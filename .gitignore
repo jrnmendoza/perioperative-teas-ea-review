@@ -1,0 +1,17 @@
+# OS & IDE
+.DS_Store
+.agents/
+.vscode/
+
+# Temporary and Cache
+tmp/
+*.log
+stata.log
+validate_with_stata.log
+
+# Large binary files & intermediate scraping batches
+retrieved_pdfs/
+covidence_batch_20/
+covidence_batch_21_40/
+covidence_batch_41_74/
+scratch_*.json

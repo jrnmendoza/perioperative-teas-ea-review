@@ -1,0 +1,65 @@
+CINAHL Ultimate (EBSCOhost)
+Access: Lund University
+Date searched: 23 July 2026
+Search mode: Proximity search (the current EBSCO interface's Boolean/phrase-capable mode)
+Databases selected: CINAHL Ultimate only
+Interface limiters: none
+
+The protocol requested CINAHL Complete. Lund exposed CINAHL Ultimate but not CINAHL Complete. The user explicitly authorized CINAHL Ultimate as the database substitution before execution.
+
+I1 / S1	MH "Electroacupuncture"	1,992
+I2 / S2	TI (electroacupunctur* OR electro-acupunctur* OR "electro acupuncture" OR "electric acupuncture" OR "electrical acupuncture")	1,533
+I3 / S3	AB (electroacupunctur* OR electro-acupunctur* OR "electro acupuncture" OR "electric acupuncture" OR "electrical acupuncture")	1,359
+I4 / S4	S1 OR S2 OR S3	2,552
+I5 / S5	MH "Transcutaneous Electric Nerve Stimulation"	3,060
+I6 / S6	MH "Acupuncture+"	20,742
+I7 / S7	MH "Acupuncture Points"	3,635
+I8 / S8	S5 AND (S6 OR S7)	478
+I9 / S9	TI (TEAS OR TAES OR "transcutaneous electrical acupoint stimulation" OR "transcutaneous electric acupoint stimulation" OR "transcutaneous acupoint electrical stimulation" OR "transcutaneous electrical acupuncture point stimulation" OR "transcutaneous electrical acupuncture stimulation" OR "transcutaneous acupoint stimulation" OR "transcutaneous electrical acustimulation" OR electroacustimulation)	4,468
+I10 / S10	AB (TEAS OR TAES OR "transcutaneous electrical acupoint stimulation" OR "transcutaneous electric acupoint stimulation" OR "transcutaneous acupoint electrical stimulation" OR "transcutaneous electrical acupuncture point stimulation" OR "transcutaneous electrical acupuncture stimulation" OR "transcutaneous acupoint stimulation" OR "transcutaneous electrical acustimulation" OR electroacustimulation)	6,640
+I11 / S11	TI ((transcutaneous N3 electric*) N5 (acupoint* OR (acupunctur* N2 point*)))	158
+I12 / S12	AB ((transcutaneous N3 electric*) N5 (acupoint* OR (acupunctur* N2 point*)))	140
+I13 / S13	TI (((transcutaneous N3 electric*) N3 (nerve N1 stimulat*)) N8 (acupoint* OR acupunctur*))	60
+I14 / S14	AB (((transcutaneous N3 electric*) N3 (nerve N1 stimulat*)) N8 (acupoint* OR acupunctur*))	149
+I15 / S15	S8 OR S9 OR S10 OR S11 OR S12 OR S13 OR S14	9,598
+P1 / S16	MH "Surgery, Operative+"	821,320
+P2 / S17	MH "Anesthesia+"	55,303
+P3 / S18	MH "Perioperative Care+"	73,437
+P4 / S19	TI (surg* OR operat* OR perioperat* OR peri-operat* OR intraoperat* OR intra-operat* OR postoperat* OR post-operat* OR preoperat* OR pre-operat* OR anesthe* OR anaesthe*)	343,432
+P5 / S20	AB (surg* OR operat* OR perioperat* OR peri-operat* OR intraoperat* OR intra-operat* OR postoperat* OR post-operat* OR preoperat* OR pre-operat* OR anesthe* OR anaesthe*)	633,094
+P6 / S21	S16 OR S17 OR S18 OR S19 OR S20	1,301,499
+U1 / S22	S4 AND S21	462
+U2 / S23	S15 AND S21	1,008
+U3 / S24	S22 OR S23	1,437
+R1 / S25	MH "Randomized Controlled Trials+"	162,175
+R2 / S26	MH "Double-Blind Studies"	56,058
+R3 / S27	MH "Single-Blind Studies"	17,003
+R4 / S28	MH "Random Assignment"	104,094
+R5 / S29	MH "Pretest-Posttest Design"	64,239
+R6 / S30	MH "Cluster Sample"	7,115
+R7 / S31	TI (randomised OR randomized)	175,039
+R8 / S32	AB (random*)	434,279
+R9 / S33	TI (trial)	224,943
+R10 / S34	MH "Sample Size" AND AB (assigned OR allocated OR control)	4,511
+R11 / S35	MH "Placebos"	15,170
+R12 / S36	PT (randomized controlled trial)	173,848
+R13 / S37	AB (control W5 group)	162,369
+R14 / S38	MH "Crossover Design" OR MH "Comparative Studies"	545,262
+R15 / S39	AB (cluster W3 RCT)	519
+R16 / S40	MH "Animals+"	101,762
+R17 / S41	MH "Animal Studies"	159,721
+R18 / S42	TI (animal model*)	4,125
+R19 / S43	S40 OR S41 OR S42	252,627
+R20 / S44	MH "Human"	3,071,387
+R21 / S45	S43 NOT S44	217,669
+R22 / S46	S25 OR S26 OR S27 OR S28 OR S29 OR S30 OR S31 OR S32 OR S33 OR S34 OR S35 OR S36 OR S37 OR S38 OR S39	1,159,931
+R23 / S47	S46 NOT S45	1,110,026
+F1 / S48	S22 AND S47	155
+F2 / S49	S23 AND S47	333
+F3 / S50	S48 OR S49	465
+
+Internal consistency:
+- F1 (155) <= U1 (462)
+- F2 (333) <= U2 (1,008)
+- F3 (465) <= U3 (1,437)
+- F1 + F2 - F3 = 23 records occurring in both modality sets

@@ -1,0 +1,18 @@
+line,concept,search,count_all_cochrane_content
+1,EA MeSH,"MeSH descriptor: [Electroacupuncture] explode all trees",1292
+2,EA text words,"(electroacupunctur* or electro-acupunctur* or ""electric acupuncture"" or ""electrical acupuncture""):ti,ab,kw",4649
+3,EA combined,"#1 or #2",4649
+4,TENS MeSH,"MeSH descriptor: [Transcutaneous Electric Nerve Stimulation] explode all trees",3312
+5,Acupuncture Therapy MeSH,"MeSH descriptor: [Acupuncture Therapy] explode all trees",7682
+6,TEAS MeSH intersection,"#4 and #5",1561
+7,TEAS text words,"(TEAS or ""transcutaneous electrical acupoint stimulation"" or ""transcutaneous electric acupoint stimulation"" or ""transcutaneous acupoint electrical stimulation"" or ""transcutaneous electrical acupuncture point stimulation"" or ""transcutaneous electrical acupuncture stimulation"" or ""transcutaneous acupoint stimulation""):ti,ab,kw",1107
+8,TEAS proximity,"((transcutaneous NEAR/3 electric*) NEAR/5 (acupoint* or (acupunctur* NEAR/2 point*))):ti,ab,kw",970
+9,TEAS combined,"#6 or #7 or #8",2574
+10,Surgery MeSH,"MeSH descriptor: [Surgical Procedures, Operative] explode all trees",180873
+11,Surgery/perioperative text words,"(surg* or operat* or perioperat* or peri-operat* or intraoperat* or intra-operat* or postoperat* or post-operat* or preoperat* or pre-operat*):ti,ab,kw",473333
+12,Anaesthesia text words,"(anesthe* or anaesthe*):ti,ab,kw",137892
+13,Surgery/perioperative combined,"#10 or #11 or #12",549644
+14,EA plus surgery/perioperative,"#3 and #13",1109
+15,TEAS plus surgery/perioperative,"#9 and #13",1038
+16,EA or TEAS final,"#14 or #15",1706
+

@@ -1,0 +1,15 @@
+(
+  "Electroacupuncture"[Mesh]
+  OR electroacupunctur*[tiab]
+  OR electro-acupunctur*[tiab]
+  OR "electro acupuncture"[tiab]
+  OR "electric acupuncture"[tiab]
+  OR "electrical acupuncture"[tiab]
+  OR "electrically stimulated acupuncture"[tiab]
+  OR "electrically stimulating acupuncture"[tiab]
+  OR (
+    ("electrical stimulation"[tiab] OR "electric stimulation"[tiab] OR electrostimulat*[tiab])
+    AND ("acupuncture needle"[tiab] OR "acupuncture needles"[tiab])
+  )
+)
+

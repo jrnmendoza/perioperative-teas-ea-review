@@ -1,0 +1,12 @@
+category_type,category,count,notes
+source,MEDLINE,767,Displayed source category; not used as a limit
+source,Embase,453,Displayed source category; not used as a limit
+source,Embase and MEDLINE,445,Displayed source category; not used as a limit
+source,Clinical Trials,260,Displayed source category; not used as a limit
+source,Preprints,3,Displayed source category; not used as a limit
+source,PubMed-not-MEDLINE,2,Displayed source category; not used as a limit
+source,Embase Classic,not displayed,No separate count displayed in the available source facet
+publication_type,Conference Abstract,159,Displayed publication-type category; retained
+publication_type,Conference Paper,3,Displayed publication-type category; retained
+publication_type,Conference Review,2,Displayed publication-type category; retained
+note,category totals,not additive,Interface categories are reported as displayed and may overlap or use different facet groupings

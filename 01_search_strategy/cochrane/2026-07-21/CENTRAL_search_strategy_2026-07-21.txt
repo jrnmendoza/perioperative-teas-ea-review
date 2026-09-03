@@ -1,0 +1,24 @@
+Cochrane Library Search Manager strategy
+Review: Perioperative_TEAS_EA_Review_2026
+Strategy date: 2026-07-21
+Database exported: Cochrane Central Register of Controlled Trials (CENTRAL)
+
+#1 MeSH descriptor: [Electroacupuncture] explode all trees
+#2 (electroacupunctur* or electro-acupunctur* or "electric acupuncture" or "electrical acupuncture"):ti,ab,kw
+#3 #1 or #2
+#4 MeSH descriptor: [Transcutaneous Electric Nerve Stimulation] explode all trees
+#5 MeSH descriptor: [Acupuncture Therapy] explode all trees
+#6 #4 and #5
+#7 (TEAS or "transcutaneous electrical acupoint stimulation" or "transcutaneous electric acupoint stimulation" or "transcutaneous acupoint electrical stimulation" or "transcutaneous electrical acupuncture point stimulation" or "transcutaneous electrical acupuncture stimulation" or "transcutaneous acupoint stimulation"):ti,ab,kw
+#8 ((transcutaneous NEAR/3 electric*) NEAR/5 (acupoint* or (acupunctur* NEAR/2 point*))):ti,ab,kw
+#9 #6 or #7 or #8
+#10 MeSH descriptor: [Surgical Procedures, Operative] explode all trees
+#11 (surg* or operat* or perioperat* or peri-operat* or intraoperat* or intra-operat* or postoperat* or post-operat* or preoperat* or pre-operat*):ti,ab,kw
+#12 (anesthe* or anaesthe*):ti,ab,kw
+#13 #10 or #11 or #12
+#14 #3 and #13
+#15 #9 and #13
+#16 #14 or #15
+
+No randomized-trial, human, adult, language, date, general-anaesthesia, or outcome filter was applied.
+

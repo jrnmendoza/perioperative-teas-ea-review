@@ -1,0 +1,51 @@
+conceptual_id,ebsco_id,label,exact_query,count,search_mode
+I1,S1,Electroacupuncture heading,"MH ""Electroacupuncture""",1992,Proximity search
+I2,S2,EA title terms,"TI (electroacupunctur* OR electro-acupunctur* OR ""electro acupuncture"" OR ""electric acupuncture"" OR ""electrical acupuncture"")",1533,Proximity search
+I3,S3,EA abstract terms,"AB (electroacupunctur* OR electro-acupunctur* OR ""electro acupuncture"" OR ""electric acupuncture"" OR ""electrical acupuncture"")",1359,Proximity search
+I4,S4,EA intervention set,S1 OR S2 OR S3,2552,Proximity search
+I5,S5,TENS heading,"MH ""Transcutaneous Electric Nerve Stimulation""",3060,Proximity search
+I6,S6,Acupuncture heading,"MH ""Acupuncture+""",20742,Proximity search
+I7,S7,Acupuncture Points heading,"MH ""Acupuncture Points""",3635,Proximity search
+I8,S8,TEAS heading construction,S5 AND (S6 OR S7),478,Proximity search
+I9,S9,TEAS title terms,"TI (TEAS OR TAES OR ""transcutaneous electrical acupoint stimulation"" OR ""transcutaneous electric acupoint stimulation"" OR ""transcutaneous acupoint electrical stimulation"" OR ""transcutaneous electrical acupuncture point stimulation"" OR ""transcutaneous electrical acupuncture stimulation"" OR ""transcutaneous acupoint stimulation"" OR ""transcutaneous electrical acustimulation"" OR electroacustimulation)",4468,Proximity search
+I10,S10,TEAS abstract terms,"AB (TEAS OR TAES OR ""transcutaneous electrical acupoint stimulation"" OR ""transcutaneous electric acupoint stimulation"" OR ""transcutaneous acupoint electrical stimulation"" OR ""transcutaneous electrical acupuncture point stimulation"" OR ""transcutaneous electrical acupuncture stimulation"" OR ""transcutaneous acupoint stimulation"" OR ""transcutaneous electrical acustimulation"" OR electroacustimulation)",6640,Proximity search
+I11,S11,TEAS title proximity,"TI ((transcutaneous N3 electric*) N5 (acupoint* OR (acupunctur* N2 point*)))",158,Proximity search
+I12,S12,TEAS abstract proximity,"AB ((transcutaneous N3 electric*) N5 (acupoint* OR (acupunctur* N2 point*)))",140,Proximity search
+I13,S13,TENS-acupuncture title proximity,"TI (((transcutaneous N3 electric*) N3 (nerve N1 stimulat*)) N8 (acupoint* OR acupunctur*))",60,Proximity search
+I14,S14,TENS-acupuncture abstract proximity,"AB (((transcutaneous N3 electric*) N3 (nerve N1 stimulat*)) N8 (acupoint* OR acupunctur*))",149,Proximity search
+I15,S15,TEAS intervention set,S8 OR S9 OR S10 OR S11 OR S12 OR S13 OR S14,9598,Proximity search
+P1,S16,Surgery heading,"MH ""Surgery, Operative+""",821320,Proximity search
+P2,S17,Anesthesia heading,"MH ""Anesthesia+""",55303,Proximity search
+P3,S18,Perioperative Care heading,"MH ""Perioperative Care+""",73437,Proximity search
+P4,S19,Perioperative title terms,"TI (surg* OR operat* OR perioperat* OR peri-operat* OR intraoperat* OR intra-operat* OR postoperat* OR post-operat* OR preoperat* OR pre-operat* OR anesthe* OR anaesthe*)",343432,Proximity search
+P5,S20,Perioperative abstract terms,"AB (surg* OR operat* OR perioperat* OR peri-operat* OR intraoperat* OR intra-operat* OR postoperat* OR post-operat* OR preoperat* OR pre-operat* OR anesthe* OR anaesthe*)",633094,Proximity search
+P6,S21,Perioperative set,S16 OR S17 OR S18 OR S19 OR S20,1301499,Proximity search
+U1,S22,Unfiltered perioperative EA,S4 AND S21,462,Proximity search
+U2,S23,Unfiltered perioperative TEAS,S15 AND S21,1008,Proximity search
+U3,S24,Unfiltered combined TEAS and EA,S22 OR S23,1437,Proximity search
+R1,S25,RCT heading,"MH ""Randomized Controlled Trials+""",162175,Proximity search
+R2,S26,Double-blind heading,"MH ""Double-Blind Studies""",56058,Proximity search
+R3,S27,Single-blind heading,"MH ""Single-Blind Studies""",17003,Proximity search
+R4,S28,Random assignment heading,"MH ""Random Assignment""",104094,Proximity search
+R5,S29,Pretest-posttest heading,"MH ""Pretest-Posttest Design""",64239,Proximity search
+R6,S30,Cluster sample heading,"MH ""Cluster Sample""",7115,Proximity search
+R7,S31,Randomized title terms,TI (randomised OR randomized),175039,Proximity search
+R8,S32,Random abstract terms,AB (random*),434279,Proximity search
+R9,S33,Trial title term,TI (trial),224943,Proximity search
+R10,S34,Sample-size assignment terms,"MH ""Sample Size"" AND AB (assigned OR allocated OR control)",4511,Proximity search
+R11,S35,Placebos heading,"MH ""Placebos""",15170,Proximity search
+R12,S36,RCT publication type,PT (randomized controlled trial),173848,Proximity search
+R13,S37,Control-group abstract proximity,AB (control W5 group),162369,Proximity search
+R14,S38,Crossover or comparative headings,"MH ""Crossover Design"" OR MH ""Comparative Studies""",545262,Proximity search
+R15,S39,Cluster-RCT abstract proximity,AB (cluster W3 RCT),519,Proximity search
+R16,S40,Animals heading,"MH ""Animals+""",101762,Proximity search
+R17,S41,Animal Studies heading,"MH ""Animal Studies""",159721,Proximity search
+R18,S42,Animal-model title term,TI (animal model*),4125,Proximity search
+R19,S43,Animal set,S40 OR S41 OR S42,252627,Proximity search
+R20,S44,Human heading,"MH ""Human""",3071387,Proximity search
+R21,S45,Animal-only set,S43 NOT S44,217669,Proximity search
+R22,S46,Controlled-trial union,S25 OR S26 OR S27 OR S28 OR S29 OR S30 OR S31 OR S32 OR S33 OR S34 OR S35 OR S36 OR S37 OR S38 OR S39,1159931,Proximity search
+R23,S47,Cochrane CINAHL controlled-trial filter,S46 NOT S45,1110026,Proximity search
+F1,S48,Final randomized perioperative EA,S22 AND S47,155,Proximity search
+F2,S49,Final randomized perioperative TEAS,S23 AND S47,333,Proximity search
+F3,S50,Final combined CINAHL retrieval,S48 OR S49,465,Proximity search

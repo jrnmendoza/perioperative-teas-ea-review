@@ -1,0 +1,48 @@
+(
+  "transcutaneous electrical acupoint stimulation"[tiab]
+  OR "transcutaneous electric acupoint stimulation"[tiab]
+  OR "transcutaneous acupoint electrical stimulation"[tiab]
+  OR "transcutaneous acupoint electric stimulation"[tiab]
+  OR "transcutaneous electrical acupuncture stimulation"[tiab]
+  OR "transcutaneous electric acupuncture stimulation"[tiab]
+  OR "transcutaneous electrical acupuncture point stimulation"[tiab]
+  OR "transcutaneous electric acupuncture point stimulation"[tiab]
+  OR "transcutaneous electrical acupuncture-point stimulation"[tiab]
+  OR "transcutaneous electric acupuncture-point stimulation"[tiab]
+  OR "electrical acupoint stimulation"[tiab]
+  OR "electric acupoint stimulation"[tiab]
+  OR "electroacupoint stimulation"[tiab]
+  OR "electro-acupoint stimulation"[tiab]
+  OR "transcutaneous electroacupoint stimulation"[tiab]
+  OR "transcutaneous electro-acupoint stimulation"[tiab]
+  OR "acupuncture-like transcutaneous electrical nerve stimulation"[tiab]
+  OR "acupuncture-like transcutaneous electric nerve stimulation"[tiab]
+  OR "acupuncture-like TENS"[tiab]
+  OR (
+    (TEAS[tiab] OR TAES[tiab])
+    AND (acupoint*[tiab] OR "acupuncture point"[tiab] OR "acupuncture points"[tiab] OR acupunctur*[tiab])
+    AND (transcutaneous[tiab] OR electric*[tiab] OR electrode*[tiab] OR stimulat*[tiab])
+  )
+  OR (
+    (
+      "Transcutaneous Electric Nerve Stimulation"[Mesh]
+      OR "transcutaneous electrical nerve stimulation"[tiab]
+      OR "transcutaneous electric nerve stimulation"[tiab]
+      OR TENS[tiab]
+    )
+    AND ("Acupuncture Points"[Mesh] OR acupoint*[tiab] OR "acupuncture point"[tiab] OR "acupuncture points"[tiab])
+  )
+  OR (
+    transcutaneous[tiab]
+    AND electric*[tiab]
+    AND (acupoint*[tiab] OR "acupuncture point"[tiab] OR "acupuncture points"[tiab])
+    AND stimulat*[tiab]
+  )
+  OR (
+    (electric*[tiab] OR electrostimulat*[tiab])
+    AND (acupoint*[tiab] OR "acupuncture point"[tiab] OR "acupuncture points"[tiab])
+    AND stimulat*[tiab]
+    AND (surface[tiab] OR electrode*[tiab] OR noninvasive[tiab] OR non-invasive[tiab] OR "nerve stimulator"[tiab])
+  )
+)
+

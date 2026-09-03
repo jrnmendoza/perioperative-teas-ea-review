@@ -1,0 +1,56 @@
+line,displayed_query,count
+1,"'electroacupuncture'/exp",12814
+2,"electroacupunctur*:ti,ab,kw OR 'electro-acupunctur*':ti,ab,kw OR 'electro acupuncture':ti,ab,kw OR 'electric acupuncture':ti,ab,kw OR 'electrical acupuncture':ti,ab,kw",11600
+3,"#1 OR #2",14502
+4,"'transcutaneous electrical nerve stimulation'/exp",13194
+5,"'acupuncture'/exp",71753
+6,"'acupuncture point'/exp",10036
+7,"#4 AND (#5 OR #6)",2741
+8,"teas:ti,ab,kw OR taes:ti,ab,kw OR 'transcutaneous electrical acupoint stimulation':ti,ab,kw OR 'transcutaneous electric acupoint stimulation':ti,ab,kw OR 'transcutaneous acupoint electrical stimulation':ti,ab,kw OR 'transcutaneous electrical acupuncture point stimulation':ti,ab,kw OR 'transcutaneous electrical acupuncture stimulation':ti,ab,kw OR 'transcutaneous acupoint stimulation':ti,ab,kw OR 'transcutaneous electrical acustimulation':ti,ab,kw OR electroacustimulation:ti,ab,kw",5385
+9,"((transcutaneous NEAR/3 electric* NEAR/5 acupoint*):ti,ab,kw) OR ((transcutaneous NEAR/3 electric* NEAR/5 acupunctur* NEAR/2 point*):ti,ab,kw)",822
+10,"#7 OR #8 OR #9",7836
+11,"'surgery'/exp",7414767
+12,"'anesthesia'/exp",531563
+13,"surg*:ti,ab,kw OR operat*:ti,ab,kw OR perioperat*:ti,ab,kw OR 'peri operat*':ti,ab,kw OR intraoperat*:ti,ab,kw OR 'intra operat*':ti,ab,kw OR postoperat*:ti,ab,kw OR 'post operat*':ti,ab,kw OR preoperat*:ti,ab,kw OR 'pre operat*':ti,ab,kw OR anesthe*:ti,ab,kw OR anaesthe*:ti,ab,kw",6112954
+14,"#11 OR #12 OR #13",9868341
+15,"#3 AND #14",3831
+16,"#10 AND #14",1942
+17,"#15 OR #16",5357
+18,"'randomized controlled trial'/exp",1225102
+19,"'controlled clinical trial'/de",463138
+20,"random*:ti,ab,tt",2694468
+21,"'randomization'/de",102619
+22,"'intermethod comparison'/de",322339
+23,"placebo:ti,ab,tt",490485
+24,"compare:ti,tt OR compared:ti,tt OR comparison:ti,tt",744272
+25,"(evaluated:ab OR evaluate:ab OR evaluating:ab OR assessed:ab OR assess:ab) AND (compare:ab OR compared:ab OR comparing:ab OR comparison:ab)",3636128
+26,"(open NEXT/1 label):ti,ab,tt",207221
+27,"((double OR single OR doubly OR singly) NEXT/1 (blind OR blinded OR blindly)):ti,ab,tt",390572
+28,"'double blind procedure'/de",334668
+29,"(parallel NEXT/1 group*):ti,ab,tt",58043
+30,"crossover:ti,ab,tt OR 'cross over':ti,ab,tt",165451
+31,"((assign* OR match OR matched OR allocation) NEAR/6 (alternate OR group OR groups OR intervention OR interventions OR patient OR patients OR subject OR subjects OR participant OR participants)):ti,ab,tt",610066
+32,"assigned:ti,ab,tt OR allocated:ti,ab,tt",661019
+33,"(controlled NEAR/8 (study OR design OR trial)):ti,ab,tt",703741
+34,"volunteer:ti,ab,tt OR volunteers:ti,ab,tt",335012
+35,"'human experiment'/de",764066
+36,"trial:ti,tt",622296
+37,"#18 OR #19 OR #20 OR #21 OR #22 OR #23 OR #24 OR #25 OR #26 OR #27 OR #28 OR #29 OR #30 OR #31 OR #32 OR #33 OR #34 OR #35 OR #36",8112891
+38,"((random* NEXT/1 sampl* NEAR/8 ('cross section*' OR questionnaire* OR survey OR surveys OR database OR databases)):ti,ab,tt) NOT ('comparative study'/de OR 'controlled study'/de OR 'randomised controlled':ti,ab,tt OR 'randomized controlled':ti,ab,tt OR 'randomly assigned':ti,ab,tt)",4150
+39,"'cross-sectional study'/de NOT ('randomized controlled trial'/exp OR 'controlled clinical trial'/de OR 'controlled study'/de OR 'randomised controlled':ti,ab,tt OR 'randomized controlled':ti,ab,tt OR 'control group':ti,ab,tt OR 'control groups':ti,ab,tt)",528674
+40,"'case control*':ti,ab,tt AND random*:ti,ab,tt NOT ('randomised controlled':ti,ab,tt OR 'randomized controlled':ti,ab,tt)",25932
+41,"'systematic review':ti,tt NOT (trial:ti,tt OR study:ti,tt)",388008
+42,"nonrandom*:ti,ab,tt NOT random*:ti,ab,tt",22196
+43,"'random field*':ti,ab,tt",3378
+44,"('random cluster' NEAR/4 sampl*):ti,ab,tt",1890
+45,"review:ab AND review:it NOT trial:ti,tt",1435864
+46,"'we searched':ab AND (review:ti,tt OR review:it)",65137
+47,"'update review':ab",158
+48,"(databases NEAR/5 searched):ab",92876
+49,"(rat:ti,tt OR rats:ti,tt OR mouse:ti,tt OR mice:ti,tt OR swine:ti,tt OR porcine:ti,tt OR murine:ti,tt OR sheep:ti,tt OR lambs:ti,tt OR pigs:ti,tt OR piglets:ti,tt OR rabbit:ti,tt OR rabbits:ti,tt OR cat:ti,tt OR cats:ti,tt OR dog:ti,tt OR dogs:ti,tt OR cattle:ti,tt OR bovine:ti,tt OR monkey:ti,tt OR monkeys:ti,tt OR trout:ti,tt OR marmoset*:ti,tt) AND 'animal experiment'/de",1360478
+50,"'animal experiment'/de NOT ('human experiment'/de OR 'human'/de)",2890301
+51,"#38 OR #39 OR #40 OR #41 OR #42 OR #43 OR #44 OR #45 OR #46 OR #47 OR #48 OR #49 OR #50",5256802
+52,"#37 NOT #51",7152559
+53,"#15 AND #52",1487
+54,"#16 AND #52",682
+55,"#53 OR #54",1928
