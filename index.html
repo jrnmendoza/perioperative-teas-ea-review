@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perioperative TEAS & EA Systematic Review & Meta-Analysis Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header class="header-container">
+    <div class="brand-wrapper">
+      <div class="brand-badge">LUND UNIV</div>
+      <div class="brand-title">
+        <h1>Perioperative TEAS & EA Opioid-Sparing Systematic Review</h1>
+        <p>Interactive Evidence & Meta-Analysis Dashboard • 63 Included RCTs • Stata 19.5 Validated</p>
+      </div>
+    </div>
+
+    <nav class="nav-tabs" role="tablist">
+      <button class="nav-btn active" data-tab="overview" role="tab">Overview</button>
+      <button class="nav-btn" data-tab="prisma" role="tab">PRISMA Flow</button>
+      <button class="nav-btn" data-tab="search" role="tab">Search Strategies</button>
+      <button class="nav-btn" data-tab="explorer" role="tab">Study Explorer</button>
+      <button class="nav-btn" data-tab="rob2" role="tab">RoB 2 Matrix</button>
+      <button class="nav-btn" data-tab="meta" role="tab">Meta-Analysis Lab</button>
+      <button class="nav-btn" data-tab="mcid" role="tab">MCID &amp; Trade-Off</button>
+      <button class="nav-btn" data-tab="sensitivity" role="tab">Sensitivity &amp; Subgroups</button>
+      <button class="nav-btn" data-tab="inquiries" role="tab">Author Inquiries &amp; What-If</button>
+      <button class="nav-btn" data-tab="evidence" role="tab">GRADE &amp; Evidence</button>
+      <button class="nav-btn" data-tab="export" role="tab">Export Hub</button>
+    </nav>
+  </header>
+
+  <!-- Review Objectives Quick-Bar -->
+  <div class="objectives-bar">
+    <span class="objectives-label">🎯 Protocol Objectives:</span>
+    <button class="obj-btn active" data-obj="all">All Included (63)</button>
+    <button class="obj-btn" data-obj="obj1_teas">Obj 1: TEAS vs Sham <span class="obj-badge-primary">Primary</span></button>
+    <button class="obj-btn" data-obj="obj1_ea">Obj 1: EA vs Sham <span class="obj-badge-primary">Primary</span></button>
+    <button class="obj-btn" data-obj="obj2_pain">Obj 2: Pain Rest &amp; Movement</button>
+    <button class="obj-btn" data-obj="obj3_subgroups">Obj 3: Protocol Subgroups</button>
+    <button class="obj-btn" data-obj="obj4_mcid">Obj 4: MCID Quad Studio</button>
+    <button class="obj-btn" data-obj="obj5_supportive">Obj 5: Supportive Syntheses <span class="obj-badge-supportive">Usual Care</span></button>
+    <button class="obj-btn" data-obj="obj6_secondary">Obj 6: Secondary Endpoints</button>
+    <button class="obj-btn" data-obj="obj7_grade">Obj 7: GRADE &amp; RoB 2</button>
+  </div>
+
+  <!-- Global Filter Toolbar -->
+  <div class="control-toolbar">
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+      <div class="filter-group">
+        <span class="filter-label">Modality:</span>
+        <select id="filter-modality" class="filter-select">
+          <option value="all">All Modalities (TEAS + EA)</option>
+          <option value="TEAS">TEAS (Surface Electrodes)</option>
+          <option value="EA">EA (Needle Electroacupuncture)</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Comparator:</span>
+        <select id="filter-comparator" class="filter-select">
+          <option value="all">All Comparators</option>
+          <option value="Sham">Sham-Controlled (Placebo Double-Blind)</option>
+          <option value="Usual Care">Usual Care (Open-Label Control)</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Surgery:</span>
+        <select id="filter-surgery" class="filter-select">
+          <option value="all">All Surgical Specialties</option>
+          <option value="Thoracic & Cardiac">Thoracic & Cardiac</option>
+          <option value="Abdominal & Gastrointestinal">Abdominal & Gastrointestinal</option>
+          <option value="Gynecologic & Breast">Gynecologic & Breast</option>
+          <option value="Orthopedic & Spine">Orthopedic & Spine</option>
+          <option value="Neurosurgery">Neurosurgery</option>
+          <option value="Head, Neck & ENT">Head, Neck & ENT</option>
+          <option value="Other General Surgery">Other General Surgery</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">RoB 2:</span>
+        <select id="filter-rob" class="filter-select">
+          <option value="all">All Risk of Bias Judgments</option>
+          <option value="Low">Low Risk of Bias Only</option>
+          <option value="Some concerns">Some Concerns</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 0.4rem; align-items: center;">
+      <span class="filter-label" style="margin-right: 0.3rem;">Presets:</span>
+      <button class="btn-preset active" data-preset="all">All 63 Studies</button>
+      <button class="btn-preset" data-preset="low_rob">Low RoB Only</button>
+      <button class="btn-preset" data-preset="sham_only">Sham Only</button>
+      <button class="btn-preset" data-preset="large_studies">Large (N ≥ 60)</button>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main class="main-container">
+
+    <!-- KPI Summary Row -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-title">Included Studies</div>
+        <div class="kpi-value" id="kpi-study-count">63</div>
+        <div class="kpi-sub" id="kpi-study-sub">of 63 total trials in database</div>
+        <span class="kpi-badge badge-indigo">100% Dual-Reviewed</span>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-title">Total Participants</div>
+        <div class="kpi-value" id="kpi-patient-count">5,089</div>
+        <div class="kpi-sub" id="kpi-patient-sub">randomized surgical patients</div>
+        <span class="kpi-badge badge-indigo">Mean N = 80.8 / trial</span>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-title">Pooled 24-h Opioid Sparing</div>
+        <div class="kpi-value" id="kpi-pooled-md" style="color: #34d399;">−10.42</div>
+        <div class="kpi-sub" id="kpi-pooled-sub">95% CI [−12.14, −8.70] • mg IV MME</div>
+        <span class="kpi-badge badge-emerald">Exceeds MCID (≥ 5 mg)</span>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-title">Between-Study Heterogeneity</div>
+        <div class="kpi-value" id="kpi-i2" style="color: #f59e0b;">68.2%</div>
+        <div class="kpi-sub" id="kpi-i2-sub">τ² = 4.12, p &lt; 0.001</div>
+        <span class="kpi-badge badge-amber">Random-Effects REML/HKSJ</span>
+      </div>
+    </section>
+
+    <!-- TAB 1: OVERVIEW -->
+    <div id="tab-overview" class="tab-content active">
+      <div class="dashboard-grid-2">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <h2>Surgical Specialties Distribution (63 Trials)</h2>
+          </div>
+          <div id="overview-surgery-bars"></div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-header">
+            <h2>Methodological Architecture & Design Separation</h2>
+          </div>
+          <div id="overview-design-split" style="margin-bottom: 1.25rem;"></div>
+          <div style="background: rgba(99, 102, 241, 0.08); border-left: 3px solid var(--accent-primary); padding: 0.9rem; border-radius: 4px; font-size: 0.78rem; line-height: 1.6; color: var(--text-secondary);">
+            <strong>Locked Protocol Rule:</strong> Non-invasive surface stimulation (TEAS) and invasive needle electroacupuncture (EA) represent fundamentally distinct physical modalities and are stratified in all primary syntheses. Sham-controlled trials (placebo double-blind) isolate true acupuncture-specific efficacy from non-specific expectation and caregiver bias.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: PRISMA FLOW DIAGRAM -->
+    <div id="tab-prisma" class="tab-content">
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div>
+            <h2>PRISMA 2020 Flow Diagram</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Live Study Selection Process from Covidence Extraction Audit</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="btn-export-prisma-summary" class="btn-copy-strategy">📋 Copy PRISMA Summary</button>
+          </div>
+        </div>
+
+        <div class="prisma-dashboard-wrapper">
+          <!-- Summary Banner -->
+          <div class="prisma-summary-banner">
+            <div class="prisma-summary-card">
+              <span class="search-meta-label">Records Imported</span>
+              <span class="prisma-card-count" style="color: #60a5fa;">5,100</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">across 4 electronic databases</span>
+            </div>
+            <div class="prisma-summary-card">
+              <span class="search-meta-label">Duplicates &amp; Ineligible</span>
+              <span class="prisma-card-count" style="color: var(--amber-warning);">2,160</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">1,652 dupes + 508 automation</span>
+            </div>
+            <div class="prisma-summary-card">
+              <span class="search-meta-label">Title/Abstract Screened</span>
+              <span class="prisma-card-count" style="color: #a78bfa;">2,928</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">2,704 irrelevant excluded</span>
+            </div>
+            <div class="prisma-summary-card">
+              <span class="search-meta-label">Full-Text Assessed</span>
+              <span class="prisma-card-count" style="color: #38bdf8;">224</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">161 excluded with reasons</span>
+            </div>
+            <div class="prisma-summary-card success">
+              <span class="search-meta-label">Included in Synthesis</span>
+              <span class="prisma-card-count">63</span>
+              <span style="font-size: 0.72rem; color: #34d399;">5,089 randomized patients</span>
+            </div>
+          </div>
+
+          <!-- PRISMA Flow Diagram Structure -->
+          <div class="prisma-flow-grid">
+            <!-- Stage 1: Identification -->
+            <div class="prisma-stage-row">
+              <div class="prisma-stage-header">
+                <span class="prisma-stage-title">Identification</span>
+                <span class="prisma-stage-desc">Databases &amp; Deduplication</span>
+              </div>
+              <div class="prisma-stage-content">
+                <div class="prisma-card primary">
+                  <div class="prisma-card-title">
+                    <span>Records Identified from Databases</span>
+                    <span class="prisma-card-count">5,100</span>
+                  </div>
+                  <div class="prisma-card-body">
+                    Total records imported for screening (representing 5,088 unique studies):
+                    <ul class="prisma-source-list">
+                      <li class="prisma-source-item"><span>Embase (Elsevier.com)</span><strong>1,928 (37.8%)</strong></li>
+                      <li class="prisma-source-item"><span>Cochrane CENTRAL</span><strong>1,698 (33.3%)</strong></li>
+                      <li class="prisma-source-item"><span>PubMed (MEDLINE)</span><strong>1,009 (19.8%)</strong></li>
+                      <li class="prisma-source-item"><span>CINAHL Ultimate</span><strong>465 (9.1%)</strong></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="prisma-flow-arrow-right">➔</div>
+
+                <div class="prisma-card excluded">
+                  <div class="prisma-card-title">
+                    <span>Records Removed Before Screening</span>
+                    <span class="prisma-card-count">2,160</span>
+                  </div>
+                  <div class="prisma-card-body">
+                    <ul class="prisma-reason-list">
+                      <li class="prisma-reason-item"><span>Duplicate records removed by Covidence</span><strong>1,651</strong></li>
+                      <li class="prisma-reason-item"><span>Duplicate records removed manually</span><strong>1</strong></li>
+                      <li class="prisma-reason-item"><span>Marked ineligible by automation tools</span><strong>508</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="prisma-connector-down">↓</div>
+
+            <!-- Stage 2: Screening -->
+            <div class="prisma-stage-row">
+              <div class="prisma-stage-header">
+                <span class="prisma-stage-title">Screening</span>
+                <span class="prisma-stage-desc">Title &amp; Abstract Review</span>
+              </div>
+              <div class="prisma-stage-content">
+                <div class="prisma-card primary">
+                  <div class="prisma-card-title">
+                    <span>Records Screened</span>
+                    <span class="prisma-card-count">2,928</span>
+                  </div>
+                  <div class="prisma-card-body">
+                    Dual independent screening of titles and abstracts by two reviewers against inclusion criteria (postoperative surgical patients, electrical stimulation at acupoints).
+                  </div>
+                </div>
+
+                <div class="prisma-flow-arrow-right">➔</div>
+
+                <div class="prisma-card excluded">
+                  <div class="prisma-card-title">
+                    <span>Records Excluded (Irrelevant)</span>
+                    <span class="prisma-card-count">2,704</span>
+                  </div>
+                  <div class="prisma-card-body">
+                    Records failing preliminary screening due to non-surgical populations, non-acupoint electrostimulation, non-clinical models, or review articles.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="prisma-connector-down">↓</div>
+
+            <!-- Stage 3: Eligibility -->
+            <div class="prisma-stage-row">
+              <div class="prisma-stage-header">
+                <span class="prisma-stage-title">Eligibility</span>
+                <span class="prisma-stage-desc">Full-Text Evaluation</span>
+              </div>
+              <div class="prisma-stage-content">
+                <div class="prisma-card primary">
+                  <div class="prisma-card-title">
+                    <span>Reports Assessed for Eligibility</span>
+                    <span class="prisma-card-count">224</span>
+                  </div>
+                  <div class="prisma-card-body">
+                    Full-text reports retrieved and independently scrutinized in duplicate against explicit PICOS eligibility criteria.
+                  </div>
+                </div>
+
+                <div class="prisma-flow-arrow-right">➔</div>
+
+                <div class="prisma-card excluded">
+                  <div class="prisma-card-title">
+                    <span>Reports Excluded</span>
+                    <span class="prisma-card-count">161</span>
+                  </div>
+                  <div class="prisma-card-body">
+                    Exclusion reasons categorized according to Covidence review records:
+                    <ul class="prisma-reason-list">
+                      <li class="prisma-reason-item"><span>Wrong outcomes (no 24h opioid/pain)</span><strong>122 (75.8%)</strong></li>
+                      <li class="prisma-reason-item"><span>Publication language (non-Eng/Chin)</span><strong>12 (7.5%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong intervention (manual/moxibustion)</span><strong>9 (5.6%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong setting (chronic / non-surgical)</span><strong>9 (5.6%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong comparator (active drug only)</span><strong>3 (1.9%)</strong></li>
+                      <li class="prisma-reason-item"><span>Study not retrieved</span><strong>2 (1.2%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong patient population (pediatric/animal)</span><strong>2 (1.2%)</strong></li>
+                      <li class="prisma-reason-item"><span>Abstract only (no full report)</span><strong>1 (0.6%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong study design (non-RCT)</span><strong>1 (0.6%)</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="prisma-connector-down">↓</div>
+
+            <!-- Stage 4: Included -->
+            <div class="prisma-stage-row">
+              <div class="prisma-stage-header">
+                <span class="prisma-stage-title">Included</span>
+                <span class="prisma-stage-desc">Systematic Synthesis</span>
+              </div>
+              <div class="prisma-stage-content" style="grid-template-columns: 1fr;">
+                <div class="prisma-card included">
+                  <div class="prisma-card-title">
+                    <span>Studies Included in Systematic Review &amp; Meta-Analysis</span>
+                    <span class="prisma-card-count">63 RCTs</span>
+                  </div>
+                  <div class="prisma-card-body">
+                    A total of <strong>63 randomized controlled trials</strong> encompassing <strong>5,089 surgical participants</strong>:
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; margin-top: 0.85rem;">
+                      <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 6px;">
+                        <strong style="color: #818cf8;">Modality Stratification:</strong><br>
+                        • TEAS (Surface Electrodes): 49 RCTs<br>
+                        • EA (Acupuncture Needles): 14 RCTs
+                      </div>
+                      <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 6px;">
+                        <strong style="color: #34d399;">Control Design:</strong><br>
+                        • Sham-Controlled (Double-Blind): 44 RCTs<br>
+                        • Usual Care / Open-Label: 19 RCTs
+                      </div>
+                      <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 6px;">
+                        <strong style="color: #fbbf24;">Audit &amp; Consensus Status:</strong><br>
+                        • 100% Audited against Source PDFs<br>
+                        • 60 Studies with targeted Author Contacts
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: SEARCH STRATEGIES -->
+    <div id="tab-search" class="tab-content">
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div>
+            <h2>Bibliographic Search Strategies &amp; Concept Architecture</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Multi-Database Search Syntax, Boolean Operators, and Retrieval Statistics</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="btn-copy-active-search" class="btn-copy-strategy">📋 Copy Active Strategy</button>
+          </div>
+        </div>
+
+        <div class="search-explorer-wrapper">
+          <!-- Database Sub-tabs -->
+          <div class="search-db-nav" id="search-db-buttons">
+            <!-- Rendered dynamically by JS -->
+          </div>
+
+          <!-- Active Search Metadata Grid -->
+          <div class="search-meta-grid" id="search-meta-container">
+            <!-- Rendered dynamically by JS -->
+          </div>
+
+          <!-- Full Search Strategy Code Box -->
+          <div class="search-strategy-box">
+            <div class="search-strategy-header">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-accent);">Search Syntax &amp; Boolean Query String</span>
+              <span id="search-strategy-lines-count" style="font-size: 0.72rem; color: var(--text-muted);">Multi-line strategy</span>
+            </div>
+            <pre class="search-strategy-code" id="search-strategy-code-display"></pre>
+          </div>
+
+          <!-- Concept Matrix Card -->
+          <div class="dashboard-card" style="margin-top: 1rem; background: var(--bg-card);">
+            <div class="card-header">
+              <h3>Search Concept Map &amp; Intersecting Facets</h3>
+            </div>
+            <div style="overflow-x: auto;">
+              <table class="concept-matrix-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">Domain Facet</th>
+                    <th style="width: 35%;">Controlled Descriptors (MeSH / Emtree / CINAHL)</th>
+                    <th style="width: 40%;">Key Natural Language Textwords (Title/Abstract/Keywords)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Intervention: TEAS</strong><br><span style="font-size: 0.72rem; color: var(--text-muted);">Non-invasive surface acupoint stimulation</span></td>
+                    <td>"Transcutaneous Electric Nerve Stimulation"[Mesh] AND "Acupuncture Points"[Mesh]; 'transcutaneous electrical nerve stimulation'/exp AND ('acupuncture'/exp OR 'acupuncture point'/exp); MH "Transcutaneous Electric Nerve Stimulation" AND MH "Acupuncture Points"</td>
+                    <td>TEAS, TAES, "transcutaneous electrical acupoint stimulation", "transcutaneous electric acupoint stimulation", "transcutaneous acupoint electrical stimulation", "electroacupoint stimulation", "acupuncture-like TENS"</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Intervention: EA</strong><br><span style="font-size: 0.72rem; color: var(--text-muted);">Invasive needle electroacupuncture</span></td>
+                    <td>"Electroacupuncture"[Mesh]; 'electroacupuncture'/exp; MH "Electroacupuncture"</td>
+                    <td>electroacupunctur*, electro-acupunctur*, "electro acupuncture", "electric acupuncture", "electrical acupuncture"</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Population: Surgical</strong><br><span style="font-size: 0.72rem; color: var(--text-muted);">Perioperative surgical patients under GA</span></td>
+                    <td>"Surgical Procedures, Operative"[Mesh]; "Anesthesia"[Mesh]; 'surgery'/exp; 'anesthesia'/exp; MH "Surgery, Operative+"; MH "Anesthesia+"; MH "Perioperative Care+"</td>
+                    <td>surg*, operat*, perioperat*, peri-operat*, intraoperat*, intra-operat*, postoperat*, post-operat*, preoperat*, anesthe*, anaesthe*</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Study Design: RCT Filter</strong><br><span style="font-size: 0.72rem; color: var(--text-muted);">Validated methodological trial filters</span></td>
+                    <td>pt "randomized controlled trial"; pt "controlled clinical trial"; 'randomized controlled trial'/exp; 'controlled clinical trial'/de; MH "Randomized Controlled Trials+"</td>
+                    <td>randomized, randomised, placebo, randomly, "double-blind", "single-blind", trial, "intermethod comparison"</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: STUDY EXPLORER -->
+    <div id="tab-explorer" class="tab-content">
+      <div class="dashboard-card">
+        <div class="card-header">
+          <h2>Study Characteristics & STRICTA Parameters Explorer</h2>
+          <input type="text" id="study-search-input" class="search-input" placeholder="Search author, year, acupoint, surgery...">
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="forest-table">
+            <thead>
+              <tr>
+                <th>Study Key</th>
+                <th>Modality</th>
+                <th>Comparator</th>
+                <th>Surgical Category</th>
+                <th>Acupoint Formula</th>
+                <th>Frequency</th>
+                <th>Sample Size (N)</th>
+                <th>RoB 2</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="explorer-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: ROB 2 MATRIX -->
+    <div id="tab-rob2" class="tab-content">
+      <div class="dashboard-card">
+        <div class="card-header">
+          <h2>Cochrane Risk of Bias 2 (RoB 2) Traffic Light Studio</h2>
+          <div style="display: flex; gap: 0.8rem; font-size: 0.75rem; align-items: center;">
+            <span style="display: flex; align-items: center; gap: 0.3rem;"><span class="rob-dot rob-low" style="width:16px;height:16px;font-size:0.6rem;">+</span> Low Risk</span>
+            <span style="display: flex; align-items: center; gap: 0.3rem;"><span class="rob-dot rob-some" style="width:16px;height:16px;font-size:0.6rem;">?</span> Some Concerns</span>
+            <span style="display: flex; align-items: center; gap: 0.3rem;"><span class="rob-dot rob-high" style="width:16px;height:16px;font-size:0.6rem;">−</span> High Risk</span>
+          </div>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="rob2-matrix-table">
+            <thead>
+              <tr>
+                <th>Study Identifier</th>
+                <th>D1: Randomization</th>
+                <th>D2: Deviations</th>
+                <th>D3: Missing Data</th>
+                <th>D4: Measurement</th>
+                <th>D5: Selection</th>
+                <th>Overall RoB</th>
+                <th>Signaling Rationale</th>
+              </tr>
+            </thead>
+            <tbody id="rob2-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: META-ANALYSIS LAB -->
+    <div id="tab-meta" class="tab-content">
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <h2>Dynamic Interactive Forest Plot</h2>
+            <select id="meta-outcome-select" class="filter-select" style="min-width: 340px;">
+              <optgroup label="Primary Outcomes">
+                <option value="opioid_24h">[Obj 1] Cumulative 0–24h Opioid Consumption (mg IV MME)</option>
+                <option value="pain_rest_24h">[Obj 2] Pain Intensity at Rest at ~24h (VAS 0–10)</option>
+                <option value="pain_movement_24h">[Obj 2] Pain Intensity During Movement at ~24h (VAS 0–10)</option>
+              </optgroup>
+              <optgroup label="Secondary Outcomes (Objective 6)">
+                <option value="ponv_24h">[Obj 6] Postoperative Nausea &amp; Vomiting (0–24h) [Risk Ratio]</option>
+                <option value="flatus_time">[Obj 6] Time to First Flatus (hours) [Mean Diff]</option>
+                <option value="hospital_stay">[Obj 6] Length of Hospital Stay (days) [Mean Diff]</option>
+                <option value="rescue_analgesia">[Obj 6] Rescue Analgesia Requirements [Risk Ratio]</option>
+                <option value="intraop_opioid">[Obj 6] Intraoperative Opioid Requirements (µg remifentanil)</option>
+              </optgroup>
+            </select>
+          </div>
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <div style="display: flex; gap: 0.4rem; align-items: center;">
+              <span class="filter-label">Subgroups:</span>
+              <select id="meta-subgroup-select" class="filter-select">
+                <option value="none">None (Pooled Overall)</option>
+                <option value="stratum">Obj 1 &amp; 5: Modality × Comparator (Sham vs Usual Care)</option>
+                <option value="timing">Obj 3: Timing (Pre / Intra / Post / Multi-phase)</option>
+                <option value="frequency">Obj 3: Frequency (2/100 Hz vs 100 Hz vs 2–10 Hz)</option>
+                <option value="sessions">Obj 3: Sessions (Single vs Multiple)</option>
+                <option value="duration">Obj 3: Duration (≤30 min vs 31–60 min vs >60 min)</option>
+                <option value="intensity">Obj 3: Intensity (Tolerable vs Strong)</option>
+              </select>
+            </div>
+            <div style="display: flex; gap: 0.4rem; align-items: center;">
+              <span class="filter-label">Sort:</span>
+              <select id="meta-sort-select" class="filter-select">
+                <option value="effect_asc">Effect Size (Most Favorable First)</option>
+                <option value="effect_desc">Effect Size (Least Favorable First)</option>
+                <option value="weight_desc">Statistical Weight (Highest First)</option>
+                <option value="year_desc">Publication Year (Newest First)</option>
+                <option value="name_asc">Author Name (A–Z)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="forest-plot-container">
+          <table class="forest-table">
+            <thead>
+              <tr>
+                <th style="width: 30px;">Inc</th>
+                <th>Study Identifier</th>
+                <th>Comparison</th>
+                <th>Intervention Mean ± SD (N)</th>
+                <th>Control Mean ± SD (N)</th>
+                <th>Mean Difference [95% CI]</th>
+                <th>Weight</th>
+                <th class="forest-svg-cell" style="text-align: center;">Forest Plot [95% CI &amp; Prediction]</th>
+              </tr>
+            </thead>
+            <tbody id="forest-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: CLINICAL IMPORTANCE & TRADE-OFF STUDIO (MCID QUAD PLOT - Objective 4) -->
+    <div id="tab-mcid" class="tab-content">
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div>
+            <h2>Clinical Importance &amp; Trade-Off Studio (Objective 4)</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Evaluating whether 0–24h Opioid Reduction achieves prespecified MCID (≥ 5 mg IV MME) without clinically important worsening of postoperative pain (≤ +0.5 VAS margin).</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="btn-export-mcid-report" class="btn-copy-strategy">📋 Copy MCID Summary</button>
+          </div>
+        </div>
+
+        <div class="mcid-studio-wrapper">
+          <!-- KPI Row for MCID -->
+          <div class="kpi-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="kpi-card">
+              <div class="kpi-title">Optimal Synergistic Zone</div>
+              <div class="kpi-value" id="kpi-mcid-q1-count" style="color: #34d399;">28</div>
+              <div class="kpi-sub" id="kpi-mcid-q1-pct">44.4% of all 63 trials</div>
+              <span class="kpi-badge badge-emerald">Opioid Sparing ≥ 5 mg + Pain Relief</span>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Sub-MCID Sparing Zone</div>
+              <div class="kpi-value" id="kpi-mcid-q2-count" style="color: #38bdf8;">27</div>
+              <div class="kpi-sub" id="kpi-mcid-q2-pct">42.9% of all 63 trials</div>
+              <span class="kpi-badge badge-indigo">Sparing &lt; 5 mg + Pain Relief</span>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Pain Compromise Zone</div>
+              <div class="kpi-value" id="kpi-mcid-q3-count" style="color: #f59e0b;">0</div>
+              <div class="kpi-sub" id="kpi-mcid-q3-pct">0.0% of all 63 trials</div>
+              <span class="kpi-badge badge-amber">Sparing ≥ 5 mg but Pain Worsened</span>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-title">Ineffective Zone</div>
+              <div class="kpi-value" id="kpi-mcid-q4-count" style="color: #f87171;">8</div>
+              <div class="kpi-sub" id="kpi-mcid-q4-pct">12.7% of all 63 trials</div>
+              <span class="kpi-badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">No Opioid Sparing</span>
+            </div>
+          </div>
+
+          <!-- Scatter Plot Layout -->
+          <div class="mcid-layout-grid">
+            <div class="mcid-plot-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-accent);">2D Trade-Off Scatter Matrix (Opioid MD vs Pain MD)</span>
+                <div style="display: flex; gap: 1rem; font-size: 0.75rem;">
+                  <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #38bdf8; display: inline-block;"></span> TEAS (Surface)</span>
+                  <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #a78bfa; display: inline-block;"></span> EA (Needle)</span>
+                  <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="border-top: 2px dashed #34d399; width: 14px; display: inline-block;"></span> MCID Threshold (5 mg)</span>
+                </div>
+              </div>
+              <div class="mcid-svg-container" id="mcid-plot-container">
+                <!-- Rendered dynamically by JS -->
+              </div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center;">
+                X-Axis: Mean Difference in 24h Opioid Consumption (mg IV MME, negative = opioid reduction) • Y-Axis: Mean Difference in 24h Pain Intensity (VAS 0–10, negative = pain reduction)
+              </div>
+            </div>
+
+            <!-- Quadrant Breakdown Details -->
+            <div class="mcid-stats-panel">
+              <div class="quadrant-card q1">
+                <div class="quadrant-title">
+                  <span style="color: #34d399;">Quadrant 1: Optimal Synergistic</span>
+                  <span class="kpi-badge badge-emerald" id="badge-q1-count">28 Trials (44.4%)</span>
+                </div>
+                <div class="quadrant-desc">
+                  Demonstrates <strong>true clinical synergy</strong>: patients achieve clinically meaningful opioid reduction (≥ 5.0 mg IV MME sparing) while concomitantly experiencing lower or equivalent postoperative pain. Zero risk of breakthrough pain.
+                </div>
+              </div>
+
+              <div class="quadrant-card q2">
+                <div class="quadrant-title">
+                  <span style="color: #38bdf8;">Quadrant 2: Sub-MCID Analgesia</span>
+                  <span class="kpi-badge badge-indigo" id="badge-q2-count">27 Trials (42.9%)</span>
+                </div>
+                <div class="quadrant-desc">
+                  Patients experience confirmed postoperative analgesia and opioid reduction, but the absolute magnitude falls below the conservative 5 mg IV MME threshold (e.g. minor surgical procedures with low baseline opioid requirements).
+                </div>
+              </div>
+
+              <div class="quadrant-card q3">
+                <div class="quadrant-title">
+                  <span style="color: #f59e0b;">Quadrant 3: Opioid Sparing with Pain Compromise</span>
+                  <span class="kpi-badge badge-amber" id="badge-q3-count">0 Trials (0.0%)</span>
+                </div>
+                <div class="quadrant-desc">
+                  <strong>Not observed in any audited trial:</strong> Opioid reduction achieved at the expense of clinically unacceptable pain worsening (> +0.5 VAS margin). Confirms TEAS/EA does not leave patients with unrelieved pain.
+                </div>
+              </div>
+
+              <div class="quadrant-card q4">
+                <div class="quadrant-title">
+                  <span style="color: #f87171;">Quadrant 4: Ineffective / Null</span>
+                  <span class="kpi-badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171;" id="badge-q4-count">8 Trials (12.7%)</span>
+                </div>
+                <div class="quadrant-desc">
+                  Trials showing negligible differences between active stimulation and control, primarily under-powered pilot studies or trials with suboptimal needle placement/sub-sensory stimulation parameters.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+                <th>Weight</th>
+                <th class="forest-svg-cell" style="text-align: center;">Forest Plot [95% CI &amp; Prediction]</th>
+              </tr>
+            </thead>
+            <tbody id="forest-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: SENSITIVITY SANDBOX -->
+    <div id="tab-sensitivity" class="tab-content">
+      <div class="dashboard-card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <h2>Interactive Sensitivity Controls & Subgroup Stratification Lab</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+          <div class="slider-control-group">
+            <div class="slider-label-wrap">
+              <span class="filter-label">Minimum Trial Sample Size:</span>
+              <span id="val-min-n" style="font-weight: 700; color: var(--text-accent);">20 patients</span>
+            </div>
+            <input type="range" id="slider-min-n" class="slider-input" min="20" max="100" step="5" value="20">
+            <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.3rem;">Slide right to filter out small trials and assess potential small-study inflation.</p>
+          </div>
+
+          <div class="slider-control-group">
+            <div class="slider-label-wrap">
+              <span class="filter-label">Publication Year Window:</span>
+              <span id="val-year" style="font-weight: 700; color: var(--text-accent);">1993 – 2026</span>
+            </div>
+            <input type="range" id="slider-year" class="slider-input" min="1993" max="2025" step="1" value="1993">
+            <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.3rem;">Slide right to analyze contemporary trials published under modern ERAS protocols.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="sensitivity-results-panel"></div>
+    </div>
+
+    <!-- TAB: AUTHOR INQUIRIES & WHAT-IF SIMULATOR -->
+    <div id="tab-inquiries" class="tab-content">
+      <div class="simulation-panel">
+        <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <h2>🔬 Author Data Confirmation &amp; "What-If" Sensitivity Simulator</h2>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-preset active" data-sim-preset="baseline" onclick="applySimScenario('baseline')">Baseline (Current)</button>
+            <button class="btn-preset" data-sim-preset="optimistic" onclick="applySimScenario('optimistic')">Optimistic (−12.7 mg)</button>
+            <button class="btn-preset" data-sim-preset="conservative" onclick="applySimScenario('conservative')">Conservative (−3.5 mg)</button>
+            <button class="btn-preset" data-sim-preset="worst" onclick="applySimScenario('worst')">Worst-Case / Trim Bound</button>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.25rem;">
+          <div>
+            <span class="filter-label">Select Inquiry Study to Simulate:</span>
+            <select id="sim-study-select" class="filter-select" style="width: 100%; margin-top: 0.4rem;" onchange="loadStudyIntoSimulator()">
+              <!-- Populated dynamically -->
+            </select>
+            
+            <div style="margin-top: 1rem;">
+              <div class="slider-label-wrap">
+                <span class="filter-label">Simulated Confirmed 24-h Opioid Difference (MD):</span>
+                <span id="sim-md-val" style="font-weight: 800; color: #34d399;">−12.7 mg MME</span>
+              </div>
+              <input type="range" id="sim-md-slider" class="slider-input" min="-25" max="5" step="0.5" value="-12.7" oninput="updateSimStudyMD(this.value)">
+              <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.2rem;">
+                <span>−25 mg (Large sparing)</span>
+                <span>0 mg (No difference)</span>
+                <span>+5 mg (Adverse)</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Inquiry Target &amp; Corresponding Author</div>
+            <div id="sim-study-info" style="background: var(--bg-panel); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); margin-top: 0.4rem; font-size: 0.78rem; line-height: 1.6;">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Before & After Comparison Grid -->
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Baseline Extraction</div>
+            <div id="sim-baseline-md" style="font-size: 1.6rem; font-weight: 800; color: #818cf8; margin-top: 0.3rem;">−9.43 mg</div>
+            <div id="sim-baseline-ci" style="font-size: 0.75rem; color: var(--text-secondary);">95% CI [−11.03, −7.84]</div>
+            <span class="delta-badge badge-indigo">k = 63 RCTs • I² = 68.2%</span>
+          </div>
+
+          <div class="arrow-divider">➔</div>
+
+          <div class="comparison-card">
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Simulated Post-Confirmation</div>
+            <div id="sim-post-md" style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.3rem;">−9.43 mg</div>
+            <div id="sim-post-ci" style="font-size: 0.75rem; color: var(--text-secondary);">95% CI [−11.03, −7.84]</div>
+            <span id="sim-delta-badge" class="delta-badge badge-emerald">Robust: Exceeds MCID (≥ 5 mg)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Author Inquiry Roster Table -->
+      <div class="dashboard-card">
+        <div class="card-header">
+          <h2>Active Author Contact Roster &amp; Targeted Variables</h2>
+          <span class="kpi-badge badge-pending">22 Active Study Inquiries</span>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="forest-table">
+            <thead>
+              <tr>
+                <th>Study Key</th>
+                <th>Target Data Point Requested</th>
+                <th>Corresponding Author &amp; Institution</th>
+                <th>Contact Email</th>
+                <th>Status</th>
+                <th>Simulate</th>
+              </tr>
+            </thead>
+            <tbody id="inquiries-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 6: GRADE & EVIDENCE (Objective 7) -->
+    <div id="tab-evidence" class="tab-content">
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div>
+            <h2>GRADE Summary of Findings (SoF) Table (Objective 7)</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Evaluated according to GRADE Working Group criteria: Risk of bias, Inconsistency, Indirectness, Imprecision, and Publication bias.</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="btn-export-grade-sof" class="btn-copy-strategy">📋 Copy GRADE Table</button>
+          </div>
+        </div>
+
+        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th style="width: 20%;">Outcome Endpoint</th>
+                <th style="width: 15%;">Anticipated Absolute Effect</th>
+                <th style="width: 18%;">Pooled Effect (95% CI)</th>
+                <th style="width: 14%;">Participants (Studies)</th>
+                <th style="width: 15%;">Certainty (GRADE)</th>
+                <th style="width: 18%;">Downgrade Assessment &amp; Footnotes</th>
+              </tr>
+            </thead>
+            <tbody id="grade-sof-table-body">
+              <!-- Dynamically populated by renderDirectionOfEvidence() -->
+            </tbody>
+          </table>
+        </div>
+
+        <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--emerald-favorable); padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; color: var(--text-secondary);">
+          <strong>GRADE Clinical Interpretation:</strong> High-to-moderate certainty evidence indicates that perioperative TEAS/EA confers clinically meaningful reduction in cumulative 24-hour postoperative opioid consumption (≥ 5 mg IV MME sparing) while concomitantly reducing postoperative nausea and vomiting and accelerating gastrointestinal functional recovery.
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 7: EXPORT HUB -->
+    <div id="tab-export" class="tab-content">
+      <div class="dashboard-grid-2">
+        <div class="dashboard-card">
+          <div class="card-header">
+            <h2>Data Export &amp; Roster Download</h2>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem;">Export the active filtered dataset containing study-level effect sizes, sample sizes, and RoB 2 classifications for independent statistical auditing.</p>
+          <button class="btn-preset" style="background: var(--accent-primary); color: #fff; border: none; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="exportDatasetCSV()">Download Filtered CSV Dataset</button>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-header">
+            <h2>Stata 19.5 &amp; R metafor Replication Scripts</h2>
+          </div>
+          <div class="code-box" id="stata-code-snippet" style="margin-bottom: 1rem;"></div>
+          <div class="code-box" id="r-code-snippet"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Study Detail Drawer Modal -->
+  <div id="study-modal" class="study-drawer-overlay" onclick="closeStudyDrawer()">
+    <div class="study-drawer" onclick="event.stopPropagation()">
+      <button class="drawer-close" onclick="closeStudyDrawer()">&times;</button>
+      <div id="study-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="meta_engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
