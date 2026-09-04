@@ -127,6 +127,11 @@ def build_complete_dataset():
     with open('06_data_extraction/jr_complete_results_payloads.json') as f:
         results_payloads = json.load(f)
 
+    audited_demographics = {}
+    if os.path.exists('06_data_extraction/audited_63_ground_truth_demographics.json'):
+        with open('06_data_extraction/audited_63_ground_truth_demographics.json', encoding='utf-8') as f:
+            audited_demographics = json.load(f)
+
     rob_master = {}
     if os.path.exists('07_risk_of_bias/rob2_master_assessment.csv'):
         with open('07_risk_of_bias/rob2_master_assessment.csv', encoding='utf-8') as f:
@@ -197,6 +202,7 @@ def build_complete_dataset():
         rm = rob_master.get(sid, {})
         resp = results_payloads.get(sid, {})
         rp = rob_payloads.get(sid, {})
+        gt_demo = audited_demographics.get(str(sid), {})
 
         ev_files = glob.glob(f'covidence_batch*/**/studies/*{sid}*evidence.md', recursive=True)
         int_files = glob.glob(f'covidence_batch*/**/studies/*{sid}*interventions.tsv', recursive=True)
@@ -227,7 +233,7 @@ def build_complete_dataset():
         stratum = f"{modality} vs {comparator}"
 
         # Acupoints & STRICTA
-        acupoints = "PC6 (Neiguan), LI4 (Hegu), ST36 (Zusanli)"
+        acupoints = gt_demo.get('acupoints', "PC6 (Neiguan), LI4 (Hegu), ST36 (Zusanli)")
         frequency_raw = "2/100 Hz (dense-disperse)"
         intensity_raw = "5–15 mA (to patient tolerance)"
         timing_raw = "Preoperative (30 min before anesthesia induction)"
@@ -243,7 +249,9 @@ def build_complete_dataset():
                     if len(parts) >= 3:
                         param = parts[1].lower()
                         val = parts[2].strip()
-                        if 'acupoint' in param or 'points' in param: acupoints = val
+                        if 'acupoint' in param or 'points' in param:
+                            # Keep verified acupoints; do not overwrite with control arm placeholder text
+                            pass
                         elif 'frequency' in param: frequency_raw = val
                         elif 'intensity' in param: intensity_raw = val
                         elif 'timing' in param: timing_raw = val
@@ -322,15 +330,17 @@ def build_complete_dataset():
 
         # Population N
         pop = resp.get('population', {})
-        n1 = int(re.search(r'\d+', str(pop.get('arm1_n_anal', '30'))).group(0)) if re.search(r'\d+', str(pop.get('arm1_n_anal', '30'))) else 30
-        n2 = int(re.search(r'\d+', str(pop.get('arm2_n_anal', '30'))).group(0)) if re.search(r'\d+', str(pop.get('arm2_n_anal', '30'))) else 30
+        n1 = gt_demo.get('arm1_n', int(re.search(r'\d+', str(pop.get('arm1_n_anal', '30'))).group(0)) if re.search(r'\d+', str(pop.get('arm1_n_anal', '30'))) else 30)
+        n2 = gt_demo.get('arm2_n', int(re.search(r'\d+', str(pop.get('arm2_n_anal', '30'))).group(0)) if re.search(r'\d+', str(pop.get('arm2_n_anal', '30'))) else 30)
+        total_n = gt_demo.get('total_n', n1 + n2)
 
-        # Refine N from consensus text if available
-        n_m = re.search(r'\(n=(\d+)\)[^v]+vs[^v]+\(n=(\d+)\)', cons_text)
-        if n_m:
-            n1 = int(n_m.group(1))
-            n2 = int(n_m.group(2))
-        total_n = n1 + n2
+        # Refine N from consensus text if available and gt_demo not present
+        if not gt_demo:
+            n_m = re.search(r'\(n=(\d+)\)[^v]+vs[^v]+\(n=(\d+)\)', cons_text)
+            if n_m:
+                n1 = int(n_m.group(1))
+                n2 = int(n_m.group(2))
+            total_n = n1 + n2
 
         # 1. 24h Opioid Data Extraction (Primary Objective 1)
         opioid_data = None
@@ -632,18 +642,18 @@ def build_complete_dataset():
                 "needle_depth": needle_depth
             },
             "population": {
-                "total_n": total_n,
-                "arm1_name": f"{modality} Group",
-                "arm1_n": n1,
-                "arm1_age": pop.get('arm1_age', '52.4 ± 8.6'),
-                "arm1_female": pop.get('arm1_female', '53.3%'),
-                "arm1_bmi": pop.get('arm1_bmi', '23.5 ± 3.0'),
-                "arm2_name": f"{comparator} Group",
-                "arm2_n": n2,
-                "arm2_age": pop.get('arm2_age', '53.1 ± 9.0'),
-                "arm2_female": pop.get('arm2_female', '56.7%'),
-                "arm2_bmi": pop.get('arm2_bmi', '23.8 ± 3.2'),
-                "asa_status": pop.get('arm1_asa', 'ASA I–II')
+                "total_n": gt_demo.get('total_n', total_n),
+                "arm1_name": gt_demo.get('arm1_name', f"{modality} Group"),
+                "arm1_n": gt_demo.get('arm1_n', n1),
+                "arm1_age": gt_demo.get('arm1_age', pop.get('arm1_age', 'not reported')),
+                "arm1_female": gt_demo.get('arm1_female', pop.get('arm1_female', 'not reported')),
+                "arm1_bmi": gt_demo.get('arm1_bmi', pop.get('arm1_bmi', 'not reported')),
+                "arm2_name": gt_demo.get('arm2_name', f"{comparator} Group"),
+                "arm2_n": gt_demo.get('arm2_n', n2),
+                "arm2_age": gt_demo.get('arm2_age', pop.get('arm2_age', 'not reported')),
+                "arm2_female": gt_demo.get('arm2_female', pop.get('arm2_female', 'not reported')),
+                "arm2_bmi": gt_demo.get('arm2_bmi', pop.get('arm2_bmi', 'not reported')),
+                "asa_status": gt_demo.get('arm1_asa', pop.get('arm1_asa', 'not reported'))
             },
             "rob2": {
                 "d1": d1,
@@ -827,16 +837,17 @@ Keywords: 术后镇痛 (Postoperative Analgesia) OR 手术 (Surgery) OR 阿片 (
         }
     ]
 
-    # Save to JSON and JS
-    with open('dashboard/studies_data.json', 'w', encoding='utf-8') as f:
-        json.dump(compiled_studies, f, indent=2)
+    # Save to JSON and JS in both dashboard/ and docs/
+    for dir_path in ['dashboard', 'docs']:
+        with open(f'{dir_path}/studies_data.json', 'w', encoding='utf-8') as f:
+            json.dump(compiled_studies, f, indent=2, ensure_ascii=False)
 
-    with open('dashboard/data.js', 'w', encoding='utf-8') as f:
-        f.write('// Complete Audited Consensus Dataset, PRISMA 2020 Flow, and Multi-Database Search Strategies\n')
-        f.write('window.STUDIES_DATA = ' + json.dumps(compiled_studies, indent=2) + ';\n\n')
-        f.write('window.AUTHOR_INQUIRIES = ' + json.dumps(list(author_contacts.values()), indent=2) + ';\n\n')
-        f.write('window.PRISMA_DATA = ' + json.dumps(prisma_data, indent=2) + ';\n\n')
-        f.write('window.SEARCH_STRATEGIES = ' + json.dumps(search_strategies, indent=2) + ';\n')
+        with open(f'{dir_path}/data.js', 'w', encoding='utf-8') as f:
+            f.write('// Complete Audited Consensus Dataset, PRISMA 2020 Flow, and Multi-Database Search Strategies\n')
+            f.write('window.STUDIES_DATA = ' + json.dumps(compiled_studies, indent=2, ensure_ascii=False) + ';\n\n')
+            f.write('window.AUTHOR_INQUIRIES = ' + json.dumps(list(author_contacts.values()), indent=2, ensure_ascii=False) + ';\n\n')
+            f.write('window.PRISMA_DATA = ' + json.dumps(prisma_data, indent=2, ensure_ascii=False) + ';\n\n')
+            f.write('window.SEARCH_STRATEGIES = ' + json.dumps(search_strategies, indent=2, ensure_ascii=False) + ';\n')
 
     print(f"Successfully generated dashboard/studies_data.json and dashboard/data.js with:")
     print(f"  - {len(compiled_studies)} audited studies (100% of 63)")
