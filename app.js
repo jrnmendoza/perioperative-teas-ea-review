@@ -553,7 +553,7 @@ function renderKPIs() {
   const i2BadgeEl = document.getElementById('kpi-i2-badge');
 
   // Strict Protocol Rule: TEAS and EA will not be combined in a pooled estimate.
-  if (currentFilters.modality === 'all') {
+  if (filterModality === 'all') {
     if (effectTitleEl) effectTitleEl.innerText = 'Primary 24-h Opioid Sparing';
     if (effectValEl) {
       effectValEl.innerHTML = '<span style="font-size:1.1rem; font-weight:800; color:#34d399;">TEAS: −1.96 | EA: −1.98</span>';
@@ -578,7 +578,7 @@ function renderKPIs() {
   } else {
     // Specific modality selected (TEAS or EA)
     const meta = MetaEngine.runContinuousMeta(filtered, currentOutcome);
-    if (effectTitleEl) effectTitleEl.innerText = `${currentFilters.modality} Pooled 24-h Opioid Sparing`;
+    if (effectTitleEl) effectTitleEl.innerText = `${filterModality} Pooled 24-h Opioid Sparing`;
     
     const mdText = meta.k > 0 ? `${meta.pooled_md < 0 ? '−' : '+'}${Math.abs(meta.pooled_md).toFixed(2)}` : 'N/A';
     const ciText = meta.k > 0 ? `95% CI [${meta.ci_low.toFixed(2)}, ${meta.ci_upp.toFixed(2)}]` : '';
@@ -733,7 +733,7 @@ function renderMetaLab() {
   // Grouping function for Subgroups (Objectives 1, 3, 5)
   // Protocol Synthesis Rule: When all modalities are selected, strictly stratify into separate strata
   let groupingFn = null;
-  if (currentSubgroup === 'stratum' || (currentSubgroup === 'none' && currentFilters.modality === 'all')) {
+  if (currentSubgroup === 'stratum' || (currentSubgroup === 'none' && filterModality === 'all')) {
     groupingFn = s => s.stratum;
   } else if (currentSubgroup === 'timing') {
     groupingFn = s => s.stricta.timing_category;
@@ -816,7 +816,9 @@ function renderMetaLab() {
 
   let html = '';
 
-  if (currentSubgroup === 'none' || !groupingFn) {
+  const shouldStratify = groupingFn && (currentSubgroup !== 'none' || filterModality === 'all');
+
+  if (!shouldStratify) {
     let sortedStats = [...overallMeta.studyStats];
     if (currentSort === 'effect_asc') sortedStats.sort((a, b) => a.yi - b.yi);
     else if (currentSort === 'effect_desc') sortedStats.sort((a, b) => b.yi - a.yi);
@@ -889,7 +891,7 @@ function renderMetaLab() {
 
   // Overall Diamond (Suppressed when All Modalities selected per Protocol Synthesis Rule)
   if (overallMeta.k > 0) {
-    if (currentFilters.modality === 'all') {
+    if (filterModality === 'all') {
       html += `
         <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 700; border-top: 2px solid var(--accent-primary);">
           <td colspan="8" style="padding: 0.85rem 1.25rem; color: #c7d2fe; font-size: 0.8rem;">
@@ -923,7 +925,7 @@ function renderMetaLab() {
 
       html += `
         <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-primary);">
-          <td colspan="3" style="font-size: 0.85rem; color: #fff;">${currentFilters.modality} STRATUM POOLED EFFECT (Random-Effects, REML):</td>
+          <td colspan="3" style="font-size: 0.85rem; color: #fff;">${filterModality} STRATUM POOLED EFFECT (Random-Effects, REML):</td>
           <td colspan="2" style="font-size: 0.78rem; color: var(--text-secondary);">k = ${overallMeta.k} trials | N = ${overallMeta.total_n.toLocaleString()} patients</td>
           <td style="font-size: 0.95rem; color: #34d399;">${ovEffText}</td>
           <td style="color: var(--text-accent);">100%</td>
@@ -1875,3 +1877,6 @@ window.loadStudyIntoSimulator = loadStudyIntoSimulator;
 window.updateSimStudyMD = updateSimStudyMD;
 window.applySimScenario = applySimScenario;
 window.selectStudyInSimulator = selectStudyInSimulator;
+window.switchMetaRegModality = switchMetaRegModality;
+window.copyStataConsoleLog = copyStataConsoleLog;
+window.toggleStataConsoleExpand = toggleStataConsoleExpand;
