@@ -29,7 +29,7 @@
       <button class="nav-btn" data-tab="rob2" role="tab">RoB 2 Matrix</button>
       <button class="nav-btn" data-tab="meta" role="tab">Meta-Analysis Lab</button>
       <button class="nav-btn" data-tab="mcid" role="tab">MCID &amp; Trade-Off</button>
-      <button class="nav-btn" data-tab="sensitivity" role="tab">Sensitivity &amp; Subgroups</button>
+      <button class="nav-btn" data-tab="sensitivity" role="tab">Stata Strategy &amp; Sensitivity</button>
       <button class="nav-btn" data-tab="inquiries" role="tab">Author Inquiries &amp; What-If</button>
       <button class="nav-btn" data-tab="conversions" role="tab">Opioid Conversions &amp; Literature</button>
       <button class="nav-btn" data-tab="evidence" role="tab">GRADE &amp; Evidence</button>
@@ -124,18 +124,18 @@
         <span class="kpi-badge badge-indigo">Mean N = 80.8 / trial</span>
       </div>
 
-      <div class="kpi-card">
-        <div class="kpi-title">Pooled 24-h Opioid Sparing</div>
-        <div class="kpi-value" id="kpi-pooled-md" style="color: #34d399;">−10.42</div>
-        <div class="kpi-sub" id="kpi-pooled-sub">95% CI [−12.14, −8.70] • mg IV MME</div>
-        <span class="kpi-badge badge-emerald">Exceeds MCID (≥ 5 mg)</span>
+      <div class="kpi-card" id="kpi-effect-card">
+        <div class="kpi-title" id="kpi-effect-title">Primary 24-h Opioid Sparing</div>
+        <div class="kpi-value" id="kpi-pooled-md" style="color: #34d399; font-size: 1.15rem; line-height: 1.25;">TEAS: −1.96 | EA: −1.98</div>
+        <div class="kpi-sub" id="kpi-pooled-sub">TEAS [−3.28, −0.64] • EA [−3.42, −0.54] • mg IV MME</div>
+        <span class="kpi-badge badge-indigo" id="kpi-pooled-badge">Protocol Rule: Not Combined</span>
       </div>
 
       <div class="kpi-card">
         <div class="kpi-title">Between-Study Heterogeneity</div>
-        <div class="kpi-value" id="kpi-i2" style="color: #f59e0b;">68.2%</div>
-        <div class="kpi-sub" id="kpi-i2-sub">τ² = 4.12, p &lt; 0.001</div>
-        <span class="kpi-badge badge-amber">Random-Effects REML/HKSJ</span>
+        <div class="kpi-value" id="kpi-i2" style="color: #f59e0b; font-size: 1.15rem; line-height: 1.25;">Stratified REML</div>
+        <div class="kpi-sub" id="kpi-i2-sub">TEAS τ² = 8.78 • EA τ² = 1.74 (p &lt; 0.001)</div>
+        <span class="kpi-badge badge-amber" id="kpi-i2-badge">Knapp–Hartung + 95% PI</span>
       </div>
     </section>
 
@@ -546,6 +546,16 @@
               </select>
             </div>
           </div>
+        <div class="protocol-callout" style="margin: 0.75rem 1.25rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <strong style="color: #c7d2fe;">🔒 Protocol Synthesis Standard:</strong>
+              <span style="color: var(--text-secondary); font-size: 0.8rem; margin-left: 0.35rem;">
+                TEAS and EA will not be combined in a grand pooled estimate. Analyses are stratified by modality. Primary comparisons evaluate TEAS vs sham TEAS and EA vs sham EA using REML + Hartung–Knapp standard errors and 95% prediction intervals.
+              </span>
+            </div>
+            <span class="badge badge-indigo" style="white-space: nowrap;">Stata 19.5 Validated</span>
+          </div>
         </div>
 
         <div class="forest-plot-container">
@@ -685,35 +695,350 @@
       </div>
     </div>
 
-    <!-- TAB 5: SENSITIVITY SANDBOX -->
+    <!-- TAB 5: STATA STRATEGY, META-REGRESSION & SENSITIVITY HUB -->
     <div id="tab-sensitivity" class="tab-content">
-      <div class="dashboard-card" style="margin-bottom: 1.5rem;">
-        <div class="card-header">
-          <h2>Interactive Sensitivity Controls & Subgroup Stratification Lab</h2>
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-          <div class="slider-control-group">
-            <div class="slider-label-wrap">
-              <span class="filter-label">Minimum Trial Sample Size:</span>
-              <span id="val-min-n" style="font-weight: 700; color: var(--text-accent);">20 patients</span>
+      
+      <!-- Section 1: Formal Protocol Synthesis Standard Callout -->
+      <div class="protocol-callout" style="margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem;">
+              <span class="badge badge-indigo">Formal Protocol Data Synthesis Strategy</span>
+              <span style="font-size: 0.75rem; color: #cbd5e1;">Cochrane &amp; PRISMA-P Standards</span>
+              <span class="badge badge-emerald">StataNow 19.5 SE Validated</span>
             </div>
-            <input type="range" id="slider-min-n" class="slider-input" min="20" max="100" step="5" value="20">
-            <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.3rem;">Slide right to filter out small trials and assess potential small-study inflation.</p>
+            <h2 style="font-size: 1.3rem; margin-top: 0.25rem;">Stata 19.5 SE Data Synthesis Strategy &amp; Meta-Regression Hub</h2>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55; max-width: 1000px;">
+              <strong>Locked Synthesis Standard:</strong> TEAS and electroacupuncture (EA) will <strong>not</strong> be combined in a pooled estimate. Analyses are strictly stratified by modality. Primary comparisons evaluate TEAS versus credible sham TEAS and EA versus sham EA. Supportive comparisons evaluate against usual care. Between-study variance is estimated using <strong>restricted maximum likelihood (REML)</strong> with <strong>Knapp–Hartung confidence intervals</strong> and <strong>95% prediction intervals</strong>.
+            </p>
           </div>
-
-          <div class="slider-control-group">
-            <div class="slider-label-wrap">
-              <span class="filter-label">Publication Year Window:</span>
-              <span id="val-year" style="font-weight: 700; color: var(--text-accent);">1993 – 2026</span>
-            </div>
-            <input type="range" id="slider-year" class="slider-input" min="1993" max="2025" step="1" value="1993">
-            <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.3rem;">Slide right to analyze contemporary trials published under modern ERAS protocols.</p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <a href="stata_strategy_synthesis.do" download class="btn-preset" style="background: var(--accent-primary); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📥</span> Download Stata .do File
+            </a>
+            <a href="stata_consensus_synthesis_data.csv" download class="btn-preset" style="background: rgba(255,255,255,0.08); color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📊</span> Download CSV Dataset
+            </a>
           </div>
         </div>
       </div>
 
-      <div id="sensitivity-results-panel"></div>
+      <!-- Section 2: Modality-Stratified Primary & Supportive Syntheses Grid -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <div>
+            <h2>Modality-Stratified Evidence Strata (REML + Hartung–Knapp + 95% PI)</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Executed in StataNow 19.5 SE via <code>meta summarize, random(reml) se(kh) predinterval</code>. Modalities are never combined into a single grand pooled estimate.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.25rem;">
+          
+          <!-- Primary Stratum 1: TEAS vs Sham -->
+          <div class="stratum-card primary-stratum">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-indigo">Primary Stratum 1</span>
+              <span style="font-size: 0.72rem; color: #818cf8; font-weight: 700;">Double-Blind Placebo</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">TEAS vs Sham TEAS</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.4rem;">
+              −1.96 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Knapp–Hartung CI:</strong> [−3.28, −0.64]
+            </div>
+            <div style="font-size: 0.78rem; color: #fbbf24; margin-top: 0.35rem; font-weight: 600;">
+              <strong>95% Prediction Interval:</strong> [−8.20, +4.27] mg
+            </div>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Studies / Patients:</strong> k = 28 RCTs • N = 2,423</div>
+              <div><strong>Test of Effect:</strong> t(27) = −3.05, p = 0.0050</div>
+              <div><strong>Heterogeneity:</strong> τ² = 8.7849, I² = 99.68%, Q = 2,085.15 (p &lt; 0.0001)</div>
+            </div>
+          </div>
+
+          <!-- Primary Stratum 2: EA vs Sham -->
+          <div class="stratum-card primary-stratum">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-indigo">Primary Stratum 2</span>
+              <span style="font-size: 0.72rem; color: #818cf8; font-weight: 700;">Needle Sham-Controlled</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">EA vs Sham EA</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.4rem;">
+              −1.98 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Knapp–Hartung CI:</strong> [−3.42, −0.54]
+            </div>
+            <div style="font-size: 0.78rem; color: #fbbf24; margin-top: 0.35rem; font-weight: 600;">
+              <strong>95% Prediction Interval:</strong> [−5.31, +1.34] mg
+            </div>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Studies / Patients:</strong> k = 11 RCTs • N = 812</div>
+              <div><strong>Test of Effect:</strong> t(10) = −3.06, p = 0.0120</div>
+              <div><strong>Heterogeneity:</strong> τ² = 1.7405, I² = 76.73%, Q = 43.07 (p &lt; 0.0001)</div>
+            </div>
+          </div>
+
+          <!-- Supportive Stratum 1: TEAS vs Usual Care -->
+          <div class="stratum-card supportive-stratum">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-cyan">Supportive Stratum 1</span>
+              <span style="font-size: 0.72rem; color: #06b6d4; font-weight: 700;">Open-Label / Usual Care</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">TEAS vs Usual Care</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #94a3b8; margin-top: 0.4rem;">
+              −0.16 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Knapp–Hartung CI:</strong> [−0.44, +0.12]
+            </div>
+            <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.35rem;">
+              <strong>Significance:</strong> t(3) = −1.78, p = 0.1739 (Not Sig)
+            </div>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Studies / Patients:</strong> k = 4 RCTs • N = 336</div>
+              <div><strong>Heterogeneity:</strong> τ² = 0.0000, I² = 0.00%, Q = 1.91 (p = 0.591)</div>
+              <div><em>Note:</em> Confounded by lack of caregiver &amp; patient blinding.</div>
+            </div>
+          </div>
+
+          <!-- Supportive Stratum 2: EA vs Usual Care -->
+          <div class="stratum-card supportive-stratum">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-cyan">Supportive Stratum 2</span>
+              <span style="font-size: 0.72rem; color: #06b6d4; font-weight: 700;">Open-Label / Usual Care</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">EA vs Usual Care</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #94a3b8; margin-top: 0.4rem;">
+              −1.16 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Knapp–Hartung CI:</strong> [−3.19, +0.86]
+            </div>
+            <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.35rem;">
+              <strong>Significance:</strong> t(4) = −1.60, p = 0.1854 (Not Sig)
+            </div>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Studies / Patients:</strong> k = 5 RCTs • N = 390</div>
+              <div><strong>Heterogeneity:</strong> τ² = 1.6472, I² = 59.57%, Q = 8.85 (p = 0.065)</div>
+              <div><em>Note:</em> High risk of performance and detection bias.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section 3: Protocol Moderator Meta-Regression Laboratory -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="badge badge-indigo">Prespecified Protocol Moderators</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Univariable Priority • Multivariable Rule-Guarded</span>
+            </div>
+            <h2 style="margin-top: 0.25rem;">Protocol Moderator Meta-Regression Laboratory</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
+              Evaluated separately for TEAS and EA without causal claims of superiority. Examined per 30-min cumulative stimulation, timing phases, frequency bands, and treatment sessions.
+            </p>
+          </div>
+          
+          <!-- Modality Model Selector -->
+          <div style="display: flex; gap: 0.4rem;">
+            <button class="btn-preset active" id="btn-metareg-teas" onclick="switchMetaRegModality('TEAS')">TEAS Models (k = 28)</button>
+            <button class="btn-preset" id="btn-metareg-ea" onclick="switchMetaRegModality('EA')">EA Models (k = 11)</button>
+          </div>
+        </div>
+
+        <!-- Methodological Threshold Rules Evaluator Box -->
+        <div style="background: rgba(11, 15, 25, 0.75); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.25rem;">
+          <h4 style="font-size: 0.82rem; color: #c7d2fe; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">Protocol Methodological Threshold Criteria:</h4>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem; font-size: 0.75rem;">
+            <div style="background: rgba(255,255,255,0.03); padding: 0.6rem; border-radius: var(--radius-sm);" id="rule-rule1">
+              <div style="font-weight: 700; color: #fff;">1. Studies per Predictor (≥ 10)</div>
+              <div style="color: #34d399; margin-top: 0.2rem;" id="rule-status-k">✅ TEAS: k = 28 (Adequate) • EA: k = 11 (Adequate)</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); padding: 0.6rem; border-radius: var(--radius-sm);" id="rule-rule2">
+              <div style="font-weight: 700; color: #fff;">2. Studies per Category Level (≥ 4)</div>
+              <div style="color: #fbbf24; margin-top: 0.2rem;" id="rule-status-levels">⚠️ TEAS: Timing/Sessions met; High freq (100 Hz, k=2) sub-threshold</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); padding: 0.6rem; border-radius: var(--radius-sm);" id="rule-rule3">
+              <div style="font-weight: 700; color: #fff;">3. Multivariable Eligibility (≥ 20)</div>
+              <div style="color: #34d399; margin-top: 0.2rem;" id="rule-status-multi">✅ TEAS: k = 28 ≥ 20 (Max 2 predictors) • ❌ EA: k = 11 &lt; 20</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); padding: 0.6rem; border-radius: var(--radius-sm);">
+              <div style="font-weight: 700; color: #fff;">4. Ecological Bias Safeguard</div>
+              <div style="color: #94a3b8; margin-top: 0.2rem;">Study-level associations; vulnerable to confounding</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meta-Regression Output Table -->
+        <div style="overflow-x: auto;">
+          <table class="moderator-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Protocol Moderator</th>
+                <th style="width: 18%;">Categorical Contrast / Unit</th>
+                <th style="width: 10%;">Coeff (β)</th>
+                <th style="width: 10%;">Std. Err.</th>
+                <th style="width: 8%;">t-stat</th>
+                <th style="width: 9%;">p-value</th>
+                <th style="width: 13%;">95% CI</th>
+                <th style="width: 10%;">Variance Expl. (R²)</th>
+              </tr>
+            </thead>
+            <tbody id="metareg-table-body">
+              <!-- Dynamically rendered via renderMetaRegressionTable() -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section 4: Comprehensive Sensitivity Suite & Clinical Thresholds -->
+      <div class="dashboard-grid-2" style="margin-bottom: 1.5rem;">
+        
+        <!-- Estimator Comparisons & RoB Restriction -->
+        <div class="dashboard-card">
+          <div class="card-header">
+            <h3>Alternative Estimators &amp; Risk of Bias Sensitivity</h3>
+          </div>
+          <div style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Protocol-mandated sensitivity checks testing between-study variance estimators and restrictions:
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm);">
+              <div>
+                <strong>Restricted Maximum Likelihood (REML) [Primary]</strong>
+                <div style="font-size: 0.72rem; color: var(--text-muted);">Knapp–Hartung SE • τ² = 8.7849</div>
+              </div>
+              <div style="text-align: right;">
+                <span style="font-weight: 700; color: #34d399;">−1.96 mg</span>
+                <div style="font-size: 0.7rem; color: #cbd5e1;">[−3.28, −0.64] • p = 0.0050</div>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm);">
+              <div>
+                <strong>DerSimonian–Laird (DL) [Non-iterative]</strong>
+                <div style="font-size: 0.72rem; color: var(--text-muted);">Classical moment estimator • τ² = 2.1212</div>
+              </div>
+              <div style="text-align: right;">
+                <span style="font-weight: 700; color: #34d399;">−1.87 mg</span>
+                <div style="font-size: 0.7rem; color: #cbd5e1;">[−2.48, −1.26] • p &lt; 0.0001</div>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm);">
+              <div>
+                <strong>Paule–Mandel (PM) [Iterative Q-profile]</strong>
+                <div style="font-size: 0.72rem; color: var(--text-muted);">Empirical Bayes formulation • τ² = 10.9009</div>
+              </div>
+              <div style="text-align: right;">
+                <span style="font-weight: 700; color: #34d399;">−1.96 mg</span>
+                <div style="font-size: 0.7rem; color: #cbd5e1;">[−3.24, −0.67] • p = 0.0028</div>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; background: rgba(6, 182, 212, 0.08); border: 1px solid rgba(6, 182, 212, 0.3); border-radius: var(--radius-sm);">
+              <div>
+                <strong style="color: #38bdf8;">Category A Only (Excluding Converted Data)</strong>
+                <div style="font-size: 0.72rem; color: var(--text-muted);">Restricted to unskewed exact published tables (k = 7)</div>
+              </div>
+              <div style="text-align: right;">
+                <span style="font-weight: 700; color: #38bdf8;">−3.70 mg</span>
+                <div style="font-size: 0.7rem; color: #cbd5e1;">[−6.57, −0.83] • p = 0.0197</div>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm);">
+              <div>
+                <strong style="color: #34d399;">RoB 2 Low Risk of Bias Only</strong>
+                <div style="font-size: 0.72rem; color: var(--text-muted);">Restricted to trials with Low overall RoB (k = 21)</div>
+              </div>
+              <div style="text-align: right;">
+                <span style="font-weight: 700; color: #34d399;">−1.80 mg</span>
+                <div style="font-size: 0.7rem; color: #cbd5e1;">[−2.96, −0.64] • p = 0.0041</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clinical Thresholds & Leave-One-Out -->
+        <div class="dashboard-card">
+          <div class="card-header">
+            <h3>Clinical Thresholds &amp; Influence Diagnostics</h3>
+          </div>
+          <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 1rem;">
+            Evaluation of prespecified clinical thresholds (5 mg IV MME, 8 mg IV MME, 30% reduction) and leave-one-out sensitivity:
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-radius: var(--radius-sm); text-align: center;">
+              <div style="font-size: 0.75rem; color: var(--text-muted);">5.0 mg IV MME Threshold</div>
+              <div style="font-size: 1.4rem; font-weight: 800; color: #34d399; margin-top: 0.2rem;">22.2%</div>
+              <div style="font-size: 0.7rem; color: var(--text-secondary);">8 of 36 TEAS trials achieve ≥ 5 mg</div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-radius: var(--radius-sm); text-align: center;">
+              <div style="font-size: 0.75rem; color: var(--text-muted);">8.0 mg IV MME Threshold</div>
+              <div style="font-size: 1.4rem; font-weight: 800; color: #fbbf24; margin-top: 0.2rem;">8.3%</div>
+              <div style="font-size: 0.7rem; color: var(--text-secondary);">3 of 36 TEAS trials achieve ≥ 8 mg</div>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-radius: var(--radius-sm); margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.78rem;">
+              <span><strong>30% Relative Opioid Reduction:</strong></span>
+              <span style="color: #818cf8; font-weight: 700;">Median 4.6% (Range: up to 95.4%)</span>
+            </div>
+            <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.35rem;">
+              Relative reduction shows marked skewness due to low baseline opioid consumptions in minor laparoscopic procedures.
+            </p>
+          </div>
+
+          <div style="background: rgba(99, 102, 241, 0.08); border-left: 3px solid var(--accent-primary); padding: 0.8rem; border-radius: var(--radius-sm); font-size: 0.75rem; line-height: 1.5; color: var(--text-secondary);">
+            <strong>Leave-One-Out Robustness (TEAS vs Sham):</strong>
+            Iteratively omitting each of the 28 trials in Stata yields pooled estimates consistently between <strong>−2.21 mg</strong> (omitting Yao 2015) and <strong>−1.72 mg</strong> (omitting Guo 2023 or Zhang 2025), with p &lt; 0.01 in all 28 iterations.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Section 5: Interactive Stata 19.5 SE Live Terminal Console -->
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="badge badge-emerald">Live Stata Log Stream</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">StataNow 19.5 SE (Macintosh 64-bit ARM)</span>
+            </div>
+            <h2 style="margin-top: 0.25rem;">StataNow 19.5 SE Execution Log Console</h2>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="btn-preset" id="btn-copy-stata-log" onclick="copyStataConsoleLog()">📋 Copy Full Log</button>
+            <button class="btn-preset" onclick="toggleStataConsoleExpand()" id="btn-expand-console">⛶ Expand Console</button>
+          </div>
+        </div>
+
+        <div class="stata-terminal-container">
+          <div class="stata-terminal-header">
+            <div class="stata-terminal-dots">
+              <div class="stata-dot stata-dot-red"></div>
+              <div class="stata-dot stata-dot-yellow"></div>
+              <div class="stata-dot stata-dot-green"></div>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #8b949e;">stata_strategy_synthesis.log — StataNow 19.5 SE</div>
+            <div style="font-size: 0.7rem; color: #58a6ff;">● Complete (0 Errors)</div>
+          </div>
+          <pre class="stata-terminal-body" id="stata-terminal-content">Loading Stata 19.5 execution stream...</pre>
+        </div>
+      </div>
+
     </div>
+
+    <!-- TAB: AUTHOR INQUIRIES, CONVERSIONS & WHAT-IF SIMULATOR -->
 
     <!-- TAB: AUTHOR INQUIRIES, CONVERSIONS & WHAT-IF SIMULATOR -->
     <div id="tab-inquiries" class="tab-content">
@@ -1323,10 +1648,15 @@
       <div class="dashboard-grid-2">
         <div class="dashboard-card">
           <div class="card-header">
-            <h2>Data Export &amp; Roster Download</h2>
+            <h2>Data Export &amp; Statistical Pipeline Downloads</h2>
           </div>
-          <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem;">Export the active filtered dataset containing study-level effect sizes, sample sizes, and RoB 2 classifications for independent statistical auditing.</p>
-          <button class="btn-preset" style="background: var(--accent-primary); color: #fff; border: none; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="exportDatasetCSV()">Download Filtered CSV Dataset</button>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem;">Export the active filtered dataset containing study-level effect sizes, sample sizes, and RoB 2 classifications for independent statistical auditing, or download the master Stata 19.5 SE replication suite.</p>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <button class="btn-preset" style="background: var(--accent-primary); color: #fff; border: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; text-align: left;" onclick="exportDatasetCSV()">📥 Download Active Filtered CSV Dataset</button>
+            <a href="stata_strategy_synthesis.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Stata Strategy Replication Script (stata_strategy_synthesis.do)</a>
+            <a href="stata_consensus_synthesis_data.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Complete Audited 63-Trial Dataset (stata_consensus_synthesis_data.csv)</a>
+            <a href="stata_strategy_synthesis.log" download class="btn-preset" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-subtle); color: var(--text-secondary); text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Stata 19.5 Execution Verification Log (stata_strategy_synthesis.log)</a>
+          </div>
         </div>
 
         <div class="dashboard-card">
