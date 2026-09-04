@@ -714,16 +714,476 @@
       <div id="sensitivity-results-panel"></div>
     </div>
 
-    <!-- TAB: AUTHOR INQUIRIES & WHAT-IF SIMULATOR -->
+    <!-- TAB: AUTHOR INQUIRIES, CONVERSIONS & WHAT-IF SIMULATOR -->
     <div id="tab-inquiries" class="tab-content">
+      
+      <!-- Section 1: The 3 Distinct Categories of Author Inquiries Architecture -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; background: linear-gradient(180deg, rgba(22, 31, 48, 0.9) 0%, rgba(11, 15, 25, 0.95) 100%); border: 1px solid rgba(99, 102, 241, 0.3);">
+        <div class="card-header">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span class="badge badge-indigo">Cochrane Methodological Framework</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Cochrane Handbook Ch. 5 &amp; 6 Standards</span>
+            </div>
+            <h2 style="margin-top: 0.35rem; font-size: 1.3rem;">The 3 Distinct Categories of Author Inquiries in this Review</h2>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.25rem; line-height: 1.5;">
+              Why are opioid values shown in the dashboard while 59 authors are flagged for contact? Cochrane standards distinguish between <strong>provisional baseline data</strong>, <strong>secondary endpoint clarifications</strong>, and <strong>unreported primary metrics</strong>. Contacting authors is a prospective precision-enhancement protocol, not an absence of baseline evidence.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Interactive Category Summary Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.25rem; margin-top: 1.25rem;">
+          
+          <!-- Category A Card -->
+          <div class="category-summary-card" id="card-cat-a" onclick="filterInquiryCategory('A')" style="cursor: pointer; background: rgba(6, 182, 212, 0.06); border: 1px solid rgba(6, 182, 212, 0.3); border-radius: var(--radius-md); padding: 1.15rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge-cat-a"><span>🔵</span> Category A</span>
+              <span style="font-size: 1.15rem; font-weight: 800; color: #38bdf8;" id="cat-a-count">9 Trials (15.3%)</span>
+            </div>
+            <h3 style="font-size: 0.95rem; margin-top: 0.6rem; color: #f8fafc;">Opioid Data Complete &amp; Exact</h3>
+            <div style="font-size: 0.76rem; color: #94a3b8; margin-top: 0.35rem; line-height: 1.5;">
+              <strong>Baseline Status:</strong> Cumulative 24h opioid consumption was fully tabulated in published tables and converted to IV MME.
+            </div>
+            <div style="font-size: 0.76rem; color: #cbd5e1; margin-top: 0.5rem; line-height: 1.5; background: rgba(0,0,0,0.25); padding: 0.6rem; border-radius: var(--radius-sm);">
+              <strong>Inquiry Target:</strong> Secondary outcomes only (e.g., numerical 24h resting vs. movement VAS pain, dichotomous PONV counts, or ITT exclusion details).
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem;">
+              <em>Exemplars:</em> Chen 1998 (#969), Yeh 2010 (#828), Praveena 2016 (#596), Li 2022 (#359), Tu 2023 (#244).
+            </div>
+            <button class="btn-preset" style="width: 100%; margin-top: 0.75rem; font-size: 0.72rem; padding: 0.35rem;">Filter Category A Inquiries</button>
+          </div>
+
+          <!-- Category B Card -->
+          <div class="category-summary-card" id="card-cat-b" onclick="filterInquiryCategory('B')" style="cursor: pointer; background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-md); padding: 1.15rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge-cat-b"><span>🟡</span> Category B</span>
+              <span style="font-size: 1.15rem; font-weight: 800; color: #fbbf24;" id="cat-b-count">37 Trials (62.7%)</span>
+            </div>
+            <h3 style="font-size: 0.95rem; margin-top: 0.6rem; color: #f8fafc;">Cochrane-Converted Baseline</h3>
+            <div style="font-size: 0.76rem; color: #94a3b8; margin-top: 0.35rem; line-height: 1.5;">
+              <strong>Baseline Status:</strong> Opioid data was published, but converted via standard algorithms (Wan/Luo median-to-mean, PCA liquid volume mL to µg, 48h to 24h split, or vector digitization).
+            </div>
+            <div style="font-size: 0.76rem; color: #cbd5e1; margin-top: 0.5rem; line-height: 1.5; background: rgba(0,0,0,0.25); padding: 0.6rem; border-radius: var(--radius-sm);">
+              <strong>Inquiry Target:</strong> Seeks raw individual patient data (IPD) or exact unskewed parametric Mean ± SD to confirm conversion accuracy and eliminate transformation variance.
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem;">
+              <em>Exemplars:</em> Chen 2015 (#657), An 2014 (#698), Ao 2021 (#438), Jin 2022 (#326), Wong 2006 (#912).
+            </div>
+            <button class="btn-preset" style="width: 100%; margin-top: 0.75rem; font-size: 0.72rem; padding: 0.35rem;">Filter Category B Inquiries</button>
+          </div>
+
+          <!-- Category C Card -->
+          <div class="category-summary-card" id="card-cat-c" onclick="filterInquiryCategory('C')" style="cursor: pointer; background: rgba(244, 63, 94, 0.06); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: var(--radius-md); padding: 1.15rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge-cat-c"><span>🔴</span> Category C</span>
+              <span style="font-size: 1.15rem; font-weight: 800; color: #fb7185;" id="cat-c-count">13 Trials (22.0%)</span>
+            </div>
+            <h3 style="font-size: 0.95rem; margin-top: 0.6rem; color: #f8fafc;">Opioid Dose Missing from Report</h3>
+            <div style="font-size: 0.76rem; color: #94a3b8; margin-top: 0.35rem; line-height: 1.5;">
+              <strong>Baseline Status:</strong> Cumulative 24h opioid was omitted from tables (set to <code style="color: #fb7185;">null</code> in opioid plot). <strong>Retained in review</strong> for secondary endpoints (pain, PONV, flatus).
+            </div>
+            <div style="font-size: 0.76rem; color: #cbd5e1; margin-top: 0.5rem; line-height: 1.5; background: rgba(0,0,0,0.25); padding: 0.6rem; border-radius: var(--radius-sm);">
+              <strong>Inquiry Target:</strong> Seeks original PCA pump electronic delivery logs. When received, these large trials will add massive statistical power directly into the forest plot.
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem;">
+              <em>Exemplars:</em> Gao 2021 (#400, N=610), Lu 2021 (#414, N=388), Zhu 2022 (#381), He 2026 (#41).
+            </div>
+            <button class="btn-preset" style="width: 100%; margin-top: 0.75rem; font-size: 0.72rem; padding: 0.35rem;">Filter Category C Inquiries</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section 2: Opioid Conversion Methodology & Pharmacological Equianalgesic Literature Hub -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem;">
+        <div class="card-header" style="flex-direction: column; align-items: flex-start; gap: 0.6rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.6rem;">
+                <span class="badge badge-emerald">Standardization Protocol</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Cochrane Handbook Ch. 6.5.2 &amp; CDC Guidelines</span>
+              </div>
+              <h2 style="margin-top: 0.35rem; font-size: 1.25rem;">📐 Opioid Conversion Methodology &amp; Literature Reference Hub</h2>
+            </div>
+            <div class="conv-subnav" style="margin-top: 0; border-bottom: none; padding-bottom: 0;">
+              <button class="conv-subnav-btn active" data-conv-tab="equi" onclick="switchConvTab('equi')">1. Equianalgesic Ratios (IV MME)</button>
+              <button class="conv-subnav-btn" data-conv-tab="stat" onclick="switchConvTab('stat')">2. Wan/Luo Statistical Formulas</button>
+              <button class="conv-subnav-btn" data-conv-tab="pca" onclick="switchConvTab('pca')">3. PCA Liquid Volumetric</button>
+              <button class="conv-subnav-btn" data-conv-tab="calc" onclick="switchConvTab('calc')">4. ⚡ Live Conversion Calculator</button>
+              <button class="conv-subnav-btn" data-conv-tab="lit" onclick="switchConvTab('lit')">5. 📚 Literature Library</button>
+            </div>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary);">
+            Transparent mathematical formulations, clinical pharmacology equianalgesic conversion factors, and peer-reviewed literature citations underpinning all converted values in this systematic review.
+          </p>
+        </div>
+
+        <!-- Pane 1: Equianalgesic Ratios to IV MME Table -->
+        <div id="conv-pane-equi" class="conv-content-pane active">
+          <div style="overflow-x: auto;">
+            <table class="forest-table">
+              <thead>
+                <tr>
+                  <th>Opioid Drug &amp; Route</th>
+                  <th>Conversion Factor to IV MME</th>
+                  <th>Equianalgesic Dose (10 mg IV Morphine)</th>
+                  <th>Clinical Pharmacology &amp; Receptor Rationale</th>
+                  <th>Foundational Guidelines &amp; References</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Morphine (IV)</strong></td>
+                  <td><span class="badge badge-indigo">1.0 mg / mg</span></td>
+                  <td><strong>10.0 mg</strong></td>
+                  <td>Reference standard opioid comparator. Pure $\mu$-opioid receptor agonist.</td>
+                  <td><span class="badge-derivation">CDC 2022 / ANZCA APM:SE 2020</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Sufentanil (IV)</strong></td>
+                  <td><span class="badge badge-emerald">1.0 mg MME / µg (1000:1)</span></td>
+                  <td><strong>10.0 µg (0.01 mg)</strong></td>
+                  <td>Highly potent lipophilic $\mu$-agonist; ~1000-fold more potent than parenteral morphine in acute surgical analgesia. Widely used in Chinese PCIA pumps.</td>
+                  <td><span class="badge-derivation">Treillet 2018 / Macintyre 2020 / Knotkova 2012</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Fentanyl (IV)</strong></td>
+                  <td><span class="badge badge-emerald">0.10 mg MME / µg (100:1)</span></td>
+                  <td><strong>100.0 µg (0.10 mg)</strong></td>
+                  <td>Rapid-onset synthetic $\mu$-agonist; clinically accepted 100:1 equianalgesic ratio with IV morphine in postoperative PCA regimens.</td>
+                  <td><span class="badge-derivation">CDC 2022 / ANZCA 2020 / Nielsen 2016</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Remifentanil (IV)</strong></td>
+                  <td><span class="badge badge-emerald">0.10 mg MME / µg (100:1)</span></td>
+                  <td><strong>100.0 µg (0.10 mg)</strong></td>
+                  <td>Ultra-short-acting esterase-metabolized $\mu$-agonist; evaluated in intraoperative consumption endpoints ($1\,\mu\text{g} = 0.1\text{ mg}$ IV MME).</td>
+                  <td><span class="badge-derivation">Macintyre 2020 / ASA Practice Guidelines 2012</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Hydromorphone (IV)</strong></td>
+                  <td><span class="badge badge-indigo">6.67 mg MME / mg</span></td>
+                  <td><strong>1.5 mg</strong></td>
+                  <td>Semisynthetic hydrogenated ketone of morphine; 5–7 times more potent than parenteral morphine (standard conversion $1.5\text{ mg} \approx 10\text{ mg}$ IV morphine).</td>
+                  <td><span class="badge-derivation">CDC 2022 / Knotkova 2012 / ANZCA 2020</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Oxycodone (IV)</strong></td>
+                  <td><span class="badge badge-indigo">1.0 mg MME / mg</span></td>
+                  <td><strong>10.0 mg</strong></td>
+                  <td>Parenteral formulation administered in European/Asian surgical trials; equipotent to intravenous morphine on a milligram-for-milligram basis.</td>
+                  <td><span class="badge-derivation">Treillet 2018 / ANZCA 2020</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Dezocine (IV)</strong></td>
+                  <td><span class="badge badge-amber">1.0 mg MME / mg</span></td>
+                  <td><strong>10.0 mg</strong></td>
+                  <td>Synthetic opioid partial $\mu$-agonist / $\kappa$-antagonist widely used in China; clinical trials establish near 1:1 equianalgesic potency to IV morphine.</td>
+                  <td><span class="badge-derivation">Chinese Pain Society Consensus / Liu 2020</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Pethidine / Meperidine (IV)</strong></td>
+                  <td><span class="badge badge-amber">0.10–0.13 mg MME / mg</span></td>
+                  <td><strong>75.0 – 100.0 mg</strong></td>
+                  <td>Synthetic opioid; 75–100 mg parenteral pethidine provides analgesia equivalent to 10 mg parenteral morphine. Converted at $0.10\text{ mg MME/mg}$.</td>
+                  <td><span class="badge-derivation">CDC 2022 / ANZCA 2020 / Knotkova 2012</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Tramadol (IV)</strong></td>
+                  <td><span class="badge badge-amber">0.10 mg MME / mg</span></td>
+                  <td><strong>100.0 mg</strong></td>
+                  <td>Atypical weak $\mu$-agonist with SNRI dual action; 100 mg IV tramadol is clinically equivalent to approximately 10 mg IV morphine.</td>
+                  <td><span class="badge-derivation">ANZCA 2020 / Treillet 2018</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Butorphanol (IV)</strong></td>
+                  <td><span class="badge badge-indigo">5.0 mg MME / mg</span></td>
+                  <td><strong>2.0 mg</strong></td>
+                  <td>Mixed agonist-antagonist; 2 mg IV butorphanol is clinically equianalgesic to 10 mg parenteral morphine.</td>
+                  <td><span class="badge-derivation">ANZCA 2020 / Knotkova 2012</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Pane 2: Wan/Luo/Shi Statistical Formulas -->
+        <div id="conv-pane-stat" class="conv-content-pane">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+              <h3 style="font-size: 0.95rem; color: #818cf8; margin-bottom: 0.5rem;">1. Estimating Mean from Median &amp; IQR (Wan et al. 2014 &amp; Luo et al. 2018)</h3>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5;">
+                When randomized trials report non-parametric summaries [Median $m$, 25th percentile $q_1$, 75th percentile $q_3$] for sample size $n$, Cochrane Handbook Section 6.5.2 recommends estimating sample mean using the Luo optimal weighting or Wan formula:
+              </p>
+              <div class="math-formula-box">
+                <strong>Wan et al. (2014) Formula:</strong><br>
+                $\bar{X} \approx \frac{q_1 + m + q_3}{3}$<br><br>
+                <strong>Luo et al. (2018) Optimal Weights:</strong><br>
+                $\bar{X} \approx w_1 q_1 + w_2 m + w_3 q_3$<br>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">where $w_1 = w_3 = 0.5 - \frac{0.7}{n}$, $w_2 = \frac{1.4}{n}$ (minimizes mean squared error for skewed data).</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 style="font-size: 0.95rem; color: #34d399; margin-bottom: 0.5rem;">2. Estimating Standard Deviation from IQR (Shi et al. 2020)</h3>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5;">
+                Sample variance is derived by scaling the Interquartile Range ($q_3 - q_1$) by normal distribution quantiles adjusted for finite sample size $n$:
+              </p>
+              <div class="math-formula-box">
+                <strong>Shi et al. (2020) Optimal Standard Deviation:</strong><br>
+                $S \approx \frac{q_3 - q_1}{2\Phi^{-1}\left(\frac{0.75n - 0.125}{n + 0.25}\right)}$<br><br>
+                <strong>Standard Cochrane Approximation:</strong><br>
+                $S \approx \frac{q_3 - q_1}{1.35}$<br>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">(Used when $n \ge 50$; exactly equal to the distance between 25th and 75th standard normal percentiles).</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: rgba(99, 102, 241, 0.08); border-left: 4px solid var(--accent-primary); padding: 0.85rem 1rem; border-radius: 4px; margin-top: 1rem; font-size: 0.78rem; line-height: 1.6;">
+            <strong>Cochrane Handbook Methodological Rule (§6.5.2):</strong> As sample size increases ($n > 50$), the mean tends toward the median in moderately skewed data, and the Wan/Luo estimators provide unbiased estimates of the population parameters. In our review, all transformed studies are flagged in <strong>Category B</strong> to enable sensitivity analysis comparing raw parametric trials against converted trials.
+          </div>
+        </div>
+
+        <!-- Pane 3: PCA Liquid Volumetric Derivation Standards -->
+        <div id="conv-pane-pca" class="conv-content-pane">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+              <h3 style="font-size: 0.95rem; color: #fbbf24; margin-bottom: 0.5rem;">Patient-Controlled Analgesia (PCA) Liquid Volumetric Protocol</h3>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5;">
+                Several trials report PCA pump consumption as delivered solution volume (in mL) or number of bolus compressions rather than mass of drug. In accordance with ASA Acute Pain Guidelines (2012), delivered doses are derived using the verified reservoir concentration:
+              </p>
+              <div class="math-formula-box">
+                <strong>Cumulative Delivered Dose ($\mu$g or mg):</strong><br>
+                $\text{Total Opioid Mass} = V_{\text{total}} \times C_{\text{solution}}$<br><br>
+                <em>Example:</em> $45.7\text{ mL}$ PCIA solution with $1\,\mu\text{g/mL}$ sufentanil<br>
+                $= 45.7\,\mu\text{g sufentanil} \times 1.0\text{ (IV MME factor)} = \mathbf{45.7\text{ mg IV MME}}$.
+              </div>
+            </div>
+
+            <div>
+              <h3 style="font-size: 0.95rem; color: #38bdf8; margin-bottom: 0.5rem;">Demand Bolus &amp; Lockout Verification</h3>
+              <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5;">
+                When compressions are reported without cumulative volume, total delivered dose accounts for successful boluses plus basal background rate:
+              </p>
+              <div class="math-formula-box">
+                <strong>Demand Dose:</strong><br>
+                $\text{Demand Mass} = N_{\text{delivered}} \times V_{\text{bolus}} \times C_{\text{solution}}$<br><br>
+                <strong>Total 24-h Consumption:</strong><br>
+                $\text{Total} = \text{Demand Mass} + (24\text{ hours} \times \text{Basal Rate} \times C_{\text{solution}})$.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 4: Live Interactive Conversion Calculator Sandbox -->
+        <div id="conv-pane-calc" class="conv-content-pane">
+          <div class="calc-grid">
+            
+            <!-- Widget 1: Equianalgesic Converter -->
+            <div class="calc-box">
+              <div style="font-size: 0.85rem; font-weight: 700; color: #34d399; margin-bottom: 0.4rem;">⚡ Equianalgesic Opioid to IV MME Calculator</div>
+              <p style="font-size: 0.74rem; color: var(--text-muted);">Select drug and enter 24h consumption to see exact IV Morphine Milligram Equivalents.</p>
+              
+              <div style="margin-top: 0.75rem;">
+                <label style="font-size: 0.75rem; color: var(--text-secondary);">Select Opioid Formulation:</label>
+                <select id="calc-drug-select" class="calc-input" onchange="runLiveEquiCalc()">
+                  <option value="sufentanil_mcg">IV Sufentanil (µg) [Factor: 1.0 mg MME / µg]</option>
+                  <option value="fentanyl_mcg">IV Fentanyl (µg) [Factor: 0.10 mg MME / µg]</option>
+                  <option value="morphine_mg">IV Morphine (mg) [Factor: 1.0 mg MME / mg]</option>
+                  <option value="hydromorphone_mg">IV Hydromorphone (mg) [Factor: 6.67 mg MME / mg]</option>
+                  <option value="oxycodone_mg">IV Oxycodone (mg) [Factor: 1.0 mg MME / mg]</option>
+                  <option value="dezocine_mg">IV Dezocine (mg) [Factor: 1.0 mg MME / mg]</option>
+                  <option value="tramadol_mg">IV Tramadol (mg) [Factor: 0.10 mg MME / mg]</option>
+                  <option value="pethidine_mg">IV Pethidine (mg) [Factor: 0.10 mg MME / mg]</option>
+                  <option value="butorphanol_mg">IV Butorphanol (mg) [Factor: 5.0 mg MME / mg]</option>
+                </select>
+              </div>
+
+              <div style="margin-top: 0.75rem;">
+                <label style="font-size: 0.75rem; color: var(--text-secondary);">Reported Quantity (in units specified above):</label>
+                <input type="number" id="calc-drug-dose" class="calc-input" value="20" step="any" oninput="runLiveEquiCalc()">
+              </div>
+
+              <div class="calc-result-box">
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Calculated Universal Metric</div>
+                <div id="calc-equi-res" style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.2rem;">20.0 mg IV MME</div>
+                <div id="calc-equi-expl" style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.2rem;">20 µg sufentanil × 1.0 = 20.0 mg IV morphine equivalents</div>
+              </div>
+            </div>
+
+            <!-- Widget 2: Wan / Luo Continuous Estimator -->
+            <div class="calc-box">
+              <div style="font-size: 0.85rem; font-weight: 700; color: #818cf8; margin-bottom: 0.4rem;">📐 Wan / Luo Median &amp; IQR Estimator</div>
+              <p style="font-size: 0.74rem; color: var(--text-muted);">Convert non-parametric five-number summary to parametric Mean ± SD.</p>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.75rem;">
+                <div>
+                  <label style="font-size: 0.72rem; color: var(--text-secondary);">Sample Size ($n$):</label>
+                  <input type="number" id="calc-stat-n" class="calc-input" value="50" min="2" oninput="runLiveStatCalc()">
+                </div>
+                <div>
+                  <label style="font-size: 0.72rem; color: var(--text-secondary);">Q1 (25th percentile):</label>
+                  <input type="number" id="calc-stat-q1" class="calc-input" value="10.0" step="any" oninput="runLiveStatCalc()">
+                </div>
+                <div>
+                  <label style="font-size: 0.72rem; color: var(--text-secondary);">Median ($m$):</label>
+                  <input type="number" id="calc-stat-m" class="calc-input" value="15.0" step="any" oninput="runLiveStatCalc()">
+                </div>
+                <div>
+                  <label style="font-size: 0.72rem; color: var(--text-secondary);">Q3 (75th percentile):</label>
+                  <input type="number" id="calc-stat-q3" class="calc-input" value="22.0" step="any" oninput="runLiveStatCalc()">
+                </div>
+              </div>
+
+              <div class="calc-result-box" style="background: rgba(99, 102, 241, 0.08); border-color: rgba(99, 102, 241, 0.3);">
+                <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700;">Estimated Parametric Distribution</div>
+                <div id="calc-stat-res" style="font-size: 1.4rem; font-weight: 800; color: #818cf8; margin-top: 0.2rem;">15.67 ± 8.89</div>
+                <div id="calc-stat-expl" style="font-size: 0.72rem; color: var(--text-secondary); margin-top: 0.2rem;">Mean via Wan (2014); SD via Shi / Cochrane ($IQR / 1.35$)</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Pane 5: Literature Library & Bibliographic References -->
+        <div id="conv-pane-lit" class="conv-content-pane">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            
+            <div class="ref-card">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="badge badge-indigo">Statistical Transformation</span>
+                <span style="font-size: 0.7rem; color: var(--text-muted);">BMC Med Res Methodol</span>
+              </div>
+              <h4 style="font-size: 0.84rem; margin-top: 0.4rem; color: #f8fafc;">Wan X, Wang W, Liu J, Tong T. (2014)</h4>
+              <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                <em>Estimating the sample mean and standard deviation from the sample size, median, range and/or interquartile range.</em>
+              </p>
+              <div style="font-size: 0.72rem; margin-top: 0.4rem;">
+                <strong>Application:</strong> Foundation for computing estimated sample mean and standard deviation for trials presenting median and IQR.
+                <br><a href="https://doi.org/10.1186/1471-2288-14-135" target="_blank" style="color: #38bdf8; text-decoration: none;">DOI: 10.1186/1471-2288-14-135 ↗</a>
+              </div>
+            </div>
+
+            <div class="ref-card">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="badge badge-indigo">Statistical Transformation</span>
+                <span style="font-size: 0.7rem; color: var(--text-muted);">Stat Methods Med Res</span>
+              </div>
+              <h4 style="font-size: 0.84rem; margin-top: 0.4rem; color: #f8fafc;">Luo D, Wan X, Liu J, Tong T. (2018)</h4>
+              <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                <em>Optimally estimating the sample mean from the sample size, median, mid-range, and/or mid-quartile range.</em>
+              </p>
+              <div style="font-size: 0.72rem; margin-top: 0.4rem;">
+                <strong>Application:</strong> Minimizes mean squared error (MSE) when reconstructing means from skewed non-parametric medical data.
+                <br><a href="https://doi.org/10.1177/0962280216669183" target="_blank" style="color: #38bdf8; text-decoration: none;">DOI: 10.1177/0962280216669183 ↗</a>
+              </div>
+            </div>
+
+            <div class="ref-card">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="badge badge-indigo">Statistical Transformation</span>
+                <span style="font-size: 0.7rem; color: var(--text-muted);">Res Synth Methods</span>
+              </div>
+              <h4 style="font-size: 0.84rem; margin-top: 0.4rem; color: #f8fafc;">Shi J, Luo D, Weng H, et al. (2020)</h4>
+              <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                <em>Optimally estimating the sample standard deviation from the five-number summary.</em>
+              </p>
+              <div style="font-size: 0.72rem; margin-top: 0.4rem;">
+                <strong>Application:</strong> Advanced standard deviation reconstruction accounting for sample size and boundary quantile behavior.
+                <br><a href="https://doi.org/10.1002/jrsm.1429" target="_blank" style="color: #38bdf8; text-decoration: none;">DOI: 10.1002/jrsm.1429 ↗</a>
+              </div>
+            </div>
+
+            <div class="ref-card">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="badge badge-emerald">Cochrane Standard</span>
+                <span style="font-size: 0.7rem; color: var(--text-muted);">Cochrane Library</span>
+              </div>
+              <h4 style="font-size: 0.84rem; margin-top: 0.4rem; color: #f8fafc;">Higgins JPT, Thomas J, et al. (eds) (2023)</h4>
+              <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                <em>Cochrane Handbook for Systematic Reviews of Interventions, Version 6.4. Chapter 6: Choosing effect measures.</em>
+              </p>
+              <div style="font-size: 0.72rem; margin-top: 0.4rem;">
+                <strong>Application:</strong> Section 6.5.2 mandates mathematical transformation of non-parametric continuous metrics and author contact protocol.
+                <br><a href="https://training.cochrane.org/handbook" target="_blank" style="color: #38bdf8; text-decoration: none;">training.cochrane.org/handbook ↗</a>
+              </div>
+            </div>
+
+            <div class="ref-card">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="badge badge-emerald">Clinical Pharmacology</span>
+                <span style="font-size: 0.7rem; color: var(--text-muted);">CDC MMWR Guidelines</span>
+              </div>
+              <h4 style="font-size: 0.84rem; margin-top: 0.4rem; color: #f8fafc;">Dowell D, Ragan KR, Jones CM, et al. (2022)</h4>
+              <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                <em>CDC Clinical Practice Guideline for Prescribing Opioids for Pain — United States, 2022.</em>
+              </p>
+              <div style="font-size: 0.72rem; margin-top: 0.4rem;">
+                <strong>Application:</strong> Universal conversion factors for calculating Morphine Milligram Equivalents (MME) in acute postoperative pain.
+                <br><a href="https://doi.org/10.15585/mmwr.rr7103a1" target="_blank" style="color: #38bdf8; text-decoration: none;">DOI: 10.15585/mmwr.rr7103a1 ↗</a>
+              </div>
+            </div>
+
+            <div class="ref-card">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="badge badge-emerald">Clinical Pharmacology</span>
+                <span style="font-size: 0.7rem; color: var(--text-muted);">ANZCA APM:SE</span>
+              </div>
+              <h4 style="font-size: 0.84rem; margin-top: 0.4rem; color: #f8fafc;">Macintyre PE, Schug SA, Scott DA, et al. (2020)</h4>
+              <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                <em>Acute Pain Management: Scientific Evidence (5th edition). Australian and New Zealand College of Anaesthetists.</em>
+              </p>
+              <div style="font-size: 0.72rem; margin-top: 0.4rem;">
+                <strong>Application:</strong> Clinical consensus on equianalgesic ratios for intravenous sufentanil, fentanyl, oxycodone, and hydromorphone in surgical recovery.
+                <br><a href="https://www.anzca.edu.au" target="_blank" style="color: #38bdf8; text-decoration: none;">anzca.edu.au ↗</a>
+              </div>
+            </div>
+
+            <div class="ref-card">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="badge badge-emerald">Clinical Pharmacology</span>
+                <span style="font-size: 0.7rem; color: var(--text-muted);">Support Care Cancer</span>
+              </div>
+              <h4 style="font-size: 0.84rem; margin-top: 0.4rem; color: #f8fafc;">Treillet E, Liborio-Amancio L, et al. (2018)</h4>
+              <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                <em>Practical issues in calculating equianalgesic doses for opioids: a systematic review and clinical consensus.</em>
+              </p>
+              <div style="font-size: 0.72rem; margin-top: 0.4rem;">
+                <strong>Application:</strong> Validates 1000:1 potency ratio for sufentanil and cross-tolerance handling in acute postoperative settings.
+                <br><a href="https://doi.org/10.1007/s00520-017-3850-9" target="_blank" style="color: #38bdf8; text-decoration: none;">DOI: 10.1007/s00520-017-3850-9 ↗</a>
+              </div>
+            </div>
+
+            <div class="ref-card">
+              <div style="display: flex; justify-content: space-between;">
+                <span class="badge badge-emerald">Clinical Pharmacology</span>
+                <span style="font-size: 0.7rem; color: var(--text-muted);">Anesthesiology</span>
+              </div>
+              <h4 style="font-size: 0.84rem; margin-top: 0.4rem; color: #f8fafc;">ASA Task Force on Acute Pain (2012)</h4>
+              <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.2rem;">
+                <em>Practice guidelines for acute pain management in the perioperative setting: an updated report.</em>
+              </p>
+              <div style="font-size: 0.72rem; margin-top: 0.4rem;">
+                <strong>Application:</strong> Standardization of patient-controlled analgesia (PCA) reservoir metrics, lockout delivery, and rescue administration.
+                <br><a href="https://doi.org/10.1097/ALN.0b013e31823c1030" target="_blank" style="color: #38bdf8; text-decoration: none;">DOI: 10.1097/ALN.0b013e31823c1030 ↗</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Section 3: Author Data Confirmation & "What-If" Sensitivity Simulator -->
       <div class="simulation-panel">
         <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
           <h2>🔬 Author Data Confirmation &amp; "What-If" Sensitivity Simulator</h2>
-          <div style="display: flex; gap: 0.5rem;">
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
             <button class="btn-preset active" data-sim-preset="baseline" onclick="applySimScenario('baseline')">Baseline (Current)</button>
             <button class="btn-preset" data-sim-preset="optimistic" onclick="applySimScenario('optimistic')">Optimistic (−12.7 mg)</button>
             <button class="btn-preset" data-sim-preset="conservative" onclick="applySimScenario('conservative')">Conservative (−3.5 mg)</button>
-            <button class="btn-preset" data-sim-preset="worst" onclick="applySimScenario('worst')">Worst-Case / Trim Bound</button>
+            <button class="btn-preset" data-sim-preset="worst" onclick="applySimScenario('worst')">Worst-Case / Null (0 mg)</button>
           </div>
         </div>
 
@@ -776,17 +1236,33 @@
         </div>
       </div>
 
-      <!-- Active Author Inquiry Roster Table -->
+      <!-- Section 4: Active Author Inquiry Roster Table with Category Filters -->
       <div class="dashboard-card">
-        <div class="card-header">
-          <h2>Active Author Contact Roster &amp; Targeted Variables</h2>
-          <span class="kpi-badge badge-pending">22 Active Study Inquiries</span>
+        <div class="card-header" style="flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <h2>Active Author Contact Roster &amp; Targeted Variables</h2>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Complete directory of drafted letters, target data points, and email contacts.</p>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+            <button class="btn-preset active" id="btn-cat-all" onclick="filterInquiryCategory('all')">All Inquiries (59)</button>
+            <button class="btn-preset" id="btn-cat-a" onclick="filterInquiryCategory('A')">Cat A: Secondary Endpoints (9)</button>
+            <button class="btn-preset" id="btn-cat-b" onclick="filterInquiryCategory('B')">Cat B: Converted Baseline (37)</button>
+            <button class="btn-preset" id="btn-cat-c" onclick="filterInquiryCategory('C')">Cat C: Missing Opioid (13)</button>
+          </div>
         </div>
+
+        <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+          <input type="text" id="inquiry-search-input" class="calc-input" placeholder="🔍 Search author name, study key, or target variable..." style="max-width: 400px; margin-top: 0;" oninput="filterInquirySearch(this.value)">
+          <span id="inquiry-counter-badge" class="kpi-badge badge-pending">Showing 59 of 59 Study Inquiries</span>
+        </div>
+
         <div style="overflow-x: auto;">
           <table class="forest-table">
             <thead>
               <tr>
                 <th>Study Key</th>
+                <th>Category</th>
+                <th>Baseline Status</th>
                 <th>Target Data Point Requested</th>
                 <th>Corresponding Author &amp; Institution</th>
                 <th>Contact Email</th>

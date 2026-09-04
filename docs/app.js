@@ -19,6 +19,9 @@ let currentSort = 'effect_asc';
 // Simulation overrides state: { [studyId]: { mean_diff, se, status } }
 let simOverrides = {};
 let activeSimStudyId = '1879895909'; // Default: #25 - He 2026
+let selectedInquiryCategory = 'all';
+let inquirySearchQuery = '';
+let activeConvTab = 'equi';
 
 document.addEventListener('DOMContentLoaded', () => {
   initObjectivesBar();
@@ -26,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initGlobalFilters();
   initSensitivityControls();
   initInquirySimulator();
+  runLiveEquiCalc();
+  runLiveStatCalc();
   renderAllViews();
 });
 
@@ -1034,6 +1039,186 @@ function updateSimulationComparison() {
   }
 }
 
+// Helper to classify study into 3 Cochrane inquiry categories
+function getStudyInquiryCategory(s) {
+  if (!s.author_inquiry || !s.author_inquiry.has_inquiry) return null;
+  const target = (s.author_inquiry.target_data || "").toLowerCase();
+  const impact = (s.author_inquiry.impact_desc || "").toLowerCase();
+  const hasOpioidOutcome = s.outcomes && s.outcomes.opioid_24h !== null;
+
+  const mentionsOpioid = target.includes("opioid") || target.includes("morphine") || target.includes("sufentanil") || target.includes("fentanyl") || target.includes("pcia") || target.includes("pca") || target.includes("remifentanil") || target.includes("analgesic") || target.includes("analgesia") || target.includes("hydromorphone") || target.includes("etoricoxib") || target.includes("pethidine") || target.includes("oxycodone");
+
+  if (!hasOpioidOutcome) {
+    return {
+      cat: 'C',
+      badgeClass: 'badge-cat-c',
+      catName: 'Category C: Missing Opioid Dose',
+      derivation: 'Null / Awaiting IPD',
+      derivationBadge: '<span class="badge-derivation" style="color: #fb7185; border-color: rgba(244,63,94,0.4);">Null / Awaiting IPD</span>'
+    };
+  }
+
+  if (!mentionsOpioid) {
+    return {
+      cat: 'A',
+      badgeClass: 'badge-cat-a',
+      catName: 'Category A: Secondary Endpoints',
+      derivation: 'Exact Published Table',
+      derivationBadge: '<span class="badge-derivation" style="color: #38bdf8; border-color: rgba(6,182,212,0.4);">Exact Published Table</span>'
+    };
+  }
+
+  let derivation = 'Cochrane MME Converted';
+  if (target.includes("median") || impact.includes("median") || target.includes("iqr") || impact.includes("iqr")) {
+    derivation = 'Wan/Luo Converted Median';
+  } else if (target.includes("ml") || target.includes("concentration") || target.includes("solution") || target.includes("bolus") || impact.includes("ml")) {
+    derivation = 'PCA mL to µg MME';
+  } else if (target.includes("48") || impact.includes("48")) {
+    derivation = '48h to 24h Extrapolated';
+  } else if (target.includes("figure") || impact.includes("graph") || target.includes("plotted") || impact.includes("digitiz")) {
+    derivation = 'WebPlotDigitizer Graph';
+  }
+
+  return {
+    cat: 'B',
+    badgeClass: 'badge-cat-b',
+    catName: 'Category B: Converted Baseline',
+    derivation: derivation,
+    derivationBadge: `<span class="badge-derivation" style="color: #fbbf24; border-color: rgba(245,158,11,0.4);">${derivation}</span>`
+  };
+}
+
+function filterInquiryCategory(cat) {
+  selectedInquiryCategory = cat;
+  document.querySelectorAll('[id^="btn-cat-"]').forEach(b => b.classList.remove('active'));
+  const btn = document.getElementById(`btn-cat-${cat.toLowerCase()}`);
+  if (btn) btn.classList.add('active');
+
+  document.querySelectorAll('.category-summary-card').forEach(c => c.classList.remove('active'));
+  if (cat !== 'all') {
+    const card = document.getElementById(`card-cat-${cat.toLowerCase()}`);
+    if (card) card.classList.add('active');
+  }
+
+  renderInquiriesView();
+}
+
+function filterInquirySearch(val) {
+  inquirySearchQuery = (val || '').toLowerCase().trim();
+  renderInquiriesView();
+}
+
+function switchConvTab(tabId) {
+  activeConvTab = tabId;
+  document.querySelectorAll('.conv-subnav-btn').forEach(b => b.classList.remove('active'));
+  const btn = document.querySelector(`[data-conv-tab="${tabId}"]`);
+  if (btn) btn.classList.add('active');
+
+  document.querySelectorAll('.conv-content-pane').forEach(p => p.classList.remove('active'));
+  const pane = document.getElementById(`conv-pane-${tabId}`);
+  if (pane) pane.classList.add('active');
+}
+
+function runLiveEquiCalc() {
+  const drugSelect = document.getElementById('calc-drug-select');
+  const doseInput = document.getElementById('calc-drug-dose');
+  const resElem = document.getElementById('calc-equi-res');
+  const explElem = document.getElementById('calc-equi-expl');
+  if (!drugSelect || !doseInput || !resElem) return;
+
+  const dose = parseFloat(doseInput.value) || 0;
+  const drug = drugSelect.value;
+  let factor = 1.0;
+  let unit = 'mg';
+  let drugName = 'Morphine';
+
+  switch (drug) {
+    case 'sufentanil_mcg':
+      factor = 1.0; // 1 mcg sufentanil = 1.0 mg IV morphine
+      unit = 'µg';
+      drugName = 'IV Sufentanil';
+      break;
+    case 'fentanyl_mcg':
+      factor = 0.10; // 100 mcg fentanyl = 10 mg IV morphine -> 1 mcg = 0.10 mg
+      unit = 'µg';
+      drugName = 'IV Fentanyl';
+      break;
+    case 'morphine_mg':
+      factor = 1.0;
+      unit = 'mg';
+      drugName = 'IV Morphine';
+      break;
+    case 'hydromorphone_mg':
+      factor = 6.667; // 1.5 mg hydromorphone = 10 mg IV morphine -> 1 mg = 6.667 mg
+      unit = 'mg';
+      drugName = 'IV Hydromorphone';
+      break;
+    case 'oxycodone_mg':
+      factor = 1.0;
+      unit = 'mg';
+      drugName = 'IV Oxycodone';
+      break;
+    case 'dezocine_mg':
+      factor = 1.0;
+      unit = 'mg';
+      drugName = 'IV Dezocine';
+      break;
+    case 'tramadol_mg':
+      factor = 0.10; // 100 mg tramadol = 10 mg IV morphine
+      unit = 'mg';
+      drugName = 'IV Tramadol';
+      break;
+    case 'pethidine_mg':
+      factor = 0.10; // 100 mg pethidine = 10 mg IV morphine
+      unit = 'mg';
+      drugName = 'IV Pethidine';
+      break;
+    case 'butorphanol_mg':
+      factor = 5.0; // 2 mg butorphanol = 10 mg IV morphine
+      unit = 'mg';
+      drugName = 'IV Butorphanol';
+      break;
+  }
+
+  const mme = (dose * factor).toFixed(2);
+  resElem.innerText = `${mme} mg IV MME`;
+  if (explElem) {
+    explElem.innerText = `${dose} ${unit} ${drugName} × ${factor} = ${mme} mg IV Morphine Milligram Equivalents`;
+  }
+}
+
+function runLiveStatCalc() {
+  const nInput = document.getElementById('calc-stat-n');
+  const q1Input = document.getElementById('calc-stat-q1');
+  const mInput = document.getElementById('calc-stat-m');
+  const q3Input = document.getElementById('calc-stat-q3');
+  const resElem = document.getElementById('calc-stat-res');
+  const explElem = document.getElementById('calc-stat-expl');
+  if (!nInput || !q1Input || !mInput || !q3Input || !resElem) return;
+
+  const n = parseInt(nInput.value) || 50;
+  const q1 = parseFloat(q1Input.value) || 0;
+  const m = parseFloat(mInput.value) || 0;
+  const q3 = parseFloat(q3Input.value) || 0;
+
+  // Wan et al. 2014: Mean ~ (q1 + m + q3) / 3
+  const wanMean = (q1 + m + q3) / 3;
+
+  // Luo et al. 2018 optimal weighting
+  const w1 = 0.5 - (0.7 / n);
+  const w2 = 1.4 / n;
+  const luoMean = (w1 * q1) + (w2 * m) + (w1 * q3);
+
+  // Shi et al. / Cochrane approximation: SD ~ (q3 - q1) / 1.35
+  const iqr = q3 - q1;
+  const sd = iqr > 0 ? (iqr / 1.35) : 0;
+
+  resElem.innerText = `${wanMean.toFixed(2)} ± ${sd.toFixed(2)}`;
+  if (explElem) {
+    explElem.innerHTML = `Wan (2014) Mean: <strong>${wanMean.toFixed(2)}</strong> | Luo (2018) Optimal Mean: <strong>${luoMean.toFixed(2)}</strong> | SD: <strong>${sd.toFixed(2)}</strong> (IQR/1.35)`;
+  }
+}
+
 function renderInquiriesView() {
   updateSimulationComparison();
 
@@ -1042,18 +1227,67 @@ function renderInquiriesView() {
 
   const inqStudies = window.STUDIES_DATA.filter(s => s.author_inquiry && s.author_inquiry.has_inquiry);
 
-  tbody.innerHTML = inqStudies.map(s => {
+  // Compute category counts
+  let countA = 0, countB = 0, countC = 0;
+  inqStudies.forEach(s => {
+    s._catMeta = getStudyInquiryCategory(s);
+    if (s._catMeta.cat === 'A') countA++;
+    else if (s._catMeta.cat === 'B') countB++;
+    else if (s._catMeta.cat === 'C') countC++;
+  });
+
+  // Update DOM badges for counts
+  const catACntElem = document.getElementById('cat-a-count');
+  if (catACntElem) catACntElem.innerText = `${countA} Trials (${((countA / inqStudies.length) * 100).toFixed(1)}%)`;
+  const catBCntElem = document.getElementById('cat-b-count');
+  if (catBCntElem) catBCntElem.innerText = `${countB} Trials (${((countB / inqStudies.length) * 100).toFixed(1)}%)`;
+  const catCCntElem = document.getElementById('cat-c-count');
+  if (catCCntElem) catCCntElem.innerText = `${countC} Trials (${((countC / inqStudies.length) * 100).toFixed(1)}%)`;
+
+  const btnAll = document.getElementById('btn-cat-all');
+  if (btnAll) btnAll.innerText = `All Inquiries (${inqStudies.length})`;
+  const btnA = document.getElementById('btn-cat-a');
+  if (btnA) btnA.innerText = `Cat A: Secondary Endpoints (${countA})`;
+  const btnB = document.getElementById('btn-cat-b');
+  if (btnB) btnB.innerText = `Cat B: Converted Baseline (${countB})`;
+  const btnC = document.getElementById('btn-cat-c');
+  if (btnC) btnC.innerText = `Cat C: Missing Opioid (${countC})`;
+
+  // Filter studies based on selectedCategory and inquirySearchQuery
+  const filtered = inqStudies.filter(s => {
+    if (selectedInquiryCategory !== 'all' && s._catMeta.cat !== selectedInquiryCategory) return false;
+    if (inquirySearchQuery) {
+      const q = inquirySearchQuery;
+      const matchKey = s.key.toLowerCase().includes(q);
+      const matchTarget = (s.author_inquiry.target_data || '').toLowerCase().includes(q);
+      const matchAuthor = (s.author_inquiry.corresponding_author || '').toLowerCase().includes(q);
+      const matchInst = (s.author_inquiry.institution || '').toLowerCase().includes(q);
+      if (!matchKey && !matchTarget && !matchAuthor && !matchInst) return false;
+    }
+    return true;
+  });
+
+  const counterBadge = document.getElementById('inquiry-counter-badge');
+  if (counterBadge) {
+    counterBadge.innerText = `Showing ${filtered.length} of ${inqStudies.length} Study Inquiries`;
+  }
+
+  tbody.innerHTML = filtered.map(s => {
     const isOverridden = !!simOverrides[s.id];
     const statusBadge = isOverridden 
       ? `<span class="kpi-badge badge-confirmed">Simulated (${simOverrides[s.id].mean_diff.toFixed(1)} mg)</span>`
       : `<span class="kpi-badge badge-pending">Pending Response</span>`;
 
+    const catBadge = `<span class="${s._catMeta.badgeClass}"><span>${s._catMeta.cat === 'A' ? '🔵' : s._catMeta.cat === 'B' ? '🟡' : '🔴'}</span> Cat ${s._catMeta.cat}</span>`;
+
     return `
       <tr>
         <td style="font-weight: 700; color: var(--text-accent);"><a href="javascript:void(0)" onclick="openStudyDrawer('${s.id}')" style="color: inherit; text-decoration: none;">${s.key}</a></td>
-        <td style="font-size: 0.78rem; max-width: 280px;">${s.author_inquiry.target_data}</td>
+        <td>${catBadge}</td>
+        <td>${s._catMeta.derivationBadge}</td>
+        <td style="font-size: 0.78rem; max-width: 260px;">${s.author_inquiry.target_data}</td>
         <td style="font-size: 0.78rem;"><strong>${s.author_inquiry.corresponding_author}</strong><br><span style="color: var(--text-muted); font-size: 0.72rem;">${s.author_inquiry.institution}</span></td>
-        <td style="font-size: 0.75rem; font-family: var(--font-mono); color: #38bdf8;">${s.author_inquiry.email}</td>
+        <td style="font-size: 0.75rem; font-family: var(--font-mono); color: #38bdf8;"><a href="mailto:${s.author_inquiry.email}" style="color: inherit; text-decoration: none;">${s.author_inquiry.email}</a></td>
         <td>${statusBadge}</td>
         <td>
           <button class="btn-preset" style="font-size: 0.72rem; padding: 0.2rem 0.5rem;" onclick="selectStudyInSimulator('${s.id}')">Simulate</button>
