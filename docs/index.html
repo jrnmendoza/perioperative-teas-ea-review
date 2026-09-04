@@ -17,7 +17,7 @@
       <div class="brand-badge">LUND UNIV</div>
       <div class="brand-title">
         <h1>Perioperative TEAS & EA Opioid-Sparing Systematic Review</h1>
-        <p>Interactive Evidence & Meta-Analysis Dashboard • 63 Included RCTs • Stata 19.5 Validated</p>
+        <p>Protocol characteristics associated with clinically meaningful 24-h opioid sparing • PROSPERO 2026 • Lund University • Stata 19.5 Validated</p>
       </div>
     </div>
 
@@ -39,16 +39,16 @@
 
   <!-- Review Objectives Quick-Bar -->
   <div class="objectives-bar">
-    <span class="objectives-label">🎯 Protocol Objectives:</span>
+    <span class="objectives-label">🎯 PROSPERO Objectives:</span>
     <button class="obj-btn active" data-obj="all">All Included (63)</button>
     <button class="obj-btn" data-obj="obj1_teas">Obj 1: TEAS vs Sham <span class="obj-badge-primary">Primary</span></button>
     <button class="obj-btn" data-obj="obj1_ea">Obj 1: EA vs Sham <span class="obj-badge-primary">Primary</span></button>
-    <button class="obj-btn" data-obj="obj2_pain">Obj 2: Pain Rest &amp; Movement</button>
-    <button class="obj-btn" data-obj="obj3_subgroups">Obj 3: Protocol Subgroups</button>
-    <button class="obj-btn" data-obj="obj4_mcid">Obj 4: MCID Quad Studio</button>
+    <button class="obj-btn" data-obj="obj2_pain">Obj 2: Pain Rest &amp; Movement (~24h)</button>
+    <button class="obj-btn" data-obj="obj3_subgroups">Obj 3: Protocol Moderators &amp; Meta-Reg</button>
+    <button class="obj-btn" data-obj="obj4_mcid">Obj 4: Clinical Meaningfulness (10 &amp; 8 mg MCID)</button>
     <button class="obj-btn" data-obj="obj5_supportive">Obj 5: Supportive Syntheses <span class="obj-badge-supportive">Usual Care</span></button>
     <button class="obj-btn" data-obj="obj6_secondary">Obj 6: Secondary Endpoints</button>
-    <button class="obj-btn" data-obj="obj7_grade">Obj 7: GRADE &amp; RoB 2</button>
+    <button class="obj-btn" data-obj="obj7_grade">Obj 7: RoB 2 &amp; GRADE Evidence</button>
   </div>
 
   <!-- Global Filter Toolbar -->
@@ -141,6 +141,35 @@
 
     <!-- TAB 1: OVERVIEW -->
     <div id="tab-overview" class="tab-content active">
+      
+      <!-- PROSPERO Registration & Synthesis Standard Banner -->
+      <div class="protocol-callout" style="margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; flex-wrap: wrap;">
+              <span class="badge badge-indigo">PROSPERO Registered: 20 August 2026</span>
+              <span class="badge badge-emerald">Lund University • Region Skåne, Sweden</span>
+              <span class="badge" style="background: rgba(14, 165, 233, 0.2); color: #38bdf8;">Cochrane &amp; PRISMA-P Compliant</span>
+            </div>
+            <h2 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.4rem; line-height: 1.35;">
+              Protocol characteristics associated with clinically meaningful 24-hour opioid sparing from perioperative transcutaneous electrical acupoint stimulation and electroacupuncture: a systematic review and meta-regression of randomized controlled trials
+            </h2>
+            <div style="font-size: 0.8rem; color: #c7d2fe; line-height: 1.6; margin-bottom: 0.5rem;">
+              <strong>Review Team:</strong> John Ryan Nual Mendoza (Review Guarantor &amp; Contact: <code>john_ryan.nual_mendoza@med.lu.se</code>), Siv Katrin Peters, Dr. Carina Sjöberg, Dr. Pether Jildenstål
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.55; max-width: 1050px;">
+              <strong>Locked Synthesis Standard:</strong> Non-invasive surface stimulation (TEAS) and needle electroacupuncture (EA) share electrical stimulation but differ in invasiveness, sensory experience, blinding, and clinical implementation. <strong>TEAS and EA will not be combined in a pooled estimate</strong>; all analyses are stratified by modality. Primary comparisons evaluate TEAS vs sham TEAS and EA vs sham EA using Restricted Maximum Likelihood (REML) random-effects pooling, Hartung–Knapp standard errors, and 95% prediction intervals. Supportive syntheses evaluate usual care and open-label controls separately.
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.4rem; min-width: 220px; background: rgba(0,0,0,0.25); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.08);">
+            <div style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">PROSPERO Clinical Margin</div>
+            <div style="font-size: 1.15rem; font-weight: 800; color: #34d399;">≥ 10 mg IV MME</div>
+            <div style="font-size: 0.72rem; color: var(--text-secondary);">with Pain Worsening ≤ +1.0 VAS (upper 95% CI limit)</div>
+            <div style="font-size: 0.7rem; color: #fbbf24; margin-top: 0.2rem;">Sensitivity: ≥ 8 mg or ≥ 30% relative</div>
+          </div>
+        </div>
+      </div>
+
       <div class="dashboard-grid-2">
         <div class="dashboard-card">
           <div class="card-header">
@@ -508,17 +537,17 @@
           <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
             <h2>Dynamic Interactive Forest Plot</h2>
             <select id="meta-outcome-select" class="filter-select" style="min-width: 340px;">
-              <optgroup label="Primary Outcomes">
-                <option value="opioid_24h">[Obj 1] Cumulative 0–24h Opioid Consumption (mg IV MME)</option>
-                <option value="pain_rest_24h">[Obj 2] Pain Intensity at Rest at ~24h (VAS 0–10)</option>
-                <option value="pain_movement_24h">[Obj 2] Pain Intensity During Movement at ~24h (VAS 0–10)</option>
+              <optgroup label="Main Protocol Outcomes">
+                <option value="opioid_24h">[Obj 1] Cumulative 0–24h Opioid Consumption (mg IV MME) [Main]</option>
+                <option value="pain_rest_24h">[Obj 2] Pain Intensity at Rest at ~24h (VAS 0–10) [Co-Outcome]</option>
+                <option value="pain_movement_24h">[Obj 2] Pain Intensity During Movement at ~24h (VAS 0–10) [Co-Outcome]</option>
               </optgroup>
-              <optgroup label="Secondary Outcomes (Objective 6)">
+              <optgroup label="Additional Acute &amp; Functional Endpoints (Objective 6)">
                 <option value="ponv_24h">[Obj 6] Postoperative Nausea &amp; Vomiting (0–24h) [Risk Ratio]</option>
-                <option value="flatus_time">[Obj 6] Time to First Flatus (hours) [Mean Diff]</option>
-                <option value="hospital_stay">[Obj 6] Length of Hospital Stay (days) [Mean Diff]</option>
                 <option value="rescue_analgesia">[Obj 6] Rescue Analgesia Requirements [Risk Ratio]</option>
-                <option value="intraop_opioid">[Obj 6] Intraoperative Opioid Requirements (µg remifentanil)</option>
+                <option value="flatus_time">[Obj 6] Time to First Flatus (GI Recovery) (hours) [Mean Diff]</option>
+                <option value="hospital_stay">[Obj 6] Length of Hospital Stay (days) [Mean Diff]</option>
+                <option value="intraop_opioid">[Obj 6] Intraoperative Opioid Requirements (µg remifentanil equiv)</option>
               </optgroup>
             </select>
           </div>
@@ -526,13 +555,21 @@
             <div style="display: flex; gap: 0.4rem; align-items: center;">
               <span class="filter-label">Subgroups:</span>
               <select id="meta-subgroup-select" class="filter-select">
-                <option value="none">None (Pooled Overall)</option>
-                <option value="stratum">Obj 1 &amp; 5: Modality × Comparator (Sham vs Usual Care)</option>
-                <option value="timing">Obj 3: Timing (Pre / Intra / Post / Multi-phase)</option>
-                <option value="frequency">Obj 3: Frequency (2/100 Hz vs 100 Hz vs 2–10 Hz)</option>
-                <option value="sessions">Obj 3: Sessions (Single vs Multiple)</option>
-                <option value="duration">Obj 3: Duration (≤30 min vs 31–60 min vs >60 min)</option>
-                <option value="intensity">Obj 3: Intensity (Tolerable vs Strong)</option>
+                <optgroup label="Protocol Modality Stratification">
+                  <option value="none">Modality-Stratified (Protocol Standard: TEAS vs EA)</option>
+                  <option value="stratum">Obj 1 &amp; 5: Modality × Comparator (Sham vs Usual Care)</option>
+                </optgroup>
+                <optgroup label="Prespecified Protocol Moderators (Objective 3)">
+                  <option value="timing">Obj 3: Timing (Pre / Intra / Post / Multi-phase)</option>
+                  <option value="frequency">Obj 3: Frequency (Low &lt;10Hz / High 100Hz / Dense-Disperse 2/100Hz)</option>
+                  <option value="sessions">Obj 3: Sessions (Single vs Repeated before 24h)</option>
+                  <option value="duration">Obj 3: Cumulative Stimulation Duration (&lt;30 min vs 30 min vs &gt;60 min)</option>
+                  <option value="intensity">Obj 3: Stimulation Intensity (Sub-sensory vs Twitching vs Strong)</option>
+                </optgroup>
+                <optgroup label="Contextual &amp; Quality Adjustments">
+                  <option value="surgery">Contextual: Surgical Specialty</option>
+                  <option value="rob">Quality: Cochrane RoB 2 Overall Judgment</option>
+                </optgroup>
               </select>
             </div>
             <div style="display: flex; gap: 0.4rem; align-items: center;">
@@ -551,9 +588,9 @@
         <div class="protocol-callout" style="margin: 0.75rem 1.25rem;">
           <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
             <div>
-              <strong style="color: #c7d2fe;">🔒 Protocol Synthesis Standard:</strong>
+              <strong style="color: #c7d2fe;">🔒 PROSPERO Protocol Synthesis Standard:</strong>
               <span style="color: var(--text-secondary); font-size: 0.8rem; margin-left: 0.35rem;">
-                TEAS and EA will not be combined in a grand pooled estimate. Analyses are stratified by modality. Primary comparisons evaluate TEAS vs sham TEAS and EA vs sham EA using REML + Hartung–Knapp standard errors and 95% prediction intervals.
+                TEAS and EA will not be combined in a pooled estimate. Analyses are stratified by modality. Primary comparisons evaluate TEAS vs sham TEAS and EA vs sham EA using REML + Hartung–Knapp standard errors and 95% prediction intervals.
               </span>
             </div>
             <span class="badge badge-indigo" style="white-space: nowrap;">Stata 19.5 Validated</span>
@@ -585,11 +622,23 @@
       <div class="dashboard-card">
         <div class="card-header">
           <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+              <span class="badge badge-indigo">PROSPERO Objective 4</span>
+              <span class="badge badge-emerald">Clinical Importance &amp; Trade-Off Studio</span>
+            </div>
             <h2>Clinical Importance &amp; Trade-Off Studio (Objective 4)</h2>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Evaluating whether 0–24h Opioid Reduction achieves prespecified MCID (≥ 5 mg IV MME) without clinically important worsening of postoperative pain (≤ +0.5 VAS margin).</p>
+            <p id="mcid-subtitle-text" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
+              Evaluating whether 0–24h Opioid Reduction achieves the prespecified PROSPERO threshold (≥ 10 mg IV MME) without clinically important worsening of postoperative pain (≤ +1.0 VAS margin; upper 95% CI examined).
+            </p>
           </div>
-          <div style="display: flex; gap: 0.5rem;">
-            <button id="btn-export-mcid-report" class="btn-copy-strategy">📋 Copy MCID Summary</button>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+            <div class="mcid-threshold-toggle" style="display: flex; gap: 0.3rem; background: rgba(255,255,255,0.06); padding: 3px; border-radius: 6px; border: 1px solid var(--border-subtle);">
+              <button class="btn-mcid-thresh active" data-thresh="10mg" onclick="switchMcidThreshold('10mg')" style="padding: 0.35rem 0.65rem; font-size: 0.75rem; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; background: var(--accent-primary); color: #fff;">Primary: ≥10 mg (Margin +1.0)</button>
+              <button class="btn-mcid-thresh" data-thresh="8mg" onclick="switchMcidThreshold('8mg')" style="padding: 0.35rem 0.65rem; font-size: 0.75rem; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; background: transparent; color: var(--text-secondary);">Sensitivity: ≥8 mg</button>
+              <button class="btn-mcid-thresh" data-thresh="30pct" onclick="switchMcidThreshold('30pct')" style="padding: 0.35rem 0.65rem; font-size: 0.75rem; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; background: transparent; color: var(--text-secondary);">Sensitivity: ≥30% Relative</button>
+              <button class="btn-mcid-thresh" data-thresh="5mg" onclick="switchMcidThreshold('5mg')" style="padding: 0.35rem 0.65rem; font-size: 0.75rem; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; background: transparent; color: var(--text-secondary);">Exploratory: ≥5 mg</button>
+            </div>
+            <button id="btn-export-mcid-report" class="btn-copy-strategy">📋 Copy PROSPERO MCID Summary</button>
           </div>
         </div>
 
@@ -598,27 +647,27 @@
           <div class="kpi-grid" style="grid-template-columns: repeat(4, 1fr);">
             <div class="kpi-card">
               <div class="kpi-title">Optimal Synergistic Zone</div>
-              <div class="kpi-value" id="kpi-mcid-q1-count" style="color: #34d399;">28</div>
-              <div class="kpi-sub" id="kpi-mcid-q1-pct">44.4% of all 63 trials</div>
-              <span class="kpi-badge badge-emerald">Opioid Sparing ≥ 5 mg + Pain Relief</span>
+              <div class="kpi-value" id="kpi-mcid-q1-count" style="color: #34d399;">1</div>
+              <div class="kpi-sub" id="kpi-mcid-q1-pct">1.6% of reporting trials</div>
+              <span class="kpi-badge badge-emerald" id="badge-q1-kpi">Opioid Sparing ≥ 10 mg + Pain Relief</span>
             </div>
             <div class="kpi-card">
-              <div class="kpi-title">Sub-MCID Sparing Zone</div>
-              <div class="kpi-value" id="kpi-mcid-q2-count" style="color: #38bdf8;">27</div>
-              <div class="kpi-sub" id="kpi-mcid-q2-pct">42.9% of all 63 trials</div>
-              <span class="kpi-badge badge-indigo">Sparing &lt; 5 mg + Pain Relief</span>
+              <div class="kpi-title">Sub-Threshold Sparing Zone</div>
+              <div class="kpi-value" id="kpi-mcid-q2-count" style="color: #38bdf8;">56</div>
+              <div class="kpi-sub" id="kpi-mcid-q2-pct">88.9% of reporting trials</div>
+              <span class="kpi-badge badge-indigo" id="badge-q2-kpi">Sparing &lt; 10 mg + Pain Relief</span>
             </div>
             <div class="kpi-card">
               <div class="kpi-title">Pain Compromise Zone</div>
               <div class="kpi-value" id="kpi-mcid-q3-count" style="color: #f59e0b;">0</div>
-              <div class="kpi-sub" id="kpi-mcid-q3-pct">0.0% of all 63 trials</div>
-              <span class="kpi-badge badge-amber">Sparing ≥ 5 mg but Pain Worsened</span>
+              <div class="kpi-sub" id="kpi-mcid-q3-pct">0.0% of reporting trials</div>
+              <span class="kpi-badge badge-amber" id="badge-q3-kpi">Pain Worsened &gt; +1.0 VAS</span>
             </div>
             <div class="kpi-card">
               <div class="kpi-title">Ineffective Zone</div>
-              <div class="kpi-value" id="kpi-mcid-q4-count" style="color: #f87171;">8</div>
-              <div class="kpi-sub" id="kpi-mcid-q4-pct">12.7% of all 63 trials</div>
-              <span class="kpi-badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">No Opioid Sparing</span>
+              <div class="kpi-value" id="kpi-mcid-q4-count" style="color: #f87171;">6</div>
+              <div class="kpi-sub" id="kpi-mcid-q4-pct">9.5% of reporting trials</div>
+              <span class="kpi-badge" id="badge-q4-kpi" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">No Opioid Sparing</span>
             </div>
           </div>
 
@@ -630,7 +679,7 @@
                 <div style="display: flex; gap: 1rem; font-size: 0.75rem;">
                   <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #38bdf8; display: inline-block;"></span> TEAS (Surface)</span>
                   <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #a78bfa; display: inline-block;"></span> EA (Needle)</span>
-                  <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="border-top: 2px dashed #34d399; width: 14px; display: inline-block;"></span> MCID Threshold (5 mg)</span>
+                  <span style="display: flex; align-items: center; gap: 0.35rem;"><span style="border-top: 2px dashed #34d399; width: 14px; display: inline-block;"></span> PROSPERO Threshold Line</span>
                 </div>
               </div>
               <div class="mcid-svg-container" id="mcid-plot-container">
@@ -646,20 +695,20 @@
               <div class="quadrant-card q1">
                 <div class="quadrant-title">
                   <span style="color: #34d399;">Quadrant 1: Optimal Synergistic</span>
-                  <span class="kpi-badge badge-emerald" id="badge-q1-count">28 Trials (44.4%)</span>
+                  <span class="kpi-badge badge-emerald" id="badge-q1-count">1 Trial (1.6%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  Demonstrates <strong>true clinical synergy</strong>: patients achieve clinically meaningful opioid reduction (≥ 5.0 mg IV MME sparing) while concomitantly experiencing lower or equivalent postoperative pain. Zero risk of breakthrough pain.
+                  Demonstrates <strong>true clinical synergy</strong>: patients achieve prespecified PROSPERO opioid reduction while concomitantly experiencing lower or equivalent postoperative pain. Zero risk of breakthrough pain.
                 </div>
               </div>
 
               <div class="quadrant-card q2">
                 <div class="quadrant-title">
-                  <span style="color: #38bdf8;">Quadrant 2: Sub-MCID Analgesia</span>
-                  <span class="kpi-badge badge-indigo" id="badge-q2-count">27 Trials (42.9%)</span>
+                  <span style="color: #38bdf8;">Quadrant 2: Sub-Threshold Analgesia</span>
+                  <span class="kpi-badge badge-indigo" id="badge-q2-count">56 Trials (88.9%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  Patients experience confirmed postoperative analgesia and opioid reduction, but the absolute magnitude falls below the conservative 5 mg IV MME threshold (e.g. minor surgical procedures with low baseline opioid requirements).
+                  Patients experience confirmed postoperative analgesia and opioid reduction, but the absolute magnitude falls below the conservative threshold (e.g. minor surgical procedures where baseline 24-h opioid consumption is already low).
                 </div>
               </div>
 
@@ -669,14 +718,14 @@
                   <span class="kpi-badge badge-amber" id="badge-q3-count">0 Trials (0.0%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  <strong>Not observed in any audited trial:</strong> Opioid reduction achieved at the expense of clinically unacceptable pain worsening (> +0.5 VAS margin). Confirms TEAS/EA does not leave patients with unrelieved pain.
+                  <strong>Not observed in any audited trial:</strong> Opioid reduction achieved at the expense of clinically unacceptable pain worsening (> +1.0 VAS margin). Confirms TEAS/EA does not leave patients with unrelieved pain.
                 </div>
               </div>
 
               <div class="quadrant-card q4">
                 <div class="quadrant-title">
                   <span style="color: #f87171;">Quadrant 4: Ineffective / Null</span>
-                  <span class="kpi-badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171;" id="badge-q4-count">8 Trials (12.7%)</span>
+                  <span class="kpi-badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171;" id="badge-q4-count">6 Trials (9.5%)</span>
                 </div>
                 <div class="quadrant-desc">
                   Trials showing negligible differences between active stimulation and control, primarily under-powered pilot studies or trials with suboptimal needle placement/sub-sensory stimulation parameters.
@@ -684,15 +733,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-                <th>Weight</th>
-                <th class="forest-svg-cell" style="text-align: center;">Forest Plot [95% CI &amp; Prediction]</th>
-              </tr>
-            </thead>
-            <tbody id="forest-table-body"></tbody>
-          </table>
         </div>
       </div>
     </div>
@@ -970,33 +1010,39 @@
         <!-- Clinical Thresholds & Leave-One-Out -->
         <div class="dashboard-card">
           <div class="card-header">
-            <h3>Clinical Thresholds &amp; Influence Diagnostics</h3>
+            <h3>PROSPERO Clinical Thresholds &amp; Influence Diagnostics</h3>
           </div>
           <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 1rem;">
-            Evaluation of prespecified clinical thresholds (5 mg IV MME, 8 mg IV MME, 30% reduction) and leave-one-out sensitivity:
+            Evaluation of prespecified PROSPERO clinical thresholds (10 mg IV MME primary, 8 mg IV MME sensitivity, 30% relative reduction) without clinically important pain worsening (margin ≤ +1.0 VAS):
           </p>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
-            <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-radius: var(--radius-sm); text-align: center;">
-              <div style="font-size: 0.75rem; color: var(--text-muted);">5.0 mg IV MME Threshold</div>
-              <div style="font-size: 1.4rem; font-weight: 800; color: #34d399; margin-top: 0.2rem;">22.2%</div>
-              <div style="font-size: 0.7rem; color: var(--text-secondary);">8 of 36 TEAS trials achieve ≥ 5 mg</div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1rem;">
+            <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-radius: var(--radius-sm); text-align: center; border: 1px solid rgba(16, 185, 129, 0.25);">
+              <div style="font-size: 0.72rem; color: #34d399; font-weight: 700;">10.0 mg IV MME (Primary)</div>
+              <div style="font-size: 1.3rem; font-weight: 800; color: #34d399; margin-top: 0.2rem;">1 Trial</div>
+              <div style="font-size: 0.68rem; color: var(--text-secondary);">1.6% of trials achieve ≥ 10 mg</div>
             </div>
 
-            <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-radius: var(--radius-sm); text-align: center;">
-              <div style="font-size: 0.75rem; color: var(--text-muted);">8.0 mg IV MME Threshold</div>
-              <div style="font-size: 1.4rem; font-weight: 800; color: #fbbf24; margin-top: 0.2rem;">8.3%</div>
-              <div style="font-size: 0.7rem; color: var(--text-secondary);">3 of 36 TEAS trials achieve ≥ 8 mg</div>
+            <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-radius: var(--radius-sm); text-align: center; border: 1px solid rgba(245, 158, 11, 0.25);">
+              <div style="font-size: 0.72rem; color: #fbbf24; font-weight: 700;">8.0 mg IV MME (Sensitivity)</div>
+              <div style="font-size: 1.3rem; font-weight: 800; color: #fbbf24; margin-top: 0.2rem;">20 Trials</div>
+              <div style="font-size: 0.68rem; color: var(--text-secondary);">31.7% of trials achieve ≥ 8 mg</div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-radius: var(--radius-sm); text-align: center; border: 1px solid rgba(129, 140, 248, 0.25);">
+              <div style="font-size: 0.72rem; color: #818cf8; font-weight: 700;">≥ 30% Relative Sparing</div>
+              <div style="font-size: 1.3rem; font-weight: 800; color: #818cf8; margin-top: 0.2rem;">41 Trials</div>
+              <div style="font-size: 0.68rem; color: var(--text-secondary);">65.1% of trials (in 46 reporting baseline)</div>
             </div>
           </div>
 
           <div style="background: rgba(255,255,255,0.03); padding: 0.85rem; border-radius: var(--radius-sm); margin-bottom: 1rem;">
             <div style="display: flex; justify-content: space-between; font-size: 0.78rem;">
-              <span><strong>30% Relative Opioid Reduction:</strong></span>
-              <span style="color: #818cf8; font-weight: 700;">Median 4.6% (Range: up to 95.4%)</span>
+              <span><strong>Pain Non-Inferiority Margin (≤ +1.0 VAS):</strong></span>
+              <span style="color: #34d399; font-weight: 700;">100% Satisfied (0 trials with pain worsening &gt; +1.0)</span>
             </div>
             <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.35rem;">
-              Relative reduction shows marked skewness due to low baseline opioid consumptions in minor laparoscopic procedures.
+              Crucially, in zero trials did TEAS or EA cause clinically important pain worsening beyond the +1.0 VAS margin. Postoperative analgesia was maintained or superior across all strata.
             </p>
           </div>
 

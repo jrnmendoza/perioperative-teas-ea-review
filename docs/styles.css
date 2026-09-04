@@ -1018,6 +1018,18 @@ body {
   gap: 1.5rem;
 }
 
+.btn-mcid-thresh {
+  transition: var(--transition-fast);
+}
+.btn-mcid-thresh:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+.btn-mcid-thresh.active {
+  background: var(--accent-primary) !important;
+  color: #fff !important;
+}
+
 .mcid-layout-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
