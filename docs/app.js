@@ -284,8 +284,15 @@ function renderActiveTab() {
   else if (activeTab === 'mcid') renderMCIDStudio();
   else if (activeTab === 'sensitivity') renderSensitivitySandbox();
   else if (activeTab === 'inquiries') renderInquiriesView();
+  else if (activeTab === 'conversions') renderConversionsView();
   else if (activeTab === 'evidence') renderDirectionOfEvidence();
   else if (activeTab === 'export') renderExportHub();
+}
+
+function renderConversionsView() {
+  switchConvTab(activeConvTab);
+  runLiveEquiCalc();
+  runLiveStatCalc();
 }
 
 // PRISMA 2020 Flow View

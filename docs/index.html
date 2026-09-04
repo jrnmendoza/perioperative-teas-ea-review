@@ -31,6 +31,7 @@
       <button class="nav-btn" data-tab="mcid" role="tab">MCID &amp; Trade-Off</button>
       <button class="nav-btn" data-tab="sensitivity" role="tab">Sensitivity &amp; Subgroups</button>
       <button class="nav-btn" data-tab="inquiries" role="tab">Author Inquiries &amp; What-If</button>
+      <button class="nav-btn" data-tab="conversions" role="tab">Opioid Conversions &amp; Literature</button>
       <button class="nav-btn" data-tab="evidence" role="tab">GRADE &amp; Evidence</button>
       <button class="nav-btn" data-tab="export" role="tab">Export Hub</button>
     </nav>
@@ -795,6 +796,110 @@
         </div>
       </div>
 
+      <!-- Section 2: Author Data Confirmation & "What-If" Sensitivity Simulator -->
+      <div class="simulation-panel">
+        <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <h2>🔬 Author Data Confirmation &amp; "What-If" Sensitivity Simulator</h2>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn-preset active" data-sim-preset="baseline" onclick="applySimScenario('baseline')">Baseline (Current)</button>
+            <button class="btn-preset" data-sim-preset="optimistic" onclick="applySimScenario('optimistic')">Optimistic (−12.7 mg)</button>
+            <button class="btn-preset" data-sim-preset="conservative" onclick="applySimScenario('conservative')">Conservative (−3.5 mg)</button>
+            <button class="btn-preset" data-sim-preset="worst" onclick="applySimScenario('worst')">Worst-Case / Null (0 mg)</button>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.25rem;">
+          <div>
+            <span class="filter-label">Select Inquiry Study to Simulate:</span>
+            <select id="sim-study-select" class="filter-select" style="width: 100%; margin-top: 0.4rem;" onchange="loadStudyIntoSimulator()">
+              <!-- Populated dynamically -->
+            </select>
+            
+            <div style="margin-top: 1rem;">
+              <div class="slider-label-wrap">
+                <span class="filter-label">Simulated Confirmed 24-h Opioid Difference (MD):</span>
+                <span id="sim-md-val" style="font-weight: 800; color: #34d399;">−12.7 mg MME</span>
+              </div>
+              <input type="range" id="sim-md-slider" class="slider-input" min="-25" max="5" step="0.5" value="-12.7" oninput="updateSimStudyMD(this.value)">
+              <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.2rem;">
+                <span>−25 mg (Large sparing)</span>
+                <span>0 mg (No difference)</span>
+                <span>+5 mg (Adverse)</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Inquiry Target &amp; Corresponding Author</div>
+            <div id="sim-study-info" style="background: var(--bg-panel); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); margin-top: 0.4rem; font-size: 0.78rem; line-height: 1.6;">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Before & After Comparison Grid -->
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Baseline Extraction</div>
+            <div id="sim-baseline-md" style="font-size: 1.6rem; font-weight: 800; color: #818cf8; margin-top: 0.3rem;">−9.43 mg</div>
+            <div id="sim-baseline-ci" style="font-size: 0.75rem; color: var(--text-secondary);">95% CI [−11.03, −7.84]</div>
+            <span class="delta-badge badge-indigo">k = 63 RCTs • I² = 68.2%</span>
+          </div>
+
+          <div class="arrow-divider">➔</div>
+
+          <div class="comparison-card">
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Simulated Post-Confirmation</div>
+            <div id="sim-post-md" style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.3rem;">−9.43 mg</div>
+            <div id="sim-post-ci" style="font-size: 0.75rem; color: var(--text-secondary);">95% CI [−11.03, −7.84]</div>
+            <span id="sim-delta-badge" class="delta-badge badge-emerald">Robust: Exceeds MCID (≥ 5 mg)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Active Author Inquiry Roster Table with Category Filters -->
+      <div class="dashboard-card">
+        <div class="card-header" style="flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <h2>Active Author Contact Roster &amp; Targeted Variables</h2>
+            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Complete directory of drafted letters, target data points, and email contacts.</p>
+          </div>
+          <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+            <button class="btn-preset active" id="btn-cat-all" onclick="filterInquiryCategory('all')">All Inquiries (59)</button>
+            <button class="btn-preset" id="btn-cat-a" onclick="filterInquiryCategory('A')">Cat A: Secondary Endpoints (9)</button>
+            <button class="btn-preset" id="btn-cat-b" onclick="filterInquiryCategory('B')">Cat B: Converted Baseline (37)</button>
+            <button class="btn-preset" id="btn-cat-c" onclick="filterInquiryCategory('C')">Cat C: Missing Opioid (13)</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+          <input type="text" id="inquiry-search-input" class="calc-input" placeholder="🔍 Search author name, study key, or target variable..." style="max-width: 400px; margin-top: 0;" oninput="filterInquirySearch(this.value)">
+          <span id="inquiry-counter-badge" class="kpi-badge badge-pending">Showing 59 of 59 Study Inquiries</span>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="forest-table">
+            <thead>
+              <tr>
+                <th>Study Key</th>
+                <th>Category</th>
+                <th>Baseline Status</th>
+                <th>Target Data Point Requested</th>
+                <th>Corresponding Author &amp; Institution</th>
+                <th>Contact Email</th>
+                <th>Status</th>
+                <th>Simulate</th>
+              </tr>
+            </thead>
+            <tbody id="inquiries-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TAB: OPIOID CONVERSION METHODOLOGY & LITERATURE REFERENCE HUB -->
+    <div id="tab-conversions" class="tab-content">
       <!-- Section 2: Opioid Conversion Methodology & Pharmacological Equianalgesic Literature Hub -->
       <div class="dashboard-card" style="margin-bottom: 1.5rem;">
         <div class="card-header" style="flex-direction: column; align-items: flex-start; gap: 0.6rem;">
@@ -1173,106 +1278,6 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- Section 3: Author Data Confirmation & "What-If" Sensitivity Simulator -->
-      <div class="simulation-panel">
-        <div class="card-header" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-          <h2>🔬 Author Data Confirmation &amp; "What-If" Sensitivity Simulator</h2>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <button class="btn-preset active" data-sim-preset="baseline" onclick="applySimScenario('baseline')">Baseline (Current)</button>
-            <button class="btn-preset" data-sim-preset="optimistic" onclick="applySimScenario('optimistic')">Optimistic (−12.7 mg)</button>
-            <button class="btn-preset" data-sim-preset="conservative" onclick="applySimScenario('conservative')">Conservative (−3.5 mg)</button>
-            <button class="btn-preset" data-sim-preset="worst" onclick="applySimScenario('worst')">Worst-Case / Null (0 mg)</button>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.25rem;">
-          <div>
-            <span class="filter-label">Select Inquiry Study to Simulate:</span>
-            <select id="sim-study-select" class="filter-select" style="width: 100%; margin-top: 0.4rem;" onchange="loadStudyIntoSimulator()">
-              <!-- Populated dynamically -->
-            </select>
-            
-            <div style="margin-top: 1rem;">
-              <div class="slider-label-wrap">
-                <span class="filter-label">Simulated Confirmed 24-h Opioid Difference (MD):</span>
-                <span id="sim-md-val" style="font-weight: 800; color: #34d399;">−12.7 mg MME</span>
-              </div>
-              <input type="range" id="sim-md-slider" class="slider-input" min="-25" max="5" step="0.5" value="-12.7" oninput="updateSimStudyMD(this.value)">
-              <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.2rem;">
-                <span>−25 mg (Large sparing)</span>
-                <span>0 mg (No difference)</span>
-                <span>+5 mg (Adverse)</span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Inquiry Target &amp; Corresponding Author</div>
-            <div id="sim-study-info" style="background: var(--bg-panel); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); margin-top: 0.4rem; font-size: 0.78rem; line-height: 1.6;">
-              <!-- Populated dynamically -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Before & After Comparison Grid -->
-        <div class="comparison-grid">
-          <div class="comparison-card">
-            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Baseline Extraction</div>
-            <div id="sim-baseline-md" style="font-size: 1.6rem; font-weight: 800; color: #818cf8; margin-top: 0.3rem;">−9.43 mg</div>
-            <div id="sim-baseline-ci" style="font-size: 0.75rem; color: var(--text-secondary);">95% CI [−11.03, −7.84]</div>
-            <span class="delta-badge badge-indigo">k = 63 RCTs • I² = 68.2%</span>
-          </div>
-
-          <div class="arrow-divider">➔</div>
-
-          <div class="comparison-card">
-            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">Simulated Post-Confirmation</div>
-            <div id="sim-post-md" style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.3rem;">−9.43 mg</div>
-            <div id="sim-post-ci" style="font-size: 0.75rem; color: var(--text-secondary);">95% CI [−11.03, −7.84]</div>
-            <span id="sim-delta-badge" class="delta-badge badge-emerald">Robust: Exceeds MCID (≥ 5 mg)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 4: Active Author Inquiry Roster Table with Category Filters -->
-      <div class="dashboard-card">
-        <div class="card-header" style="flex-wrap: wrap; gap: 0.75rem;">
-          <div>
-            <h2>Active Author Contact Roster &amp; Targeted Variables</h2>
-            <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Complete directory of drafted letters, target data points, and email contacts.</p>
-          </div>
-          <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
-            <button class="btn-preset active" id="btn-cat-all" onclick="filterInquiryCategory('all')">All Inquiries (59)</button>
-            <button class="btn-preset" id="btn-cat-a" onclick="filterInquiryCategory('A')">Cat A: Secondary Endpoints (9)</button>
-            <button class="btn-preset" id="btn-cat-b" onclick="filterInquiryCategory('B')">Cat B: Converted Baseline (37)</button>
-            <button class="btn-preset" id="btn-cat-c" onclick="filterInquiryCategory('C')">Cat C: Missing Opioid (13)</button>
-          </div>
-        </div>
-
-        <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
-          <input type="text" id="inquiry-search-input" class="calc-input" placeholder="🔍 Search author name, study key, or target variable..." style="max-width: 400px; margin-top: 0;" oninput="filterInquirySearch(this.value)">
-          <span id="inquiry-counter-badge" class="kpi-badge badge-pending">Showing 59 of 59 Study Inquiries</span>
-        </div>
-
-        <div style="overflow-x: auto;">
-          <table class="forest-table">
-            <thead>
-              <tr>
-                <th>Study Key</th>
-                <th>Category</th>
-                <th>Baseline Status</th>
-                <th>Target Data Point Requested</th>
-                <th>Corresponding Author &amp; Institution</th>
-                <th>Contact Email</th>
-                <th>Status</th>
-                <th>Simulate</th>
-              </tr>
-            </thead>
-            <tbody id="inquiries-table-body"></tbody>
-          </table>
-        </div>
       </div>
     </div>
 
