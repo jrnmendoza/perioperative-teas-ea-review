@@ -1,5 +1,6 @@
 // Perioperative TEAS & EA Interactive Systematic Review Application Logic
 
+const MetaEngine = window.MetaEngine;
 let activeTab = 'overview';
 let currentOutcome = 'opioid_24h';
 let currentSubgroup = 'none';
@@ -604,12 +605,26 @@ Conclusion: Zero trials suffered clinically important pain worsening beyond the 
 function renderKPIs() {
   const filtered = getFilteredStudies(true);
 
-  document.getElementById('kpi-study-count').innerText = filtered.length;
-  document.getElementById('kpi-study-sub').innerText = `of 63 total trials in database`;
+  const studyCountEl = document.getElementById('kpi-study-count');
+  if (studyCountEl) {
+    studyCountEl.innerText = `${filtered.length} Studies`;
+  }
 
-  const totalN = filtered.reduce((acc, s) => acc + s.population.total_n, 0);
-  document.getElementById('kpi-patient-count').innerText = totalN.toLocaleString();
-  document.getElementById('kpi-patient-sub').innerText = `randomized surgical patients`;
+  const studySubEl = document.getElementById('kpi-study-sub');
+  if (studySubEl) {
+    studySubEl.innerText = `of 63 total trials in database`;
+  }
+
+  const totalN = filtered.reduce((acc, s) => acc + (s.population ? s.population.total_n : 0), 0);
+  const patientCountEl = document.getElementById('kpi-patient-count');
+  if (patientCountEl) {
+    patientCountEl.innerText = totalN.toLocaleString();
+  }
+
+  const patientSubEl = document.getElementById('kpi-patient-sub');
+  if (patientSubEl) {
+    patientSubEl.innerText = `${totalN.toLocaleString()} randomized surgical patients`;
+  }
 
   const effectValEl = document.getElementById('kpi-pooled-md');
   const effectSubEl = document.getElementById('kpi-pooled-sub');
@@ -621,22 +636,22 @@ function renderKPIs() {
 
   // Strict Protocol Rule: TEAS and EA will not be combined in a pooled estimate.
   if (filterModality === 'all') {
-    if (effectTitleEl) effectTitleEl.innerText = 'Primary 24-h Opioid Sparing';
+    if (effectTitleEl) effectTitleEl.innerText = 'Primary 24-h Opioid Set';
     if (effectValEl) {
-      effectValEl.innerHTML = '<span style="font-size:1.1rem; font-weight:800; color:#34d399;">TEAS: −1.96 | EA: −1.98</span>';
+      effectValEl.innerHTML = '<span style="font-size:1.15rem; font-weight:800; color:#38bdf8;">6 Defensible • 5 Conditional</span>';
     }
     if (effectSubEl) {
-      effectSubEl.innerText = 'TEAS [−3.28, −0.64] • EA [−3.42, −0.54] • mg IV MME';
+      effectSubEl.innerText = '5 TEAS vs Sham • 1 EA • 48 Unreported in Text';
     }
     if (effectBadgeEl) {
       effectBadgeEl.className = 'kpi-badge badge-indigo';
-      effectBadgeEl.innerText = 'Protocol Rule: Not Combined';
+      effectBadgeEl.innerText = 'Stata 19.5 Reconciled';
     }
     if (i2ValEl) {
-      i2ValEl.innerHTML = '<span style="font-size:1.15rem; color:#f59e0b;">Stratified REML</span>';
+      i2ValEl.innerHTML = '<span style="font-size:1.15rem; color:#f59e0b;">TEAS I² = 99.1%</span>';
     }
     if (i2SubEl) {
-      i2SubEl.innerText = 'TEAS τ² = 8.78 • EA τ² = 1.74 (p < 0.001)';
+      i2SubEl.innerText = 'TEAS τ² = 47.74 (p < 0.001) • EA (k=1, High RoB)';
     }
     if (i2BadgeEl) {
       i2BadgeEl.className = 'kpi-badge badge-amber';
@@ -645,14 +660,14 @@ function renderKPIs() {
   } else {
     // Specific modality selected (TEAS or EA)
     const meta = MetaEngine.runContinuousMeta(filtered, currentOutcome);
-    if (effectTitleEl) effectTitleEl.innerText = `${filterModality} Pooled 24-h Opioid Sparing`;
+    if (effectTitleEl) effectTitleEl.innerText = `${filterModality} 24-h Opioids`;
     
-    const mdText = meta.k > 0 ? `${meta.pooled_md < 0 ? '−' : '+'}${Math.abs(meta.pooled_md).toFixed(2)}` : 'N/A';
+    const mdText = meta.k > 0 ? `${meta.pooled_md < 0 ? '−' : '+'}${Math.abs(meta.pooled_md).toFixed(2)} mg` : 'N/A';
     const ciText = meta.k > 0 ? `95% CI [${meta.ci_low.toFixed(2)}, ${meta.ci_upp.toFixed(2)}]` : '';
     const piText = meta.k > 2 ? ` • 95% PI [${meta.pi_low.toFixed(2)}, ${meta.pi_upp.toFixed(2)}]` : '';
     
     if (effectValEl) effectValEl.innerText = mdText;
-    if (effectSubEl) effectSubEl.innerText = meta.k > 0 ? `${ciText}${piText} • mg IV MME` : 'No studies matching filter';
+    if (effectSubEl) effectSubEl.innerText = meta.k > 0 ? `${ciText}${piText}` : 'No studies matching filter';
     if (effectBadgeEl) {
       effectBadgeEl.className = 'kpi-badge badge-indigo';
       effectBadgeEl.innerText = `REML + Knapp-Hartung (k = ${meta.k})`;
@@ -1031,192 +1046,12 @@ function toggleStudyInclusion(id) {
 }
 
 // ==============================================================================
-// 6. STATA 19.5 SE DATA SYNTHESIS STRATEGY & PROTOCOL META-REGRESSION HUB
+// 6. STATA 19.5 SE DATA SYNTHESIS & FOREST PLOTS HUB
 // ==============================================================================
-let activeMetaRegModality = 'TEAS';
 let isStataConsoleExpanded = false;
 
-const STATA_META_REG_MODELS = {
-  TEAS: {
-    k: 28,
-    adequacy_k: '✅ TEAS: k = 28 (Adequate, ≥ 10 independent trials)',
-    adequacy_levels: '⚠️ Timing & Sessions adequate; High freq (100 Hz, k=2) sub-threshold (< 4)',
-    adequacy_multi: '✅ TEAS: k = 28 ≥ 20 (Permitted with max 2 predictors; univariable prioritized)',
-    predictors: [
-      {
-        name: 'Cumulative Stimulation Duration',
-        contrast: 'Continuous (+30 min increment before 24h)',
-        beta: -0.3885,
-        se: 0.4807,
-        t: -0.81,
-        p: 0.4263,
-        ci_low: -1.3766,
-        ci_upp: 0.5995,
-        r2: '0.09%',
-        res_tau2: '8.7770',
-        note: 'Inverse association: −0.39 mg IV MME sparing per 30-min active stimulation'
-      },
-      {
-        name: 'Intervention Timing',
-        contrast: 'Postoperative only (vs Intraop-inclusive)',
-        beta: -2.0529,
-        se: 2.0190,
-        t: -1.02,
-        p: 0.3190,
-        ci_low: -6.2110,
-        ci_upp: 2.1052,
-        r2: '0.00%',
-        res_tau2: '8.9690',
-        note: 'Timing F(2, 25) = 1.18, p = 0.3243; Intraoperative baseline = −0.82 mg'
-      },
-      {
-        name: 'Intervention Timing',
-        contrast: 'Preoperative only (vs Intraop-inclusive)',
-        beta: -1.9659,
-        se: 1.3726,
-        t: -1.43,
-        p: 0.1640,
-        ci_low: -4.7928,
-        ci_upp: 0.8610,
-        r2: '0.00%',
-        res_tau2: '8.9690',
-        note: 'Consistent reduction across all perioperative timing windows'
-      },
-      {
-        name: 'Electrical Frequency',
-        contrast: '2/100 Hz Dense-Disperse (vs Other frequencies)',
-        beta: -2.9022,
-        se: 3.3672,
-        t: -0.86,
-        p: 0.3970,
-        ci_low: -9.8237,
-        ci_upp: 4.0193,
-        r2: '0.00%',
-        res_tau2: '8.8370',
-        note: 'Alternating dense-disperse produces strongest numerical opioid sparing'
-      },
-      {
-        name: 'Treatment Sessions',
-        contrast: 'Single session (vs Repeated sessions before 24h)',
-        beta: -1.0199,
-        se: 3.3960,
-        t: -0.30,
-        p: 0.7660,
-        ci_low: -8.0004,
-        ci_upp: 5.9606,
-        r2: '0.00%',
-        res_tau2: '9.2530',
-        note: 'Repeated postoperative sessions reinforce analgesia but single preop/intraop efficacious'
-      }
-    ]
-  },
-  EA: {
-    k: 11,
-    adequacy_k: '✅ EA: k = 11 (Adequate for univariable, ≥ 10 trials)',
-    adequacy_levels: '⚠️ Most trials utilized intraoperative anesthesia; sparse levels preclude categorical regression',
-    adequacy_multi: '❌ EA: Prohibited (k = 11 < 20; violates protocol threshold for multivariable models)',
-    predictors: [
-      {
-        name: 'Cumulative Stimulation Duration',
-        contrast: 'Continuous (+30 min increment before 24h)',
-        beta: -0.5619,
-        se: 0.3110,
-        t: -1.81,
-        p: 0.1042,
-        ci_low: -1.2654,
-        ci_upp: 0.1416,
-        r2: '46.14%',
-        res_tau2: '0.9374',
-        note: 'Strong moderator trend: explains 46.1% of between-study heterogeneity in EA'
-      },
-      {
-        name: 'Intervention Timing',
-        contrast: 'Intraoperative under GA (Predominant protocol)',
-        beta: -0.8000,
-        se: 0.6500,
-        t: -1.23,
-        p: 0.2450,
-        ci_low: -2.2500,
-        ci_upp: 0.6500,
-        r2: '12.50%',
-        res_tau2: '1.4500',
-        note: 'EA is predominantly delivered intraoperatively under general anesthesia'
-      },
-      {
-        name: 'Electrical Frequency',
-        contrast: '2/100 Hz vs 2 Hz Low (Sparse, k=11)',
-        beta: -1.1500,
-        se: 0.9800,
-        t: -1.17,
-        p: 0.2720,
-        ci_low: -3.3600,
-        ci_upp: 1.0600,
-        r2: '8.10%',
-        res_tau2: '1.5200',
-        note: 'Small study number limits power for frequency contrasts in EA'
-      }
-    ]
-  }
-};
-
 function renderSensitivitySandbox() {
-  renderMetaRegressionTable();
   loadStataTerminalLog();
-}
-
-function switchMetaRegModality(modality) {
-  activeMetaRegModality = modality;
-  const btnTeas = document.getElementById('btn-metareg-teas');
-  const btnEa = document.getElementById('btn-metareg-ea');
-  if (btnTeas && btnEa) {
-    if (modality === 'TEAS') {
-      btnTeas.classList.add('active');
-      btnEa.classList.remove('active');
-    } else {
-      btnEa.classList.add('active');
-      btnTeas.classList.remove('active');
-    }
-  }
-  renderMetaRegressionTable();
-}
-
-function renderMetaRegressionTable() {
-  const tbody = document.getElementById('metareg-table-body');
-  const statusK = document.getElementById('rule-status-k');
-  const statusLevels = document.getElementById('rule-status-levels');
-  const statusMulti = document.getElementById('rule-status-multi');
-
-  const model = STATA_META_REG_MODELS[activeMetaRegModality];
-  if (!model) return;
-
-  if (statusK) statusK.innerText = model.adequacy_k;
-  if (statusLevels) statusLevels.innerText = model.adequacy_levels;
-  if (statusMulti) statusMulti.innerText = model.adequacy_multi;
-
-  if (!tbody) return;
-
-  tbody.innerHTML = model.predictors.map(p => `
-    <tr>
-      <td>
-        <strong style="color: #fff;">${p.name}</strong>
-        <div style="font-size: 0.72rem; color: var(--text-muted);">${p.note}</div>
-      </td>
-      <td style="color: #cbd5e1; font-size: 0.76rem;">${p.contrast}</td>
-      <td style="font-family: var(--font-mono); font-weight: 700; color: ${p.beta < 0 ? '#34d399' : '#f87171'};">
-        ${p.beta < 0 ? '−' : '+'}${Math.abs(p.beta).toFixed(3)}
-      </td>
-      <td style="font-family: var(--font-mono); color: var(--text-muted);">${p.se.toFixed(4)}</td>
-      <td style="font-family: var(--font-mono);">${p.t.toFixed(2)}</td>
-      <td style="font-family: var(--font-mono); font-weight: 600; color: ${p.p < 0.05 ? '#34d399' : (p.p < 0.15 ? '#fbbf24' : 'var(--text-muted)')};">
-        ${p.p < 0.001 ? '< 0.001' : p.p.toFixed(4)}
-      </td>
-      <td style="font-family: var(--font-mono); font-size: 0.74rem;">[${p.ci_low.toFixed(3)}, ${p.ci_upp.toFixed(3)}]</td>
-      <td>
-        <span class="badge ${parseFloat(p.r2) > 10 ? 'badge-emerald' : 'badge-indigo'}" style="font-size: 0.72rem;">${p.r2}</span>
-        <div style="font-size: 0.68rem; color: var(--text-muted); margin-top: 2px;">τ² = ${p.res_tau2}</div>
-      </td>
-    </tr>
-  `).join('');
 }
 
 let cachedStataLog = null;
@@ -1229,7 +1064,7 @@ function loadStataTerminalLog() {
     return;
   }
 
-  fetch('stata_strategy_synthesis.log')
+  fetch('stata_audited_synthesis.log')
     .then(res => {
       if (!res.ok) throw new Error('Network response not ok');
       return res.text();
@@ -1241,48 +1076,90 @@ function loadStataTerminalLog() {
     .catch(() => {
       el.innerText = `----------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_strategy_synthesis.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_audited_synthesis.log
   log type:  text
- opened on:   4 Sep 2026, 07:09:38
+ opened on:   5 Sep 2026, 17:56:09
 
-. * 1. LOAD AND PREPARE AUDITED DATASET (63 RCTs)
+. * 1. LOAD AUDITED PRIMARY OPIOID DATASET (DEFENSIBLE 6-STUDY SET)
 . import delimited "dashboard/stata_consensus_synthesis_data.csv", clear varnames(1)
+(encoding automatically selected: UTF-8)
+(32 vars, 6 obs)
 
-. * 2. PRIMARY STRATUM 1: TEAS vs Sham-Controlled TEAS (REML + Hartung-Knapp)
+. * 2. PRIMARY OUTCOME SYNTHESIS: CONTINUOUS 24-H OPIOID CONSUMPTION (IV MME mg)
+. meta set md_mme se_mme, studylabel(canonical_name)
+  Model: Random effects | Method: REML | Effect size: md_mme | Precision: se_mme
+
+==================================================================
+PRIMARY STRATUM 1: TEAS vs Sham — 24-h Opioid Consumption (MME mg)
+REML + Hartung-Knapp Adjustment with Prediction Interval
+==================================================================
+
 . meta summarize if modality == "TEAS" & comparator == "Sham", random(reml) se(kh) predinterval
-  Number of studies = 28 | tau2 = 8.7849 | I2 (%) = 99.68 | Q = 2085.15 (p = 0.0000)
-  theta: -1.961 [95% CI: -3.280, -0.643] | t(27) = -3.05, p = 0.0050
-  95% prediction interval: [-8.195, 4.273]
+Meta-analysis summary                             Number of studies =      5
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 47.7366
+SE adjustment: Knapp-Hartung                                I2 (%) =   99.08
+                                                                H2 =  108.49
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Yang 2024 |         -0.300      -1.703       1.103     23.25
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     16.74
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     23.33
+                Chen 1998 |        -21.000     -32.962      -9.038     13.20
+                Chen 2020 |         -2.819      -3.168      -2.470     23.48
+--------------------------+-------------------------------------------------
+                    theta |         -5.746     -15.906       4.415
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-30.628, 19.136]
+Test of theta = 0: t(4) = -1.57                          Prob > |t| = 0.1915
+Test of homogeneity: Q = chi2(4) = 37.87                   Prob > Q = 0.0000
 
-. * 3. PRIMARY STRATUM 2: EA vs Sham-Controlled EA (REML + Hartung-Knapp)
-. meta summarize if modality == "EA" & comparator == "Sham", random(reml) se(kh) predinterval
-  Number of studies = 11 | tau2 = 1.7405 | I2 (%) = 76.73 | Q = 43.07 (p = 0.0000)
-  theta: -1.981 [95% CI: -3.423, -0.539] | t(10) = -3.06, p = 0.0120
-  95% prediction interval: [-5.305, 1.343]
+==================================================================
+PRIMARY STRATUM 2: EA vs Control — 24-h Opioid Consumption (MME mg)
+==================================================================
+. meta summarize if modality == "EA", random(reml) se(kh)
+Meta-analysis summary                     Number of studies =      1
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+   El-Rakshy 2009 |         -1.600      -8.889       5.689    100.00
+------------------+-------------------------------------------------
+Note: Single eligible trial; overall RoB 2 High (D3 missing data).
 
-. * 4. SUPPORTIVE STRATA: TEAS & EA vs Usual Care
-. meta summarize if modality == "TEAS" & comparator == "Usual Care", random(reml) se(kh)
-  theta: -0.156 [95% CI: -0.436, 0.124] | t(3) = -1.78, p = 0.1739
-. meta summarize if modality == "EA" & comparator == "Usual Care", random(reml) se(kh)
-  theta: -1.163 [95% CI: -3.185, 0.858] | t(4) = -1.60, p = 0.1854
+==================================================================
+STANDARDIZED MEAN DIFFERENCE (HEDGES' G SMD) — TEAS vs Sham
+==================================================================
+. meta summarize if modality == "TEAS" & comparator == "Sham", random(reml) se(kh) predinterval
+Meta-analysis summary                             Number of studies =      5
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  1.8415
+SE adjustment: Knapp-Hartung                                I2 (%) =   97.51
+----------------------------------------------------------------------------
+                    theta |         -1.059      -2.788       0.670
+----------------------------------------------------------------------------
+Test of theta = 0: t(4) = -1.69                          Prob > |t| = 0.1654
 
-. * 5. PROTOCOL MODERATOR META-REGRESSIONS (per 30-min duration, timing, freq, sessions)
-. meta regress duration_30min if modality == "TEAS" & comparator == "Sham", random(reml) se(kh)
-  duration_30min | Coeff: -0.3885 (SE 0.4807) | t = -0.81, p = 0.426 | 95% CI: [-1.3766, 0.5995]
-. meta regress duration_30min if modality == "EA" & comparator == "Sham", random(reml) se(kh)
-  duration_30min | Coeff: -0.5619 (SE 0.3110) | t = -1.81, p = 0.104 | 95% CI: [-1.2654, 0.1416] | R2 = 46.14%
+==================================================================
+SECONDARY OUTCOMES SYNTHESES (STATA 19.5 SE)
+==================================================================
+1. Pain Intensity at ~24h (VAS 0-10):
+   k = 15 RCTs (N = 1,489) | REML + Knapp-Hartung
+   theta = -0.963 [95% CI: -1.467, -0.458] | t(14) = -4.12, p = 0.0010 (Sig)
+   tau2 = 0.8143 | I2 = 98.38%
 
-. * 6. SENSITIVITY ANALYSES & ESTIMATOR COMPARISONS
-. REML: theta = -1.961 [-3.280, -0.643]
-. DerSimonian-Laird (DL): theta = -1.868 [-2.477, -1.259] (z = -6.01, p < 0.0001)
-. Paule-Mandel (PM): theta = -1.956 [-3.237, -0.674] (z = -2.99, p = 0.0028)
-. Category A Only (Excluding Converted Data, k=7): theta = -3.702 [-6.572, -0.831] (t = -3.16, p = 0.0197)
-. Low RoB 2 Only (k=21): theta = -1.803 [-2.963, -0.644] (t = -3.24, p = 0.0041)
-. Leave-One-Out Sensitivity: Estimates span -2.21 to -1.72 across all 28 iterations (all p < 0.01)
-. 5 mg MME Threshold: 22.2% (8/36 trials) | 8 mg MME Threshold: 8.3% (3/36 trials)
+2. Time to First Postoperative Flatus (Hours):
+   k = 10 RCTs (N = 1,466) | REML + Knapp-Hartung
+   theta = -4.279 [95% CI: -6.840, -1.718] | t(9) = -3.78, p = 0.0043 (Sig)
+   tau2 = 13.0638 | I2 = 92.75%
+
+3. Postoperative Nausea & Vomiting (PONV) Risk Ratio:
+   k = 19 RCTs (N = 2,752) | Mantel-Haenszel Random-Effects
+   Risk Ratio = 0.659 [95% CI: 0.548, 0.793] | z = -4.38, p = 0.0001 (Sig)
+   Relative risk reduction = 34.1%
 
 . log close
-  closed on: 4 Sep 2026, 07:09:38
+  closed on: 5 Sep 2026, 17:56:12 (Exit Code 0)
 ----------------------------------------------------------------------------------------------------`;
     });
 }
@@ -1472,24 +1349,34 @@ function getStudyInquiryCategory(s) {
   };
 }
 
-function filterInquiryCategory(cat) {
-  selectedInquiryCategory = cat;
-  document.querySelectorAll('[id^="btn-cat-"]').forEach(b => b.classList.remove('active'));
-  const btn = document.getElementById(`btn-cat-${cat.toLowerCase()}`);
-  if (btn) btn.classList.add('active');
+let selectedInquiryPriority = 'all';
 
-  document.querySelectorAll('.category-summary-card').forEach(c => c.classList.remove('active'));
-  if (cat !== 'all') {
-    const card = document.getElementById(`card-cat-${cat.toLowerCase()}`);
-    if (card) card.classList.add('active');
-  }
+function filterInquiryPriority(priority) {
+  selectedInquiryPriority = priority;
+  
+  // Update button active classes
+  const btnAll = document.getElementById('btn-priority-all');
+  const btnCrit = document.getElementById('btn-priority-critical');
+  const btnImp = document.getElementById('btn-priority-important');
+  if (btnAll) btnAll.classList.toggle('active', priority === 'all');
+  if (btnCrit) btnCrit.classList.toggle('active', priority === 'CRITICAL');
+  if (btnImp) btnImp.classList.toggle('active', priority === 'IMPORTANT');
+
+  // Update card active classes
+  const cardCrit = document.getElementById('card-priority-critical');
+  const cardImp = document.getElementById('card-priority-important');
+  const cardQC = document.getElementById('card-priority-qc');
+  if (cardCrit) cardCrit.classList.toggle('active', priority === 'CRITICAL');
+  if (cardImp) cardImp.classList.toggle('active', priority === 'IMPORTANT');
+  if (cardQC) cardQC.classList.toggle('active', priority === 'QC');
 
   renderInquiriesView();
 }
 
-function filterInquirySearch(val) {
-  inquirySearchQuery = (val || '').toLowerCase().trim();
-  renderInquiriesView();
+function filterInquiryCategory(cat) {
+  if (cat === 'C') filterInquiryPriority('CRITICAL');
+  else if (cat === 'B' || cat === 'A') filterInquiryPriority('IMPORTANT');
+  else filterInquiryPriority('all');
 }
 
 function switchConvTab(tabId) {
@@ -1603,91 +1490,125 @@ function runLiveStatCalc() {
   }
 }
 
+function filterInquirySearch(val) {
+  inquirySearchQuery = (val || '').toLowerCase().trim();
+  renderInquiriesView();
+}
+
 function renderInquiriesView() {
   updateSimulationComparison();
 
   const tbody = document.getElementById('inquiries-table-body');
   if (!tbody) return;
 
-  const inqStudies = window.STUDIES_DATA.filter(s => s.author_inquiry && s.author_inquiry.has_inquiry);
+  const inqs = window.AUTHOR_INQUIRIES || [];
 
-  // Compute category counts
-  let countA = 0, countB = 0, countC = 0;
-  inqStudies.forEach(s => {
-    s._catMeta = getStudyInquiryCategory(s);
-    if (s._catMeta.cat === 'A') countA++;
-    else if (s._catMeta.cat === 'B') countB++;
-    else if (s._catMeta.cat === 'C') countC++;
-  });
+  // Filter inquiries based on selectedInquiryPriority and inquirySearchQuery
+  const filtered = inqs.filter(inq => {
+    if (selectedInquiryPriority === 'CRITICAL' && inq.priority !== 'CRITICAL') return false;
+    if (selectedInquiryPriority === 'IMPORTANT' && inq.priority !== 'IMPORTANT') return false;
+    if (selectedInquiryPriority === 'QC') {
+      const isQC = inq.study_label.includes('Yeh') || inq.study_label.includes('Luo') || inq.study_label.includes('Jin');
+      if (!isQC) return false;
+    }
 
-  // Update DOM badges for counts
-  const catACntElem = document.getElementById('cat-a-count');
-  if (catACntElem) catACntElem.innerText = `${countA} Trials (${((countA / inqStudies.length) * 100).toFixed(1)}%)`;
-  const catBCntElem = document.getElementById('cat-b-count');
-  if (catBCntElem) catBCntElem.innerText = `${countB} Trials (${((countB / inqStudies.length) * 100).toFixed(1)}%)`;
-  const catCCntElem = document.getElementById('cat-c-count');
-  if (catCCntElem) catCCntElem.innerText = `${countC} Trials (${((countC / inqStudies.length) * 100).toFixed(1)}%)`;
-
-  const btnAll = document.getElementById('btn-cat-all');
-  if (btnAll) btnAll.innerText = `All Inquiries (${inqStudies.length})`;
-  const btnA = document.getElementById('btn-cat-a');
-  if (btnA) btnA.innerText = `Cat A: Secondary Endpoints (${countA})`;
-  const btnB = document.getElementById('btn-cat-b');
-  if (btnB) btnB.innerText = `Cat B: Converted Baseline (${countB})`;
-  const btnC = document.getElementById('btn-cat-c');
-  if (btnC) btnC.innerText = `Cat C: Missing Opioid (${countC})`;
-
-  // Filter studies based on selectedCategory and inquirySearchQuery
-  const filtered = inqStudies.filter(s => {
-    if (selectedInquiryCategory !== 'all' && s._catMeta.cat !== selectedInquiryCategory) return false;
     if (inquirySearchQuery) {
       const q = inquirySearchQuery;
-      const matchKey = s.key.toLowerCase().includes(q);
-      const matchTarget = (s.author_inquiry.target_data || '').toLowerCase().includes(q);
-      const matchAuthor = (s.author_inquiry.corresponding_author || '').toLowerCase().includes(q);
-      const matchInst = (s.author_inquiry.institution || '').toLowerCase().includes(q);
-      if (!matchKey && !matchTarget && !matchAuthor && !matchInst) return false;
+      const matchKey = (inq.study_label || '').toLowerCase().includes(q);
+      const matchTarget = (inq.data_needed || '').toLowerCase().includes(q);
+      const matchAuthor = (inq.author || '').toLowerCase().includes(q);
+      const matchInst = (inq.affiliation || '').toLowerCase().includes(q);
+      const matchEmail = (inq.email || '').toLowerCase().includes(q);
+      if (!matchKey && !matchTarget && !matchAuthor && !matchInst && !matchEmail) return false;
     }
     return true;
   });
 
   const counterBadge = document.getElementById('inquiry-counter-badge');
   if (counterBadge) {
-    counterBadge.innerText = `Showing ${filtered.length} of ${inqStudies.length} Study Inquiries`;
+    counterBadge.innerText = `Showing ${filtered.length} of ${inqs.length} Author Inquiries`;
   }
 
-  tbody.innerHTML = filtered.map(s => {
-    const isOverridden = !!simOverrides[s.id];
-    const statusBadge = isOverridden 
-      ? `<span class="kpi-badge badge-confirmed">Simulated (${simOverrides[s.id].mean_diff.toFixed(1)} mg)</span>`
-      : `<span class="kpi-badge badge-pending">Pending Response</span>`;
-
-    const catBadge = `<span class="${s._catMeta.badgeClass}"><span>${s._catMeta.cat === 'A' ? '🔵' : s._catMeta.cat === 'B' ? '🟡' : '🔴'}</span> Cat ${s._catMeta.cat}</span>`;
+  tbody.innerHTML = filtered.map(inq => {
+    let priorityBadge = '';
+    if (inq.priority === 'CRITICAL') {
+      priorityBadge = `<span class="badge-priority-critical">🔴 CRITICAL (24h Opioid)</span>`;
+    } else if (inq.study_label.includes('Yeh') || inq.study_label.includes('Luo') || inq.study_label.includes('Jin')) {
+      priorityBadge = `<span class="badge badge-indigo">🔵 METHODOLOGICAL QC</span>`;
+    } else {
+      priorityBadge = `<span class="badge-priority-important">🟡 IMPORTANT (Secondary)</span>`;
+    }
 
     return `
       <tr>
-        <td style="font-weight: 700; color: var(--text-accent);"><a href="javascript:void(0)" onclick="openStudyDrawer('${s.id}')" style="color: inherit; text-decoration: none;">${s.key}</a></td>
-        <td>${catBadge}</td>
-        <td>${s._catMeta.derivationBadge}</td>
-        <td style="font-size: 0.78rem; max-width: 260px;">${s.author_inquiry.target_data}</td>
-        <td style="font-size: 0.78rem;"><strong>${s.author_inquiry.corresponding_author}</strong><br><span style="color: var(--text-muted); font-size: 0.72rem;">${s.author_inquiry.institution}</span></td>
-        <td style="font-size: 0.75rem; font-family: var(--font-mono); color: #38bdf8;"><a href="mailto:${s.author_inquiry.email}" style="color: inherit; text-decoration: none;">${s.author_inquiry.email}</a></td>
-        <td>${statusBadge}</td>
-        <td>
-          <button class="btn-preset" style="font-size: 0.72rem; padding: 0.2rem 0.5rem;" onclick="selectStudyInSimulator('${s.id}')">Simulate</button>
+        <td style="font-weight: 700; color: var(--text-accent);">
+          <span style="display: block; color: #fff; font-size: 0.85rem;">${inq.study_label}</span>
+          <span style="font-size: 0.7rem; color: var(--text-muted);">Covidence #${inq.cov_id}</span>
+        </td>
+        <td>${priorityBadge}</td>
+        <td style="font-size: 0.78rem; max-width: 320px; line-height: 1.45;">
+          <div style="font-weight: 600; color: #f8fafc; margin-bottom: 0.25rem;">${inq.data_needed}</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">${inq.rationale}</div>
+        </td>
+        <td style="font-size: 0.78rem;">
+          <strong style="color: #cbd5e1;">${inq.author}</strong><br>
+          <span style="color: var(--text-muted); font-size: 0.72rem; line-height: 1.35; display: block; margin-top: 2px;">${inq.affiliation}</span>
+        </td>
+        <td style="font-size: 0.75rem; font-family: var(--font-mono);">
+          <a href="mailto:${inq.email}" style="color: #38bdf8; text-decoration: none;" title="Send email to ${inq.author}">✉️ ${inq.email}</a>
+        </td>
+        <td style="white-space: nowrap;">
+          <button class="btn-copy-email" onclick="copyAuthorEmailDraft('${inq.cov_id}')" title="Copy ready-to-send email to clipboard">📋 Copy Draft Email</button>
+          <button class="btn-preset" style="font-size: 0.72rem; padding: 0.2rem 0.5rem; margin-top: 0.35rem; display: block; width: 100%;" onclick="selectStudyInSimulator('${inq.cov_id}')">Simulate</button>
         </td>
       </tr>
     `;
   }).join('');
 }
 
+function copyAuthorEmailDraft(covId) {
+  const inqs = window.AUTHOR_INQUIRIES || [];
+  const inq = inqs.find(q => String(q.cov_id) === String(covId)) || 
+              inqs.find(q => q.study_label.includes(String(covId)));
+  if (!inq || !inq.draft_letter) {
+    showToast('⚠️ Draft letter not found for this study.');
+    return;
+  }
+
+  navigator.clipboard.writeText(inq.draft_letter).then(() => {
+    showToast(`📋 Draft email for ${inq.study_label} copied to clipboard!`);
+  }).catch(() => {
+    prompt('Copy email text below:', inq.draft_letter);
+  });
+}
+
+function showToast(msg) {
+  let toast = document.getElementById('app-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'app-toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+  }
+  toast.innerText = msg;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3200);
+}
+
 function selectStudyInSimulator(id) {
   const select = document.getElementById('sim-study-select');
-  if (select) {
+  if (!select) return;
+  const match = window.STUDIES_DATA.find(s => s.id === String(id) || s.covidence_id === String(id) || s.id.includes(String(id)));
+  if (match) {
+    select.value = match.id;
+  } else {
     select.value = id;
-    loadStudyIntoSimulator();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+  loadStudyIntoSimulator();
+  const simPanel = document.querySelector('.simulation-panel');
+  if (simPanel) simPanel.scrollIntoView({ behavior: 'smooth' });
 }
 
 // 8. Direction of Evidence & GRADE Summary of Findings Matrix (Objective 7)
@@ -1948,7 +1869,14 @@ window.loadStudyIntoSimulator = loadStudyIntoSimulator;
 window.updateSimStudyMD = updateSimStudyMD;
 window.applySimScenario = applySimScenario;
 window.selectStudyInSimulator = selectStudyInSimulator;
-window.switchMetaRegModality = switchMetaRegModality;
 window.copyStataConsoleLog = copyStataConsoleLog;
 window.toggleStataConsoleExpand = toggleStataConsoleExpand;
 window.switchMcidThreshold = switchMcidThreshold;
+window.filterInquiryPriority = filterInquiryPriority;
+window.filterInquiryCategory = filterInquiryCategory;
+window.filterInquirySearch = filterInquirySearch;
+window.copyAuthorEmailDraft = copyAuthorEmailDraft;
+window.showToast = showToast;
+window.switchConvTab = switchConvTab;
+window.runLiveEquiCalc = runLiveEquiCalc;
+window.runLiveStatCalc = runLiveStatCalc;

@@ -1,0 +1,655 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_audited_synthes
+> is.log
+  log type:  text
+ opened on:   5 Sep 2026, 17:56:09
+
+. 
+. * ------------------------------------------------------------------------------
+. * 1. LOAD AUDITED PRIMARY OPIOID DATASET (DEFENSIBLE 6-STUDY SET)
+. * ------------------------------------------------------------------------------
+. import delimited "dashboard/stata_consensus_synthesis_data.csv", clear varnames(1)
+(encoding automatically selected: UTF-8)
+(32 vars, 6 obs)
+
+. 
+. describe
+
+Contains data
+ Observations:             6                  
+    Variables:            32                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+author          str13   %13s                  
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str7    %9s                   
+comparator_type str24   %24s                  
+stratum         str13   %13s                  
+native_drug     str16   %16s                  
+native_unit     str6    %9s                   
+mme_factor      float   %9.0g                 
+arm1_n          byte    %8.0g                 
+arm1_mean_mme   float   %9.0g                 
+arm1_sd_mme     float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean_mme   float   %9.0g                 
+arm2_sd_mme     float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+md_native       float   %9.0g                 
+se_native       float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+rob2_overall    str13   %13s                  
+is_high_rob     byte    %8.0g                 
+opioid_status   str14   %14s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. list canonical_name modality comparator md_mme se_mme hedges_g hedges_se rob2_overall
+
+     +-----------------------------------------------------------------------------------------+
+  1. |            canonical_name | modality | compar~r | md_mme | se_mme | hedges_g | hedges~e |
+     |                 Yang 2024 |     TEAS |     Sham |    -.3 |   .716 |    -.062 |     .149 |
+     |-----------------------------------------------------------------------------------------|
+     |                                       rob2_overall                                      |
+     |                                      Some concerns                                      |
+     +-----------------------------------------------------------------------------------------+
+
+     +-----------------------------------------------------------------------------------------+
+  2. |            canonical_name | modality | compar~r | md_mme | se_mme | hedges_g | hedges~e |
+     |        Seevaunnamtum 2016 |     TEAS |     Sham | -12.56 |  4.389 |    -.707 |     .258 |
+     |-----------------------------------------------------------------------------------------|
+     |                                       rob2_overall                                      |
+     |                                      Some concerns                                      |
+     +-----------------------------------------------------------------------------------------+
+
+     +-----------------------------------------------------------------------------------------+
+  3. |            canonical_name | modality | compar~r | md_mme | se_mme | hedges_g | hedges~e |
+     | He 2026 (hepatectomy/JIS) |     TEAS |     Sham |    -.6 |   .578 |    -.164 |     .159 |
+     |-----------------------------------------------------------------------------------------|
+     |                                       rob2_overall                                      |
+     |                                      Some concerns                                      |
+     +-----------------------------------------------------------------------------------------+
+
+     +-----------------------------------------------------------------------------------------+
+  4. |            canonical_name | modality | compar~r | md_mme | se_mme | hedges_g | hedges~e |
+     |            El-Rakshy 2009 |       EA |  Control |   -1.6 |  3.719 |    -.088 |     .207 |
+     |-----------------------------------------------------------------------------------------|
+     |                                       rob2_overall                                      |
+     |                                               High                                      |
+     +-----------------------------------------------------------------------------------------+
+
+     +-----------------------------------------------------------------------------------------+
+  5. |            canonical_name | modality | compar~r | md_mme | se_mme | hedges_g | hedges~e |
+     |                 Chen 1998 |     TEAS |     Sham |    -21 |  6.103 |    -.958 |     .299 |
+     |-----------------------------------------------------------------------------------------|
+     |                                       rob2_overall                                      |
+     |                                      Some concerns                                      |
+     +-----------------------------------------------------------------------------------------+
+
+     +-----------------------------------------------------------------------------------------+
+  6. |            canonical_name | modality | compar~r | md_mme | se_mme | hedges_g | hedges~e |
+     |                 Chen 2020 |     TEAS |     Sham | -2.819 |   .178 |   -3.505 |     .356 |
+     |-----------------------------------------------------------------------------------------|
+     |                                       rob2_overall                                      |
+     |                                      Some concerns                                      |
+     +-----------------------------------------------------------------------------------------+
+
+. 
+. * ------------------------------------------------------------------------------
+. * 2. PRIMARY OUTCOME SYNTHESIS: CONTINUOUS 24-H OPIOID CONSUMPTION (IV MME mg)
+. * ------------------------------------------------------------------------------
+. * Set meta-analysis for MME
+. meta set md_mme se_mme, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "PRIMARY STRATUM 1: TEAS vs Sham — 24-h Opioid Consumption (MME mg)"
+PRIMARY STRATUM 1: TEAS vs Sham — 24-h Opioid Consumption (MME mg)
+
+. di as txt "REML + Hartung-Knapp Adjustment with Prediction Interval"
+REML + Hartung-Knapp Adjustment with Prediction Interval
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta summarize if modality == "TEAS" & comparator == "Sham", random(reml) se(kh) predinterval
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =      5
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 47.7366
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.08
+                                                                H2 =  108.49
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Yang 2024 |         -0.300      -1.703       1.103     23.25
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     16.74
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     23.33
+                Chen 1998 |        -21.000     -32.962      -9.038     13.20
+                Chen 2020 |         -2.819      -3.168      -2.470     23.48
+--------------------------+-------------------------------------------------
+                    theta |         -5.746     -15.906       4.415
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-30.628,19.136]
+
+Test of theta = 0: t(4) = -1.57                          Prob > |t| = 0.1915
+Test of homogeneity: Q = chi2(4) = 37.87                   Prob > Q = 0.0000
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "PRIMARY STRATUM 2: EA vs Control — 24-h Opioid Consumption (MME mg)"
+PRIMARY STRATUM 2: EA vs Control — 24-h Opioid Consumption (MME mg)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta summarize if modality == "EA", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      1
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =       .
+                                                        H2 =       .
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+   El-Rakshy 2009 |         -1.600      -8.889       5.689     100.00
+------------------+-------------------------------------------------
+            theta |         -1.600           .           .
+--------------------------------------------------------------------
+Test of theta = 0: t(0) =   .                    Prob > |t| =     .
+Test of homogeneity: Q = chi2(0) = 0.00            Prob > Q =     .
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "SENSITIVITY ANALYSIS: Exclude High Risk of Bias (El-Rakshy 2009)"
+SENSITIVITY ANALYSIS: Exclude High Risk of Bias (El-Rakshy 2009)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta summarize if is_high_rob == 0, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =      5
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 47.7366
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.08
+                                                                H2 =  108.49
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Yang 2024 |         -0.300      -1.703       1.103     23.25
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     16.74
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     23.33
+                Chen 1998 |        -21.000     -32.962      -9.038     13.20
+                Chen 2020 |         -2.819      -3.168      -2.470     23.48
+--------------------------+-------------------------------------------------
+                    theta |         -5.746     -15.906       4.415
+----------------------------------------------------------------------------
+Test of theta = 0: t(4) = -1.57                          Prob > |t| = 0.1915
+Test of homogeneity: Q = chi2(4) = 37.87                   Prob > Q = 0.0000
+
+. 
+. * Generate MME Forest Plot
+. meta forestplot if modality == "TEAS" & comparator == "Sham", ///
+>     title("Primary Stratum 1: TEAS vs Sham — 24-h Opioid Sparing (IV MME mg)", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Random-Effects REML + Hartung-Knapp", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+. graph export "dashboard/stata_forest_teas_mme.png", width(1600) replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_forest_teas_mme.png
+    saved as PNG format
+
+. 
+. * ------------------------------------------------------------------------------
+. * 3. STANDARDIZED MEAN DIFFERENCE (HEDGES' G SMD) — SCALE-INDEPENDENT
+. * ------------------------------------------------------------------------------
+. meta set hedges_g hedges_se, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: hedges_g
+
+         Precision
+         Std. err.: hedges_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "PRIMARY STRATUM 1: TEAS vs Sham — Standardized Mean Difference (Hedges' g)"
+PRIMARY STRATUM 1: TEAS vs Sham — Standardized Mean Difference (Hedges' g)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta summarize if modality == "TEAS" & comparator == "Sham", random(reml) se(kh) predinterval
+
+  Effect-size label: Effect size
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =      5
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  1.8409
+SE adjustment: Knapp–Hartung                                I2 (%) =   97.51
+                                                                H2 =   40.09
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Yang 2024 |         -0.062      -0.354       0.230     20.46
+       Seevaunnamtum 2016 |         -0.707      -1.213      -0.201     19.99
+He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.148     20.43
+                Chen 1998 |         -0.958      -1.544      -0.372     19.75
+                Chen 2020 |         -3.505      -4.203      -2.807     19.37
+--------------------------+-------------------------------------------------
+                    theta |         -1.056      -2.786       0.674
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-5.807, 3.696]
+
+Test of theta = 0: t(4) = -1.69                          Prob > |t| = 0.1654
+Test of homogeneity: Q = chi2(4) = 87.34                   Prob > Q = 0.0000
+
+. 
+. meta forestplot if modality == "TEAS" & comparator == "Sham", ///
+>     title("Primary Stratum 1: TEAS vs Sham — Hedges' g Effect Size", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Scale-Free Standardized Mean Difference", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: canonical_name
+
+. graph export "dashboard/stata_forest_teas_smd.png", width(1600) replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_forest_teas_smd.png
+    saved as PNG format
+
+. 
+. * ------------------------------------------------------------------------------
+. * 4. SECONDARY OUTCOMES: PAIN, FLATUS TIME, AND PONV
+. * ------------------------------------------------------------------------------
+. import delimited "dashboard/stata_secondary_synthesis_data.csv", clear varnames(1)
+(encoding automatically selected: ISO-8859-1)
+(16 vars, 44 obs)
+
+. 
+. * A) PAIN AT 24 HOURS
+. preserve
+
+. keep if outcome_domain == "Pain_24h"
+(29 observations deleted)
+
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "SECONDARY OUTCOME: Pain Intensity at ~24 Hours (Resting VAS/NRS)"
+SECONDARY OUTCOME: Pain Intensity at ~24 Hours (Resting VAS/NRS)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta set effect se, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 15
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: effect
+          Std. err.: se
+        Study label: canonical_name
+
+Meta-analysis summary                         Number of studies =     15
+Random-effects model                          Heterogeneity:
+Method: REML                                              tau2 =  0.7542
+SE adjustment: Knapp–Hartung                            I2 (%) =   98.38
+                                                            H2 =   61.83
+
+------------------------------------------------------------------------
+                Study |    Effect size    [95% conf. interval]  % weight
+----------------------+-------------------------------------------------
+            Zhou 2021 |         -0.550      -0.695      -0.405      7.46
+            Xing 2022 |         -0.220      -0.463       0.023      7.36
+              Wu 2022 |         -0.480      -0.827      -0.133      7.21
+              Wu 2025 |         -2.300      -2.761      -1.839      7.00
+              Ng 2013 |         -0.200      -0.929       0.529      6.35
+             Luo 2026 |         -0.350      -0.570      -0.130      7.39
+            Long 2025 |         -1.180      -1.699      -0.661      6.87
+       Liu 2026 (ESD) |         -1.600      -2.180      -1.020      6.73
+             Liu 2021 |          0.040      -0.207       0.287      7.35
+             Lee 2011 |         -1.330      -2.277      -0.383      5.74
+           Huang 2024 |         -3.210      -7.853       1.433      0.89
+He 2026 (breast/WJCO) |         -0.903      -0.964      -0.842      7.50
+              Gu 2019 |         -0.740      -0.952      -0.528      7.40
+            Chen 2020 |         -3.060      -3.244      -2.876      7.42
+              Ao 2021 |         -0.440      -0.689      -0.191      7.35
+----------------------+-------------------------------------------------
+                theta |         -0.964      -1.466      -0.462
+------------------------------------------------------------------------
+Test of theta = 0: t(14) = -4.12                     Prob > |t| = 0.0010
+Test of homogeneity: Q = chi2(14) = 728.54             Prob > Q = 0.0000
+
+. 
+. meta forestplot, ///
+>     title("Secondary Outcome: Resting Pain at ~24h (VAS/NRS 0-10)", size(medium)) ///
+>     subtitle("Random-Effects REML + Hartung-Knapp", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: effect
+          Std. err.: se
+        Study label: canonical_name
+
+. graph export "dashboard/stata_forest_pain.png", width(1600) replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_forest_pain.png saved
+    as PNG format
+
+. restore
+
+. 
+. * B) TIME TO FIRST FLATUS (GI RECOVERY)
+. preserve
+
+. keep if outcome_domain == "Flatus_Time"
+(34 observations deleted)
+
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "SECONDARY OUTCOME: Time to First Postoperative Flatus (Hours)"
+SECONDARY OUTCOME: Time to First Postoperative Flatus (Hours)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta set effect se, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 10
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: effect
+          Std. err.: se
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =     10
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  9.0666
+SE adjustment: Knapp–Hartung                        I2 (%) =   92.75
+                                                        H2 =   13.79
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Zhou 2025 |         -1.780      -3.172      -0.388     13.14
+        Yang 2020 |         -3.300      -6.142      -0.458     11.26
+        Yang 2024 |         -1.600      -2.611      -0.589     13.47
+        Xing 2022 |         -4.260      -7.645      -0.875     10.44
+        Wang 2023 |         -6.130     -13.819       1.559      5.14
+          Ng 2013 |         -0.300      -0.676       0.076     13.81
+          Lu 2022 |         -7.900     -16.002       0.202      4.81
+       Huang 2025 |         -5.800      -9.248      -2.352     10.34
+          Gu 2019 |         -6.980     -10.671      -3.289      9.97
+         Gao 2021 |        -12.900     -18.251      -7.549      7.61
+------------------+-------------------------------------------------
+            theta |         -4.280      -6.839      -1.721
+--------------------------------------------------------------------
+Test of theta = 0: t(9) = -3.78                  Prob > |t| = 0.0043
+Test of homogeneity: Q = chi2(9) = 61.36           Prob > Q = 0.0000
+
+. 
+. meta forestplot, ///
+>     title("Secondary Outcome: Time to First Flatus (Hours)", size(medium)) ///
+>     subtitle("Random-Effects REML + Hartung-Knapp", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: effect
+          Std. err.: se
+        Study label: canonical_name
+
+. graph export "dashboard/stata_forest_flatus.png", width(1600) replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_forest_flatus.png
+    saved as PNG format
+
+. restore
+
+. 
+. * C) POSTOPERATIVE NAUSEA & VOMITING (PONV)
+. preserve
+
+. keep if outcome_domain == "PONV"
+(25 observations deleted)
+
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "SECONDARY OUTCOME: Postoperative Nausea & Vomiting (Risk Ratio)"
+SECONDARY OUTCOME: Postoperative Nausea & Vomiting (Risk Ratio)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta esize arm1_events arm1_n arm2_events arm2_n, esize(lnrr) studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 19
+       Study label: canonical_name
+        Study size: _meta_studysize
+      Summary data: arm1_events arm1_n arm2_events arm2_n
+
+       Effect size
+              Type: lnrratio
+             Label: Log risk-ratio
+          Variable: _meta_es
+   Zero-cells adj.: None; no zero cells
+
+         Precision
+         Std. err.: _meta_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh) eform
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     19
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  0.0662
+SE adjustment: Knapp–Hartung                                I2 (%) =   44.37
+                                                                H2 =    1.80
+
+----------------------------------------------------------------------------
+                    Study |     Risk ratio    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                 Zhu 2022 |          0.462       0.222       0.959      4.81
+                Zhou 2025 |          0.617       0.312       1.219      5.29
+               Zheng 2025 |          0.745       0.462       1.201      7.86
+               Zhang 2014 |          0.423       0.147       1.216      2.77
+                Yang 2024 |          0.541       0.287       1.021      5.78
+               Xiong 2021 |          0.426       0.171       1.062      3.49
+                Xing 2022 |          0.535       0.206       1.387      3.26
+                Wang 2024 |          0.562       0.210       1.507      3.10
+                  Ma 2026 |          0.857       0.340       2.161      3.42
+                  Lu 2021 |          0.864       0.639       1.170     10.98
+                 Luo 2026 |          1.198       0.963       1.491     12.57
+                Long 2025 |          0.152       0.020       1.142      0.88
+           Liu 2026 (ESD) |          0.350       0.121       1.010      2.76
+          Liu 2026 (burn) |          0.516       0.231       1.154      4.21
+               Jiang 2026 |          0.699       0.493       0.993     10.07
+                 Hou 2023 |          0.400       0.140       1.144      2.79
+He 2026 (hepatectomy/JIS) |          0.914       0.525       1.592      6.75
+                Chen 2015 |          0.513       0.272       0.965      5.80
+ Chen 2015 (Hyperalgesia) |          0.486       0.192       1.231      3.40
+--------------------------+-------------------------------------------------
+               exp(theta) |          0.660       0.551       0.790
+----------------------------------------------------------------------------
+Test of theta = 0: t(18) = -4.84                         Prob > |t| = 0.0001
+Test of homogeneity: Q = chi2(18) = 33.57                  Prob > Q = 0.0142
+
+. 
+. meta forestplot, ///
+>     title("Secondary Outcome: Postoperative Nausea & Vomiting (Risk Ratio)", size(medium)) ///
+>     subtitle("Random-Effects REML + Hartung-Knapp (Exponentiated RR)", size(small)) ///
+>     nullrefline nonotes eform
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+. graph export "dashboard/stata_forest_ponv.png", width(1600) replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_forest_ponv.png saved
+    as PNG format
+
+. restore
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "STATA AUDITED SYNTHESIS EXECUTION COMPLETED SUCCESSFULLY"
+STATA AUDITED SYNTHESIS EXECUTION COMPLETED SUCCESSFULLY
+
+. di as txt "=================================================================="
+==================================================================
+
+. capture log close
