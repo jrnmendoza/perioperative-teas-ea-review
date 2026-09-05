@@ -1897,6 +1897,14 @@ function openStudyDrawer(id) {
     outcomesHtml += `<p><strong>🩹 24-h Pain Intensity at Rest:</strong> <span style="color: #38bdf8; font-weight: 700;">MD ${pn.mean_diff < 0 ? '−' : '+'}${Math.abs(pn.mean_diff)} VAS</span> (95% CI: [${pn.ci_low}, ${pn.ci_upp}]) • ${pn.arm1_mean} ± ${pn.arm1_sd} vs ${pn.arm2_mean} ± ${pn.arm2_sd}</p>`;
   }
 
+  if (s.outcomes && s.outcomes.pca_presses_24h && typeof s.outcomes.pca_presses_24h.mean_diff === 'number') {
+    const pc = s.outcomes.pca_presses_24h;
+    outcomesHtml += `<p><strong>🔘 PCA Demands / Presses (24h):</strong> <span style="color: #34d399; font-weight: 700;">MD ${pc.mean_diff < 0 ? '−' : '+'}${Math.abs(pc.mean_diff)} ${pc.unit || 'presses'}</span> (95% CI: [${pc.ci_low}, ${pc.ci_upp}], P=${pc.p_val}) • ${pc.arm1_mean} ± ${pc.arm1_sd} vs ${pc.arm2_mean} ± ${pc.arm2_sd} (${pc.metric_name})</p>`;
+  } else if (s.outcomes && s.outcomes.pca_presses_24h && s.outcomes.pca_presses_24h.status && s.outcomes.pca_presses_24h.status !== 'Unreported in Source Paper') {
+    const pc = s.outcomes.pca_presses_24h;
+    outcomesHtml += `<p><strong>🔘 PCA Demands / Presses:</strong> <span style="color: #38bdf8; font-weight: 600;">${pc.metric_name || pc.status}</span> — ${pc.note || ''}</p>`;
+  }
+
   if (s.outcomes && s.outcomes.ponv_24h && typeof s.outcomes.ponv_24h.rr === 'number') {
     const po = s.outcomes.ponv_24h;
     outcomesHtml += `<p><strong>🤢 Postoperative Nausea &amp; Vomiting (0–24h):</strong> <span style="color: #a78bfa; font-weight: 700;">RR ${po.rr}</span> (95% CI: [${po.ci_low}, ${po.ci_upp}]) • ${po.arm1_events}/${po.arm1_n} vs ${po.arm2_events}/${po.arm2_n}</p>`;

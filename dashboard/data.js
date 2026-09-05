@@ -16,7 +16,8 @@ window.AUDIT_STATS = {
   "important_inquiries": 51,
   "secondary_pain_studies": 15,
   "secondary_ponv_studies": 19,
-  "secondary_flatus_studies": 10
+  "secondary_flatus_studies": 10,
+  "secondary_pca_presses_studies": 13
 };
 
 window.AUTHOR_INQUIRIES = [
@@ -1037,7 +1038,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Zhu 2022",
     "reconciliation_batch": "Batch 19",
@@ -1173,7 +1178,11 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Zhou 2025",
     "reconciliation_batch": "Batch 16",
@@ -1300,7 +1309,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Zhou 2021",
     "reconciliation_batch": "Batch 9",
@@ -1424,7 +1437,30 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Total PCIA Presses (24h)",
+        "timepoint": "24h",
+        "mean_diff": -4.4,
+        "se": 0.708,
+        "ci_low": -5.79,
+        "ci_upp": -3.01,
+        "arm1_n": 40,
+        "arm1_mean": 6.3,
+        "arm1_sd": 2.2,
+        "arm2_n": 40,
+        "arm2_mean": 10.7,
+        "arm2_sd": 3.9,
+        "unit": "presses",
+        "p_val": 0.004,
+        "effective_presses": {
+          "arm1": "3.8 \u00b1 1.0",
+          "arm2": "4.8 \u00b1 1.6",
+          "p": 0.039
+        },
+        "note": "Table 3 reports total PCIA presses (6.3 \u00b1 2.2 vs 10.7 \u00b1 3.9, P=0.004) and effective presses (3.8 \u00b1 1.0 vs 4.8 \u00b1 1.6, P=0.039)."
+      }
     },
     "canonical_name": "Zheng 2025",
     "reconciliation_batch": "Batch 15",
@@ -1537,7 +1573,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Zhan 2020",
     "reconciliation_batch": "Batch 6",
@@ -1650,7 +1690,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "PCIA Bolus Demands (24h)",
+        "timepoint": "24h",
+        "mean_diff": -1.75,
+        "se": 0.62,
+        "ci_low": -2.96,
+        "ci_upp": -0.53,
+        "arm1_n": 44,
+        "arm1_mean": 0.5,
+        "arm1_sd": 1.48,
+        "arm2_n": 44,
+        "arm2_mean": 2.25,
+        "arm2_sd": 2.22,
+        "unit": "demands",
+        "p_val": 0.001,
+        "note": "Table 4: PCIA bolus demands: TEAS median 0 [0\u20132] vs Control median 2 [1\u20134] (P<0.001; MD -1.75)."
+      }
     },
     "canonical_name": "Zhang 2025",
     "reconciliation_batch": "Batch 15",
@@ -1763,7 +1821,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Zhang 2023",
     "reconciliation_batch": "Batch 12",
@@ -1887,7 +1949,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Zhang 2014",
     "reconciliation_batch": "Batch 4",
@@ -2000,7 +2066,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Yu 2020",
     "reconciliation_batch": "Batch 6",
@@ -2113,7 +2183,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Yeh 2010",
     "reconciliation_batch": "Batch 2",
@@ -2226,7 +2300,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Measured as Latency / Alternate Timepoint",
+        "metric_name": "Time to Initial PCA Demand (min)",
+        "timepoint": "PACU",
+        "mean_diff": null,
+        "se": null,
+        "ci_low": null,
+        "ci_upp": null,
+        "arm1_n": 22,
+        "arm1_mean": 98.4,
+        "arm1_sd": 156.2,
+        "arm2_n": 22,
+        "arm2_mean": 81.5,
+        "arm2_sd": 131.7,
+        "unit": "minutes",
+        "p_val": 0.88,
+        "note": "Time to initial PCA demand in PACU: EG1 98.4 \u00b1 156.2 min vs Control 81.5 \u00b1 131.7 min (P=0.88, ANOVA F=0.13)."
+      }
     },
     "canonical_name": "Yeh 2011",
     "reconciliation_batch": "Batch 2",
@@ -2339,7 +2431,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Yao 2015",
     "reconciliation_batch": "Batch 4",
@@ -2466,7 +2562,11 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Yang 2020",
     "reconciliation_batch": "Batch 20",
@@ -2624,7 +2724,11 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Yang 2024",
     "reconciliation_batch": "Batch 14",
@@ -2748,7 +2852,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Xiong 2021",
     "reconciliation_batch": "Batch 7",
@@ -2900,7 +3008,25 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Measured at 48h / Alternate Timepoint",
+        "metric_name": "PCIA Press Numbers (48h)",
+        "timepoint": "48h",
+        "mean_diff": null,
+        "se": null,
+        "ci_low": null,
+        "ci_upp": null,
+        "arm1_n": 29,
+        "arm1_mean": 6.55,
+        "arm1_sd": 3.19,
+        "arm2_n": 29,
+        "arm2_mean": 12.45,
+        "arm2_sd": 4.21,
+        "unit": "presses",
+        "p_val": 0.001,
+        "note": "Table 3 reports PCIA press numbers: TEAS+TAPB 6.55 \u00b1 3.19 vs TAPB 9.97 \u00b1 3.80 vs Control 12.45 \u00b1 4.21 (P<0.05)."
+      }
     },
     "canonical_name": "Xing 2022",
     "reconciliation_batch": "Batch 10",
@@ -3013,7 +3139,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Patient PCA Demands",
+        "timepoint": "24h",
+        "mean_diff": -27.0,
+        "se": 0.775,
+        "ci_low": -28.52,
+        "ci_upp": -25.48,
+        "arm1_n": 30,
+        "arm1_mean": 16.0,
+        "arm1_sd": 3.0,
+        "arm2_n": 30,
+        "arm2_mean": 43.0,
+        "arm2_sd": 3.0,
+        "unit": "demands",
+        "p_val": 0.001,
+        "note": "PCA demand frequency: EAS (16 \u00b1 3) vs Sham (43 \u00b1 3, P<0.05) vs Control (42 \u00b1 5)."
+      }
     },
     "canonical_name": "Xie 2014",
     "reconciliation_batch": "Batch 4",
@@ -3140,7 +3284,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Wu 2022",
     "reconciliation_batch": "Batch 9",
@@ -3267,7 +3415,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Wu 2025",
     "reconciliation_batch": "Batch 15",
@@ -3380,7 +3532,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Wong 2006",
     "reconciliation_batch": "Batch 3",
@@ -3507,7 +3663,11 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Wang 2023",
     "reconciliation_batch": "Batch 12",
@@ -3631,7 +3791,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Wang 2024",
     "reconciliation_batch": "Batch 13",
@@ -3744,7 +3908,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Tu 2024",
     "reconciliation_batch": "Batch 13",
@@ -3857,7 +4025,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Sun 2017",
     "reconciliation_batch": "Batch 5",
@@ -3970,7 +4142,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Sim 2002",
     "reconciliation_batch": "Batch 3",
@@ -4103,7 +4279,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "PCA Demands / Button Presses (24h)",
+        "timepoint": "24h",
+        "mean_diff": -27.97,
+        "se": 9.12,
+        "ci_low": -46.2,
+        "ci_upp": -9.74,
+        "arm1_n": 32,
+        "arm1_mean": 27.28,
+        "arm1_sd": 21.61,
+        "arm2_n": 32,
+        "arm2_mean": 55.25,
+        "arm2_sd": 46.85,
+        "unit": "presses",
+        "p_val": 0.003,
+        "note": "Table 2 reports 24h PCA button presses: 27.28 \u00b1 21.61 vs 55.25 \u00b1 46.85 (P=0.003), a 50.6% relative reduction."
+      }
     },
     "canonical_name": "Seevaunnamtum 2016",
     "reconciliation_batch": "Batch 20",
@@ -4216,7 +4410,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Pan 2023",
     "reconciliation_batch": "Batch 10",
@@ -4329,7 +4527,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Ntritsou 2014",
     "reconciliation_batch": "Batch 3",
@@ -4470,7 +4672,11 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Ng 2013",
     "reconciliation_batch": "Batch 2",
@@ -4594,7 +4800,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Ma 2026",
     "reconciliation_batch": "Batch 17",
@@ -4718,7 +4928,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Lu 2021",
     "reconciliation_batch": "Batch 8",
@@ -4845,7 +5059,30 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "PCA Attempts (24h)",
+        "timepoint": "24h",
+        "mean_diff": -11.16,
+        "se": 3.93,
+        "ci_low": -18.88,
+        "ci_upp": -3.44,
+        "arm1_n": 40,
+        "arm1_mean": 9.67,
+        "arm1_sd": 11.12,
+        "arm2_n": 40,
+        "arm2_mean": 20.83,
+        "arm2_sd": 22.24,
+        "unit": "attempts",
+        "p_val": 0.001,
+        "effective_presses": {
+          "arm1": "5.0 (2\u201312)",
+          "arm2": "12.0 (6\u201322)",
+          "p": 0.001
+        },
+        "note": "24h PCA attempts: TEAS median 8.0 [3\u201318] (mean ~9.67) vs Control median 16.5 [8\u201338] (mean ~20.83, P=0.001)."
+      }
     },
     "canonical_name": "Lu 2022",
     "reconciliation_batch": "Batch 10",
@@ -4983,7 +5220,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Luo 2026",
     "reconciliation_batch": "Batch 18",
@@ -5121,7 +5362,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Measured at 48h / Alternate Timepoint",
+        "metric_name": "PCIA Compression Times (48h)",
+        "timepoint": "48h",
+        "mean_diff": null,
+        "se": null,
+        "ci_low": null,
+        "ci_upp": null,
+        "arm1_n": 27,
+        "arm1_mean": 7.11,
+        "arm1_sd": 2.14,
+        "arm2_n": 26,
+        "arm2_mean": 8.62,
+        "arm2_sd": 1.84,
+        "unit": "compressions",
+        "p_val": 0.008,
+        "note": "48h PCIA compressions: 7.11 \u00b1 2.14 in Group A (TEAS) vs 8.62 \u00b1 1.84 in Group C (Control) (P=0.008)."
+      }
     },
     "canonical_name": "Long 2025",
     "reconciliation_batch": "Batch 16",
@@ -5234,7 +5493,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Li 2021",
     "reconciliation_batch": "Batch 7",
@@ -5372,7 +5635,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Liu 2026 (ESD)",
     "reconciliation_batch": "Batch 18",
@@ -5499,7 +5766,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "PCA Compressions (24h)",
+        "timepoint": "24h",
+        "mean_diff": 0.24,
+        "se": 0.658,
+        "ci_low": -1.06,
+        "ci_upp": 1.54,
+        "arm1_n": 50,
+        "arm1_mean": 17.62,
+        "arm1_sd": 2.69,
+        "arm2_n": 50,
+        "arm2_mean": 17.38,
+        "arm2_sd": 3.8,
+        "unit": "compressions",
+        "p_val": 0.716,
+        "note": "Table 2 reports 24h pump compressions: 17.62 \u00b1 2.687 in TEAS vs 17.38 \u00b1 3.801 in Control (P=0.716)."
+      }
     },
     "canonical_name": "Liu 2021",
     "reconciliation_batch": "Batch 8",
@@ -5623,7 +5908,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Liu 2026 (burn)",
     "reconciliation_batch": "Batch 18",
@@ -5736,7 +6025,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Liu 2025",
     "reconciliation_batch": "Batch 16",
@@ -5849,7 +6142,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Li 2022",
     "reconciliation_batch": "Batch 19",
@@ -5962,7 +6259,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Total PCA Demands (24h)",
+        "timepoint": "24h",
+        "mean_diff": -12.6,
+        "se": 2.186,
+        "ci_low": -16.91,
+        "ci_upp": -8.29,
+        "arm1_n": 25,
+        "arm1_mean": 7.9,
+        "arm1_sd": 5.9,
+        "arm2_n": 25,
+        "arm2_mean": 20.5,
+        "arm2_sd": 9.2,
+        "unit": "demands",
+        "p_val": 0.001,
+        "note": "100-Hz High EA (7.9 \u00b1 5.9) vs Control (20.5 \u00b1 9.2, P<0.01; 61.5% reduction); Low-EA: 11.7 \u00b1 7.1 vs 20.5 \u00b1 9.2."
+      }
     },
     "canonical_name": "Lin 2002",
     "reconciliation_batch": "Batch 20",
@@ -6075,7 +6390,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Liang 2021",
     "reconciliation_batch": "Batch 8",
@@ -6200,7 +6519,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "PCA Demands (24h)",
+        "timepoint": "24h",
+        "mean_diff": -42.94,
+        "se": 13.29,
+        "ci_low": -69.0,
+        "ci_upp": -16.88,
+        "arm1_n": 16,
+        "arm1_mean": 41.6,
+        "arm1_sd": 36.47,
+        "arm2_n": 16,
+        "arm2_mean": 84.54,
+        "arm2_sd": 38.66,
+        "unit": "demands",
+        "p_val": 0.05,
+        "note": "24h PCA requests: Low-EA (41.60 \u00b1 36.47) vs Control (84.54 \u00b1 38.66, P<0.05); Sham was 74.18 \u00b1 39.33."
+      }
     },
     "canonical_name": "Lee 2011",
     "reconciliation_batch": "Batch 2",
@@ -6313,7 +6650,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Analgesic Pump Compressions (24h)",
+        "timepoint": "24h",
+        "mean_diff": -5.5,
+        "se": 0.748,
+        "ci_low": -6.97,
+        "ci_upp": -4.03,
+        "arm1_n": 53,
+        "arm1_mean": 0.67,
+        "arm1_sd": 1.48,
+        "arm2_n": 52,
+        "arm2_mean": 6.17,
+        "arm2_sd": 5.19,
+        "unit": "compressions",
+        "p_val": 0.0001,
+        "note": "Primary endpoint NAPC at 24h: 2-Hz median 0.0 [0.0\u20132.0] (mean ~0.67) vs Sham median 5.5 [3.0\u201310.0] (mean ~6.17, P<0.001)."
+      }
     },
     "canonical_name": "Jin 2023",
     "reconciliation_batch": "Batch 11",
@@ -6437,7 +6792,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Jiang 2026",
     "reconciliation_batch": "Batch 17",
@@ -6564,7 +6923,11 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Huang 2025",
     "reconciliation_batch": "Batch 16",
@@ -6677,7 +7040,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Huang 2017",
     "reconciliation_batch": "Batch 5",
@@ -6804,7 +7171,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Measured on POD2 / Alternate Timepoint",
+        "metric_name": "Additional PCA Releases (POD2)",
+        "timepoint": "POD2 (24h post-tx)",
+        "mean_diff": null,
+        "se": null,
+        "ci_low": null,
+        "ci_upp": null,
+        "arm1_n": 38,
+        "arm1_mean": 0.5,
+        "arm1_sd": 1.48,
+        "arm2_n": 38,
+        "arm2_mean": 2.5,
+        "arm2_sd": 1.48,
+        "unit": "releases",
+        "p_val": 0.001,
+        "note": "Additional PCA releases on POD2: Contralateral EA 0 [0, 2] vs Ipsilateral EA 2 [0, 2] vs Sham EA 2 [2, 4] (P<0.001)."
+      }
     },
     "canonical_name": "Huang 2024",
     "reconciliation_batch": "Batch 13",
@@ -6928,7 +7313,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Hou 2023",
     "reconciliation_batch": "Batch 11",
@@ -7070,7 +7459,30 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Total PCA Attempts (24h)",
+        "timepoint": "24h",
+        "mean_diff": -0.8,
+        "se": 0.779,
+        "ci_low": -2.33,
+        "ci_upp": 0.73,
+        "arm1_n": 80,
+        "arm1_mean": 2.7,
+        "arm1_sd": 3.3,
+        "arm2_n": 79,
+        "arm2_mean": 3.5,
+        "arm2_sd": 6.1,
+        "unit": "attempts",
+        "p_val": 0.02,
+        "effective_presses": {
+          "arm1": "2.6 \u00b1 3.3",
+          "arm2": "3.5 \u00b1 6.0",
+          "p": 0.02
+        },
+        "note": "24h PCA attempts: 2.7 \u00b1 3.3 vs 3.5 \u00b1 6.1 (P=0.02); effective deliveries: 2.6 \u00b1 3.3 vs 3.5 \u00b1 6.0 (P=0.02)."
+      }
     },
     "canonical_name": "He 2026 (hepatectomy/JIS)",
     "reconciliation_batch": "Batch 17",
@@ -7197,7 +7609,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "He 2026 (breast/WJCO)",
     "reconciliation_batch": "Batch 17",
@@ -7338,7 +7754,11 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Gu 2019",
     "reconciliation_batch": "Batch 6",
@@ -7451,7 +7871,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Guo 2023",
     "reconciliation_batch": "Batch 11",
@@ -7564,7 +7988,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Grech 2016",
     "reconciliation_batch": "Batch 5",
@@ -7691,7 +8119,11 @@ window.STUDIES_DATA = [
       },
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Gao 2021",
     "reconciliation_batch": "Batch 7",
@@ -7824,7 +8256,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "El-Rakshy 2009",
     "reconciliation_batch": "Batch 2",
@@ -7937,7 +8373,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Coura 2011",
     "reconciliation_batch": "Batch 1",
@@ -8070,7 +8510,30 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Total PCA Demands (24h)",
+        "timepoint": "24h",
+        "mean_diff": -39.0,
+        "se": 11.39,
+        "ci_low": -61.42,
+        "ci_upp": -16.58,
+        "arm1_n": 25,
+        "arm1_mean": 45.0,
+        "arm1_sd": 29.0,
+        "arm2_n": 25,
+        "arm2_mean": 84.0,
+        "arm2_sd": 49.0,
+        "unit": "demands",
+        "p_val": 0.05,
+        "effective_presses": {
+          "arm1": "17 \u00b1 9",
+          "arm2": "30 \u00b1 16",
+          "p": 0.05
+        },
+        "note": "Table 2: 24h PCA demands (45 \u00b1 29 vs 84 \u00b1 49, P<0.05); PCA deliveries (17 \u00b1 9 vs 30 \u00b1 16, P<0.05)."
+      }
     },
     "canonical_name": "Chen 1998",
     "reconciliation_batch": "Batch 1",
@@ -8215,7 +8678,30 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Total PCIA Attempts (24h)",
+        "timepoint": "24h",
+        "mean_diff": -9.22,
+        "se": 0.359,
+        "ci_low": -9.92,
+        "ci_upp": -8.52,
+        "arm1_n": 40,
+        "arm1_mean": 4.83,
+        "arm1_sd": 1.06,
+        "arm2_n": 40,
+        "arm2_mean": 14.05,
+        "arm2_sd": 2.01,
+        "unit": "attempts",
+        "p_val": 0.0001,
+        "effective_presses": {
+          "arm1": "4.58 \u00b1 0.93",
+          "arm2": "7.48 \u00b1 1.18",
+          "p": 0.0001
+        },
+        "note": "Total PCIA attempts at 24h: 4.83 \u00b1 1.06 vs 14.05 \u00b1 2.01 (P<0.001); effective attempts: 4.58 \u00b1 0.93 vs 7.48 \u00b1 1.18 (P<0.001)."
+      }
     },
     "canonical_name": "Chen 2020",
     "reconciliation_batch": "Batch 1",
@@ -8342,7 +8828,25 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Measured at 48h / Alternate Timepoint",
+        "metric_name": "Effective PCA Presses (48h)",
+        "timepoint": "48h",
+        "mean_diff": null,
+        "se": null,
+        "ci_low": null,
+        "ci_upp": null,
+        "arm1_n": 32,
+        "arm1_mean": 6.2,
+        "arm1_sd": 3.7,
+        "arm2_n": 33,
+        "arm2_mean": 12.3,
+        "arm2_sd": 4.6,
+        "unit": "presses",
+        "p_val": 0.0001,
+        "note": "Table II reports effective PCA presses over 48h: 6.2 \u00b1 3.7 in TEAS vs 12.3 \u00b1 4.6 in Sham (P<0.001)."
+      }
     },
     "canonical_name": "Ao 2021",
     "reconciliation_batch": "Batches 1 and 9",
@@ -8455,7 +8959,30 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "PCIA Bolus Administrations (0\u20136h)",
+        "timepoint": "0\u20136h",
+        "mean_diff": -10.44,
+        "se": 2.883,
+        "ci_low": -16.1,
+        "ci_upp": -4.78,
+        "arm1_n": 41,
+        "arm1_mean": 14.43,
+        "arm1_sd": 10.67,
+        "arm2_n": 40,
+        "arm2_mean": 24.87,
+        "arm2_sd": 14.88,
+        "unit": "boluses",
+        "p_val": 0.05,
+        "effective_presses": {
+          "arm1": "4.83 \u00b1 2.95",
+          "arm2": "9.67 \u00b1 3.35",
+          "p": 0.05
+        },
+        "note": "Table 2 reports total PCIA boluses 0\u20136h: 14.43 \u00b1 10.67 vs 24.87 \u00b1 14.88 (P<0.05); effective: 4.83 \u00b1 2.95 vs 9.67 \u00b1 3.35."
+      }
     },
     "canonical_name": "An 2014",
     "reconciliation_batch": "Batch 20",
@@ -8579,7 +9106,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Chen 2015",
     "reconciliation_batch": "Batch 5",
@@ -8703,7 +9234,11 @@ window.STUDIES_DATA = [
       "flatus_time": null,
       "hospital_stay": null,
       "rescue_analgesia": null,
-      "intraop_opioid": null
+      "intraop_opioid": null,
+      "pca_presses_24h": {
+        "status": "Unreported in Source Paper",
+        "note": "PCA pump presses / demand counts were not reported in published tables."
+      }
     },
     "canonical_name": "Chen 2015 (Hyperalgesia)",
     "reconciliation_batch": "Batch 4",
@@ -8714,7 +9249,6 @@ window.STUDIES_DATA = [
     "reconciliation_index": "https://docs.google.com/document/d/1hR0UuZSmPpwZi384Vzn3sZt5Y5_ZwYxW6b3u4nq2-40/edit"
   }
 ];
-
 
 window.PRISMA_DATA = {
   "identification": {
