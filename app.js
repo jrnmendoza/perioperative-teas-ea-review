@@ -1941,7 +1941,9 @@ function openStudyDrawer(id) {
 
   if (s.outcomes && s.outcomes.opioid_24h && typeof s.outcomes.opioid_24h.mean_diff === 'number') {
     const op = s.outcomes.opioid_24h;
-    outcomesHtml += `<p><strong>💊 Primary 24-h Opioid Consumption:</strong> <span style="color: #34d399; font-weight: 700;">MD ${op.mean_diff < 0 ? '−' : '+'}${Math.abs(op.mean_diff)} mg IV MME</span> (95% CI: [${op.ci_low}, ${op.ci_upp}], SE: ${op.se}) • Native: ${op.arm1_mean_native} ± ${op.arm1_sd_native} vs ${op.arm2_mean_native} ± ${op.arm2_sd_native} ${op.native_unit} ${op.native_drug}</p>`;
+    const nativeDetail = op.native_drug ? ` • Native: ${op.arm1_mean_native !== undefined ? op.arm1_mean_native : op.arm1_mean} ± ${op.arm1_sd_native !== undefined ? op.arm1_sd_native : op.arm1_sd} vs ${op.arm2_mean_native !== undefined ? op.arm2_mean_native : op.arm2_mean} ± ${op.arm2_sd_native !== undefined ? op.arm2_sd_native : op.arm2_sd} ${op.native_unit || ''} ${op.native_drug}` : '';
+    const derDetail = op.derivation_rule ? `<br><span style="font-size:0.75rem; color:#94a3b8;"><strong>Derivation Rule:</strong> ${op.derivation_rule}</span>` : '';
+    outcomesHtml += `<p><strong>💊 Primary 24-h Opioid Consumption:</strong> <span style="color: #34d399; font-weight: 700;">MD ${op.mean_diff < 0 ? '−' : '+'}${Math.abs(op.mean_diff)} mg IV MME</span> (95% CI: [${op.ci_low}, ${op.ci_upp}], SE: ${op.se})${nativeDetail}${derDetail}</p>`;
   } else if (s.outcomes && s.outcomes.opioid_24h) {
     outcomesHtml += `<p><strong>💊 Primary 24-h Opioid Consumption:</strong> <span style="color: #f59e0b; font-weight: 600;">${s.outcomes.opioid_24h.status}</span> — ${s.outcomes.opioid_24h.note || 'No continuous 24h opioid mean/SD tabulated.'}</p>`;
   }
