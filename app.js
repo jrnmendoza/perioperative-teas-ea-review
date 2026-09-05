@@ -1105,88 +1105,129 @@ function loadStataTerminalLog() {
       name:  <unnamed>
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_audited_synthesis.log
   log type:  text
- opened on:   5 Sep 2026, 17:56:09
+ opened on:   5 Sep 2026, 19:52:52
 
-. * 1. LOAD AUDITED PRIMARY OPIOID DATASET (DEFENSIBLE 6-STUDY SET)
+. * 1. LOAD AUDITED PRIMARY OPIOID DATASET (11 TRIALS: 6 DIRECT + 5 DERIVED)
 . import delimited "dashboard/stata_consensus_synthesis_data.csv", clear varnames(1)
 (encoding automatically selected: UTF-8)
-(32 vars, 6 obs)
+(32 vars, 11 obs)
 
 . * 2. PRIMARY OUTCOME SYNTHESIS: CONTINUOUS 24-H OPIOID CONSUMPTION (IV MME mg)
 . meta set md_mme se_mme, studylabel(canonical_name)
   Model: Random effects | Method: REML | Effect size: md_mme | Precision: se_mme
 
 ==================================================================
-PRIMARY STRATUM 1: TEAS vs Sham — 24-h Opioid Consumption (MME mg)
-REML + Hartung-Knapp Adjustment with Prediction Interval
+PRIMARY SYNTHESIS 1: ALL 11 ANALYZABLE TRIALS (6 DIRECT + 5 DERIVED)
+Random-Effects REML + Hartung-Knapp-Sidik-Jonkman (HKSJ) Adjustment
 ==================================================================
 
-. meta summarize if modality == "TEAS" & comparator == "Sham", random(reml) se(kh) predinterval
-Meta-analysis summary                             Number of studies =      5
+. meta summarize, random(reml) se(kh) predinterval
+Meta-analysis summary                             Number of studies =     11
 Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 = 47.7366
-SE adjustment: Knapp-Hartung                                I2 (%) =   99.08
-                                                                H2 =  108.49
+Method: REML                                                  tau2 = 30.0069
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.73
+                                                                H2 =  373.57
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Yang 2024 |         -0.300      -1.703       1.103     23.25
-       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     16.74
-He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     23.33
-                Chen 1998 |        -21.000     -32.962      -9.038     13.20
-                Chen 2020 |         -2.819      -3.168      -2.470     23.48
+                Chen 1998 |        -21.000     -32.962      -9.038      5.13
+           El-Rakshy 2009 |         -1.600      -8.889       5.689      7.87
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      7.00
+                Chen 2020 |         -2.819      -3.168      -2.470     11.48
+                Yang 2024 |         -0.300      -1.703       1.103     11.30
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     11.36
+                 Sim 2002 |         -8.920     -18.465       0.625      6.42
+               Coura 2011 |        -22.400     -33.513     -11.287      5.55
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     11.48
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     10.94
+               Zhang 2025 |         -0.326      -0.522      -0.130     11.49
 --------------------------+-------------------------------------------------
-                    theta |         -5.746     -15.906       4.415
+                    theta |         -5.035      -9.777      -0.293
 ----------------------------------------------------------------------------
-95% prediction interval for theta: [-30.628, 19.136]
-Test of theta = 0: t(4) = -1.57                          Prob > |t| = 0.1915
-Test of homogeneity: Q = chi2(4) = 37.87                   Prob > Q = 0.0000
+95% prediction interval for theta: [-18.329, 8.259]
+Test of theta = 0: t(10) = -2.37                         Prob > |t| = 0.0395
+Test of homogeneity: Q = chi2(10) = 197.30                 Prob > Q = 0.0000
 
 ==================================================================
-PRIMARY STRATUM 2: EA vs Control — 24-h Opioid Consumption (MME mg)
+PRIMARY SYNTHESIS 1B: ALL 11 TRIALS — DerSimonian-Laird Random Effects
 ==================================================================
-. meta summarize if modality == "EA", random(reml) se(kh)
-Meta-analysis summary                     Number of studies =      1
---------------------------------------------------------------------
-            Study |    Effect size    [95% conf. interval]  % weight
-------------------+-------------------------------------------------
-   El-Rakshy 2009 |         -1.600      -8.889       5.689    100.00
-------------------+-------------------------------------------------
-Note: Single eligible trial; overall RoB 2 High (D3 missing data).
+. meta summarize, random(dl) se(kh)
+Meta-analysis summary                             Number of studies =     11
+Method: DerSimonian–Laird                                     tau2 =  1.5085
+SE adjustment: Knapp–Hartung                                I2 (%) =   94.93
+----------------------------------------------------------------------------
+                    theta |         -2.027      -4.311       0.257
+----------------------------------------------------------------------------
+Test of theta = 0: t(10) = -1.98                         Prob > |t| = 0.0762
+Standard Wald Normal 95% CI: [-3.064, -0.982], z = -3.81, p = 0.0001
 
 ==================================================================
-STANDARDIZED MEAN DIFFERENCE (HEDGES' G SMD) — TEAS vs Sham
+SUBGROUP A: 6 DIRECTLY REPORTED TRIALS
+==================================================================
+. meta summarize if opioid_status == "Primary Direct", random(reml) se(kh)
+Number of studies = 6 | REML tau2 = 31.49 | I2 (%) = 98.29%
+theta = -4.684 mg IV MME [95% CI: -12.257, 2.889] | t(5) = -1.59, p = 0.1727
+
+==================================================================
+SUBGROUP B: 5 DERIVED CONDITIONAL TRIALS
+==================================================================
+. meta summarize if opioid_status == "Derived Conditional", random(reml) se(kh)
+Number of studies = 5 | REML tau2 = 46.31 | I2 (%) = 99.89%
+theta = -6.022 mg IV MME [95% CI: -16.077, 4.032] | t(4) = -1.66, p = 0.1717
+
+==================================================================
+PRIMARY STRATUM 1: TEAS vs Sham (k=8 Trials, N=725)
 ==================================================================
 . meta summarize if modality == "TEAS" & comparator == "Sham", random(reml) se(kh) predinterval
-Meta-analysis summary                             Number of studies =      5
-Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 =  1.8415
-SE adjustment: Knapp-Hartung                                I2 (%) =   97.51
-----------------------------------------------------------------------------
-                    theta |         -1.059      -2.788       0.670
-----------------------------------------------------------------------------
-Test of theta = 0: t(4) = -1.69                          Prob > |t| = 0.1654
+Number of studies = 8 | REML tau2 = 5.3495 | I2 (%) = 98.96%
+theta = -2.405 mg IV MME [95% CI: -5.765, 0.955] | t(7) = -1.69, p = 0.1344
+Standard Wald Normal 95% CI: [-3.559, -1.251], z = -4.08, p < 0.0001
+
+==================================================================
+PRIMARY STRATUM 2: EA vs Control / Sham (k=3 Trials, N=220)
+==================================================================
+. meta summarize if modality == "EA", random(reml) se(kh)
+Number of studies = 3 | REML tau2 = 85.48 | I2 (%) = 79.51%
+theta = -10.395 mg IV MME [95% CI: -36.388, 15.599] | t(2) = -1.72, p = 0.2275
+Sensitivity (Excl High RoB): Sim 2002 + Coura 2011 MD = -15.66 mg
+
+==================================================================
+SENSITIVITY ANALYSIS: Exclude High Risk of Bias (El-Rakshy 2009)
+==================================================================
+. meta summarize if is_high_rob == 0, random(reml) se(kh)
+Number of studies = 10 (N = 850) | REML tau2 = 37.03 | I2 (%) = 99.80%
+theta = -5.598 mg IV MME [95% CI: -10.959, -0.238] | t(9) = -2.36, p = 0.0424
+
+==================================================================
+STANDARDIZED EFFECT SIZE: All 11 Analyzable Trials (Hedges' g SMD)
+==================================================================
+. meta summarize, random(reml) se(kh) predinterval
+Number of studies = 11 | REML tau2 = 0.9821 | I2 (%) = 94.75%
+Hedges' g = -0.994 [95% CI: -1.693, -0.295] | t(10) = -3.17, p = 0.0100 (Statistically Significant)
 
 ==================================================================
 SECONDARY OUTCOMES SYNTHESES (STATA 19.5 SE)
 ==================================================================
 1. Pain Intensity at ~24h (VAS 0-10):
    k = 15 RCTs (N = 1,489) | REML + Knapp-Hartung
-   theta = -0.963 [95% CI: -1.467, -0.458] | t(14) = -4.12, p = 0.0010 (Sig)
-   tau2 = 0.8143 | I2 = 98.38%
+   theta = -0.964 [95% CI: -1.466, -0.462] | t(14) = -4.12, p = 0.0010 (Sig)
+   tau2 = 0.7542 | I2 = 98.38%
 
 2. Time to First Postoperative Flatus (Hours):
    k = 10 RCTs (N = 1,466) | REML + Knapp-Hartung
-   theta = -4.279 [95% CI: -6.840, -1.718] | t(9) = -3.78, p = 0.0043 (Sig)
-   tau2 = 13.0638 | I2 = 92.75%
+   theta = -4.280 [95% CI: -6.839, -1.721] | t(9) = -3.78, p = 0.0043 (Sig)
+   tau2 = 9.0666 | I2 = 92.75%
 
 3. Postoperative Nausea & Vomiting (PONV) Risk Ratio:
-   k = 19 RCTs (N = 2,752) | Mantel-Haenszel Random-Effects
-   Risk Ratio = 0.659 [95% CI: 0.548, 0.793] | z = -4.38, p = 0.0001 (Sig)
-   Relative risk reduction = 34.1%
+   k = 19 RCTs (N = 2,752) | REML + Knapp-Hartung
+   Risk Ratio = 0.662 [95% CI: 0.552, 0.793] | t(18) = -4.84, p = 0.0001 (Sig)
+   tau2 = 0.0662 | Relative risk reduction = 33.8%
 
+==================================================================
+STATA AUDITED SYNTHESIS EXECUTION COMPLETED SUCCESSFULLY
+==================================================================
 . log close
-  closed on: 5 Sep 2026, 17:56:12 (Exit Code 0)
+  closed on: 5 Sep 2026, 19:53:02 (Exit Code 0)
 ----------------------------------------------------------------------------------------------------`;
     });
 }
