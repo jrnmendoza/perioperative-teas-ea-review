@@ -1,10 +1,9 @@
 // Perioperative TEAS & EA Interactive Systematic Review Application Logic
 
-const MetaEngine = window.MetaEngine;
 let activeTab = 'overview';
 let currentOutcome = 'opioid_24h';
 let currentSubgroup = 'none';
-let includedStudyIds = new Set(window.STUDIES_DATA.map(s => s.id));
+let includedStudyIds = new Set(window.STUDIES_DATA ? window.STUDIES_DATA.map(s => s.id) : []);
 
 // Filter states
 let filterModality = 'all';
@@ -24,7 +23,7 @@ let selectedInquiryCategory = 'all';
 let inquirySearchQuery = '';
 let activeConvTab = 'equi';
 
-document.addEventListener('DOMContentLoaded', () => {
+function boot() {
   initObjectivesBar();
   initNavigation();
   initGlobalFilters();
@@ -33,7 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
   runLiveEquiCalc();
   runLiveStatCalc();
   renderAllViews();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
+}
 
 // Review Objectives Quick-Bar Handling
 function initObjectivesBar() {
@@ -102,6 +107,7 @@ function applyObjectiveFilter(obj) {
 }
 
 function switchTab(tabId) {
+  if (!tabId) return;
   activeTab = tabId;
   document.querySelectorAll('.nav-btn').forEach(b => {
     b.classList.toggle('active', b.getAttribute('data-tab') === tabId);
@@ -111,6 +117,7 @@ function switchTab(tabId) {
   });
   const target = document.getElementById(`tab-${tabId}`);
   if (target) target.classList.add('active');
+  renderActiveTab();
 }
 
 function syncToolbarDropdowns() {
@@ -129,16 +136,10 @@ function syncToolbarDropdowns() {
 function initNavigation() {
   const navBtns = document.querySelectorAll('.nav-btn');
   navBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      navBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeTab = btn.getAttribute('data-tab');
-      
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      document.getElementById(`tab-${activeTab}`).classList.add('active');
-      renderActiveTab();
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tab = btn.getAttribute('data-tab');
+      if (tab) switchTab(tab);
     });
   });
 }
