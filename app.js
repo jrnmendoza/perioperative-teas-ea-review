@@ -1716,14 +1716,24 @@ function renderDirectionOfEvidence() {
       badgeClass: "grade-badge-low"
     },
     {
-      name: "Treatment-Related Adverse Events",
+      name: "Requirement for Supplemental Rescue Analgesia",
       unit: "Risk Ratio",
       key: "rescue_analgesia",
       isBinary: true,
-      controlRisk: "Minimal adverse reactions (< 2.5% minor skin redness / tingling)",
-      downgrade: "No serious intervention-related adverse events reported across 5,089 patients.",
+      controlRisk: "420 per 1,000 patients (42.0%)",
+      downgrade: "No downgrade; remarkable consistency across 15 trials (I² = 0.0%, RR = 0.51, p < 0.0001).",
       grade: "High",
       badgeClass: "grade-badge-high"
+    },
+    {
+      name: "Intraoperative Remifentanil Requirements",
+      unit: "µg",
+      key: "intraop_opioid",
+      isBinary: false,
+      controlRisk: "Mean baseline: 533 to 2,800 µg remifentanil",
+      downgrade: "Downgraded 1 level for surgical duration and operative case-mix variability across 13 trials (I² = 73.9%, MD = −131.05 µg).",
+      grade: "Moderate",
+      badgeClass: "grade-badge-mod"
     }
   ];
 
@@ -1794,6 +1804,16 @@ meta bias, egger
 meta esize pca_arm1_n pca_arm1_mean pca_arm1_sd pca_arm2_n pca_arm2_mean pca_arm2_sd, esize(mdiff) studylabel(study_key)
 meta summarize, random(reml)
 meta forestplot, title("24-Hour PCA Pump Demands / Presses")
+
+* Objective 6: Postoperative Rescue Analgesia Requirements (Risk Ratio)
+meta esize rescue_arm1_events rescue_arm1_n rescue_arm2_events rescue_arm2_n, esize(lnrr) studylabel(study_key)
+meta summarize, random(reml)
+meta forestplot, title("Rescue Analgesia Requirements (Risk Ratio)")
+
+* Objective 6: Intraoperative Remifentanil Requirements (µg)
+meta esize remi_arm1_n remi_arm1_mean remi_arm1_sd remi_arm2_n remi_arm2_mean remi_arm2_sd, esize(mdiff) studylabel(study_key)
+meta summarize, random(reml)
+meta forestplot, title("Intraoperative Remifentanil Sparing (µg)")
 `;
   }
 
@@ -1815,6 +1835,18 @@ res_pca <- rma(measure="MD", m1i=pca_arm1_mean, sd1i=pca_arm1_sd, n1i=pca_arm1_n
                m2i=pca_arm2_mean, sd2i=pca_arm2_sd, n2i=pca_arm2_n,
                data=dat, method="REML", test="knapp-hartung")
 forest(res_pca, slab=dat$study_key, xlab="PCA Pump Demands MD")
+
+# Objective 6: Rescue Analgesia (Risk Ratio)
+res_rescue <- rma(measure="RR", ai=rescue_arm1_events, n1i=rescue_arm1_n,
+                  ci=rescue_arm2_events, n2i=rescue_arm2_n,
+                  data=dat, method="REML")
+forest(res_rescue, slab=dat$study_key, xlab="Rescue Analgesia Risk Ratio")
+
+# Objective 6: Intraoperative Remifentanil
+res_remi <- rma(measure="MD", m1i=remi_arm1_mean, sd1i=remi_arm1_sd, n1i=remi_arm1_n,
+                m2i=remi_arm2_mean, sd2i=remi_arm2_sd, n2i=remi_arm2_n,
+                data=dat, method="REML", test="knapp-hartung")
+forest(res_remi, slab=dat$study_key, xlab="Intraoperative Remifentanil MD (µg)")
 `;
   }
 }
@@ -1925,6 +1957,22 @@ function openStudyDrawer(id) {
   } else if (s.outcomes && s.outcomes.pca_presses_24h && s.outcomes.pca_presses_24h.status && s.outcomes.pca_presses_24h.status !== 'Unreported in Source Paper') {
     const pc = s.outcomes.pca_presses_24h;
     outcomesHtml += `<p><strong>🔘 PCA Demands / Presses:</strong> <span style="color: #38bdf8; font-weight: 600;">${pc.metric_name || pc.status}</span> — ${pc.note || ''}</p>`;
+  }
+
+  if (s.outcomes && s.outcomes.rescue_analgesia && typeof s.outcomes.rescue_analgesia.rr === 'number') {
+    const ra = s.outcomes.rescue_analgesia;
+    outcomesHtml += `<p><strong>🆘 Supplemental / Rescue Analgesia:</strong> <span style="color: #34d399; font-weight: 700;">RR ${ra.rr}</span> (95% CI: [${ra.ci_low}, ${ra.ci_upp}], P=${ra.p_val}) • ${ra.arm1_events}/${ra.arm1_n} vs ${ra.arm2_events}/${ra.arm2_n} (${ra.definition}) — <em>${ra.note || ''}</em></p>`;
+  } else if (s.outcomes && s.outcomes.rescue_analgesia && s.outcomes.rescue_analgesia.status && s.outcomes.rescue_analgesia.status !== 'Unreported in Source Paper') {
+    const ra = s.outcomes.rescue_analgesia;
+    outcomesHtml += `<p><strong>🆘 Supplemental / Rescue Analgesia:</strong> <span style="color: #f59e0b; font-weight: 600;">${ra.status}</span> — ${ra.note || ''}</p>`;
+  }
+
+  if (s.outcomes && s.outcomes.intraop_opioid && typeof s.outcomes.intraop_opioid.mean_diff === 'number') {
+    const io = s.outcomes.intraop_opioid;
+    outcomesHtml += `<p><strong>💉 Intraoperative Opioid Requirements:</strong> <span style="color: #38bdf8; font-weight: 700;">MD ${io.mean_diff < 0 ? '−' : '+'}${Math.abs(io.mean_diff)} ${io.unit} ${io.drug}</span> (95% CI: [${io.ci_low}, ${io.ci_upp}], P=${io.p_val}) • ${io.arm1_mean} ± ${io.arm1_sd} vs ${io.arm2_mean} ± ${io.arm2_sd} — <em>${io.note || ''}</em></p>`;
+  } else if (s.outcomes && s.outcomes.intraop_opioid && s.outcomes.intraop_opioid.status && s.outcomes.intraop_opioid.status !== 'Unreported in Source Paper') {
+    const io = s.outcomes.intraop_opioid;
+    outcomesHtml += `<p><strong>💉 Intraoperative Opioid Requirements:</strong> <span style="color: #38bdf8; font-weight: 600;">${io.status}</span> — ${io.note || ''}</p>`;
   }
 
   if (s.outcomes && s.outcomes.ponv_24h && typeof s.outcomes.ponv_24h.rr === 'number') {

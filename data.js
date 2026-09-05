@@ -17,7 +17,9 @@ window.AUDIT_STATS = {
   "secondary_pain_studies": 15,
   "secondary_ponv_studies": 19,
   "secondary_flatus_studies": 10,
-  "secondary_pca_presses_studies": 13
+  "secondary_pca_presses_studies": 13,
+  "secondary_intraop_opioid_studies": 13,
+  "secondary_rescue_analgesia_studies": 15
 };
 
 window.AUTHOR_INQUIRIES = [
@@ -1037,8 +1039,27 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 101,
+        "arm1_mean": 38.1,
+        "arm1_sd": 4.97,
+        "arm2_n": 101,
+        "arm2_mean": 39.1,
+        "arm2_sd": 4.83,
+        "mean_diff": null,
+        "se": 1.01,
+        "ci_low": -2.98,
+        "ci_upp": 0.98,
+        "p_val": "0.320",
+        "drug": "Sufentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g Sufentanil)",
+        "note": "Intraoperative sufentanil dose (Table 2: 38.1 \u00b1 4.97 vs 39.1 \u00b1 4.83 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -1177,8 +1198,23 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 6,
+        "arm1_n": 48,
+        "arm2_events": 13,
+        "arm2_n": 49,
+        "rr": 0.47,
+        "ci_low": 0.19,
+        "ci_upp": 1.15,
+        "p_val": "0.086",
+        "definition": "Rescue Tramadol IV (POD 1\u20133)",
+        "note": "Rescue IV tramadol required in 6/48 (12.5%) PACU TEAS vs 13/49 (26.5%) sham patients (P=0.086)"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -1308,8 +1344,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -1436,8 +1479,27 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 42,
+        "arm1_mean": 233.1,
+        "arm1_sd": 29.6,
+        "arm2_n": 43,
+        "arm2_mean": 289.5,
+        "arm2_sd": 37.9,
+        "mean_diff": -56.4,
+        "se": 7.37,
+        "ci_low": -70.85,
+        "ci_upp": -41.95,
+        "p_val": "<0.001",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Intraoperative remifentanil consumption (Table 2: 233.1 \u00b1 29.6 vs 289.5 \u00b1 37.9 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "Total PCIA Presses (24h)",
@@ -1572,8 +1634,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -1689,8 +1758,24 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 14,
+        "arm1_n": 45,
+        "arm2_events": 29,
+        "arm2_n": 48,
+        "rr": 0.51,
+        "ci_low": 0.32,
+        "ci_upp": 0.84,
+        "p_val": "0.005",
+        "definition": "Rescue analgesia demanded for breakthrough pain (VAS >= 4)",
+        "status": "Direct Binary Event Rate",
+        "note": "Rescue flurbiprofen axetil requirement"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "PCIA Bolus Demands (24h)",
@@ -1820,8 +1905,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -1948,8 +2040,27 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 33,
+        "arm1_mean": 417.6,
+        "arm1_sd": 139.2,
+        "arm2_n": 32,
+        "arm2_mean": 626.4,
+        "arm2_sd": 208.8,
+        "mean_diff": -208.8,
+        "se": 44.15,
+        "ci_low": -295.34,
+        "ci_upp": -122.26,
+        "p_val": "0.010",
+        "drug": "Remifentanil Equiv",
+        "unit": "\u00b5g",
+        "status": "Derived Total Dose (\u00b5g)",
+        "note": "Derived from reported infusion rate (0.06 \u00b1 0.02 vs 0.09 \u00b1 0.03 \u00b5g/kg/min \u00d7 58 kg \u00d7 120 min)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -2065,8 +2176,24 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 13,
+        "arm1_n": 30,
+        "arm2_events": 24,
+        "arm2_n": 30,
+        "rr": 0.54,
+        "ci_low": 0.35,
+        "ci_upp": 0.85,
+        "p_val": "0.003",
+        "definition": "Rescue flurbiprofen 50 mg IV administered for VAS > 3",
+        "status": "Direct Binary Event Rate",
+        "note": "PACU rescue analgesia required"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -2182,8 +2309,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -2299,8 +2433,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Measured as Latency / Alternate Timepoint",
         "metric_name": "Time to Initial PCA Demand (min)",
@@ -2430,8 +2571,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -2561,8 +2709,24 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 5,
+        "arm1_n": 29,
+        "arm2_events": 7,
+        "arm2_n": 28,
+        "rr": 0.69,
+        "ci_low": 0.25,
+        "ci_upp": 1.92,
+        "p_val": "0.470",
+        "definition": "Rescue pethidine 50 mg IM for VAS > 4",
+        "status": "Direct Binary Event Rate",
+        "note": "Postoperative rescue analgesia"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -2723,8 +2887,15 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -2851,8 +3022,27 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 31,
+        "arm1_mean": 1.8,
+        "arm1_sd": 0.4,
+        "arm2_n": 31,
+        "arm2_mean": 1.8,
+        "arm2_sd": 0.4,
+        "mean_diff": null,
+        "se": 0.1,
+        "ci_low": -0.2,
+        "ci_upp": 0.2,
+        "p_val": "1.000",
+        "drug": "Morphine Equiv",
+        "unit": "mg",
+        "status": "Direct Continuous (mg)",
+        "note": "Intraoperative morphine equivalent (1.8 \u00b1 0.4 vs 1.8 \u00b1 0.4 mg)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -3007,8 +3197,27 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 29,
+        "arm1_mean": 1415.41,
+        "arm1_sd": 295.67,
+        "arm2_n": 29,
+        "arm2_mean": 1619.13,
+        "arm2_sd": 328.98,
+        "mean_diff": -203.72,
+        "se": 82.14,
+        "ci_low": -364.71,
+        "ci_upp": -42.73,
+        "p_val": "0.012",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Intraoperative remifentanil dose (Table 3: 1415.41 \u00b1 295.67 vs 1619.13 \u00b1 328.98 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Measured at 48h / Alternate Timepoint",
         "metric_name": "PCIA Press Numbers (48h)",
@@ -3138,8 +3347,36 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 5,
+        "arm1_n": 100,
+        "arm2_events": 35,
+        "arm2_n": 100,
+        "rr": 0.14,
+        "ci_low": 0.06,
+        "ci_upp": 0.35,
+        "p_val": "<0.001",
+        "definition": "Dezocine rescue bolus for breakthrough pain",
+        "status": "Direct Binary Event Rate",
+        "note": "Rescue with dezocine (Table 2)"
+      },
+      "intraop_opioid": {
+        "arm1_n": 20,
+        "arm1_mean": 1890.0,
+        "arm1_sd": 630.0,
+        "arm2_n": 20,
+        "arm2_mean": 1900.0,
+        "arm2_sd": 590.0,
+        "mean_diff": -10.0,
+        "se": 86.3,
+        "ci_low": -179.15,
+        "ci_upp": 159.15,
+        "p_val": "0.940",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Intraoperative remifentanil (reported 1.89 \u00b1 0.63 vs 1.90 \u00b1 0.59 mg)"
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "Patient PCA Demands",
@@ -3283,8 +3520,27 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 44,
+        "arm1_mean": 1383.0,
+        "arm1_sd": 494.0,
+        "arm2_n": 40,
+        "arm2_mean": 1637.0,
+        "arm2_sd": 630.0,
+        "mean_diff": -254.0,
+        "se": 124.37,
+        "ci_low": -497.77,
+        "ci_upp": -10.23,
+        "p_val": "0.042",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Cumulative intraoperative remifentanil (Table 2: 1383 \u00b1 494 vs 1637 \u00b1 630 \u00b5g, P=0.042)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -3414,8 +3670,27 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 50,
+        "arm1_mean": 489.4,
+        "arm1_sd": 226.0,
+        "arm2_n": 50,
+        "arm2_mean": 533.8,
+        "arm2_sd": 263.6,
+        "mean_diff": -44.4,
+        "se": 49.1,
+        "ci_low": -140.64,
+        "ci_upp": 51.84,
+        "p_val": "0.368",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Total intraoperative remifentanil (Table 2: 489.4 \u00b1 226.0 vs 533.8 \u00b1 263.6 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -3531,8 +3806,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -3662,8 +3944,15 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -3790,8 +4079,24 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 19,
+        "arm1_n": 70,
+        "arm2_events": 38,
+        "arm2_n": 70,
+        "rr": 0.5,
+        "ci_low": 0.32,
+        "ci_upp": 0.78,
+        "p_val": "0.001",
+        "definition": "Supplemental flurbiprofen axetil 50 mg IV for NRS >= 4",
+        "status": "Direct Binary Event Rate",
+        "note": "Rescue analgesia within 24h"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -3907,8 +4212,23 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 3,
+        "arm1_n": 57,
+        "arm2_events": 6,
+        "arm2_n": 58,
+        "rr": 0.51,
+        "ci_low": 0.13,
+        "ci_upp": 1.94,
+        "p_val": "0.315",
+        "definition": "Rescue Tramadol 10mg IM (6\u201324h)",
+        "note": "Rescue tramadol required in 3/57 (5.3%) TEAS vs 6/58 (10.3%) sham craniotomy patients (P=0.315)"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -4024,8 +4344,24 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 3,
+        "arm1_n": 38,
+        "arm2_events": 9,
+        "arm2_n": 39,
+        "rr": 0.34,
+        "ci_low": 0.1,
+        "ci_upp": 1.17,
+        "p_val": "0.065",
+        "definition": "Supplemental analgesic requirement outside PCA",
+        "status": "Direct Binary Event Rate",
+        "note": "Supplemental analgesic use"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -4141,8 +4477,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -4278,8 +4621,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "PCA Demands / Button Presses (24h)",
@@ -4409,8 +4759,36 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 10,
+        "arm1_n": 52,
+        "arm2_events": 18,
+        "arm2_n": 53,
+        "rr": 0.57,
+        "ci_low": 0.29,
+        "ci_upp": 1.11,
+        "p_val": "0.086",
+        "definition": "PACU remedial analgesia (tramadol 50 mg IV)",
+        "status": "Direct Binary Event Rate",
+        "note": "Remedial analgesic use in PACU"
+      },
+      "intraop_opioid": {
+        "arm1_n": 52,
+        "arm1_mean": 740.1,
+        "arm1_sd": 276.9,
+        "arm2_n": 53,
+        "arm2_mean": 854.0,
+        "arm2_sd": 287.5,
+        "mean_diff": -113.9,
+        "se": 55.08,
+        "ci_low": -221.86,
+        "ci_upp": -5.94,
+        "p_val": "0.045",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Intraoperative maintenance remifentanil (Table 2: 740.1 \u00b1 276.9 vs 854.0 \u00b1 287.5 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -4526,8 +4904,27 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 35,
+        "arm1_mean": 1003.6,
+        "arm1_sd": 522.7,
+        "arm2_n": 35,
+        "arm2_mean": 1041.9,
+        "arm2_sd": 631.9,
+        "mean_diff": -38.3,
+        "se": 138.62,
+        "ci_low": -310.0,
+        "ci_upp": 233.4,
+        "p_val": "0.783",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Total intraoperative remifentanil infusion (1003.6 \u00b1 522.7 vs 1041.9 \u00b1 631.9 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -4671,8 +5068,15 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -4799,8 +5203,15 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -4927,8 +5338,24 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 7,
+        "arm1_n": 38,
+        "arm2_events": 17,
+        "arm2_n": 47,
+        "rr": 0.51,
+        "ci_low": 0.24,
+        "ci_upp": 1.1,
+        "p_val": "0.076",
+        "definition": "Rescue parecoxib 40 mg IV for NRS > 3",
+        "status": "Direct Binary Event Rate",
+        "note": "Rescue parecoxib required at 24h"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -5058,8 +5485,15 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "PCA Attempts (24h)",
@@ -5219,8 +5653,24 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 5,
+        "arm1_n": 138,
+        "arm2_events": 5,
+        "arm2_n": 139,
+        "rr": 1.01,
+        "ci_low": 0.3,
+        "ci_upp": 3.4,
+        "p_val": "0.990",
+        "definition": "Rescue oral acetaminophen for mild breakthrough pain",
+        "status": "Direct Binary Event Rate",
+        "note": "Rescue analgesia requirement"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -5361,8 +5811,15 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Measured at 48h / Alternate Timepoint",
         "metric_name": "PCIA Compression Times (48h)",
@@ -5492,8 +5949,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -5634,8 +6098,23 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 19,
+        "arm1_n": 58,
+        "arm2_events": 40,
+        "arm2_n": 62,
+        "rr": 0.51,
+        "ci_low": 0.34,
+        "ci_upp": 0.77,
+        "p_val": "<0.001",
+        "definition": "Rescue IV Morphine (0\u201348h)",
+        "note": "Requirement for rescue IV morphine was significantly lower in TEAS: 19/58 (32.7%) vs 40/62 (64.5%), RR 0.508, P<0.001"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -5765,8 +6244,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "PCA Compressions (24h)",
@@ -5907,8 +6393,15 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -6024,8 +6517,27 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 38,
+        "arm1_mean": 911.1,
+        "arm1_sd": 233.8,
+        "arm2_n": 39,
+        "arm2_mean": 1095.9,
+        "arm2_sd": 362.2,
+        "mean_diff": -184.8,
+        "se": 69.3,
+        "ci_low": -320.63,
+        "ci_upp": -48.97,
+        "p_val": "0.010",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Intraoperative remifentanil consumption (Table 2: 911.1 \u00b1 233.8 vs 1095.9 \u00b1 362.2 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -6141,8 +6653,27 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 39,
+        "arm1_mean": 1989.0,
+        "arm1_sd": 158.7,
+        "arm2_n": 40,
+        "arm2_mean": 2009.0,
+        "arm2_sd": 143.2,
+        "mean_diff": -20.0,
+        "se": 34.04,
+        "ci_low": -86.71,
+        "ci_upp": 46.71,
+        "p_val": "0.555",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Intraoperative remifentanil dosage (Table 2: 1989.0 \u00b1 158.7 vs 2009.0 \u00b1 143.2 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -6258,8 +6789,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "Total PCA Demands (24h)",
@@ -6389,8 +6927,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -6518,8 +7063,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "PCA Demands (24h)",
@@ -6649,8 +7201,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "Analgesic Pump Compressions (24h)",
@@ -6791,8 +7350,15 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -6922,8 +7488,24 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 1,
+        "arm1_n": 43,
+        "arm2_events": 4,
+        "arm2_n": 45,
+        "rr": 0.26,
+        "ci_low": 0.03,
+        "ci_upp": 2.25,
+        "p_val": "0.190",
+        "definition": "Ketorolac tromethamine 30 mg IM for VAS >= 6",
+        "status": "Direct Binary Event Rate",
+        "note": "Supplemental analgesic rescue"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -7039,8 +7621,27 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 20,
+        "arm1_mean": 1049.0,
+        "arm1_sd": 316.2,
+        "arm2_n": 20,
+        "arm2_mean": 1503.8,
+        "arm2_sd": 344.1,
+        "mean_diff": -454.8,
+        "se": 85.0,
+        "ci_low": -621.4,
+        "ci_upp": -288.2,
+        "p_val": "<0.001",
+        "drug": "Remifentanil Equiv",
+        "unit": "\u00b5g",
+        "status": "Derived Total Dose (\u00b5g)",
+        "note": "Derived from reported rate (0.1128 \u00b1 0.034 vs 0.1617 \u00b1 0.037 \u00b5g/kg/min \u00d7 62 kg \u00d7 150 min)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -7170,8 +7771,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Measured on POD2 / Alternate Timepoint",
         "metric_name": "Additional PCA Releases (POD2)",
@@ -7312,8 +7920,24 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 15,
+        "arm1_n": 36,
+        "arm2_events": 28,
+        "arm2_n": 36,
+        "rr": 0.54,
+        "ci_low": 0.35,
+        "ci_upp": 0.82,
+        "p_val": "0.002",
+        "definition": "Rescue morphine 5 mg IV for breakthrough pain",
+        "status": "Direct Binary Event Rate",
+        "note": "Postoperative rescue analgesia"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -7458,8 +8082,27 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 43,
+        "arm1_mean": 2500.0,
+        "arm1_sd": 1400.0,
+        "arm2_n": 43,
+        "arm2_mean": 2800.0,
+        "arm2_sd": 1900.0,
+        "mean_diff": -300.0,
+        "se": 359.91,
+        "ci_low": -1005.4,
+        "ci_upp": 405.4,
+        "p_val": "0.380",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Intraoperative remifentanil (reported 2.5 \u00b1 1.4 vs 2.8 \u00b1 1.9 mg)"
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "Total PCA Attempts (24h)",
@@ -7608,8 +8251,24 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "arm1_events": 13,
+        "arm1_n": 65,
+        "arm2_events": 22,
+        "arm2_n": 65,
+        "rr": 0.59,
+        "ci_low": 0.33,
+        "ci_upp": 1.07,
+        "p_val": "0.078",
+        "definition": "Rescue flurbiprofen axetil 50 mg IV for VAS >= 4",
+        "status": "Direct Binary Event Rate",
+        "note": "Rescue medication in hospital"
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -7753,8 +8412,15 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -7870,8 +8536,27 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 55,
+        "arm1_mean": 870.0,
+        "arm1_sd": 300.0,
+        "arm2_n": 55,
+        "arm2_mean": 1010.0,
+        "arm2_sd": 390.0,
+        "mean_diff": -140.0,
+        "se": 66.35,
+        "ci_low": -270.05,
+        "ci_upp": -9.95,
+        "p_val": "0.040",
+        "drug": "Remifentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g)",
+        "note": "Intraoperative remifentanil (reported 0.87 \u00b1 0.30 vs 1.01 \u00b1 0.39 mg)"
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -7987,8 +8672,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -8118,8 +8810,15 @@ window.STUDIES_DATA = [
         "readiness": "INCLUDE"
       },
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -8255,8 +8954,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -8372,8 +9078,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -8509,8 +9222,27 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 25,
+        "arm1_mean": 133.0,
+        "arm1_sd": 38.0,
+        "arm2_n": 25,
+        "arm2_mean": 142.0,
+        "arm2_sd": 32.0,
+        "mean_diff": null,
+        "se": 9.98,
+        "ci_low": -28.56,
+        "ci_upp": 10.56,
+        "p_val": "0.280",
+        "drug": "Fentanyl",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g Fentanyl)",
+        "note": "Intraoperative fentanyl dose (133 \u00b1 38 vs 142 \u00b1 32 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "Total PCA Demands (24h)",
@@ -8677,8 +9409,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "Total PCIA Attempts (24h)",
@@ -8827,8 +9566,15 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Measured at 48h / Alternate Timepoint",
         "metric_name": "Effective PCA Presses (48h)",
@@ -8958,8 +9704,27 @@ window.STUDIES_DATA = [
       "ponv_24h": null,
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "arm1_n": 41,
+        "arm1_mean": 36.78,
+        "arm1_sd": 1.33,
+        "arm2_n": 40,
+        "arm2_mean": 38.12,
+        "arm2_sd": 3.56,
+        "mean_diff": null,
+        "se": 0.6,
+        "ci_low": -2.52,
+        "ci_upp": -0.16,
+        "p_val": "0.038",
+        "drug": "Sufentanil",
+        "unit": "\u00b5g",
+        "status": "Direct Continuous (\u00b5g Sufentanil)",
+        "note": "Intraoperative sufentanil dose (Table 1: 36.78 \u00b1 1.33 vs 38.12 \u00b1 3.56 \u00b5g)"
+      },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
         "metric_name": "PCIA Bolus Administrations (0\u20136h)",
@@ -9105,8 +9870,15 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -9233,8 +10005,15 @@ window.STUDIES_DATA = [
       },
       "flatus_time": null,
       "hospital_stay": null,
-      "rescue_analgesia": null,
-      "intraop_opioid": null,
+      "rescue_analgesia": {
+        "status": "Unreported in Source Paper",
+        "note": "Requirement for supplemental or rescue analgesia was not reported as a separate dichotomous event rate."
+      },
+      "intraop_opioid": {
+        "status": "Unreported in Source Paper",
+        "note": "Intraoperative opioid consumption was not tabulated with continuous numerical mean and SD.",
+        "mean_diff": null
+      },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
@@ -9247,167 +10026,5 @@ window.STUDIES_DATA = [
     "known_fabricated_signature": "Yes",
     "source_folder": "https://drive.google.com/drive/folders/1EWdZyTQjPSuoxt8n1nIr1t8D98PC-mso",
     "reconciliation_index": "https://docs.google.com/document/d/1hR0UuZSmPpwZi384Vzn3sZt5Y5_ZwYxW6b3u4nq2-40/edit"
-  }
-];
-
-window.PRISMA_DATA = {
-  "identification": {
-    "total_imported": 5100,
-    "total_unique_studies": 5088,
-    "sources": [
-      {
-        "source": "Embase (Elsevier)",
-        "count": 1928,
-        "pct": 37.8
-      },
-      {
-        "source": "Cochrane CENTRAL",
-        "count": 1698,
-        "pct": 33.3
-      },
-      {
-        "source": "PubMed (MEDLINE)",
-        "count": 1009,
-        "pct": 19.8
-      },
-      {
-        "source": "CINAHL Ultimate",
-        "count": 465,
-        "pct": 9.1
-      }
-    ],
-    "duplicates_removed": 1652,
-    "duplicates_auto": 1651,
-    "duplicates_manual": 1,
-    "automation_ineligible": 508
-  },
-  "screening": {
-    "title_abstract_screened": 2928,
-    "title_abstract_excluded": 2704
-  },
-  "eligibility": {
-    "full_text_assessed": 224,
-    "full_text_excluded": 161,
-    "exclusion_reasons": [
-      {
-        "reason": "Wrong outcomes",
-        "count": 122,
-        "pct": 75.8,
-        "desc": "Did not measure 24-h opioid consumption or pain outcomes"
-      },
-      {
-        "reason": "Publication language",
-        "count": 12,
-        "pct": 7.5,
-        "desc": "Non-English/non-Chinese or unretrievable language reports"
-      },
-      {
-        "reason": "Wrong intervention",
-        "count": 9,
-        "pct": 5.6,
-        "desc": "Manual acupuncture, acupressure, or moxibustion without electrostimulation"
-      },
-      {
-        "reason": "Wrong setting",
-        "count": 9,
-        "pct": 5.6,
-        "desc": "Chronic pain, outpatient clinics, or non-surgical acute settings"
-      },
-      {
-        "reason": "Wrong comparator",
-        "count": 3,
-        "pct": 1.9,
-        "desc": "Active drug-only comparisons without appropriate sham/standard control"
-      },
-      {
-        "reason": "Study not retrieved",
-        "count": 2,
-        "pct": 1.2,
-        "desc": "Full-text report unavailable after library loan & author contact attempts"
-      },
-      {
-        "reason": "Wrong patient population",
-        "count": 2,
-        "pct": 1.2,
-        "desc": "Pediatric cohorts or animal experimental models"
-      },
-      {
-        "reason": "Abstract only",
-        "count": 1,
-        "pct": 0.6,
-        "desc": "Conference abstract without peer-reviewed full report"
-      },
-      {
-        "reason": "Wrong study design",
-        "count": 1,
-        "pct": 0.6,
-        "desc": "Non-randomized observational cohort or retrospective series"
-      }
-    ]
-  },
-  "included": {
-    "studies_included": 63,
-    "participants_included": 5089,
-    "ongoing_studies": 0,
-    "awaiting_classification": 0
-  }
-};
-
-
-window.SEARCH_STRATEGIES = [
-  {
-    "id": "pubmed",
-    "name": "PubMed (MEDLINE)",
-    "database": "PubMed (National Library of Medicine)",
-    "platform": "PubMed Web Interface / E-utilities",
-    "date": "July 2026",
-    "hits": 1009,
-    "filters": "Cochrane Highly Sensitive Search Strategy for identifying randomized trials in MEDLINE",
-    "description": "Comprehensive multi-line strategy combining MeSH controlled terms for Transcutaneous Electric Nerve Stimulation, Acupuncture Points, and Operative Procedures with title/abstract truncation syntax.",
-    "strategy_text": "(\"transcutaneous electrical acupoint stimulation\"[tiab] OR \"transcutaneous electric acupoint stimulation\"[tiab] OR \"transcutaneous acupoint electrical stimulation\"[tiab] OR \"transcutaneous acupoint electric stimulation\"[tiab] OR \"transcutaneous electrical acupuncture stimulation\"[tiab] OR \"transcutaneous electric acupuncture stimulation\"[tiab] OR \"transcutaneous electrical acupuncture point stimulation\"[tiab] OR \"transcutaneous electric acupuncture point stimulation\"[tiab] OR \"electrical acupoint stimulation\"[tiab] OR \"electroacupoint stimulation\"[tiab] OR \"electro-acupoint stimulation\"[tiab] OR \"acupuncture-like TENS\"[tiab] OR ((TEAS[tiab] OR TAES[tiab]) AND (acupoint*[tiab] OR \"acupuncture points\"[tiab] OR acupunctur*[tiab]) AND (transcutaneous[tiab] OR electric*[tiab] OR electrode*[tiab] OR stimulat*[tiab])) OR ((\"Transcutaneous Electric Nerve Stimulation\"[Mesh] OR \"transcutaneous electrical nerve stimulation\"[tiab] OR TENS[tiab]) AND (\"Acupuncture Points\"[Mesh] OR acupoint*[tiab])))\nAND\n(\"Surgical Procedures, Operative\"[Mesh] OR \"Anesthesia\"[Mesh] OR surg*[tiab] OR operat*[tiab] OR perioperat*[tiab] OR intraoperat*[tiab] OR postoperat*[tiab] OR anesthe*[tiab] OR anaesthe*[tiab])\nAND\n(randomized controlled trial[pt] OR controlled clinical trial[pt] OR randomized[tiab] OR placebo[tiab] OR \"clinical trials as topic\"[mesh:noexp] OR randomly[tiab] OR trial[ti])\nNOT\n(\"Animals\"[Mesh] NOT (\"Humans\"[Mesh] AND \"Animals\"[Mesh]))"
-  },
-  {
-    "id": "embase",
-    "name": "Embase (Elsevier)",
-    "database": "Embase (Elsevier.com)",
-    "platform": "Embase.com Advanced Search",
-    "date": "2026-07-22",
-    "hits": 1928,
-    "filters": "Embase RCT Clinical Filter (Hedges-based RCT string)",
-    "description": "Embase strategy utilizing Emtree controlled descriptors ('electroacupuncture'/exp, 'transcutaneous electrical nerve stimulation'/exp, 'acupuncture point'/exp, 'surgery'/exp, 'anesthesia'/exp) with precision proximity operators (NEAR/3, NEAR/5, NEXT/1).",
-    "strategy_text": "#1 'electroacupuncture'/exp\n#2 electroacupunctur*:ti,ab,kw OR 'electro-acupunctur*':ti,ab,kw OR 'electric acupuncture':ti,ab,kw OR 'electrical acupuncture':ti,ab,kw\n#3 #1 OR #2\n#4 'transcutaneous electrical nerve stimulation'/exp\n#5 'acupuncture'/exp OR 'acupuncture point'/exp\n#6 #4 AND #5\n#7 teas:ti,ab,kw OR taes:ti,ab,kw OR 'transcutaneous electrical acupoint stimulation':ti,ab,kw OR 'transcutaneous electric acupoint stimulation':ti,ab,kw OR 'transcutaneous acupoint electrical stimulation':ti,ab,kw OR 'transcutaneous acupoint stimulation':ti,ab,kw\n#8 ((transcutaneous NEAR/3 electric* NEAR/5 acupoint*):ti,ab,kw) OR ((transcutaneous NEAR/3 electric* NEAR/5 acupunctur* NEAR/2 point*):ti,ab,kw)\n#9 #6 OR #7 OR #8\n#10 'surgery'/exp OR 'anesthesia'/exp\n#11 surg*:ti,ab,kw OR operat*:ti,ab,kw OR perioperat*:ti,ab,kw OR intraoperat*:ti,ab,kw OR postoperat*:ti,ab,kw OR anesthe*:ti,ab,kw OR anaesthe*:ti,ab,kw\n#12 #10 OR #11\n#13 (#3 OR #9) AND #12\n#14 'randomized controlled trial'/exp OR 'controlled clinical trial'/de OR random*:ti,ab,tt OR 'randomization'/de OR placebo:ti,ab,tt OR ((double OR single) NEXT/1 (blind OR blinded)):ti,ab,tt\n#15 #13 AND #14"
-  },
-  {
-    "id": "central",
-    "name": "Cochrane CENTRAL",
-    "database": "Cochrane Central Register of Controlled Trials (CENTRAL)",
-    "platform": "Cochrane Library Search Manager (Wiley)",
-    "date": "2026-07-21",
-    "hits": 1698,
-    "filters": "None (Cochrane CENTRAL is dedicated exclusively to randomized and quasi-randomized trials)",
-    "description": "Exploded MeSH descriptors with Title/Abstract/Keyword textword queries. Captures both indexed registry records and handsearched trials.",
-    "strategy_text": "#1 MeSH descriptor: [Electroacupuncture] explode all trees\n#2 (electroacupunctur* or electro-acupunctur* or \"electric acupuncture\" or \"electrical acupuncture\"):ti,ab,kw\n#3 #1 or #2\n#4 MeSH descriptor: [Transcutaneous Electric Nerve Stimulation] explode all trees\n#5 MeSH descriptor: [Acupuncture Therapy] explode all trees\n#6 #4 and #5\n#7 (TEAS or \"transcutaneous electrical acupoint stimulation\" or \"transcutaneous electric acupoint stimulation\" or \"transcutaneous acupoint electrical stimulation\" or \"transcutaneous acupoint stimulation\"):ti,ab,kw\n#8 ((transcutaneous NEAR/3 electric*) NEAR/5 (acupoint* or (acupunctur* NEAR/2 point*))):ti,ab,kw\n#9 #6 or #7 or #8\n#10 MeSH descriptor: [Surgical Procedures, Operative] explode all trees\n#11 (surg* or operat* or perioperat* or peri-operat* or intraoperat* or postoperat* or preoperat*):ti,ab,kw\n#12 (anesthe* or anaesthe*):ti,ab,kw\n#13 #10 or #11 or #12\n#14 (#3 or #9) and #13"
-  },
-  {
-    "id": "cinahl",
-    "name": "CINAHL Ultimate",
-    "database": "CINAHL Ultimate (Cumulative Index to Nursing and Allied Health Literature)",
-    "platform": "EBSCOhost Proximity Search",
-    "date": "2026-07-23",
-    "hits": 465,
-    "filters": "CINAHL Clinical Queries / RCT Filters (MH Randomized Controlled Trials+)",
-    "description": "Executed in CINAHL Ultimate (authorized database substitution for CINAHL Complete) with CINAHL Subject Headings and N3/N5/N8 proximity operators.",
-    "strategy_text": "S1 MH \"Electroacupuncture\"\nS2 TI (electroacupunctur* OR electro-acupunctur* OR \"electric acupuncture\") OR AB (electroacupunctur* OR electro-acupunctur*)\nS3 S1 OR S2\nS4 MH \"Transcutaneous Electric Nerve Stimulation\"\nS5 MH \"Acupuncture+\" OR MH \"Acupuncture Points\"\nS6 S4 AND S5\nS7 TI (TEAS OR TAES OR \"transcutaneous electrical acupoint stimulation\" OR \"transcutaneous electric acupoint stimulation\" OR \"transcutaneous acupoint electrical stimulation\") OR AB (TEAS OR TAES OR \"transcutaneous electrical acupoint stimulation\")\nS8 TI ((transcutaneous N3 electric*) N5 (acupoint* OR (acupunctur* N2 point*))) OR AB ((transcutaneous N3 electric*) N5 (acupoint* OR (acupunctur* N2 point*)))\nS9 S6 OR S7 OR S8\nS10 MH \"Surgery, Operative+\" OR MH \"Anesthesia+\" OR MH \"Perioperative Care+\"\nS11 TI (surg* OR operat* OR perioperat* OR postoperat* OR anesthe*) OR AB (surg* OR operat* OR perioperat* OR postoperat* OR anesthe*)\nS12 S10 OR S11\nS13 (S3 OR S9) AND S12\nS14 MH \"Randomized Controlled Trials+\" OR MH \"Double-Blind Studies\" OR MH \"Single-Blind Studies\" OR TI (randomised OR randomized)\nS15 S13 AND S14"
-  },
-  {
-    "id": "registers",
-    "name": "Clinical Trial Registers",
-    "database": "ClinicalTrials.gov & Chinese Clinical Trial Registry (ChiCTR)",
-    "platform": "US NLM & WHO ICTRP Primary Registry",
-    "date": "Ongoing through 2026",
-    "hits": 142,
-    "filters": "Interventional Studies, Completed, Surgical Conditions",
-    "description": "Registry searches conducted to identify unpublished trial outcomes, prospective registry entries, and check prospective protocol adherence for RoB 2 Domain 5.",
-    "strategy_text": "ClinicalTrials.gov:\nCondition/Disease: postoperative pain OR surgery OR anesthesia\nIntervention/Treatment: transcutaneous electrical acupoint stimulation OR electroacupuncture OR TEAS\nStudy Type: Interventional (Clinical Trial)\n\nChinese Clinical Trial Registry (ChiCTR):\nTitle: 经皮穴位电刺激 (TEAS) OR 电针 (Electroacupuncture)\nKeywords: 术后镇痛 (Postoperative Analgesia) OR 手术 (Surgery) OR 阿片 (Opioid)"
   }
 ];
