@@ -1676,6 +1676,16 @@ function renderDirectionOfEvidence() {
       badgeClass: "grade-badge-mod"
     },
     {
+      name: "PCA Pump Demands & Presses (24h behavioral analgesia)",
+      unit: "presses",
+      key: "pca_presses_24h",
+      isBinary: false,
+      controlRisk: "Mean control: 18.5 to 34.2 pump demands",
+      downgrade: "Downgraded 1 level for high statistical heterogeneity (I² = 98.8%); effect direction uniform across 13 trials.",
+      grade: "Moderate",
+      badgeClass: "grade-badge-mod"
+    },
+    {
       name: "Postoperative Nausea & Vomiting (PONV 0–24h)",
       unit: "Risk Ratio",
       key: "ponv_24h",
@@ -1779,6 +1789,11 @@ meta summarize, random(reml)
 meta forestplot, subgroup(modality) crop(-30 10) title("24-Hour Opioid Consumption")
 meta funnelplot, contour(1 5 10)
 meta bias, egger
+
+* Objective 6: 24-h PCA Pump Demands & Presses Meta-Analysis
+meta esize pca_arm1_n pca_arm1_mean pca_arm1_sd pca_arm2_n pca_arm2_mean pca_arm2_sd, esize(mdiff) studylabel(study_key)
+meta summarize, random(reml)
+meta forestplot, title("24-Hour PCA Pump Demands / Presses")
 `;
   }
 
@@ -1788,11 +1803,18 @@ library(metafor)
 
 dat <- read.csv("perioperative_teas_ea_dataset.csv")
 
+# Primary 24-h Opioid Sparing
 res <- rma(measure="MD", m1i=arm1_mean, sd1i=arm1_sd, n1i=arm1_n,
            m2i=arm2_mean, sd2i=arm2_sd, n2i=arm2_n,
            data=dat, method="REML", test="knapp-hartung")
 summary(res)
 forest(res, slab=dat$study_key)
+
+# Objective 6: 24-h PCA Pump Demands
+res_pca <- rma(measure="MD", m1i=pca_arm1_mean, sd1i=pca_arm1_sd, n1i=pca_arm1_n,
+               m2i=pca_arm2_mean, sd2i=pca_arm2_sd, n2i=pca_arm2_n,
+               data=dat, method="REML", test="knapp-hartung")
+forest(res_pca, slab=dat$study_key, xlab="PCA Pump Demands MD")
 `;
   }
 }
