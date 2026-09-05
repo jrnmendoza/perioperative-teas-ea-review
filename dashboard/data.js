@@ -8714,3 +8714,166 @@ window.STUDIES_DATA = [
     "reconciliation_index": "https://docs.google.com/document/d/1hR0UuZSmPpwZi384Vzn3sZt5Y5_ZwYxW6b3u4nq2-40/edit"
   }
 ];
+
+
+window.PRISMA_DATA = {
+  "identification": {
+    "total_imported": 5100,
+    "total_unique_studies": 5088,
+    "sources": [
+      {
+        "source": "Embase (Elsevier)",
+        "count": 1928,
+        "pct": 37.8
+      },
+      {
+        "source": "Cochrane CENTRAL",
+        "count": 1698,
+        "pct": 33.3
+      },
+      {
+        "source": "PubMed (MEDLINE)",
+        "count": 1009,
+        "pct": 19.8
+      },
+      {
+        "source": "CINAHL Ultimate",
+        "count": 465,
+        "pct": 9.1
+      }
+    ],
+    "duplicates_removed": 1652,
+    "duplicates_auto": 1651,
+    "duplicates_manual": 1,
+    "automation_ineligible": 508
+  },
+  "screening": {
+    "title_abstract_screened": 2928,
+    "title_abstract_excluded": 2704
+  },
+  "eligibility": {
+    "full_text_assessed": 224,
+    "full_text_excluded": 161,
+    "exclusion_reasons": [
+      {
+        "reason": "Wrong outcomes",
+        "count": 122,
+        "pct": 75.8,
+        "desc": "Did not measure 24-h opioid consumption or pain outcomes"
+      },
+      {
+        "reason": "Publication language",
+        "count": 12,
+        "pct": 7.5,
+        "desc": "Non-English/non-Chinese or unretrievable language reports"
+      },
+      {
+        "reason": "Wrong intervention",
+        "count": 9,
+        "pct": 5.6,
+        "desc": "Manual acupuncture, acupressure, or moxibustion without electrostimulation"
+      },
+      {
+        "reason": "Wrong setting",
+        "count": 9,
+        "pct": 5.6,
+        "desc": "Chronic pain, outpatient clinics, or non-surgical acute settings"
+      },
+      {
+        "reason": "Wrong comparator",
+        "count": 3,
+        "pct": 1.9,
+        "desc": "Active drug-only comparisons without appropriate sham/standard control"
+      },
+      {
+        "reason": "Study not retrieved",
+        "count": 2,
+        "pct": 1.2,
+        "desc": "Full-text report unavailable after library loan & author contact attempts"
+      },
+      {
+        "reason": "Wrong patient population",
+        "count": 2,
+        "pct": 1.2,
+        "desc": "Pediatric cohorts or animal experimental models"
+      },
+      {
+        "reason": "Abstract only",
+        "count": 1,
+        "pct": 0.6,
+        "desc": "Conference abstract without peer-reviewed full report"
+      },
+      {
+        "reason": "Wrong study design",
+        "count": 1,
+        "pct": 0.6,
+        "desc": "Non-randomized observational cohort or retrospective series"
+      }
+    ]
+  },
+  "included": {
+    "studies_included": 63,
+    "participants_included": 5089,
+    "ongoing_studies": 0,
+    "awaiting_classification": 0
+  }
+};
+
+
+window.SEARCH_STRATEGIES = [
+  {
+    "id": "pubmed",
+    "name": "PubMed (MEDLINE)",
+    "database": "PubMed (National Library of Medicine)",
+    "platform": "PubMed Web Interface / E-utilities",
+    "date": "July 2026",
+    "hits": 1009,
+    "filters": "Cochrane Highly Sensitive Search Strategy for identifying randomized trials in MEDLINE",
+    "description": "Comprehensive multi-line strategy combining MeSH controlled terms for Transcutaneous Electric Nerve Stimulation, Acupuncture Points, and Operative Procedures with title/abstract truncation syntax.",
+    "strategy_text": "(\"transcutaneous electrical acupoint stimulation\"[tiab] OR \"transcutaneous electric acupoint stimulation\"[tiab] OR \"transcutaneous acupoint electrical stimulation\"[tiab] OR \"transcutaneous acupoint electric stimulation\"[tiab] OR \"transcutaneous electrical acupuncture stimulation\"[tiab] OR \"transcutaneous electric acupuncture stimulation\"[tiab] OR \"transcutaneous electrical acupuncture point stimulation\"[tiab] OR \"transcutaneous electric acupuncture point stimulation\"[tiab] OR \"electrical acupoint stimulation\"[tiab] OR \"electroacupoint stimulation\"[tiab] OR \"electro-acupoint stimulation\"[tiab] OR \"acupuncture-like TENS\"[tiab] OR ((TEAS[tiab] OR TAES[tiab]) AND (acupoint*[tiab] OR \"acupuncture points\"[tiab] OR acupunctur*[tiab]) AND (transcutaneous[tiab] OR electric*[tiab] OR electrode*[tiab] OR stimulat*[tiab])) OR ((\"Transcutaneous Electric Nerve Stimulation\"[Mesh] OR \"transcutaneous electrical nerve stimulation\"[tiab] OR TENS[tiab]) AND (\"Acupuncture Points\"[Mesh] OR acupoint*[tiab])))\nAND\n(\"Surgical Procedures, Operative\"[Mesh] OR \"Anesthesia\"[Mesh] OR surg*[tiab] OR operat*[tiab] OR perioperat*[tiab] OR intraoperat*[tiab] OR postoperat*[tiab] OR anesthe*[tiab] OR anaesthe*[tiab])\nAND\n(randomized controlled trial[pt] OR controlled clinical trial[pt] OR randomized[tiab] OR placebo[tiab] OR \"clinical trials as topic\"[mesh:noexp] OR randomly[tiab] OR trial[ti])\nNOT\n(\"Animals\"[Mesh] NOT (\"Humans\"[Mesh] AND \"Animals\"[Mesh]))"
+  },
+  {
+    "id": "embase",
+    "name": "Embase (Elsevier)",
+    "database": "Embase (Elsevier.com)",
+    "platform": "Embase.com Advanced Search",
+    "date": "2026-07-22",
+    "hits": 1928,
+    "filters": "Embase RCT Clinical Filter (Hedges-based RCT string)",
+    "description": "Embase strategy utilizing Emtree controlled descriptors ('electroacupuncture'/exp, 'transcutaneous electrical nerve stimulation'/exp, 'acupuncture point'/exp, 'surgery'/exp, 'anesthesia'/exp) with precision proximity operators (NEAR/3, NEAR/5, NEXT/1).",
+    "strategy_text": "#1 'electroacupuncture'/exp\n#2 electroacupunctur*:ti,ab,kw OR 'electro-acupunctur*':ti,ab,kw OR 'electric acupuncture':ti,ab,kw OR 'electrical acupuncture':ti,ab,kw\n#3 #1 OR #2\n#4 'transcutaneous electrical nerve stimulation'/exp\n#5 'acupuncture'/exp OR 'acupuncture point'/exp\n#6 #4 AND #5\n#7 teas:ti,ab,kw OR taes:ti,ab,kw OR 'transcutaneous electrical acupoint stimulation':ti,ab,kw OR 'transcutaneous electric acupoint stimulation':ti,ab,kw OR 'transcutaneous acupoint electrical stimulation':ti,ab,kw OR 'transcutaneous acupoint stimulation':ti,ab,kw\n#8 ((transcutaneous NEAR/3 electric* NEAR/5 acupoint*):ti,ab,kw) OR ((transcutaneous NEAR/3 electric* NEAR/5 acupunctur* NEAR/2 point*):ti,ab,kw)\n#9 #6 OR #7 OR #8\n#10 'surgery'/exp OR 'anesthesia'/exp\n#11 surg*:ti,ab,kw OR operat*:ti,ab,kw OR perioperat*:ti,ab,kw OR intraoperat*:ti,ab,kw OR postoperat*:ti,ab,kw OR anesthe*:ti,ab,kw OR anaesthe*:ti,ab,kw\n#12 #10 OR #11\n#13 (#3 OR #9) AND #12\n#14 'randomized controlled trial'/exp OR 'controlled clinical trial'/de OR random*:ti,ab,tt OR 'randomization'/de OR placebo:ti,ab,tt OR ((double OR single) NEXT/1 (blind OR blinded)):ti,ab,tt\n#15 #13 AND #14"
+  },
+  {
+    "id": "central",
+    "name": "Cochrane CENTRAL",
+    "database": "Cochrane Central Register of Controlled Trials (CENTRAL)",
+    "platform": "Cochrane Library Search Manager (Wiley)",
+    "date": "2026-07-21",
+    "hits": 1698,
+    "filters": "None (Cochrane CENTRAL is dedicated exclusively to randomized and quasi-randomized trials)",
+    "description": "Exploded MeSH descriptors with Title/Abstract/Keyword textword queries. Captures both indexed registry records and handsearched trials.",
+    "strategy_text": "#1 MeSH descriptor: [Electroacupuncture] explode all trees\n#2 (electroacupunctur* or electro-acupunctur* or \"electric acupuncture\" or \"electrical acupuncture\"):ti,ab,kw\n#3 #1 or #2\n#4 MeSH descriptor: [Transcutaneous Electric Nerve Stimulation] explode all trees\n#5 MeSH descriptor: [Acupuncture Therapy] explode all trees\n#6 #4 and #5\n#7 (TEAS or \"transcutaneous electrical acupoint stimulation\" or \"transcutaneous electric acupoint stimulation\" or \"transcutaneous acupoint electrical stimulation\" or \"transcutaneous acupoint stimulation\"):ti,ab,kw\n#8 ((transcutaneous NEAR/3 electric*) NEAR/5 (acupoint* or (acupunctur* NEAR/2 point*))):ti,ab,kw\n#9 #6 or #7 or #8\n#10 MeSH descriptor: [Surgical Procedures, Operative] explode all trees\n#11 (surg* or operat* or perioperat* or peri-operat* or intraoperat* or postoperat* or preoperat*):ti,ab,kw\n#12 (anesthe* or anaesthe*):ti,ab,kw\n#13 #10 or #11 or #12\n#14 (#3 or #9) and #13"
+  },
+  {
+    "id": "cinahl",
+    "name": "CINAHL Ultimate",
+    "database": "CINAHL Ultimate (Cumulative Index to Nursing and Allied Health Literature)",
+    "platform": "EBSCOhost Proximity Search",
+    "date": "2026-07-23",
+    "hits": 465,
+    "filters": "CINAHL Clinical Queries / RCT Filters (MH Randomized Controlled Trials+)",
+    "description": "Executed in CINAHL Ultimate (authorized database substitution for CINAHL Complete) with CINAHL Subject Headings and N3/N5/N8 proximity operators.",
+    "strategy_text": "S1 MH \"Electroacupuncture\"\nS2 TI (electroacupunctur* OR electro-acupunctur* OR \"electric acupuncture\") OR AB (electroacupunctur* OR electro-acupunctur*)\nS3 S1 OR S2\nS4 MH \"Transcutaneous Electric Nerve Stimulation\"\nS5 MH \"Acupuncture+\" OR MH \"Acupuncture Points\"\nS6 S4 AND S5\nS7 TI (TEAS OR TAES OR \"transcutaneous electrical acupoint stimulation\" OR \"transcutaneous electric acupoint stimulation\" OR \"transcutaneous acupoint electrical stimulation\") OR AB (TEAS OR TAES OR \"transcutaneous electrical acupoint stimulation\")\nS8 TI ((transcutaneous N3 electric*) N5 (acupoint* OR (acupunctur* N2 point*))) OR AB ((transcutaneous N3 electric*) N5 (acupoint* OR (acupunctur* N2 point*)))\nS9 S6 OR S7 OR S8\nS10 MH \"Surgery, Operative+\" OR MH \"Anesthesia+\" OR MH \"Perioperative Care+\"\nS11 TI (surg* OR operat* OR perioperat* OR postoperat* OR anesthe*) OR AB (surg* OR operat* OR perioperat* OR postoperat* OR anesthe*)\nS12 S10 OR S11\nS13 (S3 OR S9) AND S12\nS14 MH \"Randomized Controlled Trials+\" OR MH \"Double-Blind Studies\" OR MH \"Single-Blind Studies\" OR TI (randomised OR randomized)\nS15 S13 AND S14"
+  },
+  {
+    "id": "registers",
+    "name": "Clinical Trial Registers",
+    "database": "ClinicalTrials.gov & Chinese Clinical Trial Registry (ChiCTR)",
+    "platform": "US NLM & WHO ICTRP Primary Registry",
+    "date": "Ongoing through 2026",
+    "hits": 142,
+    "filters": "Interventional Studies, Completed, Surgical Conditions",
+    "description": "Registry searches conducted to identify unpublished trial outcomes, prospective registry entries, and check prospective protocol adherence for RoB 2 Domain 5.",
+    "strategy_text": "ClinicalTrials.gov:\nCondition/Disease: postoperative pain OR surgery OR anesthesia\nIntervention/Treatment: transcutaneous electrical acupoint stimulation OR electroacupuncture OR TEAS\nStudy Type: Interventional (Clinical Trial)\n\nChinese Clinical Trial Registry (ChiCTR):\nTitle: 经皮穴位电刺激 (TEAS) OR 电针 (Electroacupuncture)\nKeywords: 术后镇痛 (Postoperative Analgesia) OR 手术 (Surgery) OR 阿片 (Opioid)"
+  }
+];

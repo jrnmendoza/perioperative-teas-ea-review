@@ -422,7 +422,7 @@ function renderMCIDStudio() {
   if (!container) return;
 
   const studies = getFilteredStudies(true);
-  const validStudies = studies.filter(s => s.mcid && s.mcid.opioid_md !== undefined && s.mcid.pain_md !== undefined);
+  const validStudies = studies.filter(s => s.mcid && typeof s.mcid.opioid_md === 'number' && !isNaN(s.mcid.opioid_md));
 
   let thresholdVal = 10.0;
   let marginVal = 1.0;
@@ -446,7 +446,7 @@ function renderMCIDStudio() {
   let q1 = 0, q2 = 0, q3 = 0, q4 = 0;
   validStudies.forEach(s => {
     const op = s.mcid.opioid_md;
-    const pn = s.mcid.pain_md;
+    const pn = typeof s.mcid.pain_md === 'number' ? s.mcid.pain_md : 0.0;
     const isSparing = op < 0;
     const painOk = pn <= marginVal;
     let meetsThresh = false;
@@ -562,14 +562,15 @@ function renderMCIDStudio() {
 
   validStudies.forEach(s => {
     const cx = scaleX(s.mcid.opioid_md);
-    const cy = scaleY(s.mcid.pain_md);
+    const painVal = typeof s.mcid.pain_md === 'number' ? s.mcid.pain_md : 0.0;
+    const cy = scaleY(painVal);
     const color = s.modality === 'TEAS' ? '#38bdf8' : '#a78bfa';
     const r = Math.max(5, Math.min(11, Math.sqrt(s.population.total_n) * 0.9));
 
     svg += `
       <g style="cursor: pointer;" onclick="openStudyDrawer('${s.id}')">
         <circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.5">
-          <title>${s.key} (${s.modality} vs ${s.comparator_short})\nOpioid MD: ${s.mcid.opioid_md} mg MME\nPain MD: ${s.mcid.pain_md} VAS\nSurgery: ${s.surgery_category}</title>
+          <title>${s.key} (${s.modality} vs ${s.comparator_short})\nOpioid MD: ${s.mcid.opioid_md} mg MME\nPain MD: ${painVal.toFixed(2)} VAS\nSurgery: ${s.surgery_category}</title>
         </circle>
         <text x="${cx}" y="${cy - r - 3}" fill="#e2e8f0" font-size="9" text-anchor="middle" font-weight="600">${s.author} '${String(s.year).slice(2)}</text>
       </g>
@@ -743,7 +744,9 @@ function renderStudyExplorer() {
   tbody.innerHTML = filtered.map((s, idx) => {
     const robBadge = s.rob2.overall === 'Low' 
       ? `<span class="kpi-badge badge-emerald">Low Risk</span>`
-      : `<span class="kpi-badge badge-amber">Some Concerns</span>`;
+      : (s.rob2.overall === 'High' 
+          ? `<span class="kpi-badge" style="background: rgba(244,63,94,0.18); color: #fda4af; border: 1px solid rgba(244,63,94,0.3);">High Risk</span>` 
+          : `<span class="kpi-badge badge-amber">Some Concerns</span>`);
     
     const inquiryBadge = s.author_inquiry && s.author_inquiry.has_inquiry 
       ? `<span class="kpi-badge badge-pending" title="${s.author_inquiry.target_data}">Inquiry Pending</span>` 
@@ -804,9 +807,30 @@ function renderMetaLab() {
 
   const validStudies = filtered.filter(s => {
     if (!s.outcomes || !s.outcomes[currentOutcome]) return false;
-    if (isBinary) return s.outcomes[currentOutcome].rr !== undefined;
-    return s.outcomes[currentOutcome].mean_diff !== undefined;
+    const oc = s.outcomes[currentOutcome];
+    if (isBinary) return typeof oc.rr === 'number' && !isNaN(oc.rr);
+    return typeof oc.mean_diff === 'number' && !isNaN(oc.mean_diff);
   });
+
+  if (validStudies.length === 0) {
+    const outcomeSelect = document.getElementById('meta-outcome-select');
+    const outcomeLabel = (outcomeSelect && outcomeSelect.selectedOptions && outcomeSelect.selectedOptions[0]) 
+      ? outcomeSelect.selectedOptions[0].text 
+      : currentOutcome;
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="8" style="text-align: center; padding: 3.5rem 1.5rem; color: var(--text-muted);">
+          <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">📊</div>
+          <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.4rem;">No Published RCTs Report Quantitative Data for This Endpoint</div>
+          <div style="font-size: 0.85rem; color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.6;">
+            Among the 63 included trials (${filterModality === 'all' ? 'TEAS & EA' : filterModality}), none tabulated extractable continuous or binary summary metrics for <em>${outcomeLabel}</em>.<br>
+            Please check the <a href="javascript:void(0)" onclick="switchTab('inquiries')" style="color: #818cf8; font-weight: 600; text-decoration: underline;">📬 Author Inquiries &amp; Outreach</a> tab to review pending author correspondence for missing trial parameters.
+          </div>
+        </td>
+      </tr>
+    `;
+    return;
+  }
 
   const overallMeta = isBinary 
     ? MetaEngine.runBinaryMeta(validStudies, currentOutcome) 
@@ -853,8 +877,10 @@ function renderMetaLab() {
 
     let colInt = '', colCtrl = '', colEffect = '', xMid = zeroX, xLow = zeroX, xUpp = zeroX, weightPct = st ? st.weight_pct : 0;
     if (isBinary) {
-      colInt = `${oc.arm1_events || 0} / ${oc.arm1_total || 30} (${(((oc.arm1_events||0)/(oc.arm1_total||30))*100).toFixed(1)}%)`;
-      colCtrl = `${oc.arm2_events || 0} / ${oc.arm2_total || 30} (${(((oc.arm2_events||0)/(oc.arm2_total||30))*100).toFixed(1)}%)`;
+      const n1 = oc.arm1_total || oc.arm1_n || 30;
+      const n2 = oc.arm2_total || oc.arm2_n || 30;
+      colInt = `${oc.arm1_events || 0} / ${n1} (${(((oc.arm1_events||0)/n1)*100).toFixed(1)}%)`;
+      colCtrl = `${oc.arm2_events || 0} / ${n2} (${(((oc.arm2_events||0)/n2)*100).toFixed(1)}%)`;
       colEffect = `RR ${oc.rr.toFixed(2)} [${oc.ci_low.toFixed(2)}, ${oc.ci_upp.toFixed(2)}]`;
       xMid = toX(Math.log(Math.max(0.01, oc.rr)));
       xLow = toX(Math.log(Math.max(0.01, oc.ci_low)));
@@ -1852,6 +1878,46 @@ function openStudyDrawer(id) {
     </div>
   `;
 
+  let outcomesHtml = `
+    <div style="background: var(--bg-panel); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+      <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: var(--text-muted); margin-bottom: 0.75rem;">Extracted Clinical Endpoints &amp; Data Audit</h4>
+      <div style="font-size: 0.82rem; line-height: 1.8;">
+  `;
+
+  if (s.outcomes && s.outcomes.opioid_24h && typeof s.outcomes.opioid_24h.mean_diff === 'number') {
+    const op = s.outcomes.opioid_24h;
+    outcomesHtml += `<p><strong>💊 Primary 24-h Opioid Consumption:</strong> <span style="color: #34d399; font-weight: 700;">MD ${op.mean_diff < 0 ? '−' : '+'}${Math.abs(op.mean_diff)} mg IV MME</span> (95% CI: [${op.ci_low}, ${op.ci_upp}], SE: ${op.se}) • Native: ${op.arm1_mean_native} ± ${op.arm1_sd_native} vs ${op.arm2_mean_native} ± ${op.arm2_sd_native} ${op.native_unit} ${op.native_drug}</p>`;
+  } else if (s.outcomes && s.outcomes.opioid_24h) {
+    outcomesHtml += `<p><strong>💊 Primary 24-h Opioid Consumption:</strong> <span style="color: #f59e0b; font-weight: 600;">${s.outcomes.opioid_24h.status}</span> — ${s.outcomes.opioid_24h.note || 'No continuous 24h opioid mean/SD tabulated.'}</p>`;
+  }
+
+  if (s.outcomes && s.outcomes.pain_rest_24h && typeof s.outcomes.pain_rest_24h.mean_diff === 'number') {
+    const pn = s.outcomes.pain_rest_24h;
+    outcomesHtml += `<p><strong>🩹 24-h Pain Intensity at Rest:</strong> <span style="color: #38bdf8; font-weight: 700;">MD ${pn.mean_diff < 0 ? '−' : '+'}${Math.abs(pn.mean_diff)} VAS</span> (95% CI: [${pn.ci_low}, ${pn.ci_upp}]) • ${pn.arm1_mean} ± ${pn.arm1_sd} vs ${pn.arm2_mean} ± ${pn.arm2_sd}</p>`;
+  }
+
+  if (s.outcomes && s.outcomes.ponv_24h && typeof s.outcomes.ponv_24h.rr === 'number') {
+    const po = s.outcomes.ponv_24h;
+    outcomesHtml += `<p><strong>🤢 Postoperative Nausea &amp; Vomiting (0–24h):</strong> <span style="color: #a78bfa; font-weight: 700;">RR ${po.rr}</span> (95% CI: [${po.ci_low}, ${po.ci_upp}]) • ${po.arm1_events}/${po.arm1_n} vs ${po.arm2_events}/${po.arm2_n}</p>`;
+  }
+
+  if (s.outcomes && s.outcomes.flatus_time && typeof s.outcomes.flatus_time.mean_diff === 'number') {
+    const fl = s.outcomes.flatus_time;
+    outcomesHtml += `<p><strong>⏱️ Time to First Flatus (GI Recovery):</strong> <span style="color: #34d399; font-weight: 700;">MD ${fl.mean_diff < 0 ? '−' : '+'}${Math.abs(fl.mean_diff)} hours</span> (95% CI: [${fl.ci_low}, ${fl.ci_upp}]) • ${fl.arm1_mean} ± ${fl.arm1_sd} vs ${fl.arm2_mean} ± ${fl.arm2_sd} h</p>`;
+  }
+
+  if (s.outcomes && s.outcomes.hospital_stay && typeof s.outcomes.hospital_stay.mean_diff === 'number') {
+    const hs = s.outcomes.hospital_stay;
+    outcomesHtml += `<p><strong>🏥 Length of Hospital Stay:</strong> MD ${hs.mean_diff < 0 ? '−' : '+'}${Math.abs(hs.mean_diff)} days • ${hs.arm1_mean} ± ${hs.arm1_sd} vs ${hs.arm2_mean} ± ${hs.arm2_sd} d</p>`;
+  }
+
+  if (s.audit && s.audit.classification) {
+    outcomesHtml += `<p style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.06); color: var(--text-secondary);"><strong>🔍 Audit Classification:</strong> ${s.audit.classification}<br><em>Evidence Sources: ${s.audit.evidence_sources || 'Published trial report'}</em></p>`;
+  }
+
+  outcomesHtml += '</div></div>';
+
+  content.innerHTML += outcomesHtml;
   modal.classList.add('active');
 }
 
@@ -1880,3 +1946,9 @@ window.showToast = showToast;
 window.switchConvTab = switchConvTab;
 window.runLiveEquiCalc = runLiveEquiCalc;
 window.runLiveStatCalc = runLiveStatCalc;
+window.renderAllViews = renderAllViews;
+window.renderActiveTab = renderActiveTab;
+window.renderMetaLab = renderMetaLab;
+window.renderSearchStrategiesView = renderSearchStrategiesView;
+window.renderActiveSearchDb = renderActiveSearchDb;
+window.switchTab = switchTab;
