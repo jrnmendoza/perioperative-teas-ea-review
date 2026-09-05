@@ -3,7 +3,7 @@
  * Conforms to Cochrane Handbook / Stata 19.5 meta & R metafor algorithms.
  */
 
-const MetaEngine = {
+var MetaEngine = {
   // Statistical Student's t distribution approximation for HKSJ
   getTCritical: function(df, alpha = 0.05) {
     if (df <= 0) return 1.96;
