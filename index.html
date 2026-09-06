@@ -14,64 +14,87 @@
   <!-- Top Header Navigation -->
   <header class="header-container">
     <div class="brand-wrapper">
-      <div class="brand-badge">LUND UNIV</div>
+      <div class="brand-badge" data-i18n="header.badge">LUND UNIV</div>
       <div class="brand-title">
-        <h1>Perioperative Electrical Acupoint Stimulation for Postoperative Opioid Sparing</h1>
-        <p>Systematic Review &amp; Meta-Analysis of Randomized Controlled Trials • PROSPERO 2026 • Lund University</p>
+        <h1 data-i18n="header.title">Perioperative Electrical Acupoint Stimulation for Postoperative Opioid Sparing</h1>
+        <p data-i18n="header.subtitle">Systematic Review &amp; Meta-Analysis of Randomized Controlled Trials • PROSPERO 2026 • Lund University</p>
       </div>
     </div>
 
     <nav class="nav-tabs" role="tablist">
       <span class="nav-section-label">I</span>
-      <button class="nav-btn active" data-tab="intro" role="tab">Introduction</button>
+      <button class="nav-btn active" data-tab="intro" role="tab" data-i18n="nav.intro">Introduction</button>
 
       <span class="nav-section-label">M</span>
-      <button class="nav-btn" data-tab="search" role="tab">Search Strategy</button>
-      <button class="nav-btn" data-tab="prisma" role="tab">Study Selection</button>
-      <button class="nav-btn" data-tab="rob2" role="tab">Risk of Bias</button>
-      <button class="nav-btn" data-tab="extraction" role="tab">Data Extraction</button>
+      <button class="nav-btn" data-tab="search" role="tab" data-i18n="nav.search">Search Strategy</button>
+      <button class="nav-btn" data-tab="prisma" role="tab" data-i18n="nav.prisma">Study Selection</button>
+      <button class="nav-btn" data-tab="rob2" role="tab" data-i18n="nav.rob2">Risk of Bias</button>
+      <button class="nav-btn" data-tab="extraction" role="tab" data-i18n="nav.extraction">Data Extraction</button>
 
       <span class="nav-section-label">R</span>
-      <button class="nav-btn" data-tab="primary" role="tab">Primary Outcome</button>
-      <button class="nav-btn" data-tab="secondary" role="tab">Secondary Outcomes</button>
-      <button class="nav-btn" data-tab="mcid" role="tab">Clinical Importance</button>
-      <button class="nav-btn" data-tab="metareg" role="tab">Meta-Regression</button>
+      <button class="nav-btn" data-tab="primary" role="tab" data-i18n="nav.primary">Primary Outcome</button>
+      <button class="nav-btn" data-tab="secondary" role="tab" data-i18n="nav.secondary">Secondary Outcomes</button>
+      <button class="nav-btn" data-tab="mcid" role="tab" data-i18n="nav.mcid">Clinical Importance</button>
+      <button class="nav-btn" data-tab="metareg" role="tab" data-i18n="nav.metareg">Meta-Regression</button>
 
       <span class="nav-section-label">D</span>
-      <button class="nav-btn" data-tab="evidence" role="tab">GRADE Evidence</button>
-      <button class="nav-btn" data-tab="limitations" role="tab">Limitations</button>
+      <button class="nav-btn" data-tab="evidence" role="tab" data-i18n="nav.evidence">GRADE Evidence</button>
+      <button class="nav-btn" data-tab="limitations" role="tab" data-i18n="nav.limitations">Limitations</button>
 
       <span class="nav-section-label" style="color: #64748b;">+</span>
-      <button class="nav-btn" data-tab="explorer" role="tab">Study Explorer</button>
-      <button class="nav-btn" data-tab="export" role="tab">Export</button>
+      <button class="nav-btn" data-tab="explorer" role="tab" data-i18n="nav.explorer">Study Explorer</button>
+      <button class="nav-btn" data-tab="glossary" role="tab" data-i18n="nav.glossary">Statistics Glossary</button>
+      <button class="nav-btn" data-tab="export" role="tab" data-i18n="nav.export">Export</button>
     </nav>
+
+    <!-- Global Reader Assistance & Language Controls (Sections 2, 3, 4) -->
+    <div class="header-controls">
+      <!-- English / Swedish Language Switch -->
+      <div class="lang-switch-group" role="group" aria-label="Language selection">
+        <span class="lang-icon">🌐</span>
+        <button class="btn-lang active" data-lang="en" onclick="setLanguage('en')" aria-label="Switch to English">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="btn-lang" data-lang="sv" onclick="setLanguage('sv')" aria-label="Byt till svenska">SV</button>
+      </div>
+
+      <!-- Explain Statistics Switch (ON / OFF) -->
+      <div class="explain-stats-group">
+        <label class="explain-stats-label" for="toggle-explain-stats">
+          <span class="explain-stats-icon">ⓘ</span>
+          <span data-i18n="controls.explainStats">Explain statistics</span>:
+        </label>
+        <button id="toggle-explain-stats" class="btn-toggle-explain active" role="switch" aria-checked="true" onclick="toggleExplainStatistics()" aria-label="Toggle Explain Statistics">
+          <span class="toggle-state-text" id="explain-stats-status">ON</span>
+        </button>
+      </div>
+    </div>
   </header>
 
   <!-- Global Filter Toolbar -->
   <div class="control-toolbar">
     <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
       <div class="filter-group">
-        <span class="filter-label">Modality:</span>
+        <span class="filter-label" data-i18n="controls.modality">Modality:</span>
         <select id="filter-modality" class="filter-select">
-          <option value="all">All Modalities (TEAS + EA)</option>
-          <option value="TEAS">TEAS (Surface Electrodes)</option>
-          <option value="EA">EA (Needle Electroacupuncture)</option>
+          <option value="all" data-i18n="controls.allModalities">All Modalities (TEAS + EA)</option>
+          <option value="TEAS" data-i18n="controls.teasOnly">TEAS (Surface Electrodes)</option>
+          <option value="EA" data-i18n="controls.eaOnly">EA (Needle Electroacupuncture)</option>
         </select>
       </div>
 
       <div class="filter-group">
-        <span class="filter-label">Comparator:</span>
+        <span class="filter-label" data-i18n="controls.comparator">Comparator:</span>
         <select id="filter-comparator" class="filter-select">
-          <option value="all">All Comparators</option>
-          <option value="Sham">Sham-Controlled (Placebo Double-Blind)</option>
-          <option value="Usual Care">Usual Care (Open-Label Control)</option>
+          <option value="all" data-i18n="controls.allComparators">All Comparators</option>
+          <option value="Sham" data-i18n="controls.shamOnly">Sham-Controlled (Placebo Double-Blind)</option>
+          <option value="Usual Care" data-i18n="controls.usualCare">Usual Care (Open-Label Control)</option>
         </select>
       </div>
 
       <div class="filter-group">
-        <span class="filter-label">Surgery:</span>
+        <span class="filter-label" data-i18n="controls.surgery">Surgery:</span>
         <select id="filter-surgery" class="filter-select">
-          <option value="all">All Surgical Specialties</option>
+          <option value="all" data-i18n="controls.allSurgeries">All Surgical Specialties</option>
           <option value="Thoracic & Cardiac">Thoracic & Cardiac</option>
           <option value="Abdominal & Gastrointestinal">Abdominal & Gastrointestinal</option>
           <option value="Gynecologic & Breast">Gynecologic & Breast</option>
@@ -83,21 +106,21 @@
       </div>
 
       <div class="filter-group">
-        <span class="filter-label">RoB 2:</span>
+        <span class="filter-label" data-i18n="controls.rob">RoB 2:</span>
         <select id="filter-rob" class="filter-select">
-          <option value="all">All Risk of Bias Judgments</option>
-          <option value="Low">Low Risk of Bias Only</option>
-          <option value="Some concerns">Some Concerns</option>
+          <option value="all" data-i18n="controls.allRob">All Risk of Bias Judgments</option>
+          <option value="Low" data-i18n="controls.lowRobOnly">Low Risk of Bias Only</option>
+          <option value="Some concerns" data-i18n="controls.someConcerns">Some Concerns</option>
         </select>
       </div>
     </div>
 
     <div style="display: flex; gap: 0.4rem; align-items: center;">
-      <span class="filter-label" style="margin-right: 0.3rem;">Presets:</span>
-      <button class="btn-preset active" data-preset="all">All 63 Studies</button>
-      <button class="btn-preset" data-preset="low_rob">Low RoB Only</button>
-      <button class="btn-preset" data-preset="sham_only">Sham Only</button>
-      <button class="btn-preset" data-preset="large_studies">Large (N ≥ 60)</button>
+      <span class="filter-label" style="margin-right: 0.3rem;" data-i18n="controls.presets">Presets:</span>
+      <button class="btn-preset active" data-preset="all" data-i18n="controls.allStudies">All 63 Studies</button>
+      <button class="btn-preset" data-preset="low_rob" data-i18n="controls.presetLowRob">Low RoB Only</button>
+      <button class="btn-preset" data-preset="sham_only" data-i18n="controls.presetSham">Sham Only</button>
+      <button class="btn-preset" data-preset="large_studies" data-i18n="controls.presetLarge">Large (N ≥ 60)</button>
     </div>
   </div>
 
@@ -107,31 +130,49 @@
     <!-- KPI Summary Row: Research Findings Focus -->
     <section class="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-title">Included RCTs</div>
+        <div class="kpi-title">
+          <span data-i18n="kpi.includedRcts">Included RCTs</span>
+          <button class="stat-info-btn" data-stat-term="kStudies" aria-label="Statistical explanation for study count k">ⓘ</button>
+        </div>
         <div class="kpi-value" id="kpi-study-count">63 RCTs</div>
         <div class="kpi-sub" id="kpi-patient-sub">5,089 randomized surgical patients</div>
-        <span class="kpi-badge badge-indigo">49 TEAS • 14 EA</span>
+        <span class="kpi-badge badge-indigo" data-i18n="kpi.includedRctsBadge">49 TEAS • 14 EA</span>
       </div>
 
       <div class="kpi-card" id="kpi-effect-card">
-        <div class="kpi-title" id="kpi-effect-title">Primary Outcome: 24-h Opioid Sparing</div>
+        <div class="kpi-title" id="kpi-effect-title">
+          <span data-i18n="kpi.primaryTitle">Primary Outcome: 24-h Opioid Sparing</span>
+          <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
+        </div>
         <div class="kpi-value" id="kpi-pooled-md" style="color: #34d399; font-size: 1.4rem; line-height: 1.25;">−5.04 mg MME</div>
         <div class="kpi-sub" id="kpi-pooled-sub">95% CI [−9.78, −0.29] • p = 0.040 • k = 11, N = 945</div>
-        <span class="kpi-badge badge-emerald" id="kpi-pooled-badge">REML + Knapp–Hartung</span>
+        <span class="kpi-badge badge-emerald" id="kpi-pooled-badge">
+          <span data-i18n="kpi.primaryBadge">PRIMARY MODEL: REML + Knapp–Hartung</span>
+          <button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
+        </span>
+        <div class="stat-plain-language" style="margin-top: 0.5rem; font-size: 0.72rem; padding: 0.35rem 0.6rem; border-left-width: 2px;">
+          <strong>Plain Language:</strong> Patients receiving neuromodulation required on average ~5.0 mg less IV morphine over 24h, with largest benefits observed in painful, high-demand surgeries.
+        </div>
       </div>
 
       <div class="kpi-card">
-        <div class="kpi-title">Standardized Effect Size</div>
+        <div class="kpi-title">
+          <span data-i18n="kpi.smdTitle">Standardized Effect Size</span>
+          <button class="stat-info-btn" data-stat-term="hedgesG" aria-label="Statistical explanation for Hedges g">ⓘ</button>
+        </div>
         <div class="kpi-value" style="color: #818cf8; font-size: 1.4rem; line-height: 1.25;">Hedges' g = −0.99</div>
         <div class="kpi-sub">95% CI [−1.69, −0.29] • p = 0.010 • Large Effect</div>
         <span class="kpi-badge badge-indigo">StataNow 19.5 SE Validated</span>
       </div>
 
       <div class="kpi-card">
-        <div class="kpi-title">GRADE Certainty</div>
+        <div class="kpi-title">
+          <span data-i18n="kpi.gradeTitle">GRADE Certainty</span>
+          <button class="stat-info-btn" data-stat-term="grade" aria-label="Statistical explanation for GRADE">ⓘ</button>
+        </div>
         <div class="kpi-value" style="color: #fbbf24; font-size: 1.15rem; line-height: 1.25;">⊕⊕⊕◯ Moderate</div>
-        <div class="kpi-sub">Downgraded 1 level for high heterogeneity (I² = 99.7%)</div>
-        <span class="kpi-badge badge-amber">7 Outcomes Synthesized</span>
+        <div class="kpi-sub" data-i18n="kpi.gradeSub">Downgraded 1 level for high heterogeneity (I² = 99.7%)</div>
+        <span class="kpi-badge badge-amber" data-i18n="kpi.gradeBadge">7 Outcomes Synthesized</span>
       </div>
     </section>
 
@@ -695,13 +736,13 @@
             <thead>
               <tr>
                 <th>Study Key</th>
-                <th>Modality</th>
-                <th>Comparator</th>
-                <th>Surgical Category</th>
-                <th>Acupoint Formula</th>
-                <th>Frequency</th>
-                <th>Sample Size (N)</th>
-                <th>RoB 2</th>
+                <th>Modality <button class="stat-info-btn" data-stat-term="modality" aria-label="Explanation for Modality">ⓘ</button></th>
+                <th>Comparator <button class="stat-info-btn" data-stat-term="comparator" aria-label="Explanation for Comparator">ⓘ</button></th>
+                <th>Surgical Category <button class="stat-info-btn" data-stat-term="surgicalCategory" aria-label="Explanation for Surgical Specialty">ⓘ</button></th>
+                <th>Acupoint Formula <button class="stat-info-btn" data-stat-term="acupoints" aria-label="Explanation for Acupoint Selection">ⓘ</button></th>
+                <th>Frequency <button class="stat-info-btn" data-stat-term="frequency" aria-label="Explanation for Stimulation Frequency">ⓘ</button></th>
+                <th>Sample Size (N) <button class="stat-info-btn" data-stat-term="nParticipants" aria-label="Explanation for Sample Size">ⓘ</button></th>
+                <th>RoB 2 <button class="stat-info-btn" data-stat-term="rob2" aria-label="Explanation for RoB 2">ⓘ</button></th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -757,9 +798,9 @@
                 <option value="opioid_24h" selected>💊 [Co-Primary: Acute] Cumulative 0–24h Opioid Consumption (mg IV MME)</option>
                 <option value="opioid_48h">💊 [Co-Primary: Extended Durability] Cumulative 0–48h Opioid Consumption (mg IV MME)</option>
               </optgroup>
-              <optgroup label="Co-Primary Pain Intensity Endpoints (Objective 2)">
-                <option value="pain_rest_24h">🩹 [Obj 2] Pain Intensity at Rest at ~24h (VAS 0–10)</option>
-                <option value="pain_movement_24h">🩹 [Obj 2] Pain Intensity During Movement at ~24h (VAS 0–10)</option>
+              <optgroup label="Secondary Outcome: Pain Intensity (Objective 2)">
+                <option value="pain_rest_24h">🩹 [Secondary] Pain Intensity at Rest at ~24h (VAS 0–10)</option>
+                <option value="pain_movement_24h">🩹 [Secondary] Pain Intensity During Movement at ~24h (VAS 0–10)</option>
               </optgroup>
               <optgroup label="Secondary Recovery &amp; Clinical Endpoints (Objective 6)">
                 <option value="pca_presses_24h">🔘 [Obj 6] PCA Pump Demands &amp; Presses (24h) [Mean Difference]</option>
@@ -817,6 +858,25 @@
           </div>
         </div>
 
+        <!-- Forest Plot Reader Support (Section 19) -->
+        <div class="forest-helper-bar" style="margin: 0.5rem 1.25rem 0.75rem 1.25rem;">
+          <details class="forest-how-to-read">
+            <summary class="forest-how-to-summary">
+              <span class="forest-summary-icon">ⓘ</span>
+              <strong data-i18n="forestPlotHelper.btnText">How to read this plot ⓘ</strong>
+            </summary>
+            <div class="forest-helper-content">
+              <ul class="forest-helper-list">
+                <li><strong data-i18n="forestPlotHelper.item1Title">Study Marker:</strong> <span data-i18n="forestPlotHelper.item1">Marker area reflects study sample size and random-effects statistical weight.</span></li>
+                <li><strong data-i18n="forestPlotHelper.item2Title">Horizontal Line:</strong> <span data-i18n="forestPlotHelper.item2">95% confidence interval for each study estimate, reflecting statistical precision.</span></li>
+                <li><strong data-i18n="forestPlotHelper.item3Title">Summary Diamond:</strong> <span data-i18n="forestPlotHelper.item3">The pooled random-effects average. Diamond width spans the 95% confidence interval.</span></li>
+                <li><strong data-i18n="forestPlotHelper.item4Title">Line of No Effect:</strong> <span data-i18n="forestPlotHelper.item4">Vertical dashed line (0 for MD/SMD; 1.0 for RR). Values to the left favor TEAS/EA.</span></li>
+                <li><strong data-i18n="forestPlotHelper.item5Title">Prediction Interval:</strong> <span data-i18n="forestPlotHelper.item5">Extended dashed bracket estimating the plausible true effect in a future comparable clinical setting.</span></li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
         <div class="forest-plot-container">
           <table class="forest-table">
             <thead>
@@ -826,9 +886,9 @@
                 <th>Comparison</th>
                 <th>Intervention Mean ± SD (N)</th>
                 <th>Control Mean ± SD (N)</th>
-                <th>Mean Difference [95% CI]</th>
+                <th>Mean Difference [95% CI] <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Explanation for Mean Difference">ⓘ</button></th>
                 <th>Weight</th>
-                <th class="forest-svg-cell" style="text-align: center;">Forest Plot [95% CI &amp; Prediction]</th>
+                <th class="forest-svg-cell" style="text-align: center;">Forest Plot [95% CI &amp; Prediction] <button class="stat-info-btn" data-stat-term="predictionInterval" aria-label="Explanation for Prediction Interval">ⓘ</button></th>
               </tr>
             </thead>
             <tbody id="forest-table-body"></tbody>
@@ -918,7 +978,7 @@
                   <span class="kpi-badge badge-emerald" id="badge-q1-count">1 Trial (1.6%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  Demonstrates <strong>true clinical synergy</strong>: patients achieve prespecified PROSPERO opioid reduction while concomitantly experiencing lower or equivalent postoperative pain. Zero risk of breakthrough pain.
+                  Demonstrates <strong>true clinical synergy</strong>: patients achieve prespecified PROSPERO opioid reduction while concomitantly experiencing lower or equivalent postoperative pain. No evidence of increased breakthrough pain was observed.
                 </div>
               </div>
 
@@ -1019,79 +1079,218 @@
           <!-- Primary Synthesis: Combined 11 Trials -->
           <div class="stratum-card primary-stratum" style="border-top: 3px solid #10b981;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-              <span class="badge badge-emerald">Combined Primary Pool</span>
-              <span style="font-size: 0.72rem; color: #34d399; font-weight: 700;">6 Direct + 5 Derived</span>
+              <span class="badge badge-emerald" data-i18n="primarySection.combinedPool">All 11 Analyzable Trials</span>
+              <span class="badge badge-indigo">
+                <span data-i18n="cardStructure.primaryModel">PRIMARY MODEL</span>: REML + Knapp–Hartung
+                <button class="stat-info-btn" data-stat-term="knappHartung" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
+              </span>
             </div>
-            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">All 11 Analyzable Trials</h3>
-            <div style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.4rem;">
-              −5.04 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">
+              Consensus Acute Window: 0–24h Opioid Consumption
+              <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
+            </h3>
+
+            <!-- Standardized 4-Questions Grid (Sections 12 & 13) -->
+            <div class="stat-four-questions-grid">
+              <!-- 1. Statistical Evidence -->
+              <div class="stat-q-card">
+                <div class="stat-q-label q-stat">
+                  <span data-i18n="cardStructure.statisticalEvidence">1. Statistical Evidence</span>
+                  <button class="stat-info-btn" data-stat-term="pValue" aria-label="Statistical explanation for p-value">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #38bdf8;">t(10) = −2.37, p = 0.0395</div>
+                <div class="stat-q-sub">95% Knapp–Hartung CI: [−9.78, −0.29] mg</div>
+              </div>
+
+              <!-- 2. Effect Magnitude -->
+              <div class="stat-q-card">
+                <div class="stat-q-label q-mag">
+                  <span data-i18n="cardStructure.effectMagnitude">2. Effect Magnitude</span>
+                  <button class="stat-info-btn" data-stat-term="ivMme" aria-label="Statistical explanation for IV MME">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #34d399;">MD = −5.04 mg IV MME</div>
+                <div class="stat-q-sub">Standardized: Hedges' g = −0.99</div>
+              </div>
+
+              <!-- 3. Clinical Importance -->
+              <div class="stat-q-card">
+                <div class="stat-q-label q-clin">
+                  <span data-i18n="cardStructure.clinicalImportance">3. Clinical Importance</span>
+                  <button class="stat-info-btn" data-stat-term="clinicalThreshold" aria-label="Statistical explanation for Clinical Importance Threshold">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #f59e0b;">Below 10 mg Threshold</div>
+                <div class="stat-q-sub">Primary threshold: 10 mg (not reached). Exploratory 5 mg threshold: reached.</div>
+              </div>
+
+              <!-- 4. Consistency Across Studies -->
+              <div class="stat-q-card">
+                <div class="stat-q-label q-cons">
+                  <span data-i18n="cardStructure.consistency">4. Consistency</span>
+                  <button class="stat-info-btn" data-stat-term="predictionInterval" aria-label="Statistical explanation for Prediction Interval">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #a78bfa;">95% PI [−18.33, +8.26]</div>
+                <div class="stat-q-sub">I² = 99.73% • τ² = 30.01 (High clinical heterogeneity)</div>
+              </div>
             </div>
-            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
-              <strong>95% Knapp–Hartung CI:</strong> [−9.78, −0.29] • <strong style="color: #34d399;">p = 0.0395</strong>
+
+            <!-- Plain-Language Interpretation (When Explain Statistics = ON) -->
+            <div class="stat-plain-language" data-i18n-html="interpretations.primary24h">
+              <strong>Plain-Language Interpretation:</strong> Across the 11 analyzable trials, perioperative electrical acupoint stimulation reduced 24-hour postoperative opioid consumption by an average of 5.04 mg IV morphine equivalents (p = 0.0395). While statistically detectable, the pooled average is below the primary prespecified clinical importance threshold of 10 mg IV MME. The wide 95% prediction interval ([−18.33, +8.26] mg) crosses zero, showing that effect sizes vary substantially and clinical benefit is largest in procedures with high baseline opioid demand.
             </div>
-            <div style="font-size: 0.78rem; color: #38bdf8; margin-top: 0.25rem;">
-              <strong>DerSimonian–Laird MD:</strong> −2.03 mg (Wald 95% CI: [−3.06, −0.98], p = 0.0001)
-            </div>
-            <div style="font-size: 0.78rem; color: #fbbf24; margin-top: 0.35rem; font-weight: 600;">
-              <strong>95% Prediction Interval:</strong> [−18.33, +8.26] mg
-            </div>
+
+            <!-- Alternative Model Estimates (Section 15) -->
+            <details class="alt-models-accordion">
+              <summary data-i18n="primarySection.altModelsToggle">Alternative Model Estimates &amp; Estimator Sensitivity</summary>
+              <div class="alt-models-content">
+                <div><strong>DerSimonian–Laird (DL):</strong> MD = −2.03 mg (Wald 95% CI: [−3.06, −0.98], z = −3.85, p = 0.0001)</div>
+                <div><strong>Normal Wald Approximation:</strong> 95% CI: [−7.91, −2.17] mg (z = −3.44, p = 0.0006)</div>
+                <div style="margin-top: 0.35rem; font-size: 0.72rem; color: #94a3b8;">
+                  <em>Methodological note:</em> The primary REML model with Knapp–Hartung adjustment accounts for limited degrees of freedom (df = 10) and prevents anticonservative false-positive bias inherent in traditional Wald tests.
+                </div>
+              </div>
+            </details>
+
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
-              <div><strong>Analyzable Cohort:</strong> k = 11 RCTs • N = 945 patients</div>
-              <div><strong>REML Test of Effect:</strong> t(10) = −2.37, <strong>p = 0.0395</strong> (Statistically Significant)</div>
-              <div><strong>Heterogeneity:</strong> τ² = 30.01, I² = 99.73%, Q = 197.30 (p &lt; 0.0001)</div>
-              <div style="margin-top: 0.4rem; color: #6ee7b7; font-weight: 600;">Point estimate (−5.04 mg) exceeds the 5.0 mg MCID clinical threshold.</div>
+              <div><strong>Analyzable Cohort:</strong> k = 11 RCTs • N = 945 patients (6 Direct + 5 Derived)</div>
+              <div><strong>Trials Included:</strong> Chen 1998, Chen 2020, He 2026, Seevaunnamtum 2016, Yang 2024, Zhang 2025, Chen 2015 (Thy), Chen 2015 (Hyp), El-Rakshy 2009, Sim 2002, Coura 2011</div>
             </div>
           </div>
 
           <!-- Primary Stratum 1: TEAS vs Sham (k = 8) -->
           <div class="stratum-card primary-stratum">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-              <span class="badge badge-indigo">Primary Stratum 1</span>
+              <span class="badge badge-indigo" data-i18n="primarySection.teasStratum">Primary Stratum 1: TEAS vs Sham</span>
               <span style="font-size: 0.72rem; color: #818cf8; font-weight: 700;">Double-Blind Sham</span>
             </div>
-            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">TEAS vs Sham TEAS</h3>
-            <div style="font-size: 1.6rem; font-weight: 800; color: #818cf8; margin-top: 0.4rem;">
-              −2.40 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">
+              TEAS vs Sham TEAS
+              <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
+            </h3>
+
+            <!-- 4 Questions Grid -->
+            <div class="stat-four-questions-grid">
+              <div class="stat-q-card">
+                <div class="stat-q-label q-stat">
+                  <span data-i18n="cardStructure.statisticalEvidence">1. Statistical Evidence</span>
+                  <button class="stat-info-btn" data-stat-term="pValue">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #cbd5e1;">t(7) = −1.69, p = 0.1344</div>
+                <div class="stat-q-sub">95% Knapp–Hartung CI: [−5.76, +0.95] mg</div>
+              </div>
+
+              <div class="stat-q-card">
+                <div class="stat-q-label q-mag">
+                  <span data-i18n="cardStructure.effectMagnitude">2. Effect Magnitude</span>
+                  <button class="stat-info-btn" data-stat-term="ivMme">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #818cf8;">MD = −2.40 mg IV MME</div>
+                <div class="stat-q-sub">Hedges' g = −1.12 [−1.89, −0.35]</div>
+              </div>
+
+              <div class="stat-q-card">
+                <div class="stat-q-label q-clin">
+                  <span data-i18n="cardStructure.clinicalImportance">3. Clinical Importance</span>
+                  <button class="stat-info-btn" data-stat-term="clinicalThreshold">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #f59e0b;">Surgical Case-Mix Dependent</div>
+                <div class="stat-q-sub">Low sparing in minor cases (0.3–1.1 mg); substantial in thoracotomy (12–21 mg).</div>
+              </div>
+
+              <div class="stat-q-card">
+                <div class="stat-q-label q-cons">
+                  <span data-i18n="cardStructure.consistency">4. Consistency</span>
+                  <button class="stat-info-btn" data-stat-term="iSquared">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #a78bfa;">I² = 98.96%</div>
+                <div class="stat-q-sub">τ² = 5.35 • Q = 188.42 (p &lt; 0.0001)</div>
+              </div>
             </div>
-            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
-              <strong>95% Knapp–Hartung CI:</strong> [−5.76, +0.95] • t(7) = −1.69, p = 0.1344
+
+            <div class="stat-plain-language" data-i18n-html="interpretations.teasStratum">
+              <strong>Plain-Language Interpretation:</strong> In the double-blind sham-controlled TEAS stratum (k = 8 trials), opioid sparing averaged 2.40 mg IV MME (Knapp–Hartung 95% CI [−5.76, +0.95], p = 0.134). This reflects surgical case-mix: trials in minor ambulatory procedures showed minimal sparing (0.3–1.1 mg), whereas high-pain thoracotomy and abdominal trials achieved 12–21 mg sparing.
             </div>
-            <div style="font-size: 0.78rem; color: #38bdf8; margin-top: 0.25rem;">
-              <strong>Normal Wald CI:</strong> [−3.56, −1.25] • z = −4.08, p &lt; 0.0001
-            </div>
-            <div style="font-size: 0.78rem; color: #fbbf24; margin-top: 0.35rem; font-weight: 600;">
-              <strong>Hedges' g SMD:</strong> −1.12 [95% CI: −1.89, −0.35], p = 0.0104
-            </div>
+
+            <!-- Alternative Model Estimates -->
+            <details class="alt-models-accordion">
+              <summary data-i18n="primarySection.altModelsToggle">Alternative Model Estimates &amp; Estimator Sensitivity</summary>
+              <div class="alt-models-content">
+                <div><strong>Normal Wald Approximation:</strong> MD = −2.40 mg (95% CI: [−3.56, −1.25], z = −4.08, p &lt; 0.0001)</div>
+                <div><strong>DerSimonian–Laird:</strong> MD = −1.94 mg (95% CI: [−2.91, −0.97], p = 0.0001)</div>
+              </div>
+            </details>
+
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
               <div><strong>Defensible Studies:</strong> k = 8 RCTs • N = 725 patients</div>
               <div><strong>Included Trials:</strong> Chen 1998, Chen 2020, He 2026, Seevaunnamtum 2016, Yang 2024, Zhang 2025, Chen 2015 (Thy), Chen 2015 (Hyp)</div>
-              <div><strong>Heterogeneity:</strong> τ² = 5.35, I² = 98.96%, Q = 188.42 (p &lt; 0.0001)</div>
             </div>
           </div>
 
           <!-- Primary Stratum 2: EA vs Control / Sham (k = 3) -->
           <div class="stratum-card primary-stratum">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-              <span class="badge badge-cyan">Primary Stratum 2</span>
+              <span class="badge badge-cyan" data-i18n="primarySection.eaStratum">Primary Stratum 2: EA vs Control / Sham</span>
               <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 700;">Needle Sham / Control</span>
             </div>
-            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">EA vs Control / Sham</h3>
-            <div style="font-size: 1.6rem; font-weight: 800; color: #38bdf8; margin-top: 0.4rem;">
-              −10.40 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">
+              EA vs Control / Sham
+              <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
+            </h3>
+
+            <!-- 4 Questions Grid -->
+            <div class="stat-four-questions-grid">
+              <div class="stat-q-card">
+                <div class="stat-q-label q-stat">
+                  <span data-i18n="cardStructure.statisticalEvidence">1. Statistical Evidence</span>
+                  <button class="stat-info-btn" data-stat-term="pValue">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #cbd5e1;">t(2) = −1.72, p = 0.2275</div>
+                <div class="stat-q-sub">95% Knapp–Hartung CI: [−36.39, +15.60] mg</div>
+              </div>
+
+              <div class="stat-q-card">
+                <div class="stat-q-label q-mag">
+                  <span data-i18n="cardStructure.effectMagnitude">2. Effect Magnitude</span>
+                  <button class="stat-info-btn" data-stat-term="ivMme">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #38bdf8;">MD = −10.40 mg IV MME</div>
+                <div class="stat-q-sub">Hedges' g = −0.66 [−2.38, +1.07]</div>
+              </div>
+
+              <div class="stat-q-card">
+                <div class="stat-q-label q-clin">
+                  <span data-i18n="cardStructure.clinicalImportance">3. Clinical Importance</span>
+                  <button class="stat-info-btn" data-stat-term="clinicalThreshold">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #34d399;">Point Est &ge; 10 mg Threshold</div>
+                <div class="stat-q-sub">Driven by open-heart surgery (Coura 2011: −22.4 mg sparing).</div>
+              </div>
+
+              <div class="stat-q-card">
+                <div class="stat-q-label q-cons">
+                  <span data-i18n="cardStructure.consistency">4. Consistency</span>
+                  <button class="stat-info-btn" data-stat-term="iSquared">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #a78bfa;">I² = 79.51%</div>
+                <div class="stat-q-sub">τ² = 85.48 • Q = 9.76 (p = 0.0076)</div>
+              </div>
             </div>
-            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
-              <strong>95% Knapp–Hartung CI:</strong> [−36.39, +15.60] • t(2) = −1.72, p = 0.2275
+
+            <div class="stat-plain-language" data-i18n-html="interpretations.eaStratum">
+              <strong>Plain-Language Interpretation:</strong> In the needle electroacupuncture stratum (k = 3 trials), opioid sparing averaged 10.40 mg IV MME (p = 0.228). This estimate is strongly influenced by open-heart surgery (Coura 2011), where baseline opioid demand was 114 mg MME and sparing was 22.4 mg. Due to small study count (k = 3), this finding is descriptive.
             </div>
-            <div style="font-size: 0.78rem; color: #38bdf8; margin-top: 0.25rem;">
-              <strong>Hedges' g SMD:</strong> −0.66 [95% CI: −2.38, +1.07]
-            </div>
-            <div style="font-size: 0.78rem; color: #f59e0b; margin-top: 0.35rem; font-weight: 600;">
-              <strong>Sensitivity (Excl High RoB):</strong> Sim 2002 + Coura 2011 MD = −15.66 mg
-            </div>
+
+            <!-- Alternative Model Estimates -->
+            <details class="alt-models-accordion">
+              <summary data-i18n="primarySection.altModelsToggle">Alternative Model Estimates &amp; Estimator Sensitivity</summary>
+              <div class="alt-models-content">
+                <div><strong>Sensitivity Analysis (Excluding High RoB):</strong> Sim 2002 + Coura 2011 MD = −15.66 mg [−28.4, −2.9]</div>
+                <div><strong>Normal Wald Approximation:</strong> 95% CI: [−22.25, +1.45] mg (z = −1.72, p = 0.085)</div>
+              </div>
+            </details>
+
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
               <div><strong>Defensible Studies:</strong> k = 3 RCTs • N = 220 patients</div>
               <div><strong>Included Trials:</strong> El-Rakshy 2009, Sim 2002, Coura 2011</div>
-              <div><strong>Heterogeneity:</strong> τ² = 85.48, I² = 79.51%, Q = 9.76 (p = 0.0076)</div>
             </div>
           </div>
 
@@ -1276,6 +1475,22 @@
             </p>
           </div>
         </div>
+
+        <!-- How to Read this Forest Plot (Section 19) -->
+        <details class="forest-plot-helper" style="margin-top: 1rem;">
+          <summary>
+            <span>📊</span>
+            <span data-i18n="forestPlotHelper.title">How to Read this Forest Plot</span>
+            <button class="stat-info-btn" data-stat-term="predictionInterval" style="margin-left: 6px;" aria-label="Statistical explanation for Prediction Interval">ⓘ</button>
+          </summary>
+          <ul class="forest-plot-helper-list">
+            <li data-i18n="forestPlotHelper.item1"><strong>Square/Marker:</strong> The estimated treatment effect for each study. Marker area reflects its statistical weight in the random-effects meta-analysis.</li>
+            <li data-i18n="forestPlotHelper.item2"><strong>Horizontal Line:</strong> 95% confidence interval for each study, showing uncertainty around the study estimate.</li>
+            <li data-i18n="forestPlotHelper.item3"><strong>Diamond:</strong> The pooled average treatment effect. The center indicates the point estimate and lateral tips represent the 95% confidence interval.</li>
+            <li data-i18n="forestPlotHelper.item4"><strong>Vertical Dashed Line (0 or 1):</strong> The line of no effect. For mean differences (MD), values to the left of 0 favor TEAS/EA (reduced opioid consumption or pain). For risk ratios (RR), values to the left of 1.0 favor TEAS/EA (lower complication incidence).</li>
+            <li data-i18n="forestPlotHelper.item5"><strong>Prediction Interval:</strong> The dashed/extended bracket representing the estimated range of true effects that could plausibly occur in a future study or comparable clinical setting.</li>
+          </ul>
+        </details>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
           
@@ -1838,7 +2053,7 @@
             <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;">
               <strong>The Rule of 10:</strong> Cochrane guidelines advise that meta-regression should generally not be considered with fewer than 10 trials, recommending a minimum ratio of <strong>10 studies per investigated covariate</strong>. With <em>k</em> = 11 analyzable primary trials:
               <ul style="margin: 0.4rem 0 0.4rem 1.2rem; padding: 0;">
-                <li><strong>Univariable Meta-Regression (1 predictor):</strong> 11 / 1 = 11.0 studies/covariate &rarr; <span style="color: #34d399; font-weight: 600;">Methodologically valid &amp; fully powered for exploratory analysis</span>.</li>
+                <li><strong>Univariable Meta-Regression (1 predictor):</strong> 11 / 1 = 11.0 studies/covariate &rarr; <span style="color: #34d399; font-weight: 600;" data-i18n="metaregStudio.ruleOf10Text">The analysis meets a commonly used minimum study-count rule of thumb for exploratory univariable meta-regression, but statistical power may remain limited and results should be considered exploratory or hypothesis-generating.</span></li>
                 <li><strong>Constrained Bivariable Meta-Regression (2 predictors):</strong> 11 / 2 = 5.5 studies/covariate &rarr; <span style="color: #fbbf24; font-weight: 600;">Exploratory / hypothesis-generating only</span>. With Knapp&ndash;Hartung adjustment, degrees of freedom are restricted to <strong>df = 11 &minus; 2 &minus; 1 = 8</strong>.</li>
                 <li><strong>Higher-Order Multivariable Models (&ge; 3 predictors):</strong> Severely vulnerable to overfitting, collinearity (ecological fallacy), and inflated Type I error. Reported strictly for sensitivity context.</li>
               </ul>
@@ -1850,25 +2065,36 @@
       <!-- 4 Stata KPI Cards -->
       <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 1.5rem;">
         <div class="kpi-card" style="border-top: 3px solid #06b6d4;">
-          <div class="kpi-title">Baseline Opioid Demand Slope</div>
+          <div class="kpi-title">
+            <span>Baseline Opioid Demand Slope</span>
+            <button class="stat-info-btn" data-stat-term="betaCoefficient" aria-label="Statistical explanation for beta coefficient">ⓘ</button>
+          </div>
           <div class="kpi-value" style="color: #06b6d4;">&beta; = &minus;0.170</div>
           <div class="kpi-sub">95% CI: [&minus;0.304, &minus;0.036] &bull; t(9) = &minus;2.87</div>
           <span class="kpi-badge badge-emerald">p = 0.0186 &bull; R&sup2; = 49.08%</span>
         </div>
         <div class="kpi-card" style="border-top: 3px solid #38bdf8;">
-          <div class="kpi-title">Publication Year Secular Trend</div>
+          <div class="kpi-title">
+            <span>Publication Year Secular Trend</span>
+            <button class="stat-info-btn" data-stat-term="metaRegR2" aria-label="Statistical explanation for Meta-regression R2">ⓘ</button>
+          </div>
           <div class="kpi-value" style="color: #38bdf8;">&beta; = +0.471</div>
           <div class="kpi-sub">95% CI: [+0.062, +0.881] &bull; t(9) = +2.60</div>
           <span class="kpi-badge badge-indigo">p = 0.0287 &bull; R&sup2; = 82.81%</span>
         </div>
         <div class="kpi-card" style="border-top: 3px solid #a78bfa;">
-          <div class="kpi-title">Multivariable Modality Adjustment</div>
+          <div class="kpi-title">
+            <span>Multivariable Modality Adjustment</span>
+          </div>
           <div class="kpi-value" style="color: #a78bfa;">&beta;_EA = +1.489</div>
           <div class="kpi-sub">p = 0.781 (Baseline demand retains p = 0.041)</div>
-          <span class="kpi-badge badge-emerald">Confounding Resolved</span>
+          <span class="kpi-badge badge-emerald">Association Attenuated After Adjustment</span>
         </div>
         <div class="kpi-card" style="border-top: 3px solid #10b981;">
-          <div class="kpi-title">Knapp&ndash;Hartung Adjustment</div>
+          <div class="kpi-title">
+            <span>Knapp&ndash;Hartung Adjustment</span>
+            <button class="stat-info-btn" data-stat-term="knappHartung" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
+          </div>
           <div class="kpi-value" style="color: #34d399;">df = 8</div>
           <div class="kpi-sub">Model F(2, 8) = 4.01 &bull; Prob &gt; F = 0.0622</div>
           <span class="kpi-badge badge-emerald">Conservative Error Control</span>
@@ -1908,40 +2134,43 @@
         </div>
       </div>
 
-      <!-- Comprehensive Moderator Audit & Feasibility Matrix Table -->
-      <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #6366f1;">
+      <!-- Comprehensive Moderator Matrix Table -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #38bdf8;">
         <div class="card-header">
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="badge badge-indigo">Systematic Parameter Audit</span>
-              <span class="badge badge-emerald">StataNow 19.5 SE Tested</span>
+              <span class="badge badge-indigo">Statistical &amp; Clinical Audit</span>
+              <span class="badge badge-emerald">k = 11 Primary Trials</span>
             </div>
-            <h2 style="margin-top: 0.25rem;">Comprehensive Moderator &amp; Clinical Parameter Matrix (k = 11 Primary Trials)</h2>
+            <h2 style="margin-top: 0.25rem;" data-i18n="metaregStudio.tableTitle">Comprehensive Moderator &amp; Clinical Parameter Matrix (k = 11 Primary RCTs)</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Methodological viability, Stata regression statistics, and Cochrane compliance across all investigated intervention, protocol, and demographic parameters.
+              Formal empirical and methodological audit of candidate moderators requested for exploration across the 11 analyzable primary trials.
             </p>
           </div>
         </div>
 
-        <div style="overflow-x: auto; margin-top: 0.75rem;">
-          <table class="data-table" style="width: 100%; font-size: 0.8rem;">
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.78rem; text-align: left;">
             <thead>
-              <tr style="background: rgba(255,255,255,0.03);">
-                <th style="padding: 0.6rem 0.8rem;">Candidate Moderator</th>
-                <th>Domain / Type</th>
-                <th>Parameter Distribution (k = 11)</th>
-                <th>Stata Slope (&beta;) [95% CI]</th>
-                <th>Test Stat &amp; p-value</th>
-                <th>Variance (R&sup2;)</th>
-                <th>Cochrane Status</th>
-                <th>Clinical Takeaway</th>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.12); color: var(--text-muted); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em;">
+                <th style="padding: 0.6rem 0.75rem;" data-i18n="metaregStudio.colModerator">Moderator Domain</th>
+                <th style="padding: 0.6rem 0.75rem;" data-i18n="metaregStudio.colType">Variable Type</th>
+                <th style="padding: 0.6rem 0.75rem;" data-i18n="metaregStudio.colDist">Empirical Distribution</th>
+                <th style="padding: 0.6rem 0.75rem;" data-i18n="metaregStudio.colBeta">Meta-Regression β [95% CI]</th>
+                <th style="padding: 0.6rem 0.75rem;" data-i18n="metaregStudio.colTest">Model Test (Knapp–Hartung)</th>
+                <th style="padding: 0.6rem 0.75rem;" data-i18n="metaregStudio.colR2">Variance Explained (R²)</th>
+                <th style="padding: 0.6rem 0.75rem;" data-i18n="metaregStudio.colStatus">Methodological Assessment</th>
+                <th style="padding: 0.6rem 0.75rem;" data-i18n="metaregStudio.colClinical">Clinical &amp; Analytical Interpretation</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody style="border-bottom: 1px solid rgba(255,255,255,0.08);">
               <tr style="background: rgba(16, 185, 129, 0.05);">
-                <td style="font-weight: 700; color: #34d399;">Baseline Control Opioid Demand</td>
+                <td style="font-weight: 700; color: #34d399;">
+                  Baseline Opioid Demand
+                  <button class="stat-info-btn" data-stat-term="betaCoefficient" aria-label="Statistical explanation for beta coefficient">ⓘ</button>
+                </td>
                 <td>Continuous Clinical</td>
-                <td>Mean control MME: 1.99 to 114.10 mg</td>
+                <td>Control Mean: 5.3 to 114.1 mg</td>
                 <td style="font-weight: 700; color: #34d399;">&minus;0.170 [&minus;0.304, &minus;0.036]</td>
                 <td><strong>t(9) = &minus;2.87, p = 0.0186</strong></td>
                 <td><span class="badge badge-emerald">49.08%</span></td>
@@ -1949,14 +2178,17 @@
                 <td style="font-size: 0.74rem; color: #cbd5e1;">Statistically robust. Sparing increases by 1.70 mg IV MME per 10 mg baseline demand.</td>
               </tr>
               <tr style="background: rgba(56, 189, 248, 0.05);">
-                <td style="font-weight: 700; color: #38bdf8;">Publication Year</td>
+                <td style="font-weight: 700; color: #38bdf8;">
+                  Publication Year
+                  <button class="stat-info-btn" data-stat-term="metaRegR2" aria-label="Statistical explanation for Meta-regression R2">ⓘ</button>
+                </td>
                 <td>Continuous Temporal</td>
                 <td>Year: 1998 to 2026</td>
                 <td style="font-weight: 700; color: #38bdf8;">+0.471 [+0.062, +0.881]</td>
                 <td><strong>t(9) = +2.60, p = 0.0287</strong></td>
                 <td><span class="badge badge-indigo">82.81%</span></td>
                 <td><span class="badge badge-indigo">Secondary Moderator</span></td>
-                <td style="font-size: 0.74rem; color: #cbd5e1;">Effect sizes decline by ~0.47 mg/year due to adoption of multimodal ERAS pathways.</td>
+                <td style="font-size: 0.74rem; color: #cbd5e1;">Later publication year was associated with smaller estimated opioid-sparing effects (decreasing by ~0.47 mg/year), potentially reflecting secular multimodal ERAS adoption.</td>
               </tr>
               <tr>
                 <td style="font-weight: 700; color: #a78bfa;">Modality (EA vs TEAS)</td>
@@ -1966,7 +2198,7 @@
                 <td>t(8) = +0.29, p = 0.781</td>
                 <td>38.79% (Model)</td>
                 <td><span class="badge badge-indigo">Multivariable (df=8)</span></td>
-                <td style="font-size: 0.74rem; color: #cbd5e1;">Apparent raw difference is confounded by surgical case-mix; drops to p=0.781 when controlling for baseline demand.</td>
+                <td style="font-size: 0.74rem; color: #cbd5e1;">The apparent modality association was attenuated after adjustment for baseline surgical opioid demand (drops to p=0.781).</td>
               </tr>
               <tr>
                 <td style="font-weight: 700;">Stimulation Timing</td>
@@ -1996,17 +2228,23 @@
                 <td style="font-size: 0.74rem; color: #f59e0b;">All 11 trials applied 1 session; impossible to test dose-response via meta-regression.</td>
               </tr>
               <tr>
-                <td style="font-weight: 700;">Patient Sex (% Female)</td>
+                <td style="font-weight: 700;">
+                  Patient Sex (% Female)
+                  <button class="stat-info-btn" data-stat-term="ecologicalFallacy" aria-label="Statistical explanation for Ecological Fallacy">ⓘ</button>
+                </td>
                 <td>Demographic (Aggregate)</td>
                 <td>Range: 22.1% to 100.0% female</td>
                 <td>&minus;0.013 [&minus;0.191, +0.165]</td>
                 <td>t(9) = &minus;0.16, p = 0.8746</td>
                 <td>0.00%</td>
                 <td><span class="badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">Ecological Fallacy</span></td>
-                <td style="font-size: 0.74rem; color: #94a3b8;">Cohort sex composition has zero moderating effect; neuromodulation is equally efficacious across sexes.</td>
+                <td style="font-size: 0.74rem; color: #94a3b8;">No evidence of an association between the study-level proportion of female participants and treatment effect was detected. This does not establish equivalent treatment effects between individual women and men.</td>
               </tr>
               <tr style="opacity: 0.75;">
-                <td style="font-weight: 700;">Patient Age &amp; BMI</td>
+                <td style="font-weight: 700;">
+                  Patient Age &amp; BMI
+                  <button class="stat-info-btn" data-stat-term="ecologicalFallacy" aria-label="Statistical explanation for Ecological Fallacy">ⓘ</button>
+                </td>
                 <td>Demographic (Aggregate)</td>
                 <td>Study mean age: 45 to 58 yrs</td>
                 <td colspan="4" style="text-align: center; color: #94a3b8; font-style: italic;">Clustered study means &bull; Individual Participant Data (IPD) required</td>
@@ -2699,10 +2937,10 @@
               <tr>
                 <th style="width: 20%;">Outcome Endpoint</th>
                 <th style="width: 15%;">Anticipated Absolute Effect</th>
-                <th style="width: 18%;">Pooled Effect (95% CI)</th>
-                <th style="width: 14%;">Participants (Studies)</th>
-                <th style="width: 15%;">Certainty (GRADE)</th>
-                <th style="width: 18%;">Downgrade Assessment &amp; Footnotes</th>
+                <th style="width: 18%;">Pooled Effect (95% CI) <button class="stat-info-btn" data-stat-term="confidenceInterval" aria-label="Explanation for 95% Confidence Interval">ⓘ</button></th>
+                <th style="width: 14%;">Participants (Studies) <button class="stat-info-btn" data-stat-term="kStudies" aria-label="Explanation for Studies and Sample Size">ⓘ</button></th>
+                <th style="width: 15%;">Certainty (GRADE) <button class="stat-info-btn" data-stat-term="grade" aria-label="Explanation for GRADE Evidence Certainty">ⓘ</button></th>
+                <th style="width: 18%;">Downgrade Assessment &amp; Footnotes <button class="stat-info-btn" data-stat-term="gradeCertainty" aria-label="Explanation for GRADE Downgrade Domains">ⓘ</button></th>
               </tr>
             </thead>
             <tbody id="grade-sof-table-body">
@@ -2712,7 +2950,7 @@
         </div>
 
         <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--emerald-favorable); padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; color: var(--text-secondary);">
-          <strong>GRADE Clinical Interpretation:</strong> High-to-moderate certainty evidence indicates that perioperative TEAS/EA confers clinically meaningful reduction in cumulative 24-hour postoperative opioid consumption (≥ 5 mg IV MME sparing) while concomitantly reducing postoperative nausea and vomiting and accelerating gastrointestinal functional recovery.
+          <strong>GRADE Clinical Interpretation:</strong> High-to-moderate certainty evidence indicates that perioperative TEAS/EA reduces cumulative 24-hour postoperative opioid consumption (pooled estimate ~5 mg IV MME sparing, reaching exploratory threshold) while concomitantly reducing postoperative nausea and vomiting and accelerating gastrointestinal functional recovery.
         </div>
       </div>
     </div>
@@ -2720,6 +2958,11 @@
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <!-- APPENDIX                                                      -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- TAB: STATISTICS GLOSSARY (Reader Assistance System) -->
+    <div id="tab-glossary" class="tab-content">
+      <!-- Dynamically populated by renderGlossaryTab() in reader_assist.js -->
+    </div>
 
     <!-- TAB: EXPORT HUB -->
     <div id="tab-export" class="tab-content">
@@ -2760,6 +3003,8 @@
 
   <!-- Scripts -->
   <script src="data.js"></script>
+  <script src="translations.js"></script>
+  <script src="reader_assist.js"></script>
   <script src="meta_engine.js"></script>
   <script src="app.js"></script>
 </body>
