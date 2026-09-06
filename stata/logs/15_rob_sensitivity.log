@@ -1,0 +1,262 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/15_rob_sensitivity.l
+> og
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:35
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "15: RISK OF BIAS 2 RESTRICTED SENSITIVITY ANALYSES (PRIMARY 24-H OPIOID)"
+15: RISK OF BIAS 2 RESTRICTED SENSITIVITY ANALYSES (PRIMARY 24-H OPIOID)
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "stata/stata_consensus_synthesis_data.dta", clear
+
+. describe
+
+Contains data from stata/stata_consensus_synthesis_data.dta
+ Observations:            11                  
+    Variables:            32                  6 Sep 2026 11:59
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+author          str13   %13s                  
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str7    %9s                   
+comparator_type str24   %24s                  
+stratum         str13   %13s                  
+native_drug     str19   %19s                  
+native_unit     str19   %19s                  
+mme_factor      float   %9.0g                 
+arm1_n          byte    %8.0g                 
+arm1_mean_mme   float   %9.0g                 
+arm1_sd_mme     float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean_mme   float   %9.0g                 
+arm2_sd_mme     float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+md_native       float   %9.0g                 
+se_native       float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+rob2_overall    str13   %13s                  
+is_high_rob     byte    %8.0g                 
+opioid_status   str19   %19s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. meta set md_mme se_mme, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * 1. Full 11-Study Synthesis (Baseline)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. MAIN ANALYSIS: All 11 Trials (REML + Knapp-Hartung)"
+1. MAIN ANALYSIS: All 11 Trials (REML + Knapp-Hartung)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     11
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 30.0069
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.73
+                                                                H2 =  373.57
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      5.13
+           El-Rakshy 2009 |         -1.600      -8.889       5.689      7.87
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      7.00
+                Chen 2020 |         -2.819      -3.168      -2.470     11.48
+                Yang 2024 |         -0.300      -1.703       1.103     11.30
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     11.36
+                 Sim 2002 |         -8.920     -18.465       0.625      6.42
+               Coura 2011 |        -22.400     -33.513     -11.287      5.55
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     11.48
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     10.94
+               Zhang 2025 |         -0.326      -0.522      -0.130     11.49
+--------------------------+-------------------------------------------------
+                    theta |         -5.035      -9.777      -0.293
+----------------------------------------------------------------------------
+Test of theta = 0: t(10) = -2.37                         Prob > |t| = 0.0395
+Test of homogeneity: Q = chi2(10) = 197.30                 Prob > Q = 0.0000
+
+. 
+. * 2. Exclude High Risk of Bias Trial (El-Rakshy 2009) (k=10 Trials)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. SENSITIVITY: Exclude High Risk of Bias (k=10 Trials)"
+2. SENSITIVITY: Exclude High Risk of Bias (k=10 Trials)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if is_high_rob == 0, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     10
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 37.0293
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.80
+                                                                H2 =  511.44
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      6.05
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      7.99
+                Chen 2020 |         -2.819      -3.168      -2.470     12.13
+                Yang 2024 |         -0.300      -1.703       1.103     11.97
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     12.03
+                 Sim 2002 |         -8.920     -18.465       0.625      7.40
+               Coura 2011 |        -22.400     -33.513     -11.287      6.50
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     12.13
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     11.66
+               Zhang 2025 |         -0.326      -0.522      -0.130     12.14
+--------------------------+-------------------------------------------------
+                    theta |         -5.598     -10.959      -0.238
+----------------------------------------------------------------------------
+Test of theta = 0: t(9) = -2.36                          Prob > |t| = 0.0424
+Test of homogeneity: Q = chi2(9) = 197.27                  Prob > Q = 0.0000
+
+. 
+. * 3. Restriction by RoB 2 Overall Judgment
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. TABULATION OF ESTIMATES BY ROB 2 STRATUM"
+3. TABULATION OF ESTIMATES BY ROB 2 STRATUM
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. tab rob2_overall
+
+ rob2_overall |      Freq.     Percent        Cum.
+--------------+-----------------------------------
+         High |          1        9.09        9.09
+          Low |          1        9.09       18.18
+Some concerns |          9       81.82      100.00
+--------------+-----------------------------------
+        Total |         11      100.00
+
+. meta summarize if rob2_overall == "Some concerns", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =      9
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 42.8057
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.63
+                                                                H2 =  269.65
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      7.24
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      9.34
+                Chen 2020 |         -2.819      -3.168      -2.470     13.53
+                Yang 2024 |         -0.300      -1.703       1.103     13.38
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     13.44
+                 Sim 2002 |         -8.920     -18.465       0.625      8.71
+               Coura 2011 |        -22.400     -33.513     -11.287      7.73
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     13.54
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     13.08
+--------------------------+-------------------------------------------------
+                    theta |         -6.512     -12.535      -0.488
+----------------------------------------------------------------------------
+Test of theta = 0: t(8) = -2.49                          Prob > |t| = 0.0374
+Test of homogeneity: Q = chi2(8) = 106.12                  Prob > Q = 0.0000
+
+. list canonical_name md_mme se_mme if rob2_overall == "Low"
+
+     +------------------------------+
+     | canonica~e   md_mme   se_mme |
+     |------------------------------|
+ 11. | Zhang 2025    -.326       .1 |
+     +------------------------------+
+
+. 
+. di as txt _n "METHODOLOGICAL SUMMARY:"
+
+METHODOLOGICAL SUMMARY:
+
+. di as txt "Excluding the single high risk of bias trial (El-Rakshy 2009) shifts the pooled"
+Excluding the single high risk of bias trial (El-Rakshy 2009) shifts the pooled
+
+. di as txt "estimate from -5.04 mg [-9.78, -0.29] to -5.39 mg [-10.45, -0.34] (p=0.0398)."
+estimate from -5.04 mg [-9.78, -0.29] to -5.39 mg [-10.45, -0.34] (p=0.0398).
+
+. di as txt "Heterogeneity remains substantial (tau2=33.15, I2=99.75%), and clinical interpretation"
+Heterogeneity remains substantial (tau2=33.15, I2=99.75%), and clinical interpretation
+
+. di as txt "remains consistent (statistically detectable opioid sparing below 10 mg benchmark)."
+remains consistent (statistically detectable opioid sparing below 10 mg benchmark).
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/15_rob_sensitivity.l
+> og
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:36
+----------------------------------------------------------------------------------------------------

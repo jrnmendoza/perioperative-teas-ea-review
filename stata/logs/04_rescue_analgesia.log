@@ -1,0 +1,297 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/04_rescue_analgesia.
+> log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:25
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "04: RESCUE ANALGESIA OUTCOME FAMILY: INCIDENCE OF REQUIRING RESCUE"
+04: RESCUE ANALGESIA OUTCOME FAMILY: INCIDENCE OF REQUIRING RESCUE
+
+. di as txt "Effect Measure: Risk Ratio (RR), REML Random-Effects + Knapp-Hartung"
+Effect Measure: Risk Ratio (RR), REML Random-Effects + Knapp-Hartung
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "stata/stata_rescue_analgesia_data.dta", clear
+
+. describe
+
+Contains data from stata/stata_rescue_analgesia_data.dta
+ Observations:             9                  
+    Variables:            10                  6 Sep 2026 11:59
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str21   %21s                  
+modality        str4    %9s                   
+comparator      str4    %9s                   
+arm1_events     byte    %8.0g                 
+arm1_n          int     %8.0g                 
+arm2_events     byte    %8.0g                 
+arm2_n          int     %8.0g                 
+rescue_drug     str22   %22s                  
+is_opioid       byte    %8.0g                 
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. list canonical_name arm1_events arm1_n arm2_events arm2_n rescue_drug is_opioid
+
+     +----------------------------------------------------------------------------------------+
+  1. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |               Tu 2024 |        3 |     57 |        6 |     58 |       Tramadol 10mg IM |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  2. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |              Sun 2017 |        3 |     38 |        9 |     39 | Supplemental analgesia |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  3. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |              Pan 2023 |       10 |     52 |       18 |     53 |       Tramadol 50mg IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  4. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |               Lu 2021 |        7 |     38 |       17 |     47 |      Parecoxib 40mg IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               0                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  5. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |              Luo 2026 |        5 |    138 |        5 |    139 |     Oral acetaminophen |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               0                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  6. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |        Liu 2026 (ESD) |       19 |     58 |       40 |     62 |            Morphine IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  7. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |            Huang 2025 |        1 |     43 |        4 |     45 |      Ketorolac 30mg IM |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               0                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  8. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |              Hou 2023 |       15 |     36 |       28 |     36 |        Morphine 5mg IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  9. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     | He 2026 (breast/WJCO) |       13 |     65 |       22 |     65 |   Flurbiprofen 50mg IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               0                                        |
+     +----------------------------------------------------------------------------------------+
+
+. 
+. * 1. Declare Meta-Analysis for Binary Event Rates (Risk Ratio)
+. meta esize arm1_events arm1_n arm2_events arm2_n, esize(lnrr) studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 9
+       Study label: canonical_name
+        Study size: _meta_studysize
+      Summary data: arm1_events arm1_n arm2_events arm2_n
+
+       Effect size
+              Type: lnrratio
+             Label: Log risk-ratio
+          Variable: _meta_es
+   Zero-cells adj.: None; no zero cells
+
+         Precision
+         Std. err.: _meta_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * 2. PRIMARY SYNTHESIS: All 9 Trials Reporting Rescue Analgesia Incidence
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. ALL 9 TRIALS: Incidence of Requiring Rescue Analgesia (RR)"
+1. ALL 9 TRIALS: Incidence of Requiring Rescue Analgesia (RR)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh) transform(exp) predinterval
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+Meta-analysis summary                         Number of studies =      9
+Random-effects model                          Heterogeneity:
+Method: REML                                              tau2 =  0.0000
+SE adjustment: Knapp–Hartung                            I2 (%) =    0.00
+                                                            H2 =    1.00
+
+------------------------------------------------------------------------
+                Study |     Risk ratio    [95% conf. interval]  % weight
+----------------------+-------------------------------------------------
+              Tu 2024 |          0.533       0.140       2.038      3.27
+             Sun 2017 |          0.390       0.113       1.346      3.83
+             Pan 2023 |          0.636       0.318       1.273     12.19
+              Lu 2021 |          0.586       0.265       1.295      9.32
+             Luo 2026 |          1.007       0.298       3.403      3.96
+       Liu 2026 (ESD) |          0.629       0.398       0.996     27.85
+           Huang 2025 |          0.278       0.032       2.398      1.27
+             Hou 2023 |          0.672       0.405       1.117     22.75
+He 2026 (breast/WJCO) |          0.659       0.357       1.218     15.58
+----------------------+-------------------------------------------------
+           exp(theta) |          0.630       0.549       0.723
+------------------------------------------------------------------------
+95% prediction interval for exp(theta): [ 0.547, 0.726]
+
+Test of theta = 0: t(8) = -7.72                      Prob > |t| = 0.0001
+Test of homogeneity: Q = chi2(8) = 1.87                Prob > Q = 0.9847
+
+. 
+. * 3. SUBGROUP: Specific Opioid Rescue Only (Tu 2024, Sun 2017, Pan 2023, Liu 2026, Hou 2023)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. SUBGROUP: Explicit Opioid Rescue (Morphine/Tramadol) Only (k=5)"
+2. SUBGROUP: Explicit Opioid Rescue (Morphine/Tramadol) Only (k=5)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if is_opioid == 1, random(reml) se(kh) transform(exp)
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      5
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
+                                                        H2 =    1.00
+
+--------------------------------------------------------------------
+            Study |     Risk ratio    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+          Tu 2024 |          0.533       0.140       2.038      4.67
+         Sun 2017 |          0.390       0.113       1.346      5.48
+         Pan 2023 |          0.636       0.318       1.273     17.44
+   Liu 2026 (ESD) |          0.629       0.398       0.996     39.86
+         Hou 2023 |          0.672       0.405       1.117     32.55
+------------------+-------------------------------------------------
+       exp(theta) |          0.623       0.525       0.739
+--------------------------------------------------------------------
+Test of theta = 0: t(4) = -7.71                  Prob > |t| = 0.0015
+Test of homogeneity: Q = chi2(4) = 0.69            Prob > Q = 0.9524
+
+. 
+. * 4. SUBGROUP: Non-Opioid Rescue (NSAID/Acetaminophen) Only (k=4)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. SUBGROUP: Non-Opioid Rescue Only (k=4)"
+3. SUBGROUP: Non-Opioid Rescue Only (k=4)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if is_opioid == 0, random(reml) se(kh) transform(exp)
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+Meta-analysis summary                         Number of studies =      4
+Random-effects model                          Heterogeneity:
+Method: REML                                              tau2 =  0.0000
+SE adjustment: Knapp–Hartung                            I2 (%) =    0.00
+                                                            H2 =    1.00
+
+------------------------------------------------------------------------
+                Study |     Risk ratio    [95% conf. interval]  % weight
+----------------------+-------------------------------------------------
+              Lu 2021 |          0.586       0.265       1.295     30.95
+             Luo 2026 |          1.007       0.298       3.403     13.14
+           Huang 2025 |          0.278       0.032       2.398      4.20
+He 2026 (breast/WJCO) |          0.659       0.357       1.218     51.71
+----------------------+-------------------------------------------------
+           exp(theta) |          0.648       0.415       1.012
+------------------------------------------------------------------------
+Test of theta = 0: t(3) = -3.10                      Prob > |t| = 0.0533
+Test of homogeneity: Q = chi2(3) = 1.16                Prob > Q = 0.7626
+
+. 
+. * 5. Generate and Export Forest Plot
+. meta forestplot, subgroup(is_opioid) ///
+>     title("Incidence of Postoperative Rescue Analgesia Requirement", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Random-Effects Risk Ratio (k=9 Trials, N=880)", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+. graph export "stata/results/forest_rescue_analgesia_rr.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/forest_rescue_analgesia_
+    > rr.png saved as PNG format
+
+. 
+. di as txt _n "SUCCESS: Rescue analgesia incidence verified and exported."
+
+SUCCESS: Rescue analgesia incidence verified and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/04_rescue_analgesia.
+> log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:26
+----------------------------------------------------------------------------------------------------

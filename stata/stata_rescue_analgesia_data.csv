@@ -1,0 +1,10 @@
+study_id,canonical_name,modality,comparator,arm1_events,arm1_n,arm2_events,arm2_n,rescue_drug,is_opioid
+1879896100,Tu 2024,TEAS,Sham,3,57,6,58,Tramadol 10mg IM,1
+1879896900,Sun 2017,TEAS,Sham,3,38,9,39,Supplemental analgesia,1
+1879896324,Pan 2023,TEAS,Sham,10,52,18,53,Tramadol 50mg IV,1
+1879896580,Lu 2021,TEAS,Sham,7,38,17,47,Parecoxib 40mg IV,0
+1879895932,Luo 2026,TEAS,Sham,5,138,5,139,Oral acetaminophen,0
+1879896009,Liu 2026 (ESD),TEAS,Sham,19,58,40,62,Morphine IV,1
+1879896131,Huang 2025,EA,Sham,1,43,4,45,Ketorolac 30mg IM,0
+1879896391,Hou 2023,TEAS,Sham,15,36,28,36,Morphine 5mg IV,1
+1879895945,He 2026 (breast/WJCO),EA,Sham,13,65,22,65,Flurbiprofen 50mg IV,0

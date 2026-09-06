@@ -1,0 +1,186 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/18_publication_bias.
+> log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:38
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "18: PUBLICATION BIAS & SMALL-STUDY EFFECTS INVESTIGATION"
+18: PUBLICATION BIAS & SMALL-STUDY EFFECTS INVESTIGATION
+
+. di as txt "Caveat: In the presence of extreme between-study heterogeneity (I2 > 90%),"
+Caveat: In the presence of extreme between-study heterogeneity (I2 > 90%),
+
+. di as txt "funnel asymmetry tests have elevated type I error rates and must be interpreted cautiou
+> sly."
+funnel asymmetry tests have elevated type I error rates and must be interpreted cautiously.
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "stata/stata_consensus_synthesis_data.dta", clear
+
+. describe
+
+Contains data from stata/stata_consensus_synthesis_data.dta
+ Observations:            11                  
+    Variables:            32                  6 Sep 2026 11:59
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+author          str13   %13s                  
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str7    %9s                   
+comparator_type str24   %24s                  
+stratum         str13   %13s                  
+native_drug     str19   %19s                  
+native_unit     str19   %19s                  
+mme_factor      float   %9.0g                 
+arm1_n          byte    %8.0g                 
+arm1_mean_mme   float   %9.0g                 
+arm1_sd_mme     float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean_mme   float   %9.0g                 
+arm2_sd_mme     float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+md_native       float   %9.0g                 
+se_native       float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+rob2_overall    str13   %13s                  
+is_high_rob     byte    %8.0g                 
+opioid_status   str19   %19s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. meta set md_mme se_mme, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * 1. Funnel Plot
+. meta funnelplot, title("Funnel Plot: Primary 24-h Opioid Consumption", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Pseudo 95% Confidence Limits (k=11 Trials)", size(small)) ///
+>     ytitle("Standard Error (SE)") xtitle("Treatment Effect (MD IV MME mg)")
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+              Model: Common effect
+             Method: Inverse-variance
+
+. graph export "stata/results/funnel_plot_24h_opioid.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/funnel_plot_24h_opioid.p
+    > ng saved as PNG format
+
+. 
+. * 2. Egger-Type Linear Regression Test for Funnel Asymmetry
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "EGGER LINEAR REGRESSION TEST FOR FUNNEL ASYMMETRY"
+EGGER LINEAR REGRESSION TEST FOR FUNNEL ASYMMETRY
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta bias, egger
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Regression-based Egger test for small-study effects
+Random-effects model
+Method: REML
+
+H0: beta1 = 0; no small-study effects
+            beta1 =     -2.43
+      SE of beta1 =     0.508
+                z =     -4.78
+       Prob > |z| =    0.0000
+
+. 
+. * 3. Begg-Type Rank Correlation Test
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "BEGG RANK CORRELATION TEST"
+BEGG RANK CORRELATION TEST
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta bias, begg
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Begg's test for small-study effects
+
+Kendall's score =    -21.00
+    SE of score =    12.845
+              z =     -1.71
+     Prob > |z| =    0.1195
+
+. 
+. di as txt _n "METHODOLOGICAL SUMMARY:"
+
+METHODOLOGICAL SUMMARY:
+
+. di as txt "With k = 11 studies and substantial between-study variance (tau2 = 30.01),"
+With k = 11 studies and substantial between-study variance (tau2 = 30.01),
+
+. di as txt "funnel asymmetry can reflect genuine clinical heterogeneity across surgical"
+funnel asymmetry can reflect genuine clinical heterogeneity across surgical
+
+. di as txt "specialties rather than selective non-reporting alone."
+specialties rather than selective non-reporting alone.
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/18_publication_bias.
+> log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:38
+----------------------------------------------------------------------------------------------------

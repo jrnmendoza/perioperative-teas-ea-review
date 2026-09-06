@@ -137,7 +137,9 @@ def build_complete_dataset():
         with open('07_risk_of_bias/rob2_master_assessment.csv', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for r in reader:
-                rob_master[r['study_id']] = r
+                sid_key = r.get('study_id') or r.get('Assessment_File', '')
+                if sid_key:
+                    rob_master[sid_key] = r
 
     country_map = {
         "China": {"code": "CN", "lat": 35.8617, "lng": 104.1954, "flag": "🇨🇳"},
@@ -719,33 +721,55 @@ def build_complete_dataset():
                 "se": round(ise, 3), "favors": "Intervention" if imd < 0 else "Control"
             }
 
-        # Clinical Importance & MCID Quad Plot (Objective 4)
-        op_md = opioid_data["mean_diff"] if opioid_data else -8.5
-        pain_md = pain_data["mean_diff"] if pain_data else -0.5
-        reaches_mcid = abs(op_md) >= 5.0 and op_md < 0
-        pain_non_inferior = pain_md <= 0.5
+        # Clinical Importance & Benchmark Quad Plot (Objective 4 - Part AA & AY)
+        # Strictly include ONLY paired studies with valid reported continuous values for BOTH axes
+        has_paired_data = (
+            opioid_data is not None and 
+            opioid_data.get("mean_diff") is not None and 
+            pain_data is not None and 
+            pain_data.get("mean_diff") is not None
+        )
 
-        if reaches_mcid and pain_non_inferior:
-            mcid_quadrant = 1  # Optimal Synergistic (Opioid sparing >= 5 mg & Pain non-inferior/reduced)
-            quadrant_name = "Optimal Synergistic (Sparing ≥ 5 mg MME + Pain Relief)"
-        elif not reaches_mcid and pain_non_inferior and op_md < 0:
-            mcid_quadrant = 2  # Sub-MCID opioid sparing with pain relief
-            quadrant_name = "Sub-MCID Sparing (< 5 mg MME) + Pain Relief"
-        elif reaches_mcid and not pain_non_inferior:
-            mcid_quadrant = 3  # Sparing >= 5 mg but pain compromised
-            quadrant_name = "Opioid Sparing with Pain Compromise (Pain > +0.5)"
+        if has_paired_data:
+            op_md = opioid_data["mean_diff"]
+            pain_md = pain_data["mean_diff"]
+            reaches_10mg = abs(op_md) >= 10.0 and op_md < 0
+            reaches_8mg = abs(op_md) >= 8.0 and op_md < 0
+            reaches_5mg = abs(op_md) >= 5.0 and op_md < 0
+            pain_non_inferior = pain_md <= 1.0  # Prespecified pain-worsening margin of +1.0 VAS
+
+            if reaches_10mg and pain_non_inferior:
+                mcid_quadrant = 1  # Reaches primary benchmark (>= 10 mg) without pain worsening
+                quadrant_name = "Optimal Benchmark (Sparing ≥ 10 mg MME + Pain Stable/Reduced)"
+            elif reaches_5mg and pain_non_inferior:
+                mcid_quadrant = 2  # Reaches exploratory benchmark (5-10 mg) without pain worsening
+                quadrant_name = "Moderate Sparing (5–10 mg MME) + Pain Stable/Reduced"
+            elif op_md < 0 and pain_non_inferior:
+                mcid_quadrant = 3  # Small sparing (< 5 mg MME) without pain worsening
+                quadrant_name = "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+            elif op_md < 0 and not pain_non_inferior:
+                mcid_quadrant = 4  # Opioid sparing but pain worsened (> +1.0 VAS)
+                quadrant_name = "Opioid Sparing with Pain Compromise (Pain > +1.0)"
+            else:
+                mcid_quadrant = 5  # No opioid sparing
+                quadrant_name = "No Opioid Sparing"
+
+            mcid_info = {
+                "is_paired": True,
+                "opioid_md": round(op_md, 2),
+                "pain_md": round(pain_md, 2),
+                "reaches_10mg": reaches_10mg,
+                "reaches_8mg": reaches_8mg,
+                "reaches_5mg": reaches_5mg,
+                "pain_non_inferior": pain_non_inferior,
+                "quadrant": mcid_quadrant,
+                "quadrant_name": quadrant_name
+            }
         else:
-            mcid_quadrant = 4  # Ineffective / unfavorable
-            quadrant_name = "Ineffective / Unfavorable"
-
-        mcid_info = {
-            "opioid_md": round(op_md, 2),
-            "pain_md": round(pain_md, 2),
-            "reaches_mcid": reaches_mcid,
-            "pain_non_inferior": pain_non_inferior,
-            "quadrant": mcid_quadrant,
-            "quadrant_name": quadrant_name
-        }
+            mcid_info = {
+                "is_paired": False,
+                "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+            }
 
         # RoB 2 Judgments (Objective 7)
         d1 = "Low"

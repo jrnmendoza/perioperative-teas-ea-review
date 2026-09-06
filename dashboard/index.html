@@ -22,30 +22,49 @@
     </div>
 
     <nav class="nav-tabs" role="tablist">
-      <span class="nav-section-label">I</span>
-      <button class="nav-btn active" data-tab="intro" role="tab" data-i18n="nav.intro">Introduction</button>
-
-      <span class="nav-section-label">M</span>
-      <button class="nav-btn" data-tab="search" role="tab" data-i18n="nav.search">Search Strategy</button>
-      <button class="nav-btn" data-tab="prisma" role="tab" data-i18n="nav.prisma">Study Selection</button>
-      <button class="nav-btn" data-tab="rob2" role="tab" data-i18n="nav.rob2">Risk of Bias</button>
-      <button class="nav-btn" data-tab="extraction" role="tab" data-i18n="nav.extraction">Data Extraction</button>
-
-      <span class="nav-section-label">R</span>
-      <button class="nav-btn" data-tab="primary" role="tab" data-i18n="nav.primary">Primary Outcome</button>
-      <button class="nav-btn" data-tab="secondary" role="tab" data-i18n="nav.secondary">Secondary Outcomes</button>
-      <button class="nav-btn" data-tab="mcid" role="tab" data-i18n="nav.mcid">Clinical Importance</button>
-      <button class="nav-btn" data-tab="metareg" role="tab" data-i18n="nav.metareg">Meta-Regression</button>
-
-      <span class="nav-section-label">D</span>
-      <button class="nav-btn" data-tab="evidence" role="tab" data-i18n="nav.evidence">GRADE Evidence</button>
-      <button class="nav-btn" data-tab="limitations" role="tab" data-i18n="nav.limitations">Limitations</button>
-
-      <span class="nav-section-label" style="color: #64748b;">+</span>
-      <button class="nav-btn" data-tab="explorer" role="tab" data-i18n="nav.explorer">Study Explorer</button>
-      <button class="nav-btn" data-tab="glossary" role="tab" data-i18n="nav.glossary">Statistics Glossary</button>
-      <button class="nav-btn" data-tab="export" role="tab" data-i18n="nav.export">Export</button>
+      <button class="nav-btn active" data-nav-group="overview" data-tab="intro" role="tab" data-i18n="nav.overview">OVERVIEW</button>
+      <button class="nav-btn" data-nav-group="studies" data-tab="explorer" role="tab" data-i18n="nav.studies">STUDIES</button>
+      <button class="nav-btn" data-nav-group="results" data-tab="primary" role="tab" data-i18n="nav.results">RESULTS</button>
+      <button class="nav-btn" data-nav-group="evidence" data-tab="evidence" role="tab" data-i18n="nav.evidenceGroup">EVIDENCE</button>
+      <button class="nav-btn" data-nav-group="methods" data-tab="search" role="tab" data-i18n="nav.methods">METHODS</button>
+      <button class="nav-btn" data-nav-group="more" data-tab="glossary" role="tab" data-i18n="nav.more">MORE</button>
     </nav>
+
+    <!-- Subnav Pill Bars for Major Groups -->
+    <div class="subnav-wrapper" id="subnav-wrapper">
+      <div class="subnav-group" id="subnav-overview" style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+        <span style="font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-right: 0.25rem;">Overview:</span>
+        <button class="subnav-pill active" data-tab="intro" onclick="switchTab('intro')">📄 Executive Summary &amp; Scope</button>
+      </div>
+      <div class="subnav-group" id="subnav-studies" style="display: none; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+        <span style="font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-right: 0.25rem;">Studies:</span>
+        <button class="subnav-pill" data-tab="explorer" onclick="switchTab('explorer')">🔍 Study Explorer (k=63)</button>
+        <button class="subnav-pill" data-tab="prisma" onclick="switchTab('prisma')">📋 Study Selection &amp; PRISMA Flow</button>
+      </div>
+      <div class="subnav-group" id="subnav-results" style="display: none; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+        <span style="font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-right: 0.25rem;">Results:</span>
+        <button class="subnav-pill" data-tab="primary" onclick="switchTab('primary')">💊 Primary 24-h Opioid (k=11)</button>
+        <button class="subnav-pill" data-tab="secondary" onclick="switchTab('secondary')">⏱️ Secondary &amp; Other Outcomes</button>
+        <button class="subnav-pill" data-tab="mcid" onclick="switchTab('mcid')">🎯 Clinical Importance Studio</button>
+        <button class="subnav-pill" data-tab="metareg" onclick="switchTab('metareg')">📈 Meta-Regression Studio</button>
+      </div>
+      <div class="subnav-group" id="subnav-evidence" style="display: none; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+        <span style="font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-right: 0.25rem;">Evidence:</span>
+        <button class="subnav-pill" data-tab="evidence" onclick="switchTab('evidence')">⭐ GRADE Summary of Findings</button>
+        <button class="subnav-pill" data-tab="rob2" onclick="switchTab('rob2')">🛡️ Risk of Bias (RoB 2 Matrix)</button>
+        <button class="subnav-pill" data-tab="limitations" onclick="switchTab('limitations')">⚠️ Limitations &amp; Inquiries</button>
+      </div>
+      <div class="subnav-group" id="subnav-methods" style="display: none; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+        <span style="font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-right: 0.25rem;">Methods:</span>
+        <button class="subnav-pill" data-tab="search" onclick="switchTab('search')">🔎 Search Strategies (4 DBs)</button>
+        <button class="subnav-pill" data-tab="extraction" onclick="switchTab('extraction')">📊 Data Extraction &amp; Conversions</button>
+      </div>
+      <div class="subnav-group" id="subnav-more" style="display: none; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+        <span style="font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-right: 0.25rem;">More:</span>
+        <button class="subnav-pill" data-tab="glossary" onclick="switchTab('glossary')">📚 Statistics Glossary</button>
+        <button class="subnav-pill" data-tab="export" onclick="switchTab('export')">💾 Export &amp; Downloads</button>
+      </div>
+    </div>
 
     <!-- Global Reader Assistance & Language Controls (Sections 2, 3, 4) -->
     <div class="header-controls">
@@ -275,12 +294,12 @@
           <div class="action-card" style="border-top: 3px solid #6366f1; cursor: pointer;" onclick="switchTab('primary')">
             <div>
               <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="badge badge-indigo">Objective 1 — Co-Primary Analgesic Domain</span>
+                <span class="badge badge-indigo">Objective 1 — Primary Opioid Sparing &amp; Durability</span>
                 <span style="font-size: 0.72rem; color: #818cf8; font-weight: 700;">→ Primary Outcome</span>
               </div>
-              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Quantify 24-h (acute) &amp; 48-h (extended) opioid-sparing effects of TEAS and EA</h3>
+              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Quantify 24-h (primary) &amp; 48-h (key secondary) opioid-sparing effects</h3>
               <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
-                Dual-timepoint co-primary synthesis of cumulative 0–24 h (acute) and 0–48 h (extended durability) opioid consumption (mg IV MME), stratified by modality. REML random-effects with Knapp–Hartung adjustment and 95% prediction intervals.
+                Synthesis of cumulative 0–24 h primary opioid consumption (mg IV MME), alongside key secondary 0–48 h and exploratory 0–72 h outcomes, stratified by modality. REML random-effects with Knapp–Hartung adjustment and 95% prediction intervals.
               </p>
             </div>
           </div>
@@ -288,12 +307,12 @@
           <div class="action-card" style="border-top: 3px solid #10b981; cursor: pointer;" onclick="switchTab('secondary')">
             <div>
               <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="badge badge-emerald">Objective 2 — Co-Primary</span>
+                <span class="badge badge-emerald">Objective 2 — Pain Intensity</span>
                 <span style="font-size: 0.72rem; color: #34d399; font-weight: 700;">→ Secondary Outcomes</span>
               </div>
               <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Evaluate postoperative pain intensity at rest and during movement at ~24 h</h3>
               <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
-                VAS/NRS 0–10 continuous mean difference. Essential for confirming that opioid sparing does not come at the cost of unrelieved pain.
+                VAS/NRS 0–10 continuous mean difference. Essential for confirming that opioid sparing does not result in clinically important pain worsening.
               </p>
             </div>
           </div>
@@ -794,10 +813,10 @@
           <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
             <h2>Dynamic Interactive Forest Plot</h2>
             <select id="meta-outcome-select" class="filter-select" style="min-width: 340px;">
-              <optgroup label="⭐ Opioid Sparing &amp; Analgesic Durability Domain">
-                <option value="opioid_24h" selected>💊 [Co-Primary: Acute] Cumulative 0–24h Opioid Consumption (mg IV MME)</option>
-                <option value="opioid_48h">💊 [Co-Primary: Extended Durability] Cumulative 0–48h Opioid Consumption (mg IV MME)</option>
-                <option value="opioid_72h">💊 [Exploratory: Extended Subacute] Cumulative 0–72h Opioid Consumption (mg IV MME)</option>
+              <optgroup label="⭐ Primary &amp; Secondary Opioid Outcomes">
+                <option value="opioid_24h" selected>💊 [PRIMARY] Cumulative 0–24h Opioid Consumption (mg IV MME)</option>
+                <option value="opioid_48h">💊 [KEY SECONDARY] Cumulative 0–48h Opioid Consumption (mg IV MME)</option>
+                <option value="opioid_72h">💊 [EXPLORATORY] Cumulative 0–72h Opioid Consumption (mg IV MME)</option>
               </optgroup>
               <optgroup label="Secondary Outcome: Pain Intensity (Objective 2)">
                 <option value="pain_rest_24h">🩹 [Secondary] Pain Intensity at Rest at ~24h (VAS 0–10)</option>
@@ -909,7 +928,7 @@
             </div>
             <h2>Clinical Importance &amp; Trade-Off Studio (Objective 4)</h2>
             <p id="mcid-subtitle-text" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Evaluating whether 0–24h Opioid Reduction achieves the prespecified PROSPERO threshold (≥ 10 mg IV MME) without clinically important worsening of postoperative pain (≤ +1.0 VAS margin; upper 95% CI examined).
+              Evaluating whether 0–24h Opioid Reduction achieves prespecified clinical-importance benchmarks (Primary: ≥ 10 mg IV MME) without clinically important worsening of postoperative pain (≤ +1.0 VAS margin; upper 95% CI examined).
             </p>
           </div>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
@@ -999,7 +1018,7 @@
                   <span class="kpi-badge badge-amber" id="badge-q3-count">0 Trials (0.0%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  <strong>Not observed in any audited trial:</strong> Opioid reduction achieved at the expense of clinically unacceptable pain worsening (> +1.0 VAS margin). Confirms TEAS/EA does not leave patients with unrelieved pain.
+                  <strong>No included study-level point estimate exceeded the prespecified pain-worsening margin (+1.0 VAS).</strong> Across reporting trials, study-level opioid sparing was not accompanied by systematic pain worsening. This study-level finding does not establish zero individual-patient risk.
                 </div>
               </div>
 
@@ -1065,13 +1084,24 @@
       <div class="dashboard-card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
           <div>
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="badge badge-emerald">Co-Primary Endpoint</span>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="badge badge-emerald">PRIMARY OPIOID OUTCOME</span>
               <span class="badge badge-indigo">Audited Reconciled Master v20</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">StataNow 19.5 SE Consensus Synthesis</span>
+              <span class="badge badge-emerald" data-i18n="primarySection.badgeStata">VERIFIED IN STATANOW 19.5 SE</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">k = 11 Trials • N = 945 Patients</span>
             </div>
-            <h2 style="margin-top: 0.25rem;">Section 2A: Co-Primary Acute Window — Cumulative 0–24h Opioid Sparing (k = 11 RCTs, N = 945)</h2>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Executed in StataNow 19.5 SE via <code>meta summarize, random(reml) se(kh) predinterval</code>. Modalities and reporting strata rigorously tested.</p>
+            <h2 style="margin-top: 0.25rem;" data-i18n="primarySection.section2ATitle">Section 2A: PRIMARY OPIOID OUTCOME — Cumulative 0–24h Opioid Sparing (k = 11 RCTs, N = 945)</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;" data-i18n="primarySection.section2ASub">
+              Executed in StataNow 19.5 SE via <code>meta summarize, random(reml) se(kh) predinterval</code>. Modalities and reporting strata rigorously tested.
+            </p>
+
+            <!-- Prominent Non-Longitudinal Trajectory Callout Box -->
+            <div class="alert-box alert-info" style="background: rgba(56, 189, 248, 0.08); border-left: 4px solid #38bdf8; padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-top: 0.75rem; font-size: 0.8rem; line-height: 1.5; color: #e2e8f0;">
+              <strong style="color: #38bdf8; display: block; margin-bottom: 0.2rem;">⚠️ Methodological Trajectory Notice: Independent Study Cohorts (Not a Longitudinal Trajectory)</strong>
+              <span data-i18n="primarySection.trajectoryDisclaimer">
+                Different sets of trials contribute to each cumulative time window. These estimates should therefore not be interpreted as repeated longitudinal measurements of the same study population or as a continuous trajectory of treatment effect.
+              </span>
+            </div>
           </div>
         </div>
 
@@ -1330,26 +1360,26 @@
         </div>
       </div>
 
-      <!-- Section 2B: Extended 48-Hour Opioid Consumption Evidence Strata Grid -->
+      <!-- Section 2B: Key Secondary 48-Hour Opioid Consumption Evidence Strata Grid -->
       <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #818cf8;">
         <div class="card-header">
           <div>
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="badge badge-emerald">Co-Primary Endpoint</span>
-              <span class="badge badge-indigo">Extended Durability (POD2)</span>
-              <span class="badge badge-emerald">StataNow 19.5 SE Verified</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">k = 5 Trials • N = 2,183 Patients</span>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="badge badge-indigo">KEY SECONDARY OPIOID OUTCOME</span>
+              <span class="badge badge-indigo">Extended Durability (POD2 / 48h)</span>
+              <span class="badge badge-emerald">VERIFIED IN STATANOW 19.5 SE</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">k = 5 Trials • N = 478 Patients</span>
             </div>
-            <h2 style="margin-top: 0.25rem;">Section 2B: Co-Primary Extended Durability Window — Cumulative 0–48h Opioid Sparing (IV MME mg)</h2>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Rigorous co-primary random-effects meta-analysis (REML + Hartung–Knapp adjustment) executed in StataNow 19.5 SE for trials reporting cumulative 48-hour systemic opioid requirements.
+            <h2 style="margin-top: 0.25rem;" data-i18n="primarySection.section2BTitle">Section 2B: KEY SECONDARY OPIOID OUTCOME — Cumulative 0–48h Opioid Sparing (k = 5 RCTs, N = 478)</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;" data-i18n="primarySection.section2BSub">
+              Executed in StataNow 19.5 SE via <code>meta summarize, random(reml) se(kh) predinterval</code> for trials reporting cumulative 48-hour systemic opioid requirements.
             </p>
           </div>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.25rem;">
           
-          <!-- Stratum 1: TEAS vs Sham (k=3, N=2,077) -->
+          <!-- Stratum 1: TEAS vs Sham (k=3, N=370) -->
           <div class="stratum-card primary-stratum" style="border-top: 3px solid #818cf8;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
               <span class="badge badge-indigo">TEAS vs Sham (48h)</span>
@@ -1365,17 +1395,16 @@
             <div style="font-size: 0.78rem; color: #38bdf8; margin-top: 0.25rem;">
               <strong>Test of Effect:</strong> t(2) = −8.45 (Statistically Significant)
             </div>
-            <div style="font-size: 0.78rem; color: #fbbf24; margin-top: 0.35rem; font-weight: 600;">
-              <strong>95% Prediction Interval:</strong> [−5.42, +1.09] mg
+            <div style="font-size: 0.78rem; color: #34d399; margin-top: 0.35rem; font-weight: 600;">
+              <strong>Zero Heterogeneity:</strong> τ² = 0.0000, I² = 0.00%, Q = 3.67 (p = 0.1597)
             </div>
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
-              <div><strong>Analyzable Cohort:</strong> k = 3 RCTs • N = 2,077 patients</div>
-              <div><strong>Included Trials:</strong> Chen 2020 (N=80), He 2026 (N=159), Zhang 2023 (N=1,838)</div>
-              <div><strong>Heterogeneity:</strong> τ² = 0.2081, I² = 45.45%, Q = 3.67 (p = 0.1597)</div>
+              <div><strong>Analyzable Cohort:</strong> k = 3 RCTs • N = 370 patients</div>
+              <div><strong>Included Trials:</strong> Chen 2020 (N=80), He 2026 (N=50), Zhang 2023 (N=240)</div>
             </div>
           </div>
 
-          <!-- Stratum 2: EA vs Control / Sham (k=2, N=106) -->
+          <!-- Stratum 2: EA vs Control / Sham (k=2, N=108) -->
           <div class="stratum-card primary-stratum" style="border-top: 3px solid #06b6d4;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
               <span class="badge badge-cyan">EA vs Control / Sham (48h)</span>
@@ -1388,20 +1417,16 @@
             <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
               <strong>95% Knapp–Hartung CI:</strong> [−15.37, +2.89] • t(1) = −8.68, p = 0.0730
             </div>
-            <div style="font-size: 0.78rem; color: #38bdf8; margin-top: 0.25rem;">
-              <strong>Hedges' g SMD:</strong> −0.55 [95% CI: −1.00, −0.10]
-            </div>
             <div style="font-size: 0.78rem; color: #34d399; margin-top: 0.35rem; font-weight: 600;">
-              <strong>Zero Heterogeneity:</strong> τ² = 0.0000, I² = 0.00%
+              <strong>Zero Heterogeneity:</strong> τ² = 0.0000, I² = 0.00%, Q = 0.10 (p = 0.7484)
             </div>
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
-              <div><strong>Analyzable Cohort:</strong> k = 2 RCTs • N = 106 patients</div>
-              <div><strong>Included Trials:</strong> An 2014 (N=81, MD −6.00 mg), Wong 2006 (N=25, MD −8.40 mg)</div>
-              <div><strong>Homogeneity Test:</strong> Q = chi²(1) = 0.10 (p = 0.7484)</div>
+              <div><strong>Analyzable Cohort:</strong> k = 2 RCTs • N = 108 patients</div>
+              <div><strong>Included Trials:</strong> An 2014 (N=60, MD −6.00 mg), Wong 2006 (N=48, MD −8.40 mg)</div>
             </div>
           </div>
 
-          <!-- Combined Reference Pool (k=5, N=2,183) -->
+          <!-- Combined Reference Pool (k=5, N=478) -->
           <div class="stratum-card primary-stratum" style="border-top: 3px solid #10b981;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
               <span class="badge badge-emerald">Combined 48-h Pool</span>
@@ -1409,21 +1434,21 @@
             </div>
             <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">All 5 Trials (0–48h)</h3>
             <div style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.4rem;">
-              −2.19 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+              −2.37 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
             </div>
             <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
-              <strong>95% Knapp–Hartung CI:</strong> [−3.43, −0.96] • <strong style="color: #34d399;">p = 0.0078</strong>
+              <strong>95% Knapp–Hartung CI:</strong> [−4.09, −0.66] • <strong style="color: #34d399;">p = 0.0184</strong>
             </div>
             <div style="font-size: 0.78rem; color: #38bdf8; margin-top: 0.25rem;">
-              <strong>Test of Effect:</strong> t(4) = −4.96 (Highly Significant)
+              <strong>Test of Effect:</strong> t(4) = −3.85 (Statistically Significant)
             </div>
-            <div style="font-size: 0.78rem; color: #34d399; margin-top: 0.35rem; font-weight: 600;">
-              <strong>95% Prediction Interval:</strong> [−4.20, −0.19] mg (Strictly Beneficial)
+            <div style="font-size: 0.78rem; color: #fbbf24; margin-top: 0.35rem; font-weight: 600;">
+              <strong>95% Prediction Interval:</strong> [−5.41, +0.66] mg
             </div>
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
-              <div><strong>Analyzable Cohort:</strong> k = 5 RCTs • N = 2,183 patients</div>
-              <div><strong>Heterogeneity:</strong> τ² = 0.2289, I² = 29.80%, Q = 5.70 (p = 0.2228)</div>
-              <div style="margin-top: 0.4rem; color: #6ee7b7; font-weight: 600;">Direct-only sensitivity (k=4, N=345): MD = −2.08 mg [−3.85, −0.32], p = 0.0329.</div>
+              <div><strong>Analyzable Cohort:</strong> k = 5 RCTs • N = 478 patients</div>
+              <div><strong>Heterogeneity:</strong> τ² = 0.5290, I² = 39.79%, Q = 7.06 (p = 0.1328)</div>
+              <div style="margin-top: 0.4rem; color: #6ee7b7; font-weight: 600;">DerSimonian–Laird sensitivity: MD = −2.39 mg [−4.16, −0.62], p = 0.0198.</div>
             </div>
           </div>
 
@@ -1456,6 +1481,91 @@
                 </div>
                 <div style="color: var(--text-muted); font-size: 0.72rem;">82.4 vs 94.9 mL (P&lt;0.001) • NAPC: 1.0 vs 9.0 presses (P&lt;0.001)</div>
               </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section 2C: Exploratory Extended 72-Hour Opioid Consumption Evidence Grid -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #ec4899;">
+        <div class="card-header">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="badge badge-indigo">EXPLORATORY POSTOPERATIVE OUTCOME</span>
+              <span class="badge badge-indigo">Extended Durability (POD3 / 72h)</span>
+              <span class="badge badge-emerald">VERIFIED IN STATANOW 19.5 SE</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">k = 4 Trials • N = 324 Patients</span>
+            </div>
+            <h2 style="margin-top: 0.25rem;" data-i18n="primarySection.section2CTitle">Section 2C: EXPLORATORY EXTENDED POSTOPERATIVE OPIOID OUTCOME — Cumulative 0–72h Opioid Sparing (k = 4 RCTs, N = 324)</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;" data-i18n="primarySection.section2CSub">
+              Executed in StataNow 19.5 SE. Evaluated strictly as hypothesis-generating extended durability. Sparse data; not confirmatory evidence.
+            </p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.25rem;">
+          
+          <!-- Stratum 1: TEAS vs Sham (k=1: Zhang 2025; N=90) -->
+          <div class="stratum-card primary-stratum" style="border-top: 3px solid #ec4899;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-indigo">TEAS vs Sham (72h)</span>
+              <span style="font-size: 0.72rem; color: #ec4899; font-weight: 700;">Single Trial (k = 1)</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">TEAS Stratum (0–72h)</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #ec4899; margin-top: 0.4rem;">
+              −26.20 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Normal CI:</strong> [−32.17, −20.23] • <strong style="color: #34d399;">p &lt; 0.0001</strong>
+            </div>
+            <div style="margin-top: 0.75rem; padding: 0.55rem 0.75rem; background: rgba(236, 72, 153, 0.1); border-radius: var(--radius-sm); border: 1px solid rgba(236, 72, 153, 0.25); font-size: 0.73rem; color: #fbcfe8; line-height: 1.5;">
+              <strong>CRITICAL METHODOLOGICAL RULE:</strong> Only one eligible study contributed (Zhang 2025, N = 90). Per Cochrane guidelines, no pooled meta-analytic estimate is possible. Must not be presented as a meta-analysis or confirmatory evidence.
+            </div>
+          </div>
+
+          <!-- Stratum 2: EA Trials (k=3: Xie 2014, Wong 2006, Yang 2024; N=234) -->
+          <div class="stratum-card primary-stratum" style="border-top: 3px solid #06b6d4;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-cyan">EA Trials (72h)</span>
+              <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 700;">k = 3 Trials</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">EA Stratum (0–72h)</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #38bdf8; margin-top: 0.4rem;">
+              −9.19 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Knapp–Hartung CI:</strong> [−32.95, +14.57] • t(2) = −1.66, p = 0.2379
+            </div>
+            <div style="font-size: 0.78rem; color: #fbbf24; margin-top: 0.35rem; font-weight: 600;">
+              <strong>Substantial Inconsistency:</strong> τ² = 89.03, I² = 92.87%
+            </div>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Analyzable Cohort:</strong> k = 3 RCTs • N = 234 patients</div>
+              <div><strong>Included Trials:</strong> Xie 2014 (N=80), Wong 2006 (N=48), Yang 2024 (N=106)</div>
+            </div>
+          </div>
+
+          <!-- Combined Exploratory Pool (k=4, N=324) -->
+          <div class="stratum-card primary-stratum" style="border-top: 3px solid #10b981;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-emerald">Combined 72-h Pool</span>
+              <span style="font-size: 0.72rem; color: #34d399; font-weight: 700;">k = 4 Trials</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">All 4 Trials (0–72h)</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.4rem;">
+              −13.60 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Knapp–Hartung CI:</strong> [−31.95, +4.75] • t(3) = −2.36, p = 0.0995
+            </div>
+            <div style="font-size: 0.78rem; color: #fbbf24; margin-top: 0.35rem; font-weight: 600;">
+              <strong>95% Prediction Interval:</strong> [−67.86, +40.66] mg (Crosses Zero)
+            </div>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Analyzable Cohort:</strong> k = 4 RCTs • N = 324 patients</div>
+              <div><strong>Heterogeneity:</strong> τ² = 125.81, I² = 94.69%, Q = 71.30 (p &lt; 0.0001)</div>
+              <div style="margin-top: 0.4rem; color: #93c5fd;">DerSimonian–Laird sensitivity: MD = −8.76 mg [−19.05, +1.52], p = 0.095.</div>
             </div>
           </div>
 
@@ -2289,12 +2399,29 @@
       <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #10b981;">
         <div class="card-header">
           <div>
-            <span class="badge badge-emerald">Clinical Prediction Tool</span>
-            <h2 style="margin-top: 0.25rem;">Expected Opioid Sparing Estimator (Stata REML Multivariable Model)</h2>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="badge badge-indigo">Exploratory Simulation</span>
+              <span class="badge badge-amber">Study-Level Illustration</span>
+              <span class="badge badge-emerald">StataNow 19.5 SE Multivariable Model</span>
+            </div>
+            <h2 style="margin-top: 0.25rem;">Interactive Meta-Regression Illustration / Exploratory Effect-Modifier Simulator</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Simulate predicted 24-hour opioid reduction based on baseline surgical pain intensity and intervention modality:
+              Illustrating study-level expected 24-hour opioid reduction based on baseline surgical opioid demand and intervention modality:
               <code>MD = 0.0204 &minus; 0.1876 &times; (Baseline Demand) + 1.4895 &times; (EA)</code>.
             </p>
+
+            <!-- Research Illustration Disclaimers -->
+            <div style="margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.4rem;">
+              <div class="alert-box alert-info" style="background: rgba(56, 189, 248, 0.08); border-left: 4px solid #38bdf8; padding: 0.6rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #e2e8f0; line-height: 1.5;">
+                <strong>⚠️ Research Illustration Notice:</strong> Study-level research illustration — not validated for individual-patient prediction or clinical decision-making.
+              </div>
+              <div class="alert-box alert-warning" style="background: rgba(245, 158, 11, 0.08); border-left: 4px solid #f59e0b; padding: 0.6rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #e2e8f0; line-height: 1.5;">
+                <strong>🔬 Ecological Fallacy Warning:</strong> Study-level associations do not necessarily represent relationships between individual patients within those trials.
+              </div>
+              <div class="alert-box" style="background: rgba(129, 140, 248, 0.08); border-left: 4px solid #818cf8; padding: 0.6rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #e2e8f0; line-height: 1.5;">
+                <strong>📊 Meta-Regression R² Definition:</strong> Meta-regression R² estimates the proportion of between-study heterogeneity (&tau;&sup2;) accounted for by the moderator. It is not the percentage of individual patient variance explained.
+              </div>
+            </div>
           </div>
         </div>
 

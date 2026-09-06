@@ -1,0 +1,249 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/08_intraoperative_op
+> ioids.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:28
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "08: INTRAOPERATIVE OPIOID EXPOSURE: TOTAL REMIFENTANIL DOSE (µg)"
+08: INTRAOPERATIVE OPIOID EXPOSURE: TOTAL REMIFENTANIL DOSE (µg)
+
+. di as txt "Note: Kept strictly separate from postoperative opioid consumption."
+Note: Kept strictly separate from postoperative opioid consumption.
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "stata/stata_intraop_remifentanil_data.dta", clear
+
+. describe
+
+Contains data from stata/stata_intraop_remifentanil_data.dta
+ Observations:            11                  
+    Variables:            13                  6 Sep 2026 11:59
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str13   %13s                  
+modality        str4    %9s                   
+comparator      str4    %9s                   
+arm1_n          byte    %8.0g                 
+arm1_mean       float   %9.0g                 
+arm1_sd         float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean       float   %9.0g                 
+arm2_sd         float   %9.0g                 
+md              float   %9.0g                 
+se              float   %9.0g                 
+unit            str2    %9s                   
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. list canonical_name modality arm1_mean arm1_sd arm2_mean arm2_sd md se
+
+     +---------------------------------------------------------------------------------------+
+     | canonical_n~e   modality   arm1_m~n   arm1_sd   arm2_m~n   arm2_sd        md       se |
+     |---------------------------------------------------------------------------------------|
+  1. |    Zheng 2025       TEAS      233.1      29.6      289.5      37.9     -56.4     7.37 |
+  2. |     Xing 2022       TEAS    1415.41    295.67    1619.13    328.98   -203.72    82.14 |
+  3. |      Pan 2023       TEAS      740.1     276.9        854     287.5    -113.9    55.08 |
+  4. | Ntritsou 2014         EA     1003.6     522.7     1041.9     631.9     -38.3   138.62 |
+  5. |       Wu 2022       TEAS       1383       494       1637       630      -254   122.95 |
+     |---------------------------------------------------------------------------------------|
+  6. |       Wu 2025       TEAS      489.4       226      533.8     263.6     -44.4     49.1 |
+  7. |      Liu 2025         EA      911.1     233.8     1095.9     362.2    -184.8    68.17 |
+  8. |       Li 2022         EA       1989     158.7       2009     143.2       -20    33.19 |
+  9. |      Guo 2023       TEAS        870       300       1010       390      -140    89.81 |
+ 10. | He 2026 (#25)       TEAS       2500      1400       2800      1900      -300   372.42 |
+     |---------------------------------------------------------------------------------------|
+ 11. |      Xie 2014         EA       1890       630       1900       590       -10   192.94 |
+     +---------------------------------------------------------------------------------------+
+
+. 
+. * 1. Declare Meta-Analysis Setting
+. meta set md se, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: md
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * 2. PRIMARY REMIFENTANIL SYNTHESIS: All 11 Trials (REML + Knapp-Hartung)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. ALL 11 TRIALS: Intraoperative Remifentanil Dose (µg)"
+1. ALL 11 TRIALS: Intraoperative Remifentanil Dose (µg)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Effect size
+        Effect size: md
+          Std. err.: se
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =     11
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  1.5e+03
+SE adjustment: Knapp–Hartung                        I2 (%) =   39.04
+                                                        H2 =    1.64
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zheng 2025 |        -56.400     -70.845     -41.955     31.64
+        Xing 2022 |       -203.720    -364.711     -42.729      5.96
+         Pan 2023 |       -113.900    -221.855      -5.945     10.84
+    Ntritsou 2014 |        -38.300    -309.990     233.390      2.37
+          Wu 2022 |       -254.000    -494.978     -13.022      2.96
+          Wu 2025 |        -44.400    -140.634      51.834     12.57
+         Liu 2025 |       -184.800    -318.411     -51.189      8.00
+          Li 2022 |        -20.000     -85.051      45.051     18.90
+         Guo 2023 |       -140.000    -316.024      36.024      5.14
+    He 2026 (#25) |       -300.000   -1029.930     429.930      0.35
+         Xie 2014 |        -10.000    -388.155     368.155      1.27
+------------------+-------------------------------------------------
+            theta |        -83.274    -129.340     -37.209
+--------------------------------------------------------------------
+95% prediction interval for theta: [-182.572,16.023]
+
+Test of theta = 0: t(10) = -4.03                 Prob > |t| = 0.0024
+Test of homogeneity: Q = chi2(10) = 12.93          Prob > Q = 0.2275
+
+. 
+. * 3. STRATUM 1: TEAS vs Sham (k=7 Trials)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. STRATUM 1: TEAS vs Sham (k=7 Trials)"
+2. STRATUM 1: TEAS vs Sham (k=7 Trials)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if modality == "TEAS", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md
+          Std. err.: se
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      7
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  1.4e+03
+SE adjustment: Knapp–Hartung                        I2 (%) =   32.99
+                                                        H2 =    1.49
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zheng 2025 |        -56.400     -70.845     -41.955     46.67
+        Xing 2022 |       -203.720    -364.711     -42.729      8.35
+         Pan 2023 |       -113.900    -221.855      -5.945     15.34
+          Wu 2022 |       -254.000    -494.978     -13.022      4.12
+          Wu 2025 |        -44.400    -140.634      51.834     17.84
+         Guo 2023 |       -140.000    -316.024      36.024      7.19
+    He 2026 (#25) |       -300.000   -1029.930     429.930      0.49
+------------------+-------------------------------------------------
+            theta |        -90.721    -150.388     -31.055
+--------------------------------------------------------------------
+Test of theta = 0: t(6) = -3.72                  Prob > |t| = 0.0098
+Test of homogeneity: Q = chi2(6) = 8.05            Prob > Q = 0.2343
+
+. 
+. * 4. STRATUM 2: EA vs Sham (k=4 Trials)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. STRATUM 2: EA vs Sham (k=4 Trials)"
+3. STRATUM 2: EA vs Sham (k=4 Trials)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if modality == "EA", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md
+          Std. err.: se
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      4
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  5.0e+03
+SE adjustment: Knapp–Hartung                        I2 (%) =   44.39
+                                                        H2 =    1.80
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+    Ntritsou 2014 |        -38.300    -309.990     233.390     12.46
+         Liu 2025 |       -184.800    -318.411     -51.189     31.19
+          Li 2022 |        -20.000     -85.051      45.051     49.19
+         Xie 2014 |        -10.000    -388.155     368.155      7.15
+------------------+-------------------------------------------------
+            theta |        -72.974    -211.873      65.926
+--------------------------------------------------------------------
+Test of theta = 0: t(3) = -1.67                  Prob > |t| = 0.1931
+Test of homogeneity: Q = chi2(3) = 4.78            Prob > Q = 0.1889
+
+. 
+. * 5. Generate and Export Forest Plot
+. meta forestplot, subgroup(modality) ///
+>     title("Intraoperative Remifentanil Dose Consumed (µg)", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Random-Effects REML + Knapp-Hartung (k=11, N=760)", size(small)) /
+> //
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: md
+          Std. err.: se
+        Study label: canonical_name
+
+. graph export "stata/results/forest_intraop_remifentanil.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/forest_intraop_remifenta
+    > nil.png saved as PNG format
+
+. 
+. di as txt _n "SUCCESS: Intraoperative remifentanil synthesis completed and exported."
+
+SUCCESS: Intraoperative remifentanil synthesis completed and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/08_intraoperative_op
+> ioids.log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:29
+----------------------------------------------------------------------------------------------------

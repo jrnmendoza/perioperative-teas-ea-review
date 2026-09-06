@@ -1,0 +1,12 @@
+canonical_name,md_mme,se_mme,timing,is_multiphase,freq_dd,pct_female
+"Zhang 2025",-0.326,0.1,"Multi-phase (Perioperative)",1,1,100.0
+"Yang 2024",-0.3,0.716,"Multi-phase (Perioperative)",1,0,67.8
+"Sim 2002",-8.92,4.87,"Multi-phase (Perioperative)",1,1,100.0
+"Seevaunnamtum 2016",-12.56,4.389,"Multi-phase (Perioperative)",1,0,100.0
+"He 2026 (hepatectomy/JIS)",-0.6,0.578,"Preoperative only",0,1,22.1
+"El-Rakshy 2009",-1.6,3.719,"Intraoperative only",0,0,90.2
+"Coura 2011",-22.4,5.67,"Preoperative only",0,0,36.4
+"Chen 1998",-21,6.103,"Preoperative only",0,1,100.0
+"Chen 2020",-2.819,0.178,"Preoperative only",0,1,43.8
+"Chen 2015",-5,1.234,"Preoperative only",0,1,100.0
+"Chen 2015 (Hyperalgesia)",-1.122,0.128,"Multi-phase (Perioperative)",1,1,100.0

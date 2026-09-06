@@ -1,0 +1,147 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/05_rescue_opioid_dos
+> e.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:26
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "05: RESCUE OPIOID DOSE OUTCOME: CONTINUOUS OPIOID CONSUMPTION (IV MME)"
+05: RESCUE OPIOID DOSE OUTCOME: CONTINUOUS OPIOID CONSUMPTION (IV MME)
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. * Load trials reporting quantified continuous rescue opioid dose
+. clear
+
+. input str25 canonical_name str10 modality str10 comparator double md_mme double se_mme str20 nativ
+> e_drug
+
+                canonical_name    modality  comparator      md_mme      se_mme           native_drug
+  1. "Chen 2015 (Hyperalgesia)" "TEAS" "Sham" -1.122 0.128 "IV sufentanil"
+  2. "Chen 2015 (Thyroidectomy)" "TEAS" "Sham" -5.000 1.234 "IV morphine"
+  3. "Wang 2023" "TEAS" "Sham" -2.250 0.880 "IV tramadol (conv)"
+  4. end
+
+. 
+. describe
+
+Contains data
+ Observations:             3                  
+    Variables:             6                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+canonical_name  str25   %25s                  
+modality        str10   %10s                  
+comparator      str10   %10s                  
+md_mme          double  %10.0g                
+se_mme          double  %10.0g                
+native_drug     str20   %20s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. list
+
+     +----------------------------------------------------------------------------------------+
+     |            canonical_name   modality   compar~r   md_mme   se_mme          native_drug |
+     |----------------------------------------------------------------------------------------|
+  1. |  Chen 2015 (Hyperalgesia)       TEAS       Sham   -1.122     .128        IV sufentanil |
+  2. | Chen 2015 (Thyroidectomy)       TEAS       Sham       -5    1.234          IV morphine |
+  3. |                 Wang 2023       TEAS       Sham    -2.25      .88   IV tramadol (conv) |
+     +----------------------------------------------------------------------------------------+
+
+. 
+. meta set md_mme se_mme, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. RESCUE OPIOID DOSE: Random-Effects REML Synthesis (IV MME mg)"
+1. RESCUE OPIOID DOSE: Random-Effects REML Synthesis (IV MME mg)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =      3
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  2.8871
+SE adjustment: Knapp–Hartung                                I2 (%) =   84.59
+                                                                H2 =    6.49
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     40.79
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     26.86
+                Wang 2023 |         -2.250      -3.975      -0.525     32.35
+--------------------------+-------------------------------------------------
+                    theta |         -2.528      -7.313       2.256
+----------------------------------------------------------------------------
+Test of theta = 0: t(2) = -2.27                          Prob > |t| = 0.1508
+Test of homogeneity: Q = chi2(2) = 11.26                   Prob > Q = 0.0036
+
+. 
+. meta forestplot, ///
+>     title("Postoperative Rescue Opioid Dose Consumed (mg IV MME)", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Random-Effects REML + Knapp-Hartung", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+. graph export "stata/results/forest_rescue_opioid_dose.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/forest_rescue_opioid_dos
+    > e.png saved as PNG format
+
+. 
+. di as txt _n "SUCCESS: Rescue opioid dose analysis executed."
+
+SUCCESS: Rescue opioid dose analysis executed.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/05_rescue_opioid_dos
+> e.log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:27
+----------------------------------------------------------------------------------------------------

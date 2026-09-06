@@ -1,0 +1,260 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/14_influence_analysi
+> s.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:35
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "14: INFLUENCE DIAGNOSTICS ON PRIMARY 24-H OPIOID MODEL"
+14: INFLUENCE DIAGNOSTICS ON PRIMARY 24-H OPIOID MODEL
+
+. di as txt "Rule: Diagnostics identify influential studies; they are NOT exclusion rules."
+Rule: Diagnostics identify influential studies; they are NOT exclusion rules.
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "stata/stata_consensus_synthesis_data.dta", clear
+
+. describe
+
+Contains data from stata/stata_consensus_synthesis_data.dta
+ Observations:            11                  
+    Variables:            32                  6 Sep 2026 11:59
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+author          str13   %13s                  
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str7    %9s                   
+comparator_type str24   %24s                  
+stratum         str13   %13s                  
+native_drug     str19   %19s                  
+native_unit     str19   %19s                  
+mme_factor      float   %9.0g                 
+arm1_n          byte    %8.0g                 
+arm1_mean_mme   float   %9.0g                 
+arm1_sd_mme     float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean_mme   float   %9.0g                 
+arm2_sd_mme     float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+md_native       float   %9.0g                 
+se_native       float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+rob2_overall    str13   %13s                  
+is_high_rob     byte    %8.0g                 
+opioid_status   str19   %19s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. 
+. * 1. Declare Meta-Analysis Setting
+. meta set md_mme se_mme, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * 2. Overall Model
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     11
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 30.0069
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.73
+                                                                H2 =  373.57
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      5.13
+           El-Rakshy 2009 |         -1.600      -8.889       5.689      7.87
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      7.00
+                Chen 2020 |         -2.819      -3.168      -2.470     11.48
+                Yang 2024 |         -0.300      -1.703       1.103     11.30
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     11.36
+                 Sim 2002 |         -8.920     -18.465       0.625      6.42
+               Coura 2011 |        -22.400     -33.513     -11.287      5.55
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     11.48
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     10.94
+               Zhang 2025 |         -0.326      -0.522      -0.130     11.49
+--------------------------+-------------------------------------------------
+                    theta |         -5.035      -9.777      -0.293
+----------------------------------------------------------------------------
+Test of theta = 0: t(10) = -2.37                         Prob > |t| = 0.0395
+Test of homogeneity: Q = chi2(10) = 197.30                 Prob > Q = 0.0000
+
+. 
+. * 3. Compute Study-Level Influence Diagnostics: Leverage, Standardized Residual, DFBETAS
+. local grand_theta = r(theta)
+
+. local grand_se = r(se)
+
+. 
+. gen double leaveone_theta = .
+(11 missing values generated)
+
+. gen double dfbeta = .
+(11 missing values generated)
+
+. gen double residual = md_mme - `grand_theta'
+
+. gen double std_residual = residual / se_mme
+
+. 
+. forvalues i = 1/11 {
+  2.     preserve
+  3.     drop if _n == `i'
+  4.     qui meta summarize, random(reml) se(kh)
+  5.     local loo_th = r(theta)
+  6.     restore
+  7.     replace leaveone_theta = `loo_th' in `i'
+  8.     replace dfbeta = (`grand_theta' - `loo_th') / `grand_se' in `i'
+  9. }
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+(1 observation deleted)
+(1 real change made)
+(1 real change made)
+
+. 
+. * 4. Display Influence Metrics Table
+. di as txt _n "====================================================================================
+> ====="
+
+=========================================================================================
+
+. di as txt "STUDY INFLUENCE DIAGNOSTICS MATRIX (k = 11 Trials)"
+STUDY INFLUENCE DIAGNOSTICS MATRIX (k = 11 Trials)
+
+. di as txt "Study Name                | Reported MD | Std Err | Std. Resid | LOO Theta | DFBETA"
+Study Name                | Reported MD | Std Err | Std. Resid | LOO Theta | DFBETA
+
+. di as txt "--------------------------+-------------+---------+------------+-----------+--------"
+--------------------------+-------------+---------+------------+-----------+--------
+
+. forvalues i = 1/11 {
+  2.     local name = canonical_name[`i']
+  3.     local y : di %7.2f md_mme[`i']
+  4.     local s : di %7.3f se_mme[`i']
+  5.     local sr : di %7.2f std_residual[`i']
+  6.     local lth : di %7.3f leaveone_theta[`i']
+  7.     local dfb : di %6.2f dfbeta[`i']
+  8.     di as res %-25s "`name'" " | " %11s "`y'" " | " %7s "`s'" " | " %10s "`sr'" " | " %9s "`lth
+> '" " | " %6s "`dfb'"
+  9. }
+Chen 1998                 |      -21.00 |   6.103 |      -2.62 |    -3.221 |  -0.85
+El-Rakshy 2009            |       -1.60 |   3.719 |       0.92 |    -5.598 |   0.26
+Seevaunnamtum 2016        |      -12.56 |   4.389 |      -1.71 |    -4.183 |  -0.40
+Chen 2020                 |       -2.82 |   0.178 |      12.45 |    -5.662 |   0.29
+Yang 2024                 |       -0.30 |   0.716 |       6.61 |    -5.838 |   0.38
+He 2026 (hepatectomy/JIS) |       -0.60 |   0.578 |       7.67 |    -5.827 |   0.37
+Sim 2002                  |       -8.92 |   4.870 |      -0.80 |    -4.870 |  -0.08
+Coura 2011                |      -22.40 |   5.670 |      -3.06 |    -2.560 |  -1.16
+Chen 2015 (Hyperalgesia)  |       -1.12 |   0.128 |      30.57 |    -5.801 |   0.36
+Chen 2015 (Thyroidectomy) |       -5.00 |   1.234 |       0.03 |    -5.395 |   0.17
+Zhang 2025                |       -0.33 |   0.100 |      47.09 |    -5.845 |   0.38
+
+. di as txt "=======================================================================================
+> =="
+=========================================================================================
+
+. 
+. di as txt _n "METHODOLOGICAL SUMMARY & INTERPRETATION:"
+
+METHODOLOGICAL SUMMARY & INTERPRETATION:
+
+. di as txt "1. Coura 2011 and Chen 1998 exhibit the largest negative DFBETAS (pulling estimate towa
+> rds greater sparing)."
+1. Coura 2011 and Chen 1998 exhibit the largest negative DFBETAS (pulling estimate towards greater s
+> paring).
+
+. di as txt "2. Zhang 2025 and Chen 2020 have tiny standard errors and large DL weights, but under R
+> EML,"
+2. Zhang 2025 and Chen 2020 have tiny standard errors and large DL weights, but under REML,
+
+. di as txt "   between-study variance (tau2=30.01) prevents single-study dominance."
+   between-study variance (tau2=30.01) prevents single-study dominance.
+
+. di as txt "3. No study warrants automatic removal; influence diagnostics inform transparency, not 
+> data trimming."
+3. No study warrants automatic removal; influence diagnostics inform transparency, not data trimming
+> .
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/14_influence_analysi
+> s.log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:35
+----------------------------------------------------------------------------------------------------

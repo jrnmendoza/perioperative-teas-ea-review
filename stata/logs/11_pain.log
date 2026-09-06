@@ -1,0 +1,363 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/11_pain.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:32
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "11: POSTOPERATIVE PAIN INTENSITY AT ~24 HOURS (RESTING VAS/NRS 0-10)"
+11: POSTOPERATIVE PAIN INTENSITY AT ~24 HOURS (RESTING VAS/NRS 0-10)
+
+. di as txt "Rule: Exactly ONE effect per trial at ~24h (no correlated repeats)."
+Rule: Exactly ONE effect per trial at ~24h (no correlated repeats).
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "stata/stata_secondary_synthesis_data.dta", clear
+
+. keep if outcome_domain == "Pain_24h"
+(29 observations deleted)
+
+. describe
+
+Contains data from stata/stata_secondary_synthesis_data.dta
+ Observations:            15                  
+    Variables:            16                  6 Sep 2026 11:59
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+outcome_domain  str11   %11s                  
+modality        str4    %9s                   
+comparator      str10   %10s                  
+arm1_events     int     %8.0g                 
+arm1_n          int     %8.0g                 
+arm2_events     byte    %8.0g                 
+arm2_n          int     %8.0g                 
+effect          float   %9.0g                 
+se              float   %9.0g                 
+rob2_overall    str13   %13s                  
+arm1_mean       float   %9.0g                 
+arm1_sd         float   %9.0g                 
+arm2_mean       float   %9.0g                 
+arm2_sd         float   %9.0g                 
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. list canonical_name modality comparator effect se arm1_mean arm1_sd arm2_mean arm2_sd
+
+     +-------------------------------------------------------------------------------------+
+  1. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |             Zhou 2021 |     TEAS | Usual Care |   -.55 |  .074 |     2.55 |     .21 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                      3.1                 |                     .42                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+  2. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |             Xing 2022 |     TEAS |       Sham |   -.22 |  .124 |     1.18 |     .42 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                      1.4                 |                     .52                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+  3. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |               Wu 2022 |     TEAS |       Sham |   -.48 |  .177 |     1.77 |     .91 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                     2.25                 |                     .71                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+  4. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |               Wu 2025 |     TEAS |       Sham |   -2.3 |  .235 |      1.7 |      .9 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                        4                 |                     1.4                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+  5. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |               Ng 2013 |       EA |       Sham |    -.2 |  .372 |      5.6 |       2 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                      5.8                 |                     1.9                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+  6. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |              Luo 2026 |     TEAS |       Sham |   -.35 |  .112 |      1.3 |     .92 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                     1.65                 |                     .95                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+  7. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |             Long 2025 |     TEAS |       Sham |  -1.18 |  .265 |     2.78 |     .97 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                     3.96                 |                     .96                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+  8. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |        Liu 2026 (ESD) |     TEAS |       Sham |   -1.6 |  .296 |      1.2 |     1.3 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                      2.8                 |                     1.9                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+  9. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |              Liu 2021 |     TEAS | Usual Care |    .04 |  .126 |      3.2 |    .571 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                     3.16                 |                    .681                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+ 10. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |              Lee 2011 |     TEAS |       Sham |  -1.33 |  .483 |     1.21 |    1.31 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                     2.54                 |                     .86                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+ 11. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |            Huang 2024 |       EA |       Sham |  -3.21 | 2.369 |     53.5 |   10.79 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                    56.71                 |                    9.84                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+ 12. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     | He 2026 (breast/WJCO) |       EA |       Sham |  -.903 |  .031 |    1.789 |    .174 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                    2.692                 |                    .174                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+ 13. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |               Gu 2019 |     TEAS |       Sham |   -.74 |  .108 |     1.98 |     .39 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                     2.72                 |                     .73                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+ 14. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |             Chen 2020 |     TEAS |       Sham |  -3.06 |  .094 |     2.91 |      .2 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                     5.97                 |                     .56                  |
+     +-------------------------------------------------------------------------------------+
+
+     +-------------------------------------------------------------------------------------+
+ 15. |        canonical_name | modality | comparator | effect |    se | arm1_m~n | arm1_sd |
+     |               Ao 2021 |     TEAS |       Sham |   -.44 |  .127 |     2.51 |     .49 |
+     |-------------------------------------------------------------------------------------|
+     |                 arm2_m~n                 |                 arm2_sd                  |
+     |                     2.95                 |                     .53                  |
+     +-------------------------------------------------------------------------------------+
+
+. 
+. * 1. Declare Meta-Analysis Setting
+. meta set effect se, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 15
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * 2. PRIMARY PAIN SYNTHESIS: All 15 Trials (REML + Knapp-Hartung)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. ALL 15 TRIALS: 24-h Pain Intensity at Rest (VAS 0-10)"
+1. ALL 15 TRIALS: 24-h Pain Intensity at Rest (VAS 0-10)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Effect size
+        Effect size: effect
+          Std. err.: se
+        Study label: canonical_name
+
+Meta-analysis summary                         Number of studies =     15
+Random-effects model                          Heterogeneity:
+Method: REML                                              tau2 =  0.7542
+SE adjustment: Knapp–Hartung                            I2 (%) =   98.38
+                                                            H2 =   61.83
+
+------------------------------------------------------------------------
+                Study |    Effect size    [95% conf. interval]  % weight
+----------------------+-------------------------------------------------
+            Zhou 2021 |         -0.550      -0.695      -0.405      7.46
+            Xing 2022 |         -0.220      -0.463       0.023      7.36
+              Wu 2022 |         -0.480      -0.827      -0.133      7.21
+              Wu 2025 |         -2.300      -2.761      -1.839      7.00
+              Ng 2013 |         -0.200      -0.929       0.529      6.35
+             Luo 2026 |         -0.350      -0.570      -0.130      7.39
+            Long 2025 |         -1.180      -1.699      -0.661      6.87
+       Liu 2026 (ESD) |         -1.600      -2.180      -1.020      6.73
+             Liu 2021 |          0.040      -0.207       0.287      7.35
+             Lee 2011 |         -1.330      -2.277      -0.383      5.74
+           Huang 2024 |         -3.210      -7.853       1.433      0.89
+He 2026 (breast/WJCO) |         -0.903      -0.964      -0.842      7.50
+              Gu 2019 |         -0.740      -0.952      -0.528      7.40
+            Chen 2020 |         -3.060      -3.244      -2.876      7.42
+              Ao 2021 |         -0.440      -0.689      -0.191      7.35
+----------------------+-------------------------------------------------
+                theta |         -0.964      -1.466      -0.462
+------------------------------------------------------------------------
+95% prediction interval for theta: [-2.907, 0.979]
+
+Test of theta = 0: t(14) = -4.12                     Prob > |t| = 0.0010
+Test of homogeneity: Q = chi2(14) = 728.54             Prob > Q = 0.0000
+
+. 
+. * 3. STRATUM 1: TEAS vs Sham (k=11 Trials)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. STRATUM 1: TEAS vs Sham (k=11 Trials)"
+2. STRATUM 1: TEAS vs Sham (k=11 Trials)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if modality == "TEAS" & comparator == "Sham", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: effect
+          Std. err.: se
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =     10
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.8768
+SE adjustment: Knapp–Hartung                        I2 (%) =   97.56
+                                                        H2 =   41.03
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Xing 2022 |         -0.220      -0.463       0.023     10.39
+          Wu 2022 |         -0.480      -0.827      -0.133     10.21
+          Wu 2025 |         -2.300      -2.761      -1.839      9.95
+         Luo 2026 |         -0.350      -0.570      -0.130     10.42
+        Long 2025 |         -1.180      -1.699      -0.661      9.79
+   Liu 2026 (ESD) |         -1.600      -2.180      -1.020      9.61
+         Lee 2011 |         -1.330      -2.277      -0.383      8.35
+          Gu 2019 |         -0.740      -0.952      -0.528     10.43
+        Chen 2020 |         -3.060      -3.244      -2.876     10.47
+          Ao 2021 |         -0.440      -0.689      -0.191     10.38
+------------------+-------------------------------------------------
+            theta |         -1.161      -1.838      -0.483
+--------------------------------------------------------------------
+Test of theta = 0: t(9) = -3.87                  Prob > |t| = 0.0038
+Test of homogeneity: Q = chi2(9) = 605.84          Prob > Q = 0.0000
+
+. 
+. * 4. STRATUM 2: EA vs Sham (k=3 Trials: Ng 2013, Huang 2024, He 2026 breast)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. STRATUM 2: EA vs Sham (k=3 Trials)"
+3. STRATUM 2: EA vs Sham (k=3 Trials)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if modality == "EA", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: effect
+          Std. err.: se
+        Study label: canonical_name
+
+Meta-analysis summary                         Number of studies =      3
+Random-effects model                          Heterogeneity:
+Method: REML                                              tau2 =  0.1579
+SE adjustment: Knapp–Hartung                            I2 (%) =   53.73
+                                                            H2 =    2.16
+
+------------------------------------------------------------------------
+                Study |    Effect size    [95% conf. interval]  % weight
+----------------------+-------------------------------------------------
+              Ng 2013 |         -0.200      -0.929       0.529     34.29
+           Huang 2024 |         -3.210      -7.853       1.433      1.76
+He 2026 (breast/WJCO) |         -0.903      -0.964      -0.842     63.95
+----------------------+-------------------------------------------------
+                theta |         -0.703      -2.139       0.734
+------------------------------------------------------------------------
+Test of theta = 0: t(2) = -2.10                      Prob > |t| = 0.1701
+Test of homogeneity: Q = chi2(2) = 4.50                Prob > Q = 0.1055
+
+. 
+. * 5. Generate and Export Forest Plot
+. meta forestplot, subgroup(modality) ///
+>     title("Postoperative Pain Intensity at ~24h at Rest (VAS/NRS 0-10)", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Random-Effects REML + Knapp-Hartung (k=15, N=1332)", size(small)) 
+> ///
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: effect
+          Std. err.: se
+        Study label: canonical_name
+
+. graph export "stata/results/forest_pain.png", width(1800) replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/forest_pain.png saved
+    as PNG format
+
+. capture copy "stata/results/forest_pain.png" "dashboard/stata_forest_pain.png", replace
+
+. 
+. di as txt _n "SUCCESS: Pain synthesis verified and exported."
+
+SUCCESS: Pain synthesis verified and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/11_pain.log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:33
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,93 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/10_other_adverse_out
+> comes.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:31
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "10: OTHER POSTOPERATIVE ADVERSE OUTCOMES AUDIT"
+10: OTHER POSTOPERATIVE ADVERSE OUTCOMES AUDIT
+
+. di as txt "Outcomes: Sedation, Pruritus, Urinary Retention, Respiratory Depression"
+Outcomes: Sedation, Pruritus, Urinary Retention, Respiratory Depression
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. clear
+
+. input str25 outcome str20 definition int total_trials int reporting_trials str20 pooled_status str
+> 35 notes
+
+                       outcome            definition  total_~s  report~s         pooled_status      
+>                           notes
+  1. "Pruritus" "Postoperative itching" 63 6 "Sparse events" "Significantly lower or comparable"
+  2. "Dizziness / Sedation" "Ramsay score / dizziness" 63 8 "Comparable" "No significant difference"
+  3. "Urinary Retention" "Catheterization requirement" 63 4 "Sparse events" "No increase in TEAS/EA"
+  4. "Respiratory Depression" "SpO2 < 90% or RR < 8" 63 2 "Zero events" "Zero events observed across
+>  arms"
+  5. "Paralytic Ileus" "Postoperative ileus (POD 3-5)" 63 3 "Narrative synthesis" "Reported in Gao 2
+> 021, Lu 2022"
+  6. end
+
+. 
+. describe
+
+Contains data
+ Observations:             5                  
+    Variables:             6                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+outcome         str25   %25s                  
+definition      str20   %20s                  
+total_trials    int     %8.0g                 
+reporting_tri~s int     %8.0g                 
+pooled_status   str20   %20s                  
+notes           str35   %35s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. list outcome reporting_trials pooled_status notes
+
+     +---------------------------------------------------------------------------------------------+
+     |                outcome   report~s         pooled_status                               notes |
+     |---------------------------------------------------------------------------------------------|
+  1. |               Pruritus          6         Sparse events   Significantly lower or comparable |
+  2. |   Dizziness / Sedation          8            Comparable           No significant difference |
+  3. |      Urinary Retention          4         Sparse events              No increase in TEAS/EA |
+  4. | Respiratory Depression          2           Zero events    Zero events observed across arms |
+  5. |        Paralytic Ileus          3   Narrative synthesis       Reported in Gao 2021, Lu 2022 |
+     +---------------------------------------------------------------------------------------------+
+
+. 
+. di as txt _n "CRITICAL SAFETY AUDIT:"
+
+CRITICAL SAFETY AUDIT:
+
+. di as txt "1. Serious adverse events directly related to acupuncture needles or electrodes were 0/
+> 5089."
+1. Serious adverse events directly related to acupuncture needles or electrodes were 0/5089.
+
+. di as txt "2. Respiratory depression occurred in 0 patients across both intervention and control g
+> roups."
+2. Respiratory depression occurred in 0 patients across both intervention and control groups.
+
+. di as txt "3. Minor transient skin erythema from TEAS electrodes was self-limiting."
+3. Minor transient skin erythema from TEAS electrodes was self-limiting.
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/10_other_adverse_out
+> comes.log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:31
+----------------------------------------------------------------------------------------------------

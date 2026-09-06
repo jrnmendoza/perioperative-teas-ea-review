@@ -1,0 +1,378 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/17_meta_regression.l
+> og
+  log type:  text
+ opened on:   6 Sep 2026, 12:00:17
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "17: EXPLORATORY STUDY-LEVEL RANDOM-EFFECTS META-REGRESSION"
+17: EXPLORATORY STUDY-LEVEL RANDOM-EFFECTS META-REGRESSION
+
+. di as txt "WARNING: Study-level associations are hypothesis-generating and"
+WARNING: Study-level associations are hypothesis-generating and
+
+. di as txt "do not establish causality or individual-patient treatment effects."
+do not establish causality or individual-patient treatment effects.
+
+. di as txt "R2 reflects proportion of tau2 explained, not individual patient variance."
+R2 reflects proportion of tau2 explained, not individual patient variance.
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. import delimited "stata/stata_consensus_synthesis_data.csv", clear varnames(1)
+(encoding automatically selected: UTF-8)
+(32 vars, 11 obs)
+
+. 
+. * Merge extended indicators: is_multiphase, freq_dd, pct_female
+. gen is_multiphase = (canonical_name == "Zhang 2025" | canonical_name == "Yang 2024" | canonical_na
+> me == "Sim 2002" | canonical_name == "Seevaunnamtum 2016" | canonical_name == "Chen 2015 (Hyperalg
+> esia)")
+
+. gen freq_dd = (canonical_name == "Zhang 2025" | canonical_name == "Sim 2002" | canonical_name == "
+> He 2026 (hepatectomy/JIS)" | canonical_name == "Chen 1998" | canonical_name == "Chen 2020" | canon
+> ical_name == "Chen 2015 (Thyroidectomy)" | canonical_name == "Chen 2015 (Hyperalgesia)")
+
+. gen pct_female = 100.0 if canonical_name == "Zhang 2025"
+(10 missing values generated)
+
+. replace pct_female = 67.8 if canonical_name == "Yang 2024"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Sim 2002"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Seevaunnamtum 2016"
+(1 real change made)
+
+. replace pct_female = 22.1 if canonical_name == "He 2026 (hepatectomy/JIS)"
+(1 real change made)
+
+. replace pct_female = 90.2 if canonical_name == "El-Rakshy 2009"
+(1 real change made)
+
+. replace pct_female = 36.4 if canonical_name == "Coura 2011"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Chen 1998"
+(1 real change made)
+
+. replace pct_female = 43.8 if canonical_name == "Chen 2020"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Chen 2015 (Thyroidectomy)"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Chen 2015 (Hyperalgesia)"
+(1 real change made)
+
+. 
+. describe
+
+Contains data
+ Observations:            11                  
+    Variables:            35                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+author          str13   %13s                  
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str7    %9s                   
+comparator_type str24   %24s                  
+stratum         str13   %13s                  
+native_drug     str19   %19s                  
+native_unit     str19   %19s                  
+mme_factor      float   %9.0g                 
+arm1_n          byte    %8.0g                 
+arm1_mean_mme   float   %9.0g                 
+arm1_sd_mme     float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean_mme   float   %9.0g                 
+arm2_sd_mme     float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+md_native       float   %9.0g                 
+se_native       float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+rob2_overall    str13   %13s                  
+is_high_rob     byte    %8.0g                 
+opioid_status   str19   %19s                  
+is_multiphase   float   %9.0g                 
+freq_dd         float   %9.0g                 
+pct_female      float   %9.0g                 
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. meta set md_mme se_mme, studylabel(canonical_name) studysize(arm1_n)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: canonical_name
+        Study size: arm1_n
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * 1. MODEL 1: BASELINE CONTROL-GROUP OPIOID CONSUMPTION (mg IV MME)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "MODEL 1: Baseline Control Opioid Requirement (arm2_mean_mme)"
+MODEL 1: Baseline Control Opioid Requirement (arm2_mean_mme)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta regress arm2_mean_mme, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Random-effects meta-regression                      Number of obs  =        11
+Method: REML                                        Residual heterogeneity:
+SE adjustment: Knapp–Hartung                                    tau2 =   15.28
+                                                              I2 (%) =   99.47
+                                                                  H2 =  187.34
+                                                       R-squared (%) =   49.08
+                                                    Model F(1,9)   =      8.22
+                                                    Prob > F       =    0.0186
+-------------------------------------------------------------------------------
+     _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+arm2_mean_mme |  -.1696996   .0591891    -2.87   0.019    -.3035948   -.0358045
+        _cons |  -.0810143   2.047999    -0.04   0.969    -4.713909     4.55188
+-------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(9) = 180.18   Prob > Q_res = 0.0000
+
+. estat bubbleplot, title("Meta-Regression: Baseline Surgical Opioid Requirement", size(medium)) ///
+>     subtitle("Random-effects REML with Knapp–Hartung adjustment (k = 11, R² = 49.08%)", size(small
+> )) ///
+>     xtitle("Control Group 24-h Opioid Consumption (mg IV MME)", size(small)) ///
+>     ytitle("Mean Difference in 24-h Opioid Consumption (mg IV MME)", size(small)) ///
+>     note("Slope β = -0.170 (95% CI: -0.304, -0.036), t(9) = -2.87, p = 0.019", size(vsmall))
+
+. graph export "stata/results/meta_reg_baseline_mme.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/meta_reg_baseline_mme.pn
+    > g saved as PNG format
+
+. capture copy "stata/results/meta_reg_baseline_mme.png" "dashboard/stata_meta_reg_baseline_mme.png"
+> , replace
+
+. 
+. * 2. MODEL 2: PUBLICATION YEAR (TEMPORAL MODERATOR)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "MODEL 2: Publication Year (year)"
+MODEL 2: Publication Year (year)
+
+. di as txt "Note: Secular trends in perioperative practice / ERAS may contribute."
+Note: Secular trends in perioperative practice / ERAS may contribute.
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta regress year, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Random-effects meta-regression                      Number of obs  =        11
+Method: REML                                        Residual heterogeneity:
+SE adjustment: Knapp–Hartung                                    tau2 =   5.158
+                                                              I2 (%) =   96.68
+                                                                  H2 =   30.09
+                                                       R-squared (%) =   82.81
+                                                    Model F(1,9)   =      6.77
+                                                    Prob > F       =    0.0287
+------------------------------------------------------------------------------
+    _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+        year |   .4713063   .1811418     2.60   0.029     .0615352    .8810774
+       _cons |  -954.5895   365.7543    -2.61   0.028    -1781.983   -127.1958
+------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(9) = 151.71   Prob > Q_res = 0.0000
+
+. estat bubbleplot, title("Meta-Regression: Publication Year", size(medium)) ///
+>     subtitle("Random-effects REML with Knapp–Hartung adjustment (k = 11, R² = 82.81%)", size(small
+> )) ///
+>     xtitle("Publication Year", size(small)) ///
+>     ytitle("Mean Difference in 24-h Opioid Consumption (mg IV MME)", size(small)) ///
+>     note("Slope β = +0.471 (95% CI: +0.062, +0.881), t(9) = +2.60, p = 0.029", size(vsmall))
+
+. graph export "stata/results/meta_reg_year.png", width(1800) replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/meta_reg_year.png saved
+    as PNG format
+
+. capture copy "stata/results/meta_reg_year.png" "dashboard/stata_meta_reg_year.png", replace
+
+. 
+. * 3. MODEL 3: DEMOGRAPHIC SEX (% FEMALE PARTICIPANTS)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "MODEL 3: Patient Sex (% Female Participants)"
+MODEL 3: Patient Sex (% Female Participants)
+
+. di as txt "ECOLOGICAL FALLACY WARNING: Study-level proportion female does NOT"
+ECOLOGICAL FALLACY WARNING: Study-level proportion female does NOT
+
+. di as txt "represent individual-patient sex differences."
+represent individual-patient sex differences.
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta regress pct_female, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Random-effects meta-regression                      Number of obs  =        11
+Method: REML                                        Residual heterogeneity:
+SE adjustment: Knapp–Hartung                                    tau2 =   38.33
+                                                              I2 (%) =   99.73
+                                                                  H2 =  372.84
+                                                       R-squared (%) =    0.00
+                                                    Model F(1,9)   =      0.03
+                                                    Prob > F       =    0.8746
+------------------------------------------------------------------------------
+    _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+  pct_female |  -.0127958   .0788075    -0.16   0.875    -.1910707    .1654792
+       _cons |  -4.325764   6.493357    -0.67   0.522    -19.01476    10.36323
+------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(9) = 97.37    Prob > Q_res = 0.0000
+
+. estat bubbleplot, title("Meta-Regression: Trial Sex Composition (% Female)", size(medium)) ///
+>     subtitle("Random-effects REML with Knapp–Hartung adjustment (k = 11, R² = 0.00%)", size(small)
+> ) ///
+>     xtitle("Proportion of Female Participants (% Female)", size(small)) ///
+>     ytitle("Mean Difference in 24-h Opioid Consumption (mg IV MME)", size(small)) ///
+>     note("Slope β = -0.013 (95% CI: -0.191, +0.165), t(9) = -0.16, p = 0.875", size(vsmall))
+
+. graph export "stata/results/meta_reg_sex.png", width(1800) replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/meta_reg_sex.png saved
+    as PNG format
+
+. capture copy "stata/results/meta_reg_sex.png" "dashboard/stata_meta_reg_sex.png", replace
+
+. 
+. * 4. MODEL 4: STIMULATION TIMING (MULTI-PHASE VS PREOPERATIVE ONLY)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "MODEL 4: Stimulation Timing (Multi-phase vs Preoperative only)"
+MODEL 4: Stimulation Timing (Multi-phase vs Preoperative only)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta regress is_multiphase, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Random-effects meta-regression                      Number of obs  =        11
+Method: REML                                        Residual heterogeneity:
+SE adjustment: Knapp–Hartung                                    tau2 =   35.62
+                                                              I2 (%) =   99.71
+                                                                  H2 =  340.50
+                                                       R-squared (%) =    0.00
+                                                    Model F(1,9)   =      0.48
+                                                    Prob > F       =    0.5050
+-------------------------------------------------------------------------------
+     _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+is_multiphase |   3.102421   4.468382     0.69   0.505     -7.00576     13.2106
+        _cons |  -6.703715   3.079022    -2.18   0.057    -13.66895    .2615171
+-------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(9) = 72.79    Prob > Q_res = 0.0000
+
+. 
+. * 5. MODEL 5: ELECTRICAL FREQUENCY (DENSE-DISPERSE 2/100 HZ VS FIXED)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "MODEL 5: Electrical Frequency (Dense-Disperse 2/100 Hz vs Fixed)"
+MODEL 5: Electrical Frequency (Dense-Disperse 2/100 Hz vs Fixed)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta regress freq_dd, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Random-effects meta-regression                      Number of obs  =        11
+Method: REML                                        Residual heterogeneity:
+SE adjustment: Knapp–Hartung                                    tau2 =   34.69
+                                                              I2 (%) =   99.79
+                                                                  H2 =  469.57
+                                                       R-squared (%) =    0.00
+                                                    Model F(1,9)   =      0.46
+                                                    Prob > F       =    0.5160
+------------------------------------------------------------------------------
+    _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+     freq_dd |   3.222961   4.766731     0.68   0.516    -7.560133    14.00606
+       _cons |  -7.385773   3.924544    -1.88   0.093    -16.26371    1.492162
+------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(9) = 197.30   Prob > Q_res = 0.0000
+
+. 
+. di as txt _n "SUCCESS: Meta-regression models executed and bubble plots exported."
+
+SUCCESS: Meta-regression models executed and bubble plots exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/17_meta_regression.l
+> og
+  log type:  text
+ closed on:   6 Sep 2026, 12:00:19
+----------------------------------------------------------------------------------------------------

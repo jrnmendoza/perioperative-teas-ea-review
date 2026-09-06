@@ -1,0 +1,6 @@
+study_id,canonical_name,author,year,modality,comparator,comparator_type,stratum,native_drug,native_unit,mme_factor,arm1_n,arm1_mean_mme,arm1_sd_mme,arm2_n,arm2_mean_mme,arm2_sd_mme,md_mme,se_mme,arm1_mean_native,arm1_sd_native,arm2_mean_native,arm2_sd_native,md_native,se_native,hedges_g,hedges_se,rob2_overall,is_high_rob,opioid_status
+1879896688,Chen 2020,Chen J,2020,TEAS,Sham,Sham-Controlled,TEAS vs Sham,IV sufentanil,µg,0.1,40,11.852,0.977,40,14.015,0.787,-2.163,0.198,118.52,9.77,140.15,7.87,-21.63,1.983,-2.411,0.301,Some concerns,0,Primary Direct
+1879895909,He 2026,He,2026,TEAS,Sham,Sham-Controlled,TEAS vs Sham,MME,mg MME,1.0,80,39.5,4.0,79,40.4,7.1,-0.9,0.915,39.5,4.0,40.4,7.1,-0.9,0.915,-0.156,0.159,Some concerns,0,Primary Direct
+1879896412,Zhang 2023,Zhang,2023,TEAS,Sham,Sham-Controlled,TEAS vs Sham,IV sufentanil PCIA (MME),mg MME,1.0,922,100.0,22.24,916,103.33,14.83,-3.333,0.881,100.0,22.24,103.33,14.83,-3.333,0.881,-0.176,0.047,Low,0,Derived Conditional
+1879897069,An 2014,An L,2014,EA,Control,No Stimulation / Control,EA vs Control,IV fentanyl,mg,100.0,41,67.0,9.0,40,73.0,12.0,-6.0,2.361,0.67,0.09,0.73,0.12,-0.06,0.0236,-0.56,0.228,Some concerns,0,Primary Direct
+1879897414,Wong 2006,Wong,2006,EA,Sham,Sham-Controlled,EA vs Sham,IV morphine,mg,1.0,13,33.9,12.8,12,42.3,21.3,-8.4,7.099,33.9,12.8,42.3,21.3,-8.4,7.099,-0.468,0.404,Low,0,Primary Direct

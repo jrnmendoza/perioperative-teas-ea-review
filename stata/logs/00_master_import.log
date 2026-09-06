@@ -1,0 +1,498 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/00_master_import.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:18
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "00: AUDITING AND IMPORTING ALL SYSTEMATIC REVIEW DATASETS"
+00: AUDITING AND IMPORTING ALL SYSTEMATIC REVIEW DATASETS
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. * 1. Check Primary 24-h Opioid Dataset (k=11)
+. import delimited "stata/stata_consensus_synthesis_data.csv", clear varnames(1)
+(encoding automatically selected: UTF-8)
+(32 vars, 11 obs)
+
+. describe
+
+Contains data
+ Observations:            11                  
+    Variables:            32                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+author          str13   %13s                  
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str7    %9s                   
+comparator_type str24   %24s                  
+stratum         str13   %13s                  
+native_drug     str19   %19s                  
+native_unit     str19   %19s                  
+mme_factor      float   %9.0g                 
+arm1_n          byte    %8.0g                 
+arm1_mean_mme   float   %9.0g                 
+arm1_sd_mme     float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean_mme   float   %9.0g                 
+arm2_sd_mme     float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+md_native       float   %9.0g                 
+se_native       float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+rob2_overall    str13   %13s                  
+is_high_rob     byte    %8.0g                 
+opioid_status   str19   %19s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. di as txt "Primary 24h opioid observations: " _N
+Primary 24h opioid observations: 11
+
+. assert _N == 11
+
+. list canonical_name modality comparator md_mme se_mme
+
+     +-------------------------------------------------------------------+
+     |            canonical_name   modality   compar~r   md_mme   se_mme |
+     |-------------------------------------------------------------------|
+  1. |                 Chen 1998       TEAS       Sham      -21    6.103 |
+  2. |            El-Rakshy 2009         EA    Control     -1.6    3.719 |
+  3. |        Seevaunnamtum 2016       TEAS       Sham   -12.56    4.389 |
+  4. |                 Chen 2020       TEAS       Sham   -2.819     .178 |
+  5. |                 Yang 2024       TEAS       Sham      -.3     .716 |
+     |-------------------------------------------------------------------|
+  6. | He 2026 (hepatectomy/JIS)       TEAS       Sham      -.6     .578 |
+  7. |                  Sim 2002         EA       Sham    -8.92     4.87 |
+  8. |                Coura 2011         EA       Sham    -22.4     5.67 |
+  9. |  Chen 2015 (Hyperalgesia)       TEAS       Sham   -1.122     .128 |
+ 10. | Chen 2015 (Thyroidectomy)       TEAS       Sham       -5    1.234 |
+     |-------------------------------------------------------------------|
+ 11. |                Zhang 2025       TEAS       Sham    -.326       .1 |
+     +-------------------------------------------------------------------+
+
+. save "stata/stata_consensus_synthesis_data.dta", replace
+file stata/stata_consensus_synthesis_data.dta saved
+
+. 
+. * 2. Check Key Secondary 48-h Opioid Dataset (k=5)
+. import delimited "stata/stata_48h_opioid_synthesis_data.csv", clear varnames(1)
+(encoding automatically selected: UTF-8)
+(30 vars, 5 obs)
+
+. describe
+
+Contains data
+ Observations:             5                  
+    Variables:            30                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str10   %10s                  
+author          str6    %9s                   
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str7    %9s                   
+comparator_type str24   %24s                  
+stratum         str13   %13s                  
+native_drug     str24   %24s                  
+native_unit     str6    %9s                   
+mme_factor      float   %9.0g                 
+arm1_n          int     %8.0g                 
+arm1_mean_mme   float   %9.0g                 
+arm1_sd_mme     float   %9.0g                 
+arm2_n          int     %8.0g                 
+arm2_mean_mme   float   %9.0g                 
+arm2_sd_mme     float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+md_native       float   %9.0g                 
+se_native       float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+rob2_overall    str13   %13s                  
+is_high_rob     byte    %8.0g                 
+opioid_status   str19   %19s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. di as txt "Key Secondary 48h opioid observations: " _N
+Key Secondary 48h opioid observations: 5
+
+. assert _N == 5
+
+. list canonical_name modality comparator md_mme se_mme
+
+     +----------------------------------------------------+
+     | canonica~e   modality   compar~r   md_mme   se_mme |
+     |----------------------------------------------------|
+  1. |  Chen 2020       TEAS       Sham   -2.163     .198 |
+  2. |    He 2026       TEAS       Sham      -.9     .915 |
+  3. | Zhang 2023       TEAS       Sham   -3.333     .881 |
+  4. |    An 2014         EA    Control       -6    2.361 |
+  5. |  Wong 2006         EA       Sham     -8.4    7.099 |
+     +----------------------------------------------------+
+
+. save "stata/stata_48h_opioid_synthesis_data.dta", replace
+file stata/stata_48h_opioid_synthesis_data.dta saved
+
+. 
+. * 3. Check Exploratory 72-h Opioid Dataset (k=4)
+. import delimited "stata/stata_72h_opioid_synthesis_data.csv", clear varnames(1)
+(encoding automatically selected: UTF-8)
+(30 vars, 4 obs)
+
+. describe
+
+Contains data
+ Observations:             4                  
+    Variables:            30                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str10   %10s                  
+author          str5    %9s                   
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str10   %10s                  
+comparator_type str38   %38s                  
+stratum         str16   %16s                  
+native_drug     str13   %13s                  
+native_unit     str3    %9s                   
+mme_factor      byte    %8.0g                 
+arm1_n          byte    %8.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+arm1_mean       float   %9.0g                 
+arm1_sd         float   %9.0g                 
+arm2_mean       float   %9.0g                 
+arm2_sd         float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+opioid_status   str14   %14s                  
+rob2_overall    str13   %13s                  
+surgery_categ~y str29   %29s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. di as txt "Exploratory 72h opioid observations: " _N
+Exploratory 72h opioid observations: 4
+
+. assert _N == 4
+
+. list canonical_name modality comparator md_mme se_mme
+
+     +------------------------------------------------------+
+     | canonica~e   modality   comparator   md_mme   se_mme |
+     |------------------------------------------------------|
+  1. | Zhang 2025       TEAS         Sham    -26.2    3.044 |
+  2. |   Xie 2014         EA         Sham    -18.5    2.062 |
+  3. |  Wong 2006         EA         Sham     -8.4    7.099 |
+  4. |  Yang 2024         EA   Usual Care      -.5    1.826 |
+     +------------------------------------------------------+
+
+. save "stata/stata_72h_opioid_synthesis_data.dta", replace
+file stata/stata_72h_opioid_synthesis_data.dta saved
+
+. 
+. * 4. Check Secondary Outcomes Dataset (Pain, Flatus, PONV)
+. import delimited "stata/stata_secondary_synthesis_data.csv", clear varnames(1)
+(encoding automatically selected: ISO-8859-1)
+(16 vars, 44 obs)
+
+. describe
+
+Contains data
+ Observations:            44                  
+    Variables:            16                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+outcome_domain  str11   %11s                  
+modality        str4    %9s                   
+comparator      str10   %10s                  
+arm1_events     int     %8.0g                 
+arm1_n          int     %8.0g                 
+arm2_events     byte    %8.0g                 
+arm2_n          int     %8.0g                 
+effect          float   %9.0g                 
+se              float   %9.0g                 
+rob2_overall    str13   %13s                  
+arm1_mean       float   %9.0g                 
+arm1_sd         float   %9.0g                 
+arm2_mean       float   %9.0g                 
+arm2_sd         float   %9.0g                 
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. di as txt "Secondary outcomes observations: " _N
+Secondary outcomes observations: 44
+
+. tab outcome_domain
+
+outcome_dom |
+        ain |      Freq.     Percent        Cum.
+------------+-----------------------------------
+Flatus_Time |         10       22.73       22.73
+       PONV |         19       43.18       65.91
+   Pain_24h |         15       34.09      100.00
+------------+-----------------------------------
+      Total |         44      100.00
+
+. save "stata/stata_secondary_synthesis_data.dta", replace
+file stata/stata_secondary_synthesis_data.dta saved
+
+. 
+. * 5. Check Intraoperative Remifentanil Dataset (k=11)
+. import delimited "stata/stata_intraop_remifentanil_data.csv", clear varnames(1)
+(encoding automatically selected: ISO-8859-1)
+(13 vars, 11 obs)
+
+. describe
+
+Contains data
+ Observations:            11                  
+    Variables:            13                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str13   %13s                  
+modality        str4    %9s                   
+comparator      str4    %9s                   
+arm1_n          byte    %8.0g                 
+arm1_mean       float   %9.0g                 
+arm1_sd         float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean       float   %9.0g                 
+arm2_sd         float   %9.0g                 
+md              float   %9.0g                 
+se              float   %9.0g                 
+unit            str2    %9s                   
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. di as txt "Intraoperative remifentanil observations: " _N
+Intraoperative remifentanil observations: 11
+
+. assert _N == 11
+
+. list canonical_name arm1_mean arm1_sd arm2_mean arm2_sd md se
+
+     +----------------------------------------------------------------------------+
+     | canonical_n~e   arm1_m~n   arm1_sd   arm2_m~n   arm2_sd        md       se |
+     |----------------------------------------------------------------------------|
+  1. |    Zheng 2025      233.1      29.6      289.5      37.9     -56.4     7.37 |
+  2. |     Xing 2022    1415.41    295.67    1619.13    328.98   -203.72    82.14 |
+  3. |      Pan 2023      740.1     276.9        854     287.5    -113.9    55.08 |
+  4. | Ntritsou 2014     1003.6     522.7     1041.9     631.9     -38.3   138.62 |
+  5. |       Wu 2022       1383       494       1637       630      -254   122.95 |
+     |----------------------------------------------------------------------------|
+  6. |       Wu 2025      489.4       226      533.8     263.6     -44.4     49.1 |
+  7. |      Liu 2025      911.1     233.8     1095.9     362.2    -184.8    68.17 |
+  8. |       Li 2022       1989     158.7       2009     143.2       -20    33.19 |
+  9. |      Guo 2023        870       300       1010       390      -140    89.81 |
+ 10. | He 2026 (#25)       2500      1400       2800      1900      -300   372.42 |
+     |----------------------------------------------------------------------------|
+ 11. |      Xie 2014       1890       630       1900       590       -10   192.94 |
+     +----------------------------------------------------------------------------+
+
+. save "stata/stata_intraop_remifentanil_data.dta", replace
+file stata/stata_intraop_remifentanil_data.dta saved
+
+. 
+. * 6. Check Rescue Analgesia Dataset (k=9)
+. import delimited "stata/stata_rescue_analgesia_data.csv", clear varnames(1)
+(encoding automatically selected: ISO-8859-1)
+(10 vars, 9 obs)
+
+. describe
+
+Contains data
+ Observations:             9                  
+    Variables:            10                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str21   %21s                  
+modality        str4    %9s                   
+comparator      str4    %9s                   
+arm1_events     byte    %8.0g                 
+arm1_n          int     %8.0g                 
+arm2_events     byte    %8.0g                 
+arm2_n          int     %8.0g                 
+rescue_drug     str22   %22s                  
+is_opioid       byte    %8.0g                 
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. di as txt "Rescue analgesia observations: " _N
+Rescue analgesia observations: 9
+
+. assert _N == 9
+
+. list canonical_name arm1_events arm1_n arm2_events arm2_n rescue_drug is_opioid
+
+     +----------------------------------------------------------------------------------------+
+  1. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |               Tu 2024 |        3 |     57 |        6 |     58 |       Tramadol 10mg IM |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  2. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |              Sun 2017 |        3 |     38 |        9 |     39 | Supplemental analgesia |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  3. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |              Pan 2023 |       10 |     52 |       18 |     53 |       Tramadol 50mg IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  4. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |               Lu 2021 |        7 |     38 |       17 |     47 |      Parecoxib 40mg IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               0                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  5. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |              Luo 2026 |        5 |    138 |        5 |    139 |     Oral acetaminophen |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               0                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  6. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |        Liu 2026 (ESD) |       19 |     58 |       40 |     62 |            Morphine IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  7. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |            Huang 2025 |        1 |     43 |        4 |     45 |      Ketorolac 30mg IM |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               0                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  8. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     |              Hou 2023 |       15 |     36 |       28 |     36 |        Morphine 5mg IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               1                                        |
+     +----------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------+
+  9. |        canonical_name | arm1_e~s | arm1_n | arm2_e~s | arm2_n |            rescue_drug |
+     | He 2026 (breast/WJCO) |       13 |     65 |       22 |     65 |   Flurbiprofen 50mg IV |
+     |----------------------------------------------------------------------------------------|
+     |                                        is_opi~d                                        |
+     |                                               0                                        |
+     +----------------------------------------------------------------------------------------+
+
+. save "stata/stata_rescue_analgesia_data.dta", replace
+file stata/stata_rescue_analgesia_data.dta saved
+
+. 
+. * 7. Check Extended Moderators Dataset
+. import delimited "stata/stata_extended_moderators.csv", clear varnames(1)
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 11 obs)
+
+. describe
+
+Contains data
+ Observations:            11                  
+    Variables:             7                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+canonical_name  str25   %25s                  
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+timing          str27   %27s                  
+is_multiphase   byte    %8.0g                 
+freq_dd         byte    %8.0g                 
+pct_female      float   %9.0g                 
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. di as txt "Extended moderators observations: " _N
+Extended moderators observations: 11
+
+. save "stata/stata_extended_moderators.dta", replace
+file stata/stata_extended_moderators.dta saved
+
+. 
+. di as txt _n "SUCCESS: All master datasets imported, verified, and converted to Stata .dta."
+
+SUCCESS: All master datasets imported, verified, and converted to Stata .dta.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/00_master_import.log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:18
+----------------------------------------------------------------------------------------------------

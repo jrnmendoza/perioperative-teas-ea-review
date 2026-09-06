@@ -10,6 +10,9 @@ stata.log
 validate_with_stata.log
 !dashboard/stata_strategy_synthesis.log
 !docs/stata_strategy_synthesis.log
+!stata/logs/
+!stata/logs/*.log
+
 
 # Large binary files & intermediate scraping batches
 retrieved_pdfs/

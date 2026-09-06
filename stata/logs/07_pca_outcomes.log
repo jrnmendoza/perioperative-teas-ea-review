@@ -1,0 +1,95 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/07_pca_outcomes.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:28
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "07: PCA OUTCOMES & PUMP PARAMETERS AUDIT"
+07: PCA OUTCOMES & PUMP PARAMETERS AUDIT
+
+. di as txt "Rule: PCA presses are NOT opioid consumption. Avoid double counting."
+Rule: PCA presses are NOT opioid consumption. Avoid double counting.
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. clear
+
+. input str20 canonical_name str15 drug str15 bolus_dose str12 lockout str15 basal_rate str20 max_li
+> mit str25 outcome_type
+
+           canonical_name             drug       bolus_dose       lockout       basal_rate          
+>    max_limit               outcome_type
+  1. "Chen 1998" "Hydromorphone" "0.2 mg" "6 min" "None" "None reported" "PCA deliveries & demands"
+  2. "Sim 2002" "Morphine" "1 mg" "5 min" "None" "None reported" "PCA demands & deliveries"
+  3. "Coura 2011" "Fentanyl" "20 ug" "10 min" "None" "None reported" "PCA boluses"
+  4. "Jin 2023" "Sufentanil" "2 ug" "15 min" "2 ug/h" "None reported" "PCA pump compressions"
+  5. "Lu 2022" "Sufentanil" "2 ug" "15 min" "1.5 ug/h" "None reported" "PCA demand attempts"
+  6. "Zhang 2023" "Sufentanil" "2 ug" "10 min" "1.5 ug/h" "None reported" "PCA bolus count"
+  7. end
+
+. 
+. describe
+
+Contains data
+ Observations:             6                  
+    Variables:             7                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+canonical_name  str20   %20s                  
+drug            str15   %15s                  
+bolus_dose      str15   %15s                  
+lockout         str12   %12s                  
+basal_rate      str15   %15s                  
+max_limit       str20   %20s                  
+outcome_type    str25   %25s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. list canonical_name drug bolus_dose lockout basal_rate outcome_type
+
+     +---------------------------------------------------------------------------------------+
+     | canonica~e            drug   bolus_~e   lockout   basal_~e               outcome_type |
+     |---------------------------------------------------------------------------------------|
+  1. |  Chen 1998   Hydromorphone     0.2 mg     6 min       None   PCA deliveries & demands |
+  2. |   Sim 2002        Morphine       1 mg     5 min       None   PCA demands & deliveries |
+  3. | Coura 2011        Fentanyl      20 ug    10 min       None                PCA boluses |
+  4. |   Jin 2023      Sufentanil       2 ug    15 min     2 ug/h      PCA pump compressions |
+  5. |    Lu 2022      Sufentanil       2 ug    15 min   1.5 ug/h        PCA demand attempts |
+     |---------------------------------------------------------------------------------------|
+  6. | Zhang 2023      Sufentanil       2 ug    10 min   1.5 ug/h            PCA bolus count |
+     +---------------------------------------------------------------------------------------+
+
+. 
+. di as txt _n "METHODOLOGICAL SUMMARY:"
+
+METHODOLOGICAL SUMMARY:
+
+. di as txt "1. Trials vary widely in pump lockout intervals (5 min to 15 min) and basal infusion."
+1. Trials vary widely in pump lockout intervals (5 min to 15 min) and basal infusion.
+
+. di as txt "2. PCA press counts reflect patient-perceived pain behavior, not actual mg exposure."
+2. PCA press counts reflect patient-perceived pain behavior, not actual mg exposure.
+
+. di as txt "3. PCA-delivered dose is already integrated into 24-h/48-h cumulative MME where valid."
+3. PCA-delivered dose is already integrated into 24-h/48-h cumulative MME where valid.
+
+. di as txt "4. Double-counting PCA dose as both an independent outcome and within total MME is prev
+> ented."
+4. Double-counting PCA dose as both an independent outcome and within total MME is prevented.
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/07_pca_outcomes.log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:28
+----------------------------------------------------------------------------------------------------

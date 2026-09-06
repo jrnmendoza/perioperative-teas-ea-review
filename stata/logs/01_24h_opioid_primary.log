@@ -1,0 +1,546 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/01_24h_opioid_primar
+> y.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:19
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "01: PRIMARY OPIOID OUTCOME: 0-24 H CUMULATIVE POSTOPERATIVE OPIOID"
+01: PRIMARY OPIOID OUTCOME: 0-24 H CUMULATIVE POSTOPERATIVE OPIOID
+
+. di as txt "Primary Model: Random-Effects REML + Knapp-Hartung Adjustment"
+Primary Model: Random-Effects REML + Knapp-Hartung Adjustment
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "stata/stata_consensus_synthesis_data.dta", clear
+
+. describe
+
+Contains data from stata/stata_consensus_synthesis_data.dta
+ Observations:            11                  
+    Variables:            32                  6 Sep 2026 11:59
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+author          str13   %13s                  
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str7    %9s                   
+comparator_type str24   %24s                  
+stratum         str13   %13s                  
+native_drug     str19   %19s                  
+native_unit     str19   %19s                  
+mme_factor      float   %9.0g                 
+arm1_n          byte    %8.0g                 
+arm1_mean_mme   float   %9.0g                 
+arm1_sd_mme     float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean_mme   float   %9.0g                 
+arm2_sd_mme     float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+md_native       float   %9.0g                 
+se_native       float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+rob2_overall    str13   %13s                  
+is_high_rob     byte    %8.0g                 
+opioid_status   str19   %19s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. 
+. * 1. Declare Meta-Analysis Setting
+. meta set md_mme se_mme, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * 2. PRIMARY MODEL: All 11 Analyzable Trials (REML + Knapp-Hartung)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. PRIMARY SYNTHESIS: ALL 11 TRIALS (REML + Knapp-Hartung)"
+1. PRIMARY SYNTHESIS: ALL 11 TRIALS (REML + Knapp-Hartung)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     11
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 30.0069
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.73
+                                                                H2 =  373.57
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      5.13
+           El-Rakshy 2009 |         -1.600      -8.889       5.689      7.87
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      7.00
+                Chen 2020 |         -2.819      -3.168      -2.470     11.48
+                Yang 2024 |         -0.300      -1.703       1.103     11.30
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     11.36
+                 Sim 2002 |         -8.920     -18.465       0.625      6.42
+               Coura 2011 |        -22.400     -33.513     -11.287      5.55
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     11.48
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     10.94
+               Zhang 2025 |         -0.326      -0.522      -0.130     11.49
+--------------------------+-------------------------------------------------
+                    theta |         -5.035      -9.777      -0.293
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-18.329, 8.259]
+
+Test of theta = 0: t(10) = -2.37                         Prob > |t| = 0.0395
+Test of homogeneity: Q = chi2(10) = 197.30                 Prob > Q = 0.0000
+
+. 
+. * 3. ESTIMATOR SENSITIVITY: DerSimonian-Laird (Explains -5.04 vs -2.03 discrepancy)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. ESTIMATOR SENSITIVITY: DerSimonian-Laird Model"
+2. ESTIMATOR SENSITIVITY: DerSimonian-Laird Model
+
+. di as txt "Note: Explains the -5.04 vs -2.03 discrepancy due to weight concentration."
+Note: Explains the -5.04 vs -2.03 discrepancy due to weight concentration.
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(dl) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     11
+Random-effects model                              Heterogeneity:
+Method: DerSimonian–Laird                                     tau2 =  1.5085
+SE adjustment: Knapp–Hartung                                I2 (%) =   94.93
+                                                                H2 =   19.73
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      0.73
+           El-Rakshy 2009 |         -1.600      -8.889       5.689      1.84
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      1.36
+                Chen 2020 |         -2.819      -3.168      -2.470     18.34
+                Yang 2024 |         -0.300      -1.703       1.103     13.98
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     15.33
+                 Sim 2002 |         -8.920     -18.465       0.625      1.12
+               Coura 2011 |        -22.400     -33.513     -11.287      0.84
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     18.53
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581      9.32
+               Zhang 2025 |         -0.326      -0.522      -0.130     18.61
+--------------------------+-------------------------------------------------
+                    theta |         -2.027      -4.311       0.257
+----------------------------------------------------------------------------
+Test of theta = 0: t(10) = -1.98                         Prob > |t| = 0.0762
+Test of homogeneity: Q = chi2(10) = 197.30                 Prob > Q = 0.0000
+
+. meta summarize, random(dl)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     11
+Random-effects model                              Heterogeneity:
+Method: DerSimonian–Laird                                     tau2 =  1.5085
+                                                            I2 (%) =   94.93
+                                                                H2 =   19.73
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      0.73
+           El-Rakshy 2009 |         -1.600      -8.889       5.689      1.84
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      1.36
+                Chen 2020 |         -2.819      -3.168      -2.470     18.34
+                Yang 2024 |         -0.300      -1.703       1.103     13.98
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     15.33
+                 Sim 2002 |         -8.920     -18.465       0.625      1.12
+               Coura 2011 |        -22.400     -33.513     -11.287      0.84
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     18.53
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581      9.32
+               Zhang 2025 |         -0.326      -0.522      -0.130     18.61
+--------------------------+-------------------------------------------------
+                    theta |         -2.027      -3.069      -0.985
+----------------------------------------------------------------------------
+Test of theta = 0: z = -3.81                             Prob > |z| = 0.0001
+Test of homogeneity: Q = chi2(10) = 197.30                 Prob > Q = 0.0000
+
+. 
+. * 4. PRINCIPAL COMPARISON 1: TEAS vs Sham (k=8 Trials, N=725)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. PRINCIPAL STRATUM 1: TEAS vs Sham (k=8 Trials, N=725)"
+3. PRINCIPAL STRATUM 1: TEAS vs Sham (k=8 Trials, N=725)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if modality == "TEAS" & comparator == "Sham", random(reml) se(kh) predinterval
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =      8
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  5.3495
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.96
+                                                                H2 =   95.73
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      2.11
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      3.64
+                Chen 2020 |         -2.819      -3.168      -2.470     16.67
+                Yang 2024 |         -0.300      -1.703       1.103     15.30
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     15.78
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     16.72
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     13.05
+               Zhang 2025 |         -0.326      -0.522      -0.130     16.74
+--------------------------+-------------------------------------------------
+                    theta |         -2.405      -5.765       0.955
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-9.047, 4.237]
+
+Test of theta = 0: t(7) = -1.69                          Prob > |t| = 0.1344
+Test of homogeneity: Q = chi2(7) = 180.38                  Prob > Q = 0.0000
+
+. 
+. * 5. PRINCIPAL COMPARISON 2: EA vs Sham/Control (k=3 Trials, N=220)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "4. PRINCIPAL STRATUM 2: EA vs Control / Sham (k=3 Trials, N=220)"
+4. PRINCIPAL STRATUM 2: EA vs Control / Sham (k=3 Trials, N=220)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if modality == "EA", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 85.4814
+SE adjustment: Knapp–Hartung                        I2 (%) =   79.51
+                                                        H2 =    4.88
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+   El-Rakshy 2009 |         -1.600      -8.889       5.689     36.31
+         Sim 2002 |         -8.920     -18.465       0.625     33.03
+       Coura 2011 |        -22.400     -33.513     -11.287     30.66
+------------------+-------------------------------------------------
+            theta |        -10.395     -36.388      15.599
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = -1.72                  Prob > |t| = 0.2275
+Test of homogeneity: Q = chi2(2) = 9.44            Prob > Q = 0.0089
+
+. 
+. * 6. SUBGROUP A: 6 Directly Reported Trials
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "5. SUBGROUP A: 6 Directly Reported Trials"
+5. SUBGROUP A: 6 Directly Reported Trials
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if opioid_status == "Primary Direct", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 31.4907
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.29
+                                                                H2 =   58.52
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      9.65
+           El-Rakshy 2009 |         -1.600      -8.889       5.689     14.64
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.07
+                Chen 2020 |         -2.819      -3.168      -2.470     21.05
+                Yang 2024 |         -0.300      -1.703       1.103     20.73
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     20.85
+--------------------------+-------------------------------------------------
+                    theta |         -4.684     -12.257       2.889
+----------------------------------------------------------------------------
+Test of theta = 0: t(5) = -1.59                          Prob > |t| = 0.1727
+Test of homogeneity: Q = chi2(5) = 37.93                   Prob > Q = 0.0000
+
+. 
+. * 7. SUBGROUP B: 5 Derived Conditional Trials
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "6. SUBGROUP B: 5 Derived Conditional Trials"
+6. SUBGROUP B: 5 Derived Conditional Trials
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if opioid_status == "Derived Conditional", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =      5
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 46.3060
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.89
+                                                                H2 =  891.41
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                 Sim 2002 |         -8.920     -18.465       0.625     15.67
+               Coura 2011 |        -22.400     -33.513     -11.287     13.99
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     23.69
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     22.95
+               Zhang 2025 |         -0.326      -0.522      -0.130     23.70
+--------------------------+-------------------------------------------------
+                    theta |         -6.022     -16.077       4.032
+----------------------------------------------------------------------------
+Test of theta = 0: t(4) = -1.66                          Prob > |t| = 0.1717
+Test of homogeneity: Q = chi2(4) = 54.12                   Prob > Q = 0.0000
+
+. 
+. * 8. SENSITIVITY: Exclude High Risk of Bias (El-Rakshy 2009)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "7. SENSITIVITY: Exclude High Risk of Bias (El-Rakshy 2009)"
+7. SENSITIVITY: Exclude High Risk of Bias (El-Rakshy 2009)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if is_high_rob == 0, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     10
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 37.0293
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.80
+                                                                H2 =  511.44
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      6.05
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      7.99
+                Chen 2020 |         -2.819      -3.168      -2.470     12.13
+                Yang 2024 |         -0.300      -1.703       1.103     11.97
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     12.03
+                 Sim 2002 |         -8.920     -18.465       0.625      7.40
+               Coura 2011 |        -22.400     -33.513     -11.287      6.50
+ Chen 2015 (Hyperalgesia) |         -1.122      -1.373      -0.871     12.13
+Chen 2015 (Thyroidectomy) |         -5.000      -7.419      -2.581     11.66
+               Zhang 2025 |         -0.326      -0.522      -0.130     12.14
+--------------------------+-------------------------------------------------
+                    theta |         -5.598     -10.959      -0.238
+----------------------------------------------------------------------------
+Test of theta = 0: t(9) = -2.36                          Prob > |t| = 0.0424
+Test of homogeneity: Q = chi2(9) = 197.27                  Prob > Q = 0.0000
+
+. 
+. * 9. Generate and Export Forest Plot (IV MME)
+. meta forestplot, subgroup(opioid_status) ///
+>     title("PRIMARY OPIOID OUTCOME: 0-24h Cumulative Consumption (mg IV MME)", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Random-Effects REML + Knapp-Hartung (k=11, N=945)", size(small)) /
+> //
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+. graph export "stata/results/forest_24h_opioid_mme.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/forest_24h_opioid_mme.pn
+    > g saved as PNG format
+
+. capture copy "stata/results/forest_24h_opioid_mme.png" "dashboard/stata_forest_teas_mme.png", repl
+> ace
+
+. 
+. * 10. Standardized Effect Size: Hedges' g SMD
+. meta set hedges_g hedges_se, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: hedges_g
+
+         Precision
+         Std. err.: hedges_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "8. STANDARDIZED MEAN DIFFERENCE (Hedges' g SMD): All 11 Trials"
+8. STANDARDIZED MEAN DIFFERENCE (Hedges' g SMD): All 11 Trials
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Effect size
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     11
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  0.9821
+SE adjustment: Knapp–Hartung                                I2 (%) =   94.75
+                                                                H2 =   19.04
+
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |         -0.958      -1.543      -0.373      9.00
+           El-Rakshy 2009 |         -0.088      -0.493       0.317      9.40
+       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202      9.19
+                Chen 2020 |         -3.505      -4.203      -2.807      8.69
+                Yang 2024 |         -0.062      -0.354       0.230      9.60
+He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147      9.57
+                 Sim 2002 |         -0.467      -0.979       0.046      9.17
+               Coura 2011 |         -1.553      -2.519      -0.587      7.87
+ Chen 2015 (Hyperalgesia) |         -2.256      -2.908      -1.603      8.82
+Chen 2015 (Thyroidectomy) |         -0.873      -1.324      -0.423      9.31
+               Zhang 2025 |         -0.670      -1.088      -0.252      9.38
+--------------------------+-------------------------------------------------
+                    theta |         -0.994      -1.693      -0.295
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-3.345, 1.358]
+
+Test of theta = 0: t(10) = -3.17                         Prob > |t| = 0.0100
+Test of homogeneity: Q = chi2(10) = 125.04                 Prob > Q = 0.0000
+
+. 
+. meta forestplot, subgroup(opioid_status) ///
+>     title("Standardized Mean Difference (Hedges' g): All 11 Analyzable Trials", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Random-Effects REML + Knapp-Hartung", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: canonical_name
+
+. graph export "stata/results/forest_24h_opioid_smd.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/forest_24h_opioid_smd.pn
+    > g saved as PNG format
+
+. capture copy "stata/results/forest_24h_opioid_smd.png" "dashboard/stata_forest_teas_smd.png", repl
+> ace
+
+. 
+. di as txt _n "SUCCESS: Primary 24-h opioid outcome verified and exported."
+
+SUCCESS: Primary 24-h opioid outcome verified and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/01_24h_opioid_primar
+> y.log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:21
+----------------------------------------------------------------------------------------------------

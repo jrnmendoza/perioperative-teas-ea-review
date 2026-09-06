@@ -1,0 +1,284 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/09_ponv.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:59:30
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "09: POSTOPERATIVE NAUSEA AND VOMITING (PONV) INCIDENCE"
+09: POSTOPERATIVE NAUSEA AND VOMITING (PONV) INCIDENCE
+
+. di as txt "Note: Reduced PONV does not prove an opioid-mediated mechanism;"
+Note: Reduced PONV does not prove an opioid-mediated mechanism;
+
+. di as txt "TEAS/EA may have direct antiemetic actions at PC6 / ST36."
+TEAS/EA may have direct antiemetic actions at PC6 / ST36.
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "stata/stata_secondary_synthesis_data.dta", clear
+
+. keep if outcome_domain == "PONV"
+(25 observations deleted)
+
+. describe
+
+Contains data from stata/stata_secondary_synthesis_data.dta
+ Observations:            19                  
+    Variables:            16                  6 Sep 2026 11:59
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str25   %25s                  
+outcome_domain  str11   %11s                  
+modality        str4    %9s                   
+comparator      str10   %10s                  
+arm1_events     int     %8.0g                 
+arm1_n          int     %8.0g                 
+arm2_events     byte    %8.0g                 
+arm2_n          int     %8.0g                 
+effect          float   %9.0g                 
+se              float   %9.0g                 
+rob2_overall    str13   %13s                  
+arm1_mean       float   %9.0g                 
+arm1_sd         float   %9.0g                 
+arm2_mean       float   %9.0g                 
+arm2_sd         float   %9.0g                 
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. list canonical_name modality comparator arm1_events arm1_n arm2_events arm2_n
+
+     +-------------------------------------------------------------------------------------------+
+     |            canonical_name   modality   comparator   arm1_e~s   arm1_n   arm2_e~s   arm2_n |
+     |-------------------------------------------------------------------------------------------|
+  1. |                  Zhu 2022         EA   Usual Care          9      100         22      101 |
+  2. |                 Zhou 2025         EA   Usual Care         10       48         19       49 |
+  3. |                Zheng 2025       TEAS         Sham         18       42         29       43 |
+  4. |                Zhang 2014       TEAS         Sham          4       33         11       32 |
+  5. |                 Yang 2024         EA   Usual Care         12       90         25       90 |
+     |-------------------------------------------------------------------------------------------|
+  6. |                Xiong 2021       TEAS         Sham          5       31         15       31 |
+  7. |                 Xing 2022       TEAS         Sham          5       29         11       29 |
+  8. |                 Wang 2024       TEAS         Sham          5       35         10       35 |
+  9. |                   Ma 2026       TEAS         Sham          6       17          7       16 |
+ 10. |                   Lu 2021       TEAS         Sham         59      198         68      188 |
+     |-------------------------------------------------------------------------------------------|
+ 11. |                  Luo 2026       TEAS         Sham        112      138         83      139 |
+ 12. |                 Long 2025       TEAS         Sham          1       27          8       26 |
+ 13. |            Liu 2026 (ESD)       TEAS         Sham          4       58         14       62 |
+ 14. |           Liu 2026 (burn)       TEAS         Sham          7       43         16       43 |
+ 15. |                Jiang 2026       TEAS         Sham         44      294         67      293 |
+     |-------------------------------------------------------------------------------------------|
+ 16. |                  Hou 2023       TEAS         Sham          4       36         12       36 |
+ 17. | He 2026 (hepatectomy/JIS)       TEAS         Sham         19       80         21       79 |
+ 18. |                 Chen 2015       TEAS         Sham         10       41         26       42 |
+ 19. |  Chen 2015 (Hyperalgesia)       TEAS         Sham          5       29         13       30 |
+     +-------------------------------------------------------------------------------------------+
+
+. 
+. * 1. Declare Binary Meta-Analysis
+. meta esize arm1_events arm1_n arm2_events arm2_n, esize(lnrr) studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 19
+       Study label: canonical_name
+        Study size: _meta_studysize
+      Summary data: arm1_events arm1_n arm2_events arm2_n
+
+       Effect size
+              Type: lnrratio
+             Label: Log risk-ratio
+          Variable: _meta_es
+   Zero-cells adj.: None; no zero cells
+
+         Precision
+         Std. err.: _meta_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * 2. PRIMARY PONV SYNTHESIS: All 17 Trials (REML + Knapp-Hartung)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. ALL 17 TRIALS: PONV Incidence Risk Ratio (RR)"
+1. ALL 17 TRIALS: PONV Incidence Risk Ratio (RR)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh) transform(exp) predinterval
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     19
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  0.0662
+SE adjustment: Knapp–Hartung                                I2 (%) =   44.37
+                                                                H2 =    1.80
+
+----------------------------------------------------------------------------
+                    Study |     Risk ratio    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                 Zhu 2022 |          0.462       0.222       0.959      4.81
+                Zhou 2025 |          0.617       0.312       1.219      5.29
+               Zheng 2025 |          0.745       0.462       1.201      7.86
+               Zhang 2014 |          0.423       0.147       1.216      2.77
+                Yang 2024 |          0.541       0.287       1.021      5.78
+               Xiong 2021 |          0.426       0.171       1.062      3.49
+                Xing 2022 |          0.535       0.206       1.387      3.26
+                Wang 2024 |          0.562       0.210       1.507      3.10
+                  Ma 2026 |          0.857       0.340       2.161      3.42
+                  Lu 2021 |          0.864       0.639       1.170     10.98
+                 Luo 2026 |          1.198       0.963       1.491     12.57
+                Long 2025 |          0.152       0.020       1.142      0.88
+           Liu 2026 (ESD) |          0.350       0.121       1.010      2.76
+          Liu 2026 (burn) |          0.516       0.231       1.154      4.21
+               Jiang 2026 |          0.699       0.493       0.993     10.07
+                 Hou 2023 |          0.400       0.140       1.144      2.79
+He 2026 (hepatectomy/JIS) |          0.914       0.525       1.592      6.75
+                Chen 2015 |          0.513       0.272       0.965      5.80
+ Chen 2015 (Hyperalgesia) |          0.486       0.192       1.231      3.40
+--------------------------+-------------------------------------------------
+               exp(theta) |          0.660       0.551       0.790
+----------------------------------------------------------------------------
+95% prediction interval for exp(theta): [ 0.372, 1.169]
+
+Test of theta = 0: t(18) = -4.84                         Prob > |t| = 0.0001
+Test of homogeneity: Q = chi2(18) = 33.57                  Prob > Q = 0.0142
+
+. 
+. * 3. STRATUM 1: TEAS vs Sham (k=13 Trials)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. STRATUM 1: TEAS vs Sham (k=13 Trials)"
+2. STRATUM 1: TEAS vs Sham (k=13 Trials)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if modality == "TEAS" & comparator == "Sham", random(reml) se(kh) transform(exp)
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+Meta-analysis summary                             Number of studies =     16
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  0.0706
+SE adjustment: Knapp–Hartung                                I2 (%) =   47.03
+                                                                H2 =    1.89
+
+----------------------------------------------------------------------------
+                    Study |     Risk ratio    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+               Zheng 2025 |          0.745       0.462       1.201      9.33
+               Zhang 2014 |          0.423       0.147       1.216      3.36
+               Xiong 2021 |          0.426       0.171       1.062      4.22
+                Xing 2022 |          0.535       0.206       1.387      3.95
+                Wang 2024 |          0.562       0.210       1.507      3.75
+                  Ma 2026 |          0.857       0.340       2.161      4.14
+                  Lu 2021 |          0.864       0.639       1.170     12.84
+                 Luo 2026 |          1.198       0.963       1.491     14.60
+                Long 2025 |          0.152       0.020       1.142      1.07
+           Liu 2026 (ESD) |          0.350       0.121       1.010      3.34
+          Liu 2026 (burn) |          0.516       0.231       1.154      5.08
+               Jiang 2026 |          0.699       0.493       0.993     11.83
+                 Hou 2023 |          0.400       0.140       1.144      3.39
+He 2026 (hepatectomy/JIS) |          0.914       0.525       1.592      8.05
+                Chen 2015 |          0.513       0.272       0.965      6.94
+ Chen 2015 (Hyperalgesia) |          0.486       0.192       1.231      4.11
+--------------------------+-------------------------------------------------
+               exp(theta) |          0.682       0.552       0.842
+----------------------------------------------------------------------------
+Test of theta = 0: t(15) = -3.86                         Prob > |t| = 0.0015
+Test of homogeneity: Q = chi2(15) = 29.11                  Prob > Q = 0.0156
+
+. 
+. * 4. STRATUM 2: EA Trials (k=4 Trials)
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. STRATUM 2: EA Trials (k=4 Trials)"
+3. STRATUM 2: EA Trials (k=4 Trials)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if modality == "EA", random(reml) se(kh) transform(exp)
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
+                                                        H2 =    1.00
+
+--------------------------------------------------------------------
+            Study |     Risk ratio    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+         Zhu 2022 |          0.462       0.222       0.959     28.72
+        Zhou 2025 |          0.617       0.312       1.219     33.14
+        Yang 2024 |          0.541       0.287       1.021     38.15
+------------------+-------------------------------------------------
+       exp(theta) |          0.540       0.382       0.763
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = -7.66                  Prob > |t| = 0.0166
+Test of homogeneity: Q = chi2(2) = 0.32            Prob > Q = 0.8504
+
+. 
+. * 5. Generate and Export Forest Plot
+. meta forestplot, subgroup(modality) ///
+>     title("Postoperative Nausea & Vomiting (PONV) Incidence", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Random-Effects Risk Ratio (k=17 Trials)", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Log risk-ratio
+        Effect size: _meta_es
+          Std. err.: _meta_se
+        Study label: canonical_name
+
+. graph export "stata/results/forest_ponv.png", width(1800) replace
+file /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/results/forest_ponv.png saved
+    as PNG format
+
+. capture copy "stata/results/forest_ponv.png" "dashboard/stata_forest_ponv.png", replace
+
+. 
+. di as txt _n "SUCCESS: PONV synthesis verified and exported."
+
+SUCCESS: PONV synthesis verified and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/09_ponv.log
+  log type:  text
+ closed on:   6 Sep 2026, 11:59:31
+----------------------------------------------------------------------------------------------------
