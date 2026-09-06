@@ -497,23 +497,25 @@ function renderMCIDStudio() {
     const pn = s.mcid.pain_md;
     const isSparing = op < 0;
     const painOk = pn <= marginVal;
-    let meetsThresh = false;
 
     if (isRelative) {
       const arm2 = s.outcomes && s.outcomes.opioid_24h && s.outcomes.opioid_24h.arm2_mean;
-      if (arm2 && arm2 > 0) {
-        meetsThresh = ((Math.abs(op) / arm2) * 100) >= 30.0;
-      } else {
-        meetsThresh = op <= -8.0;
-      }
+      const relPct = (arm2 && arm2 > 0) ? ((Math.abs(op) / arm2) * 100) : (Math.abs(op) >= 8.0 ? 30.0 : 0);
+      if (relPct >= 30.0 && painOk) q1++;
+      else if (relPct >= 15.0 && painOk) q2++;
+      else if (isSparing && painOk) q3++;
+      else q4++;
     } else {
-      meetsThresh = op <= -thresholdVal;
+      if (op <= -thresholdVal && painOk) {
+        q1++;
+      } else if (op <= -5.0 && op > -thresholdVal && painOk) {
+        q2++;
+      } else if (op < 0 && op > -5.0 && painOk) {
+        q3++;
+      } else {
+        q4++;
+      }
     }
-
-    if (meetsThresh && painOk) q1++;
-    else if (!meetsThresh && isSparing && painOk) q2++;
-    else if (meetsThresh && !painOk) q3++;
-    else q4++;
   });
 
   const total = Math.max(1, validStudies.length);
@@ -550,10 +552,17 @@ function renderMCIDStudio() {
   if (q1Badge) q1Badge.innerText = `Opioid Sparing ${threshLabel} + Pain Relief`;
 
   const q2Badge = document.getElementById('badge-q2-kpi');
-  if (q2Badge) q2Badge.innerText = `Sparing < ${threshLabel.replace('≥ ', '')} + Pain Relief`;
+  if (q2Badge) {
+    if (isRelative) q2Badge.innerText = 'Sparing 15–30% + Pain Relief';
+    else if (thresholdVal > 5) q2Badge.innerText = `Sparing 5–${thresholdVal} mg + Pain Relief`;
+    else q2Badge.innerText = `Sparing 5 mg + Pain Relief`;
+  }
 
   const q3Badge = document.getElementById('badge-q3-kpi');
-  if (q3Badge) q3Badge.innerText = `Pain Worsened > +${marginVal} VAS`;
+  if (q3Badge) q3Badge.innerText = isRelative ? 'Sparing < 15% + Pain Relief' : 'Sparing < 5 mg + Pain Relief';
+
+  const q4Badge = document.getElementById('badge-q4-kpi');
+  if (q4Badge) q4Badge.innerText = `Pain > +${marginVal} or No Sparing`;
 
   // Subtitle update
   const subtitleEl = document.getElementById('mcid-subtitle-text');
