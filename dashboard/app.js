@@ -1687,7 +1687,7 @@ function renderDirectionOfEvidence() {
 
   const outcomes = [
     {
-      name: "Cumulative 0–24h Opioid Consumption",
+      name: "Co-Primary (Acute Window): Cumulative 0–24h Opioid Consumption",
       unit: "mg IV MME",
       key: "opioid_24h",
       isBinary: false,
@@ -1695,6 +1695,16 @@ function renderDirectionOfEvidence() {
       downgrade: "Downgraded 1 level for risk of bias across surgical trials; substantial heterogeneity (I² > 80%) handled via random-effects REML modeling.",
       grade: "Moderate",
       badgeClass: "grade-badge-mod"
+    },
+    {
+      name: "Co-Primary (Extended Durability): Cumulative 0–48h Opioid Consumption",
+      unit: "mg IV MME",
+      key: "opioid_48h",
+      isBinary: false,
+      controlRisk: "Mean baseline: 14.0 to 103.3 mg IV MME",
+      downgrade: "No serious risk of bias or inconsistency (I² = 29.8%, P = 0.22). Direct continuous reporting across 5 RCTs (N = 2,183).",
+      grade: "High",
+      badgeClass: "grade-badge-high"
     },
     {
       name: "Pain Intensity at Rest (~24 hours)",
@@ -1775,16 +1785,6 @@ function renderDirectionOfEvidence() {
       downgrade: "Downgraded 1 level for surgical duration and operative case-mix variability across 13 trials (I² = 73.9%, MD = −131.05 µg).",
       grade: "Moderate",
       badgeClass: "grade-badge-mod"
-    },
-    {
-      name: "Cumulative 48-Hour Opioid Consumption (Extended Analgesia)",
-      unit: "mg IV MME",
-      key: "opioid_48h",
-      isBinary: false,
-      controlRisk: "Mean baseline: 14.0 to 103.3 mg IV MME",
-      downgrade: "No serious risk of bias or inconsistency (I² = 29.8%, P = 0.22). Direct continuous reporting across 5 RCTs (N = 2,183).",
-      grade: "High",
-      badgeClass: "grade-badge-high"
     }
   ];
 
@@ -1994,17 +1994,17 @@ function openStudyDrawer(id) {
     const op = s.outcomes.opioid_24h;
     const nativeDetail = op.native_drug ? ` • Native: ${op.arm1_mean_native !== undefined ? op.arm1_mean_native : op.arm1_mean} ± ${op.arm1_sd_native !== undefined ? op.arm1_sd_native : op.arm1_sd} vs ${op.arm2_mean_native !== undefined ? op.arm2_mean_native : op.arm2_mean} ± ${op.arm2_sd_native !== undefined ? op.arm2_sd_native : op.arm2_sd} ${op.native_unit || ''} ${op.native_drug}` : '';
     const derDetail = op.derivation_rule ? `<br><span style="font-size:0.75rem; color:#94a3b8;"><strong>Derivation Rule:</strong> ${op.derivation_rule}</span>` : '';
-    outcomesHtml += `<p><strong>💊 Primary 24-h Opioid Consumption:</strong> <span style="color: #34d399; font-weight: 700;">MD ${op.mean_diff < 0 ? '−' : '+'}${Math.abs(op.mean_diff)} mg IV MME</span> (95% CI: [${op.ci_low}, ${op.ci_upp}], SE: ${op.se})${nativeDetail}${derDetail}</p>`;
+    outcomesHtml += `<p><strong>💊 Co-Primary (0–24h Acute Opioid):</strong> <span style="color: #34d399; font-weight: 700;">MD ${op.mean_diff < 0 ? '−' : '+'}${Math.abs(op.mean_diff)} mg IV MME</span> (95% CI: [${op.ci_low}, ${op.ci_upp}], SE: ${op.se})${nativeDetail}${derDetail}</p>`;
   } else if (s.outcomes && s.outcomes.opioid_24h) {
-    outcomesHtml += `<p><strong>💊 Primary 24-h Opioid Consumption:</strong> <span style="color: #f59e0b; font-weight: 600;">${s.outcomes.opioid_24h.status}</span> — ${s.outcomes.opioid_24h.note || 'No continuous 24h opioid mean/SD tabulated.'}</p>`;
+    outcomesHtml += `<p><strong>💊 Co-Primary (0–24h Acute Opioid):</strong> <span style="color: #f59e0b; font-weight: 600;">${s.outcomes.opioid_24h.status}</span> — ${s.outcomes.opioid_24h.note || 'No continuous 24h opioid mean/SD tabulated.'}</p>`;
   }
 
   if (s.outcomes && s.outcomes.opioid_48h && typeof s.outcomes.opioid_48h.mean_diff === 'number') {
     const op48 = s.outcomes.opioid_48h;
     const nativeDetail = op48.native_drug ? ` • Native: ${op48.arm1_mean_native !== undefined ? op48.arm1_mean_native : '-'} vs ${op48.arm2_mean_native !== undefined ? op48.arm2_mean_native : '-'} ${op48.native_unit} (MD ${op48.md_native})` : '';
-    outcomesHtml += `<p><strong>💊 Cumulative 0–48h Opioid Consumption:</strong> <span style="color: #34d399; font-weight: 700;">MD ${op48.mean_diff < 0 ? '−' : '+'}${Math.abs(op48.mean_diff)} mg IV MME</span> (95% CI: [${op48.ci_low}, ${op48.ci_upp}], SE: ${op48.se})${nativeDetail}</p>`;
+    outcomesHtml += `<p><strong>💊 Co-Primary (0–48h Extended Opioid):</strong> <span style="color: #34d399; font-weight: 700;">MD ${op48.mean_diff < 0 ? '−' : '+'}${Math.abs(op48.mean_diff)} mg IV MME</span> (95% CI: [${op48.ci_low}, ${op48.ci_upp}], SE: ${op48.se})${nativeDetail}</p>`;
   } else if (s.outcomes && s.outcomes.opioid_48h && s.outcomes.opioid_48h.role === 'PCA Volume Proxy') {
-    outcomesHtml += `<p><strong>💊 Cumulative 0–48h Opioid Consumption:</strong> <span style="color: #38bdf8; font-weight: 600;">PCA Volume Proxy</span> — ${s.outcomes.opioid_48h.note}</p>`;
+    outcomesHtml += `<p><strong>💊 Co-Primary (0–48h Extended Opioid):</strong> <span style="color: #38bdf8; font-weight: 600;">PCA Volume Proxy</span> — ${s.outcomes.opioid_48h.note}</p>`;
   }
 
   if (s.outcomes && s.outcomes.pain_rest_24h && typeof s.outcomes.pain_rest_24h.mean_diff === 'number') {
