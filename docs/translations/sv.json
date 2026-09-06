@@ -84,7 +84,7 @@
     "badgeStata": "Verifierad i StataNow 19.5 SE",
     "hubTitle": "Konsensussyntes och skogsdiagram (StataNow 19.5 SE)",
     "hubText": "Låst protokollstandard för syntes: Modalitetsspecifika estimat förblir de primära inferentiella analyserna (TEAS mot sham: MD = −2,41 mg; EA mot kontroll: MD = −10,40 mg). Det kombinerade estimatet (MD = −5,04 mg) visas som en övergripande kontextuell syntes. Varians mellan studier estimeras med Restricted Maximum Likelihood (REML) med Knapp–Hartung-konfidensintervall och 95 % prediktionsintervall.",
-    "section2ATitle": "PRIMÄRT 24-H OPIOIDUTFALL — Modalitetsspecifika analyser & stödjande kombinerad syntes",
+    "section2ATitle": "Sektion 2A: PRIMÄRT OPIOIDUTFALL — Kumulativ 0–24h opioidbesparing (Modalitetsspecifik primär: TEAS k=8, EA k=3)",
     "section2ASub": "Beräknad i StataNow 19.5 SE via meta summarize, random(reml) se(kh) predinterval.",
     "section2BTitle": "VIKTIGT SEKUNDÄRT OPIOIDUTFALL — Kumulativ 0–48h opioidbesparing (k = 5 RCT:er, N = 2 183)",
     "section2BSub": "Beräknad i StataNow 19.5 SE via meta summarize, random(reml) se(kh) predinterval.",

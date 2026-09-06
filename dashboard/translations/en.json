@@ -84,7 +84,7 @@
     "badgeStata": "StataNow 19.5 SE Verified",
     "hubTitle": "StataNow 19.5 SE Consensus Synthesis & Forest Plots Hub",
     "hubText": "Locked Protocol Synthesis Standard: Modality-specific estimates remain the primary inferential analyses (TEAS vs Sham: MD = −2.41 mg; EA vs Control: MD = −10.40 mg). The combined estimate (MD = −5.04 mg) is shown as an overall contextual synthesis. Between-study variance is estimated using restricted maximum likelihood (REML) with Knapp–Hartung confidence intervals and 95% prediction intervals.",
-    "section2ATitle": "PRIMARY 24-H OPIOID OUTCOME — Modality-Specific Analyses & Supporting Combined Synthesis",
+    "section2ATitle": "Section 2A: PRIMARY OPIOID OUTCOME — Cumulative 0–24h Opioid Sparing (Modality-Specific Primary: TEAS k=8, EA k=3)",
     "section2ASub": "Executed in StataNow 19.5 SE via meta summarize, random(reml) se(kh) predinterval.",
     "section2BTitle": "KEY SECONDARY OPIOID OUTCOME — Cumulative 0–48h Opioid Sparing (k = 5 RCTs, N = 2,183)",
     "section2BSub": "Executed in StataNow 19.5 SE via meta summarize, random(reml) se(kh) predinterval.",

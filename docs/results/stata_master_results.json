@@ -19,6 +19,8 @@
     "tau2": 5.3495,
     "pi_low": -9.047,
     "pi_high": 4.237,
+    "rob_status": "Audited (Result-Specific)",
+    "grade_status": "Low Certainty (Downgraded -2: Inconsistency, Imprecision)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -41,6 +43,8 @@
     "tau2": 85.4814,
     "pi_low": null,
     "pi_high": null,
+    "rob_status": "Audited (Result-Specific)",
+    "grade_status": "Very Low Certainty (Downgraded -3: Inconsistency, Very Serious Imprecision)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -63,6 +67,8 @@
     "tau2": 30.0069,
     "pi_low": -18.329,
     "pi_high": 8.259,
+    "rob_status": "Audited (Result-Specific)",
+    "grade_status": "Low Certainty (Downgraded -2: Inconsistency, Indirectness/Imprecision)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -85,6 +91,8 @@
     "tau2": 1.5085,
     "pi_low": null,
     "pi_high": null,
+    "rob_status": "Audited (Sensitivity)",
+    "grade_status": "N/A (Sensitivity Model)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -107,6 +115,8 @@
     "tau2": 1.5085,
     "pi_low": null,
     "pi_high": null,
+    "rob_status": "Audited (Sensitivity)",
+    "grade_status": "N/A (Sensitivity Model)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -129,6 +139,8 @@
     "tau2": 38.6432,
     "pi_low": -24.81,
     "pi_high": 14.4,
+    "rob_status": "Audited (Sensitivity)",
+    "grade_status": "N/A (Sensitivity Model)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -151,6 +163,8 @@
     "tau2": 33.1517,
     "pi_low": -19.78,
     "pi_high": 8.99,
+    "rob_status": "Audited (Sensitivity)",
+    "grade_status": "N/A (Sensitivity Model)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -173,6 +187,8 @@
     "tau2": 0.0,
     "pi_low": null,
     "pi_high": null,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Moderate Certainty (Downgraded -1: Imprecision [Few Studies])",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -195,6 +211,8 @@
     "tau2": 0.0,
     "pi_low": null,
     "pi_high": null,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Very Low Certainty (Downgraded -3: Risk of Bias, Very Serious Imprecision)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -217,6 +235,8 @@
     "tau2": 0.529,
     "pi_low": -5.408,
     "pi_high": 0.662,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Moderate Certainty (Downgraded -1: Indirectness/Inconsistency)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -239,6 +259,8 @@
     "tau2": 49.3752,
     "pi_low": -37.89,
     "pi_high": 20.36,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Low Certainty (Downgraded -2: Inconsistency, Imprecision)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -261,6 +283,8 @@
     "tau2": 0.0384,
     "pi_low": 0.32,
     "pi_high": 0.93,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Moderate Certainty (Downgraded -1: Potential Risk of Bias)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -283,6 +307,8 @@
     "tau2": 2.3412,
     "pi_low": null,
     "pi_high": null,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Low Certainty (Downgraded -2: Inconsistency, Imprecision)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -305,6 +331,8 @@
     "tau2": 7842.12,
     "pi_low": -312.4,
     "pi_high": 95.8,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Moderate Certainty (Downgraded -1: Case-Mix Variability)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -327,6 +355,8 @@
     "tau2": 0.1245,
     "pi_low": 0.28,
     "pi_high": 1.21,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Moderate Certainty (Downgraded -1: Heterogeneity Across Disciplines)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -349,6 +379,8 @@
     "tau2": 0.312,
     "pi_low": -1.88,
     "pi_high": 0.62,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Moderate Certainty (Downgraded -1: High Heterogeneity)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   },
   {
@@ -371,6 +403,8 @@
     "tau2": 7.214,
     "pi_low": -9.92,
     "pi_high": 3.07,
+    "rob_status": "Pending Final Result-Specific Integration",
+    "grade_status": "Moderate Certainty (Downgraded -1: High Heterogeneity)",
     "verification_status": "VERIFIED (StataNow 19.5 SE)"
   }
 ]
