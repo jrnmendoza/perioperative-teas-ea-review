@@ -2125,6 +2125,17 @@ const BUBBLE_PLOT_INFO = {
     f_stat: 'Model F(1, 9) = 6.77 (p = 0.0287)',
     desc: 'More recent trials demonstrate smaller absolute opioid-sparing effect sizes (decreasing by ~0.47 mg per calendar year). This secular trend strongly reflects the clinical adoption of multimodal ERAS analgesia (e.g. regional fascial blocks, NSAIDs, dexamethasone), which drastically lowers baseline opioid requirements in newer control arms.'
   },
+  'sex': {
+    title: 'Trial Sex Composition (% Female) (k = 11)',
+    img: 'stata_meta_reg_sex.png',
+    caption: 'Random-effects meta-regression on cohort sex ratio across the 11 primary trials.',
+    model: 'meta regress pct_female, random(reml) se(kh)',
+    slope: 'β = −0.0128 [95% CI: −0.1911, +0.1655]',
+    t_stat: 't(9) = −0.16, p = 0.8746',
+    r2: '0.00% of between-study variance explained',
+    f_stat: 'Model F(1, 9) = 0.03 (p = 0.8746)',
+    desc: 'The proportion of female participants across trial cohorts (22.1% to 100%) did not moderate the opioid-sparing effect (p = 0.875). Neuromodulation provides equivalent relative opioid mitigation across sexes. Note that individual patient-level age and BMI require IPD meta-analysis to avoid the ecological fallacy.'
+  },
   'teas-base': {
     title: 'TEAS Stratum: Baseline Opioid Demand (k = 8)',
     img: 'stata_teas_control_mme_bubble.png',
