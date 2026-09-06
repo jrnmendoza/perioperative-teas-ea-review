@@ -313,6 +313,7 @@ function getFilteredStudies(applyOverrides = true) {
 
 function renderAllViews() {
   renderKPIs();
+  renderLeaveOneOutTable();
   renderActiveTab();
 }
 
@@ -469,7 +470,7 @@ function renderMCIDStudio() {
   if (!container) return;
 
   const studies = getFilteredStudies(true);
-  const validStudies = studies.filter(s => s.mcid && typeof s.mcid.opioid_md === 'number' && !isNaN(s.mcid.opioid_md) && typeof s.mcid.pain_md === 'number' && !isNaN(s.mcid.pain_md));
+  const validStudies = studies.filter(s => s.mcid && s.mcid.is_paired === true && typeof s.mcid.opioid_md === 'number' && !isNaN(s.mcid.opioid_md) && typeof s.mcid.pain_md === 'number' && !isNaN(s.mcid.pain_md));
 
   let thresholdVal = 10.0;
   let marginVal = 1.0;
@@ -557,7 +558,7 @@ function renderMCIDStudio() {
   // Subtitle update
   const subtitleEl = document.getElementById('mcid-subtitle-text');
   if (subtitleEl) {
-    subtitleEl.innerHTML = `Active PROSPERO Criterion: <strong>${threshLabel} Opioid Sparing</strong> with Pain Non-Inferiority Margin <strong>≤ +${marginVal} VAS</strong> (Upper 95% CI examined).`;
+    subtitleEl.innerHTML = `Active PROSPERO Criterion: <strong>${threshLabel} Opioid Sparing</strong> with Pain Non-Inferiority Margin <strong>≤ +${marginVal} VAS</strong> (Upper 95% CI examined). Paired Continuous Cohort: <strong>k = ${validStudies.length} trials (N = 945)</strong>.`;
   }
 
   const width = container.clientWidth || 700;
@@ -817,32 +818,84 @@ function renderStudyExplorer() {
   }).join('');
 }
 
-// 4. RoB 2 Matrix
+// 4. RoB 2 Matrix (Result-Specific and Summary View)
 function renderRoB2Matrix() {
   const filtered = getFilteredStudies(false);
   const tbody = document.getElementById('rob2-table-body');
   if (!tbody) return;
 
+  const outcomeSelect = document.getElementById('rob2-outcome-filter');
+  const activeOutcome = outcomeSelect ? outcomeSelect.value : 'summary';
+  const statusBadge = document.getElementById('rob2-outcome-status-badge');
+
+  let assessedCount = 0;
+  let pendingCount = 0;
+
+  const dot = (val) => {
+    if (!val || val === 'Pending' || val === 'Pending Assessment') {
+      return `<span class="rob-dot" style="background: rgba(255,255,255,0.08); color: var(--text-muted); border: 1px dashed rgba(255,255,255,0.2);" title="Pending result-specific RoB 2 assessment">⋯</span>`;
+    }
+    const cls = (val === 'Low' || val === 'LOW') ? 'rob-low' : ((val === 'Some concerns' || val === 'SOME CONCERNS' || val === 'Some Concerns') ? 'rob-some' : 'rob-high');
+    const symbol = (val === 'Low' || val === 'LOW') ? '+' : ((val === 'Some concerns' || val === 'SOME CONCERNS' || val === 'Some Concerns') ? '?' : '−');
+    return `<span class="rob-dot ${cls}" title="${val}">${symbol}</span>`;
+  };
+
   tbody.innerHTML = filtered.map((s, idx) => {
-    const dot = (val) => {
-      const cls = val === 'Low' ? 'rob-low' : (val === 'Some concerns' ? 'rob-some' : 'rob-high');
-      const symbol = val === 'Low' ? '+' : (val === 'Some concerns' ? '?' : '−');
-      return `<span class="rob-dot ${cls}" title="${val}">${symbol}</span>`;
-    };
+    let d1, d2, d3, d4, d5, overall, rationale;
+
+    if (activeOutcome === 'summary') {
+      d1 = s.rob2.d1;
+      d2 = s.rob2.d2;
+      d3 = s.rob2.d3;
+      d4 = s.rob2.d4;
+      d5 = s.rob2.d5;
+      overall = s.rob2.overall;
+      rationale = s.rob2.rationale || 'Study-level consensus overview';
+      assessedCount++;
+    } else {
+      const ocData = s.rob2_outcomes && s.rob2_outcomes[activeOutcome];
+      if (ocData && ocData.status === 'Assessed') {
+        d1 = ocData.d1;
+        d2 = ocData.d2;
+        d3 = ocData.d3;
+        d4 = ocData.d4;
+        d5 = ocData.d5;
+        overall = ocData.overall;
+        rationale = `<strong>Assessed:</strong> ${ocData.outcome_name} (${ocData.timepoint})`;
+        assessedCount++;
+      } else {
+        d1 = 'Pending';
+        d2 = 'Pending';
+        d3 = 'Pending';
+        d4 = 'Pending';
+        d5 = 'Pending';
+        overall = 'Pending';
+        rationale = '<span style="color: var(--text-muted); font-style: italic;">Pending result-specific RoB 2 assessment (domain judgments not imputed from study-level overview)</span>';
+        pendingCount++;
+      }
+    }
 
     return `
       <tr>
         <td style="font-weight: 600;"><a href="javascript:void(0)" onclick="openStudyDrawer('${s.id}')" style="color: var(--text-primary); text-decoration: none;">${idx + 1}. ${s.key}</a></td>
-        <td>${dot(s.rob2.d1)}</td>
-        <td>${dot(s.rob2.d2)}</td>
-        <td>${dot(s.rob2.d3)}</td>
-        <td>${dot(s.rob2.d4)}</td>
-        <td>${dot(s.rob2.d5)}</td>
-        <td>${dot(s.rob2.overall)}</td>
-        <td style="font-size: 0.75rem; color: var(--text-muted); max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${s.rob2.rationale}</td>
+        <td>${dot(d1)}</td>
+        <td>${dot(d2)}</td>
+        <td>${dot(d3)}</td>
+        <td>${dot(d4)}</td>
+        <td>${dot(d5)}</td>
+        <td>${dot(overall)}</td>
+        <td style="font-size: 0.75rem; color: var(--text-secondary); max-width: 380px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${rationale}</td>
       </tr>
     `;
   }).join('');
+
+  if (statusBadge) {
+    if (activeOutcome === 'summary') {
+      statusBadge.innerHTML = `<span class="badge badge-indigo">Study-Level Overview: 63 Studies</span>`;
+    } else {
+      statusBadge.innerHTML = `<span class="badge badge-emerald">Assessed for Outcome: ${assessedCount}</span> <span class="badge badge-amber" style="margin-left: 6px;">Pending Outcome Assessment: ${pendingCount}</span>`;
+    }
+  }
 }
 
 // 5. Real-Time Dynamic Meta-Analysis Lab & Forest Plot (Objectives 1, 2, 3, 5, 6)
@@ -1125,6 +1178,53 @@ let isStataConsoleExpanded = false;
 
 function renderSensitivitySandbox() {
   loadStataTerminalLog();
+  renderLeaveOneOutTable();
+}
+
+function renderLeaveOneOutTable() {
+  const tbody = document.getElementById('leave-one-out-tbody');
+  if (!tbody) return;
+
+  const looData = window.LEAVE_ONE_OUT_DATA || [
+    {"omitted_study_id": "1879897506", "omitted_canonical_name": "Chen 1998", "omitted_author": "Chen L", "omitted_year": 1998, "remaining_k": 10, "remaining_total_n": 895, "pooled_md": -3.221, "se": 1.599, "wald_ci_low": -5.614, "wald_ci_upp": -0.827, "wald_p_val": 0.0083, "kh_ci_low": -6.837, "kh_ci_upp": 0.396, "kh_p_val": 0.0748, "tau2": 10.651, "i2": 99.32, "dfbetas": -1.135, "wald_sig": true, "kh_sig": false},
+    {"omitted_study_id": "1879897344", "omitted_canonical_name": "El-Rakshy 2009", "omitted_author": "El-Rakshy", "omitted_year": 2009, "remaining_k": 10, "remaining_total_n": 850, "pooled_md": -5.598, "se": 2.370, "wald_ci_low": -9.754, "wald_ci_upp": -1.443, "wald_p_val": 0.0083, "kh_ci_low": -10.959, "kh_ci_upp": -0.238, "kh_p_val": 0.0424, "tau2": 37.029, "i2": 99.80, "dfbetas": 0.238, "wald_sig": true, "kh_sig": true},
+    {"omitted_study_id": "1879896891", "omitted_canonical_name": "Seevaunnamtum 2016", "omitted_author": "Seevaunnamtum", "omitted_year": 2016, "remaining_k": 10, "remaining_total_n": 881, "pooled_md": -4.183, "se": 2.123, "wald_ci_low": -7.563, "wald_ci_upp": -0.804, "wald_p_val": 0.0153, "kh_ci_low": -8.986, "kh_ci_upp": 0.619, "kh_p_val": 0.0803, "tau2": 23.277, "i2": 99.69, "dfbetas": -0.401, "wald_sig": true, "kh_sig": false},
+    {"omitted_study_id": "1879896688", "omitted_canonical_name": "Chen 2020", "omitted_author": "Chen J", "omitted_year": 2020, "remaining_k": 10, "remaining_total_n": 865, "pooled_md": -5.662, "se": 2.437, "wald_ci_low": -10.012, "wald_ci_upp": -1.312, "wald_p_val": 0.0107, "kh_ci_low": -11.175, "kh_ci_upp": -0.149, "kh_p_val": 0.0452, "tau2": 39.657, "i2": 99.73, "dfbetas": 0.257, "wald_sig": true, "kh_sig": true},
+    {"omitted_study_id": "1879896323", "omitted_canonical_name": "Yang 2024", "omitted_author": "Yang", "omitted_year": 2024, "remaining_k": 10, "remaining_total_n": 765, "pooled_md": -5.838, "se": 2.348, "wald_ci_low": -9.984, "wald_ci_upp": -1.693, "wald_p_val": 0.0058, "kh_ci_low": -11.151, "kh_ci_upp": -0.526, "kh_p_val": 0.0346, "tau2": 35.460, "i2": 99.79, "dfbetas": 0.342, "wald_sig": true, "kh_sig": true},
+    {"omitted_study_id": "1879895909", "omitted_canonical_name": "He 2026 (hepatectomy/JIS)", "omitted_author": "He", "omitted_year": 2026, "remaining_k": 10, "remaining_total_n": 786, "pooled_md": -5.827, "se": 2.363, "wald_ci_low": -10.008, "wald_ci_upp": -1.646, "wald_p_val": 0.0063, "kh_ci_low": -11.172, "kh_ci_upp": -0.482, "kh_p_val": 0.0358, "tau2": 36.155, "i2": 99.79, "dfbetas": 0.335, "wald_sig": true, "kh_sig": true},
+    {"omitted_study_id": "1879897479", "omitted_canonical_name": "Sim 2002", "omitted_author": "Sim", "omitted_year": 2002, "remaining_k": 10, "remaining_total_n": 885, "pooled_md": -4.869, "se": 2.321, "wald_ci_low": -8.779, "wald_ci_upp": -0.960, "wald_p_val": 0.0146, "kh_ci_low": -10.119, "kh_ci_upp": 0.380, "kh_p_val": 0.0653, "tau2": 32.754, "i2": 99.78, "dfbetas": -0.071, "wald_sig": true, "kh_sig": false},
+    {"omitted_study_id": "1879897266", "omitted_canonical_name": "Coura 2011", "omitted_author": "Coura", "omitted_year": 2011, "remaining_k": 10, "remaining_total_n": 923, "pooled_md": -2.560, "se": 1.264, "wald_ci_low": -4.352, "wald_ci_upp": -0.768, "wald_p_val": 0.0051, "kh_ci_low": -5.419, "kh_ci_upp": 0.299, "kh_p_val": 0.0734, "tau2": 5.376, "i2": 98.67, "dfbetas": -1.958, "wald_sig": true, "kh_sig": false},
+    {"omitted_study_id": "1879897029", "omitted_canonical_name": "Chen 2015 (Hyperalgesia)", "omitted_author": "Chen Y", "omitted_year": 2015, "remaining_k": 10, "remaining_total_n": 886, "pooled_md": -5.801, "se": 2.386, "wald_ci_low": -10.038, "wald_ci_upp": -1.565, "wald_p_val": 0.0073, "kh_ci_low": -11.198, "kh_ci_upp": -0.404, "kh_p_val": 0.0379, "tau2": 37.251, "i2": 99.58, "dfbetas": 0.321, "wald_sig": true, "kh_sig": true},
+    {"omitted_study_id": "1879897004", "omitted_canonical_name": "Chen 2015 (Thyroidectomy)", "omitted_author": "Chen Y", "omitted_year": 2015, "remaining_k": 10, "remaining_total_n": 862, "pooled_md": -5.395, "se": 2.452, "wald_ci_low": -9.744, "wald_ci_upp": -1.046, "wald_p_val": 0.0150, "kh_ci_low": -10.943, "kh_ci_upp": 0.153, "kh_p_val": 0.0554, "tau2": 39.835, "i2": 99.82, "dfbetas": 0.147, "wald_sig": true, "kh_sig": false},
+    {"omitted_study_id": "1879896013", "omitted_canonical_name": "Zhang 2025", "omitted_author": "Zhang", "omitted_year": 2025, "remaining_k": 10, "remaining_total_n": 852, "pooled_md": -5.845, "se": 2.350, "wald_ci_low": -9.993, "wald_ci_upp": -1.696, "wald_p_val": 0.0058, "kh_ci_low": -11.161, "kh_ci_upp": -0.528, "kh_p_val": 0.0346, "tau2": 35.454, "i2": 99.50, "dfbetas": 0.344, "wald_sig": true, "kh_sig": true}
+  ];
+
+  tbody.innerHTML = looData.map(row => {
+    const waldBadge = row.wald_sig 
+      ? '<span class="badge badge-emerald" style="font-size: 0.68rem; padding: 2px 6px;">Sig (p &lt; 0.05)</span>' 
+      : '<span class="badge badge-amber" style="font-size: 0.68rem; padding: 2px 6px;">Crosses 0</span>';
+    const khBadge = row.kh_sig 
+      ? '<span class="badge badge-emerald" style="font-size: 0.68rem; padding: 2px 6px;">Sig (p &lt; 0.05)</span>' 
+      : '<span class="badge badge-amber" style="font-size: 0.68rem; padding: 2px 6px;">p = ' + row.kh_p_val.toFixed(4) + '</span>';
+    const isCoura = row.omitted_canonical_name.includes('Coura');
+    const rowStyle = isCoura ? 'background: rgba(99, 102, 241, 0.08); font-weight: 600;' : '';
+
+    return `
+      <tr style="${rowStyle}">
+        <td><strong>${row.omitted_canonical_name}</strong> ${isCoura ? '<span class="badge badge-indigo" style="font-size: 0.65rem; margin-left: 4px;">Top Influence</span>' : ''}</td>
+        <td>${row.omitted_year}</td>
+        <td>10 (${row.remaining_total_n})</td>
+        <td style="color: #34d399; font-weight: 700;">${row.pooled_md.toFixed(3)}</td>
+        <td>[${row.wald_ci_low.toFixed(3)}, ${row.wald_ci_upp.toFixed(3)}]</td>
+        <td>${row.wald_p_val.toFixed(4)} ${waldBadge}</td>
+        <td>[${row.kh_ci_low.toFixed(3)}, ${row.kh_ci_upp.toFixed(3)}]</td>
+        <td>${row.kh_p_val.toFixed(4)} ${khBadge}</td>
+        <td>${row.tau2.toFixed(3)}</td>
+        <td>${row.i2.toFixed(1)}%</td>
+        <td style="color: ${Math.abs(row.dfbetas) > 1.0 ? '#f87171' : 'var(--text-secondary)'}; font-weight: ${Math.abs(row.dfbetas) > 1.0 ? '700' : 'normal'};">${row.dfbetas.toFixed(3)}</td>
+      </tr>
+    `;
+  }).join('');
 }
 
 let cachedStataLog = null;

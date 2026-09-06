@@ -1,20 +1,24 @@
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/13_leave_one_out.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs
+> /13_leave_one_out.log
   log type:  text
- opened on:   6 Sep 2026, 11:59:35
+ opened on:   6 Sep 2026, 12:59:29
 
 . 
-. di as txt "=================================================================="
+. di as txt "==================================================================
+> "
 ==================================================================
 
-. di as txt "13: MANDATORY LEAVE-ONE-OUT SENSITIVITY ANALYSIS (PRIMARY 24-H OPIOID)"
+. di as txt "13: MANDATORY LEAVE-ONE-OUT SENSITIVITY ANALYSIS (PRIMARY 24-H OPI
+> OID)"
 13: MANDATORY LEAVE-ONE-OUT SENSITIVITY ANALYSIS (PRIMARY 24-H OPIOID)
 
 . di as txt "Model: Random-Effects REML"
 Model: Random-Effects REML
 
-. di as txt "=================================================================="
+. di as txt "==================================================================
+> "
 ==================================================================
 
 . 
@@ -25,10 +29,10 @@ Model: Random-Effects REML
 Contains data from stata/stata_consensus_synthesis_data.dta
  Observations:            11                  
     Variables:            32                  6 Sep 2026 11:59
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 study_id        long    %12.0g                
 canonical_name  str25   %25s                  
 author          str13   %13s                  
@@ -61,8 +65,11 @@ hedges_se       float   %9.0g
 rob2_overall    str13   %13s                  
 is_high_rob     byte    %8.0g                 
 opioid_status   str19   %19s                  
-----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Sorted by: 
+
+. 
+. gen total_n = arm1_n + arm2_n
 
 . 
 . * 1. Declare Meta-Analysis Setting
@@ -90,15 +97,43 @@ Meta-analysis setting information
             Method: REML
 
 . 
+. * Compute Overall Full-Model Baseline (REML + KH)
+. qui meta summarize, random(reml) se(kh)
+
+. local overall_md = r(theta)
+
+. local overall_se = r(se)
+
+. local overall_cil = r(ci_lb)
+
+. local overall_ciu = r(ci_ub)
+
+. local overall_p = r(p)
+
+. local overall_t2 = r(tau2)
+
+. local overall_i2 = r(I2)
+
+. 
+. di as txt _n "Baseline Full Synthesis (k=11): MD = " %6.3f `overall_md' " [95
+> % CI: " %6.3f `overall_cil' ", " %6.3f `overall_ciu' "], p = " %6.4f `overall
+> _p' ", tau2 = " %6.3f `overall_t2'
+
+Baseline Full Synthesis (k=11): MD = -5.035 [95% CI: -9.777, -0.293], p = 0.039
+> 5, tau2 = 30.007
+
+. 
 . * 2. Native Stata Leave-One-Out Summarize
-. di as txt _n "------------------------------------------------------------------"
+. di as txt _n "---------------------------------------------------------------
+> ---"
 
 ------------------------------------------------------------------
 
 . di as txt "NATIVE STATA LEAVE-ONE-OUT TABLE"
 NATIVE STATA LEAVE-ONE-OUT TABLE
 
-. di as txt "------------------------------------------------------------------"
+. di as txt "------------------------------------------------------------------
+> "
 ------------------------------------------------------------------
 
 . meta summarize, leaveoneout
@@ -131,96 +166,174 @@ Chen 2015 (Thyroidectomy) |      -5.395      -9.744      -1.046    0.015
 ------------------------------------------------------------------------
 
 . 
-. * 3. Loop over all 11 studies to record detailed heterogeneity and Knapp-Hartung CI
-. di as txt _n "====================================================================================
-> ====="
+. * 3. Export machine-readable leave-one-out dataset
+. capture file close fh
 
-=========================================================================================
+. file open fh using "results/stata_leave_one_out_results.csv", write replace
 
-. di as txt "DETAILED LEAVE-ONE-OUT SUMMARY TABLE (REML + KNAPP-HARTUNG)"
-DETAILED LEAVE-ONE-OUT SUMMARY TABLE (REML + KNAPP-HARTUNG)
+. file write fh "omitted_study_id,omitted_canonical_name,omitted_author,omitted
+> _year,remaining_k,remaining_total_n,pooled_md,se,wald_ci_low,wald_ci_upp,wald
+> _p_val,kh_ci_low,kh_ci_upp,kh_p_val,tau2,i2,dfbetas" _n
 
-. di as txt "Omitted Study             | Pooled MD | [95% Conf. Int.]  | p-val  | I2 (%) | tau2  | C
-> rosses 0?"
-Omitted Study             | Pooled MD | [95% Conf. Int.]  | p-val  | I2 (%) | tau2  | Crosses 0?
+. 
+. * 4. Loop over all 11 studies to record detailed heterogeneity, Wald, and Kna
+> pp-Hartung CI
+. di as txt _n "===============================================================
+> ========================================================"
 
-. di as txt "--------------------------+-----------+-------------------+--------+--------+-------+--
-> ---------"
---------------------------+-----------+-------------------+--------+--------+-------+-----------
+===============================================================================
+> ========================================
+
+. di as txt "DETAILED LEAVE-ONE-OUT SUMMARY TABLE (REML + WALD & KNAPP-HARTUNG)
+> "
+DETAILED LEAVE-ONE-OUT SUMMARY TABLE (REML + WALD & KNAPP-HARTUNG)
+
+. di as txt "Omitted Study             | Pooled MD | Wald 95% CI        | Wald 
+> p | KH 95% CI          | KH p   | tau2  | I2 (%) | DFBETAS"
+Omitted Study             | Pooled MD | Wald 95% CI        | Wald p | KH 95% CI
+>           | KH p   | tau2  | I2 (%) | DFBETAS
+
+. di as txt "--------------------------+-----------+--------------------+------
+> --+--------------------+--------+-------+--------+--------"
+--------------------------+-----------+--------------------+--------+----------
+> ----------+--------+-------+--------+--------
 
 . 
 . forvalues i = 1/11 {
   2.     preserve
-  3.     local dropped_name = canonical_name[`i']
-  4.     drop if _n == `i'
-  5.     qui meta summarize, random(reml) se(kh)
-  6.     local md : di %6.3f r(theta)
-  7.     local cil : di %6.3f r(ci_lb)
-  8.     local ciu : di %6.3f r(ci_ub)
-  9.     local p : di %6.4f r(p)
- 10.     local i2 : di %5.2f r(I2)
- 11.     local t2 : di %5.2f r(tau2)
- 12.     local crosses = "No"
- 13.     if `cil' <= 0 & `ciu' >= 0 {
- 14.         local crosses = "YES"
- 15.     }
- 16.     di as res %-25s "`dropped_name'" " | " %7s "`md'" " | [" %6s "`cil'" ", " %6s "`ciu'" "] | 
-> " %6s "`p'" " | " %5s "`i2'" " | " %5s "`t2'" " | " %9s "`crosses'"
- 17.     restore
- 18. }
+  3.     local dropped_id : di %12.0f study_id[`i']
+  4.     local dropped_id = trim("`dropped_id'")
+  5.     local dropped_name = canonical_name[`i']
+  6.     local dropped_author = author[`i']
+  7.     local dropped_year = year[`i']
+  8.     drop if _n == `i'
+  9.     qui sum total_n
+ 10.     local rem_n = r(sum)
+ 11.     local rem_k = r(N)
+ 12. 
+.     * Wald REML
+.     qui meta summarize, random(reml)
+ 13.     local wald_md = r(theta)
+ 14.     local wald_se = r(se)
+ 15.     local wald_cil = r(ci_lb)
+ 16.     local wald_ciu = r(ci_ub)
+ 17.     local wald_p = r(p)
+ 18. 
+.     * Knapp-Hartung REML
+.     qui meta summarize, random(reml) se(kh)
+ 19.     local kh_md = r(theta)
+ 20.     local kh_se = r(se)
+ 21.     local kh_cil = r(ci_lb)
+ 22.     local kh_ciu = r(ci_ub)
+ 23.     local kh_p = r(p)
+ 24.     local i2 = r(I2)
+ 25.     local t2 = r(tau2)
+ 26. 
+.     * Standardized influence DFBETAS: (overall_md - md) / se
+.     local dfbetas = (`overall_md' - `kh_md') / `kh_se'
+ 27. 
+.     * Format for display
+.     local f_md : di %6.3f `kh_md'
+ 28.     local f_wcil : di %6.3f `wald_cil'
+ 29.     local f_wciu : di %6.3f `wald_ciu'
+ 30.     local f_wp : di %6.4f `wald_p'
+ 31.     local f_kcl : di %6.3f `kh_cil'
+ 32.     local f_kcu : di %6.3f `kh_ciu'
+ 33.     local f_kp : di %6.4f `kh_p'
+ 34.     local f_t2 : di %5.2f `t2'
+ 35.     local f_i2 : di %5.2f `i2'
+ 36.     local f_dfb : di %6.3f `dfbetas'
+ 37. 
+.     di as res %-25s "`dropped_name'" " | " %7s "`f_md'" " | [" %6s "`f_wcil'"
+>  ", " %6s "`f_wciu'" "] | " %6s "`f_wp'" " | [" %6s "`f_kcl'" ", " %6s "`f_kc
+> u'" "] | " %6s "`f_kp'" " | " %5s "`f_t2'" " | " %5s "`f_i2'" " | " %6s "`f_d
+> fb'"
+ 38. 
+.     file write fh `"`dropped_id',"`dropped_name'","`dropped_author'",`dropped
+> _year',`rem_k',`rem_n',`kh_md',`kh_se',`wald_cil',`wald_ciu',`wald_p',`kh_cil
+> ',`kh_ciu',`kh_p',`t2',`i2',`dfbetas'"' _n
+ 39.     restore
+ 40. }
 (1 observation deleted)
-Chen 1998                 |  -3.221 | [-6.837,  0.396] | 0.0748 | 99.32 | 10.65 |       YES
+Chen 1998                 |  -3.221 | [-5.614, -0.827] | 0.0083 | [-6.837,  0.3
+> 96] | 0.0748 | 10.65 | 99.32 | -1.135
 (1 observation deleted)
-El-Rakshy 2009            |  -5.598 | [-10.959, -0.238] | 0.0424 | 99.80 | 37.03 |        No
+El-Rakshy 2009            |  -5.598 | [-9.754, -1.443] | 0.0083 | [-10.959, -0.
+> 238] | 0.0424 | 37.03 | 99.80 |  0.238
 (1 observation deleted)
-Seevaunnamtum 2016        |  -4.183 | [-8.986,  0.619] | 0.0803 | 99.69 | 23.28 |       YES
+Seevaunnamtum 2016        |  -4.183 | [-7.563, -0.804] | 0.0153 | [-8.986,  0.6
+> 19] | 0.0803 | 23.28 | 99.69 | -0.401
 (1 observation deleted)
-Chen 2020                 |  -5.662 | [-11.175, -0.149] | 0.0452 | 99.73 | 39.66 |        No
+Chen 2020                 |  -5.662 | [-10.012, -1.312] | 0.0107 | [-11.175, -0
+> .149] | 0.0452 | 39.66 | 99.73 |  0.257
 (1 observation deleted)
-Yang 2024                 |  -5.838 | [-11.151, -0.526] | 0.0346 | 99.79 | 35.46 |        No
+Yang 2024                 |  -5.838 | [-9.984, -1.693] | 0.0058 | [-11.151, -0.
+> 526] | 0.0346 | 35.46 | 99.79 |  0.342
 (1 observation deleted)
-He 2026 (hepatectomy/JIS) |  -5.827 | [-11.172, -0.482] | 0.0358 | 99.79 | 36.16 |        No
+He 2026 (hepatectomy/JIS) |  -5.827 | [-10.008, -1.646] | 0.0063 | [-11.172, -0
+> .482] | 0.0358 | 36.16 | 99.79 |  0.335
 (1 observation deleted)
-Sim 2002                  |  -4.870 | [-10.119,  0.380] | 0.0653 | 99.78 | 32.75 |       YES
+Sim 2002                  |  -4.870 | [-8.779, -0.960] | 0.0146 | [-10.119,  0.
+> 380] | 0.0653 | 32.75 | 99.78 | -0.071
 (1 observation deleted)
-Coura 2011                |  -2.560 | [-5.419,  0.299] | 0.0734 | 98.67 |  5.38 |       YES
+Coura 2011                |  -2.560 | [-4.352, -0.768] | 0.0051 | [-5.419,  0.2
+> 99] | 0.0734 |  5.38 | 98.67 | -1.958
 (1 observation deleted)
-Chen 2015 (Hyperalgesia)  |  -5.801 | [-11.198, -0.404] | 0.0379 | 99.58 | 37.25 |        No
+Chen 2015 (Hyperalgesia)  |  -5.801 | [-10.038, -1.565] | 0.0073 | [-11.198, -0
+> .404] | 0.0379 | 37.25 | 99.58 |  0.321
 (1 observation deleted)
-Chen 2015 (Thyroidectomy) |  -5.395 | [-10.943,  0.153] | 0.0554 | 99.82 | 39.84 |       YES
+Chen 2015 (Thyroidectomy) |  -5.395 | [-9.744, -1.046] | 0.0150 | [-10.943,  0.
+> 153] | 0.0554 | 39.84 | 99.82 |  0.147
 (1 observation deleted)
-Zhang 2025                |  -5.845 | [-11.161, -0.528] | 0.0346 | 99.50 | 35.45 |        No
+Zhang 2025                |  -5.845 | [-9.993, -1.696] | 0.0058 | [-11.161, -0.
+> 528] | 0.0346 | 35.45 | 99.50 |  0.344
 
-. di as txt "=======================================================================================
-> =="
-=========================================================================================
+. file close fh
+
+. di as txt "==================================================================
+> ====================================================="
+===============================================================================
+> ========================================
 
 . 
 . di as txt _n "ROBUSTNESS INTERPRETATION:"
 
 ROBUSTNESS INTERPRETATION:
 
-. di as txt "1. Pooled estimates range from -2.560 mg (omitting Coura 2011) to -5.845 mg (omitting Z
-> hang 2025)."
-1. Pooled estimates range from -2.560 mg (omitting Coura 2011) to -5.845 mg (omitting Zhang 2025).
+. di as txt "1. Pooled estimates range from -2.560 mg (omitting Coura 2011) to 
+> -5.845 mg (omitting Zhang 2025)."
+1. Pooled estimates range from -2.560 mg (omitting Coura 2011) to -5.845 mg (om
+> itting Zhang 2025).
 
-. di as txt "2. Direction of effect does NOT change for any study removal (strictly negative/opioid-
-> sparing)."
-2. Direction of effect does NOT change for any study removal (strictly negative/opioid-sparing).
+. di as txt "2. Direction of effect does NOT change for any study removal (stri
+> ctly negative/opioid-sparing)."
+2. Direction of effect does NOT change for any study removal (strictly negative
+> /opioid-sparing).
 
-. di as txt "3. No leave-one-out 95% confidence interval crosses zero (all remain statistically dete
-> ctable)."
-3. No leave-one-out 95% confidence interval crosses zero (all remain statistically detectable).
+. di as txt "3. Under Wald random-effects, 100% of leave-one-out iterations rem
+> ain statistically significant (95% CIs exclude 0)."
+3. Under Wald random-effects, 100% of leave-one-out iterations remain statistic
+> ally significant (95% CIs exclude 0).
 
-. di as txt "4. Clinical benchmark interpretation does NOT change (all estimates remain below the 10
->  mg threshold)."
-4. Clinical benchmark interpretation does NOT change (all estimates remain below the 10 mg threshold
-> ).
+. di as txt "4. Under Knapp-Hartung adjustment with small k (df=9, critical t=2
+> .262), 5 omissions marginally cross zero (p=0.055 to 0.080)."
+4. Under Knapp-Hartung adjustment with small k (df=9, critical t=2.262), 5 omis
+> sions marginally cross zero (p=0.055 to 0.080).
+
+. di as txt "5. Coura 2011 is the most influential trial (drops tau2 from 30.01
+>  to 5.38 and shifts pooled MD to -2.56 mg)."
+5. Coura 2011 is the most influential trial (drops tau2 from 30.01 to 5.38 and 
+> shifts pooled MD to -2.56 mg).
+
+. di as txt "6. Machine-readable export completed: results/stata_leave_one_out_
+> results.csv"
+6. Machine-readable export completed: results/stata_leave_one_out_results.csv
 
 . 
 . log close
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs/13_leave_one_out.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs
+> /13_leave_one_out.log
   log type:  text
- closed on:   6 Sep 2026, 11:59:35
-----------------------------------------------------------------------------------------------------
+ closed on:   6 Sep 2026, 12:59:29
+-------------------------------------------------------------------------------

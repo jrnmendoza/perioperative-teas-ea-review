@@ -24,7 +24,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective total abdominal hysterectomy or myomectomy",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -67,6 +67,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1130-1131; Table 1 p. 1132 (demographics); Table 2 p. 1132 (hydromorphone & PCA deliveries/demands); Table 4 p. 1133 (PONV & side effects)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Chen_1998_MorphineConsumption_24h.md",
+          "outcome_name": "Cumulative Patient-Controlled Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Chen_1998_MorphineConsumption_24h.md",
+        "outcome_name": "Cumulative Patient-Controlled Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -142,7 +206,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Abdominal hysterectomy",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -185,6 +249,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 509-511 (Methods, computer random sequence, sham needle 0 mA); Table 1 p. 511 (demographics); Table 2 p. 511 (PCA morphine & demands); Fig 1 p. 512 (VAS pain 0-24h); Table 3 p. 512 (side effects)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Lin_2002_MorphineConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative PCA Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Some Concerns",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Lin_2002_MorphineConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative PCA Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Some Concerns",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some Concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -258,14 +386,14 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Total abdominal hysterectomy ± bilateral salpingo-oophorectomy",
     "mcid": {
       "is_paired": true,
-      "opioid_md": -1.48,
-      "pain_md": -4.3,
+      "opioid_md": -8.92,
+      "pain_md": -1.48,
       "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
+      "reaches_8mg": true,
+      "reaches_5mg": true,
       "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "quadrant": 2,
+      "quadrant_name": "Moderate Sparing (5–10 mg MME) + Pain Stable/Reduced"
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -308,6 +436,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 56-60 (Methods, random number table, NMRC 0354/1999); Table 1 p. 59 (demographics, alfentanil, surgery time); Fig 2 p. 60 (alfentanil requirements); Fig 3 p. 60 (interval morphine); Table 2 p. 60 (VAS pain, PONV, drowsiness, pruritus); Fig 4 p. 61 (cumulative morphine)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Sim_2002_MorphineConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative PCA Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Some Concerns",
+          "d2": "Some Concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Sim_2002_MorphineConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative PCA Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Some Concerns",
+        "d2": "Some Concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some Concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -421,7 +613,7 @@ window.STUDIES_DATA = [
     "mcid": {
       "is_paired": true,
       "opioid_md": -8.0,
-      "pain_md": 0.5,
+      "pain_md": -0.5,
       "reaches_10mg": false,
       "reaches_8mg": true,
       "reaches_5mg": true,
@@ -470,6 +662,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2031-2034 (Methods, computer lists, sealed envelopes); Fig 1 & 2 p. 2032 (acupoint diagrams); Fig 3 p. 2033 (CONSORT flow); Table 1 p. 2033 (acupoint prescriptions); Table 2 p. 2034 (demographics, peak flow, VAS pain, PCA morphine, chest drain duration)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Wong_2006_MorphineConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative PCA Morphine Usage",
+          "timepoint": "24 hours postoperatively (Postoperative Day 1)",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Wong_2006_MorphineConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative PCA Morphine Usage",
+        "timepoint": "24 hours postoperatively (Postoperative Day 1)",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some Concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -598,7 +854,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Abdominal hysterectomy (n=50) or laparoscopic cholecystectomy (n=52)",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -641,6 +897,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1-3; Table 1 p. 3 (operations & sex); Table 2 p. 3 (morphine & operation time); Table 3 p. 4 (pain scores)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_ElRakshy_2009_MorphineConsumption_24h.md",
+          "outcome_name": "Total Postoperative PCA Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Some Concerns",
+          "d2": "Some Concerns",
+          "d3": "Some Concerns",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_ElRakshy_2009_MorphineConsumption_24h.md",
+        "outcome_name": "Total Postoperative PCA Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Some Concerns",
+        "d2": "Some Concerns",
+        "d3": "Some Concerns",
+        "d4": "Low",
+        "d5": "Some Concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -767,6 +1087,70 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "rationale": "Text p. 703-708 (Methods, computer sequence, sealed envelopes, active sham control, double-blinding); Fig 1 p. 705 (flowchart); Fig 3 p. 706 (VAS pain); Table 1 p. 706 (demographics, anesthetics); Table 2 p. 707 (BPI pain severity and interference); Table 3 p. 707 (morphine consumption, PCA button pushes)"
     },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Yeh_2010_MorphineConsumption_24h.md",
+          "outcome_name": "Postoperative PCA Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Some Concerns",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Yeh_2010_MorphineConsumption_24h.md",
+        "outcome_name": "Postoperative PCA Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Some Concerns",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some Concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
+    },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Pending Confirmation",
@@ -868,7 +1252,7 @@ window.STUDIES_DATA = [
     "mcid": {
       "is_paired": true,
       "opioid_md": -5.4,
-      "pain_md": -4.7,
+      "pain_md": -0.47,
       "reaches_10mg": false,
       "reaches_8mg": false,
       "reaches_5mg": true,
@@ -917,6 +1301,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 10-18 (Methods, computer sequence, coordinator allocation concealment, active sham control, double-blinding); Fig 1 p. 13 (flowchart); Fig 2 p. 14 (pain trend); Table 2 p. 13 (demographics, anesthetics); Table 3 p. 14 (BPI pain severity and impact); Table 4 p. 15 (PCA opiate demand and dose); Table 5 p. 16 (Rhodes PONV scores)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Yeh_2004_MorphineConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Yeh_2004_MorphineConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -1018,14 +1466,14 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective conventional cardiac surgery: myocardial revascularisation (CABG, n=16) or valve replacement (n=6)",
     "mcid": {
       "is_paired": true,
-      "opioid_md": -0.8,
+      "opioid_md": -22.4,
       "pain_md": 0.2,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
+      "reaches_10mg": true,
+      "reaches_8mg": true,
+      "reaches_5mg": true,
       "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "quadrant": 1,
+      "quadrant_name": "Optimal Benchmark (Sparing ≥ 10 mg MME + Pain Stable/Reduced)"
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -1068,6 +1516,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1-2; Fig 1 p. 3 (flowchart 10 dropouts); Table 1 p. 3 (demographics); Table 2 p. 3 (fentanyl & pain); Fig 3 p. 3 (fentanyl bar chart)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Coura_2011_MorphineConsumption_24h.md",
+          "outcome_name": "Postoperative Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Some concerns",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Coura_2011_MorphineConsumption_24h.md",
+        "outcome_name": "Postoperative Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Some concerns",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -1169,7 +1681,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Hysterectomy (abdominal)",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections",
@@ -1212,6 +1724,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1-3 (Methods, random number table, SSP electrodes, blinding); Table 2 p. 2 (demographics); Table 3 p. 2 (bowel movement); Table 4 p. 2 (ambulation); Table 5 p. 4 (VAS pain 0-24h); Table 6 p. 4 (PCA doses delivered intervals); Table 7 p. 4 (PCA demands); Table 8 p. 5 (Total PCA delivered & demanded)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Lee_2011_MorphineConsumption_24h.md",
+          "outcome_name": "Total Postoperative PCA Morphine Doses",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Lee_2011_MorphineConsumption_24h.md",
+        "outcome_name": "Total Postoperative PCA Morphine Doses",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some Concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": false,
@@ -1299,15 +1875,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Abdominal & Gastrointestinal",
     "surgery_procedure": "Laparoscopic colectomy / anterior resection (right hemicolectomy, left hemicolectomy, sigmoidectomy, anterior resection)",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -0.2,
-      "pain_md": 0.1,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -1350,6 +1919,82 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 307-310 (Methods, computer sequence, sealed envelopes, NCT00464425); Fig 1 p. 309 (acupoints); Table 1 p. 309 (demographics); Table 2 p. 310 (complications); Table 3 p. 310 (EA vs NA outcomes); Table 4 p. 310 (EA vs SA outcomes)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Ng_2013_OpioidConsumption_POD1to4.md",
+          "outcome_name": "Postoperative Analgesic Requirement (Cumulative number of on-demand injections of 50-mg pethidine)",
+          "timepoint": "Cumulative through Postoperative Days 1 to 4",
+          "d1": "Some Concerns",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Ng_2013_TimeDefecation_POD1to4.md",
+          "outcome_name": "Time to First Bowel Motion / Defecation (Hours from end of surgery)",
+          "timepoint": "Through hospital stay / POD 1–4",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Ng_2013_TimeDefecation_POD1to4.md",
+        "outcome_name": "Time to First Bowel Motion / Defecation (Hours from end of surgery)",
+        "timepoint": "Through hospital stay / POD 1–4",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -1464,7 +2109,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Supratentorial craniotomy for tumor resection (meningioma, glioma, metastasis, or other)",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -1507,6 +2152,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1101 (anesthesia & PCIA); Table 1 p. 1103 (demographics & intraop sufentanil); Table 2 p. 1104 (PCIA boluses); Text p. 1103 (48h fentanyl); Text p. 1104 (PONV percentages); Fig 1 p. 1103 (pain VAS)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_An_2014_MorphineConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_An_2014_MorphineConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -1614,7 +2323,7 @@ window.STUDIES_DATA = [
     "mcid": {
       "is_paired": true,
       "opioid_md": -17.8,
-      "pain_md": 0.39,
+      "pain_md": -0.39,
       "reaches_10mg": true,
       "reaches_8mg": true,
       "reaches_5mg": true,
@@ -1663,6 +2372,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 215-218 (Methods, computer sequence, central concealment, NCT01526525); Fig 1 p. 217 (flow diagram); Table 1 p. 217 (demographics, remifentanil, tramadol sum); Fig 2 p. 218 (NRS pain relaxation & movement); Table 2 p. 220 (adverse effects)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Ntritsou_2014_TramadolConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative Tramadol Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Ntritsou_2014_TramadolConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative Tramadol Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -1776,15 +2549,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Thoracic & Cardiac",
     "surgery_procedure": "Radical thoracic esophagectomy for esophageal cancer",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -5.0,
-      "pain_md": -1.8,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": true,
-      "pain_non_inferior": true,
-      "quadrant": 2,
-      "quadrant_name": "Moderate Sparing (5–10 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -1827,6 +2593,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 569-573 (Methods, computer sequence, blinding); Table 1 p. 571 (demographics, anesthetics); Table 2 p. 571 (sufentanil dose, PCA demands, dezocine rate); Fig 2 p. 572 (VAS pain); Fig 3 p. 572 (beta-endorphin); Fig 4 & 5 p. 573 (PGE2, 5-HT)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Xie_2014_BreakthroughPain_2h.md",
+          "outcome_name": "Incidence of Remifentanil-Induced Breakthrough Pain in PACU",
+          "timepoint": "0 to 2 hours postoperatively (PACU stay)",
+          "d1": "Some concerns",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Xie_2014_BreakthroughPain_2h.md",
+        "outcome_name": "Incidence of Remifentanil-Induced Breakthrough Pain in PACU",
+        "timepoint": "0 to 2 hours postoperatively (PACU stay)",
+        "d1": "Some concerns",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -1957,7 +2787,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Cosmetic breast surgery: breast augmentation (30.8%), reduction mammoplasty (33.8%), Ogilvy pull out (24.6%), and other cosmetic breast procedures (10.8%)",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -2000,6 +2830,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 832-838 (Methods, random table, allocation concealment, sham electrodes, blinding, NCT01700855); Fig 2 p. 835 (CONSORT flowchart); Fig 3 p. 837 (VAS pain and sedation scores); Table 1 p. 836 (demographics, anesthetics); Table 2 p. 836 (remifentanil, stay, LMA removal, reorientation); Table 3 p. 837 (nausea, vomiting, dizziness, pruritus); Table 4 p. 837 (hemodynamics); Table 5 p. 838 (stress hormones)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Zhang_2014_QoR40_24h.md",
+          "outcome_name": "Quality of Recovery-40 (QoR-40) Total Score",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "assessment_file": "RoB2_Zhang_2014_QoR40_24h.md",
+        "outcome_name": "Quality of Recovery-40 (QoR-40) Total Score",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -2100,15 +2994,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Head, Neck & ENT",
     "surgery_procedure": "Elective thyroidectomy",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -6.4,
-      "pain_md": -6.4,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": true,
-      "pain_non_inferior": true,
-      "quadrant": 2,
-      "quadrant_name": "Moderate Sparing (5–10 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -2151,6 +3038,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 13623; Table 1 p. 13625 (demographics); Table 2 p. 13625 (QoR-40); Table 3 p. 13625 (rescue morphine, pain, PONV, time to rescue)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Chen_2015_Thyroidectomy_SufentanilConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative Sufentanil Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Chen_2015_Thyroidectomy_SufentanilConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative Sufentanil Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -2250,7 +3201,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective thyroidectomy",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -2293,6 +3244,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 5782-5784; Table 1 p. 5785 (demographics); Table 2 p. 5785 (rescue boluses, pain, PONV, time to rescue); Fig 3 p. 5785 (mechanical pain threshold)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Chen_2015_Hyperalgesia_MechanicalPainThreshold_24h.md",
+          "outcome_name": "Mechanical Pain Threshold Surrounding the Incision",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Chen_2015_Hyperalgesia_MechanicalPainThreshold_24h.md",
+        "outcome_name": "Mechanical Pain Threshold Surrounding the Incision",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -2366,7 +3381,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -2409,6 +3424,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1-5 (Methods, computer sequence, sealed envelopes, sham 0 mA control, blinding); Fig 2 p. 3 (CONSORT flow); Fig 3 p. 4 (VAS pain scores); Table 1 p. 4 (demographics, anesthetics); Table 2 p. 4 (QoR-40 dimensions and total); Table 3 p. 4 (rescue, time to rescue, PACU stay, dizziness, nausea, vomiting, satisfaction)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Yao_2015_QoR40_24h.md",
+          "outcome_name": "Quality of Recovery-40 (QoR-40) Total Score",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "assessment_file": "RoB2_Yao_2015_QoR40_24h.md",
+        "outcome_name": "Quality of Recovery-40 (QoR-40) Total Score",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -2497,7 +3576,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Thyroidectomy (n=11) or parathyroidectomy (n=9)",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -2540,6 +3619,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 235-237; Table 1 p. 237 (individual patient data); Table 2 p. 237 (group demographics); Fig 1 p. 236 (opioid MME & pain VAS graphs)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Grech_2016_MorphineConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Grech_2016_MorphineConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -2602,14 +3745,14 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": true,
-      "opioid_md": -3.62,
+      "opioid_md": -12.56,
       "pain_md": -0.03,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
+      "reaches_10mg": true,
+      "reaches_8mg": true,
+      "reaches_5mg": true,
       "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "quadrant": 1,
+      "quadrant_name": "Optimal Benchmark (Sparing ≥ 10 mg MME + Pain Stable/Reduced)"
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -2652,6 +3795,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1-4 (Methods, computer sequence, NMRR 13-128-14785); Fig 1 p. 3 (acupoint location); Fig 2 p. 5 (CONSORT flow); Table 1 p. 5 (demographics); Table 2 p. 6 (PCA morphine demand and dose); Fig 3 p. 6 (NRS pain score); Fig 4 p. 6 (nausea incidence)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Praveena_2016_MorphineConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative PCA Morphine Requirement",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Some Concerns",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Praveena_2016_MorphineConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative PCA Morphine Requirement",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Some Concerns",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some Concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -2740,7 +3947,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Video-assisted thoracic surgical (VATS) lobectomy (single lobe n=78, two lobes n=2)",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -2783,6 +3990,67 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 2-4 (Methods, SAS randomization, SNOSE, sham TEAS); Table 1 p. 5 (demographics); Table 2 p. 5 (intraop anesthetic dosages); Table 4 p. 5 (PACU extubation & NRS); Table 5 p. 6 (postop sufentanil & PONV); Table 6 p. 6 (SF-12 scores)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Zheng_2017_CognitiveDecline_POD7.md",
+          "outcome_name": "Incidence of Postoperative Cognitive Dysfunction (POCD)",
+          "timepoint": "Postoperative Day 7 (POD 7)",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -2895,7 +4163,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Laparoscopic cholecystectomy (48.8%) and laparoscopic gynaecological surgery (51.2%)",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -2938,6 +4206,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 340-344 (Methods, SPSS table, sealed envelopes, ChiCTR-IOR-15006032); Fig 1 p. 342 (flow diagram); Table 1 p. 343 (demographics); Fig 2 p. 343 (resting VAS); Fig 3 p. 344 (coughing VAS); Table 2 p. 344 (rescue analgesics, PONV, flatus, satisfaction)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Sun_2017_OpioidConsumption_24h.md",
+          "outcome_name": "Supplemental Analgesic Requirement / Opioid Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Sun_2017_OpioidConsumption_24h.md",
+        "outcome_name": "Supplemental Analgesic Requirement / Opioid Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -3048,7 +4380,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Laparoscopic radical gastrectomy (proximal gastrectomy n=34, distal gastrectomy n=38, total gastrectomy n=45; reconstruction: Billroth I n=31, Billroth II n=41, Roux-en-Y n=45)",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -3091,6 +4423,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 15 (pain VAS 24h & opioid at 4h, 8h, 36h); Text p. 15 (PONV percentages); Table 1 p. 14 (demographics); Table 3 p. 15 (GI recovery); Fig 2 p. 14 (flowchart 3 dropouts); Fig 4 p. 14 (analgesic consumption graph)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Gu_2019_TimeFlatus_POD1to4.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 4",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Gu_2019_TimeFlatus_POD1to4.md",
+        "outcome_name": "Time to First Postoperative Flatus",
+        "timepoint": "Postoperative Day 1 to Day 4",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -3153,7 +4549,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟢 Verified",
@@ -3196,6 +4592,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": ""
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Zhou_2025_QoR15_24h.md",
+          "outcome_name": "Quality of Recovery-15 (QoR-15) Total Score",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "assessment_file": "RoB2_Zhou_2025_QoR15_24h.md",
+        "outcome_name": "Quality of Recovery-15 (QoR-15) Total Score",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      }
     },
     "author_inquiry": {
       "has_inquiry": false,
@@ -3258,14 +4718,14 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Video-assisted thoracoscopic surgery (VATS) pulmonary resection: single lobectomy (95%) or bilobectomy (5%) for early-stage lung cancer (adenocarcinoma 60%, squamous cell carcinoma 40%)",
     "mcid": {
       "is_paired": true,
-      "opioid_md": 0.28,
-      "pain_md": 0.86,
+      "opioid_md": -2.82,
+      "pain_md": -3.06,
       "reaches_10mg": false,
       "reaches_8mg": false,
       "reaches_5mg": false,
       "pain_non_inferior": true,
-      "quadrant": 5,
-      "quadrant_name": "No Opioid Sparing"
+      "quadrant": 3,
+      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
     },
     "audit": {
       "classification": "🟢 Verified",
@@ -3308,6 +4768,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 930 (opioid & pain); Table 1 p. 931 (demographics); Table 2 p. 933 (PONV); Fig 1 p. 931 (flowchart 0 dropouts)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Chen_2020_SufentanilConsumption_24h.md",
+          "outcome_name": "Cumulative Postoperative Sufentanil Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Chen_2020_SufentanilConsumption_24h.md",
+        "outcome_name": "Cumulative Postoperative Sufentanil Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": false,
@@ -3427,7 +4951,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -3470,6 +4994,54 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1-6 (Methods, SPSS sequence, sealed envelopes, open-label design, ChiCTR1800014461); Fig 1 p. 4 (CONSORT flow); Table 1 p. 4 (demographics, anesthetics); Table 2 p. 5 (acceptability scores); Table 3 p. 5 (gastrointestinal outcomes, flatus, defecation, rescue); Table 4 p. 6 (nausea, vomiting, static/dynamic pain VAS, ambulation, stay)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -3592,15 +5164,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -1.03,
-      "pain_md": -6.67,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -3643,6 +5208,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 1-8 (Methods, computer sequence, sealed envelopes, sham 0 mA control, double-blinding, NCT02619578); Fig 1 p. 2 (CONSORT flow); Fig 2 p. 3 (acupoint map); Fig 4 p. 5 (QoR-40 scores); Fig 5 p. 6 (MMSE scores); Table 1 p. 5 (demographics, anesthetics); Table 2 p. 7 (VAS scores); Table 3 p. 7 (rescue analgesia, rescue antiemetics, PONV)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Yu_2020_QoR40_24h.md",
+          "outcome_name": "Quality of Recovery-40 (QoR-40) Total Score",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "assessment_file": "RoB2_Yu_2020_QoR40_24h.md",
+        "outcome_name": "Quality of Recovery-40 (QoR-40) Total Score",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -3751,7 +5380,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Open abdominal surgery: total gastrectomy (24.4%), partial gastrectomy (37.8%), and radical colectomy (37.8%)",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -3794,6 +5423,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1-5 (Methods, computer table, assistant concealment, single-blind, blinded assessors, ChiCTR-INR-17011598); Fig 1 p. 3 (CONSORT flow); Table 1 p. 4 (demographics, surgery type, duration); Table 2 p. 4 (VAS pain at 2, 24, 48 h); Table 3 p. 4 (PACU hemodynamics); Table 4 p. 5 (dizziness, nausea/vomiting, total adverse events)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Zhan_2020_SufentanilConsumption_24h.md",
+          "outcome_name": "Cumulative Sufentanil Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Zhan_2020_SufentanilConsumption_24h.md",
+        "outcome_name": "Cumulative Sufentanil Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -3869,7 +5562,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective radical mastectomy for breast cancer",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -3912,6 +5605,85 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2 (randomization, PCA, TEAS parameters); Table I p. 5 (demographics); Table II p. 6 (opioid ml, presses, PONV, adverse events); Fig 3 p. 5 (pain VAS); Discussion p. 7 (blinding limits)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Ao_2021_PainIntensity_24h.md",
+          "outcome_name": "Postoperative Pain Intensity at Rest (VAS 0–10)",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Gao_2021_ParalyticIleus_POD5.md",
+          "outcome_name": "Cumulative Incidence of Postoperative Paralytic Ileus (POI)",
+          "timepoint": "Within 5 days postoperatively (POD 1 to POD 5)",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Ao_2021_PainIntensity_24h.md",
+        "outcome_name": "Postoperative Pain Intensity at Rest (VAS 0–10)",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Gao_2021_ParalyticIleus_POD5.md",
+        "outcome_name": "Cumulative Incidence of Postoperative Paralytic Ileus (POI)",
+        "timepoint": "Within 5 days postoperatively (POD 1 to POD 5)",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -3999,7 +5771,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -4042,6 +5814,54 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1619-1620; Table I p. 1622 (demographics); Table II p. 1622 (intraop opioids & anesthetics); Table III p. 1623 (GI recovery & pain); Fig 2 p. 1623 (KM curves)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -4117,7 +5937,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -4160,6 +5980,54 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Abstract p. 211; Protocol PMC7336398 p. 2-6 (Methods, blocked randomization, SNOSE, ChiCTR1900023263); Covidence true extracted values (R1 543991)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -4248,7 +6116,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -4291,6 +6159,67 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2-4 (Methods, computer random sequence, sealed envelopes, ChiCTR1800019951); Table 1 p. 5 (demographics & intraop opioids); Table 2 p. 5 (CRBD incidence & severity); Table 4 p. 6 (PONV, pain, extra analgesia, QoR-40); Table 5 p. 6 (biochemical stress markers)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Liang_2021_IncidenceCRBD_6h.md",
+          "outcome_name": "Incidence of Catheter-Related Bladder Discomfort (CRBD)",
+          "timepoint": "6 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -4389,15 +6318,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -0.14,
-      "pain_md": 0.16,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -4440,6 +6362,67 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 758-760 (Methods, online randomization, ChiCTR2000040397); Table 1 p. 760 (demographics); Table 2 p. 760 (pain scores, compressions, length of stay); Fig 2 p. 761 (CONSORT & biomarkers); Fig 3 p. 762 (POCD duration)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Liu_2021_CognitiveDecline_POD7.md",
+          "outcome_name": "Incidence of Postoperative Cognitive Decline (POCD)",
+          "timepoint": "Postoperative Day 7 (POD 7)",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -4554,7 +6537,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -4597,6 +6580,54 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 2-4 (Methods, multicenter, web randomization, NCT02741726); Fig 1 p. 3 (flow diagram); Table 1 p. 4 (demographics); Table 2 p. 5 (chronic pain outcomes); Table 3 p. 5 (short-term acute outcomes, remifentanil, pain NRS, PONV, rescue analgesia)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -4692,7 +6723,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -4735,6 +6766,54 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 1912-1915 (Methods, computer sequence, sealed envelopes, ChiCTR2000037785); Fig 1 p. 1916 (CONSORT flow); Table 1 p. 1915 (demographics, anesthetics, opioid consumption); Table 2 p. 1916 (PONV severity, rescue antiemetics); Table 3 p. 1917 (nausea, vomiting, PONV at time intervals); Table 4 p. 1917 (postoperative flatus, diet, stays, complications)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -4844,7 +6923,7 @@ window.STUDIES_DATA = [
     "mcid": {
       "is_paired": true,
       "opioid_md": -2.06,
-      "pain_md": 0.55,
+      "pain_md": -0.55,
       "reaches_10mg": false,
       "reaches_8mg": false,
       "reaches_5mg": false,
@@ -4893,6 +6972,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 1449-1457 (Methods, 1:1 allocation, unblinded usual care control, ERAS protocol, ChiCTR1900022692); Table 1 p. 1452 (demographics, comorbidities); Table 2 p. 1453 (surgical duration, blood loss, reconstruction); Table 3 p. 1454 (pain scores POD 0-5, morphine equivalents, opioid use rate); Table 4 p. 1455 (flatus, defecation, nausea, vomiting, distention, stay, C-D grades); Table 5 p. 1456 (hematology: beta-endorphin, IL-6, TNF-alpha, MTL)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Zhou_2021_TimeFlatus_POD1to3.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 3",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Zhou_2021_TimeFlatus_POD1to3.md",
+        "outcome_name": "Time to First Postoperative Flatus",
+        "timepoint": "Postoperative Day 1 to Day 3",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -5007,7 +7150,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -5050,6 +7193,67 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2-4 (Methods, sealed envelopes, placebo blunt needles, blinding assessment); Table 1 p. 4 (demographics); Table 2 p. 5 (pump compressions); Table 3 p. 6 (pain scores, fentanyl consumption, exhaust); Fig 2 p. 7 (pain trajectories); p. 9 (ClinicalTrials.gov NCT04879212)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Jin_2023_AnalgesicPumpCompressions_48h.md",
+          "outcome_name": "Cumulative Number of Patient-Controlled Intravenous Analgesia (PCIA) Pump Compressions",
+          "timepoint": "0 to 48 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -5125,15 +7329,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -8.4,
-      "pain_md": 0.0,
-      "reaches_10mg": false,
-      "reaches_8mg": true,
-      "reaches_5mg": true,
-      "pain_non_inferior": true,
-      "quadrant": 2,
-      "quadrant_name": "Moderate Sparing (5–10 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -5176,6 +7373,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 1466-1468 (Methods, 1:1 computer sequence, sealed envelopes, ChiCTR2100050235); Fig 2 p. 1468 (CONSORT flow); Table 1 p. 1469 (demographics & intraop drugs); Table 2 p. 1470 (mechanical pain thresholds); Table 3 p. 1471 (NRS pain scores & analgesics)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Li_2022_MechanicalPainThreshold_24h.md",
+          "outcome_name": "Mechanical Pain Threshold Surrounding the Incision",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Li_2022_MechanicalPainThreshold_24h.md",
+        "outcome_name": "Mechanical Pain Threshold Surrounding the Incision",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -5286,7 +7547,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -5329,6 +7590,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 2872-2875 (Methods, multicenter, sealed envelopes, NCT02921529); Fig 1 p. 2874 (CONSORT flow); Table 2 p. 2874 (demographics); Table 3 p. 2875 (recovery parameters, VAS, PCA, PONV, hospital stay)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Lu_2022_TimeFlatus_POD1to3.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 3",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Lu_2022_TimeFlatus_POD1to3.md",
+        "outcome_name": "Time to First Postoperative Flatus",
+        "timepoint": "Postoperative Day 1 to Day 3",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -5429,15 +7754,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -0.48,
-      "pain_md": 0.77,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -5480,6 +7798,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 1-6 (Methods, computer sequence, envelopes, ChiCTR1800014634); Table 1 p. 3 (demographics); Table 2 p. 4 (anesthetic consumption, blood loss, durations); Table 3 p. 4 (VAS pain POD 1-5); Table 4 p. 5 (PONV, dizziness, rescue antiemetics); Table 5 p. 5 (hemodynamics)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Xiao_2022_QoR40_24h.md",
+          "outcome_name": "Quality of Recovery-40 (QoR-40) Total Score",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "assessment_file": "RoB2_Xiao_2022_QoR40_24h.md",
+        "outcome_name": "Quality of Recovery-40 (QoR-40) Total Score",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -5601,7 +7983,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -5644,6 +8026,54 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 1327-1333 (Methods, computer sequence, sealed envelopes, ChiCTR2100042119); Table 1 p. 1331 (demographics); Table 2 p. 1332 (T-lymphocytes); Table 3 p. 1333 (remifentanil, propofol, extubation, flatus, PONV, PCIA presses, rest & movement VAS pain); Fig 2 p. 1331 (CONSORT flow)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -5719,7 +8149,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -5762,6 +8192,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 415-423 (Methods, computer sequence, sealed envelopes, single-blind, blinded nurse assessors, ChiCTR-INR-16010035); Fig 1 p. 418 (CONSORT flow); Table 1 p. 419 (demographics, Apfel scores); Table 2 p. 420 (nausea, vomiting, antiemetic requirements 0-6h, 6-24h, 24-48h); Table 3 p. 421 (pain scores on movement, rescue analgesics, flatus, QoR-15)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Jin_2022_MorphineConsumption_24h.md",
+          "outcome_name": "Cumulative Morphine Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Jin_2022_MorphineConsumption_24h.md",
+        "outcome_name": "Cumulative Morphine Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -5872,7 +8366,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -5915,6 +8409,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Table 1 (demographics); Table 2 (intraop opioids & remedial analgesia); Table 5 (adverse events & PONV); Fig 3B (pain NRS graph)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Guo_2023_TimeFlatus_POD1to3.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 3",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Guo_2023_TimeFlatus_POD1to3.md",
+        "outcome_name": "Time to First Postoperative Flatus",
+        "timepoint": "Postoperative Day 1 to Day 3",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -6014,7 +8572,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -6057,6 +8615,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2-3 (Methods, anesthesia, sham TEAS 0 mA); Table 2 p. 6 (demographics); Table 3 p. 6 (intraop characteristics, PONV, rescue analgesia, bowel movement); Table 4 p. 7 (QoR-15, VAS-P, HADS-A, ISI)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Hou_2023_SufentanilConsumption_24h.md",
+          "outcome_name": "Cumulative Sufentanil Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Hou_2023_SufentanilConsumption_24h.md",
+        "outcome_name": "Cumulative Sufentanil Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -6165,7 +8787,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -6208,6 +8830,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2-4 (Methods, SPSS sequence, opaque envelopes, Streitberger sham needles); Table 1 p. 6 (demographics); Table 2 p. 7 (VAS pain scores & PCA releases); Table 3 p. 9 (HSS score, AROM, PROM); Table 4 p. 10 (blinding assessment & adverse events)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Liu_2024_TimeFlatus_POD1to3.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 3",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Liu_2024_TimeFlatus_POD1to3.md",
+        "outcome_name": "Time to First Postoperative Flatus",
+        "timepoint": "Postoperative Day 1 to Day 3",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -6295,15 +8981,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -1.0,
-      "pain_md": -3.3,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -6346,6 +9025,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 809-813 (Methods, random number table, ChiCTR2100045173); Fig 1 p. 811 (acupoints); Fig 2 p. 812 (protocol); Fig 3 p. 813 (CONSORT flow); Table 1 p. 812 (demographics); Table 2 p. 813 (intraop drugs, remifentanil); Table 6 p. 815 (PACU pain); Table 7 p. 815 (24h NRS pain, vomiting, analgesics); Table 9 p. 816 (flatus, stay); Table 10 p. 816 (QoR-40)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Pan_2023_TimeFlatus_POD1to2.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 2",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Pan_2023_TimeFlatus_POD1to2.md",
+        "outcome_name": "Time to First Postoperative Flatus",
+        "timepoint": "Postoperative Day 1 to Day 2",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -6468,15 +9211,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Head, Neck & ENT",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -5.01,
-      "pain_md": -2.47,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": true,
-      "pain_non_inferior": true,
-      "quadrant": 2,
-      "quadrant_name": "Moderate Sparing (5–10 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -6519,6 +9255,85 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 1-4 (Methods, computer randomization, SNOSE, ChiCTR-TRC-13003026); Fig 1 p. 3 (CONSORT flow); Table 1 p. 3 (interventions); Table 2 p. 4 (demographics, sufentanil); Table 3 p. 4 (vomiting, nausea); Table 4 p. 5 (tramadol, metoclopramide); Table 5 p. 5 (VAS pain)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Tu_2024_IncidenceOfVomiting_2to6h.md",
+          "outcome_name": "Incidence of Vomiting",
+          "timepoint": "2 to 6 hours postoperatively (Key active efficacy interval)",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Tu_2024_PainIntensity_6to24h.md",
+          "outcome_name": "Postoperative Pain Intensity (Visual Analog Scale, 0–10 cm)",
+          "timepoint": "6 to 24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Tu_2024_PainIntensity_6to24h.md",
+        "outcome_name": "Postoperative Pain Intensity (Visual Analog Scale, 0–10 cm)",
+        "timepoint": "6 to 24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "assessment_file": "RoB2_Tu_2024_IncidenceOfVomiting_2to6h.md",
+        "outcome_name": "Incidence of Vomiting",
+        "timepoint": "2 to 6 hours postoperatively (Key active efficacy interval)",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -6628,15 +9443,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -0.98,
-      "pain_md": -5.49,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -6679,6 +9487,82 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 707-713 (Methods, computer sequence, opaque envelopes, ChiCTR2100054971); Table 1 p. 711 (demographics, flatus, hospital stay); Table 2 p. 712 (rescue analgesia, PONV, abdominal distension); Fig 3 p. 714 (sleep scores); Fig 4 p. 714 (rest & activity VAS pain); Table 3 p. 713 (cytokines); Table 4 p. 715 (oxidative stress markers)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Wang_2022_TimeFlatus_POD1to3.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 3",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Wang_2023_SleepQualityScore_POD1.md",
+          "outcome_name": "Subjective Sleep Quality Score (Athens Insomnia Scale, AIS)",
+          "timepoint": "Postoperative Day 1 (POD 1)",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Wang_2022_TimeFlatus_POD1to3.md",
+        "outcome_name": "Time to First Postoperative Flatus",
+        "timepoint": "Postoperative Day 1 to Day 3",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -6805,8 +9689,15 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "is_paired": true,
+      "opioid_md": -0.3,
+      "pain_md": -1.6,
+      "reaches_10mg": false,
+      "reaches_8mg": false,
+      "reaches_5mg": false,
+      "pain_non_inferior": true,
+      "quadrant": 3,
+      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -6849,6 +9740,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 450-454 (Methods, computer codes, sealed envelopes, open-label design, ChiCTR1900024840); Fig 1 p. 452 (CONSORT flow); Table 1 p. 452 (demographics, anesthetics); Table 2 p. 453 (gastrointestinal outcomes); Table 3 p. 453 (nausea, vomiting, rest/movement pain VAS, morphine, stays)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Zhang_2024_IncidenceOfPONV_24h.md",
+          "outcome_name": "Cumulative Incidence of Postoperative Nausea and Vomiting (PONV)",
+          "timepoint": "0 to 24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "assessment_file": "RoB2_Zhang_2024_IncidenceOfPONV_24h.md",
+        "outcome_name": "Cumulative Incidence of Postoperative Nausea and Vomiting (PONV)",
+        "timepoint": "0 to 24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -6957,7 +9912,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -7000,6 +9955,67 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 1153-1161 (Methods, SAS sequence, sealed envelopes, sham 0 mA control, blinding, NCT03631160); Fig 2 p. 1156 (CONSORT flowchart); Fig 3 p. 1158 (Kaplan-Meier voiding curves); Table 1 p. 1157 (demographics, anesthetics, opioids); Table 2 p. 1158 (voiding recovery); Table 3 p. 1159 (catheterization); Table 4 p. 1159 (POUR, voiding difficulty, pain NRS, vomiting, mobilization, stay); Table 5 p. 1159 (adverse events)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Zhang_2023_TimeVoiding_POD1.md",
+          "outcome_name": "Time to First Spontaneous Voiding",
+          "timepoint": "0 to 24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -7088,7 +10104,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -7131,6 +10147,54 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 926-930 (Methods, computer sequence, 140 envelopes, ChiCTR2100053752); Table 1 p. 929 (demographics, sufentanil); Table 2 p. 930 (PONV in SNVP vs MNVP); Table 3 p. 931 (PONV across 4 subgroups); Fig 2 & 3 p. 931-932 (GDF-15 serum levels)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -7213,7 +10277,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -7256,6 +10320,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2-4 (Methods, SPSS sequence, centralized allocation, EA STRICTA); Table 1 p. 3 (acupoint anatomical locations); Table 2 p. 4 (timeline); Table 3 p. 4 (demographics); Table 4 p. 4 (outcomes); Fig 2 p. 5 (KM curve flatus)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Huang_2025_SufentanilConsumption_24h.md",
+          "outcome_name": "Cumulative Sufentanil Consumption",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "assessment_file": "RoB2_Huang_2025_SufentanilConsumption_24h.md",
+        "outcome_name": "Cumulative Sufentanil Consumption",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -7353,7 +10481,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -7396,6 +10524,67 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 2-5 (Methods, SPSS sequence, SNOSE, sham non-acupoints, ChiCTR2300077984); Fig 1 p. 4 (CONSORT flow); Table 1 p. 4 (demographics); Table 2 p. 5 (intraop drugs & hemodynamics); Fig 2 p. 6 (VAS pain scores 1-48h); Table 3 p. 6 (arrhythmias); Table 4 p. 6 (sleep parameters)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Liu_2025_SleepQualityEfficiency_POD1.md",
+          "outcome_name": "Subjective Sleep Efficiency (Athens Insomnia Scale, AIS)",
+          "timepoint": "Postoperative Day 1 (POD 1)",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -7483,15 +10672,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -1.6,
-      "pain_md": -8.5,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -7534,6 +10716,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Abstract p. 720; Protocol PMC10357617 p. 2-5 (Methods, blocked randomization, sealed numbered envelopes, ChiCTR2100052837); Covidence true extracted values (R1 543991)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Liu_2026_ModerateToSeverePain_24h.md",
+          "outcome_name": "Incidence of Moderate-to-Severe Pain (NRS >= 4)",
+          "timepoint": "0 to 24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Liu_2026_ModerateToSeverePain_24h.md",
+        "outcome_name": "Incidence of Moderate-to-Severe Pain (NRS >= 4)",
+        "timepoint": "0 to 24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -7641,15 +10887,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -1.18,
-      "pain_md": -4.15,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -7692,6 +10931,67 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2-5 (Methods, random number table, double-blind sham, ChiCTR2100053050); Fig 2 p. 4 (flow diagram); Table 1 p. 4 (demographics); Table 2 p. 4 (MMSE & PND); Table 6 p. 8 (PONV & adverse reactions); Table 7 p. 9 (VAS pain & PCIA)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Long_2025_IncidenceOfPND_POD3.md",
+          "outcome_name": "Cumulative Incidence of Perioperative Neurocognitive Disorder (PND)",
+          "timepoint": "Within 3 days postoperatively (POD 1 to POD 3)",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -7804,15 +11104,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -2.3,
-      "pain_md": -1.2,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -7855,6 +11148,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 3017-3022 (Methods, computer sequence, ChiCTR2200066600); Table 1 p. 3020 (demographics, anesthetics, operative details); Table 2 p. 3021 (VAS pain, rescue analgesics, antiemetics, vomiting, QoR-15, LOS)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Wu_2025_PainIntensity_24h.md",
+          "outcome_name": "Postoperative Pain Intensity at Rest (VAS 0–10)",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Wu_2025_PainIntensity_24h.md",
+        "outcome_name": "Postoperative Pain Intensity at Rest (VAS 0–10)",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -7953,7 +11310,7 @@ window.STUDIES_DATA = [
     "mcid": {
       "is_paired": true,
       "opioid_md": -8.47,
-      "pain_md": 0.3,
+      "pain_md": -0.3,
       "reaches_10mg": false,
       "reaches_8mg": true,
       "reaches_5mg": true,
@@ -8002,6 +11359,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 6477-6487 (Methods, Stata sequence, sealed envelopes, sham sub-sensory control, blinding, ChiCTR2400093634); Fig 1 p. 6480 (acupoints); Fig 2 p. 6481 (CONSORT flow); Fig 3 p. 6484 (pain trajectories); Table 1 p. 6482 (demographics, intraoperative anesthetics); Table 2 p. 6483 (GEE models for pain); Table 3 p. 6485 (cytokines IL-6); Table 4 p. 6485 (sufentanil, PCIA boluses, rescue analgesia); Table 5 p. 6485 (recovery milestones, drain, ambulation, flatus, discharge); Table 6 p. 6485 (PONV, dizziness, sleep)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Zhang_2025_VisceralPainScore_POD1.md",
+          "outcome_name": "Acute Visceral Pain Score (NRS 0–10)",
+          "timepoint": "Postoperative Day 1 (POD 1)",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Zhang_2025_VisceralPainScore_POD1.md",
+        "outcome_name": "Acute Visceral Pain Score (NRS 0–10)",
+        "timepoint": "Postoperative Day 1 (POD 1)",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -8155,15 +11576,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -0.5,
-      "pain_md": 0.3,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -8206,6 +11620,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 6449-6459 (Methods, SPSS sequence, sealed envelopes, sham 0 mA control, blinding, ChiCTR2200058283); Fig 1 p. 6451 (CONSORT flow); Table 1 p. 6452 (demographics, surgery duration); Table 2 p. 6453 (PONV 0-2h, 2-4h, 4-6h); Table 3 p. 6457-6458 (remifentanil, PCIA use, flatus, borborygmus, stay, adverse events); Table 4 p. 6458 (NRS pain and PSQI sleep at 6h, 24h, 48h)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Zheng_2025_IncidenceOfPONV_24h.md",
+          "outcome_name": "Incidence of Postoperative Nausea and Vomiting (PONV)",
+          "timepoint": "0 to 24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "assessment_file": "RoB2_Zheng_2025_IncidenceOfPONV_24h.md",
+        "outcome_name": "Incidence of Postoperative Nausea and Vomiting (PONV)",
+        "timepoint": "0 to 24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -8331,7 +11809,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -8374,6 +11852,82 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2-4 (Methods, anesthesia, sham acupuncture); Table 1 p. 4 (demographics); Table 2 p. 4 (pain scores); Table 3 p. 5 (BADL scores); Table 4 p. 5 (complications & PONV)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_He_2026_WJCO_PainIntensity_24h.md",
+          "outcome_name": "Postoperative Pain Intensity at Rest (VAS 0–10)",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Lu_2021_ModerateToSeverePain_24h.md",
+          "outcome_name": "Incidence of Moderate-to-Severe Acute Postoperative Pain (NRS >= 4)",
+          "timepoint": "0 to 24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Lu_2021_ModerateToSeverePain_24h.md",
+        "outcome_name": "Incidence of Moderate-to-Severe Acute Postoperative Pain (NRS >= 4)",
+        "timepoint": "0 to 24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -8473,7 +12027,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections",
@@ -8516,6 +12070,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 2-4 (Methods, web randomization, opaque sham box); Table 1 p. 6 (demographics & intraop opioids); Table 2 p. 6 (PONV mITT & PP); Table 3 p. 7 (PCA attempts, deliveries, pain median); Supplemental Material 2 eTable 1 p. 1 (24h & 48h opioid MME)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_He_2026_JIS_TimeFlatus_POD1to3.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 3",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_He_2026_JIS_TimeFlatus_POD1to3.md",
+        "outcome_name": "Time to First Postoperative Flatus",
+        "timepoint": "Postoperative Day 1 to Day 3",
+        "d1": "Low",
+        "d2": "Low",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Low",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": false,
@@ -8627,7 +12245,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -8670,6 +12288,121 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 2-3 (Methods, computer block randomization, opaque envelopes, sham TEAS 0 mA); Table 1 p. 3 (demographics); Table 2 p. 4 (intraop data); Table 3 p. 4 (time to flatus); Table 4 p. 5 (secondary outcomes & PONV); Table 5 p. 5 (complications); Fig 2 p. 5 (KM curve flatus)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Jiang_2026_TimeFlatus_POD1to3.md",
+          "outcome_name": "Time to First Postoperative Flatus (hours)",
+          "timepoint": "Postoperative follow-up (0-72 hours)",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Li_2021_TimeFlatus_POD1to4.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 4",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Wang_2020_TimeFlatus_POD1to3.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 3",
+          "d1": "Low",
+          "d2": "Low",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Low",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Xiong_2021_IncidenceOfPONV_48h.md",
+          "outcome_name": "Incidence of Postoperative Nausea and Vomiting (PONV)",
+          "timepoint": "0 to 48 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some Concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Zhou_2026_TimeFlatus_POD1to3.md",
+          "outcome_name": "Time to First Postoperative Flatus",
+          "timepoint": "Postoperative Day 1 to Day 3",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "assessment_file": "RoB2_Xiong_2021_IncidenceOfPONV_48h.md",
+        "outcome_name": "Incidence of Postoperative Nausea and Vomiting (PONV)",
+        "timepoint": "0 to 48 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some Concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some Concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "flatus_time": {
+        "assessment_file": "RoB2_Zhou_2026_TimeFlatus_POD1to3.md",
+        "outcome_name": "Time to First Postoperative Flatus",
+        "timepoint": "Postoperative Day 1 to Day 3",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -8769,7 +12502,7 @@ window.STUDIES_DATA = [
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
       "is_paired": false,
-      "reason": "Lacks paired reported continuous 24h opioid consumption and pain estimates."
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -8812,6 +12545,54 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2-4 (Methods, computer seed, SNOSE, placebo stimulator, ChiCTR2300078615); Fig 1 p. 3 (CONSORT flow); Table 1 p. 4 (demographics); Table 2 p. 5 (secondary outcomes & PONV); Fig 4 p. 7 (remifentanil dosage); Fig 5 p. 8 (F-VAS pain scores)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -8906,15 +12687,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Head, Neck & ENT",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": 0.83,
-      "pain_md": -4.7,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 5,
-      "quadrant_name": "No Opioid Sparing"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -8957,6 +12731,70 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Low",
       "rationale": "Text p. 2-5 (Methods, computer sequence, SNOSE, ChiCTR2300077667); Fig 1 p. 4 (flow diagram); Table 1 p. 4 (demographics); Table 2 p. 5 (PONV incidences); Table 3 p. 5 (vomiting severity); Table 4 p. 5 (rescue antiemetics); Table 5 p. 5 (pain NRS scores)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Luo_2026_IncidenceOfPONV_48h.md",
+          "outcome_name": "Cumulative Incidence of Postoperative Nausea and Vomiting (PONV)",
+          "timepoint": "0 to 48 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some Concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Some Concerns",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "ponv_24h": {
+        "assessment_file": "RoB2_Luo_2026_IncidenceOfPONV_48h.md",
+        "outcome_name": "Cumulative Incidence of Postoperative Nausea and Vomiting (PONV)",
+        "timepoint": "0 to 48 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some Concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Some Concerns",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -9090,15 +12928,8 @@ window.STUDIES_DATA = [
     "surgery_category": "Other General Surgery",
     "surgery_procedure": "Elective surgical procedure under general anesthesia",
     "mcid": {
-      "is_paired": true,
-      "opioid_md": -0.88,
-      "pain_md": -5.88,
-      "reaches_10mg": false,
-      "reaches_8mg": false,
-      "reaches_5mg": false,
-      "pain_non_inferior": true,
-      "quadrant": 3,
-      "quadrant_name": "Minor Sparing (< 5 mg MME) + Pain Stable/Reduced"
+      "is_paired": false,
+      "reason": "Lacks paired reported continuous 24-h opioid consumption and pain estimates in primary synthesis."
     },
     "audit": {
       "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
@@ -9141,6 +12972,85 @@ window.STUDIES_DATA = [
       "d5": "Low",
       "overall": "Some concerns",
       "rationale": "Text p. 2-5 (Methods, random number table, ChiCTR2200062959); Fig 1 p. 4 (acupoints); Fig 2 p. 6 (flow diagram); Table 1 p. 6-7 (demographics); Fig 3 p. 7 (NRS pain); Fig 4 p. 8 (AIS sleep); Table 2 p. 8 (hemodynamics); Table 3 p. 8 (PONV & hospital stay)"
+    },
+    "rob2_outcomes": {
+      "assessed_list": [
+        {
+          "assessment_file": "RoB2_Ma_2026_PainIntensity_24h.md",
+          "outcome_name": "Postoperative Pain Intensity at Rest (VAS 0–10)",
+          "timepoint": "24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        },
+        {
+          "assessment_file": "RoB2_Wang_2024_IncidenceOfPONV_24h.md",
+          "outcome_name": "Cumulative Incidence of Postoperative Nausea and Vomiting (PONV)",
+          "timepoint": "0 to 24 hours postoperatively",
+          "d1": "Low",
+          "d2": "Some concerns",
+          "d3": "Low",
+          "d4": "Low",
+          "d5": "Low",
+          "overall": "Some Concerns",
+          "status": "Assessed"
+        }
+      ],
+      "opioid_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "pain_rest_24h": {
+        "assessment_file": "RoB2_Ma_2026_PainIntensity_24h.md",
+        "outcome_name": "Postoperative Pain Intensity at Rest (VAS 0–10)",
+        "timepoint": "24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "ponv_24h": {
+        "assessment_file": "RoB2_Wang_2024_IncidenceOfPONV_24h.md",
+        "outcome_name": "Cumulative Incidence of Postoperative Nausea and Vomiting (PONV)",
+        "timepoint": "0 to 24 hours postoperatively",
+        "d1": "Low",
+        "d2": "Some concerns",
+        "d3": "Low",
+        "d4": "Low",
+        "d5": "Low",
+        "overall": "Some Concerns",
+        "status": "Assessed"
+      },
+      "flatus_time": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      },
+      "qor_24h": {
+        "status": "Pending result-specific RoB 2 assessment",
+        "d1": "Pending",
+        "d2": "Pending",
+        "d3": "Pending",
+        "d4": "Pending",
+        "d5": "Pending",
+        "overall": "Pending"
+      }
     },
     "author_inquiry": {
       "has_inquiry": true,
