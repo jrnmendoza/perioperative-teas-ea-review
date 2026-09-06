@@ -3,12 +3,12 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/
 > stata_meta_regression_execution.log
   log type:  text
- opened on:   6 Sep 2026, 09:27:47
+ opened on:   6 Sep 2026, 09:37:39
 
 . 
 . * ---------------------------------------------------------------------------
 > ---
-. * 1. LOAD AUDITED CONSENSUS PRIMARY SYNTHESIS DATASET (k = 11 RCTs)
+. * 1. LOAD AUDITED EXTENDED MODERATOR DATASET (k = 11 RCTs)
 . * ---------------------------------------------------------------------------
 > ---
 . import delimited "dashboard/stata_consensus_synthesis_data.csv", clear varnam
@@ -17,11 +17,55 @@
 (32 vars, 11 obs)
 
 . 
+. * Merge extended indicators: is_multiphase, freq_dd, pct_female
+. gen is_multiphase = (canonical_name == "Zhang 2025" | canonical_name == "Yang
+>  2024" | canonical_name == "Sim 2002" | canonical_name == "Seevaunnamtum 2016
+> " | canonical_name == "Chen 2015 (Hyperalgesia)")
+
+. gen freq_dd = (canonical_name == "Zhang 2025" | canonical_name == "Sim 2002" 
+> | canonical_name == "He 2026 (hepatectomy/JIS)" | canonical_name == "Chen 199
+> 8" | canonical_name == "Chen 2020" | canonical_name == "Chen 2015 (Thyroidect
+> omy)" | canonical_name == "Chen 2015 (Hyperalgesia)")
+
+. gen pct_female = 100.0 if canonical_name == "Zhang 2025"
+(10 missing values generated)
+
+. replace pct_female = 67.8 if canonical_name == "Yang 2024"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Sim 2002"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Seevaunnamtum 2016"
+(1 real change made)
+
+. replace pct_female = 22.1 if canonical_name == "He 2026 (hepatectomy/JIS)"
+(1 real change made)
+
+. replace pct_female = 90.2 if canonical_name == "El-Rakshy 2009"
+(1 real change made)
+
+. replace pct_female = 36.4 if canonical_name == "Coura 2011"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Chen 1998"
+(1 real change made)
+
+. replace pct_female = 43.8 if canonical_name == "Chen 2020"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Chen 2015 (Thyroidectomy)"
+(1 real change made)
+
+. replace pct_female = 100.0 if canonical_name == "Chen 2015 (Hyperalgesia)"
+(1 real change made)
+
+. 
 . describe
 
 Contains data
  Observations:            11                  
-    Variables:            32                  
+    Variables:            35                  
 -------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -58,6 +102,9 @@ hedges_se       float   %9.0g
 rob2_overall    str13   %13s                  
 is_high_rob     byte    %8.0g                 
 opioid_status   str19   %19s                  
+is_multiphase   float   %9.0g                 
+freq_dd         float   %9.0g                 
+pct_female      float   %9.0g                 
 -------------------------------------------------------------------------------
 Sorted by: 
      Note: Dataset has changed since last saved.
@@ -151,8 +198,7 @@ Test of homogeneity: Q = chi2(10) = 197.30                 Prob > Q = 0.0000
 . 
 . * ---------------------------------------------------------------------------
 > ---
-. * 4. UNIVARIABLE MODEL 1: BASELINE CONTROL-GROUP OPIOID CONSUMPTION (mg IV MM
-> E)
+. * 4. MODEL 1: BASELINE CONTROL-GROUP OPIOID CONSUMPTION (mg IV MME)
 . * ---------------------------------------------------------------------------
 > ---
 . di as txt _n "===============================================================
@@ -160,9 +206,8 @@ Test of homogeneity: Q = chi2(10) = 197.30                 Prob > Q = 0.0000
 
 ==================================================================
 
-. di as txt "UNIVARIABLE MODEL 1: Baseline Control Opioid Requirement (arm2_mea
-> n_mme)"
-UNIVARIABLE MODEL 1: Baseline Control Opioid Requirement (arm2_mean_mme)
+. di as txt "MODEL 1: Baseline Control Opioid Requirement (arm2_mean_mme)"
+MODEL 1: Baseline Control Opioid Requirement (arm2_mean_mme)
 
 . di as txt "Scientific Question: Does the magnitude of opioid sparing increase
 >  in"
@@ -215,7 +260,7 @@ file dashboard/stata_meta_reg_baseline_mme.png written in PNG format
 . 
 . * ---------------------------------------------------------------------------
 > ---
-. * 5. UNIVARIABLE MODEL 2: PUBLICATION YEAR (TEMPORAL MODERATOR)
+. * 5. MODEL 2: PUBLICATION YEAR (TEMPORAL MODERATOR)
 . * ---------------------------------------------------------------------------
 > ---
 . di as txt _n "===============================================================
@@ -223,8 +268,8 @@ file dashboard/stata_meta_reg_baseline_mme.png written in PNG format
 
 ==================================================================
 
-. di as txt "UNIVARIABLE MODEL 2: Publication Year (year)"
-UNIVARIABLE MODEL 2: Publication Year (year)
+. di as txt "MODEL 2: Publication Year (year)"
+MODEL 2: Publication Year (year)
 
 . di as txt "Scientific Question: Are opioid-sparing effect sizes changing over
 >  time"
@@ -276,7 +321,7 @@ file dashboard/stata_meta_reg_year.png written in PNG format
 . 
 . * ---------------------------------------------------------------------------
 > ---
-. * 6. UNIVARIABLE MODEL 3: MODALITY (TEAS vs EA)
+. * 6. MODEL 3: DEMOGRAPHIC SEX (% FEMALE PARTICIPANTS)
 . * ---------------------------------------------------------------------------
 > ---
 . di as txt _n "===============================================================
@@ -284,18 +329,153 @@ file dashboard/stata_meta_reg_year.png written in PNG format
 
 ==================================================================
 
-. di as txt "UNIVARIABLE MODEL 3: Acupoint Stimulation Modality (TEAS=0, EA=1)"
-UNIVARIABLE MODEL 3: Acupoint Stimulation Modality (TEAS=0, EA=1)
+. di as txt "MODEL 3: Patient Sex (% Female Participants)"
+MODEL 3: Patient Sex (% Female Participants)
+
+. di as txt "Scientific Question: Does the sex composition of the trial cohort"
+Scientific Question: Does the sex composition of the trial cohort
+
+. di as txt "moderate the 24-h opioid-sparing effect of acupoint stimulation?"
+moderate the 24-h opioid-sparing effect of acupoint stimulation?
+
+. di as txt "==================================================================
+> "
+==================================================================
+
+. meta regress pct_female, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Random-effects meta-regression                      Number of obs  =        11
+Method: REML                                        Residual heterogeneity:
+SE adjustment: Knapp–Hartung                                    tau2 =   38.33
+                                                              I2 (%) =   99.73
+                                                                  H2 =  372.84
+                                                       R-squared (%) =    0.00
+                                                    Model F(1,9)   =      0.03
+                                                    Prob > F       =    0.8746
+------------------------------------------------------------------------------
+    _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+  pct_female |  -.0127958   .0788075    -0.16   0.875    -.1910707    .1654792
+       _cons |  -4.325764   6.493357    -0.67   0.522    -19.01476    10.36323
+------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(9) = 97.37    Prob > Q_res = 0.0000
+
+. estat bubbleplot, title("Meta-Regression: Trial Sex Composition (% Female)", 
+> size(medium)) ///
+>     subtitle("Random-effects REML with Knapp–Hartung adjustment (k = 11, R² =
+>  0.00%)", size(small)) ///
+>     xtitle("Proportion of Female Participants (% Female)", size(small)) ///
+>     ytitle("Mean Difference in 24-h Opioid Consumption (mg IV MME)", size(sma
+> ll)) ///
+>     note("Slope β = -0.013 (95% CI: -0.191, +0.165), t(9) = -0.16, p = 0.875"
+> , size(vsmall))
+
+. graph export "dashboard/stata_meta_reg_sex.png", width(1600) replace
+file dashboard/stata_meta_reg_sex.png written in PNG format
+
+. 
+. * ---------------------------------------------------------------------------
+> ---
+. * 7. MODEL 4: STIMULATION TIMING (MULTI-PHASE VS PREOPERATIVE ONLY)
+. * ---------------------------------------------------------------------------
+> ---
+. di as txt _n "===============================================================
+> ==="
+
+==================================================================
+
+. di as txt "MODEL 4: Stimulation Timing (Multi-phase vs Preoperative only)"
+MODEL 4: Stimulation Timing (Multi-phase vs Preoperative only)
+
+. di as txt "==================================================================
+> "
+==================================================================
+
+. meta regress is_multiphase, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Random-effects meta-regression                      Number of obs  =        11
+Method: REML                                        Residual heterogeneity:
+SE adjustment: Knapp–Hartung                                    tau2 =   35.62
+                                                              I2 (%) =   99.71
+                                                                  H2 =  340.50
+                                                       R-squared (%) =    0.00
+                                                    Model F(1,9)   =      0.48
+                                                    Prob > F       =    0.5050
+------------------------------------------------------------------------------
+    _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+is_multiph~e |   3.102421   4.468382     0.69   0.505     -7.00576     13.2106
+       _cons |  -6.703715   3.079022    -2.18   0.057    -13.66895    .2615171
+------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(9) = 72.79    Prob > Q_res = 0.0000
+
+. 
+. * ---------------------------------------------------------------------------
+> ---
+. * 8. MODEL 5: ELECTRICAL FREQUENCY (DENSE-DISPERSE 2/100 HZ VS FIXED)
+. * ---------------------------------------------------------------------------
+> ---
+. di as txt _n "===============================================================
+> ==="
+
+==================================================================
+
+. di as txt "MODEL 5: Electrical Frequency (Dense-Disperse 2/100 Hz vs Fixed)"
+MODEL 5: Electrical Frequency (Dense-Disperse 2/100 Hz vs Fixed)
+
+. di as txt "==================================================================
+> "
+==================================================================
+
+. meta regress freq_dd, random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Random-effects meta-regression                      Number of obs  =        11
+Method: REML                                        Residual heterogeneity:
+SE adjustment: Knapp–Hartung                                    tau2 =   34.69
+                                                              I2 (%) =   99.79
+                                                                  H2 =  469.57
+                                                       R-squared (%) =    0.00
+                                                    Model F(1,9)   =      0.46
+                                                    Prob > F       =    0.5160
+------------------------------------------------------------------------------
+    _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+     freq_dd |   3.222961   4.766731     0.68   0.516    -7.560133    14.00606
+       _cons |  -7.385773   3.924544    -1.88   0.093    -16.26371    1.492162
+------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(9) = 197.30   Prob > Q_res = 0.0000
+
+. 
+. * ---------------------------------------------------------------------------
+> ---
+. * 9. MODEL 6: MODALITY (TEAS vs EA)
+. * ---------------------------------------------------------------------------
+> ---
+. di as txt _n "===============================================================
+> ==="
+
+==================================================================
+
+. di as txt "MODEL 6: Acupoint Stimulation Modality (TEAS=0, EA=1)"
+MODEL 6: Acupoint Stimulation Modality (TEAS=0, EA=1)
 
 . di as txt "==================================================================
 > "
 ==================================================================
 
 . gen is_ea = (modality == "EA")
-
-. label define ea_lbl 0 "TEAS" 1 "EA"
-
-. label values is_ea ea_lbl
 
 . meta regress is_ea, random(reml) se(kh)
 
@@ -322,7 +502,8 @@ Test of residual homogeneity: Q_res = chi2(9) = 189.82   Prob > Q_res = 0.0000
 . 
 . * ---------------------------------------------------------------------------
 > ---
-. * 7. CONSTRAINED 2-PREDICTOR MULTIVARIABLE MODEL: BASELINE OPIOID + MODALITY
+. * 10. MODEL 7: CONSTRAINED 2-PREDICTOR MULTIVARIABLE MODEL (BASELINE + MODALI
+> TY)
 . * ---------------------------------------------------------------------------
 > ---
 . di as txt _n "===============================================================
@@ -373,52 +554,7 @@ Test of residual homogeneity: Q_res = chi2(8) = 177.07   Prob > Q_res = 0.0000
 . 
 . * ---------------------------------------------------------------------------
 > ---
-. * 8. SENSITIVITY 3-PREDICTOR MULTIVARIABLE MODEL: BASELINE + MODALITY + YEAR
-. * ---------------------------------------------------------------------------
-> ---
-. di as txt _n "===============================================================
-> ==="
-
-==================================================================
-
-. di as txt "SENSITIVITY MULTIVARIABLE MODEL (3-PREDICTOR, df = 7):"
-SENSITIVITY MULTIVARIABLE MODEL (3-PREDICTOR, df = 7):
-
-. di as txt "Baseline Opioid + Modality + Publication Year"
-Baseline Opioid + Modality + Publication Year
-
-. di as txt "==================================================================
-> "
-==================================================================
-
-. meta regress arm2_mean_mme is_ea year, random(reml) se(kh)
-
-  Effect-size label: Effect size
-        Effect size: md_mme
-          Std. err.: se_mme
-
-Random-effects meta-regression                      Number of obs  =        11
-Method: REML                                        Residual heterogeneity:
-SE adjustment: Knapp–Hartung                                    tau2 =    7.12
-                                                              I2 (%) =   97.28
-                                                                  H2 =   36.82
-                                                       R-squared (%) =   76.27
-                                                    Model F(3,7)   =      6.44
-                                                    Prob > F       =    0.0201
-------------------------------------------------------------------------------
-    _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
--------------+----------------------------------------------------------------
-arm2_mean~me |  -.1552399   .0554109    -2.80   0.026    -.2862657    -.024214
-       is_ea |   6.944758   4.632165     1.50   0.177    -4.008571    17.89809
-        year |   .5497082   .1805317     3.04   0.019     .1228186    .9765978
-       _cons |  -1110.483   364.5984    -3.05   0.019    -1972.621    -248.345
-------------------------------------------------------------------------------
-Test of residual homogeneity: Q_res = chi2(7) = 110.09   Prob > Q_res = 0.0000
-
-. 
-. * ---------------------------------------------------------------------------
-> ---
-. * 9. TEAS STRATUM (k = 8): SUBSET UNIVARIABLE REGRESSION (BASELINE OPIOID)
+. * 11. TEAS STRATUM (k = 8): SUBSET UNIVARIABLE REGRESSION (BASELINE OPIOID)
 . * ---------------------------------------------------------------------------
 > ---
 . di as txt _n "===============================================================
@@ -471,7 +607,7 @@ file dashboard/stata_teas_control_mme_bubble.png written in PNG format
 . 
 . * ---------------------------------------------------------------------------
 > ---
-. * 10. EA STRATUM (k = 3): SUBSET UNIVARIABLE REGRESSION (BASELINE OPIOID)
+. * 12. EA STRATUM (k = 3): SUBSET UNIVARIABLE REGRESSION (BASELINE OPIOID)
 . * ---------------------------------------------------------------------------
 > ---
 . di as txt _n "===============================================================
@@ -527,8 +663,8 @@ file dashboard/stata_ea_control_mme_bubble.png written in PNG format
 
 ==================================================================
 
-. di as txt "STATA META-REGRESSION EXECUTION COMPLETED SUCCESSFULLY"
-STATA META-REGRESSION EXECUTION COMPLETED SUCCESSFULLY
+. di as txt "STATA EXTENDED META-REGRESSION EXECUTION COMPLETED SUCCESSFULLY"
+STATA EXTENDED META-REGRESSION EXECUTION COMPLETED SUCCESSFULLY
 
 . di as txt "==================================================================
 > "
@@ -540,5 +676,5 @@ STATA META-REGRESSION EXECUTION COMPLETED SUCCESSFULLY
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/
 > stata_meta_regression_execution.log
   log type:  text
- closed on:   6 Sep 2026, 09:27:50
+ closed on:   6 Sep 2026, 09:37:41
 -------------------------------------------------------------------------------
