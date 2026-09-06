@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260906_reconciled">
 </head>
 <body>
 
@@ -160,27 +160,32 @@
 
       <div class="kpi-card" id="kpi-effect-card">
         <div class="kpi-title" id="kpi-effect-title">
-          <span data-i18n="kpi.primaryTitle">Primary Outcome: 24-h Opioid Sparing</span>
+          <span data-i18n="kpi.primaryTitle">Primary 24-h Opioid Sparing (Modality-Specific)</span>
           <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
         </div>
-        <div class="kpi-value" id="kpi-pooled-md" style="color: #34d399; font-size: 1.4rem; line-height: 1.25;">−5.04 mg MME</div>
-        <div class="kpi-sub" id="kpi-pooled-sub">95% CI [−9.78, −0.29] • p = 0.040 • k = 11, N = 945</div>
+        <div class="kpi-value" id="kpi-pooled-md" style="color: #34d399; font-size: 1.15rem; line-height: 1.35;">
+          TEAS: −2.41 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−5.76, +0.95]</span><br>
+          EA: −10.40 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−36.39, +15.60]</span>
+        </div>
+        <div class="kpi-sub" id="kpi-pooled-sub" style="margin-top: 0.25rem;">
+          Supporting Combined (k=11, N=945): MD = −5.04 mg [−9.78, −0.29], p = 0.040
+        </div>
         <span class="kpi-badge badge-emerald" id="kpi-pooled-badge">
-          <span data-i18n="kpi.primaryBadge">PRIMARY MODEL: REML + Knapp–Hartung</span>
+          <span data-i18n="kpi.primaryBadge">PRIMARY: Modality-Specific • Supporting: Combined</span>
           <button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
         </span>
         <div class="stat-plain-language" style="margin-top: 0.5rem; font-size: 0.72rem; padding: 0.35rem 0.6rem; border-left-width: 2px;">
-          <strong>Plain Language:</strong> Patients receiving neuromodulation required on average ~5.0 mg less IV morphine over 24h, with largest benefits observed in painful, high-demand surgeries.
+          <strong>Plain Language:</strong> Modality-specific estimates are primary: TEAS showed −2.41 mg IV MME (KH 95% CI crosses zero); EA showed −10.40 mg (highly imprecise, k=3). Supporting combined synthesis: −5.04 mg IV MME.
         </div>
       </div>
 
       <div class="kpi-card">
         <div class="kpi-title">
-          <span data-i18n="kpi.smdTitle">Standardized Effect Size</span>
+          <span data-i18n="kpi.smdTitle">Standardized Supporting Analysis</span>
           <button class="stat-info-btn" data-stat-term="hedgesG" aria-label="Statistical explanation for Hedges g">ⓘ</button>
         </div>
         <div class="kpi-value" style="color: #818cf8; font-size: 1.4rem; line-height: 1.25;">Hedges' g = −0.99</div>
-        <div class="kpi-sub">95% CI [−1.69, −0.29] • p = 0.010 • Large Effect</div>
+        <div class="kpi-sub">95% CI [−1.69, −0.29] • p = 0.010 • Supporting SMD Analysis</div>
         <span class="kpi-badge badge-indigo">StataNow 19.5 SE Validated</span>
       </div>
 
@@ -263,7 +268,7 @@
               </tr>
               <tr>
                 <td><strong style="color: #818cf8;">Outcomes</strong></td>
-                <td><strong>Primary Analgesic Domain (Dual Timepoints)</strong>: Cumulative postoperative opioid consumption (mg IV morphine equivalents) at 24 h (acute window) and 48 h (extended durability window)<br><strong>Secondary</strong>: Pain intensity (VAS/NRS), PONV, rescue analgesia, time to first flatus, QoR-40/15, PCA demands</td>
+                <td><strong>Primary Outcome</strong>: Cumulative 0–24 h postoperative opioid consumption (mg IV morphine equivalents)<br><strong>Key Secondary</strong>: Cumulative 0–48 h postoperative opioid consumption<br><strong>Exploratory</strong>: Cumulative 0–72 h postoperative opioid consumption<br><strong>Secondary Analgesic &amp; Recovery Outcomes</strong>: Pain intensity (VAS/NRS), PONV, rescue analgesia, time to first flatus, QoR-40/15, PCA demands</td>
                 <td>Studies reporting no quantifiable postoperative outcome within 0–72 hours</td>
               </tr>
               <tr>
@@ -285,14 +290,14 @@
               <span style="font-size: 0.75rem; color: var(--text-muted);">Lund University • Registered July 2026</span>
             </div>
             <h2 style="font-size: 1.2rem; margin-top: 0.25rem; color: #fff;">PROSPERO Registration &amp; Protocol History</h2>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Prespecified research objectives, prospective registration record, and methodological amendment timeline.</p>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Prespecified research objectives, PROSPERO registration history, and methodological amendment timeline.</p>
           </div>
         </div>
 
         <!-- Protocol History Timeline Strip -->
         <div style="margin: 0.5rem 0 1rem 0; padding: 0.85rem 1rem; background: rgba(99, 102, 241, 0.06); border-radius: var(--radius-sm); border-left: 3px solid #6366f1; font-size: 0.76rem; color: #cbd5e1; line-height: 1.6;">
           <div style="font-weight: 700; color: #a5b4fc; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem;">
-            <span>⏱️</span> <strong>Prospective Protocol Timeline &amp; Amendments:</strong>
+            <span>⏱️</span> <strong>Protocol Timeline &amp; Amendments:</strong>
           </div>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem;">
             <div><strong>1. Protocol Drafting (July 2026):</strong> Formal prespecification of primary (0–24 h IV MME) and pain endpoints (Lund University).</div>
@@ -808,13 +813,17 @@
           <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
             <label for="rob2-outcome-filter" style="font-size: 0.82rem; font-weight: 700; color: #cbd5e1;">Target Outcome &amp; Timepoint View:</label>
             <select id="rob2-outcome-filter" class="filter-select" style="min-width: 320px;" onchange="renderRoB2Matrix()">
-              <option value="summary" selected>📋 Summary View (Study-Level Overview)</option>
-              <option value="opioid_24h">💊 Primary 0–24 h Opioid Consumption (mg IV MME)</option>
+              <option value="summary" selected>📋 Summary View Only (Study-Level Overview)</option>
+              <option value="opioid_24h">💊 [PRIMARY] 0–24 h Opioid Consumption (mg IV MME)</option>
+              <option value="opioid_48h">💊 [KEY SECONDARY] 0–48 h Opioid Consumption (mg IV MME)</option>
+              <option value="opioid_72h">💊 [EXPLORATORY] 0–72 h Opioid Consumption (mg IV MME)</option>
               <option value="pain_rest_24h">🩹 Postoperative Pain at Rest (~24 h)</option>
               <option value="ponv_24h">🤢 Postoperative Nausea &amp; Vomiting (0–24 h)</option>
+              <option value="rescue_analgesia">🔘 Supplemental Rescue Analgesia Requirements</option>
               <option value="flatus_time">💨 Time to First Flatus (GI Recovery)</option>
               <option value="qor_24h">✨ Quality of Recovery (QoR-15 / QoR-40 at 24 h)</option>
             </select>
+            <span style="font-size: 0.72rem; color: #94a3b8; font-style: italic;">Note: RoB 2 judgments used for meta-analysis and GRADE are result-specific. Study-level overview is provided for general reference only.</span>
           </div>
           <div id="rob2-outcome-status-badge" style="font-size: 0.75rem; color: var(--text-muted);">
             <!-- Dynamically updated by renderRoB2Matrix() -->
@@ -962,10 +971,14 @@
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
               <span class="badge badge-indigo">PROSPERO Objective 4</span>
-              <span class="badge badge-emerald">Clinical Importance &amp; Trade-Off Studio</span>
+              <span class="badge badge-emerald">PAIRED OPIOID + PAIN ANALYSIS</span>
             </div>
-            <h2>Clinical Importance &amp; Trade-Off Studio (Objective 4)</h2>
-            <p id="mcid-subtitle-text" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
+            <h2>PAIRED OPIOID + PAIN ANALYSIS (Objective 4 Studio)</h2>
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.35); padding: 0.35rem 0.75rem; border-radius: 4px; margin-top: 0.35rem;">
+              <strong style="color: #a5b4fc; font-size: 0.82rem;">Paired analyzable dataset: k = 11 Trials (N = 945 Patients)</strong>
+              <span class="stat-info-btn" title="This dataset includes only trials with valid analyzable values for both the opioid and pain axes. It is not necessarily identical to the dataset used for the primary opioid meta-analysis." style="cursor: help;">ⓘ</span>
+            </div>
+            <p id="mcid-subtitle-text" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.35rem;">
               Evaluating whether 0–24h Opioid Reduction achieves prespecified clinical-importance benchmarks (Primary: ≥ 10 mg IV MME) without clinically important worsening of postoperative pain (≤ +1.0 VAS margin; upper 95% CI examined).
             </p>
           </div>
@@ -976,7 +989,9 @@
               <button class="btn-mcid-thresh" data-thresh="30pct" onclick="switchMcidThreshold('30pct')" style="padding: 0.35rem 0.65rem; font-size: 0.75rem; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; background: transparent; color: var(--text-secondary);">Sensitivity: ≥30% Relative</button>
               <button class="btn-mcid-thresh" data-thresh="5mg" onclick="switchMcidThreshold('5mg')" style="padding: 0.35rem 0.65rem; font-size: 0.75rem; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; background: transparent; color: var(--text-secondary);">Exploratory: ≥5 mg</button>
             </div>
-            <button id="btn-export-mcid-report" class="btn-copy-strategy">📋 Copy PROSPERO MCID Summary</button>
+            <a href="results/paired_mcid_dataset.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600;">📥 Paired Dataset (CSV)</a>
+            <a href="results/paired_mcid_dataset.json" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600;">📥 Paired Dataset (JSON)</a>
+            <button id="btn-export-mcid-report" class="btn-copy-strategy">📋 Copy MCID Summary</button>
           </div>
         </div>
 
@@ -1046,7 +1061,7 @@
                   <span class="kpi-badge badge-indigo" id="badge-q2-count">5 Trials (45.5%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  Patients experience confirmed postoperative analgesia and moderate opioid reduction meeting exploratory benchmarks (5–10 mg MME) without pain worsening (Sim 2002, Wong 2006, Yeh 2010, Yeh 2010 ATHM, Zhang 2025).
+                  Trials showing moderate study-level opioid reduction meeting exploratory benchmarks (5–10 mg MME) without pain worsening (Sim 2002, Wong 2006, Yeh 2010, Yeh 2010 ATHM, Zhang 2025).
                 </div>
               </div>
 
@@ -1066,7 +1081,7 @@
                   <span class="kpi-badge badge-amber" id="badge-q4-count">0 Trials (0.0%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  <strong>No included study-level point estimate exceeded the prespecified pain-worsening margin (+1.0 VAS).</strong> All 11 trials had pain differences ≤ +0.20 VAS. Across reporting trials, study-level opioid sparing was not accompanied by systematic pain worsening (this study-level finding does not establish zero individual-patient risk).
+                  <strong>Among trials with paired analyzable opioid and pain outcomes, no study-level point estimate exceeded the prespecified pain-worsening margin (+1.0 VAS).</strong> All 11 trials had pain differences ≤ +0.20 VAS. Across reporting trials, study-level opioid reduction was not accompanied by systematic pain worsening (this study-level finding does not establish zero individual-patient risk).
                 </div>
               </div>
             </div>
@@ -1128,10 +1143,16 @@
               <span class="badge badge-emerald" data-i18n="primarySection.badgeStata">VERIFIED IN STATANOW 19.5 SE</span>
               <span style="font-size: 0.75rem; color: var(--text-muted);">k = 11 Trials • N = 945 Patients</span>
             </div>
-            <h2 style="margin-top: 0.25rem;" data-i18n="primarySection.section2ATitle">Section 2A: PRIMARY OPIOID OUTCOME — Cumulative 0–24h Opioid Sparing (k = 11 RCTs, N = 945)</h2>
+            <h2 style="margin-top: 0.25rem;" data-i18n="primarySection.section2ATitle">Section 2A: PRIMARY OPIOID OUTCOME — Cumulative 0–24h Opioid Sparing (Modality-Specific Primary: TEAS k=8, EA k=3)</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;" data-i18n="primarySection.section2ASub">
               Executed in StataNow 19.5 SE via <code>meta summarize, random(reml) se(kh) predinterval</code>. Modalities and reporting strata rigorously tested.
             </p>
+
+            <!-- Primary Inference Framework Notice -->
+            <div class="alert-box" style="background: rgba(99, 102, 241, 0.1); border-left: 4px solid #6366f1; padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-top: 0.75rem; font-size: 0.82rem; color: #e2e8f0; line-height: 1.5;">
+              <strong style="color: #a5b4fc; display: block; margin-bottom: 0.25rem;">📌 Primary Inference Policy: Modality-Specific Synthesis (TEAS k=8, EA k=3)</strong>
+              TEAS and EA are analysed separately for primary inference because they represent distinct stimulation modalities. The combined estimate is shown only as an overall contextual synthesis.
+            </div>
 
             <!-- Prominent Non-Longitudinal Trajectory Callout Box -->
             <div class="alert-box alert-info" style="background: rgba(56, 189, 248, 0.08); border-left: 4px solid #38bdf8; padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-top: 0.75rem; font-size: 0.8rem; line-height: 1.5; color: #e2e8f0;">
@@ -1143,96 +1164,17 @@
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.25rem;">
+        <!-- Two Primary Modality-Specific Cards in 2-Column Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin-bottom: 1.25rem;">
           
-          <!-- Primary Synthesis: Combined 11 Trials -->
-          <div class="stratum-card primary-stratum" style="border-top: 3px solid #10b981;">
+          <!-- Primary Stratum 1: TEAS vs Sham (k = 8, N = 625) -->
+          <div class="stratum-card primary-stratum" style="border-top: 3px solid #6366f1;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-              <span class="badge badge-emerald" data-i18n="primarySection.combinedPool">All 11 Analyzable Trials</span>
-              <span class="badge badge-indigo">
-                <span data-i18n="cardStructure.primaryModel">PRIMARY MODEL</span>: REML + Knapp–Hartung
-                <button class="stat-info-btn" data-stat-term="knappHartung" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
-              </span>
-            </div>
-            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">
-              Consensus Acute Window: 0–24h Opioid Consumption
-              <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
-            </h3>
-
-            <!-- Standardized 4-Questions Grid (Sections 12 & 13) -->
-            <div class="stat-four-questions-grid">
-              <!-- 1. Statistical Evidence -->
-              <div class="stat-q-card">
-                <div class="stat-q-label q-stat">
-                  <span data-i18n="cardStructure.statisticalEvidence">1. Statistical Evidence</span>
-                  <button class="stat-info-btn" data-stat-term="pValue" aria-label="Statistical explanation for p-value">ⓘ</button>
-                </div>
-                <div class="stat-q-value" style="color: #38bdf8;">t(10) = −2.37, p = 0.0395</div>
-                <div class="stat-q-sub">95% Knapp–Hartung CI: [−9.78, −0.29] mg</div>
-              </div>
-
-              <!-- 2. Effect Magnitude -->
-              <div class="stat-q-card">
-                <div class="stat-q-label q-mag">
-                  <span data-i18n="cardStructure.effectMagnitude">2. Effect Magnitude</span>
-                  <button class="stat-info-btn" data-stat-term="ivMme" aria-label="Statistical explanation for IV MME">ⓘ</button>
-                </div>
-                <div class="stat-q-value" style="color: #34d399;">MD = −5.04 mg IV MME</div>
-                <div class="stat-q-sub">Standardized: Hedges' g = −0.99</div>
-              </div>
-
-              <!-- 3. Clinical Importance -->
-              <div class="stat-q-card">
-                <div class="stat-q-label q-clin">
-                  <span data-i18n="cardStructure.clinicalImportance">3. Clinical Importance</span>
-                  <button class="stat-info-btn" data-stat-term="clinicalThreshold" aria-label="Statistical explanation for Clinical Importance Threshold">ⓘ</button>
-                </div>
-                <div class="stat-q-value" style="color: #f59e0b;">Below 10 mg Threshold</div>
-                <div class="stat-q-sub">Primary threshold: 10 mg (not reached). Exploratory 5 mg threshold: reached.</div>
-              </div>
-
-              <!-- 4. Consistency Across Studies -->
-              <div class="stat-q-card">
-                <div class="stat-q-label q-cons">
-                  <span data-i18n="cardStructure.consistency">4. Consistency</span>
-                  <button class="stat-info-btn" data-stat-term="predictionInterval" aria-label="Statistical explanation for Prediction Interval">ⓘ</button>
-                </div>
-                <div class="stat-q-value" style="color: #a78bfa;">95% PI [−18.33, +8.26]</div>
-                <div class="stat-q-sub">I² = 99.73% • τ² = 30.01 (High clinical heterogeneity)</div>
-              </div>
-            </div>
-
-            <!-- Plain-Language Interpretation (When Explain Statistics = ON) -->
-            <div class="stat-plain-language" data-i18n-html="interpretations.primary24h">
-              <strong>Plain-Language Interpretation:</strong> Across the 11 analyzable trials, perioperative electrical acupoint stimulation reduced 24-hour postoperative opioid consumption by an average of 5.04 mg IV morphine equivalents (p = 0.0395). While statistically detectable, the pooled average is below the primary prespecified clinical importance threshold of 10 mg IV MME. The wide 95% prediction interval ([−18.33, +8.26] mg) crosses zero, showing that effect sizes vary substantially and clinical benefit is largest in procedures with high baseline opioid demand.
-            </div>
-
-            <!-- Alternative Model Estimates (Section 15) -->
-            <details class="alt-models-accordion">
-              <summary data-i18n="primarySection.altModelsToggle">Alternative Model Estimates &amp; Estimator Sensitivity</summary>
-              <div class="alt-models-content">
-                <div><strong>DerSimonian–Laird (DL):</strong> MD = −2.03 mg (Wald 95% CI: [−3.06, −0.98], z = −3.85, p = 0.0001)</div>
-                <div><strong>Normal Wald Approximation:</strong> 95% CI: [−7.91, −2.17] mg (z = −3.44, p = 0.0006)</div>
-                <div style="margin-top: 0.35rem; font-size: 0.72rem; color: #94a3b8;">
-                  <em>Methodological note:</em> The primary REML model with Knapp–Hartung adjustment accounts for limited degrees of freedom (df = 10) and prevents anticonservative false-positive bias inherent in traditional Wald tests.
-                </div>
-              </div>
-            </details>
-
-            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
-              <div><strong>Analyzable Cohort:</strong> k = 11 RCTs • N = 945 patients (6 Direct + 5 Derived)</div>
-              <div><strong>Trials Included:</strong> Chen 1998, Chen 2020, He 2026, Seevaunnamtum 2016, Yang 2024, Zhang 2025, Chen 2015 (Thy), Chen 2015 (Hyp), El-Rakshy 2009, Sim 2002, Coura 2011</div>
-            </div>
-          </div>
-
-          <!-- Primary Stratum 1: TEAS vs Sham (k = 8) -->
-          <div class="stratum-card primary-stratum">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-              <span class="badge badge-indigo" data-i18n="primarySection.teasStratum">Primary Stratum 1: TEAS vs Sham</span>
+              <span class="badge badge-indigo" data-i18n="primarySection.teasStratum">PRIMARY ANALYSIS 1: TEAS vs Sham</span>
               <span style="font-size: 0.72rem; color: #818cf8; font-weight: 700;">Double-Blind Sham</span>
             </div>
             <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">
-              TEAS vs Sham TEAS
+              TEAS vs Sham TEAS (0–24h)
               <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
             </h3>
 
@@ -1276,7 +1218,7 @@
             </div>
 
             <div class="stat-plain-language" data-i18n-html="interpretations.teasStratum">
-              <strong>Plain-Language Interpretation:</strong> In the double-blind sham-controlled TEAS stratum (k = 8 trials), opioid sparing averaged 2.40 mg IV MME (Knapp–Hartung 95% CI [−5.76, +0.95], p = 0.134). This reflects surgical case-mix: trials in minor ambulatory procedures showed minimal sparing (0.3–1.1 mg), whereas high-pain thoracotomy and abdominal trials achieved 12–21 mg sparing.
+              <strong>Plain-Language Interpretation:</strong> In the double-blind sham-controlled TEAS stratum (k = 8 trials), opioid sparing averaged 2.40 mg IV MME (Knapp–Hartung 95% CI [−5.76, +0.95], p = 0.134). The pooled estimate favoured lower opioid consumption, but the 95% confidence interval included no effect. Clinical magnitude varied with surgical case-mix.
             </div>
 
             <!-- Alternative Model Estimates -->
@@ -1284,24 +1226,24 @@
               <summary data-i18n="primarySection.altModelsToggle">Alternative Model Estimates &amp; Estimator Sensitivity</summary>
               <div class="alt-models-content">
                 <div><strong>Normal Wald Approximation:</strong> MD = −2.40 mg (95% CI: [−3.56, −1.25], z = −4.08, p &lt; 0.0001)</div>
-                <div><strong>DerSimonian–Laird:</strong> MD = −1.94 mg (95% CI: [−2.91, −0.97], p = 0.0001)</div>
+                <div><strong>DerSimonian–Laird (DL):</strong> MD = −1.94 mg (95% CI: [−2.91, −0.97], p = 0.0001)</div>
               </div>
             </details>
 
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
-              <div><strong>Defensible Studies:</strong> k = 8 RCTs • N = 725 patients</div>
+              <div><strong>Analyzable Cohort:</strong> k = 8 RCTs • N = 625 patients</div>
               <div><strong>Included Trials:</strong> Chen 1998, Chen 2020, He 2026, Seevaunnamtum 2016, Yang 2024, Zhang 2025, Chen 2015 (Thy), Chen 2015 (Hyp)</div>
             </div>
           </div>
 
-          <!-- Primary Stratum 2: EA vs Control / Sham (k = 3) -->
-          <div class="stratum-card primary-stratum">
+          <!-- Primary Stratum 2: EA vs Control / Sham (k = 3, N = 320) -->
+          <div class="stratum-card primary-stratum" style="border-top: 3px solid #06b6d4;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-              <span class="badge badge-cyan" data-i18n="primarySection.eaStratum">Primary Stratum 2: EA vs Control / Sham</span>
+              <span class="badge badge-cyan" data-i18n="primarySection.eaStratum">PRIMARY ANALYSIS 2: EA vs Control / Sham</span>
               <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 700;">Needle Sham / Control</span>
             </div>
             <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">
-              EA vs Control / Sham
+              EA vs Control / Sham (0–24h)
               <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
             </h3>
 
@@ -1345,7 +1287,7 @@
             </div>
 
             <div class="stat-plain-language" data-i18n-html="interpretations.eaStratum">
-              <strong>Plain-Language Interpretation:</strong> In the needle electroacupuncture stratum (k = 3 trials), opioid sparing averaged 10.40 mg IV MME (p = 0.228). This estimate is strongly influenced by open-heart surgery (Coura 2011), where baseline opioid demand was 114 mg MME and sparing was 22.4 mg. Due to small study count (k = 3), this finding is descriptive.
+              <strong>Plain-Language Interpretation:</strong> In the needle electroacupuncture stratum (k = 3 trials), opioid sparing averaged 10.40 mg IV MME (p = 0.228). The pooled estimate favoured lower opioid consumption, but the 95% confidence interval included no effect and is highly imprecise. Strongly influenced by open-heart surgery (Coura 2011).
             </div>
 
             <!-- Alternative Model Estimates -->
@@ -1358,8 +1300,99 @@
             </details>
 
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
-              <div><strong>Defensible Studies:</strong> k = 3 RCTs • N = 220 patients</div>
+              <div><strong>Analyzable Cohort:</strong> k = 3 RCTs • N = 320 patients</div>
               <div><strong>Included Trials:</strong> El-Rakshy 2009, Sim 2002, Coura 2011</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Supporting Overall Synthesis and Secondary Endpoints Grid (Placed Below Primary Cards) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;">
+
+          <!-- Supporting Synthesis: Combined 11 Trials -->
+          <div class="stratum-card primary-stratum" style="border-top: 3px solid #10b981;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-emerald" data-i18n="primarySection.combinedPool">SUPPORTING OVERALL SYNTHESIS</span>
+              <span class="badge badge-indigo">
+                REML + Knapp–Hartung
+                <button class="stat-info-btn" data-stat-term="knappHartung" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
+              </span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">
+              Supporting Combined Synthesis: 0–24h Opioid Consumption
+              <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
+            </h3>
+            
+            <div style="font-size: 0.78rem; color: #a5b4fc; margin-bottom: 0.75rem; background: rgba(99, 102, 241, 0.12); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); border-left: 3px solid #6366f1;">
+              <strong>Methodological Clarification:</strong> TEAS and EA are analysed separately for primary inference because they represent distinct stimulation modalities. The combined estimate is shown only as an overall contextual synthesis.
+            </div>
+
+            <!-- Standardized 4-Questions Grid (Sections 12 & 13) -->
+            <div class="stat-four-questions-grid">
+              <!-- 1. Statistical Evidence -->
+              <div class="stat-q-card">
+                <div class="stat-q-label q-stat">
+                  <span data-i18n="cardStructure.statisticalEvidence">1. Statistical Evidence</span>
+                  <button class="stat-info-btn" data-stat-term="pValue" aria-label="Statistical explanation for p-value">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #38bdf8;">t(10) = −2.37, p = 0.0395</div>
+                <div class="stat-q-sub">95% Knapp–Hartung CI: [−9.78, −0.29] mg</div>
+              </div>
+
+              <!-- 2. Effect Magnitude -->
+              <div class="stat-q-card">
+                <div class="stat-q-label q-mag">
+                  <span data-i18n="cardStructure.effectMagnitude">2. Effect Magnitude</span>
+                  <button class="stat-info-btn" data-stat-term="ivMme">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #34d399;">MD = −5.04 mg IV MME</div>
+                <div class="stat-q-sub">Standardized: Hedges' g = −0.99</div>
+              </div>
+
+              <!-- 3. Clinical Importance -->
+              <div class="stat-q-card">
+                <div class="stat-q-label q-clin">
+                  <span data-i18n="cardStructure.clinicalImportance">3. Clinical Importance</span>
+                  <button class="stat-info-btn" data-stat-term="clinicalThreshold" aria-label="Statistical explanation for Clinical Importance Threshold">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #f59e0b;">Below 10 mg Threshold</div>
+                <div class="stat-q-sub">Primary threshold: 10 mg (not reached). Exploratory 5 mg threshold: reached.</div>
+              </div>
+
+              <!-- 4. Consistency Across Studies -->
+              <div class="stat-q-card">
+                <div class="stat-q-label q-cons">
+                  <span data-i18n="cardStructure.consistency">4. Consistency</span>
+                  <button class="stat-info-btn" data-stat-term="predictionInterval" aria-label="Statistical explanation for Prediction Interval">ⓘ</button>
+                </div>
+                <div class="stat-q-value" style="color: #a78bfa;">95% PI [−18.33, +8.26]</div>
+                <div class="stat-q-sub">I² = 99.73% • τ² = 30.01 (High clinical heterogeneity)</div>
+              </div>
+            </div>
+
+            <!-- Plain-Language Interpretation (When Explain Statistics = ON) -->
+            <div class="stat-plain-language" data-i18n-html="interpretations.primary24h">
+              <strong>Plain-Language Interpretation:</strong> Across the 11 analyzable trials, perioperative electrical acupoint stimulation reduced 24-hour postoperative opioid consumption by an average of 5.04 mg IV morphine equivalents (p = 0.0395). While statistically detectable, the pooled average is below the primary prespecified clinical importance threshold of 10 mg IV MME. The wide 95% prediction interval ([−18.33, +8.26] mg) crosses zero, showing that effect sizes vary substantially across trials. Exploratory study-level meta-regression suggested larger estimated opioid-sparing effects in trials with higher control-group opioid consumption; this study-level association is hypothesis-generating and should not be interpreted as an individual-patient prediction.
+            </div>
+
+            <!-- Alternative Model Estimates (Section 15 & Prompt 9) -->
+            <details class="alt-models-accordion">
+              <summary data-i18n="primarySection.altModelsToggle">Alternative Model Estimates &amp; Estimator Sensitivity</summary>
+              <div class="alt-models-content">
+                <div><strong>A. REML + Knapp–Hartung (Primary Model):</strong> MD = −5.04 mg (95% CI: [−9.78, −0.29], t = −2.37, p = 0.0395, τ² = 30.01)</div>
+                <div><strong>B. DerSimonian–Laird + Conventional Wald CI (Estimator Sensitivity):</strong> MD = −2.03 mg (95% CI: [−3.07, −0.98], z = −3.81, p = 0.0001, τ² = 1.51)</div>
+                <div><strong>C. DerSimonian–Laird + Knapp–Hartung CI (Inference Sensitivity):</strong> MD = −2.03 mg (95% CI: [−4.31, +0.26], t = −1.98, p = 0.0762, τ² = 1.51)</div>
+                <div><strong>D. Normal Wald Approximation (REML):</strong> 95% CI: [−7.91, −2.17] mg (z = −3.44, p = 0.0006)</div>
+                <div style="margin-top: 0.35rem; font-size: 0.72rem; color: #94a3b8;">
+                  <em>Methodological note:</em> Hartung–Knapp accounts for additional uncertainty in random-effects meta-analysis and can provide more appropriate confidence intervals when the number of studies is limited or between-study heterogeneity is substantial.
+                </div>
+              </div>
+            </details>
+
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Analyzable Cohort:</strong> k = 11 RCTs • N = 945 patients (6 Direct + 5 Derived)</div>
+              <div><strong>Trials Included:</strong> Chen 1998, Chen 2020, He 2026, Seevaunnamtum 2016, Yang 2024, Zhang 2025, Chen 2015 (Thy), Chen 2015 (Hyp), El-Rakshy 2009, Sim 2002, Coura 2011</div>
             </div>
           </div>
 
@@ -1373,24 +1406,24 @@
             <div style="margin-top: 0.6rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.78rem;">
               <div style="background: rgba(255,255,255,0.03); padding: 0.5rem 0.65rem; border-radius: var(--radius-sm);">
                 <div style="display: flex; justify-content: space-between;">
-                  <strong style="color: #34d399;">Pain at ~24h (15 RCTs, N=1,489):</strong>
-                  <span style="font-weight: 700; color: #34d399;">MD −0.96 pts</span>
+                  <strong style="color: #34d399;">Pain at ~24h (15 RCTs, N=1,332):</strong>
+                  <span style="font-weight: 700; color: #34d399;">MD −0.63 pts</span>
                 </div>
-                <div style="color: var(--text-muted); font-size: 0.72rem;">95% CI [−1.47, −0.46] • t = −4.12, p = 0.0010 (Sig)</div>
+                <div style="color: var(--text-muted); font-size: 0.72rem;">95% CI [−0.94, −0.32] • t = −4.50, p = 0.0006 (Sig)</div>
               </div>
               <div style="background: rgba(255,255,255,0.03); padding: 0.5rem 0.65rem; border-radius: var(--radius-sm);">
                 <div style="display: flex; justify-content: space-between;">
-                  <strong style="color: #38bdf8;">Time to First Flatus (10 RCTs, N=1,466):</strong>
-                  <span style="font-weight: 700; color: #38bdf8;">MD −4.28 hrs</span>
+                  <strong style="color: #38bdf8;">Time to First Flatus (10 RCTs, N=1,328):</strong>
+                  <span style="font-weight: 700; color: #38bdf8;">MD −3.42 hrs</span>
                 </div>
-                <div style="color: var(--text-muted); font-size: 0.72rem;">95% CI [−6.84, −1.72] • t = −3.78, p = 0.0043 (Sig)</div>
+                <div style="color: var(--text-muted); font-size: 0.72rem;">95% CI [−5.45, −1.39] • t = −3.81, p = 0.0041 (Sig)</div>
               </div>
               <div style="background: rgba(255,255,255,0.03); padding: 0.5rem 0.65rem; border-radius: var(--radius-sm);">
                 <div style="display: flex; justify-content: space-between;">
-                  <strong style="color: #a78bfa;">PONV Risk Ratio (19 RCTs, N=2,752):</strong>
-                  <span style="font-weight: 700; color: #a78bfa;">RR 0.66</span>
+                  <strong style="color: #a78bfa;">PONV Risk Ratio (17 RCTs, N=1,974):</strong>
+                  <span style="font-weight: 700; color: #a78bfa;">RR 0.58</span>
                 </div>
-                <div style="color: var(--text-muted); font-size: 0.72rem;">95% CI [0.55, 0.79] • t = −4.84, p = 0.0001 (34% Reduction)</div>
+                <div style="color: var(--text-muted); font-size: 0.72rem;">95% CI [0.47, 0.73] • t = −5.32, p = 0.0001 (42% Reduction)</div>
               </div>
             </div>
           </div>
@@ -1406,9 +1439,9 @@
               <span class="badge badge-indigo">KEY SECONDARY OPIOID OUTCOME</span>
               <span class="badge badge-indigo">Extended Durability (POD2 / 48h)</span>
               <span class="badge badge-emerald">VERIFIED IN STATANOW 19.5 SE</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">k = 5 Trials • N = 478 Patients</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">k = 5 Trials • N = 2,183 Patients</span>
             </div>
-            <h2 style="margin-top: 0.25rem;" data-i18n="primarySection.section2BTitle">Section 2B: KEY SECONDARY OPIOID OUTCOME — Cumulative 0–48h Opioid Sparing (k = 5 RCTs, N = 478)</h2>
+            <h2 style="margin-top: 0.25rem;" data-i18n="primarySection.section2BTitle">Section 2B: KEY SECONDARY OPIOID OUTCOME — Cumulative 0–48h Opioid Sparing (k = 5 RCTs, N = 2,183)</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;" data-i18n="primarySection.section2BSub">
               Executed in StataNow 19.5 SE via <code>meta summarize, random(reml) se(kh) predinterval</code> for trials reporting cumulative 48-hour systemic opioid requirements.
             </p>
@@ -1417,7 +1450,7 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.25rem;">
           
-          <!-- Stratum 1: TEAS vs Sham (k=3, N=370) -->
+          <!-- Stratum 1: TEAS vs Sham (k=3, N=2,077) -->
           <div class="stratum-card primary-stratum" style="border-top: 3px solid #818cf8;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
               <span class="badge badge-indigo">TEAS vs Sham (48h)</span>
@@ -1436,9 +1469,12 @@
             <div style="font-size: 0.78rem; color: #34d399; margin-top: 0.35rem; font-weight: 600;">
               <strong>No Between-Study Heterogeneity Estimated:</strong> τ² = 0.0000, I² = 0.00%, Q = 3.67 (p = 0.1597)
             </div>
+            <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.2rem; font-style: italic;">
+              With few studies, absence of estimated heterogeneity should not be interpreted as evidence that the underlying effects are identical.
+            </div>
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
-              <div><strong>Analyzable Cohort:</strong> k = 3 RCTs • N = 370 patients</div>
-              <div><strong>Included Trials:</strong> Chen 2020 (N=80), He 2026 (N=50), Zhang 2023 (N=240)</div>
+              <div><strong>Analyzable Cohort:</strong> k = 3 RCTs • N = 2,077 patients</div>
+              <div><strong>Included Trials:</strong> Chen 2020 (N=80), He 2026 (N=159), Zhang 2023 (N=1,838)</div>
             </div>
           </div>
 
@@ -1458,13 +1494,16 @@
             <div style="font-size: 0.78rem; color: #34d399; margin-top: 0.35rem; font-weight: 600;">
               <strong>No Between-Study Heterogeneity Estimated:</strong> τ² = 0.0000, I² = 0.00%, Q = 0.10 (p = 0.7484)
             </div>
+            <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.2rem; font-style: italic;">
+              With few studies, absence of estimated heterogeneity should not be interpreted as evidence that the underlying effects are identical.
+            </div>
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
               <div><strong>Analyzable Cohort:</strong> k = 2 RCTs • N = 108 patients</div>
-              <div><strong>Included Trials:</strong> An 2014 (N=60, MD −6.00 mg), Wong 2006 (N=48, MD −8.40 mg)</div>
+              <div><strong>Included Trials:</strong> An 2014 (N=81, MD −6.00 mg), Wong 2006 (N=25, MD −8.40 mg)</div>
             </div>
           </div>
 
-          <!-- Combined Reference Pool (k=5, N=478) -->
+          <!-- Combined Reference Pool (k=5, N=2,183) -->
           <div class="stratum-card primary-stratum" style="border-top: 3px solid #10b981;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
               <span class="badge badge-emerald">Combined 48-h Pool</span>
@@ -1484,7 +1523,7 @@
               <strong>95% Prediction Interval:</strong> [−5.41, +0.66] mg
             </div>
             <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
-              <div><strong>Analyzable Cohort:</strong> k = 5 RCTs • N = 478 patients</div>
+              <div><strong>Analyzable Cohort:</strong> k = 5 RCTs • N = 2,183 patients</div>
               <div><strong>Heterogeneity:</strong> τ² = 0.5290, I² = 39.79%, Q = 7.06 (p = 0.1328)</div>
               <div style="margin-top: 0.4rem; color: #6ee7b7; font-weight: 600;">DerSimonian–Laird sensitivity: MD = −2.39 mg [−4.16, −0.62], p = 0.0198.</div>
             </div>
@@ -1617,32 +1656,40 @@
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
               <span class="badge badge-indigo">ROBUSTNESS AUDIT</span>
               <span class="badge badge-emerald">STATANOW 19.5 SE AUTHORITATIVE ENGINE</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Primary 24-h Opioid Sparing • k = 11 Iterations</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);" id="loo-dataset-meta">TEAS Primary Analysis • k = 8 Iterations</span>
             </div>
             <h2 style="margin-top: 0.25rem;">Section 2D: Leave-One-Out Influence &amp; Sensitivity Analysis</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
               Iteratively omits each trial to evaluate whether overall statistical significance, effect direction, or heterogeneity depends on any single outlier or study artifact. Executed directly via StataNow 19.5 SE <code>meta summarize, leaveoneout</code>.
             </p>
+            <div style="display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; align-items: center;">
+              <button class="btn-preset active" id="btn-loo-teas" onclick="switchLooMode('teas')" style="background: var(--accent-primary); color: #fff; border: none; padding: 0.35rem 0.75rem; border-radius: 4px; font-weight: 600; cursor: pointer;">TEAS Primary Analysis (k = 8)</button>
+              <button class="btn-preset" id="btn-loo-comb" onclick="switchLooMode('combined')" style="background: rgba(255,255,255,0.08); color: var(--text-secondary); border: 1px solid var(--border-subtle); padding: 0.35rem 0.75rem; border-radius: 4px; font-weight: 600; cursor: pointer;">Leave-One-Out — Supporting Combined Synthesis (k = 11)</button>
+              <a href="results/stata_teas_leave_one_out_results.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600;">📥 TEAS LOO CSV</a>
+            </div>
+            <div style="margin-top: 0.4rem; font-size: 0.73rem; color: #94a3b8; font-style: italic;">
+              Note: For electroacupuncture (EA, k = 3), leave-one-out sensitivity analysis is not presented as a strong robustness analysis because study count is too small for meaningful robustness inference (df = 1 upon study omission).
+            </div>
           </div>
         </div>
 
-        <!-- Key Findings Callout Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;">
+        <!-- Key Findings Callout Grid (Dynamically updated or TEAS primary default) -->
+        <div id="loo-callout-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;">
           <div style="background: rgba(99, 102, 241, 0.08); border-left: 3px solid #6366f1; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
-            <strong style="color: #a5b4fc;">1. Strict Directional Stability:</strong>
-            <div>Pooled MD remains strictly negative (opioid-sparing) across all 11 iterations, ranging from <strong>−2.560 mg</strong> (omitting Coura 2011) to <strong>−5.845 mg</strong> (omitting Zhang 2025).</div>
-          </div>
-          <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
-            <strong style="color: #34d399;">2. Wald Random-Effects Significance:</strong>
-            <div>Under standard Wald random-effects, <strong>100% (11/11)</strong> of leave-one-out 95% confidence intervals exclude zero (p &lt; 0.016 in all iterations).</div>
+            <strong style="color: #a5b4fc;">1. Directional Stability:</strong>
+            <div>Pooled TEAS MD remains strictly negative (opioid-sparing) across all 8 omissions, ranging from <strong>−1.423 mg</strong> (omitting Seevaunnamtum 2016) to <strong>−3.726 mg</strong> (omitting Chen 2015 Hyp).</div>
           </div>
           <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid #f59e0b; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
-            <strong style="color: #fbbf24;">3. Knapp–Hartung Adjustment with Small df:</strong>
-            <div>Under Knapp–Hartung adjustment (df = 9, t_crit = 2.262), 5 study omissions marginally cross zero (p = 0.055 to 0.080), reflecting small degrees of freedom rather than effect reversal.</div>
+            <strong style="color: #fbbf24;">2. Hartung–Knapp Certainty Sensitivity:</strong>
+            <div>Across all 8 iterations (100%), the Hartung–Knapp 95% confidence interval crosses zero (p = 0.0995 to 0.2055), confirming that statistical certainty under Hartung–Knapp is sensitive to study omission.</div>
           </div>
           <div style="background: rgba(6, 182, 212, 0.08); border-left: 3px solid #06b6d4; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
-            <strong style="color: #67e8f9;">4. Key Influential Trial (Coura 2011):</strong>
-            <div>Coura 2011 (open-heart surgery, MD −22.4 mg) has the highest influence (DFBETAS = −1.958). Omitting it reduces between-study τ² by 82% (30.01 → 5.38; pooled MD = −2.56 mg, p = 0.0051).</div>
+            <strong style="color: #67e8f9;">3. Heterogeneity Influence (Seevaunnamtum 2016):</strong>
+            <div>Seevaunnamtum 2016 (laparoscopic cholecystectomy, MD −12.0 mg) had the largest impact on between-study variance: omitting it reduced τ² by 64% (from 5.35 to 1.92 mg²; pooled MD = −1.42 mg, p = 0.1912).</div>
+          </div>
+          <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
+            <strong style="color: #34d399;">4. Clinical Benchmark Consistency:</strong>
+            <div>Across all 8 iterations, neither the pooled point estimate nor the CI bound reached the prespecified primary 10 mg IV MME benchmark (point estimates range from −1.42 to −3.73 mg).</div>
           </div>
         </div>
 
@@ -1669,8 +1716,8 @@
             </tbody>
           </table>
         </div>
-        <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem;">
-          Baseline complete synthesis (k=11, N=945): Pooled MD = −5.04 mg IV MME [95% CI: −9.78 to −0.29], p = 0.0395, τ² = 30.01, I² = 99.69%. All models estimated via REML.
+        <div id="loo-table-footnote" style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem;">
+          Baseline complete TEAS synthesis (k=8, N=625): Pooled MD = −2.41 mg IV MME [95% KH CI: −5.76 to +0.95], p = 0.1344, τ² = 5.35, I² = 98.96%. All models estimated via REML.
         </div>
       </div>
 
@@ -1730,7 +1777,7 @@
           <div class="stata-plot-card">
             <div class="stata-plot-header">
               <div>
-                <span class="badge badge-indigo">Primary Outcome: All 11 Trials (SMD)</span>
+                <span class="badge badge-indigo">Supporting Analysis: All 11 Trials (SMD)</span>
                 <h4 style="font-size: 0.95rem; margin-top: 0.35rem; color: #f8fafc;">Standardized Mean Difference (Hedges' g): All 11 Trials</h4>
               </div>
               <a href="stata_forest_teas_smd.png" target="_blank" class="btn-preset" style="font-size: 0.72rem; padding: 0.25rem 0.6rem; text-decoration: none;">🔍 View Full Res</a>
@@ -1741,7 +1788,7 @@
               </a>
             </div>
             <div class="stata-plot-footer">
-              <p><strong>Scale-Independent Effect:</strong> Hedges' g = <strong>−0.99</strong> [95% CI: −1.69 to −0.29], t(10) = −3.17, <strong style="color: #34d399;">p = 0.0100</strong>, τ² = 0.98, I² = 94.75%. Subgroup Direct (k=6): g = −0.83; Subgroup Derived (k=5): g = −1.18. Confirms consistent, large opioid sparing across diverse surgical regimens.</p>
+              <p><strong>Scale-Independent Supporting Analysis:</strong> Hedges' g = <strong>−0.99</strong> [95% CI: −1.69 to −0.29], t(10) = −3.17, <strong style="color: #34d399;">p = 0.0100</strong>, τ² = 0.98, I² = 94.75%. Subgroup Direct (k=6): g = −0.83; Subgroup Derived (k=5): g = −1.18. The standardized analysis also favoured the intervention on average, but substantial between-study heterogeneity remained. Standardized effect sizes describe differences in standard-deviation units and should not be interpreted as equivalent to the absolute clinical magnitude in mg IV MME.</p>
             </div>
           </div>
 
@@ -2401,7 +2448,7 @@
                 <td><strong>t(9) = +2.60, p = 0.0287</strong></td>
                 <td><span class="badge badge-indigo">82.81%</span></td>
                 <td><span class="badge badge-indigo">Secondary Moderator</span></td>
-                <td style="font-size: 0.74rem; color: #cbd5e1;">Later publication year was associated with smaller estimated study-level opioid-sparing effects (~0.47 mg/year reduction), consistent with temporal trends across modern perioperative care.</td>
+                <td style="font-size: 0.74rem; color: #cbd5e1;">Later publication year was associated with smaller estimated effects (β = +0.471 per year, p = 0.0287). Possible explanations include changes over time in multimodal analgesia, perioperative practice, surgical case mix, comparator treatment, study methodology, or other secular trends. This analysis cannot determine the cause.</td>
               </tr>
               <tr>
                 <td style="font-weight: 700; color: #a78bfa;">Modality (EA vs TEAS)</td>
@@ -3180,11 +3227,15 @@
         </div>
 
         <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--emerald-favorable); padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; color: var(--text-secondary);">
-          <strong>GRADE Clinical Interpretation (Modality Stratified):</strong>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <strong style="color: #fff;">GRADE Clinical Interpretation (Modality-Stratified):</strong>
+            <span class="badge badge-amber" style="font-size: 0.7rem;">GRADE CERTAINTY PENDING FINAL RESULT-SPECIFIC RoB 2 INTEGRATION</span>
+          </div>
           <ul style="margin: 0.5rem 0 0 1.2rem; padding: 0;">
-            <li><strong>TEAS vs Sham (0–24 h Opioid Sparing):</strong> Moderate certainty evidence (downgraded one level for inconsistency/heterogeneity) demonstrates that perioperative TEAS reduces cumulative 24-hour postoperative opioid consumption (pooled MD −5.04 mg IV MME in combined pool, −4.11 mg in TEAS stratum) while concomitantly reducing postoperative nausea and vomiting and accelerating flatus recovery.</li>
-            <li><strong>EA vs Sham/Control (0–24 h Opioid Sparing):</strong> Moderate-to-low certainty evidence (downgraded for imprecision due to small k=3 trials) demonstrates postoperative opioid reduction (MD −8.76 mg IV MME), with larger absolute sparing but wider confidence intervals.</li>
-            <li><strong>Note on RoB 2 Domain Status:</strong> <em>Outcome ratings incorporate trial-level RoB 2 assessments and remain pending final result-specific RoB 2 outcome integration across secondary endpoints.</em></li>
+            <li><strong>TEAS vs Sham (0–24 h Opioid Sparing, k=8, N=625):</strong> Low-to-moderate certainty evidence (downgraded for inconsistency and imprecision). The pooled estimate favoured lower opioid consumption (MD −2.41 mg IV MME [95% KH CI: −5.76, +0.95], p = 0.1344), but the 95% confidence interval included no effect. Clinical magnitude was surgical case-mix dependent.</li>
+            <li><strong>EA vs Sham/Control (0–24 h Opioid Sparing, k=3, N=320):</strong> Very low certainty evidence (downgraded for inconsistency and very serious imprecision). The pooled point estimate was −10.40 mg IV MME, but the 95% confidence interval is extremely wide and includes no effect ([−36.39, +15.60] mg, p = 0.2275); the estimate is highly imprecise.</li>
+            <li><strong>Supporting Combined Synthesis (0–24 h, k=11, N=945):</strong> Contextual supporting synthesis (MD −5.04 mg IV MME [95% KH CI: −9.78, −0.29], p = 0.0395, 95% PI [−18.33, +8.26]). Modality-specific estimates remain the primary inferential analyses.</li>
+            <li><strong>Note on RoB 2 Domain Status:</strong> <em>Outcome ratings incorporate available trial assessments; final result-specific RoB 2 integration remains pending across secondary endpoints.</em></li>
           </ul>
         </div>
       </div>
@@ -3209,9 +3260,12 @@
           <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem;">Export the active filtered dataset containing study-level effect sizes, sample sizes, and RoB 2 classifications for independent statistical auditing, or download the master Stata 19.5 SE replication suite.</p>
           <div style="display: flex; flex-direction: column; gap: 0.6rem;">
             <button class="btn-preset" style="background: var(--accent-primary); color: #fff; border: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; text-align: left;" onclick="exportDatasetCSV()">📥 Download Active Filtered CSV Dataset</button>
-            <a href="stata_audited_synthesis.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Stata Replication Script (stata_audited_synthesis.do)</a>
-            <a href="stata_consensus_synthesis_data.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Primary Opioid 6-RCT Dataset (stata_consensus_synthesis_data.csv)</a>
+            <a href="results/stata_master_results.csv" download class="btn-preset" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Machine-Readable Stata Master Results (stata_master_results.csv, 20-Field Schema)</a>
+            <a href="stata_consensus_synthesis_data.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Primary 24-h Opioid Dataset — 11 Analyzable Trials (stata_consensus_synthesis_data.csv, Direct + Derived, k = 11)</a>
+            <a href="results/paired_mcid_dataset.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.45); color: #a7f3d0; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Paired Opioid + Pain Dataset (paired_mcid_dataset.csv, k = 11 Trials, N = 945)</a>
+            <a href="results/stata_teas_leave_one_out_results.csv" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download TEAS Leave-One-Out Sensitivity Results (stata_teas_leave_one_out_results.csv, k = 8 Iterations)</a>
             <a href="stata_secondary_synthesis_data.csv" download class="btn-preset" style="background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.4); color: #67e8f9; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Secondary Outcomes Dataset (stata_secondary_synthesis_data.csv)</a>
+            <a href="stata_audited_synthesis.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Stata Replication Script (stata_audited_synthesis.do)</a>
             <a href="stata_audited_synthesis.log" download class="btn-preset" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-subtle); color: var(--text-secondary); text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Stata 19.5 Execution Verification Log (stata_audited_synthesis.log)</a>
           </div>
         </div>
@@ -3238,9 +3292,9 @@
 
   <!-- Scripts -->
   <script src="data.js"></script>
-  <script src="translations.js"></script>
+  <script src="translations.js?v=20260906_reconciled"></script>
   <script src="reader_assist.js"></script>
   <script src="meta_engine.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=20260906_reconciled"></script>
 </body>
 </html>
