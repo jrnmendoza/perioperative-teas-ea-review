@@ -1,0 +1,12 @@
+study_id,citation,modality,comparator,opioid_timepoint,opioid_effect,opioid_unit,opioid_source_type,pain_timepoint,pain_effect,pain_scale,pain_source_type,paired_inclusion_status
+1879896688,"Chen J, et al. Thorac Cancer. 2020;11(4):928-934",TEAS,Sham,24 h,-2.82,mg IV MME,Direct reported mean/SD,24 h,-3.06,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879897479,"Sim CK, et al. Acupunct Med. 2002;20(2-3):56-65",EA,Sham,24 h,-8.92,mg IV MME,Direct reported mean/SD,24 h,-1.48,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879896891,"Praveena Seevaunnamtum S, et al. Anesth Pain Med. 2016;6(6):e40106",TEAS,Sham,24 h,-12.56,mg IV MME,Direct reported mean/SD,24 h,-0.03,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879896611,"Zhou X, et al. Cancer Manag Res. 2021;13:1449-1458",TEAS,Usual Care,24 h,-2.06,mg IV MME,Direct reported mean/SD,24 h,-0.55,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879897266,"Coura LEF, et al. Acupunct Med. 2011;29(1):16-20",EA,Sham,24 h,-22.4,mg IV MME,Direct reported mean/SD,24 h,0.2,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879897414,"Wong RHL, et al. Ann Thorac Surg. 2006;81(6):2031-2036",EA,Sham,24 h,-8.0,mg IV MME,Direct reported mean/SD,24 h,-0.5,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879896323,"Yang J, et al. Explore (NY). 2024;20(3):450-455",TEAS,Sham,24 h,-0.3,mg IV MME,Direct reported mean/SD,24 h,-1.6,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879897280,"Yeh ML, et al. Int J Nurs Stud. 2011;48(6):703-709",EA,Sham,24 h,-5.7,mg IV MME,Direct reported mean/SD,24 h,0.2,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879897273,"Yeh ML, et al. Altern Ther Health Med. 2010;16(6):10-18",EA,Sham,24 h,-5.4,mg IV MME,Direct reported mean/SD,24 h,-0.47,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879896013,"Zhang Y, et al. J Pain Res. 2025;18:6477-6489",TEAS,Sham,24 h,-8.47,mg IV MME,Direct reported mean/SD,24 h,-0.3,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)
+1879897120,"Ntritsou V, et al. Acupunct Med. 2014;32(3):215-222",EA,Sham,24 h,-17.8,mg IV MME,Direct reported mean/SD,24 h,-0.39,VAS (0-10),Direct reported mean/SD,Included (Paired Analyzable)

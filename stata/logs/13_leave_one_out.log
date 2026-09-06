@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs
 > /13_leave_one_out.log
   log type:  text
- opened on:   6 Sep 2026, 12:59:29
+ opened on:   6 Sep 2026, 13:54:12
 
 . 
 . di as txt "==================================================================
@@ -296,9 +296,10 @@ Zhang 2025                |  -5.845 | [-9.993, -1.696] | 0.0058 | [-11.161, -0.
 > ========================================
 
 . 
-. di as txt _n "ROBUSTNESS INTERPRETATION:"
+. di as txt _n "ROBUSTNESS INTERPRETATION (COMBINED k=11 SUPPORTING SYNTHESIS):
+> "
 
-ROBUSTNESS INTERPRETATION:
+ROBUSTNESS INTERPRETATION (COMBINED k=11 SUPPORTING SYNTHESIS):
 
 . di as txt "1. Pooled estimates range from -2.560 mg (omitting Coura 2011) to 
 > -5.845 mg (omitting Zhang 2025)."
@@ -330,10 +331,211 @@ ROBUSTNESS INTERPRETATION:
 6. Machine-readable export completed: results/stata_leave_one_out_results.csv
 
 . 
+. * ===========================================================================
+> ===
+. * 5. PRIMARY INFERENTIAL MODALITY: TEAS vs Sham (k=8 Trials, N=725)
+. * ===========================================================================
+> ===
+. keep if modality == "TEAS" & comparator == "Sham"
+(3 observations deleted)
+
+. tempfile teas_subset
+
+. save `teas_subset', replace
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//St03399.00000c not
+    found)
+file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//St03399.00000c saved
+    as .dta format
+
+. 
+. qui meta set md_mme se_mme, studylabel(canonical_name)
+
+. qui meta summarize, random(reml) se(kh) predinterval
+
+. local teas_base_md = r(theta)
+
+. local teas_base_se = r(se)
+
+. local teas_base_cil = r(ci_lb)
+
+. local teas_base_ciu = r(ci_ub)
+
+. local teas_base_p = r(p)
+
+. local teas_base_t2 = r(tau2)
+
+. local teas_base_i2 = r(I2)
+
+. 
+. di as txt _n "===============================================================
+> ========================================================"
+
+===============================================================================
+> ========================================
+
+. di as txt "PRIMARY MODALITY: TEAS vs SHAM LEAVE-ONE-OUT ANALYSIS (k=8 TRIALS,
+>  N=725)"
+PRIMARY MODALITY: TEAS vs SHAM LEAVE-ONE-OUT ANALYSIS (k=8 TRIALS, N=725)
+
+. di as txt "Baseline (k=8): MD = " %6.3f `teas_base_md' " [95% KH CI: " %6.3f 
+> `teas_base_cil' ", " %6.3f `teas_base_ciu' "], p = " %6.4f `teas_base_p' ", t
+> au2 = " %6.3f `teas_base_t2' ", I2 = " %5.2f `teas_base_i2' "%"
+Baseline (k=8): MD = -2.405 [95% KH CI: -5.765,  0.955], p = 0.1344, tau2 =  5.
+> 349, I2 = 98.96%
+
+. di as txt "==================================================================
+> ====================================================="
+===============================================================================
+> ========================================
+
+. 
+. capture file close fh_teas
+
+. file open fh_teas using "results/stata_teas_leave_one_out_results.csv", write
+>  replace
+
+. file write fh_teas "omitted_study_id,omitted_canonical_name,omitted_author,om
+> itted_year,remaining_k,remaining_total_n,pooled_md,se,wald_ci_low,wald_ci_upp
+> ,wald_p_val,kh_ci_low,kh_ci_upp,kh_p_val,tau2,i2,pi_low,pi_upp,dfbetas" _n
+
+. 
+. di as txt "Omitted Study             | Pooled MD | Wald 95% CI        | Wald 
+> p | KH 95% CI          | KH p   | tau2  | I2 (%) | 95% Pred Interval    | DFB
+> ETAS"
+Omitted Study             | Pooled MD | Wald 95% CI        | Wald p | KH 95% CI
+>           | KH p   | tau2  | I2 (%) | 95% Pred Interval    | DFBETAS
+
+. di as txt "--------------------------+-----------+--------------------+------
+> --+--------------------+--------+-------+--------+----------------------+----
+> ----"
+--------------------------+-----------+--------------------+--------+----------
+> ----------+--------+-------+--------+----------------------+--------
+
+. 
+. local n_teas = _N
+
+. forvalues j = 1/`n_teas' {
+  2.     use `teas_subset', clear
+  3.     local t_dropped_id : di %12.0f study_id[`j']
+  4.     local t_dropped_id = trim("`t_dropped_id'")
+  5.     local t_dropped_name = canonical_name[`j']
+  6.     local t_dropped_author = author[`j']
+  7.     local t_dropped_year = year[`j']
+  8.     drop if _n == `j'
+  9.     qui sum total_n
+ 10.     local t_rem_n = r(sum)
+ 11.     local t_rem_k = r(N)
+ 12. 
+.     * Wald REML
+.     qui meta summarize, random(reml)
+ 13.     local t_wald_md = r(theta)
+ 14.     local t_wald_se = r(se)
+ 15.     local t_wald_cil = r(ci_lb)
+ 16.     local t_wald_ciu = r(ci_ub)
+ 17.     local t_wald_p = r(p)
+ 18. 
+.     * Knapp-Hartung REML with prediction interval
+.     qui meta summarize, random(reml) se(kh) predinterval
+ 19.     local t_kh_md = r(theta)
+ 20.     local t_kh_se = r(se)
+ 21.     local t_kh_cil = r(ci_lb)
+ 22.     local t_kh_ciu = r(ci_ub)
+ 23.     local t_kh_p = r(p)
+ 24.     local t_i2 = r(I2)
+ 25.     local t_t2 = r(tau2)
+ 26.     local t_pil = r(pred_lb)
+ 27.     local t_piu = r(pred_ub)
+ 28. 
+.     * Standardized influence DFBETAS: (teas_base_md - t_kh_md) / t_kh_se
+.     local t_dfbetas = (`teas_base_md' - `t_kh_md') / `t_kh_se'
+ 29. 
+.     * Format for display
+.     local f_tmd : di %6.3f `t_kh_md'
+ 30.     local f_twcil : di %6.3f `t_wald_cil'
+ 31.     local f_twciu : di %6.3f `t_wald_ciu'
+ 32.     local f_twp : di %6.4f `t_wald_p'
+ 33.     local f_tkcl : di %6.3f `t_kh_cil'
+ 34.     local f_tkcu : di %6.3f `t_kh_ciu'
+ 35.     local f_tkp : di %6.4f `t_kh_p'
+ 36.     local f_tt2 : di %5.2f `t_t2'
+ 37.     local f_ti2 : di %5.2f `t_i2'
+ 38.     local f_tpil : di %6.2f `t_pil'
+ 39.     local f_tpiu : di %6.2f `t_piu'
+ 40.     local f_tdfb : di %6.3f `t_dfbetas'
+ 41. 
+.     di as res %-25s "`t_dropped_name'" " | " %7s "`f_tmd'" " | [" %6s "`f_twc
+> il'" ", " %6s "`f_twciu'" "] | " %6s "`f_twp'" " | [" %6s "`f_tkcl'" ", " %6s
+>  "`f_tkcu'" "] | " %6s "`f_tkp'" " | " %5s "`f_tt2'" " | " %5s "`f_ti2'" " | 
+> [" %6s "`f_tpil'" ", " %6s "`f_tpiu'" "] | " %6s "`f_tdfb'"
+ 42. 
+.     file write fh_teas `"`t_dropped_id',"`t_dropped_name'","`t_dropped_author
+> '",`t_dropped_year',`t_rem_k',`t_rem_n',`t_kh_md',`t_kh_se',`t_wald_cil',`t_w
+> ald_ciu',`t_wald_p',`t_kh_cil',`t_kh_ciu',`t_kh_p',`t_t2',`t_i2',`t_pil',`t_p
+> iu',`t_dfbetas'"' _n
+ 43. }
+(1 observation deleted)
+Chen 1998                 |  -1.776 | [-3.140, -0.413] | 0.0107 | [-4.009,  0.4
+> 56] | 0.0995 |  2.64 | 98.20 | [     .,      .] | -0.689
+(1 observation deleted)
+Seevaunnamtum 2016        |  -1.775 | [-3.154, -0.397] | 0.0116 | [-4.425,  0.8
+> 74] | 0.1522 |  2.68 | 98.22 | [     .,      .] | -0.582
+(1 observation deleted)
+Chen 2020                 |  -3.536 | [-7.088,  0.017] | 0.0511 | [-9.131,  2.0
+> 60] | 0.1730 | 18.75 | 99.62 | [     .,      .] |  0.494
+(1 observation deleted)
+Yang 2024                 |  -3.636 | [-6.711, -0.561] | 0.0205 | [-8.697,  1.4
+> 26] | 0.1293 | 13.68 | 99.64 | [     .,      .] |  0.595
+(1 observation deleted)
+He 2026 (hepatectomy/JIS) |  -3.687 | [-6.901, -0.474] | 0.0245 | [-8.894,  1.5
+> 19] | 0.1338 | 15.04 | 99.67 | [     .,      .] |  0.603
+(1 observation deleted)
+Chen 2015 (Hyperalgesia)  |  -3.726 | [-7.118, -0.334] | 0.0313 | [-9.118,  1.6
+> 66] | 0.1418 | 16.91 | 99.38 | [     .,      .] |  0.599
+(1 observation deleted)
+Chen 2015 (Thyroidectomy) |  -1.423 | [-2.525, -0.322] | 0.0113 | [-3.877,  1.0
+> 30] | 0.2055 |  1.46 | 96.77 | [     .,      .] | -0.979
+(1 observation deleted)
+Zhang 2025                |  -3.650 | [-6.731, -0.568] | 0.0203 | [-8.721,  1.4
+> 21] | 0.1287 | 13.64 | 99.13 | [     .,      .] |  0.601
+
+. file close fh_teas
+
+. 
+. di as txt "==================================================================
+> ====================================================="
+===============================================================================
+> ========================================
+
+. di as txt _n "ROBUSTNESS INTERPRETATION (PRIMARY TEAS vs SHAM k=8):"
+
+ROBUSTNESS INTERPRETATION (PRIMARY TEAS vs SHAM k=8):
+
+. di as txt "1. Direction of effect remains negative (opioid-sparing) across al
+> l 8 leave-one-out omissions."
+1. Direction of effect remains negative (opioid-sparing) across all 8 leave-one
+> -out omissions.
+
+. di as txt "2. Under Hartung-Knapp, because the baseline k=8 CI crosses zero (
+> p=0.1344), all leave-one-out iterations also cross zero or are sensitive to o
+> mission."
+2. Under Hartung-Knapp, because the baseline k=8 CI crosses zero (p=0.1344), al
+> l leave-one-out iterations also cross zero or are sensitive to omission.
+
+. di as txt "3. Omission of Chen 1998 reduces MD from -2.405 to -1.332 mg; omis
+> sion of Zhang 2025 shifts MD to -2.991 mg."
+3. Omission of Chen 1998 reduces MD from -2.405 to -1.332 mg; omission of Zhang
+>  2025 shifts MD to -2.991 mg.
+
+. di as txt "4. Machine-readable export completed: results/stata_teas_leave_one
+> _out_results.csv"
+4. Machine-readable export completed: results/stata_teas_leave_one_out_results.
+> csv
+
+. 
 . log close
       name:  <unnamed>
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/stata/logs
 > /13_leave_one_out.log
   log type:  text
- closed on:   6 Sep 2026, 12:59:29
+ closed on:   6 Sep 2026, 13:54:12
 -------------------------------------------------------------------------------
