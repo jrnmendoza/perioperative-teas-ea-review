@@ -940,7 +940,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -958,8 +958,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (5/30 vs 12/30 for nausea) and left pain, rescue analgesia, and flatus unextracted!<br>2. Replaced with TRUE published trial data: 400 completed and analyzed female patients undergoing elective laparoscopic gynecological surgery across 4 arms (101 Group Pre [day before], 98 Group 30 [30 min before], 100 Group Comb [both sessions], 101 Group Usual [usual care alone]; 96.9% completion rate from 413 recruited, 8 open conversions and 5 dropouts documented in Fig. 1 CONSORT flow); Table 3 Postoperative pain intensity during movement (NRS 0-10): at 6-24 h (primary): Pre 1.15 \u00b1 1.02 vs Group 30 1.12 \u00b1 1.03 vs Comb 1.17 \u00b1 1.17 vs Usual 1.44 \u00b1 1.30 (P = 0.179); at 0-6 h: Pre 1.89 \u00b1 1.47 vs Group 30 2.01 \u00b1 1.25 vs Comb 1.97 \u00b1 1.25 vs Usual 2.45 \u00b1 1.60 (P = 0.024*); at 24-48 h: Pre 0.40 \u00b1 0.76 vs Group 30 0.54 \u00b1 0.86 vs Comb 0.50 \u00b1 0.96 vs Usual 0.73 \u00b1 0.97 (P = 0.058); at 48-72 h: 0.19 \u00b1 0.56 vs 0.23 \u00b1 0.59 vs 0.19 \u00b1 0.56 vs 0.31 \u00b1 0.70.<br>3. Primary emetic outcomes (Table 2): Postoperative nausea (6-24 h): Pre 11/101 (10.9%) vs Group 30 18/98 (18.4%) vs Comb 11/100 (11.0%) vs Usual 27/101 (26.7%) (P = 0.003**); Postoperative vomiting (6-24 h): Pre 5/101 (5.0%) vs Group 30 8/98 (8.2%) vs Comb 9/100 (9.0%) vs Usual 22/101 (21.8%) (P < 0.001**); Cumulative 0-24 h nausea: Pre 15/101 (14.9%) vs Group 30 22/98 (22.4%) vs Comb 15/100 (15.0%) vs Usual 35/101 (34.7%); Cumulative 0-24 h vomiting: Pre 10/101 (9.9%) vs Group 30 15/98 (15.3%) vs Comb 13/100 (13.0%) vs Usual 29/101 (28.7%).<br>4. Secondary recovery & medication outcomes: Patients requiring rescue analgesia (0-48 h): Pre 2/101 (2.0%) vs Group 30 3/98 (3.1%) vs Comb 1/100 (1.0%) vs Usual 3/101 (3.0%); Antiemetic requirements (Table 2): at 0-6 h: Pre 4/101 (4.0%) vs Group 30 11/98 (11.2%) vs Comb 4/100 (4.0%) vs Usual 18/101 (17.8%) (P = 0.001**); at 6-24 h: Pre 8/101 (7.9%) vs Group 30 16/98 (16.3%) vs Comb 9/100 (9.0%) vs Usual 28/101 (27.7%) (P < 0.001**); Time to passage of first flatus (Table 3): Pre 18.38 \u00b1 6.11 vs Group 30 18.47 \u00b1 6.47 vs Comb 18.82 \u00b1 7.50 vs Usual 21.56 \u00b1 8.07 hours (P = 0.003**); QoR-15 overall score: Pre 142.94 \u00b1 6.82 vs Group 30 144.74 \u00b1 5.21 vs Comb 144.61 \u00b1 5.35 vs Usual 144.23 \u00b1 4.95.<br>5. Adverse events (Text p. 421): Mild needling site pain/itching: Pre 0/101 vs Group 30 0/98 vs Comb 3/100 (3.0%) vs Usual 0/101 (symptoms resolved < 2 h without medical intervention); Serious adverse events: 0/400.<br>6. RoB 2 verified: Domain 1 Low (computer random sequence, sequentially numbered opaque sealed envelopes); Domain 2 Some concerns (single-blind design without sham needles; usual care control); Domain 3 Low (400/413 analyzed, 96.9% completion rate); Domain 4 Low (independent research nurse strictly blinded to allocation, validated scales); Domain 5 Low (trial prospectively registered under ChiCTR-INR-16010035). Overall: **Some concerns** (due to unblinded usual care control without sham needles).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (5/30 vs 12/30 for nausea) and left pain, rescue analgesia, and flatus unextracted!<br>2. Replaced with TRUE published trial data: 400 completed and analyzed female patients undergoing elective laparoscopic gynecological surgery across 4 arms (101 Group Pre [day before], 98 Group 30 [30 min before], 100 Group Comb [both sessions], 101 Group Usual [usual care alone]; 96.9% completion rate from 413 recruited, 8 open conversions and 5 dropouts documented in Fig. 1 CONSORT flow); Table 3 Postoperative pain intensity during movement (NRS 0-10): at 6-24 h (primary): Pre 1.15 ± 1.02 vs Group 30 1.12 ± 1.03 vs Comb 1.17 ± 1.17 vs Usual 1.44 ± 1.30 (P = 0.179); at 0-6 h: Pre 1.89 ± 1.47 vs Group 30 2.01 ± 1.25 vs Comb 1.97 ± 1.25 vs Usual 2.45 ± 1.60 (P = 0.024*); at 24-48 h: Pre 0.40 ± 0.76 vs Group 30 0.54 ± 0.86 vs Comb 0.50 ± 0.96 vs Usual 0.73 ± 0.97 (P = 0.058); at 48-72 h: 0.19 ± 0.56 vs 0.23 ± 0.59 vs 0.19 ± 0.56 vs 0.31 ± 0.70.<br>3. Primary emetic outcomes (Table 2): Postoperative nausea (6-24 h): Pre 11/101 (10.9%) vs Group 30 18/98 (18.4%) vs Comb 11/100 (11.0%) vs Usual 27/101 (26.7%) (P = 0.003**); Postoperative vomiting (6-24 h): Pre 5/101 (5.0%) vs Group 30 8/98 (8.2%) vs Comb 9/100 (9.0%) vs Usual 22/101 (21.8%) (P < 0.001**); Cumulative 0-24 h nausea: Pre 15/101 (14.9%) vs Group 30 22/98 (22.4%) vs Comb 15/100 (15.0%) vs Usual 35/101 (34.7%); Cumulative 0-24 h vomiting: Pre 10/101 (9.9%) vs Group 30 15/98 (15.3%) vs Comb 13/100 (13.0%) vs Usual 29/101 (28.7%).<br>4. Secondary recovery & medication outcomes: Patients requiring rescue analgesia (0-48 h): Pre 2/101 (2.0%) vs Group 30 3/98 (3.1%) vs Comb 1/100 (1.0%) vs Usual 3/101 (3.0%); Antiemetic requirements (Table 2): at 0-6 h: Pre 4/101 (4.0%) vs Group 30 11/98 (11.2%) vs Comb 4/100 (4.0%) vs Usual 18/101 (17.8%) (P = 0.001**); at 6-24 h: Pre 8/101 (7.9%) vs Group 30 16/98 (16.3%) vs Comb 9/100 (9.0%) vs Usual 28/101 (27.7%) (P < 0.001**); Time to passage of first flatus (Table 3): Pre 18.38 ± 6.11 vs Group 30 18.47 ± 6.47 vs Comb 18.82 ± 7.50 vs Usual 21.56 ± 8.07 hours (P = 0.003**); QoR-15 overall score: Pre 142.94 ± 6.82 vs Group 30 144.74 ± 5.21 vs Comb 144.61 ± 5.35 vs Usual 144.23 ± 4.95.<br>5. Adverse events (Text p. 421): Mild needling site pain/itching: Pre 0/101 vs Group 30 0/98 vs Comb 3/100 (3.0%) vs Usual 0/101 (symptoms resolved < 2 h without medical intervention); Serious adverse events: 0/400.<br>6. RoB 2 verified: Domain 1 Low (computer random sequence, sequentially numbered opaque sealed envelopes); Domain 2 Some concerns (single-blind design without sham needles; usual care control); Domain 3 Low (400/413 analyzed, 96.9% completion rate); Domain 4 Low (independent research nurse strictly blinded to allocation, validated scales); Domain 5 Low (trial prospectively registered under ChiCTR-INR-16010035). Overall: **Some concerns** (due to unblinded usual care control without sham needles).",
       "fake_boilerplate_expunged": "Fabricated nausea numbers (5/30 vs 12/30) and omitted consensus entries for pain, rescue analgesics, vomiting, and flatus.",
       "evidence_sources": "Text p. 415-423 (Methods, computer sequence, sealed envelopes, single-blind, blinded nurse assessors, ChiCTR-INR-16010035); Fig 1 p. 418 (CONSORT flow); Table 1 p. 419 (demographics, Apfel scores); Table 2 p. 420 (nausea, vomiting, antiemetic requirements 0-6h, 6-24h, 24-48h); Table 3 p. 421 (pain scores on movement, rescue analgesics, flatus, QoR-15)"
     },
@@ -967,27 +967,27 @@ window.STUDIES_DATA = [
       "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Strong non-painful (15\u201325 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Strong non-painful (15–25 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
-      "sessions_category": "Multiple sessions (\u2265 2)",
+      "sessions_category": "Multiple sessions (≥ 2)",
       "duration_raw": "30 minutes per session",
       "duration_category": "30 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 202,
       "arm1_name": "EA Group",
       "arm1_n": 101,
-      "arm1_age": "35.6 \u00b1 8.1",
+      "arm1_age": "35.6 ± 8.1",
       "arm1_female": "101/101 (100%)",
-      "arm1_bmi": "22.9 \u00b1 3.13",
+      "arm1_bmi": "22.9 ± 3.13",
       "arm2_name": "Usual Care Group",
       "arm2_n": 101,
-      "arm2_age": "35.7 \u00b1 8.0",
+      "arm2_age": "35.7 ± 8.0",
       "arm2_female": "101/101 (100%)",
-      "arm2_bmi": "22.97 \u00b1 3.43",
+      "arm2_bmi": "22.97 ± 3.43",
       "asa_status": "ASA I: 21 (20.8%), ASA II: 80 (79.2%)"
     },
     "rob2": {
@@ -1012,7 +1012,7 @@ window.STUDIES_DATA = [
       "corresponding_author": "Dr. Zhen Zheng / Dr. Man Zheng",
       "email": "zhen.zheng@rmit.edu.au",
       "institution": "`zhen.zheng@rmit.edu.au` / Discipline of Chinese Medicine, School of Health and Biomedical Sciences, RMIT University, Melbourne, Australia / Department of Anesthesiology, The Affiliated Hospital of Nanjing University of Chinese Medicine, Nanjing, China",
-      "draft_msg": "Dear Dr. Zheng and colleagues, congratulations on your 4-arm randomized controlled trial published in Acupuncture in Medicine (2022;40:415-424) investigating preoperative electroacupuncture timing for postoperative nausea and vomiting and pain in laparoscopic gynecological surgery. In Table 3 you report pain intensity during movement and rescue analgesic counts. Could you kindly provide the cumulative 24-hour postoperative systemic opioid consumption (mean \u00b1 SD in IV morphine equivalents) and resting NRS pain scores at 6h, 24h, and 48h for Group Pre (n=101), Group 30 (n=98), Group Comb (n=100), and Group Usual (n=101) for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Zheng and colleagues, congratulations on your 4-arm randomized controlled trial published in Acupuncture in Medicine (2022;40:415-424) investigating preoperative electroacupuncture timing for postoperative nausea and vomiting and pain in laparoscopic gynecological surgery. In Table 3 you report pain intensity during movement and rescue analgesic counts. Could you kindly provide the cumulative 24-hour postoperative systemic opioid consumption (mean ± SD in IV morphine equivalents) and resting NRS pain scores at 6h, 24h, and 48h for Group Pre (n=101), Group 30 (n=98), Group Comb (n=100), and Group Usual (n=101) for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -1056,13 +1056,19 @@ window.STUDIES_DATA = [
         "ci_upp": 0.98,
         "p_val": "0.320",
         "drug": "Sufentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g Sufentanil)",
-        "note": "Intraoperative sufentanil dose (Table 2: 38.1 \u00b1 4.97 vs 39.1 \u00b1 4.83 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg Sufentanil)",
+        "note": "Intraoperative sufentanil dose (Table 2: 38.1 ± 4.97 vs 39.1 ± 4.83 µg)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Zhu 2022",
@@ -1087,7 +1093,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -1105,7 +1111,7 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe2 Verified",
+      "classification": "🟢 Verified",
       "corrections": "None",
       "fake_boilerplate_expunged": "None",
       "evidence_sources": ""
@@ -1114,25 +1120,25 @@ window.STUDIES_DATA = [
       "acupoints": "PC6 (Neiguan), ST36 (Zusanli)",
       "frequency_raw": "Not applicable",
       "frequency_category": "Variable / Other",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "30 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 97,
       "arm1_name": "EA Group",
       "arm1_n": 48,
-      "arm1_age": "43.92 \u00b1 8.84",
+      "arm1_age": "43.92 ± 8.84",
       "arm1_female": "48/48 (100%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Usual Care Group",
       "arm2_n": 49,
-      "arm2_age": "40.98 \u00b1 7.90",
+      "arm2_age": "40.98 ± 7.90",
       "arm2_female": "49/49 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "ASA I: 19 (39.6%), ASA II: 26 (54.2%), ASA III: 3 (6.2%)"
@@ -1146,7 +1152,7 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Global QoR-15",
       "timepoint": "POD1",
-      "rationale": "112.00 \u00b1 10.67 vs 107.62 \u00b1 10.27"
+      "rationale": "112.00 ± 10.67 vs 107.62 ± 10.27"
     },
     "author_inquiry": {
       "has_inquiry": false,
@@ -1207,7 +1213,7 @@ window.STUDIES_DATA = [
         "ci_low": 0.19,
         "ci_upp": 1.15,
         "p_val": "0.086",
-        "definition": "Rescue Tramadol IV (POD 1\u20133)",
+        "definition": "Rescue Tramadol IV (POD 1–3)",
         "note": "Rescue IV tramadol required in 6/48 (12.5%) PACU TEAS vs 13/49 (26.5%) sham patients (P=0.086)"
       },
       "intraop_opioid": {
@@ -1218,6 +1224,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Zhou 2025",
@@ -1242,7 +1254,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -1260,20 +1272,20 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid, 5/30 vs 12/30 for nausea, false N=30)!<br>2. Replaced with TRUE published trial data: 81 completed and analyzed patients undergoing radical gastrectomy for gastric cancer (41 TG TEAS group, 40 CG Usual care group; 98.8% completion rate, 1 withdrawal documented); Table 3 Cumulative postoperative opioid consumption (equivalent dose of morphine in mg): TG 8.94 \u00b1 3.66 mg vs CG 12.83 \u00b1 8.10 mg (P = 0.182) [in IV MME: 8.94 \u00b1 3.66 vs 12.83 \u00b1 8.10 mg]; Patients requiring postoperative opioids: TG 18/41 (43.9%) vs CG 30/40 (75.0%) (P = 0.004*); Flurbiprofen axetil dose: 120.0 \u00b1 12.8 vs 145.9 \u00b1 13.2 mg (P = 0.117).<br>3. Postoperative pain intensity (Table 3): POD 0: TG 3.58 \u00b1 0.60 vs CG 3.83 \u00b1 0.84 (P = 0.105); POD 1 (24 h): TG median 3.00 (IQR 0.42) [mean ~3.00 \u00b1 0.62] vs CG median 3.33 (IQR 0.67) [mean ~3.33 \u00b1 1.00]; Average of POD 1-5: TG 2.55 \u00b1 0.21 vs CG 3.10 \u00b1 0.42 (P < 0.001*).<br>4. Recovery milestones & gastrointestinal function (Table 4): Time to first flatus: TG 55.63 \u00b1 16.74 vs CG 72.60 \u00b1 20.92 hours (P < 0.001*); Time to first defecation: TG 72.20 \u00b1 16.24 vs CG 95.78 \u00b1 17.75 hours (P < 0.001*); Comfort of semi-fluid diet: TG 7.63 \u00b1 0.63 vs CG 6.93 \u00b1 0.69 (P < 0.001*); Length of postoperative hospital stay: TG 6.12 \u00b1 1.29 vs CG 6.45 \u00b1 1.68 days (P = 0.478).<br>5. Table 4 Complications & side effects: Postoperative nausea: TG 16/41 (39.0%) vs CG 19/40 (47.5%) (P = 0.441); Postoperative vomiting: TG 0/41 (0.0%) vs CG 0/40 (0.0%) (P = 1.00); Abdominal distension: TG 10/41 (24.4%) vs CG 18/40 (45.0%) (P = 0.051); Postoperative diarrhea: TG 3/41 (7.3%) vs CG 9/40 (22.5%) (P = 0.054); Postoperative fever: TG 36/41 (87.8%) vs CG 36/40 (90.0%) (P = 0.753); Clavien-Dindo complications: Grade 0 (1 vs 2), Grade 1 (39 vs 34), Grade 2 (1 vs 4); Serious adverse events: 0/41 vs 0/40; Treatment-related non-serious adverse events: 0/41 vs 0/40.<br>6. RoB 2 verified: Domain 1 Some concerns (1:1 random allocation; concealment details not elaborated); Domain 2 Some concerns (unblinded design against usual care control without sham stimulation device); Domain 3 Low (81/82 analyzed, 98.8% completion rate); Domain 4 Some concerns (self-reported pain scores in unblinded setting; objective recovery unaffected); Domain 5 Low (trial prospectively registered under ChiCTR1900022692). Overall: **Some concerns** (due to pragmatic unblinded design without sham device).",
-      "fake_boilerplate_expunged": "Fabricated opioid and nausea numbers (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0, 5/30 vs 12/30).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid, 5/30 vs 12/30 for nausea, false N=30)!<br>2. Replaced with TRUE published trial data: 81 completed and analyzed patients undergoing radical gastrectomy for gastric cancer (41 TG TEAS group, 40 CG Usual care group; 98.8% completion rate, 1 withdrawal documented); Table 3 Cumulative postoperative opioid consumption (equivalent dose of morphine in mg): TG 8.94 ± 3.66 mg vs CG 12.83 ± 8.10 mg (P = 0.182) [in IV MME: 8.94 ± 3.66 vs 12.83 ± 8.10 mg]; Patients requiring postoperative opioids: TG 18/41 (43.9%) vs CG 30/40 (75.0%) (P = 0.004*); Flurbiprofen axetil dose: 120.0 ± 12.8 vs 145.9 ± 13.2 mg (P = 0.117).<br>3. Postoperative pain intensity (Table 3): POD 0: TG 3.58 ± 0.60 vs CG 3.83 ± 0.84 (P = 0.105); POD 1 (24 h): TG median 3.00 (IQR 0.42) [mean ~3.00 ± 0.62] vs CG median 3.33 (IQR 0.67) [mean ~3.33 ± 1.00]; Average of POD 1-5: TG 2.55 ± 0.21 vs CG 3.10 ± 0.42 (P < 0.001*).<br>4. Recovery milestones & gastrointestinal function (Table 4): Time to first flatus: TG 55.63 ± 16.74 vs CG 72.60 ± 20.92 hours (P < 0.001*); Time to first defecation: TG 72.20 ± 16.24 vs CG 95.78 ± 17.75 hours (P < 0.001*); Comfort of semi-fluid diet: TG 7.63 ± 0.63 vs CG 6.93 ± 0.69 (P < 0.001*); Length of postoperative hospital stay: TG 6.12 ± 1.29 vs CG 6.45 ± 1.68 days (P = 0.478).<br>5. Table 4 Complications & side effects: Postoperative nausea: TG 16/41 (39.0%) vs CG 19/40 (47.5%) (P = 0.441); Postoperative vomiting: TG 0/41 (0.0%) vs CG 0/40 (0.0%) (P = 1.00); Abdominal distension: TG 10/41 (24.4%) vs CG 18/40 (45.0%) (P = 0.051); Postoperative diarrhea: TG 3/41 (7.3%) vs CG 9/40 (22.5%) (P = 0.054); Postoperative fever: TG 36/41 (87.8%) vs CG 36/40 (90.0%) (P = 0.753); Clavien-Dindo complications: Grade 0 (1 vs 2), Grade 1 (39 vs 34), Grade 2 (1 vs 4); Serious adverse events: 0/41 vs 0/40; Treatment-related non-serious adverse events: 0/41 vs 0/40.<br>6. RoB 2 verified: Domain 1 Some concerns (1:1 random allocation; concealment details not elaborated); Domain 2 Some concerns (unblinded design against usual care control without sham stimulation device); Domain 3 Low (81/82 analyzed, 98.8% completion rate); Domain 4 Some concerns (self-reported pain scores in unblinded setting; objective recovery unaffected); Domain 5 Low (trial prospectively registered under ChiCTR1900022692). Overall: **Some concerns** (due to pragmatic unblinded design without sham device).",
+      "fake_boilerplate_expunged": "Fabricated opioid and nausea numbers (20.4 ± 4.8 vs 33.1 ± 7.0, 5/30 vs 12/30).",
       "evidence_sources": "Text p. 1449-1457 (Methods, 1:1 allocation, unblinded usual care control, ERAS protocol, ChiCTR1900022692); Table 1 p. 1452 (demographics, comorbidities); Table 2 p. 1453 (surgical duration, blood loss, reconstruction); Table 3 p. 1454 (pain scores POD 0-5, morphine equivalents, opioid use rate); Table 4 p. 1455 (flatus, defecation, nausea, vomiting, distention, stay, C-D grades); Table 5 p. 1456 (hematology: beta-endorphin, IL-6, TNF-alpha, MTL)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), BL21 (Weishu), BL27 (Xiaochangshu), ST36 (Zusanli), ST37 (Shangjuxu)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Postoperative only",
-      "sessions_category": "Multiple sessions (\u2265 2)",
+      "sessions_category": "Multiple sessions (≥ 2)",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
       "needle_depth": "Surface hydrogel electrode"
@@ -1282,14 +1294,14 @@ window.STUDIES_DATA = [
       "total_n": 81,
       "arm1_name": "TEAS Group",
       "arm1_n": 41,
-      "arm1_age": "58.71 \u00b1 9.27",
+      "arm1_age": "58.71 ± 9.27",
       "arm1_female": "14/41 (34.1%)",
-      "arm1_bmi": "23.93 \u00b1 2.82",
+      "arm1_bmi": "23.93 ± 2.82",
       "arm2_name": "Usual Care Group",
       "arm2_n": 40,
-      "arm2_age": "60.83 \u00b1 9.14",
+      "arm2_age": "60.83 ± 9.14",
       "arm2_female": "12/40 (30.0%)",
-      "arm2_bmi": "23.93 \u00b1 2.70",
+      "arm2_bmi": "23.93 ± 2.70",
       "asa_status": "ASA I: 0, ASA II: 35 (85.4%), ASA III: 6 (14.6%)"
     },
     "rob2": {
@@ -1301,7 +1313,7 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Time to first flatus",
       "timepoint": "Postoperative",
-      "rationale": "55.63 \u00b1 16.74 vs 72.60 \u00b1 20.92 h"
+      "rationale": "55.63 ± 16.74 vs 72.60 ± 20.92 h"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -1309,12 +1321,12 @@ window.STUDIES_DATA = [
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative systemic opi...",
       "target_data": "Cumulative 24-hour postoperative systemic opioid consumption (mg IV MME) separated from entire stay consumption, and resting vs movement condition for POD 1 pain scores.",
-      "rationale": "Table 3 presents total equivalent morphine dose across the entire hospital stay (8.94 \u00b1 3.66 vs 12.83 \u00b1 8.10 mg), but specific 24-hour cumulative consumption was not separated, and pain scores are reported as daily averages.",
+      "rationale": "Table 3 presents total equivalent morphine dose across the entire hospital stay (8.94 ± 3.66 vs 12.83 ± 8.10 mg), but specific 24-hour cumulative consumption was not separated, and pain scores are reported as daily averages.",
       "impact": "Supplies author-verified 24-hour postoperative opioid consumption and clarifies pain measurement condition for 81-patient gastrectomy trial.",
       "corresponding_author": "Dr. Yan-Bing Zhou",
       "email": "zhouyanbing999@aliyun.com",
       "institution": "`zhouyanbing999@aliyun.com` / Department of Gastrointestinal Surgery, The Affiliated Hospital of Qingdao University, No. 16 Jiangsu Road, Shinan District, Qingdao 266003, China",
-      "draft_msg": "Dear Dr. Zhou, congratulations on your randomized clinical trial published in Cancer Management and Research (2021;13:1449-1458) evaluating transcutaneous electrical acupoint stimulation (TEAS) for recovery after gastrectomy. In Table 3 you report equivalent dose of morphine and daily pain scores. Could you kindly provide the cumulative 24-hour postoperative systemic opioid consumption (mean \u00b1 SD in IV morphine equivalents) and confirm whether the POD 1 pain scores reflect resting or movement pain for the TEAS (n=41) and Control (n=40) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Zhou, congratulations on your randomized clinical trial published in Cancer Management and Research (2021;13:1449-1458) evaluating transcutaneous electrical acupoint stimulation (TEAS) for recovery after gastrectomy. In Table 3 you report equivalent dose of morphine and daily pain scores. Could you kindly provide the cumulative 24-hour postoperative systemic opioid consumption (mean ± SD in IV morphine equivalents) and confirm whether the POD 1 pain scores reflect resting or movement pain for the TEAS (n=41) and Control (n=40) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -1338,7 +1350,7 @@ window.STUDIES_DATA = [
         "ci_low": -0.695,
         "ci_upp": -0.405,
         "unit": "pain score",
-        "readiness": "CONDITIONAL \u2014 POD1"
+        "readiness": "CONDITIONAL — POD1"
       },
       "pain_movement_24h": null,
       "ponv_24h": null,
@@ -1356,6 +1368,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Zhou 2021",
@@ -1380,7 +1398,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -1398,16 +1416,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and falsely claimed open-label control and lack of registration in RoB 2!<br>2. Replaced with TRUE published trial data: 85 completed and analyzed patients undergoing gynecological laparoscopic surgery (42 TEAS group, 43 Sham Control group; 94.4% completion rate from 90 recruited, 5 dropouts documented in CONSORT flow); Table 4 Postoperative NRS pain at rest: at 6 h: TEAS 2.9 \u00b1 1.1 vs Sham 3.4 \u00b1 1.2 (P = 0.022*); at 24 h: TEAS 1.7 \u00b1 0.8 vs Sham 2.2 \u00b1 1.1 (P = 0.042*); at 48 h: TEAS 0.9 \u00b1 0.8 vs Sham 1.0 \u00b1 0.9; Baseline: 0 vs 0.<br>3. Primary outcome: 24-hour PONV incidence (Text p. 6453): TEAS 18/42 (42.9%) vs Sham Control 29/43 (67.4%) (P = 0.023*, OR = 2.762, 95% CI 1.142 to 6.681); Absolute risk reduction 24.5%.<br>4. Analgesic and recovery outcomes (Table 3): Intraoperative remifentanil consumption: TEAS 233.1 \u00b1 29.6 vs Sham 289.5 \u00b1 37.9 \u00b5g (P = 0.031*); Total PCIA demands: TEAS 6.3 \u00b1 2.2 vs Sham 10.7 \u00b1 3.9 (P = 0.004*); Effective PCIA demands: TEAS 3.8 \u00b1 1.0 vs Sham 4.8 \u00b1 1.6 (P = 0.039*); Time to first flatus: TEAS 24.2 \u00b1 2.5 vs Sham 31.6 \u00b1 4.4 hours (P = 0.003*); Time to first borborygmus: TEAS 19.2 \u00b1 3.3 vs Sham 27.6 \u00b1 2.7 hours (P = 0.035*); Hospital stay duration: median 4 (IQR 3-5) vs median 4 (IQR 3-5) days (P = 0.722).<br>5. Recovery quality & sleep: QoR-40 global score at 48 h: TEAS 184.0 vs Sham 181.0 (P < 0.001*); PSQI sleep quality: at 24 h: TEAS 11.5 \u00b1 6.9 vs Sham 15.7 \u00b1 8.1 (P = 0.015*); at 48 h: TEAS 7.4 \u00b1 5.2 vs Sham 10.6 \u00b1 5.4 (P = 0.024*); Adverse events (Table 3): Dizziness & headache: 2/42 (4.8%) vs 3/43 (7.0%); Fever: 6/42 (14.3%) vs 8/43 (18.6%).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: SPSS computer random sequence with fixed seed, sequentially numbered sealed opaque envelopes, validated sham TEAS control with identical electrodes and standardized tolerance questioning, comprehensive double-blinding (patients, surgical team, and outcome assessors blinded), 94.4% completion rate, validated NRS instruments and QoR-40, and prospective registration under ChiCTR2200058283.",
-      "fake_boilerplate_expunged": "Fabricated pain and PONV numbers (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, 5/30 vs 12/30) and erroneous reviewer claims of open-label control and missing trial registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and falsely claimed open-label control and lack of registration in RoB 2!<br>2. Replaced with TRUE published trial data: 85 completed and analyzed patients undergoing gynecological laparoscopic surgery (42 TEAS group, 43 Sham Control group; 94.4% completion rate from 90 recruited, 5 dropouts documented in CONSORT flow); Table 4 Postoperative NRS pain at rest: at 6 h: TEAS 2.9 ± 1.1 vs Sham 3.4 ± 1.2 (P = 0.022*); at 24 h: TEAS 1.7 ± 0.8 vs Sham 2.2 ± 1.1 (P = 0.042*); at 48 h: TEAS 0.9 ± 0.8 vs Sham 1.0 ± 0.9; Baseline: 0 vs 0.<br>3. Primary outcome: 24-hour PONV incidence (Text p. 6453): TEAS 18/42 (42.9%) vs Sham Control 29/43 (67.4%) (P = 0.023*, OR = 2.762, 95% CI 1.142 to 6.681); Absolute risk reduction 24.5%.<br>4. Analgesic and recovery outcomes (Table 3): Intraoperative remifentanil consumption: TEAS 233.1 ± 29.6 vs Sham 289.5 ± 37.9 µg (P = 0.031*); Total PCIA demands: TEAS 6.3 ± 2.2 vs Sham 10.7 ± 3.9 (P = 0.004*); Effective PCIA demands: TEAS 3.8 ± 1.0 vs Sham 4.8 ± 1.6 (P = 0.039*); Time to first flatus: TEAS 24.2 ± 2.5 vs Sham 31.6 ± 4.4 hours (P = 0.003*); Time to first borborygmus: TEAS 19.2 ± 3.3 vs Sham 27.6 ± 2.7 hours (P = 0.035*); Hospital stay duration: median 4 (IQR 3-5) vs median 4 (IQR 3-5) days (P = 0.722).<br>5. Recovery quality & sleep: QoR-40 global score at 48 h: TEAS 184.0 vs Sham 181.0 (P < 0.001*); PSQI sleep quality: at 24 h: TEAS 11.5 ± 6.9 vs Sham 15.7 ± 8.1 (P = 0.015*); at 48 h: TEAS 7.4 ± 5.2 vs Sham 10.6 ± 5.4 (P = 0.024*); Adverse events (Table 3): Dizziness & headache: 2/42 (4.8%) vs 3/43 (7.0%); Fever: 6/42 (14.3%) vs 8/43 (18.6%).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: SPSS computer random sequence with fixed seed, sequentially numbered sealed opaque envelopes, validated sham TEAS control with identical electrodes and standardized tolerance questioning, comprehensive double-blinding (patients, surgical team, and outcome assessors blinded), 94.4% completion rate, validated NRS instruments and QoR-40, and prospective registration under ChiCTR2200058283.",
+      "fake_boilerplate_expunged": "Fabricated pain and PONV numbers (2.4 ± 0.8 vs 3.8 ± 1.1, 5/30 vs 12/30) and erroneous reviewer claims of open-label control and missing trial registration.",
       "evidence_sources": "Text p. 6449-6459 (Methods, SPSS sequence, sealed envelopes, sham 0 mA control, blinding, ChiCTR2200058283); Fig 1 p. 6451 (CONSORT flow); Table 1 p. 6452 (demographics, surgery duration); Table 2 p. 6453 (PONV 0-2h, 2-4h, 4-6h); Table 3 p. 6457-6458 (remifentanil, PCIA use, flatus, borborygmus, stay, adverse events); Table 4 p. 6458 (NRS pain and PSQI sleep at 6h, 24h, 48h)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan), ST36 (Zusanli), LI4 (Hegu)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -1420,14 +1438,14 @@ window.STUDIES_DATA = [
       "total_n": 85,
       "arm1_name": "TEAS Group",
       "arm1_n": 42,
-      "arm1_age": "42.1 \u00b1 16.3",
+      "arm1_age": "42.1 ± 16.3",
       "arm1_female": "42/42 (100%)",
-      "arm1_bmi": "24.7 \u00b1 2.2",
+      "arm1_bmi": "24.7 ± 2.2",
       "arm2_name": "Sham Group",
       "arm2_n": 43,
-      "arm2_age": "44.9 \u00b1 12.6",
+      "arm2_age": "44.9 ± 12.6",
       "arm2_female": "43/43 (100%)",
-      "arm2_bmi": "25.1 \u00b1 2.3",
+      "arm2_bmi": "25.1 ± 2.3",
       "asa_status": "ASA I: 12 (27.9%), ASA II: 30 (71.4%)"
     },
     "rob2": {
@@ -1447,12 +1465,12 @@ window.STUDIES_DATA = [
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour total postoperative IV opi...",
       "target_data": "Cumulative 24-hour total postoperative IV opioid consumption (mg IV MME) from PCIA, and isolated patient counts for nausea vs vomiting.",
-      "rationale": "Table 3 reports PCIA demand numbers (6.3 \u00b1 2.2 vs 10.7 \u00b1 3.9) but total opioid consumption in mg was not tabulated, and PONV is reported as a composite event (18/42 vs 29/43).",
+      "rationale": "Table 3 reports PCIA demand numbers (6.3 ± 2.2 vs 10.7 ± 3.9) but total opioid consumption in mg was not tabulated, and PONV is reported as a composite event (18/42 vs 29/43).",
       "impact": "Supplies author-verified cumulative 24-hour opioid consumption and isolated emetic counts for 85-patient gynecological laparoscopic surgery trial.",
       "corresponding_author": "Dr. Lin Li",
       "email": "lilinslashofmine@qq.com",
       "institution": "Department of Anesthesiology, General Hospital of Northern Theater Command, No. 83, Wenhua Road, Shenhe District, Shenyang 110016, China",
-      "draft_msg": "Dear Dr. Li, congratulations on your randomized controlled trial published in Journal of Pain Research (2025;18:6449-6462) evaluating transcutaneous electrical acupoint stimulation (TEAS) for recovery after gynecological laparoscopic surgery. In Table 3 you report total PCIA use frequency, and in the text you report composite 24-hour PONV. Could you kindly provide the cumulative 24-hour postoperative total IV opioid consumption (mean \u00b1 SD in IV morphine equivalents) and isolated patient counts for postoperative nausea and vomiting for the TEAS (n=42) and Control (n=43) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Li, congratulations on your randomized controlled trial published in Journal of Pain Research (2025;18:6449-6462) evaluating transcutaneous electrical acupoint stimulation (TEAS) for recovery after gynecological laparoscopic surgery. In Table 3 you report total PCIA use frequency, and in the text you report composite 24-hour PONV. Could you kindly provide the cumulative 24-hour postoperative total IV opioid consumption (mean ± SD in IV morphine equivalents) and isolated patient counts for postoperative nausea and vomiting for the TEAS (n=42) and Control (n=43) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -1496,9 +1514,9 @@ window.STUDIES_DATA = [
         "ci_upp": -41.95,
         "p_val": "<0.001",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Intraoperative remifentanil consumption (Table 2: 233.1 \u00b1 29.6 vs 289.5 \u00b1 37.9 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Intraoperative remifentanil consumption (Table 2: 233.1 ± 29.6 vs 289.5 ± 37.9 µg)"
       },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
@@ -1517,11 +1535,17 @@ window.STUDIES_DATA = [
         "unit": "presses",
         "p_val": 0.004,
         "effective_presses": {
-          "arm1": "3.8 \u00b1 1.0",
-          "arm2": "4.8 \u00b1 1.6",
+          "arm1": "3.8 ± 1.0",
+          "arm2": "4.8 ± 1.6",
           "p": 0.039
         },
-        "note": "Table 3 reports total PCIA presses (6.3 \u00b1 2.2 vs 10.7 \u00b1 3.9, P=0.004) and effective presses (3.8 \u00b1 1.0 vs 4.8 \u00b1 1.6, P=0.039)."
+        "note": "Table 3 reports total PCIA presses (6.3 ± 2.2 vs 10.7 ± 3.9, P=0.004) and effective presses (3.8 ± 1.0 vs 4.8 ± 1.6, P=0.039)."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Zheng 2025",
@@ -1546,7 +1570,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -1564,9 +1588,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, 5/30 vs 12/30 for PONV)!<br>2. Replaced with TRUE published trial data: 90 completed and analyzed patients undergoing elective open abdominal surgery (30 TAP+TEAS group, 30 TAP group, 30 Usual care group; 98.9% completion rate, 1 pre-intervention withdrawal documented in Fig. 1 CONSORT flow); Table 2 Postoperative VAS pain at rest (0-10): at 24 h: TAP+TEAS 1.7 \u00b1 2.2 vs TAP 2.0 \u00b1 3.0 vs Usual care 2.0 \u00b1 4.0 (P < 0.0001 overall; P = 0.03 vs TAP); at 48 h: TAP+TEAS 1.7 \u00b1 2.0 vs TAP 2.0 \u00b1 3.0 vs Usual care 2.0 \u00b1 3.2 (P = 0.007 overall; P = 0.03 vs TAP); at 2 h: 2.0 \u00b1 3.0 vs 1.7 \u00b1 3.0 vs 2.0 \u00b1 3.0 (P = 0.82).<br>3. Table 4 Adverse events & PONV: Postoperative nausea/vomiting: at 24 h: TAP+TEAS 3/30 (10.0%) vs TAP 8/30 (26.7%) vs Usual care 13/30 (43.3%) (P = 0.014*); at 48 h: TAP+TEAS 1/30 (3.3%) vs TAP 6/30 (20.0%) vs Usual care 12/30 (40.0%) (P = 0.002*); at 72 h: 0/30 vs 3/30 vs 8/30 (P = 0.005*).<br>4. Postoperative dizziness (Table 4): at 24 h: TAP+TEAS 2/30 (6.7%) vs TAP 10/30 (33.3%) vs Usual care 14/30 (46.7%) (P = 0.002*); at 48 h: TAP+TEAS 0/30 (0%) vs TAP 5/30 (16.7%) vs Usual care 8/30 (26.7%) (P = 0.007*); at 72 h: 0/30 vs 2/30 vs 3/30.<br>5. Treatment-related non-serious adverse events (Table 4 total): at 24 h: TAP+TEAS 4/30 (13.3%) vs TAP 12/30 (40.0%) vs Usual care 18/30 (60.0%) (P = 0.001*); at 48 h: TAP+TEAS 1/30 (3.3%) vs TAP 8/30 (26.7%) vs Usual care 13/30 (43.3%) (P = 0.001*); at 72 h: 0/30 vs 3/30 vs 8/30.<br>6. RoB 2 verified: Domain 1 Low (computer random table, independent research assistant concealment); Domain 2 Some concerns (single-blind design without sham device; patients aware of electrical stimulation); Domain 3 Low (90/91 completed, 98.9%); Domain 4 Low (blinded outcome assessors and statisticians); Domain 5 Low (registered prospectively under ChiCTR-INR-17011598). Overall: **Some concerns** (due to single-blind design without sham control).",
-      "fake_boilerplate_expunged": "Fabricated pain and PONV numbers (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, 5/30 vs 12/30).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for pain, 5/30 vs 12/30 for PONV)!<br>2. Replaced with TRUE published trial data: 90 completed and analyzed patients undergoing elective open abdominal surgery (30 TAP+TEAS group, 30 TAP group, 30 Usual care group; 98.9% completion rate, 1 pre-intervention withdrawal documented in Fig. 1 CONSORT flow); Table 2 Postoperative VAS pain at rest (0-10): at 24 h: TAP+TEAS 1.7 ± 2.2 vs TAP 2.0 ± 3.0 vs Usual care 2.0 ± 4.0 (P < 0.0001 overall; P = 0.03 vs TAP); at 48 h: TAP+TEAS 1.7 ± 2.0 vs TAP 2.0 ± 3.0 vs Usual care 2.0 ± 3.2 (P = 0.007 overall; P = 0.03 vs TAP); at 2 h: 2.0 ± 3.0 vs 1.7 ± 3.0 vs 2.0 ± 3.0 (P = 0.82).<br>3. Table 4 Adverse events & PONV: Postoperative nausea/vomiting: at 24 h: TAP+TEAS 3/30 (10.0%) vs TAP 8/30 (26.7%) vs Usual care 13/30 (43.3%) (P = 0.014*); at 48 h: TAP+TEAS 1/30 (3.3%) vs TAP 6/30 (20.0%) vs Usual care 12/30 (40.0%) (P = 0.002*); at 72 h: 0/30 vs 3/30 vs 8/30 (P = 0.005*).<br>4. Postoperative dizziness (Table 4): at 24 h: TAP+TEAS 2/30 (6.7%) vs TAP 10/30 (33.3%) vs Usual care 14/30 (46.7%) (P = 0.002*); at 48 h: TAP+TEAS 0/30 (0%) vs TAP 5/30 (16.7%) vs Usual care 8/30 (26.7%) (P = 0.007*); at 72 h: 0/30 vs 2/30 vs 3/30.<br>5. Treatment-related non-serious adverse events (Table 4 total): at 24 h: TAP+TEAS 4/30 (13.3%) vs TAP 12/30 (40.0%) vs Usual care 18/30 (60.0%) (P = 0.001*); at 48 h: TAP+TEAS 1/30 (3.3%) vs TAP 8/30 (26.7%) vs Usual care 13/30 (43.3%) (P = 0.001*); at 72 h: 0/30 vs 3/30 vs 8/30.<br>6. RoB 2 verified: Domain 1 Low (computer random table, independent research assistant concealment); Domain 2 Some concerns (single-blind design without sham device; patients aware of electrical stimulation); Domain 3 Low (90/91 completed, 98.9%); Domain 4 Low (blinded outcome assessors and statisticians); Domain 5 Low (registered prospectively under ChiCTR-INR-17011598). Overall: **Some concerns** (due to single-blind design without sham control).",
+      "fake_boilerplate_expunged": "Fabricated pain and PONV numbers (2.4 ± 0.8 vs 3.8 ± 1.1, 5/30 vs 12/30).",
       "evidence_sources": "Text p. 1-5 (Methods, computer table, assistant concealment, single-blind, blinded assessors, ChiCTR-INR-17011598); Fig 1 p. 3 (CONSORT flow); Table 1 p. 4 (demographics, surgery type, duration); Table 2 p. 4 (VAS pain at 2, 24, 48 h); Table 3 p. 4 (PACU hemodynamics); Table 4 p. 5 (dizziness, nausea/vomiting, total adverse events)"
     },
     "stricta": {
@@ -1574,7 +1598,7 @@ window.STUDIES_DATA = [
       "frequency_raw": "Mixed / alternating sparse-dense (2/100 Hz)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
       "intensity": "Stimulus intensity increased gradually from zero to a strong but comfortable level",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Postoperative: Session 1 administered before leaving PACU; Session 2 administered at 24 hours postoperatively",
       "timing_category": "Multi-phase (Perioperative)",
       "sessions_category": "Single session",
@@ -1586,15 +1610,15 @@ window.STUDIES_DATA = [
       "total_n": 60,
       "arm1_name": "TEAS Group",
       "arm1_n": 30,
-      "arm1_age": "64.6 \u00b1 14.6",
+      "arm1_age": "64.6 ± 14.6",
       "arm1_female": "15/30 (50.0%)",
-      "arm1_bmi": "23.1 \u00b1 2.9",
+      "arm1_bmi": "23.1 ± 2.9",
       "arm2_name": "Usual Care Group",
       "arm2_n": 30,
-      "arm2_age": "58.4 \u00b1 13.8",
+      "arm2_age": "58.4 ± 13.8",
       "arm2_female": "15/30 (50.0%)",
-      "arm2_bmi": "22.9 \u00b1 4.0",
-      "asa_status": "100% ASA I\u2013II"
+      "arm2_bmi": "22.9 ± 4.0",
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Some concerns",
@@ -1605,7 +1629,7 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "VAS pain intensity",
       "timepoint": "24 h",
-      "rationale": "Printed: 2 (1.7 \u00b1 2.2) vs 2 (2.0 \u00b1 3.0); pairwise P=0.03"
+      "rationale": "Printed: 2 (1.7 ± 2.2) vs 2 (2.0 ± 3.0); pairwise P=0.03"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -1618,7 +1642,7 @@ window.STUDIES_DATA = [
       "corresponding_author": "Dr. Weiqian Tian",
       "email": "twq1972@163.com",
       "institution": "Department of Anaesthesiology, Affiliated Hospital of Nanjing University of Chinese Medicine (Jiangsu Province Hospital of Chinese Medicine), Hanzhong Road 155, Nanjing 210029, China",
-      "draft_msg": "Dear Dr. Tian, congratulations on your randomized controlled trial published in European Journal of Integrative Medicine (2020;35:101087) investigating the addition of TEAS to transversus abdominis plane block for open abdominal surgery. In Table 4 you report combined incidence of nausea/vomiting, and in the text you mention fixed 2 \u00b5g/h sufentanil PCIA. Could you kindly provide the isolated patient counts for postoperative nausea and vomiting separately during the first 24 and 48 hours, as well as clarify whether any additional rescue opioids were required for the TAP+TEAS (n=30), TAP (n=30), and Usual care (n=30) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Tian, congratulations on your randomized controlled trial published in European Journal of Integrative Medicine (2020;35:101087) investigating the addition of TEAS to transversus abdominis plane block for open abdominal surgery. In Table 4 you report combined incidence of nausea/vomiting, and in the text you mention fixed 2 µg/h sufentanil PCIA. Could you kindly provide the isolated patient counts for postoperative nausea and vomiting separately during the first 24 and 48 hours, as well as clarify whether any additional rescue opioids were required for the TAP+TEAS (n=30), TAP (n=30), and Usual care (n=30) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -1646,6 +1670,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Zhan 2020",
@@ -1670,7 +1700,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -1688,16 +1718,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid, 5/30 vs 12/30 for PONV, false N=30) and falsely claimed open-label control and lack of registration in RoB 2!<br>2. Replaced with TRUE published trial data: 93 completed and analyzed patients undergoing elective laparoscopic hysterectomy (45 TEAS group, 48 Control Sham TEAS group; 94.9% completion rate from 98 recruited, 5 exclusions documented in Fig. 2 CONSORT flow); Table 4 Total sufentanil consumption on POD 1: TEAS 50.53 \u00b1 4.46 \u00b5g vs Control 53.79 \u00b1 5.14 \u00b5g (P = 0.002*) [in IV MME: 50.53 \u00b1 4.46 vs 53.79 \u00b1 5.14 mg]; Total PCIA bolus demands: median 0 (IQR 0-2) vs median 2 (IQR 1-4) (P < 0.001*); Rescue analgesia demands: TEAS 14/45 (31.11%) vs Control 29/48 (60.42%) (P = 0.005*).<br>3. Postoperative recovery milestones (Table 5): Time to first postoperative ambulation: TEAS 19.91 \u00b1 5.88 vs Control 28.31 \u00b1 19.01 hours (P = 0.006*); Time to pelvic drain removal: TEAS 19.95 \u00b1 7.89 vs Control 29.10 \u00b1 17.51 hours (P = 0.005*); Time to first flatus: TEAS 13.14 \u00b1 10.53 vs Control 16.60 \u00b1 10.36 hours (P = 0.110); Time to first oral liquid intake: TEAS 7.11 \u00b1 5.66 vs Control 9.16 \u00b1 5.39 hours (P = 0.077); Time to postoperative discharge: TEAS 4.07 \u00b1 1.68 vs Control 6.06 \u00b1 4.28 days (P = 0.004*); Total hospitalization costs: 14,542 \u00b1 158 vs 15,903 \u00b1 15,245 yuan (P < 0.001*).<br>4. Table 6 Complications & adverse events (0-24 h): Postoperative nausea and vomiting (PONV): TEAS 14/45 (31.11%) vs Control 25/48 (52.08%) (P = 0.04*); Dizziness: TEAS 5/45 (11.11%) vs Control 6/48 (12.50%) (P = 0.84); Sleep disturbances: TEAS 8/45 (17.78%) vs Control 6/48 (12.50%) (P = 0.48); Surgical site infection: 0/45 vs 1/48 (2.08%); Shoulder pain: 1/45 vs 2/48.<br>5. Pain phenotypes (Table 2 & Fig. 3): Maximum acute visceral pain score (POD 1): significantly lower in TEAS group (adjusted beta = 0.96, P = 0.009); Low back pain score (POD 1): significantly lower in TEAS group (adjusted beta = 1.06, P = 0.016); Incisional pain score: comparable between groups; Overall POD 1 pain: ~2.30 \u00b1 1.20 vs ~3.10 \u00b1 1.40.<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Stata computer random sequences, sealed opaque envelopes, sub-sensory sham TEAS control (1 mA below threshold), double-blind (patients, surgical team, ward nurses, and outcome assessors blinded), 94.9% completion rate (93/98 analyzed), validated NRS instruments and PCIA electronic logging, and prospective registration under ChiCTR2400093634.",
-      "fake_boilerplate_expunged": "Fabricated opioid and PONV numbers (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0, 5/30 vs 12/30) and erroneous reviewer claims of open-label control and missing trial registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid, 5/30 vs 12/30 for PONV, false N=30) and falsely claimed open-label control and lack of registration in RoB 2!<br>2. Replaced with TRUE published trial data: 93 completed and analyzed patients undergoing elective laparoscopic hysterectomy (45 TEAS group, 48 Control Sham TEAS group; 94.9% completion rate from 98 recruited, 5 exclusions documented in Fig. 2 CONSORT flow); Table 4 Total sufentanil consumption on POD 1: TEAS 50.53 ± 4.46 µg vs Control 53.79 ± 5.14 µg (P = 0.002*) [in IV MME: 50.53 ± 4.46 vs 53.79 ± 5.14 mg]; Total PCIA bolus demands: median 0 (IQR 0-2) vs median 2 (IQR 1-4) (P < 0.001*); Rescue analgesia demands: TEAS 14/45 (31.11%) vs Control 29/48 (60.42%) (P = 0.005*).<br>3. Postoperative recovery milestones (Table 5): Time to first postoperative ambulation: TEAS 19.91 ± 5.88 vs Control 28.31 ± 19.01 hours (P = 0.006*); Time to pelvic drain removal: TEAS 19.95 ± 7.89 vs Control 29.10 ± 17.51 hours (P = 0.005*); Time to first flatus: TEAS 13.14 ± 10.53 vs Control 16.60 ± 10.36 hours (P = 0.110); Time to first oral liquid intake: TEAS 7.11 ± 5.66 vs Control 9.16 ± 5.39 hours (P = 0.077); Time to postoperative discharge: TEAS 4.07 ± 1.68 vs Control 6.06 ± 4.28 days (P = 0.004*); Total hospitalization costs: 14,542 ± 158 vs 15,903 ± 15,245 yuan (P < 0.001*).<br>4. Table 6 Complications & adverse events (0-24 h): Postoperative nausea and vomiting (PONV): TEAS 14/45 (31.11%) vs Control 25/48 (52.08%) (P = 0.04*); Dizziness: TEAS 5/45 (11.11%) vs Control 6/48 (12.50%) (P = 0.84); Sleep disturbances: TEAS 8/45 (17.78%) vs Control 6/48 (12.50%) (P = 0.48); Surgical site infection: 0/45 vs 1/48 (2.08%); Shoulder pain: 1/45 vs 2/48.<br>5. Pain phenotypes (Table 2 & Fig. 3): Maximum acute visceral pain score (POD 1): significantly lower in TEAS group (adjusted beta = 0.96, P = 0.009); Low back pain score (POD 1): significantly lower in TEAS group (adjusted beta = 1.06, P = 0.016); Incisional pain score: comparable between groups; Overall POD 1 pain: ~2.30 ± 1.20 vs ~3.10 ± 1.40.<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Stata computer random sequences, sealed opaque envelopes, sub-sensory sham TEAS control (1 mA below threshold), double-blind (patients, surgical team, ward nurses, and outcome assessors blinded), 94.9% completion rate (93/98 analyzed), validated NRS instruments and PCIA electronic logging, and prospective registration under ChiCTR2400093634.",
+      "fake_boilerplate_expunged": "Fabricated opioid and PONV numbers (20.4 ± 4.8 vs 33.1 ± 7.0, 5/30 vs 12/30) and erroneous reviewer claims of open-label control and missing trial registration.",
       "evidence_sources": "Text p. 6477-6487 (Methods, Stata sequence, sealed envelopes, sham sub-sensory control, blinding, ChiCTR2400093634); Fig 1 p. 6480 (acupoints); Fig 2 p. 6481 (CONSORT flow); Fig 3 p. 6484 (pain trajectories); Table 1 p. 6482 (demographics, intraoperative anesthetics); Table 2 p. 6483 (GEE models for pain); Table 3 p. 6485 (cytokines IL-6); Table 4 p. 6485 (sufentanil, PCIA boluses, rescue analgesia); Table 5 p. 6485 (recovery milestones, drain, ambulation, flatus, discharge); Table 6 p. 6485 (PONV, dizziness, sleep)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), SP6 (Sanyinjiao), ST36 (Zusanli)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -1710,15 +1740,15 @@ window.STUDIES_DATA = [
       "total_n": 93,
       "arm1_name": "TEAS Group",
       "arm1_n": 45,
-      "arm1_age": "51.91 \u00b1 7.37",
+      "arm1_age": "51.91 ± 7.37",
       "arm1_female": "45/45 (100%)",
-      "arm1_bmi": "23.63 \u00b1 2.72",
+      "arm1_bmi": "23.63 ± 2.72",
       "arm2_name": "Sham Group",
       "arm2_n": 48,
-      "arm2_age": "50.31 \u00b1 6.46",
+      "arm2_age": "50.31 ± 6.46",
       "arm2_female": "48/48 (100%)",
-      "arm2_bmi": "24.52 \u00b1 3.09",
-      "asa_status": "100% ASA I\u2013II"
+      "arm2_bmi": "24.52 ± 3.09",
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Low",
@@ -1729,27 +1759,27 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Total sufentanil consumption",
       "timepoint": "POD1 (~24 h)",
-      "rationale": "50.53 \u00b1 4.46 vs 53.79 \u00b1 5.14 \u00b5g; P=0.002"
+      "rationale": "50.53 ± 4.46 vs 53.79 ± 5.14 µg; P=0.002"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Isolated 24-hour patient counts for postopera...",
-      "target_data": "Isolated 24-hour patient counts for postoperative nausea and vomiting, and numerical mean \u00b1 SD for POD 1 pain scores by subcategory.",
+      "target_data": "Isolated 24-hour patient counts for postoperative nausea and vomiting, and numerical mean ± SD for POD 1 pain scores by subcategory.",
       "rationale": "Table 6 presents composite PONV incidence (14/45 vs 25/48) rather than isolated nausea vs vomiting counts, and Figure 3 shows pain score distributions graphically.",
       "impact": "Supplies author-verified isolated emetic counts and numerical pain intensities for 93-patient laparoscopic hysterectomy trial.",
       "corresponding_author": "Dr. Wenwen Du",
       "email": "862892574@qq.com",
       "institution": "Department of Anesthesiology, The First Affiliated Hospital of Wenzhou Medical University, Ouhai District, Wenzhou, Zhejiang, China",
-      "draft_msg": "Dear Dr. Du, congratulations on your randomized controlled trial published in Journal of Pain Research (2025;18:6477-6489) evaluating transcutaneous electrical acupoint stimulation (TEAS) for postoperative pain and recovery after laparoscopic hysterectomy. In Table 6 you report composite PONV incidence, and in Figure 3 you display pain trajectories across visceral, incisional, and low back pain. Could you kindly provide the isolated patient counts for postoperative nausea and vomiting separately during the first 24 hours, as well as numerical mean \u00b1 SD for POD 1 pain scores by subcategory for the TEAS (n=45) and Control (n=48) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Du, congratulations on your randomized controlled trial published in Journal of Pain Research (2025;18:6477-6489) evaluating transcutaneous electrical acupoint stimulation (TEAS) for postoperative pain and recovery after laparoscopic hysterectomy. In Table 6 you report composite PONV incidence, and in Figure 3 you display pain trajectories across visceral, incisional, and low back pain. Could you kindly provide the isolated patient counts for postoperative nausea and vomiting separately during the first 24 hours, as well as numerical mean ± SD for POD 1 pain scores by subcategory for the TEAS (n=45) and Control (n=48) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
         "status": "Direct Continuous (POD1 Window)",
         "role": "Conditional Derived",
         "native_drug": "IV sufentanil",
-        "native_unit": "\u00b5g",
+        "native_unit": "µg",
         "mme_factor": 0.1,
         "arm1_mean_native": 50.53,
         "arm1_sd_native": 4.46,
@@ -1767,8 +1797,8 @@ window.STUDIES_DATA = [
         "ci_low": -0.521,
         "ci_upp": -0.131,
         "p_val": "0.001",
-        "derivation_rule": "POD1 PCIA sufentanil consumption represents full 24h observation period (programmed basal 2 \u00b5g/h \u00d7 24h = 48 \u00b5g basal plus demand boluses). Converted with mme_factor 0.1.",
-        "note": "Reported POD1 PCIA sufentanil consumption (50.53 \u00b1 4.46 vs 53.79 \u00b1 5.14 \u00b5g, P=0.002; converted to 5.05 \u00b1 0.45 vs 5.38 \u00b1 0.51 mg IV MME)"
+        "derivation_rule": "POD1 PCIA sufentanil consumption represents full 24h observation period (programmed basal 2 µg/h × 24h = 48 µg basal plus demand boluses). Converted with mme_factor 0.1.",
+        "note": "Reported POD1 PCIA sufentanil consumption (50.53 ± 4.46 vs 53.79 ± 5.14 µg, P=0.002; converted to 5.05 ± 0.45 vs 5.38 ± 0.51 mg IV MME)"
       },
       "pain_rest_24h": null,
       "pain_movement_24h": null,
@@ -1809,7 +1839,13 @@ window.STUDIES_DATA = [
         "arm2_sd": 2.22,
         "unit": "demands",
         "p_val": 0.001,
-        "note": "Table 4: PCIA bolus demands: TEAS median 0 [0\u20132] vs Control median 2 [1\u20134] (P<0.001; MD -1.75)."
+        "note": "Table 4: PCIA bolus demands: TEAS median 0 [0–2] vs Control median 2 [1–4] (P<0.001; MD -1.75)."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Zhang 2025",
@@ -1834,7 +1870,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -1852,8 +1888,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL AUDIT & CORRECTION**: Reviewers had left 24-hour pain intensity, vomiting, and adverse events unextracted, and Reviewer 811774 falsely claimed lack of registration and open-label control in RoB 2!<br>2. Replaced with TRUE published trial data: 1,838 completed and analyzed patients undergoing laparoscopic cholecystectomy (922 TEAS group, 916 Sham TEAS group; 94.4% completion rate from 1,948 recruited, all 110 exclusions clinically documented in CONSORT diagram); Table 1 Cumulative post-surgery opioid dosage within 48 h (IV morphine equivalents): TEAS median 110.0 mg (IQR 80.0-110.0) vs Sham TEAS median 110.0 mg (IQR 90.0-110.0); Intraoperative opioid dosage: 30.0 mg (25.0-35.0) vs 30.0 mg (25.0-35.0) IV MME.<br>3. Postoperative pain & early recovery (Table 4): Postoperative NRS pain score: TEAS median 4 (IQR 3-6) [mean 4.33 \u00b1 2.22] vs Sham TEAS median 5 (IQR 3-6) [mean 4.67 \u00b1 2.22] (P = 0.007*); Mobilization within 24 h after surgery: TEAS 573/922 (62.1%) vs Sham TEAS 517/916 (56.4%) (P = 0.013*); Length of hospital stay: TEAS median 7 days (IQR 6-10) vs Sham TEAS median 8 days (IQR 6-10) (P = 0.16); Hospitalization cost: 22,714.9 vs 23,013.5 yuan (P = 0.21).<br>4. Urinary and emetic outcomes (Table 4): Postoperative vomiting incidence: TEAS 231/922 (25.1%) vs Sham TEAS 246/916 (26.9%) (P = 0.38); Postoperative urinary retention (POUR): TEAS 75/922 (8.1%) vs Sham TEAS 104/916 (11.4%) (P = 0.02*); Postoperative voiding difficulty: TEAS 261/922 (28.3%) vs Sham TEAS 413/916 (45.1%) (P < 0.001*); Nocturia: TEAS 212/922 (23.0%) vs Sham TEAS 278/916 (30.3%) (P < 0.001*).<br>5. Adverse events (Table 5): Serious adverse events: 0/922 vs 0/916; Treatment-related non-serious adverse events: TEAS 2/922 (0.2%, redness) vs Sham TEAS 2/916 (0.2%, 1 redness, 1 itching).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: SAS computer-generated random sequence, sealed opaque envelopes, validated sham TEAS control with active-appearing device (0 mA), comprehensive double-blinding (patients, surgical team, recovery nurses, and assessors blinded), 94.4% completion rate across 1,838 patients, objective clinical tracking, and prospective registration on ClinicalTrials.gov under NCT03631160.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL AUDIT & CORRECTION**: Reviewers had left 24-hour pain intensity, vomiting, and adverse events unextracted, and Reviewer 811774 falsely claimed lack of registration and open-label control in RoB 2!<br>2. Replaced with TRUE published trial data: 1,838 completed and analyzed patients undergoing laparoscopic cholecystectomy (922 TEAS group, 916 Sham TEAS group; 94.4% completion rate from 1,948 recruited, all 110 exclusions clinically documented in CONSORT diagram); Table 1 Cumulative post-surgery opioid dosage within 48 h (IV morphine equivalents): TEAS median 110.0 mg (IQR 80.0-110.0) vs Sham TEAS median 110.0 mg (IQR 90.0-110.0); Intraoperative opioid dosage: 30.0 mg (25.0-35.0) vs 30.0 mg (25.0-35.0) IV MME.<br>3. Postoperative pain & early recovery (Table 4): Postoperative NRS pain score: TEAS median 4 (IQR 3-6) [mean 4.33 ± 2.22] vs Sham TEAS median 5 (IQR 3-6) [mean 4.67 ± 2.22] (P = 0.007*); Mobilization within 24 h after surgery: TEAS 573/922 (62.1%) vs Sham TEAS 517/916 (56.4%) (P = 0.013*); Length of hospital stay: TEAS median 7 days (IQR 6-10) vs Sham TEAS median 8 days (IQR 6-10) (P = 0.16); Hospitalization cost: 22,714.9 vs 23,013.5 yuan (P = 0.21).<br>4. Urinary and emetic outcomes (Table 4): Postoperative vomiting incidence: TEAS 231/922 (25.1%) vs Sham TEAS 246/916 (26.9%) (P = 0.38); Postoperative urinary retention (POUR): TEAS 75/922 (8.1%) vs Sham TEAS 104/916 (11.4%) (P = 0.02*); Postoperative voiding difficulty: TEAS 261/922 (28.3%) vs Sham TEAS 413/916 (45.1%) (P < 0.001*); Nocturia: TEAS 212/922 (23.0%) vs Sham TEAS 278/916 (30.3%) (P < 0.001*).<br>5. Adverse events (Table 5): Serious adverse events: 0/922 vs 0/916; Treatment-related non-serious adverse events: TEAS 2/922 (0.2%, redness) vs Sham TEAS 2/916 (0.2%, 1 redness, 1 itching).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: SAS computer-generated random sequence, sealed opaque envelopes, validated sham TEAS control with active-appearing device (0 mA), comprehensive double-blinding (patients, surgical team, recovery nurses, and assessors blinded), 94.4% completion rate across 1,838 patients, objective clinical tracking, and prospective registration on ClinicalTrials.gov under NCT03631160.",
       "fake_boilerplate_expunged": "Reviewer omission of 24h pain intensity, vomiting, and adverse events, and erroneous reviewer RoB claim of open-label control.",
       "evidence_sources": "Text p. 1153-1161 (Methods, SAS sequence, sealed envelopes, sham 0 mA control, blinding, NCT03631160); Fig 2 p. 1156 (CONSORT flowchart); Fig 3 p. 1158 (Kaplan-Meier voiding curves); Table 1 p. 1157 (demographics, anesthetics, opioids); Table 2 p. 1158 (voiding recovery); Table 3 p. 1159 (catheterization); Table 4 p. 1159 (POUR, voiding difficulty, pain NRS, vomiting, mobilization, stay); Table 5 p. 1159 (adverse events)"
     },
@@ -1861,7 +1897,7 @@ window.STUDIES_DATA = [
       "acupoints": "BL32 (Ciliao), CV3 (Zhongji), CV4 (Guanyuan), SP6 (Sanyinjiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -1874,14 +1910,14 @@ window.STUDIES_DATA = [
       "total_n": 1838,
       "arm1_name": "TEAS Group",
       "arm1_n": 922,
-      "arm1_age": "58.9 \u00b1 8.6",
+      "arm1_age": "58.9 ± 8.6",
       "arm1_female": "562/922 (61.0%)",
-      "arm1_bmi": "25.2 \u00b1 3.3",
+      "arm1_bmi": "25.2 ± 3.3",
       "arm2_name": "Sham Group",
       "arm2_n": 916,
-      "arm2_age": "59.1 \u00b1 8.4",
+      "arm2_age": "59.1 ± 8.4",
       "arm2_female": "533/916 (58.2%)",
-      "arm2_bmi": "25.2 \u00b1 3.4",
+      "arm2_bmi": "25.2 ± 3.4",
       "asa_status": "not reported"
     },
     "rob2": {
@@ -1899,14 +1935,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Parametric mean \u00b1 SD for cumulative 24-hour a...",
-      "target_data": "Parametric mean \u00b1 SD for cumulative 24-hour and 48-hour postoperative IV PCA opioid consumption (mg IV MME) and exact 24-hour incidence of postoperative nausea.",
+      "urgency": "IMPORTANT: Parametric mean ± SD for cumulative 24-hour a...",
+      "target_data": "Parametric mean ± SD for cumulative 24-hour and 48-hour postoperative IV PCA opioid consumption (mg IV MME) and exact 24-hour incidence of postoperative nausea.",
       "rationale": "Table 1 reports cumulative post-surgery opioid dosage within 48 h as median (IQR) (110 [80-110] vs 110 [90-110] mg), and Table 4 reports postoperative vomiting (231/922 vs 246/916) but omits isolated nausea counts.",
       "impact": "Supplies author-verified parametric opioid consumption and complete emetic data for 1,838-patient laparoscopic cholecystectomy trial.",
       "corresponding_author": "Dr. Jian-Bo Yu / Dr. Zheng-Cun Pei",
       "email": "yujianbo9981@163.com",
       "institution": "`yujianbo9981@163.com` / Department of Anesthesiology, Tianjin Medical University General Hospital, Anshan Road 154, Heping District, Tianjin 300052, China",
-      "draft_msg": "Dear Dr. Yu and Dr. Pei, congratulations on your large randomized clinical trial published in World Journal of Surgery (2023;47:1153-1162) evaluating TEAS for spontaneous voiding recovery after laparoscopic cholecystectomy. In Table 1 you report median post-surgery opioid dosage within 48 h, and in Table 4 you report vomiting incidence. Could you kindly provide the parametric mean \u00b1 SD for cumulative 24-hour and 48-hour postoperative opioid consumption (in IV morphine equivalents) and the exact patient count for postoperative nausea for the TEAS (n=922) and Sham (n=916) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Yu and Dr. Pei, congratulations on your large randomized clinical trial published in World Journal of Surgery (2023;47:1153-1162) evaluating TEAS for spontaneous voiding recovery after laparoscopic cholecystectomy. In Table 1 you report median post-surgery opioid dosage within 48 h, and in Table 4 you report vomiting incidence. Could you kindly provide the parametric mean ± SD for cumulative 24-hour and 48-hour postoperative opioid consumption (in IV morphine equivalents) and the exact patient count for postoperative nausea for the TEAS (n=922) and Sham (n=916) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -1934,6 +1970,25 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Derived / Imputed",
+        "role": "Conditional / Sensitivity",
+        "metric_name": "Cumulative 0–48h Opioid Consumption",
+        "timepoint": "48h",
+        "arm1_n": 922,
+        "arm1_mean": 100.0,
+        "arm1_sd": 22.24,
+        "arm2_n": 916,
+        "arm2_mean": 103.33,
+        "arm2_sd": 14.83,
+        "mean_diff": -3.33,
+        "se": 0.881,
+        "ci_low": -5.06,
+        "ci_upp": -1.6,
+        "unit": "mg IV MME",
+        "note": "Derived via Wan et al. (2014) from reported 48h median (IQR): TEAS 110 (80–110) vs Sham 110 (90–110) mg MME.",
+        "favors": "Intervention"
       }
     },
     "canonical_name": "Zhang 2023",
@@ -1958,7 +2013,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -1976,8 +2031,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (5/30 vs 12/30 for nausea) and left pain at 24h and vomiting empty!<br>2. Replaced with TRUE published trial data: 65 completed and analyzed female patients undergoing elective cosmetic breast surgery (33 TEAS group, 32 Sham Control group; 90.3% completion rate, 7 pre-incision dropouts fully documented in Fig. 2); Table 2 Intraoperative remifentanil infusion rate: TEAS 0.06 \u00b1 0.02 vs Sham 0.09 \u00b1 0.03 \u00b5g/kg/min (P = 0.01*); Propofol infusion: 109.1 \u00b1 15.8 vs 108.9 \u00b1 18.0 \u00b5g/kg/min (P = 0.95).<br>3. Clinical recovery milestones (Table 2): Length of recovery room stay: TEAS 35.6 \u00b1 12.9 vs Sham 48.3 \u00b1 16.3 min (P = 0.01*); Time to LMA removal: TEAS 10.2 \u00b1 2.5 vs Sham 17.8 \u00b1 4.4 min (P = 0.01*); Time to reorientation: TEAS 14.6 \u00b1 3.2 vs Sham 26.5 \u00b1 5.0 min (P = 0.01*); Patients discharged from PACU within 15 min: 3 vs 1; Patients with PACU stay > 1 h: 3 vs 9.<br>4. Table 3 Postoperative side-effects (0-24 h): Postoperative nausea: TEAS 7/33 (21.2%) vs Sham 15/32 (46.9%) (P = 0.03*); Postoperative vomiting: TEAS 4/33 (12.1%) vs Sham 11/32 (34.4%) (P = 0.03*); Postoperative dizziness: TEAS 6/33 (18.2%) vs Sham 17/32 (53.1%) (P = 0.01*); Postoperative pruritus: TEAS 2/33 (6.1%) vs Sham 8/32 (25.0%) (P = 0.03*).<br>5. Postoperative pain & sedation (Fig. 3): Visual Analogue Scale (VAS 0-10) pain scores significantly lower in TEAS group across all timepoints up to 24 h (at 24h: median ~0.80 [IQR 0.50-1.20, SD ~0.52] vs median ~1.80 [IQR 1.20-2.50, SD ~0.96]); Sedation scores significantly lower at 4 h (P < 0.05).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Random number table, allocation lists concealed from anaesthetists and statisticians, double-blind sham with placebo gel electrodes (0 mA), 90.3% completion rate, validated VAS and recovery measures, and prospective trial registration on ClinicalTrials.gov under NCT01700855.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (5/30 vs 12/30 for nausea) and left pain at 24h and vomiting empty!<br>2. Replaced with TRUE published trial data: 65 completed and analyzed female patients undergoing elective cosmetic breast surgery (33 TEAS group, 32 Sham Control group; 90.3% completion rate, 7 pre-incision dropouts fully documented in Fig. 2); Table 2 Intraoperative remifentanil infusion rate: TEAS 0.06 ± 0.02 vs Sham 0.09 ± 0.03 µg/kg/min (P = 0.01*); Propofol infusion: 109.1 ± 15.8 vs 108.9 ± 18.0 µg/kg/min (P = 0.95).<br>3. Clinical recovery milestones (Table 2): Length of recovery room stay: TEAS 35.6 ± 12.9 vs Sham 48.3 ± 16.3 min (P = 0.01*); Time to LMA removal: TEAS 10.2 ± 2.5 vs Sham 17.8 ± 4.4 min (P = 0.01*); Time to reorientation: TEAS 14.6 ± 3.2 vs Sham 26.5 ± 5.0 min (P = 0.01*); Patients discharged from PACU within 15 min: 3 vs 1; Patients with PACU stay > 1 h: 3 vs 9.<br>4. Table 3 Postoperative side-effects (0-24 h): Postoperative nausea: TEAS 7/33 (21.2%) vs Sham 15/32 (46.9%) (P = 0.03*); Postoperative vomiting: TEAS 4/33 (12.1%) vs Sham 11/32 (34.4%) (P = 0.03*); Postoperative dizziness: TEAS 6/33 (18.2%) vs Sham 17/32 (53.1%) (P = 0.01*); Postoperative pruritus: TEAS 2/33 (6.1%) vs Sham 8/32 (25.0%) (P = 0.03*).<br>5. Postoperative pain & sedation (Fig. 3): Visual Analogue Scale (VAS 0-10) pain scores significantly lower in TEAS group across all timepoints up to 24 h (at 24h: median ~0.80 [IQR 0.50-1.20, SD ~0.52] vs median ~1.80 [IQR 1.20-2.50, SD ~0.96]); Sedation scores significantly lower at 4 h (P < 0.05).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Random number table, allocation lists concealed from anaesthetists and statisticians, double-blind sham with placebo gel electrodes (0 mA), 90.3% completion rate, validated VAS and recovery measures, and prospective trial registration on ClinicalTrials.gov under NCT01700855.",
       "fake_boilerplate_expunged": "Fabricated nausea numbers (5/30 vs 12/30) and omitted consensus entries for 24h pain and vomiting.",
       "evidence_sources": "Text p. 832-838 (Methods, random table, allocation concealment, sham electrodes, blinding, NCT01700855); Fig 2 p. 835 (CONSORT flowchart); Fig 3 p. 837 (VAS pain and sedation scores); Table 1 p. 836 (demographics, anesthetics); Table 2 p. 836 (remifentanil, stay, LMA removal, reorientation); Table 3 p. 837 (nausea, vomiting, dizziness, pruritus); Table 4 p. 837 (hemodynamics); Table 5 p. 838 (stress hormones)"
     },
@@ -1985,7 +2040,7 @@ window.STUDIES_DATA = [
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Low frequency / mixed dense-disperse (2/10 Hz)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "Adjusted to individual maximum tolerance to maintain slight twitching of regional muscle (6\u20139 mA)",
+      "intensity": "Adjusted to individual maximum tolerance to maintain slight twitching of regional muscle (6–9 mA)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative: administered for 30 minutes immediately before induction of general anaesthesia in operating theatre",
       "timing_category": "Preoperative only",
@@ -1998,15 +2053,15 @@ window.STUDIES_DATA = [
       "total_n": 65,
       "arm1_name": "TEAS Group",
       "arm1_n": 33,
-      "arm1_age": "35.0 \u00b1 7.6",
+      "arm1_age": "35.0 ± 7.6",
       "arm1_female": "33/33 (100%)",
-      "arm1_bmi": "22.5 \u00b1 1.2",
+      "arm1_bmi": "22.5 ± 1.2",
       "arm2_name": "Sham Group",
       "arm2_n": 32,
-      "arm2_age": "34.3 \u00b1 9.1",
+      "arm2_age": "34.3 ± 9.1",
       "arm2_female": "32/32 (100%)",
-      "arm2_bmi": "22.2 \u00b1 1.1",
-      "asa_status": "100% ASA I\u2013II"
+      "arm2_bmi": "22.2 ± 1.1",
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Some concerns",
@@ -2017,20 +2072,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Recovery-room stay",
       "timepoint": "Recovery-room discharge",
-      "rationale": "35.6 \u00b1 12.9 vs 48.3 \u00b1 16.3 min; P=0.01"
+      "rationale": "35.6 ± 12.9 vs 48.3 ± 16.3 min; P=0.01"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Numerical mean \u00b1 SD for postoperative VAS pai...",
-      "target_data": "Numerical mean \u00b1 SD for postoperative VAS pain scores at 4, 8, and 24 hours, and whether any postoperative rescue opioids were administered.",
-      "rationale": "Figure 3 presents postoperative VAS pain scores graphically as median and IQR rather than numerical mean \u00b1 SD, and postoperative analgesia was maintained with IV parecoxib sodium without details on rescue opioid use.",
+      "urgency": "IMPORTANT: Numerical mean ± SD for postoperative VAS pai...",
+      "target_data": "Numerical mean ± SD for postoperative VAS pain scores at 4, 8, and 24 hours, and whether any postoperative rescue opioids were administered.",
+      "rationale": "Figure 3 presents postoperative VAS pain scores graphically as median and IQR rather than numerical mean ± SD, and postoperative analgesia was maintained with IV parecoxib sodium without details on rescue opioid use.",
       "impact": "Supplies author-verified numerical pain intensities and confirms postoperative opioid consumption for 65-patient cosmetic breast surgery trial.",
       "corresponding_author": "Dr. Qiang Wang",
       "email": "wangqiang@fmmu.edu.cn",
       "institution": "Department of Anaesthesiology, Xijing Hospital, Fourth Military Medical University, Xi'an, Shaanxi, China",
-      "draft_msg": "Dear Dr. Wang, congratulations on your randomized controlled trial published in Anaesthesia (2014;69:832-839) evaluating TEAS for quality of recovery after ambulatory cosmetic breast surgery. In Figure 3 you present postoperative visual analogue (VAS) pain scores graphically. Could you kindly provide the numerical mean \u00b1 SD (or median and IQR) for VAS pain scores at 4, 8, and 24 hours postoperatively, and confirm whether any postoperative rescue opioids were administered for the TEAS (n=33) and Sham (n=32) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Wang, congratulations on your randomized controlled trial published in Anaesthesia (2014;69:832-839) evaluating TEAS for quality of recovery after ambulatory cosmetic breast surgery. In Figure 3 you present postoperative visual analogue (VAS) pain scores graphically. Could you kindly provide the numerical mean ± SD (or median and IQR) for VAS pain scores at 4, 8, and 24 hours postoperatively, and confirm whether any postoperative rescue opioids were administered for the TEAS (n=33) and Sham (n=32) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -2074,13 +2129,19 @@ window.STUDIES_DATA = [
         "ci_upp": -122.26,
         "p_val": "0.010",
         "drug": "Remifentanil Equiv",
-        "unit": "\u00b5g",
-        "status": "Derived Total Dose (\u00b5g)",
-        "note": "Derived from reported infusion rate (0.06 \u00b1 0.02 vs 0.09 \u00b1 0.03 \u00b5g/kg/min \u00d7 58 kg \u00d7 120 min)"
+        "unit": "µg",
+        "status": "Derived Total Dose (µg)",
+        "note": "Derived from reported infusion rate (0.06 ± 0.02 vs 0.09 ± 0.03 µg/kg/min × 58 kg × 120 min)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Zhang 2014",
@@ -2105,7 +2166,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2123,16 +2184,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and Reviewer 811774 falsely claimed lack of registration and open-label control!<br>2. Replaced with TRUE published trial data: 60 completed and analyzed female patients undergoing gynecological laparoscopic surgery (30 TEAS group, 30 Con Sham TEAS group; 100% completion rate, 0 dropouts); Table 2 Pain VAS at rest: POD 1 (24 h): TEAS 3.70 \u00b1 1.53 vs Con 4.73 \u00b1 1.53 (P < 0.05*); POD 2 (48 h): TEAS 1.83 \u00b1 0.98 vs Con 2.30 \u00b1 0.95 (P < 0.05*).<br>3. Primary recovery outcome (QoR-40 global score): Baseline T0: 195.83 \u00b1 5.17 vs 197.50 \u00b1 2.57; POD 1 (24 h, T1): TEAS 175.33 \u00b1 9.66 vs Con 166.07 \u00b1 8.44 (P = 0.040*); POD 2 (48 h, T2): TEAS 191.40 \u00b1 5.74 vs Con 187.73 \u00b1 5.47 (P = 0.015*); Repeated measures group-time interaction: P = 0.003 and P = 0.036.<br>4. Table 3 Emetic outcomes & rescue medication (0-24 h): Composite PONV incidence: TEAS 7/30 (23.3%) vs Con 17/30 (56.7%) (P < 0.01*); Patients requiring rescue antiemetic (IV tropisetron): TEAS 7/30 (23.3%) vs Con 16/30 (53.3%) (P < 0.02*); Patients requiring rescue analgesia (IV sufentanil for VAS > 4): TEAS 13/30 (43.3%) vs Con 24/30 (80.0%) (P < 0.01*).<br>5. Cognitive recovery (MMSE): Baseline T0: 27.53 \u00b1 2.88 vs 26.83 \u00b1 2.74; POD 1 (T1): TEAS 26.10 \u00b1 2.78 vs Con 24.60 \u00b1 2.35 (P = 0.048*); POD 2 (T2): TEAS 27.83 \u00b1 2.73 vs Con 26.53 \u00b1 2.94 (P = 0.02*).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random table, sealed opaque envelopes, validated sham TEAS control with identical electrodes without current (0 mA), double-blind (patients, surgical team, ward staff, and assessors blinded), 100% completion (60/60 analyzed), validated QoR-40 instrument, and prospective registration on ClinicalTrials.gov under NCT02619578.",
-      "fake_boilerplate_expunged": "Fabricated pain and PONV numbers (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, 5/30 vs 12/30) and erroneous reviewer claims of unblinded control and missing trial registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and Reviewer 811774 falsely claimed lack of registration and open-label control!<br>2. Replaced with TRUE published trial data: 60 completed and analyzed female patients undergoing gynecological laparoscopic surgery (30 TEAS group, 30 Con Sham TEAS group; 100% completion rate, 0 dropouts); Table 2 Pain VAS at rest: POD 1 (24 h): TEAS 3.70 ± 1.53 vs Con 4.73 ± 1.53 (P < 0.05*); POD 2 (48 h): TEAS 1.83 ± 0.98 vs Con 2.30 ± 0.95 (P < 0.05*).<br>3. Primary recovery outcome (QoR-40 global score): Baseline T0: 195.83 ± 5.17 vs 197.50 ± 2.57; POD 1 (24 h, T1): TEAS 175.33 ± 9.66 vs Con 166.07 ± 8.44 (P = 0.040*); POD 2 (48 h, T2): TEAS 191.40 ± 5.74 vs Con 187.73 ± 5.47 (P = 0.015*); Repeated measures group-time interaction: P = 0.003 and P = 0.036.<br>4. Table 3 Emetic outcomes & rescue medication (0-24 h): Composite PONV incidence: TEAS 7/30 (23.3%) vs Con 17/30 (56.7%) (P < 0.01*); Patients requiring rescue antiemetic (IV tropisetron): TEAS 7/30 (23.3%) vs Con 16/30 (53.3%) (P < 0.02*); Patients requiring rescue analgesia (IV sufentanil for VAS > 4): TEAS 13/30 (43.3%) vs Con 24/30 (80.0%) (P < 0.01*).<br>5. Cognitive recovery (MMSE): Baseline T0: 27.53 ± 2.88 vs 26.83 ± 2.74; POD 1 (T1): TEAS 26.10 ± 2.78 vs Con 24.60 ± 2.35 (P = 0.048*); POD 2 (T2): TEAS 27.83 ± 2.73 vs Con 26.53 ± 2.94 (P = 0.02*).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random table, sealed opaque envelopes, validated sham TEAS control with identical electrodes without current (0 mA), double-blind (patients, surgical team, ward staff, and assessors blinded), 100% completion (60/60 analyzed), validated QoR-40 instrument, and prospective registration on ClinicalTrials.gov under NCT02619578.",
+      "fake_boilerplate_expunged": "Fabricated pain and PONV numbers (2.4 ± 0.8 vs 3.8 ± 1.1, 5/30 vs 12/30) and erroneous reviewer claims of unblinded control and missing trial registration.",
       "evidence_sources": "Text p. 1-8 (Methods, computer sequence, sealed envelopes, sham 0 mA control, double-blinding, NCT02619578); Fig 1 p. 2 (CONSORT flow); Fig 2 p. 3 (acupoint map); Fig 4 p. 5 (QoR-40 scores); Fig 5 p. 6 (MMSE scores); Table 1 p. 5 (demographics, anesthetics); Table 2 p. 7 (VAS scores); Table 3 p. 7 (rescue analgesia, rescue antiemetics, PONV)"
     },
     "stricta": {
       "acupoints": "GV20 (Baihui), EX-HN3 (Yingtang), ST36 (Zusanli), PC6 (Neiguan)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -2145,14 +2206,14 @@ window.STUDIES_DATA = [
       "total_n": 60,
       "arm1_name": "TEAS Group",
       "arm1_n": 30,
-      "arm1_age": "48.5 \u00b1 16.2",
+      "arm1_age": "48.5 ± 16.2",
       "arm1_female": "30/30 (100%)",
-      "arm1_bmi": "22.0 \u00b1 3.4",
+      "arm1_bmi": "22.0 ± 3.4",
       "arm2_name": "Sham Group",
       "arm2_n": 30,
-      "arm2_age": "45.9 \u00b1 17.5",
+      "arm2_age": "45.9 ± 17.5",
       "arm2_female": "30/30 (100%)",
-      "arm2_bmi": "22.1 \u00b1 4.5",
+      "arm2_bmi": "22.1 ± 4.5",
       "asa_status": "ASA I: 22 (73.3%), ASA II: 8 (26.7%)"
     },
     "rob2": {
@@ -2164,20 +2225,20 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Global QoR-40",
       "timepoint": "POD1 (~24 h)",
-      "rationale": "175.33 \u00b1 9.66 vs 166.07 \u00b1 8.44; P=0.040"
+      "rationale": "175.33 ± 9.66 vs 166.07 ± 8.44; P=0.040"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour total IV sufentanil consum...",
-      "target_data": "Cumulative 24-hour total IV sufentanil consumption (\u00b5g) administered as rescue analgesia, and isolated patient counts for nausea vs vomiting.",
+      "target_data": "Cumulative 24-hour total IV sufentanil consumption (µg) administered as rescue analgesia, and isolated patient counts for nausea vs vomiting.",
       "rationale": "Table 3 reports the number of patients requiring rescue sufentanil (13/30 vs 24/30) but cumulative 24-hour microgram doses were not reported in tables, and PONV is reported as a composite event (7/30 vs 17/30).",
       "impact": "Supplies author-verified cumulative 24-hour opioid dose and isolated emetic metrics for 60-patient laparoscopic surgery trial.",
       "corresponding_author": "Dr. Xiangdi Yu",
       "email": "yuxiangdi11@163.com",
       "institution": "Department of Anesthesiology, The Affiliated Hospital of Medical School, Ningbo University, 247 Renmin Road, Ningbo 315020, Zhejiang, China",
-      "draft_msg": "Dear Dr. Yu, congratulations on your prospective randomized placebo-controlled trial published in Trials (2020;21:43) evaluating TEAS for early recovery after gynecological laparoscopic surgery. In Table 3 you report the number of patients requiring remedial sufentanil analgesia and composite PONV. Could you kindly provide the cumulative 0-24 hour total IV sufentanil consumption (mean \u00b1 SD in micrograms) and isolated patient counts for postoperative nausea and vomiting for the TEAS (n=30) and Control (n=30) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Yu, congratulations on your prospective randomized placebo-controlled trial published in Trials (2020;21:43) evaluating TEAS for early recovery after gynecological laparoscopic surgery. In Table 3 you report the number of patients requiring remedial sufentanil analgesia and composite PONV. Could you kindly provide the cumulative 0-24 hour total IV sufentanil consumption (mean ± SD in micrograms) and isolated patient counts for postoperative nausea and vomiting for the TEAS (n=30) and Control (n=30) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -2214,6 +2275,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Yu 2020",
@@ -2238,7 +2305,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2256,34 +2323,34 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid, 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, false N=30)!<br>2. Replaced with TRUE published trial data: 90 completed and analyzed patients undergoing lumbar spine surgery (30 AES group, 30 Sham AES group, 30 Control group; 100% completion rate, 0 dropouts); Table 3 Cumulative 24-hour IV PCA morphine consumption (mg): AES 19.3 \u00b1 9.7 mg vs Sham AES 21.6 \u00b1 13.1 mg vs Control 28.0 \u00b1 12.1 mg (P = 0.017* vs Control) [in IV MME: 19.3 \u00b1 9.7 vs 21.6 \u00b1 13.1 vs 28.0 \u00b1 12.1 mg]; Oral morphine equivalents: AES 57.9 mg vs Sham 64.8 mg vs Control 84.0 mg; PCA demand button pushes: AES 24.9 \u00b1 28.5 vs Sham 47.4 \u00b1 39.7 vs Control 76.9 \u00b1 86.1 (P = 0.004*).<br>3. Postoperative 24-hour pain (Table 2 BPI): 24-hour average pain (at rest): AES 2.1 \u00b1 1.3 vs Sham AES 3.0 \u00b1 1.4 vs Control 3.0 \u00b1 1.4 (P = 0.01*); 24-hour worst pain (during movement): AES 5.4 \u00b1 1.6 vs Sham AES 6.5 \u00b1 1.6 vs Control 6.5 \u00b1 1.7 (P = 0.01*); Pain interference with position change: AES 5.2 \u00b1 1.5 vs Sham 6.2 \u00b1 1.6 vs Control 6.4 \u00b1 1.7 (P = 0.01*); Pain interference with daily activities: AES 5.3 \u00b1 1.4 vs Sham 6.0 \u00b1 1.6 vs Control 6.5 \u00b1 1.7 (P = 0.01*).<br>4. Adverse events: Zero adverse effects associated with AES intervention during the study period (0/30 vs 0/30 vs 0/30).<br>5. RoB 2 verified: Domain 1 Low (computer-generated random numbers, sequential envelope concealment); Domain 2 Low (double-blind design with active sham stimulation 2 cm away from acupoints, blinded patients and hospital medical staff); Domain 3 Low (100% completion rate, 90/90 analyzed); Domain 4 Low (electronic PCA pump logging, validated BPI questionnaire); Domain 5 Some concerns (formal public prospective registry ID not reported in article). Overall: **Some concerns** (due to missing clinical trial registration identifier).",
-      "fake_boilerplate_expunged": "Fabricated opioid and pain numbers (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0, 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid, 2.4 ± 0.8 vs 3.8 ± 1.1 for pain, false N=30)!<br>2. Replaced with TRUE published trial data: 90 completed and analyzed patients undergoing lumbar spine surgery (30 AES group, 30 Sham AES group, 30 Control group; 100% completion rate, 0 dropouts); Table 3 Cumulative 24-hour IV PCA morphine consumption (mg): AES 19.3 ± 9.7 mg vs Sham AES 21.6 ± 13.1 mg vs Control 28.0 ± 12.1 mg (P = 0.017* vs Control) [in IV MME: 19.3 ± 9.7 vs 21.6 ± 13.1 vs 28.0 ± 12.1 mg]; Oral morphine equivalents: AES 57.9 mg vs Sham 64.8 mg vs Control 84.0 mg; PCA demand button pushes: AES 24.9 ± 28.5 vs Sham 47.4 ± 39.7 vs Control 76.9 ± 86.1 (P = 0.004*).<br>3. Postoperative 24-hour pain (Table 2 BPI): 24-hour average pain (at rest): AES 2.1 ± 1.3 vs Sham AES 3.0 ± 1.4 vs Control 3.0 ± 1.4 (P = 0.01*); 24-hour worst pain (during movement): AES 5.4 ± 1.6 vs Sham AES 6.5 ± 1.6 vs Control 6.5 ± 1.7 (P = 0.01*); Pain interference with position change: AES 5.2 ± 1.5 vs Sham 6.2 ± 1.6 vs Control 6.4 ± 1.7 (P = 0.01*); Pain interference with daily activities: AES 5.3 ± 1.4 vs Sham 6.0 ± 1.6 vs Control 6.5 ± 1.7 (P = 0.01*).<br>4. Adverse events: Zero adverse effects associated with AES intervention during the study period (0/30 vs 0/30 vs 0/30).<br>5. RoB 2 verified: Domain 1 Low (computer-generated random numbers, sequential envelope concealment); Domain 2 Low (double-blind design with active sham stimulation 2 cm away from acupoints, blinded patients and hospital medical staff); Domain 3 Low (100% completion rate, 90/90 analyzed); Domain 4 Low (electronic PCA pump logging, validated BPI questionnaire); Domain 5 Some concerns (formal public prospective registry ID not reported in article). Overall: **Some concerns** (due to missing clinical trial registration identifier).",
+      "fake_boilerplate_expunged": "Fabricated opioid and pain numbers (20.4 ± 4.8 vs 33.1 ± 7.0, 2.4 ± 0.8 vs 3.8 ± 1.1).",
       "evidence_sources": "Text p. 703-708 (Methods, computer sequence, sealed envelopes, active sham control, double-blinding); Fig 1 p. 705 (flowchart); Fig 3 p. 706 (VAS pain); Table 1 p. 706 (demographics, anesthetics); Table 2 p. 707 (BPI pain severity and interference); Table 3 p. 707 (morphine consumption, PCA button pushes)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Mixed / alternating dense-disperse (2/100 Hz)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "Current output (4\u20137 mA) adjusted based on individual patient body weight",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "Current output (4–7 mA) adjusted based on individual patient body weight",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Postoperative: Session 1 administered during 3rd postoperative hour (in recovery room/ward); Session 2 administered during 4th postoperative hour",
       "timing_category": "Postoperative only",
       "sessions_category": "Single session",
       "duration_raw": "40 minutes (2 x 20 min sessions)",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 60,
       "arm1_name": "EA Group",
       "arm1_n": 30,
-      "arm1_age": "60.7 \u00b1 12.0",
+      "arm1_age": "60.7 ± 12.0",
       "arm1_female": "20/30 (66.7%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 30,
-      "arm2_age": "57.2 \u00b1 15.7",
+      "arm2_age": "57.2 ± 15.7",
       "arm2_female": "21/30 (70.0%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -2297,7 +2364,7 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "24-h morphine PCA dose",
       "timepoint": "First 24 postoperative hours",
-      "rationale": "18.6 \u00b1 9.7 vs 21.6 \u00b1 13.1 mg"
+      "rationale": "18.6 ± 9.7 vs 21.6 ± 13.1 mg"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -2316,7 +2383,7 @@ window.STUDIES_DATA = [
       "opioid_24h": {
         "status": "Conditional / Separate",
         "role": "Duplicate Family Hold",
-        "inclusion_decision": "HOLD \u2014 OVERLAPPING PUBLICATIONS",
+        "inclusion_decision": "HOLD — OVERLAPPING PUBLICATIONS",
         "note": "Yeh 2010 and Yeh 2011 describe overlapping cohorts with near-identical data",
         "mean_diff": null,
         "se": null
@@ -2338,6 +2405,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Yeh 2010",
@@ -2362,7 +2435,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2380,34 +2453,34 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid, 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, 5/30 vs 12/30 for nausea, false N=30)!<br>2. Replaced with TRUE published trial data: 94 completed and analyzed patients undergoing lumbar spine surgery (33 True AES group [EG1], 30 Sham AES group [EG2], 31 Control group [CG]; 94.9% completion rate, 5 dropouts due to unstable medical conditions fully documented in text and Fig. 1); Table 4 Cumulative 24-hour IV PCA morphine consumption (mg): EG1 18.6 \u00b1 9.7 mg vs EG2 21.6 \u00b1 13.1 mg vs CG 27.2 \u00b1 12.5 mg (P = 0.02* vs CG) [in IV MME: 18.6 \u00b1 9.7 vs 21.6 \u00b1 13.1 vs 27.2 \u00b1 12.5 mg]; Oral morphine equivalents: EG1 55.8 mg vs EG2 64.8 mg vs CG 81.6 mg; Occurrence of PCA button pushed: EG1 25.3 \u00b1 28.5 vs EG2 47.4 \u00b1 39.7 vs CG 74.7 \u00b1 85.5 (P < 0.001*); Initial demand launched: 98.4 \u00b1 156.2 vs 92.8 \u00b1 109.1 vs 81.5 \u00b1 131.7 min.<br>3. Postoperative 24-hour pain (Table 3 BPI): Average postoperative pain (at rest): EG1 2.1 \u00b1 1.2 vs EG2 3.0 \u00b1 1.4 vs CG 3.1 \u00b1 1.5 (P = 0.01*); Worst postoperative pain (during movement): EG1 5.3 \u00b1 1.5 vs EG2 6.5 \u00b1 1.6 vs CG 6.5 \u00b1 1.6 (P < 0.001*); Impact of pain on daily activities: EG1 5.3 \u00b1 1.4 vs EG2 6.1 \u00b1 1.5 vs CG 6.5 \u00b1 1.7 (P < 0.001*); Impact of pain on sleep: EG1 1.3 \u00b1 1.5 vs EG2 2.1 \u00b1 2.2 vs CG 2.3 \u00b1 1.6 (P = 0.05).<br>4. Postoperative nausea and vomiting (Table 5): Evaluated using Rhodes Index of Nausea and Vomiting (RINV); no significant differences among groups (overall f = 0.97, P = 0.33); dichotomous event counts omitted from published article.<br>5. Adverse events: Zero adverse effects associated with AES intervention during study period (0/33 vs 0/30 vs 0/31).<br>6. RoB 2 verified: Domain 1 Low (computer random sequence, independent research coordinator concealment); Domain 2 Low (double-blind design with active sham stimulation 2 cm away from true acupoints, blinded patients/nurses/physicians); Domain 3 Low (94/99 analyzed, 94.9% completion); Domain 4 Low (continuous electronic PCA device recordings, validated BPI questionnaire); Domain 5 Some concerns (formal public prospective registry ID not reported in article). Overall: **Some concerns** (due to missing clinical trial registration identifier).",
-      "fake_boilerplate_expunged": "Fabricated opioid, pain, and nausea numbers (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0, 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, 5/30 vs 12/30).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid, 2.4 ± 0.8 vs 3.8 ± 1.1 for pain, 5/30 vs 12/30 for nausea, false N=30)!<br>2. Replaced with TRUE published trial data: 94 completed and analyzed patients undergoing lumbar spine surgery (33 True AES group [EG1], 30 Sham AES group [EG2], 31 Control group [CG]; 94.9% completion rate, 5 dropouts due to unstable medical conditions fully documented in text and Fig. 1); Table 4 Cumulative 24-hour IV PCA morphine consumption (mg): EG1 18.6 ± 9.7 mg vs EG2 21.6 ± 13.1 mg vs CG 27.2 ± 12.5 mg (P = 0.02* vs CG) [in IV MME: 18.6 ± 9.7 vs 21.6 ± 13.1 vs 27.2 ± 12.5 mg]; Oral morphine equivalents: EG1 55.8 mg vs EG2 64.8 mg vs CG 81.6 mg; Occurrence of PCA button pushed: EG1 25.3 ± 28.5 vs EG2 47.4 ± 39.7 vs CG 74.7 ± 85.5 (P < 0.001*); Initial demand launched: 98.4 ± 156.2 vs 92.8 ± 109.1 vs 81.5 ± 131.7 min.<br>3. Postoperative 24-hour pain (Table 3 BPI): Average postoperative pain (at rest): EG1 2.1 ± 1.2 vs EG2 3.0 ± 1.4 vs CG 3.1 ± 1.5 (P = 0.01*); Worst postoperative pain (during movement): EG1 5.3 ± 1.5 vs EG2 6.5 ± 1.6 vs CG 6.5 ± 1.6 (P < 0.001*); Impact of pain on daily activities: EG1 5.3 ± 1.4 vs EG2 6.1 ± 1.5 vs CG 6.5 ± 1.7 (P < 0.001*); Impact of pain on sleep: EG1 1.3 ± 1.5 vs EG2 2.1 ± 2.2 vs CG 2.3 ± 1.6 (P = 0.05).<br>4. Postoperative nausea and vomiting (Table 5): Evaluated using Rhodes Index of Nausea and Vomiting (RINV); no significant differences among groups (overall f = 0.97, P = 0.33); dichotomous event counts omitted from published article.<br>5. Adverse events: Zero adverse effects associated with AES intervention during study period (0/33 vs 0/30 vs 0/31).<br>6. RoB 2 verified: Domain 1 Low (computer random sequence, independent research coordinator concealment); Domain 2 Low (double-blind design with active sham stimulation 2 cm away from true acupoints, blinded patients/nurses/physicians); Domain 3 Low (94/99 analyzed, 94.9% completion); Domain 4 Low (continuous electronic PCA device recordings, validated BPI questionnaire); Domain 5 Some concerns (formal public prospective registry ID not reported in article). Overall: **Some concerns** (due to missing clinical trial registration identifier).",
+      "fake_boilerplate_expunged": "Fabricated opioid, pain, and nausea numbers (20.4 ± 4.8 vs 33.1 ± 7.0, 2.4 ± 0.8 vs 3.8 ± 1.1, 5/30 vs 12/30).",
       "evidence_sources": "Text p. 10-18 (Methods, computer sequence, coordinator allocation concealment, active sham control, double-blinding); Fig 1 p. 13 (flowchart); Fig 2 p. 14 (pain trend); Table 2 p. 13 (demographics, anesthetics); Table 3 p. 14 (BPI pain severity and impact); Table 4 p. 15 (PCA opiate demand and dose); Table 5 p. 16 (Rhodes PONV scores)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Mixed / alternating dense-disperse (2/100 Hz)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "Current output (4\u20137 mA) titrated for each individual depending on body weight",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "Current output (4–7 mA) titrated for each individual depending on body weight",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative and postoperative: 3 sessions of 20 min each administered 1 hour before surgery, 1 hour after return to ward from OR, and 2 hours after return to ward from OR",
       "timing_category": "Postoperative only",
       "sessions_category": "Single session",
       "duration_raw": "60 minutes (3 x 20 min sessions)",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 63,
       "arm1_name": "EA Group",
       "arm1_n": 33,
-      "arm1_age": "60.7 \u00b1 12.0",
+      "arm1_age": "60.7 ± 12.0",
       "arm1_female": "22/33 (66.7%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 30,
-      "arm2_age": "57.2 \u00b1 15.7",
+      "arm2_age": "57.2 ± 15.7",
       "arm2_female": "21/30 (70.0%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -2421,7 +2494,7 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "24-h IV morphine PCA dose",
       "timepoint": "First 24 postoperative hours",
-      "rationale": "19.3 \u00b1 9.7 vs 21.6 \u00b1 13.1 mg"
+      "rationale": "19.3 ± 9.7 vs 21.6 ± 13.1 mg"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -2429,7 +2502,7 @@ window.STUDIES_DATA = [
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Raw dichotomous patient counts for 24-hour po...",
       "target_data": "Raw dichotomous patient counts for 24-hour postoperative nausea, vomiting, or rescue antiemetic administration, and prospective trial registration record.",
-      "rationale": "Table 5 presents continuous mean \u00b1 SD scores on the Rhodes Index of Nausea and Vomiting (overall f = 0.97, P = 0.33) rather than dichotomous patient event counts, and no prospective registry number is reported in the paper.",
+      "rationale": "Table 5 presents continuous mean ± SD scores on the Rhodes Index of Nausea and Vomiting (overall f = 0.97, P = 0.33) rather than dichotomous patient event counts, and no prospective registry number is reported in the paper.",
       "impact": "Supplies author-verified dichotomous emetic incidence rates for meta-analysis of 94-patient spinal surgery trial.",
       "corresponding_author": "Dr. Hsing-Hsia Chen",
       "email": "hsinghsi@cycu.edu.tw",
@@ -2440,7 +2513,7 @@ window.STUDIES_DATA = [
       "opioid_24h": {
         "status": "Conditional / Separate",
         "role": "Duplicate Family Hold",
-        "inclusion_decision": "HOLD \u2014 OVERLAPPING PUBLICATIONS",
+        "inclusion_decision": "HOLD — OVERLAPPING PUBLICATIONS",
         "note": "Yeh 2010 and Yeh 2011 describe overlapping cohorts with near-identical data",
         "mean_diff": null,
         "se": null
@@ -2475,7 +2548,13 @@ window.STUDIES_DATA = [
         "arm2_sd": 131.7,
         "unit": "minutes",
         "p_val": 0.88,
-        "note": "Time to initial PCA demand in PACU: EG1 98.4 \u00b1 156.2 min vs Control 81.5 \u00b1 131.7 min (P=0.88, ANOVA F=0.13)."
+        "note": "Time to initial PCA demand in PACU: EG1 98.4 ± 156.2 min vs Control 81.5 ± 131.7 min (P=0.88, ANOVA F=0.13)."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Yeh 2011",
@@ -2500,7 +2579,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2518,8 +2597,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL AUDIT & CORRECTION**: Reviewers copied fake boilerplate (5/30 vs 12/30 for nausea) and Reviewer 2 had omitted most outcomes!<br>2. Replaced with TRUE published trial data: 71 completed and analyzed patients undergoing gynecological laparoscopic surgery (35 TEAS group, 36 Sham TEAS group; 95.9% completion rate, 3 dropouts due to protocol breach fully documented in Fig. 2 CONSORT flow); Table 2 Global Quality of Recovery (QoR-40) at 24 h: TEAS 176.5 \u00b1 10.2 vs Sham 164.8 \u00b1 14.7 (P < 0.001*); QoR-40 dimensions: Emotional state: 40.5 \u00b1 3.4 vs 37.9 \u00b1 5.1 (P = 0.013*); Physical comfort: 50.8 \u00b1 4.1 vs 46.3 \u00b1 5.7 (P < 0.001*); Psychological support: 32.9 \u00b1 2.3 vs 31.7 \u00b1 2.3 (P = 0.029*); Physical independence: 20.6 \u00b1 2.4 vs 19.7 \u00b1 3.0; Pain dimension: 31.7 \u00b1 2.4 vs 29.2 \u00b1 3.6 (P = 0.001*).<br>3. Postoperative nausea and vomiting at 24 h (Table 3): Nausea incidence: TEAS 17/35 (48.6%) vs Sham 26/36 (72.2%) (P = 0.041*); Vomiting incidence: TEAS 7/35 (20.0%) vs Sham 19/36 (52.8%) (P = 0.004*); Dizziness incidence: TEAS 14/35 (40.0%) vs Sham 28/36 (77.8%) (P = 0.001*).<br>4. Analgesic outcomes & rescue medication (Table 3): Cumulative number of rescue analgesia administrations: TEAS median 1 (IQR 1-3) vs Sham median 3.5 (IQR 2-7.8) (P = 0.004*); Time to first rescue analgesia: TEAS median 59 (IQR 31-1440) vs Sham median 47 (IQR 13-196) min (P = 0.039*); Postoperative pain VAS (Fig. 3): reduced in TEAS group at 0.5, 1, 2, 4, 8, and 24 h (at 24h: ~1.2 vs ~1.8).<br>5. Recovery milestones: Duration of PACU stay: TEAS 27.8 \u00b1 8.3 vs Sham 35.7 \u00b1 7.2 min (P < 0.001*); Patient satisfaction score: TEAS median 8 (IQR 6-8) vs Sham median 6 (IQR 5-7) (P = 0.002*); Satisfaction score >= 8: TEAS 18/35 (51.4%) vs Sham 6/36 (16.7%) (P = 0.002*).<br>6. RoB 2 verified: Domain 1 Low (computer random numbers, sequentially numbered opaque envelopes); Domain 2 Low (double-blind design with sham TEAS 0 mA current, blinded patients/anesthesiologists/surgeons/ward staff); Domain 3 Low (71/74 analyzed, 95.9% completion); Domain 4 Low (validated QoR-40, blinded outcome assessors and data analysts); Domain 5 Some concerns (IRB Ref. K2014-05-008, but no prospective public registry ID stated). Overall: **Some concerns** (due to missing trial registry identifier).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL AUDIT & CORRECTION**: Reviewers copied fake boilerplate (5/30 vs 12/30 for nausea) and Reviewer 2 had omitted most outcomes!<br>2. Replaced with TRUE published trial data: 71 completed and analyzed patients undergoing gynecological laparoscopic surgery (35 TEAS group, 36 Sham TEAS group; 95.9% completion rate, 3 dropouts due to protocol breach fully documented in Fig. 2 CONSORT flow); Table 2 Global Quality of Recovery (QoR-40) at 24 h: TEAS 176.5 ± 10.2 vs Sham 164.8 ± 14.7 (P < 0.001*); QoR-40 dimensions: Emotional state: 40.5 ± 3.4 vs 37.9 ± 5.1 (P = 0.013*); Physical comfort: 50.8 ± 4.1 vs 46.3 ± 5.7 (P < 0.001*); Psychological support: 32.9 ± 2.3 vs 31.7 ± 2.3 (P = 0.029*); Physical independence: 20.6 ± 2.4 vs 19.7 ± 3.0; Pain dimension: 31.7 ± 2.4 vs 29.2 ± 3.6 (P = 0.001*).<br>3. Postoperative nausea and vomiting at 24 h (Table 3): Nausea incidence: TEAS 17/35 (48.6%) vs Sham 26/36 (72.2%) (P = 0.041*); Vomiting incidence: TEAS 7/35 (20.0%) vs Sham 19/36 (52.8%) (P = 0.004*); Dizziness incidence: TEAS 14/35 (40.0%) vs Sham 28/36 (77.8%) (P = 0.001*).<br>4. Analgesic outcomes & rescue medication (Table 3): Cumulative number of rescue analgesia administrations: TEAS median 1 (IQR 1-3) vs Sham median 3.5 (IQR 2-7.8) (P = 0.004*); Time to first rescue analgesia: TEAS median 59 (IQR 31-1440) vs Sham median 47 (IQR 13-196) min (P = 0.039*); Postoperative pain VAS (Fig. 3): reduced in TEAS group at 0.5, 1, 2, 4, 8, and 24 h (at 24h: ~1.2 vs ~1.8).<br>5. Recovery milestones: Duration of PACU stay: TEAS 27.8 ± 8.3 vs Sham 35.7 ± 7.2 min (P < 0.001*); Patient satisfaction score: TEAS median 8 (IQR 6-8) vs Sham median 6 (IQR 5-7) (P = 0.002*); Satisfaction score >= 8: TEAS 18/35 (51.4%) vs Sham 6/36 (16.7%) (P = 0.002*).<br>6. RoB 2 verified: Domain 1 Low (computer random numbers, sequentially numbered opaque envelopes); Domain 2 Low (double-blind design with sham TEAS 0 mA current, blinded patients/anesthesiologists/surgeons/ward staff); Domain 3 Low (71/74 analyzed, 95.9% completion); Domain 4 Low (validated QoR-40, blinded outcome assessors and data analysts); Domain 5 Some concerns (IRB Ref. K2014-05-008, but no prospective public registry ID stated). Overall: **Some concerns** (due to missing trial registry identifier).",
       "fake_boilerplate_expunged": "Fabricated nausea numbers (5/30 vs 12/30) and omitted consensus data.",
       "evidence_sources": "Text p. 1-5 (Methods, computer sequence, sealed envelopes, sham 0 mA control, blinding); Fig 2 p. 3 (CONSORT flow); Fig 3 p. 4 (VAS pain scores); Table 1 p. 4 (demographics, anesthetics); Table 2 p. 4 (QoR-40 dimensions and total); Table 3 p. 4 (rescue, time to rescue, PACU stay, dizziness, nausea, vomiting, satisfaction)"
     },
@@ -2527,7 +2606,7 @@ window.STUDIES_DATA = [
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -2540,12 +2619,12 @@ window.STUDIES_DATA = [
       "total_n": 71,
       "arm1_name": "TEAS Group",
       "arm1_n": 35,
-      "arm1_age": "34.2 \u00b1 7.2",
+      "arm1_age": "34.2 ± 7.2",
       "arm1_female": "35/35 (100%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 36,
-      "arm2_age": "35.6 \u00b1 8.7",
+      "arm2_age": "35.6 ± 8.7",
       "arm2_female": "36/36 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "ASA I: 34 (97.1%), ASA II: 1 (2.9%)"
@@ -2559,20 +2638,20 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Global QoR-40",
       "timepoint": "24 h",
-      "rationale": "176.5 \u00b1 10.2 vs 164.8 \u00b1 14.7; P<0.001"
+      "rationale": "176.5 ± 10.2 vs 164.8 ± 14.7; P<0.001"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Numerical mean \u00b1 SD for 24-hour VAS pain scor...",
-      "target_data": "Numerical mean \u00b1 SD for 24-hour VAS pain scores and cumulative 24-hour total IV sufentanil consumption (\u00b5g or mg IV MME).",
+      "urgency": "IMPORTANT: Numerical mean ± SD for 24-hour VAS pain scor...",
+      "target_data": "Numerical mean ± SD for 24-hour VAS pain scores and cumulative 24-hour total IV sufentanil consumption (µg or mg IV MME).",
       "rationale": "Table 3 reports cumulative number of rescue sufentanil doses as median (IQR) (1 [1-3] vs 3.5 [2-7.8]) rather than total microgram amount, and Figure 3 shows pain VAS scores graphically.",
       "impact": "Supplies author-verified cumulative 24-hour opioid dose and parametric pain metrics for 71-patient laparoscopic surgery trial.",
       "corresponding_author": "Dr. Yanqing Chen",
       "email": "fjslyys@gmail.com",
       "institution": "Department of Anesthesiology, The Shengli Clinical Medical College of Fujian Medical University and Fujian Provincial Hospital, Fuzhou 350001, China",
-      "draft_msg": "Dear Dr. Chen, congratulations on your randomized double-blind sham-controlled trial published in Evidence-Based Complementary and Alternative Medicine (2015;2015:324360) evaluating TEAS for gynecological laparoscopic surgery. In Table 3 you report the cumulative number of rescue sufentanil administrations, and in Figure 3 you present postoperative VAS pain scores. Could you kindly provide the cumulative 0-24 hour total IV sufentanil consumption (mean \u00b1 SD in micrograms or milligrams) and numerical mean \u00b1 SD for the 24-hour VAS pain score for the TEAS (n=35) and Sham Control (n=36) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Chen, congratulations on your randomized double-blind sham-controlled trial published in Evidence-Based Complementary and Alternative Medicine (2015;2015:324360) evaluating TEAS for gynecological laparoscopic surgery. In Table 3 you report the cumulative number of rescue sufentanil administrations, and in Figure 3 you present postoperative VAS pain scores. Could you kindly provide the cumulative 0-24 hour total IV sufentanil consumption (mean ± SD in micrograms or milligrams) and numerical mean ± SD for the 24-hour VAS pain score for the TEAS (n=35) and Sham Control (n=36) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -2600,6 +2679,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Yao 2015",
@@ -2624,7 +2709,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -2642,34 +2727,34 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, 5/30 vs 12/30 for nausea, false N=30) and Reviewer 1 claimed double-blind sham when study was an open-label feasibility trial!<br>2. Replaced with TRUE published trial data: 57 completed and analyzed patients undergoing thoracoscopic lobectomy or segmentectomy (29 EA group, 28 Usual care group; 96.6% completion rate, 1 exclusion in EA due to no PVB, 1 withdrawal before surgery in UC); Table 4 Postoperative nausea (0-24 h): EA 8/29 (27.59%) vs Usual care 8/28 (28.57%) (P = 0.934); Postoperative vomiting (0-24 h): EA 5/29 (17.24%) vs Usual care 7/28 (25.00%) (P = 0.473); Nausea 24-48 h: 4/29 (13.79%) vs 3/28 (10.71%); Vomiting 24-48 h: 0/29 vs 0/28.<br>3. Postoperative pain intensity (Table 4): Static pain VAS at 24 h: EA median 2 (IQR 2-2) vs Usual care median 2 (IQR 2-2) (P = 0.651) [converted mean: 2.00 \u00b1 0.50 vs 2.00 \u00b1 0.50]; Dynamic pain VAS at 24 h: EA median 3 (IQR 3-3) vs Usual care median 3 (IQR 3-3) (P = 0.153) [converted mean: 3.00 \u00b1 0.50 vs 3.00 \u00b1 0.50]; Static pain at 48 h: 2 (2-3) vs 2 (2-3); Dynamic pain at 48 h: 3 (3-3) vs 3 (3-3).<br>4. Gastrointestinal recovery (Table 3): Time to first flatus: EA 20.8 \u00b1 4.6 vs Usual care 24.1 \u00b1 6.2 hours (P = 0.026*); Time to first bowel movement (defecation): EA 53.9 \u00b1 6.0 vs Usual care 57.5 \u00b1 7.2 hours (P = 0.046*); Abdominal distension incidence: EA 9/29 (31.03%) vs Usual care 11/28 (39.28%) (P = 0.514); Required rescue medication: EA 5/29 (17.24%) vs Usual care 7/28 (25.00%) (P = 0.473).<br>5. Recovery milestones: Time to out-of-bed activity (ambulation): EA 11.2 \u00b1 1.0 vs Usual care 13.0 \u00b1 3.5 hours (P = 0.50); Length of hospital stay: EA 6.1 \u00b1 2.15 vs Usual care 6.5 \u00b1 2.05 days (P = 0.442).<br>6. Adverse events: No serious EA-related adverse events; minor events included hematoma, transient sharp pain, sleeplessness.<br>7. RoB 2 verified: Domain 1 Low (SPSS random sequence, sequentially numbered opaque envelopes); Domain 2 Some concerns (open-label feasibility design comparing EA against usual care without sham control, patients aware, though staff/assessors blinded); Domain 3 Low (57/59 analyzed, 96.6% completion); Domain 4 Low (independent blinded observer assessors and statisticians); Domain 5 Low (registered prospectively under ChiCTR1800014461). Overall: **Some concerns** (due to open-label design).",
-      "fake_boilerplate_expunged": "Fabricated pain and nausea numbers (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, 5/30 vs 12/30) and erroneous RoB claim of double-blind sham.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for pain, 5/30 vs 12/30 for nausea, false N=30) and Reviewer 1 claimed double-blind sham when study was an open-label feasibility trial!<br>2. Replaced with TRUE published trial data: 57 completed and analyzed patients undergoing thoracoscopic lobectomy or segmentectomy (29 EA group, 28 Usual care group; 96.6% completion rate, 1 exclusion in EA due to no PVB, 1 withdrawal before surgery in UC); Table 4 Postoperative nausea (0-24 h): EA 8/29 (27.59%) vs Usual care 8/28 (28.57%) (P = 0.934); Postoperative vomiting (0-24 h): EA 5/29 (17.24%) vs Usual care 7/28 (25.00%) (P = 0.473); Nausea 24-48 h: 4/29 (13.79%) vs 3/28 (10.71%); Vomiting 24-48 h: 0/29 vs 0/28.<br>3. Postoperative pain intensity (Table 4): Static pain VAS at 24 h: EA median 2 (IQR 2-2) vs Usual care median 2 (IQR 2-2) (P = 0.651) [converted mean: 2.00 ± 0.50 vs 2.00 ± 0.50]; Dynamic pain VAS at 24 h: EA median 3 (IQR 3-3) vs Usual care median 3 (IQR 3-3) (P = 0.153) [converted mean: 3.00 ± 0.50 vs 3.00 ± 0.50]; Static pain at 48 h: 2 (2-3) vs 2 (2-3); Dynamic pain at 48 h: 3 (3-3) vs 3 (3-3).<br>4. Gastrointestinal recovery (Table 3): Time to first flatus: EA 20.8 ± 4.6 vs Usual care 24.1 ± 6.2 hours (P = 0.026*); Time to first bowel movement (defecation): EA 53.9 ± 6.0 vs Usual care 57.5 ± 7.2 hours (P = 0.046*); Abdominal distension incidence: EA 9/29 (31.03%) vs Usual care 11/28 (39.28%) (P = 0.514); Required rescue medication: EA 5/29 (17.24%) vs Usual care 7/28 (25.00%) (P = 0.473).<br>5. Recovery milestones: Time to out-of-bed activity (ambulation): EA 11.2 ± 1.0 vs Usual care 13.0 ± 3.5 hours (P = 0.50); Length of hospital stay: EA 6.1 ± 2.15 vs Usual care 6.5 ± 2.05 days (P = 0.442).<br>6. Adverse events: No serious EA-related adverse events; minor events included hematoma, transient sharp pain, sleeplessness.<br>7. RoB 2 verified: Domain 1 Low (SPSS random sequence, sequentially numbered opaque envelopes); Domain 2 Some concerns (open-label feasibility design comparing EA against usual care without sham control, patients aware, though staff/assessors blinded); Domain 3 Low (57/59 analyzed, 96.6% completion); Domain 4 Low (independent blinded observer assessors and statisticians); Domain 5 Low (registered prospectively under ChiCTR1800014461). Overall: **Some concerns** (due to open-label design).",
+      "fake_boilerplate_expunged": "Fabricated pain and nausea numbers (2.4 ± 0.8 vs 3.8 ± 1.1, 5/30 vs 12/30) and erroneous RoB claim of double-blind sham.",
       "evidence_sources": "Text p. 1-6 (Methods, SPSS sequence, sealed envelopes, open-label design, ChiCTR1800014461); Fig 1 p. 4 (CONSORT flow); Table 1 p. 4 (demographics, anesthetics); Table 2 p. 5 (acceptability scores); Table 3 p. 5 (gastrointestinal outcomes, flatus, defecation, rescue); Table 4 p. 6 (nausea, vomiting, static/dynamic pain VAS, ambulation, stay)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)",
       "frequency_raw": "Not applicable",
       "frequency_category": "100 Hz (High Frequency)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 57,
       "arm1_name": "EA Group",
       "arm1_n": 29,
-      "arm1_age": "58.93 \u00b1 11.77",
+      "arm1_age": "58.93 ± 11.77",
       "arm1_female": "16/29 (55.2%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Usual Care Group",
       "arm2_n": 28,
-      "arm2_age": "56.39 \u00b1 9.34",
+      "arm2_age": "56.39 ± 9.34",
       "arm2_female": "10/28 (35.7%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -2683,20 +2768,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Time to first postoperative flatus",
       "timepoint": "Time to event",
-      "rationale": "20.8 \u00b1 4.6 h vs 24.1 \u00b1 6.2 h; P=0.026"
+      "rationale": "20.8 ± 4.6 h vs 24.1 ± 6.2 h; P=0.026"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour total IV PCA morphine cons...",
-      "target_data": "Cumulative 24-hour total IV PCA morphine consumption (mg) and parametric mean \u00b1 SD for 24-hour static and dynamic VAS pain scores.",
+      "target_data": "Cumulative 24-hour total IV PCA morphine consumption (mg) and parametric mean ± SD for 24-hour static and dynamic VAS pain scores.",
       "rationale": "Postoperative PCA morphine was administered to all participants but cumulative 24-hour milligram totals were not reported in tables, and Table 4 reports pain VAS scores as median (IQR) (static: 2 [2-2] vs 2 [2-2]; dynamic: 3 [3-3] vs 3 [3-3]).",
       "impact": "Supplies author-verified cumulative 24-hour opioid consumption and parametric pain scores for 57-patient thoracic surgery trial.",
       "corresponding_author": "Dr. Man Zheng",
       "email": "man_zheng@sina.com",
       "institution": "`man_zheng@sina.com` / Department of Anesthesiology, Affiliated Hospital of Nanjing University of Chinese Medicine, Nanjing, Jiangsu, P.R. China",
-      "draft_msg": "Dear Dr. Zheng, congratulations on your randomized feasibility study published in Medical Science Monitor (2020;26:e920648) evaluating perioperative electroacupuncture for thoracoscopic lung surgery. In your protocol, all patients received IV PCA morphine. Could you kindly provide the cumulative 0-24 hour total IV PCA morphine consumption (mean \u00b1 SD in milligrams) and parametric mean \u00b1 SD for static and dynamic 24-hour VAS pain scores for the EA (n=29) and Usual Care (n=28) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Zheng, congratulations on your randomized feasibility study published in Medical Science Monitor (2020;26:e920648) evaluating perioperative electroacupuncture for thoracoscopic lung surgery. In your protocol, all patients received IV PCA morphine. Could you kindly provide the cumulative 0-24 hour total IV PCA morphine consumption (mean ± SD in milligrams) and parametric mean ± SD for static and dynamic 24-hour VAS pain scores for the EA (n=29) and Usual Care (n=28) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -2747,6 +2832,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Yang 2020",
@@ -2771,7 +2862,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -2789,34 +2880,34 @@ window.STUDIES_DATA = [
       "quadrant_name": "Moderate Sparing"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid, 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, 5/30 vs 12/30 for nausea, false N=30)!<br>2. Replaced with TRUE published trial data: 180 completed and analyzed patients undergoing thoracoscopic lobectomy or segmentectomy (90 EA group, 90 Usual care group; 100% ITT completion rate, 3 post-randomization deviations retained under full ITT principles); Table 3 Cumulative IV PCA morphine consumption on POD 1 (24 h): EA 43.7 \u00b1 4.7 mg vs Usual care 44.0 \u00b1 4.9 mg (P = 0.733) [in IV MME: 43.7 \u00b1 4.7 vs 44.0 \u00b1 4.9 mg]; Cumulative morphine on POD 1-3 (72 h): EA 127.0 \u00b1 12.0 mg vs Usual care 127.5 \u00b1 12.5 mg (P = 0.785).<br>3. Postoperative nausea (PON) and vomiting (POV) 0-24 h (Table 3): Nausea incidence: EA 24/90 (26.7%) vs Usual care 40/90 (44.4%) (P = 0.013*); Vomiting incidence: EA 12/90 (13.3%) vs Usual care 25/90 (27.8%) (P = 0.016*); PON at 24-48 h: 6/90 vs 14/90 (P = 0.058); POV at 24-48 h: 6/90 vs 10/90.<br>4. Postoperative pain intensity (Table 3): Pain VAS at rest 0-24 h: EA median 2 (IQR 2-3) vs Usual care median 2 (IQR 2-3) (P = 0.844) [converted mean: 2.00 \u00b1 0.74 vs 2.00 \u00b1 0.74]; Pain VAS on movement 0-24 h: EA median 3 (IQR 3-4) vs Usual care median 3 (IQR 2-3) (P = 0.159) [converted mean: 3.00 \u00b1 0.74 vs 2.80 \u00b1 0.74]; VAS at 24-48 h rest: 2 (2-2.5) vs 2 (2-2); movement: 3 (2-3) vs 3 (2-3).<br>5. Gastrointestinal recovery (Table 2): Time to first flatus: EA 15.4 \u00b1 3.2 vs Usual care 17.0 \u00b1 3.7 hours (P = 0.004*); Time to first defecation: EA 75.9 \u00b1 7.9 vs Usual care 79.7 \u00b1 8.1 hours (P = 0.002*); Abdominal distension incidence: EA 31/90 (34.4%) vs Usual care 46/90 (51.1%) (P = 0.024*); Required rescue medication: EA 48/90 (53.3%) vs Usual care 64/90 (71.1%) (P = 0.014*).<br>6. Recovery milestones: Time to ambulation: median 6 (5-7) vs 6 (5-7) h; Length of hospital stay: median 6 (5-7) vs 6 (5-7) days.<br>7. RoB 2 verified: Domain 1 Low (computer-generated codes, sequentially numbered opaque envelopes); Domain 2 Some concerns (open-label design comparing EA against usual care without sham control, patients/acupuncturists aware, though full ITT); Domain 3 Low (180/180 analyzed under ITT); Domain 4 Low (electronic PCA device logs, independent blinded assessors/statisticians); Domain 5 Low (registered under ChiCTR1900024840). Overall: **Some concerns** (due to open-label design).",
-      "fake_boilerplate_expunged": "Fabricated opioid, pain, and nausea numbers (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0, 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, 5/30 vs 12/30).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid, 2.4 ± 0.8 vs 3.8 ± 1.1 for pain, 5/30 vs 12/30 for nausea, false N=30)!<br>2. Replaced with TRUE published trial data: 180 completed and analyzed patients undergoing thoracoscopic lobectomy or segmentectomy (90 EA group, 90 Usual care group; 100% ITT completion rate, 3 post-randomization deviations retained under full ITT principles); Table 3 Cumulative IV PCA morphine consumption on POD 1 (24 h): EA 43.7 ± 4.7 mg vs Usual care 44.0 ± 4.9 mg (P = 0.733) [in IV MME: 43.7 ± 4.7 vs 44.0 ± 4.9 mg]; Cumulative morphine on POD 1-3 (72 h): EA 127.0 ± 12.0 mg vs Usual care 127.5 ± 12.5 mg (P = 0.785).<br>3. Postoperative nausea (PON) and vomiting (POV) 0-24 h (Table 3): Nausea incidence: EA 24/90 (26.7%) vs Usual care 40/90 (44.4%) (P = 0.013*); Vomiting incidence: EA 12/90 (13.3%) vs Usual care 25/90 (27.8%) (P = 0.016*); PON at 24-48 h: 6/90 vs 14/90 (P = 0.058); POV at 24-48 h: 6/90 vs 10/90.<br>4. Postoperative pain intensity (Table 3): Pain VAS at rest 0-24 h: EA median 2 (IQR 2-3) vs Usual care median 2 (IQR 2-3) (P = 0.844) [converted mean: 2.00 ± 0.74 vs 2.00 ± 0.74]; Pain VAS on movement 0-24 h: EA median 3 (IQR 3-4) vs Usual care median 3 (IQR 2-3) (P = 0.159) [converted mean: 3.00 ± 0.74 vs 2.80 ± 0.74]; VAS at 24-48 h rest: 2 (2-2.5) vs 2 (2-2); movement: 3 (2-3) vs 3 (2-3).<br>5. Gastrointestinal recovery (Table 2): Time to first flatus: EA 15.4 ± 3.2 vs Usual care 17.0 ± 3.7 hours (P = 0.004*); Time to first defecation: EA 75.9 ± 7.9 vs Usual care 79.7 ± 8.1 hours (P = 0.002*); Abdominal distension incidence: EA 31/90 (34.4%) vs Usual care 46/90 (51.1%) (P = 0.024*); Required rescue medication: EA 48/90 (53.3%) vs Usual care 64/90 (71.1%) (P = 0.014*).<br>6. Recovery milestones: Time to ambulation: median 6 (5-7) vs 6 (5-7) h; Length of hospital stay: median 6 (5-7) vs 6 (5-7) days.<br>7. RoB 2 verified: Domain 1 Low (computer-generated codes, sequentially numbered opaque envelopes); Domain 2 Some concerns (open-label design comparing EA against usual care without sham control, patients/acupuncturists aware, though full ITT); Domain 3 Low (180/180 analyzed under ITT); Domain 4 Low (electronic PCA device logs, independent blinded assessors/statisticians); Domain 5 Low (registered under ChiCTR1900024840). Overall: **Some concerns** (due to open-label design).",
+      "fake_boilerplate_expunged": "Fabricated opioid, pain, and nausea numbers (20.4 ± 4.8 vs 33.1 ± 7.0, 2.4 ± 0.8 vs 3.8 ± 1.1, 5/30 vs 12/30).",
       "evidence_sources": "Text p. 450-454 (Methods, computer codes, sealed envelopes, open-label design, ChiCTR1900024840); Fig 1 p. 452 (CONSORT flow); Table 1 p. 452 (demographics, anesthetics); Table 2 p. 453 (gastrointestinal outcomes); Table 3 p. 453 (nausea, vomiting, rest/movement pain VAS, morphine, stays)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)",
       "frequency_raw": "Not applicable",
       "frequency_category": "100 Hz (High Frequency)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 180,
       "arm1_name": "EA Group",
       "arm1_n": 90,
-      "arm1_age": "52.7 \u00b1 11.0",
+      "arm1_age": "52.7 ± 11.0",
       "arm1_female": "66/90 (73.3%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Usual Care Group",
       "arm2_n": 90,
-      "arm2_age": "55.8 \u00b1 11.6",
+      "arm2_age": "55.8 ± 11.6",
       "arm2_female": "56/90 (62.2%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -2830,20 +2921,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Morphine use via IV PCA",
       "timepoint": "First 24 h / POD1",
-      "rationale": "43.7 \u00b1 4.7 vs 44.0 \u00b1 4.9 mg; P=0.733"
+      "rationale": "43.7 ± 4.7 vs 44.0 ± 4.9 mg; P=0.733"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Parametric mean \u00b1 SD for 24-hour VAS pain sco...",
-      "target_data": "Parametric mean \u00b1 SD for 24-hour VAS pain scores at rest and movement, and unique patient counts for composite 24-hour PONV.",
-      "rationale": "Table 3 reports pain VAS scores at rest and movement as median (IQR) (rest: 2 [2-3] vs 2 [2-3]; movement: 3 [3-4] vs 3 [2-3]) rather than mean \u00b1 SD, and nausea (24/90 vs 40/90) and vomiting (12/90 vs 25/90) are reported as isolated endpoints without composite PONV count.",
+      "urgency": "IMPORTANT: Parametric mean ± SD for 24-hour VAS pain sco...",
+      "target_data": "Parametric mean ± SD for 24-hour VAS pain scores at rest and movement, and unique patient counts for composite 24-hour PONV.",
+      "rationale": "Table 3 reports pain VAS scores at rest and movement as median (IQR) (rest: 2 [2-3] vs 2 [2-3]; movement: 3 [3-4] vs 3 [2-3]) rather than mean ± SD, and nausea (24/90 vs 40/90) and vomiting (12/90 vs 25/90) are reported as isolated endpoints without composite PONV count.",
       "impact": "Supplies author-verified parametric pain metrics and unique composite PONV incidence for 180-patient thoracic surgery trial.",
       "corresponding_author": "Dr. Libing Huang",
       "email": "huanglibingys@126.com",
       "institution": "Department of Anesthesiology, Affiliated Hospital of Nanjing University of Traditional Chinese Medicine, Hanzhong Road 155, Nanjing 210029, China",
-      "draft_msg": "Dear Dr. Huang, congratulations on your randomized clinical trial published in Explore (2024;20:450-455) evaluating perioperative electroacupuncture after thoracoscopic lung surgery. In Table 3 you report postoperative pain VAS scores at rest and movement as medians (IQR), and nausea and vomiting separately. Could you kindly provide the parametric mean \u00b1 SD for the 24-hour pain VAS scores at rest and during movement, as well as the unique patient count for composite 24-hour PONV for the EA (n=90) and Usual Care (n=90) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Huang, congratulations on your randomized clinical trial published in Explore (2024;20:450-455) evaluating perioperative electroacupuncture after thoracoscopic lung surgery. In Table 3 you report postoperative pain VAS scores at rest and movement as medians (IQR), and nausea and vomiting separately. Could you kindly provide the parametric mean ± SD for the 24-hour pain VAS scores at rest and during movement, as well as the unique patient count for composite 24-hour PONV for the EA (n=90) and Usual Care (n=90) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -2886,7 +2977,7 @@ window.STUDIES_DATA = [
         "log_rr_se": 0.318,
         "ci_low": 0.257,
         "ci_upp": 0.895,
-        "readiness": "INCLUDE \u2014 SEPARATE TIME WINDOW"
+        "readiness": "INCLUDE — SEPARATE TIME WINDOW"
       },
       "flatus_time": {
         "outcome_name": "Time to first flatus",
@@ -2916,6 +3007,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Yang 2024",
@@ -2940,7 +3037,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2958,16 +3055,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid, 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30)!<br>2. Replaced with TRUE published trial data: 62 completed and analyzed female patients undergoing laparoscopic sleeve gastrectomy (31 TEAS group, 31 Sham group; 100% completion rate); Table 3 Cumulative PONV incidence 0-24 h: TEAS 12/31 (38.7%) vs Sham 24/31 (77.4%) (P = 0.002*); 0-48 h: TEAS 13/31 (41.9%) vs Sham 24/31 (77.4%) (P = 0.004*); Clinically important PONV (Table 2): TEAS 5/31 (16.1%) vs Sham 15/31 (48.4%) (P = 0.007*); Severe untolerable nausea: TEAS 3/31 (9.7%) vs Sham 15/31 (48.4%) (P = 0.001*).<br>3. Cumulative vomiting incidence: 0-24 h (Table 3): TEAS 10/31 (32.3%) vs Sham 20/31 (64.5%) (P = 0.011*); 0-48 h: TEAS 11/31 (35.5%) vs Sham 21/31 (67.7%) (P = 0.011*); Vomiting >= 3 episodes: TEAS 5/31 (16.1%) vs Sham 15/31 (48.4%) (P = 0.007*).<br>4. Rescue antiemetic administration: TEAS 9/31 (29.0%) vs Sham 18/31 (58.1%) (P = 0.021*); Total rescue doses: 26 vs 57 doses (P = 0.023*).<br>5. Postoperative systemic opioid consumption (Table 1): 0.6 \u00b1 0.2 vs 0.6 \u00b1 0.1 mg morphine equivalents/kg [total dose in IV MME: 62.70 \u00b1 20.90 vs 62.82 \u00b1 10.47 mg]; Intraoperative opioid: 1.8 \u00b1 0.4 vs 1.8 \u00b1 0.4 mg/kg.<br>6. Gastrointestinal recovery: Time to first flatus (Table 4): TEAS 23.6 \u00b1 7.7 vs Sham 32.3 \u00b1 13.2 hours (P = 0.003*); Time to oral diet: 47.6 vs 46 h; Hospital stay: 3 (3, 4) vs 3 (3, 4) days.<br>7. Adverse events: TEAS electrode skin itching: TEAS 1/31 (3.2%) vs Sham 0/31 (disappeared within 12h); Sham group had 1 central vomiting lasting 65 days and 1 staple line leakage requiring re-operation.<br>8. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computerized random numbers, sealed envelopes opened upon OR arrival, validated sham TEAS with identical electrodes connected to non-stimulating covered device, double-blind (patients and independent resident assessor blinded), 100% completion (62/62 analyzed), and prospective registration under ChiCTR2000037785.",
-      "fake_boilerplate_expunged": "Fabricated opioid, pain, and PONV numbers (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0, 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, 5/30 vs 12/30).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid, 2.4 ± 0.8 vs 3.8 ± 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30)!<br>2. Replaced with TRUE published trial data: 62 completed and analyzed female patients undergoing laparoscopic sleeve gastrectomy (31 TEAS group, 31 Sham group; 100% completion rate); Table 3 Cumulative PONV incidence 0-24 h: TEAS 12/31 (38.7%) vs Sham 24/31 (77.4%) (P = 0.002*); 0-48 h: TEAS 13/31 (41.9%) vs Sham 24/31 (77.4%) (P = 0.004*); Clinically important PONV (Table 2): TEAS 5/31 (16.1%) vs Sham 15/31 (48.4%) (P = 0.007*); Severe untolerable nausea: TEAS 3/31 (9.7%) vs Sham 15/31 (48.4%) (P = 0.001*).<br>3. Cumulative vomiting incidence: 0-24 h (Table 3): TEAS 10/31 (32.3%) vs Sham 20/31 (64.5%) (P = 0.011*); 0-48 h: TEAS 11/31 (35.5%) vs Sham 21/31 (67.7%) (P = 0.011*); Vomiting >= 3 episodes: TEAS 5/31 (16.1%) vs Sham 15/31 (48.4%) (P = 0.007*).<br>4. Rescue antiemetic administration: TEAS 9/31 (29.0%) vs Sham 18/31 (58.1%) (P = 0.021*); Total rescue doses: 26 vs 57 doses (P = 0.023*).<br>5. Postoperative systemic opioid consumption (Table 1): 0.6 ± 0.2 vs 0.6 ± 0.1 mg morphine equivalents/kg [total dose in IV MME: 62.70 ± 20.90 vs 62.82 ± 10.47 mg]; Intraoperative opioid: 1.8 ± 0.4 vs 1.8 ± 0.4 mg/kg.<br>6. Gastrointestinal recovery: Time to first flatus (Table 4): TEAS 23.6 ± 7.7 vs Sham 32.3 ± 13.2 hours (P = 0.003*); Time to oral diet: 47.6 vs 46 h; Hospital stay: 3 (3, 4) vs 3 (3, 4) days.<br>7. Adverse events: TEAS electrode skin itching: TEAS 1/31 (3.2%) vs Sham 0/31 (disappeared within 12h); Sham group had 1 central vomiting lasting 65 days and 1 staple line leakage requiring re-operation.<br>8. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computerized random numbers, sealed envelopes opened upon OR arrival, validated sham TEAS with identical electrodes connected to non-stimulating covered device, double-blind (patients and independent resident assessor blinded), 100% completion (62/62 analyzed), and prospective registration under ChiCTR2000037785.",
+      "fake_boilerplate_expunged": "Fabricated opioid, pain, and PONV numbers (20.4 ± 4.8 vs 33.1 ± 7.0, 2.4 ± 0.8 vs 3.8 ± 1.1, 5/30 vs 12/30).",
       "evidence_sources": "Text p. 1912-1915 (Methods, computer sequence, sealed envelopes, ChiCTR2000037785); Fig 1 p. 1916 (CONSORT flow); Table 1 p. 1915 (demographics, anesthetics, opioid consumption); Table 2 p. 1916 (PONV severity, rescue antiemetics); Table 3 p. 1917 (nausea, vomiting, PONV at time intervals); Table 4 p. 1917 (postoperative flatus, diet, stays, complications)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan), ST36 (Zusanli)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -2980,14 +3077,14 @@ window.STUDIES_DATA = [
       "total_n": 62,
       "arm1_name": "TEAS Group",
       "arm1_n": 31,
-      "arm1_age": "27.5 \u00b1 8.0",
+      "arm1_age": "27.5 ± 8.0",
       "arm1_female": "30/31 (96.8%)",
-      "arm1_bmi": "39.1 \u00b1 6.5",
+      "arm1_bmi": "39.1 ± 6.5",
       "arm2_name": "Sham Group",
       "arm2_n": 31,
-      "arm2_age": "27.3 \u00b1 8.3",
+      "arm2_age": "27.3 ± 8.3",
       "arm2_female": "30/31 (96.8%)",
-      "arm2_bmi": "39.9 \u00b1 5.8",
+      "arm2_bmi": "39.9 ± 5.8",
       "asa_status": "ASA II: 16 (51.6%), ASA III: 14 (45.2%), ASA IV: 1 (3.2%)"
     },
     "rob2": {
@@ -3005,14 +3102,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Numerical mean \u00b1 SD for 24-hour VAS pain scor...",
-      "target_data": "Numerical mean \u00b1 SD for 24-hour VAS pain scores at rest and movement and unnormalized cumulative 0-24 hour total IV PCA sufentanil consumption.",
-      "rationale": "VAS pain scores at rest and movement were evaluated at 2, 6, 12, 24, 36, and 48 h and analyzed via MANOVA (P = 0.404 and P = 0.423) but numerical means \u00b1 SD were omitted from tables, and opioid consumption in Table 1 is expressed normalized to body weight (0.6 \u00b1 0.2 vs 0.6 \u00b1 0.1 mg/kg).",
+      "urgency": "IMPORTANT: Numerical mean ± SD for 24-hour VAS pain scor...",
+      "target_data": "Numerical mean ± SD for 24-hour VAS pain scores at rest and movement and unnormalized cumulative 0-24 hour total IV PCA sufentanil consumption.",
+      "rationale": "VAS pain scores at rest and movement were evaluated at 2, 6, 12, 24, 36, and 48 h and analyzed via MANOVA (P = 0.404 and P = 0.423) but numerical means ± SD were omitted from tables, and opioid consumption in Table 1 is expressed normalized to body weight (0.6 ± 0.2 vs 0.6 ± 0.1 mg/kg).",
       "impact": "Supplies author-verified 24-hour pain scores and absolute opioid consumption in milligrams for 62-patient bariatric surgery trial.",
       "corresponding_author": "Dr. Su Min",
       "email": "ms89011068@163.com",
-      "institution": "Department of Anesthesiology, The First Affiliated Hospital of Chongqing Medical University, Youyi Road 1, Yuzhong District, Chongqing 400016, People\u2019s Republic of China",
-      "draft_msg": "Dear Dr. Min, congratulations on your randomized sham-controlled trial published in Obesity Surgery (2021;31:1912-1920) evaluating TEAS combined with antiemetics for laparoscopic sleeve gastrectomy. In your text you note that pain VAS scores at rest and movement were analyzed across time points without significant difference. Could you kindly provide the numerical mean \u00b1 SD for the 24-hour VAS pain scores at rest and during movement, as well as the unnormalized cumulative 0-24 hour total IV PCIA sufentanil consumption (mean \u00b1 SD in milligrams or micrograms) for the TEAS (n=31) and Control (n=31) groups for our systematic review and meta-analysis?"
+      "institution": "Department of Anesthesiology, The First Affiliated Hospital of Chongqing Medical University, Youyi Road 1, Yuzhong District, Chongqing 400016, People’s Republic of China",
+      "draft_msg": "Dear Dr. Min, congratulations on your randomized sham-controlled trial published in Obesity Surgery (2021;31:1912-1920) evaluating TEAS combined with antiemetics for laparoscopic sleeve gastrectomy. In your text you note that pain VAS scores at rest and movement were analyzed across time points without significant difference. Could you kindly provide the numerical mean ± SD for the 24-hour VAS pain scores at rest and during movement, as well as the unnormalized cumulative 0-24 hour total IV PCIA sufentanil consumption (mean ± SD in milligrams or micrograms) for the TEAS (n=31) and Control (n=31) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -3035,7 +3132,7 @@ window.STUDIES_DATA = [
         "log_rr_se": 0.45,
         "ci_low": 0.138,
         "ci_upp": 0.804,
-        "readiness": "INCLUDE \u2014 SEPARATE TIME WINDOW"
+        "readiness": "INCLUDE — SEPARATE TIME WINDOW"
       },
       "flatus_time": null,
       "hospital_stay": null,
@@ -3058,11 +3155,17 @@ window.STUDIES_DATA = [
         "drug": "Morphine Equiv",
         "unit": "mg",
         "status": "Direct Continuous (mg)",
-        "note": "Intraoperative morphine equivalent (1.8 \u00b1 0.4 vs 1.8 \u00b1 0.4 mg)"
+        "note": "Intraoperative morphine equivalent (1.8 ± 0.4 vs 1.8 ± 0.4 mg)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Xiong 2021",
@@ -3087,7 +3190,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -3105,16 +3208,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, false N=30) and Reviewer 811774 erroneously claimed lack of blinding, open-label design, and missing registration!<br>2. Replaced with TRUE published trial data: 87 completed and analyzed elderly patients undergoing laparoscopic radical gastric cancer surgery (29 NTG [TEAS+TAPB], 29 NG [Sham TEAS+TAPB], 29 G [Sham TEAS+Sham TAPB]; 96.7% completion rate, 3 dropouts fully documented in Fig. 2); Primary comparisons: Pain intensity at rest at 24 h (Table 3) is TEAS (NTG) 1.18 \u00b1 0.42 vs Sham TEAS (NG) 1.40 \u00b1 0.52 (P < 0.05*) vs Control (G) 1.83 \u00b1 0.55 (P < 0.05*); at 4 h: 2.62 \u00b1 0.73 vs 2.90 \u00b1 0.82 vs 3.44 \u00b1 0.62; at 12 h: 1.73 \u00b1 0.60 vs 1.92 \u00b1 0.67 vs 2.68 \u00b1 0.55; at 48 h: 0.72 \u00b1 0.36 vs 1.10 \u00b1 0.49 vs 1.24 \u00b1 0.40.<br>3. Pain intensity during movement at 24 h (Table 3): TEAS 1.89 \u00b1 0.52 vs Sham TEAS 2.15 \u00b1 0.50 (P < 0.05*) vs Control 2.84 \u00b1 0.56; at 4 h: 3.50 \u00b1 0.64 vs 3.68 \u00b1 0.73 vs 4.42 \u00b1 0.67; at 12 h: 2.67 \u00b1 0.55 vs 2.85 \u00b1 0.53 vs 3.60 \u00b1 0.57; at 48 h: 1.19 \u00b1 0.42 vs 1.74 \u00b1 0.56 vs 2.03 \u00b1 0.52.<br>4. Patient-controlled analgesia (PCIA pump press numbers): TEAS 6.55 \u00b1 3.19 vs Sham TEAS 9.97 \u00b1 3.80 (P < 0.05*) vs Control 12.45 \u00b1 4.21 (P < 0.05*).<br>5. Gastrointestinal recovery & PONV (Table 3): Time to first flatus: TEAS 32.57 \u00b1 6.94 vs Sham TEAS 36.83 \u00b1 6.19 vs Control 43.03 \u00b1 8.13 h (P < 0.05*); Time to first ambulation: TEAS 27.64 \u00b1 5.86 vs Sham TEAS 28.50 \u00b1 5.38 vs Control 31.81 \u00b1 7.38 h; PONV incidence: TEAS 5/29 (17.2%) vs Sham TEAS 11/29 (37.9%) vs Control 13/29 (44.8%) (P < 0.05*).<br>6. Intraoperative anesthetics: Remifentanil: TEAS 1182.6 \u00b1 253.6 vs Sham TEAS 1415.4 \u00b1 295.7 vs Control 1619.1 \u00b1 329.0 \u00b5g (P < 0.05*); Extubation time: 9.45 \u00b1 3.98 vs 16.10 \u00b1 3.39 vs 17.72 \u00b1 4.67 min.<br>7. Adverse events: Pruritus: 0/29 vs 1/29 vs 1/29; Respiratory depression: 0/29 vs 0/29 vs 1/29.<br>8. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random sequence, sealed envelopes, validated sham TEAS with obscured stimulator under opaque cloth, blinded patients/surgeons/evaluators, 96.7% completion (87/90 analyzed), and prospective registration under ChiCTR2100042119.",
-      "fake_boilerplate_expunged": "Fabricated pain numbers (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1) and erroneous RoB claims of open-label control and missing registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for pain, false N=30) and Reviewer 811774 erroneously claimed lack of blinding, open-label design, and missing registration!<br>2. Replaced with TRUE published trial data: 87 completed and analyzed elderly patients undergoing laparoscopic radical gastric cancer surgery (29 NTG [TEAS+TAPB], 29 NG [Sham TEAS+TAPB], 29 G [Sham TEAS+Sham TAPB]; 96.7% completion rate, 3 dropouts fully documented in Fig. 2); Primary comparisons: Pain intensity at rest at 24 h (Table 3) is TEAS (NTG) 1.18 ± 0.42 vs Sham TEAS (NG) 1.40 ± 0.52 (P < 0.05*) vs Control (G) 1.83 ± 0.55 (P < 0.05*); at 4 h: 2.62 ± 0.73 vs 2.90 ± 0.82 vs 3.44 ± 0.62; at 12 h: 1.73 ± 0.60 vs 1.92 ± 0.67 vs 2.68 ± 0.55; at 48 h: 0.72 ± 0.36 vs 1.10 ± 0.49 vs 1.24 ± 0.40.<br>3. Pain intensity during movement at 24 h (Table 3): TEAS 1.89 ± 0.52 vs Sham TEAS 2.15 ± 0.50 (P < 0.05*) vs Control 2.84 ± 0.56; at 4 h: 3.50 ± 0.64 vs 3.68 ± 0.73 vs 4.42 ± 0.67; at 12 h: 2.67 ± 0.55 vs 2.85 ± 0.53 vs 3.60 ± 0.57; at 48 h: 1.19 ± 0.42 vs 1.74 ± 0.56 vs 2.03 ± 0.52.<br>4. Patient-controlled analgesia (PCIA pump press numbers): TEAS 6.55 ± 3.19 vs Sham TEAS 9.97 ± 3.80 (P < 0.05*) vs Control 12.45 ± 4.21 (P < 0.05*).<br>5. Gastrointestinal recovery & PONV (Table 3): Time to first flatus: TEAS 32.57 ± 6.94 vs Sham TEAS 36.83 ± 6.19 vs Control 43.03 ± 8.13 h (P < 0.05*); Time to first ambulation: TEAS 27.64 ± 5.86 vs Sham TEAS 28.50 ± 5.38 vs Control 31.81 ± 7.38 h; PONV incidence: TEAS 5/29 (17.2%) vs Sham TEAS 11/29 (37.9%) vs Control 13/29 (44.8%) (P < 0.05*).<br>6. Intraoperative anesthetics: Remifentanil: TEAS 1182.6 ± 253.6 vs Sham TEAS 1415.4 ± 295.7 vs Control 1619.1 ± 329.0 µg (P < 0.05*); Extubation time: 9.45 ± 3.98 vs 16.10 ± 3.39 vs 17.72 ± 4.67 min.<br>7. Adverse events: Pruritus: 0/29 vs 1/29 vs 1/29; Respiratory depression: 0/29 vs 0/29 vs 1/29.<br>8. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random sequence, sealed envelopes, validated sham TEAS with obscured stimulator under opaque cloth, blinded patients/surgeons/evaluators, 96.7% completion (87/90 analyzed), and prospective registration under ChiCTR2100042119.",
+      "fake_boilerplate_expunged": "Fabricated pain numbers (2.4 ± 0.8 vs 3.8 ± 1.1) and erroneous RoB claims of open-label control and missing registration.",
       "evidence_sources": "Text p. 1327-1333 (Methods, computer sequence, sealed envelopes, ChiCTR2100042119); Table 1 p. 1331 (demographics); Table 2 p. 1332 (T-lymphocytes); Table 3 p. 1333 (remifentanil, propofol, extubation, flatus, PONV, PCIA presses, rest & movement VAS pain); Fig 2 p. 1331 (CONSORT flow)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -3127,14 +3230,14 @@ window.STUDIES_DATA = [
       "total_n": 58,
       "arm1_name": "TEAS Group",
       "arm1_n": 29,
-      "arm1_age": "70.41 \u00b1 5.62",
+      "arm1_age": "70.41 ± 5.62",
       "arm1_female": "9/29 (31.0%)",
-      "arm1_bmi": "22.71 \u00b1 3.03",
+      "arm1_bmi": "22.71 ± 3.03",
       "arm2_name": "Sham Group",
       "arm2_n": 29,
-      "arm2_age": "68.48 \u00b1 5.37",
+      "arm2_age": "68.48 ± 5.37",
       "arm2_female": "7/29 (24.1%)",
-      "arm2_bmi": "22.99 \u00b1 1.81",
+      "arm2_bmi": "22.99 ± 1.81",
       "asa_status": "ASA II: 7 (24.1%), ASA III: 22 (75.9%)"
     },
     "rob2": {
@@ -3146,20 +3249,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Total intraoperative remifentanil consumption",
       "timepoint": "Intraoperative",
-      "rationale": "1182.61 \u00b1 253.61 vs 1415.41 \u00b1 295.67 \u00b5g; pairwise P<0.05"
+      "rationale": "1182.61 ± 253.61 vs 1415.41 ± 295.67 µg; pairwise P<0.05"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour total IV PCIA sufentanil c...",
-      "target_data": "Cumulative 24-hour total IV PCIA sufentanil consumption (\u00b5g or mg) and unique patient counts for postoperative nausea and vomiting.",
-      "rationale": "Table 3 reports PCIA pump press numbers (6.55 \u00b1 3.19 vs 9.97 \u00b1 3.80 vs 12.45 \u00b1 4.21) and composite PONV incidence (5/29 vs 11/29 vs 13/29) rather than exact cumulative sufentanil dose (mg IV MME) and separated nausea vs vomiting counts.",
+      "target_data": "Cumulative 24-hour total IV PCIA sufentanil consumption (µg or mg) and unique patient counts for postoperative nausea and vomiting.",
+      "rationale": "Table 3 reports PCIA pump press numbers (6.55 ± 3.19 vs 9.97 ± 3.80 vs 12.45 ± 4.21) and composite PONV incidence (5/29 vs 11/29 vs 13/29) rather than exact cumulative sufentanil dose (mg IV MME) and separated nausea vs vomiting counts.",
       "impact": "Supplies author-verified cumulative 24-hour opioid dose and isolated emesis metrics for 87-patient gastric cancer trial.",
       "corresponding_author": "Dr. Yan-hu Xie",
       "email": "xyh200701@sina.cn",
       "institution": "Department of Anesthesiology, The First Affiliated Hospital of USTC, Division of Life Sciences and Medicine, University of Science and Technology of China, Hefei 230001, Anhui, China",
-      "draft_msg": "Dear Dr. Xie, congratulations on your randomized sham-controlled trial published in Pain and Therapy (2022;11:1327-1339) evaluating TEAS combined with TAP block for laparoscopic gastric cancer surgery. In Table 3 you report PCIA pump press numbers and PONV incidence. Could you kindly provide the cumulative 0-24 hour total IV PCIA sufentanil consumption (mean \u00b1 SD in micrograms or milligrams) and isolated counts for nausea and vomiting for the NTG (TEAS+TAPB, n=29), NG (Sham TEAS+TAPB, n=29), and G (Sham TEAS+Sham TAPB, n=29) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Xie, congratulations on your randomized sham-controlled trial published in Pain and Therapy (2022;11:1327-1339) evaluating TEAS combined with TAP block for laparoscopic gastric cancer surgery. In Table 3 you report PCIA pump press numbers and PONV incidence. Could you kindly provide the cumulative 0-24 hour total IV PCIA sufentanil consumption (mean ± SD in micrograms or milligrams) and isolated counts for nausea and vomiting for the NTG (TEAS+TAPB, n=29), NG (Sham TEAS+TAPB, n=29), and G (Sham TEAS+Sham TAPB, n=29) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -3231,9 +3334,9 @@ window.STUDIES_DATA = [
         "ci_upp": -42.73,
         "p_val": "0.012",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Intraoperative remifentanil dose (Table 3: 1415.41 \u00b1 295.67 vs 1619.13 \u00b1 328.98 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Intraoperative remifentanil dose (Table 3: 1415.41 ± 295.67 vs 1619.13 ± 328.98 µg)"
       },
       "pca_presses_24h": {
         "status": "Measured at 48h / Alternate Timepoint",
@@ -3251,7 +3354,13 @@ window.STUDIES_DATA = [
         "arm2_sd": 4.21,
         "unit": "presses",
         "p_val": 0.001,
-        "note": "Table 3 reports PCIA press numbers: TEAS+TAPB 6.55 \u00b1 3.19 vs TAPB 9.97 \u00b1 3.80 vs Control 12.45 \u00b1 4.21 (P<0.05)."
+        "note": "Table 3 reports PCIA press numbers: TEAS+TAPB 6.55 ± 3.19 vs TAPB 9.97 ± 3.80 vs Control 12.45 ± 4.21 (P<0.05)."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Xing 2022",
@@ -3276,7 +3385,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -3294,9 +3403,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid, false N=30)!<br>2. Replaced with TRUE published trial data: 60 completed and analyzed patients undergoing radical thoracic esophagectomy (20 EAS group, 20 Sham EA group, 20 Control group; 100% completion rate); Table 2: Cumulative IV PCA sufentanil total dose (\u00b5g): EAS 115 \u00b1 6.0 \u00b5g vs Sham 133.5 \u00b1 7.0 \u00b5g vs Control 134.3 \u00b1 5.9 \u00b5g (P < 0.05*) [in IV MME: 115.0 \u00b1 6.0 vs 133.5 \u00b1 7.0 vs 134.3 \u00b1 5.9 mg]; Patient PCA demands: EAS 16 \u00b1 3 vs Sham 43 \u00b1 3 vs Control 42 \u00b1 5 (P < 0.05*); Rate of breakthrough pain rescue with IV dezocine: EAS 1/20 (5%) vs Sham 6/20 (30%) vs Control 7/20 (35%) (P < 0.05*).<br>3. VAS pain intensity (Fig. 2): EAS significantly lower than Sham and Control at 2, 12, 24, and 48 h (at 24h: ~2.2 vs ~4.0 vs ~4.2, P < 0.05*).<br>4. Intraoperative anesthetics (Table 1): Remifentanil: EAS 1.89 \u00b1 0.63 vs Sham 1.90 \u00b1 0.59 vs Control 1.90 \u00b1 0.65 mg; Propofol: 1064 \u00b1 174 vs 1077 \u00b1 180 vs 1048 \u00b1 167 mg; Operative duration: 217 \u00b1 33 vs 221 \u00b1 30 vs 218 \u00b1 27 min.<br>5. Biochemical outcomes: Plasma beta-endorphin significantly elevated at 24h and 48h in EAS group (176.9 \u00b1 45.7 and 163.0 \u00b1 35.0 pg/mL) compared with Sham (136.6 \u00b1 45.8 and 129.9 \u00b1 36.1 pg/mL); PGE2 and 5-HT suppressed in EAS group.<br>6. Adverse events: Zero incidence of apnea or severe hypotension across all 3 groups (0/20 vs 0/20 vs 0/20).<br>7. RoB 2 verified: Domain 1 Low (computer-generated random numbers, sealed assignments); Domain 2 Low (double-blind design using identical sham needles under GA without current, blinded thoracic surgeons and ward staff); Domain 3 Low (100% completion, 60/60 analyzed); Domain 4 Low (independent blinded outcome assessors and data analysts); Domain 5 Some concerns (trial conducted 2012-2013 without prospective public registration ID). Overall: **Some concerns**.",
-      "fake_boilerplate_expunged": "Fabricated opioid numbers (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid, false N=30)!<br>2. Replaced with TRUE published trial data: 60 completed and analyzed patients undergoing radical thoracic esophagectomy (20 EAS group, 20 Sham EA group, 20 Control group; 100% completion rate); Table 2: Cumulative IV PCA sufentanil total dose (µg): EAS 115 ± 6.0 µg vs Sham 133.5 ± 7.0 µg vs Control 134.3 ± 5.9 µg (P < 0.05*) [in IV MME: 115.0 ± 6.0 vs 133.5 ± 7.0 vs 134.3 ± 5.9 mg]; Patient PCA demands: EAS 16 ± 3 vs Sham 43 ± 3 vs Control 42 ± 5 (P < 0.05*); Rate of breakthrough pain rescue with IV dezocine: EAS 1/20 (5%) vs Sham 6/20 (30%) vs Control 7/20 (35%) (P < 0.05*).<br>3. VAS pain intensity (Fig. 2): EAS significantly lower than Sham and Control at 2, 12, 24, and 48 h (at 24h: ~2.2 vs ~4.0 vs ~4.2, P < 0.05*).<br>4. Intraoperative anesthetics (Table 1): Remifentanil: EAS 1.89 ± 0.63 vs Sham 1.90 ± 0.59 vs Control 1.90 ± 0.65 mg; Propofol: 1064 ± 174 vs 1077 ± 180 vs 1048 ± 167 mg; Operative duration: 217 ± 33 vs 221 ± 30 vs 218 ± 27 min.<br>5. Biochemical outcomes: Plasma beta-endorphin significantly elevated at 24h and 48h in EAS group (176.9 ± 45.7 and 163.0 ± 35.0 pg/mL) compared with Sham (136.6 ± 45.8 and 129.9 ± 36.1 pg/mL); PGE2 and 5-HT suppressed in EAS group.<br>6. Adverse events: Zero incidence of apnea or severe hypotension across all 3 groups (0/20 vs 0/20 vs 0/20).<br>7. RoB 2 verified: Domain 1 Low (computer-generated random numbers, sealed assignments); Domain 2 Low (double-blind design using identical sham needles under GA without current, blinded thoracic surgeons and ward staff); Domain 3 Low (100% completion, 60/60 analyzed); Domain 4 Low (independent blinded outcome assessors and data analysts); Domain 5 Some concerns (trial conducted 2012-2013 without prospective public registration ID). Overall: **Some concerns**.",
+      "fake_boilerplate_expunged": "Fabricated opioid numbers (20.4 ± 4.8 vs 33.1 ± 7.0).",
       "evidence_sources": "Text p. 569-573 (Methods, computer sequence, blinding); Table 1 p. 571 (demographics, anesthetics); Table 2 p. 571 (sufentanil dose, PCA demands, dezocine rate); Fig 2 p. 572 (VAS pain); Fig 3 p. 572 (beta-endorphin); Fig 4 & 5 p. 573 (PGE2, 5-HT)"
     },
     "stricta": {
@@ -3310,18 +3419,18 @@ window.STUDIES_DATA = [
       "sessions_category": "Single session",
       "duration_raw": "247 minutes (mean)",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 40,
       "arm1_name": "EA Group",
       "arm1_n": 20,
-      "arm1_age": "53 \u00b1 8",
+      "arm1_age": "53 ± 8",
       "arm1_female": "6/20 (30.0%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 20,
-      "arm2_age": "54 \u00b1 7",
+      "arm2_age": "54 ± 7",
       "arm2_female": "6/20 (30.0%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -3335,20 +3444,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Total postoperative/perioperative sufentanil",
       "timepoint": "Study PCA period; exact fixed window unclear",
-      "rationale": "115 \u00b1 6.0 vs 133 \u00b1 7.0 \u00b5g; P<0.05"
+      "rationale": "115 ± 6.0 vs 133 ± 7.0 µg; P<0.05"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Numerical mean \u00b1 SD for cumulative 24-hour to...",
-      "target_data": "Numerical mean \u00b1 SD for cumulative 24-hour total IV PCA sufentanil consumption and separate resting versus coughing/movement VAS pain scores.",
-      "rationale": "Table 2 reports total cumulative sufentanil consumption through POD 3 (115 \u00b1 6.0 vs 133.5 \u00b1 7.0 vs 134.3 \u00b1 5.9 \u00b5g) rather than a specific 0-24 hour cumulative total, and Figure 2 presents combined resting/coughing VAS pain scores as a line plot.",
+      "urgency": "IMPORTANT: Numerical mean ± SD for cumulative 24-hour to...",
+      "target_data": "Numerical mean ± SD for cumulative 24-hour total IV PCA sufentanil consumption and separate resting versus coughing/movement VAS pain scores.",
+      "rationale": "Table 2 reports total cumulative sufentanil consumption through POD 3 (115 ± 6.0 vs 133.5 ± 7.0 vs 134.3 ± 5.9 µg) rather than a specific 0-24 hour cumulative total, and Figure 2 presents combined resting/coughing VAS pain scores as a line plot.",
       "impact": "Supplies author-verified cumulative 24-hour opioid consumption and separate resting/dynamic pain metrics for 60-patient esophagectomy trial.",
       "corresponding_author": "Dr. Yue-lan Wang",
       "email": "wangyuelansdu@sina.com",
       "institution": "Department of Anesthesiology, Qianfushan Hospital Affiliated to Shandong University, Jinan 250014, China",
-      "draft_msg": "Dear Dr. Wang, congratulations on your randomized sham-controlled clinical trial published in Journal of Huazhong University of Science and Technology [Medical Sciences] (2014;34:569-574) evaluating electroacupuncture at PC4 and PC6 following thoracic esophagectomy. In Table 2 you report total postoperative sufentanil consumption through POD 3, and in Figure 2 you present VAS pain scores. Could you kindly provide the cumulative 0-24 hour total IV PCA sufentanil consumption (mean \u00b1 SD in micrograms) and separate resting versus movement/coughing VAS pain scores at 24 hours for the EAS (n=20), Sham EA (n=20), and Control (n=20) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Wang, congratulations on your randomized sham-controlled clinical trial published in Journal of Huazhong University of Science and Technology [Medical Sciences] (2014;34:569-574) evaluating electroacupuncture at PC4 and PC6 following thoracic esophagectomy. In Table 2 you report total postoperative sufentanil consumption through POD 3, and in Figure 2 you present VAS pain scores. Could you kindly provide the cumulative 0-24 hour total IV PCA sufentanil consumption (mean ± SD in micrograms) and separate resting versus movement/coughing VAS pain scores at 24 hours for the EAS (n=20), Sham EA (n=20), and Control (n=20) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -3390,9 +3499,9 @@ window.STUDIES_DATA = [
         "ci_upp": 159.15,
         "p_val": "0.940",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Intraoperative remifentanil (reported 1.89 \u00b1 0.63 vs 1.90 \u00b1 0.59 mg)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Intraoperative remifentanil (reported 1.89 ± 0.63 vs 1.90 ± 0.59 mg)"
       },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
@@ -3410,7 +3519,13 @@ window.STUDIES_DATA = [
         "arm2_sd": 3.0,
         "unit": "demands",
         "p_val": 0.001,
-        "note": "PCA demand frequency: EAS (16 \u00b1 3) vs Sham (43 \u00b1 3, P<0.05) vs Control (42 \u00b1 5)."
+        "note": "PCA demand frequency: EAS (16 ± 3) vs Sham (43 ± 3, P<0.05) vs Control (42 ± 5)."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Xie 2014",
@@ -3435,7 +3550,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -3453,8 +3568,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL AUDIT CORRECTION**: Systematic extraction audited and reconciled with Table 1, 2, 3, 4 published source data.<br>2. TRUE published trial data: 84 completed and analyzed patients undergoing posterior lumbar fusion surgery (44 pTEAS group, 40 Control group; 93.3% completion rate, 6 clinical exclusions); Postoperative VAS pain score (Table 3): Baseline (T0): 1.09 \u00b1 0.86 vs 1.20 \u00b1 0.94; Day 1 (T1, 24h): pTEAS 1.77 \u00b1 0.91 vs Control 2.25 \u00b1 0.71 (P = 0.009*); Day 2 (T2, 48h): 1.55 \u00b1 0.59 vs 2.00 \u00b1 0.91 (P = 0.007*); Day 3 (T3, 72h): 1.45 \u00b1 0.73 vs 1.80 \u00b1 1.14 (P = 0.098); Day 4 (T4): 1.55 \u00b1 1.04 vs 1.55 \u00b1 0.88; Day 5 (T5): 1.36 \u00b1 1.04 vs 1.45 \u00b1 0.93.<br>3. Intraoperative anesthetics & outcomes (Table 2): Remifentanil consumption: pTEAS 1383 \u00b1 494 vs Control 1637 \u00b1 630 \u00b5g (P = 0.042*); Remifentanil index: 0.084 \u00b1 0.018 vs 0.114 \u00b1 0.090 \u00b5g/min/kg (P = 0.045*); Propofol consumption: 1478 \u00b1 404 vs 1529 \u00b1 476 mg; Blood loss: 379 \u00b1 202 vs 497 \u00b1 283 ml (P = 0.030*); Extubation time: 36.95 \u00b1 16.70 vs 40.20 \u00b1 19.27 min; Operative duration: 215 \u00b1 61 vs 232 \u00b1 70 min.<br>4. Adverse events (Table 4): PONV on Day 1 (T1): pTEAS 8/44 (18%) vs Control 8/40 (20%); Rescue antiemetic on Day 1: 2/44 (4.5%) vs 4/40 (10%); Dizziness on Day 1: 0/44 (0%) vs 6/40 (15%) (P = 0.009*); Day 4 dizziness: 2/44 (4.5%) vs 8/40 (20%) (P = 0.042*); Day 5 dizziness: 2/44 (4.5%) vs 10/40 (25%) (P = 0.011*).<br>5. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated randomized list, opaque sealed envelopes, validated sham TEAS with 0 mA stimulation, blinding of patients, spine surgeons, anesthesiologists, and outcome assessors, 93.3% completion (84/90 analyzed), and prospective registration under ChiCTR1800014634.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL AUDIT CORRECTION**: Systematic extraction audited and reconciled with Table 1, 2, 3, 4 published source data.<br>2. TRUE published trial data: 84 completed and analyzed patients undergoing posterior lumbar fusion surgery (44 pTEAS group, 40 Control group; 93.3% completion rate, 6 clinical exclusions); Postoperative VAS pain score (Table 3): Baseline (T0): 1.09 ± 0.86 vs 1.20 ± 0.94; Day 1 (T1, 24h): pTEAS 1.77 ± 0.91 vs Control 2.25 ± 0.71 (P = 0.009*); Day 2 (T2, 48h): 1.55 ± 0.59 vs 2.00 ± 0.91 (P = 0.007*); Day 3 (T3, 72h): 1.45 ± 0.73 vs 1.80 ± 1.14 (P = 0.098); Day 4 (T4): 1.55 ± 1.04 vs 1.55 ± 0.88; Day 5 (T5): 1.36 ± 1.04 vs 1.45 ± 0.93.<br>3. Intraoperative anesthetics & outcomes (Table 2): Remifentanil consumption: pTEAS 1383 ± 494 vs Control 1637 ± 630 µg (P = 0.042*); Remifentanil index: 0.084 ± 0.018 vs 0.114 ± 0.090 µg/min/kg (P = 0.045*); Propofol consumption: 1478 ± 404 vs 1529 ± 476 mg; Blood loss: 379 ± 202 vs 497 ± 283 ml (P = 0.030*); Extubation time: 36.95 ± 16.70 vs 40.20 ± 19.27 min; Operative duration: 215 ± 61 vs 232 ± 70 min.<br>4. Adverse events (Table 4): PONV on Day 1 (T1): pTEAS 8/44 (18%) vs Control 8/40 (20%); Rescue antiemetic on Day 1: 2/44 (4.5%) vs 4/40 (10%); Dizziness on Day 1: 0/44 (0%) vs 6/40 (15%) (P = 0.009*); Day 4 dizziness: 2/44 (4.5%) vs 8/40 (20%) (P = 0.042*); Day 5 dizziness: 2/44 (4.5%) vs 10/40 (25%) (P = 0.011*).<br>5. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated randomized list, opaque sealed envelopes, validated sham TEAS with 0 mA stimulation, blinding of patients, spine surgeons, anesthesiologists, and outcome assessors, 93.3% completion (84/90 analyzed), and prospective registration under ChiCTR1800014634.",
       "fake_boilerplate_expunged": "Reconciled missing extraction and refuted false RoB claims of open-label control and missing registration.",
       "evidence_sources": "Text p. 1-6 (Methods, computer sequence, envelopes, ChiCTR1800014634); Table 1 p. 3 (demographics); Table 2 p. 4 (anesthetic consumption, blood loss, durations); Table 3 p. 4 (VAS pain POD 1-5); Table 4 p. 5 (PONV, dizziness, rescue antiemetics); Table 5 p. 5 (hemodynamics)"
     },
@@ -3462,7 +3577,7 @@ window.STUDIES_DATA = [
       "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao), LR3 (Taichong), EX-B2 (Jiaji)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Postoperative only",
@@ -3475,14 +3590,14 @@ window.STUDIES_DATA = [
       "total_n": 84,
       "arm1_name": "TEAS Group",
       "arm1_n": 44,
-      "arm1_age": "57.58 \u00b1 7.81",
+      "arm1_age": "57.58 ± 7.81",
       "arm1_female": "34/44 (77.3%)",
-      "arm1_bmi": "24.25 \u00b1 3.27",
+      "arm1_bmi": "24.25 ± 3.27",
       "arm2_name": "Sham Group",
       "arm2_n": 40,
-      "arm2_age": "56.02 \u00b1 8.48",
+      "arm2_age": "56.02 ± 8.48",
       "arm2_female": "24/40 (60.0%)",
-      "arm2_bmi": "23.55 \u00b1 2.49",
+      "arm2_bmi": "23.55 ± 2.49",
       "asa_status": "not reported"
     },
     "rob2": {
@@ -3494,7 +3609,7 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "VAS pain intensity",
       "timepoint": "POD1",
-      "rationale": "1.77 \u00b1 0.91 vs 2.25 \u00b1 0.71; P=0.009"
+      "rationale": "1.77 ± 0.91 vs 2.25 ± 0.71; P=0.009"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -3507,7 +3622,7 @@ window.STUDIES_DATA = [
       "corresponding_author": "Dr. Yun Li",
       "email": "liyun@fudan.edu.cn",
       "institution": "Department of Anesthesiology, Huashan Hospital, Fudan University, 12 Wulumuqi Zhong Road, Shanghai 200040, China",
-      "draft_msg": "Dear Dr. Li, congratulations on your randomized sham-controlled trial published in BMC Anesthesiology (2022;22:342) evaluating perioperative TEAS for major spinal surgery. In Table 3 you report postoperative VAS pain scores at Day 1 through Day 5. Could you kindly clarify whether any postoperative opioids (such as IV PCA or rescue opioids) were administered during the first 24 hours, and provide their total consumption (mean \u00b1 SD in milligrams), as well as any separate movement or coughing pain scores for the pTEAS (n=44) and Control (n=40) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Li, congratulations on your randomized sham-controlled trial published in BMC Anesthesiology (2022;22:342) evaluating perioperative TEAS for major spinal surgery. In Table 3 you report postoperative VAS pain scores at Day 1 through Day 5. Could you kindly clarify whether any postoperative opioids (such as IV PCA or rescue opioids) were administered during the first 24 hours, and provide their total consumption (mean ± SD in milligrams), as well as any separate movement or coughing pain scores for the pTEAS (n=44) and Control (n=40) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -3531,7 +3646,7 @@ window.STUDIES_DATA = [
         "ci_low": -0.827,
         "ci_upp": -0.133,
         "unit": "VAS 0-10",
-        "readiness": "CONDITIONAL \u2014 POD1"
+        "readiness": "CONDITIONAL — POD1"
       },
       "pain_movement_24h": null,
       "ponv_24h": null,
@@ -3554,13 +3669,19 @@ window.STUDIES_DATA = [
         "ci_upp": -10.23,
         "p_val": "0.042",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Cumulative intraoperative remifentanil (Table 2: 1383 \u00b1 494 vs 1637 \u00b1 630 \u00b5g, P=0.042)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Cumulative intraoperative remifentanil (Table 2: 1383 ± 494 vs 1637 ± 630 µg, P=0.042)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Wu 2022",
@@ -3585,7 +3706,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -3603,16 +3724,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and Reviewer 811774 erroneously claimed lack of blinding, open-label design, and missing registration!<br>2. Replaced with TRUE published trial data: 100 completed and analyzed patients undergoing day-surgery VATS wedge resection for lung cancer (50 TEAS group, 50 Sham group; 100% completion rate); Primary outcome: Mean VAS pain score at 24 h (Table 2) is TEAS 1.7 \u00b1 0.9 vs Sham 4.0 \u00b1 1.4 (P < 0.001*); at 1 h: 0.9 \u00b1 1.2 vs 1.8 \u00b1 1.6 (P = 0.006*); at 12 h: 2.0 \u00b1 1.1 vs 5.4 \u00b1 1.6 (P < 0.001*); Incidence of VAS > 4 in first 12 h: TEAS 6/50 (12.0%) vs Sham 37/50 (74.0%) (P < 0.001*).<br>3. Quality of recovery (QoR-15 at 24 h): TEAS 130.8 \u00b1 9.0 vs Sham 115.9 \u00b1 12.2 (P < 0.001*); Sleep quality subscore: 5.9 \u00b1 2.1 vs 4.3 \u00b1 2.2 (P < 0.001*); Activity: 15.3 \u00b1 2.0 vs 13.6 \u00b1 2.6 (P < 0.001*); Psychological: 17.1 \u00b1 1.7 vs 14.2 \u00b1 2.1 (P < 0.001*).<br>4. Postoperative rescue analgesia: IV parecoxib sodium: TEAS 4.8 \u00b1 13.1 vs Sham 11.2 \u00b1 18.1 mg (P = 0.046*); Oral compound paracetamol: TEAS 0.3 \u00b1 0.5 vs Sham 0.8 \u00b1 0.9 tablets (P = 0.001*); Oral oxycodone/acetaminophen: TEAS 0.3 \u00b1 0.5 vs Sham 0.3 \u00b1 0.6 tablets.<br>5. Vomiting & antiemetics: Rescue metoclopramide (i.m.): TEAS 5/50 (10.0%) vs Sham 5/50 (10.0%); Vomiting episodes 1-12h: 15/50 (30.0%) vs 21/50 (42.0%); 12-24h: 2/50 (4.0%) vs 4/50 (8.0%); within 1h: 0/50 vs 1/50.<br>6. Adverse events: Dizziness: TEAS 8/50 (16.0%) vs Sham 10/50 (20.0%); No serious adverse events (0/50 vs 0/50).<br>7. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random sequence by independent third party, sequential allocation numbers, validated sham TEAS during PACU emergence, blinded patients/surgeons/evaluators, 100% completion (100/100 analyzed), and prospective registration under ChiCTR2200066600.",
-      "fake_boilerplate_expunged": "Fabricated pain and PONV entries (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, 5/30 vs 12/30) and erroneous RoB claims of open-label control and missing registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and Reviewer 811774 erroneously claimed lack of blinding, open-label design, and missing registration!<br>2. Replaced with TRUE published trial data: 100 completed and analyzed patients undergoing day-surgery VATS wedge resection for lung cancer (50 TEAS group, 50 Sham group; 100% completion rate); Primary outcome: Mean VAS pain score at 24 h (Table 2) is TEAS 1.7 ± 0.9 vs Sham 4.0 ± 1.4 (P < 0.001*); at 1 h: 0.9 ± 1.2 vs 1.8 ± 1.6 (P = 0.006*); at 12 h: 2.0 ± 1.1 vs 5.4 ± 1.6 (P < 0.001*); Incidence of VAS > 4 in first 12 h: TEAS 6/50 (12.0%) vs Sham 37/50 (74.0%) (P < 0.001*).<br>3. Quality of recovery (QoR-15 at 24 h): TEAS 130.8 ± 9.0 vs Sham 115.9 ± 12.2 (P < 0.001*); Sleep quality subscore: 5.9 ± 2.1 vs 4.3 ± 2.2 (P < 0.001*); Activity: 15.3 ± 2.0 vs 13.6 ± 2.6 (P < 0.001*); Psychological: 17.1 ± 1.7 vs 14.2 ± 2.1 (P < 0.001*).<br>4. Postoperative rescue analgesia: IV parecoxib sodium: TEAS 4.8 ± 13.1 vs Sham 11.2 ± 18.1 mg (P = 0.046*); Oral compound paracetamol: TEAS 0.3 ± 0.5 vs Sham 0.8 ± 0.9 tablets (P = 0.001*); Oral oxycodone/acetaminophen: TEAS 0.3 ± 0.5 vs Sham 0.3 ± 0.6 tablets.<br>5. Vomiting & antiemetics: Rescue metoclopramide (i.m.): TEAS 5/50 (10.0%) vs Sham 5/50 (10.0%); Vomiting episodes 1-12h: 15/50 (30.0%) vs 21/50 (42.0%); 12-24h: 2/50 (4.0%) vs 4/50 (8.0%); within 1h: 0/50 vs 1/50.<br>6. Adverse events: Dizziness: TEAS 8/50 (16.0%) vs Sham 10/50 (20.0%); No serious adverse events (0/50 vs 0/50).<br>7. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random sequence by independent third party, sequential allocation numbers, validated sham TEAS during PACU emergence, blinded patients/surgeons/evaluators, 100% completion (100/100 analyzed), and prospective registration under ChiCTR2200066600.",
+      "fake_boilerplate_expunged": "Fabricated pain and PONV entries (2.4 ± 0.8 vs 3.8 ± 1.1, 5/30 vs 12/30) and erroneous RoB claims of open-label control and missing registration.",
       "evidence_sources": "Text p. 3017-3022 (Methods, computer sequence, ChiCTR2200066600); Table 1 p. 3020 (demographics, anesthetics, operative details); Table 2 p. 3021 (VAS pain, rescue analgesics, antiemetics, vomiting, QoR-15, LOS)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Postoperative only",
@@ -3625,14 +3746,14 @@ window.STUDIES_DATA = [
       "total_n": 100,
       "arm1_name": "TEAS Group",
       "arm1_n": 50,
-      "arm1_age": "49.3 \u00b1 11.5",
+      "arm1_age": "49.3 ± 11.5",
       "arm1_female": "35/50 (70.0%)",
-      "arm1_bmi": "23.8 \u00b1 3.1",
+      "arm1_bmi": "23.8 ± 3.1",
       "arm2_name": "Sham Group",
       "arm2_n": 50,
-      "arm2_age": "50.1 \u00b1 11.4",
+      "arm2_age": "50.1 ± 11.4",
       "arm2_female": "35/50 (70.0%)",
-      "arm2_bmi": "22.9 \u00b1 3.2",
+      "arm2_bmi": "22.9 ± 3.2",
       "asa_status": "ASA I: 30 (60.0%), ASA II: 20 (40.0%)"
     },
     "rob2": {
@@ -3644,7 +3765,7 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "VAS pain intensity",
       "timepoint": "24 h",
-      "rationale": "1.7 \u00b1 0.9 vs 4.0 \u00b1 1.4; P<0.001"
+      "rationale": "1.7 ± 0.9 vs 4.0 ± 1.4; P<0.001"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -3681,7 +3802,7 @@ window.STUDIES_DATA = [
         "ci_low": -2.761,
         "ci_upp": -1.839,
         "unit": "VAS 0-10",
-        "readiness": "EXCLUDE \u2014 DATA UNAVAILABLE"
+        "readiness": "EXCLUDE — DATA UNAVAILABLE"
       },
       "pain_movement_24h": null,
       "ponv_24h": null,
@@ -3704,13 +3825,19 @@ window.STUDIES_DATA = [
         "ci_upp": 51.84,
         "p_val": "0.368",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Total intraoperative remifentanil (Table 2: 489.4 \u00b1 226.0 vs 533.8 \u00b1 263.6 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Total intraoperative remifentanil (Table 2: 489.4 ± 226.0 vs 533.8 ± 263.6 µg)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Wu 2025",
@@ -3735,7 +3862,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -3753,9 +3880,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, false N=30)!<br>2. Replaced with TRUE Table 2 published data: 25 completed and analyzed patients undergoing open posterolateral thoracotomy for NSCLC (13 EA, 12 Sham; 92.6% completion rate, 2 post-randomization medical exclusions fully documented in Fig. 3); Postoperative IV PCA morphine consumption (mg): Day 1 (24h) is EA 18.0 \u00b1 8.8 vs Sham 18.8 \u00b1 9.8 mg; Day 2 is EA 7.5 \u00b1 5.0 vs Sham 15.7 \u00b1 12.0 mg (P = 0.035*); Total PCA morphine (0-72h): EA 33.9 \u00b1 12.8 vs Sham 42.3 \u00b1 21.3 mg.<br>3. Resting VAS pain score (0-10): Day 0: 3.7 \u00b1 1.6 vs 3.0 \u00b1 2.3; Day 1 (24h): 3.9 \u00b1 1.3 vs 3.9 \u00b1 1.4; Day 2 (48h): 3.1 \u00b1 1.4 vs 3.8 \u00b1 1.6; Day 3 (72h): 2.9 \u00b1 1.1 vs 3.8 \u00b1 1.9; Day 4: 3.0 \u00b1 1.5 vs 4.4 \u00b1 1.9; Day 5: 2.5 \u00b1 1.8 vs 4.0 \u00b1 1.1 (P = 0.02*); Day 6: 3.2 \u00b1 1.9 vs 4.8 \u00b1 2.1; Day 7: 3.0 \u00b1 3.6 vs 3.0 \u00b1 1.4.<br>4. Functional recovery & drainage (Table 2): Chest tube drainage duration: EA 4.5 \u00b1 1.8 vs Sham 5.4 \u00b1 2.1 days (P = 0.27); Peak expiratory flow rate on Day 1: 186.3 \u00b1 70.0 vs 197.1 \u00b1 83.9 L/min; Day 2: 230.4 \u00b1 85.3 vs 211.3 \u00b1 88.1 L/min.<br>5. Adverse events: No procedure-related complications, infections, or bleeding in either group (0/13 vs 0/12).<br>6. RoB 2 verified: Domain 1 Low (computer random lists, sequentially numbered sealed opaque envelopes); Domain 2 Low (double-blind design using blunt-tip non-penetrating sham needles in opaque plastic guide tubes with 0 mA current, patients completely blinded: 100% credible, surgeons blinded); Domain 3 Low (25/27 analyzed, 92.6% completion); Domain 4 Low (dedicated blinded outcome assessor collected all endpoints); Domain 5 Some concerns (trial conducted 2002-2004 prior to mandatory public registration policies; no prospective registration ID). Overall: **Some concerns**.",
-      "fake_boilerplate_expunged": "Fabricated opioid and pain numbers (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0, 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid; 2.4 ± 0.8 vs 3.8 ± 1.1 for pain, false N=30)!<br>2. Replaced with TRUE Table 2 published data: 25 completed and analyzed patients undergoing open posterolateral thoracotomy for NSCLC (13 EA, 12 Sham; 92.6% completion rate, 2 post-randomization medical exclusions fully documented in Fig. 3); Postoperative IV PCA morphine consumption (mg): Day 1 (24h) is EA 18.0 ± 8.8 vs Sham 18.8 ± 9.8 mg; Day 2 is EA 7.5 ± 5.0 vs Sham 15.7 ± 12.0 mg (P = 0.035*); Total PCA morphine (0-72h): EA 33.9 ± 12.8 vs Sham 42.3 ± 21.3 mg.<br>3. Resting VAS pain score (0-10): Day 0: 3.7 ± 1.6 vs 3.0 ± 2.3; Day 1 (24h): 3.9 ± 1.3 vs 3.9 ± 1.4; Day 2 (48h): 3.1 ± 1.4 vs 3.8 ± 1.6; Day 3 (72h): 2.9 ± 1.1 vs 3.8 ± 1.9; Day 4: 3.0 ± 1.5 vs 4.4 ± 1.9; Day 5: 2.5 ± 1.8 vs 4.0 ± 1.1 (P = 0.02*); Day 6: 3.2 ± 1.9 vs 4.8 ± 2.1; Day 7: 3.0 ± 3.6 vs 3.0 ± 1.4.<br>4. Functional recovery & drainage (Table 2): Chest tube drainage duration: EA 4.5 ± 1.8 vs Sham 5.4 ± 2.1 days (P = 0.27); Peak expiratory flow rate on Day 1: 186.3 ± 70.0 vs 197.1 ± 83.9 L/min; Day 2: 230.4 ± 85.3 vs 211.3 ± 88.1 L/min.<br>5. Adverse events: No procedure-related complications, infections, or bleeding in either group (0/13 vs 0/12).<br>6. RoB 2 verified: Domain 1 Low (computer random lists, sequentially numbered sealed opaque envelopes); Domain 2 Low (double-blind design using blunt-tip non-penetrating sham needles in opaque plastic guide tubes with 0 mA current, patients completely blinded: 100% credible, surgeons blinded); Domain 3 Low (25/27 analyzed, 92.6% completion); Domain 4 Low (dedicated blinded outcome assessor collected all endpoints); Domain 5 Some concerns (trial conducted 2002-2004 prior to mandatory public registration policies; no prospective registration ID). Overall: **Some concerns**.",
+      "fake_boilerplate_expunged": "Fabricated opioid and pain numbers (20.4 ± 4.8 vs 33.1 ± 7.0, 2.4 ± 0.8 vs 3.8 ± 1.1).",
       "evidence_sources": "Text p. 2031-2034 (Methods, computer lists, sealed envelopes); Fig 1 & 2 p. 2032 (acupoint diagrams); Fig 3 p. 2033 (CONSORT flow); Table 1 p. 2033 (acupoint prescriptions); Table 2 p. 2034 (demographics, peak flow, VAS pain, PCA morphine, chest drain duration)"
     },
     "stricta": {
@@ -3769,18 +3896,18 @@ window.STUDIES_DATA = [
       "sessions_category": "Single session",
       "duration_raw": "60 minutes (2 x 30 min sessions) [total trial: up to 420 minutes across 14 sessions]",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 25,
       "arm1_name": "EA Group",
       "arm1_n": 13,
-      "arm1_age": "64.6 \u00b1 8.0",
+      "arm1_age": "64.6 ± 8.0",
       "arm1_female": "4/13 (30.8%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 12,
-      "arm2_age": "64.5 \u00b1 8.5",
+      "arm2_age": "64.5 ± 8.5",
       "arm2_female": "2/12 (16.7%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -3794,7 +3921,7 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Total IV PCA morphine",
       "timepoint": "First 3 postoperative days",
-      "rationale": "33.9 \u00b1 12.8 vs 42.3 \u00b1 21.3 mg; P=0.25"
+      "rationale": "33.9 ± 12.8 vs 42.3 ± 21.3 mg; P=0.25"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -3802,12 +3929,12 @@ window.STUDIES_DATA = [
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour total PCA morphine consump...",
       "target_data": "Cumulative 24-hour total PCA morphine consumption (combining Day 0 and Day 1) and movement/coughing VAS pain scores.",
-      "rationale": "Table 2 reports PCA morphine consumption separately for Day 0 (8.3 \u00b1 4.9 vs 7.8 \u00b1 6.4 mg) and Day 1 (18.0 \u00b1 8.8 vs 18.8 \u00b1 9.8 mg) rather than an integrated cumulative 0-24 hour total, and VAS pain is reported only at rest.",
+      "rationale": "Table 2 reports PCA morphine consumption separately for Day 0 (8.3 ± 4.9 vs 7.8 ± 6.4 mg) and Day 1 (18.0 ± 8.8 vs 18.8 ± 9.8 mg) rather than an integrated cumulative 0-24 hour total, and VAS pain is reported only at rest.",
       "impact": "Supplies author-verified cumulative 24-hour opioid consumption and dynamic pain scores for 25-patient postthoracotomy trial.",
       "corresponding_author": "Dr. Anthony P. C. Yim",
       "email": "yimap@cuhk.edu.hk",
       "institution": "Division of Cardiothoracic Surgery, Department of Surgery, The Chinese University of Hong Kong, Prince of Wales Hospital, Shatin, Hong Kong, SAR, China",
-      "draft_msg": "Dear Dr. Yim, congratulations on your randomized double-blind sham-controlled clinical trial published in The Annals of Thoracic Surgery (2006;81:2031-2036) evaluating electroacupuncture for postthoracotomy pain. In Table 2 you report IV PCA morphine consumption separately for Day 0 and Day 1, as well as daily resting VAS pain scores. Could you kindly provide the combined cumulative 0-24 hour total PCA morphine consumption (mean \u00b1 SD in milligrams) and any available movement or coughing pain scores for the Electroacupuncture (n=13) and Sham acupuncture (n=12) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Yim, congratulations on your randomized double-blind sham-controlled clinical trial published in The Annals of Thoracic Surgery (2006;81:2031-2036) evaluating electroacupuncture for postthoracotomy pain. In Table 2 you report IV PCA morphine consumption separately for Day 0 and Day 1, as well as daily resting VAS pain scores. Could you kindly provide the combined cumulative 0-24 hour total PCA morphine consumption (mean ± SD in milligrams) and any available movement or coughing pain scores for the Electroacupuncture (n=13) and Sham acupuncture (n=12) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -3835,12 +3962,38 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Cumulative 0–48h Opioid Consumption",
+        "timepoint": "48h",
+        "arm1_n": 13,
+        "arm1_mean": 33.9,
+        "arm1_sd": 12.8,
+        "arm2_n": 12,
+        "arm2_mean": 42.3,
+        "arm2_sd": 21.3,
+        "mean_diff": -8.4,
+        "se": 7.099,
+        "ci_low": -22.31,
+        "ci_upp": 5.51,
+        "unit": "mg IV MME",
+        "native_drug": "IV morphine",
+        "native_unit": "mg",
+        "arm1_mean_native": 33.9,
+        "arm1_sd_native": 12.8,
+        "arm2_mean_native": 42.3,
+        "arm2_sd_native": 21.3,
+        "md_native": -8.4,
+        "se_native": 7.099,
+        "note": "Total PCA morphine through POD2 (Day 0–2): 33.9 ± 12.8 vs 42.3 ± 21.3 mg morphine (MD -8.4 mg MME).",
+        "favors": "Intervention"
       }
     },
     "canonical_name": "Wong 2006",
     "reconciliation_batch": "Batch 3",
     "sol_status": "SPECIAL / SOURCE-QC",
-    "sol_note": "POD labels are not exact 0\u201324-h intervals; two sham-only post-randomization exclusions; scheduled non-morphine opioid exposure.",
+    "sol_note": "POD labels are not exact 0–24-h intervals; two sham-only post-randomization exclusions; scheduled non-morphine opioid exposure.",
     "known_fabricated_signature": "Yes",
     "source_folder": "https://drive.google.com/drive/folders/1EWdZyTQjPSuoxt8n1nIr1t8D98PC-mso",
     "reconciliation_index": "https://docs.google.com/document/d/1hR0UuZSmPpwZi384Vzn3sZt5Y5_ZwYxW6b3u4nq2-40/edit"
@@ -3859,7 +4012,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -3877,16 +4030,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and Reviewer 811774 erroneously claimed lack of blinding, usual care control, and lack of trial registration!<br>2. Replaced with TRUE published trial data: 83 completed and analyzed patients undergoing laparoscopic GI tumor surgery (40 TEAS group, 43 Sham group; 100% completion rate); Pain intensity during activity at 24 h (Fig 4b) is TEAS 5.06 \u00b1 0.91 vs Sham 6.04 \u00b1 1.05 (P < 0.05*); at 48 h: 3.40 \u00b1 0.80 vs 4.35 \u00b1 0.85 (P < 0.05*); at 72 h: 2.00 \u00b1 0.70 vs 2.65 \u00b1 0.75 (P < 0.05*); Pain intensity at rest at 24 h (Fig 4a) is TEAS 2.51 \u00b1 0.78 vs Sham 2.76 \u00b1 0.79.<br>3. Cumulative number of rescue analgesia doses within 72 h (Table 2): TEAS 0.53 \u00b1 0.55 vs Sham 0.98 \u00b1 0.96 (P = 0.011*).<br>4. Adverse events (Table 2): PONV: TEAS 6/40 (15.0%) vs Sham 19/43 (44.2%) (P = 0.004*); Abdominal distension: TEAS 11/40 (27.5%) vs Sham 24/43 (55.8%) (P = 0.009*); Dizziness: TEAS 10/40 (25.0%) vs Sham 16/43 (37.2%) (P = 0.231); POPC: TEAS 7/40 (17.5%) vs Sham 13/43 (30.2%) (P = 0.175).<br>5. Recovery metrics (Table 1): Time to first flatus: TEAS 54.57 \u00b1 16.62 vs Sham 60.70 \u00b1 19.10 h (P = 0.124); Hospital length of stay: TEAS 8.60 \u00b1 3.86 vs Sham 8.65 \u00b1 3.47 days.<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random number table, sequentially numbered opaque envelopes, validated sham TEAS with 0 mA stimulation, blinding of patients, attending surgeons, OR nurses, data collectors, and statisticians, 100% completion (83/83 analyzed), and prospective public registration under ChiCTR2100054971.",
-      "fake_boilerplate_expunged": "Fabricated pain and PONV data (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, 5/30 vs 12/30) and erroneous RoB claims of open-label control and missing registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and Reviewer 811774 erroneously claimed lack of blinding, usual care control, and lack of trial registration!<br>2. Replaced with TRUE published trial data: 83 completed and analyzed patients undergoing laparoscopic GI tumor surgery (40 TEAS group, 43 Sham group; 100% completion rate); Pain intensity during activity at 24 h (Fig 4b) is TEAS 5.06 ± 0.91 vs Sham 6.04 ± 1.05 (P < 0.05*); at 48 h: 3.40 ± 0.80 vs 4.35 ± 0.85 (P < 0.05*); at 72 h: 2.00 ± 0.70 vs 2.65 ± 0.75 (P < 0.05*); Pain intensity at rest at 24 h (Fig 4a) is TEAS 2.51 ± 0.78 vs Sham 2.76 ± 0.79.<br>3. Cumulative number of rescue analgesia doses within 72 h (Table 2): TEAS 0.53 ± 0.55 vs Sham 0.98 ± 0.96 (P = 0.011*).<br>4. Adverse events (Table 2): PONV: TEAS 6/40 (15.0%) vs Sham 19/43 (44.2%) (P = 0.004*); Abdominal distension: TEAS 11/40 (27.5%) vs Sham 24/43 (55.8%) (P = 0.009*); Dizziness: TEAS 10/40 (25.0%) vs Sham 16/43 (37.2%) (P = 0.231); POPC: TEAS 7/40 (17.5%) vs Sham 13/43 (30.2%) (P = 0.175).<br>5. Recovery metrics (Table 1): Time to first flatus: TEAS 54.57 ± 16.62 vs Sham 60.70 ± 19.10 h (P = 0.124); Hospital length of stay: TEAS 8.60 ± 3.86 vs Sham 8.65 ± 3.47 days.<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random number table, sequentially numbered opaque envelopes, validated sham TEAS with 0 mA stimulation, blinding of patients, attending surgeons, OR nurses, data collectors, and statisticians, 100% completion (83/83 analyzed), and prospective public registration under ChiCTR2100054971.",
+      "fake_boilerplate_expunged": "Fabricated pain and PONV data (2.4 ± 0.8 vs 3.8 ± 1.1, 5/30 vs 12/30) and erroneous RoB claims of open-label control and missing registration.",
       "evidence_sources": "Text p. 707-713 (Methods, computer sequence, opaque envelopes, ChiCTR2100054971); Table 1 p. 711 (demographics, flatus, hospital stay); Table 2 p. 712 (rescue analgesia, PONV, abdominal distension); Fig 3 p. 714 (sleep scores); Fig 4 p. 714 (rest & activity VAS pain); Table 3 p. 713 (cytokines); Table 4 p. 715 (oxidative stress markers)"
     },
     "stricta": {
       "acupoints": "HT7 (Shenmen), PC6 (Neiguan), ST36 (Zusanli)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -3899,14 +4052,14 @@ window.STUDIES_DATA = [
       "total_n": 83,
       "arm1_name": "TEAS Group",
       "arm1_n": 40,
-      "arm1_age": "58.20 \u00b1 7.90",
+      "arm1_age": "58.20 ± 7.90",
       "arm1_female": "not reported",
-      "arm1_bmi": "23.87 \u00b1 2.85",
+      "arm1_bmi": "23.87 ± 2.85",
       "arm2_name": "Sham Group",
       "arm2_n": 43,
-      "arm2_age": "60.44 \u00b1 9.64",
+      "arm2_age": "60.44 ± 9.64",
       "arm2_female": "not reported",
-      "arm2_bmi": "23.73 \u00b1 2.37",
+      "arm2_bmi": "23.73 ± 2.37",
       "asa_status": "ASA I: 0 (0%), ASA II: 34 (85.0%), ASA III: 6 (15.0%)"
     },
     "rob2": {
@@ -3924,14 +4077,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Numerical mean \u00b1 SD for 24-hour resting and a...",
-      "target_data": "Numerical mean \u00b1 SD for 24-hour resting and activity VAS pain scores and identification of the specific rescue analgesic medication and dose.",
-      "rationale": "Figure 4 presents resting and activity VAS pain scores as line plots across timepoints, and Table 2 reports cumulative number of rescue analgesia doses (0.53 \u00b1 0.55 vs 0.98 \u00b1 0.96), but exact numerical pain means \u00b1 SD and the specific rescue drug agent/dose are omitted.",
+      "urgency": "IMPORTANT: Numerical mean ± SD for 24-hour resting and a...",
+      "target_data": "Numerical mean ± SD for 24-hour resting and activity VAS pain scores and identification of the specific rescue analgesic medication and dose.",
+      "rationale": "Figure 4 presents resting and activity VAS pain scores as line plots across timepoints, and Table 2 reports cumulative number of rescue analgesia doses (0.53 ± 0.55 vs 0.98 ± 0.96), but exact numerical pain means ± SD and the specific rescue drug agent/dose are omitted.",
       "impact": "Supplies author-verified continuous pain metrics and exact rescue analgesic agent for MME conversion in 83-patient GI surgery trial.",
       "corresponding_author": "Dr. Zhi-Wei Jiang",
       "email": "surgeryjiang@163.com",
       "institution": "Department of General Surgery, Affiliated Hospital of Nanjing University of Chinese Medicine, Nanjing, Jiangsu 210029, China",
-      "draft_msg": "Dear Dr. Jiang, congratulations on your randomized sham-controlled trial published in Pain and Therapy (2023;12:707-722) evaluating TEAS for postoperative sleep quality and recovery in laparoscopic GI tumor surgery. In Figure 4 you present resting and activity VAS pain scores, and in Table 2 you report cumulative rescue analgesia doses. Could you kindly provide the exact numerical mean \u00b1 SD for the 24-hour resting and activity VAS pain scores, and specify which medication and dose was administered as rescue analgesia for the TEAS (n=40) and Sham (n=43) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Jiang, congratulations on your randomized sham-controlled trial published in Pain and Therapy (2023;12:707-722) evaluating TEAS for postoperative sleep quality and recovery in laparoscopic GI tumor surgery. In Figure 4 you present resting and activity VAS pain scores, and in Table 2 you report cumulative rescue analgesia doses. Could you kindly provide the exact numerical mean ± SD for the 24-hour resting and activity VAS pain scores, and specify which medication and dose was administered as rescue analgesia for the TEAS (n=40) and Sham (n=43) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -3973,6 +4126,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Wang 2023",
@@ -3997,7 +4156,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -4015,8 +4174,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (5/30 vs 12/30 for nausea) and Reviewer 811774 erroneously claimed lack of blinding and lack of registration!<br>2. Replaced with TRUE published trial data: 138 analyzed women undergoing breast cancer surgery across 4 subgroups (33 SNVP-ODT, 35 SNVP-OD, 35 MNVP-ODT, 35 MNVP-OD; 98.6% completion rate); Composite PONV incidence (0\u201324h) is TEAS (ODT pooled) 19/68 (27.9%) vs Sham TEAS (OD pooled) 30/70 (42.9%) (P = 0.065); in high-risk SNVP cohort: SNVP-ODT 14/33 (42.4%) vs SNVP-OD 20/35 (57.1%) [6-12h: 7/33 vs 16/35, P = 0.033*; 12-24h: 2/33 vs 11/35, P = 0.008*]; in MNVP cohort: MNVP-ODT 5/35 (14.3%) vs MNVP-OD 10/35 (28.6%) [0-2h: 2/35 vs 9/35, P = 0.022*; 2-6h: 2/35 vs 8/35, P = 0.04*].<br>3. Vomiting cases within 6h in SNVP cohort: SNVP-ODT 7/33 (21.2%) vs SNVP-OD 19/35 (54.3%) (P = 0.005*).<br>4. Severe PONV requiring IV ondansetron 4 mg: SNVP cohort 25/68 vs MNVP cohort 3/70.<br>5. Postoperative analgesia: Standard background multimodal regimen (IV flurbiprofen axetil 100 mg at surgery end; rescue flurbiprofen axetil 100 mg for VAS >= 3; zero postoperative opioid consumption); Intraoperative sufentanil was well balanced (Table 1: 21.2 \u00b1 3.1 vs 21.9 \u00b1 3.2 \u00b5g in SNVP, 21.0 \u00b1 3.4 vs 20.9 \u00b1 3.1 \u00b5g in MNVP).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random sequence, sequentially numbered opaque envelopes prepared by independent physician, validated sham TEAS with severed internal output wires, double-blinded anesthesiologists/surgeons/evaluators, 98.6% completion (138/140 analyzed), and prospective registration under ChiCTR2100053752.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (5/30 vs 12/30 for nausea) and Reviewer 811774 erroneously claimed lack of blinding and lack of registration!<br>2. Replaced with TRUE published trial data: 138 analyzed women undergoing breast cancer surgery across 4 subgroups (33 SNVP-ODT, 35 SNVP-OD, 35 MNVP-ODT, 35 MNVP-OD; 98.6% completion rate); Composite PONV incidence (0–24h) is TEAS (ODT pooled) 19/68 (27.9%) vs Sham TEAS (OD pooled) 30/70 (42.9%) (P = 0.065); in high-risk SNVP cohort: SNVP-ODT 14/33 (42.4%) vs SNVP-OD 20/35 (57.1%) [6-12h: 7/33 vs 16/35, P = 0.033*; 12-24h: 2/33 vs 11/35, P = 0.008*]; in MNVP cohort: MNVP-ODT 5/35 (14.3%) vs MNVP-OD 10/35 (28.6%) [0-2h: 2/35 vs 9/35, P = 0.022*; 2-6h: 2/35 vs 8/35, P = 0.04*].<br>3. Vomiting cases within 6h in SNVP cohort: SNVP-ODT 7/33 (21.2%) vs SNVP-OD 19/35 (54.3%) (P = 0.005*).<br>4. Severe PONV requiring IV ondansetron 4 mg: SNVP cohort 25/68 vs MNVP cohort 3/70.<br>5. Postoperative analgesia: Standard background multimodal regimen (IV flurbiprofen axetil 100 mg at surgery end; rescue flurbiprofen axetil 100 mg for VAS >= 3; zero postoperative opioid consumption); Intraoperative sufentanil was well balanced (Table 1: 21.2 ± 3.1 vs 21.9 ± 3.2 µg in SNVP, 21.0 ± 3.4 vs 20.9 ± 3.1 µg in MNVP).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random sequence, sequentially numbered opaque envelopes prepared by independent physician, validated sham TEAS with severed internal output wires, double-blinded anesthesiologists/surgeons/evaluators, 98.6% completion (138/140 analyzed), and prospective registration under ChiCTR2100053752.",
       "fake_boilerplate_expunged": "Fabricated nausea counts (5/30 vs 12/30) and erroneous RoB concerns claiming lack of blinding/registration.",
       "evidence_sources": "Text p. 926-930 (Methods, computer sequence, 140 envelopes, ChiCTR2100053752); Table 1 p. 929 (demographics, sufentanil); Table 2 p. 930 (PONV in SNVP vs MNVP); Table 3 p. 931 (PONV across 4 subgroups); Fig 2 & 3 p. 931-932 (GDF-15 serum levels)"
     },
@@ -4024,7 +4183,7 @@ window.STUDIES_DATA = [
       "acupoints": "PC6 (Neiguan), LI4 (Hegu)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -4037,14 +4196,14 @@ window.STUDIES_DATA = [
       "total_n": 138,
       "arm1_name": "TEAS Group",
       "arm1_n": 68,
-      "arm1_age": "48.2 \u00b1 8.4",
+      "arm1_age": "48.2 ± 8.4",
       "arm1_female": "68/68 (100%)",
-      "arm1_bmi": "24.1 \u00b1 3.2",
+      "arm1_bmi": "24.1 ± 3.2",
       "arm2_name": "Sham Group",
       "arm2_n": 70,
-      "arm2_age": "49.6 \u00b1 9.7",
+      "arm2_age": "49.6 ± 9.7",
       "arm2_female": "70/70 (100%)",
-      "arm2_bmi": "24.5 \u00b1 3.8",
+      "arm2_bmi": "24.5 ± 3.8",
       "asa_status": "not reported"
     },
     "rob2": {
@@ -4062,14 +4221,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Numerical mean \u00b1 SD for 24-hour resting and m...",
-      "target_data": "Numerical mean \u00b1 SD for 24-hour resting and movement VAS pain scores and confirmation of zero postoperative opioid administration.",
-      "rationale": "Postoperative pain was assessed via VAS (0-10) with rescue IV flurbiprofen axetil 100 mg for VAS >= 3, but exact numerical mean \u00b1 SD pain scores and confirmation of zero opioid administration are omitted from publication tables.",
+      "urgency": "IMPORTANT: Numerical mean ± SD for 24-hour resting and m...",
+      "target_data": "Numerical mean ± SD for 24-hour resting and movement VAS pain scores and confirmation of zero postoperative opioid administration.",
+      "rationale": "Postoperative pain was assessed via VAS (0-10) with rescue IV flurbiprofen axetil 100 mg for VAS >= 3, but exact numerical mean ± SD pain scores and confirmation of zero opioid administration are omitted from publication tables.",
       "impact": "Supplies author-confirmed continuous pain metrics and opioid verification for 138-patient breast cancer trial.",
       "corresponding_author": "Dr. Hui Zheng",
       "email": "zhenghui0715@hotmail.com",
       "institution": "Department of Anesthesiology, National Cancer Center/National Clinical Research Center for Cancer/Cancer Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing 100021, China",
-      "draft_msg": "Dear Dr. Zheng, congratulations on your randomized sham-controlled clinical trial published in Breast Cancer (2024;31:926-934) evaluating TEAS combined with antiemetics in breast cancer surgery. In the Methods section you describe assessing postoperative pain with VAS (0-10) and administering rescue flurbiprofen axetil for VAS >= 3. Could you kindly provide the numerical mean \u00b1 SD for the 24-hour resting and movement VAS pain scores, as well as confirm whether any rescue opioids were administered postoperatively for the TEAS (ODT, n=68) and Control (OD, n=70) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Zheng, congratulations on your randomized sham-controlled clinical trial published in Breast Cancer (2024;31:926-934) evaluating TEAS combined with antiemetics in breast cancer surgery. In the Methods section you describe assessing postoperative pain with VAS (0-10) and administering rescue flurbiprofen axetil for VAS >= 3. Could you kindly provide the numerical mean ± SD for the 24-hour resting and movement VAS pain scores, as well as confirm whether any rescue opioids were administered postoperatively for the TEAS (ODT, n=68) and Control (OD, n=70) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -4117,6 +4276,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Wang 2024",
@@ -4141,7 +4306,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -4159,8 +4324,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **AUDIT CORRECTIONS**: Reviewers had left outcome cells unpopulated or with partial entries, and Reviewer 811774 erroneously claimed lack of registration and lack of blinding.<br>2. Replaced with TRUE published trial data: 115 completed and analyzed patients undergoing craniotomy (57 TEAS group, 58 Sham TEAS group; 95.8% completion rate, 5 clinical exclusions fully documented in Fig. 1); Postoperative pain intensity at 6\u201324 h (Table 5) is TEAS median 2 (IQR 0.5 to 3) [Wan mean 1.83 \u00b1 1.85] vs Sham TEAS median 4 (IQR 3 to 4) [Wan mean 3.67 \u00b1 0.74] (P = 0.001*); at 0\u20132 h: median 2 (1\u20133) vs 3 (2\u20134) (P = 0.091); at 2\u20136 h: median 2 (1\u20133) vs 3 (2\u20133.25) (P = 0.057).<br>3. Postoperative vomiting incidence (Table 3): at 0\u20132 h: 4/57 (7.0%) vs 10/58 (17.2%) (P = 0.095); at 2\u20136 h: 8/57 (14.0%) vs 17/58 (29.3%) (P = 0.047*); at 6\u201324 h: 11/57 (19.3%) vs 15/58 (25.9%) (P = 0.405).<br>4. Rescue medication usage (Table 4): Rescue tramadol (10 mg IM for VAS > 6) within 6\u201324 h: TEAS 3/57 (5.3%) vs Sham TEAS 6/58 (10.3%) (P = 0.315; mean tramadol dose 0.53 \u00b1 2.25 vs 1.03 \u00b1 3.07 mg, equivalent to 0.053 \u00b1 0.225 vs 0.103 \u00b1 0.307 mg IV MME); Rescue metoclopramide: 1/57 (1.8%) vs 1/58 (1.7%) (P = 0.990).<br>5. Adverse events: No treatment-related adverse events observed across 24 h (0/57 vs 0/58).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random sequence (1:1), sequentially numbered opaque sealed envelopes (SNOSE) managed by independent clinical assistant, validated sham TEAS with severed internal wires, blinded outcome assessor nurses and statisticians, 95.8% follow-up completion, and prospective registration under ChiCTR-TRC-13003026.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **AUDIT CORRECTIONS**: Reviewers had left outcome cells unpopulated or with partial entries, and Reviewer 811774 erroneously claimed lack of registration and lack of blinding.<br>2. Replaced with TRUE published trial data: 115 completed and analyzed patients undergoing craniotomy (57 TEAS group, 58 Sham TEAS group; 95.8% completion rate, 5 clinical exclusions fully documented in Fig. 1); Postoperative pain intensity at 6–24 h (Table 5) is TEAS median 2 (IQR 0.5 to 3) [Wan mean 1.83 ± 1.85] vs Sham TEAS median 4 (IQR 3 to 4) [Wan mean 3.67 ± 0.74] (P = 0.001*); at 0–2 h: median 2 (1–3) vs 3 (2–4) (P = 0.091); at 2–6 h: median 2 (1–3) vs 3 (2–3.25) (P = 0.057).<br>3. Postoperative vomiting incidence (Table 3): at 0–2 h: 4/57 (7.0%) vs 10/58 (17.2%) (P = 0.095); at 2–6 h: 8/57 (14.0%) vs 17/58 (29.3%) (P = 0.047*); at 6–24 h: 11/57 (19.3%) vs 15/58 (25.9%) (P = 0.405).<br>4. Rescue medication usage (Table 4): Rescue tramadol (10 mg IM for VAS > 6) within 6–24 h: TEAS 3/57 (5.3%) vs Sham TEAS 6/58 (10.3%) (P = 0.315; mean tramadol dose 0.53 ± 2.25 vs 1.03 ± 3.07 mg, equivalent to 0.053 ± 0.225 vs 0.103 ± 0.307 mg IV MME); Rescue metoclopramide: 1/57 (1.8%) vs 1/58 (1.7%) (P = 0.990).<br>5. Adverse events: No treatment-related adverse events observed across 24 h (0/57 vs 0/58).<br>6. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated random sequence (1:1), sequentially numbered opaque sealed envelopes (SNOSE) managed by independent clinical assistant, validated sham TEAS with severed internal wires, blinded outcome assessor nurses and statisticians, 95.8% follow-up completion, and prospective registration under ChiCTR-TRC-13003026.",
       "fake_boilerplate_expunged": "Reviewer omissions in outcome cells and erroneous RoB concerns claiming lack of blinding/registration.",
       "evidence_sources": "Text p. 1-4 (Methods, computer randomization, SNOSE, ChiCTR-TRC-13003026); Fig 1 p. 3 (CONSORT flow); Table 1 p. 3 (interventions); Table 2 p. 4 (demographics, sufentanil); Table 3 p. 4 (vomiting, nausea); Table 4 p. 5 (tramadol, metoclopramide); Table 5 p. 5 (VAS pain)"
     },
@@ -4168,7 +4333,7 @@ window.STUDIES_DATA = [
       "acupoints": "PC6 (Neiguan)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Postoperative only",
@@ -4181,12 +4346,12 @@ window.STUDIES_DATA = [
       "total_n": 115,
       "arm1_name": "TEAS Group",
       "arm1_n": 57,
-      "arm1_age": "44.77 \u00b1 15.74",
+      "arm1_age": "44.77 ± 15.74",
       "arm1_female": "31/57 (54.4%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 58,
-      "arm2_age": "49.24 \u00b1 14.02",
+      "arm2_age": "49.24 ± 14.02",
       "arm2_female": "31/58 (53.4%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -4207,13 +4372,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative unique patient count for postopera...",
-      "target_data": "Cumulative unique patient count for postoperative vomiting across 0-24 hours and parametric mean \u00b1 SD for 24-hour VAS pain scores.",
+      "target_data": "Cumulative unique patient count for postoperative vomiting across 0-24 hours and parametric mean ± SD for 24-hour VAS pain scores.",
       "rationale": "Table 3 reports vomiting incidence separately across 0-2 h (4/57 vs 10/58), 2-6 h (8/57 vs 17/58), and 6-24 h (11/57 vs 15/58) rather than an overall 0-24 h cumulative unique patient count, and Table 5 presents 6-24 h VAS pain scores as median and IQR (2 [0.5-3] vs 4 [3-4]).",
       "impact": "Supplies author-confirmed cumulative 24-hour vomiting incidence and parametric continuous pain metrics for meta-analysis.",
       "corresponding_author": "Dr. Jian-qin Lv",
       "email": "lvjianqin@wchscu.cn",
       "institution": "Department of Integrated Traditional and Western Medicine, West China Hospital, Sichuan University, Chengdu, Sichuan 610041, China",
-      "draft_msg": "Dear Dr. Lv, congratulations on your randomized sham-controlled trial published in Complementary Therapies in Clinical Practice (2024;54:101824) evaluating TEAS at P6 for PONV and pain after craniotomy. In Table 3 you report vomiting incidence across 0-2 h, 2-6 h, and 6-24 h intervals, and in Table 5 you report 6-24 h VAS pain scores as median (IQR). Could you kindly provide the cumulative unique number of patients who experienced vomiting across the entire 0-24 hour postoperative period and the parametric mean \u00b1 SD for the 6-24 hour VAS pain score for the TEAS (n=57) and Sham TEAS (n=58) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Lv, congratulations on your randomized sham-controlled trial published in Complementary Therapies in Clinical Practice (2024;54:101824) evaluating TEAS at P6 for PONV and pain after craniotomy. In Table 3 you report vomiting incidence across 0-2 h, 2-6 h, and 6-24 h intervals, and in Table 5 you report 6-24 h VAS pain scores as median (IQR). Could you kindly provide the cumulative unique number of patients who experienced vomiting across the entire 0-24 hour postoperative period and the parametric mean ± SD for the 6-24 hour VAS pain score for the TEAS (n=57) and Sham TEAS (n=58) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -4238,7 +4403,7 @@ window.STUDIES_DATA = [
         "ci_low": 0.13,
         "ci_upp": 1.94,
         "p_val": "0.315",
-        "definition": "Rescue Tramadol 10mg IM (6\u201324h)",
+        "definition": "Rescue Tramadol 10mg IM (6–24h)",
         "note": "Rescue tramadol required in 3/57 (5.3%) TEAS vs 6/58 (10.3%) sham craniotomy patients (P=0.315)"
       },
       "intraop_opioid": {
@@ -4249,6 +4414,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Tu 2024",
@@ -4273,7 +4444,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -4291,9 +4462,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for resting pain, false N=30) into two TEAS arms!<br>2. Replaced with TRUE Table 1, Table 2 & Figures 2 & 3 published data: 361 completed and analyzed patients across 4 groups (90 Group SSS [Sham], 91 Group TSS, 91 Group TTS, 89 Group TST [Pre+Post TEAS]); 24h movement (coughing) VAS pain score is Group TST median 3.0 (IQR 3.0 to 4.0) [Wan mean 3.33 \u00b1 0.74] vs Group SSS median 4.0 (IQR 3.8 to 5.0) [Wan mean 4.27 \u00b1 0.89] (P < 0.001); 24h resting VAS pain score is Group TST median 1.0 (1.0 to 2.0) [Wan mean 1.33 \u00b1 0.74] vs Group SSS median 2.0 (1.0 to 3.0) [Wan mean 2.00 \u00b1 1.48].<br>3. Supplemental rescue analgesic required within 48h (IV flurbiprofenaxetil 50 mg): Group TST 7/89 (7.9%) vs Group SSS 21/90 (23.3%) (P = 0.020*).<br>4. Adverse effects & recovery (Table 2): Postoperative nausea: Group TST 31/89 (34.8%) vs Group SSS 23/90 (25.6%); Postoperative vomiting: Group TST 26/89 (29.2%) vs Group SSS 20/90 (22.2%); Rescue antiemetics: 26/89 vs 21/90; Time to first flatus: 41.6 \u00b1 18.1 vs 41.5 \u00b1 19.6 h; Time to first defecation: 57.3 \u00b1 20.6 vs 63.4 \u00b1 22.9 h (P = 0.127); Patient satisfaction: 89/89 (100%) vs 80/90 (88.9%) (P < 0.001); Treatment-related adverse events: 0/89 vs 0/90.<br>5. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: SPSS random number table (1:1:1:1), sealed opaque envelopes, validated sham TEAS procedure, double-blinded anesthesiologists/patients/evaluators, 95.0% completion (361/380 analyzed), and prospective registration under ChiCTR-IOR-15006032.",
-      "fake_boilerplate_expunged": "Fabricated data: 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for resting pain.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for resting pain, false N=30) into two TEAS arms!<br>2. Replaced with TRUE Table 1, Table 2 & Figures 2 & 3 published data: 361 completed and analyzed patients across 4 groups (90 Group SSS [Sham], 91 Group TSS, 91 Group TTS, 89 Group TST [Pre+Post TEAS]); 24h movement (coughing) VAS pain score is Group TST median 3.0 (IQR 3.0 to 4.0) [Wan mean 3.33 ± 0.74] vs Group SSS median 4.0 (IQR 3.8 to 5.0) [Wan mean 4.27 ± 0.89] (P < 0.001); 24h resting VAS pain score is Group TST median 1.0 (1.0 to 2.0) [Wan mean 1.33 ± 0.74] vs Group SSS median 2.0 (1.0 to 3.0) [Wan mean 2.00 ± 1.48].<br>3. Supplemental rescue analgesic required within 48h (IV flurbiprofenaxetil 50 mg): Group TST 7/89 (7.9%) vs Group SSS 21/90 (23.3%) (P = 0.020*).<br>4. Adverse effects & recovery (Table 2): Postoperative nausea: Group TST 31/89 (34.8%) vs Group SSS 23/90 (25.6%); Postoperative vomiting: Group TST 26/89 (29.2%) vs Group SSS 20/90 (22.2%); Rescue antiemetics: 26/89 vs 21/90; Time to first flatus: 41.6 ± 18.1 vs 41.5 ± 19.6 h; Time to first defecation: 57.3 ± 20.6 vs 63.4 ± 22.9 h (P = 0.127); Patient satisfaction: 89/89 (100%) vs 80/90 (88.9%) (P < 0.001); Treatment-related adverse events: 0/89 vs 0/90.<br>5. RoB 2 verified: **Low risk across all Domains 1-5 (Overall Low risk)**: SPSS random number table (1:1:1:1), sealed opaque envelopes, validated sham TEAS procedure, double-blinded anesthesiologists/patients/evaluators, 95.0% completion (361/380 analyzed), and prospective registration under ChiCTR-IOR-15006032.",
+      "fake_boilerplate_expunged": "Fabricated data: 2.4 ± 0.8 vs 3.8 ± 1.1 for resting pain.",
       "evidence_sources": "Text p. 340-344 (Methods, SPSS table, sealed envelopes, ChiCTR-IOR-15006032); Fig 1 p. 342 (flow diagram); Table 1 p. 343 (demographics); Fig 2 p. 343 (resting VAS); Fig 3 p. 344 (coughing VAS); Table 2 p. 344 (rescue analgesics, PONV, flatus, satisfaction)"
     },
     "stricta": {
@@ -4313,14 +4484,14 @@ window.STUDIES_DATA = [
       "total_n": 179,
       "arm1_name": "TEAS Group",
       "arm1_n": 89,
-      "arm1_age": "44.8 \u00b1 11.5",
+      "arm1_age": "44.8 ± 11.5",
       "arm1_female": "71/89 (79.8%)",
-      "arm1_bmi": "23.3 \u00b1 3.2",
+      "arm1_bmi": "23.3 ± 3.2",
       "arm2_name": "Sham Group",
       "arm2_n": 90,
-      "arm2_age": "46.5 \u00b1 13.6",
+      "arm2_age": "46.5 ± 13.6",
       "arm2_female": "72/90 (80.0%)",
-      "arm2_bmi": "22.7 \u00b1 3.1",
+      "arm2_bmi": "22.7 ± 3.1",
       "asa_status": "ASA I: 29 (32.6%), ASA II: 60 (67.4%)"
     },
     "rob2": {
@@ -4338,14 +4509,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Parametric mean \u00b1 SD for 24-hour resting and ...",
-      "target_data": "Parametric mean \u00b1 SD for 24-hour resting and coughing VAS pain scores and confirmation of zero postoperative opioid consumption.",
-      "rationale": "Figure 2 and Figure 3 present resting and coughing VAS pain scores as boxplots (median and IQR), and postoperative analgesia consisted of IV flurbiprofenaxetil 50 mg \u00b1 rescue flurbiprofenaxetil 50 mg, but exact parametric mean \u00b1 SD for pain and confirmation of zero opioid administration are omitted.",
+      "urgency": "IMPORTANT: Parametric mean ± SD for 24-hour resting and ...",
+      "target_data": "Parametric mean ± SD for 24-hour resting and coughing VAS pain scores and confirmation of zero postoperative opioid consumption.",
+      "rationale": "Figure 2 and Figure 3 present resting and coughing VAS pain scores as boxplots (median and IQR), and postoperative analgesia consisted of IV flurbiprofenaxetil 50 mg ± rescue flurbiprofenaxetil 50 mg, but exact parametric mean ± SD for pain and confirmation of zero opioid administration are omitted.",
       "impact": "Supplies author-confirmed exact parametric continuous pain metrics and opioid verification for 361-patient trial.",
       "corresponding_author": "Dr. Min Yan",
       "email": "zryanmin@zju.edu.cn",
       "institution": "Department of Anesthesiology, Second Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou, Zhejiang 310009, China",
-      "draft_msg": "Dear Dr. Yan, congratulations on your landmark 4-arm randomized double-blind sham-controlled trial published in The Clinical Journal of Pain (2017;33:340-347) evaluating perioperative TEAS in laparoscopic surgery. In Figure 2 and Figure 3 you present resting and coughing VAS pain scores across timepoints as median and IQR. Could you kindly provide the parametric mean \u00b1 SD for the 24-hour resting and coughing VAS pain scores, and confirm whether any rescue opioids were administered within the first 24 to 48 hours for Group TST (n=89) and Group SSS (n=90) for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Yan, congratulations on your landmark 4-arm randomized double-blind sham-controlled trial published in The Clinical Journal of Pain (2017;33:340-347) evaluating perioperative TEAS in laparoscopic surgery. In Figure 2 and Figure 3 you present resting and coughing VAS pain scores across timepoints as median and IQR. Could you kindly provide the parametric mean ± SD for the 24-hour resting and coughing VAS pain scores, and confirm whether any rescue opioids were administered within the first 24 to 48 hours for Group TST (n=89) and Group SSS (n=90) for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -4382,6 +4553,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Sun 2017",
@@ -4406,14 +4583,14 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
     "comparator_short": "Sham",
     "stratum": "EA vs Sham",
     "surgery_category": "Abdominal & Gastrointestinal",
-    "surgery_procedure": "Total abdominal hysterectomy \u00b1 bilateral salpingo-oophorectomy",
+    "surgery_procedure": "Total abdominal hysterectomy ± bilateral salpingo-oophorectomy",
     "mcid": {
       "opioid_md": null,
       "pain_md": null,
@@ -4424,9 +4601,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30)!<br>2. Replaced with TRUE Table 1 & Table 2 published data: 90 randomized and analyzed women across 3 arms (30 Group II Preop EA, 30 Group I Placebo EA, 30 Group III Postop EA); Total 24-h cumulative morphine consumption is Group II 0.52 \u00b1 0.19 mg/kg (31.20 \u00b1 11.40 mg) vs Group I 0.68 \u00b1 0.38 mg/kg (40.12 \u00b1 22.42 mg) [vs Group III 0.58 \u00b1 0.27 mg/kg]; during 6-12 h interval: Group II 0.03 (0.05) vs Group I 0.10 (0.11) mg/kg (P = 0.015); intraoperative alfentanil: Group II 0.44 \u00b1 0.15 vs Group I 0.51 \u00b1 0.21 \u00b5g/kg/min.<br>3. Resting VAS pain score (0-10, 24h mean): Group II 4.7 \u00b1 1.8 vs Group I 4.5 \u00b1 2.1 [Table 2].<br>4. Adverse effects (Table 2): PONV: Group II 13/30 (43.3%) vs Group I 14/30 (46.6%); Drowsiness: Group II 7/30 (23.3%) vs Group I 9/30 (30.0%); Pruritus: Group II 4/30 (13.3%) vs Group I 5/30 (16.7%); Needle/procedure complications: 0/30 across all groups.<br>5. RoB 2 verified: Domain 1 Some concerns (random number table, sequence concealment not specified); Domain 2 Low risk (validated sham EA control with mock non-penetrating tapping and blinking stimulator, standardized anesthesia depth with BIS monitoring); Domain 3 Low risk (100% completion, 90/90 analyzed); Domain 4 Low risk (blinded dedicated independent outcome assessor); Domain 5 Some concerns (pre-ICMJE trial conduct prior to public registration). Overall: **Some concerns**.",
-      "fake_boilerplate_expunged": "Fabricated data: 20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid; 2.4 ± 0.8 vs 3.8 ± 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30)!<br>2. Replaced with TRUE Table 1 & Table 2 published data: 90 randomized and analyzed women across 3 arms (30 Group II Preop EA, 30 Group I Placebo EA, 30 Group III Postop EA); Total 24-h cumulative morphine consumption is Group II 0.52 ± 0.19 mg/kg (31.20 ± 11.40 mg) vs Group I 0.68 ± 0.38 mg/kg (40.12 ± 22.42 mg) [vs Group III 0.58 ± 0.27 mg/kg]; during 6-12 h interval: Group II 0.03 (0.05) vs Group I 0.10 (0.11) mg/kg (P = 0.015); intraoperative alfentanil: Group II 0.44 ± 0.15 vs Group I 0.51 ± 0.21 µg/kg/min.<br>3. Resting VAS pain score (0-10, 24h mean): Group II 4.7 ± 1.8 vs Group I 4.5 ± 2.1 [Table 2].<br>4. Adverse effects (Table 2): PONV: Group II 13/30 (43.3%) vs Group I 14/30 (46.6%); Drowsiness: Group II 7/30 (23.3%) vs Group I 9/30 (30.0%); Pruritus: Group II 4/30 (13.3%) vs Group I 5/30 (16.7%); Needle/procedure complications: 0/30 across all groups.<br>5. RoB 2 verified: Domain 1 Some concerns (random number table, sequence concealment not specified); Domain 2 Low risk (validated sham EA control with mock non-penetrating tapping and blinking stimulator, standardized anesthesia depth with BIS monitoring); Domain 3 Low risk (100% completion, 90/90 analyzed); Domain 4 Low risk (blinded dedicated independent outcome assessor); Domain 5 Some concerns (pre-ICMJE trial conduct prior to public registration). Overall: **Some concerns**.",
+      "fake_boilerplate_expunged": "Fabricated data: 20.4 ± 4.8 vs 33.1 ± 7.0 for opioid; 2.4 ± 0.8 vs 3.8 ± 1.1 for pain; 5/30 vs 12/30 for PONV.",
       "evidence_sources": "Text p. 56-60 (Methods, random number table, NMRC 0354/1999); Table 1 p. 59 (demographics, alfentanil, surgery time); Fig 2 p. 60 (alfentanil requirements); Fig 3 p. 60 (interval morphine); Table 2 p. 60 (VAS pain, PONV, drowsiness, pruritus); Fig 4 p. 61 (cumulative morphine)"
     },
     "stricta": {
@@ -4440,18 +4617,18 @@ window.STUDIES_DATA = [
       "sessions_category": "Single session",
       "duration_raw": "~142 minutes (45 min pre-op + ~97 min intra-op)",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 60,
       "arm1_name": "EA Group",
       "arm1_n": 30,
-      "arm1_age": "46 \u00b1 5",
+      "arm1_age": "46 ± 5",
       "arm1_female": "30/30 (100%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Usual Care Group",
       "arm2_n": 30,
-      "arm2_age": "47 \u00b1 6",
+      "arm2_age": "47 ± 6",
       "arm2_female": "30/30 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -4465,7 +4642,7 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Cumulative postoperative IV PCA morphine",
       "timepoint": "0-24 h",
-      "rationale": "0.52 \u00b1 0.19 vs 0.68 \u00b1 0.38 mg/kg; cumulative difference not statistically significant"
+      "rationale": "0.52 ± 0.19 vs 0.68 ± 0.38 mg/kg; cumulative difference not statistically significant"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -4473,12 +4650,12 @@ window.STUDIES_DATA = [
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Individual-level or absolute milligram total ...",
       "target_data": "Individual-level or absolute milligram total 24-hour postoperative morphine consumption and 24-hour point assessment resting/movement VAS pain scores.",
-      "rationale": "Postoperative morphine consumption is reported in mg/kg (0.52 \u00b1 0.19 vs 0.68 \u00b1 0.38 mg/kg), which converts to 31.20 \u00b1 11.40 vs 40.12 \u00b1 22.42 mg using group mean body weights, and Table 2 reports a single 24-hour mean VAS score (4.7 \u00b1 1.8 vs 4.5 \u00b1 2.1) rather than distinct 24-hour point assessments.",
+      "rationale": "Postoperative morphine consumption is reported in mg/kg (0.52 ± 0.19 vs 0.68 ± 0.38 mg/kg), which converts to 31.20 ± 11.40 vs 40.12 ± 22.42 mg using group mean body weights, and Table 2 reports a single 24-hour mean VAS score (4.7 ± 1.8 vs 4.5 ± 2.1) rather than distinct 24-hour point assessments.",
       "impact": "Supplies author-verified absolute morphine consumption in mg and 24-hour point assessment pain metrics for meta-analysis.",
       "corresponding_author": "Dr. Tat-Leang Lee",
       "email": "analeetl@nus.edu.sg",
       "institution": "Department of Anaesthesia, National University Hospital, 5 Lower Kent Ridge Road, Singapore 119074",
-      "draft_msg": "Dear Dr. Lee, congratulations on your landmark double-blind sham-controlled clinical trial published in Acupuncture in Medicine (2002;20:56-65) evaluating electroacupuncture for intra- and postoperative analgesia in abdominal hysterectomy. You report total 24-hour postoperative morphine consumption as 0.52 \u00b1 0.19 mg/kg in Group II vs 0.68 \u00b1 0.38 mg/kg in Group I, and 24-hour mean VAS pain scores. Could you kindly provide the absolute 24-hour cumulative morphine consumption (mean \u00b1 SD in milligrams) and the exact 24-hour point assessment resting and movement VAS pain scores for Group II (n=30) and Group I (n=30) for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Lee, congratulations on your landmark double-blind sham-controlled clinical trial published in Acupuncture in Medicine (2002;20:56-65) evaluating electroacupuncture for intra- and postoperative analgesia in abdominal hysterectomy. You report total 24-hour postoperative morphine consumption as 0.52 ± 0.19 mg/kg in Group II vs 0.68 ± 0.38 mg/kg in Group I, and 24-hour mean VAS pain scores. Could you kindly provide the absolute 24-hour cumulative morphine consumption (mean ± SD in milligrams) and the exact 24-hour point assessment resting and movement VAS pain scores for Group II (n=30) and Group I (n=30) for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -4503,8 +4680,8 @@ window.STUDIES_DATA = [
         "ci_low": -18.47,
         "ci_upp": 0.63,
         "p_val": "0.067",
-        "derivation_rule": "Goodman product expectation & variance using published group weights (60 \u00b1 10 kg vs 59 \u00b1 9 kg) and weight-normalized consumption (0.52 \u00b1 0.19 vs 0.68 \u00b1 0.38 mg/kg)",
-        "note": "Derived absolute 24h morphine from weight-normalized PCA records (31.2 \u00b1 12.7 vs 40.1 \u00b1 23.5 mg IV morphine)"
+        "derivation_rule": "Goodman product expectation & variance using published group weights (60 ± 10 kg vs 59 ± 9 kg) and weight-normalized consumption (0.52 ± 0.19 vs 0.68 ± 0.38 mg/kg)",
+        "note": "Derived absolute 24h morphine from weight-normalized PCA records (31.2 ± 12.7 vs 40.1 ± 23.5 mg IV morphine)"
       },
       "pain_rest_24h": null,
       "pain_movement_24h": null,
@@ -4523,6 +4700,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Sim 2002",
@@ -4547,7 +4730,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -4562,39 +4745,39 @@ window.STUDIES_DATA = [
       "reaches_8mg": true,
       "pain_non_inferior": true,
       "quadrant": 1,
-      "quadrant_name": "Optimal Synergistic (Sparing \u2265 5 mg MME + Pain Relief)"
+      "quadrant_name": "Optimal Synergistic (Sparing ≥ 5 mg MME + Pain Relief)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid, false N=30; 5/30 vs 12/30 for nausea) and fake RoB boilerplate claiming no clinical trial registration!<br>2. Replaced with TRUE Table 1, Table 2 & Figures 3 & 4 published data: 64 completed and analyzed women undergoing abdominal hysterectomy (32 EA Group, 32 Control Group; 100% completion rate, 0 dropouts); Cumulative 24-h postoperative PCA morphine consumption is EA Group 21.38 \u00b1 14.38 mg vs Control Group 33.94 \u00b1 20.24 mg (P = 0.006*) [Table 2]; PCA morphine demands (times pressed): 27.28 \u00b1 21.61 vs 55.25 \u00b1 46.85 (P = 0.003*).<br>3. Pain intensity (NRS 0-10): 30 min: 2.75 \u00b1 2.34 vs 4.50 \u00b1 2.37 (P < 0.05); 2h: 2.25 \u00b1 1.80 vs 3.88 \u00b1 2.21 (P < 0.05); 4h: 2.47 vs 2.44; 24h: EA Group 1.47 \u00b1 1.50 vs Control Group 2.22 \u00b1 1.80 [measured precisely from Figure 3 vector stream].<br>4. Postoperative nausea: 30 min: 5/32 (15.6%) vs 15/32 (46.9%) (P < 0.05); 2h: 8/32 (25.0%) vs 10/32 (31.3%); 4h: 7/32 (21.9%) vs 3/32 (9.4%); 24h: 4/32 (12.5%) vs 6/32 (18.8%) [Figure 4].<br>5. RoB 2 verified: Domain 1 Some concerns (computer-generated sequence, allocation concealment not specified); Domain 2 Low risk (ingenious double-blinding via intra-anesthetic needle application and removal before emergence); Domain 3 Low risk (100% completion, 64/64 analyzed); Domain 4 Low risk (blinded dedicated acute pain service nurse assessors); Domain 5 Low risk (formal registration under NMRR 13-128-14785). Overall: **Some concerns**.",
-      "fake_boilerplate_expunged": "Fabricated data: 20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid; 5/30 vs 12/30 for nausea; RoB 2 claiming no registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid, false N=30; 5/30 vs 12/30 for nausea) and fake RoB boilerplate claiming no clinical trial registration!<br>2. Replaced with TRUE Table 1, Table 2 & Figures 3 & 4 published data: 64 completed and analyzed women undergoing abdominal hysterectomy (32 EA Group, 32 Control Group; 100% completion rate, 0 dropouts); Cumulative 24-h postoperative PCA morphine consumption is EA Group 21.38 ± 14.38 mg vs Control Group 33.94 ± 20.24 mg (P = 0.006*) [Table 2]; PCA morphine demands (times pressed): 27.28 ± 21.61 vs 55.25 ± 46.85 (P = 0.003*).<br>3. Pain intensity (NRS 0-10): 30 min: 2.75 ± 2.34 vs 4.50 ± 2.37 (P < 0.05); 2h: 2.25 ± 1.80 vs 3.88 ± 2.21 (P < 0.05); 4h: 2.47 vs 2.44; 24h: EA Group 1.47 ± 1.50 vs Control Group 2.22 ± 1.80 [measured precisely from Figure 3 vector stream].<br>4. Postoperative nausea: 30 min: 5/32 (15.6%) vs 15/32 (46.9%) (P < 0.05); 2h: 8/32 (25.0%) vs 10/32 (31.3%); 4h: 7/32 (21.9%) vs 3/32 (9.4%); 24h: 4/32 (12.5%) vs 6/32 (18.8%) [Figure 4].<br>5. RoB 2 verified: Domain 1 Some concerns (computer-generated sequence, allocation concealment not specified); Domain 2 Low risk (ingenious double-blinding via intra-anesthetic needle application and removal before emergence); Domain 3 Low risk (100% completion, 64/64 analyzed); Domain 4 Low risk (blinded dedicated acute pain service nurse assessors); Domain 5 Low risk (formal registration under NMRR 13-128-14785). Overall: **Some concerns**.",
+      "fake_boilerplate_expunged": "Fabricated data: 20.4 ± 4.8 vs 33.1 ± 7.0 for opioid; 5/30 vs 12/30 for nausea; RoB 2 claiming no registration.",
       "evidence_sources": "Text p. 1-4 (Methods, computer sequence, NMRR 13-128-14785); Fig 1 p. 3 (acupoint location); Fig 2 p. 5 (CONSORT flow); Table 1 p. 5 (demographics); Table 2 p. 6 (PCA morphine demand and dose); Fig 3 p. 6 (NRS pain score); Fig 4 p. 6 (nausea incidence)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan), LI4 (Hegu)",
       "frequency_raw": "Not applicable",
-      "frequency_category": "2\u201310 Hz (Low Frequency)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "frequency_category": "2–10 Hz (Low Frequency)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 64,
       "arm1_name": "EA Group",
       "arm1_n": 32,
-      "arm1_age": "47.50 \u00b1 7.94",
+      "arm1_age": "47.50 ± 7.94",
       "arm1_female": "32/32 (100%)",
-      "arm1_bmi": "24.28 \u00b1 2.97",
+      "arm1_bmi": "24.28 ± 2.97",
       "arm2_name": "Usual Care Group",
       "arm2_n": 32,
-      "arm2_age": "48.72 \u00b1 6.72",
+      "arm2_age": "48.72 ± 6.72",
       "arm2_female": "32/32 (100%)",
-      "arm2_bmi": "23.71 \u00b1 3.16",
+      "arm2_bmi": "23.71 ± 3.16",
       "asa_status": "not reported"
     },
     "rob2": {
@@ -4606,7 +4789,7 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Cumulative IV PCA morphine",
       "timepoint": "0-24 h",
-      "rationale": "21.38 \u00b1 14.38 mg vs 33.94 \u00b1 20.24 mg; P=0.006"
+      "rationale": "21.38 ± 14.38 mg vs 33.94 ± 20.24 mg; P=0.006"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -4680,7 +4863,13 @@ window.STUDIES_DATA = [
         "arm2_sd": 46.85,
         "unit": "presses",
         "p_val": 0.003,
-        "note": "Table 2 reports 24h PCA button presses: 27.28 \u00b1 21.61 vs 55.25 \u00b1 46.85 (P=0.003), a 50.6% relative reduction."
+        "note": "Table 2 reports 24h PCA button presses: 27.28 ± 21.61 vs 55.25 ± 46.85 (P=0.003), a 50.6% relative reduction."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Seevaunnamtum 2016",
@@ -4705,7 +4894,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -4723,17 +4912,17 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming no clinical trial registration!<br>2. Replaced with TRUE published trial data: 105 completed and analyzed women undergoing laparoscopic myomectomy (52 Group T [TEAS], 53 Group C [Control]); 24h movement NRS pain score is Group T median 2 (IQR 2, 3) [Wan mean 2.33 \u00b1 0.74] vs Group C median 3 (IQR 3, 4) [Wan mean 3.33 \u00b1 0.74] (P < 0.001) [Table 7]; 1h movement NRS: median 2 (1, 4) vs 3 (2, 4) (P = 0.04); PACU highest NRS: median 0 (0, 1) vs 0 (0, 2) (P < 0.001).<br>3. 24h Postoperative vomiting: Group T 9/52 (17.3%) vs Group C 19/53 (35.8%) (P = 0.03) [Table 7]; Rescue analgesia in 24h: Group T 19/52 (36.5%) vs Group C 23/53 (43.4%) (P = 0.47).<br>4. Intraoperative remifentanil was significantly reduced in Group T: 740.1 \u00b1 276.9 vs 854.0 \u00b1 287.5 \u00b5g (P = 0.04).<br>5. Recovery parameters: Time to first flatus (anal exhaust): Group T median 1020.0 min (17.0 h) [Wan mean 16.5 \u00b1 7.4 h] vs Group C median 1210.0 min (20.2 h) [Wan mean 19.6 \u00b1 6.6 h] (P = 0.01); Length of hospital stay: Group T 4.1 \u00b1 2.3 vs Group C 4.1 \u00b1 1.5 days (P = 0.88); QoR-40 total score at 24h: Group T 182.7 \u00b1 6.9 vs Group C 176.4 \u00b1 7.1 (P < 0.001).<br>6. RoB 2 verified: Domain 1 Some concerns (random number table, allocation concealment not specified); Domain 2 Some concerns (usual care control without sham stimulation); Domain 3 Low risk (105/120 analyzed, 87.5% completion with documented surgical/technical exclusions); Domain 4 Low risk (blinded dedicated PACU nurse outcome assessor); Domain 5 Low risk (prospective registration under ChiCTR2100045173). Overall: **Some concerns**.",
-      "fake_boilerplate_expunged": "Fabricated data: 20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming no registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid; 2.4 ± 0.8 vs 3.8 ± 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming no clinical trial registration!<br>2. Replaced with TRUE published trial data: 105 completed and analyzed women undergoing laparoscopic myomectomy (52 Group T [TEAS], 53 Group C [Control]); 24h movement NRS pain score is Group T median 2 (IQR 2, 3) [Wan mean 2.33 ± 0.74] vs Group C median 3 (IQR 3, 4) [Wan mean 3.33 ± 0.74] (P < 0.001) [Table 7]; 1h movement NRS: median 2 (1, 4) vs 3 (2, 4) (P = 0.04); PACU highest NRS: median 0 (0, 1) vs 0 (0, 2) (P < 0.001).<br>3. 24h Postoperative vomiting: Group T 9/52 (17.3%) vs Group C 19/53 (35.8%) (P = 0.03) [Table 7]; Rescue analgesia in 24h: Group T 19/52 (36.5%) vs Group C 23/53 (43.4%) (P = 0.47).<br>4. Intraoperative remifentanil was significantly reduced in Group T: 740.1 ± 276.9 vs 854.0 ± 287.5 µg (P = 0.04).<br>5. Recovery parameters: Time to first flatus (anal exhaust): Group T median 1020.0 min (17.0 h) [Wan mean 16.5 ± 7.4 h] vs Group C median 1210.0 min (20.2 h) [Wan mean 19.6 ± 6.6 h] (P = 0.01); Length of hospital stay: Group T 4.1 ± 2.3 vs Group C 4.1 ± 1.5 days (P = 0.88); QoR-40 total score at 24h: Group T 182.7 ± 6.9 vs Group C 176.4 ± 7.1 (P < 0.001).<br>6. RoB 2 verified: Domain 1 Some concerns (random number table, allocation concealment not specified); Domain 2 Some concerns (usual care control without sham stimulation); Domain 3 Low risk (105/120 analyzed, 87.5% completion with documented surgical/technical exclusions); Domain 4 Low risk (blinded dedicated PACU nurse outcome assessor); Domain 5 Low risk (prospective registration under ChiCTR2100045173). Overall: **Some concerns**.",
+      "fake_boilerplate_expunged": "Fabricated data: 20.4 ± 4.8 vs 33.1 ± 7.0 for opioid; 2.4 ± 0.8 vs 3.8 ± 1.1 for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming no registration.",
       "evidence_sources": "Text p. 809-813 (Methods, random number table, ChiCTR2100045173); Fig 1 p. 811 (acupoints); Fig 2 p. 812 (protocol); Fig 3 p. 813 (CONSORT flow); Table 1 p. 812 (demographics); Table 2 p. 813 (intraop drugs, remifentanil); Table 6 p. 815 (PACU pain); Table 7 p. 815 (24h NRS pain, vomiting, analgesics); Table 9 p. 816 (flatus, stay); Table 10 p. 816 (QoR-40)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
       "sessions_category": "Single session",
@@ -4745,14 +4934,14 @@ window.STUDIES_DATA = [
       "total_n": 105,
       "arm1_name": "TEAS Group",
       "arm1_n": 52,
-      "arm1_age": "42.2 \u00b1 5.5",
+      "arm1_age": "42.2 ± 5.5",
       "arm1_female": "52/52 (100%)",
-      "arm1_bmi": "23.2 \u00b1 2.8",
+      "arm1_bmi": "23.2 ± 2.8",
       "arm2_name": "Sham Group",
       "arm2_n": 53,
-      "arm2_age": "43.2 \u00b1 6.3",
+      "arm2_age": "43.2 ± 6.3",
       "arm2_female": "53/53 (100%)",
-      "arm2_bmi": "22.2 \u00b1 2.5",
+      "arm2_bmi": "22.2 ± 2.5",
       "asa_status": "ASA I: 34 (65.4%), ASA II: 18 (34.6%)"
     },
     "rob2": {
@@ -4764,20 +4953,20 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Time to first postoperative flatus",
       "timepoint": "Time to event",
-      "rationale": "1020.0 (675.8\u20131278.0) min vs 1210.0 (896.5\u20131427.0) min; P=0.01"
+      "rationale": "1020.0 (675.8–1278.0) min vs 1210.0 (896.5–1427.0) min; P=0.01"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative systemic opi...",
-      "target_data": "Cumulative 24-hour postoperative systemic opioid consumption (mean \u00b1 SD in mg or \u00b5g) and parametric mean \u00b1 SD for 24-hour resting and movement NRS pain scores.",
+      "target_data": "Cumulative 24-hour postoperative systemic opioid consumption (mean ± SD in mg or µg) and parametric mean ± SD for 24-hour resting and movement NRS pain scores.",
       "rationale": "Table 7 presents 24-hour NRS pain scores as median and IQR (2 [2, 3] vs 3 [3, 4]) and reports that rescue analgesia was needed in 19/52 vs 23/53 patients, but the cumulative postoperative opioid consumption across 0-24 hours is not tabulated.",
       "impact": "Supplies author-verified cumulative 24-hour opioid consumption in IV MME and parametric continuous pain metrics for meta-analysis.",
       "corresponding_author": "Dr. Junlu Wang",
       "email": "wangjunlu973@163.com",
       "institution": "Department of Anesthesiology, The First Affiliated Hospital of Wenzhou Medical University, Wenzhou, Zhejiang, China",
-      "draft_msg": "Dear Dr. Wang, congratulations on your randomized clinical trial published in the Journal of Pain Research (2023;16:809-819) evaluating TEAS in patients undergoing laparoscopic myomectomy. In Table 7 you report 24-hour movement NRS pain scores as median (IQR) and rescue analgesia utilization. Could you kindly provide the cumulative 24-hour postoperative systemic opioid consumption (mean \u00b1 SD in mg or \u00b5g, including drug type) and the parametric mean \u00b1 SD for the 24-hour resting and movement NRS pain scores for Group T (n=52) and Group C (n=53) for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Wang, congratulations on your randomized clinical trial published in the Journal of Pain Research (2023;16:809-819) evaluating TEAS in patients undergoing laparoscopic myomectomy. In Table 7 you report 24-hour movement NRS pain scores as median (IQR) and rescue analgesia utilization. Could you kindly provide the cumulative 24-hour postoperative systemic opioid consumption (mean ± SD in mg or µg, including drug type) and the parametric mean ± SD for the 24-hour resting and movement NRS pain scores for Group T (n=52) and Group C (n=53) for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -4819,13 +5008,19 @@ window.STUDIES_DATA = [
         "ci_upp": -5.94,
         "p_val": "0.045",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Intraoperative maintenance remifentanil (Table 2: 740.1 \u00b1 276.9 vs 854.0 \u00b1 287.5 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Intraoperative maintenance remifentanil (Table 2: 740.1 ± 276.9 vs 854.0 ± 287.5 µg)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Pan 2023",
@@ -4850,7 +5045,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -4868,15 +5063,15 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming no clinical trial registration!<br>2. Replaced with TRUE Table 1, Table 2 & Figure 2 published values: 70 completed and analyzed patients (35 EA group, 35 Sham control group); Cumulative 24-h postoperative tramadol consumption is EA group 443.7 \u00b1 67.4 mg vs Sham group 461.5 \u00b1 63.2 mg (P = 0.257) [Table 1]; Intraoperative remifentanil: 1003.6 \u00b1 522.7 vs 1041.9 \u00b1 631.9 \u00b5g (P = 0.783).<br>3. Resting pain NRS at 24h (PRIMARY): EA group 0.08 \u00b1 0.43 vs Sham group 0.48 \u00b1 0.68 (P < 0.05) [measured precisely from Figure 2 bar graph]; Resting pain NRS at 6h: 0.39 \u00b1 0.86 vs 1.60 \u00b1 1.45.<br>4. Movement pain NRS at 24h (PRIMARY): EA group 0.40 \u00b1 0.63 vs Sham group 1.24 \u00b1 0.89 (P < 0.001); Movement pain NRS at 6h: 1.11 \u00b1 1.03 vs 2.56 \u00b1 1.35.<br>5. Adverse effects (Table 2): 24h nausea: EA 4/35 vs Sham 2/35; 24h vomiting: EA 2/35 vs Sham 1/35; Sedation at 45m: 1/35 vs 7/35 (P < 0.05); Treatment-related adverse events: 0/35 across groups.<br>6. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated sequence, central concealment by anesthesia director, non-penetrating sham EA device with active indicator light, independent blinded outcome assessor, 93.3% completion (70/75 analyzed), and prospective ClinicalTrials.gov registration under NCT01526525.",
-      "fake_boilerplate_expunged": "Fabricated data: 20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming no registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for opioid; 2.4 ± 0.8 vs 3.8 ± 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming no clinical trial registration!<br>2. Replaced with TRUE Table 1, Table 2 & Figure 2 published values: 70 completed and analyzed patients (35 EA group, 35 Sham control group); Cumulative 24-h postoperative tramadol consumption is EA group 443.7 ± 67.4 mg vs Sham group 461.5 ± 63.2 mg (P = 0.257) [Table 1]; Intraoperative remifentanil: 1003.6 ± 522.7 vs 1041.9 ± 631.9 µg (P = 0.783).<br>3. Resting pain NRS at 24h (PRIMARY): EA group 0.08 ± 0.43 vs Sham group 0.48 ± 0.68 (P < 0.05) [measured precisely from Figure 2 bar graph]; Resting pain NRS at 6h: 0.39 ± 0.86 vs 1.60 ± 1.45.<br>4. Movement pain NRS at 24h (PRIMARY): EA group 0.40 ± 0.63 vs Sham group 1.24 ± 0.89 (P < 0.001); Movement pain NRS at 6h: 1.11 ± 1.03 vs 2.56 ± 1.35.<br>5. Adverse effects (Table 2): 24h nausea: EA 4/35 vs Sham 2/35; 24h vomiting: EA 2/35 vs Sham 1/35; Sedation at 45m: 1/35 vs 7/35 (P < 0.05); Treatment-related adverse events: 0/35 across groups.<br>6. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated sequence, central concealment by anesthesia director, non-penetrating sham EA device with active indicator light, independent blinded outcome assessor, 93.3% completion (70/75 analyzed), and prospective ClinicalTrials.gov registration under NCT01526525.",
+      "fake_boilerplate_expunged": "Fabricated data: 20.4 ± 4.8 vs 33.1 ± 7.0 for opioid; 2.4 ± 0.8 vs 3.8 ± 1.1 for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming no registration.",
       "evidence_sources": "Text p. 215-218 (Methods, computer sequence, central concealment, NCT01526525); Fig 1 p. 217 (flow diagram); Table 1 p. 217 (demographics, remifentanil, tramadol sum); Fig 2 p. 218 (NRS pain relaxation & movement); Table 2 p. 220 (adverse effects)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), ST36 (Zusanli)",
       "frequency_raw": "Mixed / alternating (100 Hz intra-op session; 4 Hz post-op session)",
-      "frequency_category": "2\u201310 Hz (Low Frequency)",
+      "frequency_category": "2–10 Hz (Low Frequency)",
       "intensity": "Visible muscle twitch of adjacent muscle confirming placement; constant pulse programme",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Intraoperative and immediate postoperative: Session 1 during abdominal wall closure (30 min); Session 2 immediately after extubation in recovery (30 min)",
@@ -4884,20 +5079,20 @@ window.STUDIES_DATA = [
       "sessions_category": "Single session",
       "duration_raw": "60 minutes (2 x 30 min sessions)",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 70,
       "arm1_name": "EA Group",
       "arm1_n": 35,
-      "arm1_age": "67.3 \u00b1 6.3",
+      "arm1_age": "67.3 ± 6.3",
       "arm1_female": "not reported",
-      "arm1_bmi": "28.7 \u00b1 3.8",
+      "arm1_bmi": "28.7 ± 3.8",
       "arm2_name": "Usual Care Group",
       "arm2_n": 35,
-      "arm2_age": "65.5 \u00b1 5.6",
+      "arm2_age": "65.5 ± 5.6",
       "arm2_female": "not reported",
-      "arm2_bmi": "27.9 \u00b1 3.8",
+      "arm2_bmi": "27.9 ± 3.8",
       "asa_status": "ASA I: 5 (14.3%), ASA II: 28 (80.0%), ASA III: 2 (5.7%)"
     },
     "rob2": {
@@ -4909,20 +5104,20 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Total tramadol exposure",
       "timepoint": "First 24 h most consistent with protocol",
-      "rationale": "443.7 \u00b1 67.4 vs 461.5 \u00b1 63.2 mg; P=0.257"
+      "rationale": "443.7 ± 67.4 vs 461.5 ± 63.2 mg; P=0.257"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Exact numerical values (mean \u00b1 SD) for restin...",
-      "target_data": "Exact numerical values (mean \u00b1 SD) for resting and movement NRS pain scores at 45 min, 2 h, 6 h, 12 h, and 24 h, and cumulative 24-hour rescue IV morphine consumption.",
-      "rationale": "Figure 2 presents resting and movement NRS pain scores as bar graphs with error bars (measured via image calibration as 0.08 \u00b1 0.43 vs 0.48 \u00b1 0.68 at rest, and 0.40 \u00b1 0.63 vs 1.24 \u00b1 0.89 during movement at 24h), and the text mentions rescue IV tramadol 50 mg followed by morphine 2 mg for NRS >= 3, but the numerical tables for pain scores and total rescue morphine mg are omitted.",
+      "urgency": "IMPORTANT: Exact numerical values (mean ± SD) for restin...",
+      "target_data": "Exact numerical values (mean ± SD) for resting and movement NRS pain scores at 45 min, 2 h, 6 h, 12 h, and 24 h, and cumulative 24-hour rescue IV morphine consumption.",
+      "rationale": "Figure 2 presents resting and movement NRS pain scores as bar graphs with error bars (measured via image calibration as 0.08 ± 0.43 vs 0.48 ± 0.68 at rest, and 0.40 ± 0.63 vs 1.24 ± 0.89 during movement at 24h), and the text mentions rescue IV tramadol 50 mg followed by morphine 2 mg for NRS >= 3, but the numerical tables for pain scores and total rescue morphine mg are omitted.",
       "impact": "Supplies author-confirmed exact numerical pain scores and verifies rescue morphine consumption for meta-analysis.",
       "corresponding_author": "Dr. Vagia Ntritsou",
       "email": "vaya_ntr@yahoo.gr",
       "institution": "Department of Anaesthesiology, General Hospital of Thessaloniki \"G. Gennimatas\", Meleagrou 7, Thessaloniki 54250, Greece",
-      "draft_msg": "Dear Dr. Ntritsou, congratulations on your randomized sham-controlled clinical trial published in Acupuncture in Medicine (2014;32:215-222) evaluating perioperative electroacupuncture as an adjunctive therapy in radical prostatectomy. In Figure 2 you present resting and movement NRS pain scores from 45 min to 24 hours. Could you kindly provide the exact numerical mean \u00b1 SD for these resting and movement NRS pain scores at each timepoint, as well as the total cumulative 24-hour postoperative rescue morphine consumption (mean \u00b1 SD in mg) for the EA (n=35) and Control (n=35) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Ntritsou, congratulations on your randomized sham-controlled clinical trial published in Acupuncture in Medicine (2014;32:215-222) evaluating perioperative electroacupuncture as an adjunctive therapy in radical prostatectomy. In Figure 2 you present resting and movement NRS pain scores from 45 min to 24 hours. Could you kindly provide the exact numerical mean ± SD for these resting and movement NRS pain scores at each timepoint, as well as the total cumulative 24-hour postoperative rescue morphine consumption (mean ± SD in mg) for the EA (n=35) and Control (n=35) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -4955,13 +5150,19 @@ window.STUDIES_DATA = [
         "ci_upp": 233.4,
         "p_val": "0.783",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Total intraoperative remifentanil infusion (1003.6 \u00b1 522.7 vs 1041.9 \u00b1 631.9 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Total intraoperative remifentanil infusion (1003.6 ± 522.7 vs 1041.9 ± 631.9 µg)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Ntritsou 2014",
@@ -4986,7 +5187,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -5004,9 +5205,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for 24h opioid, false N=30) into 24h opioid consumption!<br>2. Replaced with TRUE Table 4 published values: 165 completed and analyzed patients across 3 arms (55 EA, 55 Sham, 55 Usual care); Day 1 (~24h) pain VAS score is EA 5.6 \u00b1 2.0 vs Sham 5.8 \u00b1 1.9 vs Usual care 5.5 \u00b1 2.3 (P = 0.655); Day 2 pain VAS: 3.2 \u00b1 1.6 vs 4.6 \u00b1 2.0 (P < 0.001); Day 3 pain VAS: 2.1 \u00b1 1.2 vs 3.4 \u00b1 2.2 (P < 0.001).<br>3. Total postoperative pethidine injections (50 mg each): EA 2.7 \u00b1 2.3 vs Sham 5.2 \u00b1 4.7 vs Usual care 5.0 \u00b1 4.5 (P = 0.001); 24-hour specific pethidine consumption marked missing pending author contact.<br>4. Time to first flatus: EA 2.0 \u00b1 0.9 vs Sham 2.3 \u00b1 1.1 days (P = 0.095); Time to first bowel motion: EA 85.9 \u00b1 36.1 vs Sham 107.5 \u00b1 46.2 h (P = 0.007); Time to resume normal diet: EA 4.0 \u00b1 1.1 vs Sham 4.1 \u00b1 0.8 days; Time to walk independently: EA 2.8 \u00b1 1.5 vs Sham 3.3 \u00b1 1.1 days (P = 0.028); Length of hospital stay: EA 6.5 \u00b1 2.2 vs Sham 6.8 \u00b1 1.7 days (P = 0.491).<br>5. Treatment-related adverse events: 0/55 across all arms.<br>6. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer sequence (1:1:1), sealed envelopes, validated sham acupuncture with flashing LED mock stimulator, blinded surgeons/care team and independent blinded outcome assessor, 100% completion (165/165 analyzed), and prospective ClinicalTrials.gov registration under NCT00464425.",
-      "fake_boilerplate_expunged": "Fabricated data: 20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 (N=30) for 24h opioid; D5 Some concerns claiming no registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for 24h opioid, false N=30) into 24h opioid consumption!<br>2. Replaced with TRUE Table 4 published values: 165 completed and analyzed patients across 3 arms (55 EA, 55 Sham, 55 Usual care); Day 1 (~24h) pain VAS score is EA 5.6 ± 2.0 vs Sham 5.8 ± 1.9 vs Usual care 5.5 ± 2.3 (P = 0.655); Day 2 pain VAS: 3.2 ± 1.6 vs 4.6 ± 2.0 (P < 0.001); Day 3 pain VAS: 2.1 ± 1.2 vs 3.4 ± 2.2 (P < 0.001).<br>3. Total postoperative pethidine injections (50 mg each): EA 2.7 ± 2.3 vs Sham 5.2 ± 4.7 vs Usual care 5.0 ± 4.5 (P = 0.001); 24-hour specific pethidine consumption marked missing pending author contact.<br>4. Time to first flatus: EA 2.0 ± 0.9 vs Sham 2.3 ± 1.1 days (P = 0.095); Time to first bowel motion: EA 85.9 ± 36.1 vs Sham 107.5 ± 46.2 h (P = 0.007); Time to resume normal diet: EA 4.0 ± 1.1 vs Sham 4.1 ± 0.8 days; Time to walk independently: EA 2.8 ± 1.5 vs Sham 3.3 ± 1.1 days (P = 0.028); Length of hospital stay: EA 6.5 ± 2.2 vs Sham 6.8 ± 1.7 days (P = 0.491).<br>5. Treatment-related adverse events: 0/55 across all arms.<br>6. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer sequence (1:1:1), sealed envelopes, validated sham acupuncture with flashing LED mock stimulator, blinded surgeons/care team and independent blinded outcome assessor, 100% completion (165/165 analyzed), and prospective ClinicalTrials.gov registration under NCT00464425.",
+      "fake_boilerplate_expunged": "Fabricated data: 20.4 ± 4.8 vs 33.1 ± 7.0 (N=30) for 24h opioid; D5 Some concerns claiming no registration.",
       "evidence_sources": "Text p. 307-310 (Methods, computer sequence, sealed envelopes, NCT00464425); Fig 1 p. 309 (acupoints); Table 1 p. 309 (demographics); Table 2 p. 310 (complications); Table 3 p. 310 (EA vs NA outcomes); Table 4 p. 310 (EA vs SA outcomes)"
     },
     "stricta": {
@@ -5017,23 +5218,23 @@ window.STUDIES_DATA = [
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Postoperative: administered once daily from postoperative day 1 through postoperative day 4 (or until primary outcome occurred)",
       "timing_category": "Postoperative only",
-      "sessions_category": "Multiple sessions (\u2265 2)",
+      "sessions_category": "Multiple sessions (≥ 2)",
       "duration_raw": "20 minutes (Day 1 session) [total trial: up to 80 minutes across 4 days]",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 110,
       "arm1_name": "EA Group",
       "arm1_n": 55,
-      "arm1_age": "67.4 \u00b1 9.7",
+      "arm1_age": "67.4 ± 9.7",
       "arm1_female": "20/55 (36.4%)",
-      "arm1_bmi": "22.8 \u00b1 2.9",
+      "arm1_bmi": "22.8 ± 2.9",
       "arm2_name": "Sham Group",
       "arm2_n": 55,
-      "arm2_age": "67.4 \u00b1 10.7",
+      "arm2_age": "67.4 ± 10.7",
       "arm2_female": "22/55 (40.0%)",
-      "arm2_bmi": "22.9 \u00b1 3.4",
+      "arm2_bmi": "22.9 ± 3.4",
       "asa_status": "ASA I: 17 (30.9%), ASA II: 36 (65.5%), ASA III: 2 (3.6%)"
     },
     "rob2": {
@@ -5045,20 +5246,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Time to first bowel motion",
       "timepoint": "Postoperative",
-      "rationale": "85.9 \u00b1 36.1 vs 107.5 \u00b1 46.2 h; P=0.007"
+      "rationale": "85.9 ± 36.1 vs 107.5 ± 46.2 h; P=0.007"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative systemic opi...",
-      "target_data": "Cumulative 24-hour postoperative systemic opioid (pethidine) consumption (mean \u00b1 SD in mg or injections) and resting vs movement condition for Day 1 VAS pain scores.",
-      "rationale": "Table 4 reports postoperative analgesic requirements as total number of 50-mg pethidine injections throughout the entire postoperative hospital stay (2.7 \u00b1 2.3 vs 5.2 \u00b1 4.7 injections), but the specific cumulative dosage within the first 24 hours is not tabulated separately.",
+      "target_data": "Cumulative 24-hour postoperative systemic opioid (pethidine) consumption (mean ± SD in mg or injections) and resting vs movement condition for Day 1 VAS pain scores.",
+      "rationale": "Table 4 reports postoperative analgesic requirements as total number of 50-mg pethidine injections throughout the entire postoperative hospital stay (2.7 ± 2.3 vs 5.2 ± 4.7 injections), but the specific cumulative dosage within the first 24 hours is not tabulated separately.",
       "impact": "Supplies author-verified 24-hour postoperative opioid dosage in IV MME and verifies pain measurement conditions for 165-patient colorectal cancer surgery trial.",
       "corresponding_author": "Dr. Simon S. M. Ng",
       "email": "simonng@surgery.cuhk.edu.hk",
       "institution": "Division of Colorectal Surgery, Department of Surgery, The Chinese University of Hong Kong, Prince of Wales Hospital, Shatin, Hong Kong SAR",
-      "draft_msg": "Dear Dr. Ng, congratulations on your landmark randomized double-blind sham-controlled trial published in Gastroenterology (2013;144:307-313) evaluating electroacupuncture for postoperative ileus and recovery after laparoscopic colorectal surgery. In Table 4 you report total postoperative pethidine injections (50 mg each) across the hospital stay. Could you kindly provide the cumulative 24-hour postoperative pethidine requirement (mean \u00b1 SD in mg or number of injections) and confirm whether the Day 1 VAS pain scores reflect resting or movement pain for the EA (n=55), Sham (n=55), and No Acupuncture (n=55) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Ng, congratulations on your landmark randomized double-blind sham-controlled trial published in Gastroenterology (2013;144:307-313) evaluating electroacupuncture for postoperative ileus and recovery after laparoscopic colorectal surgery. In Table 4 you report total postoperative pethidine injections (50 mg each) across the hospital stay. Could you kindly provide the cumulative 24-hour postoperative pethidine requirement (mean ± SD in mg or number of injections) and confirm whether the Day 1 VAS pain scores reflect resting or movement pain for the EA (n=55), Sham (n=55), and No Acupuncture (n=55) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -5082,7 +5283,7 @@ window.STUDIES_DATA = [
         "ci_low": -0.929,
         "ci_upp": 0.529,
         "unit": "VAS 0-10",
-        "readiness": "CONDITIONAL \u2014 POD1"
+        "readiness": "CONDITIONAL — POD1"
       },
       "pain_movement_24h": null,
       "ponv_24h": null,
@@ -5114,12 +5315,18 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Ng 2013",
     "reconciliation_batch": "Batch 2",
     "sol_status": "SPECIAL / SOURCE-QC",
-    "sol_note": "No defensible exact cumulative 0\u201324-h opioid endpoint in source; preserve as secondary/descriptive unless exact window found.",
+    "sol_note": "No defensible exact cumulative 0–24-h opioid endpoint in source; preserve as secondary/descriptive unless exact window found.",
     "known_fabricated_signature": "Yes",
     "source_folder": "https://drive.google.com/drive/folders/1EWdZyTQjPSuoxt8n1nIr1t8D98PC-mso",
     "reconciliation_index": "https://docs.google.com/document/d/1hR0UuZSmPpwZi384Vzn3sZt5Y5_ZwYxW6b3u4nq2-40/edit"
@@ -5138,7 +5345,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -5156,17 +5363,17 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming lack of protocol registration!<br>2. Replaced with TRUE published trial data: 33 randomized and analyzed sleep-disturbed breast cancer patients (17 Group T [TEAS], 16 Group S [Usual care control]); 24h resting NRS pain score is Group T 1.76 \u00b1 0.67 vs Group S 2.64 \u00b1 0.72 (P < 0.05) [measured precisely from vector coordinates in Figure 3]; 4h pain NRS: 1.82 \u00b1 0.53 vs 2.45 \u00b1 0.81; 48h pain NRS: 1.38 \u00b1 0.51 vs 2.63 \u00b1 1.14; 72h pain NRS: 1.12 \u00b1 0.34 vs 2.56 \u00b1 1.32.<br>3. 24h PONV: Postoperative nausea: Group T 6/17 (35.3%) vs Group S 8/16 (50.0%) (P = 0.590); Postoperative vomiting: Group T 6/17 (35.3%) vs Group S 7/16 (43.8%) (P = 0.863).<br>4. Length of hospital stay: Group T 6.82 \u00b1 1.68 vs Group S 8.06 \u00b1 2.29 days (P = 0.266). Serious adverse events: 0/17 vs 0/16.<br>5. RoB 2 verified: Domain 1 Some concerns (random number table, sequence concealment not specified); Domain 2 Some concerns (usual care control without sham device); Domain 3 Low risk (33/35 completed, 94.3% completion); Domain 4 Low risk (blinded dedicated outcome assessor); Domain 5 Low risk (prospective registration under ChiCTR2200062959). Overall: **Some concerns**.",
-      "fake_boilerplate_expunged": "Fabricated data: 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming no registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming lack of protocol registration!<br>2. Replaced with TRUE published trial data: 33 randomized and analyzed sleep-disturbed breast cancer patients (17 Group T [TEAS], 16 Group S [Usual care control]); 24h resting NRS pain score is Group T 1.76 ± 0.67 vs Group S 2.64 ± 0.72 (P < 0.05) [measured precisely from vector coordinates in Figure 3]; 4h pain NRS: 1.82 ± 0.53 vs 2.45 ± 0.81; 48h pain NRS: 1.38 ± 0.51 vs 2.63 ± 1.14; 72h pain NRS: 1.12 ± 0.34 vs 2.56 ± 1.32.<br>3. 24h PONV: Postoperative nausea: Group T 6/17 (35.3%) vs Group S 8/16 (50.0%) (P = 0.590); Postoperative vomiting: Group T 6/17 (35.3%) vs Group S 7/16 (43.8%) (P = 0.863).<br>4. Length of hospital stay: Group T 6.82 ± 1.68 vs Group S 8.06 ± 2.29 days (P = 0.266). Serious adverse events: 0/17 vs 0/16.<br>5. RoB 2 verified: Domain 1 Some concerns (random number table, sequence concealment not specified); Domain 2 Some concerns (usual care control without sham device); Domain 3 Low risk (33/35 completed, 94.3% completion); Domain 4 Low risk (blinded dedicated outcome assessor); Domain 5 Low risk (prospective registration under ChiCTR2200062959). Overall: **Some concerns**.",
+      "fake_boilerplate_expunged": "Fabricated data: 2.4 ± 0.8 vs 3.8 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming no registration.",
       "evidence_sources": "Text p. 2-5 (Methods, random number table, ChiCTR2200062959); Fig 1 p. 4 (acupoints); Fig 2 p. 6 (flow diagram); Table 1 p. 6-7 (demographics); Fig 3 p. 7 (NRS pain); Fig 4 p. 8 (AIS sleep); Table 2 p. 8 (hemodynamics); Table 3 p. 8 (PONV & hospital stay)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), HT7 (Shenmen), PC6 (Neiguan)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
       "sessions_category": "Single session",
@@ -5178,15 +5385,15 @@ window.STUDIES_DATA = [
       "total_n": 33,
       "arm1_name": "TEAS Group",
       "arm1_n": 17,
-      "arm1_age": "55.12 \u00b1 8.56",
+      "arm1_age": "55.12 ± 8.56",
       "arm1_female": "17/17 (100%)",
-      "arm1_bmi": "22.36 \u00b1 1.92",
+      "arm1_bmi": "22.36 ± 1.92",
       "arm2_name": "Sham Group",
       "arm2_n": 16,
-      "arm2_age": "59.00 \u00b1 9.22",
+      "arm2_age": "59.00 ± 9.22",
       "arm2_female": "16/16 (100%)",
-      "arm2_bmi": "23.44 \u00b1 2.91",
-      "asa_status": "100% ASA I\u2013II"
+      "arm2_bmi": "23.44 ± 2.91",
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Some concerns",
@@ -5203,14 +5410,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Exact numerical values (mean \u00b1 SD) for restin...",
-      "target_data": "Exact numerical values (mean \u00b1 SD) for resting NRS pain scores at 4, 24, 48, and 72 hours, and confirmation of cumulative 24-hour postoperative systemic opioid consumption.",
-      "rationale": "Figure 3 plots resting NRS pain scores as mean \u00b1 SD across timepoints (measured via vector graph as 1.76 \u00b1 0.67 vs 2.64 \u00b1 0.72 at 24h), and postoperative analgesia was scheduled IV flurbiprofen axetil (100 mg daily), but numerical tables for pain scores and rescue opioid usage are omitted.",
+      "urgency": "IMPORTANT: Exact numerical values (mean ± SD) for restin...",
+      "target_data": "Exact numerical values (mean ± SD) for resting NRS pain scores at 4, 24, 48, and 72 hours, and confirmation of cumulative 24-hour postoperative systemic opioid consumption.",
+      "rationale": "Figure 3 plots resting NRS pain scores as mean ± SD across timepoints (measured via vector graph as 1.76 ± 0.67 vs 2.64 ± 0.72 at 24h), and postoperative analgesia was scheduled IV flurbiprofen axetil (100 mg daily), but numerical tables for pain scores and rescue opioid usage are omitted.",
       "impact": "Supplies author-confirmed exact numerical pain scores and verifies zero/rescue opioid consumption for meta-analysis.",
       "corresponding_author": "Dr. Wenzhi Li",
       "email": "wenzhili9@126.com",
       "institution": "Department of Anesthesiology, Second Affiliated Hospital of Harbin Medical University, No. 246 Xuefu Road, Nangang District, Harbin, Heilongjiang 150086, China",
-      "draft_msg": "Dear Dr. Li, congratulations on your clinical trial published in the Journal of Pain Research (2026;19:619125) evaluating preoperative TEAS in breast cancer patients with sleep disturbance. In Figure 3 you present postoperative resting NRS pain scores at 4, 24, 48, and 72 hours. Could you kindly provide the exact numerical mean \u00b1 SD for these resting NRS pain scores, and confirm whether any rescue opioid was administered in the first 24 hours postoperatively for Group T (n=17) and Group S (n=16) for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Li, congratulations on your clinical trial published in the Journal of Pain Research (2026;19:619125) evaluating preoperative TEAS in breast cancer patients with sleep disturbance. In Figure 3 you present postoperative resting NRS pain scores at 4, 24, 48, and 72 hours. Could you kindly provide the exact numerical mean ± SD for these resting NRS pain scores, and confirm whether any rescue opioid was administered in the first 24 hours postoperatively for Group T (n=17) and Group S (n=16) for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -5249,6 +5456,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Ma 2026",
@@ -5273,7 +5486,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -5291,17 +5504,17 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE Table 1, Table 2 & Table 3 published values: 568 completed and analyzed patients across 6 medical centers (190 Combined TEAS [PC6+CV17], 198 Single TEAS [PC6], 188 Sham TEAS); 24h resting NRS pain score is Combined TEAS median 1.0 (IQR 0, 1.0) [Wan mean 1.0 \u00b1 0.7] vs Single TEAS median 0.9 (IQR 0, 1.3) [Wan mean 0.9 \u00b1 1.0] vs Sham TEAS median 1.0 (IQR 0, 1.6) [Wan mean 1.0 \u00b1 1.2] (P = 0.94).<br>3. 24h coughing NRS pain score: Combined TEAS median 1.0 (0, 2.3) [Wan mean 1.0 \u00b1 1.7] vs Single TEAS median 1.3 (0.3, 2.9) [Wan mean 1.3 \u00b1 1.9] vs Sham TEAS median 1.1 (0.1, 2.8) [Wan mean 1.1 \u00b1 2.0] (P = 0.89).<br>4. Intraoperative remifentanil consumption was significantly reduced in Combined TEAS: 1.2 \u00b1 0.5 vs Single TEAS 1.3 \u00b1 0.6 vs Sham TEAS 1.4 \u00b1 0.7 mg (P = 0.002 across groups; Combined vs Sham P < 0.001, difference -0.20 mg [95% CI -0.34 to -0.07]).<br>5. 24h PONV was significantly reduced in Combined TEAS: 35/190 (18.4%) vs Single TEAS 59/198 (29.8%) vs Sham TEAS 68/188 (36.2%) (P = 0.0001; Combined vs Sham P < 0.001, RR 0.60 [95% CI 0.45 to 0.81]); 24h Nausea: 12/190 (6.3%) vs 38/198 (19.2%) vs 45/188 (23.9%) (P < 0.001).<br>6. Rescue analgesia (parecoxib 40 mg IV): Combined TEAS 4/190 (2.1%) vs Single TEAS 3/198 (1.5%) vs Sham TEAS 7/188 (3.7%) (P = 0.35). Chronic post-mastectomy pain at 6 months: Combined TEAS 42/190 (22.1%) vs Single TEAS 72/198 (36.4%) vs Sham TEAS 65/188 (34.6%) (P = 0.005).<br>7. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Centralized computer permuted-block web randomization, opaque-box sham electrode controls, blinded clinical and follow-up teams, 98.6% completion (568/576 analyzed), and prospective registration under NCT02741726.",
-      "fake_boilerplate_expunged": "Fabricated data: 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE Table 1, Table 2 & Table 3 published values: 568 completed and analyzed patients across 6 medical centers (190 Combined TEAS [PC6+CV17], 198 Single TEAS [PC6], 188 Sham TEAS); 24h resting NRS pain score is Combined TEAS median 1.0 (IQR 0, 1.0) [Wan mean 1.0 ± 0.7] vs Single TEAS median 0.9 (IQR 0, 1.3) [Wan mean 0.9 ± 1.0] vs Sham TEAS median 1.0 (IQR 0, 1.6) [Wan mean 1.0 ± 1.2] (P = 0.94).<br>3. 24h coughing NRS pain score: Combined TEAS median 1.0 (0, 2.3) [Wan mean 1.0 ± 1.7] vs Single TEAS median 1.3 (0.3, 2.9) [Wan mean 1.3 ± 1.9] vs Sham TEAS median 1.1 (0.1, 2.8) [Wan mean 1.1 ± 2.0] (P = 0.89).<br>4. Intraoperative remifentanil consumption was significantly reduced in Combined TEAS: 1.2 ± 0.5 vs Single TEAS 1.3 ± 0.6 vs Sham TEAS 1.4 ± 0.7 mg (P = 0.002 across groups; Combined vs Sham P < 0.001, difference -0.20 mg [95% CI -0.34 to -0.07]).<br>5. 24h PONV was significantly reduced in Combined TEAS: 35/190 (18.4%) vs Single TEAS 59/198 (29.8%) vs Sham TEAS 68/188 (36.2%) (P = 0.0001; Combined vs Sham P < 0.001, RR 0.60 [95% CI 0.45 to 0.81]); 24h Nausea: 12/190 (6.3%) vs 38/198 (19.2%) vs 45/188 (23.9%) (P < 0.001).<br>6. Rescue analgesia (parecoxib 40 mg IV): Combined TEAS 4/190 (2.1%) vs Single TEAS 3/198 (1.5%) vs Sham TEAS 7/188 (3.7%) (P = 0.35). Chronic post-mastectomy pain at 6 months: Combined TEAS 42/190 (22.1%) vs Single TEAS 72/198 (36.4%) vs Sham TEAS 65/188 (34.6%) (P = 0.005).<br>7. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Centralized computer permuted-block web randomization, opaque-box sham electrode controls, blinded clinical and follow-up teams, 98.6% completion (568/576 analyzed), and prospective registration under NCT02741726.",
+      "fake_boilerplate_expunged": "Fabricated data: 2.4 ± 0.8 vs 3.8 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
       "evidence_sources": "Text p. 2-4 (Methods, multicenter, web randomization, NCT02741726); Fig 1 p. 3 (flow diagram); Table 1 p. 4 (demographics); Table 2 p. 5 (chronic pain outcomes); Table 3 p. 5 (short-term acute outcomes, remifentanil, pain NRS, PONV, rescue analgesia)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan), CV17 (Danzhong)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
       "sessions_category": "Single session",
@@ -5313,14 +5526,14 @@ window.STUDIES_DATA = [
       "total_n": 378,
       "arm1_name": "TEAS Group",
       "arm1_n": 190,
-      "arm1_age": "48.2 \u00b1 8.2",
+      "arm1_age": "48.2 ± 8.2",
       "arm1_female": "190/190 (100%)",
-      "arm1_bmi": "23.3 \u00b1 2.8",
+      "arm1_bmi": "23.3 ± 2.8",
       "arm2_name": "Sham Group",
       "arm2_n": 188,
-      "arm2_age": "48.2 \u00b1 9.0",
+      "arm2_age": "48.2 ± 9.0",
       "arm2_female": "188/188 (100%)",
-      "arm2_bmi": "23.6 \u00b1 2.5",
+      "arm2_bmi": "23.6 ± 2.5",
       "asa_status": "ASA I: 135 (71.1%), ASA II: 55 (28.9%)"
     },
     "rob2": {
@@ -5339,13 +5552,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative PCA sufentan...",
-      "target_data": "Cumulative 24-hour postoperative PCA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL), and parametric mean \u00b1 SD for 24-hour resting and coughing NRS pain scores.",
-      "rationale": "Manuscript reports that postoperative PCA sufentanil and rescue parecoxib (40 mg IV for NRS > 4) were administered, and Table 3 presents 24-hour resting and coughing pain scores as median and IQR (1.0 [0, 1.0] vs 0.9 [0, 1.3] vs 1.0 [0, 1.6] at rest; 1.0 [0, 2.3] vs 1.3 [0.3, 2.9] vs 1.1 [0.1, 2.8] at cough), but total 24-hour sufentanil dosage and parametric pain mean \u00b1 SD are not tabulated.",
+      "target_data": "Cumulative 24-hour postoperative PCA sufentanil consumption (mean ± SD in µg or mL), and parametric mean ± SD for 24-hour resting and coughing NRS pain scores.",
+      "rationale": "Manuscript reports that postoperative PCA sufentanil and rescue parecoxib (40 mg IV for NRS > 4) were administered, and Table 3 presents 24-hour resting and coughing pain scores as median and IQR (1.0 [0, 1.0] vs 0.9 [0, 1.3] vs 1.0 [0, 1.6] at rest; 1.0 [0, 2.3] vs 1.3 [0.3, 2.9] vs 1.1 [0.1, 2.8] at cough), but total 24-hour sufentanil dosage and parametric pain mean ± SD are not tabulated.",
       "impact": "Supplies author-verified 24-hour postoperative opioid consumption in IV MME and parametric continuous pain metrics for 568-patient multicenter mastectomy trial.",
       "corresponding_author": "Dr. Zhihong Lu & Dr. Lize Xiong",
       "email": "deerlu23@163.com",
       "institution": "`deerlu23@163.com`; Department of Anesthesiology and Perioperative Medicine, Xijing Hospital, Fourth Military Medical University, Xi'an 710032, China / Shanghai Fourth People's Hospital, Tongji University, Shanghai 200434, China",
-      "draft_msg": "Dear Dr. Lu and Dr. Xiong, congratulations on your multicenter randomized clinical trial published in the Journal of Clinical Anesthesia (2021;74:110453) evaluating preoperative TEAS in 568 patients undergoing mastectomy. In Section 2.6 and Table 3 you describe postoperative PCA sufentanil and present 24-hour pain scores as median (IQR). Could you kindly provide the cumulative 24-hour postoperative PCA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL) and the parametric mean \u00b1 SD for the 24-hour resting and coughing NRS pain scores for the Combined TEAS (n=190), Single TEAS (n=198), and Sham-operated (n=188) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Lu and Dr. Xiong, congratulations on your multicenter randomized clinical trial published in the Journal of Clinical Anesthesia (2021;74:110453) evaluating preoperative TEAS in 568 patients undergoing mastectomy. In Section 2.6 and Table 3 you describe postoperative PCA sufentanil and present 24-hour pain scores as median (IQR). Could you kindly provide the cumulative 24-hour postoperative PCA sufentanil consumption (mean ± SD in µg or mL) and the parametric mean ± SD for the 24-hour resting and coughing NRS pain scores for the Combined TEAS (n=190), Single TEAS (n=198), and Sham-operated (n=188) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -5393,6 +5606,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Lu 2021",
@@ -5417,7 +5636,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -5435,20 +5654,20 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE Table 3 published values: 94 completed and analyzed patients (47 TEAS, 47 Control); Resting VAS pain at 24h is TEAS median 2.2 (range 0.0, 10.0) [Wan mean 2.2 \u00b1 2.5] vs Control median 1.2 (range 0.0, 8.1) [Wan mean 1.2 \u00b1 2.0] (P = 0.41); 48h resting VAS is median 1.2 vs 1.6 (P = 0.80); 72h resting VAS is median 0.6 vs 1.0 (P = 0.05).<br>3. Coughing VAS pain at 24h is TEAS median 5.8 (0.4, 10.0) [Wan mean 5.8 \u00b1 2.4] vs Control median 5.5 (1.4, 10.0) [Wan mean 5.5 \u00b1 2.2] (P = 0.94); 48h coughing VAS is median 5.0 vs 5.0.<br>4. PCA deliveries at 24h were significantly reduced: median 5.0 (2.0, 12.0) vs 12.0 (6.0, 22.0) (P = 0.001); PCA attempts at 24h: median 8.0 (3.0, 18.0) vs 16.5 (8.0, 38.0) (P = 0.001).<br>5. Time to discharge: TEAS 6.0 \u00b1 1.8 vs Control 7.0 \u00b1 2.4 days (P = 0.02); Time to flatus: 34.5 \u00b1 16.7 vs 42.4 \u00b1 22.9 h (P = 0.03); Time to defecation: 42.0 \u00b1 25.0 vs 55.4 \u00b1 29.7 h (P = 0.03).<br>6. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated sequence (1:1), sealed envelopes, sham electrodes in opaque box with sensory threshold guidance, blinded follow-up investigators, 94% completion (94/100 analyzed), and prospective registration under NCT02921529.",
-      "fake_boilerplate_expunged": "Fabricated data: 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; RoB 2 claiming open-label design and no registry.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 ± 0.8 vs 3.7 ± 1.1 for pain, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE Table 3 published values: 94 completed and analyzed patients (47 TEAS, 47 Control); Resting VAS pain at 24h is TEAS median 2.2 (range 0.0, 10.0) [Wan mean 2.2 ± 2.5] vs Control median 1.2 (range 0.0, 8.1) [Wan mean 1.2 ± 2.0] (P = 0.41); 48h resting VAS is median 1.2 vs 1.6 (P = 0.80); 72h resting VAS is median 0.6 vs 1.0 (P = 0.05).<br>3. Coughing VAS pain at 24h is TEAS median 5.8 (0.4, 10.0) [Wan mean 5.8 ± 2.4] vs Control median 5.5 (1.4, 10.0) [Wan mean 5.5 ± 2.2] (P = 0.94); 48h coughing VAS is median 5.0 vs 5.0.<br>4. PCA deliveries at 24h were significantly reduced: median 5.0 (2.0, 12.0) vs 12.0 (6.0, 22.0) (P = 0.001); PCA attempts at 24h: median 8.0 (3.0, 18.0) vs 16.5 (8.0, 38.0) (P = 0.001).<br>5. Time to discharge: TEAS 6.0 ± 1.8 vs Control 7.0 ± 2.4 days (P = 0.02); Time to flatus: 34.5 ± 16.7 vs 42.4 ± 22.9 h (P = 0.03); Time to defecation: 42.0 ± 25.0 vs 55.4 ± 29.7 h (P = 0.03).<br>6. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated sequence (1:1), sealed envelopes, sham electrodes in opaque box with sensory threshold guidance, blinded follow-up investigators, 94% completion (94/100 analyzed), and prospective registration under NCT02921529.",
+      "fake_boilerplate_expunged": "Fabricated data: 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; RoB 2 claiming open-label design and no registry.",
       "evidence_sources": "Text p. 2872-2875 (Methods, multicenter, sealed envelopes, NCT02921529); Fig 1 p. 2874 (CONSORT flow); Table 2 p. 2874 (demographics); Table 3 p. 2875 (recovery parameters, VAS, PCA, PONV, hospital stay)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan), ST36 (Zusanli)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
-      "sessions_category": "Multiple sessions (\u2265 2)",
+      "sessions_category": "Multiple sessions (≥ 2)",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
       "needle_depth": "Surface hydrogel electrode"
@@ -5457,14 +5676,14 @@ window.STUDIES_DATA = [
       "total_n": 94,
       "arm1_name": "TEAS Group",
       "arm1_n": 47,
-      "arm1_age": "56.2 \u00b1 9.0",
+      "arm1_age": "56.2 ± 9.0",
       "arm1_female": "21/47 (44.7%)",
-      "arm1_bmi": "22.5 \u00b1 2.6",
+      "arm1_bmi": "22.5 ± 2.6",
       "arm2_name": "Sham Group",
       "arm2_n": 47,
-      "arm2_age": "55.6 \u00b1 9.9",
+      "arm2_age": "55.6 ± 9.9",
       "arm2_female": "24/47 (51.1%)",
-      "arm2_bmi": "22.8 \u00b1 2.8",
+      "arm2_bmi": "22.8 ± 2.8",
       "asa_status": "ASA I: 0, ASA II: 45 (95.7%), ASA III: 2 (4.3%)"
     },
     "rob2": {
@@ -5476,20 +5695,20 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Time to meet discharge criteria",
       "timepoint": "Postoperative",
-      "rationale": "6.0 \u00b1 1.8 vs 7.0 \u00b1 2.4 days; P=0.02"
+      "rationale": "6.0 ± 1.8 vs 7.0 ± 2.4 days; P=0.02"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Parametric mean \u00b1 SD for 24-hour resting and ...",
-      "target_data": "Parametric mean \u00b1 SD for 24-hour resting and coughing VAS pain scores, and cumulative 24-hour postoperative PCA opioid consumption (mean \u00b1 SD in \u00b5g or mL).",
-      "rationale": "Table 3 presents resting and coughing VAS pain scores as medians with ranges (2.2 [0.0, 10.0] vs 1.2 [0.0, 8.1] at rest; 5.8 [0.4, 10.0] vs 5.5 [1.4, 10.0] at cough) and PCA use as deliveries (5.0 vs 12.0) and attempts (8.0 vs 16.5), but parametric mean \u00b1 SD values and total opioid mass delivered are omitted.",
+      "urgency": "IMPORTANT: Parametric mean ± SD for 24-hour resting and ...",
+      "target_data": "Parametric mean ± SD for 24-hour resting and coughing VAS pain scores, and cumulative 24-hour postoperative PCA opioid consumption (mean ± SD in µg or mL).",
+      "rationale": "Table 3 presents resting and coughing VAS pain scores as medians with ranges (2.2 [0.0, 10.0] vs 1.2 [0.0, 8.1] at rest; 5.8 [0.4, 10.0] vs 5.5 [1.4, 10.0] at cough) and PCA use as deliveries (5.0 vs 12.0) and attempts (8.0 vs 16.5), but parametric mean ± SD values and total opioid mass delivered are omitted.",
       "impact": "Supplies author-confirmed parametric continuous pain metrics and exact 24-hour opioid consumption in IV MME for multicenter colorectal surgery cohort.",
       "corresponding_author": "Dr. Li-Ze Xiong",
       "email": "mzkxlz@126.com",
       "institution": "`mzkxlz@126.com`; Department of Anesthesiology and Perioperative Medicine, Shanghai Fourth People's Hospital Affiliated to Tongji University School of Medicine, Shanghai, China / Xijing Hospital, Xi'an, China",
-      "draft_msg": "Dear Dr. Xiong, congratulations on your multicenter randomized trial published in the Journal of Multidisciplinary Healthcare (2022;15:2871-2879) evaluating TEAS for enhanced recovery after laparoscopic colon surgery. In Table 3 you report 24-hour resting and coughing VAS pain scores as median (min, max) and PCA deliveries/attempts. Could you kindly provide the parametric mean \u00b1 SD for the 24-hour resting and coughing VAS pain scores, as well as the cumulative 24-hour postoperative PCA opioid consumption (mean \u00b1 SD in \u00b5g or mL, and PCA drug concentration) for the TEAS (n=47) and Control (n=47) groups for our systematic review?"
+      "draft_msg": "Dear Dr. Xiong, congratulations on your multicenter randomized trial published in the Journal of Multidisciplinary Healthcare (2022;15:2871-2879) evaluating TEAS for enhanced recovery after laparoscopic colon surgery. In Table 3 you report 24-hour resting and coughing VAS pain scores as median (min, max) and PCA deliveries/attempts. Could you kindly provide the parametric mean ± SD for the 24-hour resting and coughing VAS pain scores, as well as the cumulative 24-hour postoperative PCA opioid consumption (mean ± SD in µg or mL, and PCA drug concentration) for the TEAS (n=47) and Control (n=47) groups for our systematic review?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -5545,11 +5764,17 @@ window.STUDIES_DATA = [
         "unit": "attempts",
         "p_val": 0.001,
         "effective_presses": {
-          "arm1": "5.0 (2\u201312)",
-          "arm2": "12.0 (6\u201322)",
+          "arm1": "5.0 (2–12)",
+          "arm2": "12.0 (6–22)",
           "p": 0.001
         },
-        "note": "24h PCA attempts: TEAS median 8.0 [3\u201318] (mean ~9.67) vs Control median 16.5 [8\u201338] (mean ~20.83, P=0.001)."
+        "note": "24h PCA attempts: TEAS median 8.0 [3–18] (mean ~9.67) vs Control median 16.5 [8–38] (mean ~20.83, P=0.001)."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Lu 2022",
@@ -5574,7 +5799,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -5592,16 +5817,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE Table 2 & Table 5 published values: 277 completed and analyzed patients (138 TEAS, 139 Sham TEAS); 24h postoperative pain NRS score is TEAS 1.30 \u00b1 0.92 vs Sham TEAS 1.65 \u00b1 0.95 (P < 0.01) [MD -0.35, 95% CI -0.57 to -0.13]; 48h pain NRS is 0.82 \u00b1 0.75 vs 1.09 \u00b1 0.75 (P < 0.01); 6h pain NRS is 1.55 \u00b1 0.85 vs 1.86 \u00b1 0.97 (P = 0.01).<br>3. Cumulative PONV within 48h: Nausea is TEAS 24/138 (17.4%) vs Sham TEAS 53/139 (38.1%) (P < 0.01) [RR 0.46, 95% CI 0.30 to 0.69]; Vomiting is 9/138 (6.5%) vs 27/139 (19.4%) (P < 0.01) [RR 0.34, 95% CI 0.16 to 0.69]; Complete response: 112/138 (81.2%) vs 83/139 (59.7%) (P < 0.01).<br>4. Rescue analgesia (acetaminophen 0.3 g IV): TEAS 5/138 (3.6%) vs Sham TEAS 5/139 (3.6%). Intraoperative sufentanil: 15.86 \u00b1 5.11 vs 15.18 \u00b1 4.95 \u00b5g.<br>5. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer sequence (1:1), SNOSE concealment, identical 0 mA sham electrodes at PC6, blinded evaluators/ward staff/statisticians, 100% completion (277/277 analyzed), and prospective registration under ChiCTR2300077667.",
-      "fake_boilerplate_expunged": "Fabricated data: 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 ± 0.8 vs 3.7 ± 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE Table 2 & Table 5 published values: 277 completed and analyzed patients (138 TEAS, 139 Sham TEAS); 24h postoperative pain NRS score is TEAS 1.30 ± 0.92 vs Sham TEAS 1.65 ± 0.95 (P < 0.01) [MD -0.35, 95% CI -0.57 to -0.13]; 48h pain NRS is 0.82 ± 0.75 vs 1.09 ± 0.75 (P < 0.01); 6h pain NRS is 1.55 ± 0.85 vs 1.86 ± 0.97 (P = 0.01).<br>3. Cumulative PONV within 48h: Nausea is TEAS 24/138 (17.4%) vs Sham TEAS 53/139 (38.1%) (P < 0.01) [RR 0.46, 95% CI 0.30 to 0.69]; Vomiting is 9/138 (6.5%) vs 27/139 (19.4%) (P < 0.01) [RR 0.34, 95% CI 0.16 to 0.69]; Complete response: 112/138 (81.2%) vs 83/139 (59.7%) (P < 0.01).<br>4. Rescue analgesia (acetaminophen 0.3 g IV): TEAS 5/138 (3.6%) vs Sham TEAS 5/139 (3.6%). Intraoperative sufentanil: 15.86 ± 5.11 vs 15.18 ± 4.95 µg.<br>5. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer sequence (1:1), SNOSE concealment, identical 0 mA sham electrodes at PC6, blinded evaluators/ward staff/statisticians, 100% completion (277/277 analyzed), and prospective registration under ChiCTR2300077667.",
+      "fake_boilerplate_expunged": "Fabricated data: 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
       "evidence_sources": "Text p. 2-5 (Methods, computer sequence, SNOSE, ChiCTR2300077667); Fig 1 p. 4 (flow diagram); Table 1 p. 4 (demographics); Table 2 p. 5 (PONV incidences); Table 3 p. 5 (vomiting severity); Table 4 p. 5 (rescue antiemetics); Table 5 p. 5 (pain NRS scores)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan)",
       "frequency_raw": "Not applicable",
-      "frequency_category": "2\u201310 Hz (Low Frequency)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "frequency_category": "2–10 Hz (Low Frequency)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
@@ -5614,14 +5839,14 @@ window.STUDIES_DATA = [
       "total_n": 277,
       "arm1_name": "TEAS Group",
       "arm1_n": 138,
-      "arm1_age": "45.18 \u00b1 11.93",
+      "arm1_age": "45.18 ± 11.93",
       "arm1_female": "91/138 (65.9%)",
-      "arm1_bmi": "22.71 \u00b1 3.34",
+      "arm1_bmi": "22.71 ± 3.34",
       "arm2_name": "Sham Group",
       "arm2_n": 139,
-      "arm2_age": "46.29 \u00b1 11.86",
+      "arm2_age": "46.29 ± 11.86",
       "arm2_female": "80/139 (57.6%)",
-      "arm2_bmi": "23.24 \u00b1 3.72",
+      "arm2_bmi": "23.24 ± 3.72",
       "asa_status": "ASA I: 88 (63.8%), ASA II: 50 (36.2%)"
     },
     "rob2": {
@@ -5640,20 +5865,20 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative systemic opi...",
-      "target_data": "Cumulative 24-hour postoperative systemic opioid consumption (mean \u00b1 SD in IV MME) and resting vs movement pain distinction at 24 hours.",
+      "target_data": "Cumulative 24-hour postoperative systemic opioid consumption (mean ± SD in IV MME) and resting vs movement pain distinction at 24 hours.",
       "rationale": "Trial text describes postoperative pain management with IV oxycodone (0.7 mg/kg PRN) and rescue acetaminophen (0.3 g IV for NRS > 4), but total 24-hour postoperative opioid consumption in IV MME is not tabulated in the manuscript.",
       "impact": "Provides precise postoperative opioid dosage in IV MME and verifies pain conditions for the primary review synthesis in a 277-patient tympanoplasty trial.",
       "corresponding_author": "Dr. Shuangshuang Li & Dr. Jie Jia",
       "email": "lishuangshuang@eentanesthesia.com",
       "institution": "`lishuangshuang@eentanesthesia.com`; Department of Anesthesiology, EYE & ENT Hospital of Fudan University, 2600 Jiangyue Road, Pujin Street, Shanghai, Minhang 200032, China",
-      "draft_msg": "Dear Dr. Li and Dr. Jia, congratulations on your randomized controlled trial published in BMC Complementary Medicine and Therapies (2026;26:167) evaluating TEAS at PC6 for postoperative recovery after tympanoplasty in 277 patients. In Table 5 you present postoperative NRS pain scores across timepoints. Could you kindly provide the cumulative 24-hour postoperative systemic opioid consumption (mean \u00b1 SD in IV oral morphine milligram equivalents or mg of oxycodone) and specify whether the 24-hour pain scores reflect resting or movement conditions for the TEAS (n=138) and Sham-TEAS (n=139) groups for our systematic review?"
+      "draft_msg": "Dear Dr. Li and Dr. Jia, congratulations on your randomized controlled trial published in BMC Complementary Medicine and Therapies (2026;26:167) evaluating TEAS at PC6 for postoperative recovery after tympanoplasty in 277 patients. In Table 5 you present postoperative NRS pain scores across timepoints. Could you kindly provide the cumulative 24-hour postoperative systemic opioid consumption (mean ± SD in IV oral morphine milligram equivalents or mg of oxycodone) and specify whether the 24-hour pain scores reflect resting or movement conditions for the TEAS (n=138) and Sham-TEAS (n=139) groups for our systematic review?"
     },
     "outcomes": {
       "opioid_24h": {
         "status": "Conditional / Separate",
         "role": "QC Hold",
         "inclusion_decision": "EXCLUDE UNTIL UNIT/DEFINITION RESOLVED",
-        "note": "15.86 \u00b1 5.11 vs 15.18 \u00b1 4.95 published as sufentanil equivalents mg (unresolved unit definition)",
+        "note": "15.86 ± 5.11 vs 15.18 ± 4.95 published as sufentanil equivalents mg (unresolved unit definition)",
         "mean_diff": null,
         "se": null
       },
@@ -5683,7 +5908,7 @@ window.STUDIES_DATA = [
         "log_rr_se": 0.081,
         "ci_low": 1.16,
         "ci_upp": 1.593,
-        "readiness": "INCLUDE \u2014 SEPARATE TIME WINDOW"
+        "readiness": "INCLUDE — SEPARATE TIME WINDOW"
       },
       "flatus_time": null,
       "hospital_stay": null,
@@ -5708,6 +5933,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Luo 2026",
@@ -5732,7 +5963,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -5750,16 +5981,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE Table 6 & Table 7 published values: 53 completed and analyzed patients (27 Group A [EA], 26 Group C [Sham Control]); 24h resting VAS pain score is Group A 2.78 \u00b1 0.97 vs Group C 3.96 \u00b1 0.96 (P < 0.001) [MD -1.18, 95% CI -1.70 to -0.66]; 48h resting VAS pain score is 1.85 \u00b1 0.72 vs 2.65 \u00b1 0.94 (P = 0.001).<br>3. Composite PONV: Group A 1/27 (3.7%) vs Group C 8/26 (30.8%) (P = 0.024) [RR 0.12, 95% CI 0.02 to 0.90].<br>4. PCIA sufentanil compressions at 48h: 7.11 \u00b1 2.14 vs 8.62 \u00b1 1.84 (P = 0.008); 48h PCIA drug consumption: 86.22 \u00b1 4.27 vs 89.23 \u00b1 3.67 mL (P = 0.008).<br>5. RoB 2 verified: D1 Some concerns (random number table, concealment details not specified); D2-D5 Low risk (double-blind sham with 0 mA at identical acupoints, blinded observers, 88.3% completion, prospective registration under ChiCTR2100053050). Overall: Some concerns.",
-      "fake_boilerplate_expunged": "Fabricated data: 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 ± 0.8 vs 3.7 ± 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE Table 6 & Table 7 published values: 53 completed and analyzed patients (27 Group A [EA], 26 Group C [Sham Control]); 24h resting VAS pain score is Group A 2.78 ± 0.97 vs Group C 3.96 ± 0.96 (P < 0.001) [MD -1.18, 95% CI -1.70 to -0.66]; 48h resting VAS pain score is 1.85 ± 0.72 vs 2.65 ± 0.94 (P = 0.001).<br>3. Composite PONV: Group A 1/27 (3.7%) vs Group C 8/26 (30.8%) (P = 0.024) [RR 0.12, 95% CI 0.02 to 0.90].<br>4. PCIA sufentanil compressions at 48h: 7.11 ± 2.14 vs 8.62 ± 1.84 (P = 0.008); 48h PCIA drug consumption: 86.22 ± 4.27 vs 89.23 ± 3.67 mL (P = 0.008).<br>5. RoB 2 verified: D1 Some concerns (random number table, concealment details not specified); D2-D5 Low risk (double-blind sham with 0 mA at identical acupoints, blinded observers, 88.3% completion, prospective registration under ChiCTR2100053050). Overall: Some concerns.",
+      "fake_boilerplate_expunged": "Fabricated data: 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
       "evidence_sources": "Text p. 2-5 (Methods, random number table, double-blind sham, ChiCTR2100053050); Fig 2 p. 4 (flow diagram); Table 1 p. 4 (demographics); Table 2 p. 4 (MMSE & PND); Table 6 p. 8 (PONV & adverse reactions); Table 7 p. 9 (VAS pain & PCIA)"
     },
     "stricta": {
       "acupoints": "GV20 (Baihui), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -5772,14 +6003,14 @@ window.STUDIES_DATA = [
       "total_n": 53,
       "arm1_name": "TEAS Group",
       "arm1_n": 27,
-      "arm1_age": "75.70 \u00b1 10.95",
+      "arm1_age": "75.70 ± 10.95",
       "arm1_female": "13/27 (48.1%)",
-      "arm1_bmi": "21.61 \u00b1 2.58",
+      "arm1_bmi": "21.61 ± 2.58",
       "arm2_name": "Sham Group",
       "arm2_n": 26,
-      "arm2_age": "72.35 \u00b1 15.15",
+      "arm2_age": "72.35 ± 15.15",
       "arm2_female": "11/26 (42.3%)",
-      "arm2_bmi": "22.22 \u00b1 2.53",
+      "arm2_bmi": "22.22 ± 2.53",
       "asa_status": "ASA I: 1 (3.7%), ASA II: 17 (63.0%), ASA III: 9 (33.3%)"
     },
     "rob2": {
@@ -5798,13 +6029,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative PCIA sufenta...",
-      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL).",
-      "rationale": "Table 7 reports cumulative 48-hour PCIA drug consumption (86.22 \u00b1 4.27 vs 89.23 \u00b1 3.67 mL) and compression times (7.11 \u00b1 2.14 vs 8.62 \u00b1 1.84), but 24-hour cumulative opioid volume or dose is not broken down in tables.",
-      "impact": "Converts PCIA consumption into precise 24-hour continuous opioid dose in \u00b5g and IV MME for the primary opioid meta-analysis.",
+      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL).",
+      "rationale": "Table 7 reports cumulative 48-hour PCIA drug consumption (86.22 ± 4.27 vs 89.23 ± 3.67 mL) and compression times (7.11 ± 2.14 vs 8.62 ± 1.84), but 24-hour cumulative opioid volume or dose is not broken down in tables.",
+      "impact": "Converts PCIA consumption into precise 24-hour continuous opioid dose in µg and IV MME for the primary opioid meta-analysis.",
       "corresponding_author": "Dr. Yuebing Li",
       "email": "lyb1853@zcmu.edu.cn",
       "institution": "Department of Anesthesiology, The Second Affiliated Hospital of Zhejiang Chinese Medical University, 318 Chaowang Road, Gongshu District, Hangzhou, China",
-      "draft_msg": "Dear Dr. Li, congratulations on your randomized controlled trial published in Injury (2025;56:112660) evaluating electroacupuncture intervention in elderly patients undergoing hip fracture surgery. In Table 7 you report cumulative 48-hour PCIA drug consumption and compressions. Could you kindly provide the cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL of solution) for Group A (n=27) and Group C (n=26) for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Li, congratulations on your randomized controlled trial published in Injury (2025;56:112660) evaluating electroacupuncture intervention in elderly patients undergoing hip fracture surgery. In Table 7 you report cumulative 48-hour PCIA drug consumption and compressions. Could you kindly provide the cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL of solution) for Group A (n=27) and Group C (n=26) for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -5870,7 +6101,14 @@ window.STUDIES_DATA = [
         "arm2_sd": 1.84,
         "unit": "compressions",
         "p_val": 0.008,
-        "note": "48h PCIA compressions: 7.11 \u00b1 2.14 in Group A (TEAS) vs 8.62 \u00b1 1.84 in Group C (Control) (P=0.008)."
+        "note": "48h PCIA compressions: 7.11 ± 2.14 in Group A (TEAS) vs 8.62 ± 1.84 in Group C (Control) (P=0.008)."
+      },
+      "opioid_48h": {
+        "status": "Conditional / Separate",
+        "role": "PCA Volume Proxy",
+        "note": "48h PCIA solution consumption: 86.22 ± 4.27 vs 89.23 ± 3.67 mL (P=0.008); compressions: 7.11 ± 2.14 vs 8.62 ± 1.84 (P=0.008).",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Long 2025",
@@ -5895,7 +6133,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -5913,16 +6151,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 for opioid; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE published trial & protocol facts (Trials 2020;21:617 / PMC7336398, ChiCTR1900023263): Large-scale RCT with 280 completed and analyzed patients (140 TEAS, 140 Sham TEAS); Length of hospital stay is TEAS 6.2 \u00b1 3.3 vs Sham TEAS 8.1 \u00b1 3.6 days (P < 0.01).<br>3. Primary outcome time to first bowel motion, first flatus, and first ambulation were significantly accelerated in TEAS (P < 0.01).<br>4. Incidence of postoperative gastrointestinal dysfunction (PGD) was significantly reduced: 26/140 (18.6%) vs 44/140 (31.4%) (P < 0.05, OR 0.498).<br>5. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated blocked sequence (70 blocks of 4), SNOSE opaque sealed envelopes, dedicated sham electrodes at 4 non-channel points with 0 mA, blinded DMC outcome observers, 100% completion (280/280 analyzed), and published prospective protocol.",
-      "fake_boilerplate_expunged": "Fabricated data: 20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 (N=30) for opioid; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 ± 4.7 vs 33.0 ± 7.0 for opioid; 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label design and no registry!<br>2. Replaced with TRUE published trial & protocol facts (Trials 2020;21:617 / PMC7336398, ChiCTR1900023263): Large-scale RCT with 280 completed and analyzed patients (140 TEAS, 140 Sham TEAS); Length of hospital stay is TEAS 6.2 ± 3.3 vs Sham TEAS 8.1 ± 3.6 days (P < 0.01).<br>3. Primary outcome time to first bowel motion, first flatus, and first ambulation were significantly accelerated in TEAS (P < 0.01).<br>4. Incidence of postoperative gastrointestinal dysfunction (PGD) was significantly reduced: 26/140 (18.6%) vs 44/140 (31.4%) (P < 0.05, OR 0.498).<br>5. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated blocked sequence (70 blocks of 4), SNOSE opaque sealed envelopes, dedicated sham electrodes at 4 non-channel points with 0 mA, blinded DMC outcome observers, 100% completion (280/280 analyzed), and published prospective protocol.",
+      "fake_boilerplate_expunged": "Fabricated data: 20.3 ± 4.7 vs 33.0 ± 7.0 (N=30) for opioid; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
       "evidence_sources": "Abstract p. 211; Protocol PMC7336398 p. 2-6 (Methods, blocked randomization, SNOSE, ChiCTR1900023263); Covidence true extracted values (R1 543991)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
@@ -5935,12 +6173,12 @@ window.STUDIES_DATA = [
       "total_n": 280,
       "arm1_name": "TEAS Group",
       "arm1_n": 140,
-      "arm1_age": "60 \u00b1 13",
+      "arm1_age": "60 ± 13",
       "arm1_female": "55/140 (39.3%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 140,
-      "arm2_age": "62 \u00b1 12",
+      "arm2_age": "62 ± 12",
       "arm2_female": "44/140 (31.4%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -5961,13 +6199,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative PCIA sufenta...",
-      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL), 24h resting VAS pain score, and exact 24h PONV incidence.",
-      "rationale": "Abstract and trial text report that postoperative pain score and PONV occurrence were significantly lower in TEAS (P < 0.01), and protocol (Trials 2020;21:617) details electronic PCIA pump (sufentanil 250 \u00b5g in 250 mL saline), but numerical mean \u00b1 SD values for 24h pain, opioid consumption, and 24h PONV events/total are omitted in main tables.",
+      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL), 24h resting VAS pain score, and exact 24h PONV incidence.",
+      "rationale": "Abstract and trial text report that postoperative pain score and PONV occurrence were significantly lower in TEAS (P < 0.01), and protocol (Trials 2020;21:617) details electronic PCIA pump (sufentanil 250 µg in 250 mL saline), but numerical mean ± SD values for 24h pain, opioid consumption, and 24h PONV events/total are omitted in main tables.",
       "impact": "Provides primary continuous pain, opioid consumption, and PONV metrics for 280-patient abdominal surgery cohort.",
       "corresponding_author": "Dr. Li-Xin An",
       "email": "anlixin8120@163.com",
       "institution": "Department of Anesthesiology, Beijing Friendship Hospital, Capital Medical University, Beijing 100050, China",
-      "draft_msg": "Dear Dr. An, congratulations on your randomized clinical trial published in the Journal of Integrative Medicine (2021;19:211-218) evaluating perioperative TEAS for gastrointestinal recovery in 280 abdominal surgery patients. In your article you report significant reductions in postoperative pain scores and PONV occurrence (P < 0.01). Could you kindly provide the numerical mean \u00b1 SD for 24-hour resting VAS pain scores, cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL), and 24-hour PONV incidence (events/total) for the TEAS (n=140) and Sham TEAS (n=140) groups for our systematic review?"
+      "draft_msg": "Dear Dr. An, congratulations on your randomized clinical trial published in the Journal of Integrative Medicine (2021;19:211-218) evaluating perioperative TEAS for gastrointestinal recovery in 280 abdominal surgery patients. In your article you report significant reductions in postoperative pain scores and PONV occurrence (P < 0.01). Could you kindly provide the numerical mean ± SD for 24-hour resting VAS pain scores, cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL), and 24-hour PONV incidence (events/total) for the TEAS (n=140) and Sham TEAS (n=140) groups for our systematic review?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -5995,6 +6233,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Li 2021",
@@ -6019,7 +6263,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -6037,16 +6281,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers entered fake boilerplate (2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label control and no registry!<br>2. Replaced with TRUE published trial & protocol facts (BMC Complement Med Ther 2023;23:253, ChiCTR2100052837): 120 completed and analyzed patients (58 TEAS, 62 Sham TEAS); Incidence of moderate-to-severe pain within 24h is TEAS 22/58 (37.9%) vs Sham TEAS 40/62 (64.5%) (P = 0.004, OR 0.227).<br>3. Patients requiring rescue morphine: TEAS 19/58 (32.7%) vs Sham TEAS 40/62 (64.5%) (P < 0.01).<br>4. Resting pain NRS: 24h pain score is TEAS 1.2 \u00b1 1.3 vs Sham TEAS 2.8 \u00b1 1.9 (P < 0.01); 48h pain score: 0.5 \u00b1 0.4 vs 0.9 \u00b1 0.6.<br>5. PONV: TEAS 4/58 (6.9%) vs Sham TEAS 14/62 (22.6%) (P = 0.06).<br>6. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated blocked sequence, nurse-prepared sealed numbered envelopes, identical sham electrodes at non-acupoints with 0 mA, blinded evaluators/endoscopists/patients, 93.0% completion rate, and published prospective protocol.",
-      "fake_boilerplate_expunged": "Fabricated data: 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers entered fake boilerplate (2.3 ± 0.8 vs 3.7 ± 1.1 for pain, 5/30 vs 12/30 for PONV, false N=30) and fake RoB boilerplate claiming open-label control and no registry!<br>2. Replaced with TRUE published trial & protocol facts (BMC Complement Med Ther 2023;23:253, ChiCTR2100052837): 120 completed and analyzed patients (58 TEAS, 62 Sham TEAS); Incidence of moderate-to-severe pain within 24h is TEAS 22/58 (37.9%) vs Sham TEAS 40/62 (64.5%) (P = 0.004, OR 0.227).<br>3. Patients requiring rescue morphine: TEAS 19/58 (32.7%) vs Sham TEAS 40/62 (64.5%) (P < 0.01).<br>4. Resting pain NRS: 24h pain score is TEAS 1.2 ± 1.3 vs Sham TEAS 2.8 ± 1.9 (P < 0.01); 48h pain score: 0.5 ± 0.4 vs 0.9 ± 0.6.<br>5. PONV: TEAS 4/58 (6.9%) vs Sham TEAS 14/62 (22.6%) (P = 0.06).<br>6. RoB 2 corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: Computer-generated blocked sequence, nurse-prepared sealed numbered envelopes, identical sham electrodes at non-acupoints with 0 mA, blinded evaluators/endoscopists/patients, 93.0% completion rate, and published prospective protocol.",
+      "fake_boilerplate_expunged": "Fabricated data: 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no registry.",
       "evidence_sources": "Abstract p. 720; Protocol PMC10357617 p. 2-5 (Methods, blocked randomization, sealed numbered envelopes, ChiCTR2100052837); Covidence true extracted values (R1 543991)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), ST37 (Shangjuxu)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
@@ -6059,15 +6303,15 @@ window.STUDIES_DATA = [
       "total_n": 120,
       "arm1_name": "TEAS Group",
       "arm1_n": 58,
-      "arm1_age": "65 (54\u201369)",
+      "arm1_age": "65 (54–69)",
       "arm1_female": "20/58 (34.5%)",
-      "arm1_bmi": "24.0 (21.5\u201326.0)",
+      "arm1_bmi": "24.0 (21.5–26.0)",
       "arm2_name": "Sham Group",
       "arm2_n": 62,
-      "arm2_age": "62 (53\u201367)",
+      "arm2_age": "62 (53–67)",
       "arm2_female": "18/62 (29.0%)",
-      "arm2_bmi": "24.0 (22.5\u201325.9)",
-      "asa_status": "100% ASA I\u2013II"
+      "arm2_bmi": "24.0 (22.5–25.9)",
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Low",
@@ -6076,7 +6320,7 @@ window.STUDIES_DATA = [
       "d4": "Some concerns",
       "d5": "Low",
       "overall": "High",
-      "selected_result": "Moderate-to-severe pain (NRS \u22654)",
+      "selected_result": "Moderate-to-severe pain (NRS ≥4)",
       "timepoint": "Within 24 h",
       "rationale": "22/58 vs 40/62; RR 0.588; P=0.004"
     },
@@ -6085,13 +6329,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative morphine con...",
-      "target_data": "Cumulative 24-hour postoperative morphine consumption (mean \u00b1 SD in mg).",
+      "target_data": "Cumulative 24-hour postoperative morphine consumption (mean ± SD in mg).",
       "rationale": "The published trial reports that patients requiring postoperative rescue morphine was 19/58 (32.7%) in TEAS vs 40/62 (64.5%) in Sham TEAS (P < 0.01), but cumulative continuous morphine dosage in mg is not detailed in the abstract/tables.",
       "impact": "Provides continuous opioid consumption data in mg for the primary opioid meta-analysis.",
       "corresponding_author": "Dr. Li-Xin An",
       "email": "anlixin8120@163.com",
       "institution": "Department of Anesthesiology, Beijing Friendship Hospital, Capital Medical University, Beijing 100050, China",
-      "draft_msg": "Dear Dr. An, congratulations on your randomized controlled trial published in the Chinese Journal of Integrative Medicine (2026;32:720-727) evaluating perioperative TEAS for postoperative pain after endoscopic submucosal dissection (ESD). You report that rescue morphine requirements were significantly reduced in the TEAS group (19/58 vs 40/62, P < 0.01). Could you kindly provide the cumulative 24-hour postoperative morphine consumption (mean \u00b1 SD in mg) for the TEAS (n=58) and Sham TEAS (n=62) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. An, congratulations on your randomized controlled trial published in the Chinese Journal of Integrative Medicine (2026;32:720-727) evaluating perioperative TEAS for postoperative pain after endoscopic submucosal dissection (ESD). You report that rescue morphine requirements were significantly reduced in the TEAS group (19/58 vs 40/62, P < 0.01). Could you kindly provide the cumulative 24-hour postoperative morphine consumption (mean ± SD in mg) for the TEAS (n=58) and Sham TEAS (n=62) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -6141,7 +6385,7 @@ window.STUDIES_DATA = [
         "ci_low": 0.34,
         "ci_upp": 0.77,
         "p_val": "<0.001",
-        "definition": "Rescue IV Morphine (0\u201348h)",
+        "definition": "Rescue IV Morphine (0–48h)",
         "note": "Requirement for rescue IV morphine was significantly lower in TEAS: 19/58 (32.7%) vs 40/62 (64.5%), RR 0.508, P<0.001"
       },
       "intraop_opioid": {
@@ -6152,6 +6396,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Liu 2026 (ESD)",
@@ -6176,7 +6426,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -6194,17 +6444,17 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain, false N=30)!<br>2. Replaced with TRUE Table 2 published values: Resting VAS pain at 24h is TEAS (Group T, n=50) 2.52 \u00b1 0.505 vs Control (Group C, n=50) 2.66 \u00b1 0.626 (P = 0.221); Coughing VAS pain at 24h is TEAS 3.20 \u00b1 0.571 vs Control 3.16 \u00b1 0.681 (P = 0.751).<br>3. PCIA compressions within 24h: TEAS 17.62 \u00b1 2.687 vs Control 17.38 \u00b1 3.801 (P = 0.716); Length of hospital stay: TEAS 16.10 \u00b1 2.30 vs Control 16.46 \u00b1 2.06 days (P = 0.412).<br>4. RoB 2 verified: D1 Some concerns (online randomization tool, concealment details not specified); D2 Some concerns (open-label comparator against usual care without sham electrodes); D3 Low risk (100% completion, 100/100 analyzed); D4 Low risk (trained assessors for MMSE explicitly masked to groups); D5 Low risk (ChiCTR2000040397 prospective registration). Overall: Some concerns.",
-      "fake_boilerplate_expunged": "Fabricated data: 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; RoB 2 claiming missing trial registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 ± 0.8 vs 3.7 ± 1.1 for pain, false N=30)!<br>2. Replaced with TRUE Table 2 published values: Resting VAS pain at 24h is TEAS (Group T, n=50) 2.52 ± 0.505 vs Control (Group C, n=50) 2.66 ± 0.626 (P = 0.221); Coughing VAS pain at 24h is TEAS 3.20 ± 0.571 vs Control 3.16 ± 0.681 (P = 0.751).<br>3. PCIA compressions within 24h: TEAS 17.62 ± 2.687 vs Control 17.38 ± 3.801 (P = 0.716); Length of hospital stay: TEAS 16.10 ± 2.30 vs Control 16.46 ± 2.06 days (P = 0.412).<br>4. RoB 2 verified: D1 Some concerns (online randomization tool, concealment details not specified); D2 Some concerns (open-label comparator against usual care without sham electrodes); D3 Low risk (100% completion, 100/100 analyzed); D4 Low risk (trained assessors for MMSE explicitly masked to groups); D5 Low risk (ChiCTR2000040397 prospective registration). Overall: Some concerns.",
+      "fake_boilerplate_expunged": "Fabricated data: 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; RoB 2 claiming missing trial registration.",
       "evidence_sources": "Text p. 758-760 (Methods, online randomization, ChiCTR2000040397); Table 1 p. 760 (demographics); Table 2 p. 760 (pain scores, compressions, length of stay); Fig 2 p. 761 (CONSORT & biomarkers); Fig 3 p. 762 (POCD duration)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli)",
       "frequency_raw": "Not applicable",
       "frequency_category": "100 Hz (High Frequency)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
@@ -6216,14 +6466,14 @@ window.STUDIES_DATA = [
       "total_n": 100,
       "arm1_name": "TEAS Group",
       "arm1_n": 50,
-      "arm1_age": "70.80 \u00b1 5.41",
+      "arm1_age": "70.80 ± 5.41",
       "arm1_female": "22/50 (44.0%)",
-      "arm1_bmi": "24.75 \u00b1 2.57",
+      "arm1_bmi": "24.75 ± 2.57",
       "arm2_name": "Usual Care Group",
       "arm2_n": 50,
-      "arm2_age": "69.68 \u00b1 4.85",
+      "arm2_age": "69.68 ± 4.85",
       "arm2_female": "27/50 (54.0%)",
-      "arm2_bmi": "24.82 \u00b1 3.47",
+      "arm2_bmi": "24.82 ± 3.47",
       "asa_status": "ASA I: 25 (50%), ASA II: 25 (50%)"
     },
     "rob2": {
@@ -6233,7 +6483,7 @@ window.STUDIES_DATA = [
       "d4": "Some concerns",
       "d5": "Some concerns",
       "overall": "Some concerns",
-      "selected_result": "Postoperative cognitive decline (MMSE Z-score \u2264 -2)",
+      "selected_result": "Postoperative cognitive decline (MMSE Z-score ≤ -2)",
       "timepoint": "POD1",
       "rationale": "5/50 vs 11/50; P=0.102"
     },
@@ -6242,13 +6492,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative PCIA sufenta...",
-      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL).",
-      "rationale": "Table 2 reports postoperative PCIA pump compressions within 24h as 17.62 \u00b1 2.687 in TEAS vs 17.38 \u00b1 3.801 in Control, and Section 2 notes that the electronic pump contained 0.15 \u00b5g/kg sufentanil in 100 mL saline, but the cumulative 24-hour volume delivered or total sufentanil dose in \u00b5g is omitted in tables.",
+      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL).",
+      "rationale": "Table 2 reports postoperative PCIA pump compressions within 24h as 17.62 ± 2.687 in TEAS vs 17.38 ± 3.801 in Control, and Section 2 notes that the electronic pump contained 0.15 µg/kg sufentanil in 100 mL saline, but the cumulative 24-hour volume delivered or total sufentanil dose in µg is omitted in tables.",
       "impact": "Converts pump compressions and basal infusion into exact micrograms of sufentanil and IV MME for primary opioid synthesis.",
       "corresponding_author": "Dr. Qiujun Wang",
       "email": "wangqiujunsy@163.com",
       "institution": "Department of Anesthesiology, The Third Hospital of Hebei Medical University, Shijiazhuang, Hebei 050051, China",
-      "draft_msg": "Dear Dr. Wang, congratulations on your randomized trial published in Clinical Interventions in Aging (2021;16:757-765) investigating TEAS in elderly patients undergoing laparoscopic colon cancer surgery. In Table 2 you report 24-hour analgesic pump compressions (17.62 \u00b1 2.687 vs 17.38 \u00b1 3.801). Could you kindly provide the cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL of solution) for the TEAS (n=50) and Control (n=50) groups for our systematic review?"
+      "draft_msg": "Dear Dr. Wang, congratulations on your randomized trial published in Clinical Interventions in Aging (2021;16:757-765) investigating TEAS in elderly patients undergoing laparoscopic colon cancer surgery. In Table 2 you report 24-hour analgesic pump compressions (17.62 ± 2.687 vs 17.38 ± 3.801). Could you kindly provide the cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL of solution) for the TEAS (n=50) and Control (n=50) groups for our systematic review?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -6303,7 +6553,13 @@ window.STUDIES_DATA = [
         "arm2_sd": 3.8,
         "unit": "compressions",
         "p_val": 0.716,
-        "note": "Table 2 reports 24h pump compressions: 17.62 \u00b1 2.687 in TEAS vs 17.38 \u00b1 3.801 in Control (P=0.716)."
+        "note": "Table 2 reports 24h pump compressions: 17.62 ± 2.687 in TEAS vs 17.38 ± 3.801 in Control (P=0.716)."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Liu 2021",
@@ -6328,7 +6584,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -6346,17 +6602,17 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30)!<br>2. Replaced with TRUE Table 2 & Fig 5 published values: 24h PONV (nausea-vomiting) is TEAS (n=43) 7/43 (16.3%) vs Sham TEAS (n=43) 16/43 (37.2%) (P = 0.028) [RR 0.44, 95% CI 0.20 to 0.96]; Rescue analgesics until POD1 (dezocine 5 mg IM): TEAS 3/43 (7.0%) vs Sham TEAS 8/43 (18.6%) (P = 0.106); Constipation: 8/43 (18.6%) vs 17/43 (39.5%, P = 0.033).<br>3. Resting F-VAS pain scores (0-100 mm scale) digitized from Fig 5: 24h pain score is TEAS 32.3 \u00b1 4.7 vs Sham TEAS 36.1 \u00b1 5.1 (P = 0.039); 48h pain score: 27.7 \u00b1 5.5 vs 29.3 \u00b1 5.6.<br>4. Primary outcome intraoperative remifentanil (Fig 4): TEAS median 0.70 (0.50, 1.10) vs Sham TEAS 0.90 (0.65, 1.25) mg (P = 0.039).<br>5. RoB 2 verified: D1-D4 Low risk (computer random sequence with seed 20231212, SNOSE concealment, dedicated placebo-type stimulator with identical electrodes producing numbness, blinded patients/surgeons/anesthesiologists/assessors, 100% completion [86/86 analyzed]); D5/Overall Some concerns (registered under ChiCTR2300078615 on 14/12/2023 at trial commencement, designated retrospective registration).",
-      "fake_boilerplate_expunged": "Fabricated data: 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no allocation concealment.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 ± 0.8 vs 3.7 ± 1.1 for pain; 5/30 vs 12/30 for PONV, false N=30)!<br>2. Replaced with TRUE Table 2 & Fig 5 published values: 24h PONV (nausea-vomiting) is TEAS (n=43) 7/43 (16.3%) vs Sham TEAS (n=43) 16/43 (37.2%) (P = 0.028) [RR 0.44, 95% CI 0.20 to 0.96]; Rescue analgesics until POD1 (dezocine 5 mg IM): TEAS 3/43 (7.0%) vs Sham TEAS 8/43 (18.6%) (P = 0.106); Constipation: 8/43 (18.6%) vs 17/43 (39.5%, P = 0.033).<br>3. Resting F-VAS pain scores (0-100 mm scale) digitized from Fig 5: 24h pain score is TEAS 32.3 ± 4.7 vs Sham TEAS 36.1 ± 5.1 (P = 0.039); 48h pain score: 27.7 ± 5.5 vs 29.3 ± 5.6.<br>4. Primary outcome intraoperative remifentanil (Fig 4): TEAS median 0.70 (0.50, 1.10) vs Sham TEAS 0.90 (0.65, 1.25) mg (P = 0.039).<br>5. RoB 2 verified: D1-D4 Low risk (computer random sequence with seed 20231212, SNOSE concealment, dedicated placebo-type stimulator with identical electrodes producing numbness, blinded patients/surgeons/anesthesiologists/assessors, 100% completion [86/86 analyzed]); D5/Overall Some concerns (registered under ChiCTR2300078615 on 14/12/2023 at trial commencement, designated retrospective registration).",
+      "fake_boilerplate_expunged": "Fabricated data: 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label design and no allocation concealment.",
       "evidence_sources": "Text p. 2-4 (Methods, computer seed, SNOSE, placebo stimulator, ChiCTR2300078615); Fig 1 p. 3 (CONSORT flow); Table 1 p. 4 (demographics); Table 2 p. 5 (secondary outcomes & PONV); Fig 4 p. 7 (remifentanil dosage); Fig 5 p. 8 (F-VAS pain scores)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
@@ -6368,14 +6624,14 @@ window.STUDIES_DATA = [
       "total_n": 86,
       "arm1_name": "TEAS Group",
       "arm1_n": 43,
-      "arm1_age": "42.0 \u00b1 9.8",
+      "arm1_age": "42.0 ± 9.8",
       "arm1_female": "9/43 (20.9%)",
-      "arm1_bmi": "24.6 \u00b1 3.5",
+      "arm1_bmi": "24.6 ± 3.5",
       "arm2_name": "Sham Group",
       "arm2_n": 43,
-      "arm2_age": "39.5 \u00b1 11.3",
+      "arm2_age": "39.5 ± 11.3",
       "arm2_female": "10/43 (23.3%)",
-      "arm2_bmi": "24.9 \u00b1 3.2",
+      "arm2_bmi": "24.9 ± 3.2",
       "asa_status": "ASA I: 11 (25.6%), ASA II: 32 (74.4%)"
     },
     "rob2": {
@@ -6393,14 +6649,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Exact numerical mean \u00b1 SD for resting F-VAS p...",
-      "target_data": "Exact numerical mean \u00b1 SD for resting F-VAS pain score at 24 hours (0\u2013100 mm scale) and parametric mean \u00b1 SD for intraoperative remifentanil dosage (mg).",
-      "rationale": "Figure 5 displays resting F-VAS pain scores graphically across timepoints (F1, F2, F3 [24h], F4 [48h]), and Figure 4 displays intraoperative remifentanil dosage as median with IQR [0.70 (0.50, 1.10) vs 0.90 (0.65, 1.25) mg], but exact numerical mean \u00b1 SD values are omitted in the text tables.",
+      "urgency": "IMPORTANT: Exact numerical mean ± SD for resting F-VAS p...",
+      "target_data": "Exact numerical mean ± SD for resting F-VAS pain score at 24 hours (0–100 mm scale) and parametric mean ± SD for intraoperative remifentanil dosage (mg).",
+      "rationale": "Figure 5 displays resting F-VAS pain scores graphically across timepoints (F1, F2, F3 [24h], F4 [48h]), and Figure 4 displays intraoperative remifentanil dosage as median with IQR [0.70 (0.50, 1.10) vs 0.90 (0.65, 1.25) mg], but exact numerical mean ± SD values are omitted in the text tables.",
       "impact": "Replaces digitized graph approximations with author-confirmed values and provides parametric opioid metrics for primary meta-analysis.",
       "corresponding_author": "Dr. Yan Li & Dr. Jiangwen Yin",
       "email": "liyan_shz@126.com",
       "institution": "`liyan_shz@126.com`; Department of Anesthesiology, The First Affiliated Hospital of Shihezi University, North 2nd Road, Shihezi 832008, Xinjiang, China",
-      "draft_msg": "Dear Dr. Li and Dr. Yin, congratulations on your randomized clinical trial published in Perioperative Medicine (2026;15:1) investigating transcutaneous electrical acupoint stimulation for preemptive analgesia in burn patients. In Figure 5 you present resting F-VAS pain scores across timepoints, and in Figure 4 you present intraoperative remifentanil dosage as median (IQR). Could you kindly provide the exact numerical mean \u00b1 SD for the 24-hour resting F-VAS pain score (F3) and the parametric mean \u00b1 SD for intraoperative remifentanil consumption (mg) for the TEAS (n=43) and Sham TEAS (n=43) groups for our systematic review?"
+      "draft_msg": "Dear Dr. Li and Dr. Yin, congratulations on your randomized clinical trial published in Perioperative Medicine (2026;15:1) investigating transcutaneous electrical acupoint stimulation for preemptive analgesia in burn patients. In Figure 5 you present resting F-VAS pain scores across timepoints, and in Figure 4 you present intraoperative remifentanil dosage as median (IQR). Could you kindly provide the exact numerical mean ± SD for the 24-hour resting F-VAS pain score (F3) and the parametric mean ± SD for intraoperative remifentanil consumption (mg) for the TEAS (n=43) and Sham TEAS (n=43) groups for our systematic review?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -6439,6 +6695,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Liu 2026 (burn)",
@@ -6463,7 +6725,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -6481,34 +6743,34 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain, N=30)!<br>2. Replaced with TRUE published facts: 77 patients analyzed (38 EA, 39 Control); Postoperative resting VAS pain scores are shown in Figure 2 from 1 to 48 hours without between-group differences; pain was well controlled by PCIA sufentanil (1.5 \u00b5g/mL).<br>3. Intraoperative remifentanil is significantly reduced by 17% in EA: 911.1 \u00b1 233.8 vs 1095.9 \u00b1 362.2 \u00b5g (P = 0.01); intraoperative sufentanil: 24.0 \u00b1 2.8 vs 24.1 \u00b1 4.0 \u00b5g.<br>4. Primary outcome POSVT incidence is significantly reduced in EA: 4/38 (10.5%) vs 13/39 (33.3%, P = 0.02, OR 0.24).<br>5. RoB 2 previously mislabeled Some concerns claiming open-label design and lack of registration; corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: SPSS computer sequence, SNOSE sequentially numbered sealed opaque envelopes, simulated EA with non-acupoints (0 mA) covered with sterile sheets, separate blinded operative anesthesiologist, blinded outcome assessors and sleep/ECG physicians, 96.3% follow-up completeness (77/80 analyzed), and prospective registration under ChiCTR2300077984.",
-      "fake_boilerplate_expunged": "Fabricated data: 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; RoB 2 claiming open-label design and missing trial registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 ± 0.8 vs 3.7 ± 1.1 for pain, N=30)!<br>2. Replaced with TRUE published facts: 77 patients analyzed (38 EA, 39 Control); Postoperative resting VAS pain scores are shown in Figure 2 from 1 to 48 hours without between-group differences; pain was well controlled by PCIA sufentanil (1.5 µg/mL).<br>3. Intraoperative remifentanil is significantly reduced by 17% in EA: 911.1 ± 233.8 vs 1095.9 ± 362.2 µg (P = 0.01); intraoperative sufentanil: 24.0 ± 2.8 vs 24.1 ± 4.0 µg.<br>4. Primary outcome POSVT incidence is significantly reduced in EA: 4/38 (10.5%) vs 13/39 (33.3%, P = 0.02, OR 0.24).<br>5. RoB 2 previously mislabeled Some concerns claiming open-label design and lack of registration; corrected to **Low risk across all Domains 1-5 (Overall Low risk)**: SPSS computer sequence, SNOSE sequentially numbered sealed opaque envelopes, simulated EA with non-acupoints (0 mA) covered with sterile sheets, separate blinded operative anesthesiologist, blinded outcome assessors and sleep/ECG physicians, 96.3% follow-up completeness (77/80 analyzed), and prospective registration under ChiCTR2300077984.",
+      "fake_boilerplate_expunged": "Fabricated data: 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; RoB 2 claiming open-label design and missing trial registration.",
       "evidence_sources": "Text p. 2-5 (Methods, SPSS sequence, SNOSE, sham non-acupoints, ChiCTR2300077984); Fig 1 p. 4 (CONSORT flow); Table 1 p. 4 (demographics); Table 2 p. 5 (intraop drugs & hemodynamics); Fig 2 p. 6 (VAS pain scores 1-48h); Table 3 p. 6 (arrhythmias); Table 4 p. 6 (sleep parameters)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan), SP4 (Gongsun)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 77,
       "arm1_name": "EA Group",
       "arm1_n": 38,
-      "arm1_age": "60.3 \u00b1 11.9",
+      "arm1_age": "60.3 ± 11.9",
       "arm1_female": "23/38 (60.5%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 39,
-      "arm2_age": "61.3 \u00b1 10.5",
+      "arm2_age": "61.3 ± 10.5",
       "arm2_female": "19/39 (48.7%)",
       "arm2_bmi": "not reported",
       "asa_status": "ASA I: 8 (21.1%), ASA II: 29 (76.3%), ASA III: 1 (2.6%)"
@@ -6528,14 +6790,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Parametric numerical mean \u00b1 SD for 24-hour re...",
-      "target_data": "Parametric numerical mean \u00b1 SD for 24-hour resting VAS pain scores (0\u201310 scale) and cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL).",
-      "rationale": "Figure 2 displays postoperative VAS pain scores across timepoints (1, 6, 12, 24, 48 h) as a curve, where pain was well controlled and comparable across groups (~2.0/10), and Section 2.4 notes that a PCIA pump (sufentanil 1.5 \u00b5g/mL) was connected for 2 days, but 24-hour opioid consumption and numerical pain tables are not reported in the manuscript.",
+      "urgency": "IMPORTANT: Parametric numerical mean ± SD for 24-hour re...",
+      "target_data": "Parametric numerical mean ± SD for 24-hour resting VAS pain scores (0–10 scale) and cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL).",
+      "rationale": "Figure 2 displays postoperative VAS pain scores across timepoints (1, 6, 12, 24, 48 h) as a curve, where pain was well controlled and comparable across groups (~2.0/10), and Section 2.4 notes that a PCIA pump (sufentanil 1.5 µg/mL) was connected for 2 days, but 24-hour opioid consumption and numerical pain tables are not reported in the manuscript.",
       "impact": "Provides precise continuous pain and postoperative opioid data for the primary review endpoints.",
       "corresponding_author": "Dr. Ying Cao & Dr. Caineng Wu",
       "email": "yingcao@163.com",
       "institution": "`yingcao@163.com`; Department of Anesthesiology, The First Affiliated Hospital of Guangzhou University of Chinese Medicine, Guangzhou 510405, Guangdong, China",
-      "draft_msg": "Dear Dr. Cao and Dr. Wu, congratulations on your randomized trial published in Frontiers in Neurology (2025;16:1580759) investigating electroacupuncture in thoracoscopic surgery. In Figure 2 you present postoperative VAS pain trajectories across 48 hours, and Section 2.4 describes the postoperative PCIA sufentanil regimen. Could you kindly share the numerical mean \u00b1 SD for the 24-hour resting VAS pain score, as well as the cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL) for the EA (n=38) and Control (n=39) groups for our systematic review?"
+      "draft_msg": "Dear Dr. Cao and Dr. Wu, congratulations on your randomized trial published in Frontiers in Neurology (2025;16:1580759) investigating electroacupuncture in thoracoscopic surgery. In Figure 2 you present postoperative VAS pain trajectories across 48 hours, and Section 2.4 describes the postoperative PCIA sufentanil regimen. Could you kindly share the numerical mean ± SD for the 24-hour resting VAS pain score, as well as the cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL) for the EA (n=38) and Control (n=39) groups for our systematic review?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -6568,13 +6830,19 @@ window.STUDIES_DATA = [
         "ci_upp": -48.97,
         "p_val": "0.010",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Intraoperative remifentanil consumption (Table 2: 911.1 \u00b1 233.8 vs 1095.9 \u00b1 362.2 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Intraoperative remifentanil consumption (Table 2: 911.1 ± 233.8 vs 1095.9 ± 362.2 µg)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Liu 2025",
@@ -6599,7 +6867,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -6617,8 +6885,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **EXPUNGED FAKE ROB BOILERPLATE**: Previous reviewers entered boilerplate claiming open-label control against usual care, lack of allocation concealment, and missing trial registration!<br>2. Replaced with TRUE published facts: 1:1 computer random sequence, sealed envelopes, sham EA with non-acupoints (1 cm outside ST36/PC6) and disconnected current, 98.8% follow-up completeness (79/80 analyzed), blinded anesthesiologists and outcome assessors, and prospective registration under ChiCTR2100050235.<br>3. Corrected RoB 2 to **Low risk across all Domains 1-5 (Overall Low risk)**.<br>4. Verified Table 3 published values: 24h pain score (NRS, median [IQR]) is EA (n=39) 1.5 (1.0-3.0) vs Sham EA (n=40) 1.6 (1.0-3.0) (P = 0.223); 48h pain NRS: 1.5 (1.0-3.0) vs 1.5 (1.0-3.0); 6h pain NRS: 1.9 (1.3-3.0) vs 2.2 (2.0-3.0, P = 0.006); Rescue analgesia 0-48h: 0/39 (0%) vs 0/40 (0%).<br>5. Intraoperative sufentanil verified: 41.6 \u00b1 2.3 vs 41.5 \u00b1 2.6 \u00b5g; remifentanil: 2009 \u00b1 143.2 vs 1989 \u00b1 158.7 \u00b5g.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **EXPUNGED FAKE ROB BOILERPLATE**: Previous reviewers entered boilerplate claiming open-label control against usual care, lack of allocation concealment, and missing trial registration!<br>2. Replaced with TRUE published facts: 1:1 computer random sequence, sealed envelopes, sham EA with non-acupoints (1 cm outside ST36/PC6) and disconnected current, 98.8% follow-up completeness (79/80 analyzed), blinded anesthesiologists and outcome assessors, and prospective registration under ChiCTR2100050235.<br>3. Corrected RoB 2 to **Low risk across all Domains 1-5 (Overall Low risk)**.<br>4. Verified Table 3 published values: 24h pain score (NRS, median [IQR]) is EA (n=39) 1.5 (1.0-3.0) vs Sham EA (n=40) 1.6 (1.0-3.0) (P = 0.223); 48h pain NRS: 1.5 (1.0-3.0) vs 1.5 (1.0-3.0); 6h pain NRS: 1.9 (1.3-3.0) vs 2.2 (2.0-3.0, P = 0.006); Rescue analgesia 0-48h: 0/39 (0%) vs 0/40 (0%).<br>5. Intraoperative sufentanil verified: 41.6 ± 2.3 vs 41.5 ± 2.6 µg; remifentanil: 2009 ± 143.2 vs 1989 ± 158.7 µg.",
       "fake_boilerplate_expunged": "Previous extraction in Covidence left pain empty; RoB 2 contained generic boilerplate falsely claiming open-label design and no registry.",
       "evidence_sources": "Text p. 1466-1468 (Methods, 1:1 computer sequence, sealed envelopes, ChiCTR2100050235); Fig 2 p. 1468 (CONSORT flow); Table 1 p. 1469 (demographics & intraop drugs); Table 2 p. 1470 (mechanical pain thresholds); Table 3 p. 1471 (NRS pain scores & analgesics)"
     },
@@ -6626,28 +6894,28 @@ window.STUDIES_DATA = [
       "acupoints": "ST36 (Zusanli), PC6 (Neiguan)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 79,
       "arm1_name": "EA Group",
       "arm1_n": 39,
-      "arm1_age": "35.2 \u00b1 6.1",
+      "arm1_age": "35.2 ± 6.1",
       "arm1_female": "30/39 (76.9%)",
-      "arm1_bmi": "23.1 \u00b1 2.9",
+      "arm1_bmi": "23.1 ± 2.9",
       "arm2_name": "Sham Group",
       "arm2_n": 40,
-      "arm2_age": "34.4 \u00b1 9.1",
+      "arm2_age": "34.4 ± 9.1",
       "arm2_female": "30/40 (75.0%)",
-      "arm2_bmi": "23.2 \u00b1 2.7",
-      "asa_status": "100% ASA I\u2013II"
+      "arm2_bmi": "23.2 ± 2.7",
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Low",
@@ -6664,14 +6932,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Parametric numerical mean \u00b1 SD for 24-hour re...",
-      "target_data": "Parametric numerical mean \u00b1 SD for 24-hour resting NRS pain scores (0\u201310 scale).",
-      "rationale": "Table 3 reports postoperative pain scores as median (IQR) on the NRS [24h: 1.5 (1.0\u20133.0) in EA vs 1.6 (1.0\u20133.0) in Sham-EA], and notes that rescue analgesics (flurbiprofen) were required by 0/39 (0%) vs 0/40 (0%) of patients.",
-      "impact": "Obtains exact mean \u00b1 SD for parametric meta-analysis of resting pain at 24 hours.",
+      "urgency": "IMPORTANT: Parametric numerical mean ± SD for 24-hour re...",
+      "target_data": "Parametric numerical mean ± SD for 24-hour resting NRS pain scores (0–10 scale).",
+      "rationale": "Table 3 reports postoperative pain scores as median (IQR) on the NRS [24h: 1.5 (1.0–3.0) in EA vs 1.6 (1.0–3.0) in Sham-EA], and notes that rescue analgesics (flurbiprofen) were required by 0/39 (0%) vs 0/40 (0%) of patients.",
+      "impact": "Obtains exact mean ± SD for parametric meta-analysis of resting pain at 24 hours.",
       "corresponding_author": "Dr. Weiqian Tian",
       "email": "tianweiqiantwq6@126.com",
       "institution": "Department of Anesthesiology, Affiliated Hospital of Nanjing University of Chinese Medicine, Jiangsu Province Hospital of Chinese Medicine, Hanzhong Road 155, Nanjing, Jiangsu 210029, China",
-      "draft_msg": "Dear Dr. Tian, congratulations on your randomized clinical trial published in the Journal of Pain Research (2022;15:1465-1474) evaluating preoperative electroacupuncture in patients undergoing thyroidectomy. In Table 3 you report postoperative NRS pain scores as median [IQR] (24h: 1.5 [1.0\u20133.0] in the EA group vs 1.6 [1.0\u20133.0] in the SEA group). Could you kindly share the parametric mean \u00b1 SD for 24-hour resting NRS pain scores for the EA (n=39) and SEA (n=40) groups for our systematic review and meta-analysis?"
+      "draft_msg": "Dear Dr. Tian, congratulations on your randomized clinical trial published in the Journal of Pain Research (2022;15:1465-1474) evaluating preoperative electroacupuncture in patients undergoing thyroidectomy. In Table 3 you report postoperative NRS pain scores as median [IQR] (24h: 1.5 [1.0–3.0] in the EA group vs 1.6 [1.0–3.0] in the SEA group). Could you kindly share the parametric mean ± SD for 24-hour resting NRS pain scores for the EA (n=39) and SEA (n=40) groups for our systematic review and meta-analysis?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -6704,13 +6972,19 @@ window.STUDIES_DATA = [
         "ci_upp": 46.71,
         "p_val": "0.555",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Intraoperative remifentanil dosage (Table 2: 1989.0 \u00b1 158.7 vs 2009.0 \u00b1 143.2 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Intraoperative remifentanil dosage (Table 2: 1989.0 ± 158.7 vs 2009.0 ± 143.2 µg)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Li 2022",
@@ -6726,7 +7000,7 @@ window.STUDIES_DATA = [
     "key": "#951 - Lin 2002",
     "author": "Lin",
     "year": 2002,
-    "citation": "Lin JG, et al. *Pain*. 2002;99(3):509\u2013514. DOI: 10.1016/S0304-3959(02)00261-0. PMID: 12406527",
+    "citation": "Lin JG, et al. *Pain*. 2002;99(3):509–514. DOI: 10.1016/S0304-3959(02)00261-0. PMID: 12406527",
     "journal": "#951 - Lin 2002",
     "doi": "10.1016/S0304-3959",
     "pmid": "12406527",
@@ -6735,7 +7009,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -6753,9 +7027,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 for opioid; 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, all with false N=30)!<br>2. Replaced with TRUE Table 2 & Table 3 published values across 4 arms: Total PCA morphine delivered in 24 h is High-frequency EA (Group IV, 100 Hz, n=25) 15.0 \u00b1 10.7 mg vs Low-frequency EA (Group III, 2 Hz, n=25) 21.8 \u00b1 14.7 mg vs Sham EA (Group II, n=25) 30.2 \u00b1 14.4 mg vs Control (Group I, n=25) 38.1 \u00b1 16.0 mg (P < 0.01 Gr IV vs Gr I/II; 61% reduction vs Control).<br>3. Total 24h PCA demands: Gr IV 7.9 \u00b1 5.9 vs Gr III 11.7 \u00b1 7.1 vs Gr II 16.1 \u00b1 7.4 vs Gr I 20.5 \u00b1 9.2 (P < 0.01).<br>4. Composite PONV (Table 3): Gr IV 6/25 (24.0%) vs Gr III 5/25 (20.0%) vs Gr II 11/25 (44.0%) vs Gr I 11/25 (44.0%). Nausea: 6/25 vs 4/25 vs 10/25 vs 11/25; Vomiting: 0/25 vs 1/25 vs 1/25 vs 0/25; Dizziness: 10/25 vs 7/25 vs 16/25 vs 14/25; Pruritus: 1/25 vs 1/25 vs 0/25 vs 2/25.<br>5. RoB 2 verified: D1-D4 Low risk (computer random sequence, technician blinding, identical sham needles with 0 mA, 100% completion [100/100 analyzed], blinded outcome assessors); D5/Overall Some concerns (older trial published in 2002 without prospective registry ID).",
-      "fake_boilerplate_expunged": "Fabricated data: 20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 (N=30) for opioid; 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 ± 4.7 vs 33.0 ± 7.0 for opioid; 2.3 ± 0.8 vs 3.7 ± 1.1 for pain; 5/30 vs 12/30 for PONV, all with false N=30)!<br>2. Replaced with TRUE Table 2 & Table 3 published values across 4 arms: Total PCA morphine delivered in 24 h is High-frequency EA (Group IV, 100 Hz, n=25) 15.0 ± 10.7 mg vs Low-frequency EA (Group III, 2 Hz, n=25) 21.8 ± 14.7 mg vs Sham EA (Group II, n=25) 30.2 ± 14.4 mg vs Control (Group I, n=25) 38.1 ± 16.0 mg (P < 0.01 Gr IV vs Gr I/II; 61% reduction vs Control).<br>3. Total 24h PCA demands: Gr IV 7.9 ± 5.9 vs Gr III 11.7 ± 7.1 vs Gr II 16.1 ± 7.4 vs Gr I 20.5 ± 9.2 (P < 0.01).<br>4. Composite PONV (Table 3): Gr IV 6/25 (24.0%) vs Gr III 5/25 (20.0%) vs Gr II 11/25 (44.0%) vs Gr I 11/25 (44.0%). Nausea: 6/25 vs 4/25 vs 10/25 vs 11/25; Vomiting: 0/25 vs 1/25 vs 1/25 vs 0/25; Dizziness: 10/25 vs 7/25 vs 16/25 vs 14/25; Pruritus: 1/25 vs 1/25 vs 0/25 vs 2/25.<br>5. RoB 2 verified: D1-D4 Low risk (computer random sequence, technician blinding, identical sham needles with 0 mA, 100% completion [100/100 analyzed], blinded outcome assessors); D5/Overall Some concerns (older trial published in 2002 without prospective registry ID).",
+      "fake_boilerplate_expunged": "Fabricated data: 20.3 ± 4.7 vs 33.0 ± 7.0 (N=30) for opioid; 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV.",
       "evidence_sources": "Text p. 509-511 (Methods, computer random sequence, sham needle 0 mA); Table 1 p. 511 (demographics); Table 2 p. 511 (PCA morphine & demands); Fig 1 p. 512 (VAS pain 0-24h); Table 3 p. 512 (side effects)"
     },
     "stricta": {
@@ -6769,18 +7043,18 @@ window.STUDIES_DATA = [
       "sessions_category": "Single session",
       "duration_raw": "20 minutes",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 50,
       "arm1_name": "EA Group",
       "arm1_n": 25,
-      "arm1_age": "42 \u00b1 13",
+      "arm1_age": "42 ± 13",
       "arm1_female": "25/25 (100%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 25,
-      "arm2_age": "39 \u00b1 8",
+      "arm2_age": "39 ± 8",
       "arm2_female": "25/25 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -6794,20 +7068,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Cumulative IV PCA morphine delivered",
       "timepoint": "24-h test period",
-      "rationale": "Control 38.1 \u00b1 16.0 mg; sham 30.2 \u00b1 14.4; low-EA 21.8 \u00b1 14.7; high-EA 15.0 \u00b1 10.7"
+      "rationale": "Control 38.1 ± 16.0 mg; sham 30.2 ± 14.4; low-EA 21.8 ± 14.7; high-EA 15.0 ± 10.7"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Parametric numerical mean \u00b1 SD for 24-hour re...",
-      "target_data": "Parametric numerical mean \u00b1 SD for 24-hour resting VAS pain scores (0\u2013100 mm scale).",
+      "urgency": "IMPORTANT: Parametric numerical mean ± SD for 24-hour re...",
+      "target_data": "Parametric numerical mean ± SD for 24-hour resting VAS pain scores (0–100 mm scale).",
       "rationale": "Figure 1 displays postoperative VAS pain scores across timepoints (0.5, 1, 1.5, 2, 4, 8, 16, 24 h) as a bar chart, where values are roughly ~20 mm across all 4 groups due to PCA titration, but precise numeric means and SDs at 24 hours are not reported in tables.",
       "impact": "Supplies exact numerical values for the primary continuous pain synthesis without requiring bar chart digitization.",
       "corresponding_author": "Dr. Wei-Zen Sun",
       "email": "wzsun@ccms.ntu.edu.tw",
       "institution": "Department of Anesthesiology, National Taiwan University Hospital, College of Medicine, National Taiwan University, 7 Chung-Shan South Road, Taipei, Taiwan, ROC",
-      "draft_msg": "Dear Dr. Sun, congratulations on your landmark trial published in Pain (2002;99:509\u2013514) evaluating high- and low-frequency electroacupuncture after lower abdominal surgery. In Figure 1 you present postoperative VAS pain scores graphically across the 24-hour observation period. Could you kindly share the numerical mean \u00b1 SD for the 24-hour resting VAS pain scores for the 100-Hz High-EA (n=25), 2-Hz Low-EA (n=25), Sham-EA (n=25), and Control (n=25) groups for our systematic review?"
+      "draft_msg": "Dear Dr. Sun, congratulations on your landmark trial published in Pain (2002;99:509–514) evaluating high- and low-frequency electroacupuncture after lower abdominal surgery. In Figure 1 you present postoperative VAS pain scores graphically across the 24-hour observation period. Could you kindly share the numerical mean ± SD for the 24-hour resting VAS pain scores for the 100-Hz High-EA (n=25), 2-Hz Low-EA (n=25), Sham-EA (n=25), and Control (n=25) groups for our systematic review?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -6848,7 +7122,13 @@ window.STUDIES_DATA = [
         "arm2_sd": 9.2,
         "unit": "demands",
         "p_val": 0.001,
-        "note": "100-Hz High EA (7.9 \u00b1 5.9) vs Control (20.5 \u00b1 9.2, P<0.01; 61.5% reduction); Low-EA: 11.7 \u00b1 7.1 vs 20.5 \u00b1 9.2."
+        "note": "100-Hz High EA (7.9 ± 5.9) vs Control (20.5 ± 9.2, P<0.01; 61.5% reduction); Low-EA: 11.7 ± 7.1 vs 20.5 ± 9.2."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Lin 2002",
@@ -6873,7 +7153,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -6891,8 +7171,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (5/30 vs 12/30 for PONV, N=30)!<br>2. Replaced with TRUE Table 4 published values: 24h PONV is TEAS (n=35) 2/35 (5.7%) vs Control (n=35) 2/35 (5.7%); QoR-40 at 24h is 191.7 \u00b1 4.4 vs 189.1 \u00b1 4.3 (P = 0.007); QoR-40 at 48h is 195.3 \u00b1 1.9 vs 193.3 \u00b1 3.0 (P < 0.001); Extra analgesia requirement is 3.8 \u00b1 1.9 vs 5.0 \u00b1 2.9 (P = 0.045).<br>3. Intraoperative sufentanil verified: 21.4 \u00b1 3.1 vs 20.0 \u00b1 2.9 \u00b5g; intraoperative remifentanil: 521.5 \u00b1 206.8 vs 464.7 \u00b1 156.0 \u00b5g; CRBD at 24h: 7/35 (20%) vs 31/35 (89%, P < 0.001).<br>4. RoB 2 D1 updated to Low risk (computer random numbers, identical sealed envelopes, baseline comparability across 70 patients); D2 Some concerns (usual care comparator without sham electrodes); D3 Low risk (93.3% completion, 70/75 analyzed); D4 Low risk (blinded outcome assessor WL); D5 Low risk (ChiCTR1800019951 prospective registration). Overall: Some concerns.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (5/30 vs 12/30 for PONV, N=30)!<br>2. Replaced with TRUE Table 4 published values: 24h PONV is TEAS (n=35) 2/35 (5.7%) vs Control (n=35) 2/35 (5.7%); QoR-40 at 24h is 191.7 ± 4.4 vs 189.1 ± 4.3 (P = 0.007); QoR-40 at 48h is 195.3 ± 1.9 vs 193.3 ± 3.0 (P < 0.001); Extra analgesia requirement is 3.8 ± 1.9 vs 5.0 ± 2.9 (P = 0.045).<br>3. Intraoperative sufentanil verified: 21.4 ± 3.1 vs 20.0 ± 2.9 µg; intraoperative remifentanil: 521.5 ± 206.8 vs 464.7 ± 156.0 µg; CRBD at 24h: 7/35 (20%) vs 31/35 (89%, P < 0.001).<br>4. RoB 2 D1 updated to Low risk (computer random numbers, identical sealed envelopes, baseline comparability across 70 patients); D2 Some concerns (usual care comparator without sham electrodes); D3 Low risk (93.3% completion, 70/75 analyzed); D4 Low risk (blinded outcome assessor WL); D5 Low risk (ChiCTR1800019951 prospective registration). Overall: Some concerns.",
       "fake_boilerplate_expunged": "Fabricated data: PONV 5/30 vs 12/30 (N=30); RoB 2 claiming missing trial registration and unblinded assessment.",
       "evidence_sources": "Text p. 2-4 (Methods, computer random sequence, sealed envelopes, ChiCTR1800019951); Table 1 p. 5 (demographics & intraop opioids); Table 2 p. 5 (CRBD incidence & severity); Table 4 p. 6 (PONV, pain, extra analgesia, QoR-40); Table 5 p. 6 (biochemical stress markers)"
     },
@@ -6900,8 +7180,8 @@ window.STUDIES_DATA = [
       "acupoints": "RN7 (Yinjiao), RN6 (Qihai), RN5 (Shimen), RN4 (Guanyuan), RN3 (Zhongji), BL32 (Ciliao), BL33 (Zhongliao), BL34 (Xialiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
@@ -6913,15 +7193,15 @@ window.STUDIES_DATA = [
       "total_n": 70,
       "arm1_name": "TEAS Group",
       "arm1_n": 35,
-      "arm1_age": "70.8 \u00b1 6.5",
+      "arm1_age": "70.8 ± 6.5",
       "arm1_female": "0/35 (0%)",
-      "arm1_bmi": "23.6 \u00b1 2.5",
+      "arm1_bmi": "23.6 ± 2.5",
       "arm2_name": "Sham Group",
       "arm2_n": 35,
-      "arm2_age": "69.1 \u00b1 6.1",
+      "arm2_age": "69.1 ± 6.1",
       "arm2_female": "0/35 (0%)",
-      "arm2_bmi": "23.1 \u00b1 2.6",
-      "asa_status": "100% ASA I\u2013II"
+      "arm2_bmi": "23.1 ± 2.6",
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Some concerns",
@@ -6939,13 +7219,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Specific analgesic medication and units for '...",
-      "target_data": "Specific analgesic medication and units for 'extra analgesia' (Table 4) and parametric mean \u00b1 SD for 24-hour resting pain score.",
-      "rationale": "Table 4 reports 'Extra analgesia' as 3.8 \u00b1 1.9 in TEAS vs 5.0 \u00b1 2.9 in Control (P = 0.045), but the specific drug administered (e.g., tramadol, sufentanil, flurbiprofen) and whether the value represents mg or number of rescue doses are unspecified. Table 4 also reports pain as the number of patients with VRS >= 1 (8/35 vs 8/35).",
+      "target_data": "Specific analgesic medication and units for 'extra analgesia' (Table 4) and parametric mean ± SD for 24-hour resting pain score.",
+      "rationale": "Table 4 reports 'Extra analgesia' as 3.8 ± 1.9 in TEAS vs 5.0 ± 2.9 in Control (P = 0.045), but the specific drug administered (e.g., tramadol, sufentanil, flurbiprofen) and whether the value represents mg or number of rescue doses are unspecified. Table 4 also reports pain as the number of patients with VRS >= 1 (8/35 vs 8/35).",
       "impact": "Clarifies the extra analgesic medication identity and converts dosage into IV MME, while providing continuous 24-hour pain intensity data for the primary review endpoints.",
       "corresponding_author": "Dr. JinGui Yu",
       "email": "yujingui1109@126.com",
       "institution": "Department of Anesthesiology, Qilu Hospital, Cheeloo College of Medicine, Shandong University, Jinan, Shandong 250012, China",
-      "draft_msg": "Dear Dr. Yu, congratulations on your trial published in Evidence-Based Complementary and Alternative Medicine (2021;2021:6691459) evaluating TEAS in patients undergoing TURP. In Table 4 you report 'Extra analgesia' as 3.8 \u00b1 1.9 vs 5.0 \u00b1 2.9 (P = 0.045). Could you kindly clarify which analgesic drug was administered as extra analgesia and what units this metric represents (e.g., mg or number of rescue administrations)? In addition, could you share the parametric mean \u00b1 SD for 24-hour resting pain scores for the TEAS (n=35) and Control (n=35) groups?"
+      "draft_msg": "Dear Dr. Yu, congratulations on your trial published in Evidence-Based Complementary and Alternative Medicine (2021;2021:6691459) evaluating TEAS in patients undergoing TURP. In Table 4 you report 'Extra analgesia' as 3.8 ± 1.9 vs 5.0 ± 2.9 (P = 0.045). Could you kindly clarify which analgesic drug was administered as extra analgesia and what units this metric represents (e.g., mg or number of rescue administrations)? In addition, could you share the parametric mean ± SD for 24-hour resting pain scores for the TEAS (n=35) and Control (n=35) groups?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -6973,6 +7253,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Liang 2021",
@@ -6997,7 +7283,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -7015,9 +7301,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 for opioid; 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain, N=30)!<br>2. Replaced with TRUE Table 8 & Table 5 published values: Cumulative 24-h PCA morphine consumption is Dense-sparse TEAS (Group 4, n=10) 29.29 \u00b1 8.89 mg vs Sham TEAS (Group 2, n=12) 34.20 \u00b1 6.40 mg vs Control (Group 1, n=13) 38.63 \u00b1 11.08 mg (P < 0.05 Gr 4 vs Gr 1); 24-h pain VAS is Gr 4 1.21 \u00b1 1.31 vs Gr 2 2.54 \u00b1 0.86 vs Gr 1 3.50 \u00b1 1.27.<br>3. Time to first bowel movement verified: Gr 4 33.30 \u00b1 2.43 vs Gr 2 38.03 \u00b1 2.71 hours; time to first ambulation: Gr 4 29.90 \u00b1 2.95 vs Gr 2 33.75 \u00b1 3.11 hours.<br>4. RoB 2 verified: D1-D4 Low risk (random number table, sequentially numbered allocation, sham non-stimulating electrodes at non-acupoints, participants/personnel/assessors blinded, 47/49 completed [95.9%]); D5/Overall Some concerns (older trial without prospective trial registration).",
-      "fake_boilerplate_expunged": "Fabricated data: 20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 (N=30) for opioid; 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain.",
+      "classification": "🟡 Verified with Corrections",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 ± 4.7 vs 33.0 ± 7.0 for opioid; 2.3 ± 0.8 vs 3.7 ± 1.1 for pain, N=30)!<br>2. Replaced with TRUE Table 8 & Table 5 published values: Cumulative 24-h PCA morphine consumption is Dense-sparse TEAS (Group 4, n=10) 29.29 ± 8.89 mg vs Sham TEAS (Group 2, n=12) 34.20 ± 6.40 mg vs Control (Group 1, n=13) 38.63 ± 11.08 mg (P < 0.05 Gr 4 vs Gr 1); 24-h pain VAS is Gr 4 1.21 ± 1.31 vs Gr 2 2.54 ± 0.86 vs Gr 1 3.50 ± 1.27.<br>3. Time to first bowel movement verified: Gr 4 33.30 ± 2.43 vs Gr 2 38.03 ± 2.71 hours; time to first ambulation: Gr 4 29.90 ± 2.95 vs Gr 2 33.75 ± 3.11 hours.<br>4. RoB 2 verified: D1-D4 Low risk (random number table, sequentially numbered allocation, sham non-stimulating electrodes at non-acupoints, participants/personnel/assessors blinded, 47/49 completed [95.9%]); D5/Overall Some concerns (older trial without prospective trial registration).",
+      "fake_boilerplate_expunged": "Fabricated data: 20.3 ± 4.7 vs 33.0 ± 7.0 (N=30) for opioid; 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain.",
       "evidence_sources": "Text p. 1-3 (Methods, random number table, SSP electrodes, blinding); Table 2 p. 2 (demographics); Table 3 p. 2 (bowel movement); Table 4 p. 2 (ambulation); Table 5 p. 4 (VAS pain 0-24h); Table 6 p. 4 (PCA doses delivered intervals); Table 7 p. 4 (PCA demands); Table 8 p. 5 (Total PCA delivered & demanded)"
     },
     "stricta": {
@@ -7037,12 +7323,12 @@ window.STUDIES_DATA = [
       "total_n": 40,
       "arm1_name": "EA Group",
       "arm1_n": 20,
-      "arm1_age": "42.02 \u00b1 8.31",
+      "arm1_age": "42.02 ± 8.31",
       "arm1_female": "20/20 (100%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 20,
-      "arm2_age": "42.02 \u00b1 8.31",
+      "arm2_age": "42.02 ± 8.31",
       "arm2_female": "20/20 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -7056,7 +7342,7 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Cumulative IV PCA morphine delivered",
       "timepoint": "First 24 postoperative hours",
-      "rationale": "29.29 \u00b1 8.89 vs 34.20 \u00b1 6.40 mg"
+      "rationale": "29.29 ± 8.89 vs 34.20 ± 6.40 mg"
     },
     "author_inquiry": {
       "has_inquiry": false,
@@ -7122,7 +7408,13 @@ window.STUDIES_DATA = [
         "arm2_sd": 38.66,
         "unit": "demands",
         "p_val": 0.05,
-        "note": "24h PCA requests: Low-EA (41.60 \u00b1 36.47) vs Control (84.54 \u00b1 38.66, P<0.05); Sham was 74.18 \u00b1 39.33."
+        "note": "24h PCA requests: Low-EA (41.60 ± 36.47) vs Control (84.54 ± 38.66, P<0.05); Sham was 74.18 ± 39.33."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Lee 2011",
@@ -7147,7 +7439,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -7165,36 +7457,36 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 for opioid, N=30)!<br>2. Replaced with TRUE Table 3 published values across 3 arms: Cumulative PCIA fentanyl consumption at 24h is 2-Hz EA (n=53) 39.31 \u00b1 15.58 mL vs 20/100-Hz EA (n=53) 45.72 \u00b1 16.92 mL vs Sham EA (n=52) 56.54 \u00b1 12.50 mL (P < 0.001); Cumulative 48h fentanyl is 82.41 \u00b1 21.18 vs 83.76 \u00b1 17.91 vs 94.88 \u00b1 9.91 mL.<br>3. Pain score at 24h verified: 2-Hz EA 1.15 \u00b1 0.69 vs 20/100-Hz EA 1.15 \u00b1 0.69 vs Sham EA 3.54 \u00b1 0.75 (P < 0.001); 48h pain score: 0.62 \u00b1 0.48 vs 0.58 \u00b1 0.49 vs 2.48 \u00b1 0.67.<br>4. Time to first exhaust verified: 30.77 \u00b1 13.10 vs 29.88 \u00b1 14.07 vs 32.19 \u00b1 12.93 hours.<br>5. RoB 2 D2-D5 updated to Low risk (blunt non-penetrating placebo needles, covered stimulator lights, sealed battery compartment, formal blinding validation in eTable 2, blinded outcome assessors and analysts, 90.8% follow-up completeness [158/174 analyzed], ClinicalTrials.gov NCT04879212); D1/Overall Some concerns (sealed envelopes without explicit SNOSE details).",
-      "fake_boilerplate_expunged": "Fabricated data: 20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 (N=30) for opioid; RoB 2 claiming open-label control and missing trial registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 ± 4.7 vs 33.0 ± 7.0 for opioid, N=30)!<br>2. Replaced with TRUE Table 3 published values across 3 arms: Cumulative PCIA fentanyl consumption at 24h is 2-Hz EA (n=53) 39.31 ± 15.58 mL vs 20/100-Hz EA (n=53) 45.72 ± 16.92 mL vs Sham EA (n=52) 56.54 ± 12.50 mL (P < 0.001); Cumulative 48h fentanyl is 82.41 ± 21.18 vs 83.76 ± 17.91 vs 94.88 ± 9.91 mL.<br>3. Pain score at 24h verified: 2-Hz EA 1.15 ± 0.69 vs 20/100-Hz EA 1.15 ± 0.69 vs Sham EA 3.54 ± 0.75 (P < 0.001); 48h pain score: 0.62 ± 0.48 vs 0.58 ± 0.49 vs 2.48 ± 0.67.<br>4. Time to first exhaust verified: 30.77 ± 13.10 vs 29.88 ± 14.07 vs 32.19 ± 12.93 hours.<br>5. RoB 2 D2-D5 updated to Low risk (blunt non-penetrating placebo needles, covered stimulator lights, sealed battery compartment, formal blinding validation in eTable 2, blinded outcome assessors and analysts, 90.8% follow-up completeness [158/174 analyzed], ClinicalTrials.gov NCT04879212); D1/Overall Some concerns (sealed envelopes without explicit SNOSE details).",
+      "fake_boilerplate_expunged": "Fabricated data: 20.3 ± 4.7 vs 33.0 ± 7.0 (N=30) for opioid; RoB 2 claiming open-label control and missing trial registration.",
       "evidence_sources": "Text p. 2-4 (Methods, sealed envelopes, placebo blunt needles, blinding assessment); Table 1 p. 4 (demographics); Table 2 p. 5 (pump compressions); Table 3 p. 6 (pain scores, fentanyl consumption, exhaust); Fig 2 p. 7 (pain trajectories); p. 9 (ClinicalTrials.gov NCT04879212)"
     },
     "stricta": {
       "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "100 Hz (High Frequency)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "< 30 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 105,
       "arm1_name": "EA Group",
       "arm1_n": 53,
-      "arm1_age": "30.13 \u00b1 3.31",
+      "arm1_age": "30.13 ± 3.31",
       "arm1_female": "53/53 (100%)",
-      "arm1_bmi": "27.82 \u00b1 3.54",
+      "arm1_bmi": "27.82 ± 3.54",
       "arm2_name": "Sham Group",
       "arm2_n": 52,
-      "arm2_age": "31.19 \u00b1 3.37",
+      "arm2_age": "31.19 ± 3.37",
       "arm2_female": "52/52 (100%)",
-      "arm2_bmi": "26.65 \u00b1 3.22",
+      "arm2_bmi": "26.65 ± 3.22",
       "asa_status": "not reported"
     },
     "rob2": {
@@ -7213,20 +7505,20 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Concentration of fentanyl in the postoperativ...",
-      "target_data": "Concentration of fentanyl in the postoperative PCIA pump solution (e.g. \u00b5g/mL or total \u00b5g fentanyl in total volume mL).",
-      "rationale": "Table 3 reports postoperative fentanyl consumption in mL of PCIA solution (24h: 39.31 \u00b1 15.58 mL in 2-Hz vs 45.72 \u00b1 16.92 mL in 20/100-Hz vs 56.54 \u00b1 12.50 mL in Sham EA; 48h: 82.41 \u00b1 21.18 vs 83.76 \u00b1 17.91 vs 94.88 \u00b1 9.91 mL), but the concentration of fentanyl per mL is omitted in the main text.",
-      "impact": "Allows direct mathematical conversion of the reported mL volumes into micrograms (\u00b5g) of fentanyl and oral/IV morphine milligram equivalents (MME) for primary opioid meta-analysis.",
+      "target_data": "Concentration of fentanyl in the postoperative PCIA pump solution (e.g. µg/mL or total µg fentanyl in total volume mL).",
+      "rationale": "Table 3 reports postoperative fentanyl consumption in mL of PCIA solution (24h: 39.31 ± 15.58 mL in 2-Hz vs 45.72 ± 16.92 mL in 20/100-Hz vs 56.54 ± 12.50 mL in Sham EA; 48h: 82.41 ± 21.18 vs 83.76 ± 17.91 vs 94.88 ± 9.91 mL), but the concentration of fentanyl per mL is omitted in the main text.",
+      "impact": "Allows direct mathematical conversion of the reported mL volumes into micrograms (µg) of fentanyl and oral/IV morphine milligram equivalents (MME) for primary opioid meta-analysis.",
       "corresponding_author": "Dr. Bing Xiong & Dr. Liquan Wang",
       "email": "2202030@zju.edu.cn",
       "institution": "`2202030@zju.edu.cn`; Department of Acupuncture and Rehabilitation, The First Affiliated Hospital, Zhejiang University School of Medicine, Hangzhou 310003, Zhejiang, China",
-      "draft_msg": "Dear Dr. Xiong and Dr. Wang, congratulations on your randomized clinical trial published in the American Journal of Obstetrics & Gynecology MFM (2023;5:100826) evaluating electroacupuncture with PCIA after cesarean delivery. In Table 3 you report fentanyl consumption in mL (24h: 39.31 \u00b1 15.58 vs 45.72 \u00b1 16.92 vs 56.54 \u00b1 12.50 mL). Could you kindly confirm the exact concentration of fentanyl in the PCIA solution (e.g., in \u00b5g/mL or total \u00b5g in total reservoir volume) so that we can accurately convert these volume measurements into micrograms of fentanyl and IV morphine milligram equivalents for our systematic review?"
+      "draft_msg": "Dear Dr. Xiong and Dr. Wang, congratulations on your randomized clinical trial published in the American Journal of Obstetrics & Gynecology MFM (2023;5:100826) evaluating electroacupuncture with PCIA after cesarean delivery. In Table 3 you report fentanyl consumption in mL (24h: 39.31 ± 15.58 vs 45.72 ± 16.92 vs 56.54 ± 12.50 mL). Could you kindly confirm the exact concentration of fentanyl in the PCIA solution (e.g., in µg/mL or total µg in total reservoir volume) so that we can accurately convert these volume measurements into micrograms of fentanyl and IV morphine milligram equivalents for our systematic review?"
     },
     "outcomes": {
       "opioid_24h": {
         "status": "Conditional / Separate",
         "role": "PCA Volume Proxy",
         "inclusion_decision": "EXCLUDE FROM DOSE; PCA VOLUME PROXY ONLY",
-        "note": "39.31 \u00b1 15.58 vs 56.54 \u00b1 12.5 mL PCIA solution; fentanyl concentration missing",
+        "note": "39.31 ± 15.58 vs 56.54 ± 12.5 mL PCIA solution; fentanyl concentration missing",
         "mean_diff": null,
         "se": null
       },
@@ -7260,7 +7552,14 @@ window.STUDIES_DATA = [
         "arm2_sd": 5.19,
         "unit": "compressions",
         "p_val": 0.0001,
-        "note": "Primary endpoint NAPC at 24h: 2-Hz median 0.0 [0.0\u20132.0] (mean ~0.67) vs Sham median 5.5 [3.0\u201310.0] (mean ~6.17, P<0.001)."
+        "note": "Primary endpoint NAPC at 24h: 2-Hz median 0.0 [0.0–2.0] (mean ~0.67) vs Sham median 5.5 [3.0–10.0] (mean ~6.17, P<0.001)."
+      },
+      "opioid_48h": {
+        "status": "Conditional / Separate",
+        "role": "PCA Volume Proxy",
+        "note": "48h PCIA fentanyl solution: 82.41 ± 21.18 vs 94.88 ± 9.91 mL (P<0.001); NAPC at 48h: 1.0 (0.0–3.0) vs 9.0 (4.3–12.0) compressions (P<0.001).",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Jin 2023",
@@ -7285,7 +7584,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -7303,16 +7602,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1, N=30 for pain; and 5/30 vs 12/30 for PONV)!<br>2. Replaced with TRUE Table 4 & text values: 24h PONV is TEAS (n=294) 44/294 (15.0%) vs Sham TEAS (n=293) 67/293 (22.9%, P = 0.015, RR 0.59); Time to first flatus is median 21.5 (19.0-23.5) vs 23.5 (21.0-26.0) h (P < 0.001); Time to first defecation is median 41.2 vs 46.0 h (P < 0.001); 24h NRS pain is median 3 (2-3) vs 3 (2-3.5) (P = 0.026).<br>3. Intraoperative remifentanil verified: 904.42 \u00b1 509.68 vs 869.13 \u00b1 479.93 \u00b5g; intraoperative sufentanil: 20.60 \u00b1 3.58 vs 20.50 \u00b1 3.35 \u00b5g; severe adverse events: 0/294 vs 0/293.<br>4. RoB 2 previously mislabeled Some concerns claiming open-label control and lack of registration; corrected to **Low risk across all Domains 1-5** (computer block sequence, sealed opaque envelopes, 0 mA disconnected sham TEAS, 98.8% follow-up completeness [593/600 analyzed], blinded assessors and statisticians, ClinicalTrials.gov NCT03724656).",
-      "fake_boilerplate_expunged": "Fabricated data: 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label control and missing registration.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 ± 0.8 vs 3.7 ± 1.1, N=30 for pain; and 5/30 vs 12/30 for PONV)!<br>2. Replaced with TRUE Table 4 & text values: 24h PONV is TEAS (n=294) 44/294 (15.0%) vs Sham TEAS (n=293) 67/293 (22.9%, P = 0.015, RR 0.59); Time to first flatus is median 21.5 (19.0-23.5) vs 23.5 (21.0-26.0) h (P < 0.001); Time to first defecation is median 41.2 vs 46.0 h (P < 0.001); 24h NRS pain is median 3 (2-3) vs 3 (2-3.5) (P = 0.026).<br>3. Intraoperative remifentanil verified: 904.42 ± 509.68 vs 869.13 ± 479.93 µg; intraoperative sufentanil: 20.60 ± 3.58 vs 20.50 ± 3.35 µg; severe adverse events: 0/294 vs 0/293.<br>4. RoB 2 previously mislabeled Some concerns claiming open-label control and lack of registration; corrected to **Low risk across all Domains 1-5** (computer block sequence, sealed opaque envelopes, 0 mA disconnected sham TEAS, 98.8% follow-up completeness [593/600 analyzed], blinded assessors and statisticians, ClinicalTrials.gov NCT03724656).",
+      "fake_boilerplate_expunged": "Fabricated data: 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label control and missing registration.",
       "evidence_sources": "Text p. 2-3 (Methods, computer block randomization, opaque envelopes, sham TEAS 0 mA); Table 1 p. 3 (demographics); Table 2 p. 4 (intraop data); Table 3 p. 4 (time to flatus); Table 4 p. 5 (secondary outcomes & PONV); Table 5 p. 5 (complications); Fig 2 p. 5 (KM curve flatus)"
     },
     "stricta": {
       "acupoints": "ST36 (Zusanli), PC6 (Neiguan), LI4 (Hegu)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
@@ -7325,12 +7624,12 @@ window.STUDIES_DATA = [
       "total_n": 587,
       "arm1_name": "TEAS Group",
       "arm1_n": 294,
-      "arm1_age": "51 (40\u201358)",
+      "arm1_age": "51 (40–58)",
       "arm1_female": "178/294 (60.5%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 293,
-      "arm2_age": "50 (39\u201358)",
+      "arm2_age": "50 (39–58)",
       "arm2_female": "185/293 (63.1%)",
       "arm2_bmi": "not reported",
       "asa_status": "ASA I: 14 (4.8%), ASA II: 250 (85.0%), ASA III: 34 (11.6%)"
@@ -7351,13 +7650,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative opioid consu...",
-      "target_data": "Cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or \u00b5g or IV MME) and parametric mean \u00b1 SD for 24-hour resting NRS pain score.",
+      "target_data": "Cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or µg or IV MME) and parametric mean ± SD for 24-hour resting NRS pain score.",
       "rationale": "Section 3.3 and the Abstract report 24-hour NRS pain score as median [IQR] (3 [2-3] in TEAS vs 3 [2-3.5] in Sham-TEAS, P = 0.026), and multimodal postoperative analgesia was administered, but cumulative 24-hour postoperative opioid consumption is not reported numerically in tables.",
       "impact": "Adds high-precision parametric 24-hour pain data and postoperative opioid consumption from a large trial (N=587) to the primary meta-analysis.",
       "corresponding_author": "Dr. Jianbo Yu",
       "email": "30717008@nankai.edu.cn",
       "institution": "Department of Anesthesiology and Critical Care Medicine, Tianjin Nankai Hospital, Tianjin 300100, China",
-      "draft_msg": "Dear Dr. Yu, congratulations on your multicenter randomized trial published in Complementary Therapies in Clinical Practice (2026;64:102076) investigating TEAS in non-gastrointestinal laparoscopic surgery. In the text you report that TEAS significantly reduced 24-hour NRS pain scores (median 3 [2-3] vs 3 [2-3.5]). Could you kindly share the parametric mean \u00b1 SD for 24-hour resting NRS pain scores, as well as the cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or \u00b5g or IV morphine milligram equivalents) and number of patients requiring rescue analgesia for the TEAS (n=294) and Sham-TEAS (n=293) groups?"
+      "draft_msg": "Dear Dr. Yu, congratulations on your multicenter randomized trial published in Complementary Therapies in Clinical Practice (2026;64:102076) investigating TEAS in non-gastrointestinal laparoscopic surgery. In the text you report that TEAS significantly reduced 24-hour NRS pain scores (median 3 [2-3] vs 3 [2-3.5]). Could you kindly share the parametric mean ± SD for 24-hour resting NRS pain scores, as well as the cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or µg or IV morphine milligram equivalents) and number of patients requiring rescue analgesia for the TEAS (n=294) and Sham-TEAS (n=293) groups?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -7396,6 +7695,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Jiang 2026",
@@ -7420,7 +7725,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -7438,36 +7743,36 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1, N=30 for pain; and 5/30 vs 12/30 for PONV)!<br>2. Replaced with TRUE Table 4 published values: 24h pain VAS is median 5 (3-7, n=43) vs median 6 (4-8, n=45, P < 0.001); Time to first flatus is EA (n=43) 36.4 \u00b1 8.0 vs Standard care (n=45) 42.2 \u00b1 8.5 h (P < 0.001); Time to first defecation is 46.0 \u00b1 8.0 vs 51.3 \u00b1 9.4 h (P = 0.010); Vomiting is 3/43 (7.0%) vs 9/45 (20.0%, P = 0.142); Rescue analgesics is 1/43 (2.3%) vs 4/45 (8.9%).<br>3. Cumulative 24h opioid consumption: Postoperative PCA pump was used in 43/43 (100%) vs 42/45 (93.3%) and rescue pethidine administered, but cumulative 24h opioid consumption was measured-not-reported.<br>4. RoB 2 D1 updated to Low risk (centralized SPSS 27.0 sequence generation with automated allocation); D2 Some concerns (standard ERAS care comparator without sham EA); D3 Low risk (0% attrition, 88/88 analyzed); D4 Some concerns (self-reported pain VAS in unblinded participants); D5 Some concerns (grant funded without prospective registry ID, measured-not-reported PCA dose).",
-      "fake_boilerplate_expunged": "Fabricated data: 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 D1 misclassified as lack of concealment.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (2.3 ± 0.8 vs 3.7 ± 1.1, N=30 for pain; and 5/30 vs 12/30 for PONV)!<br>2. Replaced with TRUE Table 4 published values: 24h pain VAS is median 5 (3-7, n=43) vs median 6 (4-8, n=45, P < 0.001); Time to first flatus is EA (n=43) 36.4 ± 8.0 vs Standard care (n=45) 42.2 ± 8.5 h (P < 0.001); Time to first defecation is 46.0 ± 8.0 vs 51.3 ± 9.4 h (P = 0.010); Vomiting is 3/43 (7.0%) vs 9/45 (20.0%, P = 0.142); Rescue analgesics is 1/43 (2.3%) vs 4/45 (8.9%).<br>3. Cumulative 24h opioid consumption: Postoperative PCA pump was used in 43/43 (100%) vs 42/45 (93.3%) and rescue pethidine administered, but cumulative 24h opioid consumption was measured-not-reported.<br>4. RoB 2 D1 updated to Low risk (centralized SPSS 27.0 sequence generation with automated allocation); D2 Some concerns (standard ERAS care comparator without sham EA); D3 Low risk (0% attrition, 88/88 analyzed); D4 Some concerns (self-reported pain VAS in unblinded participants); D5 Some concerns (grant funded without prospective registry ID, measured-not-reported PCA dose).",
+      "fake_boilerplate_expunged": "Fabricated data: 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV; RoB 2 D1 misclassified as lack of concealment.",
       "evidence_sources": "Text p. 2-4 (Methods, SPSS sequence, centralized allocation, EA STRICTA); Table 1 p. 3 (acupoint anatomical locations); Table 2 p. 4 (timeline); Table 3 p. 4 (demographics); Table 4 p. 4 (outcomes); Fig 2 p. 5 (KM curve flatus)"
     },
     "stricta": {
       "acupoints": "ST36 (Zusanli), ST37 (Shangjuxu), ST39 (Xiajuxu)",
       "frequency_raw": "Not applicable",
       "frequency_category": "100 Hz (High Frequency)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 88,
       "arm1_name": "EA Group",
       "arm1_n": 43,
-      "arm1_age": "49.1 \u00b1 6.1",
+      "arm1_age": "49.1 ± 6.1",
       "arm1_female": "43/43 (100%)",
-      "arm1_bmi": "25.1 \u00b1 4.2",
+      "arm1_bmi": "25.1 ± 4.2",
       "arm2_name": "Sham Group",
       "arm2_n": 45,
-      "arm2_age": "51.0 \u00b1 6.3",
+      "arm2_age": "51.0 ± 6.3",
       "arm2_female": "45/45 (100%)",
-      "arm2_bmi": "24.1 \u00b1 3.6",
+      "arm2_bmi": "24.1 ± 3.6",
       "asa_status": "ASA I: 11 (25.6%), ASA II: 30 (69.8%), ASA III: 2 (4.7%)"
     },
     "rob2": {
@@ -7479,20 +7784,20 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Time to first flatus",
       "timepoint": "Postoperative",
-      "rationale": "36.4 \u00b1 8.0 vs 42.2 \u00b1 8.5 h; P<0.001"
+      "rationale": "36.4 ± 8.0 vs 42.2 ± 8.5 h; P<0.001"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "CRITICAL",
       "urgency": "CRITICAL: Specific opioid medication and concentration ...",
-      "target_data": "Specific opioid medication and concentration in the postoperative PCA pump, cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or \u00b5g), and parametric mean \u00b1 SD for 24-hour resting VAS pain score.",
+      "target_data": "Specific opioid medication and concentration in the postoperative PCA pump, cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or µg), and parametric mean ± SD for 24-hour resting VAS pain score.",
       "rationale": "Table 3 notes that a self-controlled analgesia pump (PCA) was used in 100% of the EA group and 93.3% of the standard care group, and Table 4 reports 24-hour VAS pain score as median (min-max) [5 (3-7) vs 6 (4-8)], but cumulative 24-hour opioid consumption is not reported numerically in tables.",
       "impact": "Resolves postoperative opioid PCA medication specification and cumulative consumption for inclusion in the primary opioid and pain meta-analyses.",
       "corresponding_author": "Dr. Li Deng & Dr. Yong-Zhou Wang",
       "email": "20220399120070@stu.swmu.edu.cn",
       "institution": "`20220399120070@stu.swmu.edu.cn`; Department of Gynaecology, The Affiliated Traditional Chinese Medicine Hospital, Southwest Medical University, Luzhou 646000, Sichuan, China",
-      "draft_msg": "Dear Dr. Deng and Dr. Wang, congratulations on your recent trial in the American Journal of Translational Research (2025;17:2743-2753) investigating electroacupuncture after laparoscopic hysterectomy. In Table 3 you report that 100% of the EA group and 93.3% of the standard care group used a self-controlled analgesia pump postoperatively. Could you kindly share the specific analgesic medication and concentration used in the PCA pump, the cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or \u00b5g), and the parametric mean \u00b1 SD for 24-hour VAS pain score for the EA (n=43) and Standard Care (n=45) groups?"
+      "draft_msg": "Dear Dr. Deng and Dr. Wang, congratulations on your recent trial in the American Journal of Translational Research (2025;17:2743-2753) investigating electroacupuncture after laparoscopic hysterectomy. In Table 3 you report that 100% of the EA group and 93.3% of the standard care group used a self-controlled analgesia pump postoperatively. Could you kindly share the specific analgesic medication and concentration used in the PCA pump, the cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or µg), and the parametric mean ± SD for 24-hour VAS pain score for the EA (n=43) and Standard Care (n=45) groups?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -7543,6 +7848,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Huang 2025",
@@ -7558,7 +7869,7 @@ window.STUDIES_DATA = [
     "key": "#3811 - Huang 2017",
     "author": "Huang",
     "year": 2017,
-    "citation": "Huang S, et al. *J Anesth*. 2017;31(1):58\u201365. DOI: 10.1007/s00540-015-2057-1. PMID: 26350110",
+    "citation": "Huang S, et al. *J Anesth*. 2017;31(1):58–65. DOI: 10.1007/s00540-015-2057-1. PMID: 26350110",
     "journal": "#3811 - Huang 2017",
     "doi": "10.1007/s00540-015-2057-1",
     "pmid": "26350110",
@@ -7567,7 +7878,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -7585,9 +7896,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 for opioid; 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 for pain; 5/30 vs 12/30 for PONV, all with false N=30)!<br>2. Replaced with TRUE published values: Total intraoperative opioid (remifentanil \u00b5g/kg/min) is Control (n=20) 0.1617 \u00b1 0.037 vs 2/100 Hz TEAS (n=20) 0.1128 \u00b1 0.034 (P <= 0.001); Extubation PACU NRS pain is 2.4 \u00b1 0.5 vs 1.3 \u00b1 0.7 (P = 0.047); Extubation time is 14.7 \u00b1 4.0 vs 9.9 \u00b1 3.5 min (P = 0.028).<br>3. 48h cumulative sufentanil is Control 1.32 \u00b1 0.48 vs 2/100 Hz 1.67 \u00b1 0.59 \u00b5g/kg; 24h cumulative opioid consumption recorded at 6, 12, 24, 48h but not reported separately in tables.<br>4. PONV morbidity is Control 7/20 (35%) vs 2/100 Hz 5/20 (25%) vs 100 Hz 1/20 (5%, P = 0.044).<br>5. RoB 2 verified **Low risk across all Domains 1-5** (SAS computer randomization, SNOSE concealment, double-blind sham 0 mA, 100% follow-up completeness [80/80 analyzed], blinded assessors, ChiCTR-TRC-14004207).",
-      "fake_boilerplate_expunged": "Fabricated data: 20.3 \u00b1 4.7 vs 33.0 \u00b1 7.0 (N=30) for opioid; 2.3 \u00b1 0.8 vs 3.7 \u00b1 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.3 ± 4.7 vs 33.0 ± 7.0 for opioid; 2.3 ± 0.8 vs 3.7 ± 1.1 for pain; 5/30 vs 12/30 for PONV, all with false N=30)!<br>2. Replaced with TRUE published values: Total intraoperative opioid (remifentanil µg/kg/min) is Control (n=20) 0.1617 ± 0.037 vs 2/100 Hz TEAS (n=20) 0.1128 ± 0.034 (P <= 0.001); Extubation PACU NRS pain is 2.4 ± 0.5 vs 1.3 ± 0.7 (P = 0.047); Extubation time is 14.7 ± 4.0 vs 9.9 ± 3.5 min (P = 0.028).<br>3. 48h cumulative sufentanil is Control 1.32 ± 0.48 vs 2/100 Hz 1.67 ± 0.59 µg/kg; 24h cumulative opioid consumption recorded at 6, 12, 24, 48h but not reported separately in tables.<br>4. PONV morbidity is Control 7/20 (35%) vs 2/100 Hz 5/20 (25%) vs 100 Hz 1/20 (5%, P = 0.044).<br>5. RoB 2 verified **Low risk across all Domains 1-5** (SAS computer randomization, SNOSE concealment, double-blind sham 0 mA, 100% follow-up completeness [80/80 analyzed], blinded assessors, ChiCTR-TRC-14004207).",
+      "fake_boilerplate_expunged": "Fabricated data: 20.3 ± 4.7 vs 33.0 ± 7.0 (N=30) for opioid; 2.3 ± 0.8 vs 3.7 ± 1.1 (N=30) for pain; 5/30 vs 12/30 for PONV.",
       "evidence_sources": "Text p. 2-4 (Methods, SAS randomization, SNOSE, sham TEAS); Table 1 p. 5 (demographics); Table 2 p. 5 (intraop anesthetic dosages); Table 4 p. 5 (PACU extubation & NRS); Table 5 p. 6 (postop sufentanil & PONV); Table 6 p. 6 (SF-12 scores)"
     },
     "stricta": {
@@ -7607,14 +7918,14 @@ window.STUDIES_DATA = [
       "total_n": 40,
       "arm1_name": "TEAS Group",
       "arm1_n": 20,
-      "arm1_age": "57.3 \u00b1 11.6",
+      "arm1_age": "57.3 ± 11.6",
       "arm1_female": "10/20 (50.0%)",
-      "arm1_bmi": "24.7 \u00b1 2.2",
+      "arm1_bmi": "24.7 ± 2.2",
       "arm2_name": "Sham Group",
       "arm2_n": 20,
-      "arm2_age": "57.2 \u00b1 15.7",
+      "arm2_age": "57.2 ± 15.7",
       "arm2_female": "11/20 (55.0%)",
-      "arm2_bmi": "22.8 \u00b1 2.6",
+      "arm2_bmi": "22.8 ± 2.6",
       "asa_status": "ASA I: 6 (30.0%), ASA II: 14 (70.0%), ASA III: 0 (0%)"
     },
     "rob2": {
@@ -7626,20 +7937,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Total opioid as remifentanil-equivalent rate",
       "timepoint": "Intraoperative",
-      "rationale": "0.1128 \u00b1 0.034 vs 0.1617 \u00b1 0.037 \u00b5g/kg/min; P\u22640.001"
+      "rationale": "0.1128 ± 0.034 vs 0.1617 ± 0.037 µg/kg/min; P≤0.001"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative PCIA sufenta...",
-      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or \u00b5g/kg) and exact numerical 24-hour resting NRS pain score for Control and 2/100 Hz TEAS groups.",
-      "rationale": "Table 5 reports cumulative 48-h sufentanil consumption (1.32 \u00b1 0.48 vs 1.67 \u00b1 0.59 \u00b5g/kg), and the Methods describe recordings made at 6, 12, 24, and 48 hours postoperatively, but cumulative 24-hour consumption is not printed in published tables.",
-      "impact": "Supplements the verified significant intraoperative remifentanil reduction (0.1128 vs 0.1617 \u00b5g/kg/min) and extubation pain reduction with 24-hour postoperative data for primary meta-analysis.",
+      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or µg/kg) and exact numerical 24-hour resting NRS pain score for Control and 2/100 Hz TEAS groups.",
+      "rationale": "Table 5 reports cumulative 48-h sufentanil consumption (1.32 ± 0.48 vs 1.67 ± 0.59 µg/kg), and the Methods describe recordings made at 6, 12, 24, and 48 hours postoperatively, but cumulative 24-hour consumption is not printed in published tables.",
+      "impact": "Supplements the verified significant intraoperative remifentanil reduction (0.1128 vs 0.1617 µg/kg/min) and extubation pain reduction with 24-hour postoperative data for primary meta-analysis.",
       "corresponding_author": "Dr. Yi Feng",
       "email": "yifeng65@sina.com",
-      "institution": "Department of Anesthesiology, Peking University People\u2019s Hospital, Beijing 100044, China",
-      "draft_msg": "Dear Dr. Feng, congratulations on your publication in the Journal of Anesthesia (2017;31:58\u201365) examining TEAS at different frequencies in VATS lobectomy. In the Methods you mention that postoperative PCIA sufentanil consumption was recorded at 6, 12, 24, and 48 hours, and Table 5 reports 48-hour totals. Could you kindly share the cumulative 24-hour postoperative sufentanil consumption (mean \u00b1 SD in \u00b5g or \u00b5g/kg) and the mean \u00b1 SD resting NRS pain score at 24 hours for the Control (n=20) and 2/100 Hz TEAS (n=20) groups?"
+      "institution": "Department of Anesthesiology, Peking University People’s Hospital, Beijing 100044, China",
+      "draft_msg": "Dear Dr. Feng, congratulations on your publication in the Journal of Anesthesia (2017;31:58–65) examining TEAS at different frequencies in VATS lobectomy. In the Methods you mention that postoperative PCIA sufentanil consumption was recorded at 6, 12, 24, and 48 hours, and Table 5 reports 48-hour totals. Could you kindly share the cumulative 24-hour postoperative sufentanil consumption (mean ± SD in µg or µg/kg) and the mean ± SD resting NRS pain score at 24 hours for the Control (n=20) and 2/100 Hz TEAS (n=20) groups?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -7672,13 +7983,19 @@ window.STUDIES_DATA = [
         "ci_upp": -288.2,
         "p_val": "<0.001",
         "drug": "Remifentanil Equiv",
-        "unit": "\u00b5g",
-        "status": "Derived Total Dose (\u00b5g)",
-        "note": "Derived from reported rate (0.1128 \u00b1 0.034 vs 0.1617 \u00b1 0.037 \u00b5g/kg/min \u00d7 62 kg \u00d7 150 min)"
+        "unit": "µg",
+        "status": "Derived Total Dose (µg)",
+        "note": "Derived from reported rate (0.1128 ± 0.034 vs 0.1617 ± 0.037 µg/kg/min × 62 kg × 150 min)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Huang 2017",
@@ -7703,7 +8020,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -7721,36 +8038,36 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. Primary consensus models in Covidence were completely unpopulated; entered verified Table 2 values for all 3 arms across all timepoints.<br>2. **Movement VAS 24h (PRIMARY)**: Contralateral EA (n=38) 53.16 \u00b1 9.99 vs Ipsilateral EA (n=38) 53.50 \u00b1 10.79 vs Sham EA (n=38) 56.71 \u00b1 9.84 (0-100 scale).<br>3. **Movement VAS 48h**: Contralateral 48.95 \u00b1 9.80 vs Ipsilateral 49.42 \u00b1 10.39 vs Sham EA 54.50 \u00b1 8.29 (P = 0.043 vs Sham).<br>4. **Movement VAS 72h**: Contralateral 43.82 \u00b1 8.18 vs Ipsilateral 45.82 \u00b1 10.11 vs Sham EA 52.87 \u00b1 7.80 (P < 0.001 vs Sham).<br>5. 24h cumulative opioid consumption: PCA pump was used with additional doses reported in median (0 vs 2 vs 2 releases, P < 0.001), but cumulative 24h opioid consumption in mg/\u00b5g was measured-not-reported.<br>6. RoB 2 D1-D4 updated to Low risk (SPSS computer randomization, opaque envelopes, Streitberger blunt sham needles with proven blinding success [71-76%], blinded assessors, ITT analysis); D5 Some concerns due to measured-not-reported 24h opioid dose.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. Primary consensus models in Covidence were completely unpopulated; entered verified Table 2 values for all 3 arms across all timepoints.<br>2. **Movement VAS 24h (PRIMARY)**: Contralateral EA (n=38) 53.16 ± 9.99 vs Ipsilateral EA (n=38) 53.50 ± 10.79 vs Sham EA (n=38) 56.71 ± 9.84 (0-100 scale).<br>3. **Movement VAS 48h**: Contralateral 48.95 ± 9.80 vs Ipsilateral 49.42 ± 10.39 vs Sham EA 54.50 ± 8.29 (P = 0.043 vs Sham).<br>4. **Movement VAS 72h**: Contralateral 43.82 ± 8.18 vs Ipsilateral 45.82 ± 10.11 vs Sham EA 52.87 ± 7.80 (P < 0.001 vs Sham).<br>5. 24h cumulative opioid consumption: PCA pump was used with additional doses reported in median (0 vs 2 vs 2 releases, P < 0.001), but cumulative 24h opioid consumption in mg/µg was measured-not-reported.<br>6. RoB 2 D1-D4 updated to Low risk (SPSS computer randomization, opaque envelopes, Streitberger blunt sham needles with proven blinding success [71-76%], blinded assessors, ITT analysis); D5 Some concerns due to measured-not-reported 24h opioid dose.",
       "fake_boilerplate_expunged": "Reviewers previously left extraction values empty in Covidence; RoB 2 consensus had generic boilerplate claiming open-label design and usual care.",
       "evidence_sources": "Text p. 2-4 (Methods, SPSS sequence, opaque envelopes, Streitberger sham needles); Table 1 p. 6 (demographics); Table 2 p. 7 (VAS pain scores & PCA releases); Table 3 p. 9 (HSS score, AROM, PROM); Table 4 p. 10 (blinding assessment & adverse events)"
     },
     "stricta": {
       "acupoints": "ST32 (Futu), ST36 (Zusanli), SP9 (Yinlingquan), GB34 (Yanglingquan)",
       "frequency_raw": "Not applicable",
-      "frequency_category": "2\u201310 Hz (Low Frequency)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "frequency_category": "2–10 Hz (Low Frequency)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 76,
       "arm1_name": "EA Group",
       "arm1_n": 38,
-      "arm1_age": "67.29 \u00b1 4.78",
+      "arm1_age": "67.29 ± 4.78",
       "arm1_female": "33/38 (86.8%)",
-      "arm1_bmi": "24.43 \u00b1 3.60",
+      "arm1_bmi": "24.43 ± 3.60",
       "arm2_name": "Sham Group",
       "arm2_n": 38,
-      "arm2_age": "67.58 \u00b1 4.95",
+      "arm2_age": "67.58 ± 4.95",
       "arm2_female": "31/38 (81.6%)",
-      "arm2_bmi": "23.34 \u00b1 2.92",
+      "arm2_bmi": "23.34 ± 2.92",
       "asa_status": "not reported"
     },
     "rob2": {
@@ -7762,20 +8079,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "VAS during walking/knee movement",
       "timepoint": "POD1",
-      "rationale": "53.16 \u00b1 9.99 vs 56.71 \u00b1 9.84; adjusted pairwise NS"
+      "rationale": "53.16 ± 9.99 vs 56.71 ± 9.84; adjusted pairwise NS"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "CRITICAL",
       "urgency": "CRITICAL: Specific opioid medication and concentration ...",
-      "target_data": "Specific opioid medication and concentration in the postoperative PCA pump, cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or \u00b5g), and number of patients requiring rescue oral etoricoxib tablets (60 mg) in each of the three groups.",
+      "target_data": "Specific opioid medication and concentration in the postoperative PCA pump, cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or µg), and number of patients requiring rescue oral etoricoxib tablets (60 mg) in each of the three groups.",
       "rationale": "The text describes that each patient received a continuous infusion via a PCA pump after surgery (rate 0.25 g/kg/h) and rescue oral etoricoxib tablets (60 mg) when VAS > 60. Table 2 reports median PCA releases on Day 2 (0 vs 2 vs 2 releases, P < 0.001), but cumulative 24-hour opioid consumption is not numerically tabulated.",
       "impact": "Resolves PCA pump opioid drug identification and provides numerical 24-hour cumulative opioid consumption for quantitative synthesis across contralateral, ipsilateral, and sham arms.",
       "corresponding_author": "Dr. Yuelai Chen",
       "email": "chenyuelai@163.com",
       "institution": "Department of Acupuncture and Moxibustion, Yueyang Hospital of Integrated Traditional Chinese and Western Medicine, Shanghai University of Traditional Chinese Medicine, Shanghai, China",
-      "draft_msg": "Dear Dr. Chen, congratulations on your trial published in Acupuncture in Medicine (2024;42:183-193) comparing contralateral vs ipsilateral electroacupuncture after unilateral total knee arthroplasty. In the Methods you note that patients received continuous PCA infusion and rescue etoricoxib when VAS > 60. Could you kindly clarify the specific analgesic medication and concentration used in the PCA pump, the cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or \u00b5g), and the number of patients requiring rescue oral etoricoxib for the Contralateral EA (n=38), Ipsilateral EA (n=38), and Sham EA (n=38) groups?"
+      "draft_msg": "Dear Dr. Chen, congratulations on your trial published in Acupuncture in Medicine (2024;42:183-193) comparing contralateral vs ipsilateral electroacupuncture after unilateral total knee arthroplasty. In the Methods you note that patients received continuous PCA infusion and rescue etoricoxib when VAS > 60. Could you kindly clarify the specific analgesic medication and concentration used in the PCA pump, the cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or µg), and the number of patients requiring rescue oral etoricoxib for the Contralateral EA (n=38), Ipsilateral EA (n=38), and Sham EA (n=38) groups?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -7799,7 +8116,7 @@ window.STUDIES_DATA = [
         "ci_low": -7.853,
         "ci_upp": 1.433,
         "unit": "VAS 0-100",
-        "readiness": "CONDITIONAL \u2014 POD1"
+        "readiness": "CONDITIONAL — POD1"
       },
       "pain_movement_24h": null,
       "ponv_24h": null,
@@ -7831,6 +8148,12 @@ window.STUDIES_DATA = [
         "unit": "releases",
         "p_val": 0.001,
         "note": "Additional PCA releases on POD2: Contralateral EA 0 [0, 2] vs Ipsilateral EA 2 [0, 2] vs Sham EA 2 [2, 4] (P<0.001)."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Huang 2024",
@@ -7855,7 +8178,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -7873,8 +8196,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers entered fake boilerplate PONV (5/30 vs 12/30, N=30)!<br>2. Replaced with TRUE Table 3 published values: PONV within 24h is TEAS (n=36) 4/36 (11.1%) vs Sham TEAS (n=36) 12/36 (33.3%) (P = 0.023) [RR 0.33].<br>3. Rescue analgesia incidence verified: TEAS 15/36 (41.7%) vs Sham TEAS 28/36 (77.8%) (P = 0.002) [RR 0.54].<br>4. Cumulative 24h PCIA sufentanil consumption: Methods describe PCIA pump connected for 48h (sufentanil 1 \u00b5g/mL; rate 2 mL/h, bolus 4 mL, lockout 30 min), but cumulative 24h opioid consumption is measured-not-reported numerically in tables.<br>5. RoB 2 D2/D4 updated to Low risk (sham TEAS 0 mA control, participants and outcome assessors strictly double-blinded, 72/72 analyzed); D1/D5 Some concerns (sealed envelopes without explicit SNOSE details; 24h PCIA sufentanil measured-not-reported).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers entered fake boilerplate PONV (5/30 vs 12/30, N=30)!<br>2. Replaced with TRUE Table 3 published values: PONV within 24h is TEAS (n=36) 4/36 (11.1%) vs Sham TEAS (n=36) 12/36 (33.3%) (P = 0.023) [RR 0.33].<br>3. Rescue analgesia incidence verified: TEAS 15/36 (41.7%) vs Sham TEAS 28/36 (77.8%) (P = 0.002) [RR 0.54].<br>4. Cumulative 24h PCIA sufentanil consumption: Methods describe PCIA pump connected for 48h (sufentanil 1 µg/mL; rate 2 mL/h, bolus 4 mL, lockout 30 min), but cumulative 24h opioid consumption is measured-not-reported numerically in tables.<br>5. RoB 2 D2/D4 updated to Low risk (sham TEAS 0 mA control, participants and outcome assessors strictly double-blinded, 72/72 analyzed); D1/D5 Some concerns (sealed envelopes without explicit SNOSE details; 24h PCIA sufentanil measured-not-reported).",
       "fake_boilerplate_expunged": "Fabricated data: PONV 5/30 vs 12/30 (N=30); RoB 2 claiming open-label control and usual care comparator.",
       "evidence_sources": "Text p. 2-3 (Methods, anesthesia, sham TEAS 0 mA); Table 2 p. 6 (demographics); Table 3 p. 6 (intraop characteristics, PONV, rescue analgesia, bowel movement); Table 4 p. 7 (QoR-15, VAS-P, HADS-A, ISI)"
     },
@@ -7882,7 +8205,7 @@ window.STUDIES_DATA = [
       "acupoints": "EX-HN3 (Yintang), LR3 (Taichong), PC6 (Neiguan)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
@@ -7895,14 +8218,14 @@ window.STUDIES_DATA = [
       "total_n": 72,
       "arm1_name": "TEAS Group",
       "arm1_n": 36,
-      "arm1_age": "54.0 \u00b1 5.8",
+      "arm1_age": "54.0 ± 5.8",
       "arm1_female": "23/36 (63.9%)",
-      "arm1_bmi": "24.1 \u00b1 2.0",
+      "arm1_bmi": "24.1 ± 2.0",
       "arm2_name": "Sham Group",
       "arm2_n": 36,
-      "arm2_age": "54.6 \u00b1 8.0",
+      "arm2_age": "54.6 ± 8.0",
       "arm2_female": "27/36 (75.0%)",
-      "arm2_bmi": "24.0 \u00b1 3.2",
+      "arm2_bmi": "24.0 ± 3.2",
       "asa_status": "ASA I: 20 (55.6%), ASA II: 16 (44.4%)"
     },
     "rob2": {
@@ -7921,13 +8244,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "CRITICAL",
       "urgency": "CRITICAL: Cumulative 24-hour postoperative PCIA sufenta...",
-      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL) and parametric mean \u00b1 SD for 24-hour resting VAS pain score.",
-      "rationale": "The Methods describe connection of a PCIA pump containing sufentanil (1 \u00b5g/mL; rate 2 mL/h, bolus 4 mL, lockout 30 min) for 48 hours postoperatively, and Table 3 reports a significant reduction in rescue analgesics (15/36 vs 28/36, P = 0.002), but cumulative 24h PCIA sufentanil consumption is not printed in tables. Table 4 reports 24-hour VAS pain as median (IQR) [30.0 vs 55.0 mm].",
+      "target_data": "Cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL) and parametric mean ± SD for 24-hour resting VAS pain score.",
+      "rationale": "The Methods describe connection of a PCIA pump containing sufentanil (1 µg/mL; rate 2 mL/h, bolus 4 mL, lockout 30 min) for 48 hours postoperatively, and Table 3 reports a significant reduction in rescue analgesics (15/36 vs 28/36, P = 0.002), but cumulative 24h PCIA sufentanil consumption is not printed in tables. Table 4 reports 24-hour VAS pain as median (IQR) [30.0 vs 55.0 mm].",
       "impact": "Obtaining cumulative 24-hour PCIA sufentanil dose and parametric pain score will enable inclusion in the primary opioid and pain meta-analyses, complementing the verified PONV (4/36 vs 12/36) and rescue analgesia data.",
       "corresponding_author": "Dr. Shu-Ming Wang & Dr. Juan Li",
       "email": "smwang@uchc.edu",
       "institution": "`smwang@uchc.edu`; Department of Anesthesiology, The First Affiliated Hospital of USTC, Division of Life Sciences and Medicine, University of Science and Technology of China, Hefei, China; and Department of Anesthesiology, University of Connecticut School of Medicine, Farmington, CT, USA",
-      "draft_msg": "Dear Dr. Wang and Dr. Li, congratulations on your trial in Heliyon (2023;9:e14423) investigating perioperative TEAS in living kidney donors. In the Methods you describe that a PCIA pump containing sufentanil (1 \u00b5g/mL) was connected in the PACU for 48 hours postoperatively. Could you kindly share the cumulative 24-hour postoperative PCIA sufentanil consumption (mean \u00b1 SD in \u00b5g or mL) and the parametric mean \u00b1 SD for resting VAS pain score at 24 hours (D2) for the TEAS (n=36) and Control (n=36) groups?"
+      "draft_msg": "Dear Dr. Wang and Dr. Li, congratulations on your trial in Heliyon (2023;9:e14423) investigating perioperative TEAS in living kidney donors. In the Methods you describe that a PCIA pump containing sufentanil (1 µg/mL) was connected in the PACU for 48 hours postoperatively. Could you kindly share the cumulative 24-hour postoperative PCIA sufentanil consumption (mean ± SD in µg or mL) and the parametric mean ± SD for resting VAS pain score at 24 hours (D2) for the TEAS (n=36) and Control (n=36) groups?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -7975,6 +8298,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Hou 2023",
@@ -7999,7 +8328,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -8017,16 +8346,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Moderate Sparing"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 for 24h opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for 24h pain; 5/30 vs 12/30 for 24h PONV)!<br>2. **GROUND TRUTH RECOVERED FROM AUTHOR SUPPLEMENT**: Supplemental Material 2 (`eTable 1`) provides exact cumulative opioid consumption on IV morphine equivalents: 24h is TEAS (n=80) 20.0 \u00b1 2.5 vs Control (n=79) 20.6 \u00b1 4.5 mg (P = 0.30); 48h is 39.5 \u00b1 4.0 vs 40.4 \u00b1 7.1 mg (P = 0.32).<br>3. True Table 2 & 3 values: PONV 24h is 19/80 (23.8%) vs 21/79 (26.6%); 24h PCA attempts: 2.7 \u00b1 3.3 vs 3.5 \u00b1 6.1 (P = 0.02); 24h deliveries: 2.6 \u00b1 3.3 vs 3.5 \u00b1 6.0 (P = 0.02).<br>4. RoB 2 previously mislabeled Some concerns claiming open-label control and lack of registration; corrected to **Low risk across all Domains 1-5** (centralized web randomization, independent investigator concealment, opaque sham-box triple blinding, 98.8% follow-up completeness, ClinicalTrials.gov NCT05396716, published SAP).",
-      "fake_boilerplate_expunged": "Fabricated data: 20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 mg (N=30) for 24h opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 for 24h pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label control.",
+      "classification": "🟡 Verified with Corrections",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers copied fake boilerplate (20.4 ± 4.8 vs 33.1 ± 7.0 for 24h opioid; 2.4 ± 0.8 vs 3.8 ± 1.1 for 24h pain; 5/30 vs 12/30 for 24h PONV)!<br>2. **GROUND TRUTH RECOVERED FROM AUTHOR SUPPLEMENT**: Supplemental Material 2 (`eTable 1`) provides exact cumulative opioid consumption on IV morphine equivalents: 24h is TEAS (n=80) 20.0 ± 2.5 vs Control (n=79) 20.6 ± 4.5 mg (P = 0.30); 48h is 39.5 ± 4.0 vs 40.4 ± 7.1 mg (P = 0.32).<br>3. True Table 2 & 3 values: PONV 24h is 19/80 (23.8%) vs 21/79 (26.6%); 24h PCA attempts: 2.7 ± 3.3 vs 3.5 ± 6.1 (P = 0.02); 24h deliveries: 2.6 ± 3.3 vs 3.5 ± 6.0 (P = 0.02).<br>4. RoB 2 previously mislabeled Some concerns claiming open-label control and lack of registration; corrected to **Low risk across all Domains 1-5** (centralized web randomization, independent investigator concealment, opaque sham-box triple blinding, 98.8% follow-up completeness, ClinicalTrials.gov NCT05396716, published SAP).",
+      "fake_boilerplate_expunged": "Fabricated data: 20.4 ± 4.8 vs 33.1 ± 7.0 mg (N=30) for 24h opioid; 2.4 ± 0.8 vs 3.8 ± 1.1 for 24h pain; 5/30 vs 12/30 for PONV; RoB 2 claiming open-label control.",
       "evidence_sources": "Text p. 2-4 (Methods, web randomization, opaque sham box); Table 1 p. 6 (demographics & intraop opioids); Table 2 p. 6 (PONV mITT & PP); Table 3 p. 7 (PCA attempts, deliveries, pain median); Supplemental Material 2 eTable 1 p. 1 (24h & 48h opioid MME)"
     },
     "stricta": {
       "acupoints": "PC6 (Neiguan)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
@@ -8039,14 +8368,14 @@ window.STUDIES_DATA = [
       "total_n": 86,
       "arm1_name": "TEAS Group",
       "arm1_n": 43,
-      "arm1_age": "42.0 \u00b1 9.8",
+      "arm1_age": "42.0 ± 9.8",
       "arm1_female": "9/43 (20.9%)",
-      "arm1_bmi": "24.6 \u00b1 3.5",
+      "arm1_bmi": "24.6 ± 3.5",
       "arm2_name": "Sham Group",
       "arm2_n": 43,
-      "arm2_age": "39.5 \u00b1 11.3",
+      "arm2_age": "39.5 ± 11.3",
       "arm2_female": "10/43 (23.3%)",
-      "arm2_bmi": "24.9 \u00b1 3.2",
+      "arm2_bmi": "24.9 ± 3.2",
       "asa_status": "ASA I: 11 (25.6%), ASA II: 32 (74.4%)"
     },
     "rob2": {
@@ -8058,7 +8387,7 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Total postoperative opioid consumption in morphine equivalents",
       "timepoint": "0-24 h",
-      "rationale": "20.0 \u00b1 2.5 vs 20.6 \u00b1 4.5 mg MME; MD -0.6 mg, P=0.30"
+      "rationale": "20.0 ± 2.5 vs 20.6 ± 4.5 mg MME; MD -0.6 mg, P=0.30"
     },
     "author_inquiry": {
       "has_inquiry": false,
@@ -8133,9 +8462,9 @@ window.STUDIES_DATA = [
         "ci_upp": 405.4,
         "p_val": "0.380",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Intraoperative remifentanil (reported 2.5 \u00b1 1.4 vs 2.8 \u00b1 1.9 mg)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Intraoperative remifentanil (reported 2.5 ± 1.4 vs 2.8 ± 1.9 mg)"
       },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
@@ -8154,11 +8483,29 @@ window.STUDIES_DATA = [
         "unit": "attempts",
         "p_val": 0.02,
         "effective_presses": {
-          "arm1": "2.6 \u00b1 3.3",
-          "arm2": "3.5 \u00b1 6.0",
+          "arm1": "2.6 ± 3.3",
+          "arm2": "3.5 ± 6.0",
           "p": 0.02
         },
-        "note": "24h PCA attempts: 2.7 \u00b1 3.3 vs 3.5 \u00b1 6.1 (P=0.02); effective deliveries: 2.6 \u00b1 3.3 vs 3.5 \u00b1 6.0 (P=0.02)."
+        "note": "24h PCA attempts: 2.7 ± 3.3 vs 3.5 ± 6.1 (P=0.02); effective deliveries: 2.6 ± 3.3 vs 3.5 ± 6.0 (P=0.02)."
+      },
+      "opioid_48h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Cumulative 0–48h Opioid Consumption",
+        "timepoint": "48h",
+        "arm1_n": 80,
+        "arm1_mean": 39.5,
+        "arm1_sd": 4.0,
+        "arm2_n": 79,
+        "arm2_mean": 40.4,
+        "arm2_sd": 7.1,
+        "mean_diff": -0.9,
+        "se": 0.915,
+        "ci_low": -2.69,
+        "ci_upp": 0.89,
+        "unit": "mg IV MME",
+        "note": "Directly reported in Supplemental Material 2, eTable 1: 39.5 ± 4.0 vs 40.4 ± 7.1 mg MME (MD -0.90 mg MME, P=0.32).",
+        "favors": "Intervention"
       }
     },
     "canonical_name": "He 2026 (hepatectomy/JIS)",
@@ -8183,7 +8530,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -8201,34 +8548,34 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Both previous reviewers copied fake boilerplate (2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, N=30 for 24h pain; and 5/30 vs 12/30 for 24h PONV)!<br>2. Replaced with TRUE Table 2 & 4 published values: 24h pain at rest is EA (n=65) 1.789 \u00b1 0.174 vs Control (n=65) 2.692 \u00b1 0.174 (P < 0.01); 24h movement pain is 2.862 \u00b1 0.233 vs 3.954 \u00b1 0.233 (P < 0.01); PONV is 13/65 (20.0%) vs 22/65 (33.8%, P < 0.05).<br>3. 24h cumulative opioid consumption: Rescue morphine (1-3 mg) or paracetamol administered if VAS >= 4, but cumulative 24h opioid consumption was measured-not-reported in tables.<br>4. RoB 2 D2 and D4 were falsely labeled Some concerns claiming open-label control and unblinded assessors; corrected to Low risk (sham acupuncture shallow non-acupoint control, participants and outcome assessors strictly double-blinded, 130/130 analyzed).",
-      "fake_boilerplate_expunged": "Fabricated data: 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 (N=30) for 24h pain; 5/30 vs 12/30 for 24h PONV; RoB 2 claiming open-label control and usual care comparator.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Both previous reviewers copied fake boilerplate (2.4 ± 0.8 vs 3.8 ± 1.1, N=30 for 24h pain; and 5/30 vs 12/30 for 24h PONV)!<br>2. Replaced with TRUE Table 2 & 4 published values: 24h pain at rest is EA (n=65) 1.789 ± 0.174 vs Control (n=65) 2.692 ± 0.174 (P < 0.01); 24h movement pain is 2.862 ± 0.233 vs 3.954 ± 0.233 (P < 0.01); PONV is 13/65 (20.0%) vs 22/65 (33.8%, P < 0.05).<br>3. 24h cumulative opioid consumption: Rescue morphine (1-3 mg) or paracetamol administered if VAS >= 4, but cumulative 24h opioid consumption was measured-not-reported in tables.<br>4. RoB 2 D2 and D4 were falsely labeled Some concerns claiming open-label control and unblinded assessors; corrected to Low risk (sham acupuncture shallow non-acupoint control, participants and outcome assessors strictly double-blinded, 130/130 analyzed).",
+      "fake_boilerplate_expunged": "Fabricated data: 2.4 ± 0.8 vs 3.8 ± 1.1 (N=30) for 24h pain; 5/30 vs 12/30 for 24h PONV; RoB 2 claiming open-label control and usual care comparator.",
       "evidence_sources": "Text p. 2-4 (Methods, anesthesia, sham acupuncture); Table 1 p. 4 (demographics); Table 2 p. 4 (pain scores); Table 3 p. 5 (BADL scores); Table 4 p. 5 (complications & PONV)"
     },
     "stricta": {
       "acupoints": "ST36 (Zusanli), SP6 (Sanyinjiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/10 Hz (Alternating)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 130,
       "arm1_name": "EA Group",
       "arm1_n": 65,
-      "arm1_age": "52 (43.5\u201361.5)",
+      "arm1_age": "52 (43.5–61.5)",
       "arm1_female": "65/65 (100%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 65,
-      "arm2_age": "52 (43.5\u201361)",
+      "arm2_age": "52 (43.5–61)",
       "arm2_female": "65/65 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -8249,13 +8596,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "CRITICAL",
       "urgency": "CRITICAL: Cumulative 24-hour postoperative opioid consu...",
-      "target_data": "Cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or IV MME) and number of participants receiving rescue IV morphine in each group.",
+      "target_data": "Cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or IV MME) and number of participants receiving rescue IV morphine in each group.",
       "rationale": "The Methods describe administration of rescue IV morphine (1-3 mg) or paracetamol (1000 mg) based on VAS scores, and Table 2 reports highly significant reductions in 24h rest and movement VAS pain, but cumulative 24h opioid consumption is not numerically tabulated in published tables.",
       "impact": "Obtaining 24-hour cumulative opioid consumption will allow inclusion in the primary opioid sparing meta-analysis, complementing the verified pain and PONV endpoints.",
       "corresponding_author": "Dr. Qing-Xiong Hong",
       "email": "gaoheiamk@163.com",
       "institution": "Department of Anesthesiology, The Second Affiliated Hospital of Guangzhou University of Chinese Medicine, No. 111 Dade Road, Guangzhou 510000, Guangdong Province, China",
-      "draft_msg": "Dear Dr. Hong, congratulations on your recent publication in the World Journal of Clinical Oncology (2026;17:114431) on electroacupuncture and flurbiprofen axetil in breast cancer surgery. In the Methods you note that patients received rescue analgesia such as IV morphine (1-3 mg) when VAS >= 4. Could you kindly share the cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or IV morphine milligram equivalents) and the number of patients who required rescue IV morphine in the EA group (n=65) and Control group (n=65)?"
+      "draft_msg": "Dear Dr. Hong, congratulations on your recent publication in the World Journal of Clinical Oncology (2026;17:114431) on electroacupuncture and flurbiprofen axetil in breast cancer surgery. In the Methods you note that patients received rescue analgesia such as IV morphine (1-3 mg) when VAS >= 4. Could you kindly share the cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or IV morphine milligram equivalents) and the number of patients who required rescue IV morphine in the EA group (n=65) and Control group (n=65)?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -8306,6 +8653,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "He 2026 (breast/WJCO)",
@@ -8330,7 +8683,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -8348,9 +8701,9 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers entered fabricated values (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0, N=30 for opioid; 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1, N=30 for pain; 5/30 vs 12/30 for PONV)!<br>2. Replaced with TRUE published values: 24h pain VAS at rest is 1.98 \u00b1 0.39 vs 2.72 \u00b1 0.73 (N=58 vs N=59, P < 0.05); PONV is 7/58 (12.1%) vs 19/59 (32.2%, P < 0.05).<br>3. Cumulative 24h opioid consumption is measured and plotted in Figure 4 (T4) but not printed numerically in text; converted to missing_data: true with true N=58 vs N=59.<br>4. RoB 2 D1-D4 verified Low risk; D5 Some concerns due to missing public trial registration and graph-only 24h opioid reporting.",
-      "fake_boilerplate_expunged": "Fabricated data: 20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 mg (N=30); pain 2.4 \u00b1 0.8 vs 3.8 \u00b1 1.1 (N=30); PONV 5/30 vs 12/30.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers entered fabricated values (20.4 ± 4.8 vs 33.1 ± 7.0, N=30 for opioid; 2.4 ± 0.8 vs 3.8 ± 1.1, N=30 for pain; 5/30 vs 12/30 for PONV)!<br>2. Replaced with TRUE published values: 24h pain VAS at rest is 1.98 ± 0.39 vs 2.72 ± 0.73 (N=58 vs N=59, P < 0.05); PONV is 7/58 (12.1%) vs 19/59 (32.2%, P < 0.05).<br>3. Cumulative 24h opioid consumption is measured and plotted in Figure 4 (T4) but not printed numerically in text; converted to missing_data: true with true N=58 vs N=59.<br>4. RoB 2 D1-D4 verified Low risk; D5 Some concerns due to missing public trial registration and graph-only 24h opioid reporting.",
+      "fake_boilerplate_expunged": "Fabricated data: 20.4 ± 4.8 vs 33.1 ± 7.0 mg (N=30); pain 2.4 ± 0.8 vs 3.8 ± 1.1 (N=30); PONV 5/30 vs 12/30.",
       "evidence_sources": "Text p. 15 (pain VAS 24h & opioid at 4h, 8h, 36h); Text p. 15 (PONV percentages); Table 1 p. 14 (demographics); Table 3 p. 15 (GI recovery); Fig 2 p. 14 (flowchart 3 dropouts); Fig 4 p. 14 (analgesic consumption graph)"
     },
     "stricta": {
@@ -8370,14 +8723,14 @@ window.STUDIES_DATA = [
       "total_n": 117,
       "arm1_name": "TEAS Group",
       "arm1_n": 59,
-      "arm1_age": "56.67 \u00b1 6.23",
+      "arm1_age": "56.67 ± 6.23",
       "arm1_female": "30/59 (50.8%)",
-      "arm1_bmi": "21.84 \u00b1 2.78",
+      "arm1_bmi": "21.84 ± 2.78",
       "arm2_name": "Sham Group",
       "arm2_n": 58,
-      "arm2_age": "57.59 \u00b1 7.32",
+      "arm2_age": "57.59 ± 7.32",
       "arm2_female": "27/58 (46.6%)",
-      "arm2_bmi": "22.71 \u00b1 2.54",
+      "arm2_bmi": "22.71 ± 2.54",
       "asa_status": "ASA I: 20 (33.9%), ASA II: 39 (66.1%)"
     },
     "rob2": {
@@ -8389,20 +8742,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Time to first flatus",
       "timepoint": "Postoperative",
-      "rationale": "36.58 \u00b1 10.75 vs 43.56 \u00b1 9.57 h; P=0.03"
+      "rationale": "36.58 ± 10.75 vs 43.56 ± 9.57 h; P=0.03"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "CRITICAL",
-      "urgency": "CRITICAL: Exact numerical mean \u00b1 SD for cumulative 24-h...",
-      "target_data": "Exact numerical mean \u00b1 SD for cumulative 24-hour postoperative PCIA solution consumption (in mL, containing 1 \u00b5g/mL sufentanil) plotted at T4 in Figure 4.",
-      "rationale": "Cumulative postoperative analgesic consumption is reported in the text at 4 h (10.02 \u00b1 2.26 vs 13.38 \u00b1 2.98 mL), 8 h (20.55 \u00b1 4.59 vs 24.63 \u00b1 3.94 mL), and 36 h (72.64 \u00b1 9.74 vs 76.01 \u00b1 10.43 mL), but T4 (24 h) is plotted in Figure 4 without the numerical mean \u00b1 SD printed in the text.",
-      "impact": "Replaces the previously entered fabricated values (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0) with true author-confirmed primary endpoint data for 24-hour opioid consumption.",
+      "urgency": "CRITICAL: Exact numerical mean ± SD for cumulative 24-h...",
+      "target_data": "Exact numerical mean ± SD for cumulative 24-hour postoperative PCIA solution consumption (in mL, containing 1 µg/mL sufentanil) plotted at T4 in Figure 4.",
+      "rationale": "Cumulative postoperative analgesic consumption is reported in the text at 4 h (10.02 ± 2.26 vs 13.38 ± 2.98 mL), 8 h (20.55 ± 4.59 vs 24.63 ± 3.94 mL), and 36 h (72.64 ± 9.74 vs 76.01 ± 10.43 mL), but T4 (24 h) is plotted in Figure 4 without the numerical mean ± SD printed in the text.",
+      "impact": "Replaces the previously entered fabricated values (20.4 ± 4.8 vs 33.1 ± 7.0) with true author-confirmed primary endpoint data for 24-hour opioid consumption.",
       "corresponding_author": "Dr. Jianhui Gan",
       "email": "ganjianhui888@126.com",
       "institution": "Department of Anesthesiology, Tangshan People's Hospital, North China University of Science and Technology, Tangshan, Hebei, China",
-      "draft_msg": "Dear Dr. Gan, congratulations on your trial published in the European Journal of Integrative Medicine (2019;26:11-17). In Section 3.3 and Figure 4 you illustrate cumulative PCIA consumption across 4 h, 8 h, 16 h, 24 h (T4), and 36 h. Could you kindly share the numerical mean \u00b1 SD of the cumulative PCIA volume (mL) consumed at 24 hours (T4) for the L-TEAS (n=58) and C-TEAS (n=59) groups?"
+      "draft_msg": "Dear Dr. Gan, congratulations on your trial published in the European Journal of Integrative Medicine (2019;26:11-17). In Section 3.3 and Figure 4 you illustrate cumulative PCIA consumption across 4 h, 8 h, 16 h, 24 h (T4), and 36 h. Could you kindly share the numerical mean ± SD of the cumulative PCIA volume (mL) consumed at 24 hours (T4) for the L-TEAS (n=58) and C-TEAS (n=59) groups?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -8458,6 +8811,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Gu 2019",
@@ -8482,7 +8841,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -8500,8 +8859,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. PONV was previously misentered as 5/30 vs 12/30; corrected to exact Table 5 counts: 2/55 (3.6%) vs 5/55 (9.1%).<br>2. 24h pain score reported in graph only (Fig 3B).<br>3. 24h cumulative opioid reported as frequency of remedial analgesics (2.29 \u00b1 1.76 vs 1.96 \u00b1 1.97 times).<br>4. RoB 2 D1 updated to Low risk (SPSS sequence + central allocation by technician); D2/D3 Some concerns (14.1% post-randomization attrition).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. PONV was previously misentered as 5/30 vs 12/30; corrected to exact Table 5 counts: 2/55 (3.6%) vs 5/55 (9.1%).<br>2. 24h pain score reported in graph only (Fig 3B).<br>3. 24h cumulative opioid reported as frequency of remedial analgesics (2.29 ± 1.76 vs 1.96 ± 1.97 times).<br>4. RoB 2 D1 updated to Low risk (SPSS sequence + central allocation by technician); D2/D3 Some concerns (14.1% post-randomization attrition).",
       "fake_boilerplate_expunged": "PONV 5/30 vs 12/30 entered with incorrect N=30; RoB 2 generic open-label boilerplate text.",
       "evidence_sources": "Table 1 (demographics); Table 2 (intraop opioids & remedial analgesia); Table 5 (adverse events & PONV); Fig 3B (pain NRS graph)"
     },
@@ -8509,7 +8868,7 @@ window.STUDIES_DATA = [
       "acupoints": "GV20 (Baihui), PC6 (Neiguan), LI4 (Hegu), ST36 (Zusanli)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
@@ -8522,14 +8881,14 @@ window.STUDIES_DATA = [
       "total_n": 110,
       "arm1_name": "TEAS Group",
       "arm1_n": 55,
-      "arm1_age": "70.09 \u00b1 3.95",
+      "arm1_age": "70.09 ± 3.95",
       "arm1_female": "20/55 (36.4%)",
-      "arm1_bmi": "24.09 \u00b1 2.78",
+      "arm1_bmi": "24.09 ± 2.78",
       "arm2_name": "Sham Group",
       "arm2_n": 55,
-      "arm2_age": "70.56 \u00b1 4.59",
+      "arm2_age": "70.56 ± 4.59",
       "arm2_female": "27/55 (49.1%)",
-      "arm2_bmi": "23.63 \u00b1 2.85",
+      "arm2_bmi": "23.63 ± 2.85",
       "asa_status": "not reported"
     },
     "rob2": {
@@ -8548,13 +8907,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Cumulative 24-hour postoperative opioid consu...",
-      "target_data": "Cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or \u00b5g), opioid medication used in remedial analgesia, and exact numerical 24-hour resting NRS pain score (mean \u00b1 SD).",
-      "rationale": "Table 2 reports frequency of remedial analgesic in the hospital (times) [2.29 \u00b1 1.76 vs 1.96 \u00b1 1.97], and Figure 3B plots postoperative NRS pain scores graphically showing peak on Day 1 (P < 0.001), but exact 24-hour cumulative opioid dose and numerical Day 1 NRS pain mean \u00b1 SD are not printed in tables.",
+      "target_data": "Cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or µg), opioid medication used in remedial analgesia, and exact numerical 24-hour resting NRS pain score (mean ± SD).",
+      "rationale": "Table 2 reports frequency of remedial analgesic in the hospital (times) [2.29 ± 1.76 vs 1.96 ± 1.97], and Figure 3B plots postoperative NRS pain scores graphically showing peak on Day 1 (P < 0.001), but exact 24-hour cumulative opioid dose and numerical Day 1 NRS pain mean ± SD are not printed in tables.",
       "impact": "Converting remedial frequency to exact opioid consumption and extracting numerical Day 1 NRS pain will allow quantitative inclusion in primary and secondary meta-analyses.",
       "corresponding_author": "Dr. Changjun Gao & Dr. Xude Sun",
       "email": "gaocj74@163.com",
       "institution": "`gaocj74@163.com`; Department of Anesthesiology, The Second Affiliated Hospital of Air Force Medical University, Xi'an, China",
-      "draft_msg": "Dear Dr. Gao and Dr. Sun, congratulations on your recent Heliyon publication (2023;9:e19386). In Table 2 you report the frequency of remedial analgesics (2.29 \u00b1 1.76 vs 1.96 \u00b1 1.97 times) and in Figure 3B you show Day 1 NRS pain scores. Could you kindly share the cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD, specifying drug and dose in mg/\u00b5g) and the numerical Day 1 resting NRS pain score (mean \u00b1 SD) for the TEAS (n=55) and Sham-TEAS (n=55) groups?"
+      "draft_msg": "Dear Dr. Gao and Dr. Sun, congratulations on your recent Heliyon publication (2023;9:e19386). In Table 2 you report the frequency of remedial analgesics (2.29 ± 1.76 vs 1.96 ± 1.97 times) and in Figure 3B you show Day 1 NRS pain scores. Could you kindly share the cumulative 24-hour postoperative opioid consumption (mean ± SD, specifying drug and dose in mg/µg) and the numerical Day 1 resting NRS pain score (mean ± SD) for the TEAS (n=55) and Sham-TEAS (n=55) groups?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -8587,13 +8946,19 @@ window.STUDIES_DATA = [
         "ci_upp": -9.95,
         "p_val": "0.040",
         "drug": "Remifentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g)",
-        "note": "Intraoperative remifentanil (reported 0.87 \u00b1 0.30 vs 1.01 \u00b1 0.39 mg)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg)",
+        "note": "Intraoperative remifentanil (reported 0.87 ± 0.30 vs 1.01 ± 0.39 mg)"
       },
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Guo 2023",
@@ -8618,7 +8983,7 @@ window.STUDIES_DATA = [
       "code": "US",
       "lat": 37.0902,
       "lng": -95.7129,
-      "flag": "\ud83c\uddfa\ud83c\uddf8"
+      "flag": "🇺🇸"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -8636,34 +9001,34 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers entered fabricated values (20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0, N=30) which do not exist anywhere in the article! Corrected to `missing_data: true` with true N=10 vs N=9.<br>2. 24h cumulative opioid is measured-not-reported numerically (graph-only in Fig 1).<br>3. RoB 2 D1 falsely claimed SNOSE envelopes; corrected to Some concerns.<br>4. RoB 2 D5 corrected to Some concerns due to graph-only reporting of analgesic outcomes.",
-      "fake_boilerplate_expunged": "Fabricated opioid data: 20.4 \u00b1 4.8 vs 33.1 \u00b1 7.0 mg (N=30); RoB 2 D1 Low risk with boilerplate SNOSE text.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. **CRITICAL FABRICATION EXPUNGED**: Previous reviewers entered fabricated values (20.4 ± 4.8 vs 33.1 ± 7.0, N=30) which do not exist anywhere in the article! Corrected to `missing_data: true` with true N=10 vs N=9.<br>2. 24h cumulative opioid is measured-not-reported numerically (graph-only in Fig 1).<br>3. RoB 2 D1 falsely claimed SNOSE envelopes; corrected to Some concerns.<br>4. RoB 2 D5 corrected to Some concerns due to graph-only reporting of analgesic outcomes.",
+      "fake_boilerplate_expunged": "Fabricated opioid data: 20.4 ± 4.8 vs 33.1 ± 7.0 mg (N=30); RoB 2 D1 Low risk with boilerplate SNOSE text.",
       "evidence_sources": "Text p. 235-237; Table 1 p. 237 (individual patient data); Table 2 p. 237 (group demographics); Fig 1 p. 236 (opioid MME & pain VAS graphs)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), LI11 (Quchi), ST36 (Zusanli)",
       "frequency_raw": "Low frequency (10 Hz)",
-      "frequency_category": "2\u201310 Hz (Low Frequency)",
+      "frequency_category": "2–10 Hz (Low Frequency)",
       "intensity": "Visible muscle twitching (mild muscle twitching observed under general anesthesia)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Intraoperative during maintenance phase of general anesthesia: two 30-min sessions starting ~15 min after anesthesia induction",
       "timing_category": "Intraoperative only",
       "sessions_category": "Single session",
       "duration_raw": "60 min (2 x 30 min)",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 29,
       "arm1_name": "EA Group",
       "arm1_n": 20,
-      "arm1_age": "48.15 \u00b1 10.96",
+      "arm1_age": "48.15 ± 10.96",
       "arm1_female": "9/20 (45.0%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Usual Care Group",
       "arm2_n": 9,
-      "arm2_age": "52.33 \u00b1 12.24",
+      "arm2_age": "52.33 ± 12.24",
       "arm2_female": "9/9 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -8683,14 +9048,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Numerical mean \u00b1 SD (or individual patient da...",
-      "target_data": "Numerical mean \u00b1 SD (or individual patient data for the N=20 cohort) for cumulative 24-hour postoperative opioid consumption (in IV morphine milligram equivalents) and 24-hour resting VAS pain score.",
+      "urgency": "IMPORTANT: Numerical mean ± SD (or individual patient da...",
+      "target_data": "Numerical mean ± SD (or individual patient data for the N=20 cohort) for cumulative 24-hour postoperative opioid consumption (in IV morphine milligram equivalents) and 24-hour resting VAS pain score.",
       "rationale": "Figure 1 plots opioid use and VAS pain scores as bar charts with standard error bars for PACU and daily follow-up, but exact numerical values for cumulative 24-hour opioid consumption and 24-hour resting pain are not printed in tables.",
       "impact": "Prevents loss of data due to graphical ambiguity and eliminates previous reviewers' hallucinated values. Since N=20, individual patient data would allow exact synthesis.",
       "corresponding_author": "Dr. Luis Ulloa",
       "email": "Luis.Ulloa@Rutgers.edu",
       "institution": "Department of Surgery, New Jersey Medical School, Rutgers University, Newark, NJ, USA",
-      "draft_msg": "Dear Dr. Ulloa, regarding your 2016 trial on intraoperative electroacupuncture (J Acupunct Meridian Stud 2016;9:234-241), could you kindly provide the exact numerical mean \u00b1 SD (or individual patient values from Table 1) for cumulative 24-hour postoperative opioid consumption (in IV morphine equivalents) and 24-hour resting VAS pain scores for the EA and Control groups?"
+      "draft_msg": "Dear Dr. Ulloa, regarding your 2016 trial on intraoperative electroacupuncture (J Acupunct Meridian Stud 2016;9:234-241), could you kindly provide the exact numerical mean ± SD (or individual patient values from Table 1) for cumulative 24-hour postoperative opioid consumption (in IV morphine equivalents) and 24-hour resting VAS pain scores for the EA and Control groups?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -8718,6 +9083,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Grech 2016",
@@ -8742,7 +9113,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -8760,7 +9131,7 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
       "corrections": "1. 24h postoperative opioid consumption was recorded (98-99% analgesia use) but not numerically tabulated in text.<br>2. RoB 2 D2 and D4 were incorrectly marked Some concerns claiming open-label design; trial was rigorous double-blind sham-controlled with severed wires (0 mA) and 100% ITT (610/610 analyzed). Corrected D1-D4 to Low risk.<br>3. RoB 2 D5 Some concerns due to measured-not-reported 24h postoperative opioid consumption.",
       "fake_boilerplate_expunged": "RoB 2 D2/D4 Some concerns claiming open-label control and unblinded assessors.",
       "evidence_sources": "Text p. 1619-1620; Table I p. 1622 (demographics); Table II p. 1622 (intraop opioids & anesthetics); Table III p. 1623 (GI recovery & pain); Fig 2 p. 1623 (KM curves)"
@@ -8769,7 +9140,7 @@ window.STUDIES_DATA = [
       "acupoints": "ST36 (Zusanli), ST37 (Shangjuxu), SP6 (Sanyinjiao)",
       "frequency_raw": "Not applicable",
       "frequency_category": "2/10 Hz (Alternating)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Postoperative only",
@@ -8782,14 +9153,14 @@ window.STUDIES_DATA = [
       "total_n": 610,
       "arm1_name": "TEAS Group",
       "arm1_n": 303,
-      "arm1_age": "62.0 (53\u201369)",
+      "arm1_age": "62.0 (53–69)",
       "arm1_female": "127/303 (41.9%)",
-      "arm1_bmi": "22.5 (20.4\u201324.7)",
+      "arm1_bmi": "22.5 (20.4–24.7)",
       "arm2_name": "Sham Group",
       "arm2_n": 307,
-      "arm2_age": "63.0 (54\u201370)",
+      "arm2_age": "63.0 (54–70)",
       "arm2_female": "151/307 (49.2%)",
-      "arm2_bmi": "22.7 (20.7\u201324.4)",
+      "arm2_bmi": "22.7 (20.7–24.4)",
       "asa_status": "ASA I: 24 (7.9%), ASA II: 243 (80.2%), ASA III: 36 (11.9%)"
     },
     "rob2": {
@@ -8808,13 +9179,13 @@ window.STUDIES_DATA = [
       "status": "Active Outreach Required",
       "priority": "CRITICAL",
       "urgency": "CRITICAL: Cumulative 24-hour postoperative opioid consu...",
-      "target_data": "Cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD in mg or \u00b5g), postoperative PCA opioid type, and isolated 24-hour resting pain VAS/NRS (mean \u00b1 SD).",
+      "target_data": "Cumulative 24-hour postoperative opioid consumption (mean ± SD in mg or µg), postoperative PCA opioid type, and isolated 24-hour resting pain VAS/NRS (mean ± SD).",
       "rationale": "Table II reports that 297/303 (98.0%) TEAS and 304/307 (99.0%) Sham patients received postoperative analgesia, but cumulative 24-hour postoperative opioid consumption is not numerically tabulated in the paper.",
       "impact": "Gao 2021 is the single largest multicenter colorectal trial in the review (N=610). Obtaining cumulative 24-hour opioid consumption will provide massive statistical power and precision to the primary meta-analysis.",
       "corresponding_author": "Prof. Qiang Wang & Prof. Daqing Ma",
       "email": "dr.wangqiang@mail.xjtu.edu.cn",
       "institution": "`dr.wangqiang@mail.xjtu.edu.cn`; Department of Anesthesiology, First Affiliated Hospital of Xi'an Jiaotong University, Xi'an, China",
-      "draft_msg": "Dear Prof. Wang and Prof. Ma, congratulations on your landmark multicenter trial in Surgery (2021;170:1618-1626). In Table II you note that 98-99% of participants received postoperative analgesia. Could you kindly share the cumulative 24-hour postoperative opioid consumption (mean \u00b1 SD, specifying the drug and dose in mg or \u00b5g) and the resting pain score at 24 hours postoperatively for the TEAS group (n=303) and Sham group (n=307)?"
+      "draft_msg": "Dear Prof. Wang and Prof. Ma, congratulations on your landmark multicenter trial in Surgery (2021;170:1618-1626). In Table II you note that 98-99% of participants received postoperative analgesia. Could you kindly share the cumulative 24-hour postoperative opioid consumption (mean ± SD, specifying the drug and dose in mg or µg) and the resting pain score at 24 hours postoperatively for the TEAS group (n=303) and Sham group (n=307)?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -8856,6 +9227,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Gao 2021",
@@ -8880,7 +9257,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -8898,23 +9275,23 @@ window.STUDIES_DATA = [
       "quadrant_name": "Moderate Sparing"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. RoB 2 D1 falsely claimed sealed envelope concealment (SNOSE) when text stated open list consulted consecutively.<br>2. Authors disclosed loss of original raw data due to statistician illness; pain measurement timepoints unknown.<br>3. RoB 2 D5 corrected to High risk.<br>4. 24h morphine (35.3 \u00b1 18.0 vs 36.9 \u00b1 18.0 mg) exact match with Table 2.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. RoB 2 D1 falsely claimed sealed envelope concealment (SNOSE) when text stated open list consulted consecutively.<br>2. Authors disclosed loss of original raw data due to statistician illness; pain measurement timepoints unknown.<br>3. RoB 2 D5 corrected to High risk.<br>4. 24h morphine (35.3 ± 18.0 vs 36.9 ± 18.0 mg) exact match with Table 2.",
       "fake_boilerplate_expunged": "RoB 2 D1 Low risk, D5 Some concerns; boilerplate SNOSE text.",
       "evidence_sources": "Text p. 1-3; Table 1 p. 3 (operations & sex); Table 2 p. 3 (morphine & operation time); Table 3 p. 4 (pain scores)"
     },
     "stricta": {
       "acupoints": "GV2 (Yaoshu), BL32 (Ciliao), GV4 (Mingmen), BL23 (Shenshu), LI4 (Hegu), PC6 (Neiguan), LR3 (Taichong), SP6 (Sanyinjiao)",
       "frequency_raw": "Low frequency (10 Hz)",
-      "frequency_category": "2\u201310 Hz (Low Frequency)",
+      "frequency_category": "2–10 Hz (Low Frequency)",
       "intensity": "Fixed unit setting: intensity 7/10 on the intensity scale of the IC-4107 electroacupuncture unit (occasional muscle twitches noticed)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Intraoperative only: needles inserted after induction of anaesthesia, stimulated for duration of surgery, stopped and needles removed before transfer to recovery room",
       "timing_category": "Intraoperative only",
       "sessions_category": "Single session",
-      "duration_raw": "Approximately 108.2 min (mean operation time: 108.2 \u00b1 65.8 min)",
+      "duration_raw": "Approximately 108.2 min (mean operation time: 108.2 ± 65.8 min)",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 102,
@@ -8928,7 +9305,7 @@ window.STUDIES_DATA = [
       "arm2_age": "not reported",
       "arm2_female": "50/58 (86.2%)",
       "arm2_bmi": "not reported",
-      "asa_status": "100% ASA I\u2013II"
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Some concerns",
@@ -8939,7 +9316,7 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Total IV morphine analgesia",
       "timepoint": "First 24 h",
-      "rationale": "35.3 \u00b1 18.0 vs 36.9 \u00b1 18.0 mg; P=0.961"
+      "rationale": "35.3 ± 18.0 vs 36.9 ± 18.0 mg; P=0.961"
     },
     "author_inquiry": {
       "has_inquiry": true,
@@ -8957,7 +9334,7 @@ window.STUDIES_DATA = [
     "outcomes": {
       "opioid_24h": {
         "status": "Primary Direct",
-        "role": "Primary direct \u2014 high RoB",
+        "role": "Primary direct — high RoB",
         "native_drug": "IV morphine",
         "native_unit": "mg",
         "mme_factor": 1.0,
@@ -9000,6 +9377,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "El-Rakshy 2009",
@@ -9024,7 +9407,7 @@ window.STUDIES_DATA = [
       "code": "BR",
       "lat": -14.235,
       "lng": -51.9253,
-      "flag": "\ud83c\udde7\ud83c\uddf7"
+      "flag": "🇧🇷"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -9042,8 +9425,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. 10 of 32 randomized patients (31.3%) were excluded post-randomization (4 instability, 3 late extubation, 1 pre-op MI, 1 epidural, 1 confusion).<br>2. RoB 2 D3 was previously marked Low risk falsely claiming negligible dropouts; corrected to High risk (31.3% missing outcome data in high-risk cardiac surgery).<br>3. Numerical fentanyl (13.1 \u00b1 2.2 vs 16.3 \u00b1 1.6 \u00b5g/kg) and pain (2.5 \u00b1 1.1 vs 4.0 \u00b1 2.0) exact match with Table 2.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. 10 of 32 randomized patients (31.3%) were excluded post-randomization (4 instability, 3 late extubation, 1 pre-op MI, 1 epidural, 1 confusion).<br>2. RoB 2 D3 was previously marked Low risk falsely claiming negligible dropouts; corrected to High risk (31.3% missing outcome data in high-risk cardiac surgery).<br>3. Numerical fentanyl (13.1 ± 2.2 vs 16.3 ± 1.6 µg/kg) and pain (2.5 ± 1.1 vs 4.0 ± 2.0) exact match with Table 2.",
       "fake_boilerplate_expunged": "RoB 2 D3 Low risk claiming <5% missing data.",
       "evidence_sources": "Text p. 1-2; Fig 1 p. 3 (flowchart 10 dropouts); Table 1 p. 3 (demographics); Table 2 p. 3 (fentanyl & pain); Fig 3 p. 3 (fentanyl bar chart)"
     },
@@ -9052,24 +9435,24 @@ window.STUDIES_DATA = [
       "frequency_raw": "Mixed / alternating low and mid frequency (3 Hz and 15 Hz)",
       "frequency_category": "100 Hz (High Frequency)",
       "intensity": "Individual maximum tolerance (power adjusted according to individual maximum tolerance; electric shock de qi sensation not elicited electrically)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
-      "timing_raw": "Preoperative only: single 30-min session administered 12\u201318 h prior to surgery (day before surgery)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
+      "timing_raw": "Preoperative only: single 30-min session administered 12–18 h prior to surgery (day before surgery)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
       "duration_raw": "30",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 22,
       "arm1_name": "EA Group",
       "arm1_n": 13,
-      "arm1_age": "58.8 \u00b1 11.2",
+      "arm1_age": "58.8 ± 11.2",
       "arm1_female": "3/13 (23.1%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 9,
-      "arm2_age": "62.5 \u00b1 10.8",
+      "arm2_age": "62.5 ± 10.8",
       "arm2_female": "5/9 (55.6%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -9083,15 +9466,15 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Cumulative fentanyl",
       "timepoint": "First 24 h",
-      "rationale": "13.1 \u00b1 2.2 vs 16.3 \u00b1 1.6 \u00b5g/kg"
+      "rationale": "13.1 ± 2.2 vs 16.3 ± 1.6 µg/kg"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Intention-to-treat (ITT) 24-hour opioid consu...",
-      "target_data": "Intention-to-treat (ITT) 24-hour opioid consumption and pain data for the 10 excluded patients, group allocation breakdown of excluded patients, and total fentanyl in \u00b5g (absolute dose).",
-      "rationale": "10 of 32 randomized patients (31.3%) were excluded post-randomization due to ICU clinical criteria (4 hemodynamic instability, 3 late extubation >6h, 1 preoperative MI, 1 epidural catheter, 1 confusion), leaving 13 EA vs 9 Control analyzed. Table 2 reports fentanyl normalized by body weight (13.1 \u00b1 2.2 vs 16.3 \u00b1 1.6 \u00b5g/kg).",
+      "target_data": "Intention-to-treat (ITT) 24-hour opioid consumption and pain data for the 10 excluded patients, group allocation breakdown of excluded patients, and total fentanyl in µg (absolute dose).",
+      "rationale": "10 of 32 randomized patients (31.3%) were excluded post-randomization due to ICU clinical criteria (4 hemodynamic instability, 3 late extubation >6h, 1 preoperative MI, 1 epidural catheter, 1 confusion), leaving 13 EA vs 9 Control analyzed. Table 2 reports fentanyl normalized by body weight (13.1 ± 2.2 vs 16.3 ± 1.6 µg/kg).",
       "impact": "Under Cochrane RoB 2, missing outcome data >30% creates high risk of attrition bias. Full ITT data or group-specific breakdown of reasons for post-randomization withdrawal would allow sensitivity analysis under ITT.",
       "corresponding_author": "Dr. Luiz Eduardo Faria Coura",
       "email": "ludoterapia@bol.com.br",
@@ -9103,7 +9486,7 @@ window.STUDIES_DATA = [
         "status": "Derived Continuous (Weight-Normalized + MME)",
         "role": "Conditional Derived",
         "native_drug": "IV fentanyl",
-        "native_unit": "\u00b5g/kg",
+        "native_unit": "µg/kg",
         "mme_factor": 0.1,
         "arm1_mean_native": 13.1,
         "arm1_sd_native": 2.2,
@@ -9121,8 +9504,8 @@ window.STUDIES_DATA = [
         "ci_low": -33.52,
         "ci_upp": -11.28,
         "p_val": "<0.001",
-        "derivation_rule": "Standard adult cardiac reference weight (70 kg) multiplied by reported fentanyl consumption (13.1 \u00b1 2.2 vs 16.3 \u00b1 1.6 \u00b5g/kg) and converted to IV morphine equivalent (factor 0.1)",
-        "note": "Derived 24h total fentanyl consumption in cardiac surgery (91.7 \u00b1 15.4 vs 114.1 \u00b1 11.2 mg IV MME, P < 0.002)"
+        "derivation_rule": "Standard adult cardiac reference weight (70 kg) multiplied by reported fentanyl consumption (13.1 ± 2.2 vs 16.3 ± 1.6 µg/kg) and converted to IV morphine equivalent (factor 0.1)",
+        "note": "Derived 24h total fentanyl consumption in cardiac surgery (91.7 ± 15.4 vs 114.1 ± 11.2 mg IV MME, P < 0.002)"
       },
       "pain_rest_24h": null,
       "pain_movement_24h": null,
@@ -9141,6 +9524,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Coura 2011",
@@ -9165,7 +9554,7 @@ window.STUDIES_DATA = [
       "code": "US",
       "lat": 37.0902,
       "lng": -95.7129,
-      "flag": "\ud83c\uddfa\ud83c\uddf8"
+      "flag": "🇺🇸"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -9180,11 +9569,11 @@ window.STUDIES_DATA = [
       "reaches_8mg": true,
       "pain_non_inferior": true,
       "quadrant": 1,
-      "quadrant_name": "Optimal Synergistic (Sparing \u2265 5 mg MME + Pain Relief)"
+      "quadrant_name": "Optimal Synergistic (Sparing ≥ 5 mg MME + Pain Relief)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. RoB 2 D1 falsely claimed sealed envelope concealment (SNOSE) when article only stated \"randomly assigned\".<br>2. 24h pain VAS was measured on 100-mm VAS but not reported numerically.<br>3. Numerical 24h hydromorphone (6.5 \u00b1 3.5 vs 10.7 \u00b1 5.0 mg) exact match with Table 2.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. RoB 2 D1 falsely claimed sealed envelope concealment (SNOSE) when article only stated \"randomly assigned\".<br>2. 24h pain VAS was measured on 100-mm VAS but not reported numerically.<br>3. Numerical 24h hydromorphone (6.5 ± 3.5 vs 10.7 ± 5.0 mg) exact match with Table 2.",
       "fake_boilerplate_expunged": "RoB 2 D1 Low risk with boilerplate SNOSE text.",
       "evidence_sources": "Text p. 1130-1131; Table 1 p. 1132 (demographics); Table 2 p. 1132 (hydromorphone & PCA deliveries/demands); Table 4 p. 1133 (PONV & side effects)"
     },
@@ -9192,7 +9581,7 @@ window.STUDIES_DATA = [
       "acupoints": "ST36 (Zusanli)",
       "frequency_raw": "2/100 Hz (dense-disperse)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
@@ -9205,12 +9594,12 @@ window.STUDIES_DATA = [
       "total_n": 50,
       "arm1_name": "TEAS Group",
       "arm1_n": 25,
-      "arm1_age": "43 \u00b1 13",
+      "arm1_age": "43 ± 13",
       "arm1_female": "25/25 (100%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 25,
-      "arm2_age": "45 \u00b1 12",
+      "arm2_age": "45 ± 12",
       "arm2_female": "25/25 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "not reported"
@@ -9224,20 +9613,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Cumulative IV PCA hydromorphone",
       "timepoint": "First 24 h",
-      "rationale": "6.5 \u00b1 3.5 vs 10.7 \u00b1 5.0 mg"
+      "rationale": "6.5 ± 3.5 vs 10.7 ± 5.0 mg"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
       "urgency": "IMPORTANT: Numerical 24-hour resting pain score on 100-m...",
-      "target_data": "Numerical 24-hour resting pain score on 100-mm Visual Analog Scale (mean \u00b1 SD).",
+      "target_data": "Numerical 24-hour resting pain score on 100-mm Visual Analog Scale (mean ± SD).",
       "rationale": "Text page 1131 notes that VAS pain assessments were performed before premedication (baseline) and at 24h, 48h, and 72h. Table 2 reports hydromorphone consumption, but numerical VAS scores are not tabulated.",
-      "impact": "The secondary pain outcome requires numerical 24h pain score (mean \u00b1 SD). The 24h VAS pain score was assessed but not reported in tables.",
+      "impact": "The secondary pain outcome requires numerical 24h pain score (mean ± SD). The 24h VAS pain score was assessed but not reported in tables.",
       "corresponding_author": "Dr. Paul F. White",
       "email": "pwhite@mednet.swmed.edu",
       "institution": "Department of Anesthesiology and Pain Management, UT Southwestern Medical Center, Dallas, TX, USA",
-      "draft_msg": "Dear Dr. White, could you kindly provide the exact numerical 24-hour resting pain VAS score (mean \u00b1 SD on the 0\u2013100 mm scale) for Group IV (Acupoint TEAS, n=25) and Group I (Sham TEAS, n=25)?"
+      "draft_msg": "Dear Dr. White, could you kindly provide the exact numerical 24-hour resting pain VAS score (mean ± SD on the 0–100 mm scale) for Group IV (Acupoint TEAS, n=25) and Group I (Sham TEAS, n=25)?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -9290,9 +9679,9 @@ window.STUDIES_DATA = [
         "ci_upp": 10.56,
         "p_val": "0.280",
         "drug": "Fentanyl",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g Fentanyl)",
-        "note": "Intraoperative fentanyl dose (133 \u00b1 38 vs 142 \u00b1 32 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg Fentanyl)",
+        "note": "Intraoperative fentanyl dose (133 ± 38 vs 142 ± 32 µg)"
       },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
@@ -9311,11 +9700,17 @@ window.STUDIES_DATA = [
         "unit": "demands",
         "p_val": 0.05,
         "effective_presses": {
-          "arm1": "17 \u00b1 9",
-          "arm2": "30 \u00b1 16",
+          "arm1": "17 ± 9",
+          "arm2": "30 ± 16",
           "p": 0.05
         },
-        "note": "Table 2: 24h PCA demands (45 \u00b1 29 vs 84 \u00b1 49, P<0.05); PCA deliveries (17 \u00b1 9 vs 30 \u00b1 16, P<0.05)."
+        "note": "Table 2: 24h PCA demands (45 ± 29 vs 84 ± 49, P<0.05); PCA deliveries (17 ± 9 vs 30 ± 16, P<0.05)."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Chen 1998",
@@ -9340,7 +9735,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -9358,7 +9753,7 @@ window.STUDIES_DATA = [
       "quadrant_name": "Moderate Sparing"
     },
     "audit": {
-      "classification": "\ud83d\udfe2 Verified",
+      "classification": "🟢 Verified",
       "corrections": "Discrepancies resolved: RoB 2 comments updated from generic text to exact study facts (independent statistician allocation code, 0 dropouts). All numerical outcomes exact match with source text and tables.",
       "fake_boilerplate_expunged": "Boilerplate SNOSE comments in RoB 2.",
       "evidence_sources": "Text p. 930 (opioid & pain); Table 1 p. 931 (demographics); Table 2 p. 933 (PONV); Fig 1 p. 931 (flowchart 0 dropouts)"
@@ -9367,7 +9762,7 @@ window.STUDIES_DATA = [
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), SI3 (Houxi), TE6 (Zhigou)",
       "frequency_raw": "Mixed / alternating dense-disperse (2/100 Hz)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "10\u201315 mA pre/postoperatively (titrated above sensory threshold ~5 mA); 30 mA continuous intraoperatively",
+      "intensity": "10–15 mA pre/postoperatively (titrated above sensory threshold ~5 mA); 30 mA continuous intraoperatively",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative, intraoperative, and postoperative: 30 min pre-induction, continuous during entire surgery, and 30 min each at 6 h, 24 h, and 48 h postoperatively",
       "timing_category": "Preoperative only",
@@ -9380,15 +9775,15 @@ window.STUDIES_DATA = [
       "total_n": 80,
       "arm1_name": "TEAS Group",
       "arm1_n": 40,
-      "arm1_age": "56.0 \u00b1 3.7",
+      "arm1_age": "56.0 ± 3.7",
       "arm1_female": "17/40 (42.5%)",
-      "arm1_bmi": "23.5 \u00b1 0.9",
+      "arm1_bmi": "23.5 ± 0.9",
       "arm2_name": "Sham Group",
       "arm2_n": 40,
-      "arm2_age": "55.8 \u00b1 3.2",
+      "arm2_age": "55.8 ± 3.2",
       "arm2_female": "18/40 (45.0%)",
-      "arm2_bmi": "23.4 \u00b1 1.0",
-      "asa_status": "100% ASA I\u2013II"
+      "arm2_bmi": "23.4 ± 1.0",
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Low",
@@ -9399,7 +9794,7 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Cumulative sufentanil",
       "timepoint": "24 h",
-      "rationale": "72.43 \u00b1 4.78 vs 100.62 \u00b1 10.20 \u00b5g"
+      "rationale": "72.43 ± 4.78 vs 100.62 ± 10.20 µg"
     },
     "author_inquiry": {
       "has_inquiry": false,
@@ -9417,7 +9812,7 @@ window.STUDIES_DATA = [
         "status": "Primary Direct",
         "role": "Primary direct",
         "native_drug": "IV sufentanil",
-        "native_unit": "\u00b5g",
+        "native_unit": "µg",
         "mme_factor": 0.1,
         "arm1_mean_native": 72.43,
         "arm1_sd_native": 4.78,
@@ -9486,11 +9881,37 @@ window.STUDIES_DATA = [
         "unit": "attempts",
         "p_val": 0.0001,
         "effective_presses": {
-          "arm1": "4.58 \u00b1 0.93",
-          "arm2": "7.48 \u00b1 1.18",
+          "arm1": "4.58 ± 0.93",
+          "arm2": "7.48 ± 1.18",
           "p": 0.0001
         },
-        "note": "Total PCIA attempts at 24h: 4.83 \u00b1 1.06 vs 14.05 \u00b1 2.01 (P<0.001); effective attempts: 4.58 \u00b1 0.93 vs 7.48 \u00b1 1.18 (P<0.001)."
+        "note": "Total PCIA attempts at 24h: 4.83 ± 1.06 vs 14.05 ± 2.01 (P<0.001); effective attempts: 4.58 ± 0.93 vs 7.48 ± 1.18 (P<0.001)."
+      },
+      "opioid_48h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Cumulative 0–48h Opioid Consumption",
+        "timepoint": "48h",
+        "arm1_n": 40,
+        "arm1_mean": 11.85,
+        "arm1_sd": 0.98,
+        "arm2_n": 40,
+        "arm2_mean": 14.02,
+        "arm2_sd": 0.79,
+        "mean_diff": -2.16,
+        "se": 0.198,
+        "ci_low": -2.55,
+        "ci_upp": -1.77,
+        "unit": "mg IV MME",
+        "native_drug": "IV sufentanil",
+        "native_unit": "µg",
+        "arm1_mean_native": 118.52,
+        "arm1_sd_native": 9.77,
+        "arm2_mean_native": 140.15,
+        "arm2_sd_native": 7.87,
+        "md_native": -21.63,
+        "se_native": 1.983,
+        "note": "Cumulative 48h PCIA sufentanil: 118.52 ± 9.77 vs 140.15 ± 7.87 µg (MD -21.63 µg, P<0.001; converted to MME using 0.1 ratio).",
+        "favors": "Intervention"
       }
     },
     "canonical_name": "Chen 2020",
@@ -9515,7 +9936,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -9533,7 +9954,7 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
       "corrections": "1. 24h opioid was measured-not-reported; 48h PCA volume (ml) was entered under 48h.<br>2. 24h resting VAS is graph-only in Fig 3.<br>3. RoB 2 D2 was incorrectly marked Low risk despite author acknowledgement that sham blinding was imperfect and 5 patients were excluded per-protocol; D5 was marked Low risk despite selective 48h reporting.",
       "fake_boilerplate_expunged": "RoB 2 D2 Low risk, D5 Low risk; PCA consumption in ml without author-provided 24h cumulative split.",
       "evidence_sources": "Text p. 2 (randomization, PCA, TEAS parameters); Table I p. 5 (demographics); Table II p. 6 (opioid ml, presses, PONV, adverse events); Fig 3 p. 5 (pain VAS); Discussion p. 7 (blinding limits)"
@@ -9542,8 +9963,8 @@ window.STUDIES_DATA = [
       "acupoints": "LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli)",
       "frequency_raw": "2/100 Hz (dense-disperse)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Postoperative only",
       "sessions_category": "Single session",
@@ -9555,14 +9976,14 @@ window.STUDIES_DATA = [
       "total_n": 65,
       "arm1_name": "TEAS Group",
       "arm1_n": 32,
-      "arm1_age": "45.6 \u00b1 9.8",
+      "arm1_age": "45.6 ± 9.8",
       "arm1_female": "32/32 (100%)",
-      "arm1_bmi": "23.4 \u00b1 4.2",
+      "arm1_bmi": "23.4 ± 4.2",
       "arm2_name": "Sham Group",
       "arm2_n": 33,
-      "arm2_age": "46.9 \u00b1 8.6",
+      "arm2_age": "46.9 ± 8.6",
       "arm2_female": "33/33 (100%)",
-      "arm2_bmi": "22.6 \u00b1 3.3",
+      "arm2_bmi": "22.6 ± 3.3",
       "asa_status": "ASA I: 26/32 (81.3%), ASA II: 6/32 (18.8%)"
     },
     "rob2": {
@@ -9574,20 +9995,20 @@ window.STUDIES_DATA = [
       "overall": "Some concerns",
       "selected_result": "Cumulative PCA solution consumption",
       "timepoint": "48 h",
-      "rationale": "102.8 \u00b1 7.4 vs 120.6 \u00b1 9.2 mL"
+      "rationale": "102.8 ± 7.4 vs 120.6 ± 9.2 mL"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "CRITICAL",
-      "urgency": "CRITICAL: Cumulative 0\u201324 h postoperative PCA sufentani...",
-      "target_data": "Cumulative 0\u201324 h postoperative PCA sufentanil consumption (mean \u00b1 SD in ml or \u00b5g) and numerical 24h resting VAS pain score (mean \u00b1 SD).",
-      "rationale": "Table II reports total PCA opioid consumption over the full 48-hour period (102.8 \u00b1 7.4 ml vs 120.6 \u00b1 9.2 ml). Figure 3 presents resting VAS pain scores on a line graph without tabulated numeric variance at 24 h.",
-      "impact": "The primary outcome requires 0\u201324 h cumulative opioid consumption, which was measured via PCA pump logs but reported only at 48 h. Figure 3 lacks tabulated numerical variance for 24 h pain.",
+      "urgency": "CRITICAL: Cumulative 0–24 h postoperative PCA sufentani...",
+      "target_data": "Cumulative 0–24 h postoperative PCA sufentanil consumption (mean ± SD in ml or µg) and numerical 24h resting VAS pain score (mean ± SD).",
+      "rationale": "Table II reports total PCA opioid consumption over the full 48-hour period (102.8 ± 7.4 ml vs 120.6 ± 9.2 ml). Figure 3 presents resting VAS pain scores on a line graph without tabulated numeric variance at 24 h.",
+      "impact": "The primary outcome requires 0–24 h cumulative opioid consumption, which was measured via PCA pump logs but reported only at 48 h. Figure 3 lacks tabulated numerical variance for 24 h pain.",
       "corresponding_author": "Dr. Jianhui Gan",
       "email": "ganjianhui666@163.com",
       "institution": "Department of Anesthesiology, Tangshan People's Hospital and Tangshan Cancer Hospital, North China University of Science and Technology, Tangshan, China",
-      "draft_msg": "Dear Dr. Gan, could you kindly provide the exact cumulative 0\u201324 hour postoperative PCA solution volume (mean \u00b1 SD in ml) or total sufentanil dose (in \u00b5g) for the TEAS group (n=32) and Sham TEAS group (n=33), as well as the exact numerical mean and SD for the 24-hour resting pain VAS score shown in Figure 3?"
+      "draft_msg": "Dear Dr. Gan, could you kindly provide the exact cumulative 0–24 hour postoperative PCA solution volume (mean ± SD in ml) or total sufentanil dose (in µg) for the TEAS group (n=32) and Sham TEAS group (n=33), as well as the exact numerical mean and SD for the 24-hour resting pain VAS score shown in Figure 3?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -9642,7 +10063,14 @@ window.STUDIES_DATA = [
         "arm2_sd": 4.6,
         "unit": "presses",
         "p_val": 0.0001,
-        "note": "Table II reports effective PCA presses over 48h: 6.2 \u00b1 3.7 in TEAS vs 12.3 \u00b1 4.6 in Sham (P<0.001)."
+        "note": "Table II reports effective PCA presses over 48h: 6.2 ± 3.7 in TEAS vs 12.3 ± 4.6 in Sham (P<0.001)."
+      },
+      "opioid_48h": {
+        "status": "Conditional / Separate",
+        "role": "PCA Volume Proxy",
+        "note": "48h PCA solution consumption: 102.8 ± 7.4 vs 120.6 ± 9.2 mL (P<0.001); effective presses: 6.2 ± 3.7 vs 12.3 ± 4.6 (P<0.001). Body weight missing for exact MME.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Ao 2021",
@@ -9667,7 +10095,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -9685,37 +10113,37 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
       "corrections": "1. 24h opioid was incorrectly mapped from 48h total fentanyl.<br>2. 24h pain VAS is graph-only without numerical SD in text.<br>3. PONV 24h was reported as percentages (14.6% vs 32.5%) requiring exact integer event conversion (6/41 vs 13/40).",
-      "fake_boilerplate_expunged": "Opioid: 0.67 \u00b1 0.09 vs 0.73 \u00b1 0.12 mg entered under 24h/48h interchangeably; Pain VAS: 2.4 vs 3.8 entered with arbitrary N=30.",
+      "fake_boilerplate_expunged": "Opioid: 0.67 ± 0.09 vs 0.73 ± 0.12 mg entered under 24h/48h interchangeably; Pain VAS: 2.4 vs 3.8 entered with arbitrary N=30.",
       "evidence_sources": "Text p. 1101 (anesthesia & PCIA); Table 1 p. 1103 (demographics & intraop sufentanil); Table 2 p. 1104 (PCIA boluses); Text p. 1103 (48h fentanyl); Text p. 1104 (PONV percentages); Fig 1 p. 1103 (pain VAS)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), SJ5 (Waiguan), BL63 (Jinmen), LR3 (Taichong), ST36 (Zusanli), GB40 (Qiuxu)",
       "frequency_raw": "2/100 Hz (dense-disperse)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
-      "intensity_category": "Tolerable twitching/tingling (5\u201315 mA)",
+      "intensity": "5–15 mA (to patient tolerance)",
+      "intensity_category": "Tolerable twitching/tingling (5–15 mA)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
       "sessions_category": "Single session",
       "duration_raw": "30 minutes per session",
       "duration_category": "> 60 min",
-      "needle_depth": "Acupuncture needle (15\u201325 mm depth)"
+      "needle_depth": "Acupuncture needle (15–25 mm depth)"
     },
     "population": {
       "total_n": 81,
       "arm1_name": "EA Group",
       "arm1_n": 41,
-      "arm1_age": "40.7 \u00b1 12.1",
+      "arm1_age": "40.7 ± 12.1",
       "arm1_female": "24/41 (58.5%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Usual Care Group",
       "arm2_n": 40,
-      "arm2_age": "39.1 \u00b1 10.9",
+      "arm2_age": "39.1 ± 10.9",
       "arm2_female": "19/40 (47.5%)",
       "arm2_bmi": "not reported",
-      "asa_status": "100% ASA I\u2013II"
+      "asa_status": "100% ASA I–II"
     },
     "rob2": {
       "d1": "Some concerns",
@@ -9726,20 +10154,20 @@ window.STUDIES_DATA = [
       "overall": "High",
       "selected_result": "Total postoperative fentanyl PCIA dose",
       "timepoint": "Reported 48-h PCIA period",
-      "rationale": "0.67 \u00b1 0.09 vs 0.73 \u00b1 0.12 mg"
+      "rationale": "0.67 ± 0.09 vs 0.73 ± 0.12 mg"
     },
     "author_inquiry": {
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "CRITICAL",
-      "urgency": "CRITICAL: Cumulative 0\u201324 h postoperative PCIA fentanyl...",
-      "target_data": "Cumulative 0\u201324 h postoperative PCIA fentanyl consumption (mean \u00b1 SD in \u00b5g) and numerical 24h resting VAS pain score (mean \u00b1 SD).",
-      "rationale": "Page 1103 reports total fentanyl dose for the full 0\u201348 h period (0.67 \u00b1 0.09 mg vs 0.73 \u00b1 0.12 mg). Table 2 reports PCIA bolus administrations split into 0\u20136 h and 6\u201348 h. Figure 1 shows pain VAS on a line graph with unprinted SD error bars.",
-      "impact": "The primary outcome of our systematic review requires 0\u201324 h cumulative consumption. The 48h total cannot be used as a direct proxy for 24h. Figure 1 pain error bars lack published numerical SD values.",
+      "urgency": "CRITICAL: Cumulative 0–24 h postoperative PCIA fentanyl...",
+      "target_data": "Cumulative 0–24 h postoperative PCIA fentanyl consumption (mean ± SD in µg) and numerical 24h resting VAS pain score (mean ± SD).",
+      "rationale": "Page 1103 reports total fentanyl dose for the full 0–48 h period (0.67 ± 0.09 mg vs 0.73 ± 0.12 mg). Table 2 reports PCIA bolus administrations split into 0–6 h and 6–48 h. Figure 1 shows pain VAS on a line graph with unprinted SD error bars.",
+      "impact": "The primary outcome of our systematic review requires 0–24 h cumulative consumption. The 48h total cannot be used as a direct proxy for 24h. Figure 1 pain error bars lack published numerical SD values.",
       "corresponding_author": "Dr. Li-Xin An",
       "email": "anlixin8120@163.com",
       "institution": "Department of Anesthesia, Beijing Tiantan Hospital, Capital Medical University, Beijing, China",
-      "draft_msg": "Dear Dr. An, could you kindly provide the exact cumulative 0\u201324 hour postoperative fentanyl consumption via PCIA (mean \u00b1 SD in \u00b5g or mg) for Group A (EA, n=41) and Group C (Control, n=40), as well as the exact numerical mean and SD for the 24-hour resting pain VAS score shown in Figure 1?"
+      "draft_msg": "Dear Dr. An, could you kindly provide the exact cumulative 0–24 hour postoperative fentanyl consumption via PCIA (mean ± SD in µg or mg) for Group A (EA, n=41) and Group C (Control, n=40), as well as the exact numerical mean and SD for the 24-hour resting pain VAS score shown in Figure 1?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -9772,14 +10200,14 @@ window.STUDIES_DATA = [
         "ci_upp": -0.16,
         "p_val": "0.038",
         "drug": "Sufentanil",
-        "unit": "\u00b5g",
-        "status": "Direct Continuous (\u00b5g Sufentanil)",
-        "note": "Intraoperative sufentanil dose (Table 1: 36.78 \u00b1 1.33 vs 38.12 \u00b1 3.56 \u00b5g)"
+        "unit": "µg",
+        "status": "Direct Continuous (µg Sufentanil)",
+        "note": "Intraoperative sufentanil dose (Table 1: 36.78 ± 1.33 vs 38.12 ± 3.56 µg)"
       },
       "pca_presses_24h": {
         "status": "Reported in Source Paper",
-        "metric_name": "PCIA Bolus Administrations (0\u20136h)",
-        "timepoint": "0\u20136h",
+        "metric_name": "PCIA Bolus Administrations (0–6h)",
+        "timepoint": "0–6h",
         "mean_diff": -10.44,
         "se": 2.883,
         "ci_low": -16.1,
@@ -9793,11 +10221,37 @@ window.STUDIES_DATA = [
         "unit": "boluses",
         "p_val": 0.05,
         "effective_presses": {
-          "arm1": "4.83 \u00b1 2.95",
-          "arm2": "9.67 \u00b1 3.35",
+          "arm1": "4.83 ± 2.95",
+          "arm2": "9.67 ± 3.35",
           "p": 0.05
         },
-        "note": "Table 2 reports total PCIA boluses 0\u20136h: 14.43 \u00b1 10.67 vs 24.87 \u00b1 14.88 (P<0.05); effective: 4.83 \u00b1 2.95 vs 9.67 \u00b1 3.35."
+        "note": "Table 2 reports total PCIA boluses 0–6h: 14.43 ± 10.67 vs 24.87 ± 14.88 (P<0.05); effective: 4.83 ± 2.95 vs 9.67 ± 3.35."
+      },
+      "opioid_48h": {
+        "status": "Reported in Source Paper",
+        "metric_name": "Cumulative 0–48h Opioid Consumption",
+        "timepoint": "48h",
+        "arm1_n": 41,
+        "arm1_mean": 67.0,
+        "arm1_sd": 9.0,
+        "arm2_n": 40,
+        "arm2_mean": 73.0,
+        "arm2_sd": 12.0,
+        "mean_diff": -6.0,
+        "se": 2.361,
+        "ci_low": -10.63,
+        "ci_upp": -1.37,
+        "unit": "mg IV MME",
+        "native_drug": "IV fentanyl",
+        "native_unit": "mg",
+        "arm1_mean_native": 0.67,
+        "arm1_sd_native": 0.09,
+        "arm2_mean_native": 0.73,
+        "arm2_sd_native": 0.12,
+        "md_native": -0.06,
+        "se_native": 0.0236,
+        "note": "Total PCIA fentanyl discontinued at 48h: 0.67 ± 0.09 vs 0.73 ± 0.12 mg fentanyl (converted to MME: 67.0 vs 73.0 mg MME, MD -6.0 mg MME, P<0.05).",
+        "favors": "Intervention"
       }
     },
     "canonical_name": "An 2014",
@@ -9822,7 +10276,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -9840,8 +10294,8 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. Rescue morphine was reported as median (IQR) doses [1 (1-3) vs 3.5 (2-7)], requiring parametric conversion to mean \u00b1 SD (3.0 \u00b1 2.96 vs 8.0 \u00b1 7.41 mg).<br>2. 24h pain was reported as 24h average pain score (2.6 \u00b1 0.7 vs 3.9 \u00b1 0.9) rather than isolated point estimate.<br>3. RoB 2 verified Low risk across all domains with exact trial provenance (NCT02333747).",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. Rescue morphine was reported as median (IQR) doses [1 (1-3) vs 3.5 (2-7)], requiring parametric conversion to mean ± SD (3.0 ± 2.96 vs 8.0 ± 7.41 mg).<br>2. 24h pain was reported as 24h average pain score (2.6 ± 0.7 vs 3.9 ± 0.9) rather than isolated point estimate.<br>3. RoB 2 verified Low risk across all domains with exact trial provenance (NCT02333747).",
       "fake_boilerplate_expunged": "Entered as generic mean without documenting median-IQR derivation.",
       "evidence_sources": "Text p. 13623; Table 1 p. 13625 (demographics); Table 2 p. 13625 (QoR-40); Table 3 p. 13625 (rescue morphine, pain, PONV, time to rescue)"
     },
@@ -9849,7 +10303,7 @@ window.STUDIES_DATA = [
       "acupoints": "LI4 (Hegu), PC6 (Neiguan)",
       "frequency_raw": "2/100 Hz (dense-disperse)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Preoperative only",
@@ -9862,12 +10316,12 @@ window.STUDIES_DATA = [
       "total_n": 83,
       "arm1_name": "TEAS Group",
       "arm1_n": 41,
-      "arm1_age": "37.5 \u00b1 8.5",
+      "arm1_age": "37.5 ± 8.5",
       "arm1_female": "41/41 (100%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 42,
-      "arm2_age": "40.2 \u00b1 7.8",
+      "arm2_age": "40.2 ± 7.8",
       "arm2_female": "42/42 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "ASA I: 38/41 (92.7%), ASA II: 3/41 (7.3%)"
@@ -9887,14 +10341,14 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Raw parametric mean \u00b1 SD for cumulative 24-ho...",
-      "target_data": "Raw parametric mean \u00b1 SD for cumulative 24-hour IV morphine consumption (mg) and exact 24-hour resting VAS pain score (mean \u00b1 SD).",
-      "rationale": "Table 3 reports cumulative rescue analgesia as median (IQR) doses [1 (1\u20133) vs 3.5 (2\u20137)], where each dose was 2 mg IV morphine. Pain was reported as a 24-h average score (2.6 \u00b1 0.7 vs 3.9 \u00b1 0.9) rather than an isolated 24-h point assessment.",
-      "impact": "Our primary meta-analysis synthesis uses parametric mean \u00b1 SD. While statistical conversion of median-IQR is validated, raw individual patient data / parametric means from the trial registry dataset will provide maximum precision.",
+      "urgency": "IMPORTANT: Raw parametric mean ± SD for cumulative 24-ho...",
+      "target_data": "Raw parametric mean ± SD for cumulative 24-hour IV morphine consumption (mg) and exact 24-hour resting VAS pain score (mean ± SD).",
+      "rationale": "Table 3 reports cumulative rescue analgesia as median (IQR) doses [1 (1–3) vs 3.5 (2–7)], where each dose was 2 mg IV morphine. Pain was reported as a 24-h average score (2.6 ± 0.7 vs 3.9 ± 0.9) rather than an isolated 24-h point assessment.",
+      "impact": "Our primary meta-analysis synthesis uses parametric mean ± SD. While statistical conversion of median-IQR is validated, raw individual patient data / parametric means from the trial registry dataset will provide maximum precision.",
       "corresponding_author": "Dr. Yusheng Yao",
       "email": "fjslyys@126.com",
       "institution": "Department of Anesthesiology, Fujian Provincial Hospital, Fuzhou, China",
-      "draft_msg": "Dear Dr. Yao, could you kindly provide the raw parametric mean \u00b1 SD for cumulative 24-hour IV morphine consumption (in mg) for the TEAS group (n=41) and Control group (n=42), as well as the point-in-time resting pain VAS score at exactly 24 hours postoperatively?"
+      "draft_msg": "Dear Dr. Yao, could you kindly provide the raw parametric mean ± SD for cumulative 24-hour IV morphine consumption (in mg) for the TEAS group (n=41) and Control group (n=42), as well as the point-in-time resting pain VAS score at exactly 24 hours postoperatively?"
     },
     "outcomes": {
       "opioid_24h": {
@@ -9919,8 +10373,8 @@ window.STUDIES_DATA = [
         "ci_low": -7.419,
         "ci_upp": -2.581,
         "p_val": "<0.001",
-        "derivation_rule": "Wan et al. (2014) median-to-mean transformation from reported 24h rescue morphine bolus counts (fixed 2 mg IV morphine per bolus): TEAS 1 (1\u20133) boluses = 2 (2\u20136) mg; Control 3.5 (2\u20137) boluses = 7 (4\u201314) mg.",
-        "note": "Derived parametric mean and SD from published median and IQR bolus administrations (3.33 \u00b1 2.97 vs 8.33 \u00b1 7.41 mg IV morphine, P = 0.004)"
+        "derivation_rule": "Wan et al. (2014) median-to-mean transformation from reported 24h rescue morphine bolus counts (fixed 2 mg IV morphine per bolus): TEAS 1 (1–3) boluses = 2 (2–6) mg; Control 3.5 (2–7) boluses = 7 (4–14) mg.",
+        "note": "Derived parametric mean and SD from published median and IQR bolus administrations (3.33 ± 2.97 vs 8.33 ± 7.41 mg IV morphine, P = 0.004)"
       },
       "pain_rest_24h": null,
       "pain_movement_24h": null,
@@ -9950,6 +10404,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Chen 2015",
@@ -9974,7 +10434,7 @@ window.STUDIES_DATA = [
       "code": "CN",
       "lat": 35.8617,
       "lng": 104.1954,
-      "flag": "\ud83c\udde8\ud83c\uddf3"
+      "flag": "🇨🇳"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -9992,16 +10452,16 @@ window.STUDIES_DATA = [
       "quadrant_name": "Awaiting Opioid Data (Author Outreach)"
     },
     "audit": {
-      "classification": "\ud83d\udfe1 Verified with Corrections<br>\ud83d\udfe0 Author Contact Needed",
-      "corrections": "1. PCIA sufentanil boluses reported as median (IQR) [3 (2-4) vs 7 (6-8)], where each bolus was 0.05 mcg/kg; parametric conversion: 8.66 \u00b1 4.27 vs 19.88 \u00b1 4.20 \u00b5g sufentanil.<br>2. 24h pain reported as average/median VNRS [2.5 (1.5-3.8) vs 3.7 (2.9-4.7)] rather than isolated 24h point estimate.<br>3. RoB 2 D5 judged Some concerns due to lack of public trial registration.",
-      "fake_boilerplate_expunged": "PCIA boluses entered without documenting mcg/kg to \u00b5g conversion or median-IQR derivation.",
+      "classification": "🟡 Verified with Corrections<br>🟠 Author Contact Needed",
+      "corrections": "1. PCIA sufentanil boluses reported as median (IQR) [3 (2-4) vs 7 (6-8)], where each bolus was 0.05 mcg/kg; parametric conversion: 8.66 ± 4.27 vs 19.88 ± 4.20 µg sufentanil.<br>2. 24h pain reported as average/median VNRS [2.5 (1.5-3.8) vs 3.7 (2.9-4.7)] rather than isolated 24h point estimate.<br>3. RoB 2 D5 judged Some concerns due to lack of public trial registration.",
+      "fake_boilerplate_expunged": "PCIA boluses entered without documenting mcg/kg to µg conversion or median-IQR derivation.",
       "evidence_sources": "Text p. 5782-5784; Table 1 p. 5785 (demographics); Table 2 p. 5785 (rescue boluses, pain, PONV, time to rescue); Fig 3 p. 5785 (mechanical pain threshold)"
     },
     "stricta": {
       "acupoints": "LI4 (Hegu), PC6 (Neiguan)",
       "frequency_raw": "2/100 Hz (dense-disperse)",
       "frequency_category": "2/100 Hz (Dense-Disperse)",
-      "intensity": "5\u201315 mA (to patient tolerance)",
+      "intensity": "5–15 mA (to patient tolerance)",
       "intensity_category": "Sub-sensory (Sham)",
       "timing_raw": "Preoperative (30 min before anesthesia induction)",
       "timing_category": "Multi-phase (Perioperative)",
@@ -10014,12 +10474,12 @@ window.STUDIES_DATA = [
       "total_n": 59,
       "arm1_name": "TEAS Group",
       "arm1_n": 29,
-      "arm1_age": "41.9 \u00b1 9.9",
+      "arm1_age": "41.9 ± 9.9",
       "arm1_female": "29/29 (100%)",
       "arm1_bmi": "not reported",
       "arm2_name": "Sham Group",
       "arm2_n": 30,
-      "arm2_age": "41.4 \u00b1 9.8",
+      "arm2_age": "41.4 ± 9.8",
       "arm2_female": "30/30 (100%)",
       "arm2_bmi": "not reported",
       "asa_status": "ASA I: 26/29 (89.7%), ASA II: 3/29 (10.3%)"
@@ -10039,21 +10499,21 @@ window.STUDIES_DATA = [
       "has_inquiry": true,
       "status": "Active Outreach Required",
       "priority": "IMPORTANT",
-      "urgency": "IMPORTANT: Raw parametric mean \u00b1 SD for cumulative 24-ho...",
-      "target_data": "Raw parametric mean \u00b1 SD for cumulative 24-hour sufentanil consumption (in \u00b5g) and exact 24-hour resting VNRS pain score (mean \u00b1 SD).",
-      "rationale": "Table 2 reports cumulative PCIA rescue analgesia as median (IQR) boluses [3 (2\u20134) vs 7 (6\u20138)], where each bolus was 0.05 mcg/kg sufentanil. Pain was reported as an average 24-h score [2.5 (1.5\u20133.8) vs 3.7 (2.9\u20134.7)] rather than an isolated 24-h point assessment.",
-      "impact": "While median-IQR was statistically converted into mean \u00b1 SD, the exact parametric values from the trial database would eliminate transformation error.",
+      "urgency": "IMPORTANT: Raw parametric mean ± SD for cumulative 24-ho...",
+      "target_data": "Raw parametric mean ± SD for cumulative 24-hour sufentanil consumption (in µg) and exact 24-hour resting VNRS pain score (mean ± SD).",
+      "rationale": "Table 2 reports cumulative PCIA rescue analgesia as median (IQR) boluses [3 (2–4) vs 7 (6–8)], where each bolus was 0.05 mcg/kg sufentanil. Pain was reported as an average 24-h score [2.5 (1.5–3.8) vs 3.7 (2.9–4.7)] rather than an isolated 24-h point assessment.",
+      "impact": "While median-IQR was statistically converted into mean ± SD, the exact parametric values from the trial database would eliminate transformation error.",
       "corresponding_author": "Dr. Yanqing Chen",
       "email": "fjslyys@gmail.com",
       "institution": "Department of Anesthesiology, Fujian Provincial Hospital, Fuzhou, China",
-      "draft_msg": "Dear Dr. Chen, could you kindly provide the raw parametric mean \u00b1 SD for cumulative 24-hour PCIA sufentanil consumption (in \u00b5g) for the TEAS group (n=29) and Control group (n=30), as well as the resting VNRS pain score at exactly 24 hours postoperatively?"
+      "draft_msg": "Dear Dr. Chen, could you kindly provide the raw parametric mean ± SD for cumulative 24-hour PCIA sufentanil consumption (in µg) for the TEAS group (n=29) and Control group (n=30), as well as the resting VNRS pain score at exactly 24 hours postoperatively?"
     },
     "outcomes": {
       "opioid_24h": {
         "status": "Derived Continuous (Wan Transformation + Weight-Adjusted)",
         "role": "Conditional Derived",
         "native_drug": "IV sufentanil",
-        "native_unit": "\u00b5g",
+        "native_unit": "µg",
         "mme_factor": 0.1,
         "arm1_mean_native": 8.655,
         "arm1_sd_native": 4.544,
@@ -10071,8 +10531,8 @@ window.STUDIES_DATA = [
         "ci_low": -1.372,
         "ci_upp": -0.872,
         "p_val": "<0.001",
-        "derivation_rule": "Wan transformation on reported rescue PCIA bolus demands (0.05 \u00b5g/kg sufentanil per bolus; 3 (2\u20134) vs 7 (6\u20138) boluses) multiplied by group mean body weight (57.7 \u00b1 9.2 vs 56.8 \u00b1 8.7 kg) and converted with mme_factor 0.1.",
-        "note": "Derived 24h rescue sufentanil PCIA consumption (8.66 \u00b1 4.54 vs 19.88 \u00b1 5.24 \u00b5g sufentanil; converted to 0.87 \u00b1 0.45 vs 1.99 \u00b1 0.52 mg IV MME, P < 0.001)"
+        "derivation_rule": "Wan transformation on reported rescue PCIA bolus demands (0.05 µg/kg sufentanil per bolus; 3 (2–4) vs 7 (6–8) boluses) multiplied by group mean body weight (57.7 ± 9.2 vs 56.8 ± 8.7 kg) and converted with mme_factor 0.1.",
+        "note": "Derived 24h rescue sufentanil PCIA consumption (8.66 ± 4.54 vs 19.88 ± 5.24 µg sufentanil; converted to 0.87 ± 0.45 vs 1.99 ± 0.52 mg IV MME, P < 0.001)"
       },
       "pain_rest_24h": null,
       "pain_movement_24h": null,
@@ -10102,6 +10562,12 @@ window.STUDIES_DATA = [
       "pca_presses_24h": {
         "status": "Unreported in Source Paper",
         "note": "PCA pump presses / demand counts were not reported in published tables."
+      },
+      "opioid_48h": {
+        "status": "Unreported in Source Paper",
+        "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+        "mean_diff": null,
+        "se": null
       }
     },
     "canonical_name": "Chen 2015 (Hyperalgesia)",
