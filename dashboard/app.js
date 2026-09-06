@@ -289,7 +289,12 @@ function renderActiveTab() {
   else if (activeTab === 'limitations') renderInquiriesView();
   else if (activeTab === 'extraction') renderConversionsView();
   else if (activeTab === 'evidence') renderDirectionOfEvidence();
+  else if (activeTab === 'glossary' && typeof window.renderGlossaryTab === 'function') window.renderGlossaryTab();
   else if (activeTab === 'export') renderExportHub();
+
+  if (typeof window.initStatIcons === 'function') {
+    window.initStatIcons();
+  }
 }
 
 function renderConversionsView() {
@@ -1358,13 +1363,13 @@ function updateSimulationComparison() {
   if (postCiElem) postCiElem.innerText = `95% CI [${simMeta.ci_low.toFixed(2)}, ${simMeta.ci_upp.toFixed(2)}] • I² = ${simMeta.i2.toFixed(1)}%`;
 
   if (deltaBadge) {
-    const isExceedingMCID = Math.abs(simMeta.pooled_md) >= 5.0;
-    if (isExceedingMCID) {
+    const isExceedingExploratory = Math.abs(simMeta.pooled_md) >= 5.0;
+    if (isExceedingExploratory) {
       deltaBadge.className = 'delta-badge badge-emerald';
-      deltaBadge.innerText = `Robust: Exceeds MCID (≥ 5 mg MME) by ${(Math.abs(simMeta.pooled_md) - 5.0).toFixed(1)} mg`;
+      deltaBadge.innerText = `Robust: Exceeds exploratory threshold (≥ 5 mg MME) by ${(Math.abs(simMeta.pooled_md) - 5.0).toFixed(1)} mg`;
     } else {
       deltaBadge.className = 'delta-badge badge-amber';
-      deltaBadge.innerText = `Below MCID (5 mg threshold)`;
+      deltaBadge.innerText = `Below exploratory threshold (5 mg)`;
     }
   }
 }
@@ -1810,11 +1815,18 @@ function renderDirectionOfEvidence() {
         <td style="font-size: 0.75rem; color: var(--text-secondary);">${oc.controlRisk}</td>
         <td style="font-weight: 700; color: #34d399;">${pooledText}</td>
         <td><strong>${n.toLocaleString()}</strong> (${k} RCTs)</td>
-        <td><span class="${oc.badgeClass}">${oc.grade}</span></td>
+        <td>
+          <span class="${oc.badgeClass}">${oc.grade}</span>
+          <button class="stat-info-btn" data-stat-term="gradeCertainty" aria-label="GRADE ${oc.grade} Certainty Explanation">ⓘ</button>
+        </td>
         <td style="font-size: 0.72rem; color: var(--text-muted); line-height: 1.4;">${oc.downgrade}</td>
       </tr>
     `;
   }).join('');
+
+  if (typeof window.initStatIcons === 'function') {
+    window.initStatIcons();
+  }
 
   const copyBtn = document.getElementById('btn-export-grade-sof');
   if (copyBtn) {
@@ -2123,7 +2135,7 @@ const BUBBLE_PLOT_INFO = {
     t_stat: 't(9) = +2.60, p = 0.0287',
     r2: '82.81% of between-study variance explained',
     f_stat: 'Model F(1, 9) = 6.77 (p = 0.0287)',
-    desc: 'More recent trials demonstrate smaller absolute opioid-sparing effect sizes (decreasing by ~0.47 mg per calendar year). This secular trend strongly reflects the clinical adoption of multimodal ERAS analgesia (e.g. regional fascial blocks, NSAIDs, dexamethasone), which drastically lowers baseline opioid requirements in newer control arms.'
+    desc: 'Later publication year was associated with smaller estimated opioid-sparing effects (decreasing by ~0.47 mg per calendar year, p = 0.0287). Possible explanations include changes over time in: perioperative analgesic practice, multimodal ERAS analgesia (e.g. regional blocks, NSAIDs, dexamethasone), surgical case mix, study methodology, comparator treatment, or other secular trends. The meta-regression cannot determine which mechanism caused the association.'
   },
   'sex': {
     title: 'Trial Sex Composition (% Female) (k = 11)',
@@ -2134,7 +2146,7 @@ const BUBBLE_PLOT_INFO = {
     t_stat: 't(9) = −0.16, p = 0.8746',
     r2: '0.00% of between-study variance explained',
     f_stat: 'Model F(1, 9) = 0.03 (p = 0.8746)',
-    desc: 'The proportion of female participants across trial cohorts (22.1% to 100%) did not moderate the opioid-sparing effect (p = 0.875). Neuromodulation provides equivalent relative opioid mitigation across sexes. Note that individual patient-level age and BMI require IPD meta-analysis to avoid the ecological fallacy.'
+    desc: 'No evidence of an association between the study-level proportion of female participants (22.1% to 100%) and treatment effect was detected (p = 0.875). This study-level finding does not establish equivalent treatment effects between individual women and men. Note that individual patient-level age, BMI, and sex differences require IPD meta-analysis to avoid the ecological fallacy.'
   },
   'teas-base': {
     title: 'TEAS Stratum: Baseline Opioid Demand (k = 8)',
@@ -2250,7 +2262,7 @@ function updateMetaRegPrediction() {
   if (resBadge) {
     if (absEffect >= 10.0) {
       resBadge.className = 'badge badge-emerald';
-      resBadge.innerText = 'Optimal Synergistic (≥ 10 mg MCID)';
+      resBadge.innerText = 'Optimal Synergistic (≥ 10 mg Primary Threshold)';
     } else if (absEffect >= 5.0) {
       resBadge.className = 'badge badge-indigo';
       resBadge.innerText = 'Sub-Threshold Sparing (5–10 mg)';
