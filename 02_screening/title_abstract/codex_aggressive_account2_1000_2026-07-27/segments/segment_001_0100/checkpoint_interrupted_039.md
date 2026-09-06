@@ -1,0 +1,25 @@
+# Interrupted checkpoint after 39 registered votes
+
+- Timestamp: 2026-07-27T09:30:41Z
+- Segment: 1
+- Global sequences validated: 1–39
+- Segment sequences validated: 1–39
+- Registered votes: 39
+- Unique Covidence numbers: 39
+- Unique post-vote timestamps: 39
+- Decisions: 12 Yes, 2 Maybe, 25 No
+- Maybe validation: passed; each Maybe has exactly one named uncertainty
+- Numbering gaps logged: 6
+- Segment JSONL validation: passed
+- Segment CSV regeneration: passed
+- Combined JSONL validation: passed
+- Combined CSV regeneration: passed
+- Last confirmed citation: Covidence #674
+- Next unused screening sequence: 40
+- Attempted citation: Covidence #676
+- Vote registration for attempted citation: uncertain
+- Audit row for attempted citation: not appended
+- Browser incident: interaction timeout; read-only reconciliation connection unavailable
+- Other reviewer decisions viewed: no
+- Conflicts opened or resolved: no
+- Screening stopped under the required browser-timeout rule.

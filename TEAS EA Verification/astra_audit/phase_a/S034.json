@@ -1,0 +1,123 @@
+{
+  "Study_ID": "S034",
+  "Study": "Long 2025",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "identity": {
+    "title": "Effect of electroacupuncture intervention before and after operation on perioperative neurocognitive disorders in elderly patients with hip fractures: A randomized controlled trial",
+    "year": 2025,
+    "doi": "10.1016/j.injury.2025.112660",
+    "pdf": "1-s2.0-S0020138325005200.pdf",
+    "registration": "ChiCTR2100053050 reported November10,2021;retrieval blocked405; search located publication only",
+    "recruitment": "December2021–August2022"
+  },
+  "modality": "UNRESOLVED: titleEA; methods stimulate with millimeter needle OR electrode patch; text andFig1callTEAS. Need device application confirmation before modality-specific pooling.",
+  "arms": {
+    "A_active": {
+      "randomized_as_methods": 30,
+      "analyzed": 27
+    },
+    "C_control": {
+      "randomized_as_methods": 30,
+      "analyzed": 26
+    }
+  },
+  "denominator_conflict": "Abstract/methods60randomized30/30;Figure2 says7lost before53randomlygrouped.7losses:2withdrawconsent,1cancel,4followup unknown arm. Table2PNDpercentages implyA28/C25 versusTable1A27/C26. Retain all conflicts.",
+  "results": {
+    "source_location": "Table7p9visuallychecked;Table6p8;methodspp2–3",
+    "VAS24_unspecified_mean_sd_table": [
+      [
+        2.78,
+        0.97
+      ],
+      [
+        3.96,
+        0.96
+      ]
+    ],
+    "VAS24_narrative_conflict": "Abstract/prose2.65±.94 forA, which equalsC48h value. Table7A2.78±.97retained provisionally; no average.",
+    "VAS48_unspecified_mean_sd": [
+      [
+        1.85,
+        0.72
+      ],
+      [
+        2.65,
+        0.94
+      ]
+    ],
+    "PCIA_compressions48_mean_sd": [
+      [
+        7.11,
+        2.14
+      ],
+      [
+        8.62,
+        1.84
+      ]
+    ],
+    "PCIA_volume48_mL_mean_sd": [
+      [
+        86.22,
+        4.27
+      ],
+      [
+        89.23,
+        3.67
+      ]
+    ],
+    "PONV_events": [
+      1,
+      8
+    ],
+    "PONV_n": [
+      27,
+      26
+    ],
+    "PONV_window": "Postoperative, precise interval Insufficient information / not reported.",
+    "LOS_days_mean_sd": [
+      [
+        13.37,
+        3.03
+      ],
+      [
+        14.77,
+        3.57
+      ]
+    ],
+    "PND_events_POD1_3_7": [
+      [
+        7,
+        14
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "PND_percentages_POD1": [
+      25,
+      56
+    ],
+    "PND_note": "Percentages imply28/25contradictanalyzed27/26."
+  },
+  "analgesia": {
+    "intraoperative": "GETA/TIVAetomidate,sufentanil0.3–0.5µg/kg,remifentanil0.2–2µg/kg/min",
+    "PCA": "IVsufentanil2µg/kg in100mLsaline;basal1.5mL/h,bolus2mL,lockout15min",
+    "rescue": "Insufficient information / not reported.",
+    "opioid_decision": "48hvolume only; weight-dependent concentration, no mean-weight conversion; cannot enter exact24h metric."
+  },
+  "rob_independent": {
+    "D1": "Some concerns:randomtableY,concealmentNI,randomized baselineNI dueflowconflict.",
+    "D2": "Some concerns:doublemasked assertion without mechanisms,activeawakecurrent participantPY,providerPY;trial-contextdeviationsNI;analysisbygroupbuttimingoflossunclearNI.",
+    "D3": "Some concerns:53/60possible,7lost could dependoutcomes,missingreasonsperarmunknown;NIprobable dependence.",
+    "D4": "Some concerns selfreportedVAS/PONV:possibleunmasking;maskedassessoridentitynotdocumented. PCIArecordobjectiveLowforvolume measurement though selfdosingbehaviorinfluenced.",
+    "D5": "Some concerns:prospectiveregistrationassertedbutrecordblocked,nodatedSAP;Table7/proseconflict is numericuncertaintynotproofselectivereporting."
+  },
+  "source_review": "All11pagesread;Figure2andTable7visualchecked;registryattemptedwithbrowserandcurl405."
+}

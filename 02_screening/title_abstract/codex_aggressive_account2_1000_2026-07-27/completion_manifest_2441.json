@@ -1,0 +1,68 @@
+{
+  "batch": "codex_aggressive_account2_1000_2026-07-27",
+  "review_id": 799962,
+  "reviewer": "JR Mendoza",
+  "stage": "Title and abstract screening",
+  "status": "complete_active_screening_queue_empty",
+  "completion_timestamp": "2026-07-28T17:59:50.650Z",
+  "target_scope": "complete_full_starting_queue",
+  "starting_screen_references": 2441,
+  "registered_votes": 2441,
+  "audited_registered_votes": 2441,
+  "last_successful_screening_sequence": 2441,
+  "last_successful_covidence_number": 2390,
+  "covidence_reload_verification": {
+    "screen_references": 0,
+    "active_vote_required_cards": 0,
+    "load_more_controls": 0
+  },
+  "raw_append_only_tally_normalized_for_case": {
+    "yes": 85,
+    "maybe": 54,
+    "no": 2302
+  },
+  "effective_tally_after_authorized_correction": {
+    "yes": 85,
+    "maybe": 53,
+    "no": 2303
+  },
+  "correction_note": "Sequence 197, Covidence #840, was corrected in Covidence from Maybe to No with explicit user authorization; the append-only original row is preserved and the correction is recorded in codex_aggressive_corrections_1000.jsonl.",
+  "validation": {
+    "status": "passed_for_complete_queue",
+    "records": 2441,
+    "unique_sequences": 2441,
+    "unique_covidence_numbers": 2441,
+    "registered_votes": 2441,
+    "unique_timestamps": 2441,
+    "maybe_rows_valid": true,
+    "covidence_numbering_gaps": 876,
+    "jsonl_sha256": "e55e9983e41705d3a91ad14a80a7f7508840959baf558b3395948d28faa5678b"
+  },
+  "segments": {
+    "complete_100_record_segments": 24,
+    "final_partial_segment": {
+      "segment_number": 25,
+      "global_sequence_start": 2401,
+      "global_sequence_end": 2441,
+      "registered_votes": 41,
+      "yes_count": 1,
+      "maybe_count": 1,
+      "no_count": 39,
+      "jsonl_sha256": "6f578d87520a2b509b3649f5df9367e8bc9fc4ea405d6799052b569c7b8fca7b"
+    }
+  },
+  "blinding_and_scope": {
+    "other_reviewer_decisions_viewed": false,
+    "conflicts_opened_or_resolved": false,
+    "history_opened": false,
+    "comments_or_tags_opened": false
+  },
+  "authoritative_files": {
+    "combined_jsonl": "combined/codex_aggressive_decisions_1000.jsonl",
+    "combined_csv": "combined/codex_aggressive_decisions_1000.csv",
+    "corrections": "codex_aggressive_corrections_1000.jsonl",
+    "incidents": "codex_aggressive_incidents_1000.jsonl",
+    "numbering_gaps": "codex_aggressive_sequence_gaps_1000.csv",
+    "summary": "codex_aggressive_summary_1000.md"
+  }
+}

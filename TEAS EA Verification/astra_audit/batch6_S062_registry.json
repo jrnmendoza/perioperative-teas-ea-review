@@ -1,0 +1,215 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT02333747",
+      "orgStudyIdInfo": {
+        "id": "K2014-12-003"
+      },
+      "organization": {
+        "fullName": "Fujian Provincial Hospital",
+        "class": "OTHER"
+      },
+      "briefTitle": "Can Transcutaneous Electrical Acupoint Stimulation Improve the Quality of Recovery After Thyroidectomy?",
+      "officialTitle": "The Effects of Transcutaneous Electrical Acupoint Stimulation on the Quality of Recovery After Thyroidectomy Surgery"
+    },
+    "statusModule": {
+      "statusVerifiedDate": "2015-07",
+      "overallStatus": "COMPLETED",
+      "expandedAccessInfo": {
+        "hasExpandedAccess": false
+      },
+      "startDateStruct": {
+        "date": "2015-01"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2015-05",
+        "type": "ACTUAL"
+      },
+      "completionDateStruct": {
+        "date": "2015-05",
+        "type": "ACTUAL"
+      },
+      "studyFirstSubmitDate": "2015-01-02",
+      "studyFirstSubmitQcDate": "2015-01-05",
+      "studyFirstPostDateStruct": {
+        "date": "2015-01-07",
+        "type": "ESTIMATED"
+      },
+      "lastUpdateSubmitDate": "2016-02-21",
+      "lastUpdatePostDateStruct": {
+        "date": "2016-02-23",
+        "type": "ESTIMATED"
+      }
+    },
+    "sponsorCollaboratorsModule": {
+      "responsibleParty": {
+        "type": "PRINCIPAL_INVESTIGATOR",
+        "investigatorFullName": "Yao Yusheng",
+        "investigatorTitle": "Professor",
+        "investigatorAffiliation": "Fujian Provincial Hospital"
+      },
+      "leadSponsor": {
+        "name": "Fujian Provincial Hospital",
+        "class": "OTHER"
+      }
+    },
+    "oversightModule": {
+      "oversightHasDmc": true
+    },
+    "descriptionModule": {
+      "briefSummary": "The effect of transcutaneous electric acupoint stimulation (TEAS) on the quality of recovery in patients undergoing thyroidectomy surgery remains unclear. Therefore, the investigators conducted this prospective, randomized, double-blind study to verify the hypothesis that pre-operative TEAS could improve the quality of recovery (QoR) after thyroidectomy surgery.",
+      "detailedDescription": "Transcutaneous electric acupoint stimulation (TEAS) is a form of non-invasive electrical stimulation that produces a perceptible sensation via electrodes attached to the skin. It has no risk of infections and can potentially be applied by medical personnel with minimal training. Clinical trials have demonstrated that TEAS reduces the consumption of intra-operative anesthetics and general anesthesia related side-effects."
+    },
+    "conditionsModule": {
+      "conditions": [
+        "Postoperative Complications"
+      ]
+    },
+    "designModule": {
+      "studyType": "INTERVENTIONAL",
+      "phases": [
+        "NA"
+      ],
+      "designInfo": {
+        "allocation": "RANDOMIZED",
+        "interventionModel": "PARALLEL",
+        "primaryPurpose": "PREVENTION",
+        "maskingInfo": {
+          "masking": "QUADRUPLE",
+          "whoMasked": [
+            "PARTICIPANT",
+            "CARE_PROVIDER",
+            "INVESTIGATOR",
+            "OUTCOMES_ASSESSOR"
+          ]
+        }
+      },
+      "enrollmentInfo": {
+        "count": 84,
+        "type": "ACTUAL"
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "the TEAS group",
+          "type": "EXPERIMENTAL",
+          "description": "Patients in the TEAS group received pre-operative TEAS for 30 min before the induction of anesthesia using the Hans electronic acupuncture apparatus (HANS-100A, Nanjing Jisheng Medical Technology Company, Nanjing, China) in the holding area. TEAS was applied to two pairs of acupoints: bilateral Hegu (LI4) and Neiguan (PC6).",
+          "interventionNames": [
+            "Device: the Hans electronic acupuncture apparatus"
+          ]
+        },
+        {
+          "label": "the sham group",
+          "type": "SHAM_COMPARATOR",
+          "description": "In the sham group, the patients were connected to the Hans electronic acupuncture apparatus (HANS-100A, Nanjing Jisheng Medical Technology Company, Nanjing, China), but electronic stimulation was not applied.",
+          "interventionNames": [
+            "Device: the Hans electronic acupuncture apparatus"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "DEVICE",
+          "name": "the Hans electronic acupuncture apparatus",
+          "description": "TEAS was performed with a dense-disperse frequency of 2/10 Hz and an intensity of 6-9 mA for 30 min using the Hans electronic acupuncture apparatus (HANS-100A, Nanjing Jisheng Medical Technology Company, Nanjing, China).",
+          "armGroupLabels": [
+            "the TEAS group",
+            "the sham group"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "the quality of recovery, as measured by a 40-item questionnaire",
+          "description": "The primary outcome was the quality of recovery, which was assessed on the day before surgery and 24 h after surgery using a 40-item questionnaire (QoR-40)",
+          "timeFrame": "24 hours after surgery"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "the incidence of postoperative nausea and vomiting",
+          "timeFrame": "24 hours after surgery"
+        },
+        {
+          "measure": "postoperative pain intensity, as assessed using Visual Analogue Scale (VAS)",
+          "timeFrame": "24 hours after surgery"
+        },
+        {
+          "measure": "patient's satisfaction, as evaluated with a 10-point numerical rating scale: 10= excellent, 1= bad.",
+          "timeFrame": "at 24 hours after surgery"
+        }
+      ]
+    },
+    "eligibilityModule": {
+      "eligibilityCriteria": "Inclusion Criteria:\n\n* Consecutive female patients aged 18 to 60 with American Society of Anesthesiologists physical status (ASA) physical status I or II, who underwent general anesthesia for elective thyroidectomy surgery\n\nExclusion Criteria:\n\n* potentially difficult airway,\n* a history of chronic pain,\n* drug or alcohol abuse,\n* mental disorder,\n* intake of any analgesic drug within 48 h before surgery, and\n* previous experience with acupuncture treatment",
+      "healthyVolunteers": false,
+      "sex": "FEMALE",
+      "minimumAge": "18 Years",
+      "maximumAge": "60 Years",
+      "stdAges": [
+        "ADULT"
+      ]
+    },
+    "contactsLocationsModule": {
+      "overallOfficials": [
+        {
+          "name": "Yanqing Chen, MD",
+          "affiliation": "Fujian Provincial Hospital, China",
+          "role": "STUDY_DIRECTOR"
+        }
+      ],
+      "locations": [
+        {
+          "facility": "Fujian Provincial Hospital",
+          "city": "Fuzhou",
+          "state": "Fujian",
+          "zip": "350001",
+          "country": "China",
+          "geoPoint": {
+            "lat": 26.06139,
+            "lon": 119.30611
+          }
+        }
+      ]
+    },
+    "referencesModule": {
+      "references": [
+        {
+          "pmid": "26550304",
+          "type": "RESULT",
+          "citation": "Chen Y, Yang Y, Yao Y, Dai D, Qian B, Liu P. Does transcutaneous electric acupoint stimulation improve the quality of recovery after thyroidectomy? A prospective randomized controlled trial. Int J Clin Exp Med. 2015 Aug 15;8(8):13622-7. eCollection 2015."
+        }
+      ]
+    },
+    "ipdSharingStatementModule": {
+      "ipdSharing": "NO"
+    }
+  },
+  "derivedSection": {
+    "miscInfoModule": {
+      "versionHolder": "2026-09-04"
+    },
+    "conditionBrowseModule": {
+      "meshes": [
+        {
+          "id": "D011183",
+          "term": "Postoperative Complications"
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "D010335",
+          "term": "Pathologic Processes"
+        },
+        {
+          "id": "D013568",
+          "term": "Pathological Conditions, Signs and Symptoms"
+        }
+      ]
+    }
+  },
+  "hasResults": false
+}

@@ -1,0 +1,3523 @@
+{
+  "Study_ID": "S032",
+  "Study": "Lu 2022",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Confirmed",
+    "title": "Acupoint Stimulation for Enhanced Recovery After Colon Surgery: A Prospective Multicenter Randomized Controlled Trial",
+    "year": 2022,
+    "doi": "10.2147/JMDH.S391852",
+    "pdf_files": [
+      "getfile.php-3.pdf",
+      "batch4_S032_supplement.doc"
+    ],
+    "randomized_arms": "50TEAS/50sham",
+    "analyzed_arms": "47/47",
+    "modality": "TEAS",
+    "comparator_class": "No-current sham plus common ERAS",
+    "independence": "Single100-person colon RCT",
+    "source_locations": "Full articlepp1–9;Figure1,Table3 visually inspected;Supplement1–11;registry",
+    "identity_notes": "PC6/ST36 main methods versus4points supplement."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 133,
+      "final": {
+        "_baseline_row": 133,
+        "Canonical study": "Lu 2022",
+        "Comparison ID": "LU22_TEAS_vs_CTRL_DISCHARGE",
+        "Intervention arm": "TEAS + ERAS",
+        "Comparator arm": "No-current control + ERAS",
+        "Outcome family": "Recovery",
+        "Outcome/result": "Time to meet discharge criteria",
+        "Timepoint/window": "Postoperative",
+        "Data type": "Mean/SD in table; narrative median-label conflict",
+        "Randomized n intervention": 50,
+        "Randomized n comparator": 50,
+        "Analyzed n intervention": 47,
+        "Analyzed n comparator": 47,
+        "Mean intervention": 6,
+        "SD intervention": 1.8,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 7,
+        "SD comparator": 2.4,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "days",
+        "Reported P": "0.02",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: MD from source means; raw values unconverted",
+        "Derived effect measure": "MD",
+        "Derived effect": -1,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Sensitivity only pending confirmation of mean/SD; distinct time to meeting discharge criteria",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Six randomized patients were excluded because they did not receive allocated intervention; open conversion is plausibly related to discharge time",
+        "Source location": "Primary outcome / time to discharge",
+        "Source PDF URL": "https://doi.org/10.2147/JMDH.S391852",
+        "Record status": "SOURCE-VERIFIED / ATTRITION QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 133,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2022",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU22_TEAS_vs_CTRL_DISCHARGE",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + ERAS",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current control + ERAS",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Recovery",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to meet discharge criteria",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD in table; narrative median-label conflict",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 50,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 50,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 47,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 47,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 6,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 1.8,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 7,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 2.4,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "days",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.02",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: MD from source means; raw values unconverted",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -1,
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Sensitivity only pending confirmation of mean/SD; distinct time to meeting discharge criteria",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Six randomized patients were excluded because they did not receive allocated intervention; open conversion is plausibly related to discharge time",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Primary outcome / time to discharge",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / ATTRITION QC",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Data type",
+          "old_value": "Mean/SD",
+          "source_value": "Mean/SD in table; narrative median-label conflict",
+          "final_value": "Mean/SD in table; narrative median-label conflict",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: MD from source means; raw values unconverted",
+          "final_value": "Yes: MD from source means; raw values unconverted",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "minor"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for recovery-time meta-analysis",
+          "source_value": "Sensitivity only pending confirmation of mean/SD; distinct time to meeting discharge criteria",
+          "final_value": "Sensitivity only pending confirmation of mean/SD; distinct time to meeting discharge criteria",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/12Y86huNMuLC8cPH-L2vwlEd7r1X1Qela/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "final_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5;Table1 p3;Figure1",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "getfile.php-3.pdf",
+      "source_evidence": "6.0±1.8 vs7.0±2.4days,47/47 analyzed50/50 randomized; P=.02. Narrative calls median, table footnote mean±SD.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+      "analysis_eligibility": "Sensitivity only pending confirmation of mean/SD; distinct time to meeting discharge criteria",
+      "notes": "PhaseA full source+official supplement before baseline. Unblinded supplemental methodological reconsideration: open-conversion missingness is likely related to recovery (3.4PY), strengthening initial PhaseASome concerns toHigh; no new numerical source inferred."
+    },
+    {
+      "baseline_row": 134,
+      "final": {
+        "_baseline_row": 134,
+        "Canonical study": "Lu 2022",
+        "Comparison ID": "LU22_TEAS_vs_CTRL_FLATUS",
+        "Intervention arm": "TEAS + ERAS",
+        "Comparator arm": "No-current control + ERAS",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Time to first flatus",
+        "Timepoint/window": "Postoperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 50,
+        "Randomized n comparator": 50,
+        "Analyzed n intervention": 47,
+        "Analyzed n comparator": 47,
+        "Mean intervention": 34.5,
+        "SD intervention": 16.7,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 42.4,
+        "SD comparator": 22.9,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "hours",
+        "Reported P": "0.03",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: MD from source means; raw values unconverted",
+        "Derived effect measure": "MD",
+        "Derived effect": -7.899999999999999,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for GI-recovery meta-analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Same 6 post-randomization exclusions apply",
+        "Source location": "First flatus result",
+        "Source PDF URL": "https://doi.org/10.2147/JMDH.S391852",
+        "Record status": "SOURCE-VERIFIED / ATTRITION QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 134,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2022",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU22_TEAS_vs_CTRL_FLATUS",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + ERAS",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current control + ERAS",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to first flatus",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 50,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 50,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 47,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 47,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 34.5,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 16.7,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 42.4,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 22.9,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "hours",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.03",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: MD from source means; raw values unconverted",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -7.899999999999999,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for GI-recovery meta-analysis",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Same 6 post-randomization exclusions apply",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "First flatus result",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / ATTRITION QC",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: MD from source means; raw values unconverted",
+          "final_value": "Yes: MD from source means; raw values unconverted",
+          "source_location": "Table3 p5;Figure1;registry",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/12Y86huNMuLC8cPH-L2vwlEd7r1X1Qela/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "final_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5;Figure1;registry",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "getfile.php-3.pdf",
+      "source_evidence": "Flatus34.5±16.7 vs42.4±22.9hours; P=.03;50/50 randomized47/47 analyzed.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+      "analysis_eligibility": "Eligible for GI-recovery meta-analysis",
+      "notes": "PhaseA full source+official supplement before baseline. Unblinded supplemental methodological reconsideration: open-conversion missingness is likely related to recovery (3.4PY), strengthening initial PhaseASome concerns toHigh; no new numerical source inferred."
+    },
+    {
+      "baseline_row": 135,
+      "final": {
+        "_baseline_row": 135,
+        "Canonical study": "Lu 2022",
+        "Comparison ID": "LU22_TEAS_vs_CTRL_DEFEC",
+        "Intervention arm": "TEAS + ERAS",
+        "Comparator arm": "No-current control + ERAS",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Time to first defecation",
+        "Timepoint/window": "Postoperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 50,
+        "Randomized n comparator": 50,
+        "Analyzed n intervention": 47,
+        "Analyzed n comparator": 47,
+        "Mean intervention": 42,
+        "SD intervention": 25,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 55.4,
+        "SD comparator": 29.7,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "hours",
+        "Reported P": "0.03",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: MD from source means; raw values unconverted",
+        "Derived effect measure": "MD",
+        "Derived effect": -13.399999999999999,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for GI-recovery meta-analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Same 6 post-randomization exclusions apply",
+        "Source location": "First defecation result",
+        "Source PDF URL": "https://doi.org/10.2147/JMDH.S391852",
+        "Record status": "SOURCE-VERIFIED / ATTRITION QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 135,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2022",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU22_TEAS_vs_CTRL_DEFEC",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + ERAS",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current control + ERAS",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to first defecation",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 50,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 50,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 47,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 47,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 42,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 25,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 55.4,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 29.7,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "hours",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.03",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: MD from source means; raw values unconverted",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -13.399999999999999,
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for GI-recovery meta-analysis",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Same 6 post-randomization exclusions apply",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "First defecation result",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / ATTRITION QC",
+          "source_location": "Table3 p5;Figure1;registry",
+          "evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: MD from source means; raw values unconverted",
+          "final_value": "Yes: MD from source means; raw values unconverted",
+          "source_location": "Table3 p5;Figure1;registry",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/12Y86huNMuLC8cPH-L2vwlEd7r1X1Qela/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "final_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5;Figure1;registry",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "getfile.php-3.pdf",
+      "source_evidence": "Defecation42.0±25.0 vs55.4±29.7hours; P=.03;50/50 randomized47/47 analyzed.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+      "analysis_eligibility": "Eligible for GI-recovery meta-analysis",
+      "notes": "PhaseA full source+official supplement before baseline. Unblinded supplemental methodological reconsideration: open-conversion missingness is likely related to recovery (3.4PY), strengthening initial PhaseASome concerns toHigh; no new numerical source inferred."
+    },
+    {
+      "baseline_row": 136,
+      "final": {
+        "_baseline_row": 136,
+        "Canonical study": "Lu 2022",
+        "Comparison ID": "LU22_TEAS_vs_CTRL_PCAATTEMPT24",
+        "Intervention arm": "TEAS + ERAS",
+        "Comparator arm": "No-current control + ERAS",
+        "Outcome family": "Opioid demand",
+        "Outcome/result": "PCA attempts",
+        "Timepoint/window": "24 h",
+        "Data type": "Median/range",
+        "Randomized n intervention": 50,
+        "Randomized n comparator": 50,
+        "Analyzed n intervention": 47,
+        "Analyzed n comparator": 47,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": 8,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": 16.5,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "attempts",
+        "Reported P": "0.001",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible as 24-h PCA-demand proxy only",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "PCA drug, bolus dose, concentration, basal infusion and lockout are not reported",
+        "Source location": "PCA table / 24-h attempts",
+        "Source PDF URL": "https://doi.org/10.2147/JMDH.S391852",
+        "Record status": "SOURCE-VERIFIED / DOSE NOT RECONSTRUCTABLE",
+        "Minimum intervention": 3,
+        "Maximum intervention": 18,
+        "Minimum comparator": 8,
+        "Maximum comparator": 38
+      },
+      "verification_status": "MATERIAL ERROR",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 136,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2022",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU22_TEAS_vs_CTRL_PCAATTEMPT24",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + ERAS",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current control + ERAS",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid demand",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "PCA attempts",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Median/range",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 50,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 50,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 47,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 47,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": 8,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": 16.5,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "attempts",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.001",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible as 24-h PCA-demand proxy only",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "PCA drug, bolus dose, concentration, basal infusion and lockout are not reported",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "PCA table / 24-h attempts",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / DOSE NOT RECONSTRUCTABLE",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Minimum intervention",
+          "source_value": 3,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Maximum intervention",
+          "source_value": 18,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Minimum comparator",
+          "source_value": 8,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Maximum comparator",
+          "source_value": 38,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Data type",
+          "old_value": "Median/IQR",
+          "source_value": "Median/range",
+          "final_value": "Median/range",
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Q1 intervention",
+          "old_value": 3,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Q3 intervention",
+          "old_value": 18,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Q1 comparator",
+          "old_value": 8,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Q3 comparator",
+          "old_value": 38,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/12Y86huNMuLC8cPH-L2vwlEd7r1X1Qela/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "final_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Minimum intervention",
+          "source_value": 3,
+          "final_value": 3,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Maximum intervention",
+          "source_value": 18,
+          "final_value": 18,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Minimum comparator",
+          "source_value": 8,
+          "final_value": 8,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Maximum comparator",
+          "source_value": 38,
+          "final_value": 38,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "getfile.php-3.pdf",
+      "source_evidence": "PCA attempts median(min,max)8(3,18) vs16.5(8,38), P=.001; these are ranges, not quartiles.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+      "analysis_eligibility": "Eligible as 24-h PCA-demand proxy only",
+      "notes": "PhaseA full source+official supplement before baseline. Unblinded supplemental methodological reconsideration: open-conversion missingness is likely related to recovery (3.4PY), strengthening initial PhaseASome concerns toHigh; no new numerical source inferred."
+    },
+    {
+      "baseline_row": 137,
+      "final": {
+        "_baseline_row": 137,
+        "Canonical study": "Lu 2022",
+        "Comparison ID": "LU22_TEAS_vs_CTRL_PCADELIV24",
+        "Intervention arm": "TEAS + ERAS",
+        "Comparator arm": "No-current control + ERAS",
+        "Outcome family": "Opioid demand",
+        "Outcome/result": "Successful PCA deliveries",
+        "Timepoint/window": "24 h",
+        "Data type": "Median/range; source median typo",
+        "Randomized n intervention": 50,
+        "Randomized n comparator": 50,
+        "Analyzed n intervention": 47,
+        "Analyzed n comparator": 47,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": 5,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": 12,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "deliveries",
+        "Reported P": "0.001",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible as 24-h PCA-delivery proxy only",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Do not convert successful deliveries into opioid dose because the PCA prescription is absent",
+        "Source location": "PCA table / 24-h deliveries",
+        "Source PDF URL": "https://doi.org/10.2147/JMDH.S391852",
+        "Record status": "SOURCE-VERIFIED / DOSE NOT RECONSTRUCTABLE",
+        "Minimum intervention": 2,
+        "Maximum intervention": 12,
+        "Minimum comparator": 6,
+        "Maximum comparator": 22
+      },
+      "verification_status": "MATERIAL ERROR",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 137,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2022",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU22_TEAS_vs_CTRL_PCADELIV24",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + ERAS",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current control + ERAS",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid demand",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Successful PCA deliveries",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Median/range; source median typo",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 50,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 50,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 47,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 47,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": 5,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": 12,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "deliveries",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.001",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible as 24-h PCA-delivery proxy only",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Do not convert successful deliveries into opioid dose because the PCA prescription is absent",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "PCA table / 24-h deliveries",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / DOSE NOT RECONSTRUCTABLE",
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Minimum intervention",
+          "source_value": 2,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Maximum intervention",
+          "source_value": 12,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Minimum comparator",
+          "source_value": 6,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Maximum comparator",
+          "source_value": 22,
+          "source_location": "Table3 p5 visually inspected",
+          "evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Data type",
+          "old_value": "Median/IQR",
+          "source_value": "Median/range; source median typo",
+          "final_value": "Median/range; source median typo",
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Q1 intervention",
+          "old_value": 2,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Q3 intervention",
+          "old_value": 12,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Q1 comparator",
+          "old_value": 6,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Q3 comparator",
+          "old_value": 22,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/12Y86huNMuLC8cPH-L2vwlEd7r1X1Qela/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "final_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Minimum intervention",
+          "source_value": 2,
+          "final_value": 2,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Maximum intervention",
+          "source_value": 12,
+          "final_value": 12,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Minimum comparator",
+          "source_value": 6,
+          "final_value": 6,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        },
+        {
+          "field": "Maximum comparator",
+          "source_value": 22,
+          "final_value": 22,
+          "source_location": "Table3 p5 visually inspected",
+          "reason": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "getfile.php-3.pdf",
+      "source_evidence": "PCA deliveries median(min,max)printed5.0.0(2,12) vs12(6,22), P=.001; no concentration or dose.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Ranges were incorrectly recorded as quartiles; removed falseQ1/Q3 and preserved min/max.",
+      "analysis_eligibility": "Eligible as 24-h PCA-delivery proxy only",
+      "notes": "PhaseA full source+official supplement before baseline. Unblinded supplemental methodological reconsideration: open-conversion missingness is likely related to recovery (3.4PY), strengthening initial PhaseASome concerns toHigh; no new numerical source inferred."
+    },
+    {
+      "baseline_row": 138,
+      "final": {
+        "_baseline_row": 138,
+        "Canonical study": "Lu 2022",
+        "Comparison ID": "LU22_TEAS_vs_CTRL_OPIOID24",
+        "Intervention arm": "TEAS + ERAS",
+        "Comparator arm": "No-current control + ERAS",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative PCA opioid consumption",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 50,
+        "Randomized n comparator": 50,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "Insufficient information / not reported.",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid meta-analysis without supplementary/author data",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "The main article never identifies the PCA drug or dose",
+        "Source location": "Postoperative PCA section",
+        "Source PDF URL": "https://doi.org/10.2147/JMDH.S391852",
+        "Record status": "MISSING / PCA DRUG AND DOSE NR"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 138,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2022",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU22_TEAS_vs_CTRL_OPIOID24",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + ERAS",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current control + ERAS",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative PCA opioid consumption",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 50,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 50,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "Insufficient information / not reported.",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid meta-analysis without supplementary/author data",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "The main article never identifies the PCA drug or dose",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Postoperative PCA section",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "MISSING / PCA DRUG AND DOSE NR",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 47,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 47,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "material"
+        },
+        {
+          "field": "Unit/scale",
+          "old_value": "mg/µg",
+          "source_value": "Insufficient information / not reported.",
+          "final_value": "Insufficient information / not reported.",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "material"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/12Y86huNMuLC8cPH-L2vwlEd7r1X1Qela/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.2147/JMDH.S391852",
+          "final_value": "https://doi.org/10.2147/JMDH.S391852",
+          "source_location": "p2 Procedures;Table3;Supplement2",
+          "reason": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "getfile.php-3.pdf",
+      "source_evidence": "Only PCA count data; Supplement2 standard PCA+ropivacaine does not specify PCA drug,route,concentration.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source extraction qualified for exclusion, reporting format and absence of measured opioid quantity.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid meta-analysis without supplementary/author data",
+      "notes": "PhaseA full source+official supplement before baseline. Unblinded supplemental methodological reconsideration: open-conversion missingness is likely related to recovery (3.4PY), strengthening initial PhaseASome concerns toHigh; no new numerical source inferred."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "LU22_TEAS_vs_CTRL_DISCHARGE",
+      "outcome": "Time to meet discharge criteria",
+      "time_window": "Postoperative",
+      "comparison": "TEAS+ERAS vs no-current sham+ERAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random allocation1:1.",
+          "source_location": "p2 Patients/randomization",
+          "reasoning": "Computer-generated random allocation1:1."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent.",
+          "source_location": "p2",
+          "reasoning": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Table2 baseline only47/47 analyzed, excludes6 randomized.",
+          "source_location": "Table2;Figure1",
+          "reasoning": "Table2 baseline only47/47 analyzed, excludes6 randomized."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "For logistic reasons blinding patients hard; active sensory current.",
+          "source_location": "p2;limitationsp7",
+          "reasoning": "For logistic reasons blinding patients hard; active sensory current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Designated interventionist unmasked; clinical team and follow-up masked.",
+          "source_location": "p2",
+          "reasoning": "Designated interventionist unmasked; clinical team and follow-up masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented.",
+          "source_location": "p2;Supplement2;p7",
+          "reasoning": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "N",
+          "evidence": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization.",
+          "source_location": "p3;Figure1",
+          "reasoning": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Six exclusions can matter, no full ITT available to quantify substantial impact.",
+          "source_location": "Figure1",
+          "reasoning": "Six exclusions can matter, no full ITT available to quantify substantial impact."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "47/50 per arm;94% observed.",
+          "source_location": "Figure1;Supplement8",
+          "reasoning": "47/50 per arm;94% observed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No sensitivity correcting excluded conversions/refusal.",
+          "source_location": "p3 Statistical analysis",
+          "reasoning": "No sensitivity correcting excluded conversions/refusal."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "Y",
+          "evidence": "Open conversion plausibly lengthens surgical recovery.",
+          "source_location": "p3;Figure1",
+          "reasoning": "Open conversion plausibly lengthens surgical recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "PY",
+          "evidence": "Five of six missing subjects converted to open surgery, a strong reason for slower discharge/GI recovery.",
+          "source_location": "Figure1;Table1 discharge criteria",
+          "reasoning": "Five of six missing subjects converted to open surgery, a strong reason for slower discharge/GI recovery."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "Defined discharge criteria and distinct time-to-flatus/defecation outcomes.",
+          "source_location": "Table1;pp2–3",
+          "reasoning": "Defined discharge criteria and distinct time-to-flatus/defecation outcomes."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same ERAS and scheduled blinded follow-up.",
+          "source_location": "p2",
+          "reasoning": "Same ERAS and scheduled blinded follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "PY",
+          "evidence": "Patient aware and contributes flatus report and no-discomfort component of discharge criteria.",
+          "source_location": "Table1;p7 limitations",
+          "reasoning": "Patient aware and contributes flatus report and no-discomfort component of discharge criteria."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Perceived flatus/discomfort and oral intake reporting can shift assessed recovery timing.",
+          "source_location": "Table1;p7",
+          "reasoning": "Perceived flatus/discomfort and oral intake reporting can shift assessed recovery timing."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "No data establish actual probable influence on recorded time.",
+          "source_location": "p7 limitations",
+          "reasoning": "No data establish actual probable influence on recorded time."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registry prospective but current version after completion; no dated SAP obtained.",
+          "source_location": "NCT02921529 API;Supplement",
+          "reasoning": "Registry prospective but current version after completion; no dated SAP obtained."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Registry endpoints generally correspond but original analytic measurement detail unavailable.",
+          "source_location": "NCT02921529",
+          "reasoning": "Registry endpoints generally correspond but original analytic measurement detail unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP.",
+          "source_location": "p3;Table3",
+          "reasoning": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Envelope safeguards and randomized baseline unavailable.",
+          "source_location": "p2;Table2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Postrandomization exclusion based on treatment receipt.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Conversions likely missing because of surgical pathway strongly related to recovery.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked patient contributes subjective recovery assessment.",
+          "source_location": "Table1;p7"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective registration insufficient to establish analysis specification.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Recovery missingness linked to open conversion plus additional ascertainment/analysis concerns.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old overallHigh retained; D2Low→Some concerns; D5Low→Some concerns. D3High supported by prognostic conversion, not exclusion count alone."
+    },
+    {
+      "result_id": "LU22_TEAS_vs_CTRL_FLATUS",
+      "outcome": "Time to first flatus",
+      "time_window": "Postoperative",
+      "comparison": "TEAS+ERAS vs no-current sham+ERAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random allocation1:1.",
+          "source_location": "p2 Patients/randomization",
+          "reasoning": "Computer-generated random allocation1:1."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent.",
+          "source_location": "p2",
+          "reasoning": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Table2 baseline only47/47 analyzed, excludes6 randomized.",
+          "source_location": "Table2;Figure1",
+          "reasoning": "Table2 baseline only47/47 analyzed, excludes6 randomized."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "For logistic reasons blinding patients hard; active sensory current.",
+          "source_location": "p2;limitationsp7",
+          "reasoning": "For logistic reasons blinding patients hard; active sensory current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Designated interventionist unmasked; clinical team and follow-up masked.",
+          "source_location": "p2",
+          "reasoning": "Designated interventionist unmasked; clinical team and follow-up masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented.",
+          "source_location": "p2;Supplement2;p7",
+          "reasoning": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "N",
+          "evidence": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization.",
+          "source_location": "p3;Figure1",
+          "reasoning": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Six exclusions can matter, no full ITT available to quantify substantial impact.",
+          "source_location": "Figure1",
+          "reasoning": "Six exclusions can matter, no full ITT available to quantify substantial impact."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "47/50 per arm;94% observed.",
+          "source_location": "Figure1;Supplement8",
+          "reasoning": "47/50 per arm;94% observed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No sensitivity correcting excluded conversions/refusal.",
+          "source_location": "p3 Statistical analysis",
+          "reasoning": "No sensitivity correcting excluded conversions/refusal."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "Y",
+          "evidence": "Open conversion plausibly lengthens surgical recovery.",
+          "source_location": "p3;Figure1",
+          "reasoning": "Open conversion plausibly lengthens surgical recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "PY",
+          "evidence": "Five of six missing subjects converted to open surgery, a strong reason for slower discharge/GI recovery.",
+          "source_location": "Figure1;Table1 discharge criteria",
+          "reasoning": "Five of six missing subjects converted to open surgery, a strong reason for slower discharge/GI recovery."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "Defined discharge criteria and distinct time-to-flatus/defecation outcomes.",
+          "source_location": "Table1;pp2–3",
+          "reasoning": "Defined discharge criteria and distinct time-to-flatus/defecation outcomes."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same ERAS and scheduled blinded follow-up.",
+          "source_location": "p2",
+          "reasoning": "Same ERAS and scheduled blinded follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "PY",
+          "evidence": "Patient aware and contributes flatus report and no-discomfort component of discharge criteria.",
+          "source_location": "Table1;p7 limitations",
+          "reasoning": "Patient aware and contributes flatus report and no-discomfort component of discharge criteria."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Perceived flatus/discomfort and oral intake reporting can shift assessed recovery timing.",
+          "source_location": "Table1;p7",
+          "reasoning": "Perceived flatus/discomfort and oral intake reporting can shift assessed recovery timing."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "No data establish actual probable influence on recorded time.",
+          "source_location": "p7 limitations",
+          "reasoning": "No data establish actual probable influence on recorded time."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registry prospective but current version after completion; no dated SAP obtained.",
+          "source_location": "NCT02921529 API;Supplement",
+          "reasoning": "Registry prospective but current version after completion; no dated SAP obtained."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Registry endpoints generally correspond but original analytic measurement detail unavailable.",
+          "source_location": "NCT02921529",
+          "reasoning": "Registry endpoints generally correspond but original analytic measurement detail unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP.",
+          "source_location": "p3;Table3",
+          "reasoning": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Envelope safeguards and randomized baseline unavailable.",
+          "source_location": "p2;Table2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Postrandomization exclusion based on treatment receipt.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Conversions likely missing because of surgical pathway strongly related to recovery.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked patient contributes subjective recovery assessment.",
+          "source_location": "Table1;p7"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective registration insufficient to establish analysis specification.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Recovery missingness linked to open conversion plus additional ascertainment/analysis concerns.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old overallHigh retained; D2Low→Some concerns; D5Low→Some concerns. D3High supported by prognostic conversion, not exclusion count alone."
+    },
+    {
+      "result_id": "LU22_TEAS_vs_CTRL_DEFEC",
+      "outcome": "Time to first defecation",
+      "time_window": "Postoperative",
+      "comparison": "TEAS+ERAS vs no-current sham+ERAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random allocation1:1.",
+          "source_location": "p2 Patients/randomization",
+          "reasoning": "Computer-generated random allocation1:1."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent.",
+          "source_location": "p2",
+          "reasoning": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Table2 baseline only47/47 analyzed, excludes6 randomized.",
+          "source_location": "Table2;Figure1",
+          "reasoning": "Table2 baseline only47/47 analyzed, excludes6 randomized."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "For logistic reasons blinding patients hard; active sensory current.",
+          "source_location": "p2;limitationsp7",
+          "reasoning": "For logistic reasons blinding patients hard; active sensory current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Designated interventionist unmasked; clinical team and follow-up masked.",
+          "source_location": "p2",
+          "reasoning": "Designated interventionist unmasked; clinical team and follow-up masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented.",
+          "source_location": "p2;Supplement2;p7",
+          "reasoning": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "N",
+          "evidence": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization.",
+          "source_location": "p3;Figure1",
+          "reasoning": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Six exclusions can matter, no full ITT available to quantify substantial impact.",
+          "source_location": "Figure1",
+          "reasoning": "Six exclusions can matter, no full ITT available to quantify substantial impact."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "47/50 per arm;94% observed.",
+          "source_location": "Figure1;Supplement8",
+          "reasoning": "47/50 per arm;94% observed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No sensitivity correcting excluded conversions/refusal.",
+          "source_location": "p3 Statistical analysis",
+          "reasoning": "No sensitivity correcting excluded conversions/refusal."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "Y",
+          "evidence": "Open conversion plausibly lengthens surgical recovery.",
+          "source_location": "p3;Figure1",
+          "reasoning": "Open conversion plausibly lengthens surgical recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "PY",
+          "evidence": "Five of six missing subjects converted to open surgery, a strong reason for slower discharge/GI recovery.",
+          "source_location": "Figure1;Table1 discharge criteria",
+          "reasoning": "Five of six missing subjects converted to open surgery, a strong reason for slower discharge/GI recovery."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "Defined discharge criteria and distinct time-to-flatus/defecation outcomes.",
+          "source_location": "Table1;pp2–3",
+          "reasoning": "Defined discharge criteria and distinct time-to-flatus/defecation outcomes."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same ERAS and scheduled blinded follow-up.",
+          "source_location": "p2",
+          "reasoning": "Same ERAS and scheduled blinded follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "PY",
+          "evidence": "Patient aware and contributes flatus report and no-discomfort component of discharge criteria.",
+          "source_location": "Table1;p7 limitations",
+          "reasoning": "Patient aware and contributes flatus report and no-discomfort component of discharge criteria."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Perceived flatus/discomfort and oral intake reporting can shift assessed recovery timing.",
+          "source_location": "Table1;p7",
+          "reasoning": "Perceived flatus/discomfort and oral intake reporting can shift assessed recovery timing."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "No data establish actual probable influence on recorded time.",
+          "source_location": "p7 limitations",
+          "reasoning": "No data establish actual probable influence on recorded time."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registry prospective but current version after completion; no dated SAP obtained.",
+          "source_location": "NCT02921529 API;Supplement",
+          "reasoning": "Registry prospective but current version after completion; no dated SAP obtained."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Registry endpoints generally correspond but original analytic measurement detail unavailable.",
+          "source_location": "NCT02921529",
+          "reasoning": "Registry endpoints generally correspond but original analytic measurement detail unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP.",
+          "source_location": "p3;Table3",
+          "reasoning": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Envelope safeguards and randomized baseline unavailable.",
+          "source_location": "p2;Table2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Postrandomization exclusion based on treatment receipt.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Conversions likely missing because of surgical pathway strongly related to recovery.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked patient contributes subjective recovery assessment.",
+          "source_location": "Table1;p7"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective registration insufficient to establish analysis specification.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Recovery missingness linked to open conversion plus additional ascertainment/analysis concerns.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old overallHigh retained; D2Low→Some concerns; D5Low→Some concerns. D3High supported by prognostic conversion, not exclusion count alone."
+    },
+    {
+      "result_id": "LU22_TEAS_vs_CTRL_PCAATTEMPT24",
+      "outcome": "PCA attempts",
+      "time_window": "24 h",
+      "comparison": "TEAS+ERAS vs no-current sham+ERAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random allocation1:1.",
+          "source_location": "p2 Patients/randomization",
+          "reasoning": "Computer-generated random allocation1:1."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent.",
+          "source_location": "p2",
+          "reasoning": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Table2 baseline only47/47 analyzed, excludes6 randomized.",
+          "source_location": "Table2;Figure1",
+          "reasoning": "Table2 baseline only47/47 analyzed, excludes6 randomized."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "For logistic reasons blinding patients hard; active sensory current.",
+          "source_location": "p2;limitationsp7",
+          "reasoning": "For logistic reasons blinding patients hard; active sensory current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Designated interventionist unmasked; clinical team and follow-up masked.",
+          "source_location": "p2",
+          "reasoning": "Designated interventionist unmasked; clinical team and follow-up masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented.",
+          "source_location": "p2;Supplement2;p7",
+          "reasoning": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "N",
+          "evidence": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization.",
+          "source_location": "p3;Figure1",
+          "reasoning": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Six exclusions can matter, no full ITT available to quantify substantial impact.",
+          "source_location": "Figure1",
+          "reasoning": "Six exclusions can matter, no full ITT available to quantify substantial impact."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "47/50 per arm;94% observed.",
+          "source_location": "Figure1;Supplement8",
+          "reasoning": "47/50 per arm;94% observed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No sensitivity correcting excluded conversions/refusal.",
+          "source_location": "p3 Statistical analysis",
+          "reasoning": "No sensitivity correcting excluded conversions/refusal."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "Y",
+          "evidence": "Open conversion plausibly lengthens surgical recovery.",
+          "source_location": "p3;Figure1",
+          "reasoning": "Open conversion plausibly lengthens surgical recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "PY",
+          "evidence": "Open conversion also plausibly increases analgesic demand; most exclusions have that prognostic reason.",
+          "source_location": "Figure1",
+          "reasoning": "Open conversion also plausibly increases analgesic demand; most exclusions have that prognostic reason."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Pump count is appropriate to measure demand/deliveries, not mg opioid.",
+          "source_location": "Table3",
+          "reasoning": "Pump count is appropriate to measure demand/deliveries, not mg opioid."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same PCA capture in both arms; prescription detail absent.",
+          "source_location": "Table3;Supplement2",
+          "reasoning": "Same PCA capture in both arms; prescription detail absent."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "N",
+          "evidence": "Blinded follow-up extracts pump counts.",
+          "source_location": "p2",
+          "reasoning": "Blinded follow-up extracts pump counts."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registry prospective but current version after completion; no dated SAP obtained.",
+          "source_location": "NCT02921529 API;Supplement",
+          "reasoning": "Registry prospective but current version after completion; no dated SAP obtained."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Registry endpoints generally correspond but original analytic measurement detail unavailable.",
+          "source_location": "NCT02921529",
+          "reasoning": "Registry endpoints generally correspond but original analytic measurement detail unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP.",
+          "source_location": "p3;Table3",
+          "reasoning": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Envelope safeguards and randomized baseline unavailable.",
+          "source_location": "p2;Table2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Postrandomization exclusion based on treatment receipt.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Conversions likely missing because of surgical pathway strongly related to recovery.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Recorded count objective; unmasked participant dosing behavior is part of endpoint, not a fabricated dose.",
+          "source_location": "p2;Table3"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective registration insufficient to establish analysis specification.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "High due prognosis-related exclusion of converted surgeries; proxy cannot substitute for opioid dose.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old overallHigh retained; D2Low→Some concerns; D5Low→Some concerns. D3High supported by prognostic conversion, not exclusion count alone."
+    },
+    {
+      "result_id": "LU22_TEAS_vs_CTRL_PCADELIV24",
+      "outcome": "Successful PCA deliveries",
+      "time_window": "24 h",
+      "comparison": "TEAS+ERAS vs no-current sham+ERAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random allocation1:1.",
+          "source_location": "p2 Patients/randomization",
+          "reasoning": "Computer-generated random allocation1:1."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent.",
+          "source_location": "p2",
+          "reasoning": "Sealed envelopes opened at allocation; opacity, numbering and tamper protection absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Table2 baseline only47/47 analyzed, excludes6 randomized.",
+          "source_location": "Table2;Figure1",
+          "reasoning": "Table2 baseline only47/47 analyzed, excludes6 randomized."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "For logistic reasons blinding patients hard; active sensory current.",
+          "source_location": "p2;limitationsp7",
+          "reasoning": "For logistic reasons blinding patients hard; active sensory current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Designated interventionist unmasked; clinical team and follow-up masked.",
+          "source_location": "p2",
+          "reasoning": "Designated interventionist unmasked; clinical team and follow-up masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented.",
+          "source_location": "p2;Supplement2;p7",
+          "reasoning": "Same ERAS encouraged; delayed oral intake reflects adherence problems in both groups, no trial-context divergence documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "N",
+          "evidence": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization.",
+          "source_location": "p3;Figure1",
+          "reasoning": "mITT requires receiving all interventions, excludes5 conversions and1 refusal after randomization."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Six exclusions can matter, no full ITT available to quantify substantial impact.",
+          "source_location": "Figure1",
+          "reasoning": "Six exclusions can matter, no full ITT available to quantify substantial impact."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "47/50 per arm;94% observed.",
+          "source_location": "Figure1;Supplement8",
+          "reasoning": "47/50 per arm;94% observed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No sensitivity correcting excluded conversions/refusal.",
+          "source_location": "p3 Statistical analysis",
+          "reasoning": "No sensitivity correcting excluded conversions/refusal."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "Y",
+          "evidence": "Open conversion plausibly lengthens surgical recovery.",
+          "source_location": "p3;Figure1",
+          "reasoning": "Open conversion plausibly lengthens surgical recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "PY",
+          "evidence": "Open conversion also plausibly increases analgesic demand; most exclusions have that prognostic reason.",
+          "source_location": "Figure1",
+          "reasoning": "Open conversion also plausibly increases analgesic demand; most exclusions have that prognostic reason."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Pump count is appropriate to measure demand/deliveries, not mg opioid.",
+          "source_location": "Table3",
+          "reasoning": "Pump count is appropriate to measure demand/deliveries, not mg opioid."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same PCA capture in both arms; prescription detail absent.",
+          "source_location": "Table3;Supplement2",
+          "reasoning": "Same PCA capture in both arms; prescription detail absent."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "N",
+          "evidence": "Blinded follow-up extracts pump counts.",
+          "source_location": "p2",
+          "reasoning": "Blinded follow-up extracts pump counts."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registry prospective but current version after completion; no dated SAP obtained.",
+          "source_location": "NCT02921529 API;Supplement",
+          "reasoning": "Registry prospective but current version after completion; no dated SAP obtained."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Registry endpoints generally correspond but original analytic measurement detail unavailable.",
+          "source_location": "NCT02921529",
+          "reasoning": "Registry endpoints generally correspond but original analytic measurement detail unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP.",
+          "source_location": "p3;Table3",
+          "reasoning": "t-tests/logrank plus inconsistent median/mean discharge reporting; no dated SAP."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Envelope safeguards and randomized baseline unavailable.",
+          "source_location": "p2;Table2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Postrandomization exclusion based on treatment receipt.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Conversions likely missing because of surgical pathway strongly related to recovery.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Recorded count objective; unmasked participant dosing behavior is part of endpoint, not a fabricated dose.",
+          "source_location": "p2;Table3"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective registration insufficient to establish analysis specification.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "High due prognosis-related exclusion of converted surgeries; proxy cannot substitute for opioid dose.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old overallHigh retained; D2Low→Some concerns; D5Low→Some concerns. D3High supported by prognostic conversion, not exclusion count alone."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "PCA attempts/deliveries without drug/route/concentration; no mg consumption.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Insufficient information / not reported.",
+    "route": "Insufficient information / not reported.",
+    "unit": "attempts/deliveries",
+    "raw_values": {
+      "attempts_median_range": [
+        [
+          8,
+          3,
+          18
+        ],
+        [
+          16.5,
+          8,
+          38
+        ]
+      ],
+      "deliveries_median_range": [
+        [
+          5,
+          2,
+          12
+        ],
+        [
+          12,
+          6,
+          22
+        ]
+      ]
+    },
+    "comparison_selection": "TEAS vs sham",
+    "multiarm_handling": "Two arms",
+    "source_location": "Table3;Supplement2"
+  },
+  "duplicate_map": [
+    {
+      "related_study": "S031 Lu2021",
+      "classification": "INDEPENDENT TRIALS",
+      "evidence": "Different surgery populations and registrationsNCT02921529 versusNCT02741726.",
+      "source_location": "articlep2;registry",
+      "analysis_handling": "Independent trials."
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "PCA regimen/dose; QoR15 conflicting table/narrative; discharge distribution; complete ITT",
+      "why_it_matters": "False quartiles and discordant QoR would invalidate synthesis; exclusions affect assignment effect.",
+      "analysis_affected": "Opioid,QoR,recovery",
+      "can_proceed_without": "GI raw mean/SD sensitivity; no opioid or definitiveQoR.",
+      "priority": "HIGH",
+      "exact_question": "Supply PCA drug/route/concentration and actual0–24h systemic opioid amounts; confirm QoR15at24h54.5(15–92)vs59(27–136) or narrative50.5(IQR42.3–61.8)vs44.5(35–57); confirm discharge mean/SD and provide all100 randomized outcomes."
+    }
+  ],
+  "summary": "6/6rows audited;2 material errors corrected from IQR to min/max; opioid quantity absent even after supplement retrieval; QoR conflict recorded inPhaseA; recoveryRoBHigh."
+}

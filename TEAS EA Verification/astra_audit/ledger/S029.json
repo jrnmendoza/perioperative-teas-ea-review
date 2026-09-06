@@ -1,0 +1,27 @@
+{
+  "Study_ID": "S029",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "assigned_rows": [
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "rows_audited": 6,
+  "rob2_results": 16,
+  "outputs": [
+    "phase_a/S029.json",
+    "adjudicated/S029.json",
+    "ledger/S029.json"
+  ],
+  "limitations": [
+    "Sealed nonopaque envelope printed; cannot silently change to opaque.",
+    "ASAIII2EA vs11SA vs12NA despite broad statementbaselinecomparable.",
+    "Registry50Hz andbluntsham vsarticle100Hz and2mmpenetrating sham; articleusedforreceivedregimen.",
+    "Methods1mg/kgpethidine vsresult50mg-injectionunits; no verified drugroute or exact0–24h collection.",
+    "POD1pain not exact24h and conditionunreported."
+  ]
+}

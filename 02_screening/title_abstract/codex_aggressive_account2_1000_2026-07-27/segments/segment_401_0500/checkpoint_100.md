@@ -1,0 +1,21 @@
+# Segment 5 completion checkpoint
+
+- Global sequences: 401–500
+- Segment sequences: 1–100
+- First Covidence number: 1076
+- Last Covidence number: 1230
+- Registered votes: 100
+- Segment decisions: 3 Yes, 5 Maybe, 92 No
+- Combined effective decisions after #840 correction: 54 Yes, 25 Maybe, 421 No
+- Combined registered votes: 500
+- Unique Covidence numbers and timestamps: 500
+- Maybe validation: passed
+- Numbering gaps logged: 64
+- JSONL and CSV validation: passed
+- Reloaded Screen references: 1,941, matching 2,441 − 500
+- First untouched citation: Covidence #1231
+- Sequence 494 / Covidence #1220: timeout reconciled read-only from the Undo banner and next active citation; no repeat click
+- Sequences 495–500: completed with computer-control fallback after the Chrome control bridge stopped dispatching
+- Checkpoint screenshot: `screenshots/covidence_checkpoint_0500.png`
+- Other reviewer decisions viewed: no
+- Conflicts opened or resolved: no

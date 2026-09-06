@@ -1,0 +1,40 @@
+# Covidence screening checkpoint — 500 votes
+
+- Date: 2026-07-26
+- First Covidence number: #415
+- Last Covidence number: #1702
+- Total registered votes: 500
+- Yes: 63
+- Maybe: 52
+- No: 385
+- Protocols/trial registrations excluded: 181
+- Animal studies excluded: 52
+- Non-randomized studies excluded: 4
+- Wrong interventions excluded: 10
+- Non-acupoint TENS exclusions: 1
+- No-general-anaesthesia exclusions: 31
+- Non-surgical exclusions: 52
+- Timing exclusions: 9
+- Inseparable interventions excluded: 7
+- Ineligible active comparators excluded: 11
+- No-eligible-outcome exclusions: 11
+- Population exclusions: 4
+- Publication-type exclusions: 12
+- Ambiguous-randomization Maybe decisions: 8
+- Uncertain-timing Maybe decisions: 20
+- Uncertain-general-anaesthesia Maybe decisions: 19
+- Uncertain-outcome Maybe decisions: 1
+- Uncertain-intervention-separability Maybe decisions: 4
+- Possible companion reports: 23
+- Numbering gaps logged: 82
+- Unexplained numbering gaps: 0; the post-completion queue-rehydration behavior is documented separately.
+- Records with valid unique timestamps: 500
+- Attempted records without a registered vote: 0
+- Vote-record interface incidents during screening: 0
+- Post-completion queue-rehydration incident: 1
+- No conflicts were opened or resolved.
+- No other-reviewer decision was viewed.
+- JSONL and generated CSV validated with 500 unique, consecutive audit records and 500 unique Covidence numbers.
+- `screenshots/covidence_after_500.png` preserves the immediate post-vote state.
+- `screenshots/covidence_after_500_refreshed.png` preserves the refreshed queue state and updated navigation counts.
+- Screening stopped at exactly 500 newly registered votes; record 501 was not screened.

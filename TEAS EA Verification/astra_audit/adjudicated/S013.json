@@ -1,0 +1,677 @@
+{
+  "Study_ID": "S013",
+  "Study": "Yang 2020",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first page verified",
+    "title": "Effect of Electroacupuncture on Postoperative Gastrointestinal Recovery in Patients Undergoing Thoracoscopic Surgery: A Feasibility Study",
+    "year": 2020,
+    "doi": "10.12659/MSM.920648",
+    "pdf_files": [
+      "covidence_464_verified.pdf"
+    ],
+    "randomized_arms": {
+      "EA": 30,
+      "UC": 29
+    },
+    "analyzed_arms": {
+      "EA": 29,
+      "UC": 28
+    },
+    "modality": "EA",
+    "comparator_class": "usual care, no sham",
+    "independence": "Same research team as later Yang2024 report; source2020 explicitly pilot. Need compare recruitment if proposing both as independent.",
+    "source_locations": "Complete publication; see Phase A and row-specific locators",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 2,
+      "final": {
+        "Canonical study": "Yang 2020",
+        "Comparison ID": "YANG20_EA_vs_UC",
+        "Intervention arm": "EA + usual care",
+        "Comparator arm": "Usual care",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Time to first postoperative flatus",
+        "Timepoint/window": "From surgery to first flatus",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 29,
+        "Analyzed n intervention": 29,
+        "Analyzed n comparator": 28,
+        "Mean intervention": 20.8,
+        "SD intervention": 4.6,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 24.1,
+        "SD comparator": 6.2,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "hours",
+        "Reported P": "0.026",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw meanSD direct; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -3.3,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible GI-flatus result with High RoB; usual-care stratum; not opioid endpoint.",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+        "Source location": "p5 Table3; p3 outcomes; p4 Fig1",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_464_verified.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Yang 2020",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "YANG20_EA_vs_UC",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "EA + usual care",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Usual care",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to first postoperative flatus",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "From surgery to first flatus",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 29,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 29,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 28,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 20.8,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 4.6,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 24.1,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 6.2,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "hours",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.026",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw meanSD direct; MD arithmetic",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -3.3,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible GI-flatus result with High RoB; usual-care stratum; not opioid endpoint.",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p5 Table3; p3 outcomes; p4 Fig1",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_464_verified.pdf",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw meanSD direct; MD arithmetic",
+          "final_value": "Raw meanSD direct; MD arithmetic",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "reason": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -3.3000000000000007,
+          "source_value": -3.3,
+          "final_value": -3.3,
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "reason": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for GI-recovery meta-analysis",
+          "source_value": "Eligible GI-flatus result with High RoB; usual-care stratum; not opioid endpoint.",
+          "final_value": "Eligible GI-flatus result with High RoB; usual-care stratum; not opioid endpoint.",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "reason": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Open-label; 2/59 excluded after randomization; participant-report contribution unclear",
+          "source_value": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "final_value": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "reason": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "GI recovery results/table",
+          "source_value": "p5 Table3; p3 outcomes; p4 Fig1",
+          "final_value": "p5 Table3; p3 outcomes; p4 Fig1",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "reason": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1hsQR_K6W-5QNP4rqkVxHQaopRp4f1XF0/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_464_verified.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_464_verified.pdf",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "reason": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p5 Table3; p3 outcomes; p4 Fig1",
+          "reason": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_464_verified.pdf",
+      "source_evidence": "EA29:20.8±4.6h;UC28:24.1±6.2h meanSD;P=.026 Table3. Fig1randomized30/29,analyzed29/28. Flatus distinct from defecation53.9±6.0/57.5±7.2h.",
+      "drug": "morphine; rescue bucinnazine",
+      "route": "IV PCA; IM rescue",
+      "pca_formulation": "morphine1mg/kg+ketamine1mg/kg+ondansetron10mg in100mL;2mL/h background,1mL bolus10min lockout; bilateral care PVB20mL .375%ropivacaine and celecoxib200mgq12h",
+      "rescue_regimen": "bucinnazine100mg IM if VAS>3",
+      "critical_qc": "Open-label participant-reported flatus timing; two exclusions; prospective prespecification not established.",
+      "analysis_eligibility": "Eligible GI-flatus result with High RoB; usual-care stratum; not opioid endpoint.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S013_flatus",
+      "outcome": "Time to first flatus",
+      "time_window": "Surgery to event",
+      "comparison": "EA+usual care vs usual care",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p3 Randomization:SPSS allocation sequence",
+          "source_location": "p3 Randomization",
+          "reasoning": "p3 Randomization:SPSS allocation sequence"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p3 Randomization:sealed envelope opened by provider immediately before first treatment",
+          "source_location": "p3 Randomization",
+          "reasoning": "p3 Randomization:sealed envelope opened by provider immediately before first treatment"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "p4 Table1:baseline only analyzed57/59; randomization-wide baseline insufficient",
+          "source_location": "p4 Table1",
+          "reasoning": "p4 Table1:baseline only analyzed57/59; randomization-wide baseline insufficient"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "p3 Blinding:participants not blind",
+          "source_location": "p3 Blinding",
+          "reasoning": "p3 Blinding:participants not blind"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p3 Blinding:acupuncture provider not blind",
+          "source_location": "p3 Blinding",
+          "reasoning": "p3 Blinding:acupuncture provider not blind"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p3–4:commonPVB/PCA protocol; one noPVB exclusion does not show trial-context deviation",
+          "source_location": "p3–4",
+          "reasoning": "p3–4:commonPVB/PCA protocol; one noPVB exclusion does not show trial-context deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p3–4:conditional, no established trial-context departure",
+          "source_location": "p3–4",
+          "reasoning": "p3–4:conditional, no established trial-context departure"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p3–4:conditional, no established trial-context departure",
+          "source_location": "p3–4",
+          "reasoning": "p3–4:conditional, no established trial-context departure"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "p4:57 analyzed in assigned arms; missing outcomes inD3",
+          "source_location": "p4",
+          "reasoning": "p4:57 analyzed in assigned arms; missing outcomes inD3"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p4:no reassignment reported",
+          "source_location": "p4",
+          "reasoning": "p4:no reassignment reported"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "p4 Fig1:57/59; one control presurgery withdrawal, oneEA noPVB",
+          "source_location": "p4 Fig1",
+          "reasoning": "p4 Fig1:57/59; one control presurgery withdrawal, oneEA noPVB"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p4:nearly complete; conditional afterPY3.1",
+          "source_location": "p4",
+          "reasoning": "p4:nearly complete; conditional afterPY3.1"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p4:conditional afterPY3.1; exclusions not primarily flatus driven",
+          "source_location": "p4",
+          "reasoning": "p4:conditional afterPY3.1; exclusions not primarily flatus driven"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p4:conditional afterPY3.1",
+          "source_location": "p4",
+          "reasoning": "p4:conditional afterPY3.1"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p3:time-to-first-flatus is relevant GI milestone",
+          "source_location": "p3",
+          "reasoning": "p3:time-to-first-flatus is relevant GI milestone"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p3:same regular checks in both groups",
+          "source_location": "p3",
+          "reasoning": "p3:same regular checks in both groups"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "p3:participant who senses/reports flatus knows allocation despite masked observer",
+          "source_location": "p3",
+          "reasoning": "p3:participant who senses/reports flatus knows allocation despite masked observer"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "PY",
+          "evidence": "p5 Discussion:expectation/placebo effect cannot be ruled out for GI discomfort",
+          "source_location": "p5 Discussion",
+          "reasoning": "p5 Discussion:expectation/placebo effect cannot be ruled out for GI discomfort"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "PY",
+          "evidence": "p3,p5:unmasked participant symptom timing susceptible; subjective milestone and expectation likely influence report",
+          "source_location": "p3,p5",
+          "reasoning": "p3,p5:unmasked participant symptom timing susceptible; subjective milestone and expectation likely influence report"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p2–3:no prospectively finalizedSAP obtained; registry number alone insufficient",
+          "source_location": "p2–3",
+          "reasoning": "p2–3:no prospectively finalizedSAP obtained; registry number alone insufficient"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p3,p5:multipleGI measures, no contemporaneous plan confirming selected result",
+          "source_location": "p3,p5",
+          "reasoning": "p3,p5:multipleGI measures, no contemporaneous plan confirming selected result"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p3:no prospective plan confirming analysis",
+          "source_location": "p3",
+          "reasoning": "p3:no prospective plan confirming analysis"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "SPSS and concealed envelope probably adequate",
+          "source_location": "p3 Randomization"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departures demonstrated; awareness alone not bias",
+          "source_location": "p3 Blinding"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "57/59, missingness limited and reasons pre-outcome",
+          "source_location": "p4 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "High",
+          "reasoning": "Unblinded participant reports subjective milestone; masked collector cannot remove expectancy influence",
+          "source_location": "p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No demonstrated prospective analysis plan",
+          "source_location": "p2–3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "At least one domain is High; see domain-specific reasoning.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "No observed opioid consumption reported; PCA prescription not consumption",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "morphine;IM bucinnazine rescue",
+    "route": "IV PCA/IM rescue",
+    "unit": "Insufficient information / not reported.",
+    "raw_values": {},
+    "comparison_selection": "EA vs usual care",
+    "multiarm_handling": "Two arms",
+    "source_location": "p3 anesthesia;Tables3–4"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Prospective SAP and participant-masking/independent flatus ascertainment details",
+      "why_it_matters": "Selective reporting and measurement confidence",
+      "analysis_affected": "GI flatus",
+      "can_proceed_without": "Yes with stated High RoB",
+      "priority": "MEDIUM",
+      "exact_question": "Provide registry history/SAP dated before unblinded results and explain how first flatus was timed, by whom, and whether staff verified the participant report."
+    }
+  ],
+  "summary": "One row verified numerically; flatus RoB raised to High for unblinded symptom ascertainment. No postoperative opioid dose endpoint.",
+  "contacts": [
+    {
+      "missing_information": "Prospective SAP and participant-masking/independent flatus ascertainment details",
+      "why_it_matters": "Selective reporting and measurement confidence",
+      "analysis_affected": "GI flatus",
+      "can_proceed_without": "Yes with stated High RoB",
+      "priority": "MEDIUM",
+      "exact_question": "Provide registry history/SAP dated before unblinded results and explain how first flatus was timed, by whom, and whether staff verified the participant report."
+    }
+  ]
+}

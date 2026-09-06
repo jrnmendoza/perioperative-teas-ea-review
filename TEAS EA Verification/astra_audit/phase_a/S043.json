@@ -1,0 +1,300 @@
+{
+  "Study_ID": "S043",
+  "Study": "Lee 2011",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "identity": {
+    "title": "Needle-Free Electroacupuncture for Postoperative Pain Management",
+    "year": 2011,
+    "doi": "10.1155/2011/696754",
+    "pdf": "049_lee_2011.pdf"
+  },
+  "source_read": "All7 pages; Tables2,3,5,6,7,8 visually checked",
+  "arms": {
+    "order": [
+      "control",
+      "sham nonacupoint no current",
+      "high100Hz SSP",
+      "low3/10/20Hz SSP"
+    ],
+    "randomized": [
+      13,
+      12,
+      12,
+      12
+    ],
+    "analyzed": [
+      13,
+      12,
+      12,
+      10
+    ],
+    "modality": "TEAS (surface silver-spike-point electrodes; no needles despite EA label)",
+    "population": "Hysterectomy general anesthesia; age14–59 in Table2; adult-only eligibility unresolved"
+  },
+  "results": {
+    "opioid": {
+      "location": "p5 Table8 dosage delivered24hr, p3 §2.3",
+      "means_sd": [
+        [
+          38.63,
+          11.08
+        ],
+        [
+          34.2,
+          6.4
+        ],
+        [
+          31.14,
+          8.15
+        ],
+        [
+          29.29,
+          8.89
+        ]
+      ],
+      "unit": "mg IV morphine, as printed",
+      "window": "PCA starts1h and subsequent23h; totals match Table6 1–24h intervals excluding POR",
+      "pca": "0.8mg IV bolus,8min lockout; concentration/background/rescue not reported",
+      "conflicts": "Table8 times delivered multiplied by0.8mg do not reproduce dosage; no correction inferred",
+      "eligibility": "Hold opioid interpretation; not full0–24h; minimum age14"
+    },
+    "pain": {
+      "location": "p4 Table5",
+      "format": "mean SD VAS0–10 unspecified rest/movement",
+      "times": [
+        0,
+        0.5,
+        1,
+        1.5,
+        2,
+        3,
+        4,
+        8,
+        16,
+        24
+      ],
+      "h24": [
+        [
+          3.5,
+          1.27
+        ],
+        [
+          2.54,
+          0.86
+        ],
+        [
+          2.68,
+          1.63
+        ],
+        [
+          1.21,
+          1.31
+        ]
+      ],
+      "h16": [
+        [
+          4.46,
+          1.38
+        ],
+        [
+          3.04,
+          1.2
+        ],
+        [
+          3.55,
+          1.67
+        ],
+        [
+          2,
+          1.75
+        ]
+      ],
+      "h8": [
+        [
+          4.81,
+          1.38
+        ],
+        [
+          3.54,
+          1.54
+        ],
+        [
+          3.86,
+          1.71
+        ],
+        [
+          2.57,
+          1.41
+        ]
+      ],
+      "h4": [
+        [
+          5.65,
+          1.56
+        ],
+        [
+          4.17,
+          1.7
+        ],
+        [
+          4.14,
+          2.11
+        ],
+        [
+          2.71,
+          1.83
+        ]
+      ]
+    },
+    "bowel": {
+      "location": "p2 Table3",
+      "format": "mean SD hours to first bowel movement (not explicitly flatus/defecation)",
+      "values": [
+        [
+          37.54,
+          2.93
+        ],
+        [
+          38.03,
+          2.71
+        ],
+        [
+          35.5,
+          2.64
+        ],
+        [
+          33.3,
+          2.43
+        ]
+      ]
+    },
+    "ponv": "Insufficient information / not reported.",
+    "qor": "Insufficient information / not reported."
+  },
+  "source_conflicts": [
+    "Age minimum14 explicitly printed; cannot assert all-adult.",
+    "PCA starts1h; Table8 excludes POR by arithmetic, despite24h label.",
+    "0.8mg bolus does not reconcile delivery counts/dose.",
+    "49 randomized vs47 in abstract; two low-frequency exclusions."
+  ],
+  "rob2_independent": {
+    "common": {
+      "1.1": [
+        "Y",
+        "p2 random-number table; numbered enrollment order not itself sequence"
+      ],
+      "1.2": [
+        "NI",
+        "pp1–3 concealment before assignment not described"
+      ],
+      "1.3": [
+        "NI",
+        "p2 Table2 pooled demographics only"
+      ],
+      "2.1": [
+        "PY",
+        "p2 active surface stimulation vs sham no current; blind claim not sensory validated"
+      ],
+      "2.2": [
+        "NI",
+        "p2 providers claimed blinded but configuration/masking method insufficiently explained"
+      ],
+      "2.3": [
+        "PN",
+        "p2 same PCA/general anesthesia; no trial-context nonprotocol interventions described"
+      ],
+      "2.4": [
+        "NA",
+        "2.3 PN"
+      ],
+      "2.5": [
+        "NA",
+        "2.4 NA"
+      ],
+      "2.6": [
+        "PY",
+        "Fig1/p4 excludes two low-frequency patients with missing VAS; analyzed in original groups"
+      ],
+      "2.7": [
+        "NA",
+        "2.6 PY; missing outcomes assessed D3"
+      ],
+      "3.1": [
+        "N",
+        "Low-frequency10/12 vs complete other arms13,12,12"
+      ],
+      "3.2": [
+        "N",
+        "No sensitivity analysis for two omitted patients"
+      ],
+      "3.3": [
+        "PY",
+        "Inability to perform VAS could depend on pain/sedation/recovery"
+      ],
+      "3.4": [
+        "NI",
+        "Reason for inability not explained"
+      ],
+      "4.1": [
+        "N",
+        "VAS0–10 and timing bowel movement suitable; opioid assessed separately"
+      ],
+      "4.2": [
+        "N",
+        "same follow-up schedule"
+      ],
+      "4.3": [
+        "PY",
+        "Participant assessor, perceptible current before/after surgery"
+      ],
+      "4.4": [
+        "Y",
+        "Pain and self-reported bowel milestone susceptible to knowledge"
+      ],
+      "4.5": [
+        "NI",
+        "Actual influence/masking success not demonstrated"
+      ],
+      "5.1": [
+        "NI",
+        "No registration/SAP provided in full7 pages"
+      ],
+      "5.2": [
+        "NI",
+        "No prospective definition of result selection"
+      ],
+      "5.3": [
+        "NI",
+        "Several post-hoc analysis choices without prospective plan"
+      ]
+    },
+    "opioid_measurement": {
+      "4.1": [
+        "NI",
+        "Dose/count arithmetic inconsistent; cannot validate computation"
+      ],
+      "4.2": [
+        "PN",
+        "same pump regimen across groups"
+      ],
+      "4.3": [
+        "N",
+        "blinded collecting nurse/recorded doses"
+      ],
+      "4.4": [
+        "NA",
+        "4.3 N"
+      ],
+      "4.5": [
+        "NA",
+        "4.3 N"
+      ]
+    },
+    "overall_low_frequency": "High",
+    "overall_high_frequency": "Some concerns",
+    "reason": "Low frequency attrition2/12 with unknown health-related inability plus subjective unmasking and lack of concealment/prespecification lowers confidence substantially. High-frequency comparisons have complete outcome data but unclear concealment/prespecification."
+  },
+  "independence": "Protocol differs from Lin2002: surface SSP pre+post,49 random,0.8mg PCA versus needles pre only,100random,2mg PCA. Likely independent trial; recruitment dates absent."
+}

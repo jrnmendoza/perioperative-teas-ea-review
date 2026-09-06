@@ -1,0 +1,627 @@
+=== PDF PAGE 1 ===
+Journal    of    Pain    Research
+
+
+
+
+   Open  Access  Full  Text  Article                                                                                                 CLINICAL TRIAL REPORT
+Transcutaneous     Electrical     Acupoint     Stimulation
+(TEAS)     Facilitates     Postoperative     Recover y     in     Day
+Lung     Cancer     Surger y:     A     Randomized     Controlled
+Trial
+
+Siyin Wu             1,*, Jieqiong Lou              2,*, Houdong Zou                  3,*, Wei Wang              1, Yunyun Zhang                1, Yunhua Xu             4,
+Xumin Hou             2, Jingxiang Wu                  1
+
+
+
+1Department  of  Anesthesiology,  Shanghai  Chest  Hospital,  Shanghai  Jiao  Tong  University,  School  of  Medicine,  Shanghai,  People’s  Republic  of  China;
+2President’s Office, Shanghai Chest Hospital, Shanghai Jiao Tong University, School of Medicine, Shanghai, People’s Republic of China;                                     3Department of
+Science and Education, Shanghai Chest Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, People’s Republic of China;                                       4Department
+of  Shanghai  Lung  Cancer  Center,  Shanghai  Chest  Hospital,  Shanghai  Jiao  Tong  University,  School  of  Medicine,  Shanghai,  People’s  Republic  of  China
+
+*These  authors  contributed  equally  to  this  work
+
+Correspondence: Jingxiang Wu, Department of Anesthesiology, Shanghai Chest Hospital, Shanghai Jiao Tong University, School of Medicine, No. 241
+West  Huaihai  Road,  Shanghai,  People’s  Republic  of  China,  Tel  +86  18930857186,  Email  wu_jingxiang@sjtu.edu.cn;  Xumin  Hou,  President’s  Office,
+Shanghai  Chest  Hospital,  Shanghai  Jiao  Tong  University,  School  of  Medicine,  Shanghai,  People’s  Republic  of  China,  Tel  +86-021-62821990,
+Email  hxmchest@163.com
+
+
+Background: Day    thoracic    surgery    requires    effective    analgesia    and    a    rapid    recovery.    This    study    evaluated    whether    Transcutaneous
+Electrical   Acupoint   Stimulation   (TEAS)   reduces   postoperative   pain   and   analgesic   use   in   lung   cancer   surgery.
+Methods: In   this   randomized,   sham-controlled   trial  at   a   tertiary   hospital   in  Shanghai,   100   patients   (18–70   years   old,   ASA  I–II)   who
+underwent          day          lung          cancer          surgery          (video-assisted          thoracoscopic          pulmonary          wedge          resection)          were          enrolled.          Participants          were
+randomized       to       receive       either       TEAS       or        sham       TEAS        in       the        Post-Anesthesia       Care       Unit.       The        TEAS       group        received       30        minutes       of
+stimulation     at     Hegu     (LI4)     and     Neiguan     (PC6),     whereas     the     sham     group     received     electrode     placement     without     stimulation.     Primary
+outcome was pain intensity 24 h after surgery, measured using the visual analog scale (VAS). Secondary outcomes were VAS scores at
+1    h    and    12    h    post-surgery,    analgesic    consumption,    incidence    of    moderate-to-severe    pain    (VAS    score    >4),    incidence    of    postoperative
+nausea    and   vomiting   (PONV),   Quality   of   Recovery   (QoR-15)   scores,   and   safety   events.
+Results: The  TEAS  group  had  significantly  lower  VAS  scores  at  1  hour  (0.94  vs  1.84,  p  =  0.006),  12  hours  (2.00  vs  5.40,  p  <  0.001),
+and  24  hours  (1.72  vs  4.02,  p  <  0.001).  The  incidence  of  moderate-to-severe  pain  within  12  hours  was  reduced  (12.0%  vs  74.0%,  p  <
+0.001).   Analgesic   consumption   was   lower   in   the   TEAS   group.   The   QoR-15   scores   at   24   h   were   higher   in   the   TEAS   group   (130.8   vs
+115.9,   p   <   0.001).   No    significant   differences   were   observed   in   PONV,   length   of   hospital   stay,   or   adverse    events.
+Conclusion: TEAS  reduces  postoperative  pain  and  analgesic  use,  improves  the  recovery  quality  in  lung  cancer  surgery,  and  supports
+its    integration   into   ERAS   protocols.
+Trial  Registration: ChiCTR2200066600. https://www.chictr.org.cn/showproj.html?proj=187035.
+Keywords:         transcutaneous        electrical        acupoint        stimulation,        postoperative        pain,        day        surgery,        lung        cancer,        enhanced        recovery        after
+surgery
+
+
+Introduction
+Day  thoracic  surgery,  specifically  lung  resection  procedures  aimed  at  same-day  or  next-day  discharge,  aligns  with  principles  of
+Enhanced Recovery After Surgery (ERAS). ERAS protocols are designed to optimize patient outcomes by minimizing surgical
+stress   and   promoting   faster   recovery.   The   adoption   of   day   thoracic   surgery   offers   numerous   advantages,   including   a   shortened
+hospital       stay,      reduced       healthcare      costs,       and      improved       patient      satisfaction.1,2 However,      day      thoracic       surgery       presents      unique
+
+
+                                                          Journal  of  Pain  Research  2025:18  3017–3026                                                                              3017
+                                                                           © 2025 Wu et al. This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.php
+                                                                           and incorporate the Creative Commons Attribution – Non Commercial (unported, v4.0) License (http://creativecommons.org/licenses/by-nc/4.0/). By accessing the work
+                                                           you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For
+                                                          permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).
+
+=== PDF PAGE 2 ===
+Wu  et  al
+
+challenges, such as significant postoperative pain and the critical impact on respiratory function, which necessitate more rigorous
+and effective pain management strategies.3–6 Traditional analgesic methods such as intravenous opioids often require prolonged
+administration,      which      is      incompatible      with      the      rapid      discharge      goals      of      day      surgery.      Moreover,      opioids      are      associated      with
+adverse effects such as nausea, vomiting, sedation, and respiratory depression, which can hinder recovery. Alternative techniques,
+such  as  single-dose  nerve  blocks,  provide  limited  pain  relief  and  may  require  additional  intervention.4,7,8
+     Transcutaneous   Electrical   Acupoint   Stimulation   (TEAS)   has   emerged   as   a   promising   non-pharmacological   analgesic
+method      on      labor      pain,      cancer-related      pain,      myofascial      pain      syndrome,      and      postoperative      pain.9–12                      TEAS      involves      the
+application      of      electrical      stimulation      to      specific      acupoints,      such      as      Hegu      (LI14)      and      Neiguan      (PC6),      which      have      been
+reported   to   alleviate   pain   and   improve   recovery   outcomes.13–15 Recent   research   has   shown   that   electroacupuncture   may
+alleviate        pain        by        blocking        central        sensitization        mediated        by        the        BDNF/TrkB        signaling        pathway.16   Unlike        traditional
+acupuncture,     TEAS     is     noninvasive,     poses     no     risk     of     infection     or     bleeding,     and     can     be     easily     administered     in     the     Post-
+Anesthesia      Care      Unit      (PACU)      without      the      need      for      prolonged      intervention.14                  Previous      studies      have      demonstrated      the
+efficacy  of  TEAS  in  reducing  postoperative  pain  and  opioid  consumption  in  various  surgical  settings.9,17–19 However,  its
+application         in         daily         thoracic         surgery         remains         unexplored.         This         randomized         controlled         trial         aimed         to         investigate         the
+efficacy  of  TEAS  in  enhancing  postoperative  recovery  and  facilitating  early  discharge of  patients  undergoing  surgery for
+lung cancer. The  primary  hypothesis was  that TEAS would  effectively  alleviate postoperative pain  and enhance recovery
+quality,    thereby    supporting    its    integration    into    ERAS    protocols    for    daily    thoracic    surgery.
+
+Methods
+Aim,   Design,   and   Setting
+This      study      was      a      randomized      controlled      trial      conducted      at      Shanghai      Chest      Hospital,      Shanghai,      China.      The      study      was
+approved     by     the      Institutional     Review      Board     of      Shanghai     Chest      Hospital      (IRB      #KS     (Y)      23025)      and      was     conducted     in
+accordance   with   the   Nuremberg   Code,   Declaration   of   Helsinki,   and   relevant   Chinese   regulations.   Informed   consent   was
+obtained from all participants. This trial was registered  in the  Chinese Clinical Trial Registry (No. ChiCTR2200066600).
+
+Participants
+Eligible   patients   were   scheduled   for   ambulatory   video-assisted   thoracoscopic   pulmonary   wedge   resection   under   general
+anesthesia,   aged   18–70   years,   and   with   ASA   of   Anesthesiologists   grade   I   or   II.   The   inclusion   criteria   were   normal   liver
+and    kidney    functions,    compliance    with    treatment    and    follow-up,   and    clear    communication    ability.
+     Participants were excluded if they had previously undergone  surgical  intervention along the  meridian or  had a  history
+of local infection, trauma, or significant scarring at meridian points. Additional exclusion criteria included the presence of
+upper   or   lower   limb   nerve   damage,   a   long   history   of   sedation,   use   of   analgesics   or   antidepressants,   a   history   of   surgery
+associated     with      chronic     incision      pain,      pregnancy      or     breastfeeding,      and      participation      in     any      similar      trial     (including     the
+TEAS    trial)    within    3    months    prior    to    the    current    trial.    Patients    who    were    unable    to    complete    the    study    plan    because    of
+language   difficulties,    infectious    diseases,    or    other    medical    histories    were    also    excluded.
+
+Randomization   and   Blinding
+Eligible     participants     (n=100)     were     randomly     assigned     (1:1)     to     receive     either     TEAS     or     sham     TEAS     upon     arrival     at     the
+Post-Anesthesia   Care   Unit   (PACU).   Randomization   was   performed   using   a   computer-generated   list   of   random   numbers
+created  by  an  independent  third  party.  A  professionally  trained  anesthesiologist  administered  the  interventions  according
+to    a    serial    number    corresponding    to    the    random    number   table    All    clinicians    and    researchers    collecting    or    analyzing    the
+data       were       blinded       to       the       group       assignments.       To       enhance       blinding,       the       sham       TEAS       group       received       electrode       patches
+affixed        without         electrical         stimulation        to         simulate         the         sensory         experience        without         actual         electrical         current.         Complete
+blinding   of   all   subjects   was   attempted;   however,   the   sensation   of   electrical   stimulation   can   bring   about   some   perceptual
+differences,   and  this   difference   may  affect  the   interpretation  of  the  result.   Nonetheless,  considering   that  the  participants’
+consciousness  level  was  basically  low  when  they  entered  the  PACU,  the  weak  current  intensity  might  not  be  detected  by
+
+
+3018           https://doi.org/10.2147/JPR.S529193                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 3 ===
+                                                                                                                                                                                                            Wu  et  al
+
+the   patients.   In   the   event   of   serious   adverse   events,   the   investigator   or   clinician  could   re-evaluate  the   patient’s   treatment
+and    provide    appropriate    relief,    leading    to    withdrawal    from    the    trial.
+
+Anesthetic   and   Surgical   Management
+Ultrasound-guided            thoracic            paravertebral            nerve           blocks            were           performed           at            T4-7           levels.            After           anesthesia            induction,
+endotracheal     intubation     was     performed,     adopting     one-lung     ventilation     and     a     protective     lung     ventilation     strategy.20 The
+patients’          core          temperature          was          maintained          stable         by          using          41°C          infusion          heating          and          a          warm          air          blower,          and          the
+bispectral   index  (BIS)  was  maintained  between  40–60   throughout  the  operation.  Vasoactive  agents  were  administered  to
+maintain   the    heart   rate   and   blood   pressure   within   20%   of   the   baseline   values,   and    200   mg   of   sugammadex   sodium    was
+administered  postoperatively.  Sufentanil,  propofol,  and  rocuronium  bromide  were  used  for  anesthesia  induction,  whereas
+propofol, remifentanil, rocuronium bromide, and dexmedetomidine were continuously administered during the operation.
+Ropivacaine  (150  mg)  is  used  for  TPVB,21 but  postoperative  patient-controlled  analgesia  (PCA)  is  not  routinely  applied.
+No        additional        postoperative        analgesics        were        administered        unless        the        postoperative        VAS(visual        analogue        scale)        score
+exceeded       4.       Paracetamol       and       oxycodone       with       acetaminophen       tablets       or       intravenous       parecoxib       sodium       (40       mg)       were
+administered.22 More    details    can    be    found    in Supplementary    Material    1.
+
+Inter vention
+Upon         arrival         in         the         PACU,         participants         were         randomly         assigned         to         the         TEAS         or         Sham         groups.         Prior         to         anesthesia
+induction,       all       patients       were       informed       about       the       potential       use       of       TEAS       for       postoperative       pain       management       and       were
+shown    the    electrode    patches    to    be    applied    to    specific    acupoints,    ensuring    awareness    and    minimizing    placebo    effects.
+      In   the   TEAS   group,   an   experienced   anesthesiologist   administered   Transcutaneous   Electrical   Acupoint   Stimulation   at
+the  bilateral  Hegu  (LI14)  and  Neiguan  (PC6)  points23 using  an  acupoint  nerve  stimulator  (Model:  HANS-200A;  Nanjing
+Jisheng  Medical  Technology  Co.,  Ltd.).  The  device  delivered  fixed-intensity  electrical  stimulation  at  frequencies  of  2  hz
+and 10 hz and a current of 12–20 mA for 30 min.24 Stimulation began immediately upon PACU arrival, while the patients
+were    still    under    residual    anesthesia,    ensuring    consistency    and    minimizing    the    placebo    effects.
+      In       the       sham       TEAS       group,       electrode       patches       were      affixed       to       the       same       acupoints       without       electrical       stimulation       for
+30  min.  The  presence  of  electrode  patches  and  prior  briefings  created  a  comparable  experience,  maintained  blinding,  and
+reduced    psychological    biases.
+      Administering        TEAS        during        residual        anesthesia        reduced        the        likelihood        of        participants        discerning        their        group        based        on
+sensation.           TEAS          participants           might          experience          numbness          and          acid           distension          at          acupoints          if           they          become           more          awake,
+reinforcing      the      perception     of      receiving     active      treatment.     Conversely,     sham     TEAS      participants,     despite      no     active     stimulation,
+might believe that they received TEAS due to the electrode patches and initial briefing, further minimizing placebo-related bias.
+      TEAS            was           implemented           in            accordance           with           the           Standards           for           Reporting           of           Controlled           Trials           in           Acupuncture
+(STRICTA)    guidelines    to    ensure    methodological    rigor    and    reproducibility.23
+
+Outcomes
+The    primary    outcome    was    pain    intensity    24    h    after    surgery,    measured    using    visual    analog    scale    (VAS)    scores    (0–10).
+      Secondary outcomes included VAS scores at 1 h and 12 h post-surgery, incidence of moderate to severe pain (VAS >4) in
+the first 12 h, analgesic consumption, incidence of postoperative nausea and vomiting (PONV) within 1 hour, 1–12 hours, and
+12–24  hours  post-surgery,  Quality  of  Recovery  (QoR-15)25 scores  at  24  h  post-surgery,  length  of  hospital  stay,  and  safety.
+
+Statistical   Analysis
+We    evaluated   the    distributions   of    continuous   variables    using   histograms    and    QQ    plots    and    checked   for    normality    using
+the  Shapiro–Wilk  test.  Normally  distributed  continuous  variables  were  expressed  as  mean  ±  standard  deviation  (SD)  and
+compared       using       Student’s t-test.       Asymmetrically       distributed       variables       were       presented       as       medians       (interquartile       range
+[IQR])             and             compared             using             the             Mann–Whitney U-test.             Categorical             variables             are             expressed             as             absolute             numbers
+(percentages)          and         compared         using          Pearson’s         χ2         test         with         continuity         correction         or         Fisher ’s         exact         test.          Mixed         linear
+models were used for repeated measures, considering the treatment group, time, and their interaction as fixed effects with
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                  https://doi.org/10.2147/JPR.S529193                                                                                                                                                                                                                                                                                                                                                                                                   3019
+
+=== PDF PAGE 4 ===
+Wu  et  al
+
+a random intercept for each participant. Estimates were summarized as mean differences (MD) or relative risks (RR) with
+95%   confidence   intervals   (CI).   A   2-factor   repeated   measures   ANOVA was   used   to   analyze   the   VAS   scores   at   each   time
+point    post-surgery.    The    Kolmogorov–Smirnov    test    was    used    to    assess    data    normality.    Statistical    significance    was    set    at
+a       95%       confidence       limit       and       p       <       0.05.       All       outcomes       were       evaluated       in       the       intention-to-treat       (ITT)       population,       which
+included      all      subjects      in      the      full     analysis      set      (FAS).      Statistical      analyses      were      performed      using      SPSS      version      21      (IBM,
+Armonk,    NY,    USA),    Stata    14    (StataCorp,    TX,    USA),    and    GraphPad    Prism    (version    7.0,    GraphPad    Software,    USA).
+
+Calculation   of   Sample   Sizes
+The     sample     size     was     determined     based     on     a     25%     reduction     in     pain     scores     with     a     statistical     power     of     90%     and     a     type
+I   error   of   5%.   This   calculation   was   based   on   preliminary   data,   where   patients   receiving   standard   general   anesthesia   had
+a      mean      VAS      pain      score      of      4.05      with      a      standard      deviation      of      1.95      in      the      first      24      h      postoperatively.      A      25%      reduction
+corresponds      to      a      VAS      score      decrease      of      at      least      1      point      (from      4      to      3),      which      is      considered      clinically      significant      as      it
+transitions  pain  from  moderate  to  mild  levels.  To  account  for  the  potential  loss  to  follow-up  (estimated  at  approximately
+20%),    50    patients    per    treatment    group    were    included,    resulting    in    a    total    of    100    participants.
+
+Results
+Participant   Flow
+Between   January   5,    2023,   and   May    28,   2023,   132    patients   admitted   to   the    day    ward   of   the    Chest   Hospital   Affiliated   to
+Shanghai    Jiao    Tong    University    School    of    Medicine    for    minimally    invasive    lung    cancer    surgery    were    screened.    Among
+them,     32     refused     to     sign     an     informed     consent     form     or     met     at     least     one     exclusion     criterion.     Consequently,     100     eligible
+patients     were      selected     and      randomly     assigned      to     two      groups:     50      in     the      TEAS     group      and     50      in     the      control      group.      All
+patients      successfully      completed      the      final      follow-up,      with      no      data      loss,      except      for      three      patients      who      were      discharged
+within     24     hours     post-surgery     and     could     not     be     contacted     for     data     collection     at     the     24-hour     mark.     All     the     results     were
+included in the final analysis according to the ITT principle (Figure 1). Baseline demographics and clinical characteristics
+were    well    balanced    between    the    two    groups    (Table    1).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1 CONSORT  flow  diagram  of  the  study  participants.
+Abbreviation:  ITT,  intention-to-treat.
+
+
+3020             https://doi.org/10.2147/JPR.S529193                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 5 ===
+                                                                                                                                                                                                          Wu  et  al
+
+                                     Table  1 Baseline  Demographics  and  Clinical  Characteristics
+
+                                                                                                        TEAS  (n=50)                Control  (n=50)               P  value
+
+                                       General  Characteristics
+                                       Age  (SD),  y                                                    49.3  (11.5)                50.1  (11.4)                  0.585
+                                       Female,  No.  (%)                                                35  (70.0%)                 35  (70.0%)                   1.000
+                                       BMI  (SD),  kg/m²                                                23.8  (3.1)                 22.9  (3.2)                   0.734
+                                       ASA  (I/II)                                                      30/20                       26/24                         0.420
+                                       Previous  surgical  history,  No.  (%)                           12  (24.0%)                 13  (26.0%)                   0.817
+                                       Surgical  Characteristics
+                                       Operation  duration  (SD),  min                                  52.1  (14.2)                52.0  (15.6)                  0.968
+                                       Anesthesia  duration  (SD),  min                                 77.7  (13.7)                76.6  (15.4)                  0.707
+                                       Incisive  length  (SD),  cm                                      3.4  (0.3)                  3.5  (0.3)                    0.594
+                                       Time  of  one-lung  ventilation,  min                            47.4  (13.5)                46.7  (14.2)                  0.812
+                                       Anesthetic  Consumption  During  Surgery
+                                       Propofol  (i.v.)  (SD),  mg                                      491.6  (79.0)               480.1  (69.9)                 0.441
+                                       Dexmedetomidine  (i.v.)  (SD),  mcg                              29.1  (13.3)                26.9  (12.8)                  0.393
+                                       Sufentanil  (i.v.)  (SD),  mcg                                   24.2  (9.5)                 24.3  (10.9)                  0.953
+                                       Remifentanil  (i.v.)  (SD),  mcg                                 489.4  (226.0)              533.8  (263.6)                0.368
+                                       Rocuronium  bromide  (i.v.)  (SD),  mg                           55.9  (9.4)                 57.5  (13.0)                  0.480
+                                       Ropivacaine  (TPVB)  (SD),  mg                                   154.0  (46.8)               139.5  (46.1)                 0.122
+                                       Anesthesia  Resuscitation
+                                       Extubation  time  (SD),  min                                     23.1  (8.4)                 25.7  (9.2)                   0.136
+                                       Duration  of  PACU  (SD),  min                                   65.5  (6.0)                 68.1  (10.1)                  0.116
+
+                                     Abbreviations:  BMI,  body  mass  index;  ASA,  American  Society  of  Anesthesiologists;  IV,  intravenous  injection;
+                                     TPVB,  thoracic  paravertebral  block;  PACU,  post-anesthesia  care  unit.
+
+Primar y   Outcome
+The    primary    outcome    of    this    study    was    pain    intensity    24    hours    after    surgery,    as    measured    by    the    VAS    score.    The    VAS
+score at 24 hours post-surgery was significantly lower in the TEAS group compared to the control group (TEAS 1.7 ± 0.9
+vs    control    4.0    ±    1.4,    p    <    0.001)    (Table    2).
+
+
+                            Table       2   Primary       and       Secondary       Outcomes       of       TEAS       vs       Control        in       Facilitating       Postoperative
+                            Recovery   in  Day  Lung  Cancer  Surgery
+
+                               Outcome                                                                           TEAS  Group                Control  Group                 P  value
+                                                                                                                 (n=50)                     (n=50)
+
+                               Primary  Outcome
+                               Mean  VAS  Score  at  24  h  (SD)                                                 1.7  (0.9)                 4.0  (1.4)                     <0.001
+                               Secondary  Outcomes
+                               VAS  Scores
+                               At  1  h                                                                          0.9  (1.2)                 1.8  (1.6)                     0.006
+                               At  12  h                                                                         2.0  (1.1)                 5.4  (1.6)                     <0.001
+                               Incidence  of  VAS  Score  >4  in  the  first  12  h,  No.  (%)                   6  (12.0%)                 37  (74.0%)                    <0.001
+                               Use  of  Rescue  Analgesics*
+                               Compound  paracetamol,  (P.O.)  (SD)                                              0.3  (0.5)                 0.8  (0.9)                     0.001
+                               Oxycodone  with  acetaminophen,  (P.O.)  (SD)                                     0.3  (0.5)                 0.3  (0.6)                     0.864
+                               Parecoxib  sodium,  (i.v.)  (SD)                                                  4.8  (13.1)                11.2  (18.1)                   0.046
+                               Use  of  Rescue  Antiemetics
+                               Metoclopramide,  (i.m.)  No.  (%)                                                 5  (10.0%)                 5  (10.0%)                     1.000
+
+                                                                                                                                                                      (Continued)
+
+
+
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                               https://doi.org/10.2147/JPR.S529193                                                                                                                                                                                                                                                                                                                                                                                                   3021
+
+=== PDF PAGE 6 ===
+Wu  et  al
+
+                               Table  2 (Continued).
+
+                                Outcome                                                                                TEAS  Group                  Control  Group                  P  value
+                                                                                                                       (n=50)                       (n=50)
+
+                                Frequency of  Vomiting
+                                Within  1  h                                                                           0  (0.0%)                    1  (2.0%)                       1.000
+                                1  h–12  h                                                                             15  (30.0%)                  21  (42.0%)                     0.298
+                                12  h–24  h                                                                            2  (4.0%)                    4  (8.0%)                       0.674
+                                QoR-15  Score  at  24  h  After  Surgery
+                                Total  score  of  all  items                                                           130.8  (9.0)                 115.9  (12.2)                   <0.001
+                                Sleep  quality                                                                         5.9  (2.1)                   4.3  (2.2)                      <0.001
+                                Postoperative  activity  evaluation                                                    15.3  (2.0)                  13.6  (2.6)                     <0.001
+                                Gastroenteric  function                                                                10.8  (3.1)                  10.7  (2.8)                     0.785
+                                Psychological  assessment                                                              17.1  (1.7)                  14.2  (2.1)                     <0.001
+                                Length  of  Hospital  Stay  (LOS)  No.  (%)
+                                <24  h                                                                                 1  (2.0%)                    0  (0.0%)                       0.315
+                                24–36  h                                                                               9  (18.0%)                   9  (18.0%)                      1.000
+                                36–48  h                                                                               40  (80.0%)                  40  (80.0%)                     1.000
+                                48–72  h                                                                               0  (0.0%)                    1  (2.0%)                       0.315
+                                Expense  of  Hospitalization  (CNY,  yuan)                                             44,978                       45,885                          0.637
+
+                              Note:  *Analgesics  administered  within  the  initial  24  hours  post-surgery.
+
+Secondary   Outcomes
+The   level    of    pain    was    low    in    both    groups   1    hour    after    surgery,    but    the    VAS    score    in    the    TEAS    group    was    significantly
+lower   than   in   the   control    group   (TEAS   0.9    ±   1.2   vs   control   1.8    ±   1.6,   p   =   0.006).    Similarly,   the    VAS   score   at   12   hours
+after surgery was  significantly  lower in  the  TEAS group  compared  to  the  control group  (TEAS 2.0  ±  1.1  vs  control 5.4  ±
+1.6,    p    <    0.001).    The    pain    level    was    highest    12    h    postoperatively,    with    the    prevalence    of    moderate-to-severe    pain    (VAS
+>4)  being  markedly  higher  in  the  control  group  than  in  the  TEAS  group  within  the  first  12  h  after  surgery  (TEAS  12.0%
+vs    control    74.0%,    p    <    0.001)    (Table    2).
+      In  terms  of  postoperative  analgesic  use,  the  dose  of  oral  compound  paracetamol  in  the  TEAS  group  was  significantly
+lower       than        in       the        control       group        (TEAS       0.3        ±        0.5       tablets        vs        control       0.8        ±        0.9       tablets,        p       =       0.001).        The       oral        dose       of
+oxycodone with acetaminophen was similar between the TEAS and control groups (TEAS 0.3 ± 0.5 tablets vs control 0.3
+±      0.6      tablets,      p      =      0.864).      The      postoperative      intravenous      parecoxib      sodium      dose      was      significantly      lower      in      the      TEAS
+group    than    in    the    control    group    (TEAS    4.8    ±    13.1    mg    vs    control    11.2    ±    18.1    mg,    p    =    0.046)    (Table    2).
+      Postoperative vomiting primarily occurred 1–12 hours postoperatively in both groups. Notably, none of the patients in
+the      TEAS       group       vomited       within       1       h       after       the       intervention,       whereas       one       patient       in       the       control       group       vomited       within
+1 h. The incidence of vomiting was similar between the TEAS and control group 1–12 hours after surgery. (TEAS group:
+15         patients          vs          control          group:          21         patients,          p          =          0.298).          Between          12–24          hours          after          surgery,          the          number          of          patients
+experiencing    vomiting    was     relatively     low,     with    no    significant    difference    between     the    two     groups    (TEAS:    2     patients    vs
+control:  4  patients,  p  =  0.674).  Patients  with  severe  vomiting  were  administered  10  mg  metoclopramide  intramuscularly,
+and   there   was   no  significant   difference   in   the   number   of   patients   who   received   metoclopramide   between   the   two   groups
+(TEAS:   5    patients    vs    control:    5    patients,    p    =    1.000)    (Table    2).
+      Short-term       recovery        quality       was       higher       in       the       TEAS       group       than       in       the       control       group,       with       the       QoR-15       score       at
+24   h   post-surgery   being   significantly   higher   in   the   TEAS   group   than   in   the   control   group   (TEAS   130.8   ±   9.0   vs   control
+115.9      ±      12.2,      p      <      0.001).      Similarly,      the      scores      for      sleep      quality      were      higher      in      the      TEAS     group      (TEAS      5.9      ±      2.1      vs
+control        4.3        ±        2.2,        p        <        0.001),        indicating        that        TEAS        can        remarkably        enhance        the        sleep        condition        of        patients        within
+24   hours    after   surgery.   The    recovery   of    motor    function   was    better    in    the    TEAS   group    than    in    the    control    group    (TEAS
+15.3     ±     2.0     vs     control     13.6     ±     2.6,     p     <     0.001).     There     was     no     significant     difference     in     gastrointestinal     function     recovery
+between   the    two    groups   (TEAS    10.8    ±   3.1    vs   control    10.7   ±   2.8,    p    =   0.785).    In   terms   of   psychological   assessment,    the
+
+
+3022            https://doi.org/10.2147/JPR.S529193                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 7 ===
+                                                                                                                                                                                                                             Wu  et  al
+
+score   was   significantly   higher   in   the   TEAS   group   (TEAS   17.1   ±   1.7   vs   control   14.2   ±   2.1,   p   <   0.001),   indicating   lower
+levels    of    anxiety    and    depression    in    the    TEAS    group    (Table    2).
+      There    were    no    significant    differences    in    the    mean    length    of    hospital    stay    and    hospitalization    costs    between    the    two
+groups.      In      addition      to      nausea,      vomiting,      and      postoperative      pain,      the      most      common      adverse      event      was      dizziness,      with
+a comparable incidence between the two groups (TEAS: 8 patients vs control: 10 patients, p > 0.05). TEAS generally has
+few    and    mild    adverse    reactions,    mainly    including    local    skin    reactions    such    as    itching    and    erythema,    as    well    as    pain    or
+local      discomfort,      and      none      of      these      adverse      reactions      were      observed.      No      other      serious      adverse      events      were      observed
+during    the    trial    (Table    2).
+
+Discussion
+Our     results     demonstrated     that     TEAS     significantly     reduced     pain     intensity     24     h     post-surgery,     as     evidenced     by     the     lower
+VAS    scores    compared    to    the    control    group.    Additionally,    TEAS    was    associated    with    a    lower    incidence    of    moderate-to-
+severe  pain within  the  first  12  h  after  surgery,  reduced  need  for  certain  analgesics,  and improved  overall  recovery  quality
+as          measured         by         the         QoR-15         score.          However,         there         was          no         significant          difference          in          the         incidence         of          postoperative
+vomiting,       use       of       oxycodone       and       acetaminophen,       length       of       hospital       stay,       or       hospitalization       expense       between       the       two
+groups.
+      This    study    addressed    the    critical    gap    in    postoperative    pain    management    in    patients    undergoing    thoracic    surgery.    To
+the     best     of     our     knowledge,     this     is     the     first     randomized     controlled     clinical     trial     to     investigate     the     use     of     transcutaneous
+electrical  acupoint  stimulation  (TEAS)  in  day  thoracic  surgery.  Chen  et  al  investigated  the  postoperative  analgesic  effect
+of         TEAS         following         conventional         minimally         invasive         lung         cancer         surgery         and         documented         that         VAS         scores,         opioid
+consumption,       and       the       incidence       of       nausea       and       vomiting       were       significantly       reduced-24–48       hours       after       surgery       in       the
+TEAS      group     treated     with      patient-controlled     intravenous     analgesia     (PCIA).26                                                 Due      to      earlier     discharge,     the     day      of      lung
+surgery    requires    higher    demands    for    postoperative    analgesia    within    24    h    under    the    premise    of    ERAS.    However,    unlike
+traditional    thoracic    surgery,    it    cannot    use    higher    doses    of    opioid    drugs    or    maintain    long-term    PCIA.5,27 Therefore,    this
+trial        predominantly        focused        on        the        effect        of        short-term        TEAS        treatment        on        early        postoperative        recovery        of        patients
+without    PCIA.
+      Our           results           revealed           that           the           VAS           scores           of           the           TEAS           and           control           groups           peaked           within           24           h           after           surgery,
+approximately     12     h     postoperatively.     In     the     early     postoperative     period     (1–8     hours),     the     intensity     of     pain     was     relatively
+low,      likely      because      of      the      ongoing      effect      of      thoracic      paravertebral      nerve      block.28,29                             As      the      paravertebral      block      effect
+gradually             waned,             inflammation,             edema,             and             nerve             injury             around             the             surgical            incision             peaked             12             h             post-surgery,
+potentially       leading       to       a       “rebound       pain”       phenomenon.       The       TEAS       group       showed       significantly       lower       VAS       scores       at       1,
+12,      and     24     h     postoperatively      than     did     the      control     group.     Additionally,     the     incidence     of      moderate-to-severe     pain     (VAS
+score     >4)    within    the    first    12    h     after    surgery    was     significantly    lower    in     the    TEAS    group    than    in    the    sham    TEAS    group
+(12.0%  vs   74.0%,  p  <  0.001).   These  findings  indicate  that  TEAS  effectively  mitigates  postoperative  pain  within  the  first
+24    h,    enhances    hospitalization    experience,    and    contributes    to    postoperative    recovery.
+      Interestingly,       while      an       earlier       systematic      review       corroborated       that      TEAS      can       reduce      the      frequency       and      dosage       of
+postoperative     opioid     usage,30,31                       there     was     no     significant     difference     in     the     oral     doses     of     oxycodone     and     acetaminophen
+between the two groups of patients in this trial. Although opioids are recommended for postoperative remedial analgesia,
+the       use       of       TPVB       and       requirement       for       rapid       recovery       after       surgery       may       have       partially       reduced       the       need       for       opioids,
+resulting    in    no    significant    difference    between    the    two    groups.
+      In   addition,  our  study  observed   that  postoperative  vomiting   largely   occurred  1–12  hours   after   surgery,  which   may  be
+related           to           stimulation           of           the           vagus           nerve           following           the           surgical           operation           and           the           residual           effect           of           opioids.32,33
+Compared      with      the      control      group,      the      incidence      of      vomiting      1–12      hours      after      surgery      was      lower      in      the      TEAS      group
+(30.0%       vs       42.0%),       but       the       difference       was       not       statistically       significant.       Although       TEAS       has       been       shown       to       lower       the
+incidence    of    postoperative    nausea    and    vomiting14,26,34                                       a    study    by    Cynthia    et    al35             reported    that    neither    acupuncture    nor
+TEAS      effectively      inhibited      the      gastrointestinal      gag      reflex.      The      potential      mechanisms      by      which      TEAS      alleviates      post-
+operative   vomiting   (POV)   include   local   inhibition   of   somatic   nerve   signals,   inhibition   of   motor   efferent  (vagus)   signals,
+relaxation   responses,   and   placebo   effects.36 However,   the   effectiveness   of   these   mechanisms   may    depend   on   the   choice
+
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                                https://doi.org/10.2147/JPR.S529193                                                                                                                                                                                                                                                                                                                                                                                                   3023
+
+=== PDF PAGE 8 ===
+Wu  et  al
+
+of      the      stimulation      point.      In      this      study,      PC      6      and      ST      36      were      selected      as      therapeutic      targets,      consistent      with      previous
+studies.35
+      In  contrast,  the  QoR-15  score  was  significantly  higher  in  the  TEAS  group  than  in  the  control  group  (130.8  vs  115.9),
+suggesting       that       TEAS       can       promote       early       postoperative       recovery,       which       has       been       corroborated       by       a       large       number       of
+previous studies.17,37 Among these, TEAS significantly improved the sleep quality of lung cancer patients undergoing day
+surgical        interventions        in       the        early        postoperative        period,        promoted        the        recovery        of        postoperative        motor        function,        and
+alleviated        the        stress        and        anxiety        levels        of        patients        in        the        24-hour        postoperative        period.        Nevertheless,        TEAS        did        not
+significantly improve gastrointestinal function during the early postoperative period, suggesting that it cannot significantly
+inhibit       POV.       There       were       no       significant       differences       between       the       two       groups       in       terms       of       the       mean       length       of       stay       and
+hospitalization   costs.    In   addition   to    nausea   and    vomiting,   the    most    common   adverse    event   was    dizziness;    however,   this
+difference     was     not    statistically    significant.     Neither    group    of     patients    developed     postoperative    pulmonary    complications
+(PPCs), which is consistent with the  findings of other studies.38 In general, our study highlights the safety of TEAS.
+      Recent      advances      in      multimodal      analgesia      for      day      thoracic      surgery      have      emphasized      the      importance      of      combining
+various                   analgesic                   techniques                   to                   enhance                   recovery                   and                   minimize                   opioid                   consumption.39–41 TEAS,                   as                   a                   non-
+pharmacological  intervention,  TEAS  fits  well  into  this  paradigm  by  providing  effective  pain  relief  and  improving  patient
+outcomes       without       side       effects       associated       with       opioids.       Future       research       should       continue       to       explore       the       integration       of
+TEAS    with    other    analgesic    modalities    to    optimize    postoperative    care    during    thoracic    surgery.
+      Nonetheless,  our  trial  had  some  limitations  that  cannot  be  overlooked.  First,  owing  to  the  inherent  limitations  of  trial
+conditions       and       techniques,       we       could       not       fully       blind       patients       while       they       were       awake,       potentially       leading       to       a       bias       in
+subjective         sensations         (numbness         and         distension         elicited         by         electrical         stimulation),         although         similar         previous         studies
+partially circumvented this problem by applying intraoperative electrical stimulation.42 Future resolutions to this challenge
+may      depend      on      advancements      in      TEAS      instrument      design.      Second,      due      to      the      shorter      hospitalization      time      and      faster
+operation  speed  of  day-ward  patients,  the  treatment  duration  of  TEAS  was  short  in  this  trial,  and  its  efficacy  was  mainly
+assessed    within    24    hours    after    surgery.    Consequently,    we    were    unable    to    comprehensively    evaluate    the    advantages    and
+disadvantages of TEAS during day lung surgery. Nevertheless, based on our results, we posit that a short period of TEAS
+stimulation    contributes    to    the    postoperative    recovery    after    daytime    chest    surgery.    Finally,    we    employed    uniform    TEAS
+stimulation intensities (2 hz and 10 hz, 12–20 mA) to ensure the effectiveness of stimulation. Individualized settings were
+not  considered  to  prevent   patients  from   easily  perceiving  whether   they   received  actual  TEAS  during   the  testing  process,
+which might have interfered with the accuracy of the results owing to the placebo effects. However, this approach has been
+adopted in the most recent TEAS-related studies. Further large-sample studies are required to validate our results.
+
+Conclusion
+In            summary,            TEAS            serves            as            an            effective            nonpharmacological            intervention            for            managing            postoperative            pain            and
+enhancing        recovery        quality        in        patients        undergoing        lung        cancer        surgery.        Its        integration        into        ERAS        protocols        perhaps
+offer      significant      benefits      by      reducing      pain      intensity      and      analgesic      requirements,      thereby      facilitating      a      faster      and      more
+comfortable      recovery.      Nevertheless,      further      multicenter      trials      are      needed      to      confirm      these      findings,      explore      long-term
+outcomes,    and    establish    standardized    protocols    for    TEAS    application    in    diverse    clinical    settings.
+
+Abbreviations
+ERAS,          Enhanced          Recovery          After          Surgery;          TEAS,          Transcutaneous          Electrical          Acupoint          Stimulation;          VAS,          Visual
+Analogue       Scale;       PACU,       Post-Anesthesia       Care       Unit;       PONV,       Postoperative       Nausea       and       Vomiting;       QoR-15,       Quality
+of          Recovery-15;           ASA,           American           Society          of           Anesthesiologists;           PCIA,           Patient-Controlled           Intravenous           Analgesia;
+TPVB,     Thoracic      Paravertebral      Block;      PPCs,      Postoperative      Pulmonary      Complications;      ST36,      Zusanli     (an      acupoint);
+LI4,           Hegu           (an           acupoint);           PC6,           Neiguan           (an           acupoint);           IRB,           Institutional           Review           Board;           ANOVA,           Analysis           of
+Variance.
+
+Data   Sharing   Statement
+The datasets used and/or analyzed during the current study are available from the corresponding author upon reasonable request.
+
+
+3024            https://doi.org/10.2147/JPR.S529193                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 9 ===
+                                                                                                                                                                                                              Wu  et  al
+
+Ethics   Approval   and   Consent   to   Participate
+The  study  was  approved  by  the  Institutional  Review  Board  of  Shanghai  Chest  Hospital  (IRB  #KS  (Y)  23025).  Informed
+consent    was    obtained    from    all    participants.
+
+Author   Contributions
+All          authors          made          a          significant          contribution          to          the          work          reported,          whether          that          is          in          the          conception,          study          design,
+execution,  acquisition  of  data,  analysis  and  interpretation,  or  in  all  these  areas;  took  part  in  drafting,  revising  or  critically
+reviewing   the   article;   gave   final   approval   of   the   version   to   be   published;   have   agreed   on   the   journal   to   which   the   article
+has    been    submitted;    and    agree    to    be    accountable    for    all    aspects    of    the    work.
+
+Funding
+This      work      was      supported      by      the      Fundamental      Research      Funds      for      the      Central      Universities      (YG2024LC10),      Shanghai
+Hospital       Association       Hospital       Management       Research       Fund       (x2022179),       and       National       Natural       Science       Foundation       of
+China    (82373226).
+
+Disclosure
+The         authors          declare          that         they          have         no          competing         interests.          This         paper          has          been          uploaded         to          SSRN          as          a         preprint:
+https://ssrn.com/abstract=4889532.
+
+References
+
+  1. Tovar   EA,   Roethe   RA,   Weissig   MD,   Lloyd  RE,   Patel  GR.   One-day   admission   for   lung   lobectomy:  an   incidental   result   of   a   clinical   pathway. Ann
+     Thorac   Surg. 1998;65(3):803–806.   doi:10.1016/S0003-4975(97)01381-7
+  2. Kulkarni S,  Harsoor SS, Chandrasekar  M, et al.  Consensus statement on anaesthesia for day  care surgeries. Indian J  Anaesth. 2017;61(2):110–124.
+     doi:10.4103/ija.IJA_659_16
+  3. Linden  PA,  Perry  Y,  Worrell  S,  et  al.  Postoperative  day  1  discharge after  anatomic  lung  resection:  a  society  of  thoracic  surgeons  database  analysis.
+     J   Thorac   Cardiovasc   Surg. 2020;159(2):667–78.e2.   doi:10.1016/j.jtcvs.2019.08.038
+  4. Towe   CW,   Thibault   DP,   Worrell   SG,   et   al.   Factors   associated   with   successful   postoperative   day   one   discharge   after   anatomic   lung   resection. Ann
+     Thorac   Surg. 2021;112(1):221–227.   doi:10.1016/j.athoracsur.2020.07.059
+  5. Rae A. Reasons for delayed patient discharge following day surgery: a literature review. Nurs Stand. 2016;31(11):42–51. doi:10.7748/ns.2016.e10292
+  6. Jiang L, Lei T, Zhou K, Ma H, Che G. Pivotal role of video-assisted thoracoscopic surgery in improving survival outcome of stage I non-small cell
+     lung   cancer   in   day   surgery   patients. Thorac   Cancer. 2021;12(21):2865–2872.   doi:10.1111/1759-7714.14145
+  7. Moorthy   A,   Eochagáin   AN,   Dempsey   E,   et   al.   Postoperative   recovery   with   continuous   erector   spinae   plane   block   or   video-assisted   paravertebral
+     block    after    minimally    invasive    thoracic    surgery:    a     prospective,    randomised    controlled    trial. Br     J    Anaesth. 2023;130(1):e137–e47.    doi:10.1016/j.
+     bja.2022.07.051
+  8. Shen       C,       Che       G.       Thoracic       day       surgery       versus       thoracic       inpatient       surgery       for       treatment       of       patients       with       lung       cancer:       a       systematic       review       and
+     meta-analysis. J   Cardiothorac   Surg. 2023;18(1):341.   doi:10.1186/s13019-023-02462-4
+  9. Chang XL, Liu XM, An LX, Zheng JY, Zhang K. Effects of transcutaneous electrical acupoint stimulation (TEAS) on postoperative pain in patients
+     undergoing     gastric     and     esophageal     ESD      surgery:     a     study     protocol     for     a     prospective     randomized     controlled     trial. BMC     Complement      Med     Ther.
+     2023;23(1):253.   doi:10.1186/s12906-023-04075-9
+10. Dowswell  T,  Bedwell C, Lavender  T, Neilson  JP. Transcutaneous electrical  nerve  stimulation  (TENS) for  pain  relief in  labour. Cochrane Database
+     Syst   Rev. 2009;2009(2):Cd007214.
+11. Lyu Z, Tian S, Bao G, et al. Transcutaneous electrical acupoint stimulation for cancer-related pain management in patients receiving chronic opioid
+     therapy:   a   randomized   clinical   trial. Support   Care   Cancer. 2023;32(1):16.   doi:10.1007/s00520-023-08240-1
+12. Galasso A, Urits I, An D, et al. A comprehensive review of the treatment and management of myofascial pain syndrome. Curr Pain Headache Rep.
+     2020;24(8):43.   doi:10.1007/s11916-020-00877-5
+13. Qin    J,    Ye    X,    Ye    C,    et    al.    The    effect    of    transcutaneous    electrical    acupoint    stimulation    on    high-risk    patients    with    PONV  undergoing    laparoscopic
+     gynecologic   surgery:   a   randomized   controlled   trial. J   Clin   Med. 2023;12(3):1192.   doi:10.3390/jcm12031192
+14. Chen J, Tu Q, Miao S, Zhou Z, Hu S. Transcutaneous electrical acupoint stimulation for preventing postoperative nausea and vomiting after general
+     anesthesia:   a   meta-analysis   of   randomized   controlled   trials. Int   J   Surg. 2020;73:57–64.   doi:10.1016/j.ijsu.2019.10.036
+15. Liu     J,     Zhang     K,     Zhang     Y,     et     al.     Perioperative     transcutaneous      electrical     acupoint     stimulation     reduces     postoperative     pain     in     patients     undergoing
+     thoracoscopic   surgery:   a   randomized   controlled   trial. Pain   Res   Manag. 2024;2024:5365456.   doi:10.1155/2024/5365456
+16. Xue M, Sun YL, Xia YY, Huang ZH, Huang C, Xing GG. Electroacupuncture modulates spinal BDNF/TrκB signaling pathway and ameliorates the
+     sensitization   of   dorsal   horn   WDR   neurons   in   spared   nerve   injury   rats. Int   J   Mol   Sci. 2020;21(18):6524.   doi:10.3390/ijms21186524
+17. Song B, Chang Y, Li Y, Zhu J. Effects of transcutaneous electrical acupoint stimulation on the postoperative sleep quality and pain of patients after
+     video-assisted   thoracoscopic   surgery:   a   prospective,   randomized   controlled   trial. Nat   Sci   Sleep. 2020;12:809–819.   doi:10.2147/NSS.S270739
+18. Lu   Z,   Wang   Q,   Sun   X,   et   al.   Transcutaneous   electrical   acupoint   stimulation   before   surgery   reduces   chronic   pain   after   mastectomy:   a   randomized
+     clinical   trial. J   Clin   Anesth. 2021;74:110453.   doi:10.1016/j.jclinane.2021.110453
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                   https://doi.org/10.2147/JPR.S529193                                                                                                                                                                                                                                                                                                                                                                                                   3025
+
+=== PDF PAGE 10 ===
+Wu  et  al
+
+
+19. Liu   LY,   Su   Y,   Wang   RR,   et   al.   Transcutaneous   electrical   acupoint   stimulation   benefits   postoperative   pain   relief   of   oocyte   retrieval:   a   randomized
+      controlled   trial. J   Integr   Med. 2024;22(1):32–38.   doi:10.1016/j.joim.2024.01.005
+20. Goligher EC, Jonkman AH, Dianti J, et al. Clinical strategies for implementing lung and diaphragm-protective ventilation: avoiding insufficient and
+      excessive   effort. Intensive   Care   Med. 2020;46(12):2314–2326.   doi:10.1007/s00134-020-06288-9
+21. Sandeep B, Huang X, Li Y, Xiong D, Zhu B, Xiao Z. A comparison of regional anesthesia techniques in patients undergoing video-assisted thoracic
+      surgery:   a   network   meta-analysis. Int   J   Surg. 2022;105:106840.   doi:10.1016/j.ijsu.2022.106840
+22. Garmi      G,      Parasol      M,      Zafran      N,      Rudin      M,      Romano      S,      Salim      R.      Efficacy      of      single      wound      infiltration      with      bupivacaine      and      adrenaline      during
+      cesarean        delivery        for        reduction        of        postoperative        pain:        a        randomized        clinical        trial. JAMA        Network        Open. 2022;5(11):e2242203.        doi:10.1001/
+      jamanetworkopen.2022.42203
+23. MacPherson H, Altman DG, Hammerschlag R, et al. Revised STandards for Reporting Interventions in Clinical Trials of Acupuncture (STRICTA):
+      extending   the   CONSORT statement. J   Evid   Based   Med. 2010;3(3):140–155.   doi:10.1111/j.1756-5391.2010.01086.x
+24. Chen Y, Yao  Y, Wu  Y, Dai  D,  Zhao  Q,  Qiu  L. Transcutaneous electric acupoint  stimulation  alleviates  remifentanil-induced hyperalgesia  in  patients
+      undergoing   thyroidectomy:   a   randomized   controlled   trial. Int   J   Clin   Exp   Med. 2015;8(4):5781–5787.
+25. Kleif   J,   Waage   J,   Christensen   KB,   Gögenur   I.   Systematic   review   of   the   QoR-15   score,   a   patient-   reported   outcome   measure   measuring   quality   of
+      recovery   after   surgery   and   anaesthesia. Br   J   Anaesth. 2018;120(1):28–36.   doi:10.1016/j.bja.2017.11.013
+26. Chen       J,       Zhang       Y,       Li       X,       et       al.       Efficacy       of       transcutaneous       electrical       acupoint       stimulation       combined       with       general       anesthesia       for       sedation       and
+      postoperative analgesia  in  minimally  invasive lung cancer  surgery: a randomized, double-blind,  placebo-controlled trial. Thoracic  Cancer. 2020;11
+      (4):928–934.   doi:10.1111/1759-7714.13343
+27. Ghosh-Dastidar    MB,     Deshpande     RP,     Rajagopal    K,    Andersen     D,     Marrinan     MT.     Day     surgery    unit     thoracic    surgery:    the     first     UK     experience. Eur
+      J   Cardiothorac   Surg. 2011;39(6):1047–1050.   doi:10.1016/j.ejcts.2010.09.032
+28. Yeung       JH,       Gates       S,       Naidu       BV,       Wilson       MJ,       Gao       Smith       F.       Paravertebral       block       versus       thoracic       epidural       for       patients       undergoing       thoracotomy.
+      Cochrane   Database   Syst   Rev. 2016;2(2):Cd009121.   doi:10.1002/14651858.CD009121.pub2
+29. Pace            MM,             Sharma             B,             Anderson-Dam            J,             Fleischmann             K,             Warren             L,             Stefanovich             P.            Ultrasound-guided             thoracic             paravertebral             blockade:
+      a   retrospective   study   of   the   incidence   of   complications. Anesthesia   Analg. 2016;122(4):1186–1191.   doi:10.1213/ANE.0000000000001117
+30. Meng       D,       Mao       Y,       Song       QM,       et       al.       Efficacy       and       Safety       of       Transcutaneous       Electrical       Acupoint       Stimulation       (TEAS)       for       postoperative      pain       in
+      laparoscopy:   a   systematic   review   and   meta-analysis   of   randomized   controlled   trials. Evid   Based   Complement   Alternat   Med. 2022;2022:9922879.
+      doi:10.1155/2022/9922879
+31. Ao  L,  Shi  J,  Bai  Y,  Zhang  S,  Gan  J.  Effects  of  transcutaneous  electrical  acupoint  stimulation  on  perioperative  immune  function  and  postoperative
+      analgesia   in   patients   undergoing   radical   mastectomy:   a   randomized   controlled   trial. Exp   Ther   Med. 2021;21(3):184.   doi:10.3892/etm.2021.9615
+32. Apfel CC, Meyer A, Orhan-Sungur M, Jalota L, Whelan RP, Jukar-Rao S. Supplemental intravenous crystalloids for the prevention of postoperative
+      nausea   and   vomiting:   quantitative   review. Br   J   Anaesth. 2012;108(6):893–902.   doi:10.1093/bja/aes138
+33. Mihara      T,      Tojo      K,       Uchimoto      K,      Morita       S,      Goto       T.      Reevaluation      of      the      effectiveness      of      ramosetron      for      preventing      postoperative      nausea      and
+      vomiting:   a   systematic   review   and   meta-analysis. Anesthesia   Analg. 2013;117(2):329–339.   doi:10.1213/ANE.0b013e31829847a1
+34. Liu       YY,       Duan       SE,       Cai       MX,       Zou       P,       Lai       Y,       Li       YL.       Evaluation       of       transcutaneous       electroacupoint       stimulation       with       the       train-of-four       mode       for
+      preventing   nausea   and   vomiting   after   laparoscopic   cholecystectomy. Chin   J   Integr   Med. 2008;14(2):94–97.   doi:10.1007/s11655-008-0094-4
+35. Diep C, Karibe H,  Goddard G,  Phan Y, Shubov  A. Acupuncture and transcutaneous electrical acupoint stimulation do not suppress gag reflex. Med
+      Acupuncture. 2021;33(5):353–357.   doi:10.1089/acu.2021.0008
+36. Lee  A,   Done   ML.   Stimulation   of   the   wrist  acupuncture   point   P6  for   preventing   postoperative   nausea  and   vomiting. Cochrane   Database   Syst   Rev.
+      2004;2004(3):CD003281.
+37. Wang     D,     Shi     H,     Yang     Z,     et     al.     Efficacy     and     safety     of     transcutaneous     electrical     acupoint     stimulation     for     postoperative     pain:     a     meta-analysis     of
+      randomized   controlled   trials. Pain   Res   Manag. 2022;2022:7570533.   doi:10.1155/2022/7570533
+38. Lai   Y,   Wang   X,   Li    P,    Li   J,   Zhou   K,   Che    G.   Preoperative   peak   expiratory   flow   (PEF)    for   predicting   postoperative   pulmonary    complications   after
+      lung   cancer   lobectomy:   a   prospective   study   with   725   cases. J   Thoracic   Dis. 2018;10(7):4293–4301.   doi:10.21037/jtd.2018.07.02
+39. Huang  C,  Huang  Q,  Shen  Y,  Liu  K,  Wu  J.  General  anaesthesia  with  double-lumen  intubation  compared  to  opioid-sparing  strategies  with  laryngeal
+      mask   for   thoracoscopic   surgery:   a   randomised   trial. Anaesth   Crit   Care   Pain   Med. 2022;41(3):101083.   doi:10.1016/j.accpm.2022.101083
+40. Zheng     L,     Zhang     X,     Ma     Q,     et     al.     Application     of     multimodal     analgesia     combined     with     opioid-free     anesthetics     in     a     non-intubated     video-assisted
+      thoracoscopic   surgery   bullectomy:   a   case   report. Front   Surg. 2023;10:1116523.   doi:10.3389/fsurg.2023.1116523
+41. Rice   D,   Rodriguez-Restrepo   A,   Mena   G,   et   al.   Matched   pairs   comparison   of   an   enhanced   recovery   pathway   versus   conventional   management   on
+      opioid   exposure   and   pain   control   in   patients   undergoing   lung   surgery. Ann   Surg. 2021;274(6):1099–1106.   doi:10.1097/SLA.0000000000003587
+42. Liu X, Li S, Wang B, An L, Ren X,  Wu H. Intraoperative and postoperative anaesthetic and analgesic effect of multipoint  transcutaneous electrical
+      acupuncture         stimulation         combined         with         sufentanil         anaesthesia         in         patients         undergoing         supratentorial         craniotomy. Acupuncture         Med. 2015;33
+      (4):270–276.   doi:10.1136/acupmed-2014-010749
+
+
+
+
+
+
+
+
+       Journal   of   Pain   Research
+       Publish your   work   in   this   journal
+
+       The  Journal  of  Pain  Research  is  an  international,  peer  reviewed,  open  access,  online  journal  that  welcomes  laboratory  and  clinical  findings  in  the
+       fields     of     pain     research     and     the     prevention     and     management     of     pain.     Original     research,     reviews,     symposium     reports,     hypothesis     formation     and
+       commentaries     are     all     considered     for     publication.     The     manuscript     management     system     is     completely     online     and     includes     a     very     quick     and     fair
+       peer-review   system,    which    is   all    easy   to    use.   Visit    http://www.dovepress.com/testimonials.php    to   read    real   quotes    from   published    authors.
+
+       Submit  your  manuscript  here: https://www.dovepress.com/journal-of-pain-research-journal
+
+
+3026                                                                                                                                                                                 Journal  of  Pain  Research  2025:18

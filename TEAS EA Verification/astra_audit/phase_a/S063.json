@@ -1,0 +1,365 @@
+{
+  "Study_ID": "S063",
+  "Study": "Chen 2015 remifentanil hyperalgesia",
+  "identity": {
+    "title": "Transcutaneous electric acupoint stimulation alleviates remifentanil-induced hyperalgesia in patients undergoing thyroidectomy: a randomized controlled trial",
+    "year": 2015,
+    "doi": "Insufficient information / not reported.",
+    "pdf": "040_chen_2015_hyperalgesia_lund.pdf",
+    "notes": "Yanqing Chen,Yusheng Yao,Yihuan Wu,Dongsheng Dai,Qiuyan Zhao,Liangcheng Qiu; IJCEM8(4):5781–5787,IJCEM0006509; publishedApril30,2015."
+  },
+  "source_review": {
+    "full_publication": "Read all seven PDF pages, including references.",
+    "visual_inspection": [
+      "p3 CONSORTFigure2",
+      "p4 Table1",
+      "p5 Figure3 andTable2"
+    ],
+    "registration": "Insufficient information / not reported."
+  },
+  "design": {
+    "population": "60 female adults18–60,ASA I–II,elective thyroidectomy under GA; Fujian Provincial Hospital August–December2014.",
+    "randomized": {
+      "TEAS": 30,
+      "sham": 30
+    },
+    "analyzed": {
+      "TEAS": 29,
+      "sham": 30
+    },
+    "modality": "TEAS",
+    "comparator": "Sham/no-current electrodes at same acupoints",
+    "location": "pp2–4;Figure2p3",
+    "intervention": "BilateralLI4/PC6,2/10Hz,6–9mA for30min before anesthesia; intensity to muscle twitch and DeQi.",
+    "randomization": "Computer-generated list,1:1; sealed envelopes, but opacity/sequential numbering not stated.",
+    "blinding": "Patients,investigator,anesthetist,surgeons,recovery nurses and statistical analyst claimed blinded; awake perceptible stimulation versus inactive sham can reveal allocation; operator necessarily knows.",
+    "attrition": "One TEAS participant discontinued for unspecified protocol breach;59/60 analyzed.",
+    "ethics": "K2014-07-003"
+  },
+  "regimen": {
+    "drug": "Sufentanil postoperative; remifentanil intraoperative",
+    "route": "Intravenous",
+    "pca": "Demand-only sufentanil0.05µg/kg per bolus if VNRS≥4;10-min lockout; continuous infusion not allowed. No mass concentration or absolute consumed dose reported.",
+    "rescue": "PCA delivered sufentanil rescue; additional systemic opioid use is insufficiently reported.",
+    "anesthesia": "Propofol2mg/kg and remifentanil target5ng/mL induction; remifentanil5ng/mL plus sevoflurane maintenance to BIS40–60."
+  },
+  "independent_outcomes": [
+    {
+      "result": "Mechanical pain threshold,forearm/peri-incisional",
+      "window": "Baseline,0.5,1,2,4,24h",
+      "format": "Graph-only postoperative values",
+      "numeric_postoperative_values": null,
+      "unit": "g",
+      "location": "Figure3p5",
+      "finding": "Peri-incisional between-group reductionP<.001;forearmP=.328. No numerical point labels; do not extract estimated graph values. Threshold depends on patient reporting first pain, not purely objective.",
+      "qualification": "Table1 baselineforearm control93.9 contrasts visually with Figure3A baselinecontrol near98; do not infer exact graph point. No remifentanil-free arm, so remifentanil-specific causation is not isolated."
+    },
+    {
+      "result": "Average pain score",
+      "window": "Within first24h, not point24h",
+      "format": "Median[IQR]",
+      "EA": [
+        2.5,
+        1.5,
+        3.8
+      ],
+      "control": [
+        3.7,
+        2.9,
+        4.7
+      ],
+      "n": [
+        29,
+        30
+      ],
+      "scale": "VNRS0–10; activity unspecified",
+      "p": 0.002,
+      "location": "Table2p5;Outcomesp4"
+    },
+    {
+      "result": "Maximum pain score",
+      "window": "Within first24h, not point24h",
+      "format": "Median[IQR]",
+      "EA": [
+        4.4,
+        3.3,
+        5.6
+      ],
+      "control": [
+        5.9,
+        4.9,
+        7
+      ],
+      "n": [
+        29,
+        30
+      ],
+      "scale": "VNRS0–10; activity unspecified",
+      "p": "<0.001",
+      "location": "Table2p5"
+    },
+    {
+      "result": "Time to first rescue analgesia",
+      "window": "Within24h; precise time origin not stated",
+      "format": "Mean(SD)",
+      "mean_EA": 35.6,
+      "sd_EA": 7.1,
+      "mean_control": 20.5,
+      "sd_control": 6.2,
+      "unit": "min",
+      "n": [
+        29,
+        30
+      ],
+      "p": "<0.001",
+      "location": "Table2p5",
+      "qualification": "Results show LONGER time withTEAS;discussion incorrectly says reduces time."
+    },
+    {
+      "result": "Cumulative number of rescue analgesia",
+      "window": "24h after surgery",
+      "format": "Median[IQR]",
+      "EA": [
+        3,
+        2,
+        4
+      ],
+      "control": [
+        7,
+        6,
+        8
+      ],
+      "n": [
+        29,
+        30
+      ],
+      "unit": "rescue administrations",
+      "p": "<0.001",
+      "location": "Table2p5;regimenp4",
+      "qualification": "0.05µg/kg per delivered bolus. Counts are notabsolute mass; no conversion through mean weight."
+    },
+    {
+      "result": "AnyPONV",
+      "window": "24h after surgery",
+      "events": [
+        5,
+        13
+      ],
+      "n": [
+        29,
+        30
+      ],
+      "percent": [
+        17.2,
+        43.3
+      ],
+      "p": 0.03,
+      "location": "Table2p5;Outcomesp4"
+    },
+    {
+      "result": "Dizziness",
+      "window": "24h",
+      "events": [
+        7,
+        10
+      ],
+      "n": [
+        29,
+        30
+      ],
+      "p": 0.436,
+      "location": "Table2p5"
+    },
+    {
+      "result": "Shivering",
+      "window": "24h",
+      "events": [
+        3,
+        10
+      ],
+      "n": [
+        29,
+        30
+      ],
+      "p": 0.033,
+      "location": "Table2p5"
+    },
+    {
+      "result": "Remifentanil consumption",
+      "window": "Intraoperative",
+      "format": "Mean(SD)",
+      "mean_EA": 1691,
+      "sd_EA": 37,
+      "mean_control": 1718,
+      "sd_control": 43,
+      "unit": "µg",
+      "n": [
+        29,
+        30
+      ],
+      "p": 0.461,
+      "location": "Table1p4",
+      "qualification": "Not postoperative. PrintedP=.461 inconsistent with conventional independentt using mean/SD/n(tabout2.59). Do not repair."
+    }
+  ],
+  "source_conflicts": [
+    "Table1controlASA25/4 totals29 despite analyzed30",
+    "Table1 intraoperative remifentanil mean/SD/n does not reconcile withP=.461",
+    "Forearm baseline graph position conflicts with Table1; postoperativegraphvalues remainunextracted",
+    "Discussion says time-to-rescue reduced whereas Table2 and results show longer"
+  ],
+  "independence": "Independent ofS062 supported by disjointAug–Dec2014 versusJan–May2015 enrollment, different ethicsIDs,60vs84 randomized and remifentanil/sufentanil versus induction-sufentanil/morphine analgesic protocols. Same center and TEAS settings are not evidence of duplication.",
+  "opioid_candidate": {
+    "decision": "sensitivity",
+    "reason": "24h rescue-administration median/IQR is extractable as an opioid-demand count endpoint, but not absolute mass or a primary mean/SD systemic opioid endpoint. Weight-dependent sufentanil boluses prevent group-mean-weight conversion.",
+    "postoperative": true,
+    "explicit_0_24h": true,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Sufentanil",
+    "route": "Intravenous PCA",
+    "unit": "Rescue administrations",
+    "raw_values": {
+      "median_intervention": 3,
+      "q1_intervention": 2,
+      "q3_intervention": 4,
+      "n_intervention": 29,
+      "median_comparator": 7,
+      "q1_comparator": 6,
+      "q3_comparator": 8,
+      "n_comparator": 30
+    },
+    "comparison_selection": "TEAS versus no-current sham",
+    "multiarm_handling": "Two arms;no sharedcontrol",
+    "source_location": "Table2p5;PCAp4",
+    "conversion_performed": false
+  },
+  "rob_independent": {
+    "questions": {
+      "1.1": [
+        "Y",
+        "Computer-generated list;1:1 allocation.",
+        "p2"
+      ],
+      "1.2": [
+        "NI",
+        "Sealed envelopes reported without opacity, sequential numbering or safeguard details.",
+        "p2"
+      ],
+      "1.3": [
+        "PN",
+        "Demographic means broadly similar;one missing ASA category and inconsistentP reporting do not demonstrate a failed allocation sequence.",
+        "Table1p4;Figure2p3"
+      ],
+      "2.1": [
+        "PY",
+        "Awake6–9mA DeQi and muscle twitch versus inactive sham likely perceptible, despite blinding claim.",
+        "p2"
+      ],
+      "2.2": [
+        "Y",
+        "Stimulation operator must distinguish active delivery from sham.",
+        "p2"
+      ],
+      "2.3": [
+        "NI",
+        "One unspecified protocol breach; whether trial-context-induced is unknown.",
+        "Figure2p3;resultsp4"
+      ],
+      "2.4": [
+        "NI",
+        "No detail of protocol breach or effects on rescue behavior.",
+        "pp3–4"
+      ],
+      "2.5": [
+        "NI",
+        "OneTEAS breach; insufficient detail to judge comparable departures in arms.",
+        "pp3–4"
+      ],
+      "2.6": [
+        "N",
+        "One randomizedTEAS participant excluded for protocol breach.",
+        "pp3–4"
+      ],
+      "2.7": [
+        "PN",
+        "One of60 omitted; unlikely substantial effect on median3vs7 rescue counts or5vs13PONV events.",
+        "Table2p5"
+      ],
+      "3.1": [
+        "Y",
+        "59/60(98.3%) with outcomes; nearly all.",
+        "pp3–4"
+      ],
+      "3.2": [
+        "NA",
+        "Nearly alloutcome dataavailable.",
+        "Figure2p3"
+      ],
+      "3.3": [
+        "NA",
+        "Nearly alloutcome dataavailable.",
+        "Figure2p3"
+      ],
+      "3.4": [
+        "NA",
+        "Nearly alloutcome dataavailable.",
+        "Figure2p3"
+      ],
+      "4.1": [
+        "N",
+        "Delivered rescue-administration count is appropriate for opioid demand, not for unreported absolute opioid mass.",
+        "p4;Table2p5"
+      ],
+      "4.2": [
+        "PN",
+        "Standardized demand-only PCA and same follow-up24h.",
+        "p4"
+      ],
+      "4.3": [
+        "PN",
+        "Outcome-collecting investigator/recovery nurses were blinded; electronically delivered PCA counts are objective records.",
+        "p2;p4"
+      ],
+      "4.4": [
+        "NA",
+        "Objective delivered count; participant-influenced self-dosing is not differential outcome measurement.",
+        "pp2,4"
+      ],
+      "4.5": [
+        "NA",
+        "Objective delivered count; no evidence of differential recording.",
+        "pp2,4"
+      ],
+      "5.1": [
+        "NI",
+        "No trial registration identifier or dated analysis plan reported.",
+        "pp1–7"
+      ],
+      "5.2": [
+        "NI",
+        "Secondary rescue-count endpoint reported but no prospective detailed protocol verifies definition and24h clock.",
+        "p4"
+      ],
+      "5.3": [
+        "NI",
+        "No dated SAP; selection of summaries/analyses before unblinding cannot be established.",
+        "p4"
+      ]
+    },
+    "domains": [
+      "Some concerns",
+      "Some concerns",
+      "Low",
+      "Low",
+      "Some concerns"
+    ],
+    "overall": "Some concerns",
+    "reason": "Sealed-envelope safeguards incompletely specified,one unspecified protocol-breach exclusion and no prospective plan. Near-complete follow-up and standardized objective delivery counts support lowD3/D4; subjective pain/PONV require separateD4 judgments."
+  },
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "saved_at": "2026-09-05T15:34:51.857Z",
+  "missing_information_convention": "Insufficient information / not reported."
+}

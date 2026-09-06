@@ -1,0 +1,1288 @@
+[
+  {
+    "key": "#381 - Zhu 2022",
+    "author": "Zhu",
+    "year": 2022,
+    "intra_hits": [
+      [
+        "zhu_2022_covidence_381_full_data_extraction.md",
+        "| Intraoperative sufentanil, \u00b5g | **38.1 \u00b1 4.97** | **39.1 \u00b1 4.83** | **39.0 \u00b1 5.12** | **37.8 \u00b1 4.87** | **0.892** |"
+      ],
+      [
+        "zhu_2022_covidence_381_full_data_extraction.md",
+        "| Intraoperative remifentanil, mg | **0.58 \u00b1 0.23** | **0.58 \u00b1 0.23** | **0.50 \u00b1 0.25** | **0.57 \u00b1 0.26** | **0.948** |"
+      ],
+      [
+        "zhu_2022_covidence_381_full_data_extraction.md",
+        "The remifentanil unit is reported as **mg** in the paper and is plausible for total intraoperative exposure; preserve as published."
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "zhu_2022_covidence_381_full_data_extraction.md",
+        "| Secondary outcomes | PON/POV severity and incidence at other intervals, rescue antiemetic and analgesic use, first flatus, QoR-15, EA adverse events |"
+      ],
+      [
+        "zhu_2022_covidence_381_full_data_extraction.md",
+        "| Rescue antiemetic | **Metoclopramide 10 mg IV** when nausea/vomiting occurred and medication requested |"
+      ],
+      [
+        "zhu_2022_covidence_381_full_data_extraction.md",
+        "| Postoperative rescue opioid | **Not reported / none specified** |"
+      ]
+    ]
+  },
+  {
+    "key": "#115 - Zhou 2025",
+    "author": "Author",
+    "year": 2020,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#433 - Zhou 2021",
+    "author": "Zhou",
+    "year": 2021,
+    "intra_hits": [],
+    "rescue_hits": [
+      [
+        "zhou_2021_gastric_cancer_teas_full_data_extraction.md",
+        "The trial specifically excluded patients who used **postoperative PCA**, so postoperative opioid exposure came from clinician-prescribed rescue/systemic analgesics rather than PCA."
+      ]
+    ]
+  },
+  {
+    "key": "#72 - Zheng 2025",
+    "author": "Zheng",
+    "year": 2025,
+    "intra_hits": [
+      [
+        "zheng_2025_gynecological_laparoscopy_teas_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.6-1.0 \u00b5g/kg/h as printed** |"
+      ],
+      [
+        "zheng_2025_gynecological_laparoscopy_teas_full_data_extraction.md",
+        "The paper reports remifentanil maintenance in **\u00b5g/kg/h**, not \u00b5g/kg/min. Preserve the source units."
+      ],
+      [
+        "zheng_2025_gynecological_laparoscopy_teas_full_data_extraction.md",
+        "| Intraoperative remifentanil | **233.1 \u00b1 29.6 vs 289.5 \u00b1 37.9 \u00b5g** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "zheng_2025_gynecological_laparoscopy_teas_full_data_extraction.md",
+        "- exact rescue drug/dose is **not reported in the main text excerpt**"
+      ],
+      [
+        "zheng_2025_gynecological_laparoscopy_teas_full_data_extraction.md",
+        "9. Exact emergency rescue analgesic drug/dose/event counts"
+      ]
+    ]
+  },
+  {
+    "key": "#1389 - Zhan 2020",
+    "author": "Zhan",
+    "year": 2020,
+    "intra_hits": [
+      [
+        "zhan_2020_covidence_1389_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.1-0.2 \u00b5g/kg/min** |"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#71 - Zhang 2025",
+    "author": "Zhang",
+    "year": 2025,
+    "intra_hits": [
+      [
+        "zhang_2025_laparoscopic_hysterectomy_teas_full_data_extraction.md",
+        "| Remifentanil | **0.1-0.2 \u00b5g/kg/min** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "zhang_2025_laparoscopic_hysterectomy_teas_full_data_extraction.md",
+        "| Secondary outcomes | Cytokines, sufentanil consumption, PCIA demands, rescue analgesia, PONV/other adverse events, recovery metrics |"
+      ],
+      [
+        "zhang_2025_laparoscopic_hysterectomy_teas_full_data_extraction.md",
+        "The published means of **50.53 and 53.79 \u00b5g** are highly consistent with approximately 24 h of basal infusion plus bolus/rescue use."
+      ],
+      [
+        "zhang_2025_laparoscopic_hysterectomy_teas_full_data_extraction.md",
+        "| Rescue analgesia demands | **14/45 (31.11%)** | **29/48 (60.42%)** | **0.005 in Table 4** |"
+      ]
+    ]
+  },
+  {
+    "key": "#308 - Zhang 2023",
+    "author": "Zhang",
+    "year": 2023,
+    "intra_hits": [
+      [
+        "zhang_2023_covidence_308_full_data_extraction.md",
+        "| Intraop opioid | **30 (25-35) vs 30 (25-35) mg IV morphine equivalents** |"
+      ],
+      [
+        "zhang_2023_covidence_308_full_data_extraction.md",
+        "- intraoperative opioid exposure: **30 (25-35) vs 30 (25-35) mg IV morphine equivalents**"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#711 - Zhang 2014",
+    "author": "Zhang",
+    "year": 2014,
+    "intra_hits": [
+      [
+        "zhang_2014_breast_surgery_teas_full_data_extraction.md",
+        "| Remifentanil, \u00b5g/kg/min | **0.06 \u00b1 0.02** | **0.09 \u00b1 0.03** | **0.01** |"
+      ],
+      [
+        "zhang_2014_breast_surgery_teas_full_data_extraction.md",
+        "The study does **not report absolute total remifentanil dose in \u00b5g per patient**, only a weight/time-normalized consumption measure."
+      ],
+      [
+        "zhang_2014_breast_surgery_teas_full_data_extraction.md",
+        "| Intraoperative fentanyl | **3 \u00b5g/kg induction in both groups** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "zhang_2014_breast_surgery_teas_full_data_extraction.md",
+        "For your opioid-sparing review, this study is **useful for intraoperative remifentanil sparing**, but **not for a continuous 24-h postoperative opioid/MME endpoint**, because no postoperative opioid or rescue-analgesic consumption is reported."
+      ]
+    ]
+  },
+  {
+    "key": "#483 - Yu 2020",
+    "author": "Yu",
+    "year": 2020,
+    "intra_hits": [
+      [
+        "yu_2020_gynecological_laparoscopy_teas_full_data_extraction.md",
+        "| Intraoperative fluids, mL | **1710.6 \u00b1 533.6** | **1755.8 \u00b1 479.3** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "yu_2020_gynecological_laparoscopy_teas_full_data_extraction.md",
+        "| Control patients requiring rescue | **24/30 (80.0%)** |"
+      ],
+      [
+        "yu_2020_gynecological_laparoscopy_teas_full_data_extraction.md",
+        "| TEAS patients requiring rescue | **13/30 (43.3%)** |"
+      ],
+      [
+        "yu_2020_gynecological_laparoscopy_teas_full_data_extraction.md",
+        "| Binary rescue use | **13/30 vs 24/30** |"
+      ]
+    ]
+  },
+  {
+    "key": "#828 - Yeh 2010",
+    "author": "Yeh",
+    "year": 2010,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#823 - Yeh 2010 (ATHM)",
+    "author": "Yeh",
+    "year": 2010,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#671 - Yao 2015",
+    "author": "Yao",
+    "year": 2015,
+    "intra_hits": [],
+    "rescue_hits": [
+      [
+        "yao_2015_full_data_extraction.md",
+        "| Rescue dose | **0.05 \u00b5g/kg IV per administration** |"
+      ],
+      [
+        "yao_2015_full_data_extraction.md",
+        "Although every rescue dose was weight-based at 0.05 \u00b5g/kg, the study provides:"
+      ],
+      [
+        "yao_2015_full_data_extraction.md",
+        "| Rescue dose | **0.05 \u00b5g/kg** |"
+      ]
+    ]
+  },
+  {
+    "key": "#464 - Yang 2020",
+    "author": "Yang",
+    "year": 2020,
+    "intra_hits": [],
+    "rescue_hits": [
+      [
+        "yang_2020_covidence_464_full_data_extraction.md",
+        "| Hemodynamic rescue | Phenylephrine or ephedrine if MAP fell \u226530% from baseline |"
+      ],
+      [
+        "yang_2020_covidence_464_full_data_extraction.md",
+        "| Rescue threshold | VAS **>3/10** |"
+      ],
+      [
+        "yang_2020_covidence_464_full_data_extraction.md",
+        "| Rescue medication given | **5/29 (17.24%)** | **7/28 (25.00%)** | **0.473** |"
+      ]
+    ]
+  },
+  {
+    "key": "#252 - Yang 2023",
+    "author": "Yang",
+    "year": 2023,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#431 - Xiong 2021",
+    "author": "Xiong",
+    "year": 2021,
+    "intra_hits": [
+      [
+        "xiong_2021_covidence_431_full_data_extraction.md",
+        "| Remifentanil | **0.1-0.2 \u00b5g/kg/h** as printed |"
+      ],
+      [
+        "xiong_2021_covidence_431_full_data_extraction.md",
+        "The article prints remifentanil maintenance as **0.1-0.2 \u00b5g/kg/h**. Preserve as published; do not silently convert to another unit."
+      ],
+      [
+        "xiong_2021_covidence_431_full_data_extraction.md",
+        "| Intraoperative opioid consumption | **1.8 \u00b1 0.4 mg morphine equivalent/kg** | **1.8 \u00b1 0.4 mg morphine equivalent/kg** | **0.795** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "xiong_2021_covidence_431_full_data_extraction.md",
+        "| Rescue antiemetic required | **9/31 (29.0%)** | **18/31 (58.1%)** | **0.021** | **0.60 (0.37-0.96)** |"
+      ],
+      [
+        "xiong_2021_covidence_431_full_data_extraction.md",
+        "| Any rescue antiemetic | **9/31 (29.0%)** | **18/31 (58.1%)** | **0.021** |"
+      ],
+      [
+        "xiong_2021_covidence_431_full_data_extraction.md",
+        "| Rescue antiemetic | **29.0% vs 58.1%, P=0.021** |"
+      ]
+    ]
+  },
+  {
+    "key": "#338 - Xing 2022",
+    "author": "Xing",
+    "year": 2022,
+    "intra_hits": [
+      [
+        "xing_2022_gastric_cancer_teas_tapb_full_data_extraction.md",
+        "| Group | Remifentanil, \u00b5g |"
+      ],
+      [
+        "xing_2022_gastric_cancer_teas_tapb_full_data_extraction.md",
+        "| Intraoperative remifentanil | **1619.13 \u00b1 328.98 vs 1415.41 \u00b1 295.67 vs 1182.61 \u00b1 253.61 \u00b5g** |"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#701 - Xie 2014",
+    "author": "Xie",
+    "year": 2014,
+    "intra_hits": [
+      [
+        "xie_2014_covidence_701_full_data_extraction.md",
+        "| Remifentanil, mg | **1.90 \u00b1 0.65** | **1.90 \u00b1 0.59** | **1.89 \u00b1 0.63** |"
+      ],
+      [
+        "xie_2014_covidence_701_full_data_extraction.md",
+        "The induction target concentrations are printed as **4 ng/kg** for remifentanil and **3 \u00b5g/kg** for propofol rather than the more conventional concentration units. Preserve the published wording unless clarified."
+      ],
+      [
+        "xie_2014_covidence_701_full_data_extraction.md",
+        "| Intraoperative remifentanil | **1.90 \u00b1 0.65 vs 1.90 \u00b1 0.59 vs 1.89 \u00b1 0.63 mg; no difference** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "xie_2014_covidence_701_full_data_extraction.md",
+        "This study did **not** demonstrate an intraoperative remifentanil-sparing effect. Its opioid-sparing signal is **postoperative sufentanil/rescue dezocine**, not intraoperative remifentanil."
+      ],
+      [
+        "xie_2014_covidence_701_full_data_extraction.md",
+        "| Rescue opioid/analgesic | **Dezocine 5 mg IV**, less frequently required |"
+      ],
+      [
+        "xie_2014_covidence_701_full_data_extraction.md",
+        "| Dezocine rescue | **35% vs 30% vs 5%** |"
+      ]
+    ]
+  },
+  {
+    "key": "#332 - Wu 2022",
+    "author": "Wu",
+    "year": 2022,
+    "intra_hits": [
+      [
+        "wu_2022_spinal_surgery_pteas_full_data_extraction.md",
+        "| Cumulative remifentanil, \u00b5g | **1637 \u00b1 630** | **1383 \u00b1 494** | **0.042** |"
+      ],
+      [
+        "wu_2022_spinal_surgery_pteas_full_data_extraction.md",
+        "| Remifentanil index, \u00b5g/min/kg | **0.114 \u00b1 0.090** | **0.084 \u00b1 0.018** | **0.045** |"
+      ],
+      [
+        "wu_2022_spinal_surgery_pteas_full_data_extraction.md",
+        "| Intraoperative remifentanil | **1383 \u00b1 494 vs 1637 \u00b1 630 \u00b5g, P=0.042** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "wu_2022_spinal_surgery_pteas_full_data_extraction.md",
+        "11. Exact identity/dose of the rescue antiemetic"
+      ]
+    ]
+  },
+  {
+    "key": "#122 - Wu 2025",
+    "author": "Wu",
+    "year": 2025,
+    "intra_hits": [
+      [
+        "wu_2025_day_lung_cancer_teas_full_data_extraction.md",
+        "| Remifentanil, \u00b5g | **489.4 \u00b1 226.0** | **533.8 \u00b1 263.6** | 0.368 |"
+      ],
+      [
+        "wu_2025_day_lung_cancer_teas_full_data_extraction.md",
+        "- remifentanil: **489.4 \u00b1 226.0 vs 533.8 \u00b1 263.6 \u00b5g**"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "wu_2025_day_lung_cancer_teas_full_data_extraction.md",
+        "| Secondary outcomes | VAS at 1 h and 12 h; VAS >4 within 12 h; analgesic consumption; vomiting/PONV; rescue antiemetics; QoR-15; hospital stay; safety |"
+      ],
+      [
+        "wu_2025_day_lung_cancer_teas_full_data_extraction.md",
+        "20. Main article refers readers to **Supplementary Material 1** for further anesthetic/analgesic details, so rescue-drug formulations may be recoverable from supplement rather than author contact."
+      ],
+      [
+        "wu_2025_day_lung_cancer_teas_full_data_extraction.md",
+        "5. **Can you provide the exact number of rescue doses/tablets received per patient?**"
+      ]
+    ]
+  },
+  {
+    "key": "#912 - Wong 2006",
+    "author": "Wong",
+    "year": 2006,
+    "intra_hits": [],
+    "rescue_hits": [
+      [
+        "wong_2006_covidence_912_full_data_extraction.md",
+        "| Rescue analgesia beyond PCA/oral regimen | **NR** |"
+      ]
+    ]
+  },
+  {
+    "key": "#297 - Wang 2023",
+    "author": "Wang",
+    "year": 2023,
+    "intra_hits": [
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "| Intraoperative high/low BP episodes | **0.58 \u00b1 1.06** | **0.65 \u00b1 1.11** | 0.750 |"
+      ],
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "| Intraoperative fluid, mL | **2307.75 \u00b1 787.99** | **2137.67 \u00b1 799.17** | 0.332 |"
+      ],
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.2 \u00b5g/kg/min continuous infusion** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "| Secondary outcomes | VAS pain at 24/48/72 h, cumulative number of rescue-analgesia doses, abdominal distension, dizziness, PONV, pulmonary complications, inflammatory and oxidative-stress biomarkers |"
+      ],
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "9. Rescue analgesia trigger/threshold"
+      ],
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "19. Rescue antiemetic protocol/use"
+      ]
+    ]
+  },
+  {
+    "key": "#212 - Wang 2024",
+    "author": "Wang",
+    "year": 2024,
+    "intra_hits": [
+      [
+        "wang_2024_covidence_212_full_data_extraction.md",
+        "For the opioid-sparing review, this study is **not usable for a continuous postoperative 24-h opioid/MME endpoint**. Postoperative rescue analgesia was **flurbiprofen axetil 100 mg**, not an opioid, and no postoperative opioid consumption was reported. Intraoperative sufentanil was similar between OD and ODT subgroups."
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "wang_2024_covidence_212_full_data_extraction.md",
+        "# 21. Postoperative nausea/vomiting definitions and rescue treatment"
+      ],
+      [
+        "wang_2024_covidence_212_full_data_extraction.md",
+        "For the opioid-sparing review, this study is **not usable for a continuous postoperative 24-h opioid/MME endpoint**. Postoperative rescue analgesia was **flurbiprofen axetil 100 mg**, not an opioid, and no postoperative opioid consumption was reported. Intraoperative sufentanil was similar between OD and ODT subgroups."
+      ],
+      [
+        "RoB2_Wang_2024_IncidenceOfPONV_24h.md",
+        "- Incidence of PONV within 24 hours was significantly lower in the TEAS group compared with the Sham group (19/70 [27.1%] vs. 38/70 [54.3%]; relative risk 0.50, 95% CI 0.33\u20130.77, P = 0.001). Rescue antiemetic requirement was also significantly lower in the TEAS group (11.4% vs. 30.0%, P = 0.006)."
+      ]
+    ]
+  },
+  {
+    "key": "#244 - Tu 2023",
+    "author": "Tu",
+    "year": 2023,
+    "intra_hits": [
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "| Intraoperative high/low BP episodes | **0.58 \u00b1 1.06** | **0.65 \u00b1 1.11** | 0.750 |"
+      ],
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "| Intraoperative fluid, mL | **2307.75 \u00b1 787.99** | **2137.67 \u00b1 799.17** | 0.332 |"
+      ],
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.2 \u00b5g/kg/min continuous infusion** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "| Secondary outcomes | VAS pain at 24/48/72 h, cumulative number of rescue-analgesia doses, abdominal distension, dizziness, PONV, pulmonary complications, inflammatory and oxidative-stress biomarkers |"
+      ],
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "9. Rescue analgesia trigger/threshold"
+      ],
+      [
+        "wang_2023_gi_tumor_sleep_teas_full_data_extraction.md",
+        "19. Rescue antiemetic protocol/use"
+      ]
+    ]
+  },
+  {
+    "key": "#632 - Sun 2017",
+    "author": "Sun",
+    "year": 2017,
+    "intra_hits": [
+      [
+        "sun_2017_covidence_632_full_data_extraction.md",
+        "- **0.01 mg sufentanil = 0.1 mg remifentanil = 10 mg morphine**"
+      ],
+      [
+        "sun_2017_covidence_632_full_data_extraction.md",
+        "Table 2 then reports **\u201cintraoperative morphine (mg/kg)\u201d**."
+      ],
+      [
+        "sun_2017_covidence_632_full_data_extraction.md",
+        "| Author-defined intraoperative morphine equivalent, mg/kg | **1.5 \u00b1 0.4** | **1.6 \u00b1 0.4** | **1.6 \u00b1 0.4** | **1.5 \u00b1 0.4** | **0.303** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "sun_2017_covidence_632_full_data_extraction.md",
+        "| Rescue/supplemental analgesic | **Flurbiprofen axetil 50 mg IV** |"
+      ],
+      [
+        "sun_2017_covidence_632_full_data_extraction.md",
+        "| Opioid rescue protocol | **NR / none described** |"
+      ],
+      [
+        "sun_2017_covidence_632_full_data_extraction.md",
+        "| Supplemental analgesic use | **23.3%, 11.0%, 15.4%, 7.9%** |"
+      ]
+    ]
+  },
+  {
+    "key": "#952 - Sim 2002",
+    "author": "Sim",
+    "year": 2002,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#596 - PraveenaSeevaunnamtum 2016",
+    "author": "Praveena",
+    "year": 2016,
+    "intra_hits": [
+      [
+        "RoB2_Praveena_2016_MorphineConsumption_24h.md",
+        "- **1.3 Baseline balance:** No (N) \u2014 Age (47.47 \u00b1 7.82 vs. 49.69 \u00b1 7.96 yr), weight, height, surgical duration, and intraoperative fentanyl doses balanced ($P > 0.05$; Table 1)."
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#298 - Pan 2023",
+    "author": "Pan",
+    "year": 2023,
+    "intra_hits": [
+      [
+        "pan_2023_laparoscopic_myomectomy_teas_full_data_extraction.md",
+        "| Maintenance remifentanil, \u00b5g | **740.1 \u00b1 276.9** | **854.0 \u00b1 287.5** | **0.04** |"
+      ],
+      [
+        "pan_2023_laparoscopic_myomectomy_teas_full_data_extraction.md",
+        "| Intraoperative remifentanil | **740.1 \u00b1 276.9 vs 854.0 \u00b1 287.5 \u00b5g** |"
+      ],
+      [
+        "pan_2023_laparoscopic_myomectomy_teas_full_data_extraction.md",
+        "Other notable effects favoring TEAS included lower intraoperative hypotension, less vasoactive-drug use, lower 24-h vomiting, faster first flatus and solid-food tolerance, and a higher **QoR-40 total score (182.7 \u00b1 6.9 vs 176.4 \u00b1 7.1)**."
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "pan_2023_laparoscopic_myomectomy_teas_full_data_extraction.md",
+        "| Remedial-drug use in PACU | **10/52 (19%)** | **18/53 (34%)** | 0.09 |"
+      ]
+    ]
+  },
+  {
+    "key": "#729 - Ntritsou 2014",
+    "author": "Ntritsou",
+    "year": 2014,
+    "intra_hits": [
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "| Remifentanil, \u03bcg | **1003.6 \u00b1 522.7** | **1041.9 \u00b1 631.9** | **0.783** |"
+      ],
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "| Remifentanil | **1003.6 \u00b1 522.7 vs 1041.9 \u00b1 631.9 \u03bcg, NS** |"
+      ],
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "Thus, the trial shows a clear reduction in **rescue analgesic requirement**, but not a statistically significant reduction in the reported total tramadol sum. Intraoperative remifentanil was also similar (**1003.6 \u00b1 522.7 vs 1041.9 \u00b1 631.9 \u03bcg, P=0.783**)."
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "Where the article distinguishes **scheduled/background tramadol-ketamine analgesia** from **rescue analgesia**, these are kept separate. Where rescue-analgesia quantities are not numerically reported in the main article, they are not invented."
+      ],
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "- it includes the scheduled/background tramadol regimen and likely rescue tramadol,"
+      ],
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "| 24-h MME | Could only be calculated using the review's prespecified conversion rules **if the tramadol-sum time window is accepted and rescue morphine data are obtained/confirmed** |"
+      ]
+    ]
+  },
+  {
+    "key": "#775 - Ng 2012 / 2013",
+    "author": "Ng",
+    "year": 2012,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#2 - Ma 2026",
+    "author": "Ma",
+    "year": 2026,
+    "intra_hits": [
+      [
+        "ma_2026_breast_cancer_sleep_teas_full_data_extraction.md",
+        "| Remifentanil | **0.1-0.3 \u00b5g/kg/min** |"
+      ],
+      [
+        "ma_2026_breast_cancer_sleep_teas_full_data_extraction.md",
+        "| Remifentanil infusion | **0.1-0.3 \u00b5g/kg/min** |"
+      ],
+      [
+        "ma_2026_breast_cancer_sleep_teas_full_data_extraction.md",
+        "For the opioid-sparing review, the study is **not quantitatively usable for a 24-h postoperative opioid/MME endpoint**. All patients received intraoperative sufentanil/remifentanil, but group-specific opioid totals are not reported. Postoperative analgesia was **flurbiprofen axetil 100 mg IV once daily for three days**, and the paper does not report quantitative postoperative opioid use."
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#414 - Lu 2021",
+    "author": "Lu",
+    "year": 2021,
+    "intra_hits": [
+      [
+        "lu_2021_covidence_414_full_data_extraction.md",
+        "| Group | Remifentanil, mg |"
+      ],
+      [
+        "lu_2021_covidence_414_full_data_extraction.md",
+        "| Intraoperative remifentanil | **1.4 vs 1.3 vs 1.2 mg** |"
+      ],
+      [
+        "lu_2021_covidence_414_full_data_extraction.md",
+        "| Best-supported intraoperative opioid effect | **Combined vs sham: -0.20 mg, P<0.001** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "lu_2021_covidence_414_full_data_extraction.md",
+        "| Secondary outcomes | Intraoperative remifentanil; time to verbal response; extubation; 24-h NRS at rest/cough; rescue analgesia; PONV; satisfaction; chronic pain at 3 months |"
+      ],
+      [
+        "lu_2021_covidence_414_full_data_extraction.md",
+        "At 24 h, acute pain and rescue parecoxib use were similar among groups. Combined-acupoint TEAS substantially reduced PONV (**18.4% vs 36.2% sham**) and especially nausea, while vomiting was unchanged."
+      ]
+    ]
+  },
+  {
+    "key": "#317 - Lu 2022",
+    "author": "Lu",
+    "year": 2022,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#35 - Luo 2026",
+    "author": "Luo",
+    "year": 2026,
+    "intra_hits": [
+      [
+        "luo_2026_covidence_35_full_data_extraction.md",
+        "The publication does **not explain the conversion method**, and the unit is not readily reconcilable with the stated induction dose of **sufentanil 0.2 \u00b5g/kg** or with remifentanil infusion. Preserve the table exactly as published and **do not convert this variable to MME or actual sufentanil mass without clarification**."
+      ],
+      [
+        "luo_2026_covidence_35_full_data_extraction.md",
+        "| Emergence propofol | **1 mg/kg IV immediately before discontinuing sevoflurane/remifentanil** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "luo_2026_covidence_35_full_data_extraction.md",
+        "| Rescue acetaminophen | **5/138 vs 5/139** |"
+      ],
+      [
+        "luo_2026_covidence_35_full_data_extraction.md",
+        "| Rescue acetaminophen | **5/138 (3.6%)** | **5/139 (3.6%)** |"
+      ],
+      [
+        "luo_2026_covidence_35_full_data_extraction.md",
+        "- TEAS: **at least 8 rescue administrations/patients across intervals**"
+      ]
+    ]
+  },
+  {
+    "key": "#106 - Long 2025",
+    "author": "Long",
+    "year": 2025,
+    "intra_hits": [
+      [
+        "long_2025_hip_fracture_teas_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.2-2 \u00b5g/kg/min** |"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#437 - Li 2021",
+    "author": "Li",
+    "year": 2021,
+    "intra_hits": [
+      [
+        "li_2021_covidence_437_full_data_extraction.md",
+        "| Intraoperative infusion, mL | **1940 \u00b1 720** | **2018 \u00b1 618** | 0.329 |"
+      ],
+      [
+        "liang_2021_covidence_14_full_data_extraction.md",
+        "| Intraoperative fluids, mL | **874.3 \u00b1 243.0** | **814.3 \u00b1 245.1** |"
+      ],
+      [
+        "liang_2021_covidence_14_full_data_extraction.md",
+        "| Remifentanil consumption, \u00b5g | **521.5 \u00b1 206.8** | **464.7 \u00b1 156.0** |"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#69 - Liu 2025",
+    "author": "Liu",
+    "year": 2025,
+    "intra_hits": [
+      [
+        "liu_2025_thoracoscopic_ea_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.1-0.2 \u00b5g/kg/min** |"
+      ],
+      [
+        "liu_2025_thoracoscopic_ea_full_data_extraction.md",
+        "| Remifentanil, \u00b5g | **1095.9 \u00b1 362.2** | **911.1 \u00b1 233.8** | **0.01** |"
+      ],
+      [
+        "liu_2025_thoracoscopic_ea_full_data_extraction.md",
+        "| Intraoperative remifentanil | **911.1 \u00b1 233.8 vs 1095.9 \u00b1 362.2 \u00b5g** |"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#424 - Liu 2021",
+    "author": "Liu",
+    "year": 2021,
+    "intra_hits": [
+      [
+        "liu_2021_pocd_teas_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.25-0.4 \u00b5g/kg/min** |"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#48 - Liu 2026",
+    "author": "Liu",
+    "year": 2026,
+    "intra_hits": [
+      [
+        "liu_2026_burn_teas_covidence_48_full_data_extraction.md",
+        "| Sample-size assumptions | Remifentanil 0.15 \u00b1 0.05 vs expected 0.12 \u00b1 0.03 \u00b5g/kg/min; 90% power; \u03b1=0.05 |"
+      ],
+      [
+        "liu_2026_burn_teas_covidence_48_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.1-1 \u00b5g/kg/min** |"
+      ],
+      [
+        "liu_2026_burn_teas_covidence_48_full_data_extraction.md",
+        "| Remifentanil consumption | **0.70 (0.50-1.10) mg** | **0.90 (0.65-1.25) mg** | **0.039** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "liu_2026_burn_teas_covidence_48_full_data_extraction.md",
+        "| Secondary outcomes | Propofol dosage; resting F-VAS before/after stimulation and at 24/48 h; nausea-vomiting; constipation; drowsiness; dizziness; rescue analgesia through POD1 |"
+      ],
+      [
+        "liu_2026_burn_teas_covidence_48_full_data_extraction.md",
+        "| TEAS rescue use | **3/43 (7.0%)** |"
+      ],
+      [
+        "liu_2026_burn_teas_covidence_48_full_data_extraction.md",
+        "| Control rescue use | **8/43 (18.6%)** |"
+      ]
+    ]
+  },
+  {
+    "key": "#75 - Liu 2025",
+    "author": "Liu",
+    "year": 2025,
+    "intra_hits": [
+      [
+        "liu_2025_thoracoscopic_ea_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.1-0.2 \u00b5g/kg/min** |"
+      ],
+      [
+        "liu_2025_thoracoscopic_ea_full_data_extraction.md",
+        "| Remifentanil, \u00b5g | **1095.9 \u00b1 362.2** | **911.1 \u00b1 233.8** | **0.01** |"
+      ],
+      [
+        "liu_2025_thoracoscopic_ea_full_data_extraction.md",
+        "| Intraoperative remifentanil | **911.1 \u00b1 233.8 vs 1095.9 \u00b1 362.2 \u00b5g** |"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#359 - Li 2022",
+    "author": "Li",
+    "year": 2022,
+    "intra_hits": [
+      [
+        "li_2022_preoperative_ea_thyroidectomy_full_data_extraction.md",
+        "| Remifentanil, \u00b5g | **2009 \u00b1 143.2** | **1989 \u00b1 158.7** | 0.555 |"
+      ],
+      [
+        "li_2022_preoperative_ea_thyroidectomy_full_data_extraction.md",
+        "| Intraoperative sufentanil, \u00b5g | **41.6 \u00b1 2.3** | **41.5 \u00b1 2.6** | 0.947 |"
+      ],
+      [
+        "li_2022_preoperative_ea_thyroidectomy_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.3 \u00b5g/kg/min fixed for all patients** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "li_2022_preoperative_ea_thyroidectomy_full_data_extraction.md",
+        "| Secondary outcomes | Forearm mechanical pain threshold; thresholds at 6/24/48 h; postoperative hyperalgesia; NRS pain; rescue analgesics; perioperative variables; adverse reactions |"
+      ],
+      [
+        "li_2022_preoperative_ea_thyroidectomy_full_data_extraction.md",
+        "| EA requiring rescue | **0/39 (0%)** |"
+      ],
+      [
+        "li_2022_preoperative_ea_thyroidectomy_full_data_extraction.md",
+        "| SEA requiring rescue | **0/40 (0%)** |"
+      ]
+    ]
+  },
+  {
+    "key": "#951 - Lin 2002",
+    "author": "Lin",
+    "year": 2002,
+    "intra_hits": [
+      [
+        "lin_2002_covidence_951_full_data_extraction.md",
+        "No intraoperative opioids were used. During the first postoperative hour, patients could receive **pethidine 1 mg/kg IM once**. At 1 h, all patients started **IV morphine PCA**, programmed for **2-mg boluses with a 10-min lockout**, continuing for the next 23 h."
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#432 - Liang 2021",
+    "author": "Liang",
+    "year": 2021,
+    "intra_hits": [
+      [
+        "liang_2021_covidence_14_full_data_extraction.md",
+        "| Intraoperative fluids, mL | **874.3 \u00b1 243.0** | **814.3 \u00b1 245.1** |"
+      ],
+      [
+        "liang_2021_covidence_14_full_data_extraction.md",
+        "| Remifentanil consumption, \u00b5g | **521.5 \u00b1 206.8** | **464.7 \u00b1 156.0** |"
+      ],
+      [
+        "liang_2021_covidence_14_full_data_extraction.md",
+        "| Additional intraoperative sufentanil | Article prints **0.1 mg/kg every 30 min** |"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#812 - Lee 2011",
+    "author": "Lee",
+    "year": 2011,
+    "intra_hits": [
+      [
+        "lee_2011_covidence_49_full_data_extraction.md",
+        "General anesthesia used **propofol 2 mg/kg, atracurium 0.5 mg/kg, sevoflurane, 50% nitrous oxide and oxygen**, with the authors stating that **no narcotics** were given intraoperatively. Postoperatively, all patients received **IV morphine PCA**, started after 1 h in recovery, with **0.8-mg boluses and an 8-min lockout**."
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#326 - Jin 2022",
+    "author": "Jin",
+    "year": 2022,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#4 - Jiang 2026",
+    "author": "Jiang",
+    "year": 2026,
+    "intra_hits": [
+      [
+        "jiang_2026_covidence_4_full_data_extraction.md",
+        "| Remifentanil, \u00b5g | **841.4 (593.85-1278.0)** | **795.2 (584.0-1228.2)** | 0.284 |"
+      ],
+      [
+        "jiang_2026_covidence_4_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.05-0.2 \u00b5g/kg/min** |"
+      ],
+      [
+        "jiang_2026_covidence_4_full_data_extraction.md",
+        "| Remifentanil, \u00b5g | **841.4 (593.85-1278.0)** | **795.2 (584.0-1228.2)** | 0.284 |"
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#131 - Huang 2025",
+    "author": "Huang",
+    "year": 2025,
+    "intra_hits": [],
+    "rescue_hits": [
+      [
+        "huang_2025_covidence_131_full_data_extraction.md",
+        "| Additional analgesic use | **1/43 (2.3%)** | **4/45 (8.9%)** | **0.385** |"
+      ],
+      [
+        "huang_2025_covidence_131_full_data_extraction.md",
+        "The protocol identifies the additional analgesic as **ketorolac tromethamine 30 mg IM** for VAS \u22656/request."
+      ],
+      [
+        "huang_2025_covidence_131_full_data_extraction.md",
+        "| Additional analgesic | **Ketorolac rescue: 2.3% vs 8.9%, NS** |"
+      ]
+    ]
+  },
+  {
+    "key": "#3811 - Huang 2017",
+    "author": "Huang",
+    "year": 2017,
+    "intra_hits": [
+      [
+        "huang_2017_covidence_666_full_data_extraction.md",
+        "| Sample-size basis | Pre-study intraoperative opioid dose **0.1620 (0.035) \u00b5g/kg/min** control; target **30% difference**; \u03b1=0.05, power 0.80 |"
+      ],
+      [
+        "huang_2017_covidence_666_full_data_extraction.md",
+        "| Rescue sufentanil intraoperatively | **0.1 \u00b5g/kg** if remifentanil TCI reached 6 ng/mL and ANI remained <50 |"
+      ],
+      [
+        "huang_2017_covidence_666_full_data_extraction.md",
+        "| Total opioid, remifentanil-equivalent, \u00b5g/kg/min | **0.1617 \u00b1 0.037** | **0.1128 \u00b1 0.034** | **0.1718 \u00b1 0.066** | **0.1451 \u00b1 0.036** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "huang_2017_covidence_666_full_data_extraction.md",
+        "| Rescue sufentanil intraoperatively | **0.1 \u00b5g/kg** if remifentanil TCI reached 6 ng/mL and ANI remained <50 |"
+      ]
+    ]
+  },
+  {
+    "key": "#245 - Huang 2023",
+    "author": "Huang",
+    "year": 2023,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#295 - Hou 2023",
+    "author": "Hou",
+    "year": 2023,
+    "intra_hits": [
+      [
+        "hou_2023_covidence_7_full_data_extraction.md",
+        "| Remifentanil, \u00b5g, median (IQR) | **1000 (881-1144)** | **950 (750-1238)** | 0.572 |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "hou_2023_covidence_7_full_data_extraction.md",
+        "| Secondary/recovery outcomes | Sleep quality, pain, rescue analgesia, PONV, bowel recovery, QoR-15, chronic pain, biomarkers |"
+      ],
+      [
+        "hou_2023_covidence_7_full_data_extraction.md",
+        "| Patients receiving rescue analgesic | **28/36 (77.8%)** | **15/36 (41.7%)** | **0.002** |"
+      ],
+      [
+        "hou_2023_covidence_7_full_data_extraction.md",
+        "| Rescue analgesic use | **41.7% vs 77.8%, P=0.002** |"
+      ]
+    ]
+  },
+  {
+    "key": "#25 - He 2026 (Hepatectomy)",
+    "author": "He",
+    "year": 2026,
+    "intra_hits": [
+      [
+        "he_2026_covidence_25_full_data_extraction_REVISED_with_supplements.md",
+        "| Remifentanil infusion | **0.1-0.3 \u00b5g/kg/min** |"
+      ],
+      [
+        "he_2026_covidence_25_full_data_extraction_REVISED_with_supplements.md",
+        "| Remifentanil, mg | **2.5 \u00b1 1.4** | **2.8 \u00b1 1.9** |"
+      ],
+      [
+        "he_2026_covidence_25_full_data_extraction.md",
+        "| Remifentanil infusion | **0.1-0.3 \u00b5g/kg/min** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "he_2026_covidence_41_full_data_extraction.md",
+        "| Rescue medication choice algorithm | Based on pain severity / VAS |"
+      ],
+      [
+        "he_2026_covidence_41_full_data_extraction.md",
+        "EA was applied at **ST36 and SP6** using a **2/10-Hz sparse-dense waveform**, beginning **30 min before anesthesia induction and continuing until the end of surgery**. The control group received shallow needle insertion **0.5 cm away from the true acupoints** connected to an inactive stimulator. Both groups underwent standardized general anesthesia and received **flurbiprofen axetil 50 mg IV at wound closure**. Rescue **morphine 1-3 mg IV** or **paracetamol 1 g IV** could be given according to pain severity."
+      ],
+      [
+        "he_2026_covidence_41_full_data_extraction.md",
+        "EA also improved the 24-h BADL total score (**85 vs 80, P<0.01**) and reduced **PONV (20.0% vs 33.8%)** and appetite loss. However, **rescue opioid consumption was not recorded or compared**, so this article **cannot provide a quantitative 24-h postoperative opioid or MME endpoint**."
+      ]
+    ]
+  },
+  {
+    "key": "#41 - He 2026",
+    "author": "He",
+    "year": 2026,
+    "intra_hits": [
+      [
+        "he_2026_covidence_25_full_data_extraction_REVISED_with_supplements.md",
+        "| Remifentanil infusion | **0.1-0.3 \u00b5g/kg/min** |"
+      ],
+      [
+        "he_2026_covidence_25_full_data_extraction_REVISED_with_supplements.md",
+        "| Remifentanil, mg | **2.5 \u00b1 1.4** | **2.8 \u00b1 1.9** |"
+      ],
+      [
+        "he_2026_covidence_25_full_data_extraction.md",
+        "| Remifentanil infusion | **0.1-0.3 \u00b5g/kg/min** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "he_2026_covidence_41_full_data_extraction.md",
+        "| Rescue medication choice algorithm | Based on pain severity / VAS |"
+      ],
+      [
+        "he_2026_covidence_41_full_data_extraction.md",
+        "EA was applied at **ST36 and SP6** using a **2/10-Hz sparse-dense waveform**, beginning **30 min before anesthesia induction and continuing until the end of surgery**. The control group received shallow needle insertion **0.5 cm away from the true acupoints** connected to an inactive stimulator. Both groups underwent standardized general anesthesia and received **flurbiprofen axetil 50 mg IV at wound closure**. Rescue **morphine 1-3 mg IV** or **paracetamol 1 g IV** could be given according to pain severity."
+      ],
+      [
+        "he_2026_covidence_41_full_data_extraction.md",
+        "EA also improved the 24-h BADL total score (**85 vs 80, P<0.01**) and reduced **PONV (20.0% vs 33.8%)** and appetite loss. However, **rescue opioid consumption was not recorded or compared**, so this article **cannot provide a quantitative 24-h postoperative opioid or MME endpoint**."
+      ]
+    ]
+  },
+  {
+    "key": "#848 - Gu 2019",
+    "author": "Gu",
+    "year": 2019,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#260 - Guo 2023",
+    "author": "Guo",
+    "year": 2023,
+    "intra_hits": [
+      [
+        "guo_2023_full_data_extraction.md",
+        "| Remifentanil, mg | **0.87 \u00b1 0.30** | **1.01 \u00b1 0.39** | **0.040** |"
+      ],
+      [
+        "guo_2023_full_data_extraction.md",
+        "| Intraoperative remifentanil | **0.87 \u00b1 0.30 vs 1.01 \u00b1 0.39 mg, P=0.040** |"
+      ],
+      [
+        "guo_2023_full_data_extraction.md",
+        "The primary endpoint was postoperative cognitive dysfunction. POCD was substantially lower with TEAS at **POD1 (20.0% vs 65.4%)**, **POD7 (7.3% vs 43.6%)**, and **POD30 (3.6% vs 40.0%)**, all **P<0.001**. TEAS also reduced intraoperative remifentanil consumption (**0.87 \u00b1 0.30 vs 1.01 \u00b1 0.39 mg; P=0.040**, approximately **13.9% lower**) and produced lower acute pain scores through POD30."
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "guo_2023_full_data_extraction.md",
+        "# 11. Rescue / remedial analgesia"
+      ],
+      [
+        "guo_2023_full_data_extraction.md",
+        "Both groups received **48-h sufentanil PCIA**, but the article does **not report actual postoperative sufentanil consumption**, so a 24-h postoperative opioid/MME endpoint cannot be extracted. Remedial analgesic frequency was not significantly different."
+      ]
+    ]
+  },
+  {
+    "key": "#619 - Grech 2016",
+    "author": "Grech",
+    "year": 2016,
+    "intra_hits": [],
+    "rescue_hits": []
+  },
+  {
+    "key": "#400 - Gao 2021",
+    "author": "Gao",
+    "year": 2021,
+    "intra_hits": [
+      [
+        "gao_2021_covidence_400_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.1 \u00b5g/kg/h** as printed in the article |"
+      ],
+      [
+        "gao_2021_covidence_400_full_data_extraction.md",
+        "The article tabulates propofol, etomidate, sevoflurane, dexmedetomidine, remifentanil, sufentanil, cisatracurium, and rocuronium use. The text-extraction layer renders several microgram symbols incorrectly as \"mg\"; values should be checked against the rendered PDF if these exact drug-dose fields are used for quantitative analysis."
+      ],
+      [
+        "Gao_et_al_2021_gemini.md",
+        "* **Maintenance:** Remifentanil (0.1 \u03bcg/kg/h), cisphenyl sulfatracurium (0.1 mg/kg/h), dexmedetomidine (initial 1 \u03bcg/kg for 10 min, maintenance 0.4 \u03bcg/kg/h), and sevoflurane and/or propofol to maintain a bispectral index of 40-60 [cite: 15]."
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "gao_2021_covidence_400_full_data_extraction.md",
+        "8. Rescue analgesia dose/frequency"
+      ]
+    ]
+  },
+  {
+    "key": "#837 - El-Rakshy 2009",
+    "author": "El",
+    "year": 2009,
+    "intra_hits": [
+      [
+        "el_rakshy_2009_covidence_868_full_data_extraction.md",
+        "| Intraoperative morphine | **100 \u00b5g/kg IV just before skin incision** |"
+      ],
+      [
+        "el_rakshy_2009_covidence_868_full_data_extraction.md",
+        "**Important source check:** The rendered PDF page shows the intraoperative morphine dose as **100 \u00b5g/kg**, despite the machine-parsed text incorrectly rendering the symbol as mg/kg."
+      ],
+      [
+        "El-Rakshy_et_al_2009_gemini.md",
+        "* **PONV/nausea/vomiting:** 89.1% of the PCA + acupuncture group had no PONV symptoms compared with 87.5% in the PCA alone group; the difference was not significant (p = 0.065) [cite: 13]. Standard droperidol (1 mg) was given intraoperatively as a baseline antiemetic [cite: 13]."
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "El-Rakshy_et_al_2009_gemini.md",
+        "* **Number/proportion requiring rescue analgesia:** Addressed via the total mg of PCA morphine used; no significant difference in consumption was observed between groups [cite: 13]."
+      ]
+    ]
+  },
+  {
+    "key": "#838 - Coura 2011",
+    "author": "Coura",
+    "year": 2011,
+    "intra_hits": [],
+    "rescue_hits": [
+      [
+        "coura_2011_covidence_819_full_data_extraction.md",
+        "# 14. Rescue/supplementary analgesia"
+      ],
+      [
+        "Coura_et_al_2011_gemini.md",
+        "* **Number/proportion requiring rescue analgesia:** Measured via the number of effective boluses self-administered [cite: 11]. The number of boluses issued was 13.9 \u00b1 7.0 in the treatment group and 24.8 \u00b1 7.0 in the control group (p < 0.002) [cite: 11]."
+      ]
+    ]
+  },
+  {
+    "key": "#969 - Chen 1998",
+    "author": "Chen",
+    "year": 1998,
+    "intra_hits": [
+      [
+        "chen_1998_covidence_969_full_data_extraction.md",
+        "| Intraoperative fentanyl, \u00b5g | **133 \u00b1 38** | **142 \u00b1 32** | **134 \u00b1 39** | **134 \u00b1 36** |"
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "covidence_969_chen_1998_gemini.md",
+        "* **Number/proportion requiring rescue analgesia:** Addressed primarily via PCA demands [cite: 9]. Supplemental bolus doses of HM 0.5-1 mg IM were administered if patients were unable to achieve adequate pain relief via PCA [cite: 9]. There were no differences among the four groups with respect to the number of patients requiring supplemental injections of opioid or nonopioid oral analgesics [cite: 9]."
+      ]
+    ]
+  },
+  {
+    "key": "#480 - Chen 2020",
+    "author": "Chen",
+    "year": 2020,
+    "intra_hits": [
+      [
+        "chen_2020_full_data_extraction.md",
+        "17. Clarification of the **reported intraoperative sufentanil unit in Table 1 (\"mg\")**, which appears unusual relative to the induction dose described in \u00b5g/kg"
+      ],
+      [
+        "chen_2020_full_data_extraction.md",
+        "3. **Could you confirm the unit for the intraoperative sufentanil dose in Table 1, which is printed as mg?**"
+      ],
+      [
+        "RoB2_Chen_2020_SufentanilConsumption_24h.md",
+        "- Cumulative sufentanil consumption at 24 hours postoperatively was significantly lower in the TEAS group compared with the Sham group (mean \u00b1 SD: 36.4 \u00b1 6.2 \u00b5g vs. 49.8 \u00b1 7.8 \u00b5g, P < 0.001). Intraoperative propofol requirements and PACU recovery times were also significantly reduced."
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#438 - Ao 2021",
+    "author": "Ao",
+    "year": 2021,
+    "intra_hits": [
+      [
+        "gao_2021_covidence_400_full_data_extraction.md",
+        "| Remifentanil maintenance | **0.1 \u00b5g/kg/h** as printed in the article |"
+      ],
+      [
+        "gao_2021_covidence_400_full_data_extraction.md",
+        "The article tabulates propofol, etomidate, sevoflurane, dexmedetomidine, remifentanil, sufentanil, cisatracurium, and rocuronium use. The text-extraction layer renders several microgram symbols incorrectly as \"mg\"; values should be checked against the rendered PDF if these exact drug-dose fields are used for quantitative analysis."
+      ],
+      [
+        "Gao_et_al_2021_gemini.md",
+        "* **Maintenance:** Remifentanil (0.1 \u03bcg/kg/h), cisphenyl sulfatracurium (0.1 mg/kg/h), dexmedetomidine (initial 1 \u03bcg/kg for 10 min, maintenance 0.4 \u03bcg/kg/h), and sevoflurane and/or propofol to maintain a bispectral index of 40-60 [cite: 15]."
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "ao_2021_full_data_extraction.md",
+        "| Rescue analgesia terminology | The article refers to the **number of effective PCA presses / cumulative rescue analgesia**, but does not identify a separate rescue analgesic drug |"
+      ],
+      [
+        "ao_2021_full_data_extraction.md",
+        "# 12. Rescue analgesia / PCA use"
+      ],
+      [
+        "ao_2021_full_data_extraction.md",
+        "| Number/proportion receiving non-PCA rescue medication | **NR** |"
+      ]
+    ]
+  },
+  {
+    "key": "#698 - An 2014",
+    "author": "An",
+    "year": 2014,
+    "intra_hits": [
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "| Remifentanil, \u03bcg | **1003.6 \u00b1 522.7** | **1041.9 \u00b1 631.9** | **0.783** |"
+      ],
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "| Remifentanil | **1003.6 \u00b1 522.7 vs 1041.9 \u00b1 631.9 \u03bcg, NS** |"
+      ],
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "Thus, the trial shows a clear reduction in **rescue analgesic requirement**, but not a statistically significant reduction in the reported total tramadol sum. Intraoperative remifentanil was also similar (**1003.6 \u00b1 522.7 vs 1041.9 \u00b1 631.9 \u03bcg, P=0.783**)."
+      ]
+    ],
+    "rescue_hits": [
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "Where the article distinguishes **scheduled/background tramadol-ketamine analgesia** from **rescue analgesia**, these are kept separate. Where rescue-analgesia quantities are not numerically reported in the main article, they are not invented."
+      ],
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "- it includes the scheduled/background tramadol regimen and likely rescue tramadol,"
+      ],
+      [
+        "ntritsou_2014_covidence_729_full_data_extraction.md",
+        "| 24-h MME | Could only be calculated using the review's prespecified conversion rules **if the tramadol-sum time window is accepted and rescue morphine data are obtained/confirmed** |"
+      ]
+    ]
+  },
+  {
+    "key": "#657 - Chen 2015",
+    "author": "Chen",
+    "year": 2015,
+    "intra_hits": [
+      [
+        "RoB2_Chen_2015_Thyroidectomy_SufentanilConsumption_24h.md",
+        "- Postoperative sufentanil consumption at 24 hours was significantly lower in the TEAS group compared with the Sham group (mean \u00b1 SD: 14.8 \u00b1 3.2 \u00b5g vs. 22.6 \u00b1 4.5 \u00b5g, P < 0.001). Rest and coughing pain VAS scores and remifentanil-induced hyperalgesia were also significantly reduced."
+      ]
+    ],
+    "rescue_hits": []
+  },
+  {
+    "key": "#632 - Chen 2015 (Hyperalgesia)",
+    "author": "Chen",
+    "year": 2015,
+    "intra_hits": [
+      [
+        "RoB2_Chen_2015_Thyroidectomy_SufentanilConsumption_24h.md",
+        "- Postoperative sufentanil consumption at 24 hours was significantly lower in the TEAS group compared with the Sham group (mean \u00b1 SD: 14.8 \u00b1 3.2 \u00b5g vs. 22.6 \u00b1 4.5 \u00b5g, P < 0.001). Rest and coughing pain VAS scores and remifentanil-induced hyperalgesia were also significantly reduced."
+      ]
+    ],
+    "rescue_hits": []
+  }
+]

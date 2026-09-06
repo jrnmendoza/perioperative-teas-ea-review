@@ -1,0 +1,51 @@
+screening_sequence,covidence_number,first_author,publication_year,decision,covidence_reason,decision_basis,status
+26,127,Zhou,2025,EXCLUDE,Wrong outcomes,"Pain measured at 12 and 72 hours only; no qualifying approximately-24-hour pain or postoperative opioid-consumption result",submitted_in_covidence
+27,128,Li,2025,INCLUDE,,Abdominal pain graded at 12 and 24 hours,submitted_in_covidence
+28,129,Zhou,2025,INCLUDE,,VAS pain at 24 hours,submitted_in_covidence
+29,131,Huang,2025,INCLUDE,,Pain and qualifying 24-hour analgesic-use outcome,submitted_in_covidence
+30,135,Zhang,2025,EXCLUDE,Wrong setting,Planned monitored sedation rather than general anaesthesia,submitted_in_covidence
+31,137,Cai,2025,EXCLUDE,Wrong outcomes,"Complete report contains gastrointestinal recovery outcomes but no qualifying pain or postoperative opioid-consumption outcome",submitted_in_covidence
+32,141,Jin,2025,INCLUDE,,Eligible postoperative pain/rescue-analgesia assessment retained,submitted_in_covidence
+33,149,Pei,2025,INCLUDE,,Postoperative pain VAS retained at eligible postoperative assessment,submitted_in_covidence
+34,152,Li,2025,INCLUDE,,English report remains provisionally eligible because the inaccessible complete text does not positively establish absence of both primary outcomes,submitted_in_covidence
+35,155,Yan,2025,EXCLUDE,Publication language,Chinese full text with English abstract only,submitted_in_covidence
+36,174,Zhou,2024,EXCLUDE,Publication language,Chinese full text with English abstract only,submitted_in_covidence
+37,176,Chen,2024,EXCLUDE,Wrong outcomes,"Complete report has gastrointestinal/nutritional/immune outcomes but neither qualifying primary outcome",submitted_in_covidence
+38,190,Zhao,2024,EXCLUDE,Publication language,Chinese full text with English abstract only,submitted_in_covidence
+39,193,Tong,2024,EXCLUDE,Wrong outcomes,"Only intraoperative opioid consumption and no approximately-24-hour postoperative pain result",submitted_in_covidence
+40,195,Luo,2024,INCLUDE,,Postoperative VAS pain reported,submitted_in_covidence
+41,203,Liu,2024,INCLUDE,,Postoperative pain and rescue analgesia by 24 hours,submitted_in_covidence
+42,204,Zhang,2024,EXCLUDE,Wrong outcomes,"Intraoperative opioid endpoint without qualifying postoperative opioid or pain outcome",submitted_in_covidence
+43,212,Wang,2024,INCLUDE,,Postoperative VAS includes the 24-hour assessment,submitted_in_covidence
+44,215,Hou,2024,EXCLUDE,Wrong outcomes,"Dizziness/PONV/headache outcomes and intraoperative opioid amounts only",submitted_in_covidence
+45,219,Fu,2024,INCLUDE,,Postoperative pain and postoperative rescue-analgesia results,submitted_in_covidence
+46,220,Li,2024,EXCLUDE,Publication language,Chinese full text with English abstract only,submitted_in_covidence
+47,236,Wang,2024,EXCLUDE,Wrong setting,Combined spinal-epidural anaesthesia without general anaesthesia,submitted_in_covidence
+48,238,Zhang,2024,EXCLUDE,Wrong outcomes,"Intraoperative propofol and recovery outcomes without qualifying primary outcome",submitted_in_covidence
+49,241,Xiang,2024,EXCLUDE,Publication language,Chinese full text with English abstract only,submitted_in_covidence
+50,244,Tu,2023,INCLUDE,,0-24-hour rescue tramadol dose and postoperative pain,submitted_in_covidence
+51,245,Huang,2023,INCLUDE,,POD1 pain and qualifying PCA dose,submitted_in_covidence
+52,248,Ju,2023,EXCLUDE,Wrong outcomes,"Pulmonary/QoR outcomes without qualifying primary outcome",submitted_in_covidence
+53,252,Yang,2023,INCLUDE,,24-hour postoperative morphine and rest/movement pain,submitted_in_covidence
+54,260,Guo,2023,INCLUDE,,Acute postoperative pain assessment retained,submitted_in_covidence
+55,267,Hou,2023,INCLUDE,,Postoperative pain outcome retained,submitted_in_covidence
+56,273,Zhang,2023,EXCLUDE,Publication language,Chinese full text with English abstract only,submitted_in_covidence
+57,276,Yue,2023,INCLUDE,,Postoperative pain includes POD1,submitted_in_covidence
+58,295,Hou,2023,INCLUDE,,24-hour analgesic requirements and postoperative pain,submitted_in_covidence
+59,297,Wang,2023,INCLUDE,,Pain and rescue analgesia include 24-hour assessment,submitted_in_covidence
+60,298,Pan,2023,INCLUDE,,Pain and rescue analgesia at 24 hours,submitted_in_covidence
+61,302,Li,2023,EXCLUDE,Publication language,Chinese full text with English abstract only,submitted_in_covidence
+62,305,Qin,2023,INCLUDE,,Postoperative pain includes 24-hour assessment,submitted_in_covidence
+63,307,Kang,2023,EXCLUDE,Wrong setting,First electroacupuncture session began on postoperative day 3 beyond the eligible timing window,submitted_in_covidence
+64,308,Zhang,2023,INCLUDE,,Postoperative pain and opioid outcome retained,submitted_in_covidence
+65,311,Wang,2022,INCLUDE,,Postoperative pain reported; anaesthesia remains unresolved rather than definitively ineligible,submitted_in_covidence
+66,317,Lu,2022,INCLUDE,,24-hour pain and PCA outcomes,submitted_in_covidence
+67,320,Wang,2022,INCLUDE,,Postoperative pain assessment retained,submitted_in_covidence
+68,324,Zhang,2022,EXCLUDE,Wrong outcomes,"Urinary-retention/delirium outcomes without qualifying pain or postoperative opioid-consumption result",submitted_in_covidence
+69,326,Jin,2022,INCLUDE,,24-hour fentanyl/PCIA and pain outcomes; anaesthesia remains unresolved,submitted_in_covidence
+70,332,Wu,2022,INCLUDE,,Postoperative pain includes the eligible early postoperative interval,submitted_in_covidence
+71,338,Xing,2022,INCLUDE,,24-hour PCIA/pain outcomes,submitted_in_covidence
+72,344,Pang,2022,EXCLUDE,Publication language,Chinese full text with English abstract only,submitted_in_covidence
+73,351,Yang,2022,INCLUDE,,POD1 pain/analgesic outcome retained; anaesthesia remains unresolved,submitted_in_covidence
+74,352,Tong,2022,INCLUDE,,VAS pain at 24 hours,submitted_in_covidence
+75,355,Ding,2022,EXCLUDE,Wrong outcomes,"Delirium/biomarker outcomes without either qualifying primary outcome",submitted_in_covidence

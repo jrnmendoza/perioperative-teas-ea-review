@@ -1,0 +1,38 @@
+# Independent Astra source audit
+
+User-authorized scientific reviewer: GPT-6 Astra, high reasoning effort. Parent handles integration. Work only assigned Study_IDs. Never read baseline numerical values or old assessments before saving that study's Phase A file. The original source is authoritative. This is a scientific audit, not a keyword check. Read the complete relevant publication, verify tables/figures visually when extraction is ambiguous. Source manifest and page-delimited text are in this folder; original PDFs are in ../Source PDFs. pypdf layout extraction is an aid, not evidence of a number's correctness. Inspect PDF pages with rendering where needed. Bundled Python supports pypdf, pdfplumber, fitz if installed; never invent data if a source is inaccessible.
+
+## Sequence, for each study
+
+1. Identify correct article from first-page title, authors, year, DOI. Read source first. Inspect study design, arms, randomized and analyzed n, outcomes, units/windows, table statistics, drug/route/PCA formulation/rescue. Record exact source location and short supporting excerpts. Locate protocols/supplements/registrations locally or on official sources when needed. Do not treat references to other studies as results. Assess linked reports/independence.
+2. Save phase_a/Sxxx.json BEFORE opening baseline/Sxxx.json. Include identity, arms, randomized/analyzed denominators, independently extracted results and reporting format, source references, source conflicts, RoB signaling answers/evidence. Capture all relevant opioid, pain, PONV, QoR, GI outcomes. No inferred mg/ug correction, no SD from IQR, no graph point estimates, no mean-weight conversion. Missing evidence must be exactly `Insufficient information / not reported.`.
+3. Only then read baseline/Sxxx.json. Audit EVERY Outcome_Data row assigned to study and every field requested by user. For a field not covered in Phase A, return to source and explicitly label as unblinded supplemental check; do not falsely claim independent derivation. Compare existing Corrected_RoB2 only after independently reasoning from source.
+4. Write adjudicated/Sxxx.json (schema below) and ledger/Sxxx.json after each study. Retain all rows and numeric provenance. Do not label a row VERIFIED just because broad title/timepoint matches; each populated number must be supported by cited evidence. If inaccessible, record exact limitation and mark hold. Do not stop after easy studies.
+
+## Locked protocol
+
+Adults under general anesthesia; TEAS and EA analyzed separately. Sham-control primary and usual-care/supportive comparisons separate. Main opioid metric is IV morphine mg equivalents, cumulative systemic POSTOPERATIVE end-of-surgery through 24 hours. Do not make opioid conversion yourself yet: parent will apply documented prespecified factor only after verified drug/route/unit/window. Exact24 differs from POD1. No postoperative consumption inferred from intraoperative dose, prescriptions, button presses or pump volume without concentration. Avoid duplicate/shared-control independent counting. If all systemic opioid exposure is not covered, explicitly qualify endpoint. Raw results persist.
+
+Pain rest/movement/unspecified and exact24/POD1 separated. PONV subtype and exact interval separated. QoR15/QoR40 separate, higher better. GI flatus/defecation/bowel movement/bowel sounds/POI/diet separate. Median/IQR never relabeled mean/SD. Graph-only remains graph-only. No meta-analysis in this stage.
+
+## Result-specific RoB2
+
+Effect of assignment to intervention. Independently assess selected result plus EACH proposed primary/sensitivity synthesis result. Use official 2019 RoB2 signaling questions (Y/PY/PN/N/NI/NA as appropriate), five domains and overall Low/Some concerns/High. Provide EACH signaling question answer and source evidence/locator/reasoning, not only domain summaries. Domain2 participant awareness alone is not bias: trial-context deviations matter. Sensory unmasking for subjective pain/QoR/nausea/GI milestones may affect D4. Electronic standardized objective consumption may be low D4, distinguish participant-influenced self-dosing behavior. Prospective prespecification must be demonstrated, retrospective registration does not establish it. Do not infer allocation concealment from random sequence. Source absence -> NI, with explicit reasoning. Official guidance at riskofbias.info and Cochrane Handbook is authoritative.
+
+## Final JSON schema
+
+{
+ "Study_ID":"S001", "Study":"...", "reviewer_model":"gpt-6-astra", "reasoning_effort":"high",
+ "phase_a_saved_before_baseline":true,
+ "study": {"identity_status":"...","title":"...","year":2022,"doi":"...","pdf_files":["..."],"randomized_arms":"...","analyzed_arms":"...","modality":"TEAS/EA","comparator_class":"...","independence":"...","source_locations":"...","identity_notes":"..."},
+ "outcomes":[{"baseline_row":2,"final":{ALL original Outcome_Data field names: final values, unchanged copied only after verified},"verification_status":"VERIFIED|VERIFIED WITH QUALIFICATION|CORRECTED|MATERIAL ERROR|DUPLICATE/OVERLAP HOLD|GRAPH DIGITIZATION NEEDED|AUTHOR DATA NEEDED|NOT ANALYSIS ELIGIBLE|UNRESOLVABLE FROM PUBLICATION","field_checks":[{"field":"...","source_value":0,"source_location":"...","evidence":"...","status":"..."}],"changes":[{"field":"...","old_value":0,"source_value":0,"final_value":0,"source_location":"...","reason":"...","severity":"minor/material"}],"source_pdf":"...","source_evidence":"...","drug":"...","route":"...","pca_formulation":"...","rescue_regimen":"...","critical_qc":"...","analysis_eligibility":"...","notes":"..."}],
+ "rob2":[{"result_id":"...","outcome":"...","time_window":"...","comparison":"...","effect_of_interest":"assignment to intervention","signaling_questions":[{"domain":1,"question":"1.1 ...","answer":"Y","evidence":"...","source_location":"...","reasoning":"..."}],"domains":[{"domain":1,"judgment":"Low","reasoning":"...","source_location":"..."}],"overall":"...","overall_reasoning":"...","old_selected_overall":"...","changes_from_old":"..."}],
+ "opioid_candidate":{"decision":"primary_candidate|sensitivity|excluded|hold","reason":"...","postoperative":true,"explicit_0_24h":true,"cumulative_consumption":true,"covers_all_systemic_opioid":"...","drug":"...","route":"...","unit":"...","raw_values":{},"comparison_selection":"...","multiarm_handling":"...","source_location":"..."},
+ "duplicate_map":[{"related_study":"...","classification":"SAME TRIAL / DUPLICATE PUBLICATION|PARTIAL COHORT OVERLAP|INDEPENDENT TRIALS|UNRESOLVED","evidence":"...","source_location":"...","analysis_handling":"..."}],
+ "author_contact":[{"missing_information":"...","why_it_matters":"...","analysis_affected":"...","can_proceed_without":"...","priority":"HIGH|MEDIUM|LOW","exact_question":"..."}],
+ "summary":"..."
+}
+
+Record every row, all material changes, full direct numeric evidence. Field_checks may group only genuinely jointly supported fields. Default unknown values use exact missing-information string in descriptive fields; keep typed numeric null plus explicit reporting flag when no source number. Do not fabricate old/new comparisons. Per-study ledger stage `ADJUDICATED` only after all assigned rows and result-specific RoB reviewed. Otherwise explicit partial stages/counts. Do not label work complete if required checking remains. Save genuine progress frequently.
+
+Use apply_patch for authored JSON/scripts/notes. Parent alone creates final workbook. You may create a bounded extraction helper script for your batch, but cannot automate scientific judgments with generic keyword rules. Final response list studies completed, files written, consequential findings, unresolved limitations.

@@ -1,0 +1,623 @@
+=== PDF PAGE 1 ===
+Liu et al. Perioperative Medicine           (2026) 15:21
+https://doi.org/10.1186/s13741-026-00656-7                                                                                                      Perioperative Medicine
+
+
+Effec t of transcutaneous elec trical acupoint
+stimulation for preemptive analgesia
+on intraoperative opioid dosage in burn
+patients: a randomized, double   -blind,
+controlled trial
+
+QianLiu      1, ZiyanPan        1, JingbinZhang            1, HaichuanHe            1, Yujia                                                                                           Zhao1,    JiangwenYin1* and YanLi1*
+
+
+
+  Abstract
+  Background             Burn sur vivors may be at risk of various opioid-related adverse effects. We aimed to investigate whether
+  transcutaneous electrical acupoint stimulation (  TEAS) used for preemptive analgesia in burn patients reduces
+  intraoperative opioid dosage.
+  Methods             In this trial, 86 burn patients with wound debridement under general anesthesia were randomized to
+  receive thir ty minutes of TEAS (  TEAS group, n =                       43) at acupoints LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), and SP6
+  (Sanyinjiao) before induction of anesthesia or false stimulation (control group, n =                       43). The primar y outcome was the
+  intraoperative remifentanil dosage. Secondar y outcomes included intraoperative propofol dosage, patients’ resting
+  facial-visual analogue scale (F-VAS) scores before stimulation (F1), after stimulation (F2), at 24h after surger y (F3), and
+  48h after surger y (F4), the incidence of opioid-related adverse reactions, and the use of rescue analgesics until the
+  first postoperative day (POD1).
+  Results           The dosage of remifentanil showed a significant difference between the two groups, with 0.65(0.45,1.00)
+  in the TEAS group (  T group) and 0.90(0.67,1.23) in the control group (C group) (P <                       0.05). Meanwhile, there was no
+  significant difference in the intraoperative propofol dosage between groups. F2 and F3 in the T group were lower
+  than those in the C group (P <                       0.05), and no significant differences were obser ved in F1 and F4 (P>0.05)        between        the
+  two groups. Until POD1, the incidence of nausea-vomiting and constipation (P <                       0.05) in the T group was lower than
+  that the C group, while there was no significant difference in the incidence of drowsiness and dizziness (P>0.05).        I t        is
+  wor th noting that the use of rescue analgesics between the two groups was comparable (P>0.05).
+  Conclusions           The preoperative application of TEAS for preemptive analgesia can reduce intraoperative remifentanil
+  dosage. Meanwhile, it has a positive effect on early postoperative analgesia and gastrointestinal adverse reactions.
+
+
+
+
+*Correspondence:
+Jiangwen Yin
+yjw6654328@163.com
+Yan Li
+1249623003@qq.com
+Full list of author information is available at the end of the article
+
+
+                                                 © The Author(s) 2026. Open Access  This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+                                                 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you
+                                                 give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the
+                                                 licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or
+                                                 other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the
+                                                 material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or
+                                                 exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit  h t t p :   /  / c r                                                                                                 e a t i
+                                                 v e c  o m m  o n  s                                                                                                                                          . o  r                        g /  l i c  e n s   e s  /  b                                                                                                                                             y  - n c  -  n d / 4 . 0 /.
+
+=== PDF PAGE 2 ===
+                                                                                                                                    Page 2 of 10
+
+
+
+
+ Trial registration           This study was registered in the Chinese Clinical Trials Registr y (ChiC TR2300078615, date of
+ registration: 14/12/2023, retrospectively registered).
+ Key words           Transcutaneous electrical acupoint stimulation, Burns, Remifentanil, Preemptive analgesia
+
+
+Introduction                                                              of activation of spinal cord neuroglial cells (Wang et al.,
+Worldwide, burns have become a major public health                        2018), modulation of pain-related signaling pathways
+problem affecting the health-care system (Boldeanu et al.,                involved in pain sensitization formation to alleviate noci-
+2020), and approximately 11 million people require med-                   ceptive sensitization, and regulation of pain-related brain
+ical inter vention for burn injuries each year ( James et al.,            regions and cerebral circuits to exert analgesic effects
+2020). Pain management in burn patients is challenging,                   (Ma et al., 2020). Thus, TEAS not only has analgesic
+as the pain from a burn injur y can be excruciating , which               effects but also has the effect of decreasing the peripheral
+is considered the most intense pain. Opioids are the pri-                 and central sensitization (Lai et al., 2019),   which is con-
+mary medication for burn analgesia (Romanowski et al.,                    sistent with the concept of preemptive analgesia. More
+2020). However, the dosage and duration of opioids in                     than that, compared with other analgesic measures, like
+burn patients are significantly higher than the guidelines’               regional and spinal anesthesia, and drug-based analge-
+standards (Emery et al., 2017; Emery and Eitan                2020).      sia, TEAS has the advantage of being non-invasive, easy
+Also, patients who have sur vived a burn injur y might be                 to operate, and having fewer adverse effects, including
+at risk of opioid dependence (Mauck et al., 2024; Jamal et                drug-related reactions, local anesthetic toxicity, and vas-
+al., 2024). Despite the strong analgesic effect of opioids,               cular and neurologic injur y. At the same time, compared
+it is far from benign, including numerous adverse effects                 with other analgesic measures, TEAS has unique advan-
+(Paul et al., 2021). Most burn patients require multiple                  tages in regulating patients’ immune function, alleviat-
+wound debridements, undergoing general anesthesia,                        ing postoperative cognitive function and gastrointestinal
+thus providing comfortable analgesia for them while                       adverse reactions (Li et al., 2021; Xi, et al., 2021; Cheng,
+reducing the dosages of opioid will be a major challenge                  et al., 2023), which is more in line with the concept of
+for anesthesiologists .                                                   enhanced recover y after surger y (ER AS). However, TE AS
+  It is supported that preemptive analgesia, which                        used for preemptive analgesia to reduce intraopera-
+means reducing peripheral and central nerve sensitiza-                    tive opioid dosage in burn patients has not been studied
+tion caused by afferent injurious stimulus before they                    before, to our knowledge.
+act on the organism, can effectively relieve periopera-                     Therefore, this study aimed to investigate whether
+tive pain and reduce analgesic drug dosage (Taumberger                    preoperative application of TEAS used for preemptive
+et al., 2022; Xuan et al., 2022) and is more effective than               analgesia in burn patients reduces intraoperative opioid
+analgesic treatment after the surger y (Isuru et al., 2017).              dosage and its impact on patients’ postoperative recover y.
+As burn patients’ pain has been triggered by local tis-
+sue damage and its induced inflammatory response                          Methods
+after injur y, followed by other pain associated with burn                Patients and study design
+wound treatment. These persistent pain impulses are                       This study protocol was approved by the Science and
+transmitted to the central nervous system, resulting in                   Technology Ethics Committee of the First Affiliated
+the lower patients’ pain threshold and greater sensitivity                Hospital of Shihezi University on December 1, 2023
+to external stimulus (Tan et al., 2011). Therefore, burn                  (reference: KJ2023-385–01) and registered in the Chi                 -
+patients have different degrees of pain and nociceptive                   nese Clinical Trials Registry (ChiCTR2300078615, date
+sensitization before receiving debridement.                               of registration: 14/12/2023, retrospectively registered).
+  TEAS, an important non-invasive, safe medical aid                       Between December 2023 and December 2024, American
+measure widely used for perioperative analgesia (Szmit et                 Society of Anesthesiologists (ASA) physical status I or II
+al., 2023; Shah et al., 2022), was proven to alleviate pain               in moderate burn adult patients aged                  ≤                   60 years who were
+in burn patients (Abali et al., 2015; Cuignet et al., 2015).              planned to undergo burn wound debridement under gen-
+From the periphery to the central nervous system, mul-                    eral anesthesia were enrolled in this study after provid-
+tiple molecular pathways, inflammatory factors, neu-                      ing informed consent. Patients were excluded if they had
+rotransmitters are involved in its analgesic mechanism,                   contraindications to TEAS, collateral risks attributable to
+including activation of the endogenous opioid peptide                     pregnancy or breastfeeding, alcohol or substance abuse,
+system (Fan et al., 2023), modulation of the expression                   chronic pain or long-term analgesic medication, or major
+of and activity of ion channels (Li et al., 2019), regulation             systemic diseases .
+of the balance of peripheral proinflammatory and anti-
+inflammatory cytokines (Wang et al., 2019), inhibition
+
+=== PDF PAGE 3 ===
+                                                                                                                                           Page 3 of 10
+
+
+
+
+Randomization and blinding                                                    Pain assessment
+Patients were randomly assigned to either the TEAS                            Facial-visual analogue scale (F-VAS), range of 0–100 mm,
+group (T group) or the control group (C group), using                         with one end representing “no pain at all (0    mm)” and
+a computer-generated design (with the time of the start                       the other end representing “extreme pain (100  mm)”, was
+of the study, 20,231,212 as the random number seed), in                       used to evaluate patients’ perioperative resting pain. A
+a 1:1 ratio. Allocations were concealed in sequentially                       higher score indicates more severe pain.
+numbered, opaque, sealed envelopes prepared by inde-
+pendent study monitors. After entering the preparatory                        Anesthesia and analgesia
+room, the TEAS operator, who was not involved in the                          All patients routinely underwent cardiac monitoring,
+care of the patient and independent of this study, opened                     including blood pressure (BP), heart rate (HR), pulse oxy-
+the numbered envelope, followed the arrangement, and                          gen saturation, and electrocardiogram. Both groups of
+conducted TEAS or false stimulation, but did not know                         patients were given total intravenous anesthesia, induc-
+the significance of the numbers. All other individuals                        tion drugs: midazolam 0.05      mg/kg, sufentanil 0.5      µg/
+involved in the study (patients, surgeons, anesthesiolo-                      kg, etomidate 0.2      mg/kg, and rocuronium 0.7      mg/kg.
+gists, data collectors, data analysts) were blinded to the                    Anesthesia maintenance drugs: propofol 4–12    mg/kg-h,
+randomization and the stimulation.                                            remifentanil 0.1–1   µg/kg-min intravenous pumping, and
+                                                                              rocuronium 0.2    mg/kg intravenous injection as needed;
+Intervention                                                                  The intraoperative dynamic adjustment of propofol and
+After informing the patients of the steps of electrical                       remifentanil dosage was according to hemodynamics,
+stimulation, both groups pasted electrode sheets at the                       bispectral Index (BIS) and surgical pleth index (SPI),
+selected acupoints, and T group was stimulated by Han’s                       so that BP and HR remained stable, BIS value should
+acupoint ner ve stimulator (HANS -200A , Nanjing Jisheng                      be maintained between 40–60 and SPI value between
+Medical Technology CO., LTD.) for 30     min before the                       20–50. Thirty minutes before the end of surger y, intrave-
+induction of anesthesia, while C group was stimulated                         nous sufentanil 0.1 µg/kg was pushed, and the infusion of
+by the placebo-type Han’s acupoint stimulator (Sham                           rocuronium bromide was stopped. The infusion of pro-
+TEAS), which had no therapeutic effect. The two inter-                        pofol and remifentanil was discontinued at the end of the
+ventions both caused numbness in acupoints .                                  operation.
+                                                                                 All patients were treated with patient-controlled
+Acupoint selection                                                            intravenous analgesia (PCIA) after surgery. The
+Bilateral LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli) and                       PCIA configuration method was as follows: sufen-
+PC6 (Sanyinjiao).                                                             tanil                                                                          100                                                                 µg+butorphanol                                                                          4                                                                 mg+dexamethasone
+                                                                              5                 mg+ondansetron                         8                 mg+0.9%                         so dium                         chloride,                         con-
+Operating method                                                              figured to a total of 100   ml. All patients were instructed
+In the supine position, the skin surface of the acupoint                      by the same nurse to use the PCIA pump, and pressed
+was degreased with 75% alcohol and dried, and the gel                         the PCIA pump when F-VAS was above 40  mm, with an
+electrode sheet was attached to the prescribed acupoints                      inter val of 15  min; when pain was not effectively relieved
+with tight pressing .                                                         by pressing the PCIA pump for more than 3 times, or
+                                                                              F-VAS was above 50 mm, burn patients were given dezo-
+Parameters                                                                    cine 5 mg intramuscularly as a remedial analgesic. If nec-
+Time, 30      min before anesthesia induction; Frequency,                     essar y, administer ever y 6 h, not exceeding 20 mg per day.
+2/100     Hz; Intensity, <      10     mA (gradually adjusted to the
+maximum intensity acceptable to the patient).                                 Observational indicators
+  The patients were monitored to assess reactions to the                      General observational indicators: age; sex; body mass
+stimulation. The adverse events (AE) include pallor, skin                     index (BMI); weight ; height ; burn areas; ASA grade; rates
+pigmentation, itching, vertigo, and chest tightness. The                      of hypertension, diabetes mellitus , coronar y heart disease
+serious adverse events (SAE) refer to any medical events                      and obesity ; mean arterial pressure (M AP) and HR 5 min
+that may pose a threat to life, result in persistent disability               before the TEAS intervention (T1), immediately after
+or functional impairment, such as syncope, spasm, and                         endotracheal intubation (T2), immediately after peeling
+cardiac emergencies (Hwan et al., 2020). In the event of a                    (T3), 5   min before the end of surger y (T4) and immedi-
+SAE, immediately cease the procedure and initiate emer-                       ately after endotracheal extubation (T5); operation time;
+gency treatment to ensure the patient's safety. Report the                    anesthesia time.
+SAE to the ethics committee and conduct follow-up until                          Primary outcome indicators: intraoperative remifent-
+the completion of treatment.                                                  anil dosage.
+
+=== PDF PAGE 4 ===
+                                                                                                                                         Page 4 of 10
+
+
+
+
+  Secondar y outcome indicators: intraoperative propofol                     Primary outcome
+dosage; patients’ resting F-VAS scores before stimulation                    The dosage of remifentanil showed a significantly dif-
+(F1), after stimulation (F2), at 24 h after surger y (F3), and               ference between the two groups (P=0.039),                                                          with
+48    h after surgery (F4); the occurrence of nausea-vom-                    0.70(0.50,1.10) in T group and 0.90 (0.65,1.25) in C group
+iting, constipation, drowsiness, and dizziness, and the                      (Fig . 4).
+use of rescue analgesics until the first postoperative day
+(POD1).                                                                      Secondary outcomes
+                                                                             The consumption of intraoperative propofol was not
+Sample -size calculation                                                     significantly different between the two groups (P=0.3)
+Based on pre-experimental results, the average intraop-                      (Table 2).
+erative remifentanil dosage was estimated to be 0.15   µg/                      Before the intervention, F1 in T group and C group
+kg/min, and the standard deviation was 0.05. Based on                        was comparable (P        =              0.336). After the inter vention, there
+the previous study ( Wang et al., 2023), TEAS under gen-                     was a significant decrease in F-VAS scores in both groups
+eral anesthesia may reduce intraoperative remifentanil                       (P<      0.05). Meanwhile, compared with C group, F2 was
+consumption by approximately 20%. Thus, we considered                        significantly reduced in T group (P=                0.030). At 24  h after
+the average medication dosage and standard deviation                         surger y, F3 was found to be significantly lower in T group
+decreasing to 0.12   µg/kg/min and 0.03 as clinically rele-                  compared to C group (P=         0.039), but at 48    h after sur-
+vant, with a power of 90% and significance of 5%, 82 par-                    gery, F4 was similar between the two groups (P=0.061)
+ticipants would be required to detect the reduction. To                      (Fig . 5).
+compensate for dropouts , we increased the sample size of                       The incidence of nausea-vomiting (P=0.011)                                                   and
+randomized patients to 102.                                                  constipation (P=           0.033) until POD1 in T group was sig-
+                                                                             nificantly lower than that in C group, but there was no
+Statistical analyses                                                         significant difference obser ved in the incidence of drows-
+Statistical analyses were performed using SPSS 25.0                          iness (P=       0.178) and dizziness (P=0.176)                        ( Table 2). All
+(IBM SPSS Statistics for Windows). Continuous vari-                          adverse reactions resolved spontaneously or with symp-
+ables were tested for normality Shapiro–Wilk test. The                       tomatic treatment following evaluation.
+measurement data conforming to normal distribution                              Until POD1, the use of rescue analgesics was similar
+were expressed as mean                    ±         standard deviation (x±s), and between the two groups (P=0.430)           ( Table 2). All patients
+compared using independent samples t-tests between                           receiving rescue analgesia had pain scores reduced to
+groups. Non-normally distributed data were expressed as                      below 50   mm after receiving 5   mg of dezocine for intra-
+median (M) and interquartile range (IQR) and compared                        muscular injection, and no second rescue analgesia was
+using the Mann–Whitney U test between groups. Count                          administered.
+data were expressed as numbers (n) with percentages (%)
+and analyzed by Pearson’s χ2 test or Fisher’s exact test as                  Discussion
+appropriate. Comparison between groups of hemody-                            This study indicates that TEAS used for preemptive anal-
+namic indicators (MAP, HR) was performed by repeated                         gesia significantly reduces intraoperative opioid con-
+measure ANOVA . A P-value                                                                    <                   0.05 was considered statis-sumption in burn patients, alleviates early postoperative
+tically significant.                                                         pain, mitigates postoperative gastrointestinal adverse
+                                                                             reactions , and promotes rapid recover y.
+Results                                                                         As an important medical auxiliar y measure, TEAS has
+Patient characteristics                                                      been widely used in alleviating perioperative pain (Tan
+Among the 102 patients, 16 were excluded: 9 patients                         et al., 2024). However, acupoint parameters vary across
+declined to participate, 5 patients withdrew from the                        different studies. According to the median theor y of tra-
+study due to surgical modification, and one patient in                       ditional Chinese medicine, LI4, PC6, and ST36 are the
+each of the two groups withdrew due to redness and                           main acupoints for analgesia (Han 2011). The analgesic
+itching on the skin while applying electrodes. Finally,                      effect of LI4 is widely used in various clinical depart-
+86 patients were enrolled in this study, with 43 patients                    ments to treat pain-related diseases. PC6 is often used
+in each group (Fig. 1). There were no SAEs in the study                      to treat a variety of pain symptoms and has the effect of
+groups .                                                                     tranquilizing the mind. ST36 is mainly used for treating
+  The baseline patients’ characteristics were comparable                     stomach pain, abdominal pain, headache, and paralyzing
+between the two groups (P>            0.05), and there was no dif-           pain in the lower limbs. Appropriate stimulation of SP6
+ference in surgical data between the groups (P>0.05).                        can not only effectively alleviate the pain of the lower
+(Table 1, Figs. 2, 3).                                                       limbs, but also be effective for the treatment of gastroin-
+                                                                             testinal diseases .
+
+=== PDF PAGE 5 ===
+                                                                                                                                        Page 5 of 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig.  1        CONSORT flow diagram illustrating the study design and the inclusion/exclusion patient population flow. CONSORT Consolidated Standards of
+Reporting Trials. TEAS, transcutaneous electrical acupoint stimulation
+
+  The results of this study found that the intraoperative                   2020). Apart from this, burn injur y profoundly alters the
+remifentanil dosage in T group was lower than that in C                     functional state of the immune system, which is the rea-
+group, while the dosage of propofol in the study groups                     son explaining the reduced potency of opioids (Emery
+was similar, echoing similar results found in other previ-                  et al., 2017; Emer y and Eitan 2020). Therefore, the effect
+ous research ( Wang et al., 2023). Although resting F-VAS                   of decreasing intraoperative opioid dosage may also be
+scores in both groups decreased after the intervention,                     associated with controlling the systemic inflammatory
+F2 in T group was significantly lower compared with C                       response (Que et al., 2021)     and reducing opioid resis-
+group. The decrease in F-VAS scores in C group may be                       tance to injury in burn patients. Even though TEAS has
+associated with a placebo effect. It indicates that TEAS                    been confirmed to have a sedative effect (Zhang et al.,
+reduces the intraoperative dosage of opioids, which may                     2024;   Lu et al., 2022), the use of intraoperative sedatives
+be related to its role in preemptive analgesia. TEAS can                    was similar between the two groups. This may be related
+cause the nervous system to release endogenous opi-                         to the fact that acupoints strongly associated with seda-
+oid peptides, to reduce the sensitization of central neu-                   tion were not selected for this study, or that the sedative
+rons to provide pain relief (Fan et al., 2023; Qiao et al.,                 effect of TE AS didn’t carr y over into the operation.
+
+=== PDF PAGE 6 ===
+                                                                                                                                                         Page 6 of 10
+
+
+
+
+Table 1            Comparison of baseline characteristics between the                 difference in F4 at 48     h after surgery between the two
+two groups                                                                            groups. It suggests that TEAS used for preemptive anal-
+Characteristics             T group(n=43)        C group(n=43)         P-value        gesia may have a more noticeable impact on pain relief
+Age (year)                  42.0±9.8             39.5±11.3               0.277        during the early postoperative phase, which is consis-
+BMI (kg/m2)                 24.6±3.5             24.9±3.2                0.720
+Weight (kg)                 71.9±13.4            71.8±12.6               0.980        tent with previous studies (Tu et al., 2019). Since pre-
+Height (cm)                 170.5±8.0            169.5±7.4               0.602        emptive analgesia typically involves pain intervention
+Burn areas (%)              14.0(13.0,17.0)      14.0(13.0,16.0)         0.626        before surgical incision to block central sensitization,
+ASA grading, n (%)                                                       0.610        but pain-related neural sensitization is a continuous pro-
+I                           11(25.6)             9(20.9)                              cess throughout the perioperative period, wound injury
+II                          32(74.4)             34(79.1)                             may re-initiate central sensitization once the blockade
+Sex, n (%)                                                               0.795        of nociceptive afferent stimulation is lifted. This may
+Female                      9(20.9)              10(23.3)                             explain why pain scores remained comparable between
+Male                        34(79.1)             33(76.7)                             the two groups at 48    h after surgery. Preventive analge-
+Hypertension, n (%)                                                      0.802        sia emphasizes sustained suppression of nociceptive sig-
+Yes                         10(23.3)             11(25.6)                             nal transmission throughout the perioperative period
+No                          33(76.7)             32(74.4)                             to minimize central sensitization (Clarke et al., 2015).
+Diabetes Mellitus, n (%)                                                 0.763        Future studies may explore preventive analgesia targeting
+Yes                         6(14.0)              7(16.3)                              TEAS to assess its impact on patients' long-term quality
+No                          37(86.0)             36(83.7)                             of life and pain scores .
+Coronar y Heart Disease, n (%)                                         >0.999            At the same time, the use of rescue analgesics in
+Yes                         4(9.3)               5(11.6)                              both groups was low, and no significant difference was
+No                          39(90.7)             38(88.4)                             observed between the study groups, which contra-
+Obesity, n (%)                                                         >0.999         dicts previous research findings ( Yan et al., 2025; Liu et
+Yes                         6(14.0)              6(14.0)                              al., 2024). On the one hand, we suspect that pain is not
+No                          37(86.0)             37(86.0)                             intense enough to require remedial analgesia after the
+Operation time (min)        88.4±35.6            89.0±33.6               0.938        use of PCIA . On the other hand, we controlled the value
+Anesthesia time (min)       100.9±36.3           101.4±33.9              0.951        of SPI between 20 and 50, which may be correlated to
+Charac teristic presented as mean                ±                 SD or M and IQR or (n, %) of patientsthe decrease in the patients’ postoperative pain level and
+SD Standard-deviation, M Median, IQR Interquartile range, BMI Body mass               the decrease in the need for analgesic drugs (Hung et al.,
+index, ASA American Society of Anesthesiologists                                      2022; Jung et al., 2020).
+                                                                                         Opioids have been reported to have quite a few
+  At 24  h postoperatively, F3 in T group was found to be                             adverse effects. In our study, we found that the inci-
+lower than that in C group, but there was no significant                              dence of nausea-vomiting and constipation until POD1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 2           Comparison of HR between the two groups at distinct junctures. Note: Data are presented as the mean                                                                                                                                                                                                                             ±                   SD
+
+=== PDF PAGE 7 ===
+                                                                                                                                                           Page 7 of 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 3           Comparison of MAP between the two groups at distinct junctures. Note: Data are presented as the mean                                                                                                                                                                                                                             ±                   SD
+                                                                                       Table 2            Comparison of secondar y outcomes between the two
+                                                                                       groups
+                                                                                       Secondary               T group(n=43)            C group(n=43)            P-
+                                                                                       outcomes                                                                  value
+                                                                                       Propofol consump-       400.0(305.0,625.0)       450.0(365.0,720.0)       0.296
+                                                                                       tion (mg)
+                                                                                       Nausea-vomiting,        7(16.3)                  16(37.2)                 0.028
+                                                                                       n (%)
+                                                                                       Constipation, n (%)     8(18.6)                  17(39.5)                 0.033
+                                                                                       Drowsiness, n (%)       3(7.0)                   7(16.3)                  0.178
+                                                                                       Dizziness, n (%)        6(14.0)                  11(25.6)                 0.176
+                                                                                       Use of rescue           3(7.0)                   8(18.6)                  0.106
+                                                                                       analgesics, n (%)
+                                                                                       Secondar y outcomes presented as M and IQR or n(%) of patients. M -median
+
+
+                                                                                       central nervous system, reducing vagal action, affecting
+                                                                                       chemoreceptors, and reducing inflammatory response
+                                                                                       (Li et al., 2024).
+                                                                                          Most of the previous studies adjusted intraoperative
+                                                                                       opioid dosage according to blood pressure and heart
+Fig.               4 Comparison of remifentanil consumption between the two            rate changes or the anesthesiologists’ experience, which
+groups. Note: Data are presented as the median with interquartile range.               has greater limitations and subjectivity. In this study,
+* indicates a significant decrease in intraoperative remifentanil consump-             we used the BIS value, a monitoring index of the depth
+tion in group T compared to group C (P<0.05)                                           of sedation, and SPI, an analgesic index that has been
+                                                                                       widely used for the evaluation of surgical patients (Oh et
+was significantly decreased in T group compared with                                   al., 2024), to guide intraoperative sedation and analgesia
+C group. However, there was no significant difference                                  administration. This approach enhances the reliability of
+in drowsiness and dizziness. The situation is consistent                               the research.
+with previous studies (Zhou et al., 2024; Mao et al., 2021).                              This study also has certain limitations that should be
+Considering this situation, we guess that the reduction                                acknowledged. As this was a single-center study, the
+of nausea-vomiting and constipation by TEAS was not                                    sample size was small, and a multi-center study is needed
+accomplished by decreasing the intraoperative opioid                                   to validate the findings. Moreover, there are no objective
+dosage, but rather by its other potential mechanisms,                                  laboratory indicators available to elaborate on outcome
+including modulating neurotransmitters, affecting the                                  indicators and composite recovery profiles employed to
+
+=== PDF PAGE 8 ===
+                                                                                                                                                                                                                                 Page 8 of 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig.   5       Comparison of resting F-VAS scores between the two groups at the same point. Note: Data were presented as mean                                                                                                                                   ±             SD. # indicates that the
+F-VAS scores were significantly lower in group T than in group C (P <                0.05). *** indicates a significant decrease in F-VAS scores after intervention in both
+groups (P<0.001)
+
+evaluate patients’ postoperative recovery. Ultimately,                                                                        HR                                                                                                Heart        Rate
+the follow-up of the patients in this study was only con-                                                                     BIS                                                                                               Bispectral        Index
+                                                                                                                              SPI                                                                                                                        Surgical Pleth Index
+ducted 48 h after surger y, and the postoperative recover y                                                                   POD1                                                                                                                        The First Postoperative Day
+of the patients was not followed up for a long-time, so the                                                                   AE                                                                                                   Adverse        Events
+long-term effect of TE AS needs further research.                                                                             SAE                                                                                                                        Serious Adverse Events
+
+                                                                                                                              Acknowledgements
+Strengths and limitations                                                                                                     We are ver y grateful to our colleagues in the Department of Anesthesiology
+The use of BIS (Bispectral Index) and SPI (Surgical Pleth                                                                     of the First Affiliated Hospital of Shihezi University for their help. In addition,
+                                                                                                                              we would like to express our gratitude to the patients and their families who
+Index) make our results more objective and reliable. This                                                                     participated in this study for their active cooperation.
+study also has certain limitations that should be acknowl-                                                                    Authors’ contributions
+edged. As this was a single-center study, the sample size                                                                     Study design: Qian Liu, Jiangwen Yin, Yan Li. Study conduct: Qian Liu, Ziyan
+was small, and a multi-center study is needed to validate                                                                     Pan, Haichuan He, Yujia Zhao. Data analysis: Qian Liu, Jingbin Zhang. Writing
+the findings. Moreover, there are no objective laborator y                                                                    paper: Qian Liu, Ziyan Pan, Jingbin Zhang, Haichuan He, Jiangwen Yin, Yan Li.
+indicators available to elaborate on outcome indicators                                                                       All authors read and approved the final manuscript.
+and composite recovery profiles employed to evalu-                                                                            Funding
+ate patients’ postoperative recovery. Ultimately, the fol-                                                                    This study was supported by the Bureau of Science and Technology, China,
+low-up of the patients in this study was only conducted                                                                       ZY2023051.
+48   h after surger y, and the postoperative recover y of the                                                                 Data availability
+patients was not followed up for a long time, so the long                                                                     The datasets used and analyzed during this current study are available from
+term effect of TE AS needs further researched.                                                                                the corresponding author on reasonable request.
+
+Conclusion                                                                                                                    Declarations
+The preoperative application of TEAS for preemptive                                                                           Ethics approval and consent to participate
+analgesia can reduce intraoperative remifentanil dosage.                                                                      This randomized, double-blind, controlled trial was conducted in the First
+Meanwhile, it has a positive effect on early postoperative                                                                    Affiliated Hospital of Shihezi University between December 2023 and
+                                                                                                                              December 2024. The study protocol was approved by the Science and
+analgesia and gastrointestinal adverse reactions .                                                                            Technology Ethics Committee of the First Affiliated Hospital of Shihezi
+                                                                                                                              University on December 1, 2023(reference: K J2023-385–01) (Appendix 2) and
+Abbreviations                                                                                                                 registered in the Chinese Clinical Trials Registr y (ChiC TR2300078615, date of
+TEAS                                                                                                                        Transcutaneous Electrical Acupoint Stimulationregistration: 14/12/2023). All participants provided written informed consent.
+F-VAS                                                                               Facial-Visual Analogue Scale
+PCIA                                                                                                                        Patient-Controlled Intravenous AnalgesiaConsent for publication
+ASA                                                                                                                        American Society of AnesthesiologistsNot applicable.
+BMI                                                                                                                        Body Mass Index
+BP                                                                                                     Blood        Pressure  Competing interests
+MAP                                                                                             Mean Arterial Pressure        The authors declare no competing interests.
+
+=== PDF PAGE 9 ===
+                                                                                                                                                                                                   Page 9 of 10
+
+
+
+
+
+Author details                                                                                                Li Q, Wang L, Wang Y, Zhao L. Transcutaneous electrical acupoint stimulation for
+1Department of Anesthesiology, The First Affiliated Hospital of Shihezi                                             immunologic function after surgery in patients with gastrointestinal tumor: a
+University, Shihezi 832003, China                                                                                   meta-analysis. Biotechnol Genet Eng Rev. 2024;40(2):1001–23.
+                                                                                                              Liu J, Zhang K, Zhang Y, Ji F, Shi H, Lou Y, et al. Perioperative transcutaneous electri-
+Received: 21 July 2025 / Accepted: 5 February 2026                                                                  cal acupoint stimulation reduces postoperative pain in patients undergo-
+                                                                                                                    ing thoracoscopic surgery : a randomized controlled trial. Pain Res Manag.
+                                                                                                                    2024;2024:5365456.
+                                                                                                              Lu Z, Huo T, Deng J, Guo F, Liu K, Liu P, et al. Transcutaneous electrical acupoint
+                                                                                                                    stimulation induced sedative effects in healthy volunteers: A resting-state
+References                                                                                                          fMRI study. Front Hum Neurosci. 2022;16:843186.
+Abali AE, Cabioglu T, Ozdemir H, Haberal M. Interactive effects of acupunc-                                   Ma ZZ, Lu YC, Wu JJ, Xing XX, Hua XY, Xu JG. Acupuncture induces reduction in
+      ture on pain and distress in major burns: an experiment with rats. Burns.                                     limbic-cortical feedback of a neuralgia rat model: a dynamic causal modeling
+      2015;41(4):833–42.                                                                                            study. Neural Plast. 2020;2020:5052840.
+Boldeanu L, Boldeanu MV, Bogdan M, Meca AD, Coman CG, Buca BR, et al.                                         Mao T, Cheng Q, Liu X, Chen Y. Effect of electrical stimulation on gastrointestinal
+      Immunological approaches and therapy in burns (Review). Exp Ther Med.                                         symptoms in lung cancer patients during chemotherapy : a randomized
+      2020;20(3):2361–7.                                                                                            controlled trial. Asia Pac J Oncol Nurs. 2021;8(3):246–54.
+Cheng YL, Hsu TF, Kung YY, Chen YC. Effect of acupoint stimulation on improving                               Mauck MC, Zhao Y, Goetzinger AM, Tungate AS, Spencer AB, Lal A, et al. Incidence
+      gastrointestinal motility in patients after gastrectomy : a systematic review                                 of persistent opioid use following traumatic injury. Reg Anesth Pain Med.
+      and meta-analysis. J Integr Complement Med. 2023;29(11):718–26.                                               2024;49(2):79–86.
+Clarke H, Poon M, Weinrib A, Katznelson R, Wentlandt K, Katz J. Preventive anal-                              Oh SK, Won YJ, Lim BG. Surgical pleth index monitoring in perioperative pain man-
+      gesia and novel strategies for the prevention of chronic post-surgical pain.                                  agement: usefulness and limitations. Korean J Anesthesiol. 2024;77(1):31–45.
+      Drugs. 2015;75(4):339–51.                                                                               Paul AK, Smith CM, Rahmatullah M, Nissapatorn V, Wilairatana P, Spetea M, et al.
+Cuignet O, Pirlot A, Ortiz S, Rose T. The effects of electroacupuncture on analgesia                                Opioid analgesia and opioid-induced adverse effects: a review. Pharmaceuti-
+      and peripheral sensory thresholds in patients with burn scar pain. Burns.                                     cals (Basel, Switzerland). 2021;14(11):1091.
+      2015;41(6):1298–305.                                                                                    Qiao L, Guo M, Qian J, Xu B, Gu C, Yang Y. Research advances on acupuncture
+Emery MA, Eitan S. Drug-specific differences in the ability of opioids to manage                                    analgesia. Am J Chin Med. 2020;48(2):245–58.
+      burn pain. Burns: Journal of the International Society for Burn Injuries.                               Que B, Tu Q, Shi J, Wan Z, Li Y, Zhou R, et al. Effects of transcutaneous electrical
+      2020;46(3):503–13.                                                                                            acupoint stimulation on systemic inflammatory response syndrome of
+Emery MA, Bates MLS, Wellman PJ, Eitan S. Burn injury decreases the antinocicep-                                    patients after percutaneous nephrolithotomy : a randomized controlled trial.
+      tive effects of opioids. Behav Pharmacol. 2017;28(4):285–93.                                                  Evid Based Complement Alternat Med. 2021;2021:5909956.
+Fan Z, Dou B, Wang J, Wu Y, Du S, Li J, et al. Effects and mechanisms of acupuncture                          Romanowski KS, Carson J, Pape K, Bernal E, Sharar S, Wiechman S, et al. American
+      analgesia mediated by afferent nerves in acupoint microenvironments. Front                                    Burn Association guidelines on the management of acute pain in the adult
+      Neurosci. 2023;17:1239839.                                                                                    burn patient: a review of the literature, a compilation of expert opinion and
+Han JS. Acupuncture analgesia: areas of consensus and controversy. Pain.                                            next steps. J Burn Care Res. 2020;41(6):1152–64.
+      2011;152(3 Suppl):S41–8.                                                                                Shah S, Godhardt L, Spofford C. Acupuncture and postoperative pain reduction.
+Hung KC, Huang Y T, Kuo JR, Hsu CW, Yew M, Chen JY, et al. Elevated surgical pleth                                  Curr Pain Headache Rep. 2022;26(6):453–8.
+      index at the end of surgery is associated with postoperative moderate-                                  Szmit M, Krajewski R, Rudnicki J, Agrawal S. Application and efficacy of transcuta-
+      to-severe pain: a systematic review and meta-analysis. Diagnostics (Basel).                                   neous electrical acupoint stimulation (  TEAS) in clinical practice: a systematic
+      2022;12(9):2167.                                                                                              review. Adv Clin Exp Med. 2023;32(9):1063–74.
+Hwan PJ, Jun-Hwan L, Sanghun L, Jae-Young S, Tae-Hun K. Adverse events related                                Tan AM, Chang Y W, Zhao P, Hains BC, Waxman SG. Rac1-regulated dendritic spine
+      to electroacupuncture: a systematic review of single case studies and case                                    remodeling contributes to neuropathic pain after peripheral nerve injury. Exp
+      series. Acupunct Med. 2020;38(6):407–16.                                                                      Neurol. 2011;232(2):222–33.
+Isuru A, Rodrigo A, Wijesinghe C, Ediriweera D, Premadasa S, Wijesekara C, et al. A                           Tan SY, Jiang H, Ma Q, Ye X, Fu X, Ren YF, et al. Effects of transcutaneous electrical
+      randomized, double-blind, placebo-controlled trial on the role of preemptive                                  acupoint stimulation on early postoperative pain and recovery : a compre-
+      analgesia with acetaminophen [paracetamol] in reducing headache follow-                                       hensive systematic review and meta-analysis of randomized controlled trials.
+      ing electroconvulsive therapy [EC T  ]. BMC Psychiatry. 2017;17(1):275.                                       Front Med. 2024;11:1302057.
+Jamal S, Shaw M, Quasim T, Puxty K, McGovern C. Long term opioid use after burn                               Taumberger N, Schütz AM, Jeitler K, Siebenhofer A, Simonis H, Bornemann-Cimenti
+      injury : a retrospective cohort study. Br J Anaesth. 2024;132(3):599–606.                                     H, et al. Preemptive local analgesia at vaginal hysterectomy : a systematic
+James SL, Lucchesi LR, Bisignano C, Castle CD, Dingels ZV, Fox JT, et al. Epidemi-                                  review. Int Urogynecol J. 2022;33(9):2357–66.
+      ology of injuries from fire, heat and hot substances: global, regional and                              Tu Q, Gan J, Shi J, Yu H, He S, Zhang J. Effect of transcutaneous electrical acupoint
+      national morbidity and mortality estimates from the Global Burden of                                          stimulation on postoperative analgesia after ureteroscopic lithotripsy : a
+      Disease 2017 study. Injury Prevention: Journal of the International Society for                               randomized controlled trial. Urolithiasis. 2019;47(3):279–87.
+      Child and Adolescent Injury Prevention. 2020;26(Supp 1):i36–45.                                         Wang JY, Gao YH, Qiao LN, Zhang JL, Duan-Mu CL, Yan YX, et al. Repeated elec-
+Jung K, Park MH, Kim DK, Kim BJ. Prediction of postoperative pain and opioid                                        troacupuncture treatment attenuated hyperalgesia through suppression of
+      consumption using intraoperative surgical pleth index after surgical incision:                                spinal glial activation in chronic neuropathic pain rats. BMC Complement
+      an observational study. J Pain Res. 2020;13:2815–24.                                                          Altern Med. 2018;18(1):74.
+Lai HC, Lin Y W, Hsieh CL. Acupuncture-analgesia-mediated alleviation of central                              Wang Y, Xue M, Xia Y, Jiang Q, Huang Z, Huang C. Electroacupuncture treatment
+      sensitization. Evid Based Complement Alternat Med. 2019;2019:6173412.                                         upregulates α7nAChR and inhibits JAK2/STAT3 in dorsal root ganglion of rat
+Li Y, Yin C, Li X, Liu B, Wang J, Zheng X, et al. Electroacupuncture alleviates                                     with spared nerve injury. J Pain Res. 2019;12:1947–55.
+      Paclitaxel-induced peripheral neuropathic pain in rats via suppressing                                  Wang B, Peng G, Chen L, Guo M, Zhou J, Liu Y, et al. Effect of transcutaneous
+      TLR4 signaling and TRPV1 upregulation in sensory neurons. Int J Mol Sci.                                      electrical acupoint stimulation on remifentanil dosage during craniotomy
+      2019;20(23):5917.                                                                                             aneurysm clipping: a prospective, randomized controlled study. BMC
+Li WJ, Gao C, An LX, Ji Y W, Xue FS, Du Y. Perioperative transcutaneous electrical                                  Complement Med Ther. 2023;23(1):453.
+      acupoint stimulation for improving postoperative gastrointestinal function: a                           Xi L, Fang F, Yuan H, Wang D. Transcutaneous electrical acupoint stimulation for
+      randomized controlled trial. J Integr Med. 2021;19(3):211–8.                                                  postoperative cognitive dysfunction in geriatric patients with gastrointestinal
+                                                                                                                    tumor: a randomized controlled trial. Trials. 2021;22(1):563.
+
+=== PDF PAGE 10 ===
+                                                                                                                                                                                              Page 10 of 10
+
+
+
+
+
+Xuan C, Yan W, Wang D, Li C, Ma H, Mueller A, et al. Efficacy of preemptive                                 Zhou T, Wang S, Fan BJ, Zhang LX, Hu SH, Hou W. Clinical efficacy of acupuncture
+      analgesia treatments for the management of postoperative pain: a network                                    in treating postoperative gastrointestinal dysfunction of colorectal cancer, a
+      meta-analysis. Br J Anaesth. 2022;129(6):946–58.                                                            systematic review and meta analysis. Zhen Ci Yan Jiu. 2024;49(2):208–19.
+Yan L, Sun B, Zhou M, Zhang Y, Gao F, Zhao Q, et al. Effect of transcutaneous
+      electrical acupoint stimulation on postoperative pain in patients undergo-                            Publisher’s Note
+      ing modified radical mastectomy for breast cancer. Zhongguo Zhen Jiu.                                 Springer Nature remains neutral with regard to jurisdictional claims in
+      2025;45(2):162–6.                                                                                     published maps and institutional affiliations.
+Zhang M, Cairen Z, Liu X, Deng J, Mu X, Wang Y, et al. Transcutaneous elec-
+      tric acupoint stimulation reduced consumption of profopol in patients
+      undergoing laparoscopic surgery : a randomized clinical trial. Medicine.
+      2024;103(4):e35730.

@@ -1,0 +1,14 @@
+{
+  "Study_ID": "S025",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows_expected": 4,
+  "baseline_rows_reviewed": 4,
+  "result_specific_rob2_count": 4,
+  "limitations": [
+    "0–24h includes recovery-room stay but inclusion of fixed pre-end-of-surgery0.1mg/kg morphine not explicit.",
+    "PreopEA described45min, discussion says some continued underGA to surgery end.",
+    "Table2VAS is mean over24h, not exact24h.",
+    "PONV46.6% of30 does not match conventional one-decimal rounding of14/30=46.7%; no unqualified direct event count."
+  ]
+}

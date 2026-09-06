@@ -1,0 +1,2680 @@
+{
+  "Study_ID": "S041",
+  "Study": "Lin 2002",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "CONFIRMED",
+    "title": "The effect of high and low frequency electroacupuncture in pain after lower abdominal surgery",
+    "year": 2002,
+    "doi": "10.1016/S0304-3959(02)00261-0",
+    "pdf_files": [
+      "covidence_951_lin_2002.pdf"
+    ],
+    "randomized_arms": {
+      "order": [
+        "control",
+        "sham-EA needle without current",
+        "2 Hz EA",
+        "100 Hz EA"
+      ],
+      "randomized": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "analyzed": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "modality": "EA",
+      "population": "100 women ASA I–II abdominal hysterectomy under general anesthesia",
+      "independence": "Single four-arm trial; shared control groups must not be independently counted twice."
+    },
+    "analyzed_arms": "25 each; all 100 complete",
+    "modality": "EA",
+    "comparator_class": "Needle sham primary comparator; untreated usual care separate",
+    "independence": "Single four-arm trial; shared control groups must not be independently counted twice.",
+    "source_locations": "pp509–514",
+    "identity_notes": "Title/authors/year/PII match"
+  },
+  "outcomes": [
+    {
+      "baseline_row": 4,
+      "final": {
+        "Canonical study": "Lin 2002",
+        "Comparison ID": "LIN02_HIGH_vs_CONTROL",
+        "Intervention arm": "100-Hz EA",
+        "Comparator arm": "Untreated control",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative IV PCA morphine delivered during postoperative test period",
+        "Timepoint/window": "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 25,
+        "Randomized n comparator": 25,
+        "Analyzed n intervention": 25,
+        "Analyzed n comparator": 25,
+        "Mean intervention": 15,
+        "SD intervention": 10.7,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 38.1,
+        "SD comparator": 16,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg morphine",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw arm data no conversion; MD calculated",
+        "Derived effect measure": "MD",
+        "Derived effect": -23.1,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "First postoperative hour could include IM pethidine; group-specific pethidine exposure not reported",
+        "Source location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+        "Source PDF URL": "covidence_951_lin_2002.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Lin 2002",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LIN02_HIGH_vs_CONTROL",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "100-Hz EA",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Untreated control",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative IV PCA morphine delivered during postoperative test period",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 15,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 10.7,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 38.1,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 16,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg morphine",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw arm data no conversion; MD calculated",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -23.1,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "15 - 38.1 = -23.1 mg; arithmetic only, no opioid conversion.",
+          "status": "ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "First postoperative hour could include IM pethidine; group-specific pethidine exposure not reported",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "covidence_951_lin_2002.pdf",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Reported P",
+          "old_value": null,
+          "source_value": "<0.01",
+          "final_value": "<0.01",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw arm data no conversion; MD calculated",
+          "final_value": "Raw arm data no conversion; MD calculated",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Usable as published PCA-morphine endpoint; not complete all-opioid 0-24 h exposure",
+          "source_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "final_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 2",
+          "source_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "final_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1Q5dNOPkf4PB_ctbHu1_3v3UIMIJzKRw9/view?usp=drivesdk",
+          "source_value": "covidence_951_lin_2002.pdf",
+          "final_value": "covidence_951_lin_2002.pdf",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_951_lin_2002.pdf",
+      "source_evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+      "drug": "morphine; separate first-hour pethidine",
+      "route": "IV PCA; pethidine IM",
+      "pca_formulation": "IV morphine 2 mg demand, 10 min lockout; concentration not reported",
+      "rescue_regimen": "First postoperative hour: pethidine 1 mg/kg IM single dose on request; arm totals not reported. No other analgesics during PCA.",
+      "critical_qc": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+      "analysis_eligibility": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+      "notes": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check)."
+    },
+    {
+      "baseline_row": 5,
+      "final": {
+        "Canonical study": "Lin 2002",
+        "Comparison ID": "LIN02_LOW_vs_CONTROL",
+        "Intervention arm": "2-Hz EA",
+        "Comparator arm": "Untreated control",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative IV PCA morphine delivered during postoperative test period",
+        "Timepoint/window": "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 25,
+        "Randomized n comparator": 25,
+        "Analyzed n intervention": 25,
+        "Analyzed n comparator": 25,
+        "Mean intervention": 21.8,
+        "SD intervention": 14.7,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 38.1,
+        "SD comparator": 16,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg morphine",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw arm data no conversion; MD calculated",
+        "Derived effect measure": "MD",
+        "Derived effect": -16.3,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "First postoperative hour could include IM pethidine; group-specific pethidine exposure not reported",
+        "Source location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+        "Source PDF URL": "covidence_951_lin_2002.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Lin 2002",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LIN02_LOW_vs_CONTROL",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "2-Hz EA",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Untreated control",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative IV PCA morphine delivered during postoperative test period",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 21.8,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 14.7,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 38.1,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 16,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg morphine",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw arm data no conversion; MD calculated",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -16.3,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "21.8 - 38.1 = -16.3 mg; arithmetic only, no opioid conversion.",
+          "status": "ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "First postoperative hour could include IM pethidine; group-specific pethidine exposure not reported",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "covidence_951_lin_2002.pdf",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Reported P",
+          "old_value": null,
+          "source_value": "<0.01",
+          "final_value": "<0.01",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw arm data no conversion; MD calculated",
+          "final_value": "Raw arm data no conversion; MD calculated",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Usable as published PCA-morphine endpoint; not complete all-opioid 0-24 h exposure",
+          "source_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "final_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 2",
+          "source_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "final_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1Q5dNOPkf4PB_ctbHu1_3v3UIMIJzKRw9/view?usp=drivesdk",
+          "source_value": "covidence_951_lin_2002.pdf",
+          "final_value": "covidence_951_lin_2002.pdf",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_951_lin_2002.pdf",
+      "source_evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 38.1 (16) mg; ** vs control and ++ vs sham denote P<0.01.",
+      "drug": "morphine; separate first-hour pethidine",
+      "route": "IV PCA; pethidine IM",
+      "pca_formulation": "IV morphine 2 mg demand, 10 min lockout; concentration not reported",
+      "rescue_regimen": "First postoperative hour: pethidine 1 mg/kg IM single dose on request; arm totals not reported. No other analgesics during PCA.",
+      "critical_qc": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+      "analysis_eligibility": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+      "notes": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check)."
+    },
+    {
+      "baseline_row": 6,
+      "final": {
+        "Canonical study": "Lin 2002",
+        "Comparison ID": "LIN02_HIGH_vs_SHAM",
+        "Intervention arm": "100-Hz EA",
+        "Comparator arm": "Sham EA",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative IV PCA morphine delivered during postoperative test period",
+        "Timepoint/window": "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 25,
+        "Randomized n comparator": 25,
+        "Analyzed n intervention": 25,
+        "Analyzed n comparator": 25,
+        "Mean intervention": 15,
+        "SD intervention": 10.7,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 30.2,
+        "SD comparator": 14.4,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg morphine",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw arm data no conversion; MD calculated",
+        "Derived effect measure": "MD",
+        "Derived effect": -15.2,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "First postoperative hour could include IM pethidine; group-specific pethidine exposure not reported",
+        "Source location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+        "Source PDF URL": "covidence_951_lin_2002.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Lin 2002",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LIN02_HIGH_vs_SHAM",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "100-Hz EA",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham EA",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative IV PCA morphine delivered during postoperative test period",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 15,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 10.7,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 30.2,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 14.4,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg morphine",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw arm data no conversion; MD calculated",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -15.2,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "15 - 30.2 = -15.2 mg; arithmetic only, no opioid conversion.",
+          "status": "ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "First postoperative hour could include IM pethidine; group-specific pethidine exposure not reported",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "covidence_951_lin_2002.pdf",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Reported P",
+          "old_value": null,
+          "source_value": "<0.01",
+          "final_value": "<0.01",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw arm data no conversion; MD calculated",
+          "final_value": "Raw arm data no conversion; MD calculated",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Usable as published PCA-morphine endpoint; not complete all-opioid 0-24 h exposure",
+          "source_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "final_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 2",
+          "source_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "final_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1Q5dNOPkf4PB_ctbHu1_3v3UIMIJzKRw9/view?usp=drivesdk",
+          "source_value": "covidence_951_lin_2002.pdf",
+          "final_value": "covidence_951_lin_2002.pdf",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_951_lin_2002.pdf",
+      "source_evidence": "Table2 mean(SD), n25 per arm: intervention 15 (10.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+      "drug": "morphine; separate first-hour pethidine",
+      "route": "IV PCA; pethidine IM",
+      "pca_formulation": "IV morphine 2 mg demand, 10 min lockout; concentration not reported",
+      "rescue_regimen": "First postoperative hour: pethidine 1 mg/kg IM single dose on request; arm totals not reported. No other analgesics during PCA.",
+      "critical_qc": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+      "analysis_eligibility": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+      "notes": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check)."
+    },
+    {
+      "baseline_row": 7,
+      "final": {
+        "Canonical study": "Lin 2002",
+        "Comparison ID": "LIN02_LOW_vs_SHAM",
+        "Intervention arm": "2-Hz EA",
+        "Comparator arm": "Sham EA",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative IV PCA morphine delivered during postoperative test period",
+        "Timepoint/window": "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 25,
+        "Randomized n comparator": 25,
+        "Analyzed n intervention": 25,
+        "Analyzed n comparator": 25,
+        "Mean intervention": 21.8,
+        "SD intervention": 14.7,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 30.2,
+        "SD comparator": 14.4,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg morphine",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw arm data no conversion; MD calculated",
+        "Derived effect measure": "MD",
+        "Derived effect": -8.4,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "First postoperative hour could include IM pethidine; group-specific pethidine exposure not reported",
+        "Source location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+        "Source PDF URL": "covidence_951_lin_2002.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Lin 2002",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LIN02_LOW_vs_SHAM",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "2-Hz EA",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham EA",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative IV PCA morphine delivered during postoperative test period",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 25,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 21.8,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 14.7,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 30.2,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 14.4,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+          "status": "SOURCE SUPPORTED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "No numeric value retained in this field; PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg morphine",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01. PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw arm data no conversion; MD calculated",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -8.4,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "21.8 - 30.2 = -8.4 mg; arithmetic only, no opioid conversion.",
+          "status": "ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "First postoperative hour could include IM pethidine; group-specific pethidine exposure not reported",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "covidence_951_lin_2002.pdf",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "evidence": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "status": "REVIEWER METADATA / CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Reported P",
+          "old_value": null,
+          "source_value": "<0.01",
+          "final_value": "<0.01",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw arm data no conversion; MD calculated",
+          "final_value": "Raw arm data no conversion; MD calculated",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -8.399999999999999,
+          "source_value": -8.4,
+          "final_value": -8.4,
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Usable as published PCA-morphine endpoint; not complete all-opioid 0-24 h exposure",
+          "source_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "final_value": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 2",
+          "source_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "final_value": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1Q5dNOPkf4PB_ctbHu1_3v3UIMIJzKRw9/view?usp=drivesdk",
+          "source_value": "covidence_951_lin_2002.pdf",
+          "final_value": "covidence_951_lin_2002.pdf",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p511 Table2 and no-withdrawal statement; p510 §2.3",
+          "reason": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_951_lin_2002.pdf",
+      "source_evidence": "Table2 mean(SD), n25 per arm: intervention 21.8 (14.7) mg, comparator 30.2 (14.4) mg; ** vs control and ++ vs sham denote P<0.01.",
+      "drug": "morphine; separate first-hour pethidine",
+      "route": "IV PCA; pethidine IM",
+      "pca_formulation": "IV morphine 2 mg demand, 10 min lockout; concentration not reported",
+      "rescue_regimen": "First postoperative hour: pethidine 1 mg/kg IM single dose on request; arm totals not reported. No other analgesics during PCA.",
+      "critical_qc": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check).",
+      "analysis_eligibility": "PCA morphine 1–24 h sensitivity; sham and usual-care contrasts separate; shared control adjustment required",
+      "notes": "PCA starts 1 h after surgery and excludes first-hour IM pethidine. Raw dose is directly reported, not a button-press proxy. Table2 significance footnotes rechecked after baseline (unblinded supplemental check)."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S041_MORPHINE_0",
+      "outcome": "Cumulative IV PCA morphine mg",
+      "time_window": "1–24 h",
+      "comparison": "100 Hz EA versus control",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p510 §2.1 computer-generated sequence",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.1 computer-generated sequence"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "NI",
+          "evidence": "p510 §2.1 concealment procedure not reported",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.1 concealment procedure not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "N",
+          "evidence": "p511 Table1 no suspicious prognostic imbalances",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 Table1 no suspicious prognostic imbalances"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p510 §2.2 strong perceptible current vs none; conceal equipment attempted, masking not validated",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.2 strong perceptible current vs none; conceal equipment attempted, masking not validated"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "p510 §2.2 technicians deliver distinct settings",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.2 technicians deliver distinct settings"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there trial-context deviations from intended interventions?",
+          "answer": "PN",
+          "evidence": "p510–511 standardized anesthesia, PCA and no other analgesics during PCA; no trial-context departures described",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510–511 standardized anesthesia, PCA and no other analgesics during PCA; no trial-context departures described"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3 PN",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.3 PN"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 NA",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.4 NA"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used for the effect of assignment?",
+          "answer": "Y",
+          "evidence": "p511 all enrolled completed without withdrawal; original groups analyzed",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 all enrolled completed without withdrawal; original groups analyzed"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyze as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.6 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "p511 all completed, n25 each",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 all completed, n25 each"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p510–511 standardized PCA dose recording",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510–511 standardized PCA dose recording"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "N",
+          "evidence": "same device/settings",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "same device/settings"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention?",
+          "answer": "N",
+          "evidence": "p511 blinded observer and electronic record",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 blinded observer and electronic record"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "NA",
+          "evidence": "4.3 N",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "4.3 N"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.3 N",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "4.3 N"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis prespecified before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Full publication no dated protocol/SAP/registration",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "Full publication no dated protocol/SAP/registration"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible measurements?",
+          "answer": "NI",
+          "evidence": "No prospective intentions available; measurements could vary",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "No prospective intentions available; measurements could vary"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No prospective analysis intentions available",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "No prospective analysis intentions available"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer randomization, concealment unreported.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Standardized care, no trial-context deviations and all randomized analyzed.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All 100 completed.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Blinded observer/electronic PCA dose; participant behavior is distinct from recording accuracy.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospective protocol or SAP available.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unreported concealment and prespecification; objective dose recording and complete data; no evidence warrants High.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Same overall and domain judgments as old selected morphine assessment, independently reached; comparison and incomplete window now explicit."
+    },
+    {
+      "result_id": "S041_MORPHINE_1",
+      "outcome": "Cumulative IV PCA morphine mg",
+      "time_window": "1–24 h",
+      "comparison": "2 Hz EA versus control",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p510 §2.1 computer-generated sequence",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.1 computer-generated sequence"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "NI",
+          "evidence": "p510 §2.1 concealment procedure not reported",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.1 concealment procedure not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "N",
+          "evidence": "p511 Table1 no suspicious prognostic imbalances",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 Table1 no suspicious prognostic imbalances"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p510 §2.2 strong perceptible current vs none; conceal equipment attempted, masking not validated",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.2 strong perceptible current vs none; conceal equipment attempted, masking not validated"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "p510 §2.2 technicians deliver distinct settings",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.2 technicians deliver distinct settings"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there trial-context deviations from intended interventions?",
+          "answer": "PN",
+          "evidence": "p510–511 standardized anesthesia, PCA and no other analgesics during PCA; no trial-context departures described",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510–511 standardized anesthesia, PCA and no other analgesics during PCA; no trial-context departures described"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3 PN",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.3 PN"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 NA",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.4 NA"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used for the effect of assignment?",
+          "answer": "Y",
+          "evidence": "p511 all enrolled completed without withdrawal; original groups analyzed",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 all enrolled completed without withdrawal; original groups analyzed"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyze as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.6 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "p511 all completed, n25 each",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 all completed, n25 each"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p510–511 standardized PCA dose recording",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510–511 standardized PCA dose recording"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "N",
+          "evidence": "same device/settings",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "same device/settings"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention?",
+          "answer": "N",
+          "evidence": "p511 blinded observer and electronic record",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 blinded observer and electronic record"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "NA",
+          "evidence": "4.3 N",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "4.3 N"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.3 N",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "4.3 N"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis prespecified before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Full publication no dated protocol/SAP/registration",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "Full publication no dated protocol/SAP/registration"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible measurements?",
+          "answer": "NI",
+          "evidence": "No prospective intentions available; measurements could vary",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "No prospective intentions available; measurements could vary"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No prospective analysis intentions available",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "No prospective analysis intentions available"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer randomization, concealment unreported.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Standardized care, no trial-context deviations and all randomized analyzed.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All 100 completed.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Blinded observer/electronic PCA dose; participant behavior is distinct from recording accuracy.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospective protocol or SAP available.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unreported concealment and prespecification; objective dose recording and complete data; no evidence warrants High.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Same overall and domain judgments as old selected morphine assessment, independently reached; comparison and incomplete window now explicit."
+    },
+    {
+      "result_id": "S041_MORPHINE_2",
+      "outcome": "Cumulative IV PCA morphine mg",
+      "time_window": "1–24 h",
+      "comparison": "100 Hz EA versus sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p510 §2.1 computer-generated sequence",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.1 computer-generated sequence"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "NI",
+          "evidence": "p510 §2.1 concealment procedure not reported",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.1 concealment procedure not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "N",
+          "evidence": "p511 Table1 no suspicious prognostic imbalances",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 Table1 no suspicious prognostic imbalances"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p510 §2.2 strong perceptible current vs none; conceal equipment attempted, masking not validated",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.2 strong perceptible current vs none; conceal equipment attempted, masking not validated"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "p510 §2.2 technicians deliver distinct settings",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.2 technicians deliver distinct settings"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there trial-context deviations from intended interventions?",
+          "answer": "PN",
+          "evidence": "p510–511 standardized anesthesia, PCA and no other analgesics during PCA; no trial-context departures described",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510–511 standardized anesthesia, PCA and no other analgesics during PCA; no trial-context departures described"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3 PN",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.3 PN"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 NA",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.4 NA"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used for the effect of assignment?",
+          "answer": "Y",
+          "evidence": "p511 all enrolled completed without withdrawal; original groups analyzed",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 all enrolled completed without withdrawal; original groups analyzed"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyze as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.6 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "p511 all completed, n25 each",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 all completed, n25 each"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p510–511 standardized PCA dose recording",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510–511 standardized PCA dose recording"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "N",
+          "evidence": "same device/settings",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "same device/settings"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention?",
+          "answer": "N",
+          "evidence": "p511 blinded observer and electronic record",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 blinded observer and electronic record"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "NA",
+          "evidence": "4.3 N",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "4.3 N"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.3 N",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "4.3 N"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis prespecified before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Full publication no dated protocol/SAP/registration",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "Full publication no dated protocol/SAP/registration"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible measurements?",
+          "answer": "NI",
+          "evidence": "No prospective intentions available; measurements could vary",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "No prospective intentions available; measurements could vary"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No prospective analysis intentions available",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "No prospective analysis intentions available"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer randomization, concealment unreported.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Standardized care, no trial-context deviations and all randomized analyzed.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All 100 completed.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Blinded observer/electronic PCA dose; participant behavior is distinct from recording accuracy.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospective protocol or SAP available.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unreported concealment and prespecification; objective dose recording and complete data; no evidence warrants High.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Same overall and domain judgments as old selected morphine assessment, independently reached; comparison and incomplete window now explicit."
+    },
+    {
+      "result_id": "S041_MORPHINE_3",
+      "outcome": "Cumulative IV PCA morphine mg",
+      "time_window": "1–24 h",
+      "comparison": "2 Hz EA versus sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p510 §2.1 computer-generated sequence",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.1 computer-generated sequence"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "NI",
+          "evidence": "p510 §2.1 concealment procedure not reported",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.1 concealment procedure not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "N",
+          "evidence": "p511 Table1 no suspicious prognostic imbalances",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 Table1 no suspicious prognostic imbalances"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p510 §2.2 strong perceptible current vs none; conceal equipment attempted, masking not validated",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.2 strong perceptible current vs none; conceal equipment attempted, masking not validated"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "p510 §2.2 technicians deliver distinct settings",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510 §2.2 technicians deliver distinct settings"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there trial-context deviations from intended interventions?",
+          "answer": "PN",
+          "evidence": "p510–511 standardized anesthesia, PCA and no other analgesics during PCA; no trial-context departures described",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510–511 standardized anesthesia, PCA and no other analgesics during PCA; no trial-context departures described"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3 PN",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.3 PN"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 NA",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.4 NA"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used for the effect of assignment?",
+          "answer": "Y",
+          "evidence": "p511 all enrolled completed without withdrawal; original groups analyzed",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 all enrolled completed without withdrawal; original groups analyzed"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyze as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "2.6 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "p511 all completed, n25 each",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 all completed, n25 each"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome?",
+          "answer": "NA",
+          "evidence": "3.1 Y",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "3.1 Y"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p510–511 standardized PCA dose recording",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p510–511 standardized PCA dose recording"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "N",
+          "evidence": "same device/settings",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "same device/settings"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention?",
+          "answer": "N",
+          "evidence": "p511 blinded observer and electronic record",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "p511 blinded observer and electronic record"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "NA",
+          "evidence": "4.3 N",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "4.3 N"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.3 N",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "4.3 N"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis prespecified before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Full publication no dated protocol/SAP/registration",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "Full publication no dated protocol/SAP/registration"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible measurements?",
+          "answer": "NI",
+          "evidence": "No prospective intentions available; measurements could vary",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "No prospective intentions available; measurements could vary"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No prospective analysis intentions available",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2",
+          "reasoning": "No prospective analysis intentions available"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer randomization, concealment unreported.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Standardized care, no trial-context deviations and all randomized analyzed.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All 100 completed.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Blinded observer/electronic PCA dose; participant behavior is distinct from recording accuracy.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospective protocol or SAP available.",
+          "source_location": "pp510–512 §2.1–2.5, Tables1–2"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unreported concealment and prespecification; objective dose recording and complete data; no evidence warrants High.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Same overall and domain judgments as old selected morphine assessment, independently reached; comparison and incomplete window now explicit."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "sensitivity",
+    "reason": "Sensitivity only: cumulative PCA morphine through 24 h excludes first-hour pethidine; not complete 0–24 h systemic opioid.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "No; excludes IM pethidine first hour",
+    "drug": "morphine",
+    "route": "IV",
+    "unit": "mg",
+    "raw_values": [
+      [
+        38.1,
+        16
+      ],
+      [
+        30.2,
+        14.4
+      ],
+      [
+        21.8,
+        14.7
+      ],
+      [
+        15,
+        10.7
+      ]
+    ],
+    "comparison_selection": "Sham primary comparator stratum, usual care separate",
+    "multiarm_handling": "One prespecified EA frequency or valid shared-control/multiarm method; never count four contrasts independently.",
+    "source_location": "p510 §2.3; p511 Table2"
+  },
+  "duplicate_map": [
+    {
+      "related_study": "S041 four arms",
+      "classification": "SAME TRIAL / DUPLICATE PUBLICATION",
+      "evidence": "100 randomized, 25 per four arms",
+      "source_location": "pp509–511",
+      "analysis_handling": "Shared controls; single trial unit"
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "First-hour arm-specific pethidine totals and pain graph numeric summaries",
+      "why_it_matters": "Complete systemic 0–24 h exposure and extractable pain",
+      "analysis_affected": "Primary opioid; pain",
+      "can_proceed_without": "Yes for qualified PCA sensitivity; no for complete opioid/pain means",
+      "priority": "HIGH",
+      "exact_question": "Please provide first-hour pethidine consumption by arm and numeric VAS means/SDs at each reported time."
+    }
+  ],
+  "summary": "All four opioid rows audited. Means/SDs confirmed; incomplete 1–24 h PCA exposure retained as sensitivity. Correct derivative readiness classification: reported mg morphine is not a PCA-demand proxy. No graph values inferred.",
+  "additional_source_results": {
+    "morphine": {
+      "location": "p511 Table 2; p510 §2.3",
+      "format": "mean (SD), mg IV",
+      "window": "PCA connected 1 h postoperation, used following 23 h; table calls total in 24 h",
+      "total": [
+        [
+          38.1,
+          16
+        ],
+        [
+          30.2,
+          14.4
+        ],
+        [
+          21.8,
+          14.7
+        ],
+        [
+          15,
+          10.7
+        ]
+      ],
+      "interval_1_8": [
+        [
+          16.1,
+          7.1
+        ],
+        [
+          12.8,
+          6.6
+        ],
+        [
+          9.2,
+          7.1
+        ],
+        [
+          6.1,
+          5.9
+        ]
+      ],
+      "interval_8_16": [
+        [
+          15.5,
+          9.4
+        ],
+        [
+          10.8,
+          7.7
+        ],
+        [
+          7.6,
+          5.4
+        ],
+        [
+          5.4,
+          3.8
+        ]
+      ],
+      "interval_16_24": [
+        [
+          6.5,
+          4.8
+        ],
+        [
+          6.6,
+          4.1
+        ],
+        [
+          5,
+          4.2
+        ],
+        [
+          3.5,
+          3.2
+        ]
+      ],
+      "pca": "IV morphine 2 mg demand, 10 min lockout; concentration not reported",
+      "rescue": "First postoperative hour: pethidine 1 mg/kg IM single dose on request; arm totals not reported. No other analgesics during PCA.",
+      "eligibility": "Sensitivity only: cumulative PCA morphine through 24 h excludes first-hour pethidine; not complete 0–24 h systemic opioid."
+    },
+    "pca_demands": {
+      "total": [
+        [
+          20.5,
+          9.2
+        ],
+        [
+          16.1,
+          7.4
+        ],
+        [
+          11.7,
+          7.1
+        ],
+        [
+          7.9,
+          5.9
+        ]
+      ],
+      "location": "p511 Table 2",
+      "note": "Includes unsuccessful lockout demands; not opioid dose."
+    },
+    "first_request": {
+      "minutes": [
+        [
+          10.6,
+          5.9
+        ],
+        [
+          18,
+          7.9
+        ],
+        [
+          27.9,
+          12.3
+        ],
+        [
+          28.1,
+          13.8
+        ]
+      ],
+      "location": "p511 Table 2"
+    },
+    "pain": {
+      "scale": "VAS 0–100 mm, context unspecified",
+      "times_hours": [
+        0.5,
+        1,
+        1.5,
+        2,
+        4,
+        8,
+        16,
+        24
+      ],
+      "values": null,
+      "reporting": "Graph only; no point estimates extracted.",
+      "location": "p512 Fig1"
+    },
+    "nausea": {
+      "events": [
+        11,
+        10,
+        4,
+        6
+      ],
+      "n": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "window": "first 24 h; retrospectively asked at 24 h",
+      "location": "p512 Table 3; p511 §2.4"
+    },
+    "vomiting": {
+      "events": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "n": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "window": "first 24 h",
+      "location": "p512 Table 3"
+    },
+    "qor": "Insufficient information / not reported.",
+    "gi": "Insufficient information / not reported."
+  },
+  "unblinded_supplemental_checks": [
+    "After baseline, visually rechecked Table2 P-value footnotes and calculated retained raw MDs; no conversion."
+  ]
+}

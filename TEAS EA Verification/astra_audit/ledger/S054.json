@@ -1,0 +1,26 @@
+{
+  "Study_ID": "S054",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_at": "2026-09-05T15:10:40.100Z",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows": 3,
+  "reviewed_rows": 3,
+  "reviewed_row_ids": [
+    235,
+    236,
+    237
+  ],
+  "result_specific_rob_count": 6,
+  "unresolved": [
+    {
+      "missing_information": "Exact24hdrug/routeconsumption,conversionfactors,registry/figurepainseriesreconciliation,datedsubgroupSAP",
+      "why_it_matters": "Primaryopioiddefinitionandsubgroup/SElimitations",
+      "analysis_affected": "Opioidandpain",
+      "can_proceed_without": "Primaryopioidexcluded;registryrawresultsdescriptive",
+      "priority": "HIGH",
+      "exact_question": "Please provide drug-specific actualend-of-surgery-through24hdoses/routes andSD/n, authors'morphineconversionrules, resolveFig1Hversusregistrypaintimes, andprovideprospectivefemale-subgroupSAP."
+    }
+  ],
+  "summary": "All3rowsadjudicated.Registryrescuednumericmean/SEresults, correctedwomen'sn9to8, andFigure1DsignificanceisP<0.1.Exact24hIVopioidunestablished;9itemQoRnotQoR15/40.",
+  "adjudicated_at": "2026-09-05T15:12:09.719Z"
+}

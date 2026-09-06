@@ -1,0 +1,32 @@
+# Covidence screening checkpoint — 250 votes
+
+- Date: 2026-07-26
+- First Covidence number: #415
+- Last Covidence number: #903
+- Total registered votes: 250
+- Yes: 50
+- Maybe: 34
+- No: 166
+- Protocols excluded: 17
+- Animal studies excluded: 52
+- Non-randomized studies excluded: 4
+- Wrong interventions excluded: 2
+- No-general-anaesthesia exclusions: 21
+- Non-surgical exclusions: 34
+- Timing exclusions: 8
+- Inseparable interventions excluded: 4
+- Ineligible active comparators excluded: 8
+- No-eligible-outcome exclusions: 9
+- Population exclusions: 3
+- Publication-type exclusions: 4
+- Ambiguous-randomization Maybe decisions: 1
+- Uncertain-timing Maybe decisions: 18
+- Uncertain-general-anaesthesia Maybe decisions: 11
+- Uncertain-outcome Maybe decisions: 1
+- Uncertain-intervention-separability Maybe decisions: 3
+- Numbering gaps logged: 28
+- Attempted records without a registered vote: 0
+- Interface incidents: 0
+- No conflicts were opened or resolved.
+- JSONL and generated CSV validated with 250 unique, consecutive audit records and 250 unique Covidence numbers.
+- The sequence-225 internal QC was performed late during this reconciliation. The first 225 rows were confirmed unique, consecutive, and registered; the timing deviation is append-only in `codex_continuity_incidents_500.jsonl`.

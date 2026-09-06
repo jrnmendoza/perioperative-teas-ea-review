@@ -1,0 +1,15 @@
+{
+  "Study_ID": "S027",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows_expected": 1,
+  "baseline_rows_reviewed": 1,
+  "result_specific_rob2_count": 8,
+  "limitations": [
+    "Figure3Cexclusion reasons sum8 but60→53;Tsum7 but60→52. Useconsistent analysed headers52/53, flag allocation of reasons.",
+    "Tables6–7 NRS parentheses use decimal-like punctuation; exactQ1/Q3 not explicit. Do not silently parse2.3 as2–3.",
+    "Methods calls doubleblind butCdidnotundergoTEAS; no sham apparatus documented.",
+    "P0.00 is rounded report, not exact zero.",
+    "Unidentified20mg recovery drug and implausible induction dose text present; do not correct by assumption."
+  ]
+}

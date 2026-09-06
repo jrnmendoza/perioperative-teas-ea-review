@@ -1,0 +1,257 @@
+{
+  "Study_ID": "S003",
+  "Study": "Zhou 2021",
+  "identity": {
+    "title": "Effects of Transcutaneous Electrical Acupoint Stimulation (TEAS) on Postoperative Recovery in Patients with Gastric Cancer: A Randomized Controlled Trial",
+    "year": 2021,
+    "doi": "10.2147/CMAR.S292325",
+    "pdf": "getfile.php-5.pdf",
+    "read_pages": "1–10 completely; visualFigure1p4,Tables3–4pp6,8"
+  },
+  "source_before_baseline": true,
+  "arms": {
+    "order": [
+      "TG",
+      "CG"
+    ],
+    "randomized": [
+      41,
+      41
+    ],
+    "analyzed": [
+      41,
+      40
+    ],
+    "protocol": "Unblinded TEAS20/100Hz30min twice dailyPOD1–3; usualERAScontrol. Epidural-assisted general anesthesia; PCA excluded."
+  },
+  "results": {
+    "pain": {
+      "location": "Table3p6; Methods p3",
+      "format": "POD1–5 daily values median(single unspecified Quartile width), six assessments/day; rest/movement unspecified",
+      "POD1": [
+        3,
+        3.33
+      ],
+      "quartile_POD1": [
+        0.42,
+        0.67
+      ],
+      "POD2": [
+        2.58,
+        3.17
+      ],
+      "POD3": [
+        2.25,
+        3.08
+      ],
+      "POD4": [
+        2,
+        2.83
+      ],
+      "POD5": [
+        1.75,
+        2.29
+      ],
+      "mean_average_POD1_5": [
+        [
+          2.55,
+          0.21
+        ],
+        [
+          3.1,
+          0.42
+        ]
+      ],
+      "POD0_meanSD": [
+        [
+          3.58,
+          0.6
+        ],
+        [
+          3.83,
+          0.84
+        ]
+      ]
+    },
+    "opioid": {
+      "location": "Table3p6",
+      "meanSD": [
+        [
+          8.935,
+          3.66
+        ],
+        [
+          12.83,
+          8.097
+        ]
+      ],
+      "unit": "author-converted morphine-equivalentmg",
+      "p": 0.182,
+      "window": "Insufficient information / not reported.",
+      "recipients": [
+        18,
+        30
+      ],
+      "recipient_p": 0.004,
+      "raw_drug_doses": null
+    },
+    "flatus": {
+      "location": "Table4p8",
+      "meanSD": [
+        [
+          55.63,
+          16.74
+        ],
+        [
+          72.6,
+          20.92
+        ]
+      ],
+      "unit": "h",
+      "p": "<0.001"
+    },
+    "defecation": {
+      "location": "Table4p8",
+      "meanSD": [
+        [
+          72.2,
+          16.24
+        ],
+        [
+          95.78,
+          17.75
+        ]
+      ],
+      "unit": "h",
+      "p": "<0.001"
+    },
+    "nausea": {
+      "location": "Table4p8",
+      "events": [
+        16,
+        19
+      ],
+      "p": 0.441,
+      "frequency_meanSD": [
+        [
+          1.88,
+          1.09
+        ],
+        [
+          2.58,
+          0.77
+        ]
+      ],
+      "frequency_p": 0.029
+    },
+    "vomiting": {
+      "events": [
+        0,
+        0
+      ],
+      "frequency": [
+        0,
+        0
+      ],
+      "p": 1,
+      "location": "Table4p8"
+    },
+    "diet_comfort": {
+      "meanSD": [
+        [
+          7.63,
+          0.63
+        ],
+        [
+          6.93,
+          0.69
+        ]
+      ],
+      "scale": "subjective0–10 comfort; NOTtime to diet",
+      "p": "<0.001",
+      "location": "Table4p8"
+    },
+    "qor": "Insufficient information / not reported."
+  },
+  "opioid": {
+    "decision": "hold",
+    "drug": "pethidine/pentazocine/dezocine; author converts to morphine",
+    "route": "Insufficient information / not reported.",
+    "pca": "PCA excluded",
+    "rescue": "POD1routine flurbiprofen then condition-based NSAID/opioid prescriptions; individual drugs/routes not supplied",
+    "reason": "Not exact24h; authors use pethidine100mg:pentazocine45mg:dezocine10mg:morphine10mg while methodsp3 says pentazocine30–60mg. Raw exposure and denominators for opioid consumers-only vs all unclear.",
+    "location": "pp3,6,8"
+  },
+  "source_conflicts": [
+    "Abstracthematologic directions conflict with Table5; outside relevant outcomes.",
+    "Single value 'Quartile' does not identifyQ1/Q3.",
+    "Opioid total window and participant-specific raw drug/route not explicit; no IVequivalent validation."
+  ],
+  "rob_independent": {
+    "D1": {
+      "answers": [
+        "Y",
+        "NI",
+        "PN"
+      ],
+      "evidence": "p4SPSS randomtable; assignment by consent order but no concealment method; Tables1–2 no compelling randomization imbalance.",
+      "judgment": "Some concerns"
+    },
+    "D2": {
+      "answers": [
+        "Y",
+        "Y",
+        "PN",
+        "NA",
+        "NA",
+        "PY",
+        "NA"
+      ],
+      "evidence": "p2 explicitlyunblinded; sameERAS protocol, assignedgroups retained, onepulmonaryinfection withdrawal. No demonstrated trialcontext deviation; condition-basedanalgesia part of plannedcare.",
+      "judgment": "Low"
+    },
+    "D3": {
+      "answers": [
+        "PY",
+        "NA",
+        "NA",
+        "NA"
+      ],
+      "evidence": "Figure1 only1/82lostCGpulmonaryinfection; nearlyallcontinuousoutcomes observed. Not imputed.",
+      "judgment": "Low"
+    },
+    "D4": {
+      "answers": [
+        "N",
+        "PN",
+        "Y",
+        "Y",
+        "PY"
+      ],
+      "evidence": "p2unblinded usual-care study; p3frequentdirectpatientqueries forpain,nausea,GI, additionalTEASattentiontwicedaily; subjective symptom assessment likely susceptible to expectations under unmasked treatment.",
+      "judgment": "High"
+    },
+    "D4_drug": {
+      "answers": [
+        "PN",
+        "PN",
+        "Y",
+        "Y",
+        "NI"
+      ],
+      "evidence": "p3 unblinded clinicians prescribeopioids by pain severity, not standardized electronicPCA. Dosingdecision may depend on knowledge; influence not established. Authors' conversion uncertainty furtherlimits result.",
+      "judgment": "Some concerns"
+    },
+    "D5": {
+      "answers": [
+        "NI",
+        "NI",
+        "NI"
+      ],
+      "evidence": "p2registeredApril22 2019beforeMayenrollment; protocol availablebyrequest, no datedSAP obtained. Officialregistrysearch no accessibleexactrecord; PMCcaptcha andpublisherfetchfailed.",
+      "judgment": "Some concerns"
+    }
+  },
+  "independence": "Qingdao2019 gastriccohort; distinctfromGuilinZhou2025; no duplicate demonstration.",
+  "missing": "Insufficient information / not reported."
+}

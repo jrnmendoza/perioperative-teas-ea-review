@@ -1,0 +1,22 @@
+{
+  "Study_ID": "S042",
+  "Study": "Liang 2021",
+  "stage": "ADJUDICATED",
+  "phase_a": "phase_a/S042.json",
+  "adjudicated": "adjudicated/S042.json",
+  "baseline_rows": 5,
+  "reviewed_rows": 5,
+  "reviewed_result_specific_rob": 7,
+  "phase_a_saved_before_baseline": true,
+  "consequential_findings": "All five baseline rows audited; randomized denominators materially reversed (TEAS37/control38). Extra analgesia cannot become opioid dose. QoR40 means/SD24h and48h retained in additional source results; CRBD results require high-risk qualification.",
+  "limitations": [
+    {
+      "missing_information": "Randomized exclusions, age discrepancy, extra analgesia definition, prospective plan, pain/PONV event thresholds and interval",
+      "why_it_matters": "Bias and eligibility of outcomes",
+      "analysis_affected": "CRBD/QoR/pain/PONV/opioid",
+      "can_proceed_without": "QoR/CRBD qualified; opioid cannot",
+      "priority": "HIGH",
+      "exact_question": "Please clarify age eligibility, provide outcomes for all75 randomized participants, define extra analgesia drug/unit/window and pain/PONV thresholds, reconcile control CRBD48h19 versus7, and share dated registry/protocol/SAP."
+    }
+  ]
+}

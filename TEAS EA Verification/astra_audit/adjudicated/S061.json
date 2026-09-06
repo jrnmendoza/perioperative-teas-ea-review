@@ -1,0 +1,1504 @@
+{
+  "Study_ID": "S061",
+  "Study": "An 2014",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first-page identity confirmed",
+    "title": "Electro-Acupuncture Decreases Postoperative Pain and Improves Recovery in Patients Undergoing a Supratentorial Craniotomy",
+    "year": 2014,
+    "doi": "10.1142/S0192415X14500682",
+    "pdf_files": [
+      "covidence_698_full_article.pdf"
+    ],
+    "randomized_arms": {
+      "EA": 45,
+      "control": 43
+    },
+    "analyzed_arms": {
+      "EA": 41,
+      "control": 40
+    },
+    "modality": "EA",
+    "comparator_class": "No treatment / usual care; no needles, not sham",
+    "independence": "Distinct supplied publication. Same center and several investigators/acupoints as cited An2010a/b and Yang2012; paper calls them previous studies, but no recruitment dates or registry identifier establishes participant nonoverlap. Do not assume duplicate solely from authorship; unresolved author check.",
+    "source_locations": "PDF pp2–4; Table1 p5",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 254,
+      "final": {
+        "Canonical study": "An 2014",
+        "Comparison ID": "AN14_EA_vs_CTRL_FENT48",
+        "Intervention arm": "Intraoperative electroacupuncture",
+        "Comparator arm": "No acupuncture control",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Total postoperative fentanyl PCIA dose",
+        "Timepoint/window": "Reported total during postoperative PCIA course, apparently through 48 h; exact clock not explicit",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 45,
+        "Randomized n comparator": 43,
+        "Analyzed n intervention": 41,
+        "Analyzed n comparator": 40,
+        "Mean intervention": 0.67,
+        "SD intervention": 0.09,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 0.73,
+        "SD comparator": 0.12,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg fentanyl",
+        "Reported P": "NS",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.06,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Hold quantitative fentanyl pooling pending clarification of units, delivery accounting and interval; retain printed raw summaries",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Seven randomized exclusions; no exact24h. Dose accounting inconsistent with no-basal10µg/kg/100mL and reported effective bolus counts. Printed NS does not reconcile with mean/SD/n (independent-groups t approximately2.54). Do not silently correct mg to µg or alter decimal place.",
+        "Source location": "p5 final paragraph; methods p3; Table2 p6",
+        "Source PDF URL": "https://drive.google.com/file/d/1Ygu3g28udKuPe0OS95oge2ryIGNeJ0te/view?usp=drivesdk",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "An 2014",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "AN14_EA_vs_CTRL_FENT48",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative electroacupuncture",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No acupuncture control",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total postoperative fentanyl PCIA dose",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Reported total during postoperative PCIA course, apparently through 48 h; exact clock not explicit",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 45,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 43,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 41,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 40,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 0.67,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.09,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 0.73,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.12,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg fentanyl",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "NS",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.06,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Hold quantitative fentanyl pooling pending clarification of units, delivery accounting and interval; retain printed raw summaries",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Seven randomized exclusions; no exact24h. Dose accounting inconsistent with no-basal10µg/kg/100mL and reported effective bolus counts. Printed NS does not reconcile with mean/SD/n (independent-groups t approximately2.54). Do not silently correct mg to µg or alter decimal place.",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p5 final paragraph; methods p3; Table2 p6",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1Ygu3g28udKuPe0OS95oge2ryIGNeJ0te/view?usp=drivesdk",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "Through reported 48-h PCIA period",
+          "source_value": "Reported total during postoperative PCIA course, apparently through 48 h; exact clock not explicit",
+          "final_value": "Reported total during postoperative PCIA course, apparently through 48 h; exact clock not explicit",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "reason": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -0.05999999999999994,
+          "source_value": -0.06,
+          "final_value": -0.06,
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "reason": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for 48-h fentanyl analysis; not a 24-h endpoint",
+          "source_value": "Hold quantitative fentanyl pooling pending clarification of units, delivery accounting and interval; retain printed raw summaries",
+          "final_value": "Hold quantitative fentanyl pooling pending clarification of units, delivery accounting and interval; retain printed raw summaries",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "reason": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Seven of 88 randomized patients were excluded from analysis; total fentanyl is not isolated to 0-24 h.",
+          "source_value": "Seven randomized exclusions; no exact24h. Dose accounting inconsistent with no-basal10µg/kg/100mL and reported effective bolus counts. Printed NS does not reconcile with mean/SD/n (independent-groups t approximately2.54). Do not silently correct mg to µg or alter decimal place.",
+          "final_value": "Seven randomized exclusions; no exact24h. Dose accounting inconsistent with no-basal10µg/kg/100mL and reported effective bolus counts. Printed NS does not reconcile with mean/SD/n (independent-groups t approximately2.54). Do not silently correct mg to µg or alter decimal place.",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "reason": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Opioid/PCIA results",
+          "source_value": "p5 final paragraph; methods p3; Table2 p6",
+          "final_value": "p5 final paragraph; methods p3; Table2 p6",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "reason": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / ATTRITION + 48H WINDOW",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "PDF p5 final paragraph; methods p3; Table2 p6",
+          "reason": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_698_full_article.pdf",
+      "source_evidence": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+      "drug": "Fentanyl",
+      "route": "Intravenous",
+      "pca_formulation": "10 µg/kg fentanyl + 8 mg ondansetron in 100 mL, no basal infusion; bolus 1 mL, lockout 15 min, maximum 4 mL/h. Connected at end of surgery but activated following patient instruction in PACU; discontinued at 48 h.",
+      "rescue_regimen": "Statistical methods mention rescue analgesic doses, but independent rescue regimen and contribution to total systemic opioid use are insufficiently reported.",
+      "critical_qc": "Printed postoperative total fentanyl is 0.67±0.09 versus0.73±0.12 mg, n41/40. The paper says no difference. PCIA continued48h, but this total's exact starting point/window and other rescue exposure are not explicit. The stated weight-dependent concentration and effective1-mL bolus counts do not explain the printed totals; the stated no-difference claim also conflicts with a conventional t-test of these mean/SD/n.",
+      "analysis_eligibility": "Hold quantitative fentanyl pooling pending clarification of units, delivery accounting and interval; retain printed raw summaries",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 255,
+      "final": {
+        "Canonical study": "An 2014",
+        "Comparison ID": "AN14_EA_vs_CTRL_OPIOID24",
+        "Intervention arm": "Intraoperative electroacupuncture",
+        "Comparator arm": "No acupuncture control",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative postoperative fentanyl",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 45,
+        "Randomized n comparator": 43,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "Insufficient information / not reported.",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "No reported exact24h drug-mass result or outcome-specific denominator; only0–6h/6–48h bolus counts and a qualified total course fentanyl mass.",
+        "Source location": "Methods pp3–4; results p5; Table2 p6",
+        "Source PDF URL": "https://drive.google.com/file/d/1Ygu3g28udKuPe0OS95oge2ryIGNeJ0te/view?usp=drivesdk",
+        "Record status": "NOT ANALYSIS ELIGIBLE"
+      },
+      "verification_status": "NOT ANALYSIS ELIGIBLE",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "An 2014",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "AN14_EA_vs_CTRL_OPIOID24",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative electroacupuncture",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No acupuncture control",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative postoperative fentanyl",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 45,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 43,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "Insufficient information / not reported.",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "No reported exact24h drug-mass result or outcome-specific denominator; only0–6h/6–48h bolus counts and a qualified total course fentanyl mass.",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Methods pp3–4; results p5; Table2 p6",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1Ygu3g28udKuPe0OS95oge2ryIGNeJ0te/view?usp=drivesdk",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "NOT ANALYSIS ELIGIBLE",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 41,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "reason": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 40,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "reason": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "severity": "material"
+        },
+        {
+          "field": "Unit/scale",
+          "old_value": "mg/µg fentanyl",
+          "source_value": "Insufficient information / not reported.",
+          "final_value": "Insufficient information / not reported.",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "reason": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "PCIA results",
+          "source_value": "Methods pp3–4; results p5; Table2 p6",
+          "final_value": "Methods pp3–4; results p5; Table2 p6",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "reason": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Published bolus activity is split 0-6 h and 6-48 h; exact 0-24-h fentanyl cannot be reconstructed.",
+          "source_value": "No reported exact24h drug-mass result or outcome-specific denominator; only0–6h/6–48h bolus counts and a qualified total course fentanyl mass.",
+          "final_value": "No reported exact24h drug-mass result or outcome-specific denominator; only0–6h/6–48h bolus counts and a qualified total course fentanyl mass.",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "reason": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "MISSING / 24H NOT RECONSTRUCTABLE",
+          "source_value": "NOT ANALYSIS ELIGIBLE",
+          "final_value": "NOT ANALYSIS ELIGIBLE",
+          "source_location": "Methods pp3–4; results p5; Table2 p6",
+          "reason": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_698_full_article.pdf",
+      "source_evidence": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+      "drug": "Fentanyl",
+      "route": "Intravenous",
+      "pca_formulation": "10 µg/kg fentanyl + 8 mg ondansetron in 100 mL, no basal infusion; bolus 1 mL, lockout 15 min, maximum 4 mL/h. Connected at end of surgery but activated following patient instruction in PACU; discontinued at 48 h.",
+      "rescue_regimen": "Statistical methods mention rescue analgesic doses, but independent rescue regimen and contribution to total systemic opioid use are insufficiently reported.",
+      "critical_qc": "PCIA counts reported for0–6h and6–48h; total fentanyl is not separated at24h. These overlapping reporting periods cannot produce exact0–24h. Weight-dependent concentration prevents conversion of counts using group mean weight.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+      "notes": "Phase A source-first followed by field-level comparison."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S061_FENTANYL_COURSE",
+      "outcome": "Reported total postoperative fentanyl PCIA dose",
+      "time_window": "Apparently through48h; exact clock unclear",
+      "comparison": "No treatment / usual care; no needles, not sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated randomized-number table.",
+          "source_location": "p3",
+          "reasoning": "Computer-generated randomized-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Allocation concealment mechanism is not described.",
+          "source_location": "p3",
+          "reasoning": "Allocation concealment mechanism is not described."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed.",
+          "source_location": "Table1 p5",
+          "reasoning": "Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Participants were sedated before EA and explicitly unaware of allocation.",
+          "source_location": "pp3,9",
+          "reasoning": "Participants were sedated before EA and explicitly unaware of allocation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Acupuncturist delivered needles versus no needles.",
+          "source_location": "p3",
+          "reasoning": "Acupuncturist delivered needles versus no needles."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Same GA and PCIA protocol; no trial-context departures reported.",
+          "source_location": "pp3–4",
+          "reasoning": "Same GA and PCIA protocol; no trial-context departures reported."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No relevant trial-context deviations demonstrated.",
+          "source_location": "pp3–4",
+          "reasoning": "No relevant trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No relevant trial-context deviations demonstrated.",
+          "source_location": "pp3–4",
+          "reasoning": "No relevant trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported.",
+          "source_location": "p4",
+          "reasoning": "Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "No separate inappropriate as-treated analysis established.",
+          "source_location": "p4",
+          "reasoning": "No separate inappropriate as-treated analysis established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "81/88 available; clinically important exclusions.",
+          "source_location": "p4",
+          "reasoning": "81/88 available; clinically important exclusions."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No sensitivity analysis for seven excluded patients.",
+          "source_location": "p4",
+          "reasoning": "No sensitivity analysis for seven excluded patients."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "Y",
+          "evidence": "Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications.",
+          "source_location": "p4",
+          "reasoning": "Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "PY",
+          "evidence": "Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent.",
+          "source_location": "p4",
+          "reasoning": "Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Consumed opioid dose is an appropriate endpoint; printed units/delivery inconsistencies require data clarification, not unsupported attribution to a measurement method.",
+          "source_location": "p3; p5;Table2",
+          "reasoning": "Consumed opioid dose is an appropriate endpoint; printed units/delivery inconsistencies require data clarification, not unsupported attribution to a measurement method."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same PCIA settings and data-recording schedule.",
+          "source_location": "pp3–4",
+          "reasoning": "Same PCIA settings and data-recording schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Observer collecting outcomes was blinded; PCIA records do not require a subjective pain judgment.",
+          "source_location": "pp3,9",
+          "reasoning": "Observer collecting outcomes was blinded; PCIA records do not require a subjective pain judgment."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Objective count/dose record with blinded data collection.",
+          "source_location": "pp3–4",
+          "reasoning": "Objective count/dose record with blinded data collection."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Objective count/dose record with blinded data collection.",
+          "source_location": "pp3–4",
+          "reasoning": "Objective count/dose record with blinded data collection."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one.",
+          "source_location": "pp1–11; PubMed search",
+          "reasoning": "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable.",
+          "source_location": "p4",
+          "reasoning": "Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Multiple PCIA periods/definitions and tests; no dated SAP.",
+          "source_location": "pp4–6",
+          "reasoning": "Multiple PCIA periods/definitions and tests; no dated SAP."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer-generated randomized-number table.; Allocation concealment mechanism is not described.; Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed.",
+          "source_location": "p3; p3; Table1 p5"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Participants were sedated before EA and explicitly unaware of allocation.; Acupuncturist delivered needles versus no needles.; Same GA and PCIA protocol; no trial-context departures reported.; No relevant trial-context deviations demonstrated.; No relevant trial-context deviations demonstrated.; Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported.; No separate inappropriate as-treated analysis established.",
+          "source_location": "pp3,9; p3; pp3–4; pp3–4; pp3–4; p4; p4"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "81/88 available; clinically important exclusions.; No sensitivity analysis for seven excluded patients.; Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications.; Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent.",
+          "source_location": "p4; p4; p4; p4"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Consumed opioid dose is an appropriate endpoint; printed units/delivery inconsistencies require data clarification, not unsupported attribution to a measurement method.; Same PCIA settings and data-recording schedule.; Observer collecting outcomes was blinded; PCIA records do not require a subjective pain judgment.; Objective count/dose record with blinded data collection.; Objective count/dose record with blinded data collection.",
+          "source_location": "p3; p5;Table2; pp3–4; pp3,9; pp3–4; pp3–4"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one.; Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable.; Multiple PCIA periods/definitions and tests; no dated SAP.",
+          "source_location": "pp1–11; PubMed search; p4; pp4–6"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Clinically related post-randomization missingness can bias recovery outcomes; low D4 is supported by intervention under GA and blinded postoperative assessment, not merely the label double-blind.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Overall High and domain pattern independently agree with baseline; agreement is not numerical validation. Additional source conflicts require an opioid data hold."
+    },
+    {
+      "result_id": "S061_VAS_REST24",
+      "outcome": "Resting VAS",
+      "time_window": "24 hours",
+      "comparison": "No treatment / usual care; no needles, not sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated randomized-number table.",
+          "source_location": "p3",
+          "reasoning": "Computer-generated randomized-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Allocation concealment mechanism is not described.",
+          "source_location": "p3",
+          "reasoning": "Allocation concealment mechanism is not described."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed.",
+          "source_location": "Table1 p5",
+          "reasoning": "Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Participants were sedated before EA and explicitly unaware of allocation.",
+          "source_location": "pp3,9",
+          "reasoning": "Participants were sedated before EA and explicitly unaware of allocation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Acupuncturist delivered needles versus no needles.",
+          "source_location": "p3",
+          "reasoning": "Acupuncturist delivered needles versus no needles."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Same GA and PCIA protocol; no trial-context departures reported.",
+          "source_location": "pp3–4",
+          "reasoning": "Same GA and PCIA protocol; no trial-context departures reported."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No relevant trial-context deviations demonstrated.",
+          "source_location": "pp3–4",
+          "reasoning": "No relevant trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No relevant trial-context deviations demonstrated.",
+          "source_location": "pp3–4",
+          "reasoning": "No relevant trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported.",
+          "source_location": "p4",
+          "reasoning": "Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "No separate inappropriate as-treated analysis established.",
+          "source_location": "p4",
+          "reasoning": "No separate inappropriate as-treated analysis established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "81/88 available; clinically important exclusions.",
+          "source_location": "p4",
+          "reasoning": "81/88 available; clinically important exclusions."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No sensitivity analysis for seven excluded patients.",
+          "source_location": "p4",
+          "reasoning": "No sensitivity analysis for seven excluded patients."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "Y",
+          "evidence": "Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications.",
+          "source_location": "p4",
+          "reasoning": "Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "PY",
+          "evidence": "Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent.",
+          "source_location": "p4",
+          "reasoning": "Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Standard resting0–10VAS measured at scheduled times.",
+          "source_location": "p4",
+          "reasoning": "Standard resting0–10VAS measured at scheduled times."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same schedule and single blinded assessor asked standardized questions.",
+          "source_location": "pp4,9",
+          "reasoning": "Same schedule and single blinded assessor asked standardized questions."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Self-rating participants and postoperative observer reported unaware of EA, delivered under GA.",
+          "source_location": "pp3,9",
+          "reasoning": "Self-rating participants and postoperative observer reported unaware of EA, delivered under GA."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Outcome assessors probably unaware.",
+          "source_location": "pp3,9",
+          "reasoning": "Outcome assessors probably unaware."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Outcome assessors probably unaware.",
+          "source_location": "pp3,9",
+          "reasoning": "Outcome assessors probably unaware."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one.",
+          "source_location": "pp1–11; PubMed search",
+          "reasoning": "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable.",
+          "source_location": "p4",
+          "reasoning": "Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Multiple PCIA periods/definitions and tests; no dated SAP.",
+          "source_location": "pp4–6",
+          "reasoning": "Multiple PCIA periods/definitions and tests; no dated SAP."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer-generated randomized-number table.; Allocation concealment mechanism is not described.; Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed.",
+          "source_location": "p3; p3; Table1 p5"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Participants were sedated before EA and explicitly unaware of allocation.; Acupuncturist delivered needles versus no needles.; Same GA and PCIA protocol; no trial-context departures reported.; No relevant trial-context deviations demonstrated.; No relevant trial-context deviations demonstrated.; Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported.; No separate inappropriate as-treated analysis established.",
+          "source_location": "pp3,9; p3; pp3–4; pp3–4; pp3–4; p4; p4"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "81/88 available; clinically important exclusions.; No sensitivity analysis for seven excluded patients.; Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications.; Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent.",
+          "source_location": "p4; p4; p4; p4"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Standard resting0–10VAS measured at scheduled times.; Same schedule and single blinded assessor asked standardized questions.; Self-rating participants and postoperative observer reported unaware of EA, delivered under GA.; Outcome assessors probably unaware.; Outcome assessors probably unaware.",
+          "source_location": "p4; pp4,9; pp3,9; pp3,9; pp3,9"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one.; Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable.; Multiple PCIA periods/definitions and tests; no dated SAP.",
+          "source_location": "pp1–11; PubMed search; p4; pp4–6"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Clinical exclusions make missingness likely outcome-dependent. Figure labels support mean2.6 versus3.07, but no numeric SD is extractable without author data.",
+      "old_selected_overall": "High",
+      "changes_from_old": "See domain-specific source reasoning; baseline selected result may differ."
+    },
+    {
+      "result_id": "S061_PONV_DAY1",
+      "outcome": "Any postoperative nausea or vomiting",
+      "time_window": "First postoperative day; abstract describes first24h",
+      "comparison": "No treatment / usual care; no needles, not sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated randomized-number table.",
+          "source_location": "p3",
+          "reasoning": "Computer-generated randomized-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Allocation concealment mechanism is not described.",
+          "source_location": "p3",
+          "reasoning": "Allocation concealment mechanism is not described."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed.",
+          "source_location": "Table1 p5",
+          "reasoning": "Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Participants were sedated before EA and explicitly unaware of allocation.",
+          "source_location": "pp3,9",
+          "reasoning": "Participants were sedated before EA and explicitly unaware of allocation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Acupuncturist delivered needles versus no needles.",
+          "source_location": "p3",
+          "reasoning": "Acupuncturist delivered needles versus no needles."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Same GA and PCIA protocol; no trial-context departures reported.",
+          "source_location": "pp3–4",
+          "reasoning": "Same GA and PCIA protocol; no trial-context departures reported."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No relevant trial-context deviations demonstrated.",
+          "source_location": "pp3–4",
+          "reasoning": "No relevant trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No relevant trial-context deviations demonstrated.",
+          "source_location": "pp3–4",
+          "reasoning": "No relevant trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported.",
+          "source_location": "p4",
+          "reasoning": "Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "No separate inappropriate as-treated analysis established.",
+          "source_location": "p4",
+          "reasoning": "No separate inappropriate as-treated analysis established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "81/88 available; clinically important exclusions.",
+          "source_location": "p4",
+          "reasoning": "81/88 available; clinically important exclusions."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No sensitivity analysis for seven excluded patients.",
+          "source_location": "p4",
+          "reasoning": "No sensitivity analysis for seven excluded patients."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "Y",
+          "evidence": "Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications.",
+          "source_location": "p4",
+          "reasoning": "Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "PY",
+          "evidence": "Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent.",
+          "source_location": "p4",
+          "reasoning": "Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Incidence of nausea/vomiting is a clinically appropriate composite, collected on scheduled follow-up.",
+          "source_location": "p4",
+          "reasoning": "Incidence of nausea/vomiting is a clinically appropriate composite, collected on scheduled follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same standardized questions and blinded observer for both groups.",
+          "source_location": "p9",
+          "reasoning": "Same standardized questions and blinded observer for both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Patients and postoperative assessor probably unaware because EA was applied under GA.",
+          "source_location": "pp3,9",
+          "reasoning": "Patients and postoperative assessor probably unaware because EA was applied under GA."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Outcome assessors probably unaware.",
+          "source_location": "pp3,9",
+          "reasoning": "Outcome assessors probably unaware."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Outcome assessors probably unaware.",
+          "source_location": "pp3,9",
+          "reasoning": "Outcome assessors probably unaware."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one.",
+          "source_location": "pp1–11; PubMed search",
+          "reasoning": "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable.",
+          "source_location": "p4",
+          "reasoning": "Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Multiple PCIA periods/definitions and tests; no dated SAP.",
+          "source_location": "pp4–6",
+          "reasoning": "Multiple PCIA periods/definitions and tests; no dated SAP."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer-generated randomized-number table.; Allocation concealment mechanism is not described.; Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed.",
+          "source_location": "p3; p3; Table1 p5"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Participants were sedated before EA and explicitly unaware of allocation.; Acupuncturist delivered needles versus no needles.; Same GA and PCIA protocol; no trial-context departures reported.; No relevant trial-context deviations demonstrated.; No relevant trial-context deviations demonstrated.; Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported.; No separate inappropriate as-treated analysis established.",
+          "source_location": "pp3,9; p3; pp3–4; pp3–4; pp3–4; p4; p4"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "81/88 available; clinically important exclusions.; No sensitivity analysis for seven excluded patients.; Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications.; Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent.",
+          "source_location": "p4; p4; p4; p4"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Incidence of nausea/vomiting is a clinically appropriate composite, collected on scheduled follow-up.; Same standardized questions and blinded observer for both groups.; Patients and postoperative assessor probably unaware because EA was applied under GA.; Outcome assessors probably unaware.; Outcome assessors probably unaware.",
+          "source_location": "p4; p9; pp3,9; pp3,9; pp3,9"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one.; Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable.; Multiple PCIA periods/definitions and tests; no dated SAP.",
+          "source_location": "pp1–11; PubMed search; p4; pp4–6"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Outcome-related postoperative exclusions create high D3. PONV14.6% versus32.5% corresponds to6/41 versus13/40; full-text P=.058, not abstract P<.05.",
+      "old_selected_overall": "High",
+      "changes_from_old": "See domain-specific source reasoning; baseline selected result may differ."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "hold",
+    "reason": "No exact24h mass; reported total apparently48h has unresolved decimal/unit/delivery and significance inconsistencies. Retain raw result, do not convert or pool.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Fentanyl",
+    "route": "Intravenous",
+    "unit": "mg as printed",
+    "raw_values": {
+      "mean_intervention": 0.67,
+      "sd_intervention": 0.09,
+      "n_intervention": 41,
+      "mean_comparator": 0.73,
+      "sd_comparator": 0.12,
+      "n_comparator": 40
+    },
+    "comparison_selection": "EA versus no-acupuncture usual care, separately from sham",
+    "multiarm_handling": "Two arms; no shared-control reuse",
+    "source_location": "p5 final paragraph; methods p3; Table2 p6",
+    "conversion_performed": false
+  },
+  "duplicate_map": [
+    {
+      "related_study": "An2010a, An2010b, Yang2012 cited in the publication",
+      "classification": "UNRESOLVED",
+      "evidence": "Same center/acupoints and overlapping investigators, described as previous studies; no recruitment dates or subject identifiers in An2014.",
+      "source_location": "pp8–11",
+      "analysis_handling": "Do not declare duplicate from authorship alone; if related reports enter the review, verify nonoverlap before independent counting."
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "Fentanyl units, window and complete opioid accounting",
+      "why_it_matters": "Printed totals and no-difference statement do not reconcile with mean/SD/n or PCA delivery description.",
+      "analysis_affected": "Any opioid dose synthesis",
+      "can_proceed_without": "Preserve raw reported data; exclude primary24h and hold48h pooling.",
+      "priority": "HIGH",
+      "exact_question": "Please confirm whether0.67±0.09 and0.73±0.12 are mg fentanyl, specify the accumulation interval and all additional opioid doses, explain consistency with effective1-mL boluses from10µg/kg in100mL without basal infusion, and provide exact0–24h means/SDs/n."
+    },
+    {
+      "missing_information": "Numerical24h VAS SD, excluded-patient outcomes and cohort dates",
+      "why_it_matters": "SDs are unlabeled graph bars, clinical exclusions may bias outcomes, and overlap with previous reports is unresolved.",
+      "analysis_affected": "Pain/PONV and independence assessment",
+      "can_proceed_without": "Means and derived PONV counts retained with high RoB; no VAS mean/SD pooling.",
+      "priority": "HIGH",
+      "exact_question": "Please provide24h resting VAS SDs, arm-specific reasons/outcomes for all seven exclusions, precise PONV clock, and recruitment dates/nonoverlap with An2010a/b and Yang2012."
+    }
+  ],
+  "summary": "Both baseline rows adjudicated. Preserved printed fentanyl summaries but replaced automatic48h eligibility with an author-data hold; no exact24h opioid endpoint. Source-first inspection additionally recovered24h resting VAS means2.6/3.07 (SD unavailable) and corrected abstract PONV significance using full-text P=.058.",
+  "unblinded_supplemental_checks": [],
+  "phase_a_source": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/phase_a/S061.json",
+  "guidance_source": "Official RoB2 22 August 2019; local batch6_rob2_guidance.pdf"
+}

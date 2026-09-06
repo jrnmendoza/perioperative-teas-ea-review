@@ -1,0 +1,28 @@
+{
+  "Study_ID": "S055",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_at": "2026-09-05T15:14:16.193Z",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows": 5,
+  "reviewed_rows": 5,
+  "reviewed_row_ids": [
+    238,
+    239,
+    240,
+    241,
+    242
+  ],
+  "result_specific_rob_count": 4,
+  "unresolved": [
+    {
+      "missing_information": "DatedAppendix1/SAP; exactGIclock and opioidregimen/doses",
+      "why_it_matters": "Prespecification and exposureclassification",
+      "analysis_affected": "GI RoB5 andopioidavailability",
+      "can_proceed_without": "GI with statedRoB/clockqualifications; noopioidpooling",
+      "priority": "MEDIUM",
+      "exact_question": "Please provide datedprotocol/SAP andAppendix1, confirmGIclockfromSteward4,and provideactual0-24hdrug-specificpostoperativeopioiddata if collected."
+    }
+  ],
+  "summary": "All5rows reviewed. DirectTableIII counts/means/SDs confirmed;timeoriginSteward4qualified. POI/firstflatusHighrisk forlikelyexpectancyinfluencedreporting;dietSomeconcerns. Noopioidconsumptionresult.",
+  "adjudicated_at": "2026-09-05T15:15:36.483Z"
+}

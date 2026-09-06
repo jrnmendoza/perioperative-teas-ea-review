@@ -1,0 +1,502 @@
+{
+  "Study_ID": "S029",
+  "Study": "Ng 2013",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase": "A",
+  "baseline_accessed": false,
+  "title": "Electroacupuncture Reduces Duration of Postoperative Ileus After Laparoscopic Surgery for Colorectal Cancer",
+  "year": 2013,
+  "doi": "10.1053/j.gastro.2012.10.050",
+  "pdf_files": [
+    "covidence_1970_ng_2013.pdf"
+  ],
+  "source_read": "All8pages pp307–313+313.e1supplement; visually readmethods p308,Tables1–4p310,SuppFig1; officialNCT00464425JSON and fullHKMJ2013report3pages; SSAT2010interim abstract.",
+  "modality": "EA",
+  "comparator": "SA shallow penetrating off-acupoint/no-current sham; NA usualcare analyzed separately",
+  "randomized_arms": {
+    "EA": 55,
+    "SA": 55,
+    "NA": 55
+  },
+  "analyzed_arms": {
+    "EA": 55,
+    "SA": 55,
+    "NA": 55
+  },
+  "denominator_source": "p309complete165/165;SuppFig1:43excluded BEFORErandomization",
+  "population": "Adults>18laparoscopic colon/upperrectumcancerGA HongKongOct2008–Oct2010; uncomplicated surgery selected afteroperation",
+  "drug": "Pethidine",
+  "route": "Insufficient information / not reported.",
+  "pca_formulation": "No PCA reported; as-needed injections",
+  "rescue_regimen": "Methods pethidine1mg/kg every4h on demand; results number of50mg injections; route and collection stop unspecified.",
+  "intervention": "100Hz20minEA dailyPOD1–4 or firstdefecation, whicheverearlier;ST36SP6LI4TE6; deqi20mm needles;sham2mm15mmaway no current.",
+  "results": [
+    {
+      "outcome": "First defecation",
+      "unit": "h",
+      "format": "meanSD",
+      "EA": [
+        85.9,
+        36.1
+      ],
+      "SA": [
+        107.5,
+        46.2
+      ],
+      "NA": [
+        122.1,
+        53.5
+      ],
+      "P_SA": ".007",
+      "P_NA": "<.001",
+      "n_each": 55,
+      "source": "Tables3/4p310"
+    },
+    {
+      "outcome": "First flatus",
+      "unit": "days",
+      "format": "meanSD",
+      "EA": [
+        2,
+        0.9
+      ],
+      "SA": [
+        2.3,
+        1.1
+      ],
+      "NA": [
+        2.6,
+        1.1
+      ],
+      "P_SA": ".095",
+      "P_NA": ".003",
+      "n_each": 55,
+      "source": "Tables3/4p310"
+    },
+    {
+      "outcome": "Normal solid diet",
+      "unit": "days",
+      "format": "meanSD",
+      "EA": [
+        4,
+        1.1
+      ],
+      "SA": [
+        4.1,
+        0.8
+      ],
+      "NA": [
+        4.8,
+        2
+      ],
+      "P_SA": ".695",
+      "P_NA": ".010",
+      "n_each": 55,
+      "source": "Tables3/4p310"
+    },
+    {
+      "outcome": "Ambulation",
+      "unit": "days",
+      "format": "meanSD",
+      "EA": [
+        2.8,
+        1.5
+      ],
+      "SA": [
+        3.3,
+        1.1
+      ],
+      "NA": [
+        3.8,
+        1.8
+      ],
+      "P_SA": ".028",
+      "P_NA": ".001",
+      "n_each": 55,
+      "source": "Tables3/4p310"
+    },
+    {
+      "outcome": "Hospitalstay",
+      "unit": "days",
+      "format": "meanSD",
+      "EA": [
+        6.5,
+        2.2
+      ],
+      "SA": [
+        6.8,
+        1.7
+      ],
+      "NA": [
+        8.5,
+        4.8
+      ],
+      "P_SA": ".491",
+      "P_NA": ".007",
+      "n_each": 55,
+      "source": "Tables3/4p310"
+    },
+    {
+      "outcome": "VAS unspecifiedconditionPOD1",
+      "unit": "0–10",
+      "format": "meanSD",
+      "EA": [
+        5.6,
+        2
+      ],
+      "SA": [
+        5.8,
+        1.9
+      ],
+      "NA": [
+        5.5,
+        2.3
+      ],
+      "P_SA": ".655",
+      "P_NA": ".689",
+      "n_each": 55,
+      "source": "Tables3/4p310"
+    },
+    {
+      "outcome": "VAS unspecifiedconditionPOD2",
+      "unit": "0–10",
+      "format": "meanSD",
+      "EA": [
+        3.2,
+        1.6
+      ],
+      "SA": [
+        4.6,
+        2
+      ],
+      "NA": [
+        4.2,
+        2
+      ],
+      "P_SA": "<.001",
+      "P_NA": ".004",
+      "n_each": 55,
+      "source": "Tables3/4p310"
+    },
+    {
+      "outcome": "VAS unspecifiedconditionPOD3",
+      "unit": "0–10",
+      "format": "meanSD",
+      "EA": [
+        2.1,
+        1.2
+      ],
+      "SA": [
+        3.4,
+        2.2
+      ],
+      "NA": [
+        3.2,
+        1.8
+      ],
+      "P_SA": "<.001",
+      "P_NA": "<.001",
+      "n_each": 55,
+      "source": "Tables3/4p310"
+    },
+    {
+      "outcome": "Pethidine injections",
+      "unit": "number of50mg injections",
+      "format": "meanSD",
+      "EA": [
+        2.7,
+        2.3
+      ],
+      "SA": [
+        5.2,
+        4.7
+      ],
+      "NA": [
+        5,
+        4.5
+      ],
+      "P_SA": ".001",
+      "P_NA": ".001",
+      "n_each": 55,
+      "source": "Tables3/4p310"
+    },
+    {
+      "outcome": "Prolongedileus needingNGdecompression/parenteralnutrition",
+      "EA": 3,
+      "SA": 1,
+      "NA": 6,
+      "n_each": 55,
+      "P_SA": ".618",
+      "P_NA": ".489",
+      "source": "Table2p310 andadjacenttext"
+    }
+  ],
+  "source_conflicts": [
+    "Sealed nonopaque envelope printed; cannot silently change to opaque.",
+    "ASAIII2EA vs11SA vs12NA despite broad statementbaselinecomparable.",
+    "Registry50Hz andbluntsham vsarticle100Hz and2mmpenetrating sham; articleusedforreceivedregimen.",
+    "Methods1mg/kgpethidine vsresult50mg-injectionunits; no verified drugroute or exact0–24h collection.",
+    "POD1pain not exact24h and conditionunreported."
+  ],
+  "independence": "One165-person3-arm trial; EA shared across two comparisons. HKMJ2013S33–35 same trial explicitly links Gastroenterology; SSAT2010interim108subset samegrant06070371/recruit2008–2009; do not countindependently.",
+  "linked_reports": [
+    {
+      "report": "HKMJ2013;19Suppl9:S33–35",
+      "classification": "SAME TRIAL / DUPLICATE PUBLICATION",
+      "source": "https://www.hkmj.org/system/files/hkm1306sp9p33_0.pdf p35acknowledgement"
+    },
+    {
+      "report": "SSAT2010interim108participants",
+      "classification": "PARTIAL COHORT OVERLAP",
+      "source": "https://meetings.ssat.com/abstracts/10ddw/P17.cgi",
+      "note": "Interim15minvsfinal20min protocol discrepancy"
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S029_defecation_sham",
+      "outcome": "First defecation",
+      "time_window": "Time from end surgery",
+      "comparison": "EAvsSA",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated simple random sequence.",
+          "source_location": "p308",
+          "reasoning": "Computer-generated simple random sequence."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "N",
+          "evidence": "Sealed nonopaque envelope explicitly printed and visually confirmed; does not prevent foreknowledge.",
+          "source_location": "p308StudyDesign",
+          "reasoning": "Sealed nonopaque envelope explicitly printed and visually confirmed; does not prevent foreknowledge."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PY",
+          "evidence": "ASAIII only2/55EA vs11/55SA and12/55NA, a clinically prognostic imbalance alongside nonopaque concealment; not relying solely on significance testing.",
+          "source_location": "Table1p310",
+          "reasoning": "ASAIII only2/55EA vs11/55SA and12/55NA, a clinically prognostic imbalance alongside nonopaque concealment; not relying solely on significance testing."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "NI",
+          "evidence": "EAvsSA masking intended but active deqi/current differs from shallow no-current sham; success untested.",
+          "source_location": "p308",
+          "reasoning": "EAvsSA masking intended but active deqi/current differs from shallow no-current sham; success untested."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist knows assignment; other staff stated blinded.",
+          "source_location": "p308",
+          "reasoning": "Acupuncturist knows assignment; other staff stated blinded."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "PN",
+          "evidence": "Standardized postoperative management; no departures from assigned treatment or cointerventions reported.",
+          "source_location": "p308;SuppFig1",
+          "reasoning": "Standardized postoperative management; no departures from assigned treatment or cointerventions reported."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3PN.",
+          "source_location": "p308",
+          "reasoning": "2.3PN."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.3PN.",
+          "source_location": "p308",
+          "reasoning": "2.3PN."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All165 retained in assigned groups; exclusions43 precede randomization.",
+          "source_location": "p309;SuppFig1",
+          "reasoning": "All165 retained in assigned groups; exclusions43 precede randomization."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6Y.",
+          "source_location": "SuppFig1",
+          "reasoning": "2.6Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "55each primary andsecondary outcome complete.",
+          "source_location": "p309;SuppFig1",
+          "reasoning": "55each primary andsecondary outcome complete."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "NA",
+          "evidence": "Complete data.",
+          "source_location": "p309",
+          "reasoning": "Complete data."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NA",
+          "evidence": "Complete data.",
+          "source_location": "p309",
+          "reasoning": "Complete data."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NA",
+          "evidence": "Complete data.",
+          "source_location": "p309",
+          "reasoning": "Complete data."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "First observed stool timed from surgery end; correct defecation endpoint.",
+          "source_location": "p308",
+          "reasoning": "First observed stool timed from surgery end; correct defecation endpoint."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same independent research assistant and timing definition.",
+          "source_location": "p308",
+          "reasoning": "Same independent research assistant and timing definition."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Observer blinded toEA/SA.",
+          "source_location": "p308",
+          "reasoning": "Observer blinded toEA/SA."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Blinded observer of stool.",
+          "source_location": "p308",
+          "reasoning": "Blinded observer of stool."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.3PN.",
+          "source_location": "p308",
+          "reasoning": "4.3PN."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "2007 registration predates2008recruitment, but accessible2011version and no locked SAP cannot establish preunblinding analyses.",
+          "source_location": "NCT00464425 official API",
+          "reasoning": "2007 registration predates2008recruitment, but accessible2011version and no locked SAP cannot establish preunblinding analyses."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "PN",
+          "evidence": "Registered defecation primary matches; hours vsdays equivalent unit not selected measure; both plannedcomparisons reported.",
+          "source_location": "Registry;p308,p310",
+          "reasoning": "Registered defecation primary matches; hours vsdays equivalent unit not selected measure; both plannedcomparisons reported."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "2010unblindedinterimreport precedes2011registrylastupdate; detailed preinterimSAP unavailable.",
+          "source_location": "SSAT2010interim;registry",
+          "reasoning": "2010unblindedinterimreport precedes2011registrylastupdate; detailed preinterimSAP unavailable."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "High",
+          "reasoning": "Nonopaque envelope allows foreknowledge; prognostic ASA imbalance reinforces randomization concern pending clarification.",
+          "source_location": "p308;Table1p310"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Standardized management, no trial-context departures; all assigned analysed.",
+          "source_location": "p308;SuppFig1"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Complete165/165.",
+          "source_location": "p309"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Observed stool assessed by blindedresearchassistant.",
+          "source_location": "p308"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Registration prospective but precise preinterim plan unverifiable.",
+          "source_location": "NCT00464425;SSAT2010"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Allocation concealment explicitly nonopaque, with clinically relevant baseline imbalance."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Only injection-count meanSD over unspecified postoperative period; route unreported and1mg/kgvs50mg units unresolved. Not exact0–24h mass.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "unit": "number50mgpethidineinjections",
+    "raw_values": {
+      "EA": [
+        2.7,
+        2.3
+      ],
+      "SA": [
+        5.2,
+        4.7
+      ],
+      "NA": [
+        5,
+        4.5
+      ],
+      "n_each": 55
+    },
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "source_location": "p308;Tables3/4p310"
+  }
+}

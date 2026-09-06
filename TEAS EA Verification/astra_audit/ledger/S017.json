@@ -1,0 +1,15 @@
+{
+  "Study_ID": "S017",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "source_publication_read_complete": true,
+  "outcome_rows_total": 4,
+  "outcome_rows_adjudicated": 4,
+  "rob2_results": 3,
+  "limitations": "Four rows reviewed. PrintedTable2confirmed; additionalabstract/Table2doseconflict documented. Nofixed24hcompleteopioid endpoint; pain remains graph-only.",
+  "artifacts": [
+    "phase_a/S017.json",
+    "adjudicated/S017.json"
+  ],
+  "reviewer_model": "gpt-6-astra"
+}

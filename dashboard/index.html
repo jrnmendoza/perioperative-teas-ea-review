@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perioperative TEAS & EA Systematic Review & Meta-Analysis Dashboard</title>
+  <title>Perioperative TEAS & EA for Opioid Sparing — Systematic Review & Meta-Analysis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -16,40 +16,35 @@
     <div class="brand-wrapper">
       <div class="brand-badge">LUND UNIV</div>
       <div class="brand-title">
-        <h1>Perioperative TEAS & EA Opioid-Sparing Systematic Review</h1>
-        <p>Protocol characteristics associated with clinically meaningful 24-h opioid sparing • PROSPERO 2026 • Lund University • Stata 19.5 Validated</p>
+        <h1>Perioperative Electrical Acupoint Stimulation for Postoperative Opioid Sparing</h1>
+        <p>Systematic Review &amp; Meta-Analysis of Randomized Controlled Trials • PROSPERO 2026 • Lund University</p>
       </div>
     </div>
 
     <nav class="nav-tabs" role="tablist">
-      <button class="nav-btn active" data-tab="overview" role="tab">Overview &amp; Project Status</button>
-      <button class="nav-btn" data-tab="inquiries" role="tab">📬 Author Inquiries &amp; Outreach <span class="badge" style="background: rgba(244, 63, 94, 0.25); color: #fda4af; font-size: 0.65rem; padding: 0.15rem 0.4rem; margin-left: 0.3rem;">8 Critical</span></button>
-      <button class="nav-btn" data-tab="meta" role="tab">Meta-Analysis Lab</button>
-      <button class="nav-btn" data-tab="rob2" role="tab">RoB 2 Matrix</button>
-      <button class="nav-btn" data-tab="sensitivity" role="tab">Stata 19.5 Synthesis</button>
+      <span class="nav-section-label">I</span>
+      <button class="nav-btn active" data-tab="intro" role="tab">Introduction</button>
+
+      <span class="nav-section-label">M</span>
+      <button class="nav-btn" data-tab="search" role="tab">Search Strategy</button>
+      <button class="nav-btn" data-tab="prisma" role="tab">Study Selection</button>
+      <button class="nav-btn" data-tab="rob2" role="tab">Risk of Bias</button>
+      <button class="nav-btn" data-tab="extraction" role="tab">Data Extraction</button>
+
+      <span class="nav-section-label">R</span>
+      <button class="nav-btn" data-tab="primary" role="tab">Primary Outcome</button>
+      <button class="nav-btn" data-tab="secondary" role="tab">Secondary Outcomes</button>
+      <button class="nav-btn" data-tab="mcid" role="tab">Clinical Importance</button>
+
+      <span class="nav-section-label">D</span>
+      <button class="nav-btn" data-tab="evidence" role="tab">GRADE Evidence</button>
+      <button class="nav-btn" data-tab="limitations" role="tab">Limitations</button>
+
+      <span class="nav-section-label" style="color: #64748b;">+</span>
       <button class="nav-btn" data-tab="explorer" role="tab">Study Explorer</button>
-      <button class="nav-btn" data-tab="prisma" role="tab">PRISMA Flow</button>
-      <button class="nav-btn" data-tab="search" role="tab">Search Strategies</button>
-      <button class="nav-btn" data-tab="mcid" role="tab">MCID &amp; Trade-Off</button>
-      <button class="nav-btn" data-tab="conversions" role="tab">Opioid Conversions</button>
-      <button class="nav-btn" data-tab="evidence" role="tab">GRADE &amp; Evidence</button>
-      <button class="nav-btn" data-tab="export" role="tab">Export Hub</button>
+      <button class="nav-btn" data-tab="export" role="tab">Export</button>
     </nav>
   </header>
-
-  <!-- Review Objectives Quick-Bar -->
-  <div class="objectives-bar">
-    <span class="objectives-label">🎯 PROSPERO Objectives:</span>
-    <button class="obj-btn active" data-obj="all">All Included (63)</button>
-    <button class="obj-btn" data-obj="obj1_teas">Obj 1: TEAS vs Sham <span class="obj-badge-primary">Primary</span></button>
-    <button class="obj-btn" data-obj="obj1_ea">Obj 1: EA vs Sham <span class="obj-badge-primary">Primary</span></button>
-    <button class="obj-btn" data-obj="obj2_pain">Obj 2: Pain Rest &amp; Movement (~24h)</button>
-    <button class="obj-btn" data-obj="obj3_subgroups">Obj 3: Protocol Moderators &amp; Meta-Reg</button>
-    <button class="obj-btn" data-obj="obj4_mcid">Obj 4: Clinical Meaningfulness (10 &amp; 8 mg MCID)</button>
-    <button class="obj-btn" data-obj="obj5_supportive">Obj 5: Supportive Syntheses <span class="obj-badge-supportive">Usual Care</span></button>
-    <button class="obj-btn" data-obj="obj6_secondary">Obj 6: Secondary Endpoints</button>
-    <button class="obj-btn" data-obj="obj7_grade">Obj 7: RoB 2 &amp; GRADE Evidence</button>
-  </div>
 
   <!-- Global Filter Toolbar -->
   <div class="control-toolbar">
@@ -108,57 +103,57 @@
   <!-- Main Container -->
   <main class="main-container">
 
-    <!-- KPI Summary Row -->
+    <!-- KPI Summary Row: Research Findings Focus -->
     <section class="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-title">Included RCTs &amp; Patients</div>
-        <div class="kpi-value" id="kpi-study-count">63 Studies</div>
+        <div class="kpi-title">Included RCTs</div>
+        <div class="kpi-value" id="kpi-study-count">63 RCTs</div>
         <div class="kpi-sub" id="kpi-patient-sub">5,089 randomized surgical patients</div>
-        <span class="kpi-badge badge-indigo">100% 4-Way Cross-Audited</span>
-      </div>
-
-      <div class="kpi-card">
-        <div class="kpi-title">Audited RoB 2 Status</div>
-        <div class="kpi-value" style="color: #fbbf24; font-size: 1.15rem; line-height: 1.25;">30 High • 33 Concerns</div>
-        <div class="kpi-sub">0 Low Risk (Boilerplate Expunged)</div>
-        <span class="kpi-badge badge-amber">D5 Protocol Registration &amp; D3 Dropouts</span>
+        <span class="kpi-badge badge-indigo">49 TEAS • 14 EA</span>
       </div>
 
       <div class="kpi-card" id="kpi-effect-card">
-        <div class="kpi-title" id="kpi-effect-title">Primary 24-h Opioid Set</div>
-        <div class="kpi-value" id="kpi-pooled-md" style="color: #38bdf8; font-size: 1.15rem; line-height: 1.25;">11 Analyzable (6 Direct + 5 Derived)</div>
-        <div class="kpi-sub" id="kpi-pooled-sub">5 TEAS vs Sham • 1 EA • 48 Unreported in Text</div>
-        <span class="kpi-badge badge-indigo" id="kpi-pooled-badge">Master v20 Reconciled</span>
+        <div class="kpi-title" id="kpi-effect-title">Primary Outcome: 24-h Opioid Sparing</div>
+        <div class="kpi-value" id="kpi-pooled-md" style="color: #34d399; font-size: 1.4rem; line-height: 1.25;">−5.04 mg MME</div>
+        <div class="kpi-sub" id="kpi-pooled-sub">95% CI [−9.78, −0.29] • p = 0.040 • k = 11, N = 945</div>
+        <span class="kpi-badge badge-emerald" id="kpi-pooled-badge">REML + Knapp–Hartung</span>
       </div>
 
       <div class="kpi-card">
-        <div class="kpi-title">Active Author Outreach</div>
-        <div class="kpi-value" style="color: #f43f5e; font-size: 1.15rem; line-height: 1.25;">60 Prepared Inquiries</div>
-        <div class="kpi-sub"><strong style="color: #fda4af;">8 Critical</strong> for 24h Opioid Dose • 51 Important</div>
-        <span class="kpi-badge badge-rose">Ready to Send</span>
+        <div class="kpi-title">Standardized Effect Size</div>
+        <div class="kpi-value" style="color: #818cf8; font-size: 1.4rem; line-height: 1.25;">Hedges' g = −0.99</div>
+        <div class="kpi-sub">95% CI [−1.69, −0.29] • p = 0.010 • Large Effect</div>
+        <span class="kpi-badge badge-indigo">StataNow 19.5 SE Validated</span>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-title">GRADE Certainty</div>
+        <div class="kpi-value" style="color: #fbbf24; font-size: 1.15rem; line-height: 1.25;">⊕⊕⊕◯ Moderate</div>
+        <div class="kpi-sub">Downgraded 1 level for high heterogeneity (I² = 99.7%)</div>
+        <span class="kpi-badge badge-amber">7 Outcomes Synthesized</span>
       </div>
     </section>
 
-    <!-- TAB 1: OVERVIEW & PROJECT STATUS -->
-    <div id="tab-overview" class="tab-content active">
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION I: INTRODUCTION                                       -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <div id="tab-intro" class="tab-content active">
       
-      <!-- Executive Project Status & Milestone Banner -->
+      <!-- Clinical Background & Research Rationale -->
       <div class="protocol-callout" style="margin-bottom: 1.5rem; background: linear-gradient(90deg, rgba(99, 102, 241, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%); border-left: 4px solid #10b981;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
           <div>
-            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; flex-wrap: wrap;">
-              <span class="status-pill complete">✅ Phase 1: 4-Way Forensic Audit Complete</span>
-              <span class="status-pill active">⚡ Phase 2: Active Author Outreach &amp; Adjudication</span>
-              <span class="status-pill interim">📊 Phase 3: StataNow 19.5 SE Verified</span>
-            </div>
             <h2 style="font-size: 1.3rem; color: #fff; margin-bottom: 0.4rem; line-height: 1.35;">
-              Perioperative TEAS &amp; EA Systematic Review: Executive Research Status &amp; Action Plan
+              Background &amp; Rationale
             </h2>
             <div style="font-size: 0.82rem; color: #c7d2fe; line-height: 1.6; margin-bottom: 0.5rem;">
               <strong>Review Guarantor &amp; Team:</strong> John Ryan Nual Mendoza (<code>john_ryan.nual_mendoza@med.lu.se</code>), Siv Katrin Peters, Dr. Carina Sjöberg, Dr. Pether Jildenstål • Lund University / Region Skåne
             </div>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; max-width: 1080px;">
-              <strong>Purpose of this Dashboard:</strong> To provide co-investigators with complete transparency on our systematic review pipeline following the forensic 4-way cross-audit (Source PDFs vs. ChatGPT Sol vs. Gemini vs. Covidence). This hub establishes the verified ground truth, identifies ongoing bottlenecks that need team resolution, and provides pre-drafted inquiries to contact corresponding authors.
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.7; max-width: 1080px;">
+              Postoperative opioid consumption remains a cornerstone of acute pain management, yet carries dose-dependent risks including respiratory depression, postoperative nausea and vomiting (PONV), ileus, cognitive dysfunction, and the potential for persistent opioid use. <strong>Transcutaneous electrical acupoint stimulation (TEAS)</strong> and <strong>electroacupuncture (EA)</strong> have been proposed as non-pharmacological adjuncts that modulate endogenous opioid peptide release (β-endorphin, enkephalins, dynorphins) through frequency-dependent mechanisms, potentially reducing cumulative postoperative opioid requirements without compromising analgesic adequacy.
+            </p>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.7; max-width: 1080px; margin-top: 0.5rem;">
+              Despite over two decades of randomized controlled trials, prior systematic reviews have been limited by pooling heterogeneous modalities, lacking sham controls, and failing to prespecify clinically meaningful thresholds. This review addresses these gaps by implementing rigorous modality stratification (TEAS vs EA), requiring sham/placebo controls for primary analyses, and pre-registering a clinically important opioid-sparing threshold.
             </p>
           </div>
           <div style="display: flex; flex-direction: column; gap: 0.4rem; min-width: 240px; background: rgba(0,0,0,0.3); padding: 0.85rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1);">
@@ -170,137 +165,149 @@
         </div>
       </div>
 
-      <!-- SECTION: ONGOING AREAS THAT NEED TO BE ADDRESSED -->
-      <div class="dashboard-card" style="margin-bottom: 1.5rem; border: 1px solid rgba(245, 158, 11, 0.35); background: linear-gradient(180deg, rgba(22, 31, 48, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);">
-        <div class="card-header" style="border-bottom: 1px solid rgba(245, 158, 11, 0.2);">
-          <div>
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="badge badge-amber">⚡ Immediate Action Required</span>
-              <span style="font-size: 0.75rem; color: #fbbf24; font-weight: 600;">Active Review Bottlenecks</span>
-            </div>
-            <h2 style="font-size: 1.2rem; margin-top: 0.25rem; color: #fff;">Ongoing Areas for Co-Investigator Action</h2>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              The following 4 areas require immediate action or policy consensus from our research team to finalize the review and manuscript:
-            </p>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1.25rem;">
-          
-          <!-- Action Card 1: Author Outreach -->
-          <div class="action-card" style="border-top: 3px solid #f43f5e;">
-            <div>
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="badge-priority-critical">🔴 Critical Action</span>
-                <span style="font-size: 0.72rem; color: #fda4af; font-weight: 700;">8 Trials / 1,800+ N</span>
-              </div>
-              <h3 style="font-size: 0.95rem; margin-top: 0.5rem; color: #fff;">Dispatch 8 Critical Author Inquiries</h3>
-              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
-                Eight major RCTs (An 2014, Ao 2021, Gao 2021, Gu 2019, He 2026, Hou 2023, Huang 2024, Huang 2025) measured postoperative PCA opioids, but omitted continuous 24-h numerical means/SDs from published tables.
-              </p>
-            </div>
-            <div style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06);">
-              <div style="font-size: 0.73rem; color: #38bdf8; margin-bottom: 0.5rem;"><strong>Impact:</strong> Will expand primary opioid set from 6 to 14+ trials.</div>
-              <button class="btn-preset" style="width: 100%; font-size: 0.75rem; padding: 0.4rem;" onclick="switchTab('inquiries'); filterInquiryPriority('CRITICAL');">
-                📬 Open 8 Critical Draft Emails
-              </button>
-            </div>
-          </div>
-
-          <!-- Action Card 2: Cohort Overlap Adjudication -->
-          <div class="action-card" style="border-top: 3px solid #fbbf24;">
-            <div>
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="badge-priority-important">🟡 Team Adjudication</span>
-                <span style="font-size: 0.72rem; color: #fbbf24; font-weight: 700;">Yeh 2010 vs Yeh 2011</span>
-              </div>
-              <h3 style="font-size: 0.95rem; margin-top: 0.5rem; color: #fff;">Adjudicate Cohort Overlap</h3>
-              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
-                Yeh 2010 and Yeh 2011 describe lumbar spine fusion cohorts from the same hospital with near-identical 24-h morphine PCA values (19.3 vs 21.6 mg).
-              </p>
-            </div>
-            <div style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06);">
-              <div style="font-size: 0.73rem; color: #fde68a; margin-bottom: 0.5rem;"><strong>Decision:</strong> Treat as one single study unit to avoid double-counting.</div>
-              <button class="btn-preset" style="width: 100%; font-size: 0.75rem; padding: 0.4rem;" onclick="openStudyDrawer('1879897280')">
-                🔍 Inspect Yeh Cohort Dossier
-              </button>
-            </div>
-          </div>
-
-          <!-- Action Card 3: Unit Definition & Proxies -->
-          <div class="action-card" style="border-top: 3px solid #818cf8;">
-            <div>
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="badge-priority-important">🟡 Methodological QC</span>
-                <span style="font-size: 0.72rem; color: #c7d2fe; font-weight: 700;">Luo 2026 &amp; Jin 2023</span>
-              </div>
-              <h3 style="font-size: 0.95rem; margin-top: 0.5rem; color: #fff;">Resolve Measurement Definitions</h3>
-              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
-                Luo 2026 reports "sufentanil equivalents (mg)" (15.86 vs 15.18) without defining the conversion formula. Jin 2023 reports PCA volume (39.3 vs 56.5 mL) without reporting fentanyl concentration.
-              </p>
-            </div>
-            <div style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06);">
-              <div style="font-size: 0.73rem; color: #a5b4fc; margin-bottom: 0.5rem;"><strong>Decision:</strong> Hold from continuous dose until author confirms mg/µg conversion.</div>
-              <button class="btn-preset" style="width: 100%; font-size: 0.75rem; padding: 0.4rem;" onclick="switchTab('inquiries')">
-                📬 Review Metric Inquiries
-              </button>
-            </div>
-          </div>
-
-          <!-- Action Card 4: Inclusion Policy Consensus -->
-          <div class="action-card" style="border-top: 3px solid #34d399;">
-            <div>
-              <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="badge-priority-important">🟡 Protocol Policy</span>
-                <span style="font-size: 0.72rem; color: #a7f3d0; font-weight: 700;">5 Conditional Studies</span>
-              </div>
-              <h3 style="font-size: 0.95rem; margin-top: 0.5rem; color: #fff;">Finalize Inclusion Policy Rules</h3>
-              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
-                Team consensus needed on: 1) Weight-normalized endpoints (Sim 2002 mg/kg, Coura 2011 µg/kg), 2) Derived medians from fixed rescue boluses (Chen 2015), and 3) POD1 vs strict 24-h clock (Zhang 2025).
-              </p>
-            </div>
-            <div style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06);">
-              <div style="font-size: 0.73rem; color: #6ee7b7; margin-bottom: 0.5rem;"><strong>Option:</strong> Synthesize via Standardized Mean Difference (SMD) in sensitivity.</div>
-              <button class="btn-preset" style="width: 100%; font-size: 0.75rem; padding: 0.4rem;" onclick="switchTab('sensitivity')">
-                📊 View Stata Sensitivity Model
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- SECTION: FORENSIC DISCOVERY & 48 vs 6 STUDY CORRECTION -->
-      <div class="dashboard-card" style="margin-bottom: 1.5rem; background: rgba(17, 24, 39, 0.6); border: 1px solid rgba(99, 102, 241, 0.25);">
+      <!-- PICOS Eligibility Framework -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="badge badge-indigo">Forensic Discovery</span>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Master Dataset v20 Resolution</span>
+              <span class="badge badge-indigo">Eligibility Criteria</span>
             </div>
-            <h2 style="font-size: 1.2rem; margin-top: 0.25rem; color: #fff;">Resolving the 48 vs. 6 Opioid Study Discrepancy</h2>
+            <h2 style="font-size: 1.2rem; margin-top: 0.25rem; color: #fff;">PICOS Framework</h2>
+          </div>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="forest-table" style="font-size: 0.8rem;">
+            <thead>
+              <tr>
+                <th style="width: 15%;">Element</th>
+                <th style="width: 42%;">Inclusion</th>
+                <th style="width: 43%;">Exclusion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong style="color: #818cf8;">Population</strong></td>
+                <td>Adult surgical patients (≥ 18 years) undergoing any elective or emergency surgical procedure under general, regional, or combined anaesthesia</td>
+                <td>Paediatric (&lt; 18 y), non-surgical (chronic pain, obstetric labour, ICU sedation), or animal models</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #818cf8;">Intervention</strong></td>
+                <td><strong>TEAS</strong>: Non-invasive transcutaneous electrical stimulation applied at recognized acupoints via surface electrodes<br><strong>EA</strong>: Invasive needle electroacupuncture at acupoints with electrical current</td>
+                <td>Manual acupuncture (no electrical current), moxibustion, acupressure, laser acupoint stimulation, TENS at non-acupoints</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #818cf8;">Comparator</strong></td>
+                <td><strong>Primary</strong>: Sham/placebo TEAS or sham EA (identical setup, subthreshold or no current)<br><strong>Supportive</strong>: Usual care / no stimulation (open-label)</td>
+                <td>Active drug comparators only (e.g., TEAS vs nerve block without a no-stimulation control)</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #818cf8;">Outcomes</strong></td>
+                <td><strong>Primary</strong>: Cumulative 24-h postoperative opioid consumption (mg IV morphine equivalents)<br><strong>Secondary</strong>: Pain intensity (VAS/NRS), PONV, rescue analgesia, time to first flatus, QoR-40/15, PCA demands</td>
+                <td>Studies reporting no quantifiable postoperative outcome within 0–72 hours</td>
+              </tr>
+              <tr>
+                <td><strong style="color: #818cf8;">Study Design</strong></td>
+                <td>Randomized controlled trials (RCTs), published in English or Chinese, with full-text availability</td>
+                <td>Non-randomized studies, observational cohorts, case reports, conference abstracts without full data, reviews</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PROSPERO Research Objectives Framework -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border: 1px solid rgba(99, 102, 241, 0.3);">
+        <div class="card-header">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="badge badge-indigo">PROSPERO 2026</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Preregistered Research Objectives</span>
+            </div>
+            <h2 style="font-size: 1.2rem; margin-top: 0.25rem; color: #fff;">Research Objectives &amp; Dashboard Navigation</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Each objective links to the corresponding Results section where its analysis is presented.</p>
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 0.5rem;">
-          <div style="background: rgba(244, 63, 94, 0.06); border: 1px solid rgba(244, 63, 94, 0.25); border-radius: var(--radius-sm); padding: 1rem;">
-            <h4 style="color: #fda4af; font-size: 0.88rem; margin-bottom: 0.4rem;">❌ What Went Wrong in Earlier Unvetted Drafts</h4>
-            <ul style="font-size: 0.76rem; color: var(--text-secondary); line-height: 1.6; padding-left: 1.2rem;">
-              <li><strong>Artificial 15 mg Baseline:</strong> Early automation scripts imputed an artificial control baseline of <code>arm2 = 15.0 mg MME</code> whenever any numeric mean difference appeared in text—even when the source was describing pain VAS, flatus time, or intraoperative remifentanil.</li>
-              <li><strong>Regex Decimal Truncation:</strong> Regex patterns truncated decimal values (e.g., Seevaunnamtum 21.38 mg became 0.38 mg; Chen 1998 6.5 mg became 0.5 mg; Ntritsou 2014 was assigned an impossible negative dose of -2.8 mg).</li>
-              <li><strong>Spurious 48-Study Regression:</strong> This produced an ungrounded 48-study meta-regression based on fictitious data.</li>
-            </ul>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; margin-top: 0.5rem;">
+
+          <div class="action-card" style="border-top: 3px solid #6366f1; cursor: pointer;" onclick="switchTab('primary')">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="badge badge-indigo">Objective 1 — Primary</span>
+                <span style="font-size: 0.72rem; color: #818cf8; font-weight: 700;">→ Primary Outcome</span>
+              </div>
+              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Quantify 24-h opioid-sparing effect of TEAS vs sham and EA vs sham/control</h3>
+              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
+                Pooled mean difference in cumulative 0–24 h opioid consumption (mg IV MME), stratified by modality. REML random-effects with Knapp–Hartung adjustment and 95% prediction intervals.
+              </p>
+            </div>
           </div>
 
-          <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-sm); padding: 1rem;">
-            <h4 style="color: #6ee7b7; font-size: 0.88rem; margin-bottom: 0.4rem;">✅ Audited Reality in Reconciled Master Dataset v20</h4>
-            <ul style="font-size: 0.76rem; color: var(--text-secondary); line-height: 1.6; padding-left: 1.2rem;">
-              <li><strong>6 Primary Direct Studies:</strong> 6 studies (Chen 1998, Chen 2020, He 2026, Seevaunnamtum 2016, Yang 2024, and El-Rakshy 2009) directly report continuous 24-h opioid consumption (Pooled MD = −2.40 mg IV MME).</li>
-              <li><strong>5 Conditional Studies (Derived):</strong> Successfully derived via prespecified Goodman product expectation, Wan et al. median-to-mean transformation, and MME conversion rules (Sim 2002: −8.92 mg; Coura 2011: −22.40 mg; Zhang 2025: −0.33 mg; Chen 2015: −5.00 mg; Chen 2015 Hyperalgesia: −1.12 mg).</li>
-              <li><strong>Combined 11-Study Synthesis:</strong> Pooled REML MD = <strong>−2.03 mg IV MME</strong> (95% CI: [−3.06, −0.98], p = 0.0001; Hedges' g = <strong>−0.98</strong>, p &lt; 0.0001, N = 945).</li>
-              <li><strong>48 Studies Do Not Report 24h Opioids:</strong> 8 of these measured PCA and are queued for urgent author inquiry; the remainder measured other clinical endpoints.</li>
-            </ul>
+          <div class="action-card" style="border-top: 3px solid #10b981; cursor: pointer;" onclick="switchTab('secondary')">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="badge badge-emerald">Objective 2 — Co-Primary</span>
+                <span style="font-size: 0.72rem; color: #34d399; font-weight: 700;">→ Secondary Outcomes</span>
+              </div>
+              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Evaluate postoperative pain intensity at rest and during movement at ~24 h</h3>
+              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
+                VAS/NRS 0–10 continuous mean difference. Essential for confirming that opioid sparing does not come at the cost of unrelieved pain.
+              </p>
+            </div>
           </div>
+
+          <div class="action-card" style="border-top: 3px solid #06b6d4; cursor: pointer;" onclick="switchTab('primary')">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="badge badge-cyan">Objective 3 — Moderators</span>
+                <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 700;">→ Primary Outcome</span>
+              </div>
+              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Identify protocol moderators via prespecified subgroup and meta-regression analyses</h3>
+              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
+                Stimulation timing, frequency (2/100 Hz DD vs 100 Hz), cumulative duration, intensity threshold, number of sessions, and surgical specialty.
+              </p>
+            </div>
+          </div>
+
+          <div class="action-card" style="border-top: 3px solid #34d399; cursor: pointer;" onclick="switchTab('mcid')">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="badge badge-emerald">Objective 4 — Clinical Importance</span>
+                <span style="font-size: 0.72rem; color: #6ee7b7; font-weight: 700;">→ Clinical Importance</span>
+              </div>
+              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Determine clinical meaningfulness against prespecified thresholds</h3>
+              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
+                ≥ 10 mg IV MME with pain non-inferiority ≤ +1.0 VAS (sensitivity: ≥ 8 mg, ≥ 30% relative, ≥ 5 mg).
+              </p>
+            </div>
+          </div>
+
+          <div class="action-card" style="border-top: 3px solid #f59e0b; cursor: pointer;" onclick="switchTab('secondary')">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="badge badge-amber">Objectives 5 &amp; 6 — Secondary</span>
+                <span style="font-size: 0.72rem; color: #fbbf24; font-weight: 700;">→ Secondary Outcomes</span>
+              </div>
+              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Supportive syntheses and additional clinical endpoints</h3>
+              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
+                PONV (RR), time to first flatus (hours), PCA pump demands, rescue analgesia (RR), intraoperative remifentanil, QoR-40/15, length of stay, and sleep quality.
+              </p>
+            </div>
+          </div>
+
+          <div class="action-card" style="border-top: 3px solid #ec4899; cursor: pointer;" onclick="switchTab('evidence')">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="background: rgba(236, 72, 153, 0.2); color: #f9a8d4; padding: 0.2rem 0.55rem; border-radius: 4px; font-weight: 700; font-size: 0.72rem;">Objective 7 — Evidence Quality</span>
+                <span style="font-size: 0.72rem; color: #f9a8d4; font-weight: 700;">→ GRADE Evidence</span>
+              </div>
+              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Assess certainty of evidence using RoB 2 and GRADE</h3>
+              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
+                Cochrane Risk of Bias 2 across all 5 domains. GRADE Summary of Findings with downgrade assessment for risk of bias, inconsistency, indirectness, imprecision, and publication bias.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -390,7 +397,11 @@
       </div>
     </div>
 
-    <!-- TAB: PRISMA FLOW DIAGRAM -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION M: METHODS                                            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- TAB: PRISMA FLOW DIAGRAM (Study Selection) -->
     <div id="tab-prisma" class="tab-content">
       <div class="dashboard-card">
         <div class="card-header">
@@ -699,7 +710,7 @@
       </div>
     </div>
 
-    <!-- TAB 3: ROB 2 MATRIX -->
+    <!-- TAB: RISK OF BIAS (RoB 2 Matrix) -->
     <div id="tab-rob2" class="tab-content">
       <div class="dashboard-card">
         <div class="card-header">
@@ -730,8 +741,12 @@
       </div>
     </div>
 
-    <!-- TAB 4: META-ANALYSIS LAB -->
-    <div id="tab-meta" class="tab-content">
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION R: RESULTS                                            -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- TAB: SECONDARY OUTCOMES (Interactive Forest Plot Lab) -->
+    <div id="tab-secondary" class="tab-content">
       <div class="dashboard-card">
         <div class="card-header">
           <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
@@ -818,7 +833,7 @@
       </div>
     </div>
 
-    <!-- TAB: CLINICAL IMPORTANCE & TRADE-OFF STUDIO (MCID QUAD PLOT - Objective 4) -->
+    <!-- TAB: CLINICAL IMPORTANCE & TRADE-OFF STUDIO (MCID QUAD PLOT) -->
     <div id="tab-mcid" class="tab-content">
       <div class="dashboard-card">
         <div class="card-header">
@@ -938,8 +953,8 @@
       </div>
     </div>
 
-    <!-- TAB 5: STATA STRATEGY, FOREST PLOTS & SENSITIVITY HUB -->
-    <div id="tab-sensitivity" class="tab-content">
+    <!-- TAB: PRIMARY OUTCOME — Stata 19.5 Synthesis & Forest Plots -->
+    <div id="tab-primary" class="tab-content">
       
       <!-- Section 1: Formal Protocol Synthesis Standard Callout -->
       <div class="protocol-callout" style="margin-bottom: 1.5rem;">
@@ -1597,10 +1612,12 @@
 
     </div>
 
-    <!-- TAB: AUTHOR INQUIRIES, CONVERSIONS & WHAT-IF SIMULATOR -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SECTION D: DISCUSSION                                         -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
 
-    <!-- TAB: AUTHOR INQUIRIES & OUTREACH CENTER -->
-    <div id="tab-inquiries" class="tab-content">
+    <!-- TAB: LIMITATIONS & NEXT STEPS (Author Inquiries & Outreach) -->
+    <div id="tab-limitations" class="tab-content">
       
       <!-- Section 1: Collaborative Outreach Strategy Architecture -->
       <div class="dashboard-card" style="margin-bottom: 1.5rem; background: linear-gradient(180deg, rgba(22, 31, 48, 0.9) 0%, rgba(11, 15, 25, 0.95) 100%); border: 1px solid rgba(99, 102, 241, 0.3);">
@@ -1781,8 +1798,8 @@
     </div>
 
 
-    <!-- TAB: OPIOID CONVERSION METHODOLOGY & LITERATURE REFERENCE HUB -->
-    <div id="tab-conversions" class="tab-content">
+    <!-- TAB: DATA EXTRACTION & OPIOID CONVERSION METHODOLOGY -->
+    <div id="tab-extraction" class="tab-content">
       <!-- Section 2: Opioid Conversion Methodology & Pharmacological Equianalgesic Literature Hub -->
       <div class="dashboard-card" style="margin-bottom: 1.5rem;">
         <div class="card-header" style="flex-direction: column; align-items: flex-start; gap: 0.6rem;">
@@ -2164,7 +2181,7 @@
       </div>
     </div>
 
-    <!-- TAB 6: GRADE & EVIDENCE (Objective 7) -->
+    <!-- TAB: GRADE SUMMARY OF FINDINGS (Discussion) -->
     <div id="tab-evidence" class="tab-content">
       <div class="dashboard-card">
         <div class="card-header">
@@ -2201,7 +2218,11 @@
       </div>
     </div>
 
-    <!-- TAB 7: EXPORT HUB -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- APPENDIX                                                      -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <!-- TAB: EXPORT HUB -->
     <div id="tab-export" class="tab-content">
       <div class="dashboard-grid-2">
         <div class="dashboard-card">

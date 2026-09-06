@@ -1,0 +1,3373 @@
+{
+  "Study_ID": "S028",
+  "Study": "Ntritsou 2014",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "CONFIRMED",
+    "title": "Effect of perioperative electroacupuncture as an adjunctive therapy on postoperative analgesia with tramadol and ketamine in prostatectomy: a randomised sham-controlled single-blind trial",
+    "year": 2014,
+    "doi": "10.1136/acupmed-2013-010498",
+    "pdf_files": [
+      "covidence_729_full_article.pdf"
+    ],
+    "randomized_arms": {
+      "EA": 37,
+      "sham": 38
+    },
+    "analyzed_arms": {
+      "EA": 35,
+      "sham": 35
+    },
+    "modality": "EA",
+    "comparator_class": "Nonpenetrating/no-current sham plus same drug regimen",
+    "independence": "Single2-arm trial. Citation of Sim2002 is background, not same cohort. No demonstrated duplicate among assigned studies.",
+    "source_locations": "Complete9PDFpages via renderedimages, pp215–222 plus copyright page; Table1p218,Table2p220 visually checked. ClinicalTrials.gov NCT01526525 official API read. SAGE supplemental URL failed; legacy BMJ supplement redirects to journal homepage403; main article available locally.",
+    "identity_notes": "RegistryNCT01526525 startsJuly2009,primarycompletionSept2011,completionFeb2012 vsarticleJan–Dec2012; registrationJan2012 not demonstrated prospective. Registryenrollment70 vs75randomized; likely analysed vsrandomized but unresolved. Registry rescueNRS≥3,PPI≥2ANDalgometer≤.5kg versus publicationNRS>3ORPPI≥2. Bowel movement label actually intestinal-sound auscultation. Tramadol sum table called perioperative; pre-end bolus/infusion and rescue morphine preclude unqualified locked endpoint."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 111,
+      "final": {
+        "Canonical study": "Ntritsou 2014",
+        "Comparison ID": "NTRI14_EA_vs_SHAM_TRAMSUM",
+        "Intervention arm": "Perioperative EA + tramadol/ketamine",
+        "Comparator arm": "Sham + tramadol/ketamine",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Total tramadol exposure",
+        "Timepoint/window": "Perioperative through first24h; postoperative-only start unconfirmed",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 37,
+        "Randomized n comparator": 38,
+        "Analyzed n intervention": 35,
+        "Analyzed n comparator": 35,
+        "Mean intervention": 443.7,
+        "SD intervention": 67.4,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 461.5,
+        "SD comparator": 63.2,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg tramadol",
+        "Reported P": "0.257",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — MD arithmetic only; no opioid conversion",
+        "Derived effect measure": "MD",
+        "Derived effect": -17.8,
+        "Exact 0-24 h postoperative opioid?": "No — not established",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Continuous opioid-related quantity available, but not suitable as complete 24-h MME without confirming window and rescue morphine",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Includes scheduled/background tramadol and likely rescue tramadol; rescue morphine quantity not reported",
+        "Source location": "Table 1 / tramadol sum",
+        "Source PDF URL": "https://drive.google.com/file/d/1u_kNuuXF8upB3gJA2aDq8NldYDfhnWy3/view?usp=drivesdk",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Ntritsou 2014",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "NTRI14_EA_vs_SHAM_TRAMSUM",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative EA + tramadol/ketamine",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham + tramadol/ketamine",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total tramadol exposure",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Perioperative through first24h; postoperative-only start unconfirmed",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 37,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 38,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 35,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 35,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 443.7,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 67.4,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "No value used in this reporting slot; Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "No value used in this reporting slot; Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "No value used in this reporting slot; Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "No value used in this reporting slot; Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 461.5,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 63.2,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "No value used in this reporting slot; Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "No value used in this reporting slot; Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "No value used in this reporting slot; Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "No value used in this reporting slot; Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg tramadol",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.257",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — MD arithmetic only; no opioid conversion",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -17.8,
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No — not established",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Continuous opioid-related quantity available, but not suitable as complete 24-h MME without confirming window and rescue morphine",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Includes scheduled/background tramadol and likely rescue tramadol; rescue morphine quantity not reported",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 1 / tramadol sum",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1u_kNuuXF8upB3gJA2aDq8NldYDfhnWy3/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table1p218;pp216–217",
+          "evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "Perioperative / first 24 h most consistent with protocol; table does not restate window",
+          "source_value": "Perioperative through first24h; postoperative-only start unconfirmed",
+          "final_value": "Perioperative through first24h; postoperative-only start unconfirmed",
+          "source_location": "Table1p218;pp216–217",
+          "reason": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — MD arithmetic only; no opioid conversion",
+          "final_value": "Yes — MD arithmetic only; no opioid conversion",
+          "source_location": "Table1p218;pp216–217",
+          "reason": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -17.80000000000001,
+          "source_value": -17.8,
+          "final_value": -17.8,
+          "source_location": "Table1p218;pp216–217",
+          "reason": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "severity": "minor"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "old_value": "Conditional",
+          "source_value": "No — not established",
+          "final_value": "No — not established",
+          "source_location": "Table1p218;pp216–217",
+          "reason": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / WINDOW + CO-OPIOID QC",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table1p218;pp216–217",
+          "reason": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_729_full_article.pdf",
+      "source_evidence": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+      "drug": "Tramadol; additional rescue morphine; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "Not PCA: adjustable continuous infusion tramadol0.15mg/kg/h + ketamine0.15mg/kg/h following pre-end tramadol1.5mg/kg/ketamine10mg bolus30min before end. Max tramadol600mg24h;ketamine300mg24h.",
+      "rescue_regimen": "IfNRS>3 orPPI≥2, tramadol50mgIV, then morphine2mgIV ifNRSfalls<2within30min; repeat. Sedation>2stop/reassess infusion. Parecoxib40mgIV andparacetamol20mg/kgIV pre-end.",
+      "critical_qc": "Tramadol sum meanSD443.7±67.4 vs461.5±63.2mg,P.257;37/38random,35/35analysed. Starts30min before surgery end; rescue morphine separately available.",
+      "analysis_eligibility": "Continuous opioid-related quantity available, but not suitable as complete 24-h MME without confirming window and rescue morphine",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 112,
+      "final": {
+        "Canonical study": "Ntritsou 2014",
+        "Comparison ID": "NTRI14_EA_vs_SHAM_REMI",
+        "Intervention arm": "Perioperative EA + tramadol/ketamine",
+        "Comparator arm": "Sham + tramadol/ketamine",
+        "Outcome family": "Intraoperative opioid",
+        "Outcome/result": "Remifentanil consumption",
+        "Timepoint/window": "Intraoperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 37,
+        "Randomized n comparator": 38,
+        "Analyzed n intervention": 35,
+        "Analyzed n comparator": 35,
+        "Mean intervention": 1003.6,
+        "SD intervention": 522.7,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 1041.9,
+        "SD comparator": 631.9,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg remifentanil",
+        "Reported P": "0.783",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — MD arithmetic only",
+        "Derived effect measure": "MD",
+        "Derived effect": -38.3,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for intraoperative opioid analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "No significant intraoperative opioid-sparing effect",
+        "Source location": "Table 1 / remifentanil",
+        "Source PDF URL": "https://drive.google.com/file/d/1u_kNuuXF8upB3gJA2aDq8NldYDfhnWy3/view?usp=drivesdk",
+        "Record status": "VERIFIED"
+      },
+      "verification_status": "VERIFIED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Ntritsou 2014",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "NTRI14_EA_vs_SHAM_REMI",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative EA + tramadol/ketamine",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham + tramadol/ketamine",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Intraoperative opioid",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Remifentanil consumption",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Intraoperative",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 37,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 38,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 35,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 35,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 1003.6,
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 522.7,
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table1p218",
+          "evidence": "No value used in this reporting slot; Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table1p218",
+          "evidence": "No value used in this reporting slot; Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table1p218",
+          "evidence": "No value used in this reporting slot; Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table1p218",
+          "evidence": "No value used in this reporting slot; Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 1041.9,
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 631.9,
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table1p218",
+          "evidence": "No value used in this reporting slot; Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table1p218",
+          "evidence": "No value used in this reporting slot; Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table1p218",
+          "evidence": "No value used in this reporting slot; Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table1p218",
+          "evidence": "No value used in this reporting slot; Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg remifentanil",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.783",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — MD arithmetic only",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -38.3,
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for intraoperative opioid analysis",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "No significant intraoperative opioid-sparing effect",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 1 / remifentanil",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1u_kNuuXF8upB3gJA2aDq8NldYDfhnWy3/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED",
+          "source_location": "Table1p218",
+          "evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — MD arithmetic only",
+          "final_value": "Yes — MD arithmetic only",
+          "source_location": "Table1p218",
+          "reason": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -38.30000000000007,
+          "source_value": -38.3,
+          "final_value": -38.3,
+          "source_location": "Table1p218",
+          "reason": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED",
+          "final_value": "VERIFIED",
+          "source_location": "Table1p218",
+          "reason": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_729_full_article.pdf",
+      "source_evidence": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+      "drug": "Tramadol; additional rescue morphine; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "Not PCA: adjustable continuous infusion tramadol0.15mg/kg/h + ketamine0.15mg/kg/h following pre-end tramadol1.5mg/kg/ketamine10mg bolus30min before end. Max tramadol600mg24h;ketamine300mg24h.",
+      "rescue_regimen": "IfNRS>3 orPPI≥2, tramadol50mgIV, then morphine2mgIV ifNRSfalls<2within30min; repeat. Sedation>2stop/reassess infusion. Parecoxib40mgIV andparacetamol20mg/kgIV pre-end.",
+      "critical_qc": "Remifentanil1003.6±522.7 vs1041.9±631.9µg,P.783; intraoperative.",
+      "analysis_eligibility": "Eligible for intraoperative opioid analysis",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 113,
+      "final": {
+        "Canonical study": "Ntritsou 2014",
+        "Comparison ID": "NTRI14_EA_vs_SHAM_RESCUE",
+        "Intervention arm": "Perioperative EA + tramadol/ketamine",
+        "Comparator arm": "Sham + tramadol/ketamine",
+        "Outcome family": "Rescue opioid use",
+        "Outcome/result": "Total rescue analgesia",
+        "Timepoint/window": "First 24 h",
+        "Data type": "Qualitative / exact quantities unavailable",
+        "Randomized n intervention": 37,
+        "Randomized n comparator": 38,
+        "Analyzed n intervention": 35,
+        "Analyzed n comparator": 35,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "Insufficient information / not reported.",
+        "Reported P": "P<0.001 reported",
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not quantitatively poolable from main article",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Main article reports significantly less total rescue analgesia but does not tabulate exact rescue tramadol/morphine quantities",
+        "Source location": "Rescue analgesia results",
+        "Source PDF URL": "https://drive.google.com/file/d/1u_kNuuXF8upB3gJA2aDq8NldYDfhnWy3/view?usp=drivesdk",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Ntritsou 2014",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "NTRI14_EA_vs_SHAM_RESCUE",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative EA + tramadol/ketamine",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham + tramadol/ketamine",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Rescue opioid use",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total rescue analgesia",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "First 24 h",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Qualitative / exact quantities unavailable",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 37,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 38,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 35,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 35,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "No value used in this reporting slot; Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "Insufficient information / not reported.",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "P<0.001 reported",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not quantitatively poolable from main article",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Main article reports significantly less total rescue analgesia but does not tabulate exact rescue tramadol/morphine quantities",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Rescue analgesia results",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1u_kNuuXF8upB3gJA2aDq8NldYDfhnWy3/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Unit/scale",
+          "old_value": "tramadol 50 mg IV then morphine 2 mg IV as needed",
+          "source_value": "Insufficient information / not reported.",
+          "final_value": "Insufficient information / not reported.",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "reason": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "MISSING / EXACT RESCUE DOSES NOT REPORTED",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "p218rescue results;pp216–217rescue protocol",
+          "reason": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_729_full_article.pdf",
+      "source_evidence": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+      "drug": "Tramadol; additional rescue morphine; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "Not PCA: adjustable continuous infusion tramadol0.15mg/kg/h + ketamine0.15mg/kg/h following pre-end tramadol1.5mg/kg/ketamine10mg bolus30min before end. Max tramadol600mg24h;ketamine300mg24h.",
+      "rescue_regimen": "IfNRS>3 orPPI≥2, tramadol50mgIV, then morphine2mgIV ifNRSfalls<2within30min; repeat. Sedation>2stop/reassess infusion. Parecoxib40mgIV andparacetamol20mg/kgIV pre-end.",
+      "critical_qc": "Text reports total rescue reduction P<.001, no exact drug-specific masses orSD. Rescue regimen is dose protocol, not result scale.",
+      "analysis_eligibility": "Not quantitatively poolable from main article",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 114,
+      "final": {
+        "Canonical study": "Ntritsou 2014",
+        "Comparison ID": "NTRI14_EA_vs_SHAM_MME24",
+        "Intervention arm": "Perioperative EA + tramadol/ketamine",
+        "Comparator arm": "Sham + tramadol/ketamine",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Complete 24-h opioid/MME exposure",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not calculable",
+        "Randomized n intervention": 37,
+        "Randomized n comparator": 38,
+        "Analyzed n intervention": 35,
+        "Analyzed n comparator": 35,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "IV morphine-equivalent mg (target; not reported)",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for final 24-h MME until rescue morphine and tramadol-sum window are confirmed",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Do not equate lower rescue use with significantly lower total opioid exposure",
+        "Source location": "Combined opioid exposure",
+        "Source PDF URL": "https://drive.google.com/file/d/1u_kNuuXF8upB3gJA2aDq8NldYDfhnWy3/view?usp=drivesdk",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Ntritsou 2014",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "NTRI14_EA_vs_SHAM_MME24",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative EA + tramadol/ketamine",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham + tramadol/ketamine",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Complete 24-h opioid/MME exposure",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not calculable",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 37,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 38,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 35,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 35,
+          "source_location": "p218Fig1,Table1; EA severe nausea/dizziness1,vomiting1; sham bleed/reoperation1,delirium1,severe nausea/dizziness1",
+          "evidence": "{\"randomized\":{\"EA\":37,\"sham\":38},\"analyzed\":{\"EA\":35,\"sham\":35}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No value used in this reporting slot; No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "IV morphine-equivalent mg (target; not reported)",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for final 24-h MME until rescue morphine and tramadol-sum window are confirmed",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Do not equate lower rescue use with significantly lower total opioid exposure",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Combined opioid exposure",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1u_kNuuXF8upB3gJA2aDq8NldYDfhnWy3/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "pp216–218;Table1",
+          "evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Unit/scale",
+          "old_value": "MME",
+          "source_value": "IV morphine-equivalent mg (target; not reported)",
+          "final_value": "IV morphine-equivalent mg (target; not reported)",
+          "source_location": "pp216–218;Table1",
+          "reason": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "MISSING / AUTHOR DATA NEEDED",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "pp216–218;Table1",
+          "reason": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_729_full_article.pdf",
+      "source_evidence": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+      "drug": "Tramadol; additional rescue morphine; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "Not PCA: adjustable continuous infusion tramadol0.15mg/kg/h + ketamine0.15mg/kg/h following pre-end tramadol1.5mg/kg/ketamine10mg bolus30min before end. Max tramadol600mg24h;ketamine300mg24h.",
+      "rescue_regimen": "IfNRS>3 orPPI≥2, tramadol50mgIV, then morphine2mgIV ifNRSfalls<2within30min; repeat. Sedation>2stop/reassess infusion. Parecoxib40mgIV andparacetamol20mg/kgIV pre-end.",
+      "critical_qc": "No complete postoperative0–24h opioid equivalent meanSD: missing rescue morphine and ambiguous tramadol-sum boundary.",
+      "analysis_eligibility": "Not eligible for final 24-h MME until rescue morphine and tramadol-sum window are confirmed",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S028_tramadol",
+      "outcome": "Tramadol sum",
+      "time_window": "Perioperative through24h, start ambiguous",
+      "comparison": "EAvssham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated allocation.",
+          "source_location": "p216",
+          "reasoning": "Computer-generated allocation."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable.",
+          "source_location": "p216",
+          "reasoning": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Similar analysed clinical profiles; no compelling imbalance.",
+          "source_location": "Table1p218",
+          "reasoning": "Similar analysed clinical profiles; no compelling imbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent.",
+          "source_location": "p216",
+          "reasoning": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and intraoperative anaesthetist necessarily aware.",
+          "source_location": "p216",
+          "reasoning": "Acupuncturist and intraoperative anaesthetist necessarily aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Same rescue thresholds intended, but trial-context departures not documented.",
+          "source_location": "pp216–217",
+          "reasoning": "Same rescue thresholds intended, but trial-context departures not documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No demonstrated trial-context deviations.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated trial-context deviations."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No demonstrated deviations to compare.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated deviations to compare."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3.",
+          "source_location": "Fig1p218",
+          "reasoning": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "Fig1p218",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "70/75 analysed, exclusions include severe opioid-related symptoms.",
+          "source_location": "Fig1p218",
+          "reasoning": "70/75 analysed, exclusions include severe opioid-related symptoms."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-outcome sensitivity analysis.",
+          "source_location": "pp217–218",
+          "reasoning": "No missing-outcome sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Vomiting/nausea related to opioid exposure and postoperative state.",
+          "source_location": "Fig1p218",
+          "reasoning": "Vomiting/nausea related to opioid exposure and postoperative state."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles.",
+          "source_location": "Fig1p218",
+          "reasoning": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Recorded administered dose appropriate for tramadol quantity but window not primary-compatible.",
+          "source_location": "Table1p218",
+          "reasoning": "Recorded administered dose appropriate for tramadol quantity but window not primary-compatible."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same dosing/recording protocol and blinded postoperative observer.",
+          "source_location": "pp216–217",
+          "reasoning": "Same dosing/recording protocol and blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Postoperative observer blinded; providers initially unblinded.",
+          "source_location": "p216",
+          "reasoning": "Postoperative observer blinded; providers initially unblinded."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Recorded dose, not subjective interpretation by observer.",
+          "source_location": "p217",
+          "reasoning": "Recorded dose, not subjective interpretation by observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.3PN.",
+          "source_location": "p216",
+          "reasoning": "4.3PN."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion.",
+          "source_location": "NCT01526525 official API andp216",
+          "reasoning": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable.",
+          "source_location": "Table1p218;registry",
+          "reasoning": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding SAP; varied repeated measures and rescue reporting.",
+          "source_location": "p217;registry",
+          "reasoning": "No pre-unblinding SAP; varied repeated measures and rescue reporting."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment mechanism insufficiently specified.",
+          "source_location": "p216"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Provider awareness and insufficient trial-context deviation information, not awareness alone.",
+          "source_location": "pp216–217"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Symptom-dependent exclusions likely bias analgesic exposure and toxicity estimates.",
+          "source_location": "Fig1p218"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Standardized recorded drug doses.",
+          "source_location": "pp216–218"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Registry chronology conflicting; locked analysis details unavailable.",
+          "source_location": "NCT01526525"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Clinical symptom-related missingness likely distorts retained dose outcomes.",
+      "old_selected_overall": "High",
+      "changes_from_old": "OverallHigh retained after independent assessment; D2Someconcerns insteadLow because provider awareness and deviation reporting insufficient."
+    },
+    {
+      "result_id": "S028_remi",
+      "outcome": "Intraoperative remifentanil",
+      "time_window": "Intraoperative",
+      "comparison": "EAvssham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated allocation.",
+          "source_location": "p216",
+          "reasoning": "Computer-generated allocation."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable.",
+          "source_location": "p216",
+          "reasoning": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Similar analysed clinical profiles; no compelling imbalance.",
+          "source_location": "Table1p218",
+          "reasoning": "Similar analysed clinical profiles; no compelling imbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent.",
+          "source_location": "p216",
+          "reasoning": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and intraoperative anaesthetist necessarily aware.",
+          "source_location": "p216",
+          "reasoning": "Acupuncturist and intraoperative anaesthetist necessarily aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Same rescue thresholds intended, but trial-context departures not documented.",
+          "source_location": "pp216–217",
+          "reasoning": "Same rescue thresholds intended, but trial-context departures not documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No demonstrated trial-context deviations.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated trial-context deviations."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No demonstrated deviations to compare.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated deviations to compare."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3.",
+          "source_location": "Fig1p218",
+          "reasoning": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "Fig1p218",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "70/75 analysed, exclusions include severe opioid-related symptoms.",
+          "source_location": "Fig1p218",
+          "reasoning": "70/75 analysed, exclusions include severe opioid-related symptoms."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-outcome sensitivity analysis.",
+          "source_location": "pp217–218",
+          "reasoning": "No missing-outcome sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Later adverse-event selection can depend on earlier opioid exposure.",
+          "source_location": "Fig1p218",
+          "reasoning": "Later adverse-event selection can depend on earlier opioid exposure."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "No direct evidence exclusions depended on intraoperative remifentanil dose.",
+          "source_location": "Fig1p218",
+          "reasoning": "No direct evidence exclusions depended on intraoperative remifentanil dose."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Recorded intraoperative infused dose.",
+          "source_location": "p216;Table1",
+          "reasoning": "Recorded intraoperative infused dose."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same dosing/recording protocol and blinded postoperative observer.",
+          "source_location": "pp216–217",
+          "reasoning": "Same dosing/recording protocol and blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Intraoperative anaesthetist aware.",
+          "source_location": "p216",
+          "reasoning": "Intraoperative anaesthetist aware."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "PN",
+          "evidence": "Recorded objective administered mass is not subjective assessment; dosing behavior belongs toD2.",
+          "source_location": "p216",
+          "reasoning": "Recorded objective administered mass is not subjective assessment; dosing behavior belongs toD2."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.4PN.",
+          "source_location": "p216",
+          "reasoning": "4.4PN."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion.",
+          "source_location": "NCT01526525 official API andp216",
+          "reasoning": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable.",
+          "source_location": "Table1p218;registry",
+          "reasoning": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding SAP; varied repeated measures and rescue reporting.",
+          "source_location": "p217;registry",
+          "reasoning": "No pre-unblinding SAP; varied repeated measures and rescue reporting."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment mechanism insufficiently specified.",
+          "source_location": "p216"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Provider awareness and insufficient trial-context deviation information, not awareness alone.",
+          "source_location": "pp216–217"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "Postrandomization symptom exclusions could select exposure profiles, less direct than postoperative endpoints.",
+          "source_location": "Fig1p218"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Recorded administered quantity.",
+          "source_location": "Table1p218"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Registry chronology conflicting; locked analysis details unavailable.",
+          "source_location": "NCT01526525"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Concealment, missingness and prespecification uncertainty without demonstrated major bias."
+    },
+    {
+      "result_id": "S028_painrest",
+      "outcome": "Rest NRS",
+      "time_window": "24h",
+      "comparison": "EAvssham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated allocation.",
+          "source_location": "p216",
+          "reasoning": "Computer-generated allocation."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable.",
+          "source_location": "p216",
+          "reasoning": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Similar analysed clinical profiles; no compelling imbalance.",
+          "source_location": "Table1p218",
+          "reasoning": "Similar analysed clinical profiles; no compelling imbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent.",
+          "source_location": "p216",
+          "reasoning": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and intraoperative anaesthetist necessarily aware.",
+          "source_location": "p216",
+          "reasoning": "Acupuncturist and intraoperative anaesthetist necessarily aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Same rescue thresholds intended, but trial-context departures not documented.",
+          "source_location": "pp216–217",
+          "reasoning": "Same rescue thresholds intended, but trial-context departures not documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No demonstrated trial-context deviations.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated trial-context deviations."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No demonstrated deviations to compare.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated deviations to compare."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3.",
+          "source_location": "Fig1p218",
+          "reasoning": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "Fig1p218",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "70/75 analysed, exclusions include severe opioid-related symptoms.",
+          "source_location": "Fig1p218",
+          "reasoning": "70/75 analysed, exclusions include severe opioid-related symptoms."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-outcome sensitivity analysis.",
+          "source_location": "pp217–218",
+          "reasoning": "No missing-outcome sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Vomiting/nausea related to opioid exposure and postoperative state.",
+          "source_location": "Fig1p218",
+          "reasoning": "Vomiting/nausea related to opioid exposure and postoperative state."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles.",
+          "source_location": "Fig1p218",
+          "reasoning": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Validated pain/NRS or symptom report; same scheduled assessment.",
+          "source_location": "pp217–220",
+          "reasoning": "Validated pain/NRS or symptom report; same scheduled assessment."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same dosing/recording protocol and blinded postoperative observer.",
+          "source_location": "pp216–217",
+          "reasoning": "Same dosing/recording protocol and blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "NI",
+          "evidence": "Observer blinded, but participant is assessor of subjective symptom and masking success untested.",
+          "source_location": "p216",
+          "reasoning": "Observer blinded, but participant is assessor of subjective symptom and masking success untested."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Treatment sensation could affect subjective score.",
+          "source_location": "p216",
+          "reasoning": "Treatment sensation could affect subjective score."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No evidence shows masking actually failed or influenced score.",
+          "source_location": "p216",
+          "reasoning": "No evidence shows masking actually failed or influenced score."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion.",
+          "source_location": "NCT01526525 official API andp216",
+          "reasoning": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable.",
+          "source_location": "Table1p218;registry",
+          "reasoning": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding SAP; varied repeated measures and rescue reporting.",
+          "source_location": "p217;registry",
+          "reasoning": "No pre-unblinding SAP; varied repeated measures and rescue reporting."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment mechanism insufficiently specified.",
+          "source_location": "p216"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Provider awareness and insufficient trial-context deviation information, not awareness alone.",
+          "source_location": "pp216–217"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Symptom-dependent exclusions likely bias analgesic exposure and toxicity estimates.",
+          "source_location": "Fig1p218"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Subjective symptoms may reflect sensory unmasking; likely bias not established.",
+          "source_location": "pp216–219"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Registry chronology conflicting; locked analysis details unavailable.",
+          "source_location": "NCT01526525"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Symptom-related exclusions materially affect postoperative endpoint estimates."
+    },
+    {
+      "result_id": "S028_paindeep",
+      "outcome": "Deep-inspiration NRS",
+      "time_window": "24h",
+      "comparison": "EAvssham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated allocation.",
+          "source_location": "p216",
+          "reasoning": "Computer-generated allocation."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable.",
+          "source_location": "p216",
+          "reasoning": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Similar analysed clinical profiles; no compelling imbalance.",
+          "source_location": "Table1p218",
+          "reasoning": "Similar analysed clinical profiles; no compelling imbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent.",
+          "source_location": "p216",
+          "reasoning": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and intraoperative anaesthetist necessarily aware.",
+          "source_location": "p216",
+          "reasoning": "Acupuncturist and intraoperative anaesthetist necessarily aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Same rescue thresholds intended, but trial-context departures not documented.",
+          "source_location": "pp216–217",
+          "reasoning": "Same rescue thresholds intended, but trial-context departures not documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No demonstrated trial-context deviations.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated trial-context deviations."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No demonstrated deviations to compare.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated deviations to compare."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3.",
+          "source_location": "Fig1p218",
+          "reasoning": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "Fig1p218",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "70/75 analysed, exclusions include severe opioid-related symptoms.",
+          "source_location": "Fig1p218",
+          "reasoning": "70/75 analysed, exclusions include severe opioid-related symptoms."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-outcome sensitivity analysis.",
+          "source_location": "pp217–218",
+          "reasoning": "No missing-outcome sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Vomiting/nausea related to opioid exposure and postoperative state.",
+          "source_location": "Fig1p218",
+          "reasoning": "Vomiting/nausea related to opioid exposure and postoperative state."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles.",
+          "source_location": "Fig1p218",
+          "reasoning": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Validated pain/NRS or symptom report; same scheduled assessment.",
+          "source_location": "pp217–220",
+          "reasoning": "Validated pain/NRS or symptom report; same scheduled assessment."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same dosing/recording protocol and blinded postoperative observer.",
+          "source_location": "pp216–217",
+          "reasoning": "Same dosing/recording protocol and blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "NI",
+          "evidence": "Observer blinded, but participant is assessor of subjective symptom and masking success untested.",
+          "source_location": "p216",
+          "reasoning": "Observer blinded, but participant is assessor of subjective symptom and masking success untested."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Treatment sensation could affect subjective score.",
+          "source_location": "p216",
+          "reasoning": "Treatment sensation could affect subjective score."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No evidence shows masking actually failed or influenced score.",
+          "source_location": "p216",
+          "reasoning": "No evidence shows masking actually failed or influenced score."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion.",
+          "source_location": "NCT01526525 official API andp216",
+          "reasoning": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable.",
+          "source_location": "Table1p218;registry",
+          "reasoning": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding SAP; varied repeated measures and rescue reporting.",
+          "source_location": "p217;registry",
+          "reasoning": "No pre-unblinding SAP; varied repeated measures and rescue reporting."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment mechanism insufficiently specified.",
+          "source_location": "p216"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Provider awareness and insufficient trial-context deviation information, not awareness alone.",
+          "source_location": "pp216–217"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Symptom-dependent exclusions likely bias analgesic exposure and toxicity estimates.",
+          "source_location": "Fig1p218"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Subjective symptoms may reflect sensory unmasking; likely bias not established.",
+          "source_location": "pp216–219"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Registry chronology conflicting; locked analysis details unavailable.",
+          "source_location": "NCT01526525"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Symptom-related exclusions materially affect postoperative endpoint estimates."
+    },
+    {
+      "result_id": "S028_nausea",
+      "outcome": "Nausea",
+      "time_window": "24h snapshot",
+      "comparison": "EAvssham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated allocation.",
+          "source_location": "p216",
+          "reasoning": "Computer-generated allocation."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable.",
+          "source_location": "p216",
+          "reasoning": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Similar analysed clinical profiles; no compelling imbalance.",
+          "source_location": "Table1p218",
+          "reasoning": "Similar analysed clinical profiles; no compelling imbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent.",
+          "source_location": "p216",
+          "reasoning": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and intraoperative anaesthetist necessarily aware.",
+          "source_location": "p216",
+          "reasoning": "Acupuncturist and intraoperative anaesthetist necessarily aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Same rescue thresholds intended, but trial-context departures not documented.",
+          "source_location": "pp216–217",
+          "reasoning": "Same rescue thresholds intended, but trial-context departures not documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No demonstrated trial-context deviations.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated trial-context deviations."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No demonstrated deviations to compare.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated deviations to compare."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3.",
+          "source_location": "Fig1p218",
+          "reasoning": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "Fig1p218",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "70/75 analysed, exclusions include severe opioid-related symptoms.",
+          "source_location": "Fig1p218",
+          "reasoning": "70/75 analysed, exclusions include severe opioid-related symptoms."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-outcome sensitivity analysis.",
+          "source_location": "pp217–218",
+          "reasoning": "No missing-outcome sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Vomiting/nausea related to opioid exposure and postoperative state.",
+          "source_location": "Fig1p218",
+          "reasoning": "Vomiting/nausea related to opioid exposure and postoperative state."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles.",
+          "source_location": "Fig1p218",
+          "reasoning": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Validated pain/NRS or symptom report; same scheduled assessment.",
+          "source_location": "pp217–220",
+          "reasoning": "Validated pain/NRS or symptom report; same scheduled assessment."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same dosing/recording protocol and blinded postoperative observer.",
+          "source_location": "pp216–217",
+          "reasoning": "Same dosing/recording protocol and blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "NI",
+          "evidence": "Observer blinded, but participant is assessor of subjective symptom and masking success untested.",
+          "source_location": "p216",
+          "reasoning": "Observer blinded, but participant is assessor of subjective symptom and masking success untested."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Treatment sensation could affect subjective score.",
+          "source_location": "p216",
+          "reasoning": "Treatment sensation could affect subjective score."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No evidence shows masking actually failed or influenced score.",
+          "source_location": "p216",
+          "reasoning": "No evidence shows masking actually failed or influenced score."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion.",
+          "source_location": "NCT01526525 official API andp216",
+          "reasoning": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable.",
+          "source_location": "Table1p218;registry",
+          "reasoning": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding SAP; varied repeated measures and rescue reporting.",
+          "source_location": "p217;registry",
+          "reasoning": "No pre-unblinding SAP; varied repeated measures and rescue reporting."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment mechanism insufficiently specified.",
+          "source_location": "p216"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Provider awareness and insufficient trial-context deviation information, not awareness alone.",
+          "source_location": "pp216–217"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Symptom-dependent exclusions likely bias analgesic exposure and toxicity estimates.",
+          "source_location": "Fig1p218"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Subjective symptoms may reflect sensory unmasking; likely bias not established.",
+          "source_location": "pp216–219"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Registry chronology conflicting; locked analysis details unavailable.",
+          "source_location": "NCT01526525"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Symptom-related exclusions materially affect postoperative endpoint estimates."
+    },
+    {
+      "result_id": "S028_vomit",
+      "outcome": "Vomiting",
+      "time_window": "24h snapshot",
+      "comparison": "EAvssham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated allocation.",
+          "source_location": "p216",
+          "reasoning": "Computer-generated allocation."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable.",
+          "source_location": "p216",
+          "reasoning": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Similar analysed clinical profiles; no compelling imbalance.",
+          "source_location": "Table1p218",
+          "reasoning": "Similar analysed clinical profiles; no compelling imbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent.",
+          "source_location": "p216",
+          "reasoning": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and intraoperative anaesthetist necessarily aware.",
+          "source_location": "p216",
+          "reasoning": "Acupuncturist and intraoperative anaesthetist necessarily aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Same rescue thresholds intended, but trial-context departures not documented.",
+          "source_location": "pp216–217",
+          "reasoning": "Same rescue thresholds intended, but trial-context departures not documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No demonstrated trial-context deviations.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated trial-context deviations."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No demonstrated deviations to compare.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated deviations to compare."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3.",
+          "source_location": "Fig1p218",
+          "reasoning": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "Fig1p218",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "70/75 analysed, exclusions include severe opioid-related symptoms.",
+          "source_location": "Fig1p218",
+          "reasoning": "70/75 analysed, exclusions include severe opioid-related symptoms."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-outcome sensitivity analysis.",
+          "source_location": "pp217–218",
+          "reasoning": "No missing-outcome sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Vomiting/nausea related to opioid exposure and postoperative state.",
+          "source_location": "Fig1p218",
+          "reasoning": "Vomiting/nausea related to opioid exposure and postoperative state."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles.",
+          "source_location": "Fig1p218",
+          "reasoning": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Observed emesis or auscultation/recorded rescue protocol appropriate for separately named endpoint.",
+          "source_location": "pp217–220",
+          "reasoning": "Observed emesis or auscultation/recorded rescue protocol appropriate for separately named endpoint."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same dosing/recording protocol and blinded postoperative observer.",
+          "source_location": "pp216–217",
+          "reasoning": "Same dosing/recording protocol and blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Blinded postoperative observer.",
+          "source_location": "p216",
+          "reasoning": "Blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Recorded dose, not subjective interpretation by observer.",
+          "source_location": "p217",
+          "reasoning": "Recorded dose, not subjective interpretation by observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.3PN.",
+          "source_location": "p216",
+          "reasoning": "4.3PN."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion.",
+          "source_location": "NCT01526525 official API andp216",
+          "reasoning": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable.",
+          "source_location": "Table1p218;registry",
+          "reasoning": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding SAP; varied repeated measures and rescue reporting.",
+          "source_location": "p217;registry",
+          "reasoning": "No pre-unblinding SAP; varied repeated measures and rescue reporting."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment mechanism insufficiently specified.",
+          "source_location": "p216"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Provider awareness and insufficient trial-context deviation information, not awareness alone.",
+          "source_location": "pp216–217"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Symptom-dependent exclusions likely bias analgesic exposure and toxicity estimates.",
+          "source_location": "Fig1p218"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Standardized recorded drug doses.",
+          "source_location": "pp216–218"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Registry chronology conflicting; locked analysis details unavailable.",
+          "source_location": "NCT01526525"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Symptom-related exclusions materially affect postoperative endpoint estimates."
+    },
+    {
+      "result_id": "S028_sounds",
+      "outcome": "Absent intestinal sounds",
+      "time_window": "24h snapshot",
+      "comparison": "EAvssham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated allocation.",
+          "source_location": "p216",
+          "reasoning": "Computer-generated allocation."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable.",
+          "source_location": "p216",
+          "reasoning": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Similar analysed clinical profiles; no compelling imbalance.",
+          "source_location": "Table1p218",
+          "reasoning": "Similar analysed clinical profiles; no compelling imbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent.",
+          "source_location": "p216",
+          "reasoning": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and intraoperative anaesthetist necessarily aware.",
+          "source_location": "p216",
+          "reasoning": "Acupuncturist and intraoperative anaesthetist necessarily aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Same rescue thresholds intended, but trial-context departures not documented.",
+          "source_location": "pp216–217",
+          "reasoning": "Same rescue thresholds intended, but trial-context departures not documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No demonstrated trial-context deviations.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated trial-context deviations."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No demonstrated deviations to compare.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated deviations to compare."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3.",
+          "source_location": "Fig1p218",
+          "reasoning": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "Fig1p218",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "70/75 analysed, exclusions include severe opioid-related symptoms.",
+          "source_location": "Fig1p218",
+          "reasoning": "70/75 analysed, exclusions include severe opioid-related symptoms."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-outcome sensitivity analysis.",
+          "source_location": "pp217–218",
+          "reasoning": "No missing-outcome sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Vomiting/nausea related to opioid exposure and postoperative state.",
+          "source_location": "Fig1p218",
+          "reasoning": "Vomiting/nausea related to opioid exposure and postoperative state."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles.",
+          "source_location": "Fig1p218",
+          "reasoning": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Observed emesis or auscultation/recorded rescue protocol appropriate for separately named endpoint.",
+          "source_location": "pp217–220",
+          "reasoning": "Observed emesis or auscultation/recorded rescue protocol appropriate for separately named endpoint."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same dosing/recording protocol and blinded postoperative observer.",
+          "source_location": "pp216–217",
+          "reasoning": "Same dosing/recording protocol and blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Blinded postoperative observer.",
+          "source_location": "p216",
+          "reasoning": "Blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Recorded dose, not subjective interpretation by observer.",
+          "source_location": "p217",
+          "reasoning": "Recorded dose, not subjective interpretation by observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.3PN.",
+          "source_location": "p216",
+          "reasoning": "4.3PN."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion.",
+          "source_location": "NCT01526525 official API andp216",
+          "reasoning": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable.",
+          "source_location": "Table1p218;registry",
+          "reasoning": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding SAP; varied repeated measures and rescue reporting.",
+          "source_location": "p217;registry",
+          "reasoning": "No pre-unblinding SAP; varied repeated measures and rescue reporting."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment mechanism insufficiently specified.",
+          "source_location": "p216"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Provider awareness and insufficient trial-context deviation information, not awareness alone.",
+          "source_location": "pp216–217"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Symptom-dependent exclusions likely bias analgesic exposure and toxicity estimates.",
+          "source_location": "Fig1p218"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Standardized recorded drug doses.",
+          "source_location": "pp216–218"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Registry chronology conflicting; locked analysis details unavailable.",
+          "source_location": "NCT01526525"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Symptom-related exclusions materially affect postoperative endpoint estimates."
+    },
+    {
+      "result_id": "S028_rescue",
+      "outcome": "Rescue tramadol/morphine",
+      "time_window": "0–24h",
+      "comparison": "EAvssham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated allocation.",
+          "source_location": "p216",
+          "reasoning": "Computer-generated allocation."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable.",
+          "source_location": "p216",
+          "reasoning": "Director held concealed sequence; mechanism preventing foreknowledge not described; referenced online supplement unavailable."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Similar analysed clinical profiles; no compelling imbalance.",
+          "source_location": "Table1p218",
+          "reasoning": "Similar analysed clinical profiles; no compelling imbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent.",
+          "source_location": "p216",
+          "reasoning": "Naive anaesthetized/recently extubated patients; sham tap and concealed sites, warned sensation may be absent."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and intraoperative anaesthetist necessarily aware.",
+          "source_location": "p216",
+          "reasoning": "Acupuncturist and intraoperative anaesthetist necessarily aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Same rescue thresholds intended, but trial-context departures not documented.",
+          "source_location": "pp216–217",
+          "reasoning": "Same rescue thresholds intended, but trial-context departures not documented."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No demonstrated trial-context deviations.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated trial-context deviations."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No demonstrated deviations to compare.",
+          "source_location": "pp216–217",
+          "reasoning": "No demonstrated deviations to compare."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3.",
+          "source_location": "Fig1p218",
+          "reasoning": "Available-case analysis retained randomized allocation; missing outcome exclusions assessed D3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "Fig1p218",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "70/75 analysed, exclusions include severe opioid-related symptoms.",
+          "source_location": "Fig1p218",
+          "reasoning": "70/75 analysed, exclusions include severe opioid-related symptoms."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-outcome sensitivity analysis.",
+          "source_location": "pp217–218",
+          "reasoning": "No missing-outcome sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Vomiting/nausea related to opioid exposure and postoperative state.",
+          "source_location": "Fig1p218",
+          "reasoning": "Vomiting/nausea related to opioid exposure and postoperative state."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles.",
+          "source_location": "Fig1p218",
+          "reasoning": "Explicit exclusion of severe nausea/vomiting and delirium likely selects adverse-event/analgesic profiles."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Observed emesis or auscultation/recorded rescue protocol appropriate for separately named endpoint.",
+          "source_location": "pp217–220",
+          "reasoning": "Observed emesis or auscultation/recorded rescue protocol appropriate for separately named endpoint."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same dosing/recording protocol and blinded postoperative observer.",
+          "source_location": "pp216–217",
+          "reasoning": "Same dosing/recording protocol and blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Blinded postoperative observer.",
+          "source_location": "p216",
+          "reasoning": "Blinded postoperative observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Recorded dose, not subjective interpretation by observer.",
+          "source_location": "p217",
+          "reasoning": "Recorded dose, not subjective interpretation by observer."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.3PN.",
+          "source_location": "p216",
+          "reasoning": "4.3PN."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion.",
+          "source_location": "NCT01526525 official API andp216",
+          "reasoning": "Registry dates conflict: 2009–2012 vs publication2012; initial registration Jan2012 after registered primary completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable.",
+          "source_location": "Table1p218;registry",
+          "reasoning": "No accessible locked specification of tramadol sum inclusion; supplementary rescue results unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding SAP; varied repeated measures and rescue reporting.",
+          "source_location": "p217;registry",
+          "reasoning": "No pre-unblinding SAP; varied repeated measures and rescue reporting."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment mechanism insufficiently specified.",
+          "source_location": "p216"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Provider awareness and insufficient trial-context deviation information, not awareness alone.",
+          "source_location": "pp216–217"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Symptom-dependent exclusions likely bias analgesic exposure and toxicity estimates.",
+          "source_location": "Fig1p218"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Standardized recorded drug doses.",
+          "source_location": "pp216–218"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Registry chronology conflicting; locked analysis details unavailable.",
+          "source_location": "NCT01526525"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Symptom-related exclusions materially affect postoperative endpoint estimates."
+    }
+  ],
+  "opioid_candidate": {
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "No: morphine rescue separately administered without quantitative report.",
+    "drug": "Tramadol; additional rescue morphine; intraoperative remifentanil",
+    "route": "IV",
+    "unit": "mg tramadol",
+    "raw_values": {
+      "EA": [
+        443.7,
+        67.4
+      ],
+      "sham": [
+        461.5,
+        63.2
+      ],
+      "n_each": 35
+    },
+    "comparison_selection": "Nonpenetrating/no-current sham plus same drug regimen",
+    "multiarm_handling": "Single2-arm trial. Citation of Sim2002 is background, not same cohort. No demonstrated duplicate among assigned studies.",
+    "source_location": "Table1p218 anddrugmethodpp216–217",
+    "decision": "hold",
+    "reason": "Tramadol sum rawmg verified but postoperative start and rescue morphine inclusion cannot establish all-systemic end-surgery–24h mass."
+  },
+  "duplicate_map": [],
+  "additional_source_outcomes": [
+    {
+      "outcome": "Tramadol sum",
+      "format": "meanSD mg",
+      "EA": [
+        443.7,
+        67.4
+      ],
+      "sham": [
+        461.5,
+        63.2
+      ],
+      "P": ".257",
+      "source": "Table1p218",
+      "window": "Perioperative totals in table; postoperative-only boundary unresolved; excludes morphine as separate drug"
+    },
+    {
+      "outcome": "Ketamine sum",
+      "EA": [
+        289.8,
+        18.5
+      ],
+      "sham": [
+        281.2,
+        23.5
+      ],
+      "P": ".136",
+      "source": "Table1p218",
+      "unit": "mg"
+    },
+    {
+      "outcome": "Intraoperative remifentanil",
+      "EA": [
+        1003.6,
+        522.7
+      ],
+      "sham": [
+        1041.9,
+        631.9
+      ],
+      "P": ".783",
+      "unit": "µg",
+      "source": "Table1p218"
+    },
+    {
+      "outcome": "NRS rest/deep inspiration",
+      "time": [
+        0.75,
+        2,
+        6,
+        12,
+        24
+      ],
+      "format": "Graph-only meanSD; no digitization",
+      "source": "Fig2p218",
+      "exact_values": null
+    },
+    {
+      "outcome": "SFMPQ/PPI/algometry",
+      "format": "Graph-only",
+      "source": "Fig3p219",
+      "exact_values": null
+    },
+    {
+      "outcome": "Nausea snapshots",
+      "time_hours": [
+        0.75,
+        2,
+        6,
+        12,
+        24
+      ],
+      "EA": [
+        3,
+        4,
+        2,
+        7,
+        4
+      ],
+      "sham": [
+        9,
+        8,
+        5,
+        5,
+        2
+      ],
+      "n_each": 35,
+      "source": "Table2p220"
+    },
+    {
+      "outcome": "Vomiting snapshots",
+      "time_hours": [
+        0.75,
+        2,
+        6,
+        12,
+        24
+      ],
+      "EA": [
+        0,
+        0,
+        2,
+        2,
+        2
+      ],
+      "sham": [
+        1,
+        0,
+        0,
+        3,
+        1
+      ],
+      "n_each": 35,
+      "source": "Table2p220"
+    },
+    {
+      "outcome": "Absent bowel sounds labelled absent bowel movement",
+      "time_hours": [
+        0.75,
+        2,
+        6,
+        12,
+        24
+      ],
+      "EA": [
+        6,
+        1,
+        0,
+        0,
+        0
+      ],
+      "sham": [
+        20,
+        9,
+        1,
+        1,
+        1
+      ],
+      "n_each": 35,
+      "source": "Table2p220;auscultation methodp217",
+      "qualification": "Not flatus/defecation or continuous time-to-first bowel movement"
+    },
+    {
+      "outcome": "Rescue analgesia",
+      "format": "Text reports reduction45min andtotal P<.001; exact mass/events unavailable in main article",
+      "source": "p218results; online supplement referenced",
+      "values": null
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "Postoperative-only tramadol and morphine totals withSD, full randomized cohort results and accessible supplement",
+      "why_it_matters": "Defines cumulative systemic0–24h endpoint and symptom-exclusion bias.",
+      "analysis_affected": "Primary opioid and PONV/GI sensitivity",
+      "can_proceed_without": "Raw tramadol qualified and observed snapshots only; no primary opioid synthesis",
+      "priority": "HIGH",
+      "exact_question": "Please provide drug-specific total IV doses from end of surgery through24h (including rescue), meanSD andn for all75 randomized patients, distinguish pre-end dosing, and share supplementary tables/protocol with corrected recruitment dates."
+    }
+  ],
+  "summary": "4rows audited; raw tramadol and remifentanil verified, primary0–24h all-systemic opioid held; bowel sounds not bowel transit; source read visually despite empty text."
+}

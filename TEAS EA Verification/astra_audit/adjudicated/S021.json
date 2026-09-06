@@ -1,0 +1,3569 @@
+{
+  "Study_ID": "S021",
+  "Study": "Wang 2023",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "CONFIRMED",
+    "title": "Transcutaneous Electrical Acupoint Stimulation Improves Postoperative Sleep Quality in Patients Undergoing Laparoscopic Gastrointestinal Tumor Surgery: A Prospective, Randomized Controlled Trial",
+    "year": 2023,
+    "doi": "10.1007/s40122-023-00493-2",
+    "pdf_files": [
+      "s40122-023-00493-2.pdf"
+    ],
+    "randomized_arms": {
+      "TEAS": 43,
+      "sham": 45
+    },
+    "analyzed_arms": {
+      "TEAS": 40,
+      "sham": 43
+    },
+    "modality": "TEAS",
+    "comparator_class": "sham",
+    "independence": "Registry reused in Ge et al.2025 cohort report and autonomic-function cohort; overlap unresolved; do not independently count linked cohort reports.",
+    "source_locations": "Complete 16-page publication; visually inspected PDF pp6,8,9.",
+    "identity_notes": "Abstract 2/100 Hz versus methods 2/10 Hz. Abstract allocation n83 is completer count; Fig2 randomized88. No administered rescue drug, route, dose or threshold specified."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 80,
+      "final": {
+        "Canonical study": "Wang 2023",
+        "Comparison ID": "WANG23_TEAS_vs_SHAM_SLEEPD1",
+        "Intervention arm": "Nighttime TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Sleep quality",
+        "Outcome/result": "PSQI and AIS postoperative sleep quality",
+        "Timepoint/window": "POD1",
+        "Data type": "Graph-only continuous data",
+        "Randomized n intervention": 43,
+        "Randomized n comparator": 45,
+        "Analyzed n intervention": 40,
+        "Analyzed n comparator": 43,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "PSQI/AIS points",
+        "Reported P": "<0.05 between groups",
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not ready for continuous meta-analysis without formal graph digitization or author data",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "PSQI and AIS are separate instruments; exact values are graph-only.",
+        "Source location": "Figure 3, p8",
+        "Source PDF URL": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+        "Record status": "FIGURE ONLY / DIGITIZATION NEEDED"
+      },
+      "verification_status": "GRAPH DIGITIZATION NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Wang 2023",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "WANG23_TEAS_vs_SHAM_SLEEPD1",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Nighttime TEAS",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Sleep quality",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "PSQI and AIS postoperative sleep quality",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "POD1",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Graph-only continuous data",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 45,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 40,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "No value used in this reporting slot; Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "PSQI/AIS points",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05 between groups",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not ready for continuous meta-analysis without formal graph digitization or author data",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "PSQI and AIS are separate instruments; exact values are graph-only.",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Figure 3, p8",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "FIGURE ONLY / DIGITIZATION NEEDED",
+          "source_location": "p714 Fig3; pp710–711",
+          "evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Source-QC issue",
+          "old_value": "Exact POD1 means/SDs are figure-only; do not use fabricated exact AIS/PSQI values",
+          "source_value": "PSQI and AIS are separate instruments; exact values are graph-only.",
+          "final_value": "PSQI and AIS are separate instruments; exact values are graph-only.",
+          "source_location": "p714 Fig3; pp710–711",
+          "reason": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-023-00493-2.pdf",
+      "source_evidence": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Unblinded supplemental check: PSQI and AIS separately displayed atP1,D1,D3 as mean±SD, D1 between-group P<.05; no exact means/SD printed.",
+      "analysis_eligibility": "Not ready for continuous meta-analysis without formal graph digitization or author data",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 81,
+      "final": {
+        "Canonical study": "Wang 2023",
+        "Comparison ID": "WANG23_TEAS_vs_SHAM_RESCUEDOSE",
+        "Intervention arm": "Nighttime TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Rescue analgesia",
+        "Outcome/result": "Cumulative number of additional rescue-analgesia doses",
+        "Timepoint/window": "0-72 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 43,
+        "Randomized n comparator": 45,
+        "Analyzed n intervention": 40,
+        "Analyzed n comparator": 43,
+        "Mean intervention": 0.53,
+        "SD intervention": 0.55,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 0.98,
+        "SD comparator": 0.96,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "rescue doses",
+        "Reported P": "0.011",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — arithmetic MD only; raw results unchanged",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.44999999999999996,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible as rescue-analgesia frequency outcome only",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Rescue drug, dose, route and opioid/non-opioid identity are not specified in the main article",
+        "Source location": "Table 2 / rescue analgesia",
+        "Source PDF URL": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED / DRUG IDENTITY MISSING"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Wang 2023",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "WANG23_TEAS_vs_SHAM_RESCUEDOSE",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Nighttime TEAS",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Rescue analgesia",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative number of additional rescue-analgesia doses",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-72 h",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 45,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 40,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 0.53,
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.55,
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p715 Table2",
+          "evidence": "No value used in this reporting slot; 72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p715 Table2",
+          "evidence": "No value used in this reporting slot; 72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p715 Table2",
+          "evidence": "No value used in this reporting slot; 72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p715 Table2",
+          "evidence": "No value used in this reporting slot; 72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 0.98,
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.96,
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p715 Table2",
+          "evidence": "No value used in this reporting slot; 72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p715 Table2",
+          "evidence": "No value used in this reporting slot; 72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p715 Table2",
+          "evidence": "No value used in this reporting slot; 72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p715 Table2",
+          "evidence": "No value used in this reporting slot; 72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "rescue doses",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.011",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — arithmetic MD only; raw results unchanged",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.44999999999999996,
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible as rescue-analgesia frequency outcome only",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Rescue drug, dose, route and opioid/non-opioid identity are not specified in the main article",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 2 / rescue analgesia",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / DRUG IDENTITY MISSING",
+          "source_location": "p715 Table2",
+          "evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — arithmetic MD only; raw results unchanged",
+          "final_value": "Yes — arithmetic MD only; raw results unchanged",
+          "source_location": "p715 Table2",
+          "reason": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-023-00493-2.pdf",
+      "source_evidence": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "72h cumulative number of rescue administrations: TEAS n40 0.53±0.55; sham n43 0.98±0.96; P=.011. MD arithmetic=-.45; agent unreported.",
+      "analysis_eligibility": "Eligible as rescue-analgesia frequency outcome only",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 82,
+      "final": {
+        "Canonical study": "Wang 2023",
+        "Comparison ID": "WANG23_TEAS_vs_SHAM_FLATUS",
+        "Intervention arm": "Nighttime TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Time to first flatus",
+        "Timepoint/window": "Postoperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 43,
+        "Randomized n comparator": 45,
+        "Analyzed n intervention": 40,
+        "Analyzed n comparator": 43,
+        "Mean intervention": 54.57,
+        "SD intervention": 16.62,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 60.7,
+        "SD comparator": 19.1,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "hours",
+        "Reported P": "0.124",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — arithmetic MD only; raw results unchanged",
+        "Derived effect measure": "MD",
+        "Derived effect": -6.130000000000003,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for GI-recovery analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "5/88 randomized participants excluded for protocol breaches; no full ITT",
+        "Source location": "Table 1 / postoperative first flatus",
+        "Source PDF URL": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED / ATTRITION QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Wang 2023",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "WANG23_TEAS_vs_SHAM_FLATUS",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Nighttime TEAS",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to first flatus",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 45,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 40,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 54.57,
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 16.62,
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p713 Table1",
+          "evidence": "No value used in this reporting slot; First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p713 Table1",
+          "evidence": "No value used in this reporting slot; First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p713 Table1",
+          "evidence": "No value used in this reporting slot; First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p713 Table1",
+          "evidence": "No value used in this reporting slot; First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 60.7,
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 19.1,
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p713 Table1",
+          "evidence": "No value used in this reporting slot; First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p713 Table1",
+          "evidence": "No value used in this reporting slot; First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p713 Table1",
+          "evidence": "No value used in this reporting slot; First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p713 Table1",
+          "evidence": "No value used in this reporting slot; First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "hours",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.124",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — arithmetic MD only; raw results unchanged",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -6.130000000000003,
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for GI-recovery analysis",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "5/88 randomized participants excluded for protocol breaches; no full ITT",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 1 / postoperative first flatus",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / ATTRITION QC",
+          "source_location": "p713 Table1",
+          "evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — arithmetic MD only; raw results unchanged",
+          "final_value": "Yes — arithmetic MD only; raw results unchanged",
+          "source_location": "p713 Table1",
+          "reason": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-023-00493-2.pdf",
+      "source_evidence": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "First flatus hours: TEAS n40 54.57±16.62; sham n43 60.70±19.10; P=.124. MD arithmetic=-6.13.",
+      "analysis_eligibility": "Eligible for GI-recovery analysis",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 83,
+      "final": {
+        "Canonical study": "Wang 2023",
+        "Comparison ID": "WANG23_TEAS_vs_SHAM_PAIN24",
+        "Intervention arm": "Nighttime TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Pain",
+        "Outcome/result": "Activity pain VAS",
+        "Timepoint/window": "24 h",
+        "Data type": "Graph-only mean/SD",
+        "Randomized n intervention": 43,
+        "Randomized n comparator": 45,
+        "Analyzed n intervention": 40,
+        "Analyzed n comparator": 43,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "VAS points; full instrument range not explicitly reported",
+        "Reported P": "<0.05",
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not ready for quantitative pooling without formal digitization or author data",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Exact values not printed; derivative estimates cannot be verified as source numbers.",
+        "Source location": "Figure 4, p8",
+        "Source PDF URL": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+        "Record status": "FIGURE ONLY / DIGITIZATION NEEDED"
+      },
+      "verification_status": "GRAPH DIGITIZATION NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Wang 2023",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "WANG23_TEAS_vs_SHAM_PAIN24",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Nighttime TEAS",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Activity pain VAS",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Graph-only mean/SD",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 45,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 40,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "No value used in this reporting slot; 24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "VAS points; full instrument range not explicitly reported",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not ready for quantitative pooling without formal digitization or author data",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Exact values not printed; derivative estimates cannot be verified as source numbers.",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Figure 4, p8",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "FIGURE ONLY / DIGITIZATION NEEDED",
+          "source_location": "p714 Fig4b",
+          "evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Unit/scale",
+          "old_value": "VAS 0-10",
+          "source_value": "VAS points; full instrument range not explicitly reported",
+          "final_value": "VAS points; full instrument range not explicitly reported",
+          "source_location": "p714 Fig4b",
+          "reason": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Exact 24-h activity VAS values are only shown graphically; stored derivative exact values were fabricated",
+          "source_value": "Exact values not printed; derivative estimates cannot be verified as source numbers.",
+          "final_value": "Exact values not printed; derivative estimates cannot be verified as source numbers.",
+          "source_location": "p714 Fig4b",
+          "reason": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-023-00493-2.pdf",
+      "source_evidence": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "24h activity VAS graph-only mean±SD,P<.05; complete instrument range not explicitly defined.",
+      "analysis_eligibility": "Not ready for quantitative pooling without formal digitization or author data",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 84,
+      "final": {
+        "Canonical study": "Wang 2023",
+        "Comparison ID": "WANG23_TEAS_vs_SHAM_OPIOID24",
+        "Intervention arm": "Nighttime TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative postoperative opioid dose",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 43,
+        "Randomized n comparator": 45,
+        "Analyzed n intervention": 40,
+        "Analyzed n comparator": 43,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "Insufficient information / not reported.",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid meta-analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Only rescue-dose counts are reported and the rescue drug is not identified",
+        "Source location": "Postoperative analgesia outcomes",
+        "Source PDF URL": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+        "Record status": "MISSING / DRUG IDENTITY NOT REPORTED"
+      },
+      "verification_status": "NOT ANALYSIS ELIGIBLE",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Wang 2023",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "WANG23_TEAS_vs_SHAM_OPIOID24",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Nighttime TEAS",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative postoperative opioid dose",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 45,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 40,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 43,
+          "source_location": "p712 Fig2, visually verified",
+          "evidence": "{\"randomized\":{\"TEAS\":43,\"sham\":45},\"analyzed\":{\"TEAS\":40,\"sham\":43}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No value used in this reporting slot; No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "Insufficient information / not reported.",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid meta-analysis",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Only rescue-dose counts are reported and the rescue drug is not identified",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Postoperative analgesia outcomes",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/177A4aH42GD90DhsvvtD-VOBSChBBpIWL/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "MISSING / DRUG IDENTITY NOT REPORTED",
+          "source_location": "pp710–715; Table2",
+          "evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Unit/scale",
+          "old_value": "mg/µg",
+          "source_value": "Insufficient information / not reported.",
+          "final_value": "Insufficient information / not reported.",
+          "source_location": "pp710–715; Table2",
+          "reason": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-023-00493-2.pdf",
+      "source_evidence": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+      "drug": "Insufficient information / not reported.",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "No exact0–24h postoperative opioid mass reported. Only72h rescue administration counts.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid meta-analysis",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S021_PSQI",
+      "outcome": "PSQI",
+      "time_window": "POD1",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random-number table.",
+          "source_location": "p710 randomization",
+          "reasoning": "Computer-generated random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sequentially numbered opaque sealed envelopes.",
+          "source_location": "p710",
+          "reasoning": "Opening safeguards incompletely described, but probably concealed."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table 1 describes completers only.",
+          "source_location": "p713",
+          "reasoning": "Randomized baseline set unavailable; no compelling imbalance among completers."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "6–15 mA muscle twitch versus no current while awake.",
+          "source_location": "p710",
+          "reasoning": "Sensory differences may reveal allocation despite claimed masking."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Nurses administer active current or none.",
+          "source_location": "p710",
+          "reasoning": "Nurses administer active current or none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Five protocol breaches without details.",
+          "source_location": "p711–712 Fig2",
+          "reasoning": "Trial-context origin cannot be established."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at 2.3.",
+          "source_location": "p712",
+          "reasoning": "No Y/PY at 2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p712",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "43/45 randomized; 40/43 analysed after protocol-breach exclusions.",
+          "source_location": "p712 Fig2",
+          "reasoning": "43/45 randomized; 40/43 analysed after protocol-breach exclusions."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "PN",
+          "evidence": "Five excluded; no crossovers shown; breaches not described.",
+          "source_location": "p712",
+          "reasoning": "Impact possible but substantial distortion not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "83 of 88 randomized analysed.",
+          "source_location": "p712 Fig2",
+          "reasoning": "83 of 88 randomized analysed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity analysis.",
+          "source_location": "p711 statistics",
+          "reasoning": "No missing-data sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Reasons only described as protocol breaches.",
+          "source_location": "p712",
+          "reasoning": "Reasons only described as protocol breaches."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Outcome dependence of breaches unreported.",
+          "source_location": "p712",
+          "reasoning": "Outcome dependence of breaches unreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Validated PSQI sleep instrument; POD1.",
+          "source_location": "p710–711; Fig3",
+          "reasoning": "Appropriate patient-reported sleep measurement."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same outcome schedule in both groups.",
+          "source_location": "p711",
+          "reasoning": "Same outcome schedule in both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participants report symptoms after perceptible active or absent stimulation.",
+          "source_location": "p710",
+          "reasoning": "Participants report symptoms after perceptible active or absent stimulation."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Pain, nausea and flatus timing require subjective reporting.",
+          "source_location": "p711,p713–715",
+          "reasoning": "Pain, nausea and flatus timing require subjective reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No blinding-success assessment or evidence quantifying expectation effects.",
+          "source_location": "p710–718",
+          "reasoning": "Possible influence is supported; likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dated 29 December 2021; recruitment December 2021–August 2022; accessible registry version updated after recruitment.",
+          "source_location": "p709; https://www.chictr.org.cn/hvshowproject.html?id=207077&v=1.7",
+          "reasoning": "Prospective result-specific analysis intentions not demonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding outcome plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding outcome plan retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding statistical analysis plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding statistical analysis plan retrieved."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unexplained protocol-breach exclusions and unclear trial-context deviations.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "5/88 excluded without outcome-specific reasons or sensitivity analysis.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory masking uncertain for patient-reported outcomes; likely influence not demonstrated.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific analysis plan not demonstrated.",
+          "source_location": "p711; registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Several uncertainties, but no evidence sufficient to establish a high-risk domain; domains must be reconsidered for each result in Phase B.",
+      "unblinded_supplemental_check": "Returned to pp710–711 and Fig3 after baseline; separate sleep instruments not saved in Phase A.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old High assessment is for sleep only. D2 high not established by awareness/five exclusions without evidence of substantial impact. D4 possible influence supports Some concerns; likely influence not demonstrated."
+    },
+    {
+      "result_id": "S021_AIS",
+      "outcome": "AIS",
+      "time_window": "POD1",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random-number table.",
+          "source_location": "p710 randomization",
+          "reasoning": "Computer-generated random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sequentially numbered opaque sealed envelopes.",
+          "source_location": "p710",
+          "reasoning": "Opening safeguards incompletely described, but probably concealed."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table 1 describes completers only.",
+          "source_location": "p713",
+          "reasoning": "Randomized baseline set unavailable; no compelling imbalance among completers."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "6–15 mA muscle twitch versus no current while awake.",
+          "source_location": "p710",
+          "reasoning": "Sensory differences may reveal allocation despite claimed masking."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Nurses administer active current or none.",
+          "source_location": "p710",
+          "reasoning": "Nurses administer active current or none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Five protocol breaches without details.",
+          "source_location": "p711–712 Fig2",
+          "reasoning": "Trial-context origin cannot be established."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at 2.3.",
+          "source_location": "p712",
+          "reasoning": "No Y/PY at 2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p712",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "43/45 randomized; 40/43 analysed after protocol-breach exclusions.",
+          "source_location": "p712 Fig2",
+          "reasoning": "43/45 randomized; 40/43 analysed after protocol-breach exclusions."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "PN",
+          "evidence": "Five excluded; no crossovers shown; breaches not described.",
+          "source_location": "p712",
+          "reasoning": "Impact possible but substantial distortion not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "83 of 88 randomized analysed.",
+          "source_location": "p712 Fig2",
+          "reasoning": "83 of 88 randomized analysed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity analysis.",
+          "source_location": "p711 statistics",
+          "reasoning": "No missing-data sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Reasons only described as protocol breaches.",
+          "source_location": "p712",
+          "reasoning": "Reasons only described as protocol breaches."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Outcome dependence of breaches unreported.",
+          "source_location": "p712",
+          "reasoning": "Outcome dependence of breaches unreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Validated AIS sleep instrument; POD1.",
+          "source_location": "p710–711; Fig3",
+          "reasoning": "Appropriate patient-reported sleep measurement."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same outcome schedule in both groups.",
+          "source_location": "p711",
+          "reasoning": "Same outcome schedule in both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participants report symptoms after perceptible active or absent stimulation.",
+          "source_location": "p710",
+          "reasoning": "Participants report symptoms after perceptible active or absent stimulation."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Pain, nausea and flatus timing require subjective reporting.",
+          "source_location": "p711,p713–715",
+          "reasoning": "Pain, nausea and flatus timing require subjective reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No blinding-success assessment or evidence quantifying expectation effects.",
+          "source_location": "p710–718",
+          "reasoning": "Possible influence is supported; likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dated 29 December 2021; recruitment December 2021–August 2022; accessible registry version updated after recruitment.",
+          "source_location": "p709; https://www.chictr.org.cn/hvshowproject.html?id=207077&v=1.7",
+          "reasoning": "Prospective result-specific analysis intentions not demonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding outcome plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding outcome plan retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding statistical analysis plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding statistical analysis plan retrieved."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unexplained protocol-breach exclusions and unclear trial-context deviations.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "5/88 excluded without outcome-specific reasons or sensitivity analysis.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory masking uncertain for patient-reported outcomes; likely influence not demonstrated.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific analysis plan not demonstrated.",
+          "source_location": "p711; registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Several uncertainties, but no evidence sufficient to establish a high-risk domain; domains must be reconsidered for each result in Phase B.",
+      "unblinded_supplemental_check": "Returned to pp710–711 and Fig3 after baseline; separate sleep instruments not saved in Phase A.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old High assessment is for sleep only. D2 high not established by awareness/five exclusions without evidence of substantial impact. D4 possible influence supports Some concerns; likely influence not demonstrated."
+    },
+    {
+      "result_id": "S021_VAS_activity",
+      "outcome": "VAS activity",
+      "time_window": "24h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random-number table.",
+          "source_location": "p710 randomization",
+          "reasoning": "Computer-generated random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sequentially numbered opaque sealed envelopes.",
+          "source_location": "p710",
+          "reasoning": "Opening safeguards incompletely described, but probably concealed."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table 1 describes completers only.",
+          "source_location": "p713",
+          "reasoning": "Randomized baseline set unavailable; no compelling imbalance among completers."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "6–15 mA muscle twitch versus no current while awake.",
+          "source_location": "p710",
+          "reasoning": "Sensory differences may reveal allocation despite claimed masking."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Nurses administer active current or none.",
+          "source_location": "p710",
+          "reasoning": "Nurses administer active current or none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Five protocol breaches without details.",
+          "source_location": "p711–712 Fig2",
+          "reasoning": "Trial-context origin cannot be established."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at 2.3.",
+          "source_location": "p712",
+          "reasoning": "No Y/PY at 2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p712",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "43/45 randomized; 40/43 analysed after protocol-breach exclusions.",
+          "source_location": "p712 Fig2",
+          "reasoning": "43/45 randomized; 40/43 analysed after protocol-breach exclusions."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "PN",
+          "evidence": "Five excluded; no crossovers shown; breaches not described.",
+          "source_location": "p712",
+          "reasoning": "Impact possible but substantial distortion not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "83 of 88 randomized analysed.",
+          "source_location": "p712 Fig2",
+          "reasoning": "83 of 88 randomized analysed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity analysis.",
+          "source_location": "p711 statistics",
+          "reasoning": "No missing-data sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Reasons only described as protocol breaches.",
+          "source_location": "p712",
+          "reasoning": "Reasons only described as protocol breaches."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Outcome dependence of breaches unreported.",
+          "source_location": "p712",
+          "reasoning": "Outcome dependence of breaches unreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "VAS and tabulated patient adverse events are suitable instruments.",
+          "source_location": "p711,p714–715",
+          "reasoning": "VAS and tabulated patient adverse events are suitable instruments."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same outcome schedule in both groups.",
+          "source_location": "p711",
+          "reasoning": "Same outcome schedule in both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participants report symptoms after perceptible active or absent stimulation.",
+          "source_location": "p710",
+          "reasoning": "Participants report symptoms after perceptible active or absent stimulation."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Pain, nausea and flatus timing require subjective reporting.",
+          "source_location": "p711,p713–715",
+          "reasoning": "Pain, nausea and flatus timing require subjective reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No blinding-success assessment or evidence quantifying expectation effects.",
+          "source_location": "p710–718",
+          "reasoning": "Possible influence is supported; likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dated 29 December 2021; recruitment December 2021–August 2022; accessible registry version updated after recruitment.",
+          "source_location": "p709; https://www.chictr.org.cn/hvshowproject.html?id=207077&v=1.7",
+          "reasoning": "Prospective result-specific analysis intentions not demonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding outcome plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding outcome plan retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding statistical analysis plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding statistical analysis plan retrieved."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unexplained protocol-breach exclusions and unclear trial-context deviations.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "5/88 excluded without outcome-specific reasons or sensitivity analysis.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory masking uncertain for patient-reported outcomes; likely influence not demonstrated.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific analysis plan not demonstrated.",
+          "source_location": "p711; registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Several uncertainties, but no evidence sufficient to establish a high-risk domain; domains must be reconsidered for each result in Phase B.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old High assessment is for sleep only. D2 high not established by awareness/five exclusions without evidence of substantial impact. D4 possible influence supports Some concerns; likely influence not demonstrated."
+    },
+    {
+      "result_id": "S021_VAS_rest",
+      "outcome": "VAS rest",
+      "time_window": "24h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random-number table.",
+          "source_location": "p710 randomization",
+          "reasoning": "Computer-generated random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sequentially numbered opaque sealed envelopes.",
+          "source_location": "p710",
+          "reasoning": "Opening safeguards incompletely described, but probably concealed."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table 1 describes completers only.",
+          "source_location": "p713",
+          "reasoning": "Randomized baseline set unavailable; no compelling imbalance among completers."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "6–15 mA muscle twitch versus no current while awake.",
+          "source_location": "p710",
+          "reasoning": "Sensory differences may reveal allocation despite claimed masking."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Nurses administer active current or none.",
+          "source_location": "p710",
+          "reasoning": "Nurses administer active current or none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Five protocol breaches without details.",
+          "source_location": "p711–712 Fig2",
+          "reasoning": "Trial-context origin cannot be established."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at 2.3.",
+          "source_location": "p712",
+          "reasoning": "No Y/PY at 2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p712",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "43/45 randomized; 40/43 analysed after protocol-breach exclusions.",
+          "source_location": "p712 Fig2",
+          "reasoning": "43/45 randomized; 40/43 analysed after protocol-breach exclusions."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "PN",
+          "evidence": "Five excluded; no crossovers shown; breaches not described.",
+          "source_location": "p712",
+          "reasoning": "Impact possible but substantial distortion not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "83 of 88 randomized analysed.",
+          "source_location": "p712 Fig2",
+          "reasoning": "83 of 88 randomized analysed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity analysis.",
+          "source_location": "p711 statistics",
+          "reasoning": "No missing-data sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Reasons only described as protocol breaches.",
+          "source_location": "p712",
+          "reasoning": "Reasons only described as protocol breaches."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Outcome dependence of breaches unreported.",
+          "source_location": "p712",
+          "reasoning": "Outcome dependence of breaches unreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "VAS and tabulated patient adverse events are suitable instruments.",
+          "source_location": "p711,p714–715",
+          "reasoning": "VAS and tabulated patient adverse events are suitable instruments."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same outcome schedule in both groups.",
+          "source_location": "p711",
+          "reasoning": "Same outcome schedule in both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participants report symptoms after perceptible active or absent stimulation.",
+          "source_location": "p710",
+          "reasoning": "Participants report symptoms after perceptible active or absent stimulation."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Pain, nausea and flatus timing require subjective reporting.",
+          "source_location": "p711,p713–715",
+          "reasoning": "Pain, nausea and flatus timing require subjective reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No blinding-success assessment or evidence quantifying expectation effects.",
+          "source_location": "p710–718",
+          "reasoning": "Possible influence is supported; likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dated 29 December 2021; recruitment December 2021–August 2022; accessible registry version updated after recruitment.",
+          "source_location": "p709; https://www.chictr.org.cn/hvshowproject.html?id=207077&v=1.7",
+          "reasoning": "Prospective result-specific analysis intentions not demonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding outcome plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding outcome plan retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding statistical analysis plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding statistical analysis plan retrieved."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unexplained protocol-breach exclusions and unclear trial-context deviations.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "5/88 excluded without outcome-specific reasons or sensitivity analysis.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory masking uncertain for patient-reported outcomes; likely influence not demonstrated.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific analysis plan not demonstrated.",
+          "source_location": "p711; registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Several uncertainties, but no evidence sufficient to establish a high-risk domain; domains must be reconsidered for each result in Phase B.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old High assessment is for sleep only. D2 high not established by awareness/five exclusions without evidence of substantial impact. D4 possible influence supports Some concerns; likely influence not demonstrated."
+    },
+    {
+      "result_id": "S021_First_flatus",
+      "outcome": "First flatus",
+      "time_window": "Postoperative",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random-number table.",
+          "source_location": "p710 randomization",
+          "reasoning": "Computer-generated random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sequentially numbered opaque sealed envelopes.",
+          "source_location": "p710",
+          "reasoning": "Opening safeguards incompletely described, but probably concealed."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table 1 describes completers only.",
+          "source_location": "p713",
+          "reasoning": "Randomized baseline set unavailable; no compelling imbalance among completers."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "6–15 mA muscle twitch versus no current while awake.",
+          "source_location": "p710",
+          "reasoning": "Sensory differences may reveal allocation despite claimed masking."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Nurses administer active current or none.",
+          "source_location": "p710",
+          "reasoning": "Nurses administer active current or none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Five protocol breaches without details.",
+          "source_location": "p711–712 Fig2",
+          "reasoning": "Trial-context origin cannot be established."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at 2.3.",
+          "source_location": "p712",
+          "reasoning": "No Y/PY at 2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p712",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "43/45 randomized; 40/43 analysed after protocol-breach exclusions.",
+          "source_location": "p712 Fig2",
+          "reasoning": "43/45 randomized; 40/43 analysed after protocol-breach exclusions."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "PN",
+          "evidence": "Five excluded; no crossovers shown; breaches not described.",
+          "source_location": "p712",
+          "reasoning": "Impact possible but substantial distortion not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "83 of 88 randomized analysed.",
+          "source_location": "p712 Fig2",
+          "reasoning": "83 of 88 randomized analysed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity analysis.",
+          "source_location": "p711 statistics",
+          "reasoning": "No missing-data sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Reasons only described as protocol breaches.",
+          "source_location": "p712",
+          "reasoning": "Reasons only described as protocol breaches."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Outcome dependence of breaches unreported.",
+          "source_location": "p712",
+          "reasoning": "Outcome dependence of breaches unreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "VAS and tabulated patient adverse events are suitable instruments.",
+          "source_location": "p711,p714–715",
+          "reasoning": "VAS and tabulated patient adverse events are suitable instruments."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same outcome schedule in both groups.",
+          "source_location": "p711",
+          "reasoning": "Same outcome schedule in both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participants report symptoms after perceptible active or absent stimulation.",
+          "source_location": "p710",
+          "reasoning": "Participants report symptoms after perceptible active or absent stimulation."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Pain, nausea and flatus timing require subjective reporting.",
+          "source_location": "p711,p713–715",
+          "reasoning": "Pain, nausea and flatus timing require subjective reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No blinding-success assessment or evidence quantifying expectation effects.",
+          "source_location": "p710–718",
+          "reasoning": "Possible influence is supported; likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dated 29 December 2021; recruitment December 2021–August 2022; accessible registry version updated after recruitment.",
+          "source_location": "p709; https://www.chictr.org.cn/hvshowproject.html?id=207077&v=1.7",
+          "reasoning": "Prospective result-specific analysis intentions not demonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding outcome plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding outcome plan retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding statistical analysis plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding statistical analysis plan retrieved."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unexplained protocol-breach exclusions and unclear trial-context deviations.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "5/88 excluded without outcome-specific reasons or sensitivity analysis.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory masking uncertain for patient-reported outcomes; likely influence not demonstrated.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific analysis plan not demonstrated.",
+          "source_location": "p711; registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Several uncertainties, but no evidence sufficient to establish a high-risk domain; domains must be reconsidered for each result in Phase B.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old High assessment is for sleep only. D2 high not established by awareness/five exclusions without evidence of substantial impact. D4 possible influence supports Some concerns; likely influence not demonstrated."
+    },
+    {
+      "result_id": "S021_PONV",
+      "outcome": "PONV",
+      "time_window": "0–72h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random-number table.",
+          "source_location": "p710 randomization",
+          "reasoning": "Computer-generated random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sequentially numbered opaque sealed envelopes.",
+          "source_location": "p710",
+          "reasoning": "Opening safeguards incompletely described, but probably concealed."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table 1 describes completers only.",
+          "source_location": "p713",
+          "reasoning": "Randomized baseline set unavailable; no compelling imbalance among completers."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "6–15 mA muscle twitch versus no current while awake.",
+          "source_location": "p710",
+          "reasoning": "Sensory differences may reveal allocation despite claimed masking."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Nurses administer active current or none.",
+          "source_location": "p710",
+          "reasoning": "Nurses administer active current or none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Five protocol breaches without details.",
+          "source_location": "p711–712 Fig2",
+          "reasoning": "Trial-context origin cannot be established."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at 2.3.",
+          "source_location": "p712",
+          "reasoning": "No Y/PY at 2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p712",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "43/45 randomized; 40/43 analysed after protocol-breach exclusions.",
+          "source_location": "p712 Fig2",
+          "reasoning": "43/45 randomized; 40/43 analysed after protocol-breach exclusions."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "PN",
+          "evidence": "Five excluded; no crossovers shown; breaches not described.",
+          "source_location": "p712",
+          "reasoning": "Impact possible but substantial distortion not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "83 of 88 randomized analysed.",
+          "source_location": "p712 Fig2",
+          "reasoning": "83 of 88 randomized analysed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity analysis.",
+          "source_location": "p711 statistics",
+          "reasoning": "No missing-data sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Reasons only described as protocol breaches.",
+          "source_location": "p712",
+          "reasoning": "Reasons only described as protocol breaches."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Outcome dependence of breaches unreported.",
+          "source_location": "p712",
+          "reasoning": "Outcome dependence of breaches unreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "VAS and tabulated patient adverse events are suitable instruments.",
+          "source_location": "p711,p714–715",
+          "reasoning": "VAS and tabulated patient adverse events are suitable instruments."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same outcome schedule in both groups.",
+          "source_location": "p711",
+          "reasoning": "Same outcome schedule in both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participants report symptoms after perceptible active or absent stimulation.",
+          "source_location": "p710",
+          "reasoning": "Participants report symptoms after perceptible active or absent stimulation."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Pain, nausea and flatus timing require subjective reporting.",
+          "source_location": "p711,p713–715",
+          "reasoning": "Pain, nausea and flatus timing require subjective reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No blinding-success assessment or evidence quantifying expectation effects.",
+          "source_location": "p710–718",
+          "reasoning": "Possible influence is supported; likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dated 29 December 2021; recruitment December 2021–August 2022; accessible registry version updated after recruitment.",
+          "source_location": "p709; https://www.chictr.org.cn/hvshowproject.html?id=207077&v=1.7",
+          "reasoning": "Prospective result-specific analysis intentions not demonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding outcome plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding outcome plan retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding statistical analysis plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding statistical analysis plan retrieved."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unexplained protocol-breach exclusions and unclear trial-context deviations.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "5/88 excluded without outcome-specific reasons or sensitivity analysis.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory masking uncertain for patient-reported outcomes; likely influence not demonstrated.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific analysis plan not demonstrated.",
+          "source_location": "p711; registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Several uncertainties, but no evidence sufficient to establish a high-risk domain; domains must be reconsidered for each result in Phase B.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old High assessment is for sleep only. D2 high not established by awareness/five exclusions without evidence of substantial impact. D4 possible influence supports Some concerns; likely influence not demonstrated."
+    },
+    {
+      "result_id": "S021_Abdominal_distension",
+      "outcome": "Abdominal distension",
+      "time_window": "0–72h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random-number table.",
+          "source_location": "p710 randomization",
+          "reasoning": "Computer-generated random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sequentially numbered opaque sealed envelopes.",
+          "source_location": "p710",
+          "reasoning": "Opening safeguards incompletely described, but probably concealed."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table 1 describes completers only.",
+          "source_location": "p713",
+          "reasoning": "Randomized baseline set unavailable; no compelling imbalance among completers."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "6–15 mA muscle twitch versus no current while awake.",
+          "source_location": "p710",
+          "reasoning": "Sensory differences may reveal allocation despite claimed masking."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Nurses administer active current or none.",
+          "source_location": "p710",
+          "reasoning": "Nurses administer active current or none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Five protocol breaches without details.",
+          "source_location": "p711–712 Fig2",
+          "reasoning": "Trial-context origin cannot be established."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at 2.3.",
+          "source_location": "p712",
+          "reasoning": "No Y/PY at 2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p712",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "43/45 randomized; 40/43 analysed after protocol-breach exclusions.",
+          "source_location": "p712 Fig2",
+          "reasoning": "43/45 randomized; 40/43 analysed after protocol-breach exclusions."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "PN",
+          "evidence": "Five excluded; no crossovers shown; breaches not described.",
+          "source_location": "p712",
+          "reasoning": "Impact possible but substantial distortion not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "83 of 88 randomized analysed.",
+          "source_location": "p712 Fig2",
+          "reasoning": "83 of 88 randomized analysed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity analysis.",
+          "source_location": "p711 statistics",
+          "reasoning": "No missing-data sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Reasons only described as protocol breaches.",
+          "source_location": "p712",
+          "reasoning": "Reasons only described as protocol breaches."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Outcome dependence of breaches unreported.",
+          "source_location": "p712",
+          "reasoning": "Outcome dependence of breaches unreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "VAS and tabulated patient adverse events are suitable instruments.",
+          "source_location": "p711,p714–715",
+          "reasoning": "VAS and tabulated patient adverse events are suitable instruments."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same outcome schedule in both groups.",
+          "source_location": "p711",
+          "reasoning": "Same outcome schedule in both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participants report symptoms after perceptible active or absent stimulation.",
+          "source_location": "p710",
+          "reasoning": "Participants report symptoms after perceptible active or absent stimulation."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Pain, nausea and flatus timing require subjective reporting.",
+          "source_location": "p711,p713–715",
+          "reasoning": "Pain, nausea and flatus timing require subjective reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No blinding-success assessment or evidence quantifying expectation effects.",
+          "source_location": "p710–718",
+          "reasoning": "Possible influence is supported; likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dated 29 December 2021; recruitment December 2021–August 2022; accessible registry version updated after recruitment.",
+          "source_location": "p709; https://www.chictr.org.cn/hvshowproject.html?id=207077&v=1.7",
+          "reasoning": "Prospective result-specific analysis intentions not demonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding outcome plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding outcome plan retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding statistical analysis plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding statistical analysis plan retrieved."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unexplained protocol-breach exclusions and unclear trial-context deviations.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "5/88 excluded without outcome-specific reasons or sensitivity analysis.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory masking uncertain for patient-reported outcomes; likely influence not demonstrated.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific analysis plan not demonstrated.",
+          "source_location": "p711; registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Several uncertainties, but no evidence sufficient to establish a high-risk domain; domains must be reconsidered for each result in Phase B.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old High assessment is for sleep only. D2 high not established by awareness/five exclusions without evidence of substantial impact. D4 possible influence supports Some concerns; likely influence not demonstrated."
+    },
+    {
+      "result_id": "S021_Rescue_administration_count",
+      "outcome": "Rescue administration count",
+      "time_window": "0–72h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random-number table.",
+          "source_location": "p710 randomization",
+          "reasoning": "Computer-generated random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sequentially numbered opaque sealed envelopes.",
+          "source_location": "p710",
+          "reasoning": "Opening safeguards incompletely described, but probably concealed."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table 1 describes completers only.",
+          "source_location": "p713",
+          "reasoning": "Randomized baseline set unavailable; no compelling imbalance among completers."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "6–15 mA muscle twitch versus no current while awake.",
+          "source_location": "p710",
+          "reasoning": "Sensory differences may reveal allocation despite claimed masking."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Nurses administer active current or none.",
+          "source_location": "p710",
+          "reasoning": "Nurses administer active current or none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Five protocol breaches without details.",
+          "source_location": "p711–712 Fig2",
+          "reasoning": "Trial-context origin cannot be established."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at 2.3.",
+          "source_location": "p712",
+          "reasoning": "No Y/PY at 2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p712",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "43/45 randomized; 40/43 analysed after protocol-breach exclusions.",
+          "source_location": "p712 Fig2",
+          "reasoning": "43/45 randomized; 40/43 analysed after protocol-breach exclusions."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "PN",
+          "evidence": "Five excluded; no crossovers shown; breaches not described.",
+          "source_location": "p712",
+          "reasoning": "Impact possible but substantial distortion not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "83 of 88 randomized analysed.",
+          "source_location": "p712 Fig2",
+          "reasoning": "83 of 88 randomized analysed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity analysis.",
+          "source_location": "p711 statistics",
+          "reasoning": "No missing-data sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Reasons only described as protocol breaches.",
+          "source_location": "p712",
+          "reasoning": "Reasons only described as protocol breaches."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Outcome dependence of breaches unreported.",
+          "source_location": "p712",
+          "reasoning": "Outcome dependence of breaches unreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "VAS and tabulated patient adverse events are suitable instruments.",
+          "source_location": "p711,p714–715",
+          "reasoning": "VAS and tabulated patient adverse events are suitable instruments."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same outcome schedule in both groups.",
+          "source_location": "p711",
+          "reasoning": "Same outcome schedule in both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "NI",
+          "evidence": "Data collectors blinded; identity and threshold of rescue decision maker unreported.",
+          "source_location": "p710;715",
+          "reasoning": "Cannot establish assessor knowledge for administration decisions."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Rescue requests/decisions may reflect participant or clinician knowledge.",
+          "source_location": "p711,p713–715",
+          "reasoning": "Administration count is not automatically blinded objective electronic consumption."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No blinding-success assessment or evidence quantifying expectation effects.",
+          "source_location": "p710–718",
+          "reasoning": "Possible influence is supported; likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dated 29 December 2021; recruitment December 2021–August 2022; accessible registry version updated after recruitment.",
+          "source_location": "p709; https://www.chictr.org.cn/hvshowproject.html?id=207077&v=1.7",
+          "reasoning": "Prospective result-specific analysis intentions not demonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding outcome plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding outcome plan retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding statistical analysis plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding statistical analysis plan retrieved."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unexplained protocol-breach exclusions and unclear trial-context deviations.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "5/88 excluded without outcome-specific reasons or sensitivity analysis.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory masking uncertain for patient-reported outcomes; likely influence not demonstrated.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific analysis plan not demonstrated.",
+          "source_location": "p711; registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Several uncertainties, but no evidence sufficient to establish a high-risk domain; domains must be reconsidered for each result in Phase B.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Old High assessment is for sleep only. D2 high not established by awareness/five exclusions without evidence of substantial impact. D4 possible influence supports Some concerns; likely influence not demonstrated."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Administration counts over72h; no postoperative opioid mass or exact24 exposure.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Insufficient information / not reported.",
+    "route": "Insufficient information / not reported.",
+    "unit": "Insufficient information / not reported.",
+    "raw_values": {
+      "rescue_count_72h": {
+        "outcome": "Rescue analgesia administrations",
+        "window": "0–72 h",
+        "unit": "number",
+        "TEAS": {
+          "n": 40,
+          "mean": 0.53,
+          "SD": 0.55
+        },
+        "sham": {
+          "n": 43,
+          "mean": 0.98,
+          "SD": 0.96
+        },
+        "source": "p715 Table2",
+        "opioid_eligible": false
+      }
+    },
+    "comparison_selection": "TEAS vs sham",
+    "multiarm_handling": "Single contrast",
+    "source_location": "p715 Table2"
+  },
+  "duplicate_map": [
+    {
+      "related_study": "Ge2025 HRV and autonomic-function cohorts",
+      "classification": "UNRESOLVED",
+      "evidence": "Shared ChiCTR2100054971; cohort relation unresolved.",
+      "source_location": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12019052/; https://pmc.ncbi.nlm.nih.gov/articles/PMC12527782/",
+      "analysis_handling": "Do not count linked reports independently without confirmation; no demonstrated duplicate among assigned IDs."
+    }
+  ],
+  "additional_source_outcomes": [
+    {
+      "outcome": "PONV",
+      "window": "0–72 h",
+      "TEAS": {
+        "n": 40,
+        "events": 6
+      },
+      "sham": {
+        "n": 43,
+        "events": 19
+      },
+      "source": "p715 Table2"
+    },
+    {
+      "outcome": "Abdominal distension",
+      "window": "0–72 h",
+      "TEAS": {
+        "n": 40,
+        "events": 11
+      },
+      "sham": {
+        "n": 43,
+        "events": 24
+      },
+      "source": "p715 Table2"
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "Specify rescue agent, dose, route, total0–24h opioid exposure.",
+      "why_it_matters": "Completeness or bias/independence uncertainty.",
+      "analysis_affected": "Specified endpoint",
+      "can_proceed_without": "Tabulated endpoints with qualifications; missing values cannot be pooled.",
+      "priority": "MEDIUM",
+      "exact_question": "Specify rescue agent, dose, route, total0–24h opioid exposure."
+    },
+    {
+      "missing_information": "Provide numerical Fig4 means/SD and reasons for five protocol breaches.",
+      "why_it_matters": "Completeness or bias/independence uncertainty.",
+      "analysis_affected": "Specified endpoint",
+      "can_proceed_without": "Tabulated endpoints with qualifications; missing values cannot be pooled.",
+      "priority": "MEDIUM",
+      "exact_question": "Provide numerical Fig4 means/SD and reasons for five protocol breaches."
+    },
+    {
+      "missing_information": "Provide dated SAP and confirm relationship of reports sharing ChiCTR2100054971.",
+      "why_it_matters": "Completeness or bias/independence uncertainty.",
+      "analysis_affected": "Specified endpoint",
+      "can_proceed_without": "Tabulated endpoints with qualifications; missing values cannot be pooled.",
+      "priority": "MEDIUM",
+      "exact_question": "Provide dated SAP and confirm relationship of reports sharing ChiCTR2100054971."
+    }
+  ],
+  "summary": "All5 baseline rows reviewed; graph-only values remain unquantified; rescue counts not opioid mass. Additional72h PONV6/40 vs19/43. RoB2 Some concerns pending breach details, masking and prespecification."
+}

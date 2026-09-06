@@ -1,0 +1,3936 @@
+{
+  "Study_ID": "S034",
+  "Study": "Long 2025",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Confirmed publication; modality/flow unresolved",
+    "title": "Effect of electroacupuncture intervention before and after operation on perioperative neurocognitive disorders in elderly patients with hip fractures: A randomized controlled trial",
+    "year": 2025,
+    "doi": "10.1016/j.injury.2025.112660",
+    "pdf_files": [
+      "1-s2.0-S0020138325005200.pdf"
+    ],
+    "randomized_arms": "Methods30/30;Figure2randomizationafter7losses",
+    "analyzed_arms": "A27/C26exceptPNDunresolved",
+    "modality": "Insufficient information / not reported.",
+    "comparator_class": "Electrodes/no current",
+    "independence": "Singlehipfracturetrial",
+    "source_locations": "Entire11pages;Figure2,Table7visual",
+    "identity_notes": "NeedleORpatchdevice description prevents confidentTEAS/EAassignment;titleEA not enough."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 145,
+      "final": {
+        "_baseline_row": 145,
+        "Canonical study": "Long 2025",
+        "Comparison ID": "LONG25_TEAS_vs_CTRL_PND1",
+        "Intervention arm": "Perioperative electrical acupoint stimulation",
+        "Comparator arm": "Electrodes/no current",
+        "Outcome family": "Neurocognitive",
+        "Outcome/result": "Perioperative neurocognitive disorder (PND)",
+        "Timepoint/window": "POD1",
+        "Data type": "Published event count + percentage; denominator inconsistent",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 7,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 14,
+        "Unit/scale": "Active: 7 cases (25.0%); Control: 14 cases (56.0%)",
+        "Reported P": "<0.05 (Table2 footnote)",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not meta-analysis-ready until event denominators are clarified",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Published percentages do not reconcile with final analyzed n=27 active/26 control; do not back-calculate denominators",
+        "Source location": "PND incidence table / POD1",
+        "Source PDF URL": "https://doi.org/10.1016/j.injury.2025.112660",
+        "Record status": "SOURCE-VERIFIED / DENOMINATOR INCONSISTENT"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 145,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Long 2025",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LONG25_TEAS_vs_CTRL_PND1",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative electrical acupoint stimulation",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Electrodes/no current",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Neurocognitive",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Perioperative neurocognitive disorder (PND)",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "POD1",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Published event count + percentage; denominator inconsistent",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 7,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 14,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "Active: 7 cases (25.0%); Control: 14 cases (56.0%)",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05 (Table2 footnote)",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not meta-analysis-ready until event denominators are clarified",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Published percentages do not reconcile with final analyzed n=27 active/26 control; do not back-calculate denominators",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "PND incidence table / POD1",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / DENOMINATOR INCONSISTENT",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 27,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table2p4;Figure2",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 26,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table2p4;Figure2",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        },
+        {
+          "field": "Reported P",
+          "old_value": "NR",
+          "source_value": "<0.05 (Table2 footnote)",
+          "final_value": "<0.05 (Table2 footnote)",
+          "source_location": "Table2p4;Figure2",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1LDqtQLq9-kZLP0Vv_G3iiK8QKjy4pRXP/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "final_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table2p4;Figure2",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "1-s2.0-S0020138325005200.pdf",
+      "source_evidence": "PNDPOD1A7(25%)C14(56%); percentages incompatible withTable1A27/C26.",
+      "drug": "Sufentanil",
+      "route": "IV",
+      "pca_formulation": "2µg/kg in100mL;1.5mL/hbasal;2mLbolus;15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+      "analysis_eligibility": "Not meta-analysis-ready until event denominators are clarified; modality remains unresolved",
+      "notes": "Unblinded supplemental checks ofTable2significance footnotes andTable6P=.024; numeric means/counts alreadycapturedPhaseA. Method30/30retained as reported, not resolved truth."
+    },
+    {
+      "baseline_row": 146,
+      "final": {
+        "_baseline_row": 146,
+        "Canonical study": "Long 2025",
+        "Comparison ID": "LONG25_TEAS_vs_CTRL_PND3",
+        "Intervention arm": "Perioperative electrical acupoint stimulation",
+        "Comparator arm": "Electrodes/no current",
+        "Outcome family": "Neurocognitive",
+        "Outcome/result": "Perioperative neurocognitive disorder (PND)",
+        "Timepoint/window": "POD3",
+        "Data type": "Published event count + percentage; denominator inconsistent",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 4,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 12,
+        "Unit/scale": "Active: 4 cases (14.3%); Control: 12 cases (48.0%)",
+        "Reported P": "<0.05 (Table2 footnote)",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not meta-analysis-ready until event denominators are clarified",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Published percentages do not reconcile with reported analyzed denominators",
+        "Source location": "PND incidence table / POD3",
+        "Source PDF URL": "https://doi.org/10.1016/j.injury.2025.112660",
+        "Record status": "SOURCE-VERIFIED / DENOMINATOR INCONSISTENT"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 146,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Long 2025",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LONG25_TEAS_vs_CTRL_PND3",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative electrical acupoint stimulation",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Electrodes/no current",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Neurocognitive",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Perioperative neurocognitive disorder (PND)",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "POD3",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Published event count + percentage; denominator inconsistent",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 4,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 12,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "Active: 4 cases (14.3%); Control: 12 cases (48.0%)",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05 (Table2 footnote)",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not meta-analysis-ready until event denominators are clarified",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Published percentages do not reconcile with reported analyzed denominators",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "PND incidence table / POD3",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / DENOMINATOR INCONSISTENT",
+          "source_location": "Table2p4;Figure2",
+          "evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 27,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table2p4;Figure2",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 26,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Table2p4;Figure2",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        },
+        {
+          "field": "Reported P",
+          "old_value": "NR",
+          "source_value": "<0.05 (Table2 footnote)",
+          "final_value": "<0.05 (Table2 footnote)",
+          "source_location": "Table2p4;Figure2",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1LDqtQLq9-kZLP0Vv_G3iiK8QKjy4pRXP/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "final_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table2p4;Figure2",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "1-s2.0-S0020138325005200.pdf",
+      "source_evidence": "PNDPOD3A4(14.3%)C12(48%); percentages inconsistent with27/26.",
+      "drug": "Sufentanil",
+      "route": "IV",
+      "pca_formulation": "2µg/kg in100mL;1.5mL/hbasal;2mLbolus;15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+      "analysis_eligibility": "Not meta-analysis-ready until event denominators are clarified; modality remains unresolved",
+      "notes": "Unblinded supplemental checks ofTable2significance footnotes andTable6P=.024; numeric means/counts alreadycapturedPhaseA. Method30/30retained as reported, not resolved truth."
+    },
+    {
+      "baseline_row": 147,
+      "final": {
+        "_baseline_row": 147,
+        "Canonical study": "Long 2025",
+        "Comparison ID": "LONG25_TEAS_vs_CTRL_VAS24",
+        "Intervention arm": "Perioperative electrical acupoint stimulation",
+        "Comparator arm": "Electrodes/no current",
+        "Outcome family": "Pain",
+        "Outcome/result": "VAS pain intensity, rest/movement unspecified",
+        "Timepoint/window": "24 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 27,
+        "Analyzed n comparator": 26,
+        "Mean intervention": 2.78,
+        "SD intervention": 0.97,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 3.96,
+        "SD comparator": 0.96,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "VAS 0-10",
+        "Reported P": "<0.001",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+        "Derived effect measure": "MD",
+        "Derived effect": -1.1800000000000002,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Hold definitive24h pain pooling pending source-value and modality clarification; table values preserved",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Abstract/Results prose gives active 2.65 ± 0.94; Table 7/Figure 9 gives 2.78 ± 0.97. Master uses the directly tabulated Table 7 value and retains discrepancy",
+        "Source location": "Table 7 / Figure 9",
+        "Source PDF URL": "https://doi.org/10.1016/j.injury.2025.112660",
+        "Record status": "SOURCE-VERIFIED / SOURCE VALUE CONFLICT"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 147,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Long 2025",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LONG25_TEAS_vs_CTRL_VAS24",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative electrical acupoint stimulation",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Electrodes/no current",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "VAS pain intensity, rest/movement unspecified",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 27,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 26,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 2.78,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.97,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 3.96,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.96,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "VAS 0-10",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.001",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -1.1800000000000002,
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Hold definitive24h pain pooling pending source-value and modality clarification; table values preserved",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Abstract/Results prose gives active 2.65 ± 0.94; Table 7/Figure 9 gives 2.78 ± 0.97. Master uses the directly tabulated Table 7 value and retains discrepancy",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 7 / Figure 9",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / SOURCE VALUE CONFLICT",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Outcome/result",
+          "old_value": "VAS pain intensity",
+          "source_value": "VAS pain intensity, rest/movement unspecified",
+          "final_value": "VAS pain intensity, rest/movement unspecified",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "final_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for 24-h pain analysis using Table 7 value",
+          "source_value": "Hold definitive24h pain pooling pending source-value and modality clarification; table values preserved",
+          "final_value": "Hold definitive24h pain pooling pending source-value and modality clarification; table values preserved",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1LDqtQLq9-kZLP0Vv_G3iiK8QKjy4pRXP/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "final_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table7p9 versus abstract/Resultsp5",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "1-s2.0-S0020138325005200.pdf",
+      "source_evidence": "VAS24A2.78±.97C3.96±.96;A2.65±.94in prose conflicts; analyzed27/26.",
+      "drug": "Sufentanil",
+      "route": "IV",
+      "pca_formulation": "2µg/kg in100mL;1.5mL/hbasal;2mLbolus;15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+      "analysis_eligibility": "Hold definitive24h pain pooling pending source-value and modality clarification; table values preserved",
+      "notes": "Unblinded supplemental checks ofTable2significance footnotes andTable6P=.024; numeric means/counts alreadycapturedPhaseA. Method30/30retained as reported, not resolved truth."
+    },
+    {
+      "baseline_row": 148,
+      "final": {
+        "_baseline_row": 148,
+        "Canonical study": "Long 2025",
+        "Comparison ID": "LONG25_TEAS_vs_CTRL_PCIA48VOL",
+        "Intervention arm": "Perioperative electrical acupoint stimulation",
+        "Comparator arm": "Electrodes/no current",
+        "Outcome family": "Opioid demand",
+        "Outcome/result": "PCIA solution consumption",
+        "Timepoint/window": "0–48 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 27,
+        "Analyzed n comparator": 26,
+        "Mean intervention": 86.22,
+        "SD intervention": 4.27,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 89.23,
+        "SD comparator": 3.67,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mL of weight-based sufentanil solution",
+        "Reported P": "0.008",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+        "Derived effect measure": "MD",
+        "Derived effect": -3.010000000000005,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible only as 48-h pump-volume outcome, not as sufentanil mass",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Weight-dependent2µg/kg reservoir per100mL; group mean weight cannot establish mean(weight×volume). Individual doses or weighted totals required.",
+        "Source location": "Table 7 / Figure 9",
+        "Source PDF URL": "https://doi.org/10.1016/j.injury.2025.112660",
+        "Record status": "SOURCE-VERIFIED / DOSE NOT RECONSTRUCTABLE"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 148,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Long 2025",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LONG25_TEAS_vs_CTRL_PCIA48VOL",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative electrical acupoint stimulation",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Electrodes/no current",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid demand",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "PCIA solution consumption",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0–48 h",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 27,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 26,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 86.22,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 4.27,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 89.23,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 3.67,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mL of weight-based sufentanil solution",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.008",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -3.010000000000005,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible only as 48-h pump-volume outcome, not as sufentanil mass",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Weight-dependent2µg/kg reservoir per100mL; group mean weight cannot establish mean(weight×volume). Individual doses or weighted totals required.",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 7 / Figure 9",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / DOSE NOT RECONSTRUCTABLE",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "48 h",
+          "source_value": "0–48 h",
+          "final_value": "0–48 h",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "final_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Reservoir contains 2 µg/kg sufentanil in 100 mL; group body weight is unavailable, so solution volume cannot be converted to group mean opioid mass",
+          "source_value": "Weight-dependent2µg/kg reservoir per100mL; group mean weight cannot establish mean(weight×volume). Individual doses or weighted totals required.",
+          "final_value": "Weight-dependent2µg/kg reservoir per100mL; group mean weight cannot establish mean(weight×volume). Individual doses or weighted totals required.",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1LDqtQLq9-kZLP0Vv_G3iiK8QKjy4pRXP/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "final_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "1-s2.0-S0020138325005200.pdf",
+      "source_evidence": "Cumulative48hPCIAvolumeA86.22±4.27C89.23±3.67mL,n27/26;P=.008.",
+      "drug": "Sufentanil",
+      "route": "IV",
+      "pca_formulation": "2µg/kg in100mL;1.5mL/hbasal;2mLbolus;15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+      "analysis_eligibility": "Eligible only as 48-h pump-volume outcome, not as sufentanil mass; modality remains unresolved",
+      "notes": "Unblinded supplemental checks ofTable2significance footnotes andTable6P=.024; numeric means/counts alreadycapturedPhaseA. Method30/30retained as reported, not resolved truth."
+    },
+    {
+      "baseline_row": 149,
+      "final": {
+        "_baseline_row": 149,
+        "Canonical study": "Long 2025",
+        "Comparison ID": "LONG25_TEAS_vs_CTRL_PCIAPRESS48",
+        "Intervention arm": "Perioperative electrical acupoint stimulation",
+        "Comparator arm": "Electrodes/no current",
+        "Outcome family": "Opioid demand",
+        "Outcome/result": "PCIA compression count",
+        "Timepoint/window": "0–48 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 27,
+        "Analyzed n comparator": 26,
+        "Mean intervention": 7.11,
+        "SD intervention": 2.14,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 8.62,
+        "SD comparator": 1.84,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "presses",
+        "Reported P": "0.008",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+        "Derived effect measure": "MD",
+        "Derived effect": -1.509999999999999,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible as 48-h PCA-demand outcome only",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Do not translate compression count into delivered sufentanil mass",
+        "Source location": "Table 7 / Figure 9",
+        "Source PDF URL": "https://doi.org/10.1016/j.injury.2025.112660",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 149,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Long 2025",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LONG25_TEAS_vs_CTRL_PCIAPRESS48",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative electrical acupoint stimulation",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Electrodes/no current",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid demand",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "PCIA compression count",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0–48 h",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 27,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 26,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 7.11,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 2.14,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 8.62,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 1.84,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "presses",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.008",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -1.509999999999999,
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible as 48-h PCA-demand outcome only",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Do not translate compression count into delivered sufentanil mass",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 7 / Figure 9",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "48 h",
+          "source_value": "0–48 h",
+          "final_value": "0–48 h",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "final_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1LDqtQLq9-kZLP0Vv_G3iiK8QKjy4pRXP/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "final_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table7p9;Figure9caption;methodspp2–3",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "1-s2.0-S0020138325005200.pdf",
+      "source_evidence": "48hPCIAcompressionsA7.11±2.14C8.62±1.84,n27/26;P=.008.",
+      "drug": "Sufentanil",
+      "route": "IV",
+      "pca_formulation": "2µg/kg in100mL;1.5mL/hbasal;2mLbolus;15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+      "analysis_eligibility": "Eligible as 48-h PCA-demand outcome only; modality remains unresolved",
+      "notes": "Unblinded supplemental checks ofTable2significance footnotes andTable6P=.024; numeric means/counts alreadycapturedPhaseA. Method30/30retained as reported, not resolved truth."
+    },
+    {
+      "baseline_row": 150,
+      "final": {
+        "_baseline_row": 150,
+        "Canonical study": "Long 2025",
+        "Comparison ID": "LONG25_TEAS_vs_CTRL_PONV",
+        "Intervention arm": "Perioperative electrical acupoint stimulation",
+        "Comparator arm": "Electrodes/no current",
+        "Outcome family": "PONV",
+        "Outcome/result": "PONV incidence",
+        "Timepoint/window": "Postoperative",
+        "Data type": "Events/total",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 27,
+        "Analyzed n comparator": 26,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 1,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 8,
+        "Unit/scale": "participants",
+        "Reported P": "0.024",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.12037037037037036,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Unspecified postoperative interval sensitivity only after modality clarification",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Adverse-event percentages elsewhere are internally inconsistent; raw 1/27 vs 8/26 is retained",
+        "Source location": "Adverse events / PONV",
+        "Source PDF URL": "https://doi.org/10.1016/j.injury.2025.112660",
+        "Record status": "SOURCE-VERIFIED / PERCENTAGE QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 150,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Long 2025",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LONG25_TEAS_vs_CTRL_PONV",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative electrical acupoint stimulation",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Electrodes/no current",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "PONV incidence",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 27,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 26,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 1,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 8,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.024",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.12037037037037036,
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Unspecified postoperative interval sensitivity only after modality clarification",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Adverse-event percentages elsewhere are internally inconsistent; raw 1/27 vs 8/26 is retained",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Adverse events / PONV",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / PERCENTAGE QC",
+          "source_location": "Table6p8;Resultsp5",
+          "evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Reported P",
+          "old_value": "NR",
+          "source_value": "0.024",
+          "final_value": "0.024",
+          "source_location": "Table6p8;Resultsp5",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "final_value": "Yes: effect arithmetic from reported raw values; no opioid conversion",
+          "source_location": "Table6p8;Resultsp5",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for dichotomous PONV analysis using final analyzed denominators",
+          "source_value": "Unspecified postoperative interval sensitivity only after modality clarification",
+          "final_value": "Unspecified postoperative interval sensitivity only after modality clarification",
+          "source_location": "Table6p8;Resultsp5",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1LDqtQLq9-kZLP0Vv_G3iiK8QKjy4pRXP/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "final_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "Table6p8;Resultsp5",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "1-s2.0-S0020138325005200.pdf",
+      "source_evidence": "PONVA1/27C8/26;χ²5.097,P=.024; exact surveillance interval unspecified.",
+      "drug": "Sufentanil",
+      "route": "IV",
+      "pca_formulation": "2µg/kg in100mL;1.5mL/hbasal;2mLbolus;15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+      "analysis_eligibility": "Unspecified postoperative interval sensitivity only after modality clarification",
+      "notes": "Unblinded supplemental checks ofTable2significance footnotes andTable6P=.024; numeric means/counts alreadycapturedPhaseA. Method30/30retained as reported, not resolved truth."
+    },
+    {
+      "baseline_row": 151,
+      "final": {
+        "_baseline_row": 151,
+        "Canonical study": "Long 2025",
+        "Comparison ID": "LONG25_TEAS_vs_CTRL_OPIOID24",
+        "Intervention arm": "Perioperative electrical acupoint stimulation",
+        "Comparator arm": "Electrodes/no current",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative postoperative sufentanil consumption",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg sufentanil",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "24-h PCIA volume/compressions are not reported; even 48-h volume cannot be converted exactly to sufentanil mass without body weight",
+        "Source location": "Exact 24-h opioid endpoint absent",
+        "Source PDF URL": "https://doi.org/10.1016/j.injury.2025.112660",
+        "Record status": "MISSING / AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 151,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Long 2025",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LONG25_TEAS_vs_CTRL_OPIOID24",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative electrical acupoint stimulation",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Electrodes/no current",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative postoperative sufentanil consumption",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg sufentanil",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "24-h PCIA volume/compressions are not reported; even 48-h volume cannot be converted exactly to sufentanil mass without body weight",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Exact 24-h opioid endpoint absent",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "MISSING / AUTHOR DATA NEEDED",
+          "source_location": "methodspp2–3;Table7p9",
+          "evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 27,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 26,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "methodspp2–3;Table7p9",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1LDqtQLq9-kZLP0Vv_G3iiK8QKjy4pRXP/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "final_value": "https://doi.org/10.1016/j.injury.2025.112660",
+          "source_location": "methodspp2–3;Table7p9",
+          "reason": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "1-s2.0-S0020138325005200.pdf",
+      "source_evidence": "24hopioidnotreported;48hvolume cannot recover0–24hmass.",
+      "drug": "Sufentanil",
+      "route": "IV",
+      "pca_formulation": "2µg/kg in100mL;1.5mL/hbasal;2mLbolus;15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source conflicts preserved; outcome denominators not silently inferred from percentages; all modality-specific pooling held.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis; modality remains unresolved",
+      "notes": "Unblinded supplemental checks ofTable2significance footnotes andTable6P=.024; numeric means/counts alreadycapturedPhaseA. Method30/30retained as reported, not resolved truth."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "LONG25_TEAS_vs_CTRL_PND1",
+      "outcome": "Perioperative neurocognitive disorder (PND)",
+      "time_window": "POD1",
+      "comparison": "ElectricalacupointstimulationAvsno-currentC",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random number table allocation reported.",
+          "source_location": "p2Researchgrouping",
+          "reasoning": "Random number table allocation reported."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment method absent.",
+          "source_location": "p2",
+          "reasoning": "Concealment method absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Only53analyzed baseline; flow timing andPNDdenominators conflict.",
+          "source_location": "Table1;Figure2;Table2",
+          "reasoning": "Only53analyzed baseline; flow timing andPNDdenominators conflict."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Stimulation at tolerance while awake preop/PACU vsno current.",
+          "source_location": "p2Intervention",
+          "reasoning": "Stimulation at tolerance while awake preop/PACU vsno current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Acupuncturist delivers real/current versusnone; masking roles unexplained.",
+          "source_location": "p2",
+          "reasoning": "Acupuncturist delivers real/current versusnone; masking roles unexplained."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "NI",
+          "evidence": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient.",
+          "source_location": "pp2–3",
+          "reasoning": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "NI",
+          "evidence": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT.",
+          "source_location": "p2;Figure2",
+          "reasoning": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Arm allocations/reasons of7missing not given.",
+          "source_location": "Figure2",
+          "reasoning": "Arm allocations/reasons of7missing not given."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV.",
+          "source_location": "pp1–4",
+          "reasoning": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No missingness sensitivity.",
+          "source_location": "p3Statistics",
+          "reasoning": "No missingness sensitivity."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "PY",
+          "evidence": "Withdrawal/follow-up losses may reflect postoperative condition.",
+          "source_location": "p3Results",
+          "reasoning": "Withdrawal/follow-up losses may reflect postoperative condition."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NI",
+          "evidence": "No arm-specific reasons establish likely true-value dependence.",
+          "source_location": "Figure2",
+          "reasoning": "No arm-specific reasons establish likely true-value dependence."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "MMSEdecline≥2 definesPND;VAS0–10;methods available.",
+          "source_location": "p3Indicators",
+          "reasoning": "MMSEdecline≥2 definesPND;VAS0–10;methods available."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "NI",
+          "evidence": "No explicit common assessor or masking role description beyonddoubleblind.",
+          "source_location": "pp2–3",
+          "reasoning": "No explicit common assessor or masking role description beyonddoubleblind."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "NI",
+          "evidence": "Assessor masking not operationally specified.",
+          "source_location": "pp2–3",
+          "reasoning": "Assessor masking not operationally specified."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "MMSEadministration, symptoms or pain responses can depend on knowledge.",
+          "source_location": "p3Indicators",
+          "reasoning": "MMSEadministration, symptoms or pain responses can depend on knowledge."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "Actual likely influence not established.",
+          "source_location": "pp2–3",
+          "reasoning": "Actual likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable.",
+          "source_location": "p10registration;retrievalattempt",
+          "reasoning": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple timepoints;original registered measures unavailable.",
+          "source_location": "p3;p10",
+          "reasoning": "Multiple timepoints;original registered measures unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No originalSAP; denominators/statistics inconsistent acrosssource.",
+          "source_location": "Tables2,7",
+          "reasoning": "No originalSAP; denominators/statistics inconsistent acrosssource."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment and randomization chronology unclear.",
+          "source_location": "p2;Figure2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Trial deviations and assignment analysis insufficiently described.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "7losses could depend on outcome but actual likely dependence unestablished.",
+          "source_location": "Figure2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Masking of assessor uncertain,possible subjective influence.",
+          "source_location": "p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No verifiable datedanalysisplan.",
+          "source_location": "p10"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Interacting unresolved randomization/analysis chronology, missingness and ascertainment substantially lower confidence; numericalPNDdenominators themselves are held.",
+      "old_selected_overall": "High",
+      "changes_from_old": "OldoverallHigh retained;D3High→Some concerns because actual dependence unestablished, overallHigh rests on interacting concerns."
+    },
+    {
+      "result_id": "LONG25_TEAS_vs_CTRL_PND3",
+      "outcome": "Perioperative neurocognitive disorder (PND)",
+      "time_window": "POD3",
+      "comparison": "ElectricalacupointstimulationAvsno-currentC",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random number table allocation reported.",
+          "source_location": "p2Researchgrouping",
+          "reasoning": "Random number table allocation reported."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment method absent.",
+          "source_location": "p2",
+          "reasoning": "Concealment method absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Only53analyzed baseline; flow timing andPNDdenominators conflict.",
+          "source_location": "Table1;Figure2;Table2",
+          "reasoning": "Only53analyzed baseline; flow timing andPNDdenominators conflict."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Stimulation at tolerance while awake preop/PACU vsno current.",
+          "source_location": "p2Intervention",
+          "reasoning": "Stimulation at tolerance while awake preop/PACU vsno current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Acupuncturist delivers real/current versusnone; masking roles unexplained.",
+          "source_location": "p2",
+          "reasoning": "Acupuncturist delivers real/current versusnone; masking roles unexplained."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "NI",
+          "evidence": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient.",
+          "source_location": "pp2–3",
+          "reasoning": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "NI",
+          "evidence": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT.",
+          "source_location": "p2;Figure2",
+          "reasoning": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Arm allocations/reasons of7missing not given.",
+          "source_location": "Figure2",
+          "reasoning": "Arm allocations/reasons of7missing not given."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV.",
+          "source_location": "pp1–4",
+          "reasoning": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No missingness sensitivity.",
+          "source_location": "p3Statistics",
+          "reasoning": "No missingness sensitivity."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "PY",
+          "evidence": "Withdrawal/follow-up losses may reflect postoperative condition.",
+          "source_location": "p3Results",
+          "reasoning": "Withdrawal/follow-up losses may reflect postoperative condition."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NI",
+          "evidence": "No arm-specific reasons establish likely true-value dependence.",
+          "source_location": "Figure2",
+          "reasoning": "No arm-specific reasons establish likely true-value dependence."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "MMSEdecline≥2 definesPND;VAS0–10;methods available.",
+          "source_location": "p3Indicators",
+          "reasoning": "MMSEdecline≥2 definesPND;VAS0–10;methods available."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "NI",
+          "evidence": "No explicit common assessor or masking role description beyonddoubleblind.",
+          "source_location": "pp2–3",
+          "reasoning": "No explicit common assessor or masking role description beyonddoubleblind."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "NI",
+          "evidence": "Assessor masking not operationally specified.",
+          "source_location": "pp2–3",
+          "reasoning": "Assessor masking not operationally specified."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "MMSEadministration, symptoms or pain responses can depend on knowledge.",
+          "source_location": "p3Indicators",
+          "reasoning": "MMSEadministration, symptoms or pain responses can depend on knowledge."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "Actual likely influence not established.",
+          "source_location": "pp2–3",
+          "reasoning": "Actual likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable.",
+          "source_location": "p10registration;retrievalattempt",
+          "reasoning": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple timepoints;original registered measures unavailable.",
+          "source_location": "p3;p10",
+          "reasoning": "Multiple timepoints;original registered measures unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No originalSAP; denominators/statistics inconsistent acrosssource.",
+          "source_location": "Tables2,7",
+          "reasoning": "No originalSAP; denominators/statistics inconsistent acrosssource."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment and randomization chronology unclear.",
+          "source_location": "p2;Figure2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Trial deviations and assignment analysis insufficiently described.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "7losses could depend on outcome but actual likely dependence unestablished.",
+          "source_location": "Figure2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Masking of assessor uncertain,possible subjective influence.",
+          "source_location": "p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No verifiable datedanalysisplan.",
+          "source_location": "p10"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Interacting unresolved randomization/analysis chronology, missingness and ascertainment substantially lower confidence; numericalPNDdenominators themselves are held.",
+      "old_selected_overall": "High",
+      "changes_from_old": "OldoverallHigh retained;D3High→Some concerns because actual dependence unestablished, overallHigh rests on interacting concerns."
+    },
+    {
+      "result_id": "LONG25_TEAS_vs_CTRL_VAS24",
+      "outcome": "VAS pain intensity, rest/movement unspecified",
+      "time_window": "24 h",
+      "comparison": "ElectricalacupointstimulationAvsno-currentC",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random number table allocation reported.",
+          "source_location": "p2Researchgrouping",
+          "reasoning": "Random number table allocation reported."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment method absent.",
+          "source_location": "p2",
+          "reasoning": "Concealment method absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Only53analyzed baseline; flow timing andPNDdenominators conflict.",
+          "source_location": "Table1;Figure2;Table2",
+          "reasoning": "Only53analyzed baseline; flow timing andPNDdenominators conflict."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Stimulation at tolerance while awake preop/PACU vsno current.",
+          "source_location": "p2Intervention",
+          "reasoning": "Stimulation at tolerance while awake preop/PACU vsno current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Acupuncturist delivers real/current versusnone; masking roles unexplained.",
+          "source_location": "p2",
+          "reasoning": "Acupuncturist delivers real/current versusnone; masking roles unexplained."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "NI",
+          "evidence": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient.",
+          "source_location": "pp2–3",
+          "reasoning": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "NI",
+          "evidence": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT.",
+          "source_location": "p2;Figure2",
+          "reasoning": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Arm allocations/reasons of7missing not given.",
+          "source_location": "Figure2",
+          "reasoning": "Arm allocations/reasons of7missing not given."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV.",
+          "source_location": "pp1–4",
+          "reasoning": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No missingness sensitivity.",
+          "source_location": "p3Statistics",
+          "reasoning": "No missingness sensitivity."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "PY",
+          "evidence": "Withdrawal/follow-up losses may reflect postoperative condition.",
+          "source_location": "p3Results",
+          "reasoning": "Withdrawal/follow-up losses may reflect postoperative condition."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NI",
+          "evidence": "No arm-specific reasons establish likely true-value dependence.",
+          "source_location": "Figure2",
+          "reasoning": "No arm-specific reasons establish likely true-value dependence."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "VAS orPONVclinicalendpoint; PONVwindowuncertainty is applicability concern.",
+          "source_location": "p3",
+          "reasoning": "VAS orPONVclinicalendpoint; PONVwindowuncertainty is applicability concern."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "NI",
+          "evidence": "No explicit common assessor or masking role description beyonddoubleblind.",
+          "source_location": "pp2–3",
+          "reasoning": "No explicit common assessor or masking role description beyonddoubleblind."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "PY",
+          "evidence": "Participant reports pain/nausea after tolerance-level stimulation versusno current.",
+          "source_location": "p2Intervention;p3Indicators",
+          "reasoning": "Participant reports pain/nausea after tolerance-level stimulation versusno current."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "MMSEadministration, symptoms or pain responses can depend on knowledge.",
+          "source_location": "p3Indicators",
+          "reasoning": "MMSEadministration, symptoms or pain responses can depend on knowledge."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "Actual likely influence not established.",
+          "source_location": "pp2–3",
+          "reasoning": "Actual likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable.",
+          "source_location": "p10registration;retrievalattempt",
+          "reasoning": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple timepoints;original registered measures unavailable.",
+          "source_location": "p3;p10",
+          "reasoning": "Multiple timepoints;original registered measures unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No originalSAP; denominators/statistics inconsistent acrosssource.",
+          "source_location": "Tables2,7",
+          "reasoning": "No originalSAP; denominators/statistics inconsistent acrosssource."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment and randomization chronology unclear.",
+          "source_location": "p2;Figure2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Trial deviations and assignment analysis insufficiently described.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "7losses could depend on outcome but actual likely dependence unestablished.",
+          "source_location": "Figure2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Masking of assessor uncertain,possible subjective influence.",
+          "source_location": "p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No verifiable datedanalysisplan.",
+          "source_location": "p10"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Interacting unresolved randomization/analysis chronology, missingness and ascertainment substantially lower confidence; numericalPNDdenominators themselves are held.",
+      "old_selected_overall": "High",
+      "changes_from_old": "OldoverallHigh retained;D3High→Some concerns because actual dependence unestablished, overallHigh rests on interacting concerns."
+    },
+    {
+      "result_id": "LONG25_TEAS_vs_CTRL_PCIA48VOL",
+      "outcome": "PCIA solution consumption",
+      "time_window": "0–48 h",
+      "comparison": "ElectricalacupointstimulationAvsno-currentC",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random number table allocation reported.",
+          "source_location": "p2Researchgrouping",
+          "reasoning": "Random number table allocation reported."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment method absent.",
+          "source_location": "p2",
+          "reasoning": "Concealment method absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Only53analyzed baseline; flow timing andPNDdenominators conflict.",
+          "source_location": "Table1;Figure2;Table2",
+          "reasoning": "Only53analyzed baseline; flow timing andPNDdenominators conflict."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Stimulation at tolerance while awake preop/PACU vsno current.",
+          "source_location": "p2Intervention",
+          "reasoning": "Stimulation at tolerance while awake preop/PACU vsno current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Acupuncturist delivers real/current versusnone; masking roles unexplained.",
+          "source_location": "p2",
+          "reasoning": "Acupuncturist delivers real/current versusnone; masking roles unexplained."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "NI",
+          "evidence": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient.",
+          "source_location": "pp2–3",
+          "reasoning": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "NI",
+          "evidence": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT.",
+          "source_location": "p2;Figure2",
+          "reasoning": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Arm allocations/reasons of7missing not given.",
+          "source_location": "Figure2",
+          "reasoning": "Arm allocations/reasons of7missing not given."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV.",
+          "source_location": "pp1–4",
+          "reasoning": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No missingness sensitivity.",
+          "source_location": "p3Statistics",
+          "reasoning": "No missingness sensitivity."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "PY",
+          "evidence": "Withdrawal/follow-up losses may reflect postoperative condition.",
+          "source_location": "p3Results",
+          "reasoning": "Withdrawal/follow-up losses may reflect postoperative condition."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NI",
+          "evidence": "No arm-specific reasons establish likely true-value dependence.",
+          "source_location": "Figure2",
+          "reasoning": "No arm-specific reasons establish likely true-value dependence."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Pump count orvolume objectively records thisproxy.",
+          "source_location": "p3;Table7",
+          "reasoning": "Pump count orvolume objectively records thisproxy."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "SamePCIAparametersand48hrecording.",
+          "source_location": "p2–3",
+          "reasoning": "SamePCIAparametersand48hrecording."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "NI",
+          "evidence": "Recorder masking not detailed.",
+          "source_location": "p3",
+          "reasoning": "Recorder masking not detailed."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "PN",
+          "evidence": "Recorded pump amount/count minimally subject to assessor judgment; self-dosing remainsbehavioral.",
+          "source_location": "Table7",
+          "reasoning": "Recorded pump amount/count minimally subject to assessor judgment; self-dosing remainsbehavioral."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable.",
+          "source_location": "p10registration;retrievalattempt",
+          "reasoning": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple timepoints;original registered measures unavailable.",
+          "source_location": "p3;p10",
+          "reasoning": "Multiple timepoints;original registered measures unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No originalSAP; denominators/statistics inconsistent acrosssource.",
+          "source_location": "Tables2,7",
+          "reasoning": "No originalSAP; denominators/statistics inconsistent acrosssource."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment and randomization chronology unclear.",
+          "source_location": "p2;Figure2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Trial deviations and assignment analysis insufficiently described.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "7losses could depend on outcome but actual likely dependence unestablished.",
+          "source_location": "Figure2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Objective pump recording; does not establish opioidmass.",
+          "source_location": "p2–3;Table7"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No verifiable datedanalysisplan.",
+          "source_location": "p10"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Interacting unresolved randomization/analysis chronology, missingness and ascertainment substantially lower confidence; numericalPNDdenominators themselves are held.",
+      "old_selected_overall": "High",
+      "changes_from_old": "OldoverallHigh retained;D3High→Some concerns because actual dependence unestablished, overallHigh rests on interacting concerns."
+    },
+    {
+      "result_id": "LONG25_TEAS_vs_CTRL_PCIAPRESS48",
+      "outcome": "PCIA compression count",
+      "time_window": "0–48 h",
+      "comparison": "ElectricalacupointstimulationAvsno-currentC",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random number table allocation reported.",
+          "source_location": "p2Researchgrouping",
+          "reasoning": "Random number table allocation reported."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment method absent.",
+          "source_location": "p2",
+          "reasoning": "Concealment method absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Only53analyzed baseline; flow timing andPNDdenominators conflict.",
+          "source_location": "Table1;Figure2;Table2",
+          "reasoning": "Only53analyzed baseline; flow timing andPNDdenominators conflict."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Stimulation at tolerance while awake preop/PACU vsno current.",
+          "source_location": "p2Intervention",
+          "reasoning": "Stimulation at tolerance while awake preop/PACU vsno current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Acupuncturist delivers real/current versusnone; masking roles unexplained.",
+          "source_location": "p2",
+          "reasoning": "Acupuncturist delivers real/current versusnone; masking roles unexplained."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "NI",
+          "evidence": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient.",
+          "source_location": "pp2–3",
+          "reasoning": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "NI",
+          "evidence": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT.",
+          "source_location": "p2;Figure2",
+          "reasoning": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Arm allocations/reasons of7missing not given.",
+          "source_location": "Figure2",
+          "reasoning": "Arm allocations/reasons of7missing not given."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV.",
+          "source_location": "pp1–4",
+          "reasoning": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No missingness sensitivity.",
+          "source_location": "p3Statistics",
+          "reasoning": "No missingness sensitivity."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "PY",
+          "evidence": "Withdrawal/follow-up losses may reflect postoperative condition.",
+          "source_location": "p3Results",
+          "reasoning": "Withdrawal/follow-up losses may reflect postoperative condition."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NI",
+          "evidence": "No arm-specific reasons establish likely true-value dependence.",
+          "source_location": "Figure2",
+          "reasoning": "No arm-specific reasons establish likely true-value dependence."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Pump count orvolume objectively records thisproxy.",
+          "source_location": "p3;Table7",
+          "reasoning": "Pump count orvolume objectively records thisproxy."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "SamePCIAparametersand48hrecording.",
+          "source_location": "p2–3",
+          "reasoning": "SamePCIAparametersand48hrecording."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "NI",
+          "evidence": "Recorder masking not detailed.",
+          "source_location": "p3",
+          "reasoning": "Recorder masking not detailed."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "PN",
+          "evidence": "Recorded pump amount/count minimally subject to assessor judgment; self-dosing remainsbehavioral.",
+          "source_location": "Table7",
+          "reasoning": "Recorded pump amount/count minimally subject to assessor judgment; self-dosing remainsbehavioral."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable.",
+          "source_location": "p10registration;retrievalattempt",
+          "reasoning": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple timepoints;original registered measures unavailable.",
+          "source_location": "p3;p10",
+          "reasoning": "Multiple timepoints;original registered measures unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No originalSAP; denominators/statistics inconsistent acrosssource.",
+          "source_location": "Tables2,7",
+          "reasoning": "No originalSAP; denominators/statistics inconsistent acrosssource."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment and randomization chronology unclear.",
+          "source_location": "p2;Figure2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Trial deviations and assignment analysis insufficiently described.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "7losses could depend on outcome but actual likely dependence unestablished.",
+          "source_location": "Figure2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Objective pump recording; does not establish opioidmass.",
+          "source_location": "p2–3;Table7"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No verifiable datedanalysisplan.",
+          "source_location": "p10"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Interacting unresolved randomization/analysis chronology, missingness and ascertainment substantially lower confidence; numericalPNDdenominators themselves are held.",
+      "old_selected_overall": "High",
+      "changes_from_old": "OldoverallHigh retained;D3High→Some concerns because actual dependence unestablished, overallHigh rests on interacting concerns."
+    },
+    {
+      "result_id": "LONG25_TEAS_vs_CTRL_PONV",
+      "outcome": "PONV incidence",
+      "time_window": "Postoperative",
+      "comparison": "ElectricalacupointstimulationAvsno-currentC",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random number table allocation reported.",
+          "source_location": "p2Researchgrouping",
+          "reasoning": "Random number table allocation reported."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment method absent.",
+          "source_location": "p2",
+          "reasoning": "Concealment method absent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Only53analyzed baseline; flow timing andPNDdenominators conflict.",
+          "source_location": "Table1;Figure2;Table2",
+          "reasoning": "Only53analyzed baseline; flow timing andPNDdenominators conflict."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Stimulation at tolerance while awake preop/PACU vsno current.",
+          "source_location": "p2Intervention",
+          "reasoning": "Stimulation at tolerance while awake preop/PACU vsno current."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Acupuncturist delivers real/current versusnone; masking roles unexplained.",
+          "source_location": "p2",
+          "reasoning": "Acupuncturist delivers real/current versusnone; masking roles unexplained."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "NI",
+          "evidence": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient.",
+          "source_location": "pp2–3",
+          "reasoning": "No trial-context deviation details; standardized anesthesia/PCIA alone insufficient."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "NI",
+          "evidence": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT.",
+          "source_location": "p2;Figure2",
+          "reasoning": "30/30randomized methods vs53randomized flow;7loss timing unknown, noITT."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NI",
+          "evidence": "Arm allocations/reasons of7missing not given.",
+          "source_location": "Figure2",
+          "reasoning": "Arm allocations/reasons of7missing not given."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "N",
+          "evidence": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV.",
+          "source_location": "pp1–4",
+          "reasoning": "53of60reportedly randomized; more than trivial loss relative to sparsePND/PONV."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No missingness sensitivity.",
+          "source_location": "p3Statistics",
+          "reasoning": "No missingness sensitivity."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "PY",
+          "evidence": "Withdrawal/follow-up losses may reflect postoperative condition.",
+          "source_location": "p3Results",
+          "reasoning": "Withdrawal/follow-up losses may reflect postoperative condition."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NI",
+          "evidence": "No arm-specific reasons establish likely true-value dependence.",
+          "source_location": "Figure2",
+          "reasoning": "No arm-specific reasons establish likely true-value dependence."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "VAS orPONVclinicalendpoint; PONVwindowuncertainty is applicability concern.",
+          "source_location": "p3",
+          "reasoning": "VAS orPONVclinicalendpoint; PONVwindowuncertainty is applicability concern."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "NI",
+          "evidence": "No explicit common assessor or masking role description beyonddoubleblind.",
+          "source_location": "pp2–3",
+          "reasoning": "No explicit common assessor or masking role description beyonddoubleblind."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "PY",
+          "evidence": "Participant reports pain/nausea after tolerance-level stimulation versusno current.",
+          "source_location": "p2Intervention;p3Indicators",
+          "reasoning": "Participant reports pain/nausea after tolerance-level stimulation versusno current."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "MMSEadministration, symptoms or pain responses can depend on knowledge.",
+          "source_location": "p3Indicators",
+          "reasoning": "MMSEadministration, symptoms or pain responses can depend on knowledge."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "Actual likely influence not established.",
+          "source_location": "pp2–3",
+          "reasoning": "Actual likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable.",
+          "source_location": "p10registration;retrievalattempt",
+          "reasoning": "Registration asserted before enrollment; official record405blocked, datedSAP unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple timepoints;original registered measures unavailable.",
+          "source_location": "p3;p10",
+          "reasoning": "Multiple timepoints;original registered measures unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No originalSAP; denominators/statistics inconsistent acrosssource.",
+          "source_location": "Tables2,7",
+          "reasoning": "No originalSAP; denominators/statistics inconsistent acrosssource."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment and randomization chronology unclear.",
+          "source_location": "p2;Figure2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Trial deviations and assignment analysis insufficiently described.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "7losses could depend on outcome but actual likely dependence unestablished.",
+          "source_location": "Figure2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Masking of assessor uncertain,possible subjective influence.",
+          "source_location": "p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No verifiable datedanalysisplan.",
+          "source_location": "p10"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Interacting unresolved randomization/analysis chronology, missingness and ascertainment substantially lower confidence; numericalPNDdenominators themselves are held.",
+      "old_selected_overall": "High",
+      "changes_from_old": "OldoverallHigh retained;D3High→Some concerns because actual dependence unestablished, overallHigh rests on interacting concerns."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Only48hvolume fromweight-dependentconcentration;no24hquantity.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Sufentanil",
+    "route": "IV",
+    "unit": "mLsolution",
+    "raw_values": {
+      "mean_i": 86.22,
+      "sd_i": 4.27,
+      "mean_c": 89.23,
+      "sd_c": 3.67
+    },
+    "comparison_selection": "A/C",
+    "multiarm_handling": "Twoarms",
+    "source_location": "Table7,Fig9"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Needleversuspatch;randomization/losschronology;PNDdenominators;VAS24conflict;actual24hopioid",
+      "why_it_matters": "SeparateTEAS/EA,valid denominators andeffectsize cannot be established.",
+      "analysis_affected": "Allmodality-specific pooling;PND,pain,opioid",
+      "can_proceed_without": "Retain rawsource records;PONV/pumpvolumequalitative only pendingmodality.",
+      "priority": "HIGH",
+      "exact_question": "Were needlesinserted orsurfacepatchesused? Clarify30/30randomizationversusFigure253grouping,arm-specificlosses,PNDdenominators,Table7VAS24A2.78±.97versusprose2.65±.94,andprovideactual0–24hsystemicopioidmean/SD."
+    }
+  ],
+  "summary": "7rowsreviewed;sourcePNDdenominatorsheld,VASconflictheld,modalityunresolved;48hvolume cannotenter24hopioid.6RoBassessmentswithoverallHigh."
+}

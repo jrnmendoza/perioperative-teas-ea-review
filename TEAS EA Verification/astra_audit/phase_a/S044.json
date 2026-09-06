@@ -1,0 +1,379 @@
+{
+  "Study_ID": "S044",
+  "Study": "Jin 2023",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "identity": {
+    "title": "Efficacy of electroacupuncture combined with intravenous patient-controlled analgesia after cesarean delivery: a randomized clinical trial",
+    "year": 2023,
+    "doi": "10.1016/j.ajogmf.2022.100826",
+    "pdf": "009_jin_2023.pdf"
+  },
+  "source_read": "All9 pages; missing tables2/3 recovered visually from rotated PDF pages5/6; official CTgov API and publisher adverse-event supplement read.",
+  "arms": {
+    "order": [
+      "sham",
+      "2HzEA",
+      "20/100HzEA"
+    ],
+    "randomized": [
+      58,
+      58,
+      58
+    ],
+    "analyzed": [
+      52,
+      53,
+      53
+    ],
+    "modality": "EA",
+    "population": "Cesarean delivery age22–40 registry; general anesthesia not specified in article, registry, or retrieved supplement"
+  },
+  "results": {
+    "pump_compressions": {
+      "format": "median Q1 Q3",
+      "location": "p5 Table2",
+      "h6": [
+        [
+          1,
+          0,
+          2.8
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "h12": [
+        [
+          3,
+          1,
+          6.8
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "h24": [
+        [
+          5.5,
+          3,
+          10
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "h48": [
+        [
+          9,
+          4.3,
+          12
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          4.5
+        ]
+      ]
+    },
+    "fentanyl": {
+      "format": "mean SD; mL NOT mass",
+      "location": "p6 Table3",
+      "h6": [
+        [
+          14.61,
+          6.55
+        ],
+        [
+          10.16,
+          5.21
+        ],
+        [
+          11.49,
+          4.21
+        ]
+      ],
+      "h12": [
+        [
+          30.29,
+          10.47
+        ],
+        [
+          20.32,
+          8.69
+        ],
+        [
+          22.09,
+          8.32
+        ]
+      ],
+      "h24": [
+        [
+          56.54,
+          12.5
+        ],
+        [
+          39.31,
+          15.58
+        ],
+        [
+          45.72,
+          16.92
+        ]
+      ],
+      "h48": [
+        [
+          94.88,
+          9.91
+        ],
+        [
+          82.41,
+          21.18
+        ],
+        [
+          83.76,
+          17.91
+        ]
+      ],
+      "route": "IV PCIA",
+      "concentration": "Insufficient information / not reported.",
+      "rescue": "anti-inflammatory analgesics allowed for unbearable pain, specific drug/dose not reported",
+      "eligibility": "Hold, no concentration or general-anesthesia confirmation"
+    },
+    "pain": {
+      "format": "mean SD, pain scale range/name not specified in article",
+      "location": "p6 Table3",
+      "h6": [
+        [
+          7.23,
+          1.13
+        ],
+        [
+          7.17,
+          1.21
+        ],
+        [
+          6.87,
+          1.32
+        ]
+      ],
+      "h12": [
+        [
+          4.71,
+          0.92
+        ],
+        [
+          2.62,
+          0.84
+        ],
+        [
+          2.42,
+          0.77
+        ]
+      ],
+      "h24": [
+        [
+          3.54,
+          0.75
+        ],
+        [
+          1.15,
+          0.69
+        ],
+        [
+          1.15,
+          0.69
+        ]
+      ],
+      "h48": [
+        [
+          2.48,
+          0.67
+        ],
+        [
+          0.62,
+          0.48
+        ],
+        [
+          0.58,
+          0.49
+        ]
+      ]
+    },
+    "first_exhaust": {
+      "location": "p6 Table3",
+      "format": "mean SD hours",
+      "values": [
+        [
+          32.19,
+          12.93
+        ],
+        [
+          30.77,
+          13.1
+        ],
+        [
+          29.88,
+          14.07
+        ]
+      ]
+    },
+    "ponv": "Insufficient information / not reported.",
+    "qor": "Insufficient information / not reported."
+  },
+  "source_conflicts": [
+    "AbstractITT174 vs tablesn158.",
+    "Registry open-label actual-point nonpowered acupuncture once/day vs paper nonpenetrating nonpoint sham and4sessions.",
+    "Retrospective registration relative to recruitment start.",
+    "Fentanyl expressedmL; no mass conversion available.",
+    "General anesthesia unconfirmed; cesarean surgery alone not sufficient eligibility evidence."
+  ],
+  "rob2_independent": {
+    "common": {
+      "1.1": [
+        "NI",
+        "p2 generated at hospital, no random method specified"
+      ],
+      "1.2": [
+        "PY",
+        "p2 sealed-envelope assignment, safeguards not fully described"
+      ],
+      "1.3": [
+        "NI",
+        "p4 Table1 only completers53/53/52 despite ITT label"
+      ],
+      "2.1": [
+        "NI",
+        "Article single blinded with perceptibly different stimulation, reported blinding indices inconsistent with wrong-guess percentages; registry open label"
+      ],
+      "2.2": [
+        "Y",
+        "p2 acupuncturists explicitly unblinded"
+      ],
+      "2.3": [
+        "PN",
+        "Rescue anti-inflammatory analgesics permitted by protocol; no described trial-context deviations"
+      ],
+      "2.4": [
+        "NA",
+        "2.3PN"
+      ],
+      "2.5": [
+        "NA",
+        "2.4NA"
+      ],
+      "2.6": [
+        "PY",
+        "Completer/mITT analysis in allocated groups, missing outcomes assessed D3; ITT174 claim unsupported by table denominators"
+      ],
+      "2.7": [
+        "NA",
+        "2.6PY"
+      ],
+      "3.1": [
+        "N",
+        "p3 16/174 dropped out, including unsatisfying effects; tables158"
+      ],
+      "3.2": [
+        "N",
+        "No demonstrated unbiased imputation/sensitivity"
+      ],
+      "3.3": [
+        "Y",
+        "Unsatisfying effects explicitly among dropout reasons"
+      ],
+      "3.4": [
+        "PY",
+        "Dropout related to unsatisfying effects makes outcome-dependent missingness likely"
+      ],
+      "4.1": [
+        "N",
+        "Electronic pump compressions appropriate for count endpoint, not drug dose"
+      ],
+      "4.2": [
+        "PN",
+        "Same scheduled assessments, pump details missing"
+      ],
+      "4.3": [
+        "N",
+        "p2 outcome assessors blinded; count electronic"
+      ],
+      "4.4": [
+        "NA",
+        "4.3N"
+      ],
+      "4.5": [
+        "NA",
+        "4.3N"
+      ],
+      "5.1": [
+        "NI",
+        "NCT04879212 first submitted2021-04-18/postedMay10 after startJan1; no dated SAP obtained"
+      ],
+      "5.2": [
+        "NI",
+        "Registry only48h pump counts; other windows not prospectively established"
+      ],
+      "5.3": [
+        "NI",
+        "Registry no SAP, ITT label conflicts completer tables; analysis-selection basis not established"
+      ]
+    },
+    "subjective": {
+      "4.3": [
+        "NI",
+        "Subjective participant report; masking uncertain"
+      ],
+      "4.4": [
+        "Y",
+        "Pain/exhaust affected by perception"
+      ],
+      "4.5": [
+        "NI",
+        "Actual influence not established"
+      ]
+    },
+    "domains": [
+      "Some concerns",
+      "Low",
+      "High",
+      "Low for recorded pump/volume; Some concerns subjective",
+      "Some concerns"
+    ],
+    "overall": "High",
+    "reason": "Outcome-dependent dropout including unsatisfying effects and no robust missing-data handling."
+  },
+  "retrieval_attempts": [
+    "Official CTgov API v2 full record read NCT04879212, no general anesthesia or PCA concentration.",
+    "Publisher fulltext403; Crossref and ElsevierAPI identifyPII S2589933322002567.",
+    "Publisher mmc1.docx successfully downloaded, only adverse-event table; no protocol or blinding table.",
+    "mmc2.docx/.pdf/.doc each404; no local supplement found."
+  ]
+}

@@ -1,0 +1,2895 @@
+{
+  "Study_ID": "S015",
+  "Study": "Xiong 2021",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first page verified",
+    "title": "Transcutaneous Electrical Acupoint Stimulation Combined with Dexamethasone and Tropisetron Prevents Postoperative Nausea and Vomiting in Female Patients Undergoing Laparoscopic Sleeve Gastrectomy: a Prospective, Randomized Controlled Trial",
+    "year": 2021,
+    "doi": "10.1007/s11695-020-05205-9",
+    "pdf_files": [
+      "covidence_431_full_article.pdf"
+    ],
+    "randomized_arms": {
+      "TEAS": 31,
+      "control": 31
+    },
+    "analyzed_arms": {
+      "TEAS": 31,
+      "control": 31
+    },
+    "modality": "TEAS",
+    "comparator_class": "no-current sham plus same dexamethasone10mg and tropisetron4mg",
+    "independence": "No duplicate established from reviewed source",
+    "source_locations": "Complete publication; see Phase A and row-specific locators",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 56,
+      "final": {
+        "Canonical study": "Xiong 2021",
+        "Comparison ID": "XIONG21_TEAS_vs_CTRL_PONV48",
+        "Intervention arm": "TEAS + dexamethasone + tropisetron",
+        "Comparator arm": "No-current sham TEAS + dexamethasone + tropisetron",
+        "Outcome family": "PONV",
+        "Outcome/result": "Any PONV",
+        "Timepoint/window": "Within 48 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 31,
+        "Randomized n comparator": 31,
+        "Analyzed n intervention": 31,
+        "Analyzed n comparator": 31,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 13,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 24,
+        "Unit/scale": "participants",
+        "Reported P": "0.004",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Event counts directly reported; RR arithmetic",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.5416666666666667,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible compositePONV0–48h withHighRoB, shamstratum; keepdistinctfrom0–24h.",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+        "Source location": "p1916 Table2; p1917 Table3",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xiong 2021",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XIONG21_TEAS_vs_CTRL_PONV48",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + dexamethasone + tropisetron",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Any PONV",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Within 48 h",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 31,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 31,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 31,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 31,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 13,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 24,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.004",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Event counts directly reported; RR arithmetic",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.5416666666666667,
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible compositePONV0–48h withHighRoB, shamstratum; keepdistinctfrom0–24h.",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1916 Table2; p1917 Table3",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Comparator arm",
+          "old_value": "Dexamethasone + tropisetron",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "final_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "reason": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Event counts directly reported; RR arithmetic",
+          "final_value": "Event counts directly reported; RR arithmetic",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "reason": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for dichotomous 48-h PONV analysis",
+          "source_value": "Eligible compositePONV0–48h withHighRoB, shamstratum; keepdistinctfrom0–24h.",
+          "final_value": "Eligible compositePONV0–48h withHighRoB, shamstratum; keepdistinctfrom0–24h.",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "reason": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Participant blinding intended but active postoperative tingling may have revealed allocation",
+          "source_value": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "final_value": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "reason": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Abstract / 48-h PONV result",
+          "source_value": "p1916 Table2; p1917 Table3",
+          "final_value": "p1916 Table2; p1917 Table3",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "reason": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1sNaquYeWpsts7_e3XYP9c0CwM-tbQS6T/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "reason": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1916 Table2; p1917 Table3",
+          "reason": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_431_full_article.pdf",
+      "source_evidence": "AnyPONV0–48h13/31vs24/31,P=.004; directcounts. ArithmeticRR13/24=.5416667; Table2prints.39,Table3prints.52, neither equals raw risk ratio.",
+      "drug": "sufentanil; report-derived morphine equivalents/kg",
+      "route": "PCA route ambiguous: p1915 prints intrathecal (PCIA); do not silently infer IV",
+      "pca_formulation": "sufentanil1.5ug/h background,1ug bolus20min lockout; background increased in3TEAS/4controls for moderate pain",
+      "rescue_regimen": "sufentanil5ug at patient request; metoclopramide10mgIV then ondansetron/tropisetron4mg",
+      "critical_qc": "Published RR inconsistent with events; use counts. Sensory unmasking affects subjective composite.",
+      "analysis_eligibility": "Eligible compositePONV0–48h withHighRoB, shamstratum; keepdistinctfrom0–24h.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 57,
+      "final": {
+        "Canonical study": "Xiong 2021",
+        "Comparison ID": "XIONG21_TEAS_vs_CTRL_CIPONV",
+        "Intervention arm": "TEAS + dexamethasone + tropisetron",
+        "Comparator arm": "No-current sham TEAS + dexamethasone + tropisetron",
+        "Outcome family": "PONV",
+        "Outcome/result": "Clinically important PONV",
+        "Timepoint/window": "Within 48 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 31,
+        "Randomized n comparator": 31,
+        "Analyzed n intervention": 31,
+        "Analyzed n comparator": 31,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 5,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 15,
+        "Unit/scale": "participants",
+        "Reported P": "0.007",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Event counts direct; RR arithmetic",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.3333333333333333,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible clinically-importantPONV0–48h separately,HighRoB.",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Subjective severity; printedRR wrong relative counts.",
+        "Source location": "p1916 Table2",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xiong 2021",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XIONG21_TEAS_vs_CTRL_CIPONV",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + dexamethasone + tropisetron",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Clinically important PONV",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Within 48 h",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 31,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 31,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 31,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 31,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 5,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 15,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.007",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Event counts direct; RR arithmetic",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.3333333333333333,
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible clinically-importantPONV0–48h separately,HighRoB.",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Subjective severity; printedRR wrong relative counts.",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1916 Table2",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1916 Table2",
+          "evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Comparator arm",
+          "old_value": "Dexamethasone + tropisetron",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "final_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1916 Table2",
+          "reason": "Subjective severity; printedRR wrong relative counts.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Event counts direct; RR arithmetic",
+          "final_value": "Event counts direct; RR arithmetic",
+          "source_location": "p1916 Table2",
+          "reason": "Subjective severity; printedRR wrong relative counts.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for dichotomous clinically-important PONV analysis",
+          "source_value": "Eligible clinically-importantPONV0–48h separately,HighRoB.",
+          "final_value": "Eligible clinically-importantPONV0–48h separately,HighRoB.",
+          "source_location": "p1916 Table2",
+          "reason": "Subjective severity; printedRR wrong relative counts.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Patient-reported symptom severity; sensory blinding may be imperfect",
+          "source_value": "Subjective severity; printedRR wrong relative counts.",
+          "final_value": "Subjective severity; printedRR wrong relative counts.",
+          "source_location": "p1916 Table2",
+          "reason": "Subjective severity; printedRR wrong relative counts.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Abstract / clinically important PONV",
+          "source_value": "p1916 Table2",
+          "final_value": "p1916 Table2",
+          "source_location": "p1916 Table2",
+          "reason": "Subjective severity; printedRR wrong relative counts.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1sNaquYeWpsts7_e3XYP9c0CwM-tbQS6T/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1916 Table2",
+          "reason": "Subjective severity; printedRR wrong relative counts.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1916 Table2",
+          "reason": "Subjective severity; printedRR wrong relative counts.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_431_full_article.pdf",
+      "source_evidence": "ClinicallyimportantPONV0–48h5/31vs15/31,P=.007. ArithmeticRR1/3 differs printed.62; keep scale-based clinicalimportance distinct from anyPONV.",
+      "drug": "sufentanil; report-derived morphine equivalents/kg",
+      "route": "PCA route ambiguous: p1915 prints intrathecal (PCIA); do not silently infer IV",
+      "pca_formulation": "sufentanil1.5ug/h background,1ug bolus20min lockout; background increased in3TEAS/4controls for moderate pain",
+      "rescue_regimen": "sufentanil5ug at patient request; metoclopramide10mgIV then ondansetron/tropisetron4mg",
+      "critical_qc": "Subjective severity; printedRR wrong relative counts.",
+      "analysis_eligibility": "Eligible clinically-importantPONV0–48h separately,HighRoB.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 58,
+      "final": {
+        "Canonical study": "Xiong 2021",
+        "Comparison ID": "XIONG21_TEAS_vs_CTRL_RESCUEAE",
+        "Intervention arm": "TEAS + dexamethasone + tropisetron",
+        "Comparator arm": "No-current sham TEAS + dexamethasone + tropisetron",
+        "Outcome family": "Rescue antiemetic",
+        "Outcome/result": "Any rescue antiemetic medication",
+        "Timepoint/window": "Within 48 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 31,
+        "Randomized n comparator": 31,
+        "Analyzed n intervention": 31,
+        "Analyzed n comparator": 31,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 9,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 18,
+        "Unit/scale": "participants",
+        "Reported P": "0.021",
+        "Directly reported?": "Yes; Table2 directly prints counts",
+        "Derived/converted?": "Counts direct; RR arithmetic",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.5,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible rescueantiemetic0–48h distinct from PONV;SomeconcernsRoB.",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+        "Source location": "p1916 Table2",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+        "Record status": "CORRECTED"
+      },
+      "verification_status": "CORRECTED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xiong 2021",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XIONG21_TEAS_vs_CTRL_RESCUEAE",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + dexamethasone + tropisetron",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Rescue antiemetic",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Any rescue antiemetic medication",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Within 48 h",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 31,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 31,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 31,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 31,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 9,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 18,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.021",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes; Table2 directly prints counts",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Counts direct; RR arithmetic",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.5,
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible rescueantiemetic0–48h distinct from PONV;SomeconcernsRoB.",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1916 Table2",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "CORRECTED",
+          "source_location": "p1916 Table2",
+          "evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Comparator arm",
+          "old_value": "Dexamethasone + tropisetron",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "final_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1916 Table2",
+          "reason": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "severity": "material"
+        },
+        {
+          "field": "Directly reported?",
+          "old_value": "Percentages directly reported; counts exactly reconstructed from 29.0% and 58.1%",
+          "source_value": "Yes; Table2 directly prints counts",
+          "final_value": "Yes; Table2 directly prints counts",
+          "source_location": "p1916 Table2",
+          "reason": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "Yes",
+          "source_value": "Counts direct; RR arithmetic",
+          "final_value": "Counts direct; RR arithmetic",
+          "source_location": "p1916 Table2",
+          "reason": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for dichotomous rescue-antiemetic analysis",
+          "source_value": "Eligible rescueantiemetic0–48h distinct from PONV;SomeconcernsRoB.",
+          "final_value": "Eligible rescueantiemetic0–48h distinct from PONV;SomeconcernsRoB.",
+          "source_location": "p1916 Table2",
+          "reason": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Counts reconstructed exactly from group denominator 31",
+          "source_value": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "final_value": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "source_location": "p1916 Table2",
+          "reason": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Abstract / rescue antiemetic result",
+          "source_value": "p1916 Table2",
+          "final_value": "p1916 Table2",
+          "source_location": "p1916 Table2",
+          "reason": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1sNaquYeWpsts7_e3XYP9c0CwM-tbQS6T/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1916 Table2",
+          "reason": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / COUNTS DERIVED",
+          "source_value": "CORRECTED",
+          "final_value": "CORRECTED",
+          "source_location": "p1916 Table2",
+          "reason": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_431_full_article.pdf",
+      "source_evidence": "Rescueantiemetic administration9(29.0%)vs18(58.1%)among31each,P=.021; counts directly printed, not reconstructed. Regimenmetoclopramide10mgIV thenondansetron/tropisetron4mg.",
+      "drug": "sufentanil; report-derived morphine equivalents/kg",
+      "route": "PCA route ambiguous: p1915 prints intrathecal (PCIA); do not silently infer IV",
+      "pca_formulation": "sufentanil1.5ug/h background,1ug bolus20min lockout; background increased in3TEAS/4controls for moderate pain",
+      "rescue_regimen": "sufentanil5ug at patient request; metoclopramide10mgIV then ondansetron/tropisetron4mg",
+      "critical_qc": "Baseline incorrectly described counts as reconstructed. Patientrequest may influence rescue but administration ascertainment objective.",
+      "analysis_eligibility": "Eligible rescueantiemetic0–48h distinct from PONV;SomeconcernsRoB.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 59,
+      "final": {
+        "Canonical study": "Xiong 2021",
+        "Comparison ID": "XIONG21_TEAS_vs_CTRL_POSTOPMME",
+        "Intervention arm": "TEAS + dexamethasone + tropisetron",
+        "Comparator arm": "No-current sham TEAS + dexamethasone + tropisetron",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Postoperative opioid consumption",
+        "Timepoint/window": "Postoperative window unclear",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 31,
+        "Randomized n comparator": 31,
+        "Analyzed n intervention": 31,
+        "Analyzed n comparator": 31,
+        "Mean intervention": 0.6,
+        "SD intervention": 0.2,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 0.6,
+        "SD comparator": 0.1,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg morphine-equivalent/kg",
+        "Reported P": "0.908",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes",
+        "Derived effect measure": "MD",
+        "Derived effect": 0,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Noteligible strict24h absolute systemicIVmorphine endpoint; retain weight-normalizedreport, do notmultiplybymeanweight.",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Window/route/conversionfactor andindividual rawdose unavailable.",
+        "Source location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+        "Record status": "NOT ANALYSIS ELIGIBLE"
+      },
+      "verification_status": "NOT ANALYSIS ELIGIBLE",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xiong 2021",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XIONG21_TEAS_vs_CTRL_POSTOPMME",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + dexamethasone + tropisetron",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Postoperative opioid consumption",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative window unclear",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 31,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 31,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 31,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 31,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 0.6,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.2,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 0.6,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.1,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg morphine-equivalent/kg",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.908",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0,
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Noteligible strict24h absolute systemicIVmorphine endpoint; retain weight-normalizedreport, do notmultiplybymeanweight.",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Window/route/conversionfactor andindividual rawdose unavailable.",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "NOT ANALYSIS ELIGIBLE",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+          "status": "NOT ANALYSIS ELIGIBLE"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Comparator arm",
+          "old_value": "Dexamethasone + tropisetron",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "final_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "reason": "Window/route/conversionfactor andindividual rawdose unavailable.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Not eligible for strict 0-24-h opioid meta-analysis until time window is clarified",
+          "source_value": "Noteligible strict24h absolute systemicIVmorphine endpoint; retain weight-normalizedreport, do notmultiplybymeanweight.",
+          "final_value": "Noteligible strict24h absolute systemicIVmorphine endpoint; retain weight-normalizedreport, do notmultiplybymeanweight.",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "reason": "Window/route/conversionfactor andindividual rawdose unavailable.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Exact postoperative interval is not stated; route terminology in Results is internally inconsistent",
+          "source_value": "Window/route/conversionfactor andindividual rawdose unavailable.",
+          "final_value": "Window/route/conversionfactor andindividual rawdose unavailable.",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "reason": "Window/route/conversionfactor andindividual rawdose unavailable.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 1 / postoperative opioid consumption",
+          "source_value": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "final_value": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "reason": "Window/route/conversionfactor andindividual rawdose unavailable.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1sNaquYeWpsts7_e3XYP9c0CwM-tbQS6T/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "reason": "Window/route/conversionfactor andindividual rawdose unavailable.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / WINDOW QC",
+          "source_value": "NOT ANALYSIS ELIGIBLE",
+          "final_value": "NOT ANALYSIS ELIGIBLE",
+          "source_location": "p1915 Table1 andfootnote;p1914–16 analgesia",
+          "reason": "Window/route/conversionfactor andindividual rawdose unavailable.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_431_full_article.pdf",
+      "source_evidence": "Postoperativeopioid .6±.2vs.6±.1mg morphine-equivalent/kg,P=.908,n31each. Authors converted byrelativepotency; no explicitduration. p1915intrathecal terminology conflicts presumedPCIAroute.",
+      "drug": "sufentanil; report-derived morphine equivalents/kg",
+      "route": "PCA route ambiguous: p1915 prints intrathecal (PCIA); do not silently infer IV",
+      "pca_formulation": "sufentanil1.5ug/h background,1ug bolus20min lockout; background increased in3TEAS/4controls for moderate pain",
+      "rescue_regimen": "sufentanil5ug at patient request; metoclopramide10mgIV then ondansetron/tropisetron4mg",
+      "critical_qc": "Window/route/conversionfactor andindividual rawdose unavailable.",
+      "analysis_eligibility": "Noteligible strict24h absolute systemicIVmorphine endpoint; retain weight-normalizedreport, do notmultiplybymeanweight.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 60,
+      "final": {
+        "Canonical study": "Xiong 2021",
+        "Comparison ID": "XIONG21_TEAS_vs_CTRL_OPIOID24",
+        "Intervention arm": "TEAS + dexamethasone + tropisetron",
+        "Comparator arm": "No-current sham TEAS + dexamethasone + tropisetron",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative postoperative opioid dose",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 31,
+        "Randomized n comparator": 31,
+        "Analyzed n intervention": 31,
+        "Analyzed n comparator": 31,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "Insufficient information / not reported.",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Absentresult, no synthesis orRoB effectestimate possible.",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+        "Source location": "p1915 Table1;complete report",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xiong 2021",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XIONG21_TEAS_vs_CTRL_OPIOID24",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + dexamethasone + tropisetron",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative postoperative opioid dose",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 31,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 31,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 31,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 31,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "Insufficient information / not reported.",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Absentresult, no synthesis orRoB effectestimate possible.",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1915 Table1;complete report",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "p1915 Table1;complete report",
+          "evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Comparator arm",
+          "old_value": "Dexamethasone + tropisetron",
+          "source_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "final_value": "No-current sham TEAS + dexamethasone + tropisetron",
+          "source_location": "p1915 Table1;complete report",
+          "reason": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "severity": "material"
+        },
+        {
+          "field": "Unit/scale",
+          "old_value": "mg morphine-equivalent/kg",
+          "source_value": "Insufficient information / not reported.",
+          "final_value": "Insufficient information / not reported.",
+          "source_location": "p1915 Table1;complete report",
+          "reason": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Not eligible for continuous 24-h opioid meta-analysis",
+          "source_value": "Absentresult, no synthesis orRoB effectestimate possible.",
+          "final_value": "Absentresult, no synthesis orRoB effectestimate possible.",
+          "source_location": "p1915 Table1;complete report",
+          "reason": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Published opioid-equivalent result lacks a fixed time window",
+          "source_value": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "final_value": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "source_location": "p1915 Table1;complete report",
+          "reason": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Exact 24-h endpoint absent",
+          "source_value": "p1915 Table1;complete report",
+          "final_value": "p1915 Table1;complete report",
+          "source_location": "p1915 Table1;complete report",
+          "reason": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1sNaquYeWpsts7_e3XYP9c0CwM-tbQS6T/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_431_full_article.pdf",
+          "source_location": "p1915 Table1;complete report",
+          "reason": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "MISSING / WINDOW NOT REPORTED",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "p1915 Table1;complete report",
+          "reason": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_431_full_article.pdf",
+      "source_evidence": "Only unspecifiedpostoperative weight-normalizedopioid reported; no exact0–24h dose, SD or pvalue. Numericnulls preserved asnotreported.",
+      "drug": "sufentanil; report-derived morphine equivalents/kg",
+      "route": "PCA route ambiguous: p1915 prints intrathecal (PCIA); do not silently infer IV",
+      "pca_formulation": "sufentanil1.5ug/h background,1ug bolus20min lockout; background increased in3TEAS/4controls for moderate pain",
+      "rescue_regimen": "sufentanil5ug at patient request; metoclopramide10mgIV then ondansetron/tropisetron4mg",
+      "critical_qc": "Cannotderive24hfrom48hfollowup orPCAprescription.",
+      "analysis_eligibility": "Absentresult, no synthesis orRoB effectestimate possible.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S015_PONV48",
+      "outcome": "AnyPONV",
+      "time_window": "0–48h",
+      "comparison": "TEAS vs no-currentsham; matchedantiemetics",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p1913:computerized random number generator",
+          "source_location": "p1913",
+          "reasoning": "p1913:computerized random number generator"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p1913:afterenrollment sealed envelope opened byacupuncturist inOR",
+          "source_location": "p1913",
+          "reasoning": "p1913:afterenrollment sealed envelope opened byacupuncturist inOR"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "p1915 Table1:comparable randomized characteristics",
+          "source_location": "p1915 Table1",
+          "reasoning": "p1915 Table1:comparable randomized characteristics"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p1913,p1918:masking intended but postoperative tingling likely detected",
+          "source_location": "p1913,p1918",
+          "reasoning": "p1913,p1918:masking intended but postoperative tingling likely detected"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p1913:acupuncturist and anesthetist aware",
+          "source_location": "p1913",
+          "reasoning": "p1913:acupuncturist and anesthetist aware"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p1914–16:standardized antiemetic/analgesiccare, pain-triggeredPCA increase3/4; no trial-context deviations",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:standardized antiemetic/analgesiccare, pain-triggeredPCA increase3/4; no trial-context deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p1914–16:conditional no established trial-context deviation",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:conditional no established trial-context deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p1914–16:conditional no established trial-context deviation",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:conditional no established trial-context deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "p1916 Fig1:all62 analyzed asassigned",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:all62 analyzed asassigned"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p1916 Fig1:no failure of assignment analysis",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:no failure of assignment analysis"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "p1916 Fig1:31/31 each completed",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:31/31 each completed"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p1914:validatedPONVimpactscale or medicalrecord endpoint appropriate",
+          "source_location": "p1914",
+          "reasoning": "p1914:validatedPONVimpactscale or medicalrecord endpoint appropriate"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p1914:common scheduled questionnaire and maskedresident checks",
+          "source_location": "p1914",
+          "reasoning": "p1914:common scheduled questionnaire and maskedresident checks"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "p1918:patients may identify stimulation, participant is subjective assessor",
+          "source_location": "p1918",
+          "reasoning": "p1918:patients may identify stimulation, participant is subjective assessor"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "PY",
+          "evidence": "p1918:authors acknowledge tingling may contribute antiemetic efficacy",
+          "source_location": "p1918",
+          "reasoning": "p1918:authors acknowledge tingling may contribute antiemetic efficacy"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "PY",
+          "evidence": "p1918:detectable stimulation and subjective symptomseverity likely influence reported nausea",
+          "source_location": "p1918",
+          "reasoning": "p1918:detectable stimulation and subjective symptomseverity likely influence reported nausea"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p1913:registry2020 afterrecruitment2018–Feb2020; no prospectiveSAP demonstrated",
+          "source_location": "p1913",
+          "reasoning": "p1913:registry2020 afterrecruitment2018–Feb2020; no prospectiveSAP demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p1916–17:several overlappingPONV windows, no prospectively fixed choice",
+          "source_location": "p1916–17",
+          "reasoning": "p1916–17:several overlappingPONV windows, no prospectively fixed choice"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p1914:analysis described only in completedpublication",
+          "source_location": "p1914",
+          "reasoning": "p1914:analysis described only in completedpublication"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Concealed computerizedassignment",
+          "source_location": "p1913"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departure; ordinarysymptom-triggeredanalgesia",
+          "source_location": "p1913,p1918"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All62completed",
+          "source_location": "p1916 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "High",
+          "reasoning": "Participantreportednausea/severity likely affected bysensoryunmasking",
+          "source_location": "p1914"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospectiveSAP; retrospective registry cannot establish",
+          "source_location": "p1913"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "At least one domain is High; see domain-specific reasoning.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S015_CI_PONV48",
+      "outcome": "Clinically importantPONV",
+      "time_window": "0–48h",
+      "comparison": "TEAS vs no-currentsham; matchedantiemetics",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p1913:computerized random number generator",
+          "source_location": "p1913",
+          "reasoning": "p1913:computerized random number generator"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p1913:afterenrollment sealed envelope opened byacupuncturist inOR",
+          "source_location": "p1913",
+          "reasoning": "p1913:afterenrollment sealed envelope opened byacupuncturist inOR"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "p1915 Table1:comparable randomized characteristics",
+          "source_location": "p1915 Table1",
+          "reasoning": "p1915 Table1:comparable randomized characteristics"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p1913,p1918:masking intended but postoperative tingling likely detected",
+          "source_location": "p1913,p1918",
+          "reasoning": "p1913,p1918:masking intended but postoperative tingling likely detected"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p1913:acupuncturist and anesthetist aware",
+          "source_location": "p1913",
+          "reasoning": "p1913:acupuncturist and anesthetist aware"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p1914–16:standardized antiemetic/analgesiccare, pain-triggeredPCA increase3/4; no trial-context deviations",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:standardized antiemetic/analgesiccare, pain-triggeredPCA increase3/4; no trial-context deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p1914–16:conditional no established trial-context deviation",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:conditional no established trial-context deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p1914–16:conditional no established trial-context deviation",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:conditional no established trial-context deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "p1916 Fig1:all62 analyzed asassigned",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:all62 analyzed asassigned"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p1916 Fig1:no failure of assignment analysis",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:no failure of assignment analysis"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "p1916 Fig1:31/31 each completed",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:31/31 each completed"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p1914:validatedPONVimpactscale or medicalrecord endpoint appropriate",
+          "source_location": "p1914",
+          "reasoning": "p1914:validatedPONVimpactscale or medicalrecord endpoint appropriate"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p1914:common scheduled questionnaire and maskedresident checks",
+          "source_location": "p1914",
+          "reasoning": "p1914:common scheduled questionnaire and maskedresident checks"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "p1918:patients may identify stimulation, participant is subjective assessor",
+          "source_location": "p1918",
+          "reasoning": "p1918:patients may identify stimulation, participant is subjective assessor"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "PY",
+          "evidence": "p1918:authors acknowledge tingling may contribute antiemetic efficacy",
+          "source_location": "p1918",
+          "reasoning": "p1918:authors acknowledge tingling may contribute antiemetic efficacy"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "PY",
+          "evidence": "p1918:detectable stimulation and subjective symptomseverity likely influence reported nausea",
+          "source_location": "p1918",
+          "reasoning": "p1918:detectable stimulation and subjective symptomseverity likely influence reported nausea"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p1913:registry2020 afterrecruitment2018–Feb2020; no prospectiveSAP demonstrated",
+          "source_location": "p1913",
+          "reasoning": "p1913:registry2020 afterrecruitment2018–Feb2020; no prospectiveSAP demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p1916–17:several overlappingPONV windows, no prospectively fixed choice",
+          "source_location": "p1916–17",
+          "reasoning": "p1916–17:several overlappingPONV windows, no prospectively fixed choice"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p1914:analysis described only in completedpublication",
+          "source_location": "p1914",
+          "reasoning": "p1914:analysis described only in completedpublication"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Concealed computerizedassignment",
+          "source_location": "p1913"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departure; ordinarysymptom-triggeredanalgesia",
+          "source_location": "p1913,p1918"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All62completed",
+          "source_location": "p1916 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "High",
+          "reasoning": "Participantreportednausea/severity likely affected bysensoryunmasking",
+          "source_location": "p1914"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospectiveSAP; retrospective registry cannot establish",
+          "source_location": "p1913"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "At least one domain is High; see domain-specific reasoning.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S015_rescue48",
+      "outcome": "Rescueantiemetic",
+      "time_window": "0–48h",
+      "comparison": "TEAS vs no-currentsham; matchedantiemetics",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p1913:computerized random number generator",
+          "source_location": "p1913",
+          "reasoning": "p1913:computerized random number generator"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p1913:afterenrollment sealed envelope opened byacupuncturist inOR",
+          "source_location": "p1913",
+          "reasoning": "p1913:afterenrollment sealed envelope opened byacupuncturist inOR"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "p1915 Table1:comparable randomized characteristics",
+          "source_location": "p1915 Table1",
+          "reasoning": "p1915 Table1:comparable randomized characteristics"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p1913,p1918:masking intended but postoperative tingling likely detected",
+          "source_location": "p1913,p1918",
+          "reasoning": "p1913,p1918:masking intended but postoperative tingling likely detected"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p1913:acupuncturist and anesthetist aware",
+          "source_location": "p1913",
+          "reasoning": "p1913:acupuncturist and anesthetist aware"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p1914–16:standardized antiemetic/analgesiccare, pain-triggeredPCA increase3/4; no trial-context deviations",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:standardized antiemetic/analgesiccare, pain-triggeredPCA increase3/4; no trial-context deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p1914–16:conditional no established trial-context deviation",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:conditional no established trial-context deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p1914–16:conditional no established trial-context deviation",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:conditional no established trial-context deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "p1916 Fig1:all62 analyzed asassigned",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:all62 analyzed asassigned"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p1916 Fig1:no failure of assignment analysis",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:no failure of assignment analysis"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "p1916 Fig1:31/31 each completed",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:31/31 each completed"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p1914:validatedPONVimpactscale or medicalrecord endpoint appropriate",
+          "source_location": "p1914",
+          "reasoning": "p1914:validatedPONVimpactscale or medicalrecord endpoint appropriate"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p1914:common scheduled questionnaire and maskedresident checks",
+          "source_location": "p1914",
+          "reasoning": "p1914:common scheduled questionnaire and maskedresident checks"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "p1914:maskedresident verifies medicalrecords; patients may affect request",
+          "source_location": "p1914",
+          "reasoning": "p1914:maskedresident verifies medicalrecords; patients may affect request"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "p1914:recorded administration/dose objectively ascertainable; requestingbehavior distinct",
+          "source_location": "p1914",
+          "reasoning": "p1914:recorded administration/dose objectively ascertainable; requestingbehavior distinct"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "p1914:no evidence recording influenced byassignment",
+          "source_location": "p1914",
+          "reasoning": "p1914:no evidence recording influenced byassignment"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p1913:registry2020 afterrecruitment2018–Feb2020; no prospectiveSAP demonstrated",
+          "source_location": "p1913",
+          "reasoning": "p1913:registry2020 afterrecruitment2018–Feb2020; no prospectiveSAP demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p1916–17:several overlappingPONV windows, no prospectively fixed choice",
+          "source_location": "p1916–17",
+          "reasoning": "p1916–17:several overlappingPONV windows, no prospectively fixed choice"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p1914:analysis described only in completedpublication",
+          "source_location": "p1914",
+          "reasoning": "p1914:analysis described only in completedpublication"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Concealed computerizedassignment",
+          "source_location": "p1913"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departure; ordinarysymptom-triggeredanalgesia",
+          "source_location": "p1913,p1918"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All62completed",
+          "source_location": "p1916 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Recorded drugadministration objective; participantrequest behavior acknowledged",
+          "source_location": "p1914"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospectiveSAP; retrospective registry cannot establish",
+          "source_location": "p1913"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S015_opioid_unspecified",
+      "outcome": "Postoperativeopioid equivalents/kg",
+      "time_window": "Postoperative unspecified",
+      "comparison": "TEAS vs no-currentsham; matchedantiemetics",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p1913:computerized random number generator",
+          "source_location": "p1913",
+          "reasoning": "p1913:computerized random number generator"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p1913:afterenrollment sealed envelope opened byacupuncturist inOR",
+          "source_location": "p1913",
+          "reasoning": "p1913:afterenrollment sealed envelope opened byacupuncturist inOR"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "p1915 Table1:comparable randomized characteristics",
+          "source_location": "p1915 Table1",
+          "reasoning": "p1915 Table1:comparable randomized characteristics"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p1913,p1918:masking intended but postoperative tingling likely detected",
+          "source_location": "p1913,p1918",
+          "reasoning": "p1913,p1918:masking intended but postoperative tingling likely detected"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p1913:acupuncturist and anesthetist aware",
+          "source_location": "p1913",
+          "reasoning": "p1913:acupuncturist and anesthetist aware"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p1914–16:standardized antiemetic/analgesiccare, pain-triggeredPCA increase3/4; no trial-context deviations",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:standardized antiemetic/analgesiccare, pain-triggeredPCA increase3/4; no trial-context deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p1914–16:conditional no established trial-context deviation",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:conditional no established trial-context deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p1914–16:conditional no established trial-context deviation",
+          "source_location": "p1914–16",
+          "reasoning": "p1914–16:conditional no established trial-context deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "p1916 Fig1:all62 analyzed asassigned",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:all62 analyzed asassigned"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p1916 Fig1:no failure of assignment analysis",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:no failure of assignment analysis"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "p1916 Fig1:31/31 each completed",
+          "source_location": "p1916 Fig1",
+          "reasoning": "p1916 Fig1:31/31 each completed"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p1916:conditional completefollowup",
+          "source_location": "p1916",
+          "reasoning": "p1916:conditional completefollowup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p1914:validatedPONVimpactscale or medicalrecord endpoint appropriate",
+          "source_location": "p1914",
+          "reasoning": "p1914:validatedPONVimpactscale or medicalrecord endpoint appropriate"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p1914:common scheduled questionnaire and maskedresident checks",
+          "source_location": "p1914",
+          "reasoning": "p1914:common scheduled questionnaire and maskedresident checks"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "p1914:maskedresident verifies medicalrecords; patients may affect request",
+          "source_location": "p1914",
+          "reasoning": "p1914:maskedresident verifies medicalrecords; patients may affect request"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "p1914:recorded administration/dose objectively ascertainable; requestingbehavior distinct",
+          "source_location": "p1914",
+          "reasoning": "p1914:recorded administration/dose objectively ascertainable; requestingbehavior distinct"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "p1914:no evidence recording influenced byassignment",
+          "source_location": "p1914",
+          "reasoning": "p1914:no evidence recording influenced byassignment"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p1913:registry2020 afterrecruitment2018–Feb2020; no prospectiveSAP demonstrated",
+          "source_location": "p1913",
+          "reasoning": "p1913:registry2020 afterrecruitment2018–Feb2020; no prospectiveSAP demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p1916–17:several overlappingPONV windows, no prospectively fixed choice",
+          "source_location": "p1916–17",
+          "reasoning": "p1916–17:several overlappingPONV windows, no prospectively fixed choice"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p1914:analysis described only in completedpublication",
+          "source_location": "p1914",
+          "reasoning": "p1914:analysis described only in completedpublication"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Concealed computerizedassignment",
+          "source_location": "p1913"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departure; ordinarysymptom-triggeredanalgesia",
+          "source_location": "p1913,p1918"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All62completed",
+          "source_location": "p1916 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Recorded drugadministration objective; participantrequest behavior acknowledged",
+          "source_location": "p1914"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospectiveSAP; retrospective registry cannot establish",
+          "source_location": "p1913"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "hold",
+    "reason": "Need exactwindow, route, rawdose andconversionfactor; mg/kg cannot beconverted usingmeanweight",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "sufentanil convertedbyauthors tomorphineequivalents",
+    "route": "Insufficient information / not reported.",
+    "unit": "mg morphine-equivalent/kg",
+    "raw_values": {
+      "TEAS": [
+        0.6,
+        0.2,
+        31
+      ],
+      "control": [
+        0.6,
+        0.1,
+        31
+      ]
+    },
+    "comparison_selection": "Sham+sameantiemetics",
+    "multiarm_handling": "Twoarms",
+    "source_location": "p1915 Table1"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Absolute opioidrawdose/SD,drugroute,0–24hwindow,authorconversionfactor",
+      "why_it_matters": "mg/kg results cannot support absoluteIVmorphine endpoint",
+      "analysis_affected": "Opioid24h",
+      "can_proceed_without": "No opioidpooling; otherresults usable",
+      "priority": "HIGH",
+      "exact_question": "Provide cumulative systemic0–24h postoperative sufentanil andallrescueopioid mean/SD byarm,actualroute,and clarify intrathecal wording andequivalencefactors."
+    }
+  ],
+  "summary": "Five rows reviewed. Rescueantiemetic counts are direct. ReportedRRs inconsistent withevents. Opioid remains ineligible withoutwindow/route/rawabsolute dose; subjective PONVRoBHigh.",
+  "contacts": [
+    {
+      "missing_information": "Absolute opioidrawdose/SD,drugroute,0–24hwindow,authorconversionfactor",
+      "why_it_matters": "mg/kg results cannot support absoluteIVmorphine endpoint",
+      "analysis_affected": "Opioid24h",
+      "can_proceed_without": "No opioidpooling; otherresults usable",
+      "priority": "HIGH",
+      "exact_question": "Provide cumulative systemic0–24h postoperative sufentanil andallrescueopioid mean/SD byarm,actualroute,and clarify intrathecal wording andequivalencefactors."
+    }
+  ]
+}

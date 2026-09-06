@@ -1,0 +1,376 @@
+{
+  "Study_ID": "S030",
+  "Study": "Ma 2026",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase": "A",
+  "baseline_accessed": false,
+  "title": "Preoperative Transcutaneous Electrical Acupoint Stimulation Alleviates Postoperative Pain and Improves Sleep Quality in Breast Cancer Patients with Preoperative Sleep Disturbance: A Partially Randomized Controlled Trial",
+  "year": 2026,
+  "doi": "10.2147/JPR.S619125",
+  "pdf_files": [
+    "117210.pdf",
+    "astra_audit/batch3_S030_author_response.pdf"
+  ],
+  "source_read": "Full14pagepublication,visualFig2p6,Fig3p7,Fig4andTable3p8;full3pageauthorresponse10.2147/JPR.S644717 downloadedfrompublisher; officialregistryV1.1indexedfulloutcomes/randomization/datefields viawebsearch afterdirect405block.",
+  "modality": "TEAS",
+  "comparator": "Usualcare/noTEAS(no sham),TvsSrandomizedsleepdisturbancestratum; Cnonrandomizedreference excluded",
+  "randomized_arms": {
+    "T": 18,
+    "S": 17,
+    "C_nonrandom": 26
+  },
+  "analyzed_arms": {
+    "T": 17,
+    "S": 16,
+    "C_nonrandom": 26
+  },
+  "denominator_source": "p5enrollment,p6Fig2:72screened,61allocated,35randomized,1eachT/Slost;59totalanalysed",
+  "population": "Women37–70breastcancersurgeryGA,HarbinJuly–November2022; randomizedPSQI≥6",
+  "drug": "Intraoperative sufentanil/remifentanil; postoperativeopioidquantitynotreported",
+  "route": "IV intraoperative; postoperativeopioid route unknown",
+  "pca_formulation": "Insufficient information / not reported.",
+  "rescue_regimen": "Flurbiprofen100mgIV30minbeforeendthenoncedaily3days; dexamethasone/granisetron prophylaxis. No postoperativeopioid/rescuedose report.",
+  "intervention": "2/100Hz8–12mA30minpreinduction,leftLI4HT7,rightLI4PC6",
+  "results": [
+    {
+      "outcome": "NRSrest",
+      "windows_hours": [
+        4,
+        24,
+        48,
+        72
+      ],
+      "format": "Graph-only meanSD",
+      "values": null,
+      "P_TvsS": "<.05each Bonferroni",
+      "source": "p7Fig3; no graph estimates inferred"
+    },
+    {
+      "outcome": "AIS",
+      "windows": [
+        "preop",
+        "surgeryday",
+        "POD1",
+        "POD2"
+      ],
+      "format": "Graph-only meanSDpostop",
+      "values": null,
+      "P_TvsS": "POD1/POD2<.05,surgeryday>.05",
+      "source": "p8Fig4A"
+    },
+    {
+      "outcome": "Nocturnalawakenings",
+      "windows": [
+        "surgeryday",
+        "POD1",
+        "POD2"
+      ],
+      "format": "Graph-only meanSD",
+      "values": null,
+      "source": "p8Fig4B"
+    },
+    {
+      "outcome": "Nausea0–24h",
+      "T": {
+        "events": 6,
+        "n": 17
+      },
+      "S": {
+        "events": 8,
+        "n": 16
+      },
+      "C_nonrandom": {
+        "events": 13,
+        "n": 26
+      },
+      "P_three_groups": ".590",
+      "P_TvsS": null,
+      "source": "p8Table3andtext"
+    },
+    {
+      "outcome": "Vomiting0–24h",
+      "T": {
+        "events": 6,
+        "n": 17
+      },
+      "S": {
+        "events": 7,
+        "n": 16
+      },
+      "C_nonrandom": {
+        "events": 11,
+        "n": 26
+      },
+      "P_three_groups": ".863",
+      "P_TvsS": null,
+      "source": "p8Table3andtext"
+    },
+    {
+      "outcome": "Hospitalstaydays",
+      "format": "meanSD",
+      "T": [
+        6.82,
+        1.68
+      ],
+      "S": [
+        8.06,
+        2.29
+      ],
+      "C_nonrandom": [
+        7.27,
+        2.41
+      ],
+      "P_three_groups": ".266",
+      "source": "Table3p8"
+    },
+    {
+      "outcome": "Postoperativeopioid consumption",
+      "values": null,
+      "source": "Methodspp3–5;Resultspp5–10,registrylistsanalgesicdosage butnoarticlevalues"
+    },
+    {
+      "outcome": "QoR/GI",
+      "values": null,
+      "source": "Not reportedinpublication"
+    }
+  ],
+  "source_conflicts": [
+    "Registration2022-08-25afterarticleJuly2022screening; registryplanned2022-08-30–2023-05-25,notyetrecruiting,30/36/36plannedvsarticle26/17/18allocated. Needactualrecruitment/amendmenttimeline.",
+    "Registrynonrandomdesignlabel coexistswith explicitT/Srandomsequence; supports partiallyrandomized notallnonrandom.",
+    "RegistryprimaryVAS2/6hPOD1/2,3months vsNRS4/24/48/72article; sleepPSQI/AISPOD1/2/3,3months vsAISsurgeryday/POD1/2; postoperativeanalgesicdosageomitted.",
+    "AuthorresponseAug11acknowledgesposthocNRSprimarydesignationinappropriate andproposes AISsoleprimary/NRSexploratory; formalcorrectionnotverified.",
+    "Table1TMRM6(31.3%)percentage inconsistent6/17; notchangeoutcomedenominators.",
+    "Table3Pvaluesarethree-groupnotpairwiseTvsS.",
+    "Blindedinterviewer doesnotmaskpatientassessor; concealment explanationconflateswithproviderawareness."
+  ],
+  "independence": "Only35randomizedT/S; C26observationalnoteligible. Authorresponse same study commentary not newcohort; Wang2023citedbackgroundnotduplicate.",
+  "rob2": [
+    {
+      "result_id": "S030_pain24",
+      "outcome": "RestNRS",
+      "time_window": "24h",
+      "comparison": "TEASTvsusualcareSwithinPSQI≥6",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer random table withinPSQI≥6stratum, byresearcher independent ofrecruitment/delivery/assessment;registry concurs.",
+          "source_location": "p3;ChiCTR2200062959V1.1",
+          "reasoning": "Computer random table withinPSQI≥6stratum, byresearcher independent ofrecruitment/delivery/assessment;registry concurs."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Paper says concealment notfeasible but conflates preassignment concealment with visible treatment; independent randomizer described without mechanism. Neither adequateconcealment nor actualforeknowledge established.",
+          "source_location": "p3,p12",
+          "reasoning": "Paper says concealment notfeasible but conflates preassignment concealment with visible treatment; independent randomizer described without mechanism. Neither adequateconcealment nor actualforeknowledge established."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Only analysed33/35baseline reported; nonsignificantdifferences do not establish successfulrandomization.",
+          "source_location": "Table1pp6–7",
+          "reasoning": "Only analysed33/35baseline reported; nonsignificantdifferences do not establish successfulrandomization."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Awake8–12mAstimulation versusnoTEAS/no sham; explicitly unmasked.",
+          "source_location": "pp3–4,p12",
+          "reasoning": "Awake8–12mAstimulation versusnoTEAS/no sham; explicitly unmasked."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Provider deliversvisibleTEAS.",
+          "source_location": "p3",
+          "reasoning": "Provider deliversvisibleTEAS."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Standardizedflurbiprofen described but postoperativeadditional/rescueanalgesia notreported; deviations insufficientlycharacterized.",
+          "source_location": "p3;registryanalgesicdosageoutcome omitted",
+          "reasoning": "Standardizedflurbiprofen described but postoperativeadditional/rescueanalgesia notreported; deviations insufficientlycharacterized."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No establishedtrialcontextdeviation.",
+          "source_location": "p3",
+          "reasoning": "No establishedtrialcontextdeviation."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No establisheddeviation tocompare.",
+          "source_location": "p3",
+          "reasoning": "No establisheddeviation tocompare."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis keepsT/Sassignment; missingdata addressedD3.",
+          "source_location": "pp5–6Fig2",
+          "reasoning": "Available-case analysis keepsT/Sassignment; missingdata addressedD3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "Fig2",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "33/35 randomizedwithpostopdata;2incompletecases; smallsample.",
+          "source_location": "pp5–6",
+          "reasoning": "33/35 randomizedwithpostopdata;2incompletecases; smallsample."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No imputation/sensitivity demonstratingno missingbias.",
+          "source_location": "p5",
+          "reasoning": "No imputation/sensitivity demonstratingno missingbias."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Incompletepostopdata nonspecific; severepostopcomplications listedexclusion butnotidentifiedas actualmissingreasons.",
+          "source_location": "pp2,5",
+          "reasoning": "Incompletepostopdata nonspecific; severepostopcomplications listedexclusion butnotidentifiedas actualmissingreasons."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Cannot determine whethermissingness dependedonpain/sleep.",
+          "source_location": "p5",
+          "reasoning": "Cannot determine whethermissingness dependedonpain/sleep."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "NRSrest validated0–10scale at4/24/48/72h.",
+          "source_location": "pp4,7",
+          "reasoning": "NRSrest validated0–10scale at4/24/48/72h."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same blindedassessor andscheduledtimepoints.",
+          "source_location": "p5",
+          "reasoning": "Same blindedassessor andscheduledtimepoints."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Patient isassessor ofpain despiteblindedinterviewer.",
+          "source_location": "pp4–5,p12",
+          "reasoning": "Patient isassessor ofpain despiteblindedinterviewer."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Expectations caninfluencepatient-ratedpain/sleep.",
+          "source_location": "p12;authorresponsep2",
+          "reasoning": "Expectations caninfluencepatient-ratedpain/sleep."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "PY",
+          "evidence": "AwakeTEASwithnoattention/shamcontrol likelyinfluencessubjectivepain; authorsrecognize fundamentalplaceboissue.",
+          "source_location": "p12;responsep2Comment3",
+          "reasoning": "AwakeTEASwithnoattention/shamcontrol likelyinfluencessubjectivepain; authorsrecognize fundamentalplaceboissue."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "N",
+          "evidence": "RegisteredVAS2/6hPOD1/2and3months differsNRS4/24/48/72; responseacknowledges post-dataanalysischangesduringpeerreview.",
+          "source_location": "RegistryV1.1;responsepp1–2",
+          "reasoning": "RegisteredVAS2/6hPOD1/2and3months differsNRS4/24/48/72; responseacknowledges post-dataanalysischangesduringpeerreview."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "PY",
+          "evidence": "Changed instrument/timepoints, omitted3monthfollowup and post-hocprimarydesignation tiedto significantNRS results; likely selectedpainreporting.",
+          "source_location": "p3;registry;responseComment4",
+          "reasoning": "Changed instrument/timepoints, omitted3monthfollowup and post-hocprimarydesignation tiedto significantNRS results; likely selectedpainreporting."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "Analysesrevisedafterreview/unblindeddata but no evidenceauthors selectedspecificanalysisbasedon favorableeffect beyondreportingchanges.",
+          "source_location": "p5;responsep1",
+          "reasoning": "Analysesrevisedafterreview/unblindeddata but no evidenceauthors selectedspecificanalysisbasedon favorableeffect beyondreportingchanges."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Independentsequence but concealment explanationconfused and mechanismunknown.",
+          "source_location": "p3"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "No adequatepostoprescuedeviation reporting; awarenessalone notHigh.",
+          "source_location": "p3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "2/35unknownreasonmissing withoutsensitivity.",
+          "source_location": "pp5–6"
+        },
+        {
+          "domain": 4,
+          "judgment": "High",
+          "reasoning": "Patientreportedpain knowinglyreceivingactivevsnointervention likelyexpectation-sensitive.",
+          "source_location": "p12;responsep2"
+        },
+        {
+          "domain": 5,
+          "judgment": "High",
+          "reasoning": "Instrument/window and outcomehierarchy changes afterdata, with selectiveprimarydesignation acknowledged.",
+          "source_location": "Registry;response"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Unmaskedsubjectiveassessment plus outcome-selection concerns; nonrandomCexcluded."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "No postoperativeopioidconsumption data; flurbiprofen regimen is nonopioid. Registeredanalgesicdosage not reported.",
+    "postoperative": false,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false
+  }
+}

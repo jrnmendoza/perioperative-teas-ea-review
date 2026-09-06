@@ -1,0 +1,86 @@
+{
+  "Study_ID": "S017",
+  "Study": "Xie 2014",
+  "phase": "A_SOURCE_ONLY",
+  "baseline_accessed": false,
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "title": "Effect of Electro-acupuncture Stimulation of Ximen (PC4) and Neiguan (PC6) on Remifentanil-induced Breakthrough Pain Following Thoracal Esophagectomy",
+  "year": 2014,
+  "doi": "10.1007/s11596-014-1317-x",
+  "pdf": "covidence_701_full_article.pdf",
+  "source_read": "Complete6pages; p571Table2visuallyverified",
+  "modality": "EA",
+  "randomized": {
+    "A": 20,
+    "B": 20,
+    "C": 20
+  },
+  "analyzed": {
+    "A": 20,
+    "B": 20,
+    "C": 20
+  },
+  "comparators": "C activeEA vs B needleswithoutcurrent; A noEA separate usualcare",
+  "intervention": "IpsilateralPC4PC6 2/20Hz−30minthroughsurgery",
+  "drug": "sufentanil plusdezocine",
+  "route": "IV",
+  "pca": "7.5ug loading30min beforeend;basal2.5ug/h methods vs2.25abstract;PCA.75ug15minlockout,continuedPOD3",
+  "rescue": "dezocine5mgIV onrequest; consumptionamountnotreported",
+  "results": {
+    "sufentanil": {
+      "C": [
+        115,
+        6
+      ],
+      "B": [
+        133,
+        7
+      ],
+      "A": [
+        134,
+        5.9
+      ],
+      "format": "meanSDug",
+      "location": "p571Table2",
+      "conflict": "abstractB133.5,A134.3; retainTable2ANDabstract; no silentlychooseprecisevalue",
+      "window": "Discussionp572saysupto48h, infusionstarted−30min; notexact0–24h andstartboundaryunclear"
+    },
+    "dezocine_rescue": {
+      "percent": {
+        "A": 35,
+        "B": 30,
+        "C": 5
+      },
+      "n": 20,
+      "counts_exact_arithmetic": {
+        "A": 7,
+        "B": 6,
+        "C": 1
+      },
+      "location": "p571Table2",
+      "not_total_dose": "Repeatedrescuecountsandamountunknown"
+    },
+    "patient_demand": {
+      "A": [
+        42,
+        5
+      ],
+      "B": [
+        43,
+        3
+      ],
+      "C": [
+        16,
+        3
+      ],
+      "not_drug_consumption": true
+    },
+    "pain": "Figure2 graph-onlyVAS at2,12,24,48h; methodsbothrest/cough/ambulation butonecombinedplot, no separatecontextdata;no numericSD",
+    "PONV": "Insufficient information / not reported.",
+    "QoR": "Insufficient information / not reported.",
+    "GI": "Insufficient information / not reported."
+  },
+  "conflicts": "Abstractsex47/13 vsTable1 43/17; totaldosesrounded differently; basal2.25vs2.5; biomarkers48vs72h narrative.",
+  "rob": "D1Y/NI/PN computerrandomization,concealmentabsent. D2PY/Y/PN/NA/NA/PY/NA stimulationawake mayunmask, no establishedtrialcontextdeviations. D3PY/NA/NA/NA n20alltablesnoattritionreport. D4dose N/PN/PN/NA/NA maskedcollectors objective, patientself-dosing distinguished;pain N/PN/PY/PY/NI sensorymaskingunclear. D5NI/NI/NI prospectiveSAPabsent. OverallSomeconcerns; dosewindow/rescuecoveragehold separate."
+}

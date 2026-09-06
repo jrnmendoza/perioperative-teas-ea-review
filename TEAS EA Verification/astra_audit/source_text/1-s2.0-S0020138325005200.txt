@@ -1,0 +1,979 @@
+=== PDF PAGE 1 ===
+                                                                                Injury 56 (2025) 112660
+
+
+                                                                     Contents lists available at ScienceDirect
+
+                                                                                        Injury
+
+
+                                                            journal homepage: www.elsevier.com/locate/injury
+
+
+Effect  of  electroacupuncture  intervention  before  and  after  operation  on
+perioperative  neurocognitive  disorders   in  elderly  patients  with  hip
+fractures:  A  randomized  controlled  trial
+Jiaqi  Longa,  Xiaoming  Zhanga,  Jialing  Zhang                               b,  Tao  Zhou        c,  Wei  Chen        b,  Yuebing  Lib,*
+
+
+
+aDepartment of Anesthesiology, The First Hospital of Nanchang, The Third Affiliated Hospital of Nanchang University, Jiangxi Medical College, Nanchang University,
+Nanchang, China
+bDepartment of Anesthesiology, The Second Affiliated Hospital of Zhejiang Chinese Medical University, Hangzhou, China
+
+cJiangxi Key Laboratory of Molecular Medicine, Nanchang, China
+
+
+
+
+ARTICLE                          INFO                       ABSTRACT
+
+Keywords:                                                   Introduction: The incidence of postoperative neurocognitive disorder (PND) in elderly patients with hip fractures
+Electroacupuncture                                          poses a significant clinical challenge, with current management strategies offering limited efficacy in prevention
+Transcutaneous electrical acupoint stimulation              or resolution. This prospective study evaluated the effectiveness of pre-and postoperative electroacupuncture
+Hip surgery                                                 (EA) intervention in mitigating PND in this patient cohort.
+Perioperative neurocognitive disorders                      Methods: A double-masked, randomized controlled trial was conducted involving 60 elderly patients (≥65 years)
+Pain                                                        with fragility hip fractures scheduled for surgical repair. Participants were randomly assigned to either the EA
+Postoperative nausea and vomiting
+                                                            intervention group (Group A) or a non-stimulated control group (Group C). Mini-Mental State Examination
+                                                            (MMSE) scores were recorded at baseline and 1, 3, and 7 days postoperatively, while ELISA was used to assess IL-
+                                                            1β, IL-6, and S-100β levels. Time-varying MAP, SpO2, and HR were measured. Adverse cardiovascular events,
+                                                            extubation duration, recovery room stay, VAS scores, analgesia pump use, postoperative adverse responses, and
+                                                            hospitalization length were recorded.
+                                                            Results: Among 60 randomized patients (mean age 74.02 years; 54.7 % male), 53 were analyzed for primary
+                                                            outcomes. Postoperative day 1 PND incidence was significantly lower in Group A (25.0 %) than Group C (56.0 %;
+                                                            P <0.05), persisting on day 3 (Group A: 14.3 %, Group C: 48.0 %; P <0.05). By day 7, PND incidence was similar
+                                                            in both groups. Time-group interactions were significant for IL-1β, IL-6, and blood pressure (P <0.05). Group A
+                                                            exhibited a lower VAS score at 24 h postoperatively (2.65 ±0.94 vs. 3.96 ±0.96; P <0.05). Adverse events were
+                                                            reported in 26 Group A and 32 Group C cases. Postoperative nausea and vomiting (PONV) significantly differed
+                                                            (Group A: 3.7 %, Group C: 30.8 %).
+                                                            Conclusions: The findings suggest that pre- and postoperative EA stimulation may significantly reduce the risk of
+                                                            PND, modulate inflammatory responses, and lower blood pressure. Furthermore, EA intervention was associated
+                                                            with reduced postoperative pain and a marked decrease in the incidence of PONV in elderly patients with hip
+                                                            fractures. These results highlight the potential therapeutic benefits of EA in managing PND in this vulnerable
+                                                            patient population and warrant further investigation.
+                                                            Subject words: electroacupuncture, transcutaneous electrical acupoint stimulation, hip surgery, perioperative
+                                                            neurocognitive disorders, pain, postoperative nausea and vomiting
+
+
+
+
+Introduction                                                                                      attention [1]. These fractures can lead to profound adverse outcomes for
+                                                                                                  affected   individuals.   Surgery,   a   primary   therapeutic   modality,
+    Hip fractures in the geriatric population represent a widespread and                          frequently triggers systemic inflammatory and stress responses, which
+concerning  health  issue,  commanding  considerable  international                               may intensify neuronal inflammation and diminish cognitive function in
+
+
+
+
+ *Corresponding author at: Department of Anesthesiology, The Second Affiliated Hospital of Zhejiang Chinese Medical University, 318 Chaowang Road, Gongshu
+District Hangzhou, China.
+    E-mail address: lyb1853@zcmu.edu.cn(Y. Li).
+
+https://doi.org/10.1016/j.injury.2025.112660
+Accepted 2 August 2025
+Available online 7 August 2025
+0020-1383/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+
+
+
+
+
+                                     Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                       For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 2 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+elderly      patients      [2].      Postoperative      neurocognitive      disorder      (PND)      is                 10  %  to  60  %  in  orthopedic  surgery  [10].  Based  on  our  initial  experi-
+characterized         by        a        decline        in        cognitive        domains        such        as        memory, ment,  the   occurrence  of  PND  decreased  from  45  %  to  20  %  following
+attention,  executive  function,  and  information  processing  speed  in  the                                          TEAS   treatment.   The  statistical   power  was  80   %,   and  the   significance
+perioperative    period    compared    to    preoperative    levels   [3].    The   preva-                              threshold of 0.05 for a two-sided test. The sample size was determined to
+lence of PND has been documented to be between 25.8 % and 41.4 % at                                                     be        50.       Considering       the        dropouts        and        refusals        to       participate        in        the
+one               week               and               between               9.9               %               and               12.7               %               at               three               months follow-up,    the    sample    size    was    increased    by    20    %.    Consequently,    60
+post-noncardiac      surgery      in      individuals      over      the      age      of      65      [4].      This   patients      who      underwent      elective      hip      fracture      surgery     at      the     Second
+cognitive       deterioration       can       persist       for       extended       periods,       potentially         Affiliated     Hospital     of     Zhejiang     Chinese     Medicine     University     between
+leading  to   increased   caregiver  dependence,  reduced  quality   of   life,   an                                    December 2021 and August 2022 were included in the study.
+elevated risk of dementia, and negative impacts on long-term survival.
+Although  the  etiology  of  PND  remains  to  be  fully  elucidated,  the  neu-
+roinflammatory response  is widely recognized as  a critical factor in its                                              Research  grouping
+pathogenesis [5].
+     Transcutaneous electrical acupoint stimulation (TEAS) is a compre-                                                      Patients  who  met  the  inclusion  criteria  were  randomly  assigned  to
+hensive    therapy    that    combines    the    conduction    of    meridians    and    acu-                           either     the     control     group     (Group     C)     or     the     electroacupuncture     group
+points with electrical stimulation, belonging to the electroacupuncture                                                 (Group A), with 30 participants in each group using a random number
+(EA)   category.    It   can    generate   various   parameters   such    as   waveform,                                table   method.   In   Group   C,   electrodes   were   placed   at   the   acupuncture
+duration,   frequency,   and  intensity   to   achieve  different   effects.   Studies                                  points   without   electrical   stimulation.   In   contrast,   patients   in   Group   A
+have      demonstrated      that      TEAS      can      alleviate      perioperative      tension      in              received           electroacupuncture           stimulation,           administered           by           certified
+surgical patients, enhance cerebral blood circulation, and mitigate brain                                               acupuncturists.  The  stimulation  occurred  30  min  before  anesthesia  on
+tissue       damage       to       benefit       PND       [6–      8].       Moreover,       it       exerts       a       specific the day of surgery and 30 min post-anesthesia in the post-anesthesia care
+inhibitory    effect    on    the    NF-kB    signal    transduction    pathway,    reducing                            unit (PACU) when the recovery score was ≥9.
+Interleukin-6   (IL-6)   and   tumor   necrosis   factor-alpha   (TNF-α                         )   levels   in
+central      nervous      cells      while      promoting      functional      recovery      [9].      This             Anesthesia  management
+study   aims   to   assess   the   impact   of   EA   intervention   at   Baihui   (GV20),
+Neiguan (PC6), Zusanli (ST36), and Sanyinjiao (SP6) acupoints on PND                                                         All   patients   received   general   endotracheal   anesthesia   (GETA)   with
+occurrence in elderly hip fracture patients. By applying EA stimulation                                                 total        intravenous        anesthesia        (TIVA).        Anesthesia        induction        was        per-
+pre-    and   postoperatively,   we    focus    on    its   effects   on    perioperative    he-                        formed    using    etomidate    0.3mg/kg,    sufentanil    0.3–      0.5 μ                g/kg,    and    cis-
+modynamic stability, adverse reactions, postoperative pain, and hospital                                                atracurium                 0.15–      0.2                 mg/kg.                 Following                 endotracheal                 intubation,
+stay    duration.    This    research    is    significant    as    it    may    provide    a    novel,                 mechanical     ventilation     was     initiated.     The     anesthetic     was     maintained
+non-pharmacological approach to facilitate the swift recovery of PND in                                                 with intravenous propofol (4–      10 mg/kg/h), remifentanil (0.2–      2 ug/kg/
+geriatric patients and potentially reduce healthcare expenses.                                                          min),    and   cisatracurium    (intermittently)    to    relax    muscles.   During    the
+
+Material  and  methods                                                                                                  surgery, the bispectral index was maintained between 40 and 60, while
+                                                                                                                        heart rate and blood pressure were kept within 20 % of baseline values.
+
+     We       conducted       this       randomized,       prospective,       double-blind,       inter-
+vention-controlled       clinical       trial       in       the       Second       Affiliated       Hospital       of  Postoperative  analgesia
+Zhejiang    Chinese    Medical    University    Xinhua    Hospital.    The    study    was
+approved       by       the       appropriate       Institutional       Review       Board       (IRB),       and            All     patients      received     postoperative     patient-controlled      intravenous
+written informed consent was obtained from all participants. This study                                                 analgesia     (PCIA).     The     PCIA     regimen     consisted     of     2            µ      g/kg      sufentanil
+was approved by the Ethics Committee of the Second Affiliated Hospital                                                  diluted in 100 ml of saline. The parameters were set: flow rate, 1.5 ml/h;
+of   Zhejiang   Chinese   Medicine   University   (IRB:   2019-KL-129–      01).   The                                  bolus, 2 ml; lockout time, 15 min.
+trial  was  registered   before   patient  enrollment   at  clinicaltrials.gov  (see
+https://www.chictr.org.cn/showproj.html?proj=136703,                                                     principal
+investigator: Wei Chen, date of registration: November 10, 2021) in the                                                 Intervention
+China                    Clinical                    Trial                    Registration                    Center                    (registration                    number:
+ChiCTR2100053050).                                                                                                           Acupoints were located according to the People’  s Republic of China
+                                                                                                                        standard "Acupoint Name and Positioning" (GB/T12346–      2006). Baihui
+Participants                                                                                                            (GV20): at the intersection of the line connecting the apexes of the two
+                                                                                                                        auricles and the median line of the head, 7 cun directly above the pos-
+     All patients provided written informed consent prior to enrollment in                                              terior hairline and 5 cun behind the anterior hairline; Neiguan (PC6): on
+this study. The inclusion criteria were as follows: (1) patients with hip                                               the       anterior       forearm,       two       transverse       finger       widths       above       the       wrist
+fracture           included           femoral           neck           fracture,           femoral           intertrochanteric crease, between the tendons of palmaris longus and flexor carpi radialis;
+fracture, and acetabular fracture; (2) age≥65 years old; ASA classifica-                                                Zusanli    (ST36):    on    the    anterior    aspect    of    the    lower    leg,    3    transverse
+tion  I~III; (3)  Mini-Mental State  Examination  (MMSE)  scores   ≥         24  for                                    finger widths below the knee, one finger-breadth from the anterior crest
+middle school graduates,  ≥        20 for primary school graduates, and  ≥        17                                    of     the     tibia;     Sanyinjiao     (SP6):     on     the     inner     side     of     the     lower     leg,     3
+for  illiterate individuals. The exclusion criteria included: (1) severe vi-                                            transverse finger widths above the inner ankle, on the posterior border
+sual or hearing impairment, or an inability to communicate effectively;                                                 of the tibia. Patients in Group A received 30-minute electrical stimula-
+(2) having senile dementia; (3) having a history of epilepsy, alcoholism,                                               tion     at     Baihui     (GV20),     bilateral     Neiguan     (PC6),     Zusanli     (ST36),     and
+neurological    diseases,   and   mental    illness;    (4)    having   an    infected    acu-                          Sanyinjiao (SP6) before and after anesthesia (PACU awakening score ≥
+point on the skin.                                                                                                      9).   See Fig.#x00A0;1.   The   Huatuo   brand   electronic   pulse   therapeutic
+                                                                                                                        device     (SDZ-II,     Suzhou     Medical     Products     Factory     Co.,     LTD.,     Suzhou,
+Sample  size  calculation                                                                                               China)     was     used     to     stimulate     acupoints     with     a     millimeter     needle     or
+                                                                                                                        electrode patch. The stimulation parameters were set as follows: 2/100
+     The  sample  size  for  this  study  was  calculated  using  PASS15.0  soft-                                       Hz density wave, adjusted to patient tolerance, with each session lasting
+ware. A previous study reported that the incidence of PND ranges from                                                   30 min.
+
+
+                                                                                                                   2
+
+                                             Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                                For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 3 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     Fig.  1.            The location  of the  acupoints  for transcutaneous  electrical acupoint stimulation.
+
+Indicators  of  observation                                                                                             Observation  of  postoperative  adverse reactions
+                                                                                                                             Patients’                      surgical               complications               were               recorded.               Postoperative
+General  feature  comparison                                                                                            nausea       and       vomiting       (PONV),       abdominal       discomfort,       diarrhea,       and
+     The        general        characteristics        included        age,        sex,        body        mass        index other       digestive      disturbances       were       noted.       The       cardiovascular       system
+(BMI), level of education, American Society of Anesthesiologists (ASA)                                                  included   postoperative  hypertension,   hypotension,  arrhythmia,   brady-
+grade,    number    of    previous    surgeries,    duration    of    anesthesia,    surgical                           cardia,                  tachycardia.                  Respiratory                   symptoms                   included                  hypoxemia
+procedure time, volume of fluid rehydration, amount of blood loss and                                                   (SpO2<90 %) and  pulmonary infection. Central nervous system symp-
+transfusion  required, number  of  drainage  tubes used,  lost hemoglobin,                                              toms   included   headache,   dizziness,   confusion,   restlessness,   chills,   and
+extubation time after surgery completion, duration in the recovery room                                                 fever. The adverse reactions of the two groups were compared.
+following     surgery     completion,     length     of     hospital     stay,     combined     un-
+derlying diseases and high-risk factors for both groups of patients.                                                    Detecting  of  serum indicators
+                                                                                                                             Peripheral        blood        samples        (3        ml)        were        collected        30        min        before
+Monitoring  vital  signs  at  different  time points                                                                    anesthesia (t0), 30 min after surgery (t1), and one day after surgery (t2).
+     Patients’       mean arterial pressure (MAP), heart rate (HR), and oxygen                                          The supernatant was collected and refrigerated at                 80 ◦C after 10 min
+saturation      (SpO2)      were      monitored      at      various      time      points,      including              centrifugation    at    1300    RPM.    Serum     levels    of    IL-1β      ,    IL-6,    and    S100-β
+upon  admission  (T0),  before  anesthesia  induction  (T1),  during  intuba-                                           protein   were   measured   using   an   ELISA   kit   (Jiangsu   Enzyme   Immuno-
+tion (T2), before skin incision (T3), skin incision (T4), 30 min after skin                                             assay Industry Co. Ltd, Yancheng, China).
+incision    (T5),    60    min     after    skin    incision    (T6),    completion    of    surgery
+(T7), and upon leaving the recovery room (T8).                                                                          Statistical  analyses
+                                                                                                                             Data were analyzed using SPSS 25.0 statistical software (Version 25,
+Monitoring  of  hemodynamic  stability  criteria                                                                        IBM  Corporation,  Armonk,  NY,  USA).  The  mean±SD  was  employed  to
+     Hypotension   (MAP      <          80   %)   or   hypertension   (MAP      >          120   %)   was               represent measurement data that followed a normal distribution, while
+recorded    if    the    intraoperative    MAP    was    below    or    above    20    %    of    the                   categorical    variables    were    presented    as    cases    and    percentages.    Inter-
+admission MAP for 5 min or more; when the HR is <48 bpm or >90 bpm                                                      group           comparisons          were          performed           using          the           Kruskal-Wallis          test;
+and lasts for 5 min, recorded bradycardia (HR<48 bpm) and tachycardia                                                   average distribution data were compared using the Independent-Sample
+(HR>90 bpm).                                                                                                            T-Test,                and                repeated-measurement                data                were                analyzed                through
+                                                                                                                        repeated-measures   ANOVA.   Counting   data   was   assessed   using   the   X2-
+Neuropsychiatric  function  tests                                                                                       test. P <        0.05 was considered statistically significant.
+     The       Mini-Mental       State       Examination       (MMSE)       was       used       to       assess
+cognitive function. It was performed one day before and 1, 3, and 7 days                                                Results
+after surgery. When the MMES score dropped two or more points after
+surgery, PND was considered [11].                                                                                       Clinical  characteristics  of  patients  and surgical  results
+
+PCIA  using  and pain  score                                                                                                 A  total  of  60  patients  who  met  the  inclusion  and  exclusion  criteria
+     The Visual Analog Scale (VAS) pain score was documented at 24 and                                                  were    initially   enrolled.   Two    patients   withdrew   consent,   one   canceled
+48 h post-surgery. The VAS score ranged from 0 to 10, indicating that the                                               surgery,  and  four  were  lost  to  follow-up.  Ultimately,  53  patients  were
+pain   was   more   severe   as   the   score   increased.   The   dosage   of   the   PCIA                             included in the trial. The patients were randomly assigned to Group C (n
+medication and pressing times were recorded 48 h post-surgery.                                                          =              26)       and       Group       A       (n                 =              27)       using       a       random       number       table       (Fig.
+
+
+
+                                                                                                                   3
+
+                                             Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                               For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 4 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+                                                                                                                        drainage  tubes  implanted  after  surgery,  and  hemoglobin  loss  were  not
+                                                                                                                        significantly     different     across     groups     (P           >            0.05), Table     1.     Thus,     both
+                                                                                                                        groups were comparable.
+
+
+                                                                                                                        Primary  outcome
+
+                                                                                                                        Comparison  of  MMSE  scores  and PND  incidence
+                                                                                                                             Before surgery, the two groups had similar MMSE scores. The MMSE
+                                                                                                                        scores of both groups reduced significantly after surgery (1 and 3 days)
+                                                                                                                        (P     <         0.05),  but  there  were  no  significant  differences  between  the  two
+                                                                                                                        groups  on   postoperative  day   7   (P     >         0.05).   Both  groups  experienced   a
+                                                                                                                        significant increase in MMSE scores on postoperative day 7 compared to
+                                                                                                                        postoperative day 1 (P <       0.05). The incidence of PND on postoperative
+                                                                                                                        day   1   was   56.0   %   in   group   C   and   25.0   %   in   group   A   (P       <          0.05).   On
+                                                                                                                        postoperative day 3, the incidence of PND was 48.0 % in Group C and
+                                                                                                                        14.3 % in Group A (P <     0.05). The incidence of PND was similar between
+                                                                                                                        the two groups on postoperative day 7 (P >       0.05). See Table 2                                and Fig.
+                                                                                                                        #x00A0;3, 4.
+
+                                                                                                                        Comparison  of  serum  indicators
+                                                                                                                             Repeated          measures          ANOVA          for          IL-1β                     revealed          that          time-group
+                                                                                                                        interaction  was significant (F   =         7.827, P   =        0.002). IL-1β             levels signifi-
+                           Fig. 2.            Experimental  flow of  this study.                                        cantly increased in group C at t1 and t2 (P <     0.05) and in group A at t1 (P
+                                                                                                                        <       0.05) compared to t0. There was no significant difference between t2
+                                                                                                                        and t0 (P >        0.05). Group A did not show a significant increase in IL-1β
+#x00A0;2).   The  two   groups  did  not   differ  in   age,  sex,  number   of  pre-                                   levels at t2 compared to t1 (P>0.05).
+vious     operations,     BMI     index,     ASA     categorization,     education     level,     or                         Repeated     measures     ANOVA     for     IL-6     also     showed     that     interaction
+combined  underlying  disorders  (P     >         0.05).  Anesthesia  duration,  oper-                                  between time and group was significant (F =     9.460, P =     0.001). At t1, IL-
+ation   time,   blood   loss,   blood   transfusion,   infusion   volume,   number   of                                 6      levels      were      significantly      lower      in      Group      A      compared      to      Group      C
+                                                                                                                        (P<0.05). IL-6 levels in Group A were similar at t1 and t2 compared to t0
+                                                                                                                        (P >        0.05). Group C exhibited a significant decrease in IL-6 levels at t2
+Table 1                                                                                                                 compared to t1 (P<0.05).
+Comparison of general conditions of patients in each group (n =       53).                                                   Repeated     measures      ANOVA     for     S-100β                indicated     that     time-group
+  Characteristics                           C (n =      26)      A (n =      27)       T-test/ X2-test                  interaction      was      insignificant     (F             =             0.545,      P            =             0.586).      At      t1,      S-100β
+                                                                                       t/X2           P                 levels considerably rose in both groups compared to t0 (P<0.05). At t2,
+                                                                                                                        S-100β           levels were significantly lower in both groups compared to t1 (P
+  Age [years, mean (SD)]                    72.35                75.70±10.95                       0.9270.358           <         0.05).  No  significant  differences  in  S-100β              levels  were  observed  be-
+                                            ±15.15                                                                      tween    the    groups    at    any    time    point(P         <           0.05).    See Table    3and Fig.
+  sex [n ( %)]
+     Female                                 11 (42.3 %)          13 (48.1 %)           0.182          0.669             #x00A0;5.
+     Male                                   15 (57.7 %)          14 (51.9 %)
+  History of operations [times,             0.65±0.69            0.81±0.79                         0.7910.432           Secondary  outcomes
+     mean (SD)]
+  BMI [kg/m2, mean (SD)]                    22.22±2.53           21.61±2.58            0.876          0.385
+  ASA [n ( %)]                                                                                                          Comparison  of  intraoperative  hemodynamic  stability criteria
+     І                                      1 (3.8 %)            1 (3.7 %)             5.794          0.98                   Repeated          measures          ANOVA          for          MAP          revealed          that          time-group
+     ІІ                                     17 (65.4 %)          17 (63.0 %)                                            interaction     was     significant     (F           =            3.355,     P           =            0.004).     At     T2,     Group     A
+     ІІІ                                    8 (30.8 %)           9 (33.3 %)
+  Educational level [n ( %)]                                                                                            exhibited   a   significantly  lower   MAP   value   compared  to   Group  C   (P     <
+     Primary school                         11 (42.3 %)          10 (37.0 %)           5.664          0.129             0.05). Both groups experienced significant MAP declines at T3, T4, T5,
+     Middle school                          8 (30.8 %)           3 (11.1 %)                                             and T6 compared to baseline levels at T0 (P <        0.05).
+     High school                            2 (7.7 %)            7 (25.9 %)                                                  Repeated               measures               ANOVA               for               HR               showed               that               time-group
+     College                                5 (19.2 %)           7 (25.9 %)
+  Combined underlying diseases [n ( %)]
+     Hypertension                           12 (46.2 %)          15 (55.6 %)           0.468          0.494             Table 2
+     Diabetes                               6 (23.1 %)           4 (14.8 %)            0.591          0.442             Comparison of MMSE score and PND incidence between two groups at different
+     Cardiopathy                            3 (11.5 %)           6 (22.2 %)            0.448          0.503             times (n =       53, x±s).
+     Cerebrovascular                        2 (7.7 %)            2 (7.4 %)             0.002          0.969
+  Anesthesia time [minutes,                 229.15               204.44                0.685          0.497               Group        pre-                 1st day after            3rd day after              7th day after
+     mean (SD)]                             ±114.15              ±145.99                                                               operation            surgery                  surgery                    surgery
+  Surgical duration [minutes,               196.85               166.19                0.891          0.377               MMSE scores
+     mean (SD)]                             ±113.16              ±135.86                                                     C         25.30±3.80           23.77±3.98a              24.00±3.82a                25.00±3.89b,c
+  Blood loss [ml, mean (SD)]                183.85               151.11                0.951          0.346                  A         25.74±4.37           24.89±4.68a              25.00±4.58a                25.74±4.60b,c
+                                            ±122.25              ±128.13                                                  The incidence of PND ( %)
+  Number of blood                           11 (42.3 %)          10 (37.0 %)           0.154          0.695                  C         /                    14 (56.0 %)              12 (48.0 %)                2 (8.0 %)
+     transfusions [n ( %)]                                                                                                   A         /                    7 (25.0 %) d             4 (14.3 %) d               1 (3.6 %)
+  Infusion volume [ml, mean                 2122.31              1764.81               1.384          0.172
+     (SD)]                                  ±761.94              ±1084.52                                               Note:.
+  Number of drainage tubes                  1.08±1.23            0.85±1.20             0.674          0.503               a  , compared with preoperative, P <       0.05;.
+     [mean (SD)]                                                                                                          b  , compared with 1st day after surgery, P <       0.05;.
+  Lost hemoglobin [g/dl, mean               1.36±1.04            1.31±0.90             0.175          0.862               c  , compared with 3rd day after surgery;.
+     (SD)]                                                                                                                d  , compared with group C, P <       0.05.
+
+
+                                                                                                                   4
+
+                                             Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                               For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 5 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+                                                                                                                      observed in 15.4 % of patients in Group C and 22.2 % in Group A, with
+                                                                                                                      no significant difference between the groups (P =      0.329). Intraoperative
+                                                                                                                      bradycardia was noted in 11.5 % of patients in Group C and 11.1 % in
+                                                                                                                      Group A  (P  =         0.375). The  incidence of  intraoperative tachycardia  was
+                                                                                                                      7.7   %   in   Group   C   and   22.2   %   in   Group   A   (P      =          0.083).   There   was   no
+                                                                                                                      significant     difference     in    the     mean    extubation     time     between     Group    C
+                                                                                                                      (10.85±8.44    min)    and    Group    A    (7.44±6.03    min)    (P        =           0.097).    Addi-
+                                                                                                                      tionally,   the   proportion   of   patients   with   postoperative   recovery   room
+                                                                                                                      stays exceeding 30 min was higher in Group C (42.3 %) than in Group A
+                                                                                                                      (29.6 %), although this difference was not statistically significant (P  =
+                                                                                                                      0.336). See Table 5             and Fig.#x00A0;7.
+
+                                                                                                                      Comparison  of  postoperative  adverse  reactions  between  the  two  groups
+                                                                                                                            The    incidence    of    postoperative    nausea    and    vomiting    (PONV)    was
+                                                                                                                      significantly  lower  in  Group  A (3.7  %)  compared  to  Group  C  (30.8  %)
+                                                                                                                      (X2=5.097,     P           =            0.024).     There     were     no     differences     between     the     two
+Fig.  3.            Comparison  of  MMSE  scores  before  surgery  and  1,  3,  and  7  days  after                   groups    in    terms    of    stomach    pain    and    distension,    postoperative    hypo-
+surgery between  the  two groups.                                                                                     tension,    tachycardia,     bradycardia,    hypoxemia,    headache     and    vertigo,
+                                                                                                                      delirious      agitation,      chills,      and      fever      (P>0.05).     See   Table      6  and Fig.
+                                                                                                                      #x00A0;8.
+
+                                                                                                                      Comparison  of  pain  levels  and  duration  of  hospitalization
+                                                                                                                            The Visual Analog Scale (VAS) pain score at 24 h post-operation was
+                                                                                                                      significantly higher in Group C (3.96±0.96) compared to Group A (2.65
+                                                                                                                      ±0.94)  (t    =         4.458,  P     <         0.001).  At  48  h  post-operation,  the  VAS  score
+                                                                                                                      remained      significantly      higher      in      Group      C      (2.65±0.94)      compared      to
+                                                                                                                      Group     A     (1.85±0.72)     (t           =            2.876,     P           =            0.001).     The     mean     number     of
+                                                                                                                      patient-controlled    intravenous    analgesia   (PCIA)   compressions    at   48    h
+                                                                                                                      post-surgery was significantly higher in Group C (8.62±1.84) compared
+                                                                                                                      to      Group      A      (7.11±2.14).      At      48      h,      the      two      groups      had      significantly
+                                                                                                                      different mean PCIA compressions (t =      2.745, P =      0.008). Similarly, the
+                                                                                                                      mean consumption of PCIA at 48 h post-surgery was significantly higher
+                                                                                                                      in Group C (89.23±3.67 ml) compared to Group A (86.22±4.27 ml) (t =
+                                                                                                                      2.745, P  =        0.008). The average hospital stay was 14.77±3.57 days for
+Fig.  4.            Comparison of  PND incidence  between two groups at  different  times.                            Group  C  and  13.37±3.03  days  for  Group  A,  with  no  significant  differ-
+Note:  Compared  with group  C,  * P   <        0.05.                                                                 ence the groups (t =        1.541, P =        0.13). See Table 7                 and Fig.#x00A0;9.
+
+interaction was insignificant (F =       1.238, P =       0.301). Both Group C and                                    Analysis  and  discussion
+Group        A        exhibited        significant        decreases        in        HR        at        T4,        T5,        and        T6
+compared        to        baseline        (P                   <               0.05).        Additionally,        repeated        measures Hip fracture surgery is highly invasive, and despite advancements in
+ANOVA      for      oxygen      saturation      (SpO2)      indicated      no      significant      time-             rapid     postoperative     recovery     strategies,     the     risk     of     complications     re-
+group interaction (F =     0.520, P =     0.835), See Table 4                    and Fig.#x00A0;6.                    mains     high,     with     central    nervous     system     complications     such     as     PND
+                                                                                                                      being prevalent. The underlying mechanisms of PND have yet to be fully
+Comparison  of  intraoperative hemodynamic  stability  and postoperative                                              elucidated    and     may    involve    central    inflammation    [12,13],    decreased
+recovery  between  the  two  groups                                                                                   cholinergic      system      function     [14],      synaptic     dysfunction      [15],     protein
+     Intraoperative hypotension occurred in 50.0 % of patients in Group C                                             dysfunction [16], and gut microbiota imbalance [17]. Among these, the
+and   33.3   %   in   Group   A   (P      =          0.735).   Intraoperative   hypertension   was                    mechanism of central inflammatory response is particularly critical and
+
+
+Table 3
+Comparison of serum levels of IL-1β      , IL-6 and S-100β           at different time points between the two groups (n =       53, x±s).
+
+  Group                t0                          t1                           t2                            Repeated-measures ANOVA
+
+                                                                                                              Group main effect                           Time main effect                              Group*Time
+
+                                                                                                              F                   P                       F                      P                      F                   P
+
+  IL-1β          (pg/ml)
+     C                 30.45±5.27                  38.27±5.80b                  36.18±6.49b                   0.386               0.540                   30.851                 <0.001                 7.827               0.002
+     A                 33.34±6.44                  35.74±6.28b                  32.11±6.09c
+  IL-6 (pg/ml)
+     C                 40.42±9.68                  53.26±8.25b                  39.50±11.38c                  3.974               0.056                   22.684                 <0.001                 9.460               0.001
+     A                 37.22±7.80                  40.18±9.85a                  37.36±9.47
+  S-100β          (ng/ml)
+     C                 0.56±0.05                   0.82±0.08b                   0.63±0.18c                    0.549               0.447                   107.034                <0.001                 0.545               0.586
+     A                 0.56±0.09                   0.77±0.09b                   0.60±0.20c
+
+Note:.
+  a  , compared with group C, P <       0.05;.
+  b  , compared with t0, P <       0.05;.
+  c  , compared with t1, P <       0.05. t0: before induction of anesthesia (before EA), t1:30 min after surgery (after EA), t2: 1 day after surgery.
+
+
+                                                                                                                  5
+
+                                            Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                               For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 6 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig.  5.            Comparison of  serum levels  of IL-1β      , IL-6, and  S-100β            at t0,  t1,  and  t2 between the  two groups
+Note:  Panel a  shows the changes in serum IL-1β            levels  at different times, panel  b shows the changes in serum IL-6  levels at different times,  and panel c shows the
+changes  in serum  S-100β            levels  at different  times.
+
+
+
+Table 4
+Comparison of MAP, HR, and SpO2 between the two groups at different time points during operation (n =       53,x±s).
+
+  Time                   C                                    A                                        Repeated-measures ANOVA
+
+                                                                                                       Group main effect                                 Time main effect                                   Group*Time
+
+                                                                                                       F                      P                          F                        P                         F                      P
+
+  MAP (mmHg)
+     T0                  102.65±14.02                         98.22±11.13                              2.539                  0.117                      14.940                   <0.001                    3.355                  0.004
+     T1                  99.73±15.31                          92.37±13.15
+     T2                  97.85±19.87                          80.11±15.87a,b,h
+     T3                  81.27±19.41a,b,c                     77.44±16.65a,b
+     T4                  90.27±17.61a                         83.15±17.35a
+     T5                  82.50±15.21a,b,c                     76.41±14.52a
+     T6                  83.85±13.10a,b,c                     81.78±13.64a,b
+     T7                  93.62±16.46                          99.19±16.47c,d,e,f,g
+     T8                  95.23±14.28 g                        99.81±13.01c,d,e,f,g
+  HR (bpm)
+     T0                  76.19±16.36                          76.37±10.01                              0.891                  0.350                      9.837                    <0.001                    1.238                  0.301
+     T1                  73.37±16.28                          77.11±13.73
+     T2                  74.15±20.03                          76.96±14.93
+     T3                  68.50±19.53                          71.04±15.98
+     T4                  65.85±16.11a                         71.04±15.30
+     T5                  63.65±15.10a,b                       66.19±13.02a,b,e
+     T6                  61.81±17.24a,b,c                     65.85±13.75a,b
+     T7                  66.77±15.11                          74.04±17.00
+     T8                  69.46±13.82                          69.15±17.54
+  SpO2 ( %)
+     T0                  97.73±2.69                           97.59±1.69                               0.015                  0.902                      8.832                    <0.001                    0.520                  0.835
+     T1                  98.81±1.27                           98.48±1.72a
+     T2                  99.23±1.45                           99.37±1.08a
+     T3                  99.31±1.12a                          99.48±1.04a
+     T4                  99.58±0.92a                          99.67±0.83a,b
+     T5                  99.46±1.14a                          99.67±0.88a,b
+     T6                  99.50±1.07a                          99.59±0.89a,b
+     T7                  99.46±0.99a                          99.33±1.69a
+     T8                  98.77±1.70                           98.41±1.95f,g
+
+Note:.
+  a  , compared with T0, P <       0.05;.
+  b  , compared with T1, P <       0.05;.
+  c  , compared with group T2, P <       0.05;.
+  d  , compared with T3, P <       0.05;.
+  e  , compared with T4, P <       0.05;.
+  f  , compared with T5, P <       0.05;.
+  g  , compared with T6, P <       0.05;.
+  h  , compared with C group, P <    0.05. T0: admission; T1: before anesthesia induction; T2: during intubation; T3: before skin incision; T4: skin incision; T5:30 min after
+skin incision; T6:60 min after skin incision; T7: completion of surgery; T8: upon leaving the recovery room.
+
+has attracted significant research attention.                                                                              stimulation     technology,     demonstrating     broad     clinical     application     po-
+                                                                                                                           tential.     TEAS     stimulates     specific     acupoints     with     electrical     current     to
+The  advantages  of  TEAS                                                                                                  generate  neural   modulation   effects  along   meridians,   aiming   to   reduce
+                                                                                                                           central   and   peripheral   inflammatory   responses,   inhibit   microglial   cell
+     Transcutaneous      Electrical      Acupoint      Stimulation      (TEAS)      is      a      non-                    activation,      and      prevent      neuronal      apoptosis,      thereby      exerting       neuro-
+invasive                    neuro-electroacupuncture                   therapy,                    combines                   traditional protective     effects     [18,19].     It     is     simple     to     operate,     effective,     and     has
+acupuncture             theory             with             modern             transcutaneous             electrical             nerve minimal           side           effects.           Personalized           treatment           can           be           achieved           by
+
+
+
+                                                                                                                      6
+
+                                              Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                                 For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 7 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+                                                                                                                     Selection  of  acupoints
+
+                                                                                                                          Acupoints   form   the   therapeutic   cornerstone   of   TEAS   for   managing
+                                                                                                                     PND. The selection  of acupoints follows to the "Xingnao Kaiqiao"  prin-
+                                                                                                                     ciple in traditional Chinese medicine, with a typical protocol involving
+                                                                                                                     electrical stimulation at Baihui (GV20), Neiguan (PC6), Zusanli (ST36),
+                                                                                                                     and    Sanyinjiao    (SP6)    bilaterally    [18].    Baihui    (GV20),    located    on    the
+                                                                                                                     governor       vessel       meridian,       is       essential       for       treating       neurological       and
+                                                                                                                     psychological disorders, providing neuroprotective and sedative effects.
+                                                                                                                     Neiguan (PC6), a crucial acupoint, is highly effective for nervous system
+                                                                                                                     and mental health disorders and also plays a significant role in managing
+                                                                                                                     gastrointestinal            diseases.            Zusanli            (ST36)            is            known            for            enhancing
+                                                                                                                     gastrointestinal motility and  improving digestion, with potential bene-
+                                                                                                                     fits  for  brain  function  recovery.  Sanyinjiao  (SP6),  located  at  the  inter-
+                                                                                                                     section       of       the       liver,       spleen,       and       kidney       meridians,       promotes       blood
+                                                                                                                     circulation,   mental   tranquility,   and  digestive   function.   This   study  em-
+                                                                                                                     ploys TEAS at these acupoints to evaluate its efficacy in preventing PND.
+
+                                                                                                                     Analysis  of  main  indicators
+
+                                                                                                                          PND encompasses a spectrum of cognitive changes that can manifest
+                                                                                                                     both   prior   to   and   within   the   first   12   months   following   surgery.   Clini-
+                                                                                                                     cally,           PND           is           categorized           into           several           distinct           types:           pre-existing
+                                                                                                                     cognitive       impairment,      preoperative       delirium,      postoperative       delirium
+                                                                                                                     within         the         first         week,         delayed         neurocognitive         recovery,         and         post-
+                                                                                                                     operative PND as defined by specific criteria [22].
+                                                                                                                          For accurate identification of PND, objective cognitive assessment is
+                                                                                                                     paramount,    with    neuropsychological    testing    playing    a    critical    role    in
+                                                                                                                     evaluation.  MMSE  is  a  widely  recognized  screening  tool  for  PND.  This
+Fig. 6.            Changes of MAP, HR, and SpO2 at different times during the operation                              assessment evaluates neurocognitive function  across  five key  domains:
+in  the  two groups                                                                                                  orientation, attention, calculation, recall, and language.
+Note:    Fig.s    a,    b,    and   c    show    the    changes   of    MAP,   HR,    and    SpO2    of    the    two     A    diagnosis     of    PND    is     typically    established    when    there    is     a    post-
+groups at  different  time points during operation, respectively.                                                    operative decline of two or more points in the MMSE score compared to
+                                                                                                                     the     preoperative     baseline     [11].     In     light     of     this,     our     study     employed
+                                                                                                                     MMSE    scores    to    meticulously    assess    the    cognitive    function    of    elderly
+Table 5                                                                                                              patients in the perioperative period.
+Comparison    of    intraoperative    hemodynamic    stability,    postoperative    recovery                              Previous  research  has  consistently  shown  that  perioperative  neuro-
+room residence time, and postoperative extubation time between the two groups                                        cognitive decline is a significant issue following hip fracture surgery in
+of patients (n =       53).                                                                                          elderly patients [23]. Our study’  s findings indicated no significant pre-
+  Event                                             C                 A                 T-test/ X2-test              operative difference in MMSE scores between the two groups (P >     0.05).
+
+                                                                                        t/X2        P                However, both groups experienced a decline in MMSE scores on the 1st
+  Hemodynamic stability                                                                                              and 3rd postoperative days compared to preoperative levels, which was
+     Hypotension (MAP<80 %)                         13 (50.0          9 (33.3           5.681       0.735            statistically significant (P <       0.05). By the 7th postoperative day, MMSE
+                                                    %)                %)                                             scores    had    returned    to    preoperative    levels,    with    no    significant    differ-
+     Hypertension (MAP>120 %)                       4 (15.4 %)        6 (22.2           4.615       0.329            ences observed. Notably, Group A had a significantly lower incidence of
+                                                                      %)                                             PND than Group C on both the 1st and 3rd postoperative days (P <     0.05).
+     Bradycardia (HR<48 bpm)                        3 (11.5 %)        3 (11.1           4.325       0.375            These results suggest that while neurocognitive function is temporarily
+                                                                      %)
+     Tachycardia (HR>90 bpm)                        2 (7.7 %)         6 (22.2           8.231       0.083            affected in the immediate postoperative period for both groups, there is
+                                                                      %)                                             a   gradual    recovery   towards    preoperative   levels   by   the   7th   day,    high-
+     Extubation time (min)                          10.85             7.44              1.693       0.097            lighting the impact of anesthesia and surgical stress on cognitive func-
+                                                    ±8.44             ±6.03                                          tion. Intriguingly, TEAS has been linked to a reduced incidence of PND
+     Recovery room residence                        11 (42.3          8 (29.6           0.926       0.336
+     time>30min                                     %)                %)                                             in elderly patients, suggesting its potential to aid in cognitive recovery.
+Note:  If  hypotension,  hypertension,  bradycardia,  or  tachycardia  persist  for   >5                                  There is substantial evidence that surgery and anesthesia can trigger
+min, they will be recorded as a single occurrence.                                                                   a robust systemic inflammatory response and activate the immune sys-
+                                                                                                                     tem,    leading    to    an    inflammatory    reaction    within    the    central    nervous
+precisely  controlling  the  timing  of  acupuncture  and  electrical  stimula-                                      system.   These   inflammatory  mediators   can   damage   brain  cells   by   dis-
+tion parameters, such as duration, intensity, and frequency.                                                         rupting the blood-brain barrier and releasing harmful substances such as
+     In       perioperative       management,       TEAS       has       been       widely       applied       to    proteolytic         enzymes,         oxygen-free         radicals,         and         lysosomal         enzymes,
+various  surgical  patients,  showing  significant  effects  not  only  in  organ                                    resulting in neuronal damage and impaired synaptic plasticity [10]. In
+protection,          inflammation          alleviation,          pain          management,          and          stress this   study,   a   significant   increase   in   IL-1β               levels   was   observed   30   min
+reduction but also in actively improving PND [20]. Furthermore, TEAS                                                 post-surgery for both groups compared to preoperative levels (P <     0.05).
+has been successfully applied in the rehabilitation treatment of patients                                            Group  A  exhibited  a  more  pronounced  decrease  in  IL-1β              levels  on  the
+with         cerebrovascular         diseases         such         as         cerebral        infarction         and        Alz-first    postoperative    day.    The    interaction    between    time    and    group    was
+heimer’  s          disease,          achieving          satisfactory          therapeutic          outcomes,          and statistically        significant        for        IL-1β                   (P                 <               0.05).        Additionally,        group        C
+further validating its value in neuroprotection [5,21].                                                              exhibited a significant increase in IL-6 levels at 30 min and the 1st day
+                                                                                                                     post-surgery,    whereas    group    A    did    not    show    a    significant    increase    at
+
+
+                                                                                                                 7
+
+                                            Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                              For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 8 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig.    7.            Comparison    of   intraoperative    hemodynamic    stability,    postoperative   recovery   room    residence    time,    and   postoperative    extubation    time   between    the    two
+groups
+Note:   Panel   a   shows   the   incidence   of   intraoperative   hypotension,   hypertension,   bradycardia,   and   tachycardia   between   the   two   groups.   Panel   b   shows   the   post-
+operative  recovery  room  stay duration between  the two  groups. Panel c shows  the extubation  time between the  two groups.
+
+
+Table 6                                                                                                                 these   time   points.   The  interaction   effect   between   time   and  group   was
+Comparison of postoperative adverse reactions between the two groups (n =     53,                                       again statistically significant in IL-6 (P <        0.05).
+%).                                                                                                                          It is hypothesized that significant surgical trauma and a robust stress
+                                                                                                                        response may precipitate PND by activating the central nervous system’  s
+  Adverse reactions                            C                   A                   X2-test                          inflammatory response through inflammatory mediators. TEAS appears
+
+                                                                                       X2             P                 to mitigate the expression of inflammatory factors such as IL-1β         and IL-6,
+
+  Digestive system                                                                                                      potentially               inhibiting               the               inflammatory               response               and               enhancing
+     PONV                                      8 (30.8 %)          1 (3.7 %)           5.097          0.024             neuronal     function     and     neurocognitive     performance.     This     aligns     with
+     stomach pain and distension               2 (7.7 %)           3 (11.1 %)          <0.001         1.000             previous    findings   that    surgical   trauma   can    trigger   M1    polarization    of
+  Cardiovascular system                                                                                                 microglia in aged mice, leading to hippocampal neuroinflammation and
+     Hypotension                               1 (3.8 %)           3 (11.1 %)          0.231          0.631             postoperative   cognitive   impairment    [24],which   is   consistent   with   the
+     Hypertension                              2 (7.7 %)           3 (11.1 %)          <0.001         1.000
+     Tachycardia/bradycardia                   2 (15.4 %)          2 (11.8 %)          <0.001         1.000             observed  increase  in   postoperative  inflammatory  factors  in   this  study.
+  Respiratory system                                                                                                    Prior   studies   have   demonstrated   that   TEAS   can   effectively   reduce   the
+     Hypoxemia                                 4 (15.4 %)          0 (0.0 %)           2.559          0.110             expression of inflammatory factors such as IL-6 and C-reactive protein in
+  Central nervous system                                                                                                elderly         patients         after         surgery,         thereby         inhibiting         the         inflammatory
+     headache and vertigo                      5 (19.2 %)          5 (18.5 %)          <0.001         1.000
+     Delirious agitation                       3 (11.5 %)          5 (18.5 %)          0.106          0.745             response   and   reducing   the   incidence   of   PND   [13].   These   findings   un-
+     Chills and Fever                          5 (19.2 %)          4 (14.8 %)          0.004          0.950             derscore       the       role       of       TEAS       in       modulating       inflammatory       factors       and
+                                                                                                                        improving  postoperative  cognitive  function,  thereby  corroborating  the
+                                                                                                                        results of our study.
+
+
+
+                                                                                                                   8
+
+                                             Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                                For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 9 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig.  8.            Comparison of  postoperative  adverse reactions  between the  two groups
+Note:  Compared  with group  C,  * P   <        0.05.
+
+
+Table 7                                                                                                                          The S-100β          protein, predominantly found in astrocytes and Schwann
+Comparison   of   postoperative   VAS   scores,   PCIA   compression   times,   drug   con-                                 cells of the central nervous system, serves as a promising biomarker for
+sumption, and hospital stays between the two groups (n =       53, x±s).                                                    neuronal      injury      [25].      In      this      study,      a      significant      increase      in      S-100β
+  Event                                  C                       A                      T-test                              protein           levels           was           observed           in           both           groups           30          min           post-surgery
+                                                                                                                            compared  to  preoperative  measurements,  with  levels  gradually  revert-
+                                                                                        t              P                    ing   to    baseline   by   the   first   postoperative   day.   Notably,   no   significant
+  VAS scores                                                                                                                inter-group differences were observed in S-100β            protein levels.
+     24 h after surgery                  3.96±0.96               2.78±0.97              4.458          <0.001                    Prior research has documented a transient elevation in S-100β           levels
+     48 h after surgery                  2.65±0.94               1.85±0.72              2.876          0.001                in           serum           and           cerebrospinal           fluid           within           four           hours           post-surgery,
+  PCIA compression times                 8.62±1.84               7.11±2.14              2.745          0.008                normalizing   by   24   h   [26].   Interestingly,   in   this   study,   TEAS   interven-
+  drug consumption (ml)                  89.23±3.67              86.22±4.27             2.745          0.008                tion did not diminish the expression of S-100β      . This lack of effect might
+  hospital stays (days)                  14.77±3.57              13.37±3.03             1.541          0.130
+                                                                                                                            be    due    to    factors    such    as    variability    in    participant    selection,    surgical
+                                                                                                                            techniques,    genetic    predispositions    of    the    subjects,    and    disparities    in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig.  9.            Comparison of  VAS scores at  24  and 48  h  after surgery, PCIA  compression  times, drug  consumption, and  hospital stays between  the  two groups.
+Note: Panel a is the comparison of VAS scores 24 and 48 h after surgery between the two groups; Panel b is the comparison of the total number of PCIA compressions
+48 h after surgery between the two groups; Panel c is the comparison of the total PCIA drug consumption 48 h after surgery between the two groups; Panel d is the
+comparison  of length  of hospital stay between the  two groups. Compared  with  group C,  *  P  <        0.05,  ** P   <        0.01,  *** P  <        0.001.
+
+
+                                                                                                                       9
+
+                                              Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                                 For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 10 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+PND assessment methodologies.                                                                                          ?proj=136703).
+
+Analysis  of  secondary  indicators                                                                                    Ethical  statement
+
+     The development of hypertension is intricately tied to the regulatory                                                  The      study     was      approved     by      the     appropriate     Institutional     Review
+functions  of  the  hypothalamus  within  the  central  nervous  system.  Hy-                                          Board  (IRB),  and  written  informed  consent  was  obtained  from  all  par-
+pertensive reactions are commonly triggered by external noxious stim-                                                  ticipants.      This      study      was      approved      by      the      Ethics      Committee      of      the
+uli,       such      as      intubation      and       skin      incision.      Our       observations      of       MAP Second       Affiliated       Hospital       of       Zhejiang       Chinese       Medicine       University
+indicate    that    TEAS    application    is    associated    with    a    diminished    stress                       (IRB: 2019-KL-129–      01).
+response. In this study, Group A experienced a less pronounced increase
+in  MAP  during  these  procedures  compared  to  Group  C.  Extensive  pre-                                           CRediT  authorship contribution  statement
+vious   research    has   demonstrated    that    acupuncture   therapy   can    lower
+blood      pressure      through       mechanisms      involving      the      renin-angiotensin                            Jiaqi    Long:    Writing          –                review     &     editing,    Writing         –                original    draft,
+system, vascular endothelial function, oxidative stress, and neuroendo-                                                Software,   Methodology,   Investigation,   Formal   analysis,   Data   curation,
+crine    regulation    [27].    These    findings    suggest    that    TEAS    can    mitigate                        Conceptualization.          Xiaoming          Zhang:          Writing                      –                     review           &           editing,
+cardiovascular responses to surgery while maintaining patient safety.                                                  Conceptualization.      Jialing      Zhang:      Methodology,      Investigation,      Data
+     Moreover, no significant differences were observed between the two                                                curation.     Tao    Zhou:    Methodology,     Investigation,     Data    curation.     Wei
+groups      in      terms      of      intraoperative      hypotension,      hypertension,      brady-                 Chen: Writing  –            review &  editing, Supervision, Project administration,
+cardia, or  tachycardia (P   >        0.05), indicating that TEAS does  not nega-                                      Methodology,  Investigation,  Conceptualization.  Yuebing  Li:  Writing    –
+tively      impact      hemodynamic     stability      during      surgery.     Our      study      also               review                      &                    editing,                  Project                  administration,                   Funding                  acquisition,
+found     a      significant     reduction     in     the     incidence      of     PONV     in     Group     A        Conceptualization.
+compared  to  Group  C  (P    <         0.05).  Prior  research  has  shown  that  TEAS
+can hasten recovery after surgery and decrease the occurrence of PONV                                                  Declaration  of  competing  interest
+[28],   which   aligns   with   our   results.   The   use   of   TEAS   may   reduce   the
+likelihood   of   PONV   by   activating   adrenergic   receptors   and   regulating                                        The authors declare no conflicts of interest.
+the        release        of        endogenous        5-hydroxytryptamine        [29].        Additionally,
+Group A had significantly lower VAS scores at 24 and 48 h after surgery                                                Funding
+than    Group     C.    Furthermore,    the    required    doses    of    PCIA    within    48    h
+postoperatively were significantly reduced in Group A (P <      0.05). These                                                Zhejiang        Traditional        Chinese        Medicine        Scientific        Research        Fund
+results          indicate          that          TEAS          intervention          effectively          alleviates          post-Project  [2020ZB102] and  Jiangxi  Provincial Health  Commission Tech-
+operative    pain,   corroborating   numerous   reports   in   the   existing   litera-                                nology Plan [202510679].
+ture.       Some       studies       have       further       confirmed       the       efficacy       of       TEAS       in
+controlling  postoperative  pain  following  major  spinal  surgery,  propos-                                          Acknowledgements
+ing its potential as an adjunct for short-term pain management [30]. The
+analgesic mechanism of acupuncture is thought to involve the inhibition                                                     We thank all the study  participants who enthusiastically  joined the
+of pain signal transmission, reduction in the production of endogenous                                                 study.
+algogenic substances, and the facilitation of endogenous opioid peptide
+release, thereby inducing analgesia [31].                                                                              References
+
+Limitations                                                                                                              [1]  Jing-Nan F, Cheng-Gui Z, Bao-Hua L, Si-Yan Z, Sheng-Feng  W, Chun-Li S. Global
+                                                                                                                              burden of hip fracture: The Global Burden of Disease Study. Osteoporos Int 2023;
+     This       study,       while       demonstrating       the       potential       benefits       of       EA       in    35(1).
+reducing   PND   in   elderly   hip   fracture   patients,   has   several   limitations.                                [2]  Cheng C, Wan H, Cong P,  Huang X, Wu T, He  M, et al. Targeting
+                                                                                                                              neuroinflammation as a preventive and therapeutic approach for perioperative
+The small sample size limits generalizability and the detection of subtle                                                     neurocognitive disorders. J Neuroinflammation 2022;19(1):297.
+differences. Future studies  require a  larger sample size to  elaborate on                                              [3]  Y AT, S AW, A SG, H SH. Postoperative delirium among elderly elective orthopedic
+and     validate     the     effects     of     EA.     Additionally,     the     one-week     follow-up                      patients in Addis Ababa Ethiopia: a multicentere longitudinal study. BMC
+                                                                                                                              Anesthesiol 2024;24(1).
+period   is   insufficient   for   assessing   long-term   cognitive   outcomes.   Pro-                                  [4]  Shen Y, Li X, Yao  J. Develop a Clinical Prediction Model for Postoperative
+longed   follow-up   is   needed   to   fully   evaluate   EA’  s  sustained   effects   on                                   Cognitive Dysfunction after Major Noncardiac Surgery in Elderly Patients: a
+cognitive recovery and function. Further research is essential to address                                                     Protocol for a Prospective Observational Study. Gerontology 2022;68(5):538–     45.
+                                                                                                                         [5]  Kong H, Xu LM,  Wang DX. Perioperative neurocognitive disorders: a narrative
+these limitations and elucidate the mechanisms and long-term benefits                                                         review focusing on diagnosis, prevention, and treatment. CNS Neurosci Ther 2022;
+of EA intervention.                                                                                                           28(8):1147–     67.
+                                                                                                                         [6]  Kwon CY, Lee B. Acupuncture for  Behavioral and Psychological Symptoms of
+                                                                                                                              Dementia: a Systematic Review  and Meta-Analysis. J Clin Med 2021;10(14).
+Conclusion                                                                                                               [7]  Ye X, Zheng S, Huang X, Yan Q. Effects of electroacupuncture at Baihui and Dazhui
+                                                                                                                              on perioperative neurocognitive impairment and S100-β     , LC3-II, Beclin-1 in
+     This   study   demonstrates   that   preoperative   and   postoperative   elec-                                          patients with colon cancer. Am J Transl Res 2023;15(6):4237–     45.
+                                                                                                                         [8]  Su XT, Wang LQ, Li JL, Zhang N, Wang L, Shi GX, et al. Acupuncture Therapy for
+troacupuncture   intervention   is   beneficial   in   reducing   the   incidence   of                                        Cognitive Impairment: a Delphi Expert Consensus Survey. Front Aging Neurosci
+PND      in      elderly      patients      with      hip      fractures.      Furthermore,      it      exhibits             2020;12:596081.
+distinct  advantages  in  attenuating  the  release  of  inflammatory  factors,                                          [9]  Gao F, Zhang Q, Li  Y, Tai Y,  Xin X, Wang  X, et al. Transcutaneous electrical
+stabilizing        hemodynamics,        alleviating        postoperative        pain,        and        miti-                 acupoint stimulation for prevention of postoperative delirium in geriatric patients
+                                                                                                                              with silent lacunar infarction: a preliminary study. Clin Interv Aging 2018;13:
+gating PONV.                                                                                                                  2127–     34.
+                                                                                                                       [10]   Saxena S, Lai IK, Li R, Maze M. Neuroinflammation is  a putative target for  the
+Clinical  trial  number  and  registry  URL                                                                                   prevention and treatment of perioperative neurocognitive disorders. Br Med Bull
+                                                                                                                              2019;130(1):125–     35.
+                                                                                                                       [11]   Chi Y, Li Z, Lin C, Wang Q, Zhou Y. Evaluation of the postoperative cognitive
+     The    trial    was   registered    before    patient    enrollment   at    chictr.org.cn                                dysfunction in elderly patients with general anesthesia. Eur Rev Med Pharmacol Sci
+(ChiCTR2100053050,    principal    investigator:    Wei    Chen,    date    of    regis-                                      2017;21(6):1346–     54.
+                                                                                                                       [12]   Inouye S, Marcantonio E, Kosar C, Tommet D, Schmitt E, Travison T, et al. The
+tration: November 10, 2021, https://www.chictr.org.cn/showproj.html                                                           short-term and long-term relationship between delirium and cognitive trajectory in
+
+
+                                                                                                                  10
+
+                                            Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                               For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.
+
+=== PDF PAGE 11 ===
+J. Long et al.                                                                                                                                                                                                                                     Injury 56 (2025) 112660
+
+       older surgical patients.  Alzheimer’s                                                                                                                              &  dementia: the journal of the Alzheimer’s [23]Li B, Ju J, Zhao J, Qin Y, Zhang Y. A  Nomogram to Predict Delirium after Hip
+       Association 2016;12(7):766–75            .                                                                                 Replacement in  Elderly Patients with Femoral Neck Fractures. Orthop Surg 2022;
+[13]   Xi L, Fang F, Yuan H, Wang D. Transcutaneous electrical acupoint stimulation for                                           14(12):3195–200       .
+       postoperative cognitive dysfunction in  geriatric patients with gastrointestinal                                   [24]    Luo G, Wang X, Cui Y, Cao Y, Zhao Z, Zhang J. Metabolic reprogramming mediates
+       tumor: a randomized controlled trial. Trials 2021;22(1):563.                                                               hippocampal microglial M1 polarization in response to surgical trauma causing
+[14]   Wang  DS, Terrando N, Orser BA. Targeting  microglia to mitigate perioperative                                             perioperative neurocognitive disorders. J Neuroinflammation 2021;18(1):267.
+       neurocognitive disorders. Br J Anaesth 2020;125(3):229–32                     .                                    [25]    Haselmann V, Schamberger C, Trifonova F, Ast V, Froelich MF,  Strauß                                                             M, et al.
+[15]   Xin Y, Wang  J, Chu T, Zhou Y, Liu C, Xu A. Electroacupuncture  Alleviates                                                 Plasma-based S100B testing for management of  traumatic brain injury in
+       Neuroinflammation by Inhibiting the HMGB1 Signaling Pathway in Rats with                                                   emergency setting.  Pract Lab Med 2021;26.
+       Sepsis-Associated Encephalopathy. Brain Sci 2022;12(12).                                                           [26]    Danielson M, Wiklund A, Granath F, Blennow K, Mkrtchian  S, Nellgard B, et al.
+[16]   Wang Y, Xing J, Li Y, Zhang R. Effect and safety of acupuncture on cerebrovascular                                         Neuroinflammatory markers associate with cognitive decline after major surgery:
+       reserve in patients with acute cerebral infarction: a protocol for systematic review                                       Findings of  an explorative study. Ann Neurol  2020;87(3):370–82                    .
+       and meta-analysis. Medicine (Baltimore) 2021;100(28):e26636.                                                       [27]    Wang C, Wang P, Qi G. A new use of transcutaneous electrical nerve stimulation:
+[17]   Lu Z, Dong H, Wang Q, Xiong L. Perioperative acupuncture modulation: more than                                             Role of  bioelectric technology in resistant hypertension (Review). Biomed Rep
+       anaesthesia.  Br J Anaesth 2015;115(2):183–93                .                                                             2023;18(6):38.
+[18]   Zhang T,  Ou L, Chen Z, Li J, Shang Y, Hu G. Transcutaneous Electrical Acupoint                                    [28]    Han Z, Zhang X, Yang H, Yuan P, Wang H, Du G. Suggested Electroacupuncture for
+       Stimulation for  the Prevention of  Postoperative Cognitive Dysfunction: a                                                 Postoperative Nausea and Vomiting: a Comprehensive Meta-Analysis and
+       Systematic  Review and Meta-Analysis. Front Med (Lausanne) 2021;8:756366.                                                  Systematic Review  of Randomized Controlled Trials. Medical science monitor:
+[19]   Hughes CG, Boncyk CS, Culley DJ, Fleisher  LA, Leung JM, McDonagh DL, et al.                                               international medical journal of  experimental and clinical research 2023;29:
+       American Society for Enhanced Recovery and Perioperative Quality Initiative Joint                                          e941262.
+       Consensus  Statement on Postoperative Delirium Prevention. Anesth Analg 2020;                                      [29]    Lu C, Du JY, Fang JQ, Fang JF. The curative effect observation of different
+       130(6):1572–90       .                                                                                                     frequency of TEAS combined with wristband pressing on Neiguan (PC 6) for nausea
+[20]   Olotu C. Postoperative neurocognitive disorders. Curr Opin Anaesthesiol 2020;33                                            and vomiting after laparoscopic cholecystectomy]. Zhongguo Zhen Jiu 2019;39(1):
+       (1):101–8    .                                                                                                             9–15  .
+[21]   Oh  ST, Park JY. Postoperative  delirium. Korean J Anesthesiol 2019;72(1):4–12                         .           [30]    Wu X, Huang J, Zhang Y, Chen L, Ji Y, Ma W, et al. Perioperative transcutaneous
+[22]   Kong H, Xu L, Wang D. Perioperative neurocognitive disorders: a narrative review                                           electrical acupoint stimulation (pTEAS) in  pain management in  major spinal
+       focusing on diagnosis, prevention, and treatment. CNS Neurosci Ther 2022;28(8):                                            surgery patients. BMC Anesthesiol 2022;22(1):342.
+       1147–67    .                                                                                                       [31]    Wang D,  Shi H, Yang Z, Liu  W, Qi L, Dong C, et al. Efficacy and Safety of
+                                                                                                                                  Transcutaneous Electrical  Acupoint Stimulation for  Postoperative Pain: a Meta-
+                                                                                                                                  Analysis of Randomized  Controlled Trials. Pain Res Manag 2022;2022:7570533.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                    11
+
+                                              Downloaded for Anonymous User (n/a) at Region Skåne from ClinicalKey.com by Elsevier on August 14, 2026.
+                                                For personal use only. No other uses without permission. Copyright ©2026. Elsevier Inc. All rights reserved.

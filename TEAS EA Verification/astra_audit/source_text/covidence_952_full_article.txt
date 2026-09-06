@@ -1,0 +1,706 @@
+=== PDF PAGE 1 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 56
+
+
+
+         Papers
+         Effects of Electroacupuncture on Intraoperative
+         and Postoperative Analgesic Requirement
+
+         Chin-Keng Sim, Pei-Chang Xu, Hwee-Leng Pua, Guojing Zhang, Tat-Leang Lee
+
+
+
+
+
+
+
+
+          Chin-Keng Sim                        Summary
+          anaesthetist                         Acupuncture has been shown to be effective in experimental and clinical acute pain settings. This study
+
+          Pei-Chang Xu                         aims to evaluate the effect of preoperative electroacupuncture (EA) on intraoperative and postoperative
+          acupuncturist                        analgesic (alfentanil and mor phine) requirement in patients scheduled for gynaecologic lower abdominal
+          Hwee-Leng Pua                        surgery. Ninety patients were randomly assigned to one of three groups: Group I (control group) –
+          anaesthetist                         received placebo EA for 45 minutes before induction of general anaesthesia (GA); Group II –
+          Guojing Zhang                        preoperative EA instituted 45 minutes before induction of GA; Group III – 45 minutes of postoperative
+          research fellow                      EA. The Bispectral Index monitor was used intraoperatively to monitor the hypnotic effect of anaesthetic
+                                               drugs, and alfentanil was titrated to maintain the blood pressure and pulse rate within ±15% of basal
+          Tat-Leang Lee                        values. Postoperative pain was managed by intravenous morphine via a patient-controlled analgesia
+          professor
+          Department of                        (PCA) device. Patients in Group II (0.44 ±          0.15µg/kg/min) received less alfentanil than those in Group
+          Anaesthesia,                         III (0.58 ±          0.22µg/kg/min) (p=0.024), but not signif icantly less than those in Group I (0.51 ±
+          National University                  0.21µg/kg/min) (p=0.472). Postoperative morphine consumption was numerically lower in Group II
+          Hospital
+          Singapore                            compared with the other groups; however, the difference was statistically signif icant only during the
+          Correspondence:                      period of 6-12 hours between Group II [0.03 (0.05) mg/kg] and Group I [0.10 (0.11) mg/kg] (p=0.015),
+          Tat-Leang Lee                        and Group II and Group III [0.08 (0.10) mg/kg] (p=0.010). The 24-hour cumulative morphine
+          analeetl@nus.edu.sg                  consumption for Group II (0.52 ±          0.19mg/kg) was less than that for either Group I (0.68 ±          0.38mg/kg)
+                                               or Group III (0.58 ±          0.27mg/kg), but the difference did not reach signif icance. In conclusion,
+                                               preoperative EA leads to a reduced intraoperative alfentanil consumption, though this effect may not be
+                                               specif  ic, and has a mor phine sparing effect during the early postoperative period.
+
+                                               Keywords
+                                               Electroacupuncture, abdominal surgery, opioid usage, Bispectral Index Monitor, postoperative pain.
+
+                                               Introduction                                                                  acupuncture treatment is effective for acute dental
+                                               Acupuncture is a component of the health care                                 pain and postoperative nausea and vomiting,     1
+                                               system of China that can be traced back for at                                therefore acupuncture may be a useful adjunct to
+                                               least 2500 years. It has been widely used to                                  conventional balanced general anaesthesia
+                                               provide analgesia during surgery in China since                               techniques. This study was designed to evaluate
+                                               the 1950s. However, when used alone,                                          the effect of preoperative electroacupuncture (EA)
+                                               acupuncture often does not suppress acute surgical                            on intraoperative and postoperative analgesic
+                                               pain completely. In addition, acupuncture does not                            requirement in patients scheduled for total
+                                               provide adequate skeletal muscle relaxation and is                            abdominal hysterectomy with or without bilateral
+                                               also unable to suppress the autonomic reflexes                                salpingo-oophorectomy.
+                                               elicited by traction on the intraabdominal viscera,                                 General anaesthesia is the state in which, as a
+                                               thus making the technique unsuitable for                                      result of drug-induced narcosis, the patient          neither
+                                               intraabdominal surgical procedures. A Consensus                               perceives nor recalls noxious stimuli. Analgesia,
+                                               Development Conference held by the United                                     muscle relaxation, and suppression of autonomic
+                                               States National Institutes of Health in November                              activity are important components and desirable
+                                               1997 concluded that there is good evidence that                               supplements to the state of anaesthesia. As all
+
+
+
+
+
+         56                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.www.medical-acupuncture.co.uk/aimintro.htm
+
+=== PDF PAGE 2 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 57
+
+
+
+                                                                                                                                                                Papers
+
+
+
+            patients received a non-depolarising muscle                           Group II                   –                Preoperative EA (45 minutes of
+            relaxant as part of the balanced general                              EA before induction of GA)
+            anaesthesia technique, in order to assess the                         Group III     –                     Postoperative EA (45 minutes of
+            ‘analgesic’       effect of acupuncture while the patient             EA on arrival to the recovery area, patient
+            was under general anaesthesia, a reliable monitor                     extubated and awake).
+            is required to indicate whether the patient is                    Patients in Group I and II were blinded to the
+            receiving adequate anaesthesia and/or analgesia.                  types of acupuncture administered. All patients
+                The Bispectral index (BIS) (ASPECT medical                    received a standard balanced GA technique with
+            system, A-1050, Natick, USA) is a processed                       endotracheal intubation. All patients received
+            parameter derived from multiple features                          midazolam 7.5 mg an hour before arrival at the
+            generated by bispectral analysis of the EEG.                      anaesthesia induction room. Thiopentone sodium
+            Through clinical trials, features of the bispectral               4-5mg/kg was used for induction; atracurium
+            analysis that were predictive of response to stimuli              infusion was used to provide adequate muscle
+            under the effects of a variety of anaesthetic agents              relaxation; alfentanil infusion was used to provide
+            were identif ied. These features were combined to                 intraoperative analgesia, additional boluses of
+            a multivariate index using discriminant analysis.2                alfentanil were administered intermittently to
+            The BIS index measures the hypnotic component                     suppress hypertension and tachycardia initiated
+            of the anaesthetic and is a useful adjunct to predict             by noxious surgical stimuli. Isoflurane was titrated
+            loss of consciousness and lack of recall during                   to achieve an adequate level of anaesthesia (BIS
+            surgery. It is a dimensionless number that varies                 index=45-55). All patients received intravenous
+            from 0 to 100. The monitor assigns the BIS                        morphine for postoperative pain management via
+            number based on a database of prior recordings                    a patient-controlled analgesia device (Graseby
+            and the expert opinion of the anaesthesiologist                   9300, Watford,  UK).
+            during those recordings regarding the anaesthetic
+            depth of the patient. In the awake state, the BIS is              Protocol   for Alfentanil Administration
+            close to 100 and the number decreases with                        All patients received an intravenous dose of
+            increasing sedation and hypnosis. A BIS value of                  alfentanil (10          µg/kg) one minute before
+            <60 is often regarded as the criterion for adequate               endotracheal intubation, following which a
+            anaesthesia, whereas a value of more than 70 is                   continuous infusion of alfentanil was started at a
+            frequently seen during awakening.3                                rate of 10µg/kg/hr and continued till closure of
+                                                                              the muscle layer of the abdomen. Additional
+            Methods                                                           intermittent doses of alfentanil (2µg/kg) were
+            After obtaining Ethics Committee’s approval and                   administered if the systolic blood pressure (SBP)
+            written informed consent, 90 female patients were                 and/or heart rate (HR) had increased by more
+            recruited, American Society of Anaesthesiologists                 than 15% above baseline reading. If the SBP
+            physical status (ASA) I or II, who underwent the                  and/or HR remained elevated (i.e. more than
+            above-mentioned elective surgery under balanced                   15% above baseline) in spite of two consecutive
+            general anaesthesia that lasted for more than one                 boluses of alfentanil (2                  µg/kg), the baseline
+            hour. Exclusion criteria included: previous history               infusion of alfentanil was increased at an
+            of acupuncture, ASA physical status > II, patients                increment of 5 µg/kg/hr. The above-mentioned
+            below 18 years or above 75 years, having a body                   regime was repeated till the SBP and HR returned
+            mass index greater than 30, and those patients who                to basal value ±         15%. Conversely, the infusion
+            were on β-blockers, had a psychiatric history or                  rate was reduced by 5µg/kg/hr each time the
+            who had received opioids in the preceding month.                  SBP and/or HR decreased by 15% less than the
+                The patients were randomised by the use of a                  basal values. The average SBP and HR recorded
+            table of random numbers to one of three groups.                   at 10 minutes interval over 30 minutes, while
+                Group   I                                                  –                             Control group – received placebowaiting in the anaesthetic induction room before
+                EA for 45 minutes before induction of general                 acupuncture or surgery, were taken as the baseline
+                anaesthesia (GA)                                              readings.
+
+
+
+
+            ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.                                                                                                 57
+            www.medical-acupuncture.co.uk/aimintro.htm
+
+=== PDF PAGE 3 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 58
+
+
+
+           Papers
+
+
+
+                                                           Postoperative Analgesia                                                                            Placebo Acupuncture
+                                                           Intravenous morphine (0.1mg/kg) was given as a                                                     The placebo acupuncture was carried out as
+                                                           bolus dose to all patients immediately after the                                                   described by Lao and colleagues4          with slight
+                                                           termination of alfentanil infusion, followed by i.v.                                               modification. The patients were shown the
+                                                           4mg of ondansetron. Patients’       pain was managed                                               acupuncture needle with a plastic needle tube
+                                                           in the recovery room by intermittent i.v. mor phine                                                before the procedure. It was car ried out by tapping
+                                                           1-2mg every 5 minutes until the pain intensity                                                     a plastic needle tube on the bony area next to each
+                                                           became tolerable (i.e. VAS ≤3), after which the patients                                           of the acupuncture points to produce some
+                                                           used the PCA device to titrate the morphine                                                        discernible sensation. The acupuncture needle was
+                                                           administration to meet individual analgesic needs.                                                 then taped to the skin (without skin penetration)
+                                                           The device was programmed to deliver 1 mg of                                                       with non-transparent adhesive tape. The patients
+                                                           mor phine i.v. with a lock out time of f  ive minutes.                                             were lying supine and were instructed to close
+                                                                                                                                                              their eyes and concentrate on their breathing
+                                                           Electroacupuncture (EA)                                                                            during the procedure. Electrodes from a mock
+                                                           The acupuncture points selected were adopted                                                       electrical stimulator were attached to the needles.
+                                                           from Chinese acupuncture literatures and the                                                       The indicator light on the mock unit blinked but
+                                                           recommendations of an acupuncturist with 18                                                        no electrical current was applied. The patients
+                                                           years of clinical and research experience (Xu PC),                                                 were told that they may or may not feel electrical
+                                                           who also administered the acupuncture and                                                          cur rent because of its very high frequency.
+                                                           placebo acupuncture procedure. Disposable
+                                                           acupuncture needles (0.25 mm diameter) were                                                        Bispectral Index (BIS) and isoflurane
+                                                           inserted by tapping through a plastic needle tube                                                  Isoflurane was titrated to attain a BIS value of 45-
+                                                           at acupoints ST36 and PC6 bilaterally and                                                          55 for all patients, any increase in autonomic
+                                                           subcutaneously along the skin incision. The                                                        responses (i.e. hypertension and/or tachycardia)
+                                                           needles were inserted to a depth of 3-4cm and 0.5-                                                 will be considered as indication of inadequate
+                                                           1cm at acupoints ST36 and PC6 respectively.                                                        analgesia. Boluses of alfentanil (in addition to a
+                                                           Electrical stimulation was delivered via a battery-                                                background infusion of alfentanil) will be used to
+                                                           operated stimulator (model WQ1002K, AERON                                                          suppress the autonomic responses to noxious
+                                                           optoelectronic technology corp., Beijing, PRC).                                                    stimuli. A representative tracing of changes of the
+                                                           The frequencies employed were 2Hz at ST36 and                                                      BIS index over time during surgery and
+                                                           PC6, and 100Hz at the skin incision.                                                               anaesthesia is shown in f  igure 1.
+
+                                                            Figure 1                   This graph shows the changes of BIS index over time in one patient.
+
+                                                               100
+                                                                  90
+                                                                  80
+                                                                  70
+                                                                  60
+                                                                  50
+                                                                  40
+                                                                  30        abc             d                                                                                      e
+                                                                  20
+                                                                  10
+                                                                    0
+                                                                             0        5                                               15                                    20                                    25                                      30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      120                       125
+                                                                                                                                  Time (min)
+                                                                        The time points correspond to:
+                                                                        a – induction of general anaesthesia, b – laryngoscopy and intubation,
+                                                                        c – skin incision, d – application of abdominal retractor, e – reversal of anaesthesia.
+
+
+
+
+
+           58                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.www.medical-acupuncture.co.uk/aimintro.htm
+
+=== PDF PAGE 4 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 59
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                    Papers
+
+
+
+
+                                   Table 1         Demographic and perioperative data.
+                                                                                                                                 Group I                                                                                                                                                       Group II                                                                                                                                                 Group III                                                                                                                                 p-value
+                                                                                                                                 (n = 30)                                                                                                                                                                (n = 30)                                                                                                                                                                     (n = 30)
+                                 Age (year)                                                                                                                                                                                                                                                                                                                                                 47 ±        6                                                                                                                                                                                     46 ±        5                                                                                                                                                                                          45 ±        4                                                                                                                                                                             0.67
+                                 Weight (kg)                                                                                                                                                                                                                                                                                                                                 59 ±        9                                                                                                                                                                              60 ±        10                                                                                                                                                                                   57 ±        9                                                                                                                                                                             0.58
+                                 Race (C :       M :       I)*                                                                                                                                                                                                                                                                                        22:3:5                                                                                                                                                                                                         23:4:3                                                                                                                                                                                                               24:3:3                                                                                                                                                                                               0.91
+                                 Types of incision :                                                                                                                                                                                                                                                                                       24:6                                                                                                                                                                                                                                  23:7                                                                                                                                                                                                                                        21:9                                                                                                                                                                                                            0.66
+                                 (Pfannenstiel :       midline)
+                                 Expired concentration                                                                                                                                                                              0.6 ±        0.1                                                                                                                                                        0.6 ±        0.1                                                                                                                                                             0.6 ±        0.2                                                                                                                                                               0.12
+                                 of isoflurane (%)
+                                 Duration of surgery                                                                                                                                                                                                            111 ±        27                                                                                                                                                               97 ±        26                                                                                                                                                                    102 ±        29                                                                                                                                                               0.57
+                                 (minute)
+                                 Duration of recovery                                                                                                                                                                                                         86 ±        23                                                                                                                                                                       80 ±        36                                                                                                                                                                            83 ±        24                                                                                                                                                                      0.73
+                                 room stay (minute)
+
+                                 *C: Chinese, M: Malay, I: Indian
+
+
+                               Outcomes                                                                                                                                                               Dunnett’s test for parametric data, Kruskal-Wallis
+                               The total intraoperative usage of alfentanil was                                                                                                                       test and Mann-Whitney test with Bonferroni
+                               compared among the three groups to reflect the                                                                                                                         adjustment for non-parametric data. The data were
+                               analgesic component contributed by acupuncture.                                                                                                                        presented as mean ±          SD or median (interquartile
+                               The amounts of morphine used (PCA morphine                                                                                                                             range). A p-value less than 0.05 was deemed
+                               consumption) and severity of pain at rest using a                                                                                                                      statistically signif  icant.
+                               0-10 (no pain – worse pain experienced) visual-
+                               analogue scale (VAS) were evaluated every six                                                                                                                          Results
+                               hours, up to twenty-four hours. Side effects such                                                                                                                      The demographic data of the patients is shown in
+                               as nausea, vomiting, pruritus, and drowsiness over                                                                                                                     table 1. The three groups were comparable with
+                               the f  irst twenty-four hours were also noted.                                                                                                                         regard to age, body weight and duration of
+                                          The adequacy of placebo acupuncture was                                                                                                                     surgery. Patients in Group II (0.44 ±
+                               evaluated on the 2nd postoperative day by asking                                                                                                                       0.15  µg/kg/min) received significantly less
+                               the patients in Group I and II which group they                                                                                                                        alfentanil than those in Group III (0.58 ±
+                               thought they were assigned to. Side effects                                                                                                                            0.22µg/kg/min) (p=0.024). Group II also received
+                               pertaining to acupuncture such as bruising,                                                                                                                            less alfentanil compared to Group I (0.51 ±          0.21
+                               persistent pain at needle insertion sites were also                                                                                                                    µg /kg/min) but the difference was not statistically
+                               noted. Patients’       satisfaction with the acupuncture                                                                                                               signif  icant (f  igure 2).
+                               procedure and willingness to undergo similar                                                                                                                                     Postoperative mor phine consumption via PCA
+                               treatment was surveyed on the day prior to                                                                                                                             among the three groups was assessed in four
+                               discharge from hospital.                                                                                                                                               different time periods: 0-6 hours (include recovery
+                                                                                                                                                                                                      room stay), 6-12 hours, 12-18 hours and 18-24
+                               Data Analysis                                                                                                                                                          hours. Morphine consumption was numerically
+                               An a priori sample size calculation determined                                                                                                                         lower in Group II compared to other groups from
+                               that a 30% reduction in mean 24 hour                                                                                                                                   the second time period onwards, the difference
+                               postoperative morphine consumption between                                                                                                                             was statistically signif  icant during the period of 6-
+                               preoperative EA and placebo EA (mean ±          SD=                                                                                                                    12 hours between Group II [0.03 (0.05) mg/kg]
+                               0.59 ±          0.24mg/kg) would be detectable using a                                                                                                                 and I [0.10 (0.11) mg/kg] (p=0.015), and between
+                               sample size of 30 patients per group for a two-                                                                                                                        Group II and Group III [0.08 (0.10) mg/kg]
+                               tailed α=0.05 and a study power of 0.8.                                                                                                                                (p=0.010). The total mor phine consumption (0-24
+                                          Demographic data, VAS and postoperative                                                                                                                     hours) for Group II (0.52 ±          0.19mg/kg) was less
+                               side effects were analysed using ANOVA and Chi-                                                                                                                        compared to Group I (0.68 ±          0.38mg/kg) and
+                               square. Intra and post-operative analgesic                                                                                                                             Group III (0.58 ±          0.27mg/kg) (f  igure 4), however,
+                               consumption were analysed using ANOVA and                                                                                                                              the differences were not statistically signif  icant.
+
+
+
+
+                               ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.                                                                                                                                                                                                                                                                                                                                              59
+                               www.medical-acupuncture.co.uk/aimintro.htm
+
+=== PDF PAGE 5 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 60
+
+
+
+                              Papers
+
+
+                                                                                                                                                                Figure 2                   Intraoperative alfentanil requirements in each treatment group.
+
+                                                                                                                                                                                       0.8
+
+                                                                                                                                                                                       0.7
+
+                                                                                                                                                                                       0.6                                                                                                                                                                                       *
+
+                                                                                                                                                                                       0.5
+
+                                                                                                                                                                                       0.4
+
+                                                                                                                                                                                       0.3
+                                                                                                                                                                                       0.2                                                                               Group I                                                                                                                                                                               Group II                                                                                                                                                                     Group III
+
+                                                                                                                                                                                       0.1
+
+                                                                                                                                                                                               0
+                                                                                                                                                                                                                                                                          Control                                                               Preop EAPostop EA
+
+                                                                                                                                                                                                                                                    * p=0.024 (Group II vs Group III); p=0.472 (Group II vs Group I)
+
+
+
+                                                                                                                                                                Figure 3                   Postoperative morphine requirements in each treatment group.
+
+                                                                                                                                                                                       1.0
+
+
+                                                                                                                                                                                       0.8
+
+
+                                                                                                                                                                                       0.6
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   *
+                                                                                                                                                                                       0.4                                                                                                                                                                              *
+
+                                                                                                                                                                                                                                                                                                                                               *                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      *
+                                                                                                                                                                                       0.2
+
+
+                                                                                                                                                                                       0.0
+                                                                                                                                                                                                                                                                                                                                   ab
+                                                                                                                                                                                                                                              0-6                                                                                                                                                                                                                              6-1212-18                                                                                                                                                                                                18-24
+
+                                                                                                                                                                                                                                                                                                                                             Postoperative Period (hour)
+
+
+                                                                                                                                                                                                                             Group I                                                        Group II                                                            Group III                                               a   p=0.015                               b   p=0.010
+                                                                                                                                                                                                            Circles and asterisks represent outliers and extreme outliers respectively
+
+
+
+
+
+                                                                                                                                                                                                             Table 2       VAS and side effects of PCA morphine.
+                                                                                                                                                                                                                                                                                                 Group I                                                Group II                                    Group III
+                                                                                                                                                                                                                                                                                                    (n=30)                                                                                (n=30)                                                                                (n=30)
+                                                                                                                                                                                                             *VAS (0-10)                                                                                                           4.5±2.1                                                                 4.7±1.8                                                                 3.9±1.6
+                                                                                                                                                                                                             PONV (%)                                                                                                                                                 46.6                                                                                                       43.3                                                                                                       56.7
+                                                                                                                                                                                                             Drowsiness (%)                                                                                         30.0                                                                                                       23.3                                                                                                       33.3
+                                                                                                                                                                                                             Pruritus (%)                                                                                                                                   16.7                                                                                                       13.3                                                                                                       16.7
+                                                                                                                                                                                                            * Mean values over 24 hours
+                                                                                                                                                                                                            PONV=Postoperative nausea vomiting
+
+
+
+
+
+                               60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.www.medical-acupuncture.co.uk/aimintro.htm
+
+=== PDF PAGE 6 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 61
+
+
+
+                                                                                                                                                                             Papers
+
+
+             Figure 4                   Cumulative morphine consumption for the f irst 24 hours postsurgery.
+
+                    1.2
+
+
+                    1.0
+
+
+                    0.8
+
+
+                    0.6
+
+
+                    0.4
+
+
+                    0.2
+
+
+                       0
+                            RR                                    3H                                  4H                                     5H                                  6H                                    7H                                 8H                                    9H                     10H                     11H                  12H                15H                      18H                21H                24H
+                                                                 Postoperative Period (hour)
+
+                                Group I          Group II          Group III       RR = recovery room
+
+                  The VAS for pain assessed every 6 hours was                       both can manifest intraoperatively as hypertension
+             not different among the three groups. The opioid                       and/or tachycardia. Failure to recognize inadequate
+             related side effects experienced (nausea and                           anaesthesia, especially when the patient is being
+             vomiting, drowsiness and pruritis) were less in                        paralysed due to the effect of muscle relaxant (to
+             Group II compared to the other two groups (table                       provide muscle relaxation during intra abdominal
+             2), however, the differences were not statistically                    surgery), could result in the patient being aware
+             signif  icant.                                                         (sensory and/or auditory) during surgery. Opioids
+                  In both Group I and II, f ifty-f ive to sixty-f ive               can effectively blunt the hypertension and/or
+             percent of the patients was unable to guess to                         tachycardia elicited by noxious surgical stimulus
+             which group they had been assigned, 20-30%                             (inadequate analgesia), but opioids alone are not
+             guessed acupuncture and the remaining patients                         able to ensure adequate anaesthesia to prevent
+             thought they were in the control group. There were                     awareness during anaesthesia and surgery.5
+             no complications related to the EA procedures.                              The recent introduction of the BIS monitor
+             Sixty-f ive percent of patients who received EA                        into clinical practice allows us to monitor the
+             stated, when asked, that they would not mind                           hypnotic component of the anaesthetic. It also
+             receiving EA for future surgery.                                       enables us to assess the analgesic component
+                                                                                    contributed by EA by monitoring the haemo-
+             Discussion                                                             dynamic response during surgery. The monitor has
+             This study showed that preoperative EA, when                           been validated for the anaesthetic drugs (sodium
+             used in conjunction with conventional GA                               thiopentone, midazolam, isoflurane and nitrous
+             technique, resulted in reduction of intraoperative                     oxide) and opioid (alfentanil) used in this study.
+             and postoperative opioid consumption.                                  The BIS index has been found to cor relate closely
+                  There is no data in the English literature to                     with the hypnotic effect of the anaesthetic drugs,
+             demonstrate the intraoperative analgesic component                     and is minimally affected by alfentanil.6-8          In this
+             contributed by acupuncture when the patient is                         study, the BIS index was maintained within the
+             under GA. This is because without a reliable                           limits to ensure adequate anaesthesia (BIS index
+             ‘anaesthetic depth’       monitor, it is very diff icult to            45-55) using isoflurane (which has no analgesic
+             differentiate whether the patient is receiving                         effect) while alfentanil which is a short acting
+             inadequate anaesthesia or inadequate analgesia,                        opioid, was used to provide analgesic cover to
+
+
+
+
+             ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.                                                                                                              61
+             www.medical-acupuncture.co.uk/aimintro.htm
+
+=== PDF PAGE 7 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 62
+
+
+
+         Papers
+
+
+
+                                               suppress unwanted hyperdynamic response                                       among the three groups.
+                                               (hypertension and /or tachycardia) initiated by the                                The reason why the mor phine sparing effect of
+                                               surgical stimulus.                                                            preoperative EA was not observed after the 6-12
+                                                    The results of this study showed that patients                           hours period could be due to the diminishing
+                                               in Group II (preoperative EA) consumed less                                   effect of a single dose of EA therapy. There is not
+                                               alfentanil intraoperatively as compared to the other                          much information regarding how long the
+                                               two groups. However, the difference was only                                  analgesic effect will last after a single session of
+                                               statistically signif icant between Group II and III                           acupuncture. Lao et al studied the duration of
+                                               (postop EA). The non-significant difference                                   analgesic effect of acupuncture in 11 subjects after
+                                               between Group I (control) and Group II                                        surgical third molar extractions;4         they found that
+                                               (preoperative EA) could be due to a strong placebo                            the mean time to reach moderate pain was 181
+                                               effect in Group I, since patients in Group I were                             minutes (about 3 hours). Likewise, Christensen
+                                               made to believe that they had received                                        showed that the effect of a single session of EA
+                                               acupuncture, whereas patients in Group III were                               lasted only approximately 2 hours as indicated by
+                                               aware that they only received acupuncture                                     opioid requirement.16          Current study showed that
+                                               treatment after the surgery. There is recent                                  a single session of preoperative EA (with some
+                                               evidence to suggest that placebo analgesia may                                EA continued till end of surgery) could result in
+                                               involve an endorphin mechanism.9        Although it is                        a morphine sparing effect 6-12 hours
+                                               still unclear what are the exact mechanisms                                   postoperatively. EA at 2Hz and 100Hz have been
+                                               underlying the action of acupuncture, it has been                             shown to induce expression of preproenkephalin
+                                               shown quite convincingly that endor phins play an                             mRNA and preprodynor phin mRNA respectively,
+                                               important role in the acute pain setting.                            10       in different parts of the rat brain.17        This suggests
+                                               Therefore, the sample size of thirty patients may                             that EA may result in changes in the genetic
+                                               not be able to detect a statistical difference, as                            expression of neurotransmitters and this would
+                                               both acupuncture and placebo treatments share a                               provide an explanation for the sustained effect of
+                                               common pathway in mediating analgesia. Studies                                acupuncture observed clinically.
+                                               on EA for experimental pain in humans found that                                   Clinical studies on the eff  icacy of acupuncture
+                                               acupuncture was able to raise the pain threshold                              involve a number of diff iculties. First of all it is
+                                               by about 20-30%.11-15                                                         almost impossible to design a double blind
+                                                    Postoperative mor phine consumption via PCA                              acupuncture study, since the acupuncturist and the
+                                               in Group II during the 6-12 hours postoperative                               anaesthetists involved in this study were aware of
+                                               period was significantly less than Group I                                    the group assignment. An independent observer
+                                               (p=0.015) and Group III (p=0.010). The graph of                               blinded to the group assignments carried out the
+                                               24 hours cumulative morphine consumption                                      postoperative assessment in this study.
+                                               (f  igure 4) also showed that the curve for Group II                               Some investigators blind the patients by
+                                               started to deviate (less morphine consumption)                                carrying out acupuncture treatment only after the
+                                               from Group I and III after 7-8 hours post-                                    patients had been randomized under general
+                                               operatively. In addition, there was no signif icant                           anaesthesia but before surgery.16;18-20          In addition,
+                                               difference in the VAS among the three groups (i.e.                            such a design may also help to minimize the
+                                               patients in Group II had the same level of comfort                            strong placebo or the nonspecific effect of
+                                               compared to Group I and III, despite consuming                                acupuncture instituted on awake patients.
+                                               less morphine). This study demonstrates that                                  However, there is evidence to suggest that GA
+                                               preoperative EA has a morphine sparing effect                                 may in some way affect the nervous system
+                                               during the 6-12 hours postoperative period.                                   rendering acupuncture ineffective. Indeed, two of
+                                               Although the morphine consumption level                                       the above mentioned studies did not demonstrate
+                                               remained lower in Group II from 12-24 hours                                   any difference in analgesic requirement compared
+                                               postoperatively, the difference was not statistically                         to the control group (no acupuncture).           18;19                        In
+                                               significant. The 24-hour total morphine                                       Christensen’s study,18          EA was performed soon
+                                               consumption was also not signif icantly different                             after induction of GA and continued till end of
+
+
+
+
+
+         62                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.www.medical-acupuncture.co.uk/aimintro.htm
+
+=== PDF PAGE 8 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 63
+
+
+
+                                                                                                                                                           Papers
+
+
+
+            surgery while the patient was still anaesthetized.              stimulating techniques (range from manual
+            Gupta et al,19          on the other hand, performed manual     stimulation to electrical stimulation employing
+            (not EA) acupuncture for 15 minutes before                      different stimulating frequencies) were used in
+            surgery while the patient was anaesthetized.                    different studies. This study employed EA of low
+            However, Christensen et al in an earlier study                  frequency (2Hz) and high frequency (100Hz) to
+            demonstrated a signif  icant difference between the             provoke the release of different types of
+            acupuncture group and the control group (without                endorphins (beta-endorphin, met-enkephalin and
+            acupuncture) during the first 2 hours after                     dynorphin) to combat pain.23        Acupuncture points
+            operation in terms of pethidine requirements.16                 chosen were based on traditional points (ST36 and
+            The acupuncture group received EA after the                     PC6) as recommended by our experienced
+            completion of surgery while the patients only                   acupuncturist and skin stimulation corresponding
+            received nitrous oxide and oxygen. As nitrous                   to the same dermatomes as the skin incision. Chen
+            oxide is a very weak anaesthetic, it is possible that           and co-workers studied the postoperative opioid
+            the patients were maintained at a very light plane              analgesic requirement in female patients
+            of GA, which would allow the analgesic effect                   scheduled for elective abdominal hysterectomy or
+            of acupuncture to manifest. Kho et al also                      myomectomy (type of surgery similar to our
+            demonstrated a significant reduction in                         study).24        They found that transcutaneous electrical
+            intraoperative fentanyl usage between the EA                    nerve stimulation (TENS) applied at the
+            group and control group (no EA).20        Although the          dermatomal level of the skin incision is as
+            EA was instituted under anaesthesia, the GA was                 effective as ST36 acupoint stimulation, and both
+            only maintained with fentanyl and nitrous oxide                 were more effective than stimulation at a non
+            without the use of other potent inhalational agent              acupoint location. The type of TENS used by
+            or intravenous anaesthetic, not surprisingly, their             Chen et al      24          has been shown by Han and
+            study had a high incident of intraoperative recall/             colleagues25         to have an effect similar to EA.
+            awareness under anaesthesia. As Kho et al did not                   Many studies on the eff icacy of acupuncture
+            employ any monitor to assess the hypnotic                       have compared an acupuncture group with a
+            component during the anaesthesia;20         it is diff icult    placebo control group to evaluate the specif ic
+            to determine how they had titrated the analgesic                effect (i.e. the effect beyond placebo) of
+            requirement. While acupuncture has been shown                   acupuncture. However, there is difficulty in
+            to be effective for postoperative nausea and                    designing an appropriate control procedure, and a
+            vomiting,1         there is some evidence to show that for      bewildering variety of control procedures have
+            acupuncture to be effective, it should not be                   been used in acupuncture trials.26          In the most
+            performed under GA.21;22        Acupuncture stimulation         commonly used control treatment, needling is
+            was administered before GA and surgery in this                  carried out at incorrect, theoretically irrelevant
+            study, although the preoperative EA group had                   sites. Usually this simply means carrying out a
+            some EA continued under GA till end of surgery,                 procedure similar to the real treatment at nearby,
+            it is unclear whether the intraoperative stimulation            non-classical locations. Depth of insertion and
+            gave rise to any further benef  icial effect.                   stimulation are the same, only location differs.
+                The failure to achieve significance in                      This procedure, which is termed ‘sham’      or ‘mock’
+            acupuncture studies could be due to inadequate                  acupuncture, has been used as placebo in many
+            acupuncture treatment. None of the studies                      studies. Sham acupuncture was initially assumed
+            mentioned previously made any reference to the                  to be ineffective by most investigators, and
+            experience or background training of the                        therefore ideal as a placebo. However, Lewith and
+            acupuncturist, with the exception of Gupta’s study              Machin showed that sham acupuncture appeared
+            which very briefly mentioned ‘one of the authors                to have an analgesic effect in 40% to 50% of
+            with experience in acupuncture techniques’. It is               patients compared with 60%-75% for real
+            important to enlist an experienced acupuncturist                acupuncture and 30% to 35% for placebo
+            to help design and car ry out the proper techniques.            (control).27        There is evidence that acupuncture at
+                A variety of acupuncture points and                         non-classical locations may have analgesic
+
+
+
+
+            ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.                                                                                            63
+            www.medical-acupuncture.co.uk/aimintro.htm
+
+=== PDF PAGE 9 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 64
+
+
+
+          Papers
+
+
+                                                      effects.28          It is also very likely that such effects                                     anaesthesia. Anesthesiology        1998;89(4):980-1002.
+                                                                                                                                                 3.             Rosow C, Manberg PJ. Bispectral index monitoring.
+                                                      could be endorphin mediated, therefore requiring                                                 Anesth Clin N Am        1998;2(1):89-107.
+                                                      a very large sample size to detect a difference                                            4.                        Lao L, Bergman S, Langenberg P, Wong RH, Berman B.
+                                                      between                                           ‘real  ’         acupuncture and            ‘sham  ’Efficacy of Chinese acupuncture on postoperative oral
+                                                      acupuncture. In any case, a sham acupuncture                                                     surgery pain. Oral Surg Oral Med Oral Pathol Oral Radiol
+                                                                                                                                                       Endod        1995;79(4):423-8.
+                                                      control condition really only offers information                                           5.             Miller RD. Anesthesia. 5th ed. Edinburgh: Churchill
+                                                      about the most effective sites of needling, not                                                  Livingstone; 2000. p. 286-7.
+                                                      about the specific effect of acupuncture.                                                  6.             Glass PS, Bloom M, Kearse L, Rosow C, Sebel P,
+                                                                                                                                                       Manberg P. Bispectral analysis measures sedation and
+                                                      Therefore, sham acupuncture was not used as                                                      memory effects of propofol, midazolam, isoflurane, and
+                                                      control in this study.                                                                           alfentanil in healthy volunteers.                   Anesthesiology
+                                                            The results also indicate that Group II has                                                1997;86(4):836-47.
+                                                      lower postoperative opioid related side effects                                            7.                                   Iselin-Chaves IA, Flaishon R, Sebel PS, Howell S, Gan TJ,
+                                                                                                                                                       Sigl J, et al. The effect of the interaction of propofol and
+                                                      such as nausea and vomiting and drowsiness. The                                                  alfentanil on recall, loss of consciousness, and the
+                                                      incidence of postoperative nausea and vomiting                                                   Bispectral Index. Anesth Analg        1998;87(4):949-55.
+                                                      (PONV) reported in this study was unexpectedly                                             8.                   Iselin-Chaves IA, El Moalem HE, Gan TJ, Ginsberg B,
+                                                      high (45-55%) in the f irst 24 hours; despite the                                                Glass PS. Changes in the auditory evoked potentials and
+                                                                                                                                                       the bispectral index following propofol or propofol and
+                                                      prophylactic use of an antiemetic (ondansetron)                                                  alfentanil. Anesthesiology        2000;92(5):1300-10.
+                                                      at the end of surgery and acupuncture at PC6,                                              9.                                    ter Riet G, de Craen AJ, de Boer A, Kessels AG. Is placebo
+                                                      which has been shown to be effective for PONV.1                                                  analgesia mediated by endogenous opioids? A systematic
+                                                                                                                                                       review. Pain        1998;76(3):273-5.
+                                                      The reasons could be due to the short-term                                                 10.            Pomeranz B. Scientif ic research into acupuncture for the
+                                                      antiemetic effect (not more than six hours) of a                                                 relief of pain. J Altern Complement Med        1996;2(1):53-60.
+                                                      single session of acupuncture;21          female gender and                                11.                Anderson DG, Jamieson JL, Man SC. Analgesic effects of
+                                                      gynaecological operations are known to be                                                        acupuncture on the pain of ice water: a double- blind
+                                                                                                                                                       study. Can J Psychol        1974;28(2):239-44.
+                                                      associated with a higher incidence of PONV;29         and                                  12.                 Berlin FS, Bartlett R, Black JD. Acupuncture and placebo:
+                                                      the use of morphine via PCA is also a continued                                                  Effects on delaying the terminating response to a painful
+                                                      emetic stimulus.30                                                                               stimulus. Anesthesiology        1975;42(5):527-31.
+                                                            In summary, our results indicate that                                                13.             Saletu B, Saletu M, Brown M, Stern J, Sletten I, Ulett G.
+                                                                                                                                                       Hypno-analgesia and acupuncture analgesia: a
+                                                      preoperative EA has a short-term morphine                                                        neurophysiological reality?               Neuropsychobiology
+                                                      sparing effect postoperatively, lasting not beyond                                               1975;1(4):218-42.
+                                                      12 hours postoperatively. The procedure was well                                           14.            Stewart D, Thomson J, Oswald I. Acupuncture analgesia:
+                                                                                                                                                       an experimental investigation. BMJ        1977;1(6053):67-70.
+                                                      tolerated and was generally well received by the                                           15.      Lundeberg T, Eriksson S, Lundeberg S, Thomas M.
+                                                      patients. In addition, with the help of the BIS                                                  Acupuncture and sensory thresholds. Am J Chin Med
+                                                      monitor, this study also demonstrates that                                                       1989;17(3-4):99-110.
+                                                      preoperative EA can achieve a reduction of                                                 16.        Christensen PA, Noreng M, Andersen PE, Nielsen JW.
+                                                                                                                                                       Electroacupuncture and postoperative pain. Br J Anaesth
+                                                      intraoperative alfentanil consumption. The role                                                  1989;62(3):258-62.
+                                                      of preoperative EA deserves further clinical                                               17.          Guo HF, Tian J, Wang X, Fang Y, Hou Y, Han J. Brain
+                                                      investigations.                                                                                  substrates activated by electroacupuncture (EA) of
+                                                                                                                                                       different frequencies (II): Role of Fos/Jun proteins in EA-
+                                                                                                                                                       induced transcription of preproenkephalin and
+                                                      Acknowledgement                                                                                  preprodynorphin genes.     Brain Res Mol Brain Res
+                                                      The authors would like to thank Dr Dong Fang for                                                 1996;43(1-2):167-73.
+                                                      statistical assistance, Ms Karen Ho for technical                                          18.      Christensen PA, Rotne M, Vedelsdal R, Jensen RH,
+                                                                                                                                                       Jacobsen K, Husted C. Electroacupuncture in anaesthesia
+                                                      assistance and the Department of Obstetric and                                                   for hysterectomy. Br J Anaesth        1993;71(6):835-8.
+                                                      Gynaecology for their cooperation. This study was                                          19.             Gupta S, Francis JD, Tillu AB, Sattirajah AI, Sizer J. The
+                                                      funded by an NMRC grant (0354/1999).                                                             effect of pre-emptive acupuncture treatment on analgesic
+                                                                                                                                                       requirements after day-case knee arthroscopy. Anaesthesia
+                                                                                                                                                       1999;54(12):1204-7.
+                                                      Reference list                                                                             20.      Kho HG, Eijk RJ, Kapteijns WM, van Egmond J.
+                                                      1.        NIH Consensus Conference. Acupuncture.                      JAMA                       Acupuncture and transcutaneous stimulation analgesia in
+                                                            1998;280(17):1518-24.                                                                      comparison with moderate-dose fentanyl anaesthesia in
+                                                      2.            Rampil IJ. A primer for EEG signal processing in                                   major surgery. Clinical eff icacy and influence on recovery
+
+
+
+
+
+
+           64                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.www.medical-acupuncture.co.uk/aimintro.htm
+
+=== PDF PAGE 10 ===
+5945/37 BMAS vol 20(2) 8/2002  14/8/02  9:15 AM  Page 65
+
+
+
+                                                                                                                                                                                                           Papers
+
+
+
+                     and morbidity. Anaesthesia        1991;46(2):129-35.                                Effect of low- and high-frequency TENS on Met-
+               21.                  Parf  itt A. Acupuncture as an antiemetic treatment. J Altern        enkephalin-Arg-Phe and dynor phin A immunoreactivity in
+                     Complement Med        1996;2(1):167-74.                                             human lumbar CSF. Pain        1991;47(3):295-8.
+               22.       Vickers AJ. Can acupuncture have specific effects on                      26.             Lee TL. Acupuncture and chronic pain management. Ann
+                     health? A systematic review of acupuncture antiemesis                               Acad Med Singapore        2000;29:17-21.
+                     trials. J R Soc Med        1996;89(6):303-11.                                 27.          Lewith GT, Machin D. On the evaluation of the clinical
+               23.      Han JS. The neurochemical basis of pain relief by                                effects of acupuncture. Pain        1983;16(2):111-27.
+                     acupuncture. Volume  II . Beijing: Hubei Science and                          28.       Vincent CA. The methodology of controlled trials of
+                     Technology Press; 1998. p. 1-25.                                                    acupuncture. Acupunct Med        1989;6(1):9-13.
+               24.        Chen L, Tang J, White PF, Sloninsky A, Wender RH,                        29.                 Watcha MF, White PF. Postoperative nausea and vomiting.
+                     Naruse R et al. The effect of location of transcutaneous                            Its etiology, treatment, and prevention. Anesthesiology
+                     electrical nerve stimulation on postoperative opioid                                1992;77(1):162-84.
+                     analgesic requirement: acupoint versus nonacupoint                            30.          Woodhouse A, Mather LE. Nausea and vomiting in the
+                     stimulation. Anesth Analg        1998;87(5):1129-34.                                postoperative patient-controlled analgesia environment.
+               25.             Han JS, Chen XH, Sun SL, Xu XJ, Yuan Y, Yan SC et al.                     Anaesthesia        1997;52(8):770-5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               ACUPUNCTURE         IN         MEDICINE 2002;20(2-3):56-65.                                                                                                                                           65
+               www.medical-acupuncture.co.uk/aimintro.htm

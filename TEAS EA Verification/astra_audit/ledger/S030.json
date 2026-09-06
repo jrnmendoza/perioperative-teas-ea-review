@@ -1,0 +1,28 @@
+{
+  "Study_ID": "S030",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "assigned_rows": [
+    121,
+    122,
+    123,
+    124,
+    125
+  ],
+  "rows_audited": 5,
+  "rob2_results": 8,
+  "outputs": [
+    "phase_a/S030.json",
+    "adjudicated/S030.json",
+    "ledger/S030.json"
+  ],
+  "limitations": [
+    "Registration2022-08-25afterarticleJuly2022screening; registryplanned2022-08-30–2023-05-25,notyetrecruiting,30/36/36plannedvsarticle26/17/18allocated. Needactualrecruitment/amendmenttimeline.",
+    "Registrynonrandomdesignlabel coexistswith explicitT/Srandomsequence; supports partiallyrandomized notallnonrandom.",
+    "RegistryprimaryVAS2/6hPOD1/2,3months vsNRS4/24/48/72article; sleepPSQI/AISPOD1/2/3,3months vsAISsurgeryday/POD1/2; postoperativeanalgesicdosageomitted.",
+    "AuthorresponseAug11acknowledgesposthocNRSprimarydesignationinappropriate andproposes AISsoleprimary/NRSexploratory; formalcorrectionnotverified.",
+    "Table1TMRM6(31.3%)percentage inconsistent6/17; notchangeoutcomedenominators.",
+    "Table3Pvaluesarethree-groupnotpairwiseTvsS.",
+    "Blindedinterviewer doesnotmaskpatientassessor; concealment explanationconflateswithproviderawareness."
+  ]
+}

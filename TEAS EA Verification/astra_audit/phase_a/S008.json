@@ -1,0 +1,190 @@
+{
+  "Study_ID": "S008",
+  "Study": "Zhang 2014",
+  "source_before_baseline": true,
+  "identity": {
+    "title": "The effect of pre-treatment with transcutaneous electrical acupoint stimulation on the quality of recovery after ambulatory breast surgery: a prospective, randomised controlled trial",
+    "doi": "10.1111/anae.12639",
+    "year": 2014,
+    "pdf": "043_zhang_2014.pdf",
+    "read_pages": "1–8 complete; flowFigure2 p4, Tables1/2 p5 and Figure3/Table3 p6 visually inspected"
+  },
+  "arms": {
+    "order": [
+      "TEAS",
+      "sham"
+    ],
+    "randomized": [
+      33,
+      32
+    ],
+    "analyzed": [
+      33,
+      32
+    ],
+    "randomization_conflict": "Figure2 explicitly65 randomized after7 exclusions from72 assessed; abstract72 randomly allocated and planned36each inconsistent. Adopt actual flow33/32, not planned36/36.",
+    "protocol": "TEAS LI4/PC6/ST36 bilateral2/10Hz6–9mA muscle twitch maximum tolerated30min preinduction; sham identical electrodes/no current. Women20–50 cosmetic breast GA atXijing Jul–Dec2012."
+  },
+  "results": {
+    "recovery": {
+      "format": "meanSD",
+      "values": [
+        [
+          35.6,
+          12.9
+        ],
+        [
+          48.3,
+          16.3
+        ]
+      ],
+      "unit": "minutes recovery-room stay",
+      "p": 0.01,
+      "location": "Table2 p5"
+    },
+    "opioid_intraop": {
+      "format": "meanSD",
+      "values": [
+        [
+          0.06,
+          0.02
+        ],
+        [
+          0.09,
+          0.03
+        ]
+      ],
+      "unit": "ug/kg/min remifentanil infusion rate",
+      "p": 0.01,
+      "location": "Table2 p5"
+    },
+    "pain": {
+      "format": "graph-only median/IQR, no numeric transcription",
+      "window": "0,4,8,24h after surgery",
+      "posture": "Insufficient information / not reported.",
+      "scale": "11-point verbal analogue scale0–10 in methods; Figure3 calls visual analogue",
+      "location": "Methods p3; Figure3 p6",
+      "p": "<0.05 at24h"
+    },
+    "nausea": {
+      "events": [
+        7,
+        15
+      ],
+      "n": [
+        33,
+        32
+      ],
+      "p": 0.03,
+      "window": "Postoperative; article methods emphasize PACU10min assessments, registry specifieswithin24h. Exact table coverage uncertain.",
+      "location": "Table3 p6"
+    },
+    "vomiting": {
+      "events": [
+        4,
+        11
+      ],
+      "n": [
+        33,
+        32
+      ],
+      "p": 0.03,
+      "window": "Postoperative; exact publication table interval not explicit; registrywithin24h",
+      "location": "Table3 p6"
+    },
+    "QoR": "Insufficient information / not reported.",
+    "GI": "Insufficient information / not reported."
+  },
+  "opioid": {
+    "decision": "excluded",
+    "drug": "intraoperative remifentanil; induction fentanyl3ug/kg",
+    "route": "IV",
+    "pca": "Insufficient information / not reported.",
+    "rescue": "Insufficient information / not reported.",
+    "reason": "No postoperative opioid consumption reported. Intraop weight/time-normalized rate cannot be postoperative cumulative dose. Parecoxib40mg and tropisetron4mg given5min beforeend; no opioid rescue protocol described.",
+    "location": "Anesthesia methods pp2–3; Table2 p5"
+  },
+  "registration": {
+    "identifier": "NCT01700855",
+    "source": "https://clinicaltrials.gov/api/v2/studies/NCT01700855",
+    "first_submitted": "2012-09-03",
+    "first_posted": "2012-10-04",
+    "enrollment_start_paper": "2012-07",
+    "registered_primary": "Intraoperative remifentanil/propofol infusion rate",
+    "published_primary": "Recovery-room stay",
+    "notes": "Retrospective to start; current2014 record covers sinusotomy and mammaplasty137 participants, different acupoint/stimulation parameters; no timely SAP. Registry includesVAS4/8/24/48h andPONVwithin24h."
+  },
+  "source_conflicts": [
+    "72randomized abstract vs65randomized flow; flow preferred and ambiguity retained.",
+    "Methods verbal analogue0–10 versus figure visual analogue; do not claim measured100mmVAS.",
+    "Registry primary differs from publication; no proof selection depended on results.",
+    "Publication PONV table lacks exact observation window; registry alone not proof actual24h ascertainment."
+  ],
+  "rob_independent": {
+    "D1": {
+      "answers": [
+        "Y",
+        "NI",
+        "PN"
+      ],
+      "judgment": "Some concerns",
+      "evidence": "Methods p2 random-number table; lists concealed from anesthesia/statistics is postallocation masking, not demonstrated concealment from enrolling person. Table1 balanced without suspicious differences; denominator conflict noted."
+    },
+    "D2": {
+      "answers": [
+        "PY",
+        "Y",
+        "PN",
+        "NA",
+        "NA",
+        "PY",
+        "NA"
+      ],
+      "judgment": "Low",
+      "evidence": "Methods pp2–3 and limitationsp6:acupuncturist unmasked,active muscle twitch vsnone patients mayrecognize; surgeon/anesthesia/PACU nurses masked; equal anesthesia/parecoxib/tropisetron and criteria. No trial-context deviations documented; flow retained allassigned."
+    },
+    "D3": {
+      "answers": [
+        "PY",
+        "NA",
+        "NA",
+        "NA"
+      ],
+      "judgment": "Low",
+      "evidence": "Explicit flowFigure2 p4:7excluded BEFORE65randomized,33/32completed and analyzed. Abstract72randomized conflicts; no actual after-allocation losses documented. Low conditional on explicit flow chronology; author confirmation useful."
+    },
+    "D4": {
+      "answers": [
+        "N",
+        "PN",
+        "PY",
+        "Y",
+        "NI"
+      ],
+      "judgment": "Some concerns",
+      "evidence": "Methods p2 maximum tolerated muscle twitch vs no stimulation; patient pain/nausea report can be influenced. PACU nurses masked and same procedures; no masking assessment or evidence actual expectancy-driven reporting."
+    },
+    "D4_record": {
+      "answers": [
+        "N",
+        "PN",
+        "PN",
+        "NA",
+        "NA"
+      ],
+      "judgment": "Low",
+      "evidence": "Methods pp2–3 anesthetists and PACU nurses masked; recorded infusion rate and discharge timing/standard Aldrete pluspain criterion same both arms. Possible patientpain contribution to readiness noted, actual masked nurse decisions standardized."
+    },
+    "D5": {
+      "answers": [
+        "N",
+        "NI",
+        "NI"
+      ],
+      "judgment": "Some concerns",
+      "evidence": "NCT01700855 firstsubmittedSep2012 afterJul2012 start, firstpostedOct4; registry primaryintraop rates vs paperrecovery-roomstay; planned pain48h absent. No prespecified SAP or demonstrated results-based selection; cannot establish Low or automaticHigh."
+    }
+  },
+  "independence": "Breast-surgery cohort65 atXijingJul–Dec2012. NCT01700855 also covers sinusotomy reportWang2014 DOI10.1093/bja/aeu001 (registry-linked), a different surgery cohort under shared registration. Do not count registry137 as separate trial or assume same patients from common ID.",
+  "missing": "Insufficient information / not reported."
+}

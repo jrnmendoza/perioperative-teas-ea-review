@@ -1,0 +1,254 @@
+{
+  "Study_ID": "S006",
+  "Study": "Zhang 2025",
+  "source_before_baseline": true,
+  "identity": {
+    "title": "Effects of Transcutaneous Electrical Acupoint Stimulation on Postoperative Acute Visceral, Incisional, and Low Back Pain and Recovery in Patients Undergoing Laparoscopic Hysterectomy: A Randomized Controlled Trial",
+    "doi": "10.2147/JPR.S553932",
+    "year": 2025,
+    "pdf": "109551.pdf",
+    "read_pages": "1–13complete; visualFigure2p5,Figure3p8,Tables4–6p9"
+  },
+  "arms": {
+    "order": [
+      "TEAS",
+      "Control"
+    ],
+    "randomized": [
+      54,
+      54
+    ],
+    "analyzed": [
+      45,
+      48
+    ],
+    "protocol": "TEAS1mAbelowmaximumtolerancevscontrol1mAbelowsensorythreshold,2/100Hz,30minbeforeandduringsurgery."
+  },
+  "results": {
+    "opioid": {
+      "format": "meanSD",
+      "values": [
+        [
+          50.53,
+          4.46
+        ],
+        [
+          53.79,
+          5.14
+        ]
+      ],
+      "unit": "ugIVsufentanil",
+      "window": "POD1",
+      "p": 0.002,
+      "location": "Table4p9; methods p4",
+      "includes_PACU_rescue": "Insufficient information / not reported."
+    },
+    "PCA": {
+      "medianQ1Q3": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          4
+        ]
+      ],
+      "window": "POD1",
+      "p": "<0.001",
+      "location": "Table4p9"
+    },
+    "rescue": {
+      "events": [
+        14,
+        29
+      ],
+      "n": [
+        45,
+        48
+      ],
+      "p_table": 0.005,
+      "p_prose": 0.002,
+      "RR_printed": 0.7,
+      "location": "Table4p9; p7prose; rawcountRRdoesnotmatchprintedRR"
+    },
+    "PONV": {
+      "events": [
+        14,
+        25
+      ],
+      "n": [
+        45,
+        48
+      ],
+      "p": 0.04,
+      "window": "postoperative; preciseintervalnotreported",
+      "location": "Table6p9"
+    },
+    "GI": {
+      "flatus": [
+        [
+          13.14,
+          10.53
+        ],
+        [
+          16.6,
+          10.36
+        ]
+      ],
+      "liquid_intake": [
+        [
+          7.11,
+          5.66
+        ],
+        [
+          9.16,
+          5.39
+        ]
+      ],
+      "solid_tolerance": [
+        [
+          13.11,
+          7.53
+        ],
+        [
+          15.16,
+          5.79
+        ]
+      ],
+      "unit": "h",
+      "p": [
+        0.11,
+        0.077,
+        0.14
+      ],
+      "location": "Table5p9; meanSD"
+    },
+    "pain": {
+      "scale": "NRS0–10maximum,visceral/incisional/LBPseparate; postureunspecified",
+      "window": "POD0first6h;POD1;POD2",
+      "arm_summary": "graph-only violinplots; no numericalmeansSD",
+      "adjusted_GEE": "Table2pp6–7 coefficientsnotarmmeans",
+      "moderate_severe_percent_labels": {
+        "visceral_TEAS": [
+          6.7,
+          8.9,
+          0
+        ],
+        "visceral_control": [
+          25,
+          37.5,
+          6.2
+        ],
+        "incisional_TEAS": [
+          2.2,
+          2.2,
+          2.2
+        ],
+        "incisional_control": [
+          4.2,
+          4.2,
+          2.1
+        ],
+        "LBP_TEAS": [
+          2.2,
+          17.8,
+          2.2
+        ],
+        "LBP_control": [
+          14.6,
+          29.2,
+          4.2
+        ]
+      },
+      "location": "Figure3p8visuallyinspected; continuouspanelslegendseemsreversedrelativetoprose"
+    },
+    "QoR": "Insufficient information / not reported."
+  },
+  "opioid": {
+    "decision": "hold",
+    "drug": "sufentanil",
+    "route": "IV",
+    "pca": "100ug/100mLsaline; basal2mL/h,bolus2mL,10minlockout",
+    "rescue": "PACUIVsufentaniltitratedforNRS≥4; wardrectalindomethacin50mg",
+    "reason": "POD1notexact0–24h; totalincludesPACUrescueunknown. RawsummarycanbePOD1sensitivitycandidateonlywithendpointqualification, notprimary.",
+    "location": "p4MethodsTable4p9"
+  },
+  "source_conflicts": [
+    "120assessedminus8excludedcannotyield108;108randomized54eachand93analyzedconsistentwith15postrandomizationexclusions.",
+    "AbstractFeb2024–2025 vs methodsMarch2024–April2025.",
+    "RescueRR0.70doesnotmatch14/45vs29/48; tableP0.005/prose0.002.",
+    "VisceralPOD1adjustedCI1.67–2.65doesnotcontaincoefficient0.96.",
+    "Figure3continuousTEASlegendappearsoppositetoproseclaimedlowerTEAS; no pointestimateextraction.",
+    "MultipleTable5effect/CIarithmeticinconsistencies; retainrawarmmeans."
+  ],
+  "rob_independent": {
+    "D1": {
+      "answers": [
+        "Y",
+        "Y",
+        "PN"
+      ],
+      "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+      "judgment": "Low"
+    },
+    "D2": {
+      "answers": [
+        "PY",
+        "PY",
+        "PN",
+        "NA",
+        "NA",
+        "PY",
+        "NA"
+      ],
+      "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+      "judgment": "Low"
+    },
+    "D3": {
+      "answers": [
+        "N",
+        "N",
+        "PY",
+        "NI"
+      ],
+      "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+      "judgment": "Some concerns"
+    },
+    "D4": {
+      "answers": [
+        "N",
+        "PN",
+        "PY",
+        "Y",
+        "NI"
+      ],
+      "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+      "judgment": "Some concerns"
+    },
+    "D4_opioid": {
+      "answers": [
+        "N",
+        "PN",
+        "PN",
+        "NA",
+        "NA"
+      ],
+      "evidence": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+      "judgment": "Low"
+    },
+    "D5": {
+      "answers": [
+        "NI",
+        "NI",
+        "NI"
+      ],
+      "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+      "judgment": "Some concerns"
+    }
+  },
+  "independence": "Wenzhou2024–2025cohort; distinct from2015/2020gynecology studies andZhang2023cholecystectomy.",
+  "missing": "Insufficient information / not reported."
+}

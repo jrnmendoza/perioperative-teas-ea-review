@@ -1,0 +1,366 @@
+{
+  "Study_ID": "S041",
+  "Study": "Lin 2002",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "identity": {
+    "title": "The effect of high and low frequency electroacupuncture in pain after lower abdominal surgery",
+    "year": 2002,
+    "doi": "10.1016/S0304-3959(02)00261-0",
+    "pdf": "covidence_951_lin_2002.pdf"
+  },
+  "source_read": "Complete six-page publication; Tables 1–3 and Figure 1 visually inspected.",
+  "arms": {
+    "order": [
+      "control",
+      "sham-EA needle without current",
+      "2 Hz EA",
+      "100 Hz EA"
+    ],
+    "randomized": [
+      25,
+      25,
+      25,
+      25
+    ],
+    "analyzed": [
+      25,
+      25,
+      25,
+      25
+    ],
+    "modality": "EA",
+    "population": "100 women ASA I–II abdominal hysterectomy under general anesthesia",
+    "independence": "Single four-arm trial; shared control groups must not be independently counted twice."
+  },
+  "results": {
+    "morphine": {
+      "location": "p511 Table 2; p510 §2.3",
+      "format": "mean (SD), mg IV",
+      "window": "PCA connected 1 h postoperation, used following 23 h; table calls total in 24 h",
+      "total": [
+        [
+          38.1,
+          16
+        ],
+        [
+          30.2,
+          14.4
+        ],
+        [
+          21.8,
+          14.7
+        ],
+        [
+          15,
+          10.7
+        ]
+      ],
+      "interval_1_8": [
+        [
+          16.1,
+          7.1
+        ],
+        [
+          12.8,
+          6.6
+        ],
+        [
+          9.2,
+          7.1
+        ],
+        [
+          6.1,
+          5.9
+        ]
+      ],
+      "interval_8_16": [
+        [
+          15.5,
+          9.4
+        ],
+        [
+          10.8,
+          7.7
+        ],
+        [
+          7.6,
+          5.4
+        ],
+        [
+          5.4,
+          3.8
+        ]
+      ],
+      "interval_16_24": [
+        [
+          6.5,
+          4.8
+        ],
+        [
+          6.6,
+          4.1
+        ],
+        [
+          5,
+          4.2
+        ],
+        [
+          3.5,
+          3.2
+        ]
+      ],
+      "pca": "IV morphine 2 mg demand, 10 min lockout; concentration not reported",
+      "rescue": "First postoperative hour: pethidine 1 mg/kg IM single dose on request; arm totals not reported. No other analgesics during PCA.",
+      "eligibility": "Sensitivity only: cumulative PCA morphine through 24 h excludes first-hour pethidine; not complete 0–24 h systemic opioid."
+    },
+    "pca_demands": {
+      "total": [
+        [
+          20.5,
+          9.2
+        ],
+        [
+          16.1,
+          7.4
+        ],
+        [
+          11.7,
+          7.1
+        ],
+        [
+          7.9,
+          5.9
+        ]
+      ],
+      "location": "p511 Table 2",
+      "note": "Includes unsuccessful lockout demands; not opioid dose."
+    },
+    "first_request": {
+      "minutes": [
+        [
+          10.6,
+          5.9
+        ],
+        [
+          18,
+          7.9
+        ],
+        [
+          27.9,
+          12.3
+        ],
+        [
+          28.1,
+          13.8
+        ]
+      ],
+      "location": "p511 Table 2"
+    },
+    "pain": {
+      "scale": "VAS 0–100 mm, context unspecified",
+      "times_hours": [
+        0.5,
+        1,
+        1.5,
+        2,
+        4,
+        8,
+        16,
+        24
+      ],
+      "values": null,
+      "reporting": "Graph only; no point estimates extracted.",
+      "location": "p512 Fig1"
+    },
+    "nausea": {
+      "events": [
+        11,
+        10,
+        4,
+        6
+      ],
+      "n": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "window": "first 24 h; retrospectively asked at 24 h",
+      "location": "p512 Table 3; p511 §2.4"
+    },
+    "vomiting": {
+      "events": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "n": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "window": "first 24 h",
+      "location": "p512 Table 3"
+    },
+    "qor": "Insufficient information / not reported.",
+    "gi": "Insufficient information / not reported."
+  },
+  "source_conflicts": [
+    "Abstract describes morphine first 24 h; methods explicitly PCA begins at 1 h. Retain method-based incomplete window."
+  ],
+  "rob2_independent": {
+    "common": {
+      "1.1": [
+        "Y",
+        "p510 §2.1 computer-generated sequence"
+      ],
+      "1.2": [
+        "NI",
+        "p510 §2.1 concealment procedure not reported"
+      ],
+      "1.3": [
+        "N",
+        "p511 Table1 no suspicious prognostic imbalances"
+      ],
+      "2.1": [
+        "PY",
+        "p510 §2.2 strong perceptible current vs none; conceal equipment attempted, masking not validated"
+      ],
+      "2.2": [
+        "Y",
+        "p510 §2.2 technicians deliver distinct settings"
+      ],
+      "2.3": [
+        "PN",
+        "p510–511 standardized anesthesia, PCA and no other analgesics during PCA; no trial-context departures described"
+      ],
+      "2.4": [
+        "NA",
+        "2.3 PN"
+      ],
+      "2.5": [
+        "NA",
+        "2.4 NA"
+      ],
+      "2.6": [
+        "Y",
+        "p511 all enrolled completed without withdrawal; original groups analyzed"
+      ],
+      "2.7": [
+        "NA",
+        "2.6 Y"
+      ],
+      "3.1": [
+        "Y",
+        "p511 all completed, n25 each"
+      ],
+      "3.2": [
+        "NA",
+        "3.1 Y"
+      ],
+      "3.3": [
+        "NA",
+        "3.1 Y"
+      ],
+      "3.4": [
+        "NA",
+        "3.1 Y"
+      ],
+      "5.1": [
+        "NI",
+        "Full publication no dated protocol/SAP/registration"
+      ],
+      "5.2": [
+        "NI",
+        "No prospective intentions available; measurements could vary"
+      ],
+      "5.3": [
+        "NI",
+        "No prospective analysis intentions available"
+      ]
+    },
+    "measurement": {
+      "morphine": {
+        "4.1": [
+          "N",
+          "p510–511 standardized PCA dose recording"
+        ],
+        "4.2": [
+          "N",
+          "same device/settings"
+        ],
+        "4.3": [
+          "N",
+          "p511 blinded observer and electronic record"
+        ],
+        "4.4": [
+          "NA",
+          "4.3 N"
+        ],
+        "4.5": [
+          "NA",
+          "4.3 N"
+        ],
+        "judgment": "Low",
+        "note": "Self-demand may be influenced by expectations, but dose recording is objective; do not assign measurement bias solely from self-dosing."
+      },
+      "pain_nausea": {
+        "4.1": [
+          "N",
+          "VAS and solicited symptoms conventional"
+        ],
+        "4.2": [
+          "N",
+          "same times and ascertainment"
+        ],
+        "4.3": [
+          "PY",
+          "participant is assessor and current perceptible"
+        ],
+        "4.4": [
+          "Y",
+          "subjective symptoms susceptible to expectations"
+        ],
+        "4.5": [
+          "NI",
+          "masking success and actual influence not demonstrated"
+        ],
+        "judgment": "Some concerns"
+      },
+      "vomiting": {
+        "4.1": [
+          "N",
+          "participant report of vomiting"
+        ],
+        "4.2": [
+          "N",
+          "identical 24 h query"
+        ],
+        "4.3": [
+          "PY",
+          "participant probably aware"
+        ],
+        "4.4": [
+          "PY",
+          "recall/interpretation can influence report"
+        ],
+        "4.5": [
+          "NI",
+          "influence not demonstrated"
+        ],
+        "judgment": "Some concerns"
+      }
+    },
+    "domains": {
+      "D1": "Some concerns",
+      "D2": "Low",
+      "D3": "Low",
+      "D5": "Some concerns"
+    },
+    "overall": "Some concerns; no evidence the separate concerns substantially lower confidence enough for High."
+  }
+}

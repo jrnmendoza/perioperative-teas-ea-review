@@ -1,0 +1,309 @@
+{
+  "Study_ID": "S061",
+  "Study": "An 2014",
+  "identity": {
+    "title": "Electro-Acupuncture Decreases Postoperative Pain and Improves Recovery in Patients Undergoing a Supratentorial Craniotomy",
+    "year": 2014,
+    "doi": "10.1142/S0192415X14500682",
+    "pdf": "covidence_698_full_article.pdf"
+  },
+  "source_review": {
+    "full_publication": "Read all 11 PDF pages including methods, results, discussion and references.",
+    "visual_inspection": [
+      "PDF p5 Figure 1 and Table 1",
+      "PDF p6 Tables 2 and 3"
+    ],
+    "retrieval": "Local full publication complete. PubMed DOI/title search https://pubmed.ncbi.nlm.nih.gov/25169910/ verified identity but did not establish trial registration or recruitment dates."
+  },
+  "design": {
+    "population": "88 adults, 18–60, ASA I–II, supratentorial tumor resection under general anesthesia; Beijing Tiantan Hospital. Needling-resistant patients excluded before enrollment.",
+    "randomized": {
+      "EA": 45,
+      "control": 43
+    },
+    "analyzed": {
+      "EA": 41,
+      "control": 40
+    },
+    "modality": "EA",
+    "comparator": "No treatment / usual care; no needles, not sham",
+    "location": "PDF pp2–4; Table1 p5",
+    "intervention": "Ipsilateral LI4/SJ5, BL63/LR3, ST36/GB40; 2/100 Hz alternating every 3 s, maximum tolerance; after induction through end of surgery.",
+    "randomization": "Computer-generated random-number table; concealment not reported.",
+    "blinding": "Patients sedated before stimulation and explicitly unaware of allocation; postoperative assessor blinded; treating acupuncturist necessarily aware.",
+    "attrition": "Seven excluded: two reoperations, two remaining unconscious and three incomplete data. Arm-specific reasons unavailable; 4/45 EA and 3/43 controls missing."
+  },
+  "regimen": {
+    "drug": "Fentanyl (postoperative); sufentanil (intraoperative)",
+    "route": "Intravenous",
+    "pca": "10 µg/kg fentanyl + 8 mg ondansetron in 100 mL, no basal infusion; bolus 1 mL, lockout 15 min, maximum 4 mL/h. Connected at end of surgery but activated following patient instruction in PACU; discontinued at 48 h.",
+    "rescue": "Statistical methods mention rescue analgesic doses, but independent rescue regimen and contribution to total systemic opioid use are insufficiently reported."
+  },
+  "independent_outcomes": [
+    {
+      "result": "VAS at rest",
+      "window": "1,2,3,4,6,24,48 hours",
+      "n": [
+        41,
+        40
+      ],
+      "means_EA": [
+        3.7,
+        3.67,
+        3.33,
+        3.4,
+        3.1,
+        2.6,
+        1.9
+      ],
+      "means_control": [
+        4.7,
+        5.8,
+        5.43,
+        5.4,
+        4.6,
+        3.07,
+        2.2
+      ],
+      "SD": null,
+      "location": "Figure1 p5 visual",
+      "qualification": "Means are printed numerical point labels, not digitization. SD error bars have no numerical labels. Stars appear at 2/3/4/6 h; narrative generalizes first6h. No 24h or48h star."
+    },
+    {
+      "result": "Total fentanyl dose",
+      "window": "Apparently postoperative course through 48 h; exact start and interval attribution not explicit in results",
+      "mean_EA": 0.67,
+      "sd_EA": 0.09,
+      "mean_control": 0.73,
+      "sd_control": 0.12,
+      "unit": "mg",
+      "n": [
+        41,
+        40
+      ],
+      "location": "p5 final paragraph",
+      "qualification": "Authors say no difference, despite printed summaries giving a conventional independent-groups t near 2.54. Weight-dependent 100mL bag and roughly10/15 effective 1mL boluses suggest a further order-of-magnitude dose-accounting inconsistency. Do not change printed units or infer mass from mean weight."
+    },
+    {
+      "result": "Total PCIA bolus administration",
+      "window": "0–6h",
+      "mean_EA": 14.43,
+      "sd_EA": 10.67,
+      "mean_control": 24.87,
+      "sd_control": 14.88,
+      "unit": "count",
+      "location": "Table2 p6"
+    },
+    {
+      "result": "Total PCIA bolus administration",
+      "window": "6–48h",
+      "mean_EA": 8.3,
+      "sd_EA": 2.91,
+      "mean_control": 9.63,
+      "sd_control": 3.21,
+      "unit": "count",
+      "location": "Table2 p6"
+    },
+    {
+      "result": "Effective PCIA bolus administration",
+      "window": "0–6h",
+      "mean_EA": 4.83,
+      "sd_EA": 2.95,
+      "mean_control": 9.67,
+      "sd_control": 3.35,
+      "unit": "count",
+      "location": "Table2 p6"
+    },
+    {
+      "result": "Effective PCIA bolus administration",
+      "window": "6–48h",
+      "mean_EA": 5.64,
+      "sd_EA": 1.23,
+      "mean_control": 5.57,
+      "sd_control": 1.52,
+      "unit": "count",
+      "location": "Table2 p6"
+    },
+    {
+      "result": "PONV",
+      "window": "First postoperative day (abstract describes within first24h; confirm clock)",
+      "percent_EA": 14.6,
+      "percent_control": 32.5,
+      "derived_events": [
+        6,
+        13
+      ],
+      "n": [
+        41,
+        40
+      ],
+      "p": 0.058,
+      "location": "p6 secondary parameters; p9 discussion",
+      "qualification": "Counts reconstructed unambiguously from rounded percentages and denominators. Abstract incorrectly claims P<0.05."
+    },
+    {
+      "result": "PONV",
+      "window": "Second postoperative day",
+      "percent_EA": 4.9,
+      "percent_control": 10,
+      "derived_events": [
+        2,
+        4
+      ],
+      "n": [
+        41,
+        40
+      ],
+      "p": 0.379,
+      "location": "p6"
+    },
+    {
+      "result": "Sufficient liquid diet",
+      "window": "First24h",
+      "percent_EA": 51.2,
+      "percent_control": 27.5,
+      "n": [
+        41,
+        40
+      ],
+      "p": 0.03,
+      "location": "Figure2 p7",
+      "qualification": "Ordinal appetite recovery, not validated QoR or time-to-first GI event."
+    }
+  ],
+  "opioid_candidate": {
+    "Study_ID": "S061",
+    "decision": "excluded",
+    "reason": "No cumulative exact0–24h mass. Reported total fentanyl apparently48h and internally inconsistent with dosing account; weight-dependent PCIA counts cannot be converted via group mean weight.",
+    "conversion_performed": false
+  },
+  "independence": "Distinct supplied publication. Same center and several investigators/acupoints as cited An2010a/b and Yang2012; paper calls them previous studies, but no recruitment dates or registry identifier establishes participant nonoverlap. Do not assume duplicate solely from authorship; unresolved author check.",
+  "rob_independent": {
+    "questions": {
+      "1.1": [
+        "Y",
+        "Computer-generated randomized-number table.",
+        "p3"
+      ],
+      "1.2": [
+        "NI",
+        "Allocation concealment mechanism is not described.",
+        "p3"
+      ],
+      "1.3": [
+        "NI",
+        "Baseline only for81 completers; tumor histology differs between arms, but no firm evidence that randomization failed.",
+        "Table1 p5"
+      ],
+      "2.1": [
+        "PN",
+        "Participants were sedated before EA and explicitly unaware of allocation.",
+        "pp3,9"
+      ],
+      "2.2": [
+        "Y",
+        "Acupuncturist delivered needles versus no needles.",
+        "p3"
+      ],
+      "2.3": [
+        "PN",
+        "Same GA and PCIA protocol; no trial-context departures reported.",
+        "pp3–4"
+      ],
+      "2.4": [
+        "NA",
+        "No relevant trial-context deviations demonstrated.",
+        "pp3–4"
+      ],
+      "2.5": [
+        "NA",
+        "No relevant trial-context deviations demonstrated.",
+        "pp3–4"
+      ],
+      "2.6": [
+        "PY",
+        "Analyzed according to assigned arm among participants with outcomes. Clinical missingness belongs in D3; no crossover or nonadherence exclusions reported.",
+        "p4"
+      ],
+      "2.7": [
+        "NA",
+        "No separate inappropriate as-treated analysis established.",
+        "p4"
+      ],
+      "3.1": [
+        "N",
+        "81/88 available; clinically important exclusions.",
+        "p4"
+      ],
+      "3.2": [
+        "N",
+        "No sensitivity analysis for seven excluded patients.",
+        "p4"
+      ],
+      "3.3": [
+        "Y",
+        "Reoperation and persistent unconsciousness can be strongly associated with postoperative pain, opioid needs and complications.",
+        "p4"
+      ],
+      "3.4": [
+        "PY",
+        "Explicit clinical-recovery exclusions make outcome-dependent missingness likely, although arm-specific reasons are absent.",
+        "p4"
+      ],
+      "4.1": [
+        "N",
+        "Standard resting0–10VAS measured at scheduled times.",
+        "p4"
+      ],
+      "4.2": [
+        "PN",
+        "Same schedule and single blinded assessor asked standardized questions.",
+        "pp4,9"
+      ],
+      "4.3": [
+        "PN",
+        "Self-rating participants and postoperative observer reported unaware of EA, delivered under GA.",
+        "pp3,9"
+      ],
+      "4.4": [
+        "NA",
+        "Outcome assessors probably unaware.",
+        "pp3,9"
+      ],
+      "4.5": [
+        "NA",
+        "Outcome assessors probably unaware.",
+        "pp3,9"
+      ],
+      "5.1": [
+        "NI",
+        "No registration identifier or dated prospective SAP in the full report; targeted DOI search did not establish one.",
+        "pp1–11; PubMed search"
+      ],
+      "5.2": [
+        "NI",
+        "Multiple scheduled pain times and recovery outcomes; precise prospective endpoint selection unavailable.",
+        "p4"
+      ],
+      "5.3": [
+        "NI",
+        "Multiple PCIA periods/definitions and tests; no dated SAP.",
+        "pp4–6"
+      ]
+    },
+    "domains": [
+      "Some concerns",
+      "Low",
+      "High",
+      "Low",
+      "Some concerns"
+    ],
+    "overall": "High",
+    "reason": "Clinically related post-randomization missingness can bias recovery outcomes; low D4 is supported by intervention under GA and blinded postoperative assessment, not merely the label double-blind."
+  },
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "saved_at": "2026-09-05T15:27:44.068Z",
+  "missing_information_convention": "Insufficient information / not reported."
+}

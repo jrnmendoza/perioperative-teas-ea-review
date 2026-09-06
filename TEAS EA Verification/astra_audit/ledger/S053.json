@@ -1,0 +1,29 @@
+{
+  "Study_ID": "S053",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_at": "2026-09-05T15:00:59.886Z",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows": 6,
+  "reviewed_rows": 6,
+  "reviewed_row_ids": [
+    229,
+    230,
+    231,
+    232,
+    233,
+    234
+  ],
+  "result_specific_rob_count": 5,
+  "unresolved": [
+    {
+      "missing_information": "0-24h postoperative actual sufentanil and any rescue opioid totals; numerical pain data and data for all128 randomized",
+      "why_it_matters": "Dose unavailable; graph only pain and selected completers impede synthesis",
+      "analysis_affected": "Postoperative opioid and pain",
+      "can_proceed_without": "Descriptive/intraoperative only; high-risk POCD sensitivity with derived counts",
+      "priority": "HIGH",
+      "exact_question": "Please provide actual0-24h IV sufentanil plus rescue opioid dose mean/SD/n and NRS data for all randomized participants, the dated SAP, and exact POCD counts."
+    }
+  ],
+  "summary": "All6 rows adjudicated. Intraoperative remifentanil confirmed; postoperative opioid unavailable; pain graph-only POD1. POCD counts reconstructed with qualification. High risk from selecting12-month completers.",
+  "adjudicated_at": "2026-09-05T15:03:13.675Z"
+}

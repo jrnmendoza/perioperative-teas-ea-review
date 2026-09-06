@@ -1,0 +1,26 @@
+screening_sequence,covidence_number,first_author,publication_year,decision,covidence_reason,primary_outcome_basis,language_basis,status
+1,2,Ma,2026,INCLUDE,,Pain at 24 hours reported,English full text,submitted_in_covidence
+2,4,Jiang,2026,INCLUDE,,NRS pain at 24 hours reported,English full text,submitted_in_covidence
+3,20,Zhao,2026,EXCLUDE,Wrong outcomes,"No approximately-24-hour postoperative opioid-consumption or pain outcome",English full text,submitted_in_covidence
+4,25,He,2026,INCLUDE,,24-hour opioid/PCA and pain results reported,English full text,submitted_in_covidence
+5,28,Zhang,2026,EXCLUDE,Publication language,Not assessed because language is the first definitive exclusion,Chinese full text with English abstract only,submitted_in_covidence
+6,29,Li,2026,EXCLUDE,Publication language,Not assessed because language is the first definitive exclusion,Chinese full text with English abstract only,submitted_in_covidence
+7,32,Luo,2025,INCLUDE,,VAS pain at 24 hours reported,English full text,submitted_in_covidence
+8,35,Luo,2026,INCLUDE,,NRS pain at 24 hours reported,English full text,submitted_in_covidence
+9,40,Tian,2026,EXCLUDE,Publication language,Not assessed because language is the first definitive exclusion,Chinese full text with English abstract only,submitted_in_covidence
+10,41,He,2026,INCLUDE,,Rest and movement pain at 24 hours reported,English full text,submitted_in_covidence
+11,43,Gao,2026,EXCLUDE,Wrong outcomes,"No approximately-24-hour postoperative opioid-consumption or pain outcome",English full text,submitted_in_covidence
+12,48,Liu,2026,INCLUDE,,Resting F-VAS pain at 24 hours reported,English full text,submitted_in_covidence
+13,69,Liu,2025,INCLUDE,,Pain within/at 24 hours and postoperative morphine reported,English full text,submitted_in_covidence
+14,71,Zhang,2025,INCLUDE,,Pain and POD1 sufentanil outcomes reported,English full text,submitted_in_covidence
+15,72,Zheng,2025,INCLUDE,,24-hour PCIA use and pain reported,English full text,submitted_in_covidence
+16,75,Liu,2025,INCLUDE,,Postoperative pain at the eligible 24-hour assessment reported,English full text,submitted_in_covidence
+17,83,Sun,2025,EXCLUDE,Wrong setting,"Primary outcomes cannot rescue an inseparable mixed spinal/general-anaesthesia population",English full text,submitted_in_covidence
+18,86,Zhang,2025,INCLUDE,,Eligible postoperative pain assessment retained,English full text,submitted_in_covidence
+19,89,Wu,2025,EXCLUDE,Wrong setting,Local infiltration anaesthesia without general anaesthesia,English full text,submitted_in_covidence
+20,106,Long,2025,INCLUDE,,VAS pain at 24 hours reported,English full text,submitted_in_covidence
+21,109,Cheng,2025,EXCLUDE,Publication language,Not assessed because language is the first definitive exclusion,Chinese full text with English abstract only,submitted_in_covidence
+22,115,Zhou,2025,INCLUDE,,POD1 pain reported,English full text,submitted_in_covidence
+23,121,Zhou,2025,EXCLUDE,Publication language,Not assessed because language is the first definitive exclusion,Chinese full text with English abstract only,submitted_in_covidence
+24,122,Wu,2025,INCLUDE,,Pain and analgesic consumption at 24 hours reported,English full text,submitted_in_covidence
+25,124,Guan,2025,EXCLUDE,Publication language,Not assessed because language is the first definitive exclusion,Chinese full text with English abstract only,submitted_in_covidence

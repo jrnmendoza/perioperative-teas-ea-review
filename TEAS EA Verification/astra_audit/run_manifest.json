@@ -1,0 +1,11 @@
+{
+  "started_utc": "2026-09-05T14:53:05.881895+00:00",
+  "baseline": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v20_PRIMARY_OPIOID_SET.xlsx",
+  "baseline_sha256": "e101e42a317c92dd21c906f9a01f9b69cfa8718bf43127424b16136d05163c4c",
+  "studies": 63,
+  "outcomes": 261,
+  "pdfs": 63,
+  "model_for_scientific_review": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "blinding": "Baseline values withheld from source reviewers until phase_a file saved."
+}

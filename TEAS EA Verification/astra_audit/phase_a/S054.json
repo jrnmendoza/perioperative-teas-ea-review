@@ -1,0 +1,344 @@
+{
+  "Study_ID": "S054",
+  "Study": "Grech 2016",
+  "identity": {
+    "title": "Intraoperative Low-frequency Electroacupuncture under General Anesthesia Improves Postoperative Recovery in a Randomized Trial",
+    "year": 2016,
+    "doi": "10.1016/j.jams.2016.03.009",
+    "pdf": "030_grech_2016_lund.pdf"
+  },
+  "design": {
+    "modality": "EA",
+    "comparator": "No acupuncture under GA (registry calls sham/placebo)",
+    "randomized": {
+      "EA": 11,
+      "control": 9
+    },
+    "analyzed": {
+      "all_EA": 11,
+      "all_control": 9,
+      "female_EA": 8,
+      "female_control": 9
+    },
+    "population": "Adults thyroid/parathyroid surgery,2013-07-02to2014-07-15",
+    "location": "pp2-4;Tables1-2;NCT01937520 registry results",
+    "intervention": "10Hz bilateralLI4/LI11/ST36 needleEA two30min blocks separated30min duringGA",
+    "attrition": "EA female#11 excluded for preoperativeTNF>1ug/mL;2EA males removed for female analyses;all-subject registry results11/9"
+  },
+  "regimen": {
+    "drug": "Author-converted mixed analgesics in morphine equivalents; underlying drugs unavailable",
+    "route": "Insufficient information / not reported.",
+    "pca": "Insufficient information / not reported.",
+    "rescue": "Insufficient information / not reported.",
+    "location": "p3 section2.2;registry Morphine Equivalent"
+  },
+  "results": [
+    {
+      "outcome": "All-participant PACU analgesia",
+      "format": "mean SE",
+      "T": [
+        5.43,
+        1.7,
+        11
+      ],
+      "C": [
+        7.36,
+        1.49,
+        9
+      ],
+      "unit": "author morphine equivalent mg",
+      "location": "NCT01937520 Reduced Pain Medication Requirement;Fig1B"
+    },
+    {
+      "outcome": "All-participant PACU VAS",
+      "format": "mean SE",
+      "T": [
+        5.36,
+        0.97,
+        11
+      ],
+      "C": [
+        6.67,
+        1.01,
+        9
+      ],
+      "location": "Registry Visual Acuity Score;Fig1C"
+    },
+    {
+      "outcome": "Female morphine equivalents",
+      "window": "PACU,Day1,Day2,Day3",
+      "format": "mean SE",
+      "T": [
+        [
+          3.19,
+          1.59
+        ],
+        [
+          6.31,
+          2.14
+        ],
+        [
+          9.84,
+          3.44
+        ],
+        [
+          7.93,
+          3.35
+        ]
+      ],
+      "C": [
+        [
+          7.36,
+          1.49
+        ],
+        [
+          9,
+          2.44
+        ],
+        [
+          7.42,
+          2.37
+        ],
+        [
+          5.25,
+          2.32
+        ]
+      ],
+      "n": [
+        8,
+        9
+      ],
+      "unit": "author morphine equivalent mg",
+      "location": "Registry primary Morphine Equivalent;Fig1G graph only in paper"
+    },
+    {
+      "outcome": "Female VAS",
+      "window": "PACU,Day1,Day2,Day3",
+      "format": "mean SE",
+      "T": [
+        [
+          4.88,
+          1.29
+        ],
+        [
+          6.67,
+          1.09
+        ],
+        [
+          5,
+          1.09
+        ],
+        [
+          4.28,
+          0.95
+        ]
+      ],
+      "C": [
+        [
+          6.67,
+          1.01
+        ],
+        [
+          5.56,
+          0.96
+        ],
+        [
+          5.93,
+          0.49
+        ],
+        [
+          3.33,
+          0.96
+        ]
+      ],
+      "n": [
+        8,
+        9
+      ],
+      "location": "Registry Pain Levels;Fig1H"
+    },
+    {
+      "outcome": "Female modified9itemQoR",
+      "window": "Day1,Day2,Day3",
+      "format": "mean SE",
+      "T": [
+        [
+          14.5,
+          0.98
+        ],
+        [
+          16,
+          0.73
+        ],
+        [
+          17.57,
+          0.3
+        ]
+      ],
+      "C": [
+        [
+          13.33,
+          0.85
+        ],
+        [
+          15.89,
+          0.75
+        ],
+        [
+          17,
+          0.33
+        ]
+      ],
+      "n": [
+        8,
+        9
+      ],
+      "unit": "0-18 higher better;notQoR15/40",
+      "location": "Registry Modified Quality of Recovery Scale;Fig1I"
+    }
+  ],
+  "retrieval": {
+    "source": "https://clinicaltrials.gov/api/v2/studies/NCT01937520",
+    "saved": "batch6_S054_registry.json",
+    "timing": "Firstsubmitted2013-04-24;firstQC2013-09-07/posted09-09 afterJuly2013start. Current2017 record not proof of prospective female subgroup SAP."
+  },
+  "source_conflicts": [
+    "Article tables20patients and9womenEA but exclusion#11 leaves8; registry resolves subgroup n8/9.",
+    "Figure1H controlDay1/Day2 pattern visually differs from registry numeric series; no graph estimates taken, flag before use.",
+    "Mixed analgesic morphine-equivalence factors/routes absent; no standardIVMME endorsement.",
+    "Article primary biomarkers versus current registry primary pain; historical prospective version unavailable."
+  ],
+  "independence": "Registry and article same trial, not independent cohorts.",
+  "rob_independent": {
+    "questions": {
+      "1.1": [
+        "NI",
+        "Randomized stated without sequence-generation method in paper/registry",
+        "p2;registry design"
+      ],
+      "1.2": [
+        "NI",
+        "Concealment mechanism not reported",
+        "p2;registry"
+      ],
+      "1.3": [
+        "PN",
+        "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+        "p4 Tables1-2"
+      ],
+      "2.1": [
+        "N",
+        "EA performed entirely underGA",
+        "pp2-3"
+      ],
+      "2.2": [
+        "Y",
+        "Licensed anesthesiologist/acupuncturist necessarily knows treatment",
+        "p3"
+      ],
+      "2.3": [
+        "PN",
+        "Both groups same anesthetic procedure; no reported trial-context departures",
+        "p3;registry protocol"
+      ],
+      "2.4": [
+        "NA",
+        "No departures identified",
+        "p3"
+      ],
+      "2.5": [
+        "NA",
+        "No departures identified",
+        "p3"
+      ],
+      "2.6": [
+        "PY",
+        "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response",
+        "p2;registry"
+      ],
+      "2.7": [
+        "NA",
+        "Within-subgroup assigned comparison;post-hoc selection assessedD5",
+        "pp2,4"
+      ],
+      "3.1": [
+        "PY",
+        "8/9eligiblefemale data; excludedfemale preexistingTNF criterion",
+        "registry outcome denominators"
+      ],
+      "3.2": [
+        "NA",
+        "Available eligible subgroup",
+        "registry"
+      ],
+      "3.3": [
+        "NA",
+        "Available eligible subgroup",
+        "registry"
+      ],
+      "3.4": [
+        "NA",
+        "Available eligible subgroup",
+        "registry"
+      ],
+      "4.1": [
+        "PN",
+        "VAS appropriate; authorMME measurement conversion undocumented",
+        "p3"
+      ],
+      "4.2": [
+        "PN",
+        "Same post-op assessments;data collector blinded in registry",
+        "registry"
+      ],
+      "4.3": [
+        "N",
+        "UnderGA subjects anddata collector blinded",
+        "registry protocol;pp2-4"
+      ],
+      "4.4": [
+        "NA",
+        "Blinded assessors",
+        "registry"
+      ],
+      "4.5": [
+        "NA",
+        "Blinded assessors",
+        "registry"
+      ],
+      "5.1": [
+        "NI",
+        "Historical prespecifiedSAP unavailable;current record updatedaftertrial",
+        "registry status"
+      ],
+      "5.2": [
+        "NI",
+        "Multiple pain/time measurements; prospective choices unclear",
+        "p3 Fig1;registry"
+      ],
+      "5.3": [
+        "PY",
+        "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+        "p4 Results"
+      ]
+    },
+    "domains": [
+      "Some concerns",
+      "Low",
+      "Low",
+      "Low",
+      "High"
+    ],
+    "overall": "High",
+    "reason": "Result-led female and age/weight subgroup emphasis after null all-participant analysis; prospective subgroup specification not established."
+  },
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "PACU/day-specific author-convertedmixed analgesicMEs;not exact0-24hIVmetric."
+  },
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "saved_at": "2026-09-05T15:10:40.100Z",
+  "missing_information_convention": "Insufficient information / not reported."
+}

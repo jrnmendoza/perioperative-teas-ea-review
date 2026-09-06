@@ -1,0 +1,2417 @@
+{
+  "Study_ID": "S025",
+  "Study": "Sim 2002",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "CONFIRMED",
+    "title": "Effects of Electroacupuncture on Intraoperative and Postoperative Analgesic Requirement",
+    "year": 2002,
+    "doi": "10.1136/aim.20.2-3.56",
+    "pdf_files": [
+      "covidence_952_full_article.pdf"
+    ],
+    "randomized_arms": {
+      "I": 30,
+      "II": 30,
+      "III": 30
+    },
+    "analyzed_arms": {
+      "I": 30,
+      "II": 30,
+      "III": 30
+    },
+    "modality": "EA",
+    "comparator_class": "GroupI preop placebo tap/tape needle without penetration/no current45min",
+    "independence": "One3-arm trial with sharedI control. IIvsI is matched-timing blinded comparison; IIIvsI differs in timing and III awareness. No demonstrated duplicate among assigned trials.",
+    "source_locations": "Complete10-page article; visual p60 confirmsTable2,Fig2–3.",
+    "identity_notes": "0–24h includes recovery-room stay but inclusion of fixed pre-end-of-surgery0.1mg/kg morphine not explicit. PreopEA described45min, discussion says some continued underGA to surgery end. Table2VAS is mean over24h, not exact24h. PONV46.6% of30 does not match conventional one-decimal rounding of14/30=46.7%; no unqualified direct event count."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 107,
+      "final": {
+        "Canonical study": "Sim 2002",
+        "Comparison ID": "SIM02_PREOP_vs_PLACEBO_MORPH24",
+        "Intervention arm": "Preoperative EA",
+        "Comparator arm": "Placebo EA",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative postoperative IV PCA morphine",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 30,
+        "Analyzed n comparator": 30,
+        "Mean intervention": 0.52,
+        "SD intervention": 0.19,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 0.68,
+        "SD comparator": 0.38,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg/kg morphine",
+        "Reported P": "NS overall 24-h cumulative comparison",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — arithmetic mg/kg MD only",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.16000000000000003,
+        "Exact 0-24 h postoperative opioid?": "Yes",
+        "Primary opioid meta-analysis eligible?": "No — absolute mg unavailable",
+        "Other analysis eligibility": "Direct weight-normalized 24-h morphine endpoint; pool only if protocol permits mg/kg or a prespecified standardization method",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Do not convert with mean weight; fixed0.1mg/kg dose at muscle closure may be included; clarify window/all-exposure coverage.",
+        "Source location": "p59 Results; Fig4p61",
+        "Source PDF URL": "https://drive.google.com/file/d/1YsNHL-J3Kgfu8mCanRrNu_bHk_roj0w6/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Sim 2002",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "SIM02_PREOP_vs_PLACEBO_MORPH24",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Preoperative EA",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Placebo EA",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative postoperative IV PCA morphine",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 0.52,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.19,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "No value used in this reporting slot; II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "No value used in this reporting slot; II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "No value used in this reporting slot; II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "No value used in this reporting slot; II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 0.68,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.38,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "No value used in this reporting slot; II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "No value used in this reporting slot; II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "No value used in this reporting slot; II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "No value used in this reporting slot; II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg/kg morphine",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "NS overall 24-h cumulative comparison",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — arithmetic mg/kg MD only",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.16000000000000003,
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "Yes",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No — absolute mg unavailable",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Direct weight-normalized 24-h morphine endpoint; pool only if protocol permits mg/kg or a prespecified standardization method",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Do not convert with mean weight; fixed0.1mg/kg dose at muscle closure may be included; clarify window/all-exposure coverage.",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p59 Results; Fig4p61",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1YsNHL-J3Kgfu8mCanRrNu_bHk_roj0w6/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — arithmetic mg/kg MD only",
+          "final_value": "Yes — arithmetic mg/kg MD only",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "reason": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "severity": "minor"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "old_value": "Conditional",
+          "source_value": "No — absolute mg unavailable",
+          "final_value": "No — absolute mg unavailable",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "reason": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Do not convert mg/kg to absolute mg using group mean body weight; aggregate means cannot reconstruct individual absolute dose",
+          "source_value": "Do not convert with mean weight; fixed0.1mg/kg dose at muscle closure may be included; clarify window/all-exposure coverage.",
+          "final_value": "Do not convert with mean weight; fixed0.1mg/kg dose at muscle closure may be included; clarify window/all-exposure coverage.",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "reason": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Figure 4 / cumulative 24-h morphine",
+          "source_value": "p59 Results; Fig4p61",
+          "final_value": "p59 Results; Fig4p61",
+          "source_location": "p59 Results (exact numbers); Fig4p61 supportive only",
+          "reason": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_952_full_article.pdf",
+      "source_evidence": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+      "drug": "Morphine",
+      "route": "IV",
+      "pca_formulation": "Graseby9300; delivered1mg bolus,5min lockout; concentration/basal not specified.",
+      "rescue_regimen": "Morphine0.1mg/kg immediately after alfentanil cessation at abdominal muscle closure; PACU1–2mg every5min untilVAS≤3 thenPCA. Ondansetron4mg.",
+      "critical_qc": "II30 .52±.19 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.16. PACU included; fixed transition dose inclusion unclear.",
+      "analysis_eligibility": "Direct weight-normalized 24-h morphine endpoint; pool only if protocol permits mg/kg or a prespecified standardization method",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 108,
+      "final": {
+        "Canonical study": "Sim 2002",
+        "Comparison ID": "SIM02_POSTOP_vs_PLACEBO_MORPH24",
+        "Intervention arm": "Postoperative EA",
+        "Comparator arm": "Placebo EA",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative postoperative IV PCA morphine",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 30,
+        "Analyzed n comparator": 30,
+        "Mean intervention": 0.58,
+        "SD intervention": 0.27,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 0.68,
+        "SD comparator": 0.38,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg/kg morphine",
+        "Reported P": "NS overall 24-h cumulative comparison",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — arithmetic mg/kg MD only",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.10000000000000009,
+        "Exact 0-24 h postoperative opioid?": "Yes",
+        "Primary opioid meta-analysis eligible?": "No — absolute mg unavailable",
+        "Other analysis eligibility": "mg/kg sensitivity only;IIIvsI timing-unmatched; sharedI counted once.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Postoperative EA is a distinct randomized timing arm and must not be merged with preoperative EA",
+        "Source location": "p59Results;Fig4p61",
+        "Source PDF URL": "https://drive.google.com/file/d/1YsNHL-J3Kgfu8mCanRrNu_bHk_roj0w6/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Sim 2002",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "SIM02_POSTOP_vs_PLACEBO_MORPH24",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative EA",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Placebo EA",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative postoperative IV PCA morphine",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 0.58,
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.27,
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p59Results",
+          "evidence": "No value used in this reporting slot; III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p59Results",
+          "evidence": "No value used in this reporting slot; III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p59Results",
+          "evidence": "No value used in this reporting slot; III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p59Results",
+          "evidence": "No value used in this reporting slot; III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 0.68,
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.38,
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p59Results",
+          "evidence": "No value used in this reporting slot; III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p59Results",
+          "evidence": "No value used in this reporting slot; III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p59Results",
+          "evidence": "No value used in this reporting slot; III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p59Results",
+          "evidence": "No value used in this reporting slot; III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg/kg morphine",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "NS overall 24-h cumulative comparison",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — arithmetic mg/kg MD only",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.10000000000000009,
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "Yes",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No — absolute mg unavailable",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "mg/kg sensitivity only;IIIvsI timing-unmatched; sharedI counted once.",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Postoperative EA is a distinct randomized timing arm and must not be merged with preoperative EA",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p59Results;Fig4p61",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1YsNHL-J3Kgfu8mCanRrNu_bHk_roj0w6/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "p59Results",
+          "evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — arithmetic mg/kg MD only",
+          "final_value": "Yes — arithmetic mg/kg MD only",
+          "source_location": "p59Results",
+          "reason": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "severity": "minor"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "old_value": "Conditional",
+          "source_value": "No — absolute mg unavailable",
+          "final_value": "No — absolute mg unavailable",
+          "source_location": "p59Results",
+          "reason": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "severity": "minor"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Timing-comparator 24-h morphine endpoint",
+          "source_value": "mg/kg sensitivity only;IIIvsI timing-unmatched; sharedI counted once.",
+          "final_value": "mg/kg sensitivity only;IIIvsI timing-unmatched; sharedI counted once.",
+          "source_location": "p59Results",
+          "reason": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Figure 4 / cumulative 24-h morphine",
+          "source_value": "p59Results;Fig4p61",
+          "final_value": "p59Results;Fig4p61",
+          "source_location": "p59Results",
+          "reason": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_952_full_article.pdf",
+      "source_evidence": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+      "drug": "Morphine",
+      "route": "IV",
+      "pca_formulation": "Graseby9300; delivered1mg bolus,5min lockout; concentration/basal not specified.",
+      "rescue_regimen": "Morphine0.1mg/kg immediately after alfentanil cessation at abdominal muscle closure; PACU1–2mg every5min untilVAS≤3 thenPCA. Ondansetron4mg.",
+      "critical_qc": "III30 .58±.27 vsI30 .68±.38mg/kg cumulative0–24h;MD=-.10. IIIaware and timing-unmatched preop placebo.",
+      "analysis_eligibility": "mg/kg sensitivity only;IIIvsI timing-unmatched; sharedI counted once.",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 109,
+      "final": {
+        "Canonical study": "Sim 2002",
+        "Comparison ID": "SIM02_PREOP_vs_PLACEBO_MORPH6_12",
+        "Intervention arm": "Preoperative EA",
+        "Comparator arm": "Placebo EA",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Postoperative IV PCA morphine",
+        "Timepoint/window": "6-12 h",
+        "Data type": "Median/IQR",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 30,
+        "Analyzed n comparator": 30,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": 0.03,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": 0.1,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg/kg morphine",
+        "Reported P": "0.015",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for interval-specific opioid analysis only",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Source reports median (IQR) as 0.03 (0.05) vs 0.10 (0.11); IQR is reported as a single width rather than Q1/Q3",
+        "Source location": "6-12-h morphine interval",
+        "Source PDF URL": "https://drive.google.com/file/d/1YsNHL-J3Kgfu8mCanRrNu_bHk_roj0w6/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED / IQR FORMAT QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Sim 2002",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "SIM02_PREOP_vs_PLACEBO_MORPH6_12",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Preoperative EA",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Placebo EA",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Postoperative IV PCA morphine",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "6-12 h",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Median/IQR",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": 0.03,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": 0.1,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "No value used in this reporting slot; 6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg/kg morphine",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.015",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for interval-specific opioid analysis only",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Source reports median (IQR) as 0.03 (0.05) vs 0.10 (0.11); IQR is reported as a single width rather than Q1/Q3",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "6-12-h morphine interval",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1YsNHL-J3Kgfu8mCanRrNu_bHk_roj0w6/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / IQR FORMAT QC",
+          "source_location": "p59 Results;Fig3p60",
+          "evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [],
+      "source_pdf": "covidence_952_full_article.pdf",
+      "source_evidence": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+      "drug": "Morphine",
+      "route": "IV",
+      "pca_formulation": "Graseby9300; delivered1mg bolus,5min lockout; concentration/basal not specified.",
+      "rescue_regimen": "Morphine0.1mg/kg immediately after alfentanil cessation at abdominal muscle closure; PACU1–2mg every5min untilVAS≤3 thenPCA. Ondansetron4mg.",
+      "critical_qc": "6–12h II median .03(IQRwidth .05) vsI .10(.11)mg/kg;P=.015; cannot reconstruct quartiles.",
+      "analysis_eligibility": "Eligible for interval-specific opioid analysis only",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 110,
+      "final": {
+        "Canonical study": "Sim 2002",
+        "Comparison ID": "SIM02_PREOP_vs_PLACEBO_ALFENT",
+        "Intervention arm": "Preoperative EA",
+        "Comparator arm": "Placebo EA",
+        "Outcome family": "Intraoperative opioid",
+        "Outcome/result": "Alfentanil requirement rate",
+        "Timepoint/window": "Intraoperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 30,
+        "Analyzed n comparator": 30,
+        "Mean intervention": 0.44,
+        "SD intervention": 0.15,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 0.51,
+        "SD comparator": 0.21,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg/kg/min",
+        "Reported P": "0.472",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — arithmetic rate MD only",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.07,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for intraoperative opioid analysis",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "No significant placebo-controlled intraoperative opioid-sparing effect",
+        "Source location": "Figure 2 / alfentanil requirement",
+        "Source PDF URL": "https://drive.google.com/file/d/1YsNHL-J3Kgfu8mCanRrNu_bHk_roj0w6/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Sim 2002",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "SIM02_PREOP_vs_PLACEBO_ALFENT",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Preoperative EA",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Placebo EA",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Intraoperative opioid",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Alfentanil requirement rate",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Intraoperative",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 30,
+          "source_location": "pp57,59–60Tables1–2",
+          "evidence": "{\"randomized\":{\"I\":30,\"II\":30,\"III\":30},\"analyzed\":{\"I\":30,\"II\":30,\"III\":30}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 0.44,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.15,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "No value used in this reporting slot; Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "No value used in this reporting slot; Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "No value used in this reporting slot; Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "No value used in this reporting slot; Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 0.51,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.21,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "No value used in this reporting slot; Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "No value used in this reporting slot; Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "No value used in this reporting slot; Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "No value used in this reporting slot; Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg/kg/min",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.472",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — arithmetic rate MD only",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.07,
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for intraoperative opioid analysis",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "No significant placebo-controlled intraoperative opioid-sparing effect",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Figure 2 / alfentanil requirement",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1YsNHL-J3Kgfu8mCanRrNu_bHk_roj0w6/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "p59 Results;Fig2p60",
+          "evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — arithmetic rate MD only",
+          "final_value": "Yes — arithmetic rate MD only",
+          "source_location": "p59 Results;Fig2p60",
+          "reason": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_952_full_article.pdf",
+      "source_evidence": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+      "drug": "Alfentanil",
+      "route": "IV",
+      "pca_formulation": "Graseby9300; delivered1mg bolus,5min lockout; concentration/basal not specified.",
+      "rescue_regimen": "Morphine0.1mg/kg immediately after alfentanil cessation at abdominal muscle closure; PACU1–2mg every5min untilVAS≤3 thenPCA. Ondansetron4mg.",
+      "critical_qc": "Intraop alfentanilII .44±.15 vsI .51±.21µg/kg/min;n30each;P=.472;MD=-.07.",
+      "analysis_eligibility": "Eligible for intraoperative opioid analysis",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "SIM02_PREOP_vs_PLACEBO_MORPH24",
+      "outcome": "Cumulative postoperative IV PCA morphine",
+      "time_window": "0-24 h",
+      "comparison": "Preoperative EA vs preop placebo",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number table.",
+          "source_location": "p57",
+          "reasoning": "Random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment mechanism described.",
+          "source_location": "p57",
+          "reasoning": "No concealment mechanism described."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Age/weight/incision and surgical durations broadly comparable30/arm.",
+          "source_location": "p59Table1",
+          "reasoning": "Age/weight/incision and surgical durations broadly comparable30/arm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "I/II masking survey mostly unable to guess; tap/tape mock procedure.",
+          "source_location": "pp58,61",
+          "reasoning": "I/II masking survey mostly unable to guess; tap/tape mock procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and anaesthetists explicitly aware.",
+          "source_location": "p62",
+          "reasoning": "Acupuncturist and anaesthetists explicitly aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Some preoperativeEA continued intraoperatively; frequency/extent not reported.",
+          "source_location": "pp62–63",
+          "reasoning": "Whether trial-context deviation occurred is unclear."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p62",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p62",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All90 shown in30/arm results; no reclassification.",
+          "source_location": "p59Table1",
+          "reasoning": "All90 shown in30/arm results; no reclassification."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6Y.",
+          "source_location": "p59",
+          "reasoning": "2.6Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "30/arm outcome tables; no losses reported.",
+          "source_location": "pp59–60",
+          "reasoning": "30/arm outcome tables; no losses reported."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "NA",
+          "evidence": "Complete reported cohort.",
+          "source_location": "p60",
+          "reasoning": "Complete reported cohort."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "PCA delivered morphine records and recovery-room doses.",
+          "source_location": "pp58–59",
+          "reasoning": "PCA delivered morphine records and recovery-room doses."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same PCA1mg5min lockout and follow-up.",
+          "source_location": "p58",
+          "reasoning": "Same PCA1mg5min lockout and follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Independent postoperative assessor blinded; participants I/II plausibly masked.",
+          "source_location": "pp61–62",
+          "reasoning": "Independent postoperative assessor blinded; participants I/II plausibly masked."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Blinded consumption recording.",
+          "source_location": "p62",
+          "reasoning": "Blinded consumption recording."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.4NA.",
+          "source_location": "p62",
+          "reasoning": "4.4NA."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "No registration/datable SAP provided in2002 publication.",
+          "source_location": "pp56–65",
+          "reasoning": "No registration/datable SAP provided in2002 publication."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "24h and intervals reported but prior detailed intentions unavailable.",
+          "source_location": "p59",
+          "reasoning": "24h and intervals reported but prior detailed intentions unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No dated analysis plan; multiple comparisons/statistics.",
+          "source_location": "p59",
+          "reasoning": "No dated analysis plan; multiple comparisons/statistics."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment not reported.",
+          "source_location": "p57"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unclear continuation of preopEA into surgery.",
+          "source_location": "pp62–63"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All90 in results.",
+          "source_location": "pp59–60"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Standard PCA with blinded recording and credible I/II masking.",
+          "source_location": "pp58,61–62"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospective analysis plan demonstrated.",
+          "source_location": "p59"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Concealment, intervention continuation and prespecification uncertainties.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Overall retained for selectedIIvsI; D2Some concerns because unexplained intraop continuation. III and alfentanil assessments differ in awareness."
+    },
+    {
+      "result_id": "SIM02_POSTOP_vs_PLACEBO_MORPH24",
+      "outcome": "Cumulative postoperative IV PCA morphine",
+      "time_window": "0-24 h",
+      "comparison": "Postoperative EA vs preop placebo",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number table.",
+          "source_location": "p57",
+          "reasoning": "Random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment mechanism described.",
+          "source_location": "p57",
+          "reasoning": "No concealment mechanism described."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Age/weight/incision and surgical durations broadly comparable30/arm.",
+          "source_location": "p59Table1",
+          "reasoning": "Age/weight/incision and surgical durations broadly comparable30/arm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "GroupIII knewEA after surgery; I/II-only masking survey.",
+          "source_location": "p62",
+          "reasoning": "Timing reveals groupIII."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and anaesthetists explicitly aware.",
+          "source_location": "p62",
+          "reasoning": "Acupuncturist and anaesthetists explicitly aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Some preoperativeEA continued intraoperatively; frequency/extent not reported.",
+          "source_location": "pp62–63",
+          "reasoning": "Whether trial-context deviation occurred is unclear."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p62",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p62",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All90 shown in30/arm results; no reclassification.",
+          "source_location": "p59Table1",
+          "reasoning": "All90 shown in30/arm results; no reclassification."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6Y.",
+          "source_location": "p59",
+          "reasoning": "2.6Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "30/arm outcome tables; no losses reported.",
+          "source_location": "pp59–60",
+          "reasoning": "30/arm outcome tables; no losses reported."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "NA",
+          "evidence": "Complete reported cohort.",
+          "source_location": "p60",
+          "reasoning": "Complete reported cohort."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "PCA delivered morphine records and recovery-room doses.",
+          "source_location": "pp58–59",
+          "reasoning": "PCA delivered morphine records and recovery-room doses."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same PCA1mg5min lockout and follow-up.",
+          "source_location": "p58",
+          "reasoning": "Same PCA1mg5min lockout and follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "PCA recording blinded but self-dosing behavior participant-influenced andIIIaware.",
+          "source_location": "pp58,62",
+          "reasoning": "Dose recording objective; behavior may be affected."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Expectations could affect PCA button use.",
+          "source_location": "p62",
+          "reasoning": "Self-dosing susceptible."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No evidence of likely behavioral distortion.",
+          "source_location": "p62",
+          "reasoning": "Some concerns."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "No registration/datable SAP provided in2002 publication.",
+          "source_location": "pp56–65",
+          "reasoning": "No registration/datable SAP provided in2002 publication."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "24h and intervals reported but prior detailed intentions unavailable.",
+          "source_location": "p59",
+          "reasoning": "24h and intervals reported but prior detailed intentions unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No dated analysis plan; multiple comparisons/statistics.",
+          "source_location": "p59",
+          "reasoning": "No dated analysis plan; multiple comparisons/statistics."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment not reported.",
+          "source_location": "p57"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unclear continuation of preopEA into surgery.",
+          "source_location": "pp62–63"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All90 in results.",
+          "source_location": "pp59–60"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Objective delivery but unmaskedIIIself-dosing warrants separate qualification.",
+          "source_location": "pp58,62"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospective analysis plan demonstrated.",
+          "source_location": "p59"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Concealment, intervention continuation and prespecification uncertainties.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Overall retained for selectedIIvsI; D2Some concerns because unexplained intraop continuation. III and alfentanil assessments differ in awareness."
+    },
+    {
+      "result_id": "SIM02_PREOP_vs_PLACEBO_MORPH6_12",
+      "outcome": "Postoperative IV PCA morphine",
+      "time_window": "6-12 h",
+      "comparison": "Preoperative EA vs preop placebo",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number table.",
+          "source_location": "p57",
+          "reasoning": "Random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment mechanism described.",
+          "source_location": "p57",
+          "reasoning": "No concealment mechanism described."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Age/weight/incision and surgical durations broadly comparable30/arm.",
+          "source_location": "p59Table1",
+          "reasoning": "Age/weight/incision and surgical durations broadly comparable30/arm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "I/II masking survey mostly unable to guess; tap/tape mock procedure.",
+          "source_location": "pp58,61",
+          "reasoning": "I/II masking survey mostly unable to guess; tap/tape mock procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and anaesthetists explicitly aware.",
+          "source_location": "p62",
+          "reasoning": "Acupuncturist and anaesthetists explicitly aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Some preoperativeEA continued intraoperatively; frequency/extent not reported.",
+          "source_location": "pp62–63",
+          "reasoning": "Whether trial-context deviation occurred is unclear."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p62",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p62",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All90 shown in30/arm results; no reclassification.",
+          "source_location": "p59Table1",
+          "reasoning": "All90 shown in30/arm results; no reclassification."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6Y.",
+          "source_location": "p59",
+          "reasoning": "2.6Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "30/arm outcome tables; no losses reported.",
+          "source_location": "pp59–60",
+          "reasoning": "30/arm outcome tables; no losses reported."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "NA",
+          "evidence": "Complete reported cohort.",
+          "source_location": "p60",
+          "reasoning": "Complete reported cohort."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "PCA delivered morphine records and recovery-room doses.",
+          "source_location": "pp58–59",
+          "reasoning": "PCA delivered morphine records and recovery-room doses."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same PCA1mg5min lockout and follow-up.",
+          "source_location": "p58",
+          "reasoning": "Same PCA1mg5min lockout and follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Independent postoperative assessor blinded; participants I/II plausibly masked.",
+          "source_location": "pp61–62",
+          "reasoning": "Independent postoperative assessor blinded; participants I/II plausibly masked."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Blinded consumption recording.",
+          "source_location": "p62",
+          "reasoning": "Blinded consumption recording."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.4NA.",
+          "source_location": "p62",
+          "reasoning": "4.4NA."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "No registration/datable SAP provided in2002 publication.",
+          "source_location": "pp56–65",
+          "reasoning": "No registration/datable SAP provided in2002 publication."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "24h and intervals reported but prior detailed intentions unavailable.",
+          "source_location": "p59",
+          "reasoning": "24h and intervals reported but prior detailed intentions unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No dated analysis plan; multiple comparisons/statistics.",
+          "source_location": "p59",
+          "reasoning": "No dated analysis plan; multiple comparisons/statistics."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment not reported.",
+          "source_location": "p57"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unclear continuation of preopEA into surgery.",
+          "source_location": "pp62–63"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All90 in results.",
+          "source_location": "pp59–60"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Standard PCA with blinded recording and credible I/II masking.",
+          "source_location": "pp58,61–62"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospective analysis plan demonstrated.",
+          "source_location": "p59"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Concealment, intervention continuation and prespecification uncertainties.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Overall retained for selectedIIvsI; D2Some concerns because unexplained intraop continuation. III and alfentanil assessments differ in awareness."
+    },
+    {
+      "result_id": "SIM02_PREOP_vs_PLACEBO_ALFENT",
+      "outcome": "Alfentanil requirement rate",
+      "time_window": "Intraoperative",
+      "comparison": "Preoperative EA vs preop placebo",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number table.",
+          "source_location": "p57",
+          "reasoning": "Random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment mechanism described.",
+          "source_location": "p57",
+          "reasoning": "No concealment mechanism described."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Age/weight/incision and surgical durations broadly comparable30/arm.",
+          "source_location": "p59Table1",
+          "reasoning": "Age/weight/incision and surgical durations broadly comparable30/arm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "I/II masking survey mostly unable to guess; tap/tape mock procedure.",
+          "source_location": "pp58,61",
+          "reasoning": "I/II masking survey mostly unable to guess; tap/tape mock procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and anaesthetists explicitly aware.",
+          "source_location": "p62",
+          "reasoning": "Acupuncturist and anaesthetists explicitly aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Some preoperativeEA continued intraoperatively; frequency/extent not reported.",
+          "source_location": "pp62–63",
+          "reasoning": "Whether trial-context deviation occurred is unclear."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p62",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p62",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All90 shown in30/arm results; no reclassification.",
+          "source_location": "p59Table1",
+          "reasoning": "All90 shown in30/arm results; no reclassification."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6Y.",
+          "source_location": "p59",
+          "reasoning": "2.6Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "30/arm outcome tables; no losses reported.",
+          "source_location": "pp59–60",
+          "reasoning": "30/arm outcome tables; no losses reported."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "NA",
+          "evidence": "Complete reported cohort.",
+          "source_location": "p60",
+          "reasoning": "Complete reported cohort."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "PCA delivered morphine records and recovery-room doses.",
+          "source_location": "pp58–59",
+          "reasoning": "PCA delivered morphine records and recovery-room doses."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same PCA1mg5min lockout and follow-up.",
+          "source_location": "p58",
+          "reasoning": "Same PCA1mg5min lockout and follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Anaesthetists aware of assignment.",
+          "source_location": "p62",
+          "reasoning": "Dose titrator unmasked."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Autonomic titration protocol limits but does not abolish discretion.",
+          "source_location": "p57",
+          "reasoning": "Knowledge could influence dosing."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No evidence actual biased titration.",
+          "source_location": "p62",
+          "reasoning": "Some concerns."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "No registration/datable SAP provided in2002 publication.",
+          "source_location": "pp56–65",
+          "reasoning": "No registration/datable SAP provided in2002 publication."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "24h and intervals reported but prior detailed intentions unavailable.",
+          "source_location": "p59",
+          "reasoning": "24h and intervals reported but prior detailed intentions unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No dated analysis plan; multiple comparisons/statistics.",
+          "source_location": "p59",
+          "reasoning": "No dated analysis plan; multiple comparisons/statistics."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment not reported.",
+          "source_location": "p57"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unclear continuation of preopEA into surgery.",
+          "source_location": "pp62–63"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All90 in results.",
+          "source_location": "pp59–60"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unblinded clinician administers alfentanil under objective threshold protocol.",
+          "source_location": "pp57,62"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospective analysis plan demonstrated.",
+          "source_location": "p59"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Concealment, intervention continuation and prespecification uncertainties.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Overall retained for selectedIIvsI; D2Some concerns because unexplained intraop continuation. III and alfentanil assessments differ in awareness."
+    }
+  ],
+  "opioid_candidate": {
+    "postoperative": true,
+    "explicit_0_24h": true,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "Includes recovery-room period; inclusion of fixed intraoperative transition morphine dose uncertain.",
+    "drug": "Morphine",
+    "route": "IV",
+    "unit": "mg/kg",
+    "raw_values": {
+      "I": [
+        0.68,
+        0.38
+      ],
+      "II": [
+        0.52,
+        0.19
+      ],
+      "III": [
+        0.58,
+        0.27
+      ]
+    },
+    "comparison_selection": "PreferIIvsI;III timing-unmatched sensitivity; sharedI counted once",
+    "multiarm_handling": "One3-arm trial with sharedI control. IIvsI is matched-timing blinded comparison; IIIvsI differs in timing and III awareness. No demonstrated duplicate among assigned trials.",
+    "source_location": "Complete10-page article; visual p60 confirmsTable2,Fig2–3.",
+    "decision": "sensitivity",
+    "reason": "Verified cumulative24h IV morphine in mg/kg only; cannot convert with group mean weight. Fixed dose at muscle closure inclusion uncertain. Requires raw mg or IPD for primary mg endpoint."
+  },
+  "duplicate_map": [],
+  "additional_source_outcomes": [
+    {
+      "outcome": "Morphine cumulative0–24h",
+      "unit": "mg/kg IV morphine",
+      "format": "meanSD",
+      "I": [
+        0.68,
+        0.38
+      ],
+      "II": [
+        0.52,
+        0.19
+      ],
+      "III": [
+        0.58,
+        0.27
+      ],
+      "source": "p59Results, p56abstract",
+      "P": "not significant; exact P not reported"
+    },
+    {
+      "outcome": "Morphine6–12h",
+      "unit": "mg/kg",
+      "format": "median(IQR width), NOT Q1/Q3",
+      "I": [
+        0.1,
+        0.11
+      ],
+      "II": [
+        0.03,
+        0.05
+      ],
+      "III": [
+        0.08,
+        0.1
+      ],
+      "P": "IIvsI .015;IIvsIII .010",
+      "source": "p59text;Fig3"
+    },
+    {
+      "outcome": "RestVAS average over24h",
+      "unit": "0–10",
+      "format": "meanSD",
+      "I": [
+        4.5,
+        2.1
+      ],
+      "II": [
+        4.7,
+        1.8
+      ],
+      "III": [
+        3.9,
+        1.6
+      ],
+      "source": "p60Table2 footnote mean values over24h"
+    },
+    {
+      "outcome": "PONV0–24h",
+      "format": "percentage",
+      "I": 46.6,
+      "II": 43.3,
+      "III": 56.7,
+      "source": "p60Table2",
+      "events": null
+    },
+    {
+      "outcome": "Alfentanil intraop",
+      "unit": "µg/kg/min",
+      "format": "meanSD",
+      "I": [
+        0.51,
+        0.21
+      ],
+      "II": [
+        0.44,
+        0.15
+      ],
+      "III": [
+        0.58,
+        0.22
+      ],
+      "P": "IIvsI .472;IIvsIII .024",
+      "source": "pp59–60Fig2"
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "Absolute mg consumption, peri-end-of-surgery dose accounting and EA continuation",
+      "why_it_matters": "Primary metric and intervention/window definition",
+      "analysis_affected": "24h opioid",
+      "can_proceed_without": "mg/kg sensitivity only",
+      "priority": "HIGH",
+      "exact_question": "Please provide arm means/SD of absolute IV morphine mg from end-of-surgery to24h, whether0.1mg/kg transition/PACU doses were included, and which patients continuedEA during surgery."
+    }
+  ],
+  "summary": "All4rows audited. Raw mg/kg morphine confirmed, primary mg synthesis unavailable; no mean-weight conversion. Exact source numbers fromResults, notgraph. Preop and postop schedules distinguished."
+}

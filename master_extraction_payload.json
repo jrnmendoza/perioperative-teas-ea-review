@@ -1,0 +1,1260 @@
+{
+  "1879897069": {
+    "sid": "1879897069",
+    "title": "An 2014 (Covidence ID: 1879897069)",
+    "dossier": "covidence_batch_20/studies/01_1879897069_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": true,
+      "ponv": true,
+      "rescue": true,
+      "gi": true,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896620": {
+    "sid": "1879896620",
+    "title": "Ao 2021 (Covidence ID: 1879896620)",
+    "dossier": "covidence_batch_20/studies/02_1879896620_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896688": {
+    "sid": "1879896688",
+    "title": "Evidence File: Chen 2020 \u2014 Study #480 (Covidence ID 1879896688)",
+    "dossier": "covidence_batch_20/studies/03_1879896688_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879897506": {
+    "sid": "1879897506",
+    "title": "Chen 1998 (Covidence ID: 1879897506)",
+    "dossier": "covidence_batch_20/studies/04_1879897506_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": true,
+      "ponv": true,
+      "rescue": true,
+      "gi": false,
+      "los": true,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896981": {
+    "sid": "1879896981",
+    "title": "Chen 2016 (Covidence ID: 1879896981)",
+    "dossier": "covidence_batch_20/studies/05_1879896981_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": true,
+      "gi": true,
+      "los": false,
+      "ae": false,
+      "qor": false
+    }
+  },
+  "1879897004": {
+    "sid": "1879897004",
+    "title": "Chen 2015 (Covidence ID: 1879897004)",
+    "dossier": "covidence_batch_20/studies/06_1879897004_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": true,
+      "ponv": true,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": true
+    }
+  },
+  "1879897029": {
+    "sid": "1879897029",
+    "title": "Chen 2015 (Covidence ID: 1879897029)",
+    "dossier": "covidence_batch_20/studies/07_1879897029_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": true,
+      "ponv": true,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879897531": {
+    "sid": "1879897531",
+    "title": "Evidence File: Christensen 1993 \u2014 Study #985 (Covidence ID 1879897531)",
+    "dossier": "covidence_batch_20/studies/08_1879897531_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": true
+    }
+  },
+  "1879897298": {
+    "sid": "1879897298",
+    "title": "Evidence File: Colak 2010 \u2014 Study #839 (Covidence ID 1879897298)",
+    "dossier": "covidence_batch_20/studies/09_1879897298_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": false,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879897266": {
+    "sid": "1879897266",
+    "title": "Evidence File: Coura 2011 \u2014 Study #819 (Covidence ID 1879897266)",
+    "dossier": "covidence_batch_20/studies/10_1879897266_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": false,
+      "rescue": true,
+      "gi": false,
+      "los": true,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879897344": {
+    "sid": "1879897344",
+    "title": "Evidence File: El-Rakshy 2009 \u2014 Study #868 (Covidence ID 1879897344)",
+    "dossier": "covidence_batch_20/studies/11_1879897344_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879897063": {
+    "sid": "1879897063",
+    "title": "Evidence File: Ertas 2015 \u2014 Study #694 (Covidence ID 1879897063)",
+    "dossier": "covidence_batch_20/studies/12_1879897063_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": false,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896778": {
+    "sid": "1879896778",
+    "title": "Evidence File: Gao 2018 \u2014 Study #537 (Covidence ID 1879896778)",
+    "dossier": "covidence_batch_20/studies/13_1879896778_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": true,
+      "ponv": false,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896952": {
+    "sid": "1879896952",
+    "title": "Evidence File: Grech 2016 \u2014 Study #625 (Covidence ID 1879896952)",
+    "dossier": "covidence_batch_20/studies/15_1879896952_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": true
+    }
+  },
+  "1881841223": {
+    "sid": "1881841223",
+    "title": "Evidence File: Gu 2019 \u2014 Study #1471 (Covidence ID 1881841223)",
+    "dossier": "covidence_batch_20/studies/17_1881841223_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": true,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1882881457": {
+    "sid": "1882881457",
+    "title": "Evidence File: Huang 2017 \u2014 Study #3811 (Covidence ID 1882881457)",
+    "dossier": "covidence_batch_21_40/studies/22_1882881457_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": true,
+      "ponv": true,
+      "rescue": false,
+      "gi": false,
+      "los": true,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1882880803": {
+    "sid": "1882880803",
+    "title": "Evidence File: Kang 2023 \u2014 Study #3157 (Covidence ID 1882880803)",
+    "dossier": "covidence_batch_21_40/studies/26_1882880803_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": false,
+      "rescue": false,
+      "gi": true,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879897255": {
+    "sid": "1879897255",
+    "title": "Evidence File: Lee 2011 \u2014 Study #812 (Covidence ID 1879897255)",
+    "dossier": "covidence_batch_21_40/studies/28_1879897255_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879897477": {
+    "sid": "1879897477",
+    "title": "Evidence File: Lin 2002 \u2014 Study #951 (Covidence ID 1879897477)",
+    "dossier": "covidence_batch_21_40/studies/30_1879897477_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896559": {
+    "sid": "1879896559",
+    "title": "Evidence File: #400 - Gao 2021 (Covidence ID 1879896559)",
+    "dossier": "covidence_batch_41_74/studies/14_1879896559_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896335": {
+    "sid": "1879896335",
+    "title": "Evidence File: #260 - Guo 2023 (Covidence ID 1879896335)",
+    "dossier": "covidence_batch_41_74/studies/16_1879896335_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879895945": {
+    "sid": "1879895945",
+    "title": "Evidence File: #41 - He 2026 (Covidence ID 1879895945)",
+    "dossier": "covidence_batch_41_74/studies/18_1879895945_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879895909": {
+    "sid": "1879895909",
+    "title": "Evidence File: #25 - He 2026 (Covidence ID 1879895909)",
+    "dossier": "covidence_batch_41_74/studies/19_1879895909_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896391": {
+    "sid": "1879896391",
+    "title": "Evidence File: #295 - Hou 2023 (Covidence ID 1879896391)",
+    "dossier": "covidence_batch_41_74/studies/20_1879896391_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896311": {
+    "sid": "1879896311",
+    "title": "Evidence File: #245 - Huang 2023 (Covidence ID 1879896311)",
+    "dossier": "covidence_batch_41_74/studies/21_1879896311_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896131": {
+    "sid": "1879896131",
+    "title": "Evidence File: #131 - Huang 2025 (Covidence ID 1879896131)",
+    "dossier": "covidence_batch_41_74/studies/23_1879896131_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879895860": {
+    "sid": "1879895860",
+    "title": "Evidence File: #4 - Jiang 2026 (Covidence ID 1879895860)",
+    "dossier": "covidence_batch_41_74/studies/24_1879895860_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896440": {
+    "sid": "1879896440",
+    "title": "Evidence File: #326 - Jin 2022 (Covidence ID 1879896440)",
+    "dossier": "covidence_batch_41_74/studies/25_1879896440_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1882881976": {
+    "sid": "1882881976",
+    "title": "Evidence File: #4330 - Larson 2010 (Covidence ID 1882881976)",
+    "dossier": "covidence_batch_41_74/studies/27_1882881976_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896610": {
+    "sid": "1879896610",
+    "title": "Evidence File: #432 - Liang 2021 (Covidence ID 1879896610)",
+    "dossier": "covidence_batch_41_74/studies/29_1879896610_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896493": {
+    "sid": "1879896493",
+    "title": "Evidence File: #359 - Li 2022 (Covidence ID 1879896493)",
+    "dossier": "covidence_batch_41_74/studies/31_1879896493_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896021": {
+    "sid": "1879896021",
+    "title": "Evidence File: #75 - Liu 2025 (Covidence ID 1879896021)",
+    "dossier": "covidence_batch_41_74/studies/32_1879896021_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879895960": {
+    "sid": "1879895960",
+    "title": "Evidence File: #48 - Liu 2026 (Covidence ID 1879895960)",
+    "dossier": "covidence_batch_41_74/studies/33_1879895960_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896597": {
+    "sid": "1879896597",
+    "title": "Evidence File: #424 - Liu 2021 (Covidence ID 1879896597)",
+    "dossier": "covidence_batch_41_74/studies/34_1879896597_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896009": {
+    "sid": "1879896009",
+    "title": "Evidence File: #69 - Liu 2025 (Covidence ID 1879896009)",
+    "dossier": "covidence_batch_41_74/studies/35_1879896009_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896618": {
+    "sid": "1879896618",
+    "title": "Evidence File: #437 - Li 2021 (Covidence ID 1879896618)",
+    "dossier": "covidence_batch_41_74/studies/36_1879896618_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896090": {
+    "sid": "1879896090",
+    "title": "Evidence File: #106 - Long 2025 (Covidence ID 1879896090)",
+    "dossier": "covidence_batch_41_74/studies/37_1879896090_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879895932": {
+    "sid": "1879895932",
+    "title": "Evidence File: #35 - Luo 2026 (Covidence ID 1879895932)",
+    "dossier": "covidence_batch_41_74/studies/38_1879895932_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896426": {
+    "sid": "1879896426",
+    "title": "Evidence File: #317 - Lu 2022 (Covidence ID 1879896426)",
+    "dossier": "covidence_batch_41_74/studies/39_1879896426_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896580": {
+    "sid": "1879896580",
+    "title": "Evidence File: #414 - Lu 2021 (Covidence ID 1879896580)",
+    "dossier": "covidence_batch_41_74/studies/40_1879896580_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879897120": {
+    "sid": "1879897120",
+    "title": "Evidence File: Ntritsou 2014 \u2014 Study #729 (Covidence ID 1879897120)",
+    "dossier": "covidence_batch_41_74/studies/41_1879897120_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": true,
+      "ponv": true,
+      "rescue": true,
+      "gi": true,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896727": {
+    "sid": "1879896727",
+    "title": "Evidence File: #505 - Oztas 2019 (Covidence ID 1879896727)",
+    "dossier": "covidence_batch_41_74/studies/42_1879896727_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896396": {
+    "sid": "1879896396",
+    "title": "Evidence File: #298 - Pan 2023 (Covidence ID 1879896396)",
+    "dossier": "covidence_batch_41_74/studies/43_1879896396_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896891": {
+    "sid": "1879896891",
+    "title": "Evidence File: #596 - PraveenaSeevaunnamtum 2016 (Covidence ID 1879896891)",
+    "dossier": "covidence_batch_41_74/studies/44_1879896891_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879897479": {
+    "sid": "1879897479",
+    "title": "Evidence File: Sim 2002 \u2014 Study #952 (Covidence ID 1879897479)",
+    "dossier": "covidence_batch_41_74/studies/45_1879897479_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896637": {
+    "sid": "1879896637",
+    "title": "Evidence File: #449 - Song 2020 (Covidence ID 1879896637)",
+    "dossier": "covidence_batch_41_74/studies/46_1879896637_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896963": {
+    "sid": "1879896963",
+    "title": "Evidence File: Sun 2017 \u2014 Study #632 (Covidence ID 1879896963)",
+    "dossier": "covidence_batch_41_74/studies/47_1879896963_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": true,
+      "gi": true,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896624": {
+    "sid": "1879896624",
+    "title": "Evidence File: #441 - Szmit 2021 (Covidence ID 1879896624)",
+    "dossier": "covidence_batch_41_74/studies/48_1879896624_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879897195": {
+    "sid": "1879897195",
+    "title": "Evidence File: Ng 2012 / 2013 \u2014 Study #775 (Covidence ID 1879897195)",
+    "dossier": "covidence_batch_41_74/studies/49_1879897195_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879895855": {
+    "sid": "1879895855",
+    "title": "Evidence File: #2 - Ma 2026 (Covidence ID 1879895855)",
+    "dossier": "covidence_batch_41_74/studies/50_1879895855_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896309": {
+    "sid": "1879896309",
+    "title": "Evidence File: #244 - Tu 2023 (Covidence ID 1879896309)",
+    "dossier": "covidence_batch_41_74/studies/51_1879896309_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896259": {
+    "sid": "1879896259",
+    "title": "Evidence File: #212 - Wang 2024 (Covidence ID 1879896259)",
+    "dossier": "covidence_batch_41_74/studies/52_1879896259_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896394": {
+    "sid": "1879896394",
+    "title": "Evidence File: #297 - Wang 2023 (Covidence ID 1879896394)",
+    "dossier": "covidence_batch_41_74/studies/53_1879896394_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879897414": {
+    "sid": "1879897414",
+    "title": "Evidence File: Wong 2006 \u2014 Study #912 (Covidence ID 1879897414)",
+    "dossier": "covidence_batch_41_74/studies/54_1879897414_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": false,
+      "rescue": false,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896116": {
+    "sid": "1879896116",
+    "title": "Evidence File: #122 - Wu 2025 (Covidence ID 1879896116)",
+    "dossier": "covidence_batch_41_74/studies/55_1879896116_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896450": {
+    "sid": "1879896450",
+    "title": "Evidence File: #332 - Wu 2022 (Covidence ID 1879896450)",
+    "dossier": "covidence_batch_41_74/studies/56_1879896450_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879897074": {
+    "sid": "1879897074",
+    "title": "Evidence File: Xie 2014 \u2014 Study #701 (Covidence ID 1879897074)",
+    "dossier": "covidence_batch_41_74/studies/57_1879897074_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": false,
+      "rescue": true,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896460": {
+    "sid": "1879896460",
+    "title": "Evidence File: #338 - Xing 2022 (Covidence ID 1879896460)",
+    "dossier": "covidence_batch_41_74/studies/58_1879896460_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896608": {
+    "sid": "1879896608",
+    "title": "Evidence File: #431 - Xiong 2021 (Covidence ID 1879896608)",
+    "dossier": "covidence_batch_41_74/studies/59_1879896608_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896323": {
+    "sid": "1879896323",
+    "title": "Evidence File: #252 - Yang 2023 (Covidence ID 1879896323)",
+    "dossier": "covidence_batch_41_74/studies/60_1879896323_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896661": {
+    "sid": "1879896661",
+    "title": "Evidence File: #464 - Yang 2020 (Covidence ID 1879896661)",
+    "dossier": "covidence_batch_41_74/studies/61_1879896661_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879897026": {
+    "sid": "1879897026",
+    "title": "Evidence File: #671 - Yao 2015 (Covidence ID 1879897026)",
+    "dossier": "covidence_batch_41_74/studies/62_1879897026_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879897280": {
+    "sid": "1879897280",
+    "title": "Evidence File: Yeh 2010 / 2011 \u2014 Study #828 (Covidence ID 1879897280)",
+    "dossier": "covidence_batch_41_74/studies/63_1879897280_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879897273": {
+    "sid": "1879897273",
+    "title": "Evidence File: Yeh 2010 (ATHM) \u2014 Study #823 (Covidence ID 1879897273)",
+    "dossier": "covidence_batch_41_74/studies/64_1879897273_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896692": {
+    "sid": "1879896692",
+    "title": "Evidence File: #483 - Yu 2020 (Covidence ID 1879896692)",
+    "dossier": "covidence_batch_41_74/studies/65_1879896692_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1882881336": {
+    "sid": "1882881336",
+    "title": "Evidence File: #3690 - Zhang 2018 (Covidence ID 1882881336)",
+    "dossier": "covidence_batch_41_74/studies/66_1882881336_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879897091": {
+    "sid": "1879897091",
+    "title": "Evidence File: Zhang 2014 \u2014 Study #711 (Covidence ID 1879897091)",
+    "dossier": "covidence_batch_41_74/studies/67_1879897091_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": true,
+      "ponv": true,
+      "rescue": true,
+      "gi": false,
+      "los": true,
+      "ae": true,
+      "qor": true
+    }
+  },
+  "1879896412": {
+    "sid": "1879896412",
+    "title": "Evidence File: #308 - Zhang 2023 (Covidence ID 1879896412)",
+    "dossier": "covidence_batch_41_74/studies/68_1879896412_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896013": {
+    "sid": "1879896013",
+    "title": "Evidence File: #71 - Zhang 2025 (Covidence ID 1879896013)",
+    "dossier": "covidence_batch_41_74/studies/69_1879896013_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1881841076": {
+    "sid": "1881841076",
+    "title": "Evidence File: Zhan 2020 \u2014 Study #1389 (Covidence ID 1881841076)",
+    "dossier": "covidence_batch_41_74/studies/70_1881841076_evidence.md",
+    "outcomes_flags": {
+      "opioid": true,
+      "pain_rest": true,
+      "pain_mvmt": true,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": false,
+      "los": false,
+      "ae": true,
+      "qor": false
+    }
+  },
+  "1879896014": {
+    "sid": "1879896014",
+    "title": "Evidence File: #72 - Zheng 2025 (Covidence ID 1879896014)",
+    "dossier": "covidence_batch_41_74/studies/71_1879896014_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896611": {
+    "sid": "1879896611",
+    "title": "Evidence File: #433 - Zhou 2021 (Covidence ID 1879896611)",
+    "dossier": "covidence_batch_41_74/studies/72_1879896611_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896105": {
+    "sid": "1879896105",
+    "title": "Evidence File: #115 - Zhou 2025 (Covidence ID 1879896105)",
+    "dossier": "covidence_batch_41_74/studies/73_1879896105_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  },
+  "1879896528": {
+    "sid": "1879896528",
+    "title": "Evidence File: #381 - Zhu 2022 (Covidence ID 1879896528)",
+    "dossier": "covidence_batch_41_74/studies/74_1879896528_evidence.md",
+    "outcomes_flags": {
+      "opioid": false,
+      "pain_rest": true,
+      "pain_mvmt": false,
+      "intraop": false,
+      "ponv": true,
+      "rescue": false,
+      "gi": true,
+      "los": true,
+      "ae": false,
+      "qor": true
+    }
+  }
+}

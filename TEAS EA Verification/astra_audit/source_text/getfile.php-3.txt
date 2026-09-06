@@ -1,0 +1,643 @@
+=== PDF PAGE 1 ===
+Journal    of    Multidisciplinary    Healthcare                                                                                                                                                                                                                                Dovepress
+
+                                                                                                                                                  open  access  to  scientific  and  medical  research
+
+
+    Open  Access  Full  Text  Article                                                                                                        CLINICAL TRIAL REPORT
+Acupoint Stimulation for Enhanced Recover y After
+Colon Surger y: A Prospective Multicenter
+Randomized Controlled Trial
+
+Zhihong Lu1,*, Ailin Luo2,*, Su Min3,*, Hailong Dong1, Qiuju Xiong3, Xinhua Li2, Qingzhu Deng2, Tingting Liu1,
+Xue Yang1, Chen Li4, Qingchuan Zhao5, Lize Xiong1,6
+
+
+
+1Department  of  Anaesthesiology  and  Perioperative  Medicine,  Xijing  Hospital,  Fourth  Military  Medical  University,  Xi’an,  People’s  Republic  of  China;
+2Department of Anaesthesiology, Tongji Hospital, Huazhong University of Science and Technology, Wuhan, People’s Republic of China;                                                       3Department
+of  Anaesthesiology,  First  Affiliated  Hospital  of  Chongqing  Medical  University,  Chongqing,  People’s  Republic  of  China;                                4Department  of  Medical
+Statistics,  Fourth  Military  Medical  University,  Xi’an,  People’s  Republic  of  China;                  5Xijing  Hospital  of  Digestive  Diseases,  Fourth  Military  Medical
+University, Xi’an, People’s Republic of China;               6Translational Research Institute of Brain and Brain-Like Intelligence and Department of Anesthesiology,
+Shanghai  Fourth  People’s  Hospital  Affiliated  to  Tongji  University  School  of  Medicine,  Shanghai,  People’s  Republic  of  China
+
+*These  authors  contributed  equally  to  this  work
+
+Correspondence:   Zhihong   Lu;   Lize   Xiong,   Department    of   Anesthesiology   and   Perioperative   Medicine,    Xijing   Hospital,   Fourth   Military   Medical
+University,   Changle   West   Road127,   Xi’an,   Shaanxi,   710032,   People’s   Republic   of   China,   Tel   +86-29-84775337;   Tel   +86-29-84772126,
+Email   deerlu23@163.com;   xlzmzk@163.com
+
+
+Purpose: The    aim   of   this    study   was    to    evaluate   the    efficacy    of   transcutaneous   electrical    acupoint   stimulation   (TEAS)    in   improving
+bowel    function   and   thus   shortening   hospital   stay   after    laparoscopic   colon   surgery   within   the    ERAS   pathway.
+Patients and Methods: From November 2016 to March 2018, 100 patients who underwent elective colon surgery were enrolled and 94
+finished study (n = 47 for each) in three university hospitals. Patients in the TEAS group received TEAS 30 min before surgery and once
+a day for 3 days after surgery, while those in the Control Group received no stimulation. Primary outcome was the time to discharge.
+Results: Compared     with     standardized     postoperative     care,     TEAS     resulted     in     a     shorter     time     to     first     flatus     (P=0.03)     and     time     to     first
+defecation         (P=0.03),         as         well         as         a         reduction         in         the         length         of         hospital         stay         (P=0.02).         Median         patient-controlled         analgesia         (PCA)
+deliveries     and     PCA     attempts     at     24h,     48h     and     72h     after     surgery     were     less     in     the     TEAS     group     (P<0.01).     No     evidence     of     significant
+advantages   in   postoperative   pain   intensity,   nausea,   vomiting,   sleeping   quality   and   expenses   was   found   in   the   TEAS    group.
+Conclusion: Perioperative      TEAS      further      shortens      the      time      to      meet      discharge      criteria      after      laparoscopic      colon      surgery      in      patients
+under   ERAS   strategy.
+Keywords: transcutaneous   electrical   acupoint   stimulation,   colon   surgery,   laparoscopy,   ERAS
+
+
+Plain   Language   Summar y
+Recovery of bowel function is important for patients undergoing colorectal surgery. Enhanced recovery after surgery (ERAS) program
+makes      great     efforts     on     improving     bowel      function.      In      patients      under     ERAS      program,     transcutaneous     electrical      acupoint     stimulation
+(TEAS)   can   further   shorten   the   time   to   first   flatus   and   to   first   defecation   after   colon   surgery.   The   length   of   hospital   stay   and   need   of
+analgesics   after   surgery   were   decreased   as   well.
+
+Introduction
+Accumulating   evidence   supported   that   the   enhanced   recovery   after   surgery   (ERAS)   pathway   and   laparoscopic   approach
+benefit    patients    undergoing    colorectal    resections    by    shortening    the    length    of    hospital    stay    and    reducing    morbidity    after
+surgery.1–5        For         patients         undergoing         colon         surgery,         the         return         of         bowel         function         is         especially         important         for         ERAS.6
+Shortening       fasting        time,       early        mobilization       and        early        oral       intake        have        been        used       to       facilitate       the        recovery        of        bowel
+
+
+
+                                                              Journal  of  Multidisciplinary  Healthcare  2022:15  2871–2879                                                                      2871
+                                                                               © 2022 Lu et al. This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.php
+                                                                               and incorporate the Creative Commons Attribution – Non Commercial (unported, v3.0) License (http://creativecommons.org/licenses/by-nc/3.0/). By accessing the work
+                                                              you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For
+                                                              permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).
+
+=== PDF PAGE 2 ===
+Lu  et  al                                                                                                                                                                           Dovepress
+
+function.6 However, postoperative ileus still represents problems in the management.7 The time to first bowel motion was
+not satisfied in the laparoscopic arm in many of these trials, which is only about 1 day earlier than that in the open arm.7–9
+     Acupuncture-related  techniques  have  been  used  to  treat  bowel  function  disorders,  including  irritable  bowel  syndrome
+and  chronic  functional  constipation10–12 Perioperative  acupuncture-related  techniques  including  transcutaneous  electrical
+acupoint  stimulation  (TEAS)  have  shown  benefits  including  narcotic-sparing  effects  and  fewer  complications.13 Besides,
+acupuncture        has        been        used        to        treat        gastrointestinal        motility        disorder.14–19 Evidence        of        acupuncture        for        postoperative
+gastrointestinal      function      is      accumulating.      In      patients      undergoing      major      abdominal      surgery,      Li      et      al19         observed      shorter
+time      to      flatus      and      to      ambulation      after      TEAS.      In      patients      undergoing     laparoscopic      surgery,      the      time      to      defecation      was
+shortened as well.20 However, whether the potential benefit of TEAS on gastrointestinal function could shorten the length
+of         stay         after         surgery         is         not         clear.         Therefore,         the         aim         of         this         multicenter         randomized         trial         was         to         evaluate         whether
+perioperative TEAS could further improve the gastrointestinal function and shorten the time to meet the discharge criteria
+in    patients    undergoing    laparoscopic    colon    surgery    with    current    ERAS    approaches.
+
+Materials   and   Methods
+Patients   and   Randomization
+The      randomized,      prospective,      sham      controlled      study      was      undertaken      in      3      university      hospitals      in      China      (Xijing      Hospital,
+Tongji Hospital, and First Affiliated Hospital of Chongqing Medical University). The study was approved by the Institutional
+Ethics        Committee        of        each        participating        hospital        and        has        been        registered        in        ClinicalTrials.gov        (NCT02921529).        Written
+informed consent was obtained from all patients. Patients scheduled for laparoscopic colon surgery under general anaesthesia
+were screened. Inclusion criteria included age between 18 and 75 years, a body mass index between 18 and 30, and ASA status
+of  I–III.  Patients  with  contraindications  for  electrical  stimulation,  difficulty  in  communicating,  confirmed  or  suspected  drug
+abuse/addiction    or    alcohol    abuse/addiction,    or    severe    hepatic    or    renal    dysfunction    were    excluded.    Patients    were    randomly
+assigned       to        the       TEAS        or       Control       group       in       a       ratio       of       1:1       using       a       computer-generated       random       allocation       sequence.       The
+randomization  code  for  each  patient  was  put  in  sealed  envelope  and  not  opened  until  allocation.
+
+Intervention   and   Blinding
+For all patients, electrodes were placed at the bilateral PC6/LI4 and ST36/SP6 and connected to the stimulator (Model No. SDZ-II;
+Hwato       electronic       stimulator;        Suzhou        Medical       Appliances        Co.,        Ltd,        Suzhou,       China)        (See Supplemental        Digital       Content        1).
+Patients    in    the    TEAS    group    received    stimulation    at    the    bilateral    PC6    and    ST36    points.    The    device    provided    “disperse-dense”
+waves of alternating frequencies of 2 Hz and 10 Hz for 2 cycles. Increasing electrical stimulation intensity (4 mA to 11 mA) was
+applied     to     identify     the     threshold     intensity.     Stimulation     began     30     min     before     induction     and     lasted     for     30     min.     Then     the     same
+stimulation  for  30  min  was  given  in  the  morning  once  a  day  for  3  days  after  surgery.  Patients  in  the  Control  group  received  no
+stimulation.
+     For   logistic  reasons,   blinding   the   patients   was  hard   to  perform.   However,   the   threshold  intensity   was   identified  in   all
+the patients, and they were told  that they may or may not  feel the  electrical  stimulation. Interventions were performed by
+a      designated      investigator      who      was      not      involved      in      the      anaesthesia      or      the      follow-up.      The      stimulator      was      placed      in      an
+opaque    box.    Investigators    involved    in    the    follow-up    were    blinded    to    the    group    allocation.
+
+Procedures
+Anaesthesia was induced with midazolam, propofol and fentanyl. Rocuronium was given to facilitate tracheal intubation.
+Intraoperative   anaesthesia   was   maintained   with    a   remifentanil   infusion   and   sevoflurane.   Patients    were   managed   accord-
+ing    to    ERAS    methods    previously    reported21,22                  (see Supplemental    Digital    Content    2)    and    followed    up    until    discharge.
+     The primary outcome was the time to meet discharge criteria after surgery that we previously reported21,22 (Table 1). The
+secondary   outcomes   included   time   to   flatus,   time   to   first   defecation,  and   time   to   first   oral   intake;   pain   intensity   assessed   by
+visual analogue scale (VAS), attempts and deliveries of patient-controlled analgesia (PCA), postoperative nausea and vomiting
+(PONV),     quality     of     sleeping     (QoS)     and     quality     of     recovery     (QoR)     evaluated     at     24h,     48h     and     72h     after     surgery.     QoS     was
+assessed using visual sleeping scale and the Richard-Campbell Sleep Questionnaire (RCSQ),23 and QoR was assessed using
+
+
+
+2872          https://doi.org/10.2147/JMDH.S391852                                                                                                                                                                                                                                Journal  of  Multidisciplinary   Healthcare  2022:15
+              DovePress
+
+=== PDF PAGE 3 ===
+Dove    press                                                                                                                                                                                         Lu  et  al
+
+Table  1 Criteria  for  Discharge
+
+                    Content
+
+  Criteria  1       Normal  body  temperature,  normal  mobilization  (off-bed  mobilization  >6h  in  24  h),  normal  oral  diet  (oral  intake  of  liquid  diet
+                    >1000mLin  24h),  normal  gastrointestinal  function  (flatus  and  defecation)
+  Criteria  2       Pain  could  be  controlled  with  oral  analgesics
+  Criteria  3       No  discomfort  complaint,  no  parenteral  nutrition
+
+
+QoR-15  questionnaire.24 Higher  scores  indicate  better  quality (Supplemental  Digital  Contents  3 and 4).  Postoperative  major
+complications  (Supplemental  Digital  Content  5)  and  expenses  were  recorded  as  well.
+
+Statistical   Analysis
+We         performed        all         the         analyses        in         a        modified         intention-to-treat        population,         which        included         all        the         patients        who        had
+undergone   randomization    and    all    the    interventions.    All    the    patients    were    followed    for    the    duration    of    the    trial.
+      Based   on   a   previous   study,   the   average   time   to   meet   discharge   criteria   was   5   days   for   patients   undergoing   colorectal
+surgery.21 A   minimum   of   43   patients   in   each   group   would   give   90%   power   to   detect   a   decrease   of   1   day   for   the   time   to
+discharge,      with      a      standard      deviation      of      1.3       days,      at       an      overall      2-sided P <       0.05.      The      sample      size       was      inflated      to      94
+patients    (n=47    for    each)    to    account    for    a    rate    of    withdrawals    and    loss    to    follow-up    by    10%.
+      Data       were      analyzed       with      SAS       9.2       (USA:      SAS       Institute      Inc.,       2010).       Descriptive      statistics       were      applied       to      present
+subjects’      characters.     Comparison     of      qualitative     data      between      two      groups      was     done      using      Chi-square     test     and      Fisher ’s
+exact      test.      And      comparison      of      quantitative      data      was      evaluated      by         t-test.      Also,      Satterthwaite      t’      test      was      applied      if      the
+variances   were   unequal  between  two   groups.  Univariate  analysis  of   survival  data  was   estimated  using  the   Log  rank  test.
+A    two-tailed P-value    of    0.05    was    considered    as    statistically    significant    with    a    95%    confidence    interval    (95%    CI).
+
+Results
+From November 2016 through March 2018, a total of 100 patients were enrolled at 3 hospitals. We randomly assigned 50
+patients        to        each        group        (Figure        1).        After        randomization,        5        patients        were        excluded        due        to        procedure        converting        from
+laparoscopic   to   open   surgery   and   1   patient   was   excluded   due   to   rejection   to   TEAS   (Figure   1).   There   was   no   significant
+difference between the  groups with respect  to  demographic, anesthetic  and surgical  characteristics (Table 2), pre-existing
+diseases     and     pre-operative     laboratory     test     results     including     nutritional     status     (Supplemental     Digital     Contents     6 and 7).
+Case    numbers    in    each    center    were    shown    in Supplemental    Digital    Content    8.
+
+Primar y   Outcome
+The  median follow-up time was 7 days in  each group. The median time to discharge was 6.0d±1.8d (95% CI,  5.5–6.5) in
+the      TEAS     group      compared      with      7.0d±2.4d      (95%     CI,      6.3–7.7,                 P =0.02)      in      the      Control     group      (Table      3).      Log      rank      test
+showed   a P value   of   0.02   between  the   two   groups   (Figure   2).   Subgroup   analysis  based   on   type   of   surgery   showed   same
+results    concerning    time    to    discharge   (Supplemental    Digital    Content    9).
+
+Secondar y   Outcomes
+The    mean    time    to    flatus    and    mean    time    defecation    were    34.5    h±16.7h    (95%    CI,    29.6–39.4)    and    42.0h±25.0h    (95%    CI,
+34.7–49.3)  respectively  in  the  TEAS  group,  compared  with  42.4h±22.9h  (95%  CI,  35.6–49.1, P =0.03)  and  55.4h±29.7h
+(95%      CI,     46.7–64.1, P=0.03)      respectively     in     the      Control     group      (Table      3).     Log      rank     test     of     the      two      outcomes     showed
+P values    of    0.03    and    0.03    respectively    between    the    two    groups    (Supplemental    Digital    Contents    10 and 11).
+      Incidences     of     PONV,     the     VAS     at     rest     and     at     cough,     and     score     of     sleeping     quality     in     3     days     after     surgery     were     not
+different between the groups (all P >0.05). However, median PCA deliveries and PCA attempts at 24h, 48h and 72h after
+surgery were less in the TEAS group than in the Control (P<0.01). Median QoR-15 scores22 in the TEAS group were not
+different  to  the  Control  group  at  48  h  and  72h  after  surgery,  but  lower  at  24h  after  surgery  50.5  (IQR  42.3–61.8)  vs  44.5
+(IQR35.0–57.0), P =0.04.    Postoperative   morbidity    of   infection   and    major    complications    were    not   different   between    the
+
+
+
+Journal  of  Multidisciplinary  Healthcare  2022:15                                                                                                          https://doi.org/10.2147/JMDH.S391852                                                                                                                                                                                                                       2873
+                                                                                                                                                                                     DovePress
+
+=== PDF PAGE 4 ===
+Lu  et  al                                                                                                                                                                                              Dovepress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1 Trial  profile.
+
+
+two    groups.     Mean     postoperative    expense     was     62962±28001CNY   in     the     TEAS     group    and     84,218±115     027    CNY  in     the
+Control    group,    with    no    significant    difference    (P=0.22, Table    3).
+
+Discussion
+This      multicenter      prospective     randomized      trial     suggests      that      in      patients      being      managed      by      the      current      ERAS      protocol,
+perioperative      TEAS      (30      min      before      anaesthetic      induction,      and      30      min      once      a      day      for      3      days      after      surgery)      provided
+additional    benefit    in    enhanced    recovery    after    laparoscopic    colon    surgery.    Patients    needed    less    opioid    after    surgery,    and
+the    time    to    meet    discharge   criteria    and    recovery    of    bowel    function    were    shortened    significantly.
+      Our     study     was    the    first    multicenter    randomized    controlled     trial    on    the    role     of    TEAS    for    postoperative    hospital    stay
+and    bowel    function    in    laparoscopic    colon   surgery.    There    has    been   limited    randomized    controlled    trials    published   in    the
+English     literature     that     examined     the     role     of     acupuncture     in     preventing     postoperative     ileus     after     laparoscopic     colorectal
+surgery.         In        a         single-center         trial,         Ng         et         al25 observed         that         electroacupuncture        once         a         day         for         4         days         postoperatively
+decreased   the   time   to   flatus   by   0.6   d   and   shortened   the   length   of   hospital   stay   from   8.5   to   6d.   In   our   study,   with   TEAS,
+a  non-invasive  technique,  we  achieved  enhanced  recovery  as  well  time  to  flatus  decreased  by  7.9h  and  time  to  discharge
+decreased     by     1d.     Additionally,     we     did     TEAS     both     preoperatively     (30min     before     anaesthesia     induction)     and     postopera-
+tively    (once    a    day    for    3    days).    Previous    studies    have    found    that    preoperative    acupuncture-related    technique    potentially
+provided    additional    benefits    including    alleviating    anxiety    and    decreasing    anaesthetic    consumption.13
+      The   shortening   of   time   to   discharge   or   to   flatus   varied   in   different   trials.   In   a   trial   in   open   colorectal   surgery,   Zhang
+et al26 found that electroacupuncture decreased the time to flatus by 9 hours, close to the 7.9 hours in our study. But Ng’s
+study    and    Li’s    study    found    stronger    effect    of    bowel    function    acceleration.19,25                                   And    the    time    to    first    oral    intake    was    not
+shortened   in   our   study,   while   in   Ng’s   study   the   time   to   normal   diet   decreased   by   0.8d.   A   possible   explanation   is   that   in
+our   study   patient   were   managed   with   ERAS   protocol   which   encourages   early   oral   intake   and   mobilization.   The   benefits
+of  TEAS  maybe  overlapped  by  ERAS  strategy.  Ng  et  al  acknowledged  that  one  of  the  limitations  of  their  study  was  that
+
+
+2874            https://doi.org/10.2147/JMDH.S391852                                                                                                                                                                                                                                Journal  of  Multidisciplinary   Healthcare  2022:15
+                DovePress
+
+=== PDF PAGE 5 ===
+Dove    press                                                                                                                                                                                             Lu  et  al
+
+                              Table  2 Demographic  and  Surgical  Characteristics  of  the  Patients
+
+                                                                                            TEAS  (n=47)                    Control  (n=47)                   P value
+
+                                 Age,  years                                                56.2±9.0                        55.6±9.9                          0.75
+
+                                 Gender  (male/female),  n                                  26/21                           23/24                             0.54
+                                 BMI  (kg/m2)                                               22.5±2.6                        22.8±2.8                          0.63
+
+                                 ASA  (I/II/III)                                            0/45/2                          1/43/3                            0.68
+
+                                 NRS  2002  score                                           2(0,  5)                        2(0,  4)                          0.62
+
+                                 Type  of  surgery  (left/right/sigmoid)                    6/18/23                         5/18/24                           0.95
+
+                                 Duration  of  surgery,  min                                163.7±49.2                      160.1±50.3                        0.73
+
+                                 Duration  of  anaesthesia,  min                            200.2±48.6                      199.2±52.3                        0.92
+
+                                 Fluid  input,  mL                                          1930.9±459.9                    1996.8±529.3                      0.52
+
+                                    Crystalloid,  mL                                        1462.8±428.8                    1437.2±543.2                      0.80
+
+                                    Colloid,  mL                                            446.8±214.5                     553.2±238.5                       0.05
+
+                                 Output,  mL                                                434.8±273.5                     430.0±236.0                       0.93
+
+                                    Blood  loss,  mL                                        72.8±135.9                      62.9±44.0                         0.65
+
+                                 Use  of  vasoactive  agents,  n  (%)                       12  (25.5)                      13  (27.7)                        0.82
+
+                              Note:  Data  are  presented  as  mean±SD,  n  or  median  (min,  max).
+                              Abbreviations:  BMI,  body  mass  index;  ASA,  American  Society  of  Anaesthesiologists;  NRS,  nutritional  risk  screening.
+
+
+Table  3 Recovery   Parameters  of  the  Patients
+
+                                                           TEAS  (n=47)                                   Control  (n=47)                                    P value               Difference,  95%  CI
+  Time  to  discharge,  d                                  6.0±1.8a                                       7.0±2.4                                            0.02                  −0.98(−1.82,-0.14)
+
+  Time  to  flatus,  h                                     34.5±16.7a                                     42.4±22.9                                          0.03                  −7.90(−12.35,-3.66)
+
+  Time  to  first  defecation,  h                          42.0±25.0a                                     55.4±29.7                                          0.03                  −13.42(−23.62, −6.80)
+
+  Time  to  first  oral  intake  of  water,  h             33.5±22.3                                      28.9±17.5                                          0.28                  /
+
+  PONV,  n  (%)
+
+     24  h  after  surgery                                 30(63.83)                                      22(46.81)                                          0.17                  /
+
+     48h  after  surgery                                   10(21.28)                                      9(19.15)                                           0.76                  /
+
+     72h  after  surgery                                   8(17.02)                                       4(8.7)                                             0.23                  /
+
+  VAS  at  rest/at  cough,  median  (min,  max)
+
+     24  h  after  surgery                                 2.2(0.0,  10.0)/5.8(0.4,  10.0)                1.2(0.0–8.1)/  5.5(1.4–10.0)                       0.41/0.94             /
+
+     48h  after  surgery                                   1.2(0.0,  6.7)/  5.0(0.3,  10.0)               1.6(0.0–6.0)/  5(0.7,  10.0)                       0.80/0.98             /
+
+     72h  after  surgery                                   0.6(0.0,  5.0)/  3.5(0.1,  10.0)               1.0(0.0,  6.2)/  4.0(0.3,  10.0)                   0.05/0.33             /
+
+  PCA  attempts/deliveries,  median  (min,  max)
+
+     24  h  after  surgery                                 8.0(3.0,  18.0)/5.0.0(2.0,  12.0)              16.5(8.0,  38.0)/12(6,  22.0)                      0.001/0.001           /
+
+     48h  after  surgery                                   13.0(5.0,  22.0)/7.0(3.0,  14.0)               26.0(11.5,  45.5)/16.5(8.0,  35.0)                 0.002/0.001           /
+
+     72h  after  surgery                                   13.0(5.0,  24.0)/7.0(3.0,  20.0)               24.5(13.0,  46.0)/16.5(10.0,  36.0)                0.002/0.003           /
+
+                                                                                                                                                                                                  (Continued)
+
+
+
+Journal  of  Multidisciplinary  Healthcare  2022:15                                                                                                             https://doi.org/10.2147/JMDH.S391852                                                                                                                                                                                                                       2875
+                                                                                                                                                                                         DovePress
+
+=== PDF PAGE 6 ===
+Lu  et  al                                                                                                                                                                                                         Dovepress
+
+ Table  3 (Continued).
+
+                                                                TEAS  (n=47)                                      Control  (n=47)                                         P value                 Difference,  95%  CI
+
+  QoR −15  score,  median  (min,  max)
+
+      24  h  after  surgery                                     54.5(15.0,  92.0)                                 59.0(27.0,  136.0)                                      0.01                    /
+
+      48h  after  surgery                                       59.0(35.0,  104.0)                                62.0(0.0,  130.0)                                       0.35                    /
+
+      72h  after  surgery                                       67.0(31.0,  113.0)                                67.0(11.0,  136.0)                                      0.75                    /
+
+  VSS  score,  median  (min,  max)
+
+      24  h  after  surgery                                     69.0(0.0,  100.0)                                 60.0(0.0,  96.0)                                        0.29                    /
+
+      48h  after  surgery                                       44.5(0.0,  96.0)                                  52.5(1.0,  89.0)                                        0.27                    /
+
+      72h  after  surgery                                       30.5(2.0,  82.0)                                  40.5(1.0,  93.0)                                        0.48                    /
+
+  RCSQ  score,  median  (min,  max)
+
+      24  h  after  surgery                                     61.4(18.7,  100.0)                                57.0(19.0,  85.0)                                       0.26                    /
+
+      48h  after  surgery                                       38.5(6.3,  91.0)                                  45.0(12.9,  85.1)                                       0.39                    /
+
+      72h  after  surgery                                       34.0(5.0,  81.6)                                  39.9(8.0,  77.4)                                        0.44                    /
+
+  Major complications,  n  (%)                                  0(0)                                              0(0)                                                    1.00                    /
+
+  Post-surgery  expense,  CNY                                   62962±28,001                                      84,218±115,027                                          0.21                    /
+
+Note:  Data  are  presented  as  mean±SD,  n  (%)  or  mean  (min,  max).
+Abbreviations:   PONV,   postoperative   nausea   and   vomiting;   VAS,   visual   analogue   scale;   PCA,   patient-controlled   analgesia;   QoR,   quality   of   recovery;   VSS,   visual   sleeping
+scale;  RCSQ,  Richard–Campbell  Sleep  Questionnaire; CNY,  Chinese  Yuan.
+
+
+they    did    not    use    a    fast-track    perioperative    program.    They    also    suggested    that    possible    combined    effects    of    EA    and    the
+fast-track     program     on     the     clinical     outcomes     after     laparoscopic     colorectal     surgery     will     be     an     important     area     for     further
+research.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2 Kaplan–Meier  estimation  of  incidence  of  meeting  discharge  criteria.
+
+
+2876             https://doi.org/10.2147/JMDH.S391852                                                                                                                                                                                                                                Journal  of  Multidisciplinary   Healthcare  2022:15
+                 DovePress
+
+=== PDF PAGE 7 ===
+Dove    press                                                                                                                                                                                               Lu  et  al
+
+      In our  study, the  cost after surgery was  not different  between the  two groups (P=0.22).  However, it should be  prudent
+to     conclude     that     TEAS     has     no     cost-effective     benefit.     In     our     study,     the     time     to     meet     discharge     criteria     was     reduced     by
+1  day   in  patients   receiving  TEAS.   It  is   estimated  that   a  reduction  of   the  length   of   hospital  stay  by  1  day   may   reduce  the
+annual  health  care  system  costs  in  the  United  States  by  approximately  US$1  billion.27 The  cost-effective effect  of  TEAS
+may    be    shown    in    the    hospital    and    overall    health    care    system.
+      Mechanisms         of         acupuncture-related         techniques         improving         gut         function         have         been         studied         in         animal         and         clinical
+studies. In patients undergoing open colon surgery, Meng et al28 failed to prove any benefit of electroacupuncture on time
+to          first          bowel          movement          when          the          patients          received          epidural          anaesthesia,          which          blocked          the          afferent          and          efferent
+pathway.          This          highlights         the          role          of          neural          pathway         during          action          of          acupuncture.          It         was          also          reported         that          vagal
+nerve system-induced anti-inflammatory effect may be the underlying mechanism of acupuncture improving gut function.
+Electroacupuncture       may       suppress       intestinal       manipulation-induced       inflammation       via       activation       of       the       cholinergic       anti-
+inflammatory    pathway    in    macrophages.29,30                              Besides,    in    our    study,    the    postoperative    analgesics    consumption    was    fewer
+during      the     first      3     days     after     surgery.     The     use      of     opioid-based     analgesia      is     usually      thought     to     exacerbate     postoperative
+ileus.31–33 The    decreased    opioid    use    in    our    study    may    contribute    to    the    better    bowel    function    recovery.
+      In      our     study,     frequency     of     stimulation     was     set     at     2Hz/10Hz,     which     is     a      low     frequency.     Both     low     frequency     and      high
+frequency of electrical acupoint stimulation have been used in the prevention and treatment of postoperative ileus. In Li et al19
+and  Wang et al20 trials, 2/100Hz was used. While Yang et al found that 10 Hz and 30Hz are more  effective in increasing the
+gastrointestinal     motility     and     attenuating     peripheral     inflammation.34 Besides,     our     previous     studies     showed     that     TEAS     at    2/
+10Hz      induces      opioid-sparing      effect,35                which      may      decrease      opioid-related      postoperative      ileus.      The      optimal      frequency       for
+improving  gut  function  still  needs  further  investigation.
+      The     present     trial     has     some     limitations.     First,     investigators     could     not     administer     TEAS     in     a     patient-blinded     manner.
+The   patient   may   tell   the   investigator   who   did   the   follow-up   that   he/she   felt   a   stimuli.   We   tried   to   minimize   the   potential
+bias  by  applying  electrodes  at  acupoints  and  testified  stimulation  threshold  for  all  patients.  We  told  the  patients  that  they
+may    not    feel    the    stimulation   during    treatment.    The   stimulators    were    put    in    opaque   box    to    blind    the    medical    staff   in   the
+OR  and  in  the  ward.  Second,  flatus  is  sometimes regarded  as  an  insensitive index,  and  the  time to  resume  oral  intake  can
+be        influenced        by        the        patient’s        perception        and        the        clinician.        We        therefore        adopted        time        to        meet        discharge        criteria        as
+primary endpoint and time to defecation as one secondary endpoint, because they are more objective and can be recorded
+by    the    assessor    without    bias.    Third,    though    we    followed    ERAS    approaches    and    encouraged    the    patients    to    resume    oral
+intake      as      early      as      6h       after      surgery,      the      time      to      oral      intake      was      longer      than      24h      in      both      groups.      Adherence      to      ERAS
+protocols    should    be    paid    attention    in    future    studies.
+
+Conclusion
+In           conclusion,           this           multicenter           randomized           controlled           study           suggests           that           TEAS           could           further           enhance           short-term
+recovery         and         shorten          hospital         stay          after         laparoscopic         colon         surgery         in         patients         being         managed         by         ERAS         program.
+Further    studies    are    warranted    to    generalize    our    findings.
+
+Data   Sharing   Statement
+Data    related    to    the    specific    manuscript    will    be    made    available    upon    reasonable    request    in    adherence    with    transparency
+conventions    in    medical    research    and    through    requests    to    the    corresponding    author    (xlzmzk@163.com).
+
+Acknowledgments
+The authors are grateful to Min Chen and Genlin Ji for supporting the anesthesia for the patients, Jielai Xia for suggesting
+the    methods    of    statistical    analysis    and    critical    reading    of    the    manuscript.
+
+Funding
+This      work      was      supported      by      the      National      Key      Basic      Research      Program      of      China      (No.      2014CB543200),      the      National
+Natural Science  Foundation of China (No. 81871028),  the National Cultivation and Development  Program (2021ZY019)
+and    the    Aeromedical    Flow    Principal    Investigator    Program    of    Air    Force    Medical    University    (2022HYPI02).
+
+
+
+Journal  of  Multidisciplinary  Healthcare  2022:15                                                                                                               https://doi.org/10.2147/JMDH.S391852                                                                                                                                                                                                                       2877
+                                                                                                                                                                                           DovePress
+
+=== PDF PAGE 8 ===
+Lu  et  al                                                                                                                                                                                                                        Dovepress
+
+Disclosure
+The    authors    declare    no    conflicts    of    interest    in    this    work.
+
+References
+
+  1. Ni  X,  Jia  D,  Chen  Y,  Wang  L,  Suo  J.  Is   the  enhanced  recovery  after  surgery  (ERAS)  program  effective  and  safe  in  laparoscopic  colorectal  cancer
+      surgery?   A   meta-analysis   of   randomized   controlled   trials. J   Gastrointest   Surg. 2019;23(7):1502–1512.   doi:10.1007/s11605-019-04170-8
+  2. Ota   H,   Ikenaga   M,   Hasegawa   J,   et   al.   Safety   and   efficacy   of   an   “enhanced   recovery   after   surgery”   protocol   for   patients   undergoing   colon   cancer
+      surgery:   a   multi-institutional   controlled   study. Surg   Today. 2017;47(6):668–675.   doi:10.1007/s00595-016-1423-4
+  3. García-Erce   JA,   Camps-Cervantes   Á,   Ferrando-Ortolá   C.   Association   between   use   of   enhanced   recovery   after   surgery   protocol   and   postoperative
+      complications    in     colorectal     surgery:     the    postoperative     outcomes     within    enhanced     recovery     after    surgery    protocol     (POWER)     Study. JAMA    Surg.
+      2019;154(8):725–736.   doi:10.1001/jamasurg.2019.0995
+  4. Godellas CV, Vaince FT, Singer MA, Godellas CV, Vaince FT. Enhanced recovery after surgery: a clinical review of implementation across multiple
+      surgical   subspecialties. Am   J   Surg. 2020;219(3):530–534.   doi:10.1016/j.amjsurg.2019.11.009
+  5. Ban     KA,     Berian     JR,     Ko     CY.     Does     implementation     of     enhanced     recovery     after     surgery     (ERAS)     protocols     in     colorectal     surgery     improve     patient
+      outcomes? Clin   Colon   Rectal   Surg. 2019;32(2):109–113.   doi:10.1055/s-0038-1676475
+  6. Lassen     K,      Soop      M,     Nygren      J,      et      al.      Consensus      review      of      optimal      perioperative      care     in      colorectal      surgery:     Enhanced      Recovery      After      Surgery
+      (ERAS)   Group   recommendations. Arch   Surg. 2009;144(10):961–969.   doi:10.1001/archsurg.2009.170
+  7. Thillainadesan    J,    Yumol    MF,    Suen    M,    Hilmer    S,    Naganathan    V.    Enhanced    recovery    after    surgery    in    older    adults    undergoing    colorectal    surgery:
+      a                     systematic                     review                     and                     meta-analysis                     of                     randomized                     controlled                     trials. Dis                     Colon                     Rectum. 2021;64(8):1020–1028.                     doi:10.1097/
+      DCR.0000000000002128
+  8. Guillou  PJ,  Quirke  P,  Thorpe  H,  et  al.  Short-term  endpoints  of  conventional  versus  laparoscopic-assisted  surgery  in  patients  with  colorectal  cancer
+      (MRC   CLASICC   trial):   multicentre,   randomised   controlled   trial. Lancet. 2005;365(9472):1718–1726.   doi:10.1016/S0140-6736(05)66545-2
+  9. Huang  Z,  Li  T,  Zhang  G,  et  al.  Comparison  of  open,  laparoscopic,  and  robotic  left  colectomy  for  radical  treatment  of  colon  cancer:  a  retrospective
+      analysis   in   a   consecutive   series   of   211   patients. World   J   Surg   Oncol. 2022;20(1):345.   doi:10.1186/s12957-022-02796-8
+10. Wang    XY,    Wang    H,    Guan    YY,    Cai    RL,    Shen    GM.    Acupuncture    for    functional    gastrointestinal    disorders:    a    systematic    review    and    meta-analysis.
+      J   Gastroenterol   Hepatol. 2021;36(11):3015–3026.   doi:10.1111/jgh.15645
+11. Santucci          NR,          Chogle          A,          Leiby          A,          et          al.          Non-pharmacologic          approach          to          pediatric          constipation. Complement          Ther          Med. 2021;59:102711.
+      doi:10.1016/j.ctim.2021.102711
+12. Lee   HY,   Kwon   OJ,   Kim   JE,   et   al.   Efficacy   and   safety   of   acupuncture   for   functional   constipation:   a   randomised,   sham-controlled   pilot   trial. BMC
+      Complement   Altern   Med. 2018;18(1):186.   doi:10.1186/s12906-018-2243-4
+13. Lu Z, Dong H, Wang Q, Xiong L. Perioperative acupuncture modulation: more than anaesthesia. Br J Anaesth. 2015;115(2):183–193. doi:10.1093/
+      bja/aev227
+14. Liu YH, Dong GT, Ye Y, et al. Effectiveness of acupuncture for early recovery of bowel function in cancer: a systematic review and meta-analysis.
+      Evid   Based   Complement   Alternat   Med. 2017;2017:2504021.   doi:10.1155/2017/2504021
+15. Zhu    YJ,    Wu    XY,    Wang    W,    et    al.    Acupuncture    for    quality    of    life    in    gastric    cancer    patients    undergoing    adjuvant    chemotherapy. J    Pain    Symptom
+      Manage. 2022;63(2):210–220.   doi:10.1016/j.jpainsymman.2021.09.009
+16. Kanza    Gül    D,    Şolt    Kırca    A.    Effects    of   acupressure,    gum    chewing    and    coffee   consumption    on    the    gastrointestinal    system    after    caesarean    section
+      under   spinal   anaesthesia. J   Obstet   Gynaecol. 2021;41(4):573–580.   doi:10.1080/01443615.2020.1787363
+17. Soylu      D,       Tekinsoy       Kartın      P.      The       effect       on       gastrointestinal      system       functions,      pain       and       anxiety      of      acupressure       applied      following       laparoscopic
+      cholecystectomy                     operation:                     a                     randomised,                     placebo-controlled                     study. Complement                     Ther                     Clin                     Pract. 2021;43:101304.                     doi:10.1016/j.
+      ctcp.2021.101304
+18. Zhou     X,     Cao     SG,     Tan     XJ,     et     al.     Effects    of     Transcutaneous     Electrical     Acupoint     Stimulation     (TEAS)     on     postoperative     recovery     in     patients     with
+      gastric   cancer:   a   randomized   controlled   trial. Cancer   Manag   Res. 2021;13:1449–1458.   doi:10.2147/CMAR.S292325
+19. Li          WJ,          Gao          C,          An          LX,          Ji          YW,          Xue          FS,          Du          Y.          Perioperative          transcutaneous          electrical          acupoint          stimulation          for          improving          postoperative
+      gastrointestinal   function:   a   randomized   controlled   trial. J   Integr   Med. 2021;19(3):211–218.   doi:10.1016/j.joim.2021.01.005
+20. Wang  Y,  Yang  JW,  Yan  SY,  et  al.  Electroacupuncture  vs  sham  electroacupuncture  in  the  treatment  of  postoperative  ileus  after  laparoscopic  surgery
+      for   colorectal   cancer:   a   multicenter,   randomized   clinical   trial. JAMA   Surg. 2022;2022:1.
+21. Feng    F,    Ji    G,    Li    JP,    et    al.    Fast-track    surgery    could    improve    postoperative    recovery    in    radical    total    gastrectomy    patients. World    J    Gastroenterol.
+      2013;19(23):3642–3648.   doi:10.3748/wjg.v19.i23.3642
+22. Feng F, Li XH, Shi H, et al. Fast-track surgery combined with laparoscopy could improve postoperative recovery of low-risk rectal cancer patients:
+      a   randomized   controlled   clinical   trial. J   Dig   Dis. 2014;15(6):306–313.   doi:10.1111/1751-2980.12142
+23. Menear  A,  Elliott  R,  Lal  LMA,  Lal  S,  McKinley  S.  Repeated  sleep-quality  assessment  and  use  of  sleep-promoting  interventions  in  ICU. Nurs  Crit
+      Care. 2017;22(6):348–354.   doi:10.1111/nicc.12315
+24. Stark            PA,            Myles            PS,            Burke            JA.            Development            and            psychometric            evaluation            of            a            postoperative            quality            of            recovery            score:            the            QoR-15.
+      Anesthesiology. 2013;118(6):1332–1340.   doi:10.1097/ALN.0b013e318289b84b
+25. Ng    SS,    Leung    WW,    Mak    TW,    et    al.    Electroacupuncture    reduces    duration    of    postoperative    ileus    after    laparoscopic    surgery    for    colorectal    cancer.
+      Gastroenterology. 2013;144(2):307–313   e1.   doi:10.1053/j.gastro.2012.10.050
+26. Zhang          Z,          Wang          C,          Li          Q,          et          al.          Electroacupuncture          at          ST36          accelerates          the          recovery          of          gastrointestinal          motility          after          colorectal          surgery:
+      a   randomised   controlled   trial. Acupunct   Med. 2014;32(3):223–226.   doi:10.1136/acupmed-2013-010490
+27. Sommer     NP,     Schneider     R,     Wehner     S,     Kalff     JC,     Vilz     TO.     State-of-the-art     colorectal     disease:     postoperative     ileus. Int     J     Colorectal     Dis. 2021;36
+      (9):2017–2025.   doi:10.1007/s00384-021-03939-1
+28. Meng         ZQ,         Garcia         MK,         Chiang         JS,         et         al.         Electro-acupuncture         to         prevent         prolonged         postoperative         ileus:         a         randomized         clinical         trial. World
+      J   Gastroenterol. 2010;16(1):104–111.   doi:10.3748/wjg.v16.i1.104
+
+
+
+2878              https://doi.org/10.2147/JMDH.S391852                                                                                                                                                                                                                                Journal  of  Multidisciplinary   Healthcare  2022:15
+                  DovePress
+
+=== PDF PAGE 9 ===
+Dove     press                                                                                                                                                                                                        Lu  et  al
+
+
+29. Luo   D,   Liu   S,   Xie   X,   Hou   X.   Electroacupuncture   at   acupoint   ST-36   promotes   contractility   of   distal   colon   via   a   cholinergic   pathway   in   conscious
+     rats. Dig   Dis   Sci. 2008;53(3):689–693.   doi:10.1007/s10620-007-9929-7
+30. Yang  NN,  Yang  JW,  Ye  Y,  et  al.  Electroacupuncture  ameliorates  intestinal  inflammation  by  activating  α7nAChR-mediated  JAK2/STAT3  signaling
+     pathway   in   postoperative   ileus. Theranostics. 2021;11(9):4078–4089.   doi:10.7150/thno.52574
+31. Farmer      AD,      Holt     CB,      Downes      TJ,      Ruggeri      E,      Del     Vecchio      S,     De      Giorgio     R.      Pathophysiology,      diagnosis,      and     management     of      opioid-induced
+     constipation. Lancet   Gastroenterol   Hepatol. 2018;3(3):203–212.   doi:10.1016/S2468-1253(18)30008-6
+32. Sheng   RY,   Yan   Y,   Linh   Dang   HH.   Acupuncture   for   hot   flashes:   a   literature   review   of   randomized   controlled   trials   conducted   in   the   last   10   years.
+     World   J   Tradit   Chin   Med. 2021;7:397–407.   doi:10.4103/wjtcm.wjtcm_27_21
+33. De     Giorgio     R,     Zucco     FM,     Chiarioni     G,     et     al.     Management     of     opioid-induced     constipation     and     bowel     dysfunction:     expert     opinion     of     an     Italian
+     multidisciplinary   panel. Adv   Ther. 2021;38(7):3589–3621.   doi:10.1007/s12325-021-01766-y
+34. Yang NN, Ye Y, Tian ZX, et al. Effects of electroacupuncture on the intestinal motility and local inflammation are modulated by acupoint selection
+     and   stimulation   frequency   in   postoperative   ileus   mice. Neurogastroenterol   Motil. 2020;32(5):e13808.   doi:10.1111/nmo.13808
+35. Wang      H,      Xie      Y,      Zhang      Q,      et      al.      Transcutaneous      electric      acupoint      stimulation      reduces      intra-operative      remifentanil      consumption      and      alleviates
+     postoperative          side-effects          in          patients          undergoing          sinusotomy:          a          prospective,          randomized,          placebo-controlled          trial. Br          J          Anaesth. 2014;112
+     (6):1075–1082.   doi:10.1093/bja/aeu001
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Journal   of   Multidisciplinary   Healthcare                                                                                             Dove                                                         press
+      Publish your   work   in   this   journal
+
+       The Journal of Multidisciplinary Healthcare is an international, peer-reviewed open-access journal that aims to represent and publish research in
+       healthcare areas delivered by practitioners of different disciplines. This includes studies and reviews conducted by multidisciplinary teams as well
+       as research which evaluates the results or conduct of such teams or healthcare processes in general. The journal covers a very wide range of areas
+       and    welcomes    submissions    from    practitioners    at    all    levels,    from    all    over    the    world.    The    manuscript    management    system    is    completely    online    and
+       includes a very quick and fair peer-review system. Visit http://www.dovepress.com/testimonials.php to read real quotes from published authors.
+
+       Submit your manuscript here: https://www.dovepress.com/journal-of-inflammation-research-journal
+
+
+
+Journal  of  Multidisciplinary  Healthcare  2022:15                                                                                                                                                 DovePress                                                                                                                       2879

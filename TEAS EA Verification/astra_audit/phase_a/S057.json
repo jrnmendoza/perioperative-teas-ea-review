@@ -1,0 +1,258 @@
+{
+  "Study_ID": "S057",
+  "Study": "Coura 2011",
+  "identity": {
+    "title": "Randomised, controlled study of preoperative eletroacupuncture for postoperative pain control after cardiac surgery",
+    "year": 2011,
+    "doi": "10.1136/aim.2010.003251",
+    "pdf": "covidence_819_full_article.pdf"
+  },
+  "design": {
+    "modality": "EA",
+    "comparator": "Sham surface TENS 300Hz5seconds then off30min",
+    "randomized": {
+      "total": 32,
+      "EA": null,
+      "control": null
+    },
+    "analyzed": {
+      "EA": 13,
+      "control": 9
+    },
+    "population": "Conventional cardiac surgery under anesthesia;Brazil Apr2009-Jun2010",
+    "intervention": "Needle EA LI4-LI11/LR3-ST36/PC6-TE5,3/15Hz30min12-18h preoperative",
+    "location": "pp1-3, Fig1",
+    "attrition": "10/32 excluded afterrandomization:4instability,3lateextubation,1preoperativeMI,1epidural,1confusion; arm-specificexclusioncountsnotreported"
+  },
+  "regimen": {
+    "drug": "fentanyl",
+    "route": "IV",
+    "pca": "0.4ug/kg/h continuous;0.3ug/kg bolus,15minlockout,30mL/4hlimit;0.04mL/kg/h and0.03mL/kg bolus ofsolution(fentanyl50mL+saline200mL), concentrationstocknotreported",
+    "rescue": "Supplementary morphine or fentanyl permitted byICUspecialist;individualamounts notreported. NoNSAID/localanesthetic. Anestheticsnotstandardized.",
+    "location": "p2 Methods visually inspected"
+  },
+  "results": [
+    {
+      "outcome": "Total fentanyl",
+      "format": "meanSD",
+      "T": [
+        13.1,
+        2.2,
+        13
+      ],
+      "C": [
+        16.3,
+        1.6,
+        9
+      ],
+      "unit": "ug/kg",
+      "window": "24h fromstartfentanylinfusion inICU",
+      "p": "<.002",
+      "location": "p2 window; p3 Table2 andprose visually inspected"
+    },
+    {
+      "outcome": "Fentanyl PCAbolus dose",
+      "format": "meanSD",
+      "T": [
+        4.1,
+        2,
+        13
+      ],
+      "C": [
+        6.9,
+        1.7,
+        9
+      ],
+      "unit": "ug/kg",
+      "window": "24h frominfusionstart",
+      "p": "<.003",
+      "location": "Table2"
+    },
+    {
+      "outcome": "Effective bolusnumber",
+      "format": "meanSD",
+      "T": [
+        13.9,
+        7,
+        13
+      ],
+      "C": [
+        24.8,
+        7,
+        9
+      ],
+      "unit": "times",
+      "window": "24h frominfusionstart",
+      "p": "<.002",
+      "location": "Table2"
+    },
+    {
+      "outcome": "Verbal pain0-10",
+      "format": "meanSD",
+      "T": [
+        2.5,
+        1.1,
+        13
+      ],
+      "C": [
+        4,
+        2,
+        9
+      ],
+      "window": "Summary ofevery2h assessmentsafterextubation;notisolated24h",
+      "p": "<.04",
+      "location": "pp2-3;Table2;Fig2"
+    },
+    {
+      "outcome": "Drowsiness promptingratechange",
+      "T": [
+        0,
+        13
+      ],
+      "C": [
+        1,
+        9
+      ],
+      "location": "p3 Results"
+    }
+  ],
+  "source_conflicts": [
+    "Table2titlefirst24hafteroperation butmethodsclock24hfrominfusionstart.",
+    "Abstract32randomized but randomizednbyarm notreported; do notassume16/16.",
+    "Nausea not measured per p4;absenceofsideeffectsnotvalid0PONVcount.",
+    "Pumpbolus-dose means not exact0.3xboluscounts; doses/ratescouldvarywithsideeffects, do notrepair."
+  ],
+  "independence": "SingleBraziltrial; cardiactrial distinct from thoracotomyreferencedstudies.",
+  "rob_independent": {
+    "questions": {
+      "1.1": [
+        "PY",
+        "Permutationblockrandomization stated, sequenceimplementationnotfullydetailed",
+        "p2"
+      ],
+      "1.2": [
+        "NI",
+        "No concealmentmechanismreported",
+        "p2"
+      ],
+      "1.3": [
+        "NI",
+        "Only22 analyzed baseline;sex imbalance10/13malevs4/9 couldreflectexclusions",
+        "p3 Table1"
+      ],
+      "2.1": [
+        "PY",
+        "Deepneedles30min versus surfaceelectrodes5seconds createsperceptibledifference",
+        "p2"
+      ],
+      "2.2": [
+        "Y",
+        "Acupuncturist knows needleversussurfaceintervention;clinicalstaffblinded",
+        "p2"
+      ],
+      "2.3": [
+        "PN",
+        "PCAchanges for drowsiness protocolallowed; no reportedtrial-contextdeviations",
+        "pp2-3"
+      ],
+      "2.4": [
+        "NA",
+        "No identifiedtrial-contextdeviations",
+        "p2"
+      ],
+      "2.5": [
+        "NA",
+        "No identifieddeviations",
+        "p2"
+      ],
+      "2.6": [
+        "N",
+        "10randomized patients excludedbasedonpostoperativeinstability/PCAability",
+        "pp2-3"
+      ],
+      "2.7": [
+        "Y",
+        "31.25% excluded withclinicallyimportantreasons; armexclusionsunknown",
+        "Fig1"
+      ],
+      "3.1": [
+        "N",
+        "22/32 analyzed",
+        "p3 Fig1"
+      ],
+      "3.2": [
+        "N",
+        "No missing-outcomesensitivityanalysis",
+        "pp2-3"
+      ],
+      "3.3": [
+        "Y",
+        "Instability/intubation/confusion stronglylinkedtoanalgesicrequirements",
+        "p2"
+      ],
+      "3.4": [
+        "PY",
+        "Exclusiondepends onrecoveryconditionscloselylinkedtoopioidexposure/pain",
+        "pp2-3"
+      ],
+      "4.1": [
+        "PN",
+        "PCAfentanyl recordappropriate forthisendpoint;doesnotguaranteeallopioids",
+        "p2"
+      ],
+      "4.2": [
+        "PN",
+        "Samepump protocol andblindednurses",
+        "p2"
+      ],
+      "4.3": [
+        "PN",
+        "ICU/anaesthetist/nursesblind; objectivepumpdose",
+        "p2"
+      ],
+      "4.4": [
+        "NA",
+        "Dosecollectorsblind",
+        "p2"
+      ],
+      "4.5": [
+        "NA",
+        "Dosecollectorsblind;patientdemandbehaviornotautomaticallymeasurementbias",
+        "p2"
+      ],
+      "5.1": [
+        "NI",
+        "No protocol/registration/SAPreported",
+        "fullpublicationpp1-5"
+      ],
+      "5.2": [
+        "NI",
+        "Several opioid/painsummaries,prospectivespecificationunavailable",
+        "pp2-3"
+      ],
+      "5.3": [
+        "NI",
+        "No datedSAP;averagingpainmethodunclear",
+        "pp2-3"
+      ]
+    },
+    "domains": [
+      "Some concerns",
+      "High",
+      "High",
+      "Low",
+      "Some concerns"
+    ],
+    "overall": "High",
+    "reason": "Large prognosticallydrivenpostrandomizationexclusions compromiseassignmentestimate."
+  },
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "ug/kgdose cannotconvertwithmeanweight;24hfrominfusionstartnotverifiedsurgeryend;additionalrescueopioidsnotquantified."
+  },
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "saved_at": "2026-09-05T15:16:57.167Z",
+  "missing_information_convention": "Insufficient information / not reported."
+}

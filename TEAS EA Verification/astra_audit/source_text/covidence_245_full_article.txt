@@ -1,0 +1,750 @@
+=== PDF PAGE 1 ===
+              1211601    AIM          Acupuncture in MedicineHuang et al.
+
+
+
+
+Original paper
+
+
+                                                                                                                                                                                                  Acupuncture in Medicine
+                                                                                                                                                                                                  2024, Vol. 42(4) 183                                                                                                                                                                                                          –193
+Effects of contralateral versus ipsilateral                                                                                                                                                       https://doi.org/10.1177/09645284231211601
+                                                                                                                                                                                                  DOI: 10.1177/09645284231211601
+                                                                                                                                                                                                  © The Author(s) 2023
+electroacupuncture for analgesia and                                                                                                                                                              Article reuse guidelines:
+                                                                                                                                                                                                  sagepub.com/journals-permissions
+rehabilitation after unilateral total knee                                                                                                                                                        journals.sagepub.com/home/aim
+arthroplasty: a randomized controlled
+trial
+
+
+Hai Huang1†                             , Kangmin Tang2†              , Xiuling Song2                                                   , Ling Zhao2                            ,
+Yongying Liang3, Hui Xu3, Lianbo Xiao3 and Yuelai Chen2,4
+
+
+
+Abstract
+Purpose: Total knee arthroplasty (TKA) is a treatment for advanced knee osteoarthritis. Since postoperative pain
+affects rehabilitation, this study aimed to determine whether electroacupuncture (EA) contralateral to the surgical
+site is more effective than ipsilateral EA or sham EA in terms of relieving postoperative pain and promoting post-TKA
+rehabilitation.
+Methods: In this parallel, single-blind randomized controlled trial, 114 patients undergoing unilateral TKA were assigned to
+the contralateral EA (EA on the contralateral side                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    + sham EA on the ipsilateral), ipsilateral EA (EA on the ipsilateral                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             + sham
+EA on the contralateral side), or sham EA (sham EA on both sides) groups (n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  =               38 each). Treatment was performed once
+daily on postoperative days 1–3. The visual analog scale (VAS) scores, additional opioid doses via patient-controlled analge-
+sia (PCA) pump, Hospital for Special Surgery (HSS) knee scores, active/passive range of motion (AROM/PROM), swelling
+around the knee joint, and Hamilton anxiety scale (HAMA) scores were used for postoperative evaluation.
+Results: At 3                                                                                                                                                                                         days postoperatively, the VAS scores, HSS scores, AROM/PROM, swelling around the knee, and HAMA
+scores in the contralateral EA and ipsilateral EA groups were significantly improved compared with baseline. In addi-
+tion, VAS scores, HSS scores, PROM and swelling around the knee were significantly better in the contralateral and
+ipsilateral EA groups than in the sham EA group, but similar in the two true EA groups. Furthermore, PCA additional
+dose release was significantly higher in the sham EA group than in the two true EA groups (which did not significantly
+differ). At 10                                                                                                                                                                    days postoperatively, the HSS scores, AROM/PROM, and HAMA scores were better in the contralateral
+and ipsilateral EA groups than in the sham EA group, but similar in the two true EA groups.
+Conclusion: Contralateral EA is more effective than sham EA for treating postoperative pain following TKA, but has
+an analgesic effect similar to that of ipsilateral EA.
+Trial registration number: ChiCTR1800020297 (Chinese Clinical Trial Registry)
+
+Keywords
+contralateral needling, electroacupuncture, knee osteoarthritis, ipsilateral needling, pain management
+Accepted: 14 October 2023
+
+
+
+
+1     Shenzhen Hospital, Shanghai University of Traditional Chinese Medicine                                                Corresponding authors:
+2Shanghai University of Traditional Chinese Medicine, Shanghai, China                                                       Lianbo Xiao, Guanghua Hospital, Shanghai University of Traditional
+3 Guanghua Hospital, Shanghai University of Traditional Chinese                                                             Chinese Medicine, Shanghai 200052, China.
+ Medicine, Shanghai, China                                                                                                  Email: xiao_lianbo@163.com
+4 Longhua Hospital, Shanghai University of Traditional Chinese Medicine,
+ Shanghai, China                                                                                                            Yuelai Chen, Longhua Hospital, Shanghai University of Traditional Chi-
+†Hai Huang and Kangmin Tang contributed equally to this work and                                                            nese Medicine, Shanghai 200032, China.
+should be considered co-first authors.                                                                                      Email: chen_yuelai@163.com
+
+
+                                                                                                                                                                                       Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 2 ===
+184                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Acupuncture in Medicine
+
+
+Introduction                                                                               Methods
+Acupuncture is widely used in the treatment of knee osteo-                                 Ethical approval
+arthritis (KOA). Acupuncture can effectively improve the                                   The protocol for this clinical trial was in accordance with
+pain and joint issues associated with early KOA and also                                   the Standard Protocol Items: Recommendations for
+play an important role in reducing postoperative pain after                                Interventional Trials (SPIRIT) guidelines and has been pre-
+total knee arthroplasty (TKA) in patients with late KOA. It                                viously published.23 This study was assessed and approved
+has been reported that approximately 7 million living peo-                                 by the Institutional Review Board of Guanghua Hospital,
+ple in the United States have had a total hip arthroplasty or                              Shanghai University of Traditional Chinese Medicine
+TKA.1 With the aging global population, the number of                                      (2018-K-18) and was prospectively registered in the Chinese
+TKA surgeries performed in most countries, including                                       Clinical Trials Registry Center (ChiCTR1800020297) on 22
+China, has increased annually, as has the economic burden                                  December 2018 prior to recruitment of the first participant.
+of medical care. However, it has been reported that 15%–                                   All patients provided written informed consent before
+20% of patients undergoing TKA are unsatisfied with their                                  randomization.
+postoperative outcome,2,3 while joint pain after TKA is
+known to affect the rehabilitation process and patient satis-
+faction.4 About 30% of patients experience moderate post-                                  Study design and enrollment
+operative knee pain, and 60% experience severe                                             This was a randomized, controlled, three-arm parallel trial
+postoperative knee pain.5 Acute pain that is not promptly                                  comparing the efficacy of two interventions (contralateral
+and effectively controlled greatly increases the risk of post-                             EA vs ipsilateral EA) relative to a control intervention
+operative complications and persistent pain.6 The wide-                                    (sham EA). All participants were inpatients admitted to the
+spread use of prescription opioids has led to an increasing                                Joint Surgery Department of Guanghua Hospital, Shanghai
+number of people receiving these agents.7,8 Presently, the                                 University of Traditional Chinese Medicine, between
+most common postoperative analgesic approach is multi-                                     February and November 2019.
+modal analgesia,9 which can effectively improve postoper-
+ative outcomes and reduce opioid consumption.10,11
+However, the use of any one or more medications is associ-                                 Randomization and masking
+ated with side effects (such as psychological dependence                                   Patients with KOA were enrolled, and unilateral TKA was
+and gastrointestinal-related events),12 and it has become                                  performed as planned after admission. The day before the
+essential to develop and implement multidisciplinary meth-                                 surgery, baseline assessment of eligible patients was carried
+ods to improve TKA outcomes while reducing unnecessary                                     out and written informed consent was obtained. The patients
+expenditure.13 In recent years, nonopioid medications and                                  were then randomly assigned (in a ratio of 1:1:1) to an con-
+alternative therapies have become prevalent. tralateral EA group, ipsilateral EA group, or sham EA
+Electroacupuncture (EA) can reduce pain after TKA with-                                    group. Random numbers were generated using the
+out side effects and thus influence the recovery period.14,15                              Statistical Package for the Social Sciences (SPSS; IBM
+    A meta-analysis previously demonstrated that postoper-                                 Corp, Armonk, NY, USA) before the trial and sealed in
+ative pain after TKA was reduced with the use of EA.16                                     opaque envelopes. Only the acupuncturist had the right to
+Contralateral acupuncture, also known as opposing nee-                                     open the envelope to obtain the group code for the corre-
+dling or healthy side acupuncture, originally described in                                 sponding intervention. All other researchers, such as asses-
+the Huangdi Neijing, was one of the nine needling methods                                  sors and statistical analysts, remained blind to group
+described in ancient China.17,18 In this acupuncture method,                               allocation.
+to avoid infection near the incision after TKA, traditional
+acupuncture point locations on the healthy side are selected
+for treatment. Historically, contralateral acupuncture has                                 Participants
+been widely used in the clinical treatment of pain and joint
+dysfunction in China, and in recent years, increasing                                      To be included, patients (of either sex) needed to be: aged
+research has been focusing on this method, as it can relieve                               40–75                                                                                                 years; diagnosed with KOA according to the clinical
+chronic shoulder pain and improve shoulder mobility.19–21                                  classification criteria recommended by the American
+Studies have shown distinct antinociceptive effects both                                   College of Rheumatology; and undergoing unilateral TKA
+from contralateral and ipsilateral needling, and the former                                under general anesthesia during hospitalization without
+may exert an analgesic effect through spinal and supraspi-                                 surgical and anesthetic contraindications.
+nal mechanisms.19,22 Accordingly, we conducted a rand-                                          We excluded patients who: could not participate due to
+omized controlled trial to compare the short-term effects of                               skin lesions at the planned sites of acupuncture needling;
+contralateral EA (versus ipsilateral EA and sham EA) on                                    had lower extremity sensory disturbance or abnormality;
+pain after TKA, and evaluated whether contralateral nee-                                   had severe arrhythmias, heart failure, chronic obstructive
+dling can accelerate rehabilitation after TKA.                                             pulmonary disease, epilepsy, or mental disorders; or had
+
+Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 3 ===
+Huang et al.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           185
+
+
+received acupuncture treatment during the month before                                                                                                             Ipsilateral EA.                                                                                                                                           This group received EA on the same side as
+enrollment.                                                                                                                                                        the operated lower limb and sham EA on the healthy side.
+
+Interventions                                                                                                                                                      Sham EA.                                                                                                                                     This group received sham EA on both the oper-
+                                                                                                                                                                   ated and the healthy sides.
+All patients underwent surgery under general anesthesia.
+The anesthetic drugs included fentanyl (4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    µg/kg), propofol Outcome measurements
+(2                 mg/kg), and cisatracurium (0.15                                                                                                                                                                                                                                                                                                                                                                          mg/kg), and anesthesi-
+ologists paid close attention to each patient’s physical con-                                                                                                      Index measurement time points were postoperative days
+dition. Each patient received the same analgesic dose                                                                                                              1–3                         days during the treatment period, and postoperative
+(continuous infusion rate 0.25                                                                                                                                                                                                                                                                        g/kg/h) via a patient-con-days 5, 7 and 10 during the follow-up period (Supplemental
+trolled analgesia (PCA) pump after surgery. Furthermore,                                                                                                           Table 1).
+when the patient’s pain severity was unbearable, and the                                                                                                                   The two prespecified primary outcome measurements
+visual analogue scale (VAS) score was >60,                                                                                                                                                                                                                                                                                                 24 additional were as follows: (1) pain, assessed using the VAS, which
+analgesics (etoricoxib tablets, 60     mg) were provided                                                                                                           was evaluated after EA treatment when patients were walk-
+according to the patient’s needs after discontinuing the                                                                                                           ing or moving their joints on six different occasions (post-
+PCA pump.                                                                                                                                                          operative days 1, 2, 3, 5, 7 and 10); and (2) the additional
+       The acupuncturists in the research process had many years dose released by PCA pump as recorded on postoperative
+of clinical experience and completed unified training for the day 2 (i.e. 24                                                                                                                                                                                                             h after the first treatment).
+research program. The results were evaluated by research                                                                                                                   The secondary outcome measures were the Hospital for
+evaluators, and the research process was monitored by the Special Surgery (HSS) knee and Hamilton anxiety scale
+main researchers. The treatment of the three groups included (HAMA) scores, which were evaluated on postoperative
+three courses within the 3                                                                                                                                                                                                                                                                                                                                                                                                                                days after surgery.days 3 and 10. The knee joint’s active and passive range of
+       Based on previous research experience and expert discus-                                                                                                    motion (AROM and PROM) and improvement of swelling
+sion, EA was administered at ST32 (Futu) and ST36 (Zusanli),                                                                                                       around the knee joint were evaluated on postoperative days
+featuring a distribution around the knees, as well as SP9 3, 5, 7, and 10. The latter was based on the knee circumfer-
+(Yinlingquan) and GB34 (Yanglingquan) (Supplemental                                                                                                                ence ratio on postoperative day 1, according to the follow-
+Figure 1).                                                                                                                                                         ing formula: (circumference of the knee (COK) on day
+       During each 30-min acupuncture session, the patient was                                                                                                     X—COK on postoperative day 1)                                                                                                                                                                                                                                                                                                                                                          /     (COK on postoperative
+placed in a supine position. The acupuncturist untied the                                                                                                          day 1). During the first measurement, a mark was made at
+elastic bandage that had been applied during the operation to                                                                                                      the suprapatellar pole and used as the starting point over the
+expose the treatment area. The local skin was sterilized with                                                                                                      next few days when measuring the COK around the patella
+a cotton ball dipped in 75% alcohol, and then, a sterile rubber                                                                                                    with a tape measure.
+pad (10                                   mm diameter and 5                                                             mm thickness) was pasted onto                      Furthermore, any side effects of acupuncture (such as
+each traditional acupuncture point location. For EA, four                                                                                                          pain, local infection, fatigue or local hematoma)25 and acu-
+verum needles (0.30                                                                                                                                                                                                                                       mm in diameter and 40                                                                                                                                                                                                                                                                             mm in length; puncture tolerance,26 including discomfort and acceptance
+Hwato Brand, Suzhou Medical Appliance Factory, China)                                                                                                              of EA, were also evaluated on postoperative days 1–3, and
+were inserted vertically through the sterile rubber pads to a                                                                                                      the blinding success rate was assessed. Cases that dropped
+depth of 25–30                                                                                                                                                                                                                                                      mm, until a muscle twitch response was elic-out after receiving 1–2 sessions of EA or sham EA were
+ited. Subsequently, the two connecting wires of an EA instru-                                                                                                      regarded as blinding failures, consistent with a prior trial by
+ment (SDZ-V, Hwato Brand) were connected to the handles                                                                                                            Liu etal.                                                                                                              27 Subjects completed their blinding assessments
+of needle pairs GB34                                                                                                                                                                                                        + ST32 and ST36                                                                                                                                                   + SP9, which were by means of a questionnaire, which was administered
+stimulated with a continuous wave of 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Hz frequency, 1                          mA within 5                                                                                                                                min of the end of the three interventions.23
+intensity, and 0.25                                                                                                                                     ms pulse width. For sham EA, four blunt
+needles (0.30                                                                                                                                                          mm in diameter and 25                                                                                                                                                                                                                                                                                        mm in length; Hwato Sample size calculation and statistical
+Brand) were used to touch the skin through the sterile rubber                                                                                                      analysis
+pad without skin penetration, and the needle handles were
+rotated on both sides three times to simulate real acupunc-                                                                                                        The strategy of sample size calculation was performed
+ture. The internal metal wire of the EA instrument was cut,                                                                                                        based on the mean                                                                                                                                                                                        ±              standard deviation (SD) for a pilot
+such that no current passed through the connected power                                                                                                            sample, in which contralateral side EA, ipsilateral EA, and
+line; however, the display of the EA unit was identical to that                                                                                                    sham EA yielded VAS scores of 38.6                                                                                                                                                                        ±9.9,          45.4 ±8.0,          and
+observed by the patients in the true EA groups.                                                                                                                    46.9                                        ±7.4,                                          respectively.                                     Assuming                                          SD=9.9,                                          two-tailed
+                                                                                                                                                                   α  = 0.05, 90% power (1-β), and λ=12.66                                          (noncentral
+Contralateral EA.                               This group received EA on the healthy                                                                              parameter of the κ-1 noncentral chi-square distribution),                                                                                                                                 28
+side of the lower limb and sham EA on the ipsilateral.                                                                                                             it was estimated that a total sample size of 96 cases (n                          =                32
+
+
+                                                                                                                                                                                                                                               Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 4 ===
+186                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Acupuncture in Medicine
+
+
+
+   Figure 1.                                                              CONSORT flow diagram of patients.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+per group) was needed. Considering an anticipated dropout                                                                                    and percentages. For normally distributed data, the baseline
+rate of 15%, target recruitment per group was increased to                                                                                   analysis was performed using the t-test or Wilcoxon rank-
+n          =            38 (total sample size of 114). After the study, the final                                                            sum test for continuous data and chi-square test or Fisher ’s
+mean and SD were transferred back into the sample size                                                                                       exact test for categorical data. Comparisons between the
+calculation formula, and it was concluded that each group                                                                                    three groups were conducted using one-way analysis of vari-
+had only needed only 33 subjects to achieve 90% power,                                                                                       ance (ANOVA) and post hoc tests of least significant differ-
+indicating that the assumptions of the a priori sample size                                                                                  ence (LSD).30 When the distribution was not normal, the
+calculation had been appropriate.                                                                                                            Kruskal–Wallis test was used. The preoperative data were
+      Data were analyzed by a statistician using the Statistical                                                                             used as covariates, and the primary outcome was assessed
+Package for the Social Sciences (SPSS) version 26.0 (IBM                                                                                     using a one-way, repeated-measures ANOVA to test the
+Corp, NY, USA), and analysis was based on the intention-to-                                                                                  influence of time, group, and time                                                                                                                                                                                                                                                                                                                                               × group interaction on
+treat (ITT) principle.29 Continuous data are expressed as the                                                                                pain. Comparisons of categorical data between groups were
+mean and SD or median and interquartile ranges as appropri-                                                                                  made using the chi-square test or the Mann–Whitney U-test
+ate, and categorical data are expressed as numbers as appropriate. Given our seven primary outcomes (VAS
+
+Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 5 ===
+Huang et al.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           187
+
+
+score at six different time points plus the additional dose                                                                                             score improvement was greater in the contralateral EA and
+delivered by PCA (assessed once on postoperative day 2),                                                                                                ipsilateral EA groups than in the sham EA group on postop-
+p         < 0.007 was taken to indicate formal statistical significance                                                                                 erative day 10 (both p                                                                                                                                                                                                                <                             0.001; Table 3).
+(i.e. p                                                   < 0.05 with Bonferroni adjustment to account for more
+than one primary outcome). In addition, a Sidák correction                                                                                              Range of motion.                                                                                                                                                                                                           The range of motion (ROM) assessment
+was applied to control for the multiple pairwise testing asso-                                                                                          included AROM and PROM (Table 3). After three EA
+ciated with three study groups. Statistical significance for                                                                                            interventions, the PROM in the contralateral EA group was
+our secondary outcome measures was kept at p                                                                                                                                                                                                                                                                                                                                                                                                                                                                        < 0.05,                      on greater than that in the sham EA group (p                                                                                                                                                                                                                                                                                                                                                                                                                     <0.05).               PROM
+the understanding that these were exploratory in nature.                                                                                                was significantly greater during the follow-up period in the
+                                                                                                                                                        ipsilateral EA group than in the sham EA group on postop-
+                                                                                                                                                        erative day 5 (p                                                                                                                                                          <                0.05). Both AROM and PROM in the
+Results                                                                                                                                                 contralateral EA group were significantly greater than
+Patient characteristics                                                                                                                                 those in the sham EA group on postoperative day 7
+                                                                                                                                                        (p                  <                              0.05). AROM and PROM in both the contralateral EA
+Between February and December 2019, we screened 137                                                                                                     and ipsilateral EA were significantly greater than those in
+participants, 114 of whom were randomly assigned to treat-                                                                                              the sham EA group on postoperative day 10 (p                                                                                                                                                                                                                                                                                                                                                                                                                                                              <0.05).
+ment groups. Of these participants, 108 (95%) completed
+the study. Six participants dropped out (two from the con-                                                                                              Improvement in swelling around the knee joint.                                               After three
+tralateral EA group, one from the ipsilateral EA group, and                                                                                             EA interventions, the improvement in the swelling around
+three from the sham EA group). The dropout rate and the                                                                                                 the knee joint was significantly greater in the ipsilateral EA
+number of primary outcome assessments completed at each                                                                                                 group compared with both the contralateral EA (p                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <0.05)
+stage are shown in Figure 1. Table 1 shows the general and                                                                                              and sham EA (p                                                                                                                                                           <                      0.001) groups. On postoperative day 5,
+baseline characteristics of the participants, which were                                                                                                the swelling had gradually reduced, but the improvement
+comparable among the three groups.                                                                                                                      was still greater in the ipsilateral EA group than in the sham
+                                                                                                                                                        EA group (p                                                                                                                      <0.05).
+Primary outcomes                                                                                                                                        Anxiety.                                                                  After three EA interventions, the HAMA score
+Pain.                                                There were no significant differences observed in the was significantly lower in the ipsilateral EA group than in
+VAS score between the three groups at baseline (Table 2). Fig-                                                                                          the sham EA group (p                                                                                                                                                                                                                           <                0.01). On postoperative day 10,
+ure 2 shows a downward trend in the VAS scores in the con-                                                                                              the HAMA scores of the contralateral EA and ipsilateral
+tralateral EA and ipsilateral EA groups during the treatment EA groups were both significantly lower than in the sham
+and follow-up periods. After three EA interventions (postop-                                                                                            EA group (p                                                                                                                      <                             0.01 and p                                                                                                  <0.001,           respectively).
+erative day 3), the VAS scores were significantly lower in both
+the contralateral EA and ipsilateral EA groups compared with Safety and other outcomes
+the sham EA group (p                                                                                                                                                                                                          < 0.001); this trend continued on post-
+operative days 5, 7, and 10. The VAS scores did not signifi-                                                                                            Three cases of side effects of acupuncture were recorded
+cantly differ between the contralateral EA and ipsilateral EA (Table 4). Two of these were in the contralateral EA group; a
+groups at any point during the treatment and follow-up bent needle occurred in one patient, and one patient became
+periods.                                                                                                                                                slightly flustered before acupuncture. Meanwhile, one
+                                                                                                                                                        patient in the ipsilateral EA group had a curved needle. Our
+Additional doses delivered by PCA pump.                                                                                                                                                                                                                                                                                                                                                                                                                     On postoperative experienced acupuncturist pacified the patient, removed the
+day 2 (i.e. 24                                                                                                                                                         h after the first intervention), the additional acupuncture needle, and gave the patient a cup of warm
+dose delivered by the PCA pump was greater in the sham                                                                                                  boiled water, and they felt relieved after a short rest.
+EA group than in the contralateral EA group (p               <0.001).                                                                                           Acupuncture tolerance was evaluated and it was found
+While a similar trend was seen in ipsilateral EA vs sham                                                                                                that the discomfort of EA decreased while the acceptance
+EA groups, it did not meet our adjusted threshold for statis-                                                                                           of EA increased day by day, with no significant differences
+tical significance (p                                                                                                                                                                                           <0.05           but                           >0.007; Table 2).between groups (Table 4).
+                                                                                                                                                                Finally, the total number of blinded cases was 85, and
+Secondary outcomes                                                                                                                                      the blinding success rate was 75% (Table 4).
+
+Knee joint function.                                                                                                                                                                                                                                   After three EA interventions, the HSS Discussion
+scores were higher in the contralateral EA and ipsilateral
+EA groups than in the sham EA group; however, scores did                                                                                                Pain management after TKA is an urgent problem to be
+not significantly differ between the contralateral EA and                                                                                               solved in patients with KOA,9,31 as postoperative pain tra-
+ipsilateral EA groups (p                                                                                                                                                                                                                                                <          0.01). Furthermore, the HSS jectories are independently associated with long-term pain
+
+
+                                                                                                                                                                                                                                Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 6 ===
+188                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Acupuncture in Medicine
+
+
+Table 1.                                                                      General and preoperative baseline characteristics of participants in the three groups.
+
+         Variable                                                                                                                                                                                                                                                                                                                 Contralateral EA Ipsilateral EA                                                                                                                                 Sham            EA            (n=38)                                                                                                                                              P
+                                                                                                                                                                                              (n=38)                                                                                                                                            (n=38)
+         Age, years                                                                                                                                                                                                                                                                                                       67.29                                             ±4.78                                                                                                                                                                                                                     68.82                                             ±5.36                                                                                                                                                                                                                     67.58                                             ±4.95                                                                                                                                                                                                                 0.377
+
+         Gender
+         Female                                                                                                                                                                                                                                                                                                                                                  33 (86.8)                                                                                                                                                                                                                                   36 (94.7)                                                                                                                                                                                                                                   31 (81.6)                                                                                                                                                                                                                              0.251 (χ                                                                                           2 =3.107)
+         Male                                                                                                                                                                                                                                                                                                                                                                                               5 (13.2)                                                                                                                                                                                                                                                   2 (5.3)                                                                                                                                                                                                                                                                   7 (18.4)
+         Height, m                                                                                                                                                                                                                                                                                                                                              1.58 [1.55, 1.60]                                                                                                                                   1.58 [1.54, 1.64]                                                                                                                                   1.56 [1.54, 1.61]                                                                                              0.470
+         Weight, kg                                                                                                                                                                                                                                                                                               61.50                                             ±8.94                                                                                                                                                                                                                     61.26                                             ±10.44                                                                                                                                                                                                     58.84                                             ±10.40                                                                                                                                                                                                 0.439
+
+         BMI                                                                                                                                                                                                                                                                                                                                                                                          24.43                                             ±3.60                                                                                                                                                                                                                     24.12                                             ±3.69                                                                                                                                                                                                                     23.34                                             ±2.92                                                                                                                                                                                                                 0.366
+
+         Medical history
+         Yes                                                                                                                                                                                                                                                                                                                                                                                              22 (57.9)                                                                                                                                                                                                                                   25 (65.8)                                                                                                                                                                                                                                   26 (68.4)                                                                                                                                                                                                                              0.609 (χ                                                                                           2 =0.990)
+         No                                                                                                                                                                                                                                                                                                                                                                                                   16 (42.1)                                                                                                                                                                                                                                   13 (34.2)                                                                                                                                                                                                                                   12 (31.6)
+         Operative time, h                                                                                                                                                                                                            1.38                                  ±0.36                                                                                                                                                                                                                                     1.38                                  ±0.36                                                                                                                                                                                                                                     1.41                                  ±0.30                                                                                                                                                                                                                          0.934
+
+         TKA laterality
+         Left                                                                                                                                                                                                                                                                                                                                                                                           18 (47.4)                                                                                                                                                                                                                                   21 (55.3)                                                                                                                                                                                                                                   18 (47.4)                                                                                                                                                                                                                              0.729 (χ                                                                                           2 =0.632)
+         Right                                                                                                                                                                                                                                                                                                                                                                          20 (52.6)                                                                                                                                                                                                                                   17 (44.7)                                                                                                                                                                                                                                   20 (52.6)
+         Baseline characteristics
+         VASa                                                                                                                                                                                                                                                                                                                                                                             37.18                                             ±12.05                                                                                                                                                                                                     37.82                                             ±11.03                                                                                                                                                                                                     39.71                                             ±10.43                                                                                                                                                                                                 0.593
+
+         Total dose of PCA pump (mL)                               100                                                                                                                                                                                                                                                                                                        100                                                                                                                                                                                                                                                                                                        100                                                                                                                                                                                                                                                                                                    1.000
+         ROMa                                                                                              AROM                                                                                                                                                                                    90.00 [85.00, 100.00]                                                                  90.00 [80.00, 101.25]                                                                  90.00 [85.00, 100.00]                                            0.973
+                                                                                   PROM                                                                                                                                                                       100.00 [93.75, 110.00]                                                  100.00 [90.00, 110.00]                                                  100.00 [90.00, 110.00]                                              0.741
+         HSS scorea                                                                                                                                                                                                                                                                                              53.75                                             ±8.38                                                                                                                                                                                                                     55.15                                             ±8.61                                                                                                                                                                                                                     55.72                                             ±7.38                                                                                                                                                                                                                 0.557
+
+         HAMA scorea                                                                                                                                                                                                                                                       19.16                                             ±3.98                                                                                                                                                                                                                     18.00                                             ±4.56                                                                                                                                                                                                                     18.24                                             ±2.83                                                                                                                                                                                                                 0.388
+
+         COKb                                                                                                                                                                                                                                                                                                                                                             40.89                                             ±3.02                                                                                                                                                                                                                     40.06                                             ±2.92                                                                                                                                                                                                                     41.11                                             ±2.96                                                                                                                                                                                                                 0.273
+
+Note: Data are mean                                                                                                                                                                    ±                    SD, median [Q1, Q3], or n (%).
+Baseline characteristics abefore surgery or bbefore treatment.
+BMI: body mass index; VAS: visual analog analogue score; PCA: patient-controlled analgesia; HSS: Hospital for Special Surgery; HAMA: Hamilton
+anxiety scale; COK: circumference of knee; EA: electroacupuncture; ROM: range of movement.
+
+
+outcomes after TKA. Since the intensity of postoperative                                                                                                                                                                                                                                                                                                                                that early active EA was effective at treating postoperative
+acute pain correlates with the risk of developing a persistent                                                                                                                                                                                                                                                                                                                          pain after TKA; however, the contralateral and ipsilateral
+pain state,32,33 active and early treatment of postoperative                                                                                                                                                                                                                                                                                                                            EA methods did not differ with respect to the observed
+pain should also be studied. Compared with other alterna-                                                                                                                                                                                                                                                                                                                               reductions in postoperative acute pain and opioid use.
+tive therapies, acupuncture appears to have greater potential                                                                                                                                                                                                                                                                                                                           Accordingly, both EA approaches appear to protect against
+in the management of postoperative pain after TKA.34,35                                                                                                                                                                                                                                                                                                                                 pain and promote joint rehabilitation after TKA.
+                  After TKA surgery, the knee joint on the ipsilateral of                                                                                                                                                                                                                                                                                                                                 In our trial, the VAS scores did not significantly differ
+the patient was fixed by a pressure bandage and was not                                                                                                                                                                                                                                                                                                                                 between the two real EA groups during the treatment and
+suitable for the local application of EA around the knee                                                                                                                                                                                                                                                                                                                                follow-up periods but were lower than the sham EA group.
+joint because it increases the risk of local infection. In this                                                                                                                                                                                                                                                                                                                         Furthermore, this result has also been confirmed in our ani-
+case, it is arguably better to perform EA on the contralateral                                                                                                                                                                                                                                                                                                                          mal experiments.36 EA is often used to treat pain in the clinic,
+side. Therefore, in our trial, we aimed to compare the                                                                                                                                                                                                                                                                                                                                  but the specific analgesic mechanism is not completely clear.
+effects of contralateral EA, ipsilateral EA, and sham EA on                                                                                                                                                                                                                                                                                                                             Acupuncture information is introduced from the periphery,
+pain after TKA and evaluate the hypothesized superiority                                                                                                                                                                                                                                                                                                                                reaches the upper center from the spinal cord crossing to the
+of contralateral EA in rehabilitation. ITT analysis revealed                                                                                                                                                                                                                                                                                                                            contralateral ventrolateral spinal cord bundle, and induces
+
+Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 7 ===
+Huang et al.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           189
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 8 ===
+190                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Acupuncture in Medicine
+
+
+  Figure 2.                                                              Visual analog scale (VAS) pain scores in the contralateral electroacupuncture (EA), ipsilateral EA and sham EA groups
+  at each time point.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+corresponding analgesic effects by regulating the release of                                              inflammatory site can alleviate the local inflammatory
+neurotransmitters (such as endorphin and enkephalin) and                                                  reaction, which is an effect that is unlikely to be seen with
+blocking the pain signal pathway.37,38 Liu etal.                                                                                                                        39 explained contralateral acupuncture.48 Accordingly, in our trial, the
+that acupuncture at traditional acupuncture point locations                                               improvement in the swelling around the knee joint after
+could induce various somatosensory-autonomic nerve-target                                                 three interventions was significantly greater in the ipsilat-
+organ reflex pathways and regulate immunity/inflammation.                                                 eral EA group than in the contralateral EA.
+However, the mechanism of action of contralateral needling                                                      There were some limitations to our study. First, we did
+has been rarely studied. In some types of pain, contralateral                                             not conduct a long-term follow-up evaluation, and the fol-
+acupuncture may be more effective than ipsilateral acupunc-                                               low-up period was restricted to the period of hospitaliza-
+ture.40 Other studies have confirmed that contralateral and                                               tion. Therefore, further research is needed to explore the
+ipsilateral acupuncture have similar analgesic effects,41,42 but                                          long-term effects of contralateral EA on pain and joint
+different underlying brain mechanisms.20,22 The anterior cin-                                             function rehabilitation after TKA. Second, referring to the
+gulate cortex (ACC) is one of the candidate regions, and                                                  trial of Liu etal.,                                                                                                                                                                                                                                                  27 we attempted to blind the patients; a
+ACC neurons have a large bilateral receptive area of body                                                 strict clinical controlled trial was designed and executed,
+sensory stimulation,43 which means that contralateral acu-                                                which aimed to minimize the placebo effect. Sterile rubber
+puncture may competitively suppress noxious signals. pads were attached to the skin overlying the needling loca-
+However, ACC involvement in the emotional component of                                                    tions, and blunt needles were used through the adhesive pad
+postoperative pain needs to be further investigated. Yang                                                 without penetrating the skin; however, a slight pressure
+etal.                                  44 suggested that the analgesic effect mediated by the mu          sensation was induced by contact with the blunt tip.
+receptor during low-frequency contralateral EA pretreatment                                               Moreover, the wire inside the electrical stimulation appara-
+has an antinociceptive action against inflammatory pain, and                                              tus was cut to ensure no current flowed through the con-
+it may provide a potential strategy to treat inflammatory                                                 necting wires between the two needle handles, to create the
+arthritic pain.                                                                                           appearance of real EA. We did not set a blinding method for
+     The HSS scale includes the assessment of pain, joint                                                 acupuncturists. Ultimately, the expectation of participants
+function, and ROM, which account for 70% of the score.45                                                  and the communication between acupuncturists and partici-
+From the comparison results of the three groups, joint func-                                              pants may still have introduced performance bias. Third,
+tion and ROM were improved with pain relief. After three                                                  the treatment cycle used in this study was short. Finally, as
+interventions, the HSS scores of the two true EA groups                                                   pain is a subjective experience, the effect of contralateral
+were higher than the sham EA group but did not signifi-                                                   needling on postoperative pain should be objectively sup-
+cantly differ between the two true EA groups. Postoperative                                               plemented by further neuroimaging research.
+pain may trigger a strong stress reaction, stimulate the
+release of inflammatory factors, and inhibit immune func-                                                 Conclusion
+tion.46 EA at ST36 has been found to maintain immune
+function and improve postoperative recovery.47 Studies                                                    In conclusion, both contralateral EA and ipsilateral EA
+have shown that peripheral opioids released by EA at the                                                  methods improved pain and reduced opioid use after TKA,
+
+
+Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 9 ===
+Huang et al.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           191
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 10 ===
+192                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Acupuncture in Medicine
+
+
+Table 4.                                                                      Safety and other outcomes.
+
+      Variable                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Contralateral Ipsilateral EASham EA
+                                                                                                                                                                                                       EA                                                                                                      (n=37)                                                                                                                (n=35)
+                                                                                                                                                                                                       (n=36)
+      Discomfort and acceptance of EA
+      Discomfort of EAa                                                                                                                                                                                  Day 1                                                                                                                                                                                      19.97                                             ±10.60                                                                                                                                                                                                                          20.51                                             ±10.12                                                                                                                                                                                                                                                                            20.94                                             ±9.58
+
+                                                                                                                             Day 2                                                                                                                                                                                      16.75                                             ±9.26                                                                                                                                                                                                                                          16.78                                             ±8.66                                                                                                                                                                                                                                                                                            17.77                                             ±8.95
+
+                                                                                                                             Day 3                                                                                                                                                                                      12.25                                             ±10.13                                                                                                                                                                                                                          12.57                                             ±8.91                                                                                                                                                                                                                                                                                            16.11                                             ±8.64
+
+      Acceptance of EAa                                                                                                                                                                                Day 1                                                                                                                                                                                      84.44                                             ±8.36                                                                                                                                                                                                                                          84.16                                             ±9.39                                                                                                                                                                                                                                                                                            83.06                                             ±7.45
+
+                                                                                                                             Day 2                                                                                                                                                                                      87.69                                             ±6.75                                                                                                                                                                                                                                          87.57                                             ±7.40                                                                                                                                                                                                                                                                                            85.89                                             ±8.37
+
+                                                                                                                             Day 3                                                                                                                                                                                      90.97                                             ±7.22                                                                                                                                                                                                                                          91.22                                             ±7.32                                                                                                                                                                                                                                                                                            87.26                                             ±9.20
+
+      Assessment of blindingb                                                                                                                                                                                                                                                                                                                                                                                  27 (71.05)                                                                                                                                                                                                                                       29 (76.32)                                                                                                                                                                                                                                                                                          29 (76.32)
+      Side effects of acupuncture                                                                                                                                                                                                                                                                                                                                                2 (5.26)                                                                                                                                                                                                                                                                        1 (2.70)                                                                                                                                                                                                                                                                                                                          0 (0.00)
+
+Note: Data are mean                                                                                                                                                                    ±                    SD or n (%).
+aRefer to the visual analog score (VAS), measured using a range of 0–100.
+bCases lost to follow-up were considered to represent blinding failures.
+EA: electroacupuncture.
+
+in an effect that was already apparent after two rounds of                                                                                                                                                                                                  of the study was assessed and approved by the Institutional
+the intervention. These findings increase our understanding                                                                                                                                                                                                 Review Board of Guanghua Hospital, Shanghai University of
+of pain management after TKA, and the role of early inter-                                                                                                                                                                                                  Traditional Chinese Medicine (2018                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 -K-18).
+vention by nonpharmacologic treatment methods to pro-                                                                                                                                                                                                       Consent for publication
+mote postoperative rehabilitation.
+                                                                                                                                                                                                                                                            Not applicable.
+Acknowledgements
+The authors would like to thank our colleagues in the Joint Surgery                                                                                                                                                                                         ORCID iDs
+Department of Guanghua Hospital, Shanghai University of                                                                                                                                                                                                     Hai Huang                                               https://orcid.org/0000-0002-2376-0462
+Traditional Chinese Medicine, for their professional guidance.
+                                                                                                                                                                                                                                                            Xiuling Song                                                     https://orcid.org/0000-0002-3280-7189
+Contributors                                                                                                                                                                                                                                                Ling Zhao                                             https://orcid.org/0000-0002-4017-8167
+Y.L.C. and L.B.X. conceived the study, designed the study protocol,
+and sought ethical approval. H.X. was the acupuncturist. X.L.S. and Supplemental material
+Y.Y.L. participated in the data evaluation and collection. L.Z. and Supplemental material for this article is available online.
+K.M.T. were responsible for data entry and statistical analysis. H.H.
+drafted the article. K.M.T. and Y.L.C. participated in the critical revi-                                                                                                                                                                                   References
+sion of the article. All authors read and approved the final version of        1.                              Kremers HM, Larson DR, Crowson CS, etal. Prevalence of total hip
+the article accepted for publication.                                                                                                                                                                                                                                      and knee replacement in the United States. J Bone Joint Surg Am
+Declaration of conf licting interests                                                                                                                                                                                                                                      2015; 97: 1386–1397.
+                                                                                                                                                                                                                                                             2.             Jacobs CA and Christensen CP. Factors influencing patient satis-
+The author(s) declared no potential conflicts of interest with respect                                                                                                                                                                                                     faction two to five years after primary total knee arthroplasty. J
+to the research, authorship, and/or publication of this article.                                                                                                                                                                                                           Arthroplasty 2014; 29: 1189–1191.
+                                                                                                                                                                                                                                                              3.               Sanchez-Santos MT, Garriga C, Judge A, etal. Development and
+Funding                                                                                                                                                                                                                                                                    validation of a clinical prediction model for patient-reported pain and
+                                                                                                                                                                                                                                                                           function after primary total knee replacement surgery. Sci Rep 2018;
+The author(s) disclosed receipt of the following financial support                                                                                                                                                                                                         8: 3381.
+for the research, authorship, and/or publication of this article: This                                                                                                                                                                                             4.                             Varacallo M, Chakravarty R, Denehy K, etal. Joint perception and
+trial was funded by the Shanghai University of Traditional Chinese                                                                                                                                                                                                         patient perceived satisfaction after total hip and knee arthroplasty
+Medicine (grant no. Y201908).                                                                                                                                                                                                                                              in the American population. J Orthop 2018; 15(2): 495–499.
+                                                                                                                                                                                                                                                                      5.                                      Seo SS, Kim OG, Seo JH, etal. Comparison of the effect of contin-
+Ethical approval and informed consent                                                                                                                                                                                                                                      uous femoral nerve block and adductor canal block after primary
+                                                                                                                                                                                                                                                                           total knee arthroplasty. Clin Orthop Surg 2017; 9(3): 303–309.
+All study participants provided written consent and received a full                                                                                                                                                                                            6.                  Pogatzki-Zahn EM, Segelcke D and Schug SA. Postoperative pain
+and detailed explanation of the trial process. The ethical validity                                                                                                                                                                                                        from mechanisms to treatment. Pain Rep 2017; 2(2): e588.
+
+Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 11 ===
+Huang et al.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           193
+
+
+
+        7.                              Bao Y, Pan Y, Taylor A, etal. Prescription drug monitoring programs                            acupuncture and moxibustion departments: a cross-sectional study.
+       are associated with sustained reductions in opioid prescribing by phy-                                                          Evid Based Complement Alternat Med 2013; 2013: 715480.
+       sicians. Health Aff 2016; 35: 1045–1051.                                                                                27.                                      Liu ZS, Xu HF, Chen YL, etal. The efficacy and safety of electroa-
+    8.                     Rosner B, Neicun J, Yang JC, etal. Opioid prescription patterns in                                          cupuncture for women with pure stress urinary incontinence: study
+       Germany and the global opioid epidemic: systematic review of avail-                                                             protocol for a multicenter randomized controlled trial. Trials 2013;
+       able evidence. PLoS ONE 2019; 14(8): e0221153.                                                                                  14: 1–9.
+             9.                                         Gaffney CJ, Pelt CE, Gililland JM, etal. Perioperative pain management 28.                                  Deng W and He J. Design and statistical analysis of clinical trials.
+       in hip and knee arthroplasty. Orthop Clin N Am 2017; 48: 407–419.                                                               Beijing, China: People’s Medical Publishing House, 2012, p. 130.
+10.                                              Memtsoudis SG, Poeran J, Zubizarreta N, etal. Association of multi-           29.                    Detry MA and Lewis RJ. The intention-to-treat principle. JAMA
+       modal pain management strategies with perioperative outcomes and                                                                2014; 312: 85–86.
+       resource utilization: a population-based study. Anesthesiology 2018;                                                    30.                                                Park E, Cho M and Ki CS. Correct use of repeated measures analysis
+       128(5): 891–902.                                                                                                                of variance. Korean J Lab Med 2009; 29(1): 1–9.
+11.                  Goode VM, Morgan B, Muckler VC, etal. Multimodal pain man-                                                31.                                     Wainwright TW, Gill M, McDonald DA, etal. Consensus statement
+       agement for major joint replacement surgery. Orthop Nurs 2019; 38:                                                              for perioperative care in total hip replacement and total knee replace-
+       150–156.                                                                                                                        ment surgery: enhanced recovery after surgery (ERAS) society rec-
+12.                                   Carter JA, Black LK, Sharma D, etal. Efficacy of non-opioid anal-                                ommendations. Acta Orthop 2020; 91: 3–19.
+       gesics to control postoperative pain: a network meta-analysis. BMC                                                      32.                                          Kehlet H, Jensen TS and Woolf CJ. Persistent postsurgical pain: risk
+       Anesthesiol 2020; 20: 272.                                                                                                      factors and prevention. Lancet 2006; 367: 1618–1625.
+13.                          Feng JE, Novikov D, Anoushiravani AA, etal. Total knee arthro-                                    33.                              Singh JA, Lemay CA, Nobel L, etal. Association of early postop-
+       plasty: improving outcomes with a multidisciplinary approach. J                                                                 erative pain trajectories with longer-term pain outcome after primary
+       Multidiscip Healthc 2018; 11: 63–73.                                                                                            total knee arthroplasty. JAMA Netw Open 2019; 211: e1915105.
+14.                                                       Tedesco D, Gori D, Desai KR, etal. Drug-free interventions to reduce 34.                                Yuan W and Wang Q. Perioperative acupuncture medicine: a novel
+       pain or opioid consumption after total knee arthroplasty. JAMA Surg                                                             concept instead of acupuncture anesthesia. Chin Med J 2019; 132:
+       2017; 152: e172872.                                                                                                             707–715.
+15.                        Crespin DJ, Griffin KH, Johnson JR, etal. Acupuncture provides                                      35.                                                Lu Z, Dong H, Wang Q, etal. Perioperative acupuncture modulation:
+       short-term pain relief for patients in a total joint replacement program.                                                       more than anaesthesia. Br J Anaesth 2015; 115(2): 183–193.
+       Pain Med 2015; 16(6): 1195–1203.                                                                                        36.                                Huang H, Song X, Wang J, et                 al. Contralateral and ipsilateral elec-
+16.                     Chen W, Chen Z, Li J, etal. Electroacupuncture as an adjuvant                                                  troacupuncture generates similar analgesic effects on pain after knee
+       approach to rehabilitation during postacute phase after total knee                                                              surgery. Evid Based Complement Alternat Med 2021; 2021: 6616886.
+       arthroplasty: a systematic review and meta-analysis of randomized                                                       37.                                             Han JS. Acupuncture and endorphins. Neurosci Lett 2004; 361: 258–
+       controlled trials. Evid Based Complement Alternat Med 2021; 2021:                                                               261.
+       9927699.                                                                                                                38.                            Acar HV. Acupuncture and related techniques during perioperative
+17.                                                 Huang ZJ, Tian P and Wu S. Similarities and differences of contralat-              period: a literature review. Complement Ther Med 2016; 29: 48–55.
+       eral meridian needling and contralateral collateral needling. J Clin                                                    39.                                         Liu SB, Wang ZF, Su YS, et                     al. Somatotopic organization and inten-
+       Acupunct Moxib 2018; 34: 67–69.                                                                                                 sity dependence in driving distinct NPY-expressing sympathetic path-
+18.                                                   Ye MZ. Contralateral needling method and its applications in treating            ways by electroacupuncture. Neuron 2020; 108: 436.e7–450.e7.
+       upper-limb pain. J Acupunct Tuina Sci 2012; 10: 58–61.                                                                  40.                         Yi M, Zhang H, Lao L, etal. Anterior cingulate cortex is crucial
+19.                                     Zhang H, Sun J, Wang C, etal. Randomised controlled trial of con-                              for contra- but not ipsi-lateral electro-acupuncture in the formalin-
+       tralateral manual acupuncture for the relief of chronic shoulder pain.                                                          induced inflammatory pain model of rats. Mol Pain 2011; 7: 61.
+       Acupunct Med 2016; 34(3): 164–170.                                                                                      41.                                                           Lu KW, Hsu CK, Hsieh CL, etal. Probing the effects and mechanisms
+20.                                           Yan CQ, Huo JW, Wang X, etal. Different degree centrality changes                        of electroacupuncture at ipsilateral or contralateral ST36-ST37 acu-
+       in the brain after acupuncture on contralateral or ipsilateral acupoint                                                         points on CFA-induced inflammatory pain. Sci Rep 2016; 6: 22123.
+       in patients with chronic shoulder pain: a resting-state fMRI study.                                                     42.                                 Zuo CY, Lv P, Zhang CS, etal. Ipsi- and contralateral moxibustion
+       Neural Plast 2020; 2020: 5701042.                                                                                               generate similar analgesic effect on inflammatory pain. Evid Based
+21.                                                          Li RW, Guo J, Dou J, etal. Effect of the contralateral needling therapy   Complement Alternat Med 2019; 2019: 1807287.
+       on post-stroke shoulder-hand syndrome. Zhen Ci Yan Jiu 2020; 45:                                                        43.                                         Urien L and Wang J. Top-down cortical control of acute and chronic
+       152–156.                                                                                                                        pain. Psychosom Med 2019; 81(9): 851–858.
+22.                       Zhang S, Wang X, Yan CQ, etal. Different mechanisms of con-                                          44.                            Yang EJ, Koo ST, Kim YS, etal. Contralateral electroacupuncture
+       tralateral- or ipsilateral-acupuncture to modulate the brain activity in                                                        pretreatment suppresses carrageenan-induced inflammatory pain via
+       patients with unilateral chronic shoulder pain: a pilot fMRI study. J                                                           the opioid-mu receptor. Rheumatol Int 2011; 31(6): 725–730.
+       Pain Res 2018; 11: 505–514.                                                                                             45.                                  Dos Santos RA, Derhon V, Brandalize M, etal. Evaluation of knee
+23.                                           Huang H, Song XL, Zhao L, etal. Contralateral needling for analge-                       range of motion: correlation between measurements using a universal
+       sia and rehabilitation after unilateral total knee arthroplasty: a rand-                                                        goniometer and a smartphone goniometric application. J Bodyw Mov
+       omized, sham-controlled trial protocol. Trials 2020; 21: 385.                                                                   Ther 2017; 21(3): 699–703.
+24.                        Jensen MP, Tomé-Pires C, de la Vega R, etal. What determines                                        46.                                                          Leaver HA, Craig SR, Yap PL, et                            al. Lymphocyte responses following
+       whether a pain is rated as mild, moderate, or severe? The impor         -                                                       open and minimally invasive thoracic surgery. Eur J Clin Invest 2000;
+       tance of pain beliefs and pain interference. Clin J Pain 2017; 33(5):                                                           30(3): 230–238.
+       414–421.                                                                                                                47.                                   Grech D, Li Z, Morcillo P, etal. Intraoperative low-frequency elec-
+25.                          Macpherson H, Thomas K, Walters S, et                                     al. A prospective survey        troacupuncture under general anesthesia improves postoperative
+       of adverse events and treatment reactions following 34,000 consul-                                                              recovery in a randomized trial. J Acupunct Meridian Stud 2016; 9(5):
+       tations with professional acupuncturists. Acupunct Med 2002; 19:                                                                234–241.
+       9302–9301.                                                                                                              48.                         Zhang GG, Yu C, Lee W, etal. Involvement of peripheral opioid
+26.                            Liu B, Xu H, Guo S, etal. Prevalence and correlates of discom-                                          mechanisms in electroacupuncture analgesia. Explore 2005; 1(5):
+       fort and acceptability of acupuncture among outpatients in Chinese                                                              365–371.
+
+
+
+
+                                                                                                                                                                                            Acupuncture in Medicine, 42(4)
+
+=== PDF PAGE 12 ===
+articles for individual   use.
+copyright   holder's express   written  permission.    However,    users  may  print, download,     or email
+content  may   not be  copied  or  emailed   to multiple  sites or posted   to a listserv without   the
+Copyright   of Acupuncture     in Medicine    is the property   of Sage   Publications   Inc. and  its

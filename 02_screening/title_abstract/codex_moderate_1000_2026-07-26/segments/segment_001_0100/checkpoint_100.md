@@ -1,0 +1,36 @@
+# Segment 1 checkpoint 100
+
+- Global screening sequence: 100
+- Valid registered votes in segment: 100
+- Yes: 8
+- Maybe: 31
+- No: 61
+- Unique Covidence numbers: 100
+- Unique post-vote timestamps: 100
+- JSONL validation: passed
+- CSV validation: passed
+- Vote registration: all yes
+- Visible unscreened citations bypassed: 0
+- Conflicts opened or resolved: 0
+
+## Primary reason counts
+
+- EXCLUDE_ANIMAL: 20
+- EXCLUDE_INELIGIBLE_ACTIVE_COMPARATOR: 1
+- EXCLUDE_INSEPARABLE_INTERVENTION: 1
+- EXCLUDE_NO_ELIGIBLE_OUTCOME: 4
+- EXCLUDE_NO_GENERAL_ANAESTHESIA: 6
+- EXCLUDE_NON_ACUPOINT_TENS: 1
+- EXCLUDE_NON_RANDOMIZED: 1
+- EXCLUDE_NON_SURGICAL: 8
+- EXCLUDE_POPULATION: 2
+- EXCLUDE_PROTOCOL_NO_RESULTS: 14
+- EXCLUDE_PUBLICATION_TYPE: 1
+- EXCLUDE_TIMING: 1
+- EXCLUDE_WRONG_INTERVENTION: 1
+- INCLUDE_CLEAR: 8
+- UNCERTAIN_GENERAL_ANAESTHESIA: 22
+- UNCERTAIN_INTERVENTION_SEPARABILITY: 2
+- UNCERTAIN_OUTCOME: 1
+- UNCERTAIN_RANDOMIZATION: 1
+- UNCERTAIN_TIMING: 5

@@ -1,0 +1,193 @@
+{
+  "Study_ID": "S031",
+  "Study": "Lu 2021",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "identity": {
+    "title": "Transcutaneous electrical acupoint stimulation before surgery reduces chronic pain after mastectomy: A randomized clinical trial",
+    "doi": "10.1016/j.jclinane.2021.110453",
+    "year": 2021,
+    "pdf": "covidence_414_full_article.pdf",
+    "registration": "NCT02741726",
+    "recruitment": "May 2016–April 2018; six Chinese centers"
+  },
+  "arms": {
+    "sham": {
+      "randomized": 188,
+      "completed": 184
+    },
+    "single_PC6": {
+      "randomized": 198,
+      "completed": 196
+    },
+    "combined_PC6_CV17": {
+      "randomized": 190,
+      "completed": 188
+    }
+  },
+  "denominator_evidence": "PDF p3 Figure 1 visually inspected: ITT 188/198/190, PP 184/196/188; four changed surgery, four follow-up losses.",
+  "results": {
+    "arm_order": [
+      "sham",
+      "single_PC6",
+      "combined_PC6_CV17"
+    ],
+    "source_location": "PDF p5 Table 3, visually inspected",
+    "intraoperative_remifentanil_mg_mean_sd": [
+      [
+        1.4,
+        0.7
+      ],
+      [
+        1.3,
+        0.6
+      ],
+      [
+        1.2,
+        0.5
+      ]
+    ],
+    "NRS_rest_exact24_median_IQR": [
+      [
+        1,
+        0,
+        1.6
+      ],
+      [
+        0.9,
+        0,
+        1.3
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "NRS_cough_exact24_median_IQR": [
+      [
+        1.1,
+        0.1,
+        2.8
+      ],
+      [
+        1.3,
+        0.3,
+        2.9
+      ],
+      [
+        1,
+        0,
+        2.3
+      ]
+    ],
+    "rescue_analgesia_patients_0_24": [
+      7,
+      3,
+      4
+    ],
+    "PONV_patients_0_24": [
+      68,
+      59,
+      35
+    ],
+    "nausea_patients_0_24": [
+      45,
+      38,
+      12
+    ],
+    "vomiting_patients_0_24": [
+      22,
+      21,
+      22
+    ],
+    "PONV_score_mean_sd": [
+      [
+        0.4,
+        0.7
+      ],
+      [
+        0.4,
+        0.7
+      ],
+      [
+        0.3,
+        0.7
+      ]
+    ],
+    "satisfaction_mean_sd": [
+      [
+        8.2,
+        0.9
+      ],
+      [
+        8.2,
+        1.1
+      ],
+      [
+        8.4,
+        0.9
+      ]
+    ],
+    "chronic_pain_3months": [
+      75,
+      70,
+      58
+    ],
+    "chronic_pain_6months": [
+      65,
+      72,
+      42
+    ],
+    "chronic_pain_NRS_3months_mean_sd": [
+      [
+        2.8,
+        2
+      ],
+      [
+        2.6,
+        2
+      ],
+      [
+        2.3,
+        2
+      ]
+    ],
+    "chronic_pain_NRS_6months_mean_sd": [
+      [
+        2.8,
+        1.8
+      ],
+      [
+        2.7,
+        2
+      ],
+      [
+        2.4,
+        1.9
+      ]
+    ],
+    "chronic_note": "p5 Table 2 NRS denominator is ONLY patients with chronic pain, not entire randomized arms."
+  },
+  "analgesia": {
+    "drug": "Sufentanil postoperative PCA, unreported total; remifentanil IV intraoperative only",
+    "pca_formulation": "Insufficient information / not reported.",
+    "rescue": "Parecoxib sodium 40 mg when NRS >4; nonopioid",
+    "source_location": "p2 §2.6–p3"
+  },
+  "opioid_decision": "Excluded from postoperative opioid synthesis; Table 3 title does not change intraoperative remifentanil window explicitly defined in §2.5.",
+  "source_conflicts": [
+    "p4 text uses 79/196 single-arm chronic pain versus Table 2 and abstract 72/198; p4 pain P-values disagree with Table 3; no uncritical adoption of narrative.",
+    "PONV composite counts do not equal nausea plus vomiting; preserve published subtypes separately."
+  ],
+  "rob_independent": {
+    "randomization": "Low: secured centralized web system stratified center, randomly varying blocks; p2 §2.3 and Table 1.",
+    "deviations": "Low: participant and interventionist unmasked, other clinical staff masked, monitored protocol with ITT; no evidence of trial-context nonprotocol cointervention; p2 §§2.1–2.6, p3 §2.7.",
+    "missing": "Low for short-term common outcomes: nearly all followed; Table 3 ITT; precise short-term observed versus imputed n not separately reported.",
+    "measurement": "Some concerns for self-reported pain/nausea/composite: participants explicitly not masked, hence own assessors aware; could influence responses but actual influence not demonstrated. Low for blinded record-based intraoperative opioid and overt vomiting.",
+    "selection": "Some concerns: prospective registration stated April 2016, but dated detailed analysis plan not yet obtained. 5.1 NI;5.2 NI;5.3 NI. All short-term outcomes reported but cannot demonstrate prospective analysis choices."
+  },
+  "independence": "Single trial with two active arms sharing one sham; do not independently double-count shared control.",
+  "missing_outcomes": "Postoperative opioid quantity, QoR15/QoR40, GI: Insufficient information / not reported."
+}

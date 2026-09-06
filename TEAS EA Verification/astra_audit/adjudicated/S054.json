@@ -1,0 +1,2609 @@
+{
+  "Study_ID": "S054",
+  "Study": "Grech 2016",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first-page identity confirmed",
+    "title": "Intraoperative Low-frequency Electroacupuncture under General Anesthesia Improves Postoperative Recovery in a Randomized Trial",
+    "year": 2016,
+    "doi": "10.1016/j.jams.2016.03.009",
+    "pdf_files": [
+      "030_grech_2016_lund.pdf"
+    ],
+    "randomized_arms": {
+      "EA": 11,
+      "control": 9
+    },
+    "analyzed_arms": {
+      "all_EA": 11,
+      "all_control": 9,
+      "female_EA": 8,
+      "female_control": 9
+    },
+    "modality": "EA",
+    "comparator_class": "No acupuncture under GA (registry calls sham/placebo)",
+    "independence": "Registry and article same trial, not independent cohorts.",
+    "source_locations": "pp2-4;Tables1-2;NCT01937520 registry results",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 235,
+      "final": {
+        "Canonical study": "Grech 2016",
+        "Comparison ID": "GRECH16_EA_vs_CTRL_PACU_MME_WOMEN",
+        "Intervention arm": "Intraoperative low-frequency EA",
+        "Comparator arm": "No acupuncture under general anesthesia",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "PACU analgesic requirement in women-only subgroup",
+        "Timepoint/window": "PACU",
+        "Data type": "Mean/SE (registry); graph-only in article",
+        "Randomized n intervention": 11,
+        "Randomized n comparator": 9,
+        "Analyzed n intervention": 8,
+        "Analyzed n comparator": 9,
+        "Mean intervention": 3.19,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 7.36,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg morphine-equivalent",
+        "Reported P": "Figure1D: * P<0.1; exact P not reported",
+        "Directly reported?": "Yes — trial registry results",
+        "Derived/converted?": "Author morphine-equivalence conversion; factors not reported",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "PACU female subgroup only; not primary24hIVopioid synthesis; conversion factors/routes unresolved",
+        "Shared-control / multi-arm issue": "Same female controls shared with other subgroup/all-patientresults;do not count independently",
+        "Source-QC issue": "n8/9 registry clarified; SEM not SD; nominal Fig1D P<0.1; result-led subgroup selection",
+        "Source location": "NCT01937520 primary Morphine Equivalent/PACU;articleFig1D",
+        "Source PDF URL": "https://drive.google.com/file/d/1U3KShiAZKL8n9hxSpBkhuhuQHW2EN-IY/view?usp=drivesdk",
+        "Record status": "CORRECTED FROM PRIMARY REGISTRY",
+        "SE intervention": 1.59,
+        "SE comparator": 1.49
+      },
+      "verification_status": "CORRECTED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Grech 2016",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "GRECH16_EA_vs_CTRL_PACU_MME_WOMEN",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative low-frequency EA",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No acupuncture under general anesthesia",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "PACU analgesic requirement in women-only subgroup",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "PACU",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SE (registry); graph-only in article",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 11,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 9,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 8,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 9,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 3.19,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 7.36,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg morphine-equivalent",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "Figure1D: * P<0.1; exact P not reported",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes — trial registry results",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Author morphine-equivalence conversion; factors not reported",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "PACU female subgroup only; not primary24hIVopioid synthesis; conversion factors/routes unresolved",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Same female controls shared with other subgroup/all-patientresults;do not count independently",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "n8/9 registry clarified; SEM not SD; nominal Fig1D P<0.1; result-led subgroup selection",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "NCT01937520 primary Morphine Equivalent/PACU;articleFig1D",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1U3KShiAZKL8n9hxSpBkhuhuQHW2EN-IY/view?usp=drivesdk",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "CORRECTED FROM PRIMARY REGISTRY",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SE intervention",
+          "source_value": 1.59,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SE comparator",
+          "source_value": 1.49,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Comparator arm",
+          "old_value": "Sham/control",
+          "source_value": "No acupuncture under general anesthesia",
+          "final_value": "No acupuncture under general anesthesia",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 9,
+          "source_value": 8,
+          "final_value": 8,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Mean intervention",
+          "old_value": null,
+          "source_value": 3.19,
+          "final_value": 3.19,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Mean comparator",
+          "old_value": null,
+          "source_value": 7.36,
+          "final_value": 7.36,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Data type",
+          "old_value": "Graph-only morphine-equivalent outcome",
+          "source_value": "Mean/SE (registry); graph-only in article",
+          "final_value": "Mean/SE (registry); graph-only in article",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "SE intervention",
+          "old_value": null,
+          "source_value": 1.59,
+          "final_value": 1.59,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "SE comparator",
+          "old_value": null,
+          "source_value": 1.49,
+          "final_value": 1.49,
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Reported P",
+          "old_value": "Significant; authors report ~60% lower in EA women",
+          "source_value": "Figure1D: * P<0.1; exact P not reported",
+          "final_value": "Figure1D: * P<0.1; exact P not reported",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Directly reported?",
+          "old_value": "No",
+          "source_value": "Yes — trial registry results",
+          "final_value": "Yes — trial registry results",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Author morphine-equivalence conversion; factors not reported",
+          "final_value": "Author morphine-equivalence conversion; factors not reported",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Figure 1D / women-only PACU analgesic requirement",
+          "source_value": "NCT01937520 primary Morphine Equivalent/PACU;articleFig1D",
+          "final_value": "NCT01937520 primary Morphine Equivalent/PACU;articleFig1D",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Not quantitatively meta-analysis-ready without exact graph values or author data",
+          "source_value": "PACU female subgroup only; not primary24hIVopioid synthesis; conversion factors/routes unresolved",
+          "final_value": "PACU female subgroup only; not primary24hIVopioid synthesis; conversion factors/routes unresolved",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "old_value": "No",
+          "source_value": "Same female controls shared with other subgroup/all-patientresults;do not count independently",
+          "final_value": "Same female controls shared with other subgroup/all-patientresults;do not count independently",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Post hoc women-only subgroup excludes two men from EA arm; exact means/SEM are not tabulated",
+          "source_value": "n8/9 registry clarified; SEM not SD; nominal Fig1D P<0.1; result-led subgroup selection",
+          "final_value": "n8/9 registry clarified; SEM not SD; nominal Fig1D P<0.1; result-led subgroup selection",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "GRAPH ONLY / POST-HOC SUBGROUP",
+          "source_value": "CORRECTED FROM PRIMARY REGISTRY",
+          "final_value": "CORRECTED FROM PRIMARY REGISTRY",
+          "source_location": "p3 Fig1D caption;p2 exclusion;NCT01937520 Morphine Equivalent primary results, PACU",
+          "reason": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "030_grech_2016_lund.pdf",
+      "source_evidence": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+      "drug": "Author-converted mixed analgesics in morphine equivalents; underlying drugs unavailable",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Registry femaleEA3.19(SE1.59),n8 vscontrol7.36(SE1.49),n9.9EA women randomized but#11excludedpreexistingTNF;2men onlyEA. Figure1D oneasterisk meansP<0.1, notP<0.05. Paper says60%less; raw means preserved; SD not inferred.",
+      "analysis_eligibility": "PACU female subgroup only; not primary24hIVopioid synthesis; conversion factors/routes unresolved",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 236,
+      "final": {
+        "Canonical study": "Grech 2016",
+        "Comparison ID": "GRECH16_EA_vs_CTRL_OPIOID24",
+        "Intervention arm": "Intraoperative low-frequency EA",
+        "Comparator arm": "Sham/control",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative 24-h postoperative morphine-equivalent consumption",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 11,
+        "Randomized n comparator": 9,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg morphine-equivalent",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Day1numeric registry result exists (6.31SE2.14vs9SE2.44,n8/9), but exact0-24h cumulativeIVmetric not established",
+        "Source location": "NCT01937520 Morphine Equivalent Day1;Fig1G",
+        "Source PDF URL": "https://drive.google.com/file/d/1U3KShiAZKL8n9hxSpBkhuhuQHW2EN-IY/view?usp=drivesdk",
+        "Record status": "EXACT24H ENDPOINT NOT ESTABLISHED"
+      },
+      "verification_status": "NOT ANALYSIS ELIGIBLE",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Grech 2016",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "GRECH16_EA_vs_CTRL_OPIOID24",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative low-frequency EA",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/control",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative 24-h postoperative morphine-equivalent consumption",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 11,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 9,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg morphine-equivalent",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Day1numeric registry result exists (6.31SE2.14vs9SE2.44,n8/9), but exact0-24h cumulativeIVmetric not established",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "NCT01937520 Morphine Equivalent Day1;Fig1G",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1U3KShiAZKL8n9hxSpBkhuhuQHW2EN-IY/view?usp=drivesdk",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "EXACT24H ENDPOINT NOT ESTABLISHED",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Source location",
+          "old_value": "Postoperative analgesic figures",
+          "source_value": "NCT01937520 Morphine Equivalent Day1;Fig1G",
+          "final_value": "NCT01937520 Morphine Equivalent Day1;Fig1G",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "reason": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Day-1 analgesic use is graphical and exact 24-h mean/dispersion is not tabulated",
+          "source_value": "Day1numeric registry result exists (6.31SE2.14vs9SE2.44,n8/9), but exact0-24h cumulativeIVmetric not established",
+          "final_value": "Day1numeric registry result exists (6.31SE2.14vs9SE2.44,n8/9), but exact0-24h cumulativeIVmetric not established",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "reason": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "MISSING / AUTHOR DATA NEEDED",
+          "source_value": "EXACT24H ENDPOINT NOT ESTABLISHED",
+          "final_value": "EXACT24H ENDPOINT NOT ESTABLISHED",
+          "source_location": "p3 Fig1G;NCT01937520 Morphine Equivalent Day1",
+          "reason": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "030_grech_2016_lund.pdf",
+      "source_evidence": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+      "drug": "Author-converted mixed analgesics in morphine equivalents; underlying drugs unavailable",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Day1female6.31(SE2.14)n8 vs9(SE2.44)n9 exists in registry, but no explicit cumulative end-of-surgery-through24h interval, druglist/routes/conversion factors. Do not insertday1intoexact24hrow.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 237,
+      "final": {
+        "Canonical study": "Grech 2016",
+        "Comparison ID": "GRECH16_EA_vs_CTRL_PAIN",
+        "Intervention arm": "Intraoperative low-frequency EA",
+        "Comparator arm": "Sham/control",
+        "Outcome family": "Pain",
+        "Outcome/result": "Postoperative VAS pain",
+        "Timepoint/window": "PACU and POD1-3",
+        "Data type": "Mean/SE series in trial registry; graph-only article",
+        "Randomized n intervention": 11,
+        "Randomized n comparator": 9,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "VAS 0-10",
+        "Reported P": "No significant overall difference",
+        "Directly reported?": "Yes — trial registry; series retained in source evidence",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Separate all-participantPACU fromfemalePACU/POD1-3; reconcile registry/figure pattern before pain pooling; noSD conversion inthisaudit",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Registry numeric means/SE recovered; outcome-specificdenominators11/9(all)or8/9(female); figure/registrytime-seriesdiscrepancy",
+        "Source location": "NCT01937520 Pain Levels/Visual Acuity Score;articleFig1C/E/H",
+        "Source PDF URL": "https://drive.google.com/file/d/1U3KShiAZKL8n9hxSpBkhuhuQHW2EN-IY/view?usp=drivesdk",
+        "Record status": "REGISTRY DATA RECOVERED / TIME-SERIES QC"
+      },
+      "verification_status": "CORRECTED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Grech 2016",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "GRECH16_EA_vs_CTRL_PAIN",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative low-frequency EA",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/control",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Postoperative VAS pain",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "PACU and POD1-3",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SE series in trial registry; graph-only article",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 11,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 9,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "VAS 0-10",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "No significant overall difference",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes — trial registry; series retained in source evidence",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Separate all-participantPACU fromfemalePACU/POD1-3; reconcile registry/figure pattern before pain pooling; noSD conversion inthisaudit",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Registry numeric means/SE recovered; outcome-specificdenominators11/9(all)or8/9(female); figure/registrytime-seriesdiscrepancy",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "NCT01937520 Pain Levels/Visual Acuity Score;articleFig1C/E/H",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1U3KShiAZKL8n9hxSpBkhuhuQHW2EN-IY/view?usp=drivesdk",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "REGISTRY DATA RECOVERED / TIME-SERIES QC",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Data type",
+          "old_value": "Graph-only continuous data",
+          "source_value": "Mean/SE series in trial registry; graph-only article",
+          "final_value": "Mean/SE series in trial registry; graph-only article",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "reason": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Directly reported?",
+          "old_value": "No",
+          "source_value": "Yes — trial registry; series retained in source evidence",
+          "final_value": "Yes — trial registry; series retained in source evidence",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "reason": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Postoperative pain figures",
+          "source_value": "NCT01937520 Pain Levels/Visual Acuity Score;articleFig1C/E/H",
+          "final_value": "NCT01937520 Pain Levels/Visual Acuity Score;articleFig1C/E/H",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "reason": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Not ready for continuous pooling without digitization",
+          "source_value": "Separate all-participantPACU fromfemalePACU/POD1-3; reconcile registry/figure pattern before pain pooling; noSD conversion inthisaudit",
+          "final_value": "Separate all-participantPACU fromfemalePACU/POD1-3; reconcile registry/figure pattern before pain pooling; noSD conversion inthisaudit",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "reason": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Exact numeric pain means/SEM are not tabulated",
+          "source_value": "Registry numeric means/SE recovered; outcome-specificdenominators11/9(all)or8/9(female); figure/registrytime-seriesdiscrepancy",
+          "final_value": "Registry numeric means/SE recovered; outcome-specificdenominators11/9(all)or8/9(female); figure/registrytime-seriesdiscrepancy",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "reason": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "FIGURE ONLY",
+          "source_value": "REGISTRY DATA RECOVERED / TIME-SERIES QC",
+          "final_value": "REGISTRY DATA RECOVERED / TIME-SERIES QC",
+          "source_location": "p3 Fig1C/E/H;NCT01937520 Visual Acuity Score and Pain Levels",
+          "reason": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "030_grech_2016_lund.pdf",
+      "source_evidence": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+      "drug": "Author-converted mixed analgesics in morphine equivalents; underlying drugs unavailable",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "All-patientPACUVAS5.36SE.97(n11)vs6.67SE1.01(n9). FemalesPACU4.88SE1.29vs6.67SE1.01;Day1 6.67SE1.09vs5.56SE.96;Day2 5SE1.09vs5.93SE.49;Day3 4.28SE.95vs3.33SE.96,n8/9. Composite row cannot represent one mean. Figure/registryDay1/2controlpattern appears discrepant; retain both provenance without graph estimates.",
+      "analysis_eligibility": "Separate all-participantPACU fromfemalePACU/POD1-3; reconcile registry/figure pattern before pain pooling; noSD conversion inthisaudit",
+      "notes": "Phase A source-first followed by field-level comparison."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "female_PACU_analgesia",
+      "outcome": "Female PACU author morphine equivalents",
+      "time_window": "PACU",
+      "comparison": "No acupuncture under GA (registry calls sham/placebo)",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "NI",
+          "evidence": "Randomized stated without sequence-generation method in paper/registry",
+          "source_location": "p2;registry design",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment mechanism not reported",
+          "source_location": "p2;registry",
+          "reasoning": "Concealment mechanism not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p4 Tables1-2",
+          "reasoning": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "N",
+          "evidence": "EA performed entirely underGA",
+          "source_location": "pp2-3",
+          "reasoning": "EA performed entirely underGA"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Licensed anesthesiologist/acupuncturist necessarily knows treatment",
+          "source_location": "p3",
+          "reasoning": "Licensed anesthesiologist/acupuncturist necessarily knows treatment"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Both groups same anesthetic procedure; no reported trial-context departures",
+          "source_location": "p3;registry protocol",
+          "reasoning": "Both groups same anesthetic procedure; no reported trial-context departures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response",
+          "source_location": "p2;registry",
+          "reasoning": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2,4",
+          "reasoning": "Within-subgroup assigned comparison;post-hoc selection assessedD5"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion",
+          "source_location": "registry outcome denominators",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "VAS appropriate; authorMME measurement conversion undocumented",
+          "source_location": "p3",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same post-op assessments;data collector blinded in registry",
+          "source_location": "registry",
+          "reasoning": "Same post-op assessments;data collector blinded in registry"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "N",
+          "evidence": "UnderGA subjects anddata collector blinded",
+          "source_location": "registry protocol;pp2-4",
+          "reasoning": "UnderGA subjects anddata collector blinded"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Historical prespecifiedSAP unavailable;current record updatedaftertrial",
+          "source_location": "registry status",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple pain/time measurements; prospective choices unclear",
+          "source_location": "p3 Fig1;registry",
+          "reasoning": "Multiple pain/time measurements; prospective choices unclear"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "PY",
+          "evidence": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "p4 Results",
+          "reasoning": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry; Concealment mechanism not reported; 11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p2;registry design; p2;registry; p4 Tables1-2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "EA performed entirely underGA; Licensed anesthesiologist/acupuncturist necessarily knows treatment; Both groups same anesthetic procedure; no reported trial-context departures; No departures identified; No departures identified; Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response; Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2-3; p3; p3;registry protocol; p3; p3; p2;registry; pp2,4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion; Available eligible subgroup; Available eligible subgroup; Available eligible subgroup",
+          "source_location": "registry outcome denominators; registry; registry; registry"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented; Same post-op assessments;data collector blinded in registry; UnderGA subjects anddata collector blinded; Blinded assessors; Blinded assessors",
+          "source_location": "p3; registry; registry protocol;pp2-4; registry; registry"
+        },
+        {
+          "domain": 5,
+          "judgment": "High",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial; Multiple pain/time measurements; prospective choices unclear; All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "registry status; p3 Fig1;registry; p4 Results"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Result-led female and age/weight subgroup emphasis after null all-participant analysis; prospective subgroup specification not established.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Female selected result remains High dueD5. D2Low: sex-defined subgroup preserves assignment; selection addressedD5, not automatically a trial-context deviation. D3Low using registry clarified eligible subgroupn8/9. Baseline9/9denominator corrected."
+    },
+    {
+      "result_id": "female_VAS_PACU",
+      "outcome": "FemaleVAS",
+      "time_window": "PACU",
+      "comparison": "No acupuncture under GA (registry calls sham/placebo)",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "NI",
+          "evidence": "Randomized stated without sequence-generation method in paper/registry",
+          "source_location": "p2;registry design",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment mechanism not reported",
+          "source_location": "p2;registry",
+          "reasoning": "Concealment mechanism not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p4 Tables1-2",
+          "reasoning": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "N",
+          "evidence": "EA performed entirely underGA",
+          "source_location": "pp2-3",
+          "reasoning": "EA performed entirely underGA"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Licensed anesthesiologist/acupuncturist necessarily knows treatment",
+          "source_location": "p3",
+          "reasoning": "Licensed anesthesiologist/acupuncturist necessarily knows treatment"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Both groups same anesthetic procedure; no reported trial-context departures",
+          "source_location": "p3;registry protocol",
+          "reasoning": "Both groups same anesthetic procedure; no reported trial-context departures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response",
+          "source_location": "p2;registry",
+          "reasoning": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2,4",
+          "reasoning": "Within-subgroup assigned comparison;post-hoc selection assessedD5"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion",
+          "source_location": "registry outcome denominators",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "VAS appropriate; authorMME measurement conversion undocumented",
+          "source_location": "p3",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same post-op assessments;data collector blinded in registry",
+          "source_location": "registry",
+          "reasoning": "Same post-op assessments;data collector blinded in registry"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "N",
+          "evidence": "UnderGA subjects anddata collector blinded",
+          "source_location": "registry protocol;pp2-4",
+          "reasoning": "UnderGA subjects anddata collector blinded"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Historical prespecifiedSAP unavailable;current record updatedaftertrial",
+          "source_location": "registry status",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple pain/time measurements; prospective choices unclear",
+          "source_location": "p3 Fig1;registry",
+          "reasoning": "Multiple pain/time measurements; prospective choices unclear"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "PY",
+          "evidence": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "p4 Results",
+          "reasoning": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry; Concealment mechanism not reported; 11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p2;registry design; p2;registry; p4 Tables1-2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "EA performed entirely underGA; Licensed anesthesiologist/acupuncturist necessarily knows treatment; Both groups same anesthetic procedure; no reported trial-context departures; No departures identified; No departures identified; Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response; Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2-3; p3; p3;registry protocol; p3; p3; p2;registry; pp2,4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion; Available eligible subgroup; Available eligible subgroup; Available eligible subgroup",
+          "source_location": "registry outcome denominators; registry; registry; registry"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented; Same post-op assessments;data collector blinded in registry; UnderGA subjects anddata collector blinded; Blinded assessors; Blinded assessors",
+          "source_location": "p3; registry; registry protocol;pp2-4; registry; registry"
+        },
+        {
+          "domain": 5,
+          "judgment": "High",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial; Multiple pain/time measurements; prospective choices unclear; All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "registry status; p3 Fig1;registry; p4 Results"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Result-led female and age/weight subgroup emphasis after null all-participant analysis; prospective subgroup specification not established.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Female selected result remains High dueD5. D2Low: sex-defined subgroup preserves assignment; selection addressedD5, not automatically a trial-context deviation. D3Low using registry clarified eligible subgroupn8/9. Baseline9/9denominator corrected."
+    },
+    {
+      "result_id": "female_VAS_POD1",
+      "outcome": "FemaleVAS",
+      "time_window": "POD1",
+      "comparison": "No acupuncture under GA (registry calls sham/placebo)",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "NI",
+          "evidence": "Randomized stated without sequence-generation method in paper/registry",
+          "source_location": "p2;registry design",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment mechanism not reported",
+          "source_location": "p2;registry",
+          "reasoning": "Concealment mechanism not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p4 Tables1-2",
+          "reasoning": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "N",
+          "evidence": "EA performed entirely underGA",
+          "source_location": "pp2-3",
+          "reasoning": "EA performed entirely underGA"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Licensed anesthesiologist/acupuncturist necessarily knows treatment",
+          "source_location": "p3",
+          "reasoning": "Licensed anesthesiologist/acupuncturist necessarily knows treatment"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Both groups same anesthetic procedure; no reported trial-context departures",
+          "source_location": "p3;registry protocol",
+          "reasoning": "Both groups same anesthetic procedure; no reported trial-context departures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response",
+          "source_location": "p2;registry",
+          "reasoning": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2,4",
+          "reasoning": "Within-subgroup assigned comparison;post-hoc selection assessedD5"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion",
+          "source_location": "registry outcome denominators",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "VAS appropriate; authorMME measurement conversion undocumented",
+          "source_location": "p3",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same post-op assessments;data collector blinded in registry",
+          "source_location": "registry",
+          "reasoning": "Same post-op assessments;data collector blinded in registry"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "N",
+          "evidence": "UnderGA subjects anddata collector blinded",
+          "source_location": "registry protocol;pp2-4",
+          "reasoning": "UnderGA subjects anddata collector blinded"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Historical prespecifiedSAP unavailable;current record updatedaftertrial",
+          "source_location": "registry status",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple pain/time measurements; prospective choices unclear",
+          "source_location": "p3 Fig1;registry",
+          "reasoning": "Multiple pain/time measurements; prospective choices unclear"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "PY",
+          "evidence": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "p4 Results",
+          "reasoning": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry; Concealment mechanism not reported; 11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p2;registry design; p2;registry; p4 Tables1-2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "EA performed entirely underGA; Licensed anesthesiologist/acupuncturist necessarily knows treatment; Both groups same anesthetic procedure; no reported trial-context departures; No departures identified; No departures identified; Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response; Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2-3; p3; p3;registry protocol; p3; p3; p2;registry; pp2,4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion; Available eligible subgroup; Available eligible subgroup; Available eligible subgroup",
+          "source_location": "registry outcome denominators; registry; registry; registry"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented; Same post-op assessments;data collector blinded in registry; UnderGA subjects anddata collector blinded; Blinded assessors; Blinded assessors",
+          "source_location": "p3; registry; registry protocol;pp2-4; registry; registry"
+        },
+        {
+          "domain": 5,
+          "judgment": "High",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial; Multiple pain/time measurements; prospective choices unclear; All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "registry status; p3 Fig1;registry; p4 Results"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Result-led female and age/weight subgroup emphasis after null all-participant analysis; prospective subgroup specification not established.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Female selected result remains High dueD5. D2Low: sex-defined subgroup preserves assignment; selection addressedD5, not automatically a trial-context deviation. D3Low using registry clarified eligible subgroupn8/9. Baseline9/9denominator corrected."
+    },
+    {
+      "result_id": "female_VAS_POD2",
+      "outcome": "FemaleVAS",
+      "time_window": "POD2",
+      "comparison": "No acupuncture under GA (registry calls sham/placebo)",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "NI",
+          "evidence": "Randomized stated without sequence-generation method in paper/registry",
+          "source_location": "p2;registry design",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment mechanism not reported",
+          "source_location": "p2;registry",
+          "reasoning": "Concealment mechanism not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p4 Tables1-2",
+          "reasoning": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "N",
+          "evidence": "EA performed entirely underGA",
+          "source_location": "pp2-3",
+          "reasoning": "EA performed entirely underGA"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Licensed anesthesiologist/acupuncturist necessarily knows treatment",
+          "source_location": "p3",
+          "reasoning": "Licensed anesthesiologist/acupuncturist necessarily knows treatment"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Both groups same anesthetic procedure; no reported trial-context departures",
+          "source_location": "p3;registry protocol",
+          "reasoning": "Both groups same anesthetic procedure; no reported trial-context departures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response",
+          "source_location": "p2;registry",
+          "reasoning": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2,4",
+          "reasoning": "Within-subgroup assigned comparison;post-hoc selection assessedD5"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion",
+          "source_location": "registry outcome denominators",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "VAS appropriate; authorMME measurement conversion undocumented",
+          "source_location": "p3",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same post-op assessments;data collector blinded in registry",
+          "source_location": "registry",
+          "reasoning": "Same post-op assessments;data collector blinded in registry"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "N",
+          "evidence": "UnderGA subjects anddata collector blinded",
+          "source_location": "registry protocol;pp2-4",
+          "reasoning": "UnderGA subjects anddata collector blinded"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Historical prespecifiedSAP unavailable;current record updatedaftertrial",
+          "source_location": "registry status",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple pain/time measurements; prospective choices unclear",
+          "source_location": "p3 Fig1;registry",
+          "reasoning": "Multiple pain/time measurements; prospective choices unclear"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "PY",
+          "evidence": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "p4 Results",
+          "reasoning": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry; Concealment mechanism not reported; 11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p2;registry design; p2;registry; p4 Tables1-2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "EA performed entirely underGA; Licensed anesthesiologist/acupuncturist necessarily knows treatment; Both groups same anesthetic procedure; no reported trial-context departures; No departures identified; No departures identified; Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response; Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2-3; p3; p3;registry protocol; p3; p3; p2;registry; pp2,4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion; Available eligible subgroup; Available eligible subgroup; Available eligible subgroup",
+          "source_location": "registry outcome denominators; registry; registry; registry"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented; Same post-op assessments;data collector blinded in registry; UnderGA subjects anddata collector blinded; Blinded assessors; Blinded assessors",
+          "source_location": "p3; registry; registry protocol;pp2-4; registry; registry"
+        },
+        {
+          "domain": 5,
+          "judgment": "High",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial; Multiple pain/time measurements; prospective choices unclear; All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "registry status; p3 Fig1;registry; p4 Results"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Result-led female and age/weight subgroup emphasis after null all-participant analysis; prospective subgroup specification not established.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Female selected result remains High dueD5. D2Low: sex-defined subgroup preserves assignment; selection addressedD5, not automatically a trial-context deviation. D3Low using registry clarified eligible subgroupn8/9. Baseline9/9denominator corrected."
+    },
+    {
+      "result_id": "female_VAS_POD3",
+      "outcome": "FemaleVAS",
+      "time_window": "POD3",
+      "comparison": "No acupuncture under GA (registry calls sham/placebo)",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "NI",
+          "evidence": "Randomized stated without sequence-generation method in paper/registry",
+          "source_location": "p2;registry design",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment mechanism not reported",
+          "source_location": "p2;registry",
+          "reasoning": "Concealment mechanism not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p4 Tables1-2",
+          "reasoning": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "N",
+          "evidence": "EA performed entirely underGA",
+          "source_location": "pp2-3",
+          "reasoning": "EA performed entirely underGA"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Licensed anesthesiologist/acupuncturist necessarily knows treatment",
+          "source_location": "p3",
+          "reasoning": "Licensed anesthesiologist/acupuncturist necessarily knows treatment"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Both groups same anesthetic procedure; no reported trial-context departures",
+          "source_location": "p3;registry protocol",
+          "reasoning": "Both groups same anesthetic procedure; no reported trial-context departures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response",
+          "source_location": "p2;registry",
+          "reasoning": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2,4",
+          "reasoning": "Within-subgroup assigned comparison;post-hoc selection assessedD5"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion",
+          "source_location": "registry outcome denominators",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "VAS appropriate; authorMME measurement conversion undocumented",
+          "source_location": "p3",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same post-op assessments;data collector blinded in registry",
+          "source_location": "registry",
+          "reasoning": "Same post-op assessments;data collector blinded in registry"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "N",
+          "evidence": "UnderGA subjects anddata collector blinded",
+          "source_location": "registry protocol;pp2-4",
+          "reasoning": "UnderGA subjects anddata collector blinded"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Historical prespecifiedSAP unavailable;current record updatedaftertrial",
+          "source_location": "registry status",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple pain/time measurements; prospective choices unclear",
+          "source_location": "p3 Fig1;registry",
+          "reasoning": "Multiple pain/time measurements; prospective choices unclear"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "PY",
+          "evidence": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "p4 Results",
+          "reasoning": "All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry; Concealment mechanism not reported; 11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p2;registry design; p2;registry; p4 Tables1-2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "EA performed entirely underGA; Licensed anesthesiologist/acupuncturist necessarily knows treatment; Both groups same anesthetic procedure; no reported trial-context departures; No departures identified; No departures identified; Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response; Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2-3; p3; p3;registry protocol; p3; p3; p2;registry; pp2,4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "8/9eligiblefemale data; excludedfemale preexistingTNF criterion; Available eligible subgroup; Available eligible subgroup; Available eligible subgroup",
+          "source_location": "registry outcome denominators; registry; registry; registry"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented; Same post-op assessments;data collector blinded in registry; UnderGA subjects anddata collector blinded; Blinded assessors; Blinded assessors",
+          "source_location": "p3; registry; registry protocol;pp2-4; registry; registry"
+        },
+        {
+          "domain": 5,
+          "judgment": "High",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial; Multiple pain/time measurements; prospective choices unclear; All-patientanalysis nonsignificant; paper then selects females andage/weightsubgroups to highlightbenefit",
+          "source_location": "registry status; p3 Fig1;registry; p4 Results"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Result-led female and age/weight subgroup emphasis after null all-participant analysis; prospective subgroup specification not established.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Female selected result remains High dueD5. D2Low: sex-defined subgroup preserves assignment; selection addressedD5, not automatically a trial-context deviation. D3Low using registry clarified eligible subgroupn8/9. Baseline9/9denominator corrected."
+    },
+    {
+      "result_id": "all_PACU_VAS",
+      "outcome": "All-participant VAS",
+      "time_window": "PACUthrough2h",
+      "comparison": "No acupuncture under GA (registry calls sham/placebo)",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "NI",
+          "evidence": "Randomized stated without sequence-generation method in paper/registry",
+          "source_location": "p2;registry design",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Concealment mechanism not reported",
+          "source_location": "p2;registry",
+          "reasoning": "Concealment mechanism not reported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p4 Tables1-2",
+          "reasoning": "11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "N",
+          "evidence": "EA performed entirely underGA",
+          "source_location": "pp2-3",
+          "reasoning": "EA performed entirely underGA"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Licensed anesthesiologist/acupuncturist necessarily knows treatment",
+          "source_location": "p3",
+          "reasoning": "Licensed anesthesiologist/acupuncturist necessarily knows treatment"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Both groups same anesthetic procedure; no reported trial-context departures",
+          "source_location": "p3;registry protocol",
+          "reasoning": "Both groups same anesthetic procedure; no reported trial-context departures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No departures identified",
+          "source_location": "p3",
+          "reasoning": "No departures identified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response",
+          "source_location": "p2;registry",
+          "reasoning": "Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2,4",
+          "reasoning": "Within-subgroup assigned comparison;post-hoc selection assessedD5"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "All20 registry denominators11/9",
+          "source_location": "registry Visual Acuity Score",
+          "reasoning": "All20 registry denominators11/9"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Available eligible subgroup",
+          "source_location": "registry",
+          "reasoning": "Available eligible subgroup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "VAS appropriate; authorMME measurement conversion undocumented",
+          "source_location": "p3",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same post-op assessments;data collector blinded in registry",
+          "source_location": "registry",
+          "reasoning": "Same post-op assessments;data collector blinded in registry"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "N",
+          "evidence": "UnderGA subjects anddata collector blinded",
+          "source_location": "registry protocol;pp2-4",
+          "reasoning": "UnderGA subjects anddata collector blinded"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Blinded assessors",
+          "source_location": "registry",
+          "reasoning": "Blinded assessors"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Historical prespecifiedSAP unavailable;current record updatedaftertrial",
+          "source_location": "registry status",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple pain/time measurements; prospective choices unclear",
+          "source_location": "p3 Fig1;registry",
+          "reasoning": "Multiple pain/time measurements; prospective choices unclear"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Allrandomizedpatientsreported; subgroupselectionnotapplicable tothisall-participantresult;prospectiveSAPunverified",
+          "source_location": "registry;articleFig1C",
+          "reasoning": "Allrandomizedpatientsreported; subgroupselectionnotapplicable tothisall-participantresult;prospectiveSAPunverified"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Randomized stated without sequence-generation method in paper/registry; Concealment mechanism not reported; 11/9arms and2malesonlyEA plausible chance in tiny trial; no clear failure",
+          "source_location": "p2;registry design; p2;registry; p4 Tables1-2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "EA performed entirely underGA; Licensed anesthesiologist/acupuncturist necessarily knows treatment; Both groups same anesthetic procedure; no reported trial-context departures; No departures identified; No departures identified; Withinfemale subgroup randomized arm retained; preexistingTNF exclusion defined as eligibility, not response; Within-subgroup assigned comparison;post-hoc selection assessedD5",
+          "source_location": "pp2-3; p3; p3;registry protocol; p3; p3; p2;registry; pp2,4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All20 registry denominators11/9; Available eligible subgroup; Available eligible subgroup; Available eligible subgroup",
+          "source_location": "registry Visual Acuity Score; registry; registry; registry"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "VAS appropriate; authorMME measurement conversion undocumented; Same post-op assessments;data collector blinded in registry; UnderGA subjects anddata collector blinded; Blinded assessors; Blinded assessors",
+          "source_location": "p3; registry; registry protocol;pp2-4; registry; registry"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Historical prespecifiedSAP unavailable;current record updatedaftertrial; Multiple pain/time measurements; prospective choices unclear; Allrandomizedpatientsreported; subgroupselectionnotapplicable tothisall-participantresult;prospectiveSAPunverified",
+          "source_location": "registry status; p3 Fig1;registry; registry;articleFig1C"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "All-participant result avoids selectedfemaleanalysis;randomizationmethodanddatedSAPstillunclear.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Female selected result remains High dueD5. D2Low: sex-defined subgroup preserves assignment; selection addressedD5, not automatically a trial-context deviation. D3Low using registry clarified eligible subgroupn8/9. Baseline9/9denominator corrected."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Noexplicit0-24hcumulativeIVopioid; registryPACUanddaily author-convertedME not interchangeable.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Underlying analgesic list not reported",
+    "route": "Insufficient information / not reported.",
+    "unit": "Author morphine equivalentsmg",
+    "raw_values": {
+      "female_PACU": {
+        "Tmean": 3.19,
+        "Tse": 1.59,
+        "Tn": 8,
+        "Cmean": 7.36,
+        "Cse": 1.49,
+        "Cn": 9
+      },
+      "female_Day1": {
+        "Tmean": 6.31,
+        "Tse": 2.14,
+        "Tn": 8,
+        "Cmean": 9,
+        "Cse": 2.44,
+        "Cn": 9
+      }
+    },
+    "comparison_selection": "NoacupunctureGAcontrol; subgroup separate fromallpatients",
+    "multiarm_handling": "Do not independentlycountsubgroupandallparticipantresults",
+    "source_location": "Registry NCT01937520;Fig1"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Exact24hdrug/routeconsumption,conversionfactors,registry/figurepainseriesreconciliation,datedsubgroupSAP",
+      "why_it_matters": "Primaryopioiddefinitionandsubgroup/SElimitations",
+      "analysis_affected": "Opioidandpain",
+      "can_proceed_without": "Primaryopioidexcluded;registryrawresultsdescriptive",
+      "priority": "HIGH",
+      "exact_question": "Please provide drug-specific actualend-of-surgery-through24hdoses/routes andSD/n, authors'morphineconversionrules, resolveFig1Hversusregistrypaintimes, andprovideprospectivefemale-subgroupSAP."
+    }
+  ],
+  "summary": "All3rowsadjudicated.Registryrescuednumericmean/SEresults, correctedwomen'sn9to8, andFigure1DsignificanceisP<0.1.Exact24hIVopioidunestablished;9itemQoRnotQoR15/40.",
+  "unblinded_supplemental_checks": [],
+  "phase_a_source": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/phase_a/S054.json",
+  "guidance_source": "Official RoB2 22 August 2019; local batch6_rob2_guidance.pdf"
+}

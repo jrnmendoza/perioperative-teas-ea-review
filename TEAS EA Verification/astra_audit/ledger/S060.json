@@ -1,0 +1,34 @@
+{
+  "Study_ID": "S060",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_at": "2026-09-05T15:19:03.597Z",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows": 3,
+  "reviewed_rows": 3,
+  "reviewed_row_ids": [
+    17,
+    18,
+    262
+  ],
+  "result_specific_rob_count": 2,
+  "unresolved": [
+    {
+      "missing_information": "Exact 24-hour opioid mass and actual PCA delivery accounting",
+      "why_it_matters": "Reported 48-hour volumes do not follow from stated basal rate plus effective boluses; concentration is weight-dependent.",
+      "analysis_affected": "Primary opioid analysis and 48-hour PCA-volume sensitivity analysis",
+      "can_proceed_without": "Exclude primary opioid result; preserve qualified raw 48-hour volume.",
+      "priority": "High",
+      "exact_question": "Please provide individual-weight-based absolute sufentanil consumption from end of surgery through 24 hours, all additional systemic opioids, arm-specific n/mean/SD, and explain how 48-hour volumes were calculated from basal and bolus delivery."
+    },
+    {
+      "missing_information": "Numerical 24-hour VAS and outcomes for five randomized exclusions",
+      "why_it_matters": "The figure does not validate baseline digitized values; exclusion may bias pain.",
+      "analysis_affected": "24-hour pain and assignment-effect RoB2",
+      "can_proceed_without": "Qualitative pain finding only.",
+      "priority": "High",
+      "exact_question": "Please provide the 24-hour VAS mean, SD, activity condition, and participant-level or arm-level outcome data for all 70 randomized patients, including five excluded patients."
+    }
+  ],
+  "summary": "All three baseline rows adjudicated. Removed unverified digitized VAS means/SDs, verified 48-hour PCA volumes and P<0.001, and excluded the missing 24-hour opioid endpoint. Pain and objective PCA use receive distinct RoB2 judgments.",
+  "adjudicated_at": "2026-09-05T15:25:40.282Z"
+}

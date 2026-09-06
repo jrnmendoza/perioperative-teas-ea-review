@@ -1,0 +1,26 @@
+{
+  "Study_ID": "S007",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "outcome_rows_expected": 5,
+  "outcome_rows_reviewed": 5,
+  "rob_results_reviewed": 6,
+  "baseline_rows": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "limitations": [
+    "No exact24h opioid data",
+    "Registry current record only; no original SAP",
+    "Pain/posture and vomiting interval unspecified"
+  ],
+  "files": [
+    "phase_a/S007.json",
+    "adjudicated/S007.json",
+    "ledger/S007.json"
+  ],
+  "summary": "All5 baseline rows audited; six result-specific RoB2 assessments. Corrected delayed-void clock to anesthesia induction and POUR table locator. Raw48h equivalents retained, excluded strict24h; selected void High→Some concerns."
+}

@@ -1,0 +1,3849 @@
+{
+  "Study_ID": "S031",
+  "Study": "Lu 2021",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Confirmed; registry inconsistencies retained",
+    "title": "Transcutaneous electrical acupoint stimulation before surgery reduces chronic pain after mastectomy: A randomized clinical trial",
+    "year": 2021,
+    "doi": "10.1016/j.jclinane.2021.110453",
+    "pdf_files": [
+      "covidence_414_full_article.pdf"
+    ],
+    "randomized_arms": "Sham188,single198,combined190",
+    "analyzed_arms": "ITT188/198/190; PP184/196/188",
+    "modality": "TEAS",
+    "comparator_class": "Sham/no current",
+    "independence": "One three-arm RCT",
+    "source_locations": "Complete pp1–7; Figure1,Tables2–3 visually checked",
+    "identity_notes": "Current registry593 versus paper576; no replacement of publication denominators."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 126,
+      "final": {
+        "_baseline_row": 126,
+        "Canonical study": "Lu 2021",
+        "Comparison ID": "LU21_COMB_vs_SHAM_CHRONIC6M",
+        "Intervention arm": "Combined PC6+CV17 TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Chronic pain",
+        "Outcome/result": "Post-mastectomy chronic pain incidence",
+        "Timepoint/window": "6 months",
+        "Data type": "Events/total",
+        "Randomized n intervention": 190,
+        "Randomized n comparator": 188,
+        "Analyzed n intervention": 190,
+        "Analyzed n comparator": 188,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 42,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 65,
+        "Unit/scale": "participants",
+        "Reported P": "Overall P=0.005; combined vs sham pairwise P varies by article section",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study effect arithmetic; raw data unconverted",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.6393522267206477,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous chronic-pain analysis using raw event counts",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Printed RR/P-values conflict across abstract, Results and Table 2; raw counts 42/190 vs 65/188 are the stable source facts",
+        "Source location": "Table 2 / primary 6-month chronic pain",
+        "Source PDF URL": "https://doi.org/10.1016/j.jclinane.2021.110453",
+        "Record status": "SOURCE-VERIFIED / PUBLISHED EFFECT QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 126,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2021",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU21_COMB_vs_SHAM_CHRONIC6M",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Combined PC6+CV17 TEAS",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Chronic pain",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Post-mastectomy chronic pain incidence",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "6 months",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 190,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 188,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 190,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "ITT table n retained; Figure1 actual completion differs. Not counted as observed for RoB.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 188,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Sham table ITT188 versus184 completers.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 42,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 65,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "Overall P=0.005; combined vs sham pairwise P varies by article section",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.6393522267206477,
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Checked source arithmetic: (eventsI/nI)/(eventsC/nC), or meanI−meanC. Not source-reported effect.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous chronic-pain analysis using raw event counts",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Printed RR/P-values conflict across abstract, Results and Table 2; raw counts 42/190 vs 65/188 are the stable source facts",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 2 / primary 6-month chronic pain",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / PUBLISHED EFFECT QC",
+          "source_location": "Table2 p5;Figure1 p3",
+          "evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "final_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table2 p5;Figure1 p3",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1MgD_OucfiyNEDdDe3osh8W01U1yYZs08/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "final_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table2 p5;Figure1 p3",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_414_full_article.pdf",
+      "source_evidence": "Combined42/190 vs sham65/188 chronic pain6months; overallP=.005. Printed RR/P conflicts.",
+      "drug": "Sufentanil PCA background",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Parecoxib sodium40mg if NRS>4",
+      "critical_qc": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+      "analysis_eligibility": "Eligible for dichotomous chronic-pain analysis using raw event counts; one trial with shared sham",
+      "notes": "Unblinded supplemental registry check: current NCT02741726 enrollment593 versus publication576; frequency2/15 versus2/10; quadruple masking versus expressly unmasked participants. Publication retained, clarification needed."
+    },
+    {
+      "baseline_row": 127,
+      "final": {
+        "_baseline_row": 127,
+        "Canonical study": "Lu 2021",
+        "Comparison ID": "LU21_SINGLE_vs_SHAM_CHRONIC6M",
+        "Intervention arm": "Single PC6 TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Chronic pain",
+        "Outcome/result": "Post-mastectomy chronic pain incidence",
+        "Timepoint/window": "6 months",
+        "Data type": "Events/total",
+        "Randomized n intervention": 198,
+        "Randomized n comparator": 188,
+        "Analyzed n intervention": 198,
+        "Analyzed n comparator": 188,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 72,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 65,
+        "Unit/scale": "participants",
+        "Reported P": "Overall P=0.005; single vs sham pairwise P reported 0.71 in Table 2",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study effect arithmetic; raw data unconverted",
+        "Derived effect measure": "RR",
+        "Derived effect": 1.0517482517482517,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible only with explicit source-conflict sensitivity handling",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Table 2 gives 72/198; Results prose gives 79/196. Preserve Table 2 here and flag conflict rather than silently reconcile",
+        "Source location": "Table 2 / primary 6-month chronic pain",
+        "Source PDF URL": "https://doi.org/10.1016/j.jclinane.2021.110453",
+        "Record status": "SOURCE-VERIFIED / DENOMINATOR CONFLICT"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 127,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2021",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU21_SINGLE_vs_SHAM_CHRONIC6M",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Single PC6 TEAS",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Chronic pain",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Post-mastectomy chronic pain incidence",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "6 months",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 198,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 188,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 198,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "ITT table n retained; Figure1 actual completion differs. Not counted as observed for RoB.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 188,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Sham table ITT188 versus184 completers.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 72,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 65,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "Overall P=0.005; single vs sham pairwise P reported 0.71 in Table 2",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 1.0517482517482517,
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Checked source arithmetic: (eventsI/nI)/(eventsC/nC), or meanI−meanC. Not source-reported effect.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible only with explicit source-conflict sensitivity handling",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Table 2 gives 72/198; Results prose gives 79/196. Preserve Table 2 here and flag conflict rather than silently reconcile",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 2 / primary 6-month chronic pain",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / DENOMINATOR CONFLICT",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "final_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1MgD_OucfiyNEDdDe3osh8W01U1yYZs08/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "final_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table2 p5 versus §3.2 p4",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_414_full_article.pdf",
+      "source_evidence": "Single72/198 vs sham65/188; prose79/196 conflicts; pairwiseP=.71.",
+      "drug": "Sufentanil PCA background",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Parecoxib sodium40mg if NRS>4",
+      "critical_qc": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+      "analysis_eligibility": "Eligible only with explicit source-conflict sensitivity handling; one trial with shared sham",
+      "notes": "Unblinded supplemental registry check: current NCT02741726 enrollment593 versus publication576; frequency2/15 versus2/10; quadruple masking versus expressly unmasked participants. Publication retained, clarification needed."
+    },
+    {
+      "baseline_row": 128,
+      "final": {
+        "_baseline_row": 128,
+        "Canonical study": "Lu 2021",
+        "Comparison ID": "LU21_COMB_vs_SHAM_REMI",
+        "Intervention arm": "Combined PC6+CV17 TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Intraoperative opioid",
+        "Outcome/result": "Total remifentanil",
+        "Timepoint/window": "Intraoperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 190,
+        "Randomized n comparator": 188,
+        "Analyzed n intervention": 190,
+        "Analyzed n comparator": 188,
+        "Mean intervention": 1.2,
+        "SD intervention": 0.5,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 1.4,
+        "SD comparator": 0.7,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg remifentanil",
+        "Reported P": "P<0.001 combined vs sham",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study effect arithmetic; raw data unconverted",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.19999999999999996,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for intraoperative opioid-sparing analysis",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Three-arm trial; sham is a shared comparator",
+        "Source location": "Table 3 / intraoperative remifentanil",
+        "Source PDF URL": "https://doi.org/10.1016/j.jclinane.2021.110453",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 128,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2021",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU21_COMB_vs_SHAM_REMI",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Combined PC6+CV17 TEAS",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Intraoperative opioid",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total remifentanil",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Intraoperative",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 190,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 188,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 190,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "ITT table n retained; Figure1 actual completion differs. Not counted as observed for RoB.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 188,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Sham table ITT188 versus184 completers.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 1.2,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.5,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 1.4,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.7,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg remifentanil",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "P<0.001 combined vs sham",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.19999999999999996,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Checked source arithmetic: (eventsI/nI)/(eventsC/nC), or meanI−meanC. Not source-reported effect.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for intraoperative opioid-sparing analysis",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Three-arm trial; sham is a shared comparator",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 3 / intraoperative remifentanil",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "final_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1MgD_OucfiyNEDdDe3osh8W01U1yYZs08/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "final_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_414_full_article.pdf",
+      "source_evidence": "Intraoperative remifentanil mg combined1.2±0.5 n190 vs sham1.4±0.7 n188; P<.001.",
+      "drug": "Remifentanil",
+      "route": "IV",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Parecoxib sodium40mg if NRS>4",
+      "critical_qc": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+      "analysis_eligibility": "Eligible for intraoperative opioid-sparing analysis; one trial with shared sham",
+      "notes": "Unblinded supplemental registry check: current NCT02741726 enrollment593 versus publication576; frequency2/15 versus2/10; quadruple masking versus expressly unmasked participants. Publication retained, clarification needed."
+    },
+    {
+      "baseline_row": 129,
+      "final": {
+        "_baseline_row": 129,
+        "Canonical study": "Lu 2021",
+        "Comparison ID": "LU21_SINGLE_vs_SHAM_REMI",
+        "Intervention arm": "Single PC6 TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Intraoperative opioid",
+        "Outcome/result": "Total remifentanil",
+        "Timepoint/window": "Intraoperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 198,
+        "Randomized n comparator": 188,
+        "Analyzed n intervention": 198,
+        "Analyzed n comparator": 188,
+        "Mean intervention": 1.3,
+        "SD intervention": 0.6,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 1.4,
+        "SD comparator": 0.7,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg remifentanil",
+        "Reported P": "P=0.04 single vs sham; not significant after Bonferroni alpha 0.0125",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study effect arithmetic; raw data unconverted",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.09999999999999987,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for intraoperative opioid analysis with multiplicity-aware interpretation",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Three-arm trial; do not describe P=0.04 as multiplicity-adjusted significant",
+        "Source location": "Table 3 / intraoperative remifentanil",
+        "Source PDF URL": "https://doi.org/10.1016/j.jclinane.2021.110453",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 129,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2021",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU21_SINGLE_vs_SHAM_REMI",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Single PC6 TEAS",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Intraoperative opioid",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total remifentanil",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Intraoperative",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 198,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 188,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 198,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "ITT table n retained; Figure1 actual completion differs. Not counted as observed for RoB.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 188,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Sham table ITT188 versus184 completers.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 1.3,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.6,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 1.4,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.7,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg remifentanil",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "P=0.04 single vs sham; not significant after Bonferroni alpha 0.0125",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.09999999999999987,
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Checked source arithmetic: (eventsI/nI)/(eventsC/nC), or meanI−meanC. Not source-reported effect.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for intraoperative opioid analysis with multiplicity-aware interpretation",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Three-arm trial; do not describe P=0.04 as multiplicity-adjusted significant",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 3 / intraoperative remifentanil",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "final_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1MgD_OucfiyNEDdDe3osh8W01U1yYZs08/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "final_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table3 p5;§2.5–2.6 p2",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_414_full_article.pdf",
+      "source_evidence": "Intraoperative remifentanil mg single1.3±0.6 n198 vs sham1.4±0.7 n188; P=.04, alpha=.0125.",
+      "drug": "Remifentanil",
+      "route": "IV",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Parecoxib sodium40mg if NRS>4",
+      "critical_qc": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+      "analysis_eligibility": "Eligible for intraoperative opioid analysis with multiplicity-aware interpretation; one trial with shared sham",
+      "notes": "Unblinded supplemental registry check: current NCT02741726 enrollment593 versus publication576; frequency2/15 versus2/10; quadruple masking versus expressly unmasked participants. Publication retained, clarification needed."
+    },
+    {
+      "baseline_row": 130,
+      "final": {
+        "_baseline_row": 130,
+        "Canonical study": "Lu 2021",
+        "Comparison ID": "LU21_COMB_vs_SHAM_PONV24",
+        "Intervention arm": "Combined PC6+CV17 TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "PONV",
+        "Outcome/result": "Any PONV",
+        "Timepoint/window": "0–24 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 190,
+        "Randomized n comparator": 188,
+        "Analyzed n intervention": 190,
+        "Analyzed n comparator": 188,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 35,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 68,
+        "Unit/scale": "participants",
+        "Reported P": "Overall P=0.0001",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study effect arithmetic; raw data unconverted",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.5092879256965943,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous 24-h PONV analysis",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Use raw event counts; three-arm shared sham comparator",
+        "Source location": "24-h PONV table",
+        "Source PDF URL": "https://doi.org/10.1016/j.jclinane.2021.110453",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 130,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2021",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU21_COMB_vs_SHAM_PONV24",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Combined PC6+CV17 TEAS",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Any PONV",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0–24 h",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 190,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 188,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 190,
+          "source_location": "Table3 p5",
+          "evidence": "ITT table n retained; Figure1 actual completion differs. Not counted as observed for RoB.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 188,
+          "source_location": "Table3 p5",
+          "evidence": "Sham table ITT188 versus184 completers.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 35,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 68,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "Overall P=0.0001",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.5092879256965943,
+          "source_location": "Table3 p5",
+          "evidence": "Checked source arithmetic: (eventsI/nI)/(eventsC/nC), or meanI−meanC. Not source-reported effect.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous 24-h PONV analysis",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Use raw event counts; three-arm shared sham comparator",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "24-h PONV table",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "24 h",
+          "source_value": "0–24 h",
+          "final_value": "0–24 h",
+          "source_location": "Table3 p5",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "final_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table3 p5",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1MgD_OucfiyNEDdDe3osh8W01U1yYZs08/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "final_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table3 p5",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_414_full_article.pdf",
+      "source_evidence": "PONV by24h combined35/190 vs sham68/188; overallP=.0001.",
+      "drug": "Sufentanil PCA background",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Parecoxib sodium40mg if NRS>4",
+      "critical_qc": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+      "analysis_eligibility": "Eligible for dichotomous 24-h PONV analysis; one trial with shared sham",
+      "notes": "Unblinded supplemental registry check: current NCT02741726 enrollment593 versus publication576; frequency2/15 versus2/10; quadruple masking versus expressly unmasked participants. Publication retained, clarification needed."
+    },
+    {
+      "baseline_row": 131,
+      "final": {
+        "_baseline_row": 131,
+        "Canonical study": "Lu 2021",
+        "Comparison ID": "LU21_SINGLE_vs_SHAM_PONV24",
+        "Intervention arm": "Single PC6 TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "PONV",
+        "Outcome/result": "Any PONV",
+        "Timepoint/window": "0–24 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 198,
+        "Randomized n comparator": 188,
+        "Analyzed n intervention": 198,
+        "Analyzed n comparator": 188,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 59,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 68,
+        "Unit/scale": "participants",
+        "Reported P": "Overall P=0.0001",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study effect arithmetic; raw data unconverted",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.8238265002970884,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous 24-h PONV analysis with multi-arm adjustment",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Overall P is three-group; pairwise significance should not be inferred unless directly reported",
+        "Source location": "24-h PONV table",
+        "Source PDF URL": "https://doi.org/10.1016/j.jclinane.2021.110453",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 131,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2021",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU21_SINGLE_vs_SHAM_PONV24",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Single PC6 TEAS",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Any PONV",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0–24 h",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 198,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 188,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 198,
+          "source_location": "Table3 p5",
+          "evidence": "ITT table n retained; Figure1 actual completion differs. Not counted as observed for RoB.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 188,
+          "source_location": "Table3 p5",
+          "evidence": "Sham table ITT188 versus184 completers.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 59,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 68,
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "Overall P=0.0001",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.8238265002970884,
+          "source_location": "Table3 p5",
+          "evidence": "Checked source arithmetic: (eventsI/nI)/(eventsC/nC), or meanI−meanC. Not source-reported effect.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous 24-h PONV analysis with multi-arm adjustment",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Overall P is three-group; pairwise significance should not be inferred unless directly reported",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "24-h PONV table",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "Table3 p5",
+          "evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "24 h",
+          "source_value": "0–24 h",
+          "final_value": "0–24 h",
+          "source_location": "Table3 p5",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "final_value": "Yes: within-study effect arithmetic; raw data unconverted",
+          "source_location": "Table3 p5",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1MgD_OucfiyNEDdDe3osh8W01U1yYZs08/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "final_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "Table3 p5",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_414_full_article.pdf",
+      "source_evidence": "PONV by24h single59/198 vs sham68/188; overallP=.0001.",
+      "drug": "Sufentanil PCA background",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Parecoxib sodium40mg if NRS>4",
+      "critical_qc": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+      "analysis_eligibility": "Eligible for dichotomous 24-h PONV analysis with multi-arm adjustment; one trial with shared sham",
+      "notes": "Unblinded supplemental registry check: current NCT02741726 enrollment593 versus publication576; frequency2/15 versus2/10; quadruple masking versus expressly unmasked participants. Publication retained, clarification needed."
+    },
+    {
+      "baseline_row": 132,
+      "final": {
+        "_baseline_row": 132,
+        "Canonical study": "Lu 2021",
+        "Comparison ID": "LU21_POSTOP_OPIOID24",
+        "Intervention arm": "TEAS arms",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative postoperative sufentanil PCA consumption",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": null,
+        "Randomized n comparator": null,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "Insufficient information / not reported.",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h postoperative opioid meta-analysis",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "PCA opioid is sufentanil but prescription and cumulative 24-h consumption are not reported",
+        "Source location": "Postoperative PCA section",
+        "Source PDF URL": "https://doi.org/10.1016/j.jclinane.2021.110453",
+        "Record status": "MISSING / AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 132,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Lu 2021",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LU21_POSTOP_OPIOID24",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS arms",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative postoperative sufentanil PCA consumption",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "ITT table n retained; Figure1 actual completion differs. Not counted as observed for RoB.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Sham table ITT188 versus184 completers.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "Insufficient information / not reported.",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Checked source arithmetic: (eventsI/nI)/(eventsC/nC), or meanI−meanC. Not source-reported effect.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h postoperative opioid meta-analysis",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "PCA opioid is sufentanil but prescription and cumulative 24-h consumption are not reported",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Postoperative PCA section",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "MISSING / AUTHOR DATA NEEDED",
+          "source_location": "§2.6 p3;Table3 p5",
+          "evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Unit/scale",
+          "old_value": "µg sufentanil",
+          "source_value": "Insufficient information / not reported.",
+          "final_value": "Insufficient information / not reported.",
+          "source_location": "§2.6 p3;Table3 p5",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1MgD_OucfiyNEDdDe3osh8W01U1yYZs08/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "final_value": "https://doi.org/10.1016/j.jclinane.2021.110453",
+          "source_location": "§2.6 p3;Table3 p5",
+          "reason": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_414_full_article.pdf",
+      "source_evidence": "Postoperative sufentanil PCA mentioned without quantity, concentration or delivered-dose data.",
+      "drug": "Sufentanil PCA background",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Parecoxib sodium40mg if NRS>4",
+      "critical_qc": "Retain source quantities with reporting and shared-control qualifications; derived RR/MD arithmetic independently checked.",
+      "analysis_eligibility": "No numerical postoperative opioid result",
+      "notes": "Unblinded supplemental registry check: current NCT02741726 enrollment593 versus publication576; frequency2/15 versus2/10; quadruple masking versus expressly unmasked participants. Publication retained, clarification needed."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "LU21_COMB_vs_SHAM_CHRONIC6M",
+      "outcome": "Post-mastectomy chronic pain incidence",
+      "time_window": "6 months",
+      "comparison": "Combined PC6+CV17 TEAS vs Sham/no current",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Central computer-generated randomization stratified by center with variable blocks.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Central computer-generated randomization stratified by center with variable blocks."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Secured web-based allocation system.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Secured web-based allocation system."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "No concerning imbalance in age, BMI, surgical-site pain or therapies.",
+          "source_location": "Table1",
+          "reasoning": "No concerning imbalance in age, BMI, surgical-site pain or therapies."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Patients explicitly not masked.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Patients explicitly not masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Interventionist unmasked; other clinical staff blinded.",
+          "source_location": "p2 §2.3–2.4",
+          "reasoning": "Interventionist unmasked; other clinical staff blinded."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified.",
+          "source_location": "p2 §2.1,2.6",
+          "reasoning": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity.",
+          "source_location": "p3 §2.7, Figure1",
+          "reasoning": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "PY",
+          "evidence": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events.",
+          "source_location": "Figure1, Tables2–3",
+          "reasoning": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "Common defined pain questionnaire or PONV outcome.",
+          "source_location": "p2 §2.5; Tables2–3",
+          "reasoning": "Common defined pain questionnaire or PONV outcome."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same follow-up schedules with blinded interviewer.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Same follow-up schedules with blinded interviewer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "Y",
+          "evidence": "Participant is unmasked assessor for self-reported symptoms.",
+          "source_location": "p2 §2.3; p6 limitations",
+          "reasoning": "Participant is unmasked assessor for self-reported symptoms."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Knowledge can influence pain/nausea reporting.",
+          "source_location": "p6 limitations",
+          "reasoning": "Knowledge can influence pain/nausea reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "No expectancy or masking-success data establish likely influence.",
+          "source_location": "p6 limitations",
+          "reasoning": "No expectancy or masking-success data establish likely influence."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion.",
+          "source_location": "NCT02741726 API status/outcomes; p3 §2.7",
+          "reasoning": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed.",
+          "source_location": "NCT02741726 API",
+          "reasoning": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "ITT/PP stated but dated analysis choices unavailable.",
+          "source_location": "p3 §2.7",
+          "reasoning": "ITT/PP stated but dated analysis choices unavailable."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Central concealed randomization, no concerning imbalance.",
+          "source_location": "p2;Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context deviations established; ITT.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Near complete common outcomes, balanced small attrition.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked subjective reporting could be influenced; actual likely influence not established.",
+          "source_location": "p6"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No dated detailed analysis plan.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "D4 and D5 concerns do not establish probable bias or interacting concerns substantially undermining raw-count result.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Selected result High reduced to Some concerns: awareness establishes possible rather than automatically probable influence; source numerical conflicts remain separately qualified."
+    },
+    {
+      "result_id": "LU21_SINGLE_vs_SHAM_CHRONIC6M",
+      "outcome": "Post-mastectomy chronic pain incidence",
+      "time_window": "6 months",
+      "comparison": "Single PC6 TEAS vs Sham/no current",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Central computer-generated randomization stratified by center with variable blocks.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Central computer-generated randomization stratified by center with variable blocks."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Secured web-based allocation system.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Secured web-based allocation system."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "No concerning imbalance in age, BMI, surgical-site pain or therapies.",
+          "source_location": "Table1",
+          "reasoning": "No concerning imbalance in age, BMI, surgical-site pain or therapies."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Patients explicitly not masked.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Patients explicitly not masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Interventionist unmasked; other clinical staff blinded.",
+          "source_location": "p2 §2.3–2.4",
+          "reasoning": "Interventionist unmasked; other clinical staff blinded."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified.",
+          "source_location": "p2 §2.1,2.6",
+          "reasoning": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity.",
+          "source_location": "p3 §2.7, Figure1",
+          "reasoning": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "PY",
+          "evidence": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events.",
+          "source_location": "Figure1, Tables2–3",
+          "reasoning": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "Common defined pain questionnaire or PONV outcome.",
+          "source_location": "p2 §2.5; Tables2–3",
+          "reasoning": "Common defined pain questionnaire or PONV outcome."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same follow-up schedules with blinded interviewer.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Same follow-up schedules with blinded interviewer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "Y",
+          "evidence": "Participant is unmasked assessor for self-reported symptoms.",
+          "source_location": "p2 §2.3; p6 limitations",
+          "reasoning": "Participant is unmasked assessor for self-reported symptoms."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Knowledge can influence pain/nausea reporting.",
+          "source_location": "p6 limitations",
+          "reasoning": "Knowledge can influence pain/nausea reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "No expectancy or masking-success data establish likely influence.",
+          "source_location": "p6 limitations",
+          "reasoning": "No expectancy or masking-success data establish likely influence."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion.",
+          "source_location": "NCT02741726 API status/outcomes; p3 §2.7",
+          "reasoning": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed.",
+          "source_location": "NCT02741726 API",
+          "reasoning": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "ITT/PP stated but dated analysis choices unavailable.",
+          "source_location": "p3 §2.7",
+          "reasoning": "ITT/PP stated but dated analysis choices unavailable."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Central concealed randomization, no concerning imbalance.",
+          "source_location": "p2;Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context deviations established; ITT.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Near complete common outcomes, balanced small attrition.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked subjective reporting could be influenced; actual likely influence not established.",
+          "source_location": "p6"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No dated detailed analysis plan.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "D4 and D5 concerns do not establish probable bias or interacting concerns substantially undermining raw-count result.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Selected result High reduced to Some concerns: awareness establishes possible rather than automatically probable influence; source numerical conflicts remain separately qualified."
+    },
+    {
+      "result_id": "LU21_COMB_vs_SHAM_REMI",
+      "outcome": "Total remifentanil",
+      "time_window": "Intraoperative",
+      "comparison": "Combined PC6+CV17 TEAS vs Sham/no current",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Central computer-generated randomization stratified by center with variable blocks.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Central computer-generated randomization stratified by center with variable blocks."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Secured web-based allocation system.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Secured web-based allocation system."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "No concerning imbalance in age, BMI, surgical-site pain or therapies.",
+          "source_location": "Table1",
+          "reasoning": "No concerning imbalance in age, BMI, surgical-site pain or therapies."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Patients explicitly not masked.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Patients explicitly not masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Interventionist unmasked; other clinical staff blinded.",
+          "source_location": "p2 §2.3–2.4",
+          "reasoning": "Interventionist unmasked; other clinical staff blinded."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified.",
+          "source_location": "p2 §2.1,2.6",
+          "reasoning": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity.",
+          "source_location": "p3 §2.7, Figure1",
+          "reasoning": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "PY",
+          "evidence": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events.",
+          "source_location": "Figure1, Tables2–3",
+          "reasoning": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Total administered intraoperative remifentanil is recorded drug amount.",
+          "source_location": "p2 §2.5–2.6",
+          "reasoning": "Total administered intraoperative remifentanil is recorded drug amount."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same anesthetic titration and records.",
+          "source_location": "p2 §2.6",
+          "reasoning": "Same anesthetic titration and records."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "N",
+          "evidence": "Anesthesiologists masked; not patient-controlled dosing.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Anesthesiologists masked; not patient-controlled dosing."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion.",
+          "source_location": "NCT02741726 API status/outcomes; p3 §2.7",
+          "reasoning": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed.",
+          "source_location": "NCT02741726 API",
+          "reasoning": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "ITT/PP stated but dated analysis choices unavailable.",
+          "source_location": "p3 §2.7",
+          "reasoning": "ITT/PP stated but dated analysis choices unavailable."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Central concealed randomization, no concerning imbalance.",
+          "source_location": "p2;Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context deviations established; ITT.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Near complete common outcomes, balanced small attrition.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Objective total administered by masked anesthesiologist.",
+          "source_location": "p2 §2.3–2.6"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No dated detailed analysis plan.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Some concerns for unknown prospective analysis plan; objective intraoperative amount has low D4.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Separate intraoperative result; old chronic-pain High not applicable."
+    },
+    {
+      "result_id": "LU21_SINGLE_vs_SHAM_REMI",
+      "outcome": "Total remifentanil",
+      "time_window": "Intraoperative",
+      "comparison": "Single PC6 TEAS vs Sham/no current",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Central computer-generated randomization stratified by center with variable blocks.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Central computer-generated randomization stratified by center with variable blocks."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Secured web-based allocation system.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Secured web-based allocation system."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "No concerning imbalance in age, BMI, surgical-site pain or therapies.",
+          "source_location": "Table1",
+          "reasoning": "No concerning imbalance in age, BMI, surgical-site pain or therapies."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Patients explicitly not masked.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Patients explicitly not masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Interventionist unmasked; other clinical staff blinded.",
+          "source_location": "p2 §2.3–2.4",
+          "reasoning": "Interventionist unmasked; other clinical staff blinded."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified.",
+          "source_location": "p2 §2.1,2.6",
+          "reasoning": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity.",
+          "source_location": "p3 §2.7, Figure1",
+          "reasoning": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "PY",
+          "evidence": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events.",
+          "source_location": "Figure1, Tables2–3",
+          "reasoning": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Total administered intraoperative remifentanil is recorded drug amount.",
+          "source_location": "p2 §2.5–2.6",
+          "reasoning": "Total administered intraoperative remifentanil is recorded drug amount."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same anesthetic titration and records.",
+          "source_location": "p2 §2.6",
+          "reasoning": "Same anesthetic titration and records."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "N",
+          "evidence": "Anesthesiologists masked; not patient-controlled dosing.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Anesthesiologists masked; not patient-controlled dosing."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion.",
+          "source_location": "NCT02741726 API status/outcomes; p3 §2.7",
+          "reasoning": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed.",
+          "source_location": "NCT02741726 API",
+          "reasoning": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "ITT/PP stated but dated analysis choices unavailable.",
+          "source_location": "p3 §2.7",
+          "reasoning": "ITT/PP stated but dated analysis choices unavailable."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Central concealed randomization, no concerning imbalance.",
+          "source_location": "p2;Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context deviations established; ITT.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Near complete common outcomes, balanced small attrition.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Objective total administered by masked anesthesiologist.",
+          "source_location": "p2 §2.3–2.6"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No dated detailed analysis plan.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Some concerns for unknown prospective analysis plan; objective intraoperative amount has low D4.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Separate intraoperative result; old chronic-pain High not applicable."
+    },
+    {
+      "result_id": "LU21_COMB_vs_SHAM_PONV24",
+      "outcome": "Any PONV",
+      "time_window": "0–24 h",
+      "comparison": "Combined PC6+CV17 TEAS vs Sham/no current",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Central computer-generated randomization stratified by center with variable blocks.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Central computer-generated randomization stratified by center with variable blocks."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Secured web-based allocation system.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Secured web-based allocation system."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "No concerning imbalance in age, BMI, surgical-site pain or therapies.",
+          "source_location": "Table1",
+          "reasoning": "No concerning imbalance in age, BMI, surgical-site pain or therapies."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Patients explicitly not masked.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Patients explicitly not masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Interventionist unmasked; other clinical staff blinded.",
+          "source_location": "p2 §2.3–2.4",
+          "reasoning": "Interventionist unmasked; other clinical staff blinded."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified.",
+          "source_location": "p2 §2.1,2.6",
+          "reasoning": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity.",
+          "source_location": "p3 §2.7, Figure1",
+          "reasoning": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "PY",
+          "evidence": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events.",
+          "source_location": "Figure1, Tables2–3",
+          "reasoning": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "Common defined pain questionnaire or PONV outcome.",
+          "source_location": "p2 §2.5; Tables2–3",
+          "reasoning": "Common defined pain questionnaire or PONV outcome."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same follow-up schedules with blinded interviewer.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Same follow-up schedules with blinded interviewer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "Y",
+          "evidence": "Participant is unmasked assessor for self-reported symptoms.",
+          "source_location": "p2 §2.3; p6 limitations",
+          "reasoning": "Participant is unmasked assessor for self-reported symptoms."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Knowledge can influence pain/nausea reporting.",
+          "source_location": "p6 limitations",
+          "reasoning": "Knowledge can influence pain/nausea reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "No expectancy or masking-success data establish likely influence.",
+          "source_location": "p6 limitations",
+          "reasoning": "No expectancy or masking-success data establish likely influence."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion.",
+          "source_location": "NCT02741726 API status/outcomes; p3 §2.7",
+          "reasoning": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed.",
+          "source_location": "NCT02741726 API",
+          "reasoning": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "ITT/PP stated but dated analysis choices unavailable.",
+          "source_location": "p3 §2.7",
+          "reasoning": "ITT/PP stated but dated analysis choices unavailable."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Central concealed randomization, no concerning imbalance.",
+          "source_location": "p2;Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context deviations established; ITT.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Near complete common outcomes, balanced small attrition.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked subjective reporting could be influenced; actual likely influence not established.",
+          "source_location": "p6"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No dated detailed analysis plan.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "D4 and D5 concerns do not establish probable bias or interacting concerns substantially undermining raw-count result.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Selected result High reduced to Some concerns: awareness establishes possible rather than automatically probable influence; source numerical conflicts remain separately qualified."
+    },
+    {
+      "result_id": "LU21_SINGLE_vs_SHAM_PONV24",
+      "outcome": "Any PONV",
+      "time_window": "0–24 h",
+      "comparison": "Single PC6 TEAS vs Sham/no current",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Central computer-generated randomization stratified by center with variable blocks.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Central computer-generated randomization stratified by center with variable blocks."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Secured web-based allocation system.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Secured web-based allocation system."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "No concerning imbalance in age, BMI, surgical-site pain or therapies.",
+          "source_location": "Table1",
+          "reasoning": "No concerning imbalance in age, BMI, surgical-site pain or therapies."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Patients explicitly not masked.",
+          "source_location": "p2 §2.3",
+          "reasoning": "Patients explicitly not masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Interventionist unmasked; other clinical staff blinded.",
+          "source_location": "p2 §2.3–2.4",
+          "reasoning": "Interventionist unmasked; other clinical staff blinded."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified.",
+          "source_location": "p2 §2.1,2.6",
+          "reasoning": "Monitored adherence, standard anesthesia and parecoxib rescue; no trial-context departures identified."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity.",
+          "source_location": "p3 §2.7, Figure1",
+          "reasoning": "ITT by allocation, worst-case chronic-pain imputation; PP sensitivity."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "PY",
+          "evidence": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events.",
+          "source_location": "Figure1, Tables2–3",
+          "reasoning": "568/576 complete, four surgery changes and four follow-up losses; few relative to chronic-pain/PONV events."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "Common defined pain questionnaire or PONV outcome.",
+          "source_location": "p2 §2.5; Tables2–3",
+          "reasoning": "Common defined pain questionnaire or PONV outcome."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same follow-up schedules with blinded interviewer.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Same follow-up schedules with blinded interviewer."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "Y",
+          "evidence": "Participant is unmasked assessor for self-reported symptoms.",
+          "source_location": "p2 §2.3; p6 limitations",
+          "reasoning": "Participant is unmasked assessor for self-reported symptoms."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Knowledge can influence pain/nausea reporting.",
+          "source_location": "p6 limitations",
+          "reasoning": "Knowledge can influence pain/nausea reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "No expectancy or masking-success data establish likely influence.",
+          "source_location": "p6 limitations",
+          "reasoning": "No expectancy or masking-success data establish likely influence."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion.",
+          "source_location": "NCT02741726 API status/outcomes; p3 §2.7",
+          "reasoning": "Prospective registration but no dated detailed SAP obtained; latest registry post-completion."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed.",
+          "source_location": "NCT02741726 API",
+          "reasoning": "Current registry endpoints align broadly; original detailed measurement intentions unconfirmed."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "ITT/PP stated but dated analysis choices unavailable.",
+          "source_location": "p3 §2.7",
+          "reasoning": "ITT/PP stated but dated analysis choices unavailable."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Central concealed randomization, no concerning imbalance.",
+          "source_location": "p2;Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context deviations established; ITT.",
+          "source_location": "pp2–3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Near complete common outcomes, balanced small attrition.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked subjective reporting could be influenced; actual likely influence not established.",
+          "source_location": "p6"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No dated detailed analysis plan.",
+          "source_location": "registry;p3"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "D4 and D5 concerns do not establish probable bias or interacting concerns substantially undermining raw-count result.",
+      "old_selected_overall": "High",
+      "changes_from_old": "Selected result High reduced to Some concerns: awareness establishes possible rather than automatically probable influence; source numerical conflicts remain separately qualified."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Only intraoperative remifentanil quantity reported; postoperative sufentanil PCA amount absent.",
+    "postoperative": false,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Sufentanil PCA postoperative",
+    "route": "Insufficient information / not reported.",
+    "unit": "Insufficient information / not reported.",
+    "raw_values": {},
+    "comparison_selection": "None",
+    "multiarm_handling": "One trial; shared sham",
+    "source_location": "p3;Table3"
+  },
+  "duplicate_map": [
+    {
+      "related_study": "S031 active contrasts",
+      "classification": "SAME TRIAL / DUPLICATE PUBLICATION",
+      "evidence": "Both active arms share sham188.",
+      "source_location": "Figure1",
+      "analysis_handling": "Select prespecified contrast or account for correlation."
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "Postoperative opioid quantities/formulation; dated SAP; registry/paper and Table2/prose contradictions",
+      "why_it_matters": "No postoperative dose derivable; single-arm chronic pain uncertain.",
+      "analysis_affected": "Opioid; chronic pain; D5",
+      "can_proceed_without": "Qualified raw PONV/combined chronic pain; no opioid synthesis.",
+      "priority": "HIGH",
+      "exact_question": "Provide arm-specific total postoperative0–24h systemic opioid quantities, PCA route/formulation, observed n, dated protocol/SAP; clarify enrollment593 vs576 and single-arm chronic pain72/198 vs79/196."
+    }
+  ],
+  "summary": "7/7 rows audited; source raw results preserved with qualifications, no postoperative opioid estimate. Selected chronic-pain RoB Some concerns; registry read after baseline explicitly supplemental."
+}

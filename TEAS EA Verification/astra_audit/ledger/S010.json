@@ -1,0 +1,15 @@
+{
+  "Study_ID": "S010",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "source_publication_read_complete": true,
+  "outcome_rows_total": 2,
+  "outcome_rows_adjudicated": 2,
+  "rob2_results": 2,
+  "limitations": "Both rows source checked, family/route hold. Final family classification UNRESOLVED, strong probable overlap.",
+  "artifacts": [
+    "phase_a/S010.json",
+    "adjudicated/S010.json"
+  ],
+  "reviewer_model": "gpt-6-astra"
+}

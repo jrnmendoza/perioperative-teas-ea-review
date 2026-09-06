@@ -1,0 +1,1775 @@
+{
+  "Study_ID": "S006",
+  "Study": "Zhang 2025",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "CONFIRMED",
+    "title": "Effects of Transcutaneous Electrical Acupoint Stimulation on Postoperative Acute Visceral, Incisional, and Low Back Pain and Recovery in Patients Undergoing Laparoscopic Hysterectomy: A Randomized Controlled Trial",
+    "year": 2025,
+    "doi": "10.2147/JPR.S553932",
+    "pdf_files": [
+      "109551.pdf"
+    ],
+    "randomized_arms": "[54,54]",
+    "analyzed_arms": "[45,48]",
+    "modality": "TEAS",
+    "comparator_class": "sub-sensorysham",
+    "independence": "Wenzhou2024–2025cohort; distinct from2015/2020gynecology studies andZhang2023cholecystectomy.",
+    "source_locations": "1–13complete; visualFigure2p5,Figure3p8,Tables4–6p9",
+    "identity_notes": "First-page identity and full source checked before baseline."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 39,
+      "final": {
+        "Canonical study": "Zhang 2025",
+        "Comparison ID": "ZHANG25_TEAS_vs_SHAM_SUFPOD1",
+        "Intervention arm": "Perioperative TEAS",
+        "Comparator arm": "Sub-sensory sham",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Total sufentanil consumption",
+        "Timepoint/window": "POD1; exactclockinterval Insufficient information / not reported.",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 54,
+        "Randomized n comparator": 54,
+        "Analyzed n intervention": 45,
+        "Analyzed n comparator": 48,
+        "Mean intervention": 50.53,
+        "SD intervention": 4.46,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 53.79,
+        "SD comparator": 5.14,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg sufentanil",
+        "Reported P": "0.002",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — derivedeffectfromverifiedrawdata; nomorphineconversion",
+        "Derived effect measure": "MD",
+        "Derived effect": -3.259999999999998,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No — hold pending exactwindow and PACUrescuecoverage confirmation",
+        "Other analysis eligibility": "Eligible for POD1 opioid analysis; strict 0-24-h use requires confirmation",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "POD1notexact24h; inclusionofPACUIVsufentanilrescueunclear;15/108excluded",
+        "Source location": "Table 4, p9",
+        "Source PDF URL": "https://drive.google.com/file/d/1eHx6Hk16vmIfMgoiZ5eNae4zmCR5ktwJ/view?usp=drivesdk",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Zhang 2025",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "ZHANG25_TEAS_vs_SHAM_SUFPOD1",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative TEAS",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sub-sensory sham",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total sufentanil consumption",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "POD1; exactclockinterval Insufficient information / not reported.",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 54,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 54,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 45,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 48,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 50.53,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 4.46,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 53.79,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 5.14,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg sufentanil",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.002",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — derivedeffectfromverifiedrawdata; nomorphineconversion",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -3.259999999999998,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No — hold pending exactwindow and PACUrescuecoverage confirmation",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for POD1 opioid analysis; strict 0-24-h use requires confirmation",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "POD1notexact24h; inclusionofPACUIVsufentanilrescueunclear;15/108excluded",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 4, p9",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1eHx6Hk16vmIfMgoiZ5eNae4zmCR5ktwJ/view?usp=drivesdk",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / WINDOW QC",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "reason": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — derivedeffectfromverifiedrawdata; nomorphineconversion",
+          "final_value": "Yes — derivedeffectfromverifiedrawdata; nomorphineconversion",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "reason": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+          "severity": "material"
+        },
+        {
+          "field": "Timepoint/window",
+          "old_value": "POD1; approximately 24 h but exact clock window not explicit",
+          "source_value": "POD1; exactclockinterval Insufficient information / not reported.",
+          "final_value": "POD1; exactclockinterval Insufficient information / not reported.",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "reason": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+          "severity": "material"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "old_value": "Conditional",
+          "source_value": "No",
+          "final_value": "No",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "reason": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+          "severity": "material"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "old_value": "Conditional",
+          "source_value": "No — hold pending exactwindow and PACUrescuecoverage confirmation",
+          "final_value": "No — hold pending exactwindow and PACUrescuecoverage confirmation",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "reason": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Endpoint is directly reported as POD1, not explicitly clock-defined 0-24 h; 15/108 excluded after randomization",
+          "source_value": "POD1notexact24h; inclusionofPACUIVsufentanilrescueunclear;15/108excluded",
+          "final_value": "POD1notexact24h; inclusionofPACUIVsufentanilrescueunclear;15/108excluded",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "reason": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "109551.pdf",
+      "source_evidence": "50.53±4.46 versus53.79±5.14ug POD1;45/48analyzed54/54randomized;P0.002. IncludesPCAfixed1ug/mL; whetherPACUrescueincludedunreported. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+      "drug": "sufentanil",
+      "route": "IV",
+      "pca_formulation": "100ug/100mLsaline; basal2mL/h,bolus2mL,10minlockout",
+      "rescue_regimen": "PACUIVsufentaniltitratedforNRS≥4; wardrectalindomethacin50mg",
+      "critical_qc": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+      "analysis_eligibility": "RawPOD1opioidsensitivityonly; exact24hprimaryheld",
+      "notes": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1."
+    },
+    {
+      "baseline_row": 40,
+      "final": {
+        "Canonical study": "Zhang 2025",
+        "Comparison ID": "ZHANG25_TEAS_vs_SHAM_RESCUE",
+        "Intervention arm": "Perioperative TEAS",
+        "Comparator arm": "Sub-sensory sham",
+        "Outcome family": "Rescue analgesia",
+        "Outcome/result": "Any rescue analgesia demand",
+        "Timepoint/window": "POD1 / postoperative period reported in Table 4",
+        "Data type": "Events/total",
+        "Randomized n intervention": 54,
+        "Randomized n comparator": 54,
+        "Analyzed n intervention": 45,
+        "Analyzed n comparator": 48,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 14,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 29,
+        "Unit/scale": "participants",
+        "Reported P": "0.005 in Table 4; 0.002 in prose",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — derivedeffectfromverifiedrawdata; nomorphineconversion",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.5149425287356322,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for binary rescue-analgesia analysis using raw counts",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Published RR 0.70 (0.44-1.10) conflicts with raw counts (~0.52) and significant P-value; use raw event counts",
+        "Source location": "Table 4, p9",
+        "Source PDF URL": "https://drive.google.com/file/d/1eHx6Hk16vmIfMgoiZ5eNae4zmCR5ktwJ/view?usp=drivesdk",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Zhang 2025",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "ZHANG25_TEAS_vs_SHAM_RESCUE",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative TEAS",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sub-sensory sham",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Rescue analgesia",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Any rescue analgesia demand",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "POD1 / postoperative period reported in Table 4",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 54,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 54,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 45,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 48,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 14,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 29,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.005 in Table 4; 0.002 in prose",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — derivedeffectfromverifiedrawdata; nomorphineconversion",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.5149425287356322,
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for binary rescue-analgesia analysis using raw counts",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Published RR 0.70 (0.44-1.10) conflicts with raw counts (~0.52) and significant P-value; use raw event counts",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 4, p9",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1eHx6Hk16vmIfMgoiZ5eNae4zmCR5ktwJ/view?usp=drivesdk",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / PUBLISHED EFFECT QC",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "reason": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — derivedeffectfromverifiedrawdata; nomorphineconversion",
+          "final_value": "Yes — derivedeffectfromverifiedrawdata; nomorphineconversion",
+          "source_location": "Table4p9; Methods p4; Figure2p5",
+          "reason": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "109551.pdf",
+      "source_evidence": "14/45 versus29/48 rescue recipients; P0.005tableversus0.002prose; printedRR0.70inconsistent; recomputedRR0.5149425287356322. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+      "drug": "sufentanil",
+      "route": "IV",
+      "pca_formulation": "100ug/100mLsaline; basal2mL/h,bolus2mL,10minlockout",
+      "rescue_regimen": "PACUIVsufentaniltitratedforNRS≥4; wardrectalindomethacin50mg",
+      "critical_qc": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+      "analysis_eligibility": "POD1binaryrescue",
+      "notes": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1."
+    },
+    {
+      "baseline_row": 41,
+      "final": {
+        "Canonical study": "Zhang 2025",
+        "Comparison ID": "ZHANG25_TEAS_vs_SHAM_VISCERAL_POD1",
+        "Intervention arm": "Perioperative TEAS",
+        "Comparator arm": "Sub-sensory sham",
+        "Outcome family": "Pain",
+        "Outcome/result": "Moderate-to-severe visceral pain",
+        "Timepoint/window": "POD1",
+        "Data type": "Events/total",
+        "Randomized n intervention": 54,
+        "Randomized n comparator": 54,
+        "Analyzed n intervention": 45,
+        "Analyzed n comparator": 48,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 4,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 18,
+        "Unit/scale": "participants",
+        "Reported P": "0.001",
+        "Directly reported?": "Percentages directly reported; counts reconstructed exactly from denominators",
+        "Derived/converted?": "Yes",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.23703703703703705,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous visceral-pain analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Figure 3D reports 8.9% vs 37.5%; 4/45 and 18/48 are exact denominator reconstructions",
+        "Source location": "Figure 3D, p8",
+        "Source PDF URL": "https://drive.google.com/file/d/1eHx6Hk16vmIfMgoiZ5eNae4zmCR5ktwJ/view?usp=drivesdk",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Zhang 2025",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "ZHANG25_TEAS_vs_SHAM_VISCERAL_POD1",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative TEAS",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sub-sensory sham",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Moderate-to-severe visceral pain",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "POD1",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 54,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 54,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 45,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 48,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 4,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 18,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.001",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Percentages directly reported; counts reconstructed exactly from denominators",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.23703703703703705,
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous visceral-pain analysis",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Figure 3D reports 8.9% vs 37.5%; 4/45 and 18/48 are exact denominator reconstructions",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Figure 3D, p8",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1eHx6Hk16vmIfMgoiZ5eNae4zmCR5ktwJ/view?usp=drivesdk",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / COUNTS DERIVED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Figure3D p8printedpercentlabels; Methods p3NRS≥4; Figure2p5",
+          "reason": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "109551.pdf",
+      "source_evidence": "Figure3Dprinted8.9%TEAS versus37.5%control uniquelycorrespond4/45 and18/48; P0.001printed. Notgraphpointdigitization: exactpercentage textused; moderate/severeNRS4–10. AdministrativeID/URLprovenance; nullalternateformatfieldsnotapplicable.",
+      "drug": "sufentanil",
+      "route": "IV",
+      "pca_formulation": "100ug/100mLsaline; basal2mL/h,bolus2mL,10minlockout",
+      "rescue_regimen": "PACUIVsufentaniltitratedforNRS≥4; wardrectalindomethacin50mg",
+      "critical_qc": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1.",
+      "analysis_eligibility": "POD1visceralmoderate/severebinary; notcontinuouspain",
+      "notes": "Surgicalchangesandconsentwithdrawalscause14%missing; sourceinternaleffect/CIandflowarithmeticconflictsretained. EndpointwindowisPOD1."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S006_ROW39",
+      "outcome": "sufentanilconsumption",
+      "time_window": "POD1",
+      "comparison": "TEASversussub-sensorysham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "Y",
+          "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "PN",
+          "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers/intervention providers aware?",
+          "answer": "PY",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of trial context?",
+          "answer": "PN",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate assignment effect?",
+          "answer": "PY",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze by randomized assignment?",
+          "answer": "NA",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "N",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "PY",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NI",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "source_location": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "reasoning": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "source_location": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "reasoning": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of assignment?",
+          "answer": "PN",
+          "evidence": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "source_location": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "reasoning": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "NA",
+          "evidence": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "source_location": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "reasoning": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "source_location": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "reasoning": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was a prespecified analysis plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold.",
+          "source_location": "p4PCIAstandardizedfixedconcentrationandmaskedoutcomeassessors; administrationrecordcanreliablyquantifydrug. Participantinfluencedselfdosingdistinctfromrecordingbias; PACUcoverage/windowisendpointdefinitionhold."
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "15/108missingwithpotentialoutcomeassociation, no demonstrationactualmissingnesslikelydependentontruevalue; no trialcontextdeviationevidence. Subjectivereportingandanalysisintentionsuncertain; sourceintegrityflagsseparatelyretained.",
+      "old_selected_overall": "High",
+      "changes_from_old": "SelectedopioidHigh→Some concerns: missingdataappropriatelyinD3; percentagealonecannotestablishHighD3, and exclusionsdonotautomaticallyestablishD2bias. D4Lowforrecordedconsumption; subjectiveendpointsseparate."
+    },
+    {
+      "result_id": "S006_ROW40",
+      "outcome": "rescueanalgesia",
+      "time_window": "POD1",
+      "comparison": "TEASversussub-sensorysham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "Y",
+          "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "PN",
+          "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers/intervention providers aware?",
+          "answer": "PY",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of trial context?",
+          "answer": "PN",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate assignment effect?",
+          "answer": "PY",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze by randomized assignment?",
+          "answer": "NA",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "N",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "PY",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NI",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of assignment?",
+          "answer": "PY",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "Y",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was a prespecified analysis plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "15/108missingwithpotentialoutcomeassociation, no demonstrationactualmissingnesslikelydependentontruevalue; no trialcontextdeviationevidence. Subjectivereportingandanalysisintentionsuncertain; sourceintegrityflagsseparatelyretained.",
+      "old_selected_overall": "High",
+      "changes_from_old": "SelectedopioidHigh→Some concerns: missingdataappropriatelyinD3; percentagealonecannotestablishHighD3, and exclusionsdonotautomaticallyestablishD2bias. D4Lowforrecordedconsumption; subjectiveendpointsseparate."
+    },
+    {
+      "result_id": "S006_ROW41",
+      "outcome": "moderate/severevisceralpain",
+      "time_window": "POD1",
+      "comparison": "TEASversussub-sensorysham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "Y",
+          "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "PN",
+          "evidence": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers/intervention providers aware?",
+          "answer": "PY",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of trial context?",
+          "answer": "PN",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate assignment effect?",
+          "answer": "PY",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze by randomized assignment?",
+          "answer": "NA",
+          "evidence": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "N",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "PY",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NI",
+          "evidence": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of assignment?",
+          "answer": "PY",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "Y",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was a prespecified analysis plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance.",
+          "source_location": "p2Stata15randomization,sequentialopaqueenvelopesafterconsent; Table1groupsnotdemonstrablyincompatiblewithchance."
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment.",
+          "source_location": "p2claimsblindedanesthetistsbutp3theysetindividualthreshold; activevsbelow-sensoryrecognitionpossible. StandardizedPCAandrescuealgorithm; no reportedtrial-contextdeviations;availablecasesretainedassignment."
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported.",
+          "source_location": "Figure2 15/108missing(9vs6),11surgicalchangesand4TEASconsentwithdrawals. NoITT/sensitivity; surgicalseverityandwithdrawalcouldrelatetopain,dose/PONV/GI,actualrelationshipunreported."
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain.",
+          "source_location": "p3maximumtolerancevsbelowsensorysham; subjectivepain/PONV/GImilestonecanbeinfluenced; standardizedblindedassessorbutpatientawarenessuncertain."
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts.",
+          "source_location": "ChiCTR2400093634citedwithoutdate; exactsearchretrievedpublicationbutnotofficialrecord; noSAP. Cannot inferregistrationdateorprospectivityfromnumber. Multiplepainphenotypes,days,adjustedmodelsandreportingconflicts."
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "15/108missingwithpotentialoutcomeassociation, no demonstrationactualmissingnesslikelydependentontruevalue; no trialcontextdeviationevidence. Subjectivereportingandanalysisintentionsuncertain; sourceintegrityflagsseparatelyretained.",
+      "old_selected_overall": "High",
+      "changes_from_old": "SelectedopioidHigh→Some concerns: missingdataappropriatelyinD3; percentagealonecannotestablishHighD3, and exclusionsdonotautomaticallyestablishD2bias. D4Lowforrecordedconsumption; subjectiveendpointsseparate."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "hold",
+    "reason": "POD1explicitbutexact0–24hnotestablished; PACUrescuecoverageunknown. Retainrawvalues; couldenteraPOD1sensitivitystratumwithqualification.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "sufentanil",
+    "route": "IV",
+    "unit": "ug",
+    "raw_values": {
+      "n_intervention": 45,
+      "mean_intervention": 50.53,
+      "sd_intervention": 4.46,
+      "n_comparator": 48,
+      "mean_comparator": 53.79,
+      "sd_comparator": 5.14
+    },
+    "comparison_selection": "TEASvs sub-sensorysham",
+    "multiarm_handling": "Twoarms",
+    "source_location": "Table4p9Methodsp4"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Clockwindow,PACUrescuecoverage,excludedparticipants,registration/SAP",
+      "why_it_matters": "Exact24hcriterion,completeopioidexposureandassignmentbias",
+      "analysis_affected": "opioidprimaryandallresults",
+      "can_proceed_without": "POD1rawresultswithRoBqualification",
+      "priority": "HIGH",
+      "exact_question": "DoesTable4totalincludeallPACUrescueandPCA fromsurgeryendthrough24h? Pleasegiveclockwindow, excludedpatientoutcomes/reasons, prospectiveSAP and correctionsforFigure3legends,flowarithmeticandrescueRR."
+    }
+  ],
+  "unblinded_supplemental_checks": [],
+  "summary": "Threebaseline rowsaudited. SufentanilprimaryeligibilitydowngradedtoholdforPOD1/coverage; rawmeanSDpreserved. Binaryvisceralcountsbackcalculatedfromprintedlabels. Fullresult-specificRoBSomeconcerns; sourceintegrityissuesexplicit."
+}

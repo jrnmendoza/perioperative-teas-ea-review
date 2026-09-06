@@ -1,0 +1,21 @@
+# Segment 3 completion checkpoint
+
+- Completion timestamp: 2026-07-27T10:23:13Z
+- Global sequences: 201–300
+- Segment sequences: 1–100
+- First Covidence number: 844
+- Last Covidence number: 954
+- Registered votes: 100
+- Segment decisions: 9 Yes, 6 Maybe, 85 No
+- Combined effective decisions after #840 correction: 51 Yes, 14 Maybe, 235 No
+- Combined registered votes: 300
+- Unique Covidence numbers: 300
+- Unique timestamps: 300
+- Maybe validation: passed
+- Numbering gaps logged: 23
+- JSONL and CSV validation: passed
+- Reloaded Screen references: 2,141, matching 2,441 − 300
+- First untouched citation: Covidence #955
+- Checkpoint screenshot: `screenshots/covidence_checkpoint_0300.png`
+- Other reviewer decisions viewed: no
+- Conflicts opened or resolved: no

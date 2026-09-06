@@ -1,0 +1,1329 @@
+{
+  "Study_ID": "S010",
+  "Study": "Yeh 2010",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first page verified",
+    "title": "Acupoint electrical stimulation reduces acute postoperative pain in surgical patients with patient-controlled analgesia: a randomized controlled study",
+    "year": 2010,
+    "doi": "Insufficient information / not reported.",
+    "pdf_files": [
+      "015_PainATHM-2.pdf"
+    ],
+    "randomized_arms": "99 included, per-arm initial n not reported",
+    "analyzed_arms": {
+      "EG1": 33,
+      "EG2": 30,
+      "CG": 31
+    },
+    "modality": "TEAS",
+    "comparator_class": "off-point active stimulation sham and no stimulation usual care; separate comparisons sharing active arm",
+    "independence": {
+      "classification": "UNRESOLVED",
+      "evidence": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+      "source_location": "2010 pp11,13–15 Tables2–4;2011 pp704–707 Fig1 Tables1–3",
+      "analysis_handling": "Hold both publications from independent counting. Hold opioid family until author confirms patient overlap, route, analyzed denominators and authoritative numerical dataset. Preserve separate report values; never substitute numbers across publications."
+    },
+    "source_locations": "Complete publication; see Phase A and row-specific locators",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 243,
+      "final": {
+        "Canonical study": "Yeh 2010",
+        "Comparison ID": "YEH10_AES_vs_SHAM_MORPH24",
+        "Intervention arm": "True-acupoint AES",
+        "Comparator arm": "Electrical sham/nonmeridian AES",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "24-h morphine PCA dose",
+        "Timepoint/window": "First 24 postoperative hours",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": null,
+        "Randomized n comparator": null,
+        "Analyzed n intervention": 33,
+        "Analyzed n comparator": 30,
+        "Mean intervention": 18.6,
+        "SD intervention": 9.7,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 21.6,
+        "SD comparator": 13.1,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg morphine; source explicitly calls PCA epidural",
+        "Reported P": "Insufficient information / not reported.",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw values not converted; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -3,
+        "Exact 0-24 h postoperative opioid?": "Yes",
+        "Primary opioid meta-analysis eligible?": "Hold",
+        "Other analysis eligibility": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+        "Source location": "Yeh2010 p15 Table4; p11 methods",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/015_PainATHM-2.pdf",
+        "Record status": "DUPLICATE/OVERLAP HOLD"
+      },
+      "verification_status": "DUPLICATE/OVERLAP HOLD",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Yeh 2010",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "YEH10_AES_vs_SHAM_MORPH24",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "True-acupoint AES",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Electrical sham/nonmeridian AES",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "24-h morphine PCA dose",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "First 24 postoperative hours",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 33,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 30,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 18.6,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 9.7,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 21.6,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 13.1,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg morphine; source explicitly calls PCA epidural",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "Insufficient information / not reported.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw values not converted; MD arithmetic",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -3,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "Yes",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "Hold",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Yeh2010 p15 Table4; p11 methods",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/015_PainATHM-2.pdf",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Record status",
+          "source_value": "DUPLICATE/OVERLAP HOLD",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Reported P",
+          "old_value": "AES-vs-sham pairwise significance NR",
+          "source_value": "Insufficient information / not reported.",
+          "final_value": "Insufficient information / not reported.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw values not converted; MD arithmetic",
+          "final_value": "Raw values not converted; MD arithmetic",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "old_value": "Conditional",
+          "source_value": "Hold",
+          "final_value": "Hold",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "SOURCE VALID BUT META-ANALYSIS HOLD until PCA route and report overlap with Yeh 2011 are resolved",
+          "source_value": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+          "final_value": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Probable overlapping publication/cohort with Yeh 2011. Five of 99 entrants did not complete and randomized arm assignment of losses is NR. Do not treat both papers as independent.",
+          "source_value": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "final_value": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 4 / 24-h opiate dose",
+          "source_value": "Yeh2010 p15 Table4; p11 methods",
+          "final_value": "Yeh2010 p15 Table4; p11 methods",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1a1s31PQPWGnaVkYUtNUxO22F3QFTcwmi/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/015_PainATHM-2.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/015_PainATHM-2.pdf",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / DUPLICATE-OVERLAP HOLD",
+          "source_value": "DUPLICATE/OVERLAP HOLD",
+          "final_value": "DUPLICATE/OVERLAP HOLD",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "015_PainATHM-2.pdf",
+      "source_evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+      "drug": "morphine",
+      "route": "epidural (explicit p11); conflicts with linked 2011 IV report",
+      "pca_formulation": "morphine1mg bolus10min lockout;2010 no basal infusion;2011 basal formulation/rescue Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+      "analysis_eligibility": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+      "notes": "All raw numeric fields source verified; MD arithmetic only. Unblinded supplemental check: reread source pairwise P narrative after baseline, confirmed stated values."
+    },
+    {
+      "baseline_row": 244,
+      "final": {
+        "Canonical study": "Yeh 2010",
+        "Comparison ID": "YEH10_AES_vs_CONTROL_MORPH24",
+        "Intervention arm": "True-acupoint AES",
+        "Comparator arm": "No-AES control",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "24-h morphine PCA dose",
+        "Timepoint/window": "First 24 postoperative hours",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": null,
+        "Randomized n comparator": null,
+        "Analyzed n intervention": 33,
+        "Analyzed n comparator": 31,
+        "Mean intervention": 18.6,
+        "SD intervention": 9.7,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 27.2,
+        "SD comparator": 12.5,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg morphine; source explicitly calls PCA epidural",
+        "Reported P": "0.02",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw values not converted; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -8.6,
+        "Exact 0-24 h postoperative opioid?": "Yes",
+        "Primary opioid meta-analysis eligible?": "Hold",
+        "Other analysis eligibility": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+        "Source location": "Yeh2010 p15 Table4; p11 methods",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/015_PainATHM-2.pdf",
+        "Record status": "DUPLICATE/OVERLAP HOLD"
+      },
+      "verification_status": "DUPLICATE/OVERLAP HOLD",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Yeh 2010",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "YEH10_AES_vs_CONTROL_MORPH24",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "True-acupoint AES",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "No-AES control",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "24-h morphine PCA dose",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "First 24 postoperative hours",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 33,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 31,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 18.6,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 9.7,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 27.2,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 12.5,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg morphine; source explicitly calls PCA epidural",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.02",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw values not converted; MD arithmetic",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -8.6,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "Yes",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "Hold",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Yeh2010 p15 Table4; p11 methods",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/015_PainATHM-2.pdf",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        },
+        {
+          "field": "Record status",
+          "source_value": "DUPLICATE/OVERLAP HOLD",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+          "status": "DUPLICATE/OVERLAP HOLD"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw values not converted; MD arithmetic",
+          "final_value": "Raw values not converted; MD arithmetic",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -8.599999999999998,
+          "source_value": -8.6,
+          "final_value": -8.6,
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "old_value": "Conditional",
+          "source_value": "Hold",
+          "final_value": "Hold",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Use only if no-treatment comparator is prespecified AND overlap with Yeh 2011 is resolved",
+          "source_value": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+          "final_value": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Same probable overlapping cohort issue; route must not be silently recoded as IV.",
+          "source_value": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "final_value": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 4 / 24-h opiate dose",
+          "source_value": "Yeh2010 p15 Table4; p11 methods",
+          "final_value": "Yeh2010 p15 Table4; p11 methods",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1a1s31PQPWGnaVkYUtNUxO22F3QFTcwmi/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/015_PainATHM-2.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/015_PainATHM-2.pdf",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / DUPLICATE-OVERLAP HOLD",
+          "source_value": "DUPLICATE/OVERLAP HOLD",
+          "final_value": "DUPLICATE/OVERLAP HOLD",
+          "source_location": "Yeh2010 p15 Table4; p11 methods",
+          "reason": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "015_PainATHM-2.pdf",
+      "source_evidence": "Table4 EG1 n33 18.6±9.7;EG2 n30 21.6±13.1;CG n31 27.2±12.5mg meanSD first24h. p11 epidural morphine1mg/10min. p15 EG1-CG P=.02, sham pairwise absent.",
+      "drug": "morphine",
+      "route": "epidural (explicit p11); conflicts with linked 2011 IV report",
+      "pca_formulation": "morphine1mg bolus10min lockout;2010 no basal infusion;2011 basal formulation/rescue Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+      "analysis_eligibility": "Hold all family contributions pending overlap and route/denominator clarification; sham and usual care separate.",
+      "notes": "All raw numeric fields source verified; MD arithmetic only. Unblinded supplemental check: reread source pairwise P narrative after baseline, confirmed stated values."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S010_opioid24_sham",
+      "outcome": "PCA morphine consumption",
+      "time_window": "0–24h postoperative",
+      "comparison": "AES vs active off-point sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "NI",
+          "evidence": "p11 Methods:randomization asserted, method absent",
+          "source_location": "p11 Methods",
+          "reasoning": "p11 Methods:randomization asserted, method absent"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "p11:one researcher knew allocation; pre-enrollment concealment absent",
+          "source_location": "p11",
+          "reasoning": "p11:one researcher knew allocation; pre-enrollment concealment absent"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "p14 Table2:only completer baseline available",
+          "source_location": "p14 Table2",
+          "reasoning": "p14 Table2:only completer baseline available"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "Methods:active off-point sham permits participant masking; no-AES contrast unmasked",
+          "source_location": "Methods",
+          "reasoning": "Methods:active off-point sham permits participant masking; no-AES contrast unmasked"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "Methods:intervention researcher necessarily knew allocation",
+          "source_location": "Methods",
+          "reasoning": "Methods:intervention researcher necessarily knew allocation"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "NI",
+          "evidence": "p11–13:trial-context departures insufficiently described",
+          "source_location": "p11–13",
+          "reasoning": "p11–13:trial-context departures insufficiently described"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NI",
+          "evidence": "Methods:no established outcome-relevant deviation; conditional question",
+          "source_location": "Methods",
+          "reasoning": "Methods:no established outcome-relevant deviation; conditional question"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NI",
+          "evidence": "Methods:no established imbalance in deviations; conditional question",
+          "source_location": "Methods",
+          "reasoning": "Methods:no established imbalance in deviations; conditional question"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Results:completers analyzed as assigned; missingness D3",
+          "source_location": "Results",
+          "reasoning": "Results:completers analyzed as assigned; missingness D3"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "Results:no reassignment or as-treated analysis",
+          "source_location": "Results",
+          "reasoning": "Results:no reassignment or as-treated analysis"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "p13:94/99;5 unstable losses, arms unknown",
+          "source_location": "p13",
+          "reasoning": "p13:94/99;5 unstable losses, arms unknown"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NI",
+          "evidence": "Results:no missing-data sensitivity analysis",
+          "source_location": "Results",
+          "reasoning": "Results:no missing-data sensitivity analysis"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "PY",
+          "evidence": "p13:clinical instability could relate to opioid consumption",
+          "source_location": "p13",
+          "reasoning": "p13:clinical instability could relate to opioid consumption"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NI",
+          "evidence": "Results:dependence on true value insufficiently known",
+          "source_location": "Results",
+          "reasoning": "Results:dependence on true value insufficiently known"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Methods:delivered PCA morphine appropriate",
+          "source_location": "Methods",
+          "reasoning": "Methods:delivered PCA morphine appropriate"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Methods:common dose ascertainment",
+          "source_location": "Methods",
+          "reasoning": "Methods:common dose ascertainment"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Methods:researcher knows assignment, masked dose extraction not established",
+          "source_location": "Methods",
+          "reasoning": "Methods:researcher knows assignment, masked dose extraction not established"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "PN",
+          "evidence": "Methods:objective recorded dose; patient self-dosing defines consumption and does not itself show erroneous recording",
+          "source_location": "Methods",
+          "reasoning": "Methods:objective recorded dose; patient self-dosing defines consumption and does not itself show erroneous recording"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:recorded objective dose probably unaffected by assessor knowledge",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:recorded objective dose probably unaffected by assessor knowledge"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "Full report:no prospective SAP demonstrated",
+          "source_location": "Full report",
+          "reasoning": "Full report:no prospective SAP demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Methods/results:selection of window not established; insufficient prespecification",
+          "source_location": "Methods/results",
+          "reasoning": "Methods/results:selection of window not established; insufficient prespecification"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Methods/results:selection among analyses cannot be ruled out",
+          "source_location": "Methods/results",
+          "reasoning": "Methods/results:selection among analyses cannot be ruled out"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Sequence and concealment insufficiently reported",
+          "source_location": "p11 Methods"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Trial-context deviation information insufficient; awareness alone not bias",
+          "source_location": "Methods"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "Five unstable losses unknown allocation",
+          "source_location": "p13"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Objective delivered-dose ascertainment; self-dosing behavior distinguished",
+          "source_location": "Methods"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific SAP unavailable",
+          "source_location": "Full report"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S010_opioid24_usualcare",
+      "outcome": "PCA morphine consumption",
+      "time_window": "0–24h postoperative",
+      "comparison": "AES vs no AES",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "NI",
+          "evidence": "p11 Methods:randomization asserted, method absent",
+          "source_location": "p11 Methods",
+          "reasoning": "p11 Methods:randomization asserted, method absent"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "p11:one researcher knew allocation; pre-enrollment concealment absent",
+          "source_location": "p11",
+          "reasoning": "p11:one researcher knew allocation; pre-enrollment concealment absent"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "p14 Table2:only completer baseline available",
+          "source_location": "p14 Table2",
+          "reasoning": "p14 Table2:only completer baseline available"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Methods:active off-point sham permits participant masking; no-AES contrast unmasked",
+          "source_location": "Methods",
+          "reasoning": "Methods:active off-point sham permits participant masking; no-AES contrast unmasked"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "Methods:intervention researcher necessarily knew allocation",
+          "source_location": "Methods",
+          "reasoning": "Methods:intervention researcher necessarily knew allocation"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "NI",
+          "evidence": "p11–13:trial-context departures insufficiently described",
+          "source_location": "p11–13",
+          "reasoning": "p11–13:trial-context departures insufficiently described"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NI",
+          "evidence": "Methods:no established outcome-relevant deviation; conditional question",
+          "source_location": "Methods",
+          "reasoning": "Methods:no established outcome-relevant deviation; conditional question"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NI",
+          "evidence": "Methods:no established imbalance in deviations; conditional question",
+          "source_location": "Methods",
+          "reasoning": "Methods:no established imbalance in deviations; conditional question"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Results:completers analyzed as assigned; missingness D3",
+          "source_location": "Results",
+          "reasoning": "Results:completers analyzed as assigned; missingness D3"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "Results:no reassignment or as-treated analysis",
+          "source_location": "Results",
+          "reasoning": "Results:no reassignment or as-treated analysis"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "p13:94/99;5 unstable losses, arms unknown",
+          "source_location": "p13",
+          "reasoning": "p13:94/99;5 unstable losses, arms unknown"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NI",
+          "evidence": "Results:no missing-data sensitivity analysis",
+          "source_location": "Results",
+          "reasoning": "Results:no missing-data sensitivity analysis"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "PY",
+          "evidence": "p13:clinical instability could relate to opioid consumption",
+          "source_location": "p13",
+          "reasoning": "p13:clinical instability could relate to opioid consumption"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NI",
+          "evidence": "Results:dependence on true value insufficiently known",
+          "source_location": "Results",
+          "reasoning": "Results:dependence on true value insufficiently known"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Methods:delivered PCA morphine appropriate",
+          "source_location": "Methods",
+          "reasoning": "Methods:delivered PCA morphine appropriate"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Methods:common dose ascertainment",
+          "source_location": "Methods",
+          "reasoning": "Methods:common dose ascertainment"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Methods:researcher knows assignment, masked dose extraction not established",
+          "source_location": "Methods",
+          "reasoning": "Methods:researcher knows assignment, masked dose extraction not established"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "PN",
+          "evidence": "Methods:objective recorded dose; patient self-dosing defines consumption and does not itself show erroneous recording",
+          "source_location": "Methods",
+          "reasoning": "Methods:objective recorded dose; patient self-dosing defines consumption and does not itself show erroneous recording"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:recorded objective dose probably unaffected by assessor knowledge",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:recorded objective dose probably unaffected by assessor knowledge"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "Full report:no prospective SAP demonstrated",
+          "source_location": "Full report",
+          "reasoning": "Full report:no prospective SAP demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Methods/results:selection of window not established; insufficient prespecification",
+          "source_location": "Methods/results",
+          "reasoning": "Methods/results:selection of window not established; insufficient prespecification"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Methods/results:selection among analyses cannot be ruled out",
+          "source_location": "Methods/results",
+          "reasoning": "Methods/results:selection among analyses cannot be ruled out"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Sequence and concealment insufficiently reported",
+          "source_location": "p11 Methods"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Trial-context deviation information insufficient; awareness alone not bias",
+          "source_location": "Methods"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "Five unstable losses unknown allocation",
+          "source_location": "p13"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Objective delivered-dose ascertainment; self-dosing behavior distinguished",
+          "source_location": "Methods"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific SAP unavailable",
+          "source_location": "Full report"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "hold",
+    "reason": "Hold both publications from independent counting. Hold opioid family until author confirms patient overlap, route, analyzed denominators and authoritative numerical dataset. Preserve separate report values; never substitute numbers across publications.",
+    "postoperative": true,
+    "explicit_0_24h": true,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "No:epidural",
+    "drug": "morphine",
+    "route": "epidural",
+    "unit": "mg",
+    "raw_values": {
+      "active": [
+        18.6,
+        9.7,
+        33
+      ],
+      "sham": [
+        21.6,
+        13.1,
+        30
+      ],
+      "control": [
+        27.2,
+        12.5,
+        31
+      ]
+    },
+    "comparison_selection": "Sham primary only if resolved; no-AES separate",
+    "multiarm_handling": "Shared active arm, no independent duplicate contrasts",
+    "source_location": "Yeh2010 p15 Table4; p11 methods"
+  },
+  "duplicate_map": [
+    {
+      "related_study": "S011",
+      "classification": "UNRESOLVED",
+      "evidence": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+      "source_location": "2010 pp11,13–15 Tables2–4;2011 pp704–707 Fig1 Tables1–3",
+      "analysis_handling": "Hold both publications from independent counting. Hold opioid family until author confirms patient overlap, route, analyzed denominators and authoritative numerical dataset. Preserve separate report values; never substitute numbers across publications."
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "Overlap, recruitment dates/hospital, route, intervention timing, denominators",
+      "why_it_matters": "Independence, systemic opioid eligibility and variance",
+      "analysis_affected": "All family results",
+      "can_proceed_without": "Descriptive report-specific results only",
+      "priority": "HIGH",
+      "exact_question": "Do ATHM2010 and IJNS2011 share patients? Supply recruitment dates/hospital and overlap by arm; explain99/94 versus90, preop+1/+2h versus+3/+4h, epidural versusIV PCA, and n30 versusF(2,84); identify authoritative dataset."
+    }
+  ],
+  "summary": "Both rows source checked, family/route hold. Final family classification UNRESOLVED, strong probable overlap.",
+  "contacts": [
+    {
+      "missing_information": "Overlap, recruitment dates/hospital, route, intervention timing, denominators",
+      "why_it_matters": "Independence, systemic opioid eligibility and variance",
+      "analysis_affected": "All family results",
+      "can_proceed_without": "Descriptive report-specific results only",
+      "priority": "HIGH",
+      "exact_question": "Do ATHM2010 and IJNS2011 share patients? Supply recruitment dates/hospital and overlap by arm; explain99/94 versus90, preop+1/+2h versus+3/+4h, epidural versusIV PCA, and n30 versusF(2,84); identify authoritative dataset."
+    }
+  ]
+}

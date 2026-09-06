@@ -1,0 +1,15 @@
+{
+  "Study_ID": "S013",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "source_publication_read_complete": true,
+  "outcome_rows_total": 1,
+  "outcome_rows_adjudicated": 1,
+  "rob2_results": 1,
+  "limitations": "One row verified numerically; flatus RoB raised to High for unblinded symptom ascertainment. No postoperative opioid dose endpoint.",
+  "artifacts": [
+    "phase_a/S013.json",
+    "adjudicated/S013.json"
+  ],
+  "reviewer_model": "gpt-6-astra"
+}

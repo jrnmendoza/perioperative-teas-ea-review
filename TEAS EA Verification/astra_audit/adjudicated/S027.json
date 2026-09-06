@@ -1,0 +1,2389 @@
+{
+  "Study_ID": "S027",
+  "Study": "Pan 2023",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "CONFIRMED",
+    "title": "Transcutaneous Electrical Acupoint Stimulation Accelerates the Recovery of Patients Undergoing Laparoscopic Myomectomy: A Randomized Controlled Trial",
+    "year": 2023,
+    "doi": "10.2147/JPR.S399249",
+    "pdf_files": [
+      "getfile.php-4.pdf"
+    ],
+    "randomized_arms": {
+      "T": 60,
+      "C": 60
+    },
+    "analyzed_arms": {
+      "T": 52,
+      "C": 53
+    },
+    "modality": "TEAS",
+    "comparator_class": "Usual-care/noTEAS, not demonstrated sham",
+    "independence": "Single2-arm trial; Wenzhou2021distinct from assigned other cohorts; no demonstrated duplicate.",
+    "source_locations": "Complete11 pages; visualFig3p813 and Tables6/7p815.",
+    "identity_notes": "Figure3Cexclusion reasons sum8 but60→53;Tsum7 but60→52. Useconsistent analysed headers52/53, flag allocation of reasons. Tables6–7 NRS parentheses use decimal-like punctuation; exactQ1/Q3 not explicit. Do not silently parse2.3 as2–3. Methods calls doubleblind butCdidnotundergoTEAS; no sham apparatus documented. P0.00 is rounded report, not exact zero. Unidentified20mg recovery drug and implausible induction dose text present; do not correct by assumption."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 10,
+      "final": {
+        "Canonical study": "Pan 2023",
+        "Comparison ID": "PAN23_TEAS_vs_CONTROL",
+        "Intervention arm": "TEAS",
+        "Comparator arm": "Control/usual care",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Time to first postoperative flatus",
+        "Timepoint/window": "Postoperative recovery endpoint",
+        "Data type": "Median/IQR",
+        "Randomized n intervention": 60,
+        "Randomized n comparator": 60,
+        "Analyzed n intervention": 52,
+        "Analyzed n comparator": 53,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": 1020,
+        "Q1 intervention": 675.8,
+        "Q3 intervention": 1278,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": 1210,
+        "Q1 comparator": 896.5,
+        "Q3 comparator": 1427,
+        "Events comparator": null,
+        "Unit/scale": "minutes",
+        "Reported P": "0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for GI analysis using nonparametric/prespecified conversion method only",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "15/120 excluded, including analgesic/PCIA users. Flow reasons sum8C/7T but reported finalC53/T52; analysed headers retained. Median/IQR only.",
+        "Source location": "p816 Table9; p813Fig3",
+        "Source PDF URL": "https://drive.google.com/file/d/19IZpaoI-iTQOr_XOTw-a17WTw_haz8q6/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Pan 2023",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "PAN23_TEAS_vs_CONTROL",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Control/usual care",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to first postoperative flatus",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative recovery endpoint",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Median/IQR",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 60,
+          "source_location": "p813Fig3 and all table headers52/53; flow reasons8C/7T inconsistent with finalC53/T52",
+          "evidence": "{\"randomized\":{\"T\":60,\"C\":60},\"analyzed\":{\"T\":52,\"C\":53}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 60,
+          "source_location": "p813Fig3 and all table headers52/53; flow reasons8C/7T inconsistent with finalC53/T52",
+          "evidence": "{\"randomized\":{\"T\":60,\"C\":60},\"analyzed\":{\"T\":52,\"C\":53}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 52,
+          "source_location": "p813Fig3 and all table headers52/53; flow reasons8C/7T inconsistent with finalC53/T52",
+          "evidence": "{\"randomized\":{\"T\":60,\"C\":60},\"analyzed\":{\"T\":52,\"C\":53}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 53,
+          "source_location": "p813Fig3 and all table headers52/53; flow reasons8C/7T inconsistent with finalC53/T52",
+          "evidence": "{\"randomized\":{\"T\":60,\"C\":60},\"analyzed\":{\"T\":52,\"C\":53}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "No value used in this reporting slot; First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "No value used in this reporting slot; First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": 1020,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": 675.8,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": 1278,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "No value used in this reporting slot; First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "No value used in this reporting slot; First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "No value used in this reporting slot; First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": 1210,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": 896.5,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": 1427,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "No value used in this reporting slot; First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "minutes",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.01",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for GI analysis using nonparametric/prespecified conversion method only",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "15/120 excluded, including analgesic/PCIA users. Flow reasons sum8C/7T but reported finalC53/T52; analysed headers retained. Median/IQR only.",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p816 Table9; p813Fig3",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/19IZpaoI-iTQOr_XOTw-a17WTw_haz8q6/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "p816Table9; p813Fig3",
+          "evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Source-QC issue",
+          "old_value": "15/120 excluded after randomization; do not relabel median/IQR as mean/SD",
+          "source_value": "15/120 excluded, including analgesic/PCIA users. Flow reasons sum8C/7T but reported finalC53/T52; analysed headers retained. Median/IQR only.",
+          "final_value": "15/120 excluded, including analgesic/PCIA users. Flow reasons sum8C/7T but reported finalC53/T52; analysed headers retained. Median/IQR only.",
+          "source_location": "p816Table9; p813Fig3",
+          "reason": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Postoperative recovery table",
+          "source_value": "p816 Table9; p813Fig3",
+          "final_value": "p816 Table9; p813Fig3",
+          "source_location": "p816Table9; p813Fig3",
+          "reason": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "getfile.php-4.pdf",
+      "source_evidence": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+      "drug": "Remifentanil/sufentanil intraoperative; rescue drug identity unreported",
+      "route": "IV intraoperative",
+      "pca_formulation": "PCIA users excluded; no included-cohort PCA regimen reported",
+      "rescue_regimen": "Flurbiprofen100mg routine; incision ropivacaine; rescue analgesic counts without drug/route/dose. Tropisetron5mg routine.",
+      "critical_qc": "First anal exhaust T52median1020[675.8–1278] vsC53median1210[896.5–1427]minutes;P=.01; 60randomizedeach. Time-to-flatus not24h value.",
+      "analysis_eligibility": "Eligible for GI analysis using nonparametric/prespecified conversion method only",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S027_First flatus",
+      "outcome": "First flatus",
+      "time_window": "Postoperative",
+      "comparison": "TEASvsnoTEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number tables.",
+          "source_location": "p810",
+          "reasoning": "Random-number tables."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment method.",
+          "source_location": "p810",
+          "reasoning": "No concealment method."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Analysed cohort baseline only; flow exclusions inconsistent byarm.",
+          "source_location": "p813–814",
+          "reasoning": "Analysed cohort baseline only; flow exclusions inconsistent byarm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Control did not undergoTEAS; active preop/PACU awake stimulation.",
+          "source_location": "p810",
+          "reasoning": "Control did not undergoTEAS; active preop/PACU awake stimulation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Anesthesiologist deliversTEAS.",
+          "source_location": "p810",
+          "reasoning": "Anesthesiologist deliversTEAS."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown.",
+          "source_location": "p813",
+          "reasoning": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p813",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p813",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "Postrandomization exclusions based on analgesia use and procedure.",
+          "source_location": "p813Fig3",
+          "reasoning": "Postrandomization exclusions based on analgesia use and procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "Y",
+          "evidence": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain.",
+          "source_location": "p813",
+          "reasoning": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "105/120 retained.",
+          "source_location": "p813",
+          "reasoning": "105/120 retained."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity or imputation.",
+          "source_location": "p813",
+          "reasoning": "No missing-data sensitivity or imputation."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Additional analgesia/PCIA reflects pain burden; complications affect recovery.",
+          "source_location": "p813",
+          "reasoning": "Additional analgesia/PCIA reflects pain burden; complications affect recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Exclusion reasons linked to postoperative symptom/analgesic needs.",
+          "source_location": "p813",
+          "reasoning": "Exclusion reasons linked to postoperative symptom/analgesic needs."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "First flatus is a defined recovery endpoint in study measures.",
+          "source_location": "pp810–812,815–816",
+          "reasoning": "Suitable instrument/event with reporting qualifications separately."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same24h schedule.",
+          "source_location": "p812",
+          "reasoning": "Same24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Participant experiencesTEAS vs no intervention despitedoubleblind label.",
+          "source_location": "p810",
+          "reasoning": "Participant experiencesTEAS vs no intervention despitedoubleblind label."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "QoR/pain/GI reports can respond to treatment expectations.",
+          "source_location": "pp810,816",
+          "reasoning": "QoR/pain/GI reports can respond to treatment expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "Knowledge may influence report/request, but likely measurement influence not established for this endpoint.",
+          "source_location": "pp810,815–816",
+          "reasoning": "Some concerns instead of automatically copyingQoRHigh."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "RegistryID supplied but no dated detailed protocol/SAP retrieved.",
+          "source_location": "p810;official registry search",
+          "reasoning": "RegistryID supplied but no dated detailed protocol/SAP retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article.",
+          "source_location": "p812",
+          "reasoning": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding analysis plan.",
+          "source_location": "p813",
+          "reasoning": "No pre-unblinding analysis plan."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment unknown; flow inconsistency.",
+          "source_location": "pp810,813"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Excluding patients on other analgesia undermines assignment estimate materially.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Missing cases selected on analgesic/clinical state.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked participant can affect reporting/clinical milestone; influence likelihood not established.",
+          "source_location": "pp810,815–816"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific plan unavailable.",
+          "source_location": "p810"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Analgesia-based exclusions and open subjective comparison materially undermine assignment effect.",
+      "old_selected_overall": "High (flatus)",
+      "changes_from_old": "Flatus overallHigh retained; distinct result-specific judgments added."
+    },
+    {
+      "result_id": "S027_QoR40total",
+      "outcome": "QoR40total",
+      "time_window": "24h",
+      "comparison": "TEASvsnoTEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number tables.",
+          "source_location": "p810",
+          "reasoning": "Random-number tables."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment method.",
+          "source_location": "p810",
+          "reasoning": "No concealment method."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Analysed cohort baseline only; flow exclusions inconsistent byarm.",
+          "source_location": "p813–814",
+          "reasoning": "Analysed cohort baseline only; flow exclusions inconsistent byarm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Control did not undergoTEAS; active preop/PACU awake stimulation.",
+          "source_location": "p810",
+          "reasoning": "Control did not undergoTEAS; active preop/PACU awake stimulation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Anesthesiologist deliversTEAS.",
+          "source_location": "p810",
+          "reasoning": "Anesthesiologist deliversTEAS."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown.",
+          "source_location": "p813",
+          "reasoning": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p813",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p813",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "Postrandomization exclusions based on analgesia use and procedure.",
+          "source_location": "p813Fig3",
+          "reasoning": "Postrandomization exclusions based on analgesia use and procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "Y",
+          "evidence": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain.",
+          "source_location": "p813",
+          "reasoning": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "105/120 retained.",
+          "source_location": "p813",
+          "reasoning": "105/120 retained."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity or imputation.",
+          "source_location": "p813",
+          "reasoning": "No missing-data sensitivity or imputation."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Additional analgesia/PCIA reflects pain burden; complications affect recovery.",
+          "source_location": "p813",
+          "reasoning": "Additional analgesia/PCIA reflects pain burden; complications affect recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Exclusion reasons linked to postoperative symptom/analgesic needs.",
+          "source_location": "p813",
+          "reasoning": "Exclusion reasons linked to postoperative symptom/analgesic needs."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "QoR40total is a defined recovery endpoint in study measures.",
+          "source_location": "pp810–812,815–816",
+          "reasoning": "Suitable instrument/event with reporting qualifications separately."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same24h schedule.",
+          "source_location": "p812",
+          "reasoning": "Same24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Participant experiencesTEAS vs no intervention despitedoubleblind label.",
+          "source_location": "p810",
+          "reasoning": "Participant experiencesTEAS vs no intervention despitedoubleblind label."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "QoR/pain/GI reports can respond to treatment expectations.",
+          "source_location": "pp810,816",
+          "reasoning": "QoR/pain/GI reports can respond to treatment expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "PY",
+          "evidence": "Unmasked repeated treatment vs no attention control for subjective recovery; likely expectation influence.",
+          "source_location": "pp810,816",
+          "reasoning": "Unmasked repeated treatment vs no attention control for subjective recovery; likely expectation influence."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "RegistryID supplied but no dated detailed protocol/SAP retrieved.",
+          "source_location": "p810;official registry search",
+          "reasoning": "RegistryID supplied but no dated detailed protocol/SAP retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article.",
+          "source_location": "p812",
+          "reasoning": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding analysis plan.",
+          "source_location": "p813",
+          "reasoning": "No pre-unblinding analysis plan."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment unknown; flow inconsistency.",
+          "source_location": "pp810,813"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Excluding patients on other analgesia undermines assignment estimate materially.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Missing cases selected on analgesic/clinical state.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 4,
+          "judgment": "High",
+          "reasoning": "Unmasked intervention vsnoTEAS likely influences subjectiveQoR/pain.",
+          "source_location": "p810"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific plan unavailable.",
+          "source_location": "p810"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Analgesia-based exclusions and open subjective comparison materially undermine assignment effect.",
+      "old_selected_overall": "High (flatus)",
+      "changes_from_old": "Flatus overallHigh retained; distinct result-specific judgments added."
+    },
+    {
+      "result_id": "S027_MovementNRS",
+      "outcome": "MovementNRS",
+      "time_window": "24h",
+      "comparison": "TEASvsnoTEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number tables.",
+          "source_location": "p810",
+          "reasoning": "Random-number tables."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment method.",
+          "source_location": "p810",
+          "reasoning": "No concealment method."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Analysed cohort baseline only; flow exclusions inconsistent byarm.",
+          "source_location": "p813–814",
+          "reasoning": "Analysed cohort baseline only; flow exclusions inconsistent byarm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Control did not undergoTEAS; active preop/PACU awake stimulation.",
+          "source_location": "p810",
+          "reasoning": "Control did not undergoTEAS; active preop/PACU awake stimulation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Anesthesiologist deliversTEAS.",
+          "source_location": "p810",
+          "reasoning": "Anesthesiologist deliversTEAS."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown.",
+          "source_location": "p813",
+          "reasoning": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p813",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p813",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "Postrandomization exclusions based on analgesia use and procedure.",
+          "source_location": "p813Fig3",
+          "reasoning": "Postrandomization exclusions based on analgesia use and procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "Y",
+          "evidence": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain.",
+          "source_location": "p813",
+          "reasoning": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "105/120 retained.",
+          "source_location": "p813",
+          "reasoning": "105/120 retained."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity or imputation.",
+          "source_location": "p813",
+          "reasoning": "No missing-data sensitivity or imputation."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Additional analgesia/PCIA reflects pain burden; complications affect recovery.",
+          "source_location": "p813",
+          "reasoning": "Additional analgesia/PCIA reflects pain burden; complications affect recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Exclusion reasons linked to postoperative symptom/analgesic needs.",
+          "source_location": "p813",
+          "reasoning": "Exclusion reasons linked to postoperative symptom/analgesic needs."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "MovementNRS is a defined recovery endpoint in study measures.",
+          "source_location": "pp810–812,815–816",
+          "reasoning": "Suitable instrument/event with reporting qualifications separately."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same24h schedule.",
+          "source_location": "p812",
+          "reasoning": "Same24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Participant experiencesTEAS vs no intervention despitedoubleblind label.",
+          "source_location": "p810",
+          "reasoning": "Participant experiencesTEAS vs no intervention despitedoubleblind label."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "QoR/pain/GI reports can respond to treatment expectations.",
+          "source_location": "pp810,816",
+          "reasoning": "QoR/pain/GI reports can respond to treatment expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "PY",
+          "evidence": "Unmasked repeated treatment vs no attention control for subjective recovery; likely expectation influence.",
+          "source_location": "pp810,816",
+          "reasoning": "Unmasked repeated treatment vs no attention control for subjective recovery; likely expectation influence."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "RegistryID supplied but no dated detailed protocol/SAP retrieved.",
+          "source_location": "p810;official registry search",
+          "reasoning": "RegistryID supplied but no dated detailed protocol/SAP retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article.",
+          "source_location": "p812",
+          "reasoning": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding analysis plan.",
+          "source_location": "p813",
+          "reasoning": "No pre-unblinding analysis plan."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment unknown; flow inconsistency.",
+          "source_location": "pp810,813"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Excluding patients on other analgesia undermines assignment estimate materially.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Missing cases selected on analgesic/clinical state.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 4,
+          "judgment": "High",
+          "reasoning": "Unmasked intervention vsnoTEAS likely influences subjectiveQoR/pain.",
+          "source_location": "p810"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific plan unavailable.",
+          "source_location": "p810"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Analgesia-based exclusions and open subjective comparison materially undermine assignment effect.",
+      "old_selected_overall": "High (flatus)",
+      "changes_from_old": "Flatus overallHigh retained; distinct result-specific judgments added."
+    },
+    {
+      "result_id": "S027_Vomiting",
+      "outcome": "Vomiting",
+      "time_window": "0–24h",
+      "comparison": "TEASvsnoTEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number tables.",
+          "source_location": "p810",
+          "reasoning": "Random-number tables."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment method.",
+          "source_location": "p810",
+          "reasoning": "No concealment method."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Analysed cohort baseline only; flow exclusions inconsistent byarm.",
+          "source_location": "p813–814",
+          "reasoning": "Analysed cohort baseline only; flow exclusions inconsistent byarm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Control did not undergoTEAS; active preop/PACU awake stimulation.",
+          "source_location": "p810",
+          "reasoning": "Control did not undergoTEAS; active preop/PACU awake stimulation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Anesthesiologist deliversTEAS.",
+          "source_location": "p810",
+          "reasoning": "Anesthesiologist deliversTEAS."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown.",
+          "source_location": "p813",
+          "reasoning": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p813",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p813",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "Postrandomization exclusions based on analgesia use and procedure.",
+          "source_location": "p813Fig3",
+          "reasoning": "Postrandomization exclusions based on analgesia use and procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "Y",
+          "evidence": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain.",
+          "source_location": "p813",
+          "reasoning": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "105/120 retained.",
+          "source_location": "p813",
+          "reasoning": "105/120 retained."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity or imputation.",
+          "source_location": "p813",
+          "reasoning": "No missing-data sensitivity or imputation."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Additional analgesia/PCIA reflects pain burden; complications affect recovery.",
+          "source_location": "p813",
+          "reasoning": "Additional analgesia/PCIA reflects pain burden; complications affect recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Exclusion reasons linked to postoperative symptom/analgesic needs.",
+          "source_location": "p813",
+          "reasoning": "Exclusion reasons linked to postoperative symptom/analgesic needs."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Vomiting is a defined recovery endpoint in study measures.",
+          "source_location": "pp810–812,815–816",
+          "reasoning": "Suitable instrument/event with reporting qualifications separately."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same24h schedule.",
+          "source_location": "p812",
+          "reasoning": "Same24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "NI",
+          "evidence": "Pain nurse blinded but specificvomiting assessor blinding unclear.",
+          "source_location": "p810",
+          "reasoning": "Do not infer all outcome assessors blinded from pain-only statement."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "PN",
+          "evidence": "Observable emesis less open to subjective judgment.",
+          "source_location": "p815",
+          "reasoning": "Measurement influence unlikely if event observed."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.4PN.",
+          "source_location": "pp810,815–816",
+          "reasoning": "BranchNA."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "RegistryID supplied but no dated detailed protocol/SAP retrieved.",
+          "source_location": "p810;official registry search",
+          "reasoning": "RegistryID supplied but no dated detailed protocol/SAP retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article.",
+          "source_location": "p812",
+          "reasoning": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding analysis plan.",
+          "source_location": "p813",
+          "reasoning": "No pre-unblinding analysis plan."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment unknown; flow inconsistency.",
+          "source_location": "pp810,813"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Excluding patients on other analgesia undermines assignment estimate materially.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Missing cases selected on analgesic/clinical state.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Observable vomiting, common24h window; reporting concern insufficient for high measurement bias.",
+          "source_location": "p815"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific plan unavailable.",
+          "source_location": "p810"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Analgesia-based exclusions and open subjective comparison materially undermine assignment effect.",
+      "old_selected_overall": "High (flatus)",
+      "changes_from_old": "Flatus overallHigh retained; distinct result-specific judgments added."
+    },
+    {
+      "result_id": "S027_Solidfood tolerance",
+      "outcome": "Solidfood tolerance",
+      "time_window": "Postoperative",
+      "comparison": "TEASvsnoTEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number tables.",
+          "source_location": "p810",
+          "reasoning": "Random-number tables."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment method.",
+          "source_location": "p810",
+          "reasoning": "No concealment method."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Analysed cohort baseline only; flow exclusions inconsistent byarm.",
+          "source_location": "p813–814",
+          "reasoning": "Analysed cohort baseline only; flow exclusions inconsistent byarm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Control did not undergoTEAS; active preop/PACU awake stimulation.",
+          "source_location": "p810",
+          "reasoning": "Control did not undergoTEAS; active preop/PACU awake stimulation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Anesthesiologist deliversTEAS.",
+          "source_location": "p810",
+          "reasoning": "Anesthesiologist deliversTEAS."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown.",
+          "source_location": "p813",
+          "reasoning": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p813",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p813",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "Postrandomization exclusions based on analgesia use and procedure.",
+          "source_location": "p813Fig3",
+          "reasoning": "Postrandomization exclusions based on analgesia use and procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "Y",
+          "evidence": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain.",
+          "source_location": "p813",
+          "reasoning": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "105/120 retained.",
+          "source_location": "p813",
+          "reasoning": "105/120 retained."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity or imputation.",
+          "source_location": "p813",
+          "reasoning": "No missing-data sensitivity or imputation."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Additional analgesia/PCIA reflects pain burden; complications affect recovery.",
+          "source_location": "p813",
+          "reasoning": "Additional analgesia/PCIA reflects pain burden; complications affect recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Exclusion reasons linked to postoperative symptom/analgesic needs.",
+          "source_location": "p813",
+          "reasoning": "Exclusion reasons linked to postoperative symptom/analgesic needs."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Solidfood tolerance is a defined recovery endpoint in study measures.",
+          "source_location": "pp810–812,815–816",
+          "reasoning": "Suitable instrument/event with reporting qualifications separately."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same24h schedule.",
+          "source_location": "p812",
+          "reasoning": "Same24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Participant experiencesTEAS vs no intervention despitedoubleblind label.",
+          "source_location": "p810",
+          "reasoning": "Participant experiencesTEAS vs no intervention despitedoubleblind label."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "QoR/pain/GI reports can respond to treatment expectations.",
+          "source_location": "pp810,816",
+          "reasoning": "QoR/pain/GI reports can respond to treatment expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "Knowledge may influence report/request, but likely measurement influence not established for this endpoint.",
+          "source_location": "pp810,815–816",
+          "reasoning": "Some concerns instead of automatically copyingQoRHigh."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "RegistryID supplied but no dated detailed protocol/SAP retrieved.",
+          "source_location": "p810;official registry search",
+          "reasoning": "RegistryID supplied but no dated detailed protocol/SAP retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article.",
+          "source_location": "p812",
+          "reasoning": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding analysis plan.",
+          "source_location": "p813",
+          "reasoning": "No pre-unblinding analysis plan."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment unknown; flow inconsistency.",
+          "source_location": "pp810,813"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Excluding patients on other analgesia undermines assignment estimate materially.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Missing cases selected on analgesic/clinical state.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked participant can affect reporting/clinical milestone; influence likelihood not established.",
+          "source_location": "pp810,815–816"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific plan unavailable.",
+          "source_location": "p810"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Analgesia-based exclusions and open subjective comparison materially undermine assignment effect.",
+      "old_selected_overall": "High (flatus)",
+      "changes_from_old": "Flatus overallHigh retained; distinct result-specific judgments added."
+    },
+    {
+      "result_id": "S027_Water intake",
+      "outcome": "Water intake",
+      "time_window": "Postoperative",
+      "comparison": "TEASvsnoTEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number tables.",
+          "source_location": "p810",
+          "reasoning": "Random-number tables."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment method.",
+          "source_location": "p810",
+          "reasoning": "No concealment method."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Analysed cohort baseline only; flow exclusions inconsistent byarm.",
+          "source_location": "p813–814",
+          "reasoning": "Analysed cohort baseline only; flow exclusions inconsistent byarm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Control did not undergoTEAS; active preop/PACU awake stimulation.",
+          "source_location": "p810",
+          "reasoning": "Control did not undergoTEAS; active preop/PACU awake stimulation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Anesthesiologist deliversTEAS.",
+          "source_location": "p810",
+          "reasoning": "Anesthesiologist deliversTEAS."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown.",
+          "source_location": "p813",
+          "reasoning": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p813",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p813",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "Postrandomization exclusions based on analgesia use and procedure.",
+          "source_location": "p813Fig3",
+          "reasoning": "Postrandomization exclusions based on analgesia use and procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "Y",
+          "evidence": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain.",
+          "source_location": "p813",
+          "reasoning": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "105/120 retained.",
+          "source_location": "p813",
+          "reasoning": "105/120 retained."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity or imputation.",
+          "source_location": "p813",
+          "reasoning": "No missing-data sensitivity or imputation."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Additional analgesia/PCIA reflects pain burden; complications affect recovery.",
+          "source_location": "p813",
+          "reasoning": "Additional analgesia/PCIA reflects pain burden; complications affect recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Exclusion reasons linked to postoperative symptom/analgesic needs.",
+          "source_location": "p813",
+          "reasoning": "Exclusion reasons linked to postoperative symptom/analgesic needs."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Water intake is a defined recovery endpoint in study measures.",
+          "source_location": "pp810–812,815–816",
+          "reasoning": "Suitable instrument/event with reporting qualifications separately."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same24h schedule.",
+          "source_location": "p812",
+          "reasoning": "Same24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Participant experiencesTEAS vs no intervention despitedoubleblind label.",
+          "source_location": "p810",
+          "reasoning": "Participant experiencesTEAS vs no intervention despitedoubleblind label."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "QoR/pain/GI reports can respond to treatment expectations.",
+          "source_location": "pp810,816",
+          "reasoning": "QoR/pain/GI reports can respond to treatment expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "Knowledge may influence report/request, but likely measurement influence not established for this endpoint.",
+          "source_location": "pp810,815–816",
+          "reasoning": "Some concerns instead of automatically copyingQoRHigh."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "RegistryID supplied but no dated detailed protocol/SAP retrieved.",
+          "source_location": "p810;official registry search",
+          "reasoning": "RegistryID supplied but no dated detailed protocol/SAP retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article.",
+          "source_location": "p812",
+          "reasoning": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding analysis plan.",
+          "source_location": "p813",
+          "reasoning": "No pre-unblinding analysis plan."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment unknown; flow inconsistency.",
+          "source_location": "pp810,813"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Excluding patients on other analgesia undermines assignment estimate materially.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Missing cases selected on analgesic/clinical state.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked participant can affect reporting/clinical milestone; influence likelihood not established.",
+          "source_location": "pp810,815–816"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific plan unavailable.",
+          "source_location": "p810"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Analgesia-based exclusions and open subjective comparison materially undermine assignment effect.",
+      "old_selected_overall": "High (flatus)",
+      "changes_from_old": "Flatus overallHigh retained; distinct result-specific judgments added."
+    },
+    {
+      "result_id": "S027_Analgesic use",
+      "outcome": "Analgesic use",
+      "time_window": "0–24h",
+      "comparison": "TEASvsnoTEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number tables.",
+          "source_location": "p810",
+          "reasoning": "Random-number tables."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment method.",
+          "source_location": "p810",
+          "reasoning": "No concealment method."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Analysed cohort baseline only; flow exclusions inconsistent byarm.",
+          "source_location": "p813–814",
+          "reasoning": "Analysed cohort baseline only; flow exclusions inconsistent byarm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Control did not undergoTEAS; active preop/PACU awake stimulation.",
+          "source_location": "p810",
+          "reasoning": "Control did not undergoTEAS; active preop/PACU awake stimulation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Anesthesiologist deliversTEAS.",
+          "source_location": "p810",
+          "reasoning": "Anesthesiologist deliversTEAS."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown.",
+          "source_location": "p813",
+          "reasoning": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p813",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p813",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "Postrandomization exclusions based on analgesia use and procedure.",
+          "source_location": "p813Fig3",
+          "reasoning": "Postrandomization exclusions based on analgesia use and procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "Y",
+          "evidence": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain.",
+          "source_location": "p813",
+          "reasoning": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "105/120 retained.",
+          "source_location": "p813",
+          "reasoning": "105/120 retained."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity or imputation.",
+          "source_location": "p813",
+          "reasoning": "No missing-data sensitivity or imputation."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Additional analgesia/PCIA reflects pain burden; complications affect recovery.",
+          "source_location": "p813",
+          "reasoning": "Additional analgesia/PCIA reflects pain burden; complications affect recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Exclusion reasons linked to postoperative symptom/analgesic needs.",
+          "source_location": "p813",
+          "reasoning": "Exclusion reasons linked to postoperative symptom/analgesic needs."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Analgesic use is a defined recovery endpoint in study measures.",
+          "source_location": "pp810–812,815–816",
+          "reasoning": "Suitable instrument/event with reporting qualifications separately."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same24h schedule.",
+          "source_location": "p812",
+          "reasoning": "Same24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Participant experiencesTEAS vs no intervention despitedoubleblind label.",
+          "source_location": "p810",
+          "reasoning": "Participant experiencesTEAS vs no intervention despitedoubleblind label."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "QoR/pain/GI reports can respond to treatment expectations.",
+          "source_location": "pp810,816",
+          "reasoning": "QoR/pain/GI reports can respond to treatment expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "Knowledge may influence report/request, but likely measurement influence not established for this endpoint.",
+          "source_location": "pp810,815–816",
+          "reasoning": "Some concerns instead of automatically copyingQoRHigh."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "RegistryID supplied but no dated detailed protocol/SAP retrieved.",
+          "source_location": "p810;official registry search",
+          "reasoning": "RegistryID supplied but no dated detailed protocol/SAP retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article.",
+          "source_location": "p812",
+          "reasoning": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding analysis plan.",
+          "source_location": "p813",
+          "reasoning": "No pre-unblinding analysis plan."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment unknown; flow inconsistency.",
+          "source_location": "pp810,813"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Excluding patients on other analgesia undermines assignment estimate materially.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Missing cases selected on analgesic/clinical state.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked participant can affect reporting/clinical milestone; influence likelihood not established.",
+          "source_location": "pp810,815–816"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific plan unavailable.",
+          "source_location": "p810"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Analgesia-based exclusions and open subjective comparison materially undermine assignment effect.",
+      "old_selected_overall": "High (flatus)",
+      "changes_from_old": "Flatus overallHigh retained; distinct result-specific judgments added."
+    },
+    {
+      "result_id": "S027_Abdominal distension",
+      "outcome": "Abdominal distension",
+      "time_window": "24h",
+      "comparison": "TEASvsnoTEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number tables.",
+          "source_location": "p810",
+          "reasoning": "Random-number tables."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment method.",
+          "source_location": "p810",
+          "reasoning": "No concealment method."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Analysed cohort baseline only; flow exclusions inconsistent byarm.",
+          "source_location": "p813–814",
+          "reasoning": "Analysed cohort baseline only; flow exclusions inconsistent byarm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Control did not undergoTEAS; active preop/PACU awake stimulation.",
+          "source_location": "p810",
+          "reasoning": "Control did not undergoTEAS; active preop/PACU awake stimulation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Anesthesiologist deliversTEAS.",
+          "source_location": "p810",
+          "reasoning": "Anesthesiologist deliversTEAS."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown.",
+          "source_location": "p813",
+          "reasoning": "6nonprotocol analgesic and2PCIA exclusions; whether trial-context origin unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p813",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p813",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "Postrandomization exclusions based on analgesia use and procedure.",
+          "source_location": "p813Fig3",
+          "reasoning": "Postrandomization exclusions based on analgesia use and procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "Y",
+          "evidence": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain.",
+          "source_location": "p813",
+          "reasoning": "15/120 excluded including8with other analgesia/PCIA; directly linked to recovery/pain."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "105/120 retained.",
+          "source_location": "p813",
+          "reasoning": "105/120 retained."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity or imputation.",
+          "source_location": "p813",
+          "reasoning": "No missing-data sensitivity or imputation."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Additional analgesia/PCIA reflects pain burden; complications affect recovery.",
+          "source_location": "p813",
+          "reasoning": "Additional analgesia/PCIA reflects pain burden; complications affect recovery."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "PY",
+          "evidence": "Exclusion reasons linked to postoperative symptom/analgesic needs.",
+          "source_location": "p813",
+          "reasoning": "Exclusion reasons linked to postoperative symptom/analgesic needs."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Abdominal distension is a defined recovery endpoint in study measures.",
+          "source_location": "pp810–812,815–816",
+          "reasoning": "Suitable instrument/event with reporting qualifications separately."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same24h schedule.",
+          "source_location": "p812",
+          "reasoning": "Same24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Participant experiencesTEAS vs no intervention despitedoubleblind label.",
+          "source_location": "p810",
+          "reasoning": "Participant experiencesTEAS vs no intervention despitedoubleblind label."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "QoR/pain/GI reports can respond to treatment expectations.",
+          "source_location": "pp810,816",
+          "reasoning": "QoR/pain/GI reports can respond to treatment expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "Knowledge may influence report/request, but likely measurement influence not established for this endpoint.",
+          "source_location": "pp810,815–816",
+          "reasoning": "Some concerns instead of automatically copyingQoRHigh."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "RegistryID supplied but no dated detailed protocol/SAP retrieved.",
+          "source_location": "p810;official registry search",
+          "reasoning": "RegistryID supplied but no dated detailed protocol/SAP retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article.",
+          "source_location": "p812",
+          "reasoning": "Broad multiple endpoints; prospective hierarchy not demonstrable beyond article."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding analysis plan.",
+          "source_location": "p813",
+          "reasoning": "No pre-unblinding analysis plan."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment unknown; flow inconsistency.",
+          "source_location": "pp810,813"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Excluding patients on other analgesia undermines assignment estimate materially.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Missing cases selected on analgesic/clinical state.",
+          "source_location": "p813"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Unmasked participant can affect reporting/clinical milestone; influence likelihood not established.",
+          "source_location": "pp810,815–816"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific plan unavailable.",
+          "source_location": "p810"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Analgesia-based exclusions and open subjective comparison materially undermine assignment effect.",
+      "old_selected_overall": "High (flatus)",
+      "changes_from_old": "Flatus overallHigh retained; distinct result-specific judgments added."
+    }
+  ],
+  "opioid_candidate": {
+    "postoperative": false,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Remifentanil/sufentanil intraoperative; rescue drug identity unreported",
+    "route": "IV intraoperative",
+    "unit": "Insufficient information / not reported.",
+    "raw_values": {},
+    "comparison_selection": "Usual-care/noTEAS, not demonstrated sham",
+    "multiarm_handling": "Single2-arm trial; Wenzhou2021distinct from assigned other cohorts; no demonstrated duplicate.",
+    "source_location": "Complete11 pages; visualFig3p813 and Tables6/7p815.",
+    "decision": "excluded",
+    "reason": "Only intraoperative remifentanil and postoperative unspecified analgesic use; PCIA users excluded. No cumulative0–24h opioid mass."
+  },
+  "duplicate_map": [],
+  "additional_source_outcomes": [
+    {
+      "outcome": "QoR40total24h",
+      "format": "meanSD",
+      "T": [
+        182.7,
+        6.9
+      ],
+      "C": [
+        176.4,
+        7.1
+      ],
+      "source": "p816Table10",
+      "P": "0.00* rounded, not zero"
+    },
+    {
+      "outcome": "QoR40dimensions24h",
+      "T": {
+        "comfort": [
+          54.6,
+          2.8
+        ],
+        "emotional": [
+          41.7,
+          2.3
+        ],
+        "independence": [
+          20.9,
+          3.3
+        ],
+        "support": [
+          32.5,
+          2.3
+        ],
+        "pain": [
+          32.9,
+          1.3
+        ]
+      },
+      "C": {
+        "comfort": [
+          52.3,
+          3.6
+        ],
+        "emotional": [
+          39.7,
+          2.9
+        ],
+        "independence": [
+          20.4,
+          3.1
+        ],
+        "support": [
+          32,
+          1.9
+        ],
+        "pain": [
+          32,
+          1.5
+        ]
+      },
+      "source": "p816Table10"
+    },
+    {
+      "outcome": "MovementNRS24h",
+      "format": "median with ambiguous punctuation in parenthetical dispersion",
+      "T": "2 (2.3)",
+      "C": "3 (3.4)",
+      "source": "p815Table7",
+      "median_T": 2,
+      "median_C": 3,
+      "quartiles": null,
+      "P": "0.00* printed"
+    },
+    {
+      "outcome": "MovementNRS1h",
+      "T": "2 (1.4)",
+      "C": "3 (2.4)",
+      "P": ".04",
+      "source": "p815Table7"
+    },
+    {
+      "outcome": "Vomiting0–24h",
+      "T": {
+        "events": 9,
+        "n": 52
+      },
+      "C": {
+        "events": 19,
+        "n": 53
+      },
+      "P": ".03",
+      "source": "p815Table7 and text within first24h"
+    },
+    {
+      "outcome": "Vomiting0–1h",
+      "T": {
+        "events": 2,
+        "n": 52
+      },
+      "C": {
+        "events": 3,
+        "n": 53
+      },
+      "P": ".66",
+      "source": "p815Table7"
+    },
+    {
+      "outcome": "Analgesic use24h",
+      "T": 19,
+      "C": 23,
+      "P": ".47",
+      "source": "p815Table7"
+    },
+    {
+      "outcome": "Antiemetic use24h",
+      "T": 25,
+      "C": 34,
+      "P": ".10",
+      "source": "p815Table7"
+    },
+    {
+      "outcome": "Abdominal distension24h",
+      "T": {
+        "grades": [
+          28,
+          19,
+          5,
+          0
+        ],
+        "any": 24,
+        "n": 52
+      },
+      "C": {
+        "grades": [
+          20,
+          25,
+          8,
+          0
+        ],
+        "any": 33,
+        "n": 53
+      },
+      "P": ".24",
+      "source": "p816Table8;any sumsgrades1–3"
+    },
+    {
+      "outcome": "First flatus minutes",
+      "format": "medianQ1Q3",
+      "T": [
+        1020,
+        675.8,
+        1278
+      ],
+      "C": [
+        1210,
+        896.5,
+        1427
+      ],
+      "P": ".01",
+      "source": "p816Table9"
+    },
+    {
+      "outcome": "Water intake minutes",
+      "T": [
+        698,
+        389.8,
+        900.5
+      ],
+      "C": [
+        698,
+        494.5,
+        946
+      ],
+      "P": ".33",
+      "source": "p816Table9"
+    },
+    {
+      "outcome": "Solidfood tolerance minutes",
+      "T": [
+        1207.5,
+        998.5,
+        1414.5
+      ],
+      "C": [
+        1328,
+        1133.5,
+        1521.5
+      ],
+      "P": ".02",
+      "source": "p816Table9"
+    },
+    {
+      "outcome": "Intraoperative remifentanil µg",
+      "format": "meanSD",
+      "T": [
+        740.1,
+        276.9
+      ],
+      "C": [
+        854,
+        287.5
+      ],
+      "P": ".04",
+      "source": "p814Table2"
+    },
+    {
+      "outcome": "Induction sufentanil µg",
+      "T": [
+        22.6,
+        2.9
+      ],
+      "C": [
+        21.6,
+        2.7
+      ],
+      "P": ".09",
+      "source": "p814Table2"
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "Excluded-patient outcomes, flow correction, NRS dispersion",
+      "why_it_matters": "Assignment effect and numerical reporting",
+      "analysis_affected": "Pain/QoR/GI/PONV",
+      "can_proceed_without": "Tabulated endpoints withHighRoB; NRSquartiles unresolved",
+      "priority": "HIGH",
+      "exact_question": "Please correct arm-specific exclusions, supply all120patients' outcomes, identify rescue drugs and clarify whetherNRS2(2.3) denotesQ1=2,Q3=3 or another dispersion."
+    }
+  ],
+  "summary": "Singlebaseline row audited. Firstflatus median/IQR minutes verified; HighRoB retained. Added source inventory includesQoR40meanSD, vomiting9/52vs19/53, solidfood and movementNRS with ambiguous dispersion punctuation."
+}

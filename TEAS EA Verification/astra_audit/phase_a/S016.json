@@ -1,0 +1,263 @@
+{
+  "Study_ID": "S016",
+  "Study": "Xing 2022",
+  "phase": "A_SOURCE_ONLY",
+  "baseline_accessed": false,
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "title": "Effect of Transcutaneous Electrical Acupoint Stimulation Combined with Transversus Abdominis Plane Block on Postoperative Recovery in Elderly Patients Undergoing Laparoscopic Gastric Cancer Surgery: A Randomized Controlled Trial",
+  "year": 2022,
+  "doi": "10.1007/s40122-022-00429-2",
+  "pdf": "s40122-022-00429-2.pdf",
+  "source_read": "Complete13pages; Table3 visually verified",
+  "modality": "TEAS",
+  "randomized": {
+    "G": 30,
+    "NG": 30,
+    "NTG": 30
+  },
+  "analyzed": {
+    "G": 29,
+    "NG": 29,
+    "NTG": 29
+  },
+  "comparators": "NTG TEAS+activeTAPB vsNG no-currentTEAS+activeTAPB isolatesTEAS; vsG no-currentTEAS+salineTAPB tests combined package",
+  "intervention": "LI4 PC6 ST36 bilateral2/100Hz−30min toend surgery, twitchthreshold",
+  "drug": "sufentanil; intraoperative remifentanil",
+  "route": "IV",
+  "pca": "100mL .5ug/mLsufentanil;2mLbolus15minlockout,no basal;2days",
+  "rescue": "flurbiprofen50mgIV ifmovementVAS>4",
+  "results": {
+    "order": [
+      "G",
+      "NG",
+      "NTG"
+    ],
+    "QoR15": {
+      "POD1": [
+        [
+          77.1,
+          10.16
+        ],
+        [
+          85.97,
+          11.07
+        ],
+        [
+          90.86,
+          12.36
+        ]
+      ],
+      "POD3": [
+        [
+          96.55,
+          10.51
+        ],
+        [
+          100.55,
+          10.06
+        ],
+        [
+          116.38,
+          10.82
+        ]
+      ],
+      "POD7": [
+        [
+          112.62,
+          10.67
+        ],
+        [
+          116.97,
+          11.01
+        ],
+        [
+          130.66,
+          10.2
+        ]
+      ],
+      "location": "p1331 Results explicitmeanSD; NOT graph-only;POD1 notexact24h"
+    },
+    "restVAS": {
+      "h4": [
+        [
+          3.44,
+          0.62
+        ],
+        [
+          2.9,
+          0.82
+        ],
+        [
+          2.62,
+          0.73
+        ]
+      ],
+      "h12": [
+        [
+          2.68,
+          0.55
+        ],
+        [
+          1.92,
+          0.67
+        ],
+        [
+          1.73,
+          0.6
+        ]
+      ],
+      "h24": [
+        [
+          1.83,
+          0.55
+        ],
+        [
+          1.4,
+          0.52
+        ],
+        [
+          1.18,
+          0.42
+        ]
+      ],
+      "h48": [
+        [
+          1.24,
+          0.4
+        ],
+        [
+          1.1,
+          0.49
+        ],
+        [
+          0.72,
+          0.36
+        ]
+      ]
+    },
+    "movementVAS": {
+      "h4": [
+        [
+          4.42,
+          0.67
+        ],
+        [
+          3.68,
+          0.73
+        ],
+        [
+          3.5,
+          0.64
+        ]
+      ],
+      "h12": [
+        [
+          3.6,
+          0.57
+        ],
+        [
+          2.85,
+          0.53
+        ],
+        [
+          2.67,
+          0.55
+        ]
+      ],
+      "h24": [
+        [
+          2.84,
+          0.56
+        ],
+        [
+          2.15,
+          0.5
+        ],
+        [
+          1.89,
+          0.52
+        ]
+      ],
+      "h48": [
+        [
+          2.03,
+          0.52
+        ],
+        [
+          1.74,
+          0.56
+        ],
+        [
+          1.19,
+          0.42
+        ]
+      ]
+    },
+    "PONV48": {
+      "events": [
+        13,
+        11,
+        5
+      ],
+      "location": "p1333 text explicitlywithin48h;p1336Table3"
+    },
+    "flatus": {
+      "values": [
+        [
+          43.03,
+          8.13
+        ],
+        [
+          36.83,
+          6.19
+        ],
+        [
+          32.57,
+          6.94
+        ]
+      ],
+      "unit": "h"
+    },
+    "pump_presses": {
+      "values": [
+        [
+          12.45,
+          4.21
+        ],
+        [
+          9.97,
+          3.8
+        ],
+        [
+          6.55,
+          3.19
+        ]
+      ],
+      "window": "Insufficient information / not reported.",
+      "not_dose": "Successful boluses not identified; no consumption inference"
+    },
+    "intraop_remifentanil": {
+      "values": [
+        [
+          1619.13,
+          328.98
+        ],
+        [
+          1415.41,
+          295.67
+        ],
+        [
+          1182.61,
+          253.61
+        ]
+      ],
+      "unit": "ug"
+    },
+    "opioid24": "Insufficient information / not reported.",
+    "location": "p1336Table3 meanSD/n29each",
+    "pairwiseP": "NTGvsNG pain24h not marked significant; NTGvsGpain24h<.05;flatus/PONV NTGvsboth<.05"
+  },
+  "registration": "ChiCTR2100042119;2021recruitment; prospectiveSAP not demonstrated byregistrycitation/search",
+  "rob": "D1Y/PY/NI computerizedsealedindependentnurse; typo1:1:1:1 vs3arms; completertable only. D2PY/Y/PN/NA/NA/PY/NA no trial-context deviations, differentialTAPB inG intended package not deviation. D3PY/NA/NA/NA87/90oneperarm. D4QoR/pain N/PN/PY/PY/NI Someconcerns:preoperative sensation mayunmask,p1336acknowledges; maskedobserver doesn'tmaskpatient. PONV/flatus similarSomeconcerns; pumpobjectiveLow. D5NI/NI/NI no prospectiveSAP. OverallSomeconcerns."
+}

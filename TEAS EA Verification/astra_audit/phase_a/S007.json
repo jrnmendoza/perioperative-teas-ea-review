@@ -1,0 +1,228 @@
+{
+  "Study_ID": "S007",
+  "Study": "Zhang 2023",
+  "source_before_baseline": true,
+  "identity": {
+    "title": "Transcutaneous Electrical Acupoints Stimulation Improves Spontaneous Voiding Recovery After Laparoscopic Cholecystectomy: A Randomized Clinical Trial",
+    "doi": "10.1007/s00268-023-06924-7",
+    "year": 2023,
+    "pdf": "covidence_308_full_article.pdf",
+    "read_pages": "1–10 complete; visual flow p4 and Tables1/4 pp5/7; official NCT03631160 current record"
+  },
+  "arms": {
+    "order": [
+      "TEAS",
+      "sham"
+    ],
+    "randomized": [
+      975,
+      973
+    ],
+    "analyzed": [
+      922,
+      916
+    ],
+    "protocol": "Strongest tolerated 2Hz BL32/SP6/CV3/CV4, 30min preinduction to45min postsurgery; sham cut wires/no current, identical device sound/lights."
+  },
+  "results": {
+    "pain": {
+      "format": "median[Q1,Q3]",
+      "values": [
+        [
+          4,
+          3,
+          6
+        ],
+        [
+          5,
+          3,
+          6
+        ]
+      ],
+      "scale": "NRS",
+      "p": 0.007,
+      "window": "Insufficient information / not reported.",
+      "posture": "Insufficient information / not reported.",
+      "location": "Table4 p7; registry describes rest and cough at6–8h, not24h"
+    },
+    "vomiting": {
+      "events": [
+        231,
+        246
+      ],
+      "n": [
+        922,
+        916
+      ],
+      "p": 0.38,
+      "window": "Insufficient information / not reported.",
+      "location": "Table4 p7; vomiting alone, not composite PONV"
+    },
+    "opioid": {
+      "format": "median[Q1,Q3]",
+      "values": [
+        [
+          110,
+          80,
+          110
+        ],
+        [
+          110,
+          90,
+          110
+        ]
+      ],
+      "unit": "mg IV morphine equivalents, author converted",
+      "window": "within48h after surgery",
+      "location": "Table1 p5",
+      "coverage": "Insufficient information / not reported."
+    },
+    "intraoperative_opioid": {
+      "format": "median[Q1,Q3]",
+      "values": [
+        [
+          30,
+          25,
+          35
+        ],
+        [
+          30,
+          25,
+          35
+        ]
+      ],
+      "unit": "mg IV morphine equivalents",
+      "location": "Table1 p5"
+    },
+    "PCIA_users": {
+      "events": [
+        837,
+        838
+      ],
+      "n": [
+        922,
+        916
+      ],
+      "location": "Table1 p5"
+    },
+    "voiding": {
+      "format": "median[Q1,Q3]",
+      "values": [
+        [
+          5.6,
+          3.7,
+          8
+        ],
+        [
+          7.1,
+          4.7,
+          9.7
+        ]
+      ],
+      "unit": "hours end-surgery to first spontaneous void",
+      "location": "Table2 p6; abstract/prose conflict"
+    },
+    "POUR": {
+      "events": [
+        75,
+        104
+      ],
+      "n": [
+        922,
+        916
+      ],
+      "location": "Table4 p7"
+    },
+    "QoR": "Insufficient information / not reported.",
+    "GI": "Insufficient information / not reported."
+  },
+  "opioid": {
+    "decision": "excluded",
+    "drug": "sufentanil administered; reported outcome is author-converted IV morphine equivalents",
+    "route": "IV",
+    "pca": "IV sufentanil plus flurbiprofen,24–48h as needed; concentration/settings not reported",
+    "rescue": "Insufficient information / not reported.",
+    "reason": "48h median/IQR is not exact0–24h and not mean/SD. Author cites ClinCalc conversion without raw constituent doses/factors; no independent conversion performed.",
+    "location": "Table1 p5 and anesthesia methods"
+  },
+  "source_conflicts": [
+    "Table2 voiding TEAS IQR upper8.0 vs abstract8.1; control median7.1 vs abstract7.0; retain table provenance.",
+    "Current registry describes planned multicenter1200, nonacupoint sham and2/100Hz, versus publication single-center1948 and2Hz same-acupoint sham. Amendment history not retrieved.",
+    "Registry pain rest/cough6–8h but publication collapses to one unspecified NRS. No exact24h support."
+  ],
+  "registration": {
+    "identifier": "NCT03631160",
+    "source": "https://clinicaltrials.gov/api/v2/studies/NCT03631160",
+    "first_posted": "2018-08-15",
+    "study_start": "2018-08-20",
+    "current_record_last_update": "2021-05-25",
+    "prespecification": "Prospective registration established; original version and timely SAP not available. Current record alone does not establish original exact analysis."
+  },
+  "rob_independent": {
+    "D1": {
+      "answers": [
+        "Y",
+        "Y",
+        "PN"
+      ],
+      "evidence": "Methods pp2–3 computer block randomization and sequential opaque sealed numbered envelopes opened by acupuncturist after enrollment; baseline table has no clear randomization failure.",
+      "judgment": "Low"
+    },
+    "D2": {
+      "answers": [
+        "PY",
+        "Y",
+        "PN",
+        "NA",
+        "NA",
+        "PY",
+        "NA"
+      ],
+      "evidence": "Methods pp2–4 active strongest-tolerated stimulation versus no-current sham; acupuncturist knows, patients told sensation may vary; care and assessors masked. No documented trial-context deviations; analyzed participants retained assignment. Postrandomization missing outcomes evaluated in D3.",
+      "judgment": "Low"
+    },
+    "D3": {
+      "answers": [
+        "N",
+        "N",
+        "PY",
+        "NI"
+      ],
+      "evidence": "Flow p4:53/975 and57/973 excluded: canceled surgery20/29, insensitive2/1, otherclinical2/0, conversion10/7, intraopcatheter19/20. 110 missing; procedure/catheter changes could relate to pain,opioid,urination/vomiting; no ITT sensitivity, actual missing-value dependence unknown.",
+      "judgment": "Some concerns"
+    },
+    "D4": {
+      "answers": [
+        "N",
+        "PN",
+        "PY",
+        "Y",
+        "NI"
+      ],
+      "evidence": "Methods and Table4: patient pain reports and vomiting/voiding records can be affected by perceived stimulation; assessment procedures equal and personnel masked, but sensory masking not demonstrated. Actual influence not established.",
+      "judgment": "Some concerns"
+    },
+    "D4_opioid": {
+      "answers": [
+        "N",
+        "PN",
+        "PN",
+        "NA",
+        "NA"
+      ],
+      "evidence": "Table1 and methods: dose from perioperative administration records assessed by masked personnel. Self-dosing is distinct from inaccurate recording. Conversion completeness is an endpoint-validity limitation, not automatic detection bias.",
+      "judgment": "Low"
+    },
+    "D5": {
+      "answers": [
+        "NI",
+        "NI",
+        "NI"
+      ],
+      "evidence": "NCT03631160 prospectively posted15Aug2018; current record updatedMay2021. No original SAP/history. Registered rest/cough NRS6–8h collapsed into unspecified result; multiple possible measurements/analyses, result-based selection unproven.",
+      "judgment": "Some concerns"
+    }
+  },
+  "independence": "Nankai cholecystectomy Aug2018–Jun2020 cohort, registration NCT03631160; not the hysterectomy/gynecologic cohorts. Registry-linked report is same trial, not separate independent data.",
+  "missing": "Insufficient information / not reported."
+}

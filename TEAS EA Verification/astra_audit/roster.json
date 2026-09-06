@@ -1,0 +1,254 @@
+[
+  {
+    "Study_ID": "S001",
+    "Study": "Zhu 2022"
+  },
+  {
+    "Study_ID": "S002",
+    "Study": "Zhou 2025"
+  },
+  {
+    "Study_ID": "S003",
+    "Study": "Zhou 2021"
+  },
+  {
+    "Study_ID": "S004",
+    "Study": "Zheng 2025"
+  },
+  {
+    "Study_ID": "S005",
+    "Study": "Zhan 2020"
+  },
+  {
+    "Study_ID": "S006",
+    "Study": "Zhang 2025"
+  },
+  {
+    "Study_ID": "S007",
+    "Study": "Zhang 2023"
+  },
+  {
+    "Study_ID": "S008",
+    "Study": "Zhang 2014"
+  },
+  {
+    "Study_ID": "S009",
+    "Study": "Yu 2020"
+  },
+  {
+    "Study_ID": "S010",
+    "Study": "Yeh 2010"
+  },
+  {
+    "Study_ID": "S011",
+    "Study": "Yeh 2011"
+  },
+  {
+    "Study_ID": "S012",
+    "Study": "Yao 2015"
+  },
+  {
+    "Study_ID": "S013",
+    "Study": "Yang 2020"
+  },
+  {
+    "Study_ID": "S014",
+    "Study": "Yang 2024"
+  },
+  {
+    "Study_ID": "S015",
+    "Study": "Xiong 2021"
+  },
+  {
+    "Study_ID": "S016",
+    "Study": "Xing 2022"
+  },
+  {
+    "Study_ID": "S017",
+    "Study": "Xie 2014"
+  },
+  {
+    "Study_ID": "S018",
+    "Study": "Wu 2022"
+  },
+  {
+    "Study_ID": "S019",
+    "Study": "Wu 2025"
+  },
+  {
+    "Study_ID": "S020",
+    "Study": "Wong 2006"
+  },
+  {
+    "Study_ID": "S021",
+    "Study": "Wang 2023"
+  },
+  {
+    "Study_ID": "S022",
+    "Study": "Wang 2024"
+  },
+  {
+    "Study_ID": "S023",
+    "Study": "Tu 2024"
+  },
+  {
+    "Study_ID": "S024",
+    "Study": "Sun 2017"
+  },
+  {
+    "Study_ID": "S025",
+    "Study": "Sim 2002"
+  },
+  {
+    "Study_ID": "S026",
+    "Study": "Seevaunnamtum 2016"
+  },
+  {
+    "Study_ID": "S027",
+    "Study": "Pan 2023"
+  },
+  {
+    "Study_ID": "S028",
+    "Study": "Ntritsou 2014"
+  },
+  {
+    "Study_ID": "S029",
+    "Study": "Ng 2013"
+  },
+  {
+    "Study_ID": "S030",
+    "Study": "Ma 2026"
+  },
+  {
+    "Study_ID": "S031",
+    "Study": "Lu 2021"
+  },
+  {
+    "Study_ID": "S032",
+    "Study": "Lu 2022"
+  },
+  {
+    "Study_ID": "S033",
+    "Study": "Luo 2026"
+  },
+  {
+    "Study_ID": "S034",
+    "Study": "Long 2025"
+  },
+  {
+    "Study_ID": "S035",
+    "Study": "Li 2021"
+  },
+  {
+    "Study_ID": "S036",
+    "Study": "Liu 2026 (ESD)"
+  },
+  {
+    "Study_ID": "S037",
+    "Study": "Liu 2021"
+  },
+  {
+    "Study_ID": "S038",
+    "Study": "Liu 2026 (burn)"
+  },
+  {
+    "Study_ID": "S039",
+    "Study": "Liu 2025"
+  },
+  {
+    "Study_ID": "S040",
+    "Study": "Li 2022"
+  },
+  {
+    "Study_ID": "S041",
+    "Study": "Lin 2002"
+  },
+  {
+    "Study_ID": "S042",
+    "Study": "Liang 2021"
+  },
+  {
+    "Study_ID": "S043",
+    "Study": "Lee 2011"
+  },
+  {
+    "Study_ID": "S044",
+    "Study": "Jin 2023"
+  },
+  {
+    "Study_ID": "S045",
+    "Study": "Jiang 2026"
+  },
+  {
+    "Study_ID": "S046",
+    "Study": "Huang 2025"
+  },
+  {
+    "Study_ID": "S047",
+    "Study": "Huang 2017"
+  },
+  {
+    "Study_ID": "S048",
+    "Study": "Huang 2024"
+  },
+  {
+    "Study_ID": "S049",
+    "Study": "Hou 2023"
+  },
+  {
+    "Study_ID": "S050",
+    "Study": "He 2026 (hepatectomy/JIS)"
+  },
+  {
+    "Study_ID": "S051",
+    "Study": "He 2026 (breast/WJCO)"
+  },
+  {
+    "Study_ID": "S052",
+    "Study": "Gu 2019"
+  },
+  {
+    "Study_ID": "S053",
+    "Study": "Guo 2023"
+  },
+  {
+    "Study_ID": "S054",
+    "Study": "Grech 2016"
+  },
+  {
+    "Study_ID": "S055",
+    "Study": "Gao 2021"
+  },
+  {
+    "Study_ID": "S056",
+    "Study": "El-Rakshy 2009"
+  },
+  {
+    "Study_ID": "S057",
+    "Study": "Coura 2011"
+  },
+  {
+    "Study_ID": "S058",
+    "Study": "Chen 1998"
+  },
+  {
+    "Study_ID": "S059",
+    "Study": "Chen 2020"
+  },
+  {
+    "Study_ID": "S060",
+    "Study": "Ao 2021"
+  },
+  {
+    "Study_ID": "S061",
+    "Study": "An 2014"
+  },
+  {
+    "Study_ID": "S062",
+    "Study": "Chen 2015"
+  },
+  {
+    "Study_ID": "S063",
+    "Study": "Chen 2015 (Hyperalgesia)"
+  }
+]

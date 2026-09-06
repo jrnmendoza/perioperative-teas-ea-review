@@ -1,0 +1,26 @@
+{
+  "Study_ID": "S002",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "outcome_rows_expected": 6,
+  "outcome_rows_reviewed": 6,
+  "rob_results_reviewed": 5,
+  "baseline_rows": [
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "limitations": [
+    "FullChiCTR record405; historicalSAP not inspected",
+    "POD3QoR15 P inconsistency outside baseline row retained inPhaseA"
+  ],
+  "files": [
+    "phase_a/S002.json",
+    "adjudicated/S002.json",
+    "ledger/S002.json"
+  ],
+  "summary": "Sixrows audited; POD1 preserved, restVAS quartiles verified, unsupported scale endpoints removed; absent opioid result has no result-specific denominator. All5 reported results assessedSome concerns; no RoB invented for absent dose."
+}

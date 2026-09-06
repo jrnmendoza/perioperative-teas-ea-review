@@ -1,0 +1,3084 @@
+{
+  "Study_ID": "S023",
+  "Study": "Tu 2024",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "CONFIRMED",
+    "title": "Transcutaneous electrical acupoint stimulation for postoperative nausea and vomiting in patients undergoing craniotomy: A randomized controlled trial",
+    "year": 2024,
+    "doi": "10.1016/j.ctcp.2023.101824",
+    "pdf_files": [
+      "study_244_Tu_2023.pdf"
+    ],
+    "randomized_arms": {
+      "TEAS": 60,
+      "sham": 60
+    },
+    "analyzed_arms": {
+      "TEAS": 57,
+      "sham": 58
+    },
+    "modality": "TEAS",
+    "comparator_class": "Cut-wire no-current sham P6; both ondansetron8mg",
+    "independence": "Linked Lv2021 manual acupuncture report cites same protocol; TEAS/sham appear distinct protocol arms, but allocation framework/amendments and shared-control overlap unresolved. No automatic independent counting of linked reports.",
+    "source_locations": "Complete6-page source, visual Fig1 and Tables4–5; cited2013 protocol retrieved/read publisher.",
+    "identity_notes": "Table3P=.047 versus text .47 (decimal error). Exclusion of motion-sickness history conflicts with Table2 positive history16/57 and16/58. 2013 five-arm protocol300 planned vs two-arm120 publication; protocol planned lost cases counted PONV, publication excluded5. No cumulative0–24h vomiting total; intervals cannot be added as unique patients. Rescue10mg IM tramadol unusual but printed twice; preserve pending clarification."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 94,
+      "final": {
+        "Canonical study": "Tu 2024",
+        "Comparison ID": "TU24_TEAS_vs_SHAM_VOMIT2_6",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "PONV",
+        "Outcome/result": "Vomiting incidence",
+        "Timepoint/window": "2-6 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 60,
+        "Randomized n comparator": 60,
+        "Analyzed n intervention": 57,
+        "Analyzed n comparator": 58,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 8,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 17,
+        "Unit/scale": "participants",
+        "Reported P": "0.047",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — arithmetic RR only",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.478844169246646,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous vomiting analysis",
+        "Shared-control / multi-arm issue": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+        "Source-QC issue": "Five post-randomization exclusions include one sham participant excluded specifically for vomiting caused by intracranial hypertension",
+        "Source location": "Table 3 / vomiting 2-6 h",
+        "Source PDF URL": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED / MISSINGNESS QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Tu 2024",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "TU24_TEAS_vs_SHAM_VOMIT2_6",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Vomiting incidence",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "2-6 h",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 57,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 58,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 8,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "No value used in this reporting slot; Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 17,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.047",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — arithmetic RR only",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.478844169246646,
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous vomiting analysis",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Five post-randomization exclusions include one sham participant excluded specifically for vomiting caused by intracranial hypertension",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 3 / vomiting 2-6 h",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / MISSINGNESS QC",
+          "source_location": "p4 Table3; p3 Fig1",
+          "evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — arithmetic RR only",
+          "final_value": "Yes — arithmetic RR only",
+          "source_location": "p4 Table3; p3 Fig1",
+          "reason": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "severity": "minor"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "old_value": "No",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "final_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p4 Table3; p3 Fig1",
+          "reason": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "study_244_Tu_2023.pdf",
+      "source_evidence": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+      "drug": "Tramadol postoperative; sufentanil intraoperative",
+      "route": "IM tramadol; IV sufentanil",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Publication IM tramadol10mg forVAS>6, IM metoclopramide10mg for intolerable nausea/vomiting. Do not silently change10mg. Protocol instead describes postoperative IV fentanyl PCIA.",
+      "critical_qc": "Vomiting2–6h8/57 vs17/58;P=.047;RR arithmetic .47884417. Text .47 is typographical conflict.",
+      "analysis_eligibility": "Eligible for dichotomous vomiting analysis",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 95,
+      "final": {
+        "Canonical study": "Tu 2024",
+        "Comparison ID": "TU24_TEAS_vs_SHAM_VOMIT6_24",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "PONV",
+        "Outcome/result": "Vomiting incidence",
+        "Timepoint/window": "6-24 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 60,
+        "Randomized n comparator": 60,
+        "Analyzed n intervention": 57,
+        "Analyzed n comparator": 58,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 11,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 15,
+        "Unit/scale": "participants",
+        "Reported P": "0.405",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — arithmetic RR only",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.7461988304093566,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous vomiting analysis",
+        "Shared-control / multi-arm issue": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+        "Source-QC issue": "Same post-randomization exclusion concern",
+        "Source location": "Table 3 / vomiting 6-24 h",
+        "Source PDF URL": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED / MISSINGNESS QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Tu 2024",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "TU24_TEAS_vs_SHAM_VOMIT6_24",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Vomiting incidence",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "6-24 h",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 57,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 58,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 11,
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p4 Table3",
+          "evidence": "No value used in this reporting slot; Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 15,
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.405",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — arithmetic RR only",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.7461988304093566,
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous vomiting analysis",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Same post-randomization exclusion concern",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 3 / vomiting 6-24 h",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / MISSINGNESS QC",
+          "source_location": "p4 Table3",
+          "evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — arithmetic RR only",
+          "final_value": "Yes — arithmetic RR only",
+          "source_location": "p4 Table3",
+          "reason": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "severity": "minor"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "old_value": "No",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "final_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p4 Table3",
+          "reason": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "study_244_Tu_2023.pdf",
+      "source_evidence": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+      "drug": "Tramadol postoperative; sufentanil intraoperative",
+      "route": "IM tramadol; IV sufentanil",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Publication IM tramadol10mg forVAS>6, IM metoclopramide10mg for intolerable nausea/vomiting. Do not silently change10mg. Protocol instead describes postoperative IV fentanyl PCIA.",
+      "critical_qc": "Vomiting6–24h11/57 vs15/58;P=.405;RR .74619883.",
+      "analysis_eligibility": "Eligible for dichotomous vomiting analysis",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 96,
+      "final": {
+        "Canonical study": "Tu 2024",
+        "Comparison ID": "TU24_TEAS_vs_SHAM_PAIN6_24",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Pain",
+        "Outcome/result": "VAS pain intensity, rest/movement unspecified",
+        "Timepoint/window": "6-24 h",
+        "Data type": "Median/IQR",
+        "Randomized n intervention": 60,
+        "Randomized n comparator": 60,
+        "Analyzed n intervention": 57,
+        "Analyzed n comparator": 58,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": 2,
+        "Q1 intervention": 0.5,
+        "Q3 intervention": 3,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": 4,
+        "Q1 comparator": 3,
+        "Q3 comparator": 4,
+        "Events comparator": null,
+        "Unit/scale": "VAS points; range not explicitly defined",
+        "Reported P": "0.001",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Interval6–24h pain with median/IQR methods only; not exact24h mean/SD.",
+        "Shared-control / multi-arm issue": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+        "Source-QC issue": "Subjective outcome; sensory difference between active de qi and no-current sham may affect participant masking",
+        "Source location": "Pain outcome 6-24 h",
+        "Source PDF URL": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED / SUBJECTIVE OUTCOME QC"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Tu 2024",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "TU24_TEAS_vs_SHAM_PAIN6_24",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "VAS pain intensity, rest/movement unspecified",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "6-24 h",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Median/IQR",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 57,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 58,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "No value used in this reporting slot; VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "No value used in this reporting slot; VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": 2,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": 0.5,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": 3,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "No value used in this reporting slot; VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "No value used in this reporting slot; VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "No value used in this reporting slot; VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": 4,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": 3,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": 4,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "No value used in this reporting slot; VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "VAS points; range not explicitly defined",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.001",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Interval6–24h pain with median/IQR methods only; not exact24h mean/SD.",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Subjective outcome; sensory difference between active de qi and no-current sham may affect participant masking",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Pain outcome 6-24 h",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / SUBJECTIVE OUTCOME QC",
+          "source_location": "p5 Table5; p3 measures",
+          "evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Outcome/result",
+          "old_value": "VAS pain intensity",
+          "source_value": "VAS pain intensity, rest/movement unspecified",
+          "final_value": "VAS pain intensity, rest/movement unspecified",
+          "source_location": "p5 Table5; p3 measures",
+          "reason": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "severity": "minor"
+        },
+        {
+          "field": "Unit/scale",
+          "old_value": "VAS 0-10",
+          "source_value": "VAS points; range not explicitly defined",
+          "final_value": "VAS points; range not explicitly defined",
+          "source_location": "p5 Table5; p3 measures",
+          "reason": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "severity": "minor"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for pain analysis using median/IQR methods",
+          "source_value": "Interval6–24h pain with median/IQR methods only; not exact24h mean/SD.",
+          "final_value": "Interval6–24h pain with median/IQR methods only; not exact24h mean/SD.",
+          "source_location": "p5 Table5; p3 measures",
+          "reason": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "severity": "minor"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "old_value": "No",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "final_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p5 Table5; p3 measures",
+          "reason": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "study_244_Tu_2023.pdf",
+      "source_evidence": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+      "drug": "Tramadol postoperative; sufentanil intraoperative",
+      "route": "IM tramadol; IV sufentanil",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Publication IM tramadol10mg forVAS>6, IM metoclopramide10mg for intolerable nausea/vomiting. Do not silently change10mg. Protocol instead describes postoperative IV fentanyl PCIA.",
+      "critical_qc": "VAS6–24h median[IQR]2[.5–3] vs4[3–4],n57/58,P=.001; rest/movement unspecified; interval not exact24h.",
+      "analysis_eligibility": "Interval6–24h pain with median/IQR methods only; not exact24h mean/SD.",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 97,
+      "final": {
+        "Canonical study": "Tu 2024",
+        "Comparison ID": "TU24_TEAS_vs_SHAM_TRAMADOL",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Rescue opioid use",
+        "Outcome/result": "Any rescue tramadol use",
+        "Timepoint/window": "6-24 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 60,
+        "Randomized n comparator": 60,
+        "Analyzed n intervention": 57,
+        "Analyzed n comparator": 58,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 3,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 6,
+        "Unit/scale": "participants",
+        "Reported P": "0.315",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — arithmetic RR only",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.5087719298245614,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible only for binary rescue-opioid-use analysis",
+        "Shared-control / multi-arm issue": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+        "Source-QC issue": "Tramadol was 10 mg IM for VAS >6; number of doses/cumulative tramadol per patient is not reported",
+        "Source location": "Table4,p5",
+        "Source PDF URL": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED / DOSE MISSING"
+      },
+      "verification_status": "CORRECTED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Tu 2024",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "TU24_TEAS_vs_SHAM_TRAMADOL",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Rescue opioid use",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Any rescue tramadol use",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "6-24 h",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 57,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 58,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 3,
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p5 Table4",
+          "evidence": "No value used in this reporting slot; Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 6,
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.315",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — arithmetic RR only",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.5087719298245614,
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible only for binary rescue-opioid-use analysis",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Tramadol was 10 mg IM for VAS >6; number of doses/cumulative tramadol per patient is not reported",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table4,p5",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / DOSE MISSING",
+          "source_location": "p5 Table4",
+          "evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "Within 24 h",
+          "source_value": "6-24 h",
+          "final_value": "6-24 h",
+          "source_location": "p5 Table4",
+          "reason": "Table4 expressly6–24h, not an established cumulative0–24h result.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — arithmetic RR only",
+          "final_value": "Yes — arithmetic RR only",
+          "source_location": "p5 Table4",
+          "reason": "Table4 expressly6–24h, not an established cumulative0–24h result.",
+          "severity": "material"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "old_value": "No",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "final_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p5 Table4",
+          "reason": "Table4 expressly6–24h, not an established cumulative0–24h result.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Rescue analgesia outcome",
+          "source_value": "Table4,p5",
+          "final_value": "Table4,p5",
+          "source_location": "p5 Table4",
+          "reason": "Table4 expressly6–24h, not an established cumulative0–24h result.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "study_244_Tu_2023.pdf",
+      "source_evidence": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+      "drug": "Tramadol postoperative; sufentanil intraoperative",
+      "route": "IM tramadol; IV sufentanil",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Publication IM tramadol10mg forVAS>6, IM metoclopramide10mg for intolerable nausea/vomiting. Do not silently change10mg. Protocol instead describes postoperative IV fentanyl PCIA.",
+      "critical_qc": "Tramadol use6–24h3/57 vs6/58,P=.315;RR .50877193; number of administrations and mass unknown.",
+      "analysis_eligibility": "Eligible only for binary rescue-opioid-use analysis",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    },
+    {
+      "baseline_row": 98,
+      "final": {
+        "Canonical study": "Tu 2024",
+        "Comparison ID": "TU24_TEAS_vs_SHAM_OPIOID24",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative rescue tramadol consumption",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 60,
+        "Randomized n comparator": 60,
+        "Analyzed n intervention": 57,
+        "Analyzed n comparator": 58,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg tramadol",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid meta-analysis",
+        "Shared-control / multi-arm issue": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+        "Source-QC issue": "Only number of patients receiving rescue tramadol is reported; cumulative dose is unavailable",
+        "Source location": "Rescue analgesia section",
+        "Source PDF URL": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+        "Record status": "MISSING / CUMULATIVE DOSE NOT REPORTED"
+      },
+      "verification_status": "NOT ANALYSIS ELIGIBLE",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Tu 2024",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "TU24_TEAS_vs_SHAM_OPIOID24",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative rescue tramadol consumption",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 60,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 57,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 58,
+          "source_location": "p3 Fig1:TEAS2coma+1cognitive;sham1coma+1vomiting due intracranial hypertension",
+          "evidence": "{\"randomized\":{\"TEAS\":60,\"sham\":60},\"analyzed\":{\"TEAS\":57,\"sham\":58}}",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "No value used in this reporting slot; IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg tramadol",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid meta-analysis",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Only number of patients receiving rescue tramadol is reported; cumulative dose is unavailable",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Rescue analgesia section",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1xQ9SbXVZblphUrb0-T9xpnAXk-_z5nBX/view?usp=drivesdk",
+          "source_location": "Administrative linkage; local PDF identity independently checked",
+          "evidence": "Retained identifier/link as administrative metadata; not used as numerical evidence.",
+          "status": "ADMINISTRATIVE"
+        },
+        {
+          "field": "Record status",
+          "source_value": "MISSING / CUMULATIVE DOSE NOT REPORTED",
+          "source_location": "p2 regimen;p5 Table4",
+          "evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "status": "SOURCE CHECKED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Shared-control / multi-arm issue",
+          "old_value": "No",
+          "source_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "final_value": "Cited five-arm protocol; two arms reported here. Linked manual-acupuncture cohort/control relationship unresolved.",
+          "source_location": "p2 regimen;p5 Table4",
+          "reason": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "study_244_Tu_2023.pdf",
+      "source_evidence": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+      "drug": "Tramadol postoperative; sufentanil intraoperative",
+      "route": "IM tramadol; IV sufentanil",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Publication IM tramadol10mg forVAS>6, IM metoclopramide10mg for intolerable nausea/vomiting. Do not silently change10mg. Protocol instead describes postoperative IV fentanyl PCIA.",
+      "critical_qc": "IM10mg dose is regimen, not group cumulative consumption. Only6–24h use counts; no0–24h cumulative mass.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid meta-analysis",
+      "notes": "Raw distribution retained; no opioid-equivalence conversion performed."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S023_Vomiting_2–6h",
+      "outcome": "Vomiting",
+      "time_window": "2–6h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated1:1 list.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Computer-generated1:1 list."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "Y",
+          "evidence": "Opaque sealed sequential envelopes opened after eligibility and consent.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Opaque sealed sequential envelopes opened after eligibility and consent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility.",
+          "source_location": "p2,p4 Table2",
+          "reasoning": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "Awake deqi vs cut-wire sham despite sensory explanation.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Awake deqi vs cut-wire sham despite sensory explanation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "PY",
+          "evidence": "Operator titrates deqi current vs none.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Operator titrates deqi current vs none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown.",
+          "source_location": "p2; protocol10.1186/1745-6215-14-153",
+          "reasoning": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at2.3.",
+          "source_location": "p2",
+          "reasoning": "No Y/PY at2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 NA.",
+          "source_location": "p2",
+          "reasoning": "2.4 NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis by assigned arm.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Missing outcomes handled D3; original plan's imputation was not followed."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "Available-case assignment analysis.",
+          "source_location": "p3",
+          "reasoning": "Available-case assignment analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "5/120 excluded;1 control excluded specifically for vomiting.",
+          "source_location": "p3 Fig1",
+          "reasoning": "5/120 excluded;1 control excluded specifically for vomiting."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No sensitivity analysis addressing exclusions.",
+          "source_location": "p4 statistics",
+          "reasoning": "No sensitivity analysis addressing exclusions."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Control exclusion explicitly because of intracranial-hypertension vomiting.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Control exclusion explicitly because of intracranial-hypertension vomiting."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "Y",
+          "evidence": "At least1 omission determined by observed vomiting; neurological illness explains others.",
+          "source_location": "p3 Fig1",
+          "reasoning": "At least1 omission determined by observed vomiting; neurological illness explains others."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Vomiting action/oral emesis observed; appropriate ascertainment.",
+          "source_location": "p3",
+          "reasoning": "Vomiting action/oral emesis observed; appropriate ascertainment."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same0–2,2–6,6–24h schedule.",
+          "source_location": "p3",
+          "reasoning": "Same0–2,2–6,6–24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Blinded nurse records vomiting events.",
+          "source_location": "p3",
+          "reasoning": "Blinded nurse records vomiting events."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Observer masked.",
+          "source_location": "p3",
+          "reasoning": "Observer masked."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.4 NA.",
+          "source_location": "p3",
+          "reasoning": "4.4 NA."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "N",
+          "evidence": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms.",
+          "source_location": "2013 protocol Methods; publicationpp2–4",
+          "reasoning": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "PY",
+          "evidence": "Planned cumulative0–24h vomiting not reported; interval emphasis includes one significant interval.",
+          "source_location": "2013 protocol Outcomes; Table3",
+          "reasoning": "Selective measurement reporting likely, though interval results themselves preserved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "Unexplained analysis change but result-based choice not proven.",
+          "source_location": "2013 protocol Analysis; publicationp4",
+          "reasoning": "Unexplained analysis change but result-based choice not proven."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence/concealment well described; eligibility conflict retained separately.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Regimen/protocol changes unexplained; awareness alone insufficient.",
+          "source_location": "p2;protocol"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Vomiting-dependent exclusion directly present.",
+          "source_location": "p3 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Blinded observer vomiting ascertainment.",
+          "source_location": "p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "High",
+          "reasoning": "Cumulative planned vomiting absent with emphasis on selected interval; protocol discrepancy.",
+          "source_location": "protocol;Table3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Outcome-related exclusions and selective result/protocol discrepancies.",
+      "old_selected_overall": "High (vomiting2–6h)",
+      "changes_from_old": "Vomiting High retained; D5 now High based on retrieved protocol discrepancy and absent cumulative planned primary. Other results separately adjudicated."
+    },
+    {
+      "result_id": "S023_Vomiting_6–24h",
+      "outcome": "Vomiting",
+      "time_window": "6–24h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated1:1 list.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Computer-generated1:1 list."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "Y",
+          "evidence": "Opaque sealed sequential envelopes opened after eligibility and consent.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Opaque sealed sequential envelopes opened after eligibility and consent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility.",
+          "source_location": "p2,p4 Table2",
+          "reasoning": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "Awake deqi vs cut-wire sham despite sensory explanation.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Awake deqi vs cut-wire sham despite sensory explanation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "PY",
+          "evidence": "Operator titrates deqi current vs none.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Operator titrates deqi current vs none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown.",
+          "source_location": "p2; protocol10.1186/1745-6215-14-153",
+          "reasoning": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at2.3.",
+          "source_location": "p2",
+          "reasoning": "No Y/PY at2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 NA.",
+          "source_location": "p2",
+          "reasoning": "2.4 NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis by assigned arm.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Missing outcomes handled D3; original plan's imputation was not followed."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "Available-case assignment analysis.",
+          "source_location": "p3",
+          "reasoning": "Available-case assignment analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "5/120 excluded;1 control excluded specifically for vomiting.",
+          "source_location": "p3 Fig1",
+          "reasoning": "5/120 excluded;1 control excluded specifically for vomiting."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No sensitivity analysis addressing exclusions.",
+          "source_location": "p4 statistics",
+          "reasoning": "No sensitivity analysis addressing exclusions."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Control exclusion explicitly because of intracranial-hypertension vomiting.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Control exclusion explicitly because of intracranial-hypertension vomiting."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "Y",
+          "evidence": "At least1 omission determined by observed vomiting; neurological illness explains others.",
+          "source_location": "p3 Fig1",
+          "reasoning": "At least1 omission determined by observed vomiting; neurological illness explains others."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Vomiting action/oral emesis observed; appropriate ascertainment.",
+          "source_location": "p3",
+          "reasoning": "Vomiting action/oral emesis observed; appropriate ascertainment."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same0–2,2–6,6–24h schedule.",
+          "source_location": "p3",
+          "reasoning": "Same0–2,2–6,6–24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Blinded nurse records vomiting events.",
+          "source_location": "p3",
+          "reasoning": "Blinded nurse records vomiting events."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Observer masked.",
+          "source_location": "p3",
+          "reasoning": "Observer masked."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.4 NA.",
+          "source_location": "p3",
+          "reasoning": "4.4 NA."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "N",
+          "evidence": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms.",
+          "source_location": "2013 protocol Methods; publicationpp2–4",
+          "reasoning": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "PY",
+          "evidence": "Planned cumulative0–24h vomiting not reported; interval emphasis includes one significant interval.",
+          "source_location": "2013 protocol Outcomes; Table3",
+          "reasoning": "Selective measurement reporting likely, though interval results themselves preserved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "Unexplained analysis change but result-based choice not proven.",
+          "source_location": "2013 protocol Analysis; publicationp4",
+          "reasoning": "Unexplained analysis change but result-based choice not proven."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence/concealment well described; eligibility conflict retained separately.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Regimen/protocol changes unexplained; awareness alone insufficient.",
+          "source_location": "p2;protocol"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Vomiting-dependent exclusion directly present.",
+          "source_location": "p3 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Blinded observer vomiting ascertainment.",
+          "source_location": "p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "High",
+          "reasoning": "Cumulative planned vomiting absent with emphasis on selected interval; protocol discrepancy.",
+          "source_location": "protocol;Table3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Outcome-related exclusions and selective result/protocol discrepancies.",
+      "old_selected_overall": "High (vomiting2–6h)",
+      "changes_from_old": "Vomiting High retained; D5 now High based on retrieved protocol discrepancy and absent cumulative planned primary. Other results separately adjudicated."
+    },
+    {
+      "result_id": "S023_Vomiting_0–2h",
+      "outcome": "Vomiting",
+      "time_window": "0–2h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated1:1 list.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Computer-generated1:1 list."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "Y",
+          "evidence": "Opaque sealed sequential envelopes opened after eligibility and consent.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Opaque sealed sequential envelopes opened after eligibility and consent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility.",
+          "source_location": "p2,p4 Table2",
+          "reasoning": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "Awake deqi vs cut-wire sham despite sensory explanation.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Awake deqi vs cut-wire sham despite sensory explanation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "PY",
+          "evidence": "Operator titrates deqi current vs none.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Operator titrates deqi current vs none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown.",
+          "source_location": "p2; protocol10.1186/1745-6215-14-153",
+          "reasoning": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at2.3.",
+          "source_location": "p2",
+          "reasoning": "No Y/PY at2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 NA.",
+          "source_location": "p2",
+          "reasoning": "2.4 NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis by assigned arm.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Missing outcomes handled D3; original plan's imputation was not followed."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "Available-case assignment analysis.",
+          "source_location": "p3",
+          "reasoning": "Available-case assignment analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "5/120 excluded;1 control excluded specifically for vomiting.",
+          "source_location": "p3 Fig1",
+          "reasoning": "5/120 excluded;1 control excluded specifically for vomiting."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No sensitivity analysis addressing exclusions.",
+          "source_location": "p4 statistics",
+          "reasoning": "No sensitivity analysis addressing exclusions."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "Y",
+          "evidence": "Control exclusion explicitly because of intracranial-hypertension vomiting.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Control exclusion explicitly because of intracranial-hypertension vomiting."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "Y",
+          "evidence": "At least1 omission determined by observed vomiting; neurological illness explains others.",
+          "source_location": "p3 Fig1",
+          "reasoning": "At least1 omission determined by observed vomiting; neurological illness explains others."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Vomiting action/oral emesis observed; appropriate ascertainment.",
+          "source_location": "p3",
+          "reasoning": "Vomiting action/oral emesis observed; appropriate ascertainment."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same0–2,2–6,6–24h schedule.",
+          "source_location": "p3",
+          "reasoning": "Same0–2,2–6,6–24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Blinded nurse records vomiting events.",
+          "source_location": "p3",
+          "reasoning": "Blinded nurse records vomiting events."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Observer masked.",
+          "source_location": "p3",
+          "reasoning": "Observer masked."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.4 NA.",
+          "source_location": "p3",
+          "reasoning": "4.4 NA."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "N",
+          "evidence": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms.",
+          "source_location": "2013 protocol Methods; publicationpp2–4",
+          "reasoning": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "PY",
+          "evidence": "Planned cumulative0–24h vomiting not reported; interval emphasis includes one significant interval.",
+          "source_location": "2013 protocol Outcomes; Table3",
+          "reasoning": "Selective measurement reporting likely, though interval results themselves preserved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "Unexplained analysis change but result-based choice not proven.",
+          "source_location": "2013 protocol Analysis; publicationp4",
+          "reasoning": "Unexplained analysis change but result-based choice not proven."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence/concealment well described; eligibility conflict retained separately.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Regimen/protocol changes unexplained; awareness alone insufficient.",
+          "source_location": "p2;protocol"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "Vomiting-dependent exclusion directly present.",
+          "source_location": "p3 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Blinded observer vomiting ascertainment.",
+          "source_location": "p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "High",
+          "reasoning": "Cumulative planned vomiting absent with emphasis on selected interval; protocol discrepancy.",
+          "source_location": "protocol;Table3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Outcome-related exclusions and selective result/protocol discrepancies.",
+      "old_selected_overall": "High (vomiting2–6h)",
+      "changes_from_old": "Vomiting High retained; D5 now High based on retrieved protocol discrepancy and absent cumulative planned primary. Other results separately adjudicated."
+    },
+    {
+      "result_id": "S023_VAS unspecified_6–24h",
+      "outcome": "VAS unspecified",
+      "time_window": "6–24h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated1:1 list.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Computer-generated1:1 list."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "Y",
+          "evidence": "Opaque sealed sequential envelopes opened after eligibility and consent.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Opaque sealed sequential envelopes opened after eligibility and consent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility.",
+          "source_location": "p2,p4 Table2",
+          "reasoning": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "Awake deqi vs cut-wire sham despite sensory explanation.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Awake deqi vs cut-wire sham despite sensory explanation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "PY",
+          "evidence": "Operator titrates deqi current vs none.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Operator titrates deqi current vs none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown.",
+          "source_location": "p2; protocol10.1186/1745-6215-14-153",
+          "reasoning": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at2.3.",
+          "source_location": "p2",
+          "reasoning": "No Y/PY at2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 NA.",
+          "source_location": "p2",
+          "reasoning": "2.4 NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis by assigned arm.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Missing outcomes handled D3; original plan's imputation was not followed."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "Available-case assignment analysis.",
+          "source_location": "p3",
+          "reasoning": "Available-case assignment analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "5/120 excluded;1 control excluded specifically for vomiting.",
+          "source_location": "p3 Fig1",
+          "reasoning": "5/120 excluded;1 control excluded specifically for vomiting."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No sensitivity analysis addressing exclusions.",
+          "source_location": "p4 statistics",
+          "reasoning": "No sensitivity analysis addressing exclusions."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "PY",
+          "evidence": "Coma/cognitive impairment can preclude self-report and change rescue need.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Clinical-status related missingness possible."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "No actual pain/rescue outcomes for exclusions.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Likelihood of outcome dependence unknown."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Vomiting action/oral emesis observed; appropriate ascertainment.",
+          "source_location": "p3",
+          "reasoning": "Vomiting action/oral emesis observed; appropriate ascertainment."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same0–2,2–6,6–24h schedule.",
+          "source_location": "p3",
+          "reasoning": "Same0–2,2–6,6–24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participant perceived deqi vs no sensation; rescues depend onVAS>6.",
+          "source_location": "p3",
+          "reasoning": "Patient contributes subjective measurement."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Knowledge could alter pain report/request.",
+          "source_location": "p3",
+          "reasoning": "Subjective endpoint."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "Likely influence not established.",
+          "source_location": "p3",
+          "reasoning": "No masking-success data."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "N",
+          "evidence": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms.",
+          "source_location": "2013 protocol Methods; publicationpp2–4",
+          "reasoning": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Pain/rescue endpoint added or changed relative to protocol; no dated amendment.",
+          "source_location": "2013 protocol Outcomes; Table3",
+          "reasoning": "Cannot demonstrate selection based on results."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "Unexplained analysis change but result-based choice not proven.",
+          "source_location": "2013 protocol Analysis; publicationp4",
+          "reasoning": "Unexplained analysis change but result-based choice not proven."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence/concealment well described; eligibility conflict retained separately.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Regimen/protocol changes unexplained; awareness alone insufficient.",
+          "source_location": "p2;protocol"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "Neurologic illness may determine missing pain/rescue; no direct evidence missingness driven by these outcomes.",
+          "source_location": "p3 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Subjective pain/request may be influenced by sensory differences.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Pain/tramadol reporting not reconciled with cited protocol.",
+          "source_location": "https://link.springer.com/article/10.1186/1745-6215-14-153"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Combined missing neurological cases, subjective unmasking and unplanned/unreconciled analgesic results substantially reduce confidence.",
+      "old_selected_overall": "High (vomiting2–6h)",
+      "changes_from_old": "Vomiting High retained; D5 now High based on retrieved protocol discrepancy and absent cumulative planned primary. Other results separately adjudicated."
+    },
+    {
+      "result_id": "S023_Tramadol rescue use_6–24h",
+      "outcome": "Tramadol rescue use",
+      "time_window": "6–24h",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated1:1 list.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Computer-generated1:1 list."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "Y",
+          "evidence": "Opaque sealed sequential envelopes opened after eligibility and consent.",
+          "source_location": "p2 §2.4",
+          "reasoning": "Opaque sealed sequential envelopes opened after eligibility and consent."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility.",
+          "source_location": "p2,p4 Table2",
+          "reasoning": "Table2 contains analysed participants; motion-sickness history conflicts with eligibility."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "Awake deqi vs cut-wire sham despite sensory explanation.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Awake deqi vs cut-wire sham despite sensory explanation."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "PY",
+          "evidence": "Operator titrates deqi current vs none.",
+          "source_location": "p2 §2.5",
+          "reasoning": "Operator titrates deqi current vs none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown.",
+          "source_location": "p2; protocol10.1186/1745-6215-14-153",
+          "reasoning": "Published analgesic regimen differs from protocol; amendment and trial-context basis unknown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at2.3.",
+          "source_location": "p2",
+          "reasoning": "No Y/PY at2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 NA.",
+          "source_location": "p2",
+          "reasoning": "2.4 NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available-case analysis by assigned arm.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Missing outcomes handled D3; original plan's imputation was not followed."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "Available-case assignment analysis.",
+          "source_location": "p3",
+          "reasoning": "Available-case assignment analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "5/120 excluded;1 control excluded specifically for vomiting.",
+          "source_location": "p3 Fig1",
+          "reasoning": "5/120 excluded;1 control excluded specifically for vomiting."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No sensitivity analysis addressing exclusions.",
+          "source_location": "p4 statistics",
+          "reasoning": "No sensitivity analysis addressing exclusions."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "PY",
+          "evidence": "Coma/cognitive impairment can preclude self-report and change rescue need.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Clinical-status related missingness possible."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "No actual pain/rescue outcomes for exclusions.",
+          "source_location": "p3 Fig1",
+          "reasoning": "Likelihood of outcome dependence unknown."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Vomiting action/oral emesis observed; appropriate ascertainment.",
+          "source_location": "p3",
+          "reasoning": "Vomiting action/oral emesis observed; appropriate ascertainment."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same0–2,2–6,6–24h schedule.",
+          "source_location": "p3",
+          "reasoning": "Same0–2,2–6,6–24h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participant perceived deqi vs no sensation; rescues depend onVAS>6.",
+          "source_location": "p3",
+          "reasoning": "Patient contributes subjective measurement."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Knowledge could alter pain report/request.",
+          "source_location": "p3",
+          "reasoning": "Subjective endpoint."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "Likely influence not established.",
+          "source_location": "p3",
+          "reasoning": "No masking-success data."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "N",
+          "evidence": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms.",
+          "source_location": "2013 protocol Methods; publicationpp2–4",
+          "reasoning": "Cited protocol specifies different reporting/analysis and5 arms; final report2 arms."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Pain/rescue endpoint added or changed relative to protocol; no dated amendment.",
+          "source_location": "2013 protocol Outcomes; Table3",
+          "reasoning": "Cannot demonstrate selection based on results."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "Unexplained analysis change but result-based choice not proven.",
+          "source_location": "2013 protocol Analysis; publicationp4",
+          "reasoning": "Unexplained analysis change but result-based choice not proven."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence/concealment well described; eligibility conflict retained separately.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Regimen/protocol changes unexplained; awareness alone insufficient.",
+          "source_location": "p2;protocol"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "Neurologic illness may determine missing pain/rescue; no direct evidence missingness driven by these outcomes.",
+          "source_location": "p3 Fig1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Subjective pain/request may be influenced by sensory differences.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Pain/tramadol reporting not reconciled with cited protocol.",
+          "source_location": "https://link.springer.com/article/10.1186/1745-6215-14-153"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Combined missing neurological cases, subjective unmasking and unplanned/unreconciled analgesic results substantially reduce confidence.",
+      "old_selected_overall": "High (vomiting2–6h)",
+      "changes_from_old": "Vomiting High retained; D5 now High based on retrieved protocol discrepancy and absent cumulative planned primary. Other results separately adjudicated."
+    }
+  ],
+  "opioid_candidate": {
+    "postoperative": false,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Tramadol postoperative; sufentanil intraoperative",
+    "route": "IM tramadol; IV sufentanil",
+    "unit": "Insufficient information / not reported.",
+    "raw_values": {},
+    "comparison_selection": "Cut-wire no-current sham P6; both ondansetron8mg",
+    "multiarm_handling": "Linked Lv2021 manual acupuncture report cites same protocol; TEAS/sham appear distinct protocol arms, but allocation framework/amendments and shared-control overlap unresolved. No automatic independent counting of linked reports.",
+    "source_location": "Complete6-page source, visual Fig1 and Tables4–5; cited2013 protocol retrieved/read publisher.",
+    "decision": "excluded",
+    "reason": "Rescue use3/57 vs6/58 is event incidence6–24h, not cumulative mass. No verified total0–24h opioid consumption."
+  },
+  "duplicate_map": [
+    {
+      "related_study": "Lv2021 manual P6 acupuncture",
+      "classification": "UNRESOLVED",
+      "evidence": "Common protocolChiCTR-TRC-13003026 planned5 arms; Tu reports2.",
+      "source_location": "https://link.springer.com/article/10.1186/1745-6215-14-153; publicationRef11",
+      "analysis_handling": "Request arm/cohort mapping; manual acupuncture cannot be silently pooled as EA/TEAS; do not count shared controls twice."
+    }
+  ],
+  "additional_source_outcomes": [
+    {
+      "outcome": "Vomiting",
+      "windows": [
+        "0–2h",
+        "2–6h",
+        "6–24h"
+      ],
+      "TEAS": [
+        4,
+        8,
+        11
+      ],
+      "sham": [
+        10,
+        17,
+        15
+      ],
+      "n": [
+        57,
+        58
+      ],
+      "P": [
+        ".095",
+        ".047",
+        ".405"
+      ],
+      "source": "p4 Table3"
+    },
+    {
+      "outcome": "Nausea ordinal score",
+      "format": "median[IQR]",
+      "windows": [
+        "0–2h",
+        "2–6h",
+        "6–24h"
+      ],
+      "TEAS": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "sham": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "P": [
+        ".502",
+        ".146",
+        ".574"
+      ],
+      "source": "p4 Table3"
+    },
+    {
+      "outcome": "Pain VAS unspecified condition",
+      "format": "median[IQR]",
+      "windows": [
+        "0–2h",
+        "2–6h",
+        "6–24h"
+      ],
+      "TEAS": [
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          0.5,
+          3
+        ]
+      ],
+      "sham": [
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          3,
+          2,
+          3.25
+        ],
+        [
+          4,
+          3,
+          4
+        ]
+      ],
+      "P": [
+        ".091",
+        ".057",
+        ".001"
+      ],
+      "source": "p5 Table5"
+    },
+    {
+      "outcome": "Rescue tramadol use",
+      "window": "6–24h",
+      "TEAS": {
+        "events": 3,
+        "n": 57
+      },
+      "sham": {
+        "events": 6,
+        "n": 58
+      },
+      "P": ".315",
+      "source": "p5 Table4"
+    },
+    {
+      "outcome": "Rescue metoclopramide use",
+      "windows": [
+        "0–2h",
+        "2–6h",
+        "6–24h"
+      ],
+      "TEAS": [
+        0,
+        0,
+        1
+      ],
+      "sham": [
+        0,
+        0,
+        1
+      ],
+      "P": [
+        "1",
+        "1",
+        ".990"
+      ],
+      "source": "p5 Table4"
+    },
+    {
+      "outcome": "Intraop sufentanil µg",
+      "TEAS": {
+        "mean": 28.99,
+        "SD": 10.78
+      },
+      "sham": {
+        "mean": 28.16,
+        "SD": 13.23
+      },
+      "source": "p4 Table2",
+      "P": ".350"
+    }
+  ],
+  "author_contact": [
+    {
+      "missing_information": "Protocol amendments, cumulative vomiting and all systemic opioids",
+      "why_it_matters": "Reporting bias, independence and opioid endpoint",
+      "analysis_affected": "Vomiting/pain/opioid",
+      "can_proceed_without": "Available interval results with High RoB; no opioid mass synthesis",
+      "priority": "HIGH",
+      "exact_question": "Please provide dated amendments linking the five-arm protocol to this two-arm report, cumulative0–24h vomiting, outcomes of all5 exclusions, actual tramadol dose and any postoperative fentanyl/PCA exposure."
+    }
+  ],
+  "summary": "All5 rows audited; tramadol-use window corrected to6–24h. No cumulative opioid mass. Published protocol reveals outcome/analysis/arm discrepancies. High vomiting RoB retained."
+}

@@ -1,0 +1,33 @@
+# Covidence screening checkpoint — 400 votes
+
+- Date: 2026-07-26
+- First Covidence number: #415
+- Last Covidence number: #1329
+- Total registered votes: 400
+- Yes: 62
+- Maybe: 44
+- No: 294
+- Protocols/trial registrations excluded: 102
+- Animal studies excluded: 52
+- Non-randomized studies excluded: 4
+- Wrong interventions excluded: 9
+- Non-acupoint TENS exclusions: 1
+- No-general-anaesthesia exclusions: 30
+- Non-surgical exclusions: 47
+- Timing exclusions: 8
+- Inseparable interventions excluded: 6
+- Ineligible active comparators excluded: 9
+- No-eligible-outcome exclusions: 11
+- Population exclusions: 4
+- Publication-type exclusions: 11
+- Ambiguous-randomization Maybe decisions: 6
+- Uncertain-timing Maybe decisions: 19
+- Uncertain-general-anaesthesia Maybe decisions: 14
+- Uncertain-outcome Maybe decisions: 1
+- Uncertain-intervention-separability Maybe decisions: 4
+- Numbering gaps logged: 59
+- Attempted records without a registered vote: 0
+- Interface incidents: 0
+- No conflicts were opened or resolved.
+- JSONL and generated CSV validated with 400 unique, consecutive audit records and 400 unique Covidence numbers.
+- Screenshot saved as `screenshots/covidence_checkpoint_400.png`.

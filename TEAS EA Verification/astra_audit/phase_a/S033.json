@@ -1,0 +1,184 @@
+{
+  "Study_ID": "S033",
+  "Study": "Luo 2026",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "identity": {
+    "title": "Perioperative transcutaneous electrical acupoint stimulation at pericardium 6 reduces postoperative nausea and vomiting after tympanoplasty patients: a randomized controlled study",
+    "year": 2026,
+    "doi": "10.1186/s12906-026-05357-8",
+    "pdf": "covidence_35_verified.pdf",
+    "recruitment": "May–July2024 Eye&ENT HospitalFudan",
+    "registration": "Insufficient information / not reported."
+  },
+  "arms": {
+    "TEAS": {
+      "randomized": 138,
+      "analyzed": 138
+    },
+    "sham": {
+      "randomized": 139,
+      "analyzed": 139
+    }
+  },
+  "denominator_evidence": "Figure1,p4 and results: no losses/exclusions, all analyzed; flow diagram incongruously says discontinued138/139 despite all received; likely labeling issue, retained.",
+  "results": {
+    "arm_order": [
+      "TEAS",
+      "sham"
+    ],
+    "source_location": "Tables1–5pp4–5 visually inspected",
+    "opioid_sufentanil_equivalents_as_printed_mg_mean_sd": [
+      [
+        15.86,
+        5.11
+      ],
+      [
+        15.18,
+        4.95
+      ]
+    ],
+    "opioid_qualification": "Perioperative Table1 label, conversion algorithm absent, unit suspect but must not correctmg→µg; exact postoperative window not established.",
+    "nausea_events_0_2_2_6_6_24_24_48_0_48": [
+      [
+        20,
+        48
+      ],
+      [
+        7,
+        17
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        24,
+        53
+      ]
+    ],
+    "vomiting_events_0_2_2_6_6_24_24_48_0_48": [
+      [
+        7,
+        18
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        9,
+        27
+      ]
+    ],
+    "complete_response_0_48": [
+      112,
+      83
+    ],
+    "NRS_unspecified_mean_sd_2_6_24_48": [
+      [
+        [
+          1.67,
+          0.82
+        ],
+        [
+          1.66,
+          0.93
+        ]
+      ],
+      [
+        [
+          1.55,
+          0.85
+        ],
+        [
+          1.86,
+          0.97
+        ]
+      ],
+      [
+        [
+          1.3,
+          0.92
+        ],
+        [
+          1.65,
+          0.95
+        ]
+      ],
+      [
+        [
+          0.82,
+          0.75
+        ],
+        [
+          1.09,
+          0.75
+        ]
+      ]
+    ],
+    "rescue_antiemetic_events_intervals": [
+      [
+        7,
+        5
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "rescue_antiemetic_cumulative_printed": [
+      0,
+      0
+    ],
+    "acetaminophen_rescue_patients": [
+      5,
+      5
+    ],
+    "QoR_GI": "Insufficient information / not reported."
+  },
+  "analgesia": {
+    "intraoperative": "IVsufentanil0.2µg/kg induction; remifentanil infusion titrated; sevoflurane",
+    "postoperative": "IVoxycodone0.7mg/kg as printed targetingNRS≤3; actual consumed dose/window not supplied",
+    "rescue": "IVacetaminophen0.3g ifNRS>4",
+    "PCA": "Insufficient information / not reported.",
+    "antiemetic": "Dexamethasone8mgIV +palonosetron0.075mgIV; droperidol for impactscore≥5 or patient request"
+  },
+  "conflicts": [
+    "Abstract sham nausea39.1% vs table53/13938.13%.",
+    "AbstractCR81.6 vs table112/13881.16%.",
+    "Table4 cumulative0/0 incompatible with nonzero interval rescue counts; cannot sum recurrent patients.",
+    "CR is no nausea/vomiting AND no rescue; complement is not strictly PONV incidence.",
+    "Registration anonymized in published PDF and official HTML; supplement onlyCONSORTchecklist, no identifier/protocol."
+  ],
+  "rob_independent": {
+    "D1": "Low:computer sequence,SNOSE;p2; baseline differences compatible chance.",
+    "D2": "Low:anesthesiologist aware, participant masking failed77.5%active66.2%sham correctly guessed; standardized protocol, no trial-context deviations reported, all analyzed by assignment.",
+    "D3": "Low:all277analyzed.",
+    "D4": "Some concerns forNRS/nausea/CR:demonstrated sensory unmasking, possible assessment influence; guessing after outcomes can reflect efficacy so does not by itself prove likely expectancy influence. VomitingLow:observer-nurse masked, overt events.",
+    "D5": "Some concerns:registration anonymized, no prospective SAP; supplementretrieved isCONSORT checklist only.5.1NI5.2NI5.3NI."
+  },
+  "opioid_decision": "Hold opioid conversion; no eligible cumulative postoperative0–24h amount.",
+  "source_review": "All8pages read;Figure1Tables1–5visual;official HTML and downloadedCONSORT supplement examined before baseline."
+}

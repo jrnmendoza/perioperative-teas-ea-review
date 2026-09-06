@@ -1,0 +1,25 @@
+{
+  "Study_ID": "S001",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "outcome_rows_expected": 6,
+  "outcome_rows_reviewed": 6,
+  "rob_results_reviewed": 6,
+  "baseline_rows": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "limitations": [
+    "Supplement/protocol full text retrieval failed; prospective analysis details unresolved."
+  ],
+  "files": [
+    "phase_a/S001.json",
+    "adjudicated/S001.json",
+    "ledger/S001.json"
+  ],
+  "summary": "All6 baseline rows reviewed; table counts confirmed; RR derivation flag corrected. Randomized-n abstract/Figure1 conflict,6–24h window and shared usual-care control qualified. Result-specificRoB2 Some concerns for each contrast."
+}

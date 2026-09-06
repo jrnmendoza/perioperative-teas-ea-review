@@ -1,0 +1,882 @@
+=== PDF PAGE 1 ===
+Journal    of    Pain    Research
+
+
+
+
+    Open  Access  Full  Text  Article                                                                                                            ORIGINAL RESEARCH
+Effects     of     Transcutaneous     Electrical     Acupoint
+Stimulation     on     Postoperative     Acute     Visceral,
+Incisional,     and     Low     Back     Pain     and     Recover y     in
+Patients     Undergoing     Laparoscopic     Hysterectomy:
+A     Randomized     Controlled     Trial
+
+Yu Zhang          1, Qinxue Dai                   2, Jing Zhang            3, Junlu Wang             2, Xiuxiu Zhuang                      2, Anqi Zhang               2,
+Luping Huang                   2, Wenwen Du                     2
+
+
+
+1Department  of Anesthesiology,the Zaoyang First People’s Hospital, Xiangyang, People’s Republic of China;                                      2Department of Anesthesiology,the First
+Affiliated  Hospital  of  Wenzhou  Medical  University,  Wenzhou,  People’s  Republic  of  China;                       3Department  of  Laboratory  Medicine,  Clinical  Medical
+College  of  Shihezi  University,  Shihezi,  People’s  Republic  of  China
+
+Correspondence:  Wenwen  Du,  Departments  of  Anesthesiology,The  First  Affiliated  Hospital  of  Wenzhou  Medical  University,  Ouhai  District,
+Wenzhou,  Zhejiang,  People’s  Republic  of  China,  Tel  +86  150  8892  5016,  Email  862892574@qq.com
+
+
+Purpose: Laparoscopic    hysterectomy(LH)    is    often    associated    with    multimodal    postoperative    pain,    which    impedes    patient    recovery.
+This       study       aimed       to       evaluate       the       effect       of       transcutaneous       electrical       acupoint       stimulation       (TEAS)       on       postoperative       acute       visceral,
+incisional,   and   low   back   pain   (LBP)   and   recovery   in   patients   undergoing   LH.
+Patients         and         Methods:    Patients           scheduled           for           elective           LH          at           the           First           Affiliated          Hospital           of           Wenzhou           Medical           University
+(February      2024–2025)      were      randomly      divided      (1:1      ratio)      into      a      TEAS      and      control      group.      TEAS      involved      bilateral      stimulation      at
+Hegu–Neiguan,         and         Sanyinjiao–Zusanli         30         min         before         anesthesia         induction         and         throughout         surgery,         while         the         control         involved
+electrodes  placed  identically  for  sham  stimulation.  Pain  intensity  (visceral,  incisional,  and  LBP)  was  evaluated  using  numerical  rating
+scale on postoperative days (PODs) 0 (day of surgery), 1, and 2. Secondary outcomes comprised postoperative serum cytokine profiles,
+opioid   consumption,    rescue   analgesia   demands   on   POD   1,   adverse   events,   and   standardized   recovery   metrics.
+Results: The  TEAS  group  (n=45)  demonstrated   superior  pain  control  compared  to  the  control  group   (n=48),  with  significantly  lower
+visceral   pain   scores   (POD   0–1),   decreased   LBP   scores   (POD   0–2),   and   reduced   incidence   of   moderate-to-severe   visceral   pain   (POD
+0–2) and LBP (POD 0) (all P < 0.017). TEAS resulted in lower interleukin-6 levels, total sufentanil consumption, and rescue analgesia
+demands         on         POD         1(all         P         <         0.05).         TEAS         was         associated         with         a         shorter         time         to         pelvic         drain         removal,         decreased         postoperative
+hospitalization,   earlier   ambulation,   and   lower   incidence   of   postoperative   nausea   and   vomiting   (all   P   <   0.05).   No   significant   improve-
+ment   in   incisional   pain   was    observed   with   TEAS   intervention.
+Conclusion: TEAS provided differential postoperative analgesia, effectively alleviating visceral and LBP but not incisional pain. This
+primary benefit, coupled with reduced inflammation, opioid use, and adverse events, facilitated recovery in LH patients. These findings
+support   the   incorporation   of   TEAS   as   an    effective    non-pharmacological   adjuvant   within   multimodal   analgesia   and   ERAS   protocols.
+Keywords: transcutaneous    electrical    acupoint    stimulation,    laparoscopic    hysterectomy,    visceral    pain,    incisional    pain,    low    back    pain,
+postoperative   recovery
+
+
+Introduction
+Laparoscopic          hysterectomy         (LH)          is          characterized          by         minimal          incisions,          low         risk          of          complications,          and          accelerated
+recovery,        which        often        leads        to        postoperative        pain        underestimation.        Beyond        incisional        pain,        LH        can        provoke        hetero-
+geneous    pain    phenotypes,    including    visceral    pain,    low    back    pain    (LBP),    and    incisional    pain.    These    pains    are    primarily
+
+
+
+                                                            Journal  of  Pain  Research  2025:18  6477–6489                                                                                  6477
+                                                                             © 2025 Zhang et al. This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.
+                                                                             php and incorporate the Creative Commons Attribution – Non Commercial (unported, v4.0) License (http://creativecommons.org/licenses/by-nc/4.0/). By accessing the
+                                                            work you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For
+                                                            permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).
+
+=== PDF PAGE 2 ===
+Zhang  et  al
+
+attributed  to  traction  caused  by  pneumoperitoneum,  surgical  trauma,  neuroinflammation,  and  peritoneal  irritation,  among
+other       factors.1,2         Previous       studies       reported       that       >70%       of       patients       undergoing       LH       experience       moderate-to-severe       pain,
+predominantly         visceral         and         LBP.3             Uncontrolled         postoperative         pain         triggers         sympathetic         hyperactivity         and         restrictive
+ventilation,            potentially            precipitating            myocardial            ischemia,            arrhythmia,            and            atelectasis.4,5            Opioids             (the            most            potent
+analgesics) inhibit  nociceptive  transmission  by  binding  to  opioid  receptors  in  the  central  and  peripheral  nervous  systems.
+However,        high-dose        opioid        therapy        paradoxically        fails        to        adequately       alleviate        pain        and        increases        the        risk        of        opioid-
+related    adverse    events    such    as    nausea/vomiting,    ileus,    and    pruritus.6
+      Transcutaneous       electrical       acupoint       stimulation        (TEAS)        offers        a       non-invasive       alternative        that       synthesizes        acupoint
+theory     with     transcutaneous     electrical     nerve     stimulation     (TENS).7 In     contrast     to     TENS,     TEAS     is     safer,     better     tolerated,
+and             promotes             higher             patient             adherence.             Evidence             indicates             that             TEAS             mediates             analgesia             through             a             multimodal
+mechanism.  The  2/100   Hz  frequency  stimulation  activates  the  cerebral  endogenous   opioid  system,   consequently  trigger-
+ing the release of enkephalins and endorphins,8 and key innate analgesic compounds to mediate analgesia.9 Concurrently,
+TEAS  induces   serotonin  and  norepinephrine   release  within  the   spinal  cord,  leading  to  inhibition  of   dorsal   horn  neuronal
+excitability.10            Moreover,     it     regulates      local     and     systemic     concentrations      of     inflammatory     mediators     (eg,     TNF-α,      IL-6),9
+attenuating     neural     sensitization     and     pain     memory.11                               These     mechanisms     collectively     underpin     a     synergistic,     multi-level
+analgesic    strategy.12
+      Recent           randomized           controlled           trials           (RCTs)           in           gynecological           surgeries           have           established           TEAS           as           a           promising
+intervention     for     postoperative     pain,     associated     with     diminished     pain     scores,     reduced     opioid     requirements,13                                                             and     accel-
+erated    recovery.14 Although    considerable     research    has     investigated     TEAS     for    general     postoperative    pain,     it     has     largely
+overlooked           its           effects           on           distinct           acute           phenotypes           like           visceral,           incisional,           and           low           back           pain.           Furthermore,           the
+conventional            use            of            short-term            follow-ups            limits            insights            into            the            intervention’s            long-term            influence            on            recovery.
+Based      on      the      multi-modal      analgesic      mechanisms      of      TEAS,      we      hypothesize      that      it      exerts      preferential      efficacy      against
+visceral  pain  following  LH.  Therefore,  we  designed  an  RCT  to  systematically  evaluate  its  effects  on  visceral,  incisional,
+and    LBP    intensities    at    multiple    time    points    and    overall    quality    of    recovery.
+
+Materials   and   Methods
+Study   Design   and   Participants
+This    study    was    approved    by    the    Ethics    Committee    of    The    First    Affiliated    Hospital    of    Wenzhou    Medical    University    on
+23   February   2024   (Approval   No.:   KY2024-019)   and   registered   in   the   Chinese   Clinical   Trial   Registry   (Registration   No.:
+ChiCTR2400093634).            This            study            strictly            adhered            to            the            guidelines            established            by            the            Consolidated            Standards            of
+Reporting        Trials        (CONSORT)        and        Helsinki        declaration.Written        informed        consent        was        obtained        from        all        participants
+prior         to         study         initiation.         In         total,         108         patients         scheduled         to         undergo        elective         LH         at         the         First         Affiliated         Hospital         of
+Wenzhou    Medical    University    between    March    2024    and    April    2025    were    enrolled.
+      The       inclusion      criteria       were      age       18–65       years,       American       Society       of       Anesthesiologists      (ASA)       I–II,       planned       patient-
+controlled   intravenous   analgesia   (PCIA),   and   independent   comprehension   and   completion   of   questionnaires.   The   exclu-
+sion criteria included dermatological conditions (infection, lesions, or scarring) at the electrode placement sites, allergy to
+TEAS  electrodes,  intraoperative  conversion  to  open  surgery,  comorbid  psychiatric  illness,  pregnancy  or  lactation,  severe
+cardiopulmonary   disease,   severe    hepatic    or   renal    dysfunction,   preoperative   opioid   abuse,    history    of   illicit   drug    use,   and
+withdrawal    of    consent.
+
+Randomization   and   Blinding
+Randomization        was        performed        using        Stata        15.0        software        to        generate        random        sequences        in        a        1:1        ratio.        The        random
+allocation      sequences      were      placed      in      sealed      opaque      envelopes.      After      obtaining      written      informed      consent,      the      research
+assistant       opened       the        next        consecutively       numbered       envelope        to       assign        the        participants       to        their       corresponding       groups.
+Anesthesiologists,  outcome  assessors,  and  patients  were  blinded  to  the  group  allocation.  The  outcome  assessors  received
+standardized           training,           had           no           involvement           in           intraoperative           anesthetic           management,           and           remained           unaware           of           the
+treatment    assignments.    The    anesthesiologists    did    not    participate    in    data    collection,   entry,    or    analysis.
+
+
+6478             https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 3 ===
+                                                                                                                                                                                                                   Zhang  et  al
+
+Inter ventions
+The           TEAS           procedure           was           administered           by           anesthesiologists           who           had           completed           a           standardized           training           program,
+including      at      least      one      week      of     specialized      instruction      and      a      consistency      assessment.     Prior      to      electrode      placement,     the
+skin    was    cleaned    with    75%    alcohol    and    allowed    to    dry    completely.    To    prevent    interference,    the    surgical    electrocautery
+return      electrode      was     positioned      at     a      site     separate      from      the     TEAS      electrodes.     All      participants     were      informed      that      they
+might    perceive    slight    tingling,    mild    vibration,    or    no    sensation    during    the    procedure.
+      TEAS        (HANS-200F,        Nanjing        Jisheng        Medical        Technology        Co.,        Ltd.)        was        applied        bilaterally        to        the        Hegu        (LI4)–
+Neiguan        (PC6)        and        Sanyinjiao        (SP6)–Zusanli       (ST36)        acupoints        (Figure        1).        Stimulation        commenced       30        min        prior        to
+anesthesia and continued throughout the surgery. Stimulation was delivered at 2/100 Hz in the dense-disperse wave mode
+with    the    intensity    set    at    1    mA    below    the    patient’s    maximum    tolerance    threshold.
+      The     control     group     had     electrodes     placed     identically     for     sham     stimulation,     which     was     administered     in     the     2/100     Hz
+dense-disperse       mode,       1       mA       below       the       sensory       threshold.       To       maintain       blinding       integrity,       the       TEAS       intervention       and
+outcome    assessments    were    conducted    by    separate    personnel    at    distinct    time    points.
+
+Primar y   Outcome
+The    primary    outcome    was    the    maximum    pain    score    for    different   types    of    acute    postoperative    pains    (visceral,    LBP,    and
+incisional    pain)    assessed    on    postoperative    days    (PODs)    0    (day    of    surgery),    1,    and    2.15 Postoperative    pain    intensity    was
+evaluated       using       a       numerical       rating       scale       (NRS),       where       0       represents       no       pain,       1–3       represent       mild       pain,       4–6       represent
+moderate  pain,  and  7–10  represent  severe  pain.  Pain  scores  on  POD  0  were  recorded  within  the  first  6  h  postoperatively.
+      Visceral pain was defined as a deep poorly localized pain originating within the abdominal cavity. Incisional pain was
+defined as sharp superficial pain localized to the surgical incision site or abdominal wall surface. LBP was defined as pain
+located    between    the    12th    rib    and    gluteal    region,    with    or    without    associated    leg    pain.    Shoulder    pain    was     defined    as    the
+pain    perceived    in    the    shoulder    region.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure  1 Location  of  acupoints.
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                           https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                   6479
+
+=== PDF PAGE 4 ===
+Zhang  et  al
+
+Secondary   Outcomes
+Secondary     outcomes     included     (1)     serum     concentrations     of     IL-2,     IL-4,     IL-6,     and     TNF-α     on     POD     1;     (2)     total     sufentanil
+consumption,        number        of        PCIA        bolus        demands,        and        rescue        analgesia        demands        on        POD        1;        (3)        postoperative        adverse
+events   [postoperative   nausea   and    vomiting   (PONV)],   sleep   disturbances,   dizziness,   surgical   site   infection,   fever,   cough,
+allergic  reaction,   abdominal  distension,  and   other  documented  complications;   and   (4)  postoperative  recovery   parameters
+encompassing    time     to     first     ambulation,     time     to     first     oral     liquid     intake,     time     to     first     solid     food     tolerance,    time     to     pelvic
+drain    removal,    time    to    first    postoperative    flatus,    and    time    to    postoperative    discharge.
+
+Anesthesia   and   Analgesia   Management
+Upon    arrival    in    the    operating    room,    patients    underwent    continuous    monitoring    of    non-invasive    blood    pressure,    electrocardio-
+graphy      (ECG),      pulse       oximetry       (SpO2),       bispectral      index      (BIS),       and      core       body       temperature.      General      anesthesia       was       induced
+intravenously with sufentanil  (0.4 μg/kg),  propofol (2 mg/kg),  and rocuronium (0.6  mg/kg). Tracheal intubation  was performed
+by an anesthesiologist (>3 years of experience) 1 min after induction. Anesthesia was maintained with a continuous infusion  of
+propofol (4–12 mg/kg/h) and remifentanil (0.1–0.2 μg/kg/min), supplemented with sevoflurane (1–2% end-tidal concentration).
+Neuromuscular          blockade           was           maintained          with           supplemental           rocuronium           boluses           (0.1–0.2           mg/kg)           as          clinically           indicated.
+Ventilation   parameters   were   adjusted   to   maintain   the   end-tidal   CO2 (EtCO2)   between   30–40   mmHg.   The   bispectral   index   was
+maintained  at  40–60  throughout  the  procedure.  Active  warming  strategies  were  used  when  necessary.
+      Intravenous intravenous palonosetron (0.25 mg) and flurbiprofen axetil (100 mg) were administered 30 min before the
+anticipated          surgical           completion.           Following           skin           closure,           local           anesthetic           infiltration           was           performed           at           the           surgical
+incision    site    using    10    mL    0.75%    ropivacaine    hydrochloride.
+      All         patients         received         postoperative         analgesia         via         PCIA,         with         a         solution         containing         100         µg         sufentanil         diluted         to
+100 mL with 0.9% normal saline. The PCIA settings included a background infusion of 2 mL/h, bolus dose of 2 mL, and
+lockout    interval    of    10    min.    In    the    post-anesthesia    care    unit    (PACU),    rescue    analgesia    was     administered    by    an    anesthe-
+siologist   if   the   patient   NRS   was   ≥4.   Sufentanil   was   administered   intravenously   until   adequate   analgesia   (NRS   <   4)   was
+achieved. After 1  h in  the PACU,  patients were transferred to the  ward, where a  rectal indomethacin suppository  (50 mg)
+was    administered    as    rescue    analgesia    if    the    NRS    was    ≥4.
+
+Surgical   Technique
+All      surgical      procedures      were      performed      by      experienced      surgeons      according      to      a      standardized      protocol.     Following      the
+establishment      of      a      pneumoperitoneum      using      one      10-mm      and      two      or      three      5-mm      laparoscopic      trocars,      the      uterus      was
+removed      transvaginally      after      sequential      division      of      the      round      ligament,      broad      ligament,      and      uterine      artery.      The      intra-
+abdominal     pressure     was     maintained     below     12     mmHg     throughout     the     procedure.     Upon     completion     of     the     surgery,     CO2
+was    evacuated    by    applying    manual    compression    to    the    abdomen    while    opening    the    laparoscopic    trocars.
+
+Statistical   Analysis
+Statistical         analyses          were         performed          using          Stata          15         SE          software         (StataCorp,         College          Station,          TX,          USA).          Based          on
+preliminary   trial   results,   the    maximum   visceral   pain   NRS   on    POD   1   was   2.53    ±   0.96    in   the   TEAS   group   versus    3.40   ±
+1.11     in     the     control     group.     A     sample     size     of     43     participants     per    group     was     estimated     (α     =     0.05,     1-β     =     0.8),     which     was
+adjusted   to   54,   accounting   for   an   anticipated   dropout   rate   of   20%   during   follow-up.   Continuous   variables   were   assessed
+for normality using the Shapiro–Wilk test. Normally distributed data with homogeneous variance are presented as mean ±
+standard deviation (SD) and compared using the independent-sample t-test. Non-normally distributed continuous data are
+reported  as  median  (interquartile  range)  [M(IQR)]  and  analyzed  using  the  Wilcoxon  rank-sum  test.  Categorical  variables
+are   expressed   as   numbers   (percentages)   [n(%)]   and   compared   using   the   chi-square   or   Fisher ’s   exact   test,   as   appropriate.
+Postoperative   pain    outcomes,    including    NRS    scores    and    the    incidence   of    moderate-to-severe    pain,    were    analyzed    using
+Generalized       Estimating       Equations       (GEE).       The       model       included       group,       time       point,       and       their       interaction       term       as       fixed
+effects   to   evaluate   differential   trends   over   time,   while   controlling   for   the   covariates   of   age,   BMI,   educational   level,   and
+previous         abdominal         surgery.         A         significant         group-by-time         interaction         prompted         post-hoc         comparisons,         for         which         the
+
+
+6480           https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 5 ===
+                                                                                                                                                                                                   Zhang  et  al
+
+Bonferroni method was applied to control the family-wise error rate, with a corrected significance threshold of P < 0.017.
+All    statistical    tests    were    two-sided,    and    P    <    0.05    was    considered    statistically    significant.
+
+Results
+Flowchart   and   Patient   Characteristics
+We       assessed       120       eligible       patients.      Five       patients      declined       participation      and       three       failed      to       meet       the       inclusion      criteria,
+resulting    in    108    enrolled    participants.    We    excluded   nine    TEAS    group    (five    for    surgical    protocol    modifications    and    four
+for  consent  withdrawals)  and  six  control  group  patients  (for  surgical protocol  modifications).  Finally,  93  patients  (TEAS,
+n    =    45;    controls,    n    =    48)    were    included    in    the    statistical    analyses    (Figure    2).
+
+Comparison   of   Baseline   Characteristics   Between   the   Two   Groups
+The    two    groups    were    similar    in    age,    BMI,    and    educational    level.    There    were    no    differences    in    the    history    of    hyperten-
+sion,    diabetes,    previous    abdominal    surgery,   dysmenorrhea,    surgical   duration,   or    anesthesia    duration   between    the    groups
+(P    >    0.05, Table    1).
+
+Maximum   Pain   Scores   and   Incidence   of   Moderate-to-Severe   Pain   for   Different   Types
+of   Acute   Postoperative   Pain
+After     adjusting     for     age,     BMI,     educational     level,     and     previous     abdominal     surgery,     the     GEE     models     revealed     significant
+main    effects    of    the    group    on    both    maximum    acute    visceral    pain    score    (Wald    χ2 =    7.35,    p    =0.007)    and    maximum    acute
+LBP    score    (Wald    χ2          =    6.37,    p    =0.012)    (Table    2).    The    adjusted    post-hoc    analyses    showed    that,    compared    to    the    control
+group,   the   TEAS   group   had   significantly   lower   visceral   pain   scores   on   POD   0   (adjusted   β   =   0.72,   95%   CI   [0.20,   1.25],
+p=0.007)     and    POD     1     (adjusted     β    =     0.96,    95%     CI    [1.67,     2.65],    p=0.009).    The     incidence    of     moderate-to-severe    visceral
+pain    was    also    reduced    in    the    TEAS    group    on    POD    0,    POD    1,    and    POD    2    (p    <    0.017).
+      For LBP, the TEAS group showed significantly reduced maximum scores on POD 0 (adjusted β =0.65, 95% CI [0.14,
+1.16],      p      =0.012),      POD      1      (adjusted      β      =      1.06,      95%      CI      [0.20,      1.91],      p      =0.016),      and      POD      2      (adjusted      β      =0.71,      95%      CI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure  2 Flowchart  of  participants  in  the  trail.
+
+
+
+
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                             https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                   6481
+
+=== PDF PAGE 6 ===
+Zhang  et  al
+
+
+
+
+                                   Table  1 Comparison  of  Baseline  Characteristics  Between  the  Two  Groups
+
+                                     Variables                                             TEAS Group  (n=45)                    Control Group (n=48)                     P
+
+                                     Age  (years)                                          51.91±7.37                            50.31±6.46                               0.27
+                                     BMI  (kg/m2)                                          23.63±2.72                            24.52±3.09                               0.14
+
+                                     Education  level                                                                                                                     0.25
+
+                                        Primary  school  or  below                         10(22.22)                             5(10.42)
+
+                                        Junior  high  school                               18(40.00)                             16(33.33)
+
+                                        Senior  high  school or equivalent                 13(28.89)                             22(45.83)
+
+                                        College  degree  or  above                         4(8.89)                               5(10.42)
+
+                                     Hypertension                                          14(31.11)                             10(20.83)                                0.26
+
+                                     Diabetes                                              3(6.67)                               3(6.25)                                  0.93
+
+                                     Previous  abdominal  surgery                          17(37.78)                             10(20.83)                                0.07
+
+                                     Dysmenorrhea                                          12(26.67)                             14(29.17)                                0.79
+
+                                     Anesthesia  duration  (min)                           91.66±36.56                           95.58±28.62                              0.58
+
+                                     Surgical  duration  (min)                             73.34±33.12                           84.13±25.84                              0.09
+
+                                   Note:  Values  are  presented  as  the  mean  ±SD,  n  (%).
+                                   Abbreviations:  BMI,  bodymass  index;  TEAS  group,  transcutaneous  electrical  acupoint  stimulation  group.
+
+
+
+
+
+                                        Table       2   Generalized        Estimating        Equation        (GEE)       Analysis        of        Postoperative        Pain
+                                        Outcomes  Over  Time
+
+                                          Variables                                             Unadjusted                                     Adjusted
+
+                                                                                     Estimate           Wald         P            Estimate           Wald          P
+
+                                          Visceral  pain
+
+                                              Group  TEAS                              −0.694            6.48        0.011          −0.723             7.35        0.007
+
+                                              TimePOD1                                  0.813            4.95        0.026           0.813             5.05        0.025
+
+                                              TimePOD2                                 −0.708            7.37        0.007          −0.701             7.60        0.006
+
+                                              GroupTEAS:TimePOD1                       −0.235            0.27        0.605          −0.235             0.27        0.602
+
+                                              GroupTEAS:TimePOD2                        0.619            3.74        0.053           0.619             3.86        0.049
+
+                                          LBP
+
+                                              Group  TEAS                              −0.624            5.91        0.015          −0.651             6.37        0.012
+
+                                              TimePOD1                                  0.917            5.21        0.022           0.917             5.34        0.021
+
+                                              TimePOD2                                 −0.688            6.45        0.011          −0.687             6.62        0.010
+
+                                              GroupTEAS:TimePOD1                       −0.406            0.64        0.425          −0.406             0.65        0.421
+
+                                              GroupTEAS:TimePOD2                       −0.068            0.04        0.847          −0.068             0.04        0.847
+
+                                                                                                                                                         (Continued)
+
+
+
+6482           https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 7 ===
+                                                                                                                                                                                                       Zhang  et  al
+
+
+
+                                          Table  2 (Continued).
+
+                                           Variables                                             Unadjusted                                     Adjusted
+
+                                                                                      Estimate           Wald          P           Estimate            Wald         P
+
+                                           Incision  pain
+
+                                              Group  TEAS                               −0.243            1.17         0.28           −0.281            1.60        0.210
+
+                                              TimePOD1                                   0.375            2.60         0.11            0.375            2.66        0.100
+
+                                              TimePOD2                                   0.104            0.26         0.61            0.104            0.26        0.611
+
+                                              GroupTEAS:TimePOD1                        −0.175            0.29         0.59           −0.175            0.29        0.590
+
+                                              GroupTEAS:TimePOD2                         0.407            1.83         0.18            0.407            1.82        0.180
+
+                                        Abbreviations:  TEAS,  transcutaneous  electrical  acupoint  stimulation;  POD,  postoperative  day;  LBP,  Low
+                                        back   pain;   The   model   included   group,   time   point,   and   their   interaction   term   as   fixed   effects.   All   models
+                                        were  adjusted  for  the  covariates  of  age,  BMI,  educational  level,  and  previous  abdominal  surgery.
+
+
+
+
+[0.24,1.2],     p     =0.003),     along     with     a     lower     incidence     of     moderate-to-severe     pain     on     POD     0     (p     <     0.017).     No     differences
+were    observed    between    the    two    groups    in    either    the    maximum    acute    incisional   pain    score    or    incidence    of    moderate-to-
+severe    incisional    pain    during    the    postoperative    period    (all    p    >    0.017)    (Figure    3).
+
+Plasma   Cytokine   Levels   Between   the   Two   Groups   on   POD1
+Plasma  IL-6  levels  were lower  in  the  TEAS  group  than in  the  control group  on  POD  1  (mean differece=  −21.96,  95%  CI
+[−31.48,    −12.44],    P    <    0.001),    whereas    no    differences    were    observed    in    the    plasma    levels    of    IL-2,    IL-4,    or    TNF-α    (P    >
+0.05, Table    3).
+
+Postoperative   Analgesia   Between   the   Two   Groups   on   POD1
+Compared   with   the   control   group,   patients   in   the   TEAS   group   exhibited   significantly   reduced   total   sufentanil   consump-
+tion  (mean  differece=  −3.26,  95%  CI  [−5.25,  −1.27],  P=0.002),  total  PCIA  bolus  demands  (mean  differece=  −1.75,  95%
+CI [−2.96, −0.53], P<0.001), and rescue analgesia administrations (RR=0.70, 95% CI [0.44, 1.10], P=0.002) on POD 1 (P
+<    0.05, Table    4).
+
+Postoperative   Recover y   of   Patients   Between   the   Two   Groups
+Compared        to        the        control        group,        patients        in        the        TEAS        group        exhibited        shorter        times        to        pelvic        drain        removal        (mean
+differece=      −9.15,       95%      CI      [−15.43,      −2.88],      P=0.005),      first       postoperative      ambulation      (mean      differece=      −8.39,      95%      CI
+[−14.27,         −2.51],         P=0.006),         and         postoperative         discharge         (mean         differece=         −2.05,         95%         CI         [−4.80,         −0.71],         P=0.004),
+whereas  no  difference  was  observed  in  the  time  to  first  flatus,  oral  liquid  intake,  and  solid  food  tolerance  (P  >  0.05).  The
+total     hospitalization     costs     were     higher     in     the     TEAS     group     than     in     the     control     group     (mean     differece=     −1361,     95%     CI
+[−1951,    −770],    P=0.004)    (Table    5).
+
+Postoperative   Complications   Between   the   Two   Groups
+Compared            to            the            control            group,            the            TEAS            group            demonstrated            a            lower            incidence            of            PONV            (RR=0.60,            95%            CI
+[0.36,0.99],       P=0.04).       No       significant       differences       were       observed       regarding       the       other       complications       between       the       groups
+(Table    6).
+
+
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                   6483
+
+=== PDF PAGE 8 ===
+Zhang  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6484                     https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 9 ===
+                                                                                                                                                                                               Zhang  et  al
+
+                                        Table  3 Plasma  Cytokine  Levels  Between  the  Two  Groups  on  POD1
+
+                                          Variables          TEAS  Group              Control  Group                   Mean  Difference                       P
+                                                                  (n=45)                     (n=48)                          (95%  CI)
+
+                                          IL-2                  2.58±0.29                  2.61±0.45                  −0.03(−0.12  to  0.19)                0.67
+
+                                          IL-4                  2.88±1.20                  3.17±1.45                  −0.29(−0.84  to  0.26)                0.30
+
+                                          IL-6                 16.63±13.85               38.59±29.22              −21.96(−31.48  to −12.44)               <0.001
+
+                                          TNF-α                 2.87±1.37                  2.57±0.28                   0.30(−0.10  to  0.70)                0.14
+
+                                        Note:  Values  are  presented  as  the  mean  ±  SD.
+                                        Abbreviations: IL-2, interleukin-2; IL-4, interleukin-4; IL-6, interleukin-6; TNF-α, tumor necrosis factor-
+                                        alpha;95%  CI,  95%  Confidence  Interval.
+                        Table  4 Postoperative  Analgesia  Between  the  Two  Groups  on  POD1
+
+                          Variables                                          TEAS  Group              Control  Group                   Estimated  Effect                      P
+                                                                                  (n=45)                     (n=48)                          (95%  CI)
+
+                          Total  sufentanil  consumption  (μg)                 50.53±4.46                 53.79±5.14              MD:-3.26(−5.25  to −1.27)                0.002
+
+                          Total  PCIA  bolus  demands                              0(0,2)                     2(1,4)              MD:-1.75(−2.96  to −0.53)               <0.001
+
+                          Rescue  analgesia  demands                             14(31.11)                 29(60.42)                 RR:0.70(0.44  to  1.10)               0.005
+
+                        Note:  Values  are  presented  as  the  mean  ±  SD,  median  (interquartile  range)  or  n  (%).
+                        Abbreviations: TEAS group, transcutaneous electrical acupoint stimulation group; PCIA, patient-controlled intravenous analgesia;
+                        MD,  mean  difference;  RR,  relative  risk;  95%  CI,  95%  Confidence  Interval.
+
+                    Table  5 Postoperative  Recovery  of  Patients  Between  the  Two  Groups
+
+                      Variables                                                     TEAS  Group              Control  Group                  Mean  Difference                     P
+                                                                                         (n=45)                     (n=48)                         (95%  CI)
+
+                      Time  to  pelvic  drain  removal(h)                              19.95±7.89                29.10±17.51              −9.15(−15.42  to −2.88)              0.005
+
+                      Time  to  first  postoperative  ambulation(h)                    19.91±5.88                28.31±19.01              −8.39(−14.27  to −2.51)              0.006
+
+                      Time  to  postoperative  discharge(d)                             4.07±1.68                 6.06±4.28                −2.05(−4.32  to  0.23)              0.004
+
+                      Time  to  first  postoperative  flatus(h)                       13.14±10.53                16.60±10.36               −3.46(−7.77  to  0.84)              0.110
+
+                      Time  to  first  oral  liquid  intake(h)                          7.11±5.66                 9.16±5.39                −2.05(−4.80  to  0.71)              0.077
+
+                      Time  to  first  solid  food  tolerance(h)                       13.11±7.53                 15.16±5.79              −2.00(−3.35  to −0.64)               0.140
+
+                      Total  hospitalization  costs(¥)                                14,542±158              15,903±  15,245             −1361(−1951  to −770)               <0.001
+
+                    Note:  Values  are  presented  as  the  mean  ±  SD,  median  (interquartile  range)  or  n  (%).
+                    Abbreviations: TEAS group, transcutaneous electrical acupoint stimulation group; PCIA, patient-controlled intravenous analgesia; 95% CI,
+                    95%  Confidence  Interval.
+
+                               Table  6 Postoperative  Complications  Between  the  Two  Groups
+
+                                 Variables                                          TEAS  Group              Control  Group              RR  (95%  CI)                   P
+                                                                                         (n=45)                     (n=48)
+
+                                 Shoulder  pain                                           1(2.22)                   2(4.17)              0.53(0.05  to  5.82)          0.99
+
+                                 PONV                                                   14(31.11)                  25(52.08)             0.60(0.36  to  0.99)          0.04
+
+                                 Sleep  disturbances                                     8(17.78)                  6(12.50)              1.42(0.54  to  3.78)          0.48
+
+                                 Dizziness                                               5(11.11)                  6(12.50)              0.89(0.29  to  2.71)          0.84
+
+                                 Surgical  site  infection                                0(0.00)                   1(2.08)              NA                            0.33
+
+                                                                                                                                                            (Continued)
+
+
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                         https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                   6485
+
+=== PDF PAGE 10 ===
+Zhang  et  al
+
+                                     Table  6 (Continued).
+
+                                      Variables                                                 TEAS  Group                 Control  Group                  RR  (95%  CI)                       P
+                                                                                                      (n=45)                        (n=48)
+
+                                      Fever                                                         12(26.67)                      8(16.67)                 1.60(0.72  to  3.55)              0.24
+
+                                      Cough                                                          7(15.56)                     12(25.00)                 0.62(0.69  to  1.44)              0.26
+
+                                      Allergic  reaction                                              0(0.00)                       1(2.08)                 NA                                0.33
+
+                                      Abdominal  distension                                          5(11.11)                      6(12.50)                 0.89(0.29  to  2.71)              0.84
+
+                                      Intermuscular  venous  thrombosis                               0(0.00)                       1(2.08)                 NA                                0.33
+
+                                   Note:  Values  are  presented  as  the  n  (%).
+                                   Abbreviations:   TEAS   group,   transcutaneous   electrical   acupoint   stimulation   group;   PONV,   postoperative   nausea   and
+                                   vomiting;  95%  CI,  95%  Confidence  Interval.
+
+Discussion
+Acute   postoperative   pain,   which   is   the   most   prevalent   yet   inadequately   managed   clinical   challenge,   primarily   originates
+from       surgical       trauma       and       inflammatory       responses.       Its       management       requires       substantial       healthcare       resources.       Patients
+undergoing  LH  frequently  experience  visceral, incisional,  low  back,  and shoulder  pains.  This  RCT evaluated the  efficacy
+of  TEAS  in  alleviating different types  of  acute  postoperative  pain  (visceral,  LBP,  and  incisional  pain)  following  LH.  The
+TEAS   group    (n=45)   demonstrated    superior   pain    control    compared    to    the   control    group    (n=48),    with    significantly   lower
+visceral pain  scores  (POD  0–1),  decreased  LBP  scores  (POD  0–2),  and  reduced  incidence  of  moderate-to-severe  visceral
+pain          (POD          0–2)          and          LBP          (POD          0)          (all          P          <          0.017).          TEAS          resulted          in          lower          interleukin-6          levels,          total          sufentanil
+consumption,  and  rescue  analgesia  demands  on  POD  1(all  P  <  0.05).  TEAS  was  associated  with  a  shorter  time  to  pelvic
+drain   removal,    decreased   postoperative    hospitalization,   earlier   ambulation,   and    lower    incidence   of    postoperative   nausea
+and    vomiting    (all    P    <    0.05).    No    significant    improvement    in    incisional    pain    was    observed    with    TEAS    intervention.
+      Visceral     pain      was      defined      as     poorly      localized      deep     abdominal      pain      accompanied      by      autonomic      responses      (nausea,
+vomiting,    and    sweating).16                      Its    pathophysiology    involves    complex    mechanisms,    including    surgical    manipulation,    perito-
+neal       inflammation,       visceral       ischemia,       and       peripheral/central       sensitization-induced       visceral       hypersensitivity.       Such       pain
+frequently       evokes       negative       emotions       due       to       dual       autonomic       innervation       with       central       projections       to       limbic       emotional
+centers.  Despite  multimodal  analgesia  combining  opioids  and  non-steroidal  anti-inflammatory  drugs,  suboptimal  visceral
+pain     control     persists     after     LH.17                Consistent     with     previous     evidence,18                           our     study     demonstrated     that     TEAS     significantly
+reduced    visceral    pain    scores    (POD    0–1),    and    the    incidence    of    moderate-to-severe    visceral    pain    (POD    0–2).
+      LBP        is        a        common        musculoskeletal        disorder        characterized        by        pain,        soreness,        muscle        tension,        and        stiffness        in        the
+lumbosacral          region.19               In          this           study,          14           patients          (29.17%)           in          the          control           group          developed          moderate-to-severe          LBP
+postoperatively,          with          two         patients          reporting         a          pain         score          of          10.          The          high         incidence          of          postoperative         LBP          may         be
+attributed            to            the            general            anesthesia            coupled            with            the            lithotomy            position            and            prolonged            maintenance            in            the            steep
+Trendelenburg          position         during          surgery.         This          posture         causes         the         lumbar         region          to          sustain         biomechanical         stress,          and
+predisposes     patients     to     acute     postoperative     LBP.     According     to     the      clinical     practice     guidelines     issued     by     the      American
+College          of          Physicians,          nonpharmacological          and          noninvasive          treatments          are          recommended          as          first-line          therapies          for
+LBP.20         These         therapies         produce         biological         effects         through         physical         modalities         such         as         sound,         light,         electricity,         and
+thermal           energy.21          TEAS           can           thus           be           conceptualized           as           a           targeted           physical           intervention           mediated           by           well-defined
+electrical    parameters.In    this     study,     TEAS    significantly     reduced    the    intensity     of    acute     postoperative    LBP    on    PODs    0–2.
+These results indicate that TEAS can safely and effectively reduce postoperative LBP, warranting wider clinical adoption
+as    a    non-invasive    therapeutic    modality.
+      This  study  revealed  a  divergent  analgesic  profile  of  TEAS  following  LH:  while  it  significantly  alleviated  visceral and
+LBP,      it      demonstrated      no      appreciable      effect      on      incisional      pain.      This      differential      response      may      be      attributed      to      distinct
+neural              mechanisms              underlying              different              pain              types              and              their              interactions              with              perioperative              analgesic              strategies.
+
+
+6486             https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 11 ===
+                                                                                                                                                                                                     Zhang  et  al
+
+Although        both        visceral        and        incisional        pain        typically        peak        on        the        day        of        surgery,22 all        patients        in        this        trial        received
+ropivacaine wound infiltration, which likely created a “ceiling effect” that masked any incremental benefit of TEAS at the
+incision         site.         In         contrast,         the         absence         of         comparable         preemptive         analgesia         for         visceral         and         LBP         allowed         persistent
+nociceptive    signaling,    thereby    establishing    a    therapeutic    window    in    which    TEAS    could    exert    its    modulatory    effects.
+      Post-laparoscopic    shoulder    pain    (PLSP)    is    another    common    complication,    primarily    caused    by    diaphragmatic    irrita-
+tion         following        CO2    pneumoperitoneum;2                     thus,        the         evacuation        of         residual        CO2 is         a        primary         preventive         measure.        To
+enhance    the    evacuation    of    residual    intra-abdominal    CO2,    surgeons     at    our    institution    delayed    the    removal    of    the    largest
+trocar until complete closure of the other incisions. This approach may explain the lower incidence of PLSP in our cohort
+than  in  previous  cohorts.  Although  the  low  incidence  of  PLSP  in  this  cohort  prevented  a  focused  evaluation  of  the  direct
+impact       of      TEAS      intervention       as      originally      planned,      its      potential       benefits      warrant      further      investigation.       Future      studies
+could  target  specific  high-risk  populations,  such  as  patients  undergoing  laparoscopic  cholecystectomy,  to  further  validate
+the    effect    of    TEAS    on    PLSP.
+      The      analgesic      effects      of      TEAS      involve      several      mechanisms.      To      further      validate      these      mechanisms,      blood      samples
+were      collected      to      measure      immune      cytokines      on      POD      1.      IL-6,      a      pro-inflammatory      cytokine,      elicits      inflammatory      and
+stress   responses.23 Plasma   IL-6   levels   are   correlated   with   the    severity   of   surgical   trauma.   In   this   study,   the   plasma    IL-6
+levels   on  POD   1   were   significantly  lower   in  the   TEAS   group  than   in  the   control   group,  suggesting   that   TEAS   alleviates
+inflammatory   pain   by   attenuating   IL-6   levels.   Conversely,   Jiang   et   al   reported   that   TEAS   treatment   elevates   serum   IL-2
+levels  and   reduces  IL-4  secretion,  facilitating  a  rapid  return  to  preoperative  levels.24 However,   no  significant  differences
+were    observed    in    IL-2,    IL-4,    or    TNF-α    levels    between    the    two    groups    on    POD    1,    likely    because    of    our    limited    sample
+size      and      lack      of      serial      cytokine      measurements      at      multiple      time      points.      Further      investigations      are      warranted      to      clarify
+these    findings.
+      The  pain  associated  with  PONV,  one  of  the  most  common  postoperative  complications,  may  be  treatable  by  TEAS  at
+PC6,  which  likely  functions  through  the  modulation  of  the  neuroendocrine  system,  including  endogenous  opioid  release,
+and        adrenergic       and        noradrenergic        pathway        activation,        thereby        modulating        serotonin        levels.        Consistent        with        previous
+findings,        we       demonstrated       that       TEAS        significantly       reduced       the       incidence        of       PONV.25              Furthermore,       compared       to       the
+control group, patients receiving TEAS exhibited significantly shorter times to pelvic drain removal, first ambulation, and
+hospital     discharge.     These     recovery    outcomes     may     be    attributed     to     the    ability     of    TEAS     to     mitigate     oxidative    stress     and
+reduce    postoperative    adverse    events.26
+      In  this  study,  bilateral  stimulation  was  simultaneously  applied  to  the  PC6,  LI4,  ST36,  and  SP6  acupoints.  Stimulation
+at   LI4   and   PC6   primarily   mediates   central   regulatory   effects;   LI4   activation   is   known   to   engage   the   endogenous   opioid
+system,      promoting      the      release      of      neurotransmitters      such      as      endorphins      and      enkephalins      for      central      analgesia,8,9                            while
+PC6        modulation       contributes        to       sedative        and       anti-emetic       outcomes,       effectively       reducing       anxiety       and        preventing       post-
+operative     nausea     and     vomiting10                 (PONV).     Conversely,     stimulation     at     SP6     and     ST36     exerts     targeted     peripheral     effects.
+SP6,  a  pivotal  point for gynecological  conditions,  helps  alleviate deep  visceral pain  by  modulating pelvic  blood  flow and
+organ     function.14           Simultaneously,     ST36     enhances     gastrointestinal     recovery     by     promoting     motility,     reducing     abdominal
+distension,    and    significantly    shortening    the    time    to    first    flatus    and    defecation.27
+      This   study   has   some   limitations.   First,   as   a   single-center   clinical   trial   with   a   limited   sample   size,   the   findings   of   this
+study         may         not         be         generalisable         to         a         broader         population;         future         multicenter         controlled         trials         are         warranted.         Second,
+chronic         postoperative         pain         was         not         assessed.         Extending         the         follow-up         duration         to         assess         the         potential         of         TEAS         in
+preventing the  transition from acute to chronic post-surgical pain represents a critical direction for future research. Third,
+the    control    group    received    sham    TEAS    stimulation    rather    than    no    treatment.    Finally,    only    IL-2,    IL-4,    IL-6,    and    TNF-α
+were    analyzed    on    POD    1.    Future    studies    should    include    a    longitudinal    assessment    of    all    relevant    cytokines    at    multiple
+time    points.
+
+Conclusion
+TEAS  provided differential postoperative analgesia,  effectively alleviating visceral  and LBP  but not  incisional pain. This
+primary   benefit,  coupled  with   reduced  inflammation,   opioid   use,  and  adverse   events,   facilitated  recovery   in  LH   patients.
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                               https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                   6487
+
+=== PDF PAGE 12 ===
+Zhang  et  al
+
+These        findings        support        the         incorporation        of        TEAS        as        an        effective        non-pharmacological        adjuvant        within        multimodal
+analgesia    and    ERAS    protocols.
+
+Abbreviations
+LBP,       low       back       pain;       LH,       laparoscopic       hysterectomy;       LI4,Hegu;       PC6,Neiguan;       SP6,Sanyinjiao;       ST36,Zusanli;       PODs,
+postoperative         days;         TENS,transcutaneous         electrical         nerve         stimulation;         RCT,randomized         control         trial;         ASA,American
+Society    of    Anesthesiologists;    PCIA,patient-controlled    intravenous    analgesia;    PONV,postoperative    nausea    and    vomiting;
+ECG,electrocardiography;  SpO2,pulse  oximetry;  BIS,  bispectral  index;  EtCO2,end-tidal  CO2;  PACU,post-anesthesia  care
+unit;    SD,standard    deviation;    M(IQR),    median    (interquartile    range).
+
+Data   Sharing   Statement
+We      all      agree      to      share      individual      deidentified      participant      data.      The      data      used      to      support      the      findings      of      this      study      are
+available   from    the    corresponding    author    (Wenwen    Du)    on    reasonable    request.
+
+Acknowledgments
+This             work             is             financially             supported             by             Zhejiang             Traditional             Chinese             Medicine             Administration             Project             (grant             No.
+2023ZL086),      National      Natural      Science      Foundation      of      China      (grant      No.82104622),      Wenzhou      Science      and      Technology
+Bureau(grant    No.Y20210787),    and    Zhejiang    Natural    Science    Foundation(grant    No.LQ24H310013).
+
+Disclosure
+The    authors    declare    that    they    have    no    competing    interests.
+
+References
+
+  1. Wu Q, Zhou Y, Sun S, et al. Clinical analysis of acute postoperative pain after total laparoscopic hysterectomy for adenomyosis and uterine fibroids
+      -   a   prospective   observational   study. Ann   Med. 2023;55(2):2281510.   doi:10.1080/07853890.2023.2281510
+  2. Lee  PS,  Lee  CL.  Unveiling  the  enigma  of  shoulder  pain  post  laparoscopic  surgery:  exploring  influencing  factors  and  recovery  trajectories. Taiwan
+      J   Obstet   Gynecol. 2025;64(3):482–486.   doi:10.1016/j.tjog.2024.06.016
+  3. Chen        S,        Du        W,        Zhuang        X,        et        al.        Description        and        comparison        of        acute        pain        characteristics        after        laparoscope-assisted        vaginal        hysterectomy,
+      laparoscopic   myomectomy   and   laparoscopic   adnexectomy. J   Pain   Res. 2021;14:3279–3288.   doi:10.2147/jpr.S335089
+  4. Nabil    Saleh     A,     FI     S,     AS     Y,     et     al.    Enhanced     postoperative     pain     management:     a     comparative     analysis     of     ultrasound-guided     quadratus     lumborum
+      block       versus       intraperitoneal       and       periportal       bupivacaine       infiltration       following       laparoscopic       cholecystectomy:       a       randomized       double-blind       study.
+      Anesth   Pain   Med. 2025;15(2):e159545.   doi:10.5812/aapm-159545
+  5. Liao     D,     Peng      K,     Zhang      Y,     et      al.     Effect     of      liposomal     bupivacaine     for      preoperative      erector     spinae      plane     block      on     postoperative      pain     following
+      video-assisted      thoracoscopic      lung      surgery:      a      protocol      for      a      multicenter,      randomized,      double-blind,      clinical      trial. Front      Med.             2024;11:1359878.
+      doi:10.3389/fmed.2024.1359878
+  6. Adams   TJ,    Aljohani   DM,    Forget    P.    Perioperative    opioids:   a    narrative    review   contextualising    new    avenues    to   improve    prescribing. Br    J   Anaesth.
+      2023;130(6):709–718.   doi:10.1016/j.bja.2023.02.037
+  7. Huang   KY,   Liang   S,   Chen   L,   et   al.   Transcutaneous   electrical   acupoint   stimulation   for   the   prevention   of   postoperative   delirium   in   elderly   surgical
+      patients:   a   systematic   review   and   meta-analysis. Front   Aging   Neurosci. 2023;15:1046754.   doi:10.3389/fnagi.2023.1046754
+  8. Han        JS.         Acupuncture:         neuropeptide        release         produced         by         electrical         stimulation         of        different        frequencies. Trends         Neurosci. 2003;26(1):17–22.
+      doi:10.1016/s0166-2236(02)00006-1
+  9. Zhou     X,     Cao     SG,     Tan     XJ,     et     al.     Effects    of     Transcutaneous     Electrical     Acupoint     Stimulation     (TEAS)     on     postoperative     recovery     in     patients     with
+      gastric   cancer:   a   randomized   controlled   trial. Cancer   Manag   Res. 2021;13:1449–1458.   doi:10.2147/cmar.S292325
+10. Zheng X,  Lin J, Wang Z, et al. Research of the analgesic effects and central nervous system impact of electroacupuncture therapy  in rats with knee
+      osteoarthritis. Heliyon. 2024;10(1):e21825.   doi:10.1016/j.heliyon.2023.e21825
+11. Han      K,      Zhang      A,      Mo      Y,      et      al.      Islet-cell      autoantigen      69      mediates      the      antihyperalgesic      effects      of      electroacupuncture      on      inflammatory      pain      by
+      regulating    spinal    glutamate    receptor    subunit    2    phosphorylation    through    protein    interacting    with    C-kinase    1    in    mice. Pain. 2019;160(3):712–723.
+      doi:10.1097/j.pain.0000000000001450
+12. Chen   T,   Zhang   WW,   Chu   YX,   et   al.   Acupuncture   for   pain   management:   molecular   mechanisms   of   action. Am   J   Chin   Med. 2020;48(4):793–811.
+      doi:10.1142/s0192415x20500408
+13. Wang      B,      Peng      G,      Chen      L,      et      al.      Effect     of      transcutaneous      electrical      acupoint      stimulation      on      remifentanil      dosage      during      craniotomy      aneurysm
+      clipping:   a   prospective,   randomized   controlled   study. BMC   Complement   Med   Ther. 2023;23(1):453.   doi:10.1186/s12906-023-04297-x
+14. Pan          Y,          Shao          Y,          Chi          Z,          et          al.          Transcutaneous          electrical         acupoint          stimulation         accelerates          the          recovery          of          patients          undergoing          laparoscopic
+      myomectomy:   a   randomized   controlled   trial. J   Pain   Res. 2023;16:809–819.   doi:10.2147/jpr.S399249
+15. You S, Xu F, Wu Y, et al. Effect of noise isolation using noise-cancelling headphones during laparoscopic surgery for postoperative pain reduction:
+      a   randomized   clinical   trial. J   Clin   Anesth. 2024;92:111286.   doi:10.1016/j.jclinane.2023.111286
+
+
+6488             https://doi.org/10.2147/JPR.S553932                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 13 ===
+                                                                                                                                                                                                                             Zhang  et  al
+
+
+16. Yang       JR,       Li       YY,       Ran       TJ,       et       al.       Esketamine       combined       with       dexmedetomidine       to       reduce       visceral       pain       during       elective       cesarean       section       under
+      combined    spinal-epidural    anesthesia:    a    double-blind    randomized    controlled    study. Drug    Des    Devel    Ther. 2024;18:2381–2392.    doi:10.2147/dddt.
+      S460924
+17. Yang    GW,    Cheng    H,    Song    XY,    et    al.    Effect    of    oxycodone-based    multimodal    analgesia    on    visceral    pain    after    major    laparoscopic    gastrointestinal
+      surgery:   a   randomised,   double-blind,   controlled   trial. Drug   Des   Devel   Ther. 2024;18:1799–1810.   doi:10.2147/dddt.S464518
+18. Guo  F,  Yan  Y,   Sun  L,   et   al.  Transcutaneous  electrical  acupoint  stimulation  for   preventing   postoperative  delirium:  a   meta-analysis. Neuropsychiatr
+      Dis   Treat. 2023;19:907–920.   doi:10.2147/ndt.S404805
+19. Hutchinson  AJ,  Ball  S,  Andrews  JC,  et  al.  The  effectiveness  of  acupuncture  in  treating  chronic  non-specific  low  back  pain:  a  systematic  review  of
+      the   literature. J   Orthop   Surg   Res. 2012;7:36.   doi:10.1186/1749-799x-7-36
+20. Qaseem  A,  Wilt  TJ,  McLean  RM,   et  al.  Noninvasive  treatments   for  acute,  subacute,  and  chronic  low   back  pain:  a  clinical  practice  guideline  from
+      the   American   College   of   Physicians. Ann   Intern   Med. 2017;166(7):514–530.   doi:10.7326/m16-2367
+21. Baroncini      A,     Maffulli     N,     Schäfer     L,     et     al.     Physiotherapeutic     and     non-conventional     approaches     in     patients     with     chronic     low-back     pain:     a     level
+      I   Bayesian   network   meta-analysis. Sci   Rep. 2024;14(1):11546.   doi:10.1038/s41598-024-62276-9
+22. Choi     JB,     Kang     K,     Song     MK,     et     al.     Pain     characteristics     after     total     laparoscopic     hysterectomy. Int     J     Med     Sci. 2016;13(8):562–568.     doi:10.7150/
+      ijms.15875
+23. Liu     J,     Zhang     K,     Zhang     Y,     et     al.     Perioperative     transcutaneous      electrical     acupoint     stimulation     reduces     postoperative     pain     in     patients     undergoing
+      thoracoscopic   surgery:   a   randomized   controlled   trial. Pain   Res   Manag. 2024;2024:5365456.   doi:10.1155/2024/5365456
+24. Tai   JB,   Hong   L,   Ma   ME,   et   al.   Evaluation   of   therapeutic   effect   of   transcutaneous   electrical   acupoint   stimulation   on   bone    metastasis   pain   and   its
+      influence   on   immune   function   of   patients. Ann   Palliat   Med. 2020;9(5):2538–2544.   doi:10.21037/apm-19-434
+25. Qin    J,    Ye    X,    Ye    C,    et    al.    The    effect    of    transcutaneous    electrical    acupoint    stimulation    on    high-risk    patients    with    PONV  undergoing    laparoscopic
+      gynecologic   surgery:   a   randomized   controlled   trial. J   Clin   Med. 2023;12(3):1192.   doi:10.3390/jcm12031192
+26. Ju     S,     Liu     M,     Wang     B,     et     al.     Transcutaneous     electrical     acupoint     stimulation     improves     pulmonary     function     by     regulating     oxidative     stress     during
+      one-lung    ventilation    in    patients    with    lung    cancer    undergoing    thoracoscopic    surgery:    a    randomized    controlled    trial. BMC    Complement    Med    Ther.
+      2023;23(1):463.   doi:10.1186/s12906-023-04304-1
+27. Hou        YT,        Pan        YY,        Wan        L,        et        al.        Transcutaneous        electrical        acupoint        stimulation        in        adult        patients        receiving        gastrectomy/colorectal        resection:
+      a   randomized   controlled   trial. World   J   Gastrointest   Surg. 2023;15(7):1474–1484.   doi:10.4240/wjgs.v15.i7.1474
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       Journal   of   Pain   Research
+       Publish your   work   in   this   journal
+
+       The  Journal  of  Pain  Research  is  an  international,  peer  reviewed,  open  access,  online  journal  that  welcomes  laboratory  and  clinical  findings  in  the
+       fields     of     pain     research     and     the     prevention     and     management     of     pain.     Original     research,     reviews,     symposium     reports,     hypothesis     formation     and
+       commentaries     are     all     considered     for     publication.     The     manuscript     management     system     is     completely     online     and     includes     a     very     quick     and     fair
+       peer-review    system,    which   is    all    easy   to    use.   Visit    http://www.dovepress.com/testimonials.php   to    read    real   quotes    from   published   authors.
+
+       Submit  your  manuscript  here: https://www.dovepress.com/journal-of-pain-research-journal
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                                                                                6489

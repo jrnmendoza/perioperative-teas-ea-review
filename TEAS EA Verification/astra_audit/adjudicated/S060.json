@@ -1,0 +1,1702 @@
+{
+  "Study_ID": "S060",
+  "Study": "Ao 2021",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first-page identity confirmed",
+    "title": "Effects of transcutaneous electrical acupoint stimulation on perioperative immune function and postoperative analgesia in patients undergoing radical mastectomy: A randomized controlled trial",
+    "year": 2021,
+    "doi": "10.3892/etm.2021.9615",
+    "pdf_files": [
+      "download.pdf"
+    ],
+    "randomized_arms": {
+      "TEAS": 35,
+      "sham": 35
+    },
+    "analyzed_arms": {
+      "TEAS": 32,
+      "sham": 33
+    },
+    "modality": "TEAS",
+    "comparator_class": "Electrode attachment without stimulation",
+    "independence": "DistinctmastectomytrialfromGu2019gastrectomydespitesharedTangshaninvestigatorGan.",
+    "source_locations": "pp2-4;Fig2 visually inspected",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 17,
+      "final": {
+        "Canonical study": "Ao 2021",
+        "Comparison ID": "AO21_TEAS_vs_SHAM_VAS",
+        "Intervention arm": "TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Pain",
+        "Outcome/result": "VAS pain intensity; activity not specified",
+        "Timepoint/window": "24 h postoperatively",
+        "Data type": "Graph-only mean/SD",
+        "Randomized n intervention": 35,
+        "Randomized n comparator": 35,
+        "Analyzed n intervention": 32,
+        "Analyzed n comparator": 33,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "VAS 0-10",
+        "Reported P": "<0.05",
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Qualitative evidence only; obtain numerical author data or independently validated graph extraction before pooling",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Baseline graph-digitized values removed from final numerical fields; retained in change history. No numerical graph labels.",
+        "Source location": "Figure 3, PDF p5; methods p3",
+        "Source PDF URL": "https://drive.google.com/file/d/1tNFnY0fJpx53hrtY4DIaE1RsNjE55Xvd/view?usp=drivesdk",
+        "Record status": "GRAPH DIGITIZATION NEEDED"
+      },
+      "verification_status": "GRAPH DIGITIZATION NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Ao 2021",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "AO21_TEAS_vs_SHAM_VAS",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "VAS pain intensity; activity not specified",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h postoperatively",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Graph-only mean/SD",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 35,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 35,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 32,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 33,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "VAS 0-10",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Qualitative evidence only; obtain numerical author data or independently validated graph extraction before pooling",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Baseline graph-digitized values removed from final numerical fields; retained in change history. No numerical graph labels.",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Figure 3, PDF p5; methods p3",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1tNFnY0fJpx53hrtY4DIaE1RsNjE55Xvd/view?usp=drivesdk",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "GRAPH DIGITIZATION NEEDED",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Mean intervention",
+          "old_value": 2.51,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "SD intervention",
+          "old_value": 0.49,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Mean comparator",
+          "old_value": 2.95,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "SD comparator",
+          "old_value": 0.53,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Data type",
+          "old_value": "Graph-digitized mean/SD",
+          "source_value": "Graph-only mean/SD",
+          "final_value": "Graph-only mean/SD",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "Yes",
+          "source_value": "No",
+          "final_value": "No",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Reported P",
+          "old_value": null,
+          "source_value": "<0.05",
+          "final_value": "<0.05",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Outcome/result",
+          "old_value": "VAS pain intensity",
+          "source_value": "VAS pain intensity; activity not specified",
+          "final_value": "VAS pain intensity; activity not specified",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Needs adjudication/sensitivity analysis before quantitative pooling",
+          "source_value": "Qualitative evidence only; obtain numerical author data or independently validated graph extraction before pooling",
+          "final_value": "Qualitative evidence only; obtain numerical author data or independently validated graph extraction before pooling",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Exact values are graph-digitized, not numerically tabulated by authors",
+          "source_value": "Baseline graph-digitized values removed from final numerical fields; retained in change history. No numerical graph labels.",
+          "final_value": "Baseline graph-digitized values removed from final numerical fields; retained in change history. No numerical graph labels.",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Figure-only 24-h VAS",
+          "source_value": "Figure 3, PDF p5; methods p3",
+          "final_value": "Figure 3, PDF p5; methods p3",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "DERIVED / NEEDS ADJUDICATION",
+          "source_value": "GRAPH DIGITIZATION NEEDED",
+          "final_value": "GRAPH DIGITIZATION NEEDED",
+          "source_location": "Figure 3, PDF p5; methods pp2–3; limitations p7",
+          "reason": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "download.pdf",
+      "source_evidence": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+      "drug": "sufentanil",
+      "route": "IV PCA (systemic postoperative PCA followingIVanesthesia)",
+      "pca_formulation": "1.5ug/kg sufentanil dilutedto150mL;2mL/h,0.5mLbolus,15minlockout;48h",
+      "rescue_regimen": "Cumulative rescue/press count reported; separate rescue drug/dose not specified",
+      "critical_qc": "VAS was assessed at 4, 12, 24 and 48 hours; 12- and 24-hour differences are marked P<0.05. Figure 3 contains no numerical point labels. Activity is not specified. The printed graph cannot authenticate the baseline's four precise digitized estimates.",
+      "analysis_eligibility": "Qualitative evidence only; obtain numerical author data or independently validated graph extraction before pooling",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 18,
+      "final": {
+        "Canonical study": "Ao 2021",
+        "Comparison ID": "AO21_TEAS_vs_SHAM_OPIOID24",
+        "Intervention arm": "TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative postoperative sufentanil",
+        "Timepoint/window": "Exact 0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 35,
+        "Randomized n comparator": 35,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg sufentanil",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid meta-analysis without author data",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "48-hour volume only; PCA concentration depends on individual weight; absolute 24-hour opioid dose and outcome denominator are unavailable",
+        "Source location": "Methods p3; Table II p6",
+        "Source PDF URL": "https://drive.google.com/file/d/1tNFnY0fJpx53hrtY4DIaE1RsNjE55Xvd/view?usp=drivesdk",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Ao 2021",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "AO21_TEAS_vs_SHAM_OPIOID24",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative postoperative sufentanil",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Exact 0-24 h",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 35,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 35,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg sufentanil",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid meta-analysis without author data",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "48-hour volume only; PCA concentration depends on individual weight; absolute 24-hour opioid dose and outcome denominator are unavailable",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Methods p3; Table II p6",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1tNFnY0fJpx53hrtY4DIaE1RsNjE55Xvd/view?usp=drivesdk",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "Methods p3; Table II p6",
+          "evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 32,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "reason": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 33,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "Methods p3; Table II p6",
+          "reason": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Article reports 48-h PCA framework only",
+          "source_value": "Methods p3; Table II p6",
+          "final_value": "Methods p3; Table II p6",
+          "source_location": "Methods p3; Table II p6",
+          "reason": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "MISSING / AUTHOR DATA NEEDED",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "Methods p3; Table II p6",
+          "reason": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "PCA followed for 48 h; no extractable cumulative 0-24-h total",
+          "source_value": "48-hour volume only; PCA concentration depends on individual weight; absolute 24-hour opioid dose and outcome denominator are unavailable",
+          "final_value": "48-hour volume only; PCA concentration depends on individual weight; absolute 24-hour opioid dose and outcome denominator are unavailable",
+          "source_location": "Methods p3; Table II p6",
+          "reason": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "download.pdf",
+      "source_evidence": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+      "drug": "sufentanil",
+      "route": "IV PCA (systemic postoperative PCA followingIVanesthesia)",
+      "pca_formulation": "1.5ug/kg sufentanil dilutedto150mL;2mL/h,0.5mLbolus,15minlockout;48h",
+      "rescue_regimen": "Cumulative rescue/press count reported; separate rescue drug/dose not specified",
+      "critical_qc": "PCA was followed for 48 hours. No exact cumulative end-of-surgery to 24-hour sufentanil mass is reported. The 65 analyzed participants are the 48-hour study population, not an observed 24-hour consumption denominator.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid meta-analysis without author data",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 262,
+      "final": {
+        "Canonical study": "Ao 2021",
+        "Comparison ID": "AO21_TEAS_vs_SHAM_PCA48",
+        "Intervention arm": "Repeated perioperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Opioid demand",
+        "Outcome/result": "Cumulative PCA solution consumption",
+        "Timepoint/window": "48 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 35,
+        "Randomized n comparator": 35,
+        "Analyzed n intervention": 32,
+        "Analyzed n comparator": 33,
+        "Mean intervention": 102.8,
+        "SD intervention": 7.4,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 120.6,
+        "SD comparator": 9.2,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mL PCA solution",
+        "Reported P": "<0.001",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "MD",
+        "Derived effect": -17.8,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "48-hour PCA-solution volume only, with delivery-accounting qualification; not a 24-hour opioid mass endpoint",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Basal 2 mL/h for 48 h gives 96 mL. Adding reported effective presses ×0.5 mL gives 99.1 vs 102.15 mL, not reported 102.8 vs 120.6 mL. Interruptions, extra boluses, or other delivery details are not explained. Preserve reported values; do not infer drug mass from group mean weight.",
+        "Source location": "Table II p6; methods p3",
+        "Source PDF URL": "https://drive.google.com/file/d/1tNFnY0fJpx53hrtY4DIaE1RsNjE55Xvd/view?usp=drivesdk",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Ao 2021",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "AO21_TEAS_vs_SHAM_PCA48",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Repeated perioperative TEAS",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid demand",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative PCA solution consumption",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "48 h",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 35,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 35,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 32,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 33,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 102.8,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 7.4,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 120.6,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 9.2,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mL PCA solution",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.001",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -17.8,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "48-hour PCA-solution volume only, with delivery-accounting qualification; not a 24-hour opioid mass endpoint",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Basal 2 mL/h for 48 h gives 96 mL. Adding reported effective presses ×0.5 mL gives 99.1 vs 102.15 mL, not reported 102.8 vs 120.6 mL. Interruptions, extra boluses, or other delivery details are not explained. Preserve reported values; do not infer drug mass from group mean weight.",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table II p6; methods p3",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1tNFnY0fJpx53hrtY4DIaE1RsNjE55Xvd/view?usp=drivesdk",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Reported P",
+          "old_value": "NR",
+          "source_value": "<0.001",
+          "final_value": "<0.001",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "reason": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -17.799999999999997,
+          "source_value": -17.8,
+          "final_value": -17.8,
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "reason": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible as directly reported 48-h PCA-volume outcome; not as 24-h opioid dose",
+          "source_value": "48-hour PCA-solution volume only, with delivery-accounting qualification; not a 24-hour opioid mass endpoint",
+          "final_value": "48-hour PCA-solution volume only, with delivery-accounting qualification; not a 24-hour opioid mass endpoint",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "reason": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Exact 24-h sufentanil total is not reported; the earlier 24-h VAS row is graph-digitized and remains derived.",
+          "source_value": "Basal 2 mL/h for 48 h gives 96 mL. Adding reported effective presses ×0.5 mL gives 99.1 vs 102.15 mL, not reported 102.8 vs 120.6 mL. Interruptions, extra boluses, or other delivery details are not explained. Preserve reported values; do not infer drug mass from group mean weight.",
+          "final_value": "Basal 2 mL/h for 48 h gives 96 mL. Adding reported effective presses ×0.5 mL gives 99.1 vs 102.15 mL, not reported 102.8 vs 120.6 mL. Interruptions, extra boluses, or other delivery details are not explained. Preserve reported values; do not infer drug mass from group mean weight.",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "reason": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "48-h PCA result",
+          "source_value": "Table II p6; methods p3",
+          "final_value": "Table II p6; methods p3",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "reason": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / 48H ONLY",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table II, PDF p6; PCA methods p3; flow diagram Figure 2 p4",
+          "reason": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "download.pdf",
+      "source_evidence": "Table II reports 102.8±7.4 versus 120.6±9.2 mL over 48 hours, n=32/33, P<0.001. These are mean/SD solution volumes, not µg. The bag contains 1.5 µg/kg sufentanil in 150 mL; no mean-weight conversion is valid. The reported fixed basal rate and effective press counts do not reconcile with mean delivered volume without additional delivery details.",
+      "drug": "sufentanil",
+      "route": "IV PCA (systemic postoperative PCA followingIVanesthesia)",
+      "pca_formulation": "1.5ug/kg sufentanil dilutedto150mL;2mL/h,0.5mLbolus,15minlockout;48h",
+      "rescue_regimen": "Cumulative rescue/press count reported; separate rescue drug/dose not specified",
+      "critical_qc": "Printed volume verified, but formulation is weight-dependent and basal-plus-bolus accounting is unresolved.",
+      "analysis_eligibility": "48-hour PCA-solution volume only, with delivery-accounting qualification; not a 24-hour opioid mass endpoint",
+      "notes": "Phase A source-first followed by field-level comparison."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S060_PCA48",
+      "outcome": "Cumulative PCA solution volume",
+      "time_window": "48 hours",
+      "comparison": "Electrode attachment without stimulation",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Randomnumbergenerator",
+          "source_location": "p2",
+          "reasoning": "Randomnumbergenerator"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "PY",
+          "evidence": "Sequentiallynumberedsealedenvelopesindependentassistant;opacitynotexplicit",
+          "source_location": "p2",
+          "reasoning": "Sequentiallynumberedsealedenvelopesindependentassistant;opacitynotexplicit"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Only65completersbaseline",
+          "source_location": "p5TableI",
+          "reasoning": "Only65completersbaseline"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Patients eventually knew whetherelectricalstimulationreceived",
+          "source_location": "p7limitations",
+          "reasoning": "Patients eventually knew whetherelectricalstimulationreceived"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Operatorsunblinded because deqiconfirmed",
+          "source_location": "p7",
+          "reasoning": "Operatorsunblinded because deqiconfirmed"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Standardizedanesthesia/PCA; refusals occur butnotattributedtotrialcontext",
+          "source_location": "pp2-3",
+          "reasoning": "Standardizedanesthesia/PCA; refusals occur butnotattributedtotrialcontext"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No trial-contextdepartures demonstrated",
+          "source_location": "pp2-3",
+          "reasoning": "No trial-contextdepartures demonstrated"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No trial-contextdepartures demonstrated",
+          "source_location": "pp2-3",
+          "reasoning": "No trial-contextdepartures demonstrated"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "5nonadherentparticipantsremoved",
+          "source_location": "p3;Fig2",
+          "reasoning": "5nonadherentparticipantsremoved"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "PN",
+          "evidence": "Five of 70 randomized patients were excluded for nonadherence. At 7.1%, exclusions create uncertainty but a substantial effect on the relatively large 17.8-mL contrast is not established.",
+          "source_location": "Flow Fig2; TableII",
+          "reasoning": "Five of 70 randomized patients were excluded for nonadherence. At 7.1%, exclusions create uncertainty but a substantial effect on the relatively large 17.8-mL contrast is not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "65/70 analyzed",
+          "source_location": "p3",
+          "reasoning": "65/70 analyzed"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No robustnessanalysesformissingoutcomes",
+          "source_location": "p3",
+          "reasoning": "No robustnessanalysesformissingoutcomes"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "PY",
+          "evidence": "Refusal/incompletion canrelateto discomfortorrecovery",
+          "source_location": "p3",
+          "reasoning": "Refusal/incompletion canrelateto discomfortorrecovery"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NI",
+          "evidence": "Reasonsnotlinkedexplicitlytotrueoutcome;cannotassertlikelihood",
+          "source_location": "p3",
+          "reasoning": "Reasonsnotlinkedexplicitlytotrueoutcome;cannotassertlikelihood"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Delivered pump volume is an appropriate objective measure of solution use; unit/clock eligibility is a separate issue.",
+          "source_location": "Methods p3;TableII",
+          "reasoning": "Delivered pump volume is an appropriate objective measure of solution use; unit/clock eligibility is a separate issue."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Both groups used the same pump settings and blinded follow-up assessment.",
+          "source_location": "Methods pp2–3",
+          "reasoning": "Both groups used the same pump settings and blinded follow-up assessment."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Follow-up anesthesiologist was blinded; pump volume is electronically recorded.",
+          "source_location": "Methods pp2–3",
+          "reasoning": "Follow-up anesthesiologist was blinded; pump volume is electronically recorded."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Objective pump record with blinded outcome collection.",
+          "source_location": "p3",
+          "reasoning": "Objective pump record with blinded outcome collection."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Objective pump record with blinded outcome collection.",
+          "source_location": "p3",
+          "reasoning": "Objective pump record with blinded outcome collection."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "ProspectiveregistrationclaimnotdatedSAPverification",
+          "source_location": "pp2,7",
+          "reasoning": "ProspectiveregistrationclaimnotdatedSAPverification"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "SeveralVAS/immuneresults;prospectivepreciseplansunavailable",
+          "source_location": "pp2-3",
+          "reasoning": "SeveralVAS/immuneresults;prospectivepreciseplansunavailable"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No datedSAP",
+          "source_location": "p3",
+          "reasoning": "No datedSAP"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Randomnumbergenerator; Sequentiallynumberedsealedenvelopesindependentassistant;opacitynotexplicit; Only65completersbaseline",
+          "source_location": "p2; p2; p5TableI"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Patients eventually knew whetherelectricalstimulationreceived; Operatorsunblinded because deqiconfirmed; Standardizedanesthesia/PCA; refusals occur butnotattributedtotrialcontext; No trial-contextdepartures demonstrated; No trial-contextdepartures demonstrated; 5nonadherentparticipantsremoved; Five of 70 randomized patients were excluded for nonadherence. At 7.1%, exclusions create uncertainty but a substantial effect on the relatively large 17.8-mL contrast is not established.",
+          "source_location": "p7limitations; p7; pp2-3; pp2-3; pp2-3; p3;Fig2; Flow Fig2; TableII"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "65/70 analyzed; No robustnessanalysesformissingoutcomes; Refusal/incompletion canrelateto discomfortorrecovery; Reasonsnotlinkedexplicitlytotrueoutcome;cannotassertlikelihood",
+          "source_location": "p3; p3; p3; p3"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Delivered pump volume is an appropriate objective measure of solution use; unit/clock eligibility is a separate issue.; Both groups used the same pump settings and blinded follow-up assessment.; Follow-up anesthesiologist was blinded; pump volume is electronically recorded.; Objective pump record with blinded outcome collection.; Objective pump record with blinded outcome collection.",
+          "source_location": "Methods p3;TableII; Methods pp2–3; Methods pp2–3; p3; p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "ProspectiveregistrationclaimnotdatedSAPverification; SeveralVAS/immuneresults;prospectivepreciseplansunavailable; No datedSAP",
+          "source_location": "pp2,7; pp2-3; p3"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Concealment is reasonably described, but only completer baseline data are available. Nonadherent exclusions and missingness cause uncertainty; no convincing substantial bias of the objective 48-hour volume result is demonstrated. D4 is low despite participant unmasking.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Selected-result overall retained Some concerns, with explicit result-specific missingness and nonadherence reasoning; numerical delivery-accounting issue is recorded separately."
+    },
+    {
+      "result_id": "S060_VAS24",
+      "outcome": "VAS pain intensity; activity unspecified",
+      "time_window": "24 hours",
+      "comparison": "Electrode attachment without stimulation",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Randomnumbergenerator",
+          "source_location": "p2",
+          "reasoning": "Randomnumbergenerator"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "PY",
+          "evidence": "Sequentiallynumberedsealedenvelopesindependentassistant;opacitynotexplicit",
+          "source_location": "p2",
+          "reasoning": "Sequentiallynumberedsealedenvelopesindependentassistant;opacitynotexplicit"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Only65completersbaseline",
+          "source_location": "p5TableI",
+          "reasoning": "Only65completersbaseline"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Patients eventually knew whetherelectricalstimulationreceived",
+          "source_location": "p7limitations",
+          "reasoning": "Patients eventually knew whetherelectricalstimulationreceived"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Operatorsunblinded because deqiconfirmed",
+          "source_location": "p7",
+          "reasoning": "Operatorsunblinded because deqiconfirmed"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Standardizedanesthesia/PCA; refusals occur butnotattributedtotrialcontext",
+          "source_location": "pp2-3",
+          "reasoning": "Standardizedanesthesia/PCA; refusals occur butnotattributedtotrialcontext"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No trial-contextdepartures demonstrated",
+          "source_location": "pp2-3",
+          "reasoning": "No trial-contextdepartures demonstrated"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No trial-contextdepartures demonstrated",
+          "source_location": "pp2-3",
+          "reasoning": "No trial-contextdepartures demonstrated"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "5nonadherentparticipantsremoved",
+          "source_location": "p3;Fig2",
+          "reasoning": "5nonadherentparticipantsremoved"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "PY",
+          "evidence": "7.1%excludedincludinginterventionrefusals;potentiallymaterial forsubjectivepainandrelativelyrarePONV",
+          "source_location": "Fig2;TableII",
+          "reasoning": "7.1%excludedincludinginterventionrefusals;potentiallymaterial forsubjectivepainandrelativelyrarePONV"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "65/70 analyzed",
+          "source_location": "p3",
+          "reasoning": "65/70 analyzed"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No robustnessanalysesformissingoutcomes",
+          "source_location": "p3",
+          "reasoning": "No robustnessanalysesformissingoutcomes"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "PY",
+          "evidence": "Refusal/incompletion canrelateto discomfortorrecovery",
+          "source_location": "p3",
+          "reasoning": "Refusal/incompletion canrelateto discomfortorrecovery"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NI",
+          "evidence": "Reasonsnotlinkedexplicitlytotrueoutcome;cannotassertlikelihood",
+          "source_location": "p3",
+          "reasoning": "Reasonsnotlinkedexplicitlytotrueoutcome;cannotassertlikelihood"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "VASvalidpainmeasure",
+          "source_location": "p3",
+          "reasoning": "VASvalidpainmeasure"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "SameVASschedule;blindedfollowupanesthesiologist",
+          "source_location": "pp2-3",
+          "reasoning": "SameVASschedule;blindedfollowupanesthesiologist"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Patientself-ratingandexplicitunmasking",
+          "source_location": "p7",
+          "reasoning": "Patientself-ratingandexplicitunmasking"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "Y",
+          "evidence": "Painexpectancycaninfluenceselfrating",
+          "source_location": "pp3,7",
+          "reasoning": "Painexpectancycaninfluenceselfrating"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NI",
+          "evidence": "Explicitunmaskingbutnoevidenceofstrengthofexpectancyinfluence",
+          "source_location": "p7",
+          "reasoning": "Explicitunmaskingbutnoevidenceofstrengthofexpectancyinfluence"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "ProspectiveregistrationclaimnotdatedSAPverification",
+          "source_location": "pp2,7",
+          "reasoning": "ProspectiveregistrationclaimnotdatedSAPverification"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "SeveralVAS/immuneresults;prospectivepreciseplansunavailable",
+          "source_location": "pp2-3",
+          "reasoning": "SeveralVAS/immuneresults;prospectivepreciseplansunavailable"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No datedSAP",
+          "source_location": "p3",
+          "reasoning": "No datedSAP"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Randomnumbergenerator; Sequentiallynumberedsealedenvelopesindependentassistant;opacitynotexplicit; Only65completersbaseline",
+          "source_location": "p2; p2; p5TableI"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Patients eventually knew whetherelectricalstimulationreceived; Operatorsunblinded because deqiconfirmed; Standardizedanesthesia/PCA; refusals occur butnotattributedtotrialcontext; No trial-contextdepartures demonstrated; No trial-contextdepartures demonstrated; 5nonadherentparticipantsremoved; 7.1%excludedincludinginterventionrefusals;potentiallymaterial forsubjectivepainandrelativelyrarePONV",
+          "source_location": "p7limitations; p7; pp2-3; pp2-3; pp2-3; p3;Fig2; Fig2;TableII"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "65/70 analyzed; No robustnessanalysesformissingoutcomes; Refusal/incompletion canrelateto discomfortorrecovery; Reasonsnotlinkedexplicitlytotrueoutcome;cannotassertlikelihood",
+          "source_location": "p3; p3; p3; p3"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "VASvalidpainmeasure; SameVASschedule;blindedfollowupanesthesiologist; Patientself-ratingandexplicitunmasking; Painexpectancycaninfluenceselfrating; Explicitunmaskingbutnoevidenceofstrengthofexpectancyinfluence",
+          "source_location": "p3; pp2-3; p7; pp3,7; p7"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "ProspectiveregistrationclaimnotdatedSAPverification; SeveralVAS/immuneresults;prospectivepreciseplansunavailable; No datedSAP",
+          "source_location": "pp2,7; pp2-3; p3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Excluding patients who refused or did not complete stimulation can substantially affect a modest subjective pain contrast. Explicit participant unmasking, missing data and unavailable prespecified analysis add concerns. No precise numerical graph estimates are endorsed.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "See domain-specific source reasoning; baseline selected result may differ."
+    }
+  ],
+  "opioid_candidate": {
+    "Study_ID": "S060",
+    "decision": "excluded",
+    "drug": "Sufentanil",
+    "route": "Intravenous PCA",
+    "window": "48 hours only",
+    "exact_0_24h": false,
+    "randomized_n": {
+      "intervention": 35,
+      "comparator": 35
+    },
+    "analyzed_n": {
+      "intervention": 32,
+      "comparator": 33
+    },
+    "reported_values": {
+      "intervention_mean": 102.8,
+      "intervention_sd": 7.4,
+      "comparator_mean": 120.6,
+      "comparator_sd": 9.2,
+      "unit": "mL solution"
+    },
+    "pca_formulation": "1.5 µg/kg sufentanil in 150 mL; basal 2 mL/h; bolus 0.5 mL; lockout 15 min",
+    "rescue": "Insufficient information / not reported.",
+    "total_systemic_coverage": "Insufficient information / not reported.",
+    "conversion_performed": false,
+    "reason": "Wrong window and weight-dependent solution concentration. No exact 24-hour absolute systemic opioid mass; no group-mean-weight conversion."
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Exact 24-hour opioid mass and actual PCA delivery accounting",
+      "why_it_matters": "Reported 48-hour volumes do not follow from stated basal rate plus effective boluses; concentration is weight-dependent.",
+      "analysis_affected": "Primary opioid analysis and 48-hour PCA-volume sensitivity analysis",
+      "can_proceed_without": "Exclude primary opioid result; preserve qualified raw 48-hour volume.",
+      "priority": "High",
+      "exact_question": "Please provide individual-weight-based absolute sufentanil consumption from end of surgery through 24 hours, all additional systemic opioids, arm-specific n/mean/SD, and explain how 48-hour volumes were calculated from basal and bolus delivery."
+    },
+    {
+      "missing_information": "Numerical 24-hour VAS and outcomes for five randomized exclusions",
+      "why_it_matters": "The figure does not validate baseline digitized values; exclusion may bias pain.",
+      "analysis_affected": "24-hour pain and assignment-effect RoB2",
+      "can_proceed_without": "Qualitative pain finding only.",
+      "priority": "High",
+      "exact_question": "Please provide the 24-hour VAS mean, SD, activity condition, and participant-level or arm-level outcome data for all 70 randomized patients, including five excluded patients."
+    }
+  ],
+  "summary": "All three baseline rows adjudicated. Removed unverified digitized VAS means/SDs, verified 48-hour PCA volumes and P<0.001, and excluded the missing 24-hour opioid endpoint. Pain and objective PCA use receive distinct RoB2 judgments.",
+  "unblinded_supplemental_checks": [],
+  "phase_a_source": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/phase_a/S060.json",
+  "guidance_source": "Official RoB2 22 August 2019; local batch6_rob2_guidance.pdf"
+}

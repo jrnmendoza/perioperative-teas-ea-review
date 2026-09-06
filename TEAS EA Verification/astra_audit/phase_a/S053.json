@@ -1,0 +1,293 @@
+{
+  "Study_ID": "S053",
+  "Study": "Guo 2023",
+  "identity": {
+    "title": "Effect of transcutaneous electrical acupoint stimulation on postoperative cognitive function in older patients with lung cancer: A randomized, double-blind, placebo-controlled trial",
+    "year": 2023,
+    "doi": "10.1016/j.heliyon.2023.e19386",
+    "pdf": "006_guo_2023.pdf",
+    "location": "p1"
+  },
+  "design": {
+    "modality": "TEAS",
+    "comparator": "No-current sham TEAS",
+    "population": "Adults >=65; thoracoscopic pulmonary resection under general anesthesia",
+    "randomized": {
+      "TEAS": 64,
+      "sham": 64
+    },
+    "analyzed": {
+      "TEAS": 55,
+      "sham": 55
+    },
+    "intervention": "DU20 and bilateral PC6/LI4/ST36, 2/100Hz 10-30mA, 30min preinduction through surgery end",
+    "location": "pp2-5; Figure1 visually inspected",
+    "attrition": "TEAS:2 open conversions,1 unilateral pulmonary resection,3 second operations,2 declined follow-up,1 death. Sham:4 open conversions,1 operation<2h,1 benign tumor,3 deaths. All excluded from analyses."
+  },
+  "results": [
+    {
+      "id": "pain",
+      "outcome": "NRS pain, activity unspecified",
+      "window": "POD1/POD7/POD30",
+      "format": "graph only",
+      "values": null,
+      "location": "p6 Fig3B visually inspected; no numerical labels"
+    },
+    {
+      "id": "sufentanil",
+      "outcome": "Intraoperative sufentanil",
+      "unit": "ug",
+      "format": "mean SD",
+      "T": [
+        29.42,
+        7.62,
+        55
+      ],
+      "C": [
+        30.55,
+        7.94,
+        55
+      ],
+      "location": "p5 Table2; p8 explicitly intraoperative"
+    },
+    {
+      "id": "remifentanil",
+      "outcome": "Intraoperative remifentanil",
+      "unit": "mg",
+      "format": "mean SD",
+      "T": [
+        0.87,
+        0.3,
+        55
+      ],
+      "C": [
+        1.01,
+        0.39,
+        55
+      ],
+      "location": "p5 Table2"
+    },
+    {
+      "id": "rescue",
+      "outcome": "Frequency remedial analgesia in hospital",
+      "unit": "times",
+      "format": "mean SD",
+      "T": [
+        2.29,
+        1.76,
+        55
+      ],
+      "C": [
+        1.96,
+        1.97,
+        55
+      ],
+      "location": "p5 Table2"
+    },
+    {
+      "id": "ponv",
+      "outcome": "Nausea and vomiting adverse events",
+      "window": "during 12-month trial; acute interval unspecified",
+      "T": [
+        2,
+        55
+      ],
+      "C": [
+        5,
+        55
+      ],
+      "location": "p6 section3.4; p7 Table5"
+    },
+    {
+      "id": "longterm",
+      "outcome": "EORTC QLQ-C30 pain; not QoR",
+      "window": "6 and 12 months",
+      "format": "mean SD",
+      "T": [
+        [
+          3.64,
+          8.3
+        ],
+        [
+          2.73,
+          7.7
+        ]
+      ],
+      "C": [
+        [
+          7.58,
+          11.03
+        ],
+        [
+          5.45,
+          10.17
+        ]
+      ],
+      "location": "p7 Table3"
+    },
+    {
+      "id": "chronic",
+      "outcome": "Current pain at 12 months",
+      "T": [
+        4,
+        55
+      ],
+      "C": [
+        13,
+        55
+      ],
+      "location": "p7 Table4"
+    }
+  ],
+  "regimen": {
+    "drug": "sufentanil",
+    "route": "IV",
+    "pca": "48h PCIA:0.04ug/kg/h,bolus0.01ug/kg; PCIA dose3mL,background2mL/h,interval15min as printed",
+    "rescue": "Insufficient information / not reported.",
+    "postoperative_consumption": "Insufficient information / not reported.",
+    "location": "p3 section2.4"
+  },
+  "source_conflicts": [
+    "p2 exclusions include diseases present in Table1.",
+    "12-month completers used for acute analyses.",
+    "PONV table has no acute interval."
+  ],
+  "retrieval": {
+    "guidance": "Official RoB2 22Aug2019 pp17-18,24,27-29,45-46,54-55,63-65 read",
+    "registration": "ChiCTR2000035552 official listing:2020-08-13, before recruitment2020-08-26; result-level dated SAP unavailable.",
+    "supplement_attempts": "DOI500; ScienceDirect403; PMC10558345 recaptcha. Main full PDF accessible. Supplementary materials1(acupoints),2(CRF),3(baseline dropout comparison) not retrieved."
+  },
+  "rob_independent": {
+    "questions": {
+      "1.1": [
+        "Y",
+        "SPSS25 random sequence",
+        "p2 section2.3"
+      ],
+      "1.2": [
+        "NI",
+        "Independent technician code; concealment from enrolling staff before assignment undescribed",
+        "pp2-3"
+      ],
+      "1.3": [
+        "NI",
+        "Only completers baseline data shown",
+        "p5 Table1"
+      ],
+      "2.1": [
+        "PY",
+        "10-30mA preanesthetic versus power off",
+        "p3 section2.4"
+      ],
+      "2.2": [
+        "Y",
+        "Technician implements allocation; clinical team described blinded",
+        "p3"
+      ],
+      "2.3": [
+        "PN",
+        "Standard anesthetic protocol; no reported trial-context deviations",
+        "p3"
+      ],
+      "2.4": [
+        "NA",
+        "No identified trial-context deviations",
+        "p3"
+      ],
+      "2.5": [
+        "NA",
+        "2.4 not applicable",
+        "p3"
+      ],
+      "2.6": [
+        "N",
+        "All data of18 noncompleters excluded including early data of later withdrawals",
+        "p4 Fig1"
+      ],
+      "2.7": [
+        "PY",
+        "14.06% removed partly for later surgery/death; recovery could differ materially",
+        "p4 Fig1"
+      ],
+      "3.1": [
+        "N",
+        "110/128 included",
+        "p4"
+      ],
+      "3.2": [
+        "N",
+        "No missing-outcome sensitivity analysis; baseline comparison cannot establish absence of bias",
+        "p4"
+      ],
+      "3.3": [
+        "PY",
+        "Conversion/second surgery/death correlate with recovery/pain",
+        "p4 Fig1"
+      ],
+      "3.4": [
+        "PY",
+        "Clinical reasons linked to pain burden and differ across groups",
+        "p4 Fig1"
+      ],
+      "4.1": [
+        "N",
+        "NRS suitable for pain",
+        "p3 section2.5"
+      ],
+      "4.2": [
+        "PN",
+        "Same schedule/scales",
+        "p3"
+      ],
+      "4.3": [
+        "PY",
+        "Participant is pain assessor; active sensation versus off sham",
+        "p3"
+      ],
+      "4.4": [
+        "Y",
+        "Self-reported pain susceptible to awareness",
+        "p3"
+      ],
+      "4.5": [
+        "NI",
+        "No expectancy/blinding-success assessment; influence not demonstrated",
+        "pp3,6"
+      ],
+      "5.1": [
+        "NI",
+        "Registration precedes recruitment but dated SAP not verified",
+        "p2; official registry listing"
+      ],
+      "5.2": [
+        "NI",
+        "Several pain times; precise prospective specification unavailable",
+        "p3"
+      ],
+      "5.3": [
+        "NI",
+        "No dated SAP; selection of final-completer analysis cannot be excluded",
+        "pp3-4"
+      ]
+    },
+    "domains": [
+      "Some concerns",
+      "High",
+      "High",
+      "Some concerns",
+      "Some concerns"
+    ],
+    "overall": "High",
+    "reason": "Selecting 12-month completers compromises acute assignment effect; sensory unmasking adds pain concern."
+  },
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "No postoperative cumulative systemic opioid dose; tables are intraoperative."
+  },
+  "independence": "Single trial; no linked report identified in source bibliography.",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "saved_at": "2026-09-05T15:00:59.886Z",
+  "missing_information_convention": "Insufficient information / not reported."
+}

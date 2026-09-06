@@ -1,0 +1,144 @@
+{
+  "Study_ID": "S015",
+  "Study": "Xiong 2021",
+  "phase": "A_SOURCE_ONLY",
+  "baseline_accessed": false,
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "title": "Transcutaneous Electrical Acupoint Stimulation Combined with Dexamethasone and Tropisetron Prevents Postoperative Nausea and Vomiting in Female Patients Undergoing Laparoscopic Sleeve Gastrectomy: a Prospective, Randomized Controlled Trial",
+  "year": 2021,
+  "doi": "10.1007/s11695-020-05205-9",
+  "pdf": "covidence_431_full_article.pdf",
+  "source_read": "All9pages read, tables1–4 and flow",
+  "modality": "TEAS",
+  "randomized": {
+    "TEAS": 31,
+    "control": 31
+  },
+  "analyzed": {
+    "TEAS": 31,
+    "control": 31
+  },
+  "comparators": "no-current sham plus same dexamethasone10mg and tropisetron4mg",
+  "intervention": "PC6 ST36,2/10Hz from−30min through surgery,+2/+6h sessions",
+  "drug": "sufentanil; report-derived morphine equivalents/kg",
+  "route": "PCA route ambiguous: p1915 prints intrathecal (PCIA); do not silently infer IV",
+  "pca": "sufentanil1.5ug/h background,1ug bolus20min lockout; background increased in3TEAS/4controls for moderate pain",
+  "rescue": "sufentanil5ug at patient request; metoclopramide10mgIV then ondansetron/tropisetron4mg",
+  "results": {
+    "PONV48": {
+      "events": [
+        13,
+        24
+      ],
+      "n": [
+        31,
+        31
+      ],
+      "P": 0.004,
+      "location": "p1916 Table2 / p1917 Table3"
+    },
+    "PONV24": {
+      "events": [
+        12,
+        24
+      ],
+      "P": 0.002,
+      "location": "p1917 Table3"
+    },
+    "vomiting48": {
+      "events": [
+        11,
+        21
+      ],
+      "P": 0.011
+    },
+    "vomiting24": {
+      "events": [
+        10,
+        20
+      ],
+      "P": 0.011
+    },
+    "only_nausea48": {
+      "events": [
+        2,
+        3
+      ],
+      "P": 1
+    },
+    "only_nausea24": {
+      "events": [
+        2,
+        4
+      ],
+      "P": 0.671
+    },
+    "clinically_important_PONV48": {
+      "events": [
+        5,
+        15
+      ],
+      "P": 0.007
+    },
+    "rescue_antiemetic48": {
+      "events": [
+        9,
+        18
+      ],
+      "P": 0.021
+    },
+    "flatus": {
+      "values": [
+        [
+          23.6,
+          7.7
+        ],
+        [
+          32.3,
+          13.2
+        ]
+      ],
+      "format": "meanSD h",
+      "P": 0.003,
+      "location": "p1917 Table4"
+    },
+    "diet": {
+      "values": [
+        [
+          47.6,
+          42,
+          75
+        ],
+        [
+          46,
+          42,
+          51
+        ]
+      ],
+      "format": "medianQ1Q3 h",
+      "P": 0.81
+    },
+    "postop_opioid": {
+      "values": [
+        [
+          0.6,
+          0.2
+        ],
+        [
+          0.6,
+          0.1
+        ]
+      ],
+      "format": "meanSD mg morphine equivalents/kg",
+      "window": "Postoperative unspecified; collection48h does not establish exact24h",
+      "P": 0.908,
+      "location": "p1915 Table1 footnote; no raw sufentanil totals"
+    },
+    "pain": "rest/movement repeated measurements, only globalP=.404/.423,no numeric scores",
+    "QoR": "Insufficient information / not reported."
+  },
+  "source_conflicts": "Table2RRs disagree raw event risks and Table3; preserve events. Table1 postoperative opioid already converted weight-standardized, cannot reconstruct individual absolute morphine dose by mean-weight multiplication. Intrathecal route printed. Table3 only-nausea exclusive not any nausea.",
+  "registration": "ChiCTR2000037785, 2020 number vs recruitmentMay2018–Feb2020; prospective prespecification not established",
+  "rob": "D1Y/PY/PN computerized,sealed envelope opened byacupuncturist afterenrollment. D2PY/Y/PN/NA/NA/Y/NA sensory unmasking possible but no trial-context departure; clinically increasedPCA3/4 pain-triggered balanced. D3Y/NA/NA/NA62/62. D4 composite nausea/PONV N/PN/PY/PY/PY High,p1918 sensory tingling acknowledged possible efficacy effect; vomiting N/PN/PY/PY/PN Some concerns concrete events. Flatus similar subjective timing awareness Some concerns; opioid objective recordLow but route/window ineligible. D5NI/NI/NI retrospective registry not prospectiveSAP."
+}

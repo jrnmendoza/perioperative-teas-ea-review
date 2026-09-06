@@ -1,0 +1,336 @@
+{
+  "Study_ID": "S021",
+  "Study": "Wang 2023",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase": "A",
+  "baseline_accessed": false,
+  "title": "Transcutaneous Electrical Acupoint Stimulation Improves Postoperative Sleep Quality in Patients Undergoing Laparoscopic Gastrointestinal Tumor Surgery: A Prospective, Randomized Controlled Trial",
+  "year": 2023,
+  "doi": "10.1007/s40122-023-00493-2",
+  "pdf_files": [
+    "s40122-023-00493-2.pdf"
+  ],
+  "source_read": "Complete 16-page publication; visually inspected PDF pp6,8,9.",
+  "modality": "TEAS",
+  "comparator": "No-current sham at same acupoints",
+  "randomized_arms": {
+    "TEAS": 43,
+    "sham": 45
+  },
+  "analyzed_arms": {
+    "TEAS": 40,
+    "sham": 43
+  },
+  "population": "Adults 18–75, laparoscopic gastric/colorectal tumor resection under general anesthesia; Dec2021–Aug2022, two Chinese hospitals.",
+  "source_conflicts": [
+    "Abstract 2/100 Hz versus methods 2/10 Hz.",
+    "Abstract allocation n83 is completer count; Fig2 randomized88.",
+    "No administered rescue drug, route, dose or threshold specified."
+  ],
+  "results": [
+    {
+      "outcome": "First flatus",
+      "unit": "h",
+      "TEAS": {
+        "n": 40,
+        "mean": 54.57,
+        "SD": 16.62
+      },
+      "sham": {
+        "n": 43,
+        "mean": 60.7,
+        "SD": 19.1
+      },
+      "source": "p713 Table1",
+      "format": "mean SD"
+    },
+    {
+      "outcome": "PONV",
+      "window": "0–72 h",
+      "TEAS": {
+        "n": 40,
+        "events": 6
+      },
+      "sham": {
+        "n": 43,
+        "events": 19
+      },
+      "source": "p715 Table2"
+    },
+    {
+      "outcome": "Abdominal distension",
+      "window": "0–72 h",
+      "TEAS": {
+        "n": 40,
+        "events": 11
+      },
+      "sham": {
+        "n": 43,
+        "events": 24
+      },
+      "source": "p715 Table2"
+    },
+    {
+      "outcome": "Rescue analgesia administrations",
+      "window": "0–72 h",
+      "unit": "number",
+      "TEAS": {
+        "n": 40,
+        "mean": 0.53,
+        "SD": 0.55
+      },
+      "sham": {
+        "n": 43,
+        "mean": 0.98,
+        "SD": 0.96
+      },
+      "source": "p715 Table2",
+      "opioid_eligible": false
+    },
+    {
+      "outcome": "VAS rest and activity",
+      "window": "0,24,48,72 h",
+      "format": "graph-only mean SD",
+      "numeric_values": null,
+      "source": "p714 Fig4",
+      "eligibility": "Graph digitization or author values required; no point estimates read from graph"
+    }
+  ],
+  "drug": "Insufficient information / not reported.",
+  "route": "Insufficient information / not reported.",
+  "pca_formulation": "Insufficient information / not reported.",
+  "rescue_regimen": "Insufficient information / not reported.",
+  "qor": "Insufficient information / not reported.",
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Administration counts over72h; no postoperative opioid mass or exact24 exposure."
+  },
+  "independence": "Registry reused in Ge et al.2025 cohort report and autonomic-function cohort; overlap unresolved; do not independently count linked cohort reports.",
+  "rob2": [
+    {
+      "result_id": "S021_symptom_source_profile",
+      "outcome": "Pain rest/activity; PONV; first flatus; abdominal distension",
+      "time_window": "outcome-specific windows above",
+      "comparison": "TEAS vs sham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated random-number table.",
+          "source_location": "p710 randomization",
+          "reasoning": "Computer-generated random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sequentially numbered opaque sealed envelopes.",
+          "source_location": "p710",
+          "reasoning": "Opening safeguards incompletely described, but probably concealed."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table 1 describes completers only.",
+          "source_location": "p713",
+          "reasoning": "Randomized baseline set unavailable; no compelling imbalance among completers."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "6–15 mA muscle twitch versus no current while awake.",
+          "source_location": "p710",
+          "reasoning": "Sensory differences may reveal allocation despite claimed masking."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Nurses administer active current or none.",
+          "source_location": "p710",
+          "reasoning": "Nurses administer active current or none."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Five protocol breaches without details.",
+          "source_location": "p711–712 Fig2",
+          "reasoning": "Trial-context origin cannot be established."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No Y/PY at 2.3.",
+          "source_location": "p712",
+          "reasoning": "No Y/PY at 2.3."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p712",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "43/45 randomized; 40/43 analysed after protocol-breach exclusions.",
+          "source_location": "p712 Fig2",
+          "reasoning": "43/45 randomized; 40/43 analysed after protocol-breach exclusions."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "PN",
+          "evidence": "Five excluded; no crossovers shown; breaches not described.",
+          "source_location": "p712",
+          "reasoning": "Impact possible but substantial distortion not established."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "83 of 88 randomized analysed.",
+          "source_location": "p712 Fig2",
+          "reasoning": "83 of 88 randomized analysed."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity analysis.",
+          "source_location": "p711 statistics",
+          "reasoning": "No missing-data sensitivity analysis."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NI",
+          "evidence": "Reasons only described as protocol breaches.",
+          "source_location": "p712",
+          "reasoning": "Reasons only described as protocol breaches."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Outcome dependence of breaches unreported.",
+          "source_location": "p712",
+          "reasoning": "Outcome dependence of breaches unreported."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "VAS and tabulated patient adverse events are suitable instruments.",
+          "source_location": "p711,p714–715",
+          "reasoning": "VAS and tabulated patient adverse events are suitable instruments."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same outcome schedule in both groups.",
+          "source_location": "p711",
+          "reasoning": "Same outcome schedule in both groups."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participants report symptoms after perceptible active or absent stimulation.",
+          "source_location": "p710",
+          "reasoning": "Participants report symptoms after perceptible active or absent stimulation."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Pain, nausea and flatus timing require subjective reporting.",
+          "source_location": "p711,p713–715",
+          "reasoning": "Pain, nausea and flatus timing require subjective reporting."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No blinding-success assessment or evidence quantifying expectation effects.",
+          "source_location": "p710–718",
+          "reasoning": "Possible influence is supported; likely influence not established."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry dated 29 December 2021; recruitment December 2021–August 2022; accessible registry version updated after recruitment.",
+          "source_location": "p709; https://www.chictr.org.cn/hvshowproject.html?id=207077&v=1.7",
+          "reasoning": "Prospective result-specific analysis intentions not demonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding outcome plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding outcome plan retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No pre-unblinding statistical analysis plan retrieved.",
+          "source_location": "p711; registry",
+          "reasoning": "No pre-unblinding statistical analysis plan retrieved."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unexplained protocol-breach exclusions and unclear trial-context deviations.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "5/88 excluded without outcome-specific reasons or sensitivity analysis.",
+          "source_location": "p712"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory masking uncertain for patient-reported outcomes; likely influence not demonstrated.",
+          "source_location": "p710"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective result-specific analysis plan not demonstrated.",
+          "source_location": "p711; registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Several uncertainties, but no evidence sufficient to establish a high-risk domain; domains must be reconsidered for each result in Phase B."
+    }
+  ],
+  "author_queries": [
+    "Specify rescue agent, dose, route, total0–24h opioid exposure.",
+    "Provide numerical Fig4 means/SD and reasons for five protocol breaches.",
+    "Provide dated SAP and confirm relationship of reports sharing ChiCTR2100054971."
+  ]
+}

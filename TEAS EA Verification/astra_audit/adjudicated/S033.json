@@ -1,0 +1,3065 @@
+{
+  "Study_ID": "S033",
+  "Study": "Luo 2026",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Confirmed",
+    "title": "Perioperative transcutaneous electrical acupoint stimulation at pericardium 6 reduces postoperative nausea and vomiting after tympanoplasty patients: a randomized controlled study",
+    "year": 2026,
+    "doi": "10.1186/s12906-026-05357-8",
+    "pdf_files": [
+      "covidence_35_verified.pdf",
+      "batch4_S033_supplement.doc"
+    ],
+    "randomized_arms": "138TEAS/139sham",
+    "analyzed_arms": "138/139",
+    "modality": "TEAS",
+    "comparator_class": "Sham/no current with common antiemetics",
+    "independence": "One RCT; distinct tympanoplasty population",
+    "source_locations": "All8pages;Figure1Tables1–5visual;publisherHTML andCONSORTsupplement",
+    "identity_notes": "Registration anonymized; Figure1discontinued label conflicts with complete receipt/follow-up."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 139,
+      "final": {
+        "_baseline_row": 139,
+        "Canonical study": "Luo 2026",
+        "Comparison ID": "LUO26_TEAS_vs_SHAM_NAUSEA48",
+        "Intervention arm": "Intraoperative PC6 TEAS + standard antiemetics",
+        "Comparator arm": "Sham/no current + standard antiemetics",
+        "Outcome family": "PONV",
+        "Outcome/result": "Cumulative postoperative nausea",
+        "Timepoint/window": "0-48 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 138,
+        "Randomized n comparator": 139,
+        "Analyzed n intervention": 138,
+        "Analyzed n comparator": 139,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 24,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 53,
+        "Unit/scale": "participants",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study arithmetic; no opioid conversion",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.45611156685808035,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous 48-h nausea analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Participant blinding was empirically poor: 77.5% of TEAS and 66.2% of sham participants correctly guessed allocation",
+        "Source location": "Primary outcome / cumulative nausea",
+        "Source PDF URL": "https://doi.org/10.1186/s12906-026-05357-8",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 139,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Luo 2026",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LUO26_TEAS_vs_SHAM_NAUSEA48",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative PC6 TEAS + standard antiemetics",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current + standard antiemetics",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative postoperative nausea",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-48 h",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 138,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 139,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 138,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 139,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 24,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 53,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.45611156685808035,
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous 48-h nausea analysis",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Participant blinding was empirically poor: 77.5% of TEAS and 66.2% of sham participants correctly guessed allocation",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Primary outcome / cumulative nausea",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "Table2p5",
+          "evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "final_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "Table2p5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1xxZle6mPpcnmHLblJbsy1kA4CyQHpvm2/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "final_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "Table2p5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_35_verified.pdf",
+      "source_evidence": "Nausea0–48h24/138 vs53/139,P<.01; abstractsham39.1% inconsistent with raw38.13%.",
+      "drug": "IVoxycodone postoperative background",
+      "route": "IV regimen; equivalent metric route composition unreported",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "IVacetaminophen0.3g ifNRS>4;5patients each arm",
+      "critical_qc": "Table4cumulative rescue0/0 conflicts with nonzero intervals. CR complement is not purePONV. Do not repair opioid mg unit.",
+      "analysis_eligibility": "Eligible for dichotomous 48-h nausea analysis",
+      "notes": "Phase A source extraction precedes baseline comparison."
+    },
+    {
+      "baseline_row": 140,
+      "final": {
+        "_baseline_row": 140,
+        "Canonical study": "Luo 2026",
+        "Comparison ID": "LUO26_TEAS_vs_SHAM_VOMIT48",
+        "Intervention arm": "Intraoperative PC6 TEAS + standard antiemetics",
+        "Comparator arm": "Sham/no current + standard antiemetics",
+        "Outcome family": "PONV",
+        "Outcome/result": "Cumulative postoperative vomiting",
+        "Timepoint/window": "0-48 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 138,
+        "Randomized n comparator": 139,
+        "Analyzed n intervention": 138,
+        "Analyzed n comparator": 139,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 9,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 27,
+        "Unit/scale": "participants",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study arithmetic; no opioid conversion",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.3357487922705314,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous 48-h vomiting analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Vomiting is more objective than nausea, but participant masking was incomplete",
+        "Source location": "Primary outcome / cumulative vomiting",
+        "Source PDF URL": "https://doi.org/10.1186/s12906-026-05357-8",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 140,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Luo 2026",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LUO26_TEAS_vs_SHAM_VOMIT48",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative PC6 TEAS + standard antiemetics",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current + standard antiemetics",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative postoperative vomiting",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-48 h",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 138,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 139,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 138,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 139,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 9,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 27,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.3357487922705314,
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous 48-h vomiting analysis",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Vomiting is more objective than nausea, but participant masking was incomplete",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Primary outcome / cumulative vomiting",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "Table2p5",
+          "evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "final_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "Table2p5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1xxZle6mPpcnmHLblJbsy1kA4CyQHpvm2/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "final_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "Table2p5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_35_verified.pdf",
+      "source_evidence": "Vomiting0–48h9/138 vs27/139,P<.01.",
+      "drug": "IVoxycodone postoperative background",
+      "route": "IV regimen; equivalent metric route composition unreported",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "IVacetaminophen0.3g ifNRS>4;5patients each arm",
+      "critical_qc": "Table4cumulative rescue0/0 conflicts with nonzero intervals. CR complement is not purePONV. Do not repair opioid mg unit.",
+      "analysis_eligibility": "Eligible for dichotomous 48-h vomiting analysis",
+      "notes": "Phase A source extraction precedes baseline comparison."
+    },
+    {
+      "baseline_row": 141,
+      "final": {
+        "_baseline_row": 141,
+        "Canonical study": "Luo 2026",
+        "Comparison ID": "LUO26_TEAS_vs_SHAM_COMPLETE48",
+        "Intervention arm": "Intraoperative PC6 TEAS + standard antiemetics",
+        "Comparator arm": "Sham/no current + standard antiemetics",
+        "Outcome family": "PONV",
+        "Outcome/result": "Complete response: no nausea, no vomiting and no rescue antiemetic",
+        "Timepoint/window": "0-48 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 138,
+        "Randomized n comparator": 139,
+        "Analyzed n intervention": 138,
+        "Analyzed n comparator": 139,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 112,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 83,
+        "Unit/scale": "participants",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study arithmetic; no opioid conversion",
+        "Derived effect measure": "RR",
+        "Derived effect": 1.3591758337698623,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous complete-response analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Abstract percentage differs slightly from table-derived 112/138; use raw counts",
+        "Source location": "Complete-response result",
+        "Source PDF URL": "https://doi.org/10.1186/s12906-026-05357-8",
+        "Record status": "SOURCE-VERIFIED / ABSTRACT % QC"
+      },
+      "verification_status": "MATERIAL ERROR",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 141,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Luo 2026",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LUO26_TEAS_vs_SHAM_COMPLETE48",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative PC6 TEAS + standard antiemetics",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current + standard antiemetics",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Complete response: no nausea, no vomiting and no rescue antiemetic",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-48 h",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 138,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 139,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 138,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 139,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 112,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 83,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 1.3591758337698623,
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous complete-response analysis",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Abstract percentage differs slightly from table-derived 112/138; use raw counts",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Complete-response result",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / ABSTRACT % QC",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Outcome/result",
+          "old_value": "Complete response: no vomiting and no rescue antiemetic",
+          "source_value": "Complete response: no nausea, no vomiting and no rescue antiemetic",
+          "final_value": "Complete response: no nausea, no vomiting and no rescue antiemetic",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "reason": "Baseline CR definition omitted nausea, materially changes endpoint.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "final_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "reason": "Baseline CR definition omitted nausea, materially changes endpoint.",
+          "severity": "material"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1xxZle6mPpcnmHLblJbsy1kA4CyQHpvm2/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "final_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "p3Outcome assessments;Table2p5",
+          "reason": "Baseline CR definition omitted nausea, materially changes endpoint.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_35_verified.pdf",
+      "source_evidence": "CR112/138 vs83/139,P<.01; CR requires no nausea AND no vomiting AND no rescue.",
+      "drug": "IVoxycodone postoperative background",
+      "route": "IV regimen; equivalent metric route composition unreported",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "IVacetaminophen0.3g ifNRS>4;5patients each arm",
+      "critical_qc": "Table4cumulative rescue0/0 conflicts with nonzero intervals. CR complement is not purePONV. Do not repair opioid mg unit.",
+      "analysis_eligibility": "Eligible for dichotomous complete-response analysis",
+      "notes": "Phase A source extraction precedes baseline comparison."
+    },
+    {
+      "baseline_row": 142,
+      "final": {
+        "_baseline_row": 142,
+        "Canonical study": "Luo 2026",
+        "Comparison ID": "LUO26_TEAS_vs_SHAM_NRS24",
+        "Intervention arm": "Intraoperative PC6 TEAS + standard antiemetics",
+        "Comparator arm": "Sham/no current + standard antiemetics",
+        "Outcome family": "Pain",
+        "Outcome/result": "Postoperative NRS pain, rest/movement unspecified",
+        "Timepoint/window": "24 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 138,
+        "Randomized n comparator": 139,
+        "Analyzed n intervention": 138,
+        "Analyzed n comparator": 139,
+        "Mean intervention": 1.3,
+        "SD intervention": 0.92,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 1.65,
+        "SD comparator": 0.95,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "NRS 0-10",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study arithmetic; no opioid conversion",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.34999999999999987,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for 24-h pain analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Rest-versus-movement condition is not reported; participant masking was incomplete",
+        "Source location": "Postoperative pain table / 24 h",
+        "Source PDF URL": "https://doi.org/10.1186/s12906-026-05357-8",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 142,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Luo 2026",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LUO26_TEAS_vs_SHAM_NRS24",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative PC6 TEAS + standard antiemetics",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current + standard antiemetics",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Postoperative NRS pain, rest/movement unspecified",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 138,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 139,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 138,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 139,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 1.3,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.92,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 1.65,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.95,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "NRS 0-10",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.34999999999999987,
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for 24-h pain analysis",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Rest-versus-movement condition is not reported; participant masking was incomplete",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Postoperative pain table / 24 h",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "Table5p5",
+          "evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Outcome/result",
+          "old_value": "Postoperative NRS pain",
+          "source_value": "Postoperative NRS pain, rest/movement unspecified",
+          "final_value": "Postoperative NRS pain, rest/movement unspecified",
+          "source_location": "Table5p5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "final_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "Table5p5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1xxZle6mPpcnmHLblJbsy1kA4CyQHpvm2/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "final_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "Table5p5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_35_verified.pdf",
+      "source_evidence": "NRSat24h1.30±.92 vs1.65±.95,n138/139,P<.01; rest/movement unspecified.",
+      "drug": "IVoxycodone postoperative background",
+      "route": "IV regimen; equivalent metric route composition unreported",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "IVacetaminophen0.3g ifNRS>4;5patients each arm",
+      "critical_qc": "Table4cumulative rescue0/0 conflicts with nonzero intervals. CR complement is not purePONV. Do not repair opioid mg unit.",
+      "analysis_eligibility": "Eligible for 24-h pain analysis",
+      "notes": "Phase A source extraction precedes baseline comparison."
+    },
+    {
+      "baseline_row": 143,
+      "final": {
+        "_baseline_row": 143,
+        "Canonical study": "Luo 2026",
+        "Comparison ID": "LUO26_TEAS_vs_SHAM_OPIOIDEQUIV",
+        "Intervention arm": "Intraoperative PC6 TEAS + standard antiemetics",
+        "Comparator arm": "Sham/no current + standard antiemetics",
+        "Outcome family": "Perioperative opioid",
+        "Outcome/result": "Published 'sufentanil equivalents' metric",
+        "Timepoint/window": "Perioperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 138,
+        "Randomized n comparator": 139,
+        "Analyzed n intervention": 138,
+        "Analyzed n comparator": 139,
+        "Mean intervention": 15.86,
+        "SD intervention": 5.11,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 15.18,
+        "SD comparator": 4.95,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "published as mg; definition/unit unresolved",
+        "Reported P": "0.27",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes: within-study arithmetic; no opioid conversion",
+        "Derived effect measure": "MD",
+        "Derived effect": 0.6799999999999997,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Do not harmonize to MME or actual sufentanil mass until authors clarify conversion and unit",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Source labels approximately 15-16 as 'sufentanil equivalents (mg)' without explaining conversion; preserve verbatim",
+        "Source location": "Table 1 / perioperative opioid metric",
+        "Source PDF URL": "https://doi.org/10.1186/s12906-026-05357-8",
+        "Record status": "SOURCE-VERIFIED / UNIT UNRESOLVED"
+      },
+      "verification_status": "UNRESOLVABLE FROM PUBLICATION",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 143,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Luo 2026",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LUO26_TEAS_vs_SHAM_OPIOIDEQUIV",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative PC6 TEAS + standard antiemetics",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current + standard antiemetics",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Perioperative opioid",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Published 'sufentanil equivalents' metric",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Perioperative",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 138,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 139,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 138,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 139,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 15.86,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 5.11,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 15.18,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 4.95,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "published as mg; definition/unit unresolved",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.27",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.6799999999999997,
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Do not harmonize to MME or actual sufentanil mass until authors clarify conversion and unit",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Source labels approximately 15-16 as 'sufentanil equivalents (mg)' without explaining conversion; preserve verbatim",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 1 / perioperative opioid metric",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED / UNIT UNRESOLVED",
+          "source_location": "Table1p4",
+          "evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes: within-study arithmetic; no opioid conversion",
+          "final_value": "Yes: within-study arithmetic; no opioid conversion",
+          "source_location": "Table1p4",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1xxZle6mPpcnmHLblJbsy1kA4CyQHpvm2/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "final_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "Table1p4",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_35_verified.pdf",
+      "source_evidence": "Publishedsufentanilequivalents(mg)15.86±5.11 vs15.18±4.95,n138/139,P=.27; algorithm/window absent.",
+      "drug": "Published sufentanil equivalents; component drugs unknown",
+      "route": "IV regimen; equivalent metric route composition unreported",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "IVacetaminophen0.3g ifNRS>4;5patients each arm",
+      "critical_qc": "Table4cumulative rescue0/0 conflicts with nonzero intervals. CR complement is not purePONV. Do not repair opioid mg unit.",
+      "analysis_eligibility": "Hold:undefined equivalent metric, no conversion",
+      "notes": "Phase A source extraction precedes baseline comparison."
+    },
+    {
+      "baseline_row": 144,
+      "final": {
+        "_baseline_row": 144,
+        "Canonical study": "Luo 2026",
+        "Comparison ID": "LUO26_TEAS_vs_SHAM_OPIOID24",
+        "Intervention arm": "Intraoperative PC6 TEAS + standard antiemetics",
+        "Comparator arm": "Sham/no current + standard antiemetics",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative postoperative oxycodone consumption",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 138,
+        "Randomized n comparator": 139,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg oxycodone",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Postoperative IV oxycodone is described, but schedule and group-specific cumulative 24-h consumption are not reported",
+        "Source location": "Postoperative analgesia / exact 24-h endpoint absent",
+        "Source PDF URL": "https://doi.org/10.1186/s12906-026-05357-8",
+        "Record status": "MISSING / AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "_baseline_row",
+          "source_value": 144,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Canonical study",
+          "source_value": "Luo 2026",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "LUO26_TEAS_vs_SHAM_OPIOID24",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "AUDIT IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Intraoperative PC6 TEAS + standard antiemetics",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current + standard antiemetics",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative postoperative oxycodone consumption",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 138,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 139,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg oxycodone",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Postoperative IV oxycodone is described, but schedule and group-specific cumulative 24-h consumption are not reported",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Postoperative analgesia / exact 24-h endpoint absent",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "MISSING / AUTHOR DATA NEEDED",
+          "source_location": "p3;Tables1–5",
+          "evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+          "status": "SOURCE CHECKED / REVIEW CLASSIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 138,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p3;Tables1–5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 139,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p3;Tables1–5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1xxZle6mPpcnmHLblJbsy1kA4CyQHpvm2/view?usp=drivesdk",
+          "source_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "final_value": "https://doi.org/10.1186/s12906-026-05357-8",
+          "source_location": "p3;Tables1–5",
+          "reason": "Source values confirmed; retain subtype, exact window and unresolved source units.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_35_verified.pdf",
+      "source_evidence": "IVoxycodone0.7mg/kg prescribed; no0–24hconsumption result.",
+      "drug": "IVoxycodone postoperative background",
+      "route": "IV regimen; equivalent metric route composition unreported",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "IVacetaminophen0.3g ifNRS>4;5patients each arm",
+      "critical_qc": "Table4cumulative rescue0/0 conflicts with nonzero intervals. CR complement is not purePONV. Do not repair opioid mg unit.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+      "notes": "Phase A source extraction precedes baseline comparison."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "LUO26_TEAS_vs_SHAM_NAUSEA48",
+      "outcome": "Cumulative postoperative nausea",
+      "time_window": "0-48 h",
+      "comparison": "PC6TEAS+standard antiemetics vs sham+same antiemetics",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated sequence.",
+          "source_location": "p2",
+          "reasoning": "Computer-generated sequence."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Sequentially numbered opaque sealed envelopes opened before induction.",
+          "source_location": "p2",
+          "reasoning": "Sequentially numbered opaque sealed envelopes opened before induction."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "Demographic and Apfel risk differences compatible with chance.",
+          "source_location": "Table1",
+          "reasoning": "Demographic and Apfel risk differences compatible with chance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Correct allocation guesses77.5%active66.2%sham.",
+          "source_location": "p7 limitations",
+          "reasoning": "Correct allocation guesses77.5%active66.2%sham."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Attending anesthesiologist performs unmasked intervention; nurses/assessors masked.",
+          "source_location": "p2",
+          "reasoning": "Attending anesthesiologist performs unmasked intervention; nurses/assessors masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Common anesthetic and antiemetic regimen, no trial-context deviations demonstrated.",
+          "source_location": "pp2–3",
+          "reasoning": "Common anesthetic and antiemetic regimen, no trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "All277 randomized participants analyzed by allocation.",
+          "source_location": "pp3–4;Figure1",
+          "reasoning": "All277 randomized participants analyzed by allocation."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "Y",
+          "evidence": "138/138 and139/139 with zero outcome losses.",
+          "source_location": "Figure1;Tables2,5",
+          "reasoning": "138/138 and139/139 with zero outcome losses."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Defined nausea or NRS endpoint captured at same times.",
+          "source_location": "p3;Tables2,5",
+          "reasoning": "Defined nausea or NRS endpoint captured at same times."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same scales/timepoints and blinded follow-up.",
+          "source_location": "pp2–3",
+          "reasoning": "Same scales/timepoints and blinded follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "PY",
+          "evidence": "Participants self-report and masking demonstrably compromised.",
+          "source_location": "p7",
+          "reasoning": "Participants self-report and masking demonstrably compromised."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Nausea/pain ratings may depend on expectations.",
+          "source_location": "p7",
+          "reasoning": "Nausea/pain ratings may depend on expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "Survey establishes awareness, not direction or likelihood of actual reporting bias; obtained after outcomes.",
+          "source_location": "p7",
+          "reasoning": "Survey establishes awareness, not direction or likelihood of actual reporting bias; obtained after outcomes."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration remains[Anonymized] in official publication; supplementCONSORT only.",
+          "source_location": "p2;officialHTML;Supplement1",
+          "reasoning": "Registration remains[Anonymized] in official publication; supplementCONSORT only."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "No accessible prospective protocol with measurement choices.",
+          "source_location": "p2;Supplement1",
+          "reasoning": "No accessible prospective protocol with measurement choices."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No prospective SAP; posthoc severity analysis acknowledged.",
+          "source_location": "p7;Supplement1",
+          "reasoning": "No prospective SAP; posthoc severity analysis acknowledged."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Computer sequence and SNOSE.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Standardized care, no trial-context deviations, all analyzed.",
+          "source_location": "pp2–4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Complete data.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Empirical unmasking can influence self-report; actual influence uncertain.",
+          "source_location": "p7"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No identifiable registration/SAP.",
+          "source_location": "p2;Supplement1"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Self-report susceptibility and unavailable prospective specification; neither proves likely biased result.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Old selectedSome concerns retained after independent source assessment."
+    },
+    {
+      "result_id": "LUO26_TEAS_vs_SHAM_VOMIT48",
+      "outcome": "Cumulative postoperative vomiting",
+      "time_window": "0-48 h",
+      "comparison": "PC6TEAS+standard antiemetics vs sham+same antiemetics",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated sequence.",
+          "source_location": "p2",
+          "reasoning": "Computer-generated sequence."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Sequentially numbered opaque sealed envelopes opened before induction.",
+          "source_location": "p2",
+          "reasoning": "Sequentially numbered opaque sealed envelopes opened before induction."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "Demographic and Apfel risk differences compatible with chance.",
+          "source_location": "Table1",
+          "reasoning": "Demographic and Apfel risk differences compatible with chance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Correct allocation guesses77.5%active66.2%sham.",
+          "source_location": "p7 limitations",
+          "reasoning": "Correct allocation guesses77.5%active66.2%sham."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Attending anesthesiologist performs unmasked intervention; nurses/assessors masked.",
+          "source_location": "p2",
+          "reasoning": "Attending anesthesiologist performs unmasked intervention; nurses/assessors masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Common anesthetic and antiemetic regimen, no trial-context deviations demonstrated.",
+          "source_location": "pp2–3",
+          "reasoning": "Common anesthetic and antiemetic regimen, no trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "All277 randomized participants analyzed by allocation.",
+          "source_location": "pp3–4;Figure1",
+          "reasoning": "All277 randomized participants analyzed by allocation."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "Y",
+          "evidence": "138/138 and139/139 with zero outcome losses.",
+          "source_location": "Figure1;Tables2,5",
+          "reasoning": "138/138 and139/139 with zero outcome losses."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Overt vomiting incidence.",
+          "source_location": "Table2",
+          "reasoning": "Overt vomiting incidence."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same scales/timepoints and blinded follow-up.",
+          "source_location": "pp2–3",
+          "reasoning": "Same scales/timepoints and blinded follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "N",
+          "evidence": "Postoperative nurses and outcome assessor masked.",
+          "source_location": "p2",
+          "reasoning": "Postoperative nurses and outcome assessor masked."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration remains[Anonymized] in official publication; supplementCONSORT only.",
+          "source_location": "p2;officialHTML;Supplement1",
+          "reasoning": "Registration remains[Anonymized] in official publication; supplementCONSORT only."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "No accessible prospective protocol with measurement choices.",
+          "source_location": "p2;Supplement1",
+          "reasoning": "No accessible prospective protocol with measurement choices."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No prospective SAP; posthoc severity analysis acknowledged.",
+          "source_location": "p7;Supplement1",
+          "reasoning": "No prospective SAP; posthoc severity analysis acknowledged."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Computer sequence and SNOSE.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Standardized care, no trial-context deviations, all analyzed.",
+          "source_location": "pp2–4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Complete data.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Overt event ascertainment by masked observer; less judgment than nausea.",
+          "source_location": "p2;Table2"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No identifiable registration/SAP.",
+          "source_location": "p2;Supplement1"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Some concerns for prospective analytic specification.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Old selectedSome concerns retained after independent source assessment."
+    },
+    {
+      "result_id": "LUO26_TEAS_vs_SHAM_COMPLETE48",
+      "outcome": "Complete response: no nausea, no vomiting and no rescue antiemetic",
+      "time_window": "0-48 h",
+      "comparison": "PC6TEAS+standard antiemetics vs sham+same antiemetics",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated sequence.",
+          "source_location": "p2",
+          "reasoning": "Computer-generated sequence."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Sequentially numbered opaque sealed envelopes opened before induction.",
+          "source_location": "p2",
+          "reasoning": "Sequentially numbered opaque sealed envelopes opened before induction."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "Demographic and Apfel risk differences compatible with chance.",
+          "source_location": "Table1",
+          "reasoning": "Demographic and Apfel risk differences compatible with chance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Correct allocation guesses77.5%active66.2%sham.",
+          "source_location": "p7 limitations",
+          "reasoning": "Correct allocation guesses77.5%active66.2%sham."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Attending anesthesiologist performs unmasked intervention; nurses/assessors masked.",
+          "source_location": "p2",
+          "reasoning": "Attending anesthesiologist performs unmasked intervention; nurses/assessors masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Common anesthetic and antiemetic regimen, no trial-context deviations demonstrated.",
+          "source_location": "pp2–3",
+          "reasoning": "Common anesthetic and antiemetic regimen, no trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "All277 randomized participants analyzed by allocation.",
+          "source_location": "pp3–4;Figure1",
+          "reasoning": "All277 randomized participants analyzed by allocation."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "Y",
+          "evidence": "138/138 and139/139 with zero outcome losses.",
+          "source_location": "Figure1;Tables2,5",
+          "reasoning": "138/138 and139/139 with zero outcome losses."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Defined nausea or NRS endpoint captured at same times.",
+          "source_location": "p3;Tables2,5",
+          "reasoning": "Defined nausea or NRS endpoint captured at same times."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same scales/timepoints and blinded follow-up.",
+          "source_location": "pp2–3",
+          "reasoning": "Same scales/timepoints and blinded follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "PY",
+          "evidence": "Participants self-report and masking demonstrably compromised.",
+          "source_location": "p7",
+          "reasoning": "Participants self-report and masking demonstrably compromised."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Nausea/pain ratings may depend on expectations.",
+          "source_location": "p7",
+          "reasoning": "Nausea/pain ratings may depend on expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "Survey establishes awareness, not direction or likelihood of actual reporting bias; obtained after outcomes.",
+          "source_location": "p7",
+          "reasoning": "Survey establishes awareness, not direction or likelihood of actual reporting bias; obtained after outcomes."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration remains[Anonymized] in official publication; supplementCONSORT only.",
+          "source_location": "p2;officialHTML;Supplement1",
+          "reasoning": "Registration remains[Anonymized] in official publication; supplementCONSORT only."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "No accessible prospective protocol with measurement choices.",
+          "source_location": "p2;Supplement1",
+          "reasoning": "No accessible prospective protocol with measurement choices."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No prospective SAP; posthoc severity analysis acknowledged.",
+          "source_location": "p7;Supplement1",
+          "reasoning": "No prospective SAP; posthoc severity analysis acknowledged."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Computer sequence and SNOSE.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Standardized care, no trial-context deviations, all analyzed.",
+          "source_location": "pp2–4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Complete data.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Empirical unmasking can influence self-report; actual influence uncertain.",
+          "source_location": "p7"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No identifiable registration/SAP.",
+          "source_location": "p2;Supplement1"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Self-report susceptibility and unavailable prospective specification; neither proves likely biased result.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Old selectedSome concerns retained after independent source assessment."
+    },
+    {
+      "result_id": "LUO26_TEAS_vs_SHAM_NRS24",
+      "outcome": "Postoperative NRS pain, rest/movement unspecified",
+      "time_window": "24 h",
+      "comparison": "PC6TEAS+standard antiemetics vs sham+same antiemetics",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer-generated sequence.",
+          "source_location": "p2",
+          "reasoning": "Computer-generated sequence."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "Y",
+          "evidence": "Sequentially numbered opaque sealed envelopes opened before induction.",
+          "source_location": "p2",
+          "reasoning": "Sequentially numbered opaque sealed envelopes opened before induction."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences between intervention groups suggest a problem with the randomization process?",
+          "answer": "PN",
+          "evidence": "Demographic and Apfel risk differences compatible with chance.",
+          "source_location": "Table1",
+          "reasoning": "Demographic and Apfel risk differences compatible with chance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention during the trial?",
+          "answer": "PY",
+          "evidence": "Correct allocation guesses77.5%active66.2%sham.",
+          "source_location": "p7 limitations",
+          "reasoning": "Correct allocation guesses77.5%active66.2%sham."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering the interventions aware of participants' assigned intervention during the trial?",
+          "answer": "Y",
+          "evidence": "Attending anesthesiologist performs unmasked intervention; nurses/assessors masked.",
+          "source_location": "p2",
+          "reasoning": "Attending anesthesiologist performs unmasked intervention; nurses/assessors masked."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from the intended intervention that arose because of the trial context?",
+          "answer": "PN",
+          "evidence": "Common anesthetic and antiemetic regimen, no trial-context deviations demonstrated.",
+          "source_location": "pp2–3",
+          "reasoning": "Common anesthetic and antiemetic regimen, no trial-context deviations demonstrated."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to have affected the outcome?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations from intended intervention balanced between groups?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment to intervention?",
+          "answer": "Y",
+          "evidence": "All277 randomized participants analyzed by allocation.",
+          "source_location": "pp3–4;Figure1",
+          "reasoning": "All277 randomized participants analyzed by allocation."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for a substantial impact of the failure to analyse participants in the group to which they were randomized?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data for this outcome available for all, or nearly all, participants randomized?",
+          "answer": "Y",
+          "evidence": "138/138 and139/139 with zero outcome losses.",
+          "source_location": "Figure1;Tables2,5",
+          "reasoning": "138/138 and139/139 with zero outcome losses."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness in the outcome depend on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely that missingness in the outcome depended on its true value?",
+          "answer": "NA",
+          "evidence": "Not applicable under conditional routing.",
+          "source_location": "RoB2 2019",
+          "reasoning": "Not applicable under conditional routing."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Defined nausea or NRS endpoint captured at same times.",
+          "source_location": "p3;Tables2,5",
+          "reasoning": "Defined nausea or NRS endpoint captured at same times."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment of the outcome have differed between intervention groups?",
+          "answer": "PN",
+          "evidence": "Same scales/timepoints and blinded follow-up.",
+          "source_location": "pp2–3",
+          "reasoning": "Same scales/timepoints and blinded follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of the intervention received by study participants?",
+          "answer": "PY",
+          "evidence": "Participants self-report and masking demonstrably compromised.",
+          "source_location": "p7",
+          "reasoning": "Participants self-report and masking demonstrably compromised."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment of the outcome have been influenced by knowledge of intervention received?",
+          "answer": "Y",
+          "evidence": "Nausea/pain ratings may depend on expectations.",
+          "source_location": "p7",
+          "reasoning": "Nausea/pain ratings may depend on expectations."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is it likely that assessment of the outcome was influenced by knowledge of intervention received?",
+          "answer": "NI",
+          "evidence": "Survey establishes awareness, not direction or likelihood of actual reporting bias; obtained after outcomes.",
+          "source_location": "p7",
+          "reasoning": "Survey establishes awareness, not direction or likelihood of actual reporting bias; obtained after outcomes."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analysed in accordance with a prespecified analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Registration remains[Anonymized] in official publication; supplementCONSORT only.",
+          "source_location": "p2;officialHTML;Supplement1",
+          "reasoning": "Registration remains[Anonymized] in official publication; supplementCONSORT only."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected on the basis of results from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "No accessible prospective protocol with measurement choices.",
+          "source_location": "p2;Supplement1",
+          "reasoning": "No accessible prospective protocol with measurement choices."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected on the basis of results from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No prospective SAP; posthoc severity analysis acknowledged.",
+          "source_location": "p7;Supplement1",
+          "reasoning": "No prospective SAP; posthoc severity analysis acknowledged."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Computer sequence and SNOSE.",
+          "source_location": "p2"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Standardized care, no trial-context deviations, all analyzed.",
+          "source_location": "pp2–4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Complete data.",
+          "source_location": "Figure1"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Empirical unmasking can influence self-report; actual influence uncertain.",
+          "source_location": "p7"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No identifiable registration/SAP.",
+          "source_location": "p2;Supplement1"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Self-report susceptibility and unavailable prospective specification; neither proves likely biased result.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Old selectedSome concerns retained after independent source assessment."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "hold",
+    "reason": "Sufentanil-equivalent metric undefined, unit suspicious, perioperative window; postoperative oxycodone actual amounts absent.",
+    "postoperative": false,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Published sufentanil equivalents",
+    "route": "Insufficient information / not reported.",
+    "unit": "mg as printed; no correction",
+    "raw_values": {
+      "mean_i": 15.86,
+      "sd_i": 5.11,
+      "mean_c": 15.18,
+      "sd_c": 4.95
+    },
+    "comparison_selection": "TEAS vs sham",
+    "multiarm_handling": "Two-arm",
+    "source_location": "Table1p4"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Opioid equivalent algorithm/unit/window; true postoperative dose; registration; Table4rescue totals",
+      "why_it_matters": "No defensible postoperative conversion, rescue composite uncertain.",
+      "analysis_affected": "Opioid andCR;RoB5",
+      "can_proceed_without": "Nausea/vomiting/pain with qualifications.",
+      "priority": "HIGH",
+      "exact_question": "ClarifyTable1sufentanilequivalentsmg and drugs/window; supply0–24hIVoxycodone consumed by arm, correctTable4cumulative rescue totals, and provide registration plus dated protocol/SAP."
+    }
+  ],
+  "summary": "6rows audited;CRdefinition materially corrected to include no nausea.4result-specificRoB assessments. Opioid held;Table4rescue inconsistency retained."
+}

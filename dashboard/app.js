@@ -1,6 +1,6 @@
 // Perioperative TEAS & EA Interactive Systematic Review Application Logic
 
-let activeTab = 'overview';
+let activeTab = 'intro';
 let currentOutcome = 'opioid_24h';
 let currentSubgroup = 'none';
 let includedStudyIds = new Set(window.STUDIES_DATA ? window.STUDIES_DATA.map(s => s.id) : []);
@@ -59,31 +59,31 @@ function applyObjectiveFilter(obj) {
     filterComparator = 'all';
     currentOutcome = 'opioid_24h';
     currentSubgroup = 'none';
-    switchTab('overview');
+    switchTab('intro');
   } else if (obj === 'obj1_teas') {
     filterModality = 'TEAS';
     filterComparator = 'Sham';
     currentOutcome = 'opioid_24h';
     currentSubgroup = 'none';
-    switchTab('meta');
+    switchTab('primary');
   } else if (obj === 'obj1_ea') {
     filterModality = 'EA';
     filterComparator = 'Sham';
     currentOutcome = 'opioid_24h';
     currentSubgroup = 'none';
-    switchTab('meta');
+    switchTab('primary');
   } else if (obj === 'obj2_pain') {
     filterModality = 'all';
     filterComparator = 'Sham';
     currentOutcome = currentOutcome === 'pain_rest_24h' ? 'pain_movement_24h' : 'pain_rest_24h';
     currentSubgroup = 'none';
-    switchTab('meta');
+    switchTab('secondary');
   } else if (obj === 'obj3_subgroups') {
     filterModality = 'all';
     filterComparator = 'Sham';
     currentOutcome = 'opioid_24h';
     currentSubgroup = 'timing';
-    switchTab('meta');
+    switchTab('primary');
   } else if (obj === 'obj4_mcid') {
     switchTab('mcid');
   } else if (obj === 'obj5_supportive') {
@@ -91,13 +91,13 @@ function applyObjectiveFilter(obj) {
     filterComparator = 'Usual Care';
     currentOutcome = 'opioid_24h';
     currentSubgroup = 'stratum';
-    switchTab('meta');
+    switchTab('secondary');
   } else if (obj === 'obj6_secondary') {
     filterModality = 'all';
     filterComparator = 'Sham';
     currentOutcome = 'ponv_24h';
     currentSubgroup = 'none';
-    switchTab('meta');
+    switchTab('secondary');
   } else if (obj === 'obj7_grade') {
     switchTab('evidence');
   }
@@ -277,16 +277,16 @@ function renderAllViews() {
 }
 
 function renderActiveTab() {
-  if (activeTab === 'overview') renderOverview();
+  if (activeTab === 'intro') renderOverview();
   else if (activeTab === 'prisma') renderPrismaView();
   else if (activeTab === 'search') renderSearchStrategiesView();
   else if (activeTab === 'explorer') renderStudyExplorer();
   else if (activeTab === 'rob2') renderRoB2Matrix();
-  else if (activeTab === 'meta') renderMetaLab();
+  else if (activeTab === 'secondary') renderMetaLab();
   else if (activeTab === 'mcid') renderMCIDStudio();
-  else if (activeTab === 'sensitivity') renderSensitivitySandbox();
-  else if (activeTab === 'inquiries') renderInquiriesView();
-  else if (activeTab === 'conversions') renderConversionsView();
+  else if (activeTab === 'primary') renderSensitivitySandbox();
+  else if (activeTab === 'limitations') renderInquiriesView();
+  else if (activeTab === 'extraction') renderConversionsView();
   else if (activeTab === 'evidence') renderDirectionOfEvidence();
   else if (activeTab === 'export') renderExportHub();
 }
@@ -825,7 +825,7 @@ function renderMetaLab() {
           <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.4rem;">No Published RCTs Report Quantitative Data for This Endpoint</div>
           <div style="font-size: 0.85rem; color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.6;">
             Among the 63 included trials (${filterModality === 'all' ? 'TEAS & EA' : filterModality}), none tabulated extractable continuous or binary summary metrics for <em>${outcomeLabel}</em>.<br>
-            Please check the <a href="javascript:void(0)" onclick="switchTab('inquiries')" style="color: #818cf8; font-weight: 600; text-decoration: underline;">📬 Author Inquiries &amp; Outreach</a> tab to review pending author correspondence for missing trial parameters.
+            Please check the <a href="javascript:void(0)" onclick="switchTab('limitations')" style="color: #818cf8; font-weight: 600; text-decoration: underline;">📬 Author Inquiries &amp; Outreach</a> tab to review pending author correspondence for missing trial parameters.
           </div>
         </td>
       </tr>

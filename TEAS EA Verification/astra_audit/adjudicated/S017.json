@@ -1,0 +1,2266 @@
+{
+  "Study_ID": "S017",
+  "Study": "Xie 2014",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first page verified",
+    "title": "Effect of Electro-acupuncture Stimulation of Ximen (PC4) and Neiguan (PC6) on Remifentanil-induced Breakthrough Pain Following Thoracal Esophagectomy",
+    "year": 2014,
+    "doi": "10.1007/s11596-014-1317-x",
+    "pdf_files": [
+      "covidence_701_full_article.pdf"
+    ],
+    "randomized_arms": {
+      "A": 20,
+      "B": 20,
+      "C": 20
+    },
+    "analyzed_arms": {
+      "A": 20,
+      "B": 20,
+      "C": 20
+    },
+    "modality": "EA",
+    "comparator_class": "C activeEA vs B needleswithoutcurrent; A noEA separate usualcare",
+    "independence": "No duplicate established from reviewed source",
+    "source_locations": "Complete publication; see Phase A and row-specific locators",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 67,
+      "final": {
+        "Canonical study": "Xie 2014",
+        "Comparison ID": "XIE14_EAS_vs_SHAM_TOTALSUF",
+        "Intervention arm": "Active EAS PC4/PC6",
+        "Comparator arm": "Sham needling PC4/PC6",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Total postoperative/perioperative sufentanil",
+        "Timepoint/window": "Study PCA period; exact fixed window unclear",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 20,
+        "Randomized n comparator": 20,
+        "Analyzed n intervention": 20,
+        "Analyzed n comparator": 20,
+        "Mean intervention": 115,
+        "SD intervention": 6,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 133,
+        "SD comparator": 7,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg sufentanil",
+        "Reported P": "<0.05",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw Table2 values direct; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -18,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+        "Source location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xie 2014",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XIE14_EAS_vs_SHAM_TOTALSUF",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Active EAS PC4/PC6",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham needling PC4/PC6",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total postoperative/perioperative sufentanil",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Study PCA period; exact fixed window unclear",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 115,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 6,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 133,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 7,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg sufentanil",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw Table2 values direct; MD arithmetic",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -18,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+          "status": "AUTHOR DATA NEEDED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw Table2 values direct; MD arithmetic",
+          "final_value": "Raw Table2 values direct; MD arithmetic",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Potentially usable only for non-24-h opioid analysis after time-window adjudication",
+          "source_value": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+          "final_value": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Infusion described through POD3; Discussion mentions lower use through 48 h; Table 2 does not define fixed window",
+          "source_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "final_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 2 / total sufentanil",
+          "source_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "final_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/17faY_h0rMJTuhjPOC5PL_S59jYmHDPee/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / WINDOW QC",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_701_full_article.pdf",
+      "source_evidence": "Table2 C20 115±6.0vsB20 133±7.0ug;abstractB133.5±7.0. P<.05. Discussionupto48h but infusionbegins−30min andcontinuedPOD3.",
+      "drug": "sufentanil plusdezocine",
+      "route": "IV",
+      "pca_formulation": "7.5ug loading30min beforeend;basal2.5ug/h methods vs2.25abstract;PCA.75ug15minlockout,continuedPOD3",
+      "rescue_regimen": "dezocine5mgIV onrequest; consumptionamountnotreported",
+      "critical_qc": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+      "analysis_eligibility": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 68,
+      "final": {
+        "Canonical study": "Xie 2014",
+        "Comparison ID": "XIE14_EAS_vs_CONTROL_TOTALSUF",
+        "Intervention arm": "Active EAS PC4/PC6",
+        "Comparator arm": "General-anesthesia control",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Total postoperative/perioperative sufentanil",
+        "Timepoint/window": "Study PCA period; exact fixed window unclear",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 20,
+        "Randomized n comparator": 20,
+        "Analyzed n intervention": 20,
+        "Analyzed n comparator": 20,
+        "Mean intervention": 115,
+        "SD intervention": 6,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 134,
+        "SD comparator": 5.9,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg sufentanil",
+        "Reported P": "<0.05",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw Table2 values direct; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -19,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+        "Source location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xie 2014",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XIE14_EAS_vs_CONTROL_TOTALSUF",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Active EAS PC4/PC6",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "General-anesthesia control",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total postoperative/perioperative sufentanil",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Study PCA period; exact fixed window unclear",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 115,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 6,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 134,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 5.9,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg sufentanil",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw Table2 values direct; MD arithmetic",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -19,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+          "status": "AUTHOR DATA NEEDED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw Table2 values direct; MD arithmetic",
+          "final_value": "Raw Table2 values direct; MD arithmetic",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Potentially usable only for non-24-h opioid analysis after time-window adjudication",
+          "source_value": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+          "final_value": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Three-arm shared-intervention structure; exact fixed observation window not established",
+          "source_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "final_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 2 / total sufentanil",
+          "source_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "final_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/17faY_h0rMJTuhjPOC5PL_S59jYmHDPee/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / WINDOW QC",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_701_full_article.pdf",
+      "source_evidence": "Table2 C20 115±6.0vsA20 134±5.9ug;abstractA134.3±5.9. P<.05. Observationboundariesunclear.",
+      "drug": "sufentanil plusdezocine",
+      "route": "IV",
+      "pca_formulation": "7.5ug loading30min beforeend;basal2.5ug/h methods vs2.25abstract;PCA.75ug15minlockout,continuedPOD3",
+      "rescue_regimen": "dezocine5mgIV onrequest; consumptionamountnotreported",
+      "critical_qc": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+      "analysis_eligibility": "Hold dose synthesis pending table/abstract, fixedwindow, pre-endload inclusion andadditionaldezocine clarification.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 69,
+      "final": {
+        "Canonical study": "Xie 2014",
+        "Comparison ID": "XIE14_EAS_vs_SHAM_PCADEMAND",
+        "Intervention arm": "Active EAS PC4/PC6",
+        "Comparator arm": "Sham needling PC4/PC6",
+        "Outcome family": "Opioid demand",
+        "Outcome/result": "Patient-controlled analgesia demand count",
+        "Timepoint/window": "Study PCA period",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 20,
+        "Randomized n comparator": 20,
+        "Analyzed n intervention": 20,
+        "Analyzed n comparator": 20,
+        "Mean intervention": 16,
+        "SD intervention": 3,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 43,
+        "SD comparator": 3,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "demands",
+        "Reported P": "<0.05",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw Table2 values direct; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -27,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Demand-only descriptive result; not opioidconsumption.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+        "Source location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xie 2014",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XIE14_EAS_vs_SHAM_PCADEMAND",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Active EAS PC4/PC6",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham needling PC4/PC6",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid demand",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Patient-controlled analgesia demand count",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Study PCA period",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 16,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 3,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 43,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 3,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "demands",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw Table2 values direct; MD arithmetic",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -27,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Demand-only descriptive result; not opioidconsumption.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw Table2 values direct; MD arithmetic",
+          "final_value": "Raw Table2 values direct; MD arithmetic",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible as analgesic-demand outcome only",
+          "source_value": "Demand-only descriptive result; not opioidconsumption.",
+          "final_value": "Demand-only descriptive result; not opioidconsumption.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Demand count should not be converted into delivered sufentanil without confirmation",
+          "source_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "final_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 2 / patient demand",
+          "source_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "final_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/17faY_h0rMJTuhjPOC5PL_S59jYmHDPee/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / DOSE NOT RECONSTRUCTABLE",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_701_full_article.pdf",
+      "source_evidence": "Table2 patientdemand C20 16±3vsB20 43±3,meanSD,P<.05; noobserved delivereddoseperdemand; exactwindowabsent.",
+      "drug": "sufentanil plusdezocine",
+      "route": "IV",
+      "pca_formulation": "7.5ug loading30min beforeend;basal2.5ug/h methods vs2.25abstract;PCA.75ug15minlockout,continuedPOD3",
+      "rescue_regimen": "dezocine5mgIV onrequest; consumptionamountnotreported",
+      "critical_qc": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+      "analysis_eligibility": "Demand-only descriptive result; not opioidconsumption.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 70,
+      "final": {
+        "Canonical study": "Xie 2014",
+        "Comparison ID": "XIE14_EAS_vs_SHAM_OPIOID24",
+        "Intervention arm": "Active EAS PC4/PC6",
+        "Comparator arm": "Sham needling PC4/PC6",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative postoperative sufentanil",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 20,
+        "Randomized n comparator": 20,
+        "Analyzed n intervention": 20,
+        "Analyzed n comparator": 20,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg sufentanil",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "No24h opioidresult.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+        "Source location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xie 2014",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XIE14_EAS_vs_SHAM_OPIOID24",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Active EAS PC4/PC6",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham needling PC4/PC6",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative postoperative sufentanil",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 20,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg sufentanil",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "No24h opioidresult.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+          "status": "AUTHOR DATA NEEDED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Not eligible for strict continuous 24-h opioid meta-analysis",
+          "source_value": "No24h opioidresult.",
+          "final_value": "No24h opioidresult.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Directly reported total cannot be assigned to a fixed 24-h window",
+          "source_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "final_value": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Exact 24-h endpoint absent",
+          "source_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "final_value": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/17faY_h0rMJTuhjPOC5PL_S59jYmHDPee/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/covidence_701_full_article.pdf",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "MISSING / TIME WINDOW UNRESOLVED",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "p571 Table2; p569 abstract; p570 analgesia; p572 discussion",
+          "reason": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "covidence_701_full_article.pdf",
+      "source_evidence": "Completepublication lacks0–24h cumulativesufentanil or totaldezocine. Numericnulls retained asnotreported.",
+      "drug": "sufentanil plusdezocine",
+      "route": "IV",
+      "pca_formulation": "7.5ug loading30min beforeend;basal2.5ug/h methods vs2.25abstract;PCA.75ug15minlockout,continuedPOD3",
+      "rescue_regimen": "dezocine5mgIV onrequest; consumptionamountnotreported",
+      "critical_qc": "Abstract/table sufentanilvalues differ; basal2.25vs2.5ug/h; totalstarts possiblybeforeend;dezocinerescue1/20EA,6/20sham,7/20control (exactlyderivedfrom5/30/35%), amountunknown.",
+      "analysis_eligibility": "No24h opioidresult.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S017_sufentanil_sham",
+      "outcome": "Total sufentanil",
+      "time_window": "Study period, fixedboundary unresolved",
+      "comparison": "EA vsno-currentneedles",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p570:computer generatedrandomization,n20each",
+          "source_location": "p570",
+          "reasoning": "p570:computer generatedrandomization,n20each"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "p570:concealment method absent",
+          "source_location": "p570",
+          "reasoning": "p570:concealment method absent"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "p571 Table1:armcharacteristics similar; no convincingchance-exceedingimbalance",
+          "source_location": "p571 Table1",
+          "reasoning": "p571 Table1:armcharacteristics similar; no convincingchance-exceedingimbalance"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p570:submaximalEA beforeanesthesia versusno-current needles/noEA could revealallocation",
+          "source_location": "p570",
+          "reasoning": "p570:submaximalEA beforeanesthesia versusno-current needles/noEA could revealallocation"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p570:EAprovider knew whethercurrent applied",
+          "source_location": "p570",
+          "reasoning": "p570:EAprovider knew whethercurrent applied"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p570–71:commonanalgesia and symptom-drivenrescue;no trial-contextdeviations established",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:commonanalgesia and symptom-drivenrescue;no trial-contextdeviations established"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p570–71:conditional no establishedtrial-contextdeviation",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:conditional no establishedtrial-contextdeviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p570–71:conditional no establishedtrial-contextdeviation",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:conditional no establishedtrial-contextdeviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "p571:n20 each reported, asassigned",
+          "source_location": "p571",
+          "reasoning": "p571:n20 each reported, asassigned"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p571:no as-treatedanalysis described",
+          "source_location": "p571",
+          "reasoning": "p571:no as-treatedanalysis described"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "p571 Tables1–2:n20 each, no missingnessreported; probablyall",
+          "source_location": "p571 Tables1–2",
+          "reasoning": "p571 Tables1–2:n20 each, no missingnessreported; probablyall"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p571:conditional afterPY3.1",
+          "source_location": "p571",
+          "reasoning": "p571:conditional afterPY3.1"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p571:conditional afterPY3.1",
+          "source_location": "p571",
+          "reasoning": "p571:conditional afterPY3.1"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p571:conditional afterPY3.1",
+          "source_location": "p571",
+          "reasoning": "p571:conditional afterPY3.1"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p571:observed drugtotal/demand count appropriate; windowissue separate",
+          "source_location": "p571",
+          "reasoning": "p571:observed drugtotal/demand count appropriate; windowissue separate"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p570–71:commonPCArecording",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:commonPCArecording"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "p571 1.5:collectors andanalysts blinded",
+          "source_location": "p571 1.5",
+          "reasoning": "p571 1.5:collectors andanalysts blinded"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:maskedrecording",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:maskedrecording"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:maskedrecording",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:maskedrecording"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "Completepublication:no prospectivelydatedregistry/SAP",
+          "source_location": "Completepublication",
+          "reasoning": "Completepublication:no prospectivelydatedregistry/SAP"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p571–72:reported totalwindow notdefined consistently;selectionunknown",
+          "source_location": "p571–72",
+          "reasoning": "p571–72:reported totalwindow notdefined consistently;selectionunknown"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p571:multipleanalyses, noprospectiveSAP",
+          "source_location": "p571",
+          "reasoning": "p571:multipleanalyses, noprospectiveSAP"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Sequence adequate;concealmentunreported",
+          "source_location": "p570"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-contextdeviationestablished",
+          "source_location": "p570"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "n20eachthroughout,probablyall",
+          "source_location": "p571 Tables1–2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Maskedobjective dose/demandrecord; self-dosing behavior distinguished",
+          "source_location": "p571"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospectiveSAP; ambiguousreportwindow",
+          "source_location": "Completepublication"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S017_sufentanil_control",
+      "outcome": "Total sufentanil",
+      "time_window": "Study period, fixedboundary unresolved",
+      "comparison": "EA vsnoEA",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p570:computer generatedrandomization,n20each",
+          "source_location": "p570",
+          "reasoning": "p570:computer generatedrandomization,n20each"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "p570:concealment method absent",
+          "source_location": "p570",
+          "reasoning": "p570:concealment method absent"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "p571 Table1:armcharacteristics similar; no convincingchance-exceedingimbalance",
+          "source_location": "p571 Table1",
+          "reasoning": "p571 Table1:armcharacteristics similar; no convincingchance-exceedingimbalance"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p570:submaximalEA beforeanesthesia versusno-current needles/noEA could revealallocation",
+          "source_location": "p570",
+          "reasoning": "p570:submaximalEA beforeanesthesia versusno-current needles/noEA could revealallocation"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p570:EAprovider knew whethercurrent applied",
+          "source_location": "p570",
+          "reasoning": "p570:EAprovider knew whethercurrent applied"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p570–71:commonanalgesia and symptom-drivenrescue;no trial-contextdeviations established",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:commonanalgesia and symptom-drivenrescue;no trial-contextdeviations established"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p570–71:conditional no establishedtrial-contextdeviation",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:conditional no establishedtrial-contextdeviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p570–71:conditional no establishedtrial-contextdeviation",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:conditional no establishedtrial-contextdeviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "p571:n20 each reported, asassigned",
+          "source_location": "p571",
+          "reasoning": "p571:n20 each reported, asassigned"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p571:no as-treatedanalysis described",
+          "source_location": "p571",
+          "reasoning": "p571:no as-treatedanalysis described"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "p571 Tables1–2:n20 each, no missingnessreported; probablyall",
+          "source_location": "p571 Tables1–2",
+          "reasoning": "p571 Tables1–2:n20 each, no missingnessreported; probablyall"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p571:conditional afterPY3.1",
+          "source_location": "p571",
+          "reasoning": "p571:conditional afterPY3.1"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p571:conditional afterPY3.1",
+          "source_location": "p571",
+          "reasoning": "p571:conditional afterPY3.1"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p571:conditional afterPY3.1",
+          "source_location": "p571",
+          "reasoning": "p571:conditional afterPY3.1"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p571:observed drugtotal/demand count appropriate; windowissue separate",
+          "source_location": "p571",
+          "reasoning": "p571:observed drugtotal/demand count appropriate; windowissue separate"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p570–71:commonPCArecording",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:commonPCArecording"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "p571 1.5:collectors andanalysts blinded",
+          "source_location": "p571 1.5",
+          "reasoning": "p571 1.5:collectors andanalysts blinded"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:maskedrecording",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:maskedrecording"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:maskedrecording",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:maskedrecording"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "Completepublication:no prospectivelydatedregistry/SAP",
+          "source_location": "Completepublication",
+          "reasoning": "Completepublication:no prospectivelydatedregistry/SAP"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p571–72:reported totalwindow notdefined consistently;selectionunknown",
+          "source_location": "p571–72",
+          "reasoning": "p571–72:reported totalwindow notdefined consistently;selectionunknown"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p571:multipleanalyses, noprospectiveSAP",
+          "source_location": "p571",
+          "reasoning": "p571:multipleanalyses, noprospectiveSAP"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Sequence adequate;concealmentunreported",
+          "source_location": "p570"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-contextdeviationestablished",
+          "source_location": "p570"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "n20eachthroughout,probablyall",
+          "source_location": "p571 Tables1–2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Maskedobjective dose/demandrecord; self-dosing behavior distinguished",
+          "source_location": "p571"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospectiveSAP; ambiguousreportwindow",
+          "source_location": "Completepublication"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S017_demand_sham",
+      "outcome": "PCA demand",
+      "time_window": "Study period, fixedboundary unresolved",
+      "comparison": "EA vsno-currentneedles",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p570:computer generatedrandomization,n20each",
+          "source_location": "p570",
+          "reasoning": "p570:computer generatedrandomization,n20each"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "p570:concealment method absent",
+          "source_location": "p570",
+          "reasoning": "p570:concealment method absent"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "p571 Table1:armcharacteristics similar; no convincingchance-exceedingimbalance",
+          "source_location": "p571 Table1",
+          "reasoning": "p571 Table1:armcharacteristics similar; no convincingchance-exceedingimbalance"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p570:submaximalEA beforeanesthesia versusno-current needles/noEA could revealallocation",
+          "source_location": "p570",
+          "reasoning": "p570:submaximalEA beforeanesthesia versusno-current needles/noEA could revealallocation"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p570:EAprovider knew whethercurrent applied",
+          "source_location": "p570",
+          "reasoning": "p570:EAprovider knew whethercurrent applied"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p570–71:commonanalgesia and symptom-drivenrescue;no trial-contextdeviations established",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:commonanalgesia and symptom-drivenrescue;no trial-contextdeviations established"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p570–71:conditional no establishedtrial-contextdeviation",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:conditional no establishedtrial-contextdeviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p570–71:conditional no establishedtrial-contextdeviation",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:conditional no establishedtrial-contextdeviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "p571:n20 each reported, asassigned",
+          "source_location": "p571",
+          "reasoning": "p571:n20 each reported, asassigned"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p571:no as-treatedanalysis described",
+          "source_location": "p571",
+          "reasoning": "p571:no as-treatedanalysis described"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "p571 Tables1–2:n20 each, no missingnessreported; probablyall",
+          "source_location": "p571 Tables1–2",
+          "reasoning": "p571 Tables1–2:n20 each, no missingnessreported; probablyall"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p571:conditional afterPY3.1",
+          "source_location": "p571",
+          "reasoning": "p571:conditional afterPY3.1"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p571:conditional afterPY3.1",
+          "source_location": "p571",
+          "reasoning": "p571:conditional afterPY3.1"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p571:conditional afterPY3.1",
+          "source_location": "p571",
+          "reasoning": "p571:conditional afterPY3.1"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p571:observed drugtotal/demand count appropriate; windowissue separate",
+          "source_location": "p571",
+          "reasoning": "p571:observed drugtotal/demand count appropriate; windowissue separate"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p570–71:commonPCArecording",
+          "source_location": "p570–71",
+          "reasoning": "p570–71:commonPCArecording"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "p571 1.5:collectors andanalysts blinded",
+          "source_location": "p571 1.5",
+          "reasoning": "p571 1.5:collectors andanalysts blinded"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:maskedrecording",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:maskedrecording"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:maskedrecording",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:maskedrecording"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "Completepublication:no prospectivelydatedregistry/SAP",
+          "source_location": "Completepublication",
+          "reasoning": "Completepublication:no prospectivelydatedregistry/SAP"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p571–72:reported totalwindow notdefined consistently;selectionunknown",
+          "source_location": "p571–72",
+          "reasoning": "p571–72:reported totalwindow notdefined consistently;selectionunknown"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p571:multipleanalyses, noprospectiveSAP",
+          "source_location": "p571",
+          "reasoning": "p571:multipleanalyses, noprospectiveSAP"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Sequence adequate;concealmentunreported",
+          "source_location": "p570"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-contextdeviationestablished",
+          "source_location": "p570"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "n20eachthroughout,probablyall",
+          "source_location": "p571 Tables1–2"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Maskedobjective dose/demandrecord; self-dosing behavior distinguished",
+          "source_location": "p571"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospectiveSAP; ambiguousreportwindow",
+          "source_location": "Completepublication"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "hold",
+    "reason": "Reported total probably48h butboundariesconflict;additionaldezocineamountunknown;not0–24h",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "No:dezocinerescue notquantified",
+    "drug": "sufentanil plusdezocine",
+    "route": "IV",
+    "unit": "ug sufentanil",
+    "raw_values": {
+      "Table2": {
+        "EA": [
+          115,
+          6,
+          20
+        ],
+        "sham": [
+          133,
+          7,
+          20
+        ],
+        "control": [
+          134,
+          5.9,
+          20
+        ]
+      },
+      "abstract": {
+        "EA": [
+          115,
+          6
+        ],
+        "sham": [
+          133.5,
+          7
+        ],
+        "control": [
+          134.3,
+          5.9
+        ]
+      }
+    },
+    "comparison_selection": "EAsham preferred afterclarification;usualcareseparate",
+    "multiarm_handling": "SharedEAarm;avoidindependentcountingofboth",
+    "source_location": "pp569–572"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Authoritativedosevalues, exact0–24hwindow andallrescueopioid",
+      "why_it_matters": "Window anddose provenance plusincomplete systemicexposure",
+      "analysis_affected": "Opioidprimary/sensitivity",
+      "can_proceed_without": "DescriptiveTable2results only",
+      "priority": "HIGH",
+      "exact_question": "Clarify Table2A134/B133 versusabstract134.3/133.5ug; provide0–24h observed doses excludingpre-endload withSD/n, actualbasalrate, andtotalIVdezocine byarm."
+    }
+  ],
+  "summary": "Four rows reviewed. PrintedTable2confirmed; additionalabstract/Table2doseconflict documented. Nofixed24hcompleteopioid endpoint; pain remains graph-only.",
+  "contacts": [
+    {
+      "missing_information": "Authoritativedosevalues, exact0–24hwindow andallrescueopioid",
+      "why_it_matters": "Window anddose provenance plusincomplete systemicexposure",
+      "analysis_affected": "Opioidprimary/sensitivity",
+      "can_proceed_without": "DescriptiveTable2results only",
+      "priority": "HIGH",
+      "exact_question": "Clarify Table2A134/B133 versusabstract134.3/133.5ug; provide0–24h observed doses excludingpre-endload withSD/n, actualbasalrate, andtotalIVdezocine byarm."
+    }
+  ]
+}

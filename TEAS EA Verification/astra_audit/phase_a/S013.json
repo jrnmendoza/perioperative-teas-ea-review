@@ -1,0 +1,210 @@
+{
+  "Study_ID": "S013",
+  "Study": "Yang 2020",
+  "phase": "A_SOURCE_ONLY",
+  "baseline_accessed": false,
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "title": "Effect of Electroacupuncture on Postoperative Gastrointestinal Recovery in Patients Undergoing Thoracoscopic Surgery: A Feasibility Study",
+  "year": 2020,
+  "doi": "10.12659/MSM.920648",
+  "pdf": "covidence_464_verified.pdf",
+  "source_read": "All8 pages read including tables1–4 and Fig1",
+  "modality": "EA",
+  "randomized": {
+    "EA": 30,
+    "UC": 29
+  },
+  "analyzed": {
+    "EA": 29,
+    "UC": 28
+  },
+  "comparators": "usual care, no sham",
+  "intervention": "PC6 ST36 ST37 bilateral15Hz3–5mA30min at−24h,+4h,+24h",
+  "drug": "morphine; rescue bucinnazine",
+  "route": "IV PCA; IM rescue",
+  "pca": "morphine1mg/kg+ketamine1mg/kg+ondansetron10mg in100mL;2mL/h background,1mL bolus10min lockout; bilateral care PVB20mL .375%ropivacaine and celecoxib200mgq12h",
+  "rescue": "bucinnazine100mg IM if VAS>3",
+  "results": {
+    "flatus": {
+      "EA": [
+        20.8,
+        4.6
+      ],
+      "UC": [
+        24.1,
+        6.2
+      ],
+      "format": "mean SD h",
+      "P": 0.026,
+      "location": "p5 Table3"
+    },
+    "defecation": {
+      "EA": [
+        53.9,
+        6
+      ],
+      "UC": [
+        57.5,
+        7.2
+      ],
+      "format": "mean SD h",
+      "P": 0.046,
+      "location": "p5 Table3"
+    },
+    "AD": {
+      "events": [
+        9,
+        11
+      ],
+      "n": [
+        29,
+        28
+      ],
+      "P": 0.514
+    },
+    "rescue_medication": {
+      "events": [
+        5,
+        7
+      ],
+      "P": 0.473,
+      "ambiguity": "Table3 unnamed; results calls antiemetic, cannot infer opioid rescue"
+    },
+    "pain": {
+      "format": "median Q1 Q3",
+      "n": [
+        29,
+        28
+      ],
+      "rest24": [
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "movement24": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "rest48": [
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          2,
+          2,
+          3
+        ]
+      ],
+      "movement48": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "rest72": [
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "movement72": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "location": "p6 Table4; interval headings0–24,24–48,48–72; methods assessment24/48/72"
+    },
+    "nausea": {
+      "events": [
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "windows": [
+        "0–24",
+        "24–48",
+        "48–72"
+      ],
+      "n": [
+        29,
+        28
+      ]
+    },
+    "vomiting": {
+      "events": [
+        [
+          5,
+          7
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "windows": [
+        "0–24",
+        "24–48",
+        "48–72"
+      ],
+      "n": [
+        29,
+        28
+      ]
+    },
+    "opioid_consumption": "Insufficient information / not reported.",
+    "QoR": "Insufficient information / not reported."
+  },
+  "registration": "ChiCTR1800014461; recruitment25Dec2017–20June2018; prospective SAP not demonstrated",
+  "independence": "Same research team as later Yang2024 report; source2020 explicitly pilot. Need compare recruitment if proposing both as independent.",
+  "rob": "D1Y/PY/NI sealed envelope opened beforefirst treatment,SPSS; baseline only completers. D2Y/Y/PN/NA/NA/PY/NA standardized common PVB/PCA, oneEA excluded noPVB, no behavioral departures established. D3PY/NA/NA/NA57/59; singleUC withdrew presurgery, oneEA noPVB; limited missing outcomes. D4 pain/nausea/flatus N/PN/Y/PY/PY High:unblinded participant reports, expectancy explicitly acknowledged p5 despite masked observer; defecation/vomiting N/PN/Y/PY/PN Some concerns more concrete events. D5NI/NI/NI no prospective SAP. Overall High subjective pain/nausea/flatus; Some concerns vomiting/defecation."
+}

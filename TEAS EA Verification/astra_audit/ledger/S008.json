@@ -1,0 +1,27 @@
+{
+  "Study_ID": "S008",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "outcome_rows_expected": 5,
+  "outcome_rows_reviewed": 5,
+  "rob_results_reviewed": 5,
+  "baseline_rows": [
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "limitations": [
+    "Pain remains graph-only; no graph point estimates taken",
+    "PONV actual interval uncertain",
+    "Shared registry with sinusotomy report needs parent linkage confirmation",
+    "No postoperative opioid consumption"
+  ],
+  "files": [
+    "phase_a/S008.json",
+    "adjudicated/S008.json",
+    "ledger/S008.json"
+  ],
+  "summary": "All5rows audited and5result-specificRoB2 complete. Verified33/32 flow denominators, corrected derived-effect flags, retained intraop normalized remifentanil only. Nausea/vomiting separated, timing qualified;24h pain graph-only."
+}

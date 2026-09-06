@@ -1,0 +1,252 @@
+{
+  "Study_ID": "S060",
+  "Study": "Ao 2021",
+  "identity": {
+    "title": "Effects of transcutaneous electrical acupoint stimulation on perioperative immune function and postoperative analgesia in patients undergoing radical mastectomy: A randomized controlled trial",
+    "year": 2021,
+    "doi": "10.3892/etm.2021.9615",
+    "pdf": "download.pdf"
+  },
+  "design": {
+    "modality": "TEAS",
+    "comparator": "Electrode attachment without stimulation",
+    "randomized": {
+      "TEAS": 35,
+      "sham": 35
+    },
+    "analyzed": {
+      "TEAS": 32,
+      "sham": 33
+    },
+    "population": "Women20-65; radicalmastectomyGA;Tangshan Aug2018-Dec2019",
+    "intervention": "LI4/PC6/ST36 2/100Hz,5-10mAupper/10-30mAlower,30minpreinduction,4/12hpostsurgery andthree/dayPOD1-2",
+    "attrition": "1TEAS/2shamrefusedpostoperativeTEAS;2TEAS incomplete stimulation;all5excluded",
+    "location": "pp2-4;Fig2 visually inspected"
+  },
+  "regimen": {
+    "drug": "sufentanil",
+    "route": "IV PCA (systemic postoperative PCA followingIVanesthesia)",
+    "pca": "1.5ug/kg sufentanil dilutedto150mL;2mL/h,0.5mLbolus,15minlockout;48h",
+    "rescue": "Cumulative rescue/press count reported; separate rescue drug/dose not specified",
+    "location": "pp2-3"
+  },
+  "results": [
+    {
+      "outcome": "PCA solution consumption",
+      "T": [
+        102.8,
+        7.4,
+        32
+      ],
+      "C": [
+        120.6,
+        9.2,
+        33
+      ],
+      "format": "meanSD",
+      "unit": "mL",
+      "window": "0-48h",
+      "p": "<.001",
+      "location": "p6 TableII;p3 observations"
+    },
+    {
+      "outcome": "Effective PCApresses",
+      "T": [
+        6.2,
+        3.7,
+        32
+      ],
+      "C": [
+        12.3,
+        4.6,
+        33
+      ],
+      "format": "meanSD",
+      "window": "0-48h",
+      "p": "<.001",
+      "location": "p6 TableII"
+    },
+    {
+      "outcome": "PONV",
+      "T": [
+        4,
+        32
+      ],
+      "C": [
+        12,
+        33
+      ],
+      "window": "0-48h",
+      "p": ".042",
+      "location": "p6 TableII;p3 observations"
+    },
+    {
+      "outcome": "VAS activity unspecified",
+      "window": "4/12/24/48h",
+      "format": "graph-only meanSD",
+      "values": null,
+      "p": "12/24h<.05;4/48hNS",
+      "location": "p5 Fig3 visually inspected"
+    },
+    {
+      "outcome": "Dizziness/pruritus/headache",
+      "T": [
+        7,
+        2,
+        2
+      ],
+      "C": [
+        9,
+        4,
+        9
+      ],
+      "n": [
+        32,
+        33
+      ],
+      "location": "p6 TableII"
+    }
+  ],
+  "source_conflicts": [
+    "Opioid consumption labeledmL, notug; patient-specificweightdependent concentration precludesusingmeanweight.",
+    "Fixed2mL/h48h+0.5mL perreportedpress doesnotexplain observedtotalvolume, especiallysham; needdose-accounting clarification.",
+    "No exact24hconsumption;48hcannotbehalved.",
+    "Authors explicitly report participants eventually knewcurrentallocation,p7."
+  ],
+  "retrieval": {
+    "registration": "ChiCTR1800017768 claimedprospective. Searchfoundpublication butnoofficialdatedregistry/SAP; claimnotindependentlyverified."
+  },
+  "independence": "DistinctmastectomytrialfromGu2019gastrectomydespitesharedTangshaninvestigatorGan.",
+  "rob_independent": {
+    "questions": {
+      "1.1": [
+        "Y",
+        "Randomnumbergenerator",
+        "p2"
+      ],
+      "1.2": [
+        "PY",
+        "Sequentiallynumberedsealedenvelopesindependentassistant;opacitynotexplicit",
+        "p2"
+      ],
+      "1.3": [
+        "NI",
+        "Only65completersbaseline",
+        "p5TableI"
+      ],
+      "2.1": [
+        "Y",
+        "Patients eventually knew whetherelectricalstimulationreceived",
+        "p7limitations"
+      ],
+      "2.2": [
+        "Y",
+        "Operatorsunblinded because deqiconfirmed",
+        "p7"
+      ],
+      "2.3": [
+        "PN",
+        "Standardizedanesthesia/PCA; refusals occur butnotattributedtotrialcontext",
+        "pp2-3"
+      ],
+      "2.4": [
+        "NA",
+        "No trial-contextdepartures demonstrated",
+        "pp2-3"
+      ],
+      "2.5": [
+        "NA",
+        "No trial-contextdepartures demonstrated",
+        "pp2-3"
+      ],
+      "2.6": [
+        "N",
+        "5nonadherentparticipantsremoved",
+        "p3;Fig2"
+      ],
+      "2.7": [
+        "PY",
+        "7.1%excludedincludinginterventionrefusals;potentiallymaterial forsubjectivepainandrelativelyrarePONV",
+        "Fig2;TableII"
+      ],
+      "3.1": [
+        "N",
+        "65/70 analyzed",
+        "p3"
+      ],
+      "3.2": [
+        "N",
+        "No robustnessanalysesformissingoutcomes",
+        "p3"
+      ],
+      "3.3": [
+        "PY",
+        "Refusal/incompletion canrelateto discomfortorrecovery",
+        "p3"
+      ],
+      "3.4": [
+        "NI",
+        "Reasonsnotlinkedexplicitlytotrueoutcome;cannotassertlikelihood",
+        "p3"
+      ],
+      "4.1": [
+        "N",
+        "VASvalidpainmeasure",
+        "p3"
+      ],
+      "4.2": [
+        "PN",
+        "SameVASschedule;blindedfollowupanesthesiologist",
+        "pp2-3"
+      ],
+      "4.3": [
+        "Y",
+        "Patientself-ratingandexplicitunmasking",
+        "p7"
+      ],
+      "4.4": [
+        "Y",
+        "Painexpectancycaninfluenceselfrating",
+        "pp3,7"
+      ],
+      "4.5": [
+        "NI",
+        "Explicitunmaskingbutnoevidenceofstrengthofexpectancyinfluence",
+        "p7"
+      ],
+      "5.1": [
+        "NI",
+        "ProspectiveregistrationclaimnotdatedSAPverification",
+        "pp2,7"
+      ],
+      "5.2": [
+        "NI",
+        "SeveralVAS/immuneresults;prospectivepreciseplansunavailable",
+        "pp2-3"
+      ],
+      "5.3": [
+        "NI",
+        "No datedSAP",
+        "p3"
+      ]
+    },
+    "domains": [
+      "Some concerns",
+      "High",
+      "Some concerns",
+      "Some concerns",
+      "Some concerns"
+    ],
+    "overall": "High",
+    "reason": "Naive exclusion ofnonadherentpatients maymateriallyaffectassignmentestimate;subjectiveunmaskingandprespecificationuncertainty."
+  },
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "48hweight-dependentPCAvolumeonly;no24habsoluteopioiddose."
+  },
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "saved_at": "2026-09-05T15:19:03.597Z",
+  "missing_information_convention": "Insufficient information / not reported."
+}

@@ -1,0 +1,21 @@
+# Full-text checkpoint 75
+
+- Timestamp: 2026-08-09T17:04:00+02:00
+- Review: Covidence 799962, Full text stage, reviewer JM
+- Covidence UI: 207 reports awaiting this reviewer; 75 awaiting the other reviewer; 0 conflicts
+- Authoritative JSONL objects: 75
+- Screening sequences: consecutive 1-75
+- Covidence numbers: 75 unique
+- Registered decisions: 75 (`vote_registered = yes` for every object)
+- Combined decisions: 71 Include, 4 Exclude
+- Continuation decisions (sequences 51-75): 24 Include, 1 Exclude
+- Page-level evidence: present for every decision
+- Exclusions: each has one primary exclusion reason and positive full-text evidence
+- Needs-human-review derivative CSV: regenerated programmatically; 11 records including Covidence #83 and #137
+- Companion-report derivative CSV: regenerated programmatically; 1 record (#775)
+- Full-text-unavailable incident ledger: 20 records
+- New unavailable citation since restart: #682; no vote cast and not counted
+- Another reviewer's decision visible: no
+- Conflict screen opened: no
+- Screenshot: `screenshots/fulltext_checkpoint_075.png`
+- Audit result: PASS

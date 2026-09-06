@@ -1,0 +1,595 @@
+=== PDF PAGE 1 ===
+                                                      Complementary Therapies in Clinical Practice 64 (2026) 102076
+
+
+                                                                  Contents lists available at ScienceDirect
+
+                                         Complementary Therapies in Clinical Practice
+
+
+                                                          journal homepage: www.elsevier.com/locate/ctcp
+
+
+Transcutaneous  electrical  acupoint  stimulation  accelerates  postoperative
+gastrointestinal  function  recovery  in  patients  undergoing
+non-gastrointestinal  laparoscopic  surgery:  a  randomized  controlled  trial
+Xianhong  Jiang           a,1    ,  Yuan  Zhangb,1,  Jiaqi  Tana,  Ping  Zhuanga,  Aili  Fang                              a,  Xiaomin  Yue         a,
+Jun  Pang      a,  Ying  Konga,  Ke  Zhang               b,  Yanfang  Zhangb,  Jianbo  Yu                   b,*
+
+
+
+aDepartment of Anesthesiology, Shanxi Bethune Hospital, Shanxi Academy of Medical Sciences, Third Hospital of Shanxi Medical University, Tongji Shanxi Hospital,
+Taiyuan, 030032, China
+bDepartment of Anesthesiology and Critical Care Medicine, Tianjin Nankai Hospital, Tianjin, 300100, China
+
+
+
+
+ARTICLE                          INFO                    ABSTRACT
+
+Keywords:                                                Background: and Purpose: Postoperative gastrointestinal dysfunction (POGD) is a significant complication
+Gastrointestinal disorder                                following abdominal surgery and is characterized by delayed flatus and stool passage, postponed oral feeding,
+Laparoscopy                                              and dyspeptic symptoms. The study aimed to evaluate whether transcutaneous electrical acupoint stimulation
+Randomized controlled trial                              (TEAS) accelerates gastrointestinal function recovery and reduces POGD-related complications after elective
+Transcutaneous electrical acupoint stimulation           laparoscopic non-gastrointestinal surgery.
+                                                         Materials and methods: Patients scheduled for selective non-gastrointestinal laparoscopic surgery were random-
+                                                         ized into the TEAS or sham-TEAS group. TEAS group patients were administered electrical stimulation at acu-
+                                                         points Zusanli (ST36), Neiguan (PC6), and Hegu (LI4) starting 30 min prior to anesthesia induction and
+                                                         continuing until surgery completion. Patients in the sham-TEAS group received a sham stimulus at the same
+                                                         acupoints, and no output current was delivered by disconnecting the device's output line. Our primary endpoint
+                                                         included the time to first flatus, whereas the secondary endpoints were the time to first defecation, postoperative
+                                                         nausea and vomiting (PONV) rate, length of hospital stay, hospital expenses, numeric rating scale (NRS) pain
+                                                         score, and incidence of postoperative complications.
+                                                         Results: A total of 587 patients were enrolled and assigned to the TEAS (n =294) or sham-TEAS (n =293) group
+                                                         between May 15, 2019, and October 18, 2021. Compared with the sham-TEAS group, the TEAS group had a
+                                                         significantly shorter time to first flatus (median [interquartile range (IQR)], 21.50 h [19.0–23.5 h] vs. 23.5 h
+                                                         [21.0–26.0 h]; p <0.001) and time to first defecation (41.2 h [38.5–45.0 h] vs. 46.0 h [42.0–52.0 h]; p <0.001).
+                                                         Additionally, the TEAS group showed lower rates of PONV (15% vs. 22.9%; p =0.015) and abdominal distention
+                                                         (21.1% vs. 29.7%; p =0.017), as well as lower NRS pain scores (median [IQR], 3 [2–3] vs. 3 [2–3.5]; p =0.026).
+                                                         There were no significant differences in hospital stay length and hospitalization expenses.
+                                                         Conclusion: TEAS accelerates gastrointestinal function recovery in patients undergoing laparoscopic non-
+                                                         gastrointestinal surgery, reducing PONV, abdominal distention and postoperative pain without increasing hos-
+                                                         pital stay or costs.
+
+
+
+1. Introduction                                                                               punctures during laparoscopic procedures can disrupt gastrointestinal
+                                                                                              peristalsis. This disruption can subsequently lead to postoperative
+    Compared with open surgery, laparoscopic surgery offers advantages                        complications, including nausea, vomiting, abdominal distension, anal
+such as less surgical pain, shorter hospital stays, fewer infections, and                     sphincter dysfunction, defecation difficulties, and delayed physical re-
+faster return to normal activities [1–3]. However, the creation of                            covery [4,5]. Postoperative gastrointestinal dysfunction (POGD) signif-
+pneumoperitoneum, the application of anaesthetics, and mechanical                             icantly impairs patient recovery, prolongs hospital stays, and increases
+
+
+
+ *Corresponding author.
+    E-mail address: 30717008@nankai.edu.cn(J. Yu).
+  1Xianhong Jiang and Yuan Zhang contributed equally to this work.
+
+https://doi.org/10.1016/j.ctcp.2026.102076
+Received 29 June 2025; Received in revised form 29 June 2026; Accepted 29 June 2026
+Available online 4 July 2026
+1744-3881/© 2026 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+
+=== PDF PAGE 2 ===
+X.  Jiang et al.                                                                                                                                                                                                                                    Complementary Therapies in Clinical Practice 64 (2026) 102076
+
+the risk of additional complications, with an estimated annual economic                                                    2.                Materials  and  Methods
+burden of approximately $1.5 billion in the USA [6]. Postoperative ileus
+(POI),  as  the  most  common  clinical  manifestation  of  POGD,  remains  a                                              2.1.                 Study  design
+critical   concern   for   abdominal   surgeons   due   to   its   high   incidence   and
+clinical impact [7].                                                                                                             The  present  prospective,  double-blind,  randomized  controlled  clin-
+     The            pathophysiology            of            POGD            is            complex            and            multifactorial, ical  trial was  carried  out  at  the  tertiary  Nankai  Hospital  from  May  15,
+involving neurogenic, inflammatory, and pharmacological mechanisms,                                                        2019, to October 18, 2021. The study was carried out with a TEAS group
+including sympathetic overactivation, cytokine release, and opioid use,                                                    and a sham-TEAS group.
+all of which delay gastrointestinal motility [6]. It is generally believed
+that the early phase of the reaction to surgery is mediated neurally and                                                   2.2.                 Patients
+involves neural reflexes activated during and immediately after surgery.
+An      incision     in     the      skin     elevates     adrenergic      motor     neuronal     activity,                      Eligible patients were those aged 18–64                                             years, with American Soci-
+leading  to acute intestinal paralysis. After 3 to 4 h of surgical manipu-                                                 ety of Anesthesiologists (ASA) class I–III                     disease, and planned to undergo
+lation,          the          release          of          pro-inflammatory          cytokines          and          chemokines selective         laparoscopic         non-gastrointestinal         surgery.         Patients         with          a
+up-regulates       endothelial        adhesion       molecules.       This       cascade       activates                   previous   history   of   abdominal   surgery,   gastrointestinal   motility   disor-
+phagocytes residing throughout the gut, leading to leukocyte migration                                                     ders,      severe      cardiovascular,      hepatic,      or      renal      disease,      presence      of      a
+into the muscularis externa. Ultimately, these phagocytes release nitric                                                   cardiac  pacemaker,  infection  at  acupuncture  sites,  allergy  to  acupunc-
+oxide             and             prostaglandins,             which             directly             inhibit             smooth             muscle ture electrode patches, prior acupuncture treatment, or participation in
+contractility to prevent intestinal peristalsis [8]. In addition, the use of                                               other studies within three months preceding this trial were excluded.
+opioids,            fluid            overload,            and            gastrointestinal            tract            edema            can            all
+adversely  affect  gastrointestinal  function,  thereby  prolonging  recovery                                              2.3.                 Randomization  and  blinding
+[7].
+     Therefore,        current        management        strategies        employ        a        multimodal                      The principal investigator explained more details of this study to the
+approach                that                integrates                pharmacological                treatments                with                non-enrolled patients one day prior to their scheduled surgery, in accordance
+pharmacological    interventions    [8,9].    However,    the    high    cost    and    po-                                with                  a                  standardized                  perioperative                  protocol.                  Laparoscopic                  non-
+tential   adverse  effects  of  pharmacological  treatments  can  reduce  their                                            gastrointestinal       surgeries       were       conducted        under       general        anesthesia.
+acceptability         [10].         Alternative         strategies         focus         on         enhancing         post-Patients who met the eligibility criteria were enrolled in this study and
+operative     rehabilitation    through    interventions    such    as    patient    educa-                                followed up postoperatively.
+tion,      chewing      gum,      limited      preoperative      fasting,      minimally      invasive                           Patients were randomized into the TEAS or sham-TEAS groups at a
+surgical techniques, early oral feeding, and effective analgesia [11–13                                          ].        1:1  ratio  using  block  randomization.  The  randomization  sequence  was
+Despite    these    approaches,    no    clinical    guidelines    or    recommendations                                   generated by an independent statistician using computer software. The
+currently specify drugs or interventions tailored to preventing POGD.                                                      acupuncturist,          the          sole           individual          aware           of          treatment          allocations,
+     In      line      with      traditional      Chinese      medicine      principles,      surgical      in-            accessed the randomization sequence through sealed opaque envelopes
+terventions   are  believed  to   induce  Qi  stagnation  and  blood  stasis  syn-                                         containing computer-generated allocations. Patients, outcome assessors,
+drome, disrupting the body's balance and leading to bowel dysfunction                                                      and statisticians were blinded to group assignments.
+[14].     Acupuncture,     through     stimulation     of     specific    acupoints,     is     pro-
+posed to regulate energy (Qi) flow and alleviate blood stasis, making it                                                   2.4.                 Interventions
+widely    utilized    for    managing    gastrointestinal    disorders    because    of    its
+efficacy and minimal invasion [14–16                        ]. However, the reliance on skilled                                  Acupoints   were   selected   through   a   comprehensively   review   of   the
+practitioners        for       traditional       acupuncture       and       moxibustion       limits       its            literature and expert consensus. Precise acupoint locations were deter-
+widespread application. Transcutaneous electrical acupoint stimulation                                                     mined         using        The         National        Standards         for         Acupoint         Location        (GB/T
+(TEAS)   offers   a   non-invasive   alternative   to   conventional   acupuncture,                                        12346–2021                                                                                           nomenclature and location of meridian points) guidelines
+employing   electrical   stimulation   through   surface  electrodes   instead   of                                        [21].   A   licensed   acupuncturist   with    nine   years   of   clinical   experience,
+needle    insertion    and    manual    manipulation,    as    in    electroacupuncture.                                   registered   as  a   traditional   Chinese   medicine   (TCM)   practitioner,   inde-
+TEAS          has          demonstrated          clinical          benefits,          including          reduced          intra-pendently  administered  either  TEAS  or  sham-TEAS.  The  acupuncturist
+operative anesthetic requirements, decreased postoperative nausea and                                                      did     not     disclose     group     allocation     but     informed     patients     that     tingling
+vomiting    [5],    alleviated    postoperative    pain    [17],    and    improved    post-                               sensations        might        have        occurred        near        the        wrists        and        calves        during
+operative   recovery   [18].   Moreover,   previous   research   has   shown   that                                        treatment.       In       the       TEAS       group,       acupoints       associated       with       managing
+TEAS  enhances  gastrointestinal  recovery  by  activating  the  vagal  nerve                                              abdominal distension, abdominal pain, and constipation, such as Zusanli
+and inhibiting inflammation, as evidenced by increased plasma levels of                                                    (stomach    meridian     ST36),    Neiguan     (pericardium    meridian     PC6),    and
+acetylcholine         (Ach)         and         interleukin-10         (IL-10)         alongside         decreased         Hegu (large intestine meridian LI4), were identified. The bilateral acu-
+levels of interleukin-6 (IL-6) and inducible nitric oxide synthase (iNOS)                                                  point     skin     was     cleaned     with     alcohol     and     dried,     and     electrodes     were
+[19].                                                                                                                      attached        to        the         TEAS        machine         (Hua        Tuo        SDZ-III,        Suzhou         Medical
+     Although    several   rigorously    designed   randomized    controlled   trials                                      Apparatus   and   Instruments   Factory,   Suzhou,   China).   The   TEAS   group
+(RCTs)             [4,5,14,17,19,20]             have             evaluated             TEAS             for             postoperative was         administered         at         a         2/10         Hz         dense-disperse         frequency,         starting
+gastrointestinal dysfunction, there remains significant variability in the                                                 30 min before anesthesia induction and continuing through the opera-
+definitions of POI and POGD, as well as in clinical outcome measures for                                                   tion.        We        adjusted        the        stimulation        intensity        to        induce        mild        muscle
+assessing gastrointestinal recovery. Furthermore, existing guidelines for                                                  twitching    at    the    individual's    maximum    tolerance,    achieving    the    radi-
+the    prevention    and    management    of    POGD    have    not    yet    incorporated                                 ating      paresthesia      sensation      known      as      de      qi      [22].      In      the      sham-TEAS
+recommendations for TEAS or electroacupuncture. Therefore, this study                                                      group,      identical      acupoints      were      targeted,      but      stimulation      was      simu-
+was                   conducted                   to                   evaluate                   whether                   TEAS,                   as                   an                   adjunctive lated    by    cutting    output    wires,    ensuring    no    electrical    current    delivery
+non-pharmacological  intervention,  could  effectively  promote  gastroin-                                                 [23] (eFigure in Supplement 1).
+testinal     function     recovery     and     reduce     the     incidence     of     postoperative                             Standardized anesthesia protocols were employed across all patients.
+nausea and vomiting (PONV) and abdominal distension in patients un-                                                        Patients received 5 mg of dexamethasone prior to induction, followed by
+dergoing elective laparoscopic non-gastrointestinal surgery.                                                               0.03 mg/kg midazolam, 1.5–2.5                                                     mg/kg propofol, 0.3–0.4 μg/kg sufen-
+                                                                                                                           tanil, and 0.8 mg/kg rocuronium. Maintenance anesthesia consisted of
+
+
+                                                                                                                       2
+
+=== PDF PAGE 3 ===
+X.  Jiang et al.                                                                                                                                                                                                                                    Complementary Therapies in Clinical Practice 64 (2026) 102076
+
+0.05–      0.2 μ g/kg/min      remifentanil      and      4–      12      mg/kg/h      propofol,      with            significant. Statistical analysis was conducted using IBM SPSS 25.0 (IBM
+intermittent        rocuronium        administration       (0.2        mg/kg)        every        30        min.      Corp., Armonk, NY, USA).
+Sedation depth was monitored using the bispectral index (BIS), which is
+a  quantitative,  dimensionless  measure  derived  from  processed  electro-                                          2.7.                 Ethical  considerations
+encephalogram (EEG) signals and ranges from 0 to 100. BIS is routinely
+used to monitor the depth of anesthesia and sedation in real time, with                                                    Ethics    approval    for    this    study   was    obtained   from    the    Institutional
+values    between    40    and    60    representing    a    state    of    general    anesthesia                     Review Board of Tianjin Nankai Hospital (NKYY-YX-IRB-2017-035-02),
+[24]. In our study, the propofol infusion rate was adjusted to maintain                                               and     the     study     was     conducted     in     accordance     with     the     Declaration     of
+BIS values between 40 and 60. The ventilation parameters were adjusted                                                Helsinki.     This     study     was     registered     at    ClinicalTrials.gov           (registration
+to  maintain  the  pressure  of  end  tidal  carbon  dioxide  (PetCO2)  level  at                                     number NCT03724656). All patients provided written informed consent
+30–      40         mmHg.         After         peritoneal         suturing,         sufentanil         (5–      10 μg)         was prior to enrollment and were informed of the possibility of withdrawing
+administered as needed. Upon skin closure, patients were transferred to                                               from the study at any time. Data were anonymized to protect privacy.
+the post-anesthesia care unit (PACU), where extubation was performed
+after spontaneous breathing resumed, with muscle relaxant antagonists                                                 3.                Results
+(1–      2 mg neostigmine and 0.5–      1 mg atropine) administered as necessary.
+PONV were prevented by administering ondansetron, a 5-hydroxytryp-                                                    3.1.                 Characteristics  of  patients
+tamine-3 (5-HT3) receptor antagonist. Postoperative analgesia included
+sufentanil and flurbiprofen via patient-controlled intravenous analgesia                                                   There were 1226 patients screened between May 2019 and October
+(PCIA) for 24–      48 h if needed. Adverse events that occurred throughout                                           2021 for eligibility. Of these, 612 were eliminated because of failure to
+this study were reported.                                                                                             meet   the   inclusion   criteria,   refusal   to   take   part   in   this   study,   or   other
+                                                                                                                      reasons.    Ultimately,    614    eligible    patients    were    allocated    to    the    TEAS
+2.5.                 Outcome  measures                                                                                (n  =        308) or sham-TEAS (n  =        306) group. During this study, 12 and 9
+                                                                                                                      patients    in    the    TEAS    and    sham-TEAS    groups,    respectively,    withdrew.
+     Our primary endpoint included the time to first flatus, which referred                                           Thus, 587 patients (TEAS: n =      294; sham-TEAS: n =      293) were included
+to the duration between the completion of laparoscopic surgery and its                                                in this study and were thereby enrolled in the final analyses. The patient
+occurrence (unit: hour); this was assessed every 6 h postoperatively until                                            selection process is shown in Fig. 1. Patient demographic characteristics,
+occurrence or discharge. The secondary endpoints were the time to first                                               comorbidities,         surgical         data         and         perioperative         anesthetic         use         were
+defecation  (assessed at the same time points as the primary endpoint),                                               compared    between    the    two    groups.    The    results    showed    that    the    two
+pain    score   evaluated    by   the    numeric    rating   scale   (NRS;    0        =          no    pain,         groups            were            well            balanced            on            baseline            and            intra-operative            data
+10 =      worst imaginable pain) at 6 h, 24 h, and 48 h postoperatively, and                                          (Tables 1 and 2).
+PONV incidence at the same three time points. Hospital expenses were
+documented in Chinese yuan (CNY) and converted into US dollars using                                                  3.2.                 Primary  endpoint
+an average exchange rate of 0.1525 from 2019 to 2021. Adverse events,
+whether related to the treatment or not, were reported through patient                                                     Patients in TEAS group demonstrated a remarkably shorter median
+interviews conducted by a research assistant at each follow-up visit.                                                 time  to  first  flatus  compared  to  sham-TEAS  group  (21.5  h  [19.0–      23.5]
+                                                                                                                      vs.    23.5    h    [21.0–      26.0];    median    difference:                         2.5    h    (95%     CI,                         3.0    to
+2.6.                 Statistical  analysis                                                                                           1.8); p <        0.001). The intention-to-treat analysis found similar results:
+                                                                                                                      the   time   to   first   flatus   in   TEAS   group   compared   to   sham-TEAS   group
+     We   determined   our   sample   size   in   line   with   one   preliminary   work                              (21.3 h [19.0–      23.5] vs. 23.4 h [21.0–      26.0]; median  difference:                 2.0 h
+conducted      in      2018      (n             =             50),      which      showed      times      to      first      flatus      of (95% CI,                2.9 to                1.5); p <       0.001) (Table 3). The cumulative no-flatus
+21.5   ±         8.6 h  and  23.5   ±         6.7  h  for  the  TEAS  and  sham  groups,  respec-                     rate   was   assessed   by   log-rank   tests   and   Kaplan-Meier   curves.   Kaplan-
+tively. Using a one-sided significance level of α                        =       0.025 (corresponding                 Meier         analysis         demonstrated         a         significantly         higher         cumulative         no-
+to     a     two-sided α    =            0.05     for     the     final     analysis)     and     80%     power,     the flatus  rate  in  the  sham-TEAS  group  compared  to  the  TEAS  group  (log-
+minimum  required  sample  size  was  determined  to  be  235  patients  per                                          rank test, P <       0.001). The hazard ratio (HR) for the first flatus was 0.55
+group. To account for an anticipated dropout rate of about 20%, a total                                               (95% CI, 0.45–      0.67), indicating that patients receiving TEAS had a 45%
+of 294 patients per group were planned. Sample size calculations were                                                 higher probability of achieving first flatus at any given time point than
+performed using PASS software, version 15.0 (NCSS, LLC, Kaysville, UT,                                                those receiving sham stimulation (Fig. 2).
+USA).
+     Data analysis followed the per-protocol set principle, For the primary                                           3.3.                 Secondary  endpoints  and adverse  events
+outcome, an intention-to-treat analysis was also performed. For missing
+data        in        the       TEAS        group,       values        were       replaced        with        the       maximum Compared  with  the  sham-TEAS group,  the  TEAS  group  presented  a
+observed value (worst-case scenario) from the entire cohort. Conversely,                                              significantly shorter median time to first defecation (41.2 h [38.5–      45.0]
+missing data in the sham-TEAS group were replaced with the minimum                                                    vs.        46.0        h        [42.0–      52.0],        p                 <               0.001).        Additionally,        the        TEAS        group
+observed            value             (best-case            scenario)             from            the             entire            cohort.            The demonstrated            reduced            24            h            PONV            incidence            (15.0%            vs.            22.9%,
+normality of  continuous variables was assessed  using the  Kolmogorov-                                               p             =             0.015),      lower      rates      of      abdominal      distension      (21.1%      vs.      29.7%,
+Smirnov  test.  Continuous variables  conforming  to  the  normal  distribu-                                          p =        0.017), and decreased pain intensity (NRS pain score, 3 [2,3] vs. 3
+tion were presented as means with standard deviations (SDs) and were                                                  [2–      3.5],    p         =           0.026).    The    duration    of    postoperative    hospital    stay    and
+analyzed    using    two-tailed    Student's    t-tests.    Continuous    variables    con-                           hospitalization    expenses    were    similar    in    both    groups.    Adverse    events
+forming  to  a  non-normal  distribution  were  presented  as  medians  with                                          reported       during       the       study       were       mild       and       resolved       quickly       without
+interquartile ranges (IQRs) and were compared using Mann-Whitney U                                                    long-term effects (Tables 4 and 5).
+tests.        Categorical        variables       were        expressed        as        frequencies        and        pro-
+portions  and  analyzed  using χ               2 tests  or  Fisher's  exact  tests.  The  cumu-                       4.                Discussion
+lative    no-flatus    rate    was    assessed    by    log-rank    tests    and    Kaplan-Meier
+curves.  Comparison  of  the  outcomes  between  the  two  groups  was  pre-                                               The findings of this randomized clinical trial demonstrate that TEAS
+sented with effect sizes and their 95% confidence intervals (CIs) and p-                                              significantly promotes gastrointestinal function recovery in adults aged
+values.  A  two-sided  p-value  less  than  0.05  was  considered  statistically                                      18–      64            years            undergoing            elective            laparoscopic            non-gastrointestinal
+
+
+                                                                                                                 3
+
+=== PDF PAGE 4 ===
+X.  Jiang et al.                                                                                                                                                                                                                                    Complementary Therapies in Clinical Practice 64 (2026) 102076
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                         Fig. 1.            CONSORT flow  diagram.  TEAS: transcutaneous electrical  acupoint stimulation.
+
+
+
+Table 1                                                                                                                       Table 2
+Patients baseline characteristics.                                                                                            Surgery and anesthesia related records.
+
+  Characteristics                        TEAS (n =      294)         Sham-TEAS (n =      293)            P value                 Characteristics                            TEAS (n =      294)            Sham-TEAS                     P
+
+                                                                                                         a                                                                                                 (n =      293)                value
+  Age, median (IQR), y                   51 (40–     58)             50 (39–     58)                      0.9112
+  Height, mean (SD), cm                  166.2 (7.5)                 165.8 (7.6)                         b0.551                  Type of surgery, n (%)
+  Weight, mean (SD), kg                    69.6 (13.1)                70.5 (13.3)                        b0.399                     LC                                      141 (48.0)                     152 (51.9)                    b0.636
+  Sex, n (%)                                                                                                                           LCBDE +      LC                      23 (7.8)                       25 (8.5)
+     Male                                   122 (40.67)                115 (38.33)                       c0.5588                       Laparoscopic                         102 (34.7)                     87 (29.7)
+        Female                           178 (59.33)                 185 (61.67)                                                    gynecologic surgery                     28 (9.5)                       29 (9.9)
+  ASA physical status classification, n (%)                                                                                            Others
+     I                                       14 (2.4)                      4 (1.4)                       c0.264                  Surgical time, median (IQR),               61 (45–     89)                58 (43–     85)               a0.280
+        II                               250 (85.0)                  257 (87.7)                                                     min
+        III                              34 (11.6)                   32 (10.9)                                                   Anesthesia time, median                    75.5 (57–     102)             73 (56–     100)              a0.314
+  BMI, n (%)                                                                                                                        (IQR), min
+     Underweight (<18.5)                       3 (1.0)                     4 (1.4)                       c0.564                  Blood loss, median (IQR), ml               50.0 (20.0–     50.0)          50.0 (20.0–     50.0)         a0.664
+        Normal (18.5–     23.9)          119 (40.5)                  106 (36.2)                                                  Total intraoperative                       1000.0                         1000.0                        a0.165
+        Overweight (≥24)                 172 (58.5)                  183 (62.5)                                                     infusion, median (IQR),                 (1000.0–     1000.0)           (1000.0–     1000.0)
+     Comorbidities, n (%)                    72 (24.5)                   68 (23.2)                       c0.716                     ml
+        Hypertension                     30 (10.2)                   26 (8.9)                            c0.583                  Intraoperative medication
+        Diabetes mellitus                                                                                                           Ondansetron, n (%)                        38 (12.9)                     35 (11.9)                    b0.719
+                                                                                                                                       Dexamethasone, n (%)                 234 (79.6)                     237 (80.9)                    b0.693
+P values are two-sided, and p <       0.05 was considered statistically significant.                                                   Neostigmine, n (%)                   168 (57.1)                     178 (60.8)                    b0.374
+TEAS: transcutaneous electrical acupoint stimulation; IQR: interquartile range;                                                        Atropine, n (%)                      189 (64.3)                     203 (69.3)                    b0.199
+SD: standard deviation.                                                                                                                Remifentanil, median                 841.4                          795.2                         a0.284
+ASA: American Society of Anesthesiologists; BMI: body mass index.                                                                   (IQR), μg                               (593.85–     1278.0)           (584.0–     1228.2)           a0.927
+  a  Based on the Mann–      Whitney U test.                                                                                           Sufentanil, median                   21.0 (18.0–     22.8)          21.0 (18.0–     22.5)
+  b  Based on the independent Student's t-test.                                                                                     (IQR), μg
+  c                                                                                                                              Patient controlled                         286 (97.3)                     279 (95.2)                    b0.190
+     Based on the Chi-square test or Fisher's exact test.                                                                           intravenous analgesia, n
+
+                                                                                                                                    (%)
+surgery.          Specifically,          compared          with          sham-TEAS,          the          TEAS          group P values are two-sided, and p <       0.05 was considered statistically significant.
+exhibited significantly shorter times to first flatus and first defecation, as                                                TEAS:   transcutaneous   electrical   acupoint   stimulation;   LC:   laparoscopic   chole-
+well      as      significantly      lower      incidence      of      24      h      PONV      and      abdominal            cystectomy;     LCBDE:     laparoscopic     common     bile     duct     exploration;     IQR:     inter-
+distension.                                                                                                                   quartile range.
+     These    findings    are   consistent   with    those   previous    studies    [14,25],                                     a  Based on the Mann–      Whitney U test.
+showing  that  compared  with  sham-TEAS,  intraoperative  TEAS  is  asso-                                                       b  Based on the Chi-square test or Fisher's exact test.
+ciated with a shorter time to first flatus or a lower POI rate. Wang et al.
+[25]  randomized 249  patients undergoing laparoscopic colorectal can-
+cer                              surgery                              to                              either                              electroacupuncture                              (EA)                              or                              sham                                                      electroacupuncture (SA) group. Their results showed that the EA group experienced shorter times to first defecation (76.4 h vs. 90.0 h), and first
+
+
+
+                                                                                                                         4
+
+=== PDF PAGE 5 ===
+X.  Jiang et al.                                                                                                                                                                                                                                    Complementary Therapies in Clinical Practice 64 (2026) 102076
+
+Table 3                                                                                                                     outcome   reporting   has   been   identified   as   a   major   source   of   heteroge-
+Primary outcome measures between TEAS and sham-TEAS groups.                                                                 neity in clinical studies. A systematic review [26] highlighted the clin-
+  Primary outcome                TEAS                  Sham-TEAS               Median                  aP                   ical          significance          of          time          to          first          flatus          as          a          reliable          indicator          of
+                                 (n =      294)        (n =      293)          difference              value                postoperative gastrointestinal recovery, noting its practicality compared
+                                                                               (95% CI)                                     with  the  assessment  of  bowel  sounds,  which  clinicians  often  find  chal-
+  time to flatus,                21.5                  23.5                                2.5 (            3.0 to <0.001   lenging because of time constraints. Consequently, the time to first flatus
+     median (IQR), h             (19.0–     23.5)      (21.0–     26.0)                    1.8)        <0.001               and   defecation   remain   key   metrics   for   assessing   postoperative   gastro-
+     (PP analysis)               21.3                  23.4                                2.0 (            2.9 to          intestinal function and are commonly employed as endpoints in clinical
+     time to flatus,             (19.0–     23.5)      (21.0–     26.0)                    1.5)                             trials      [13,14,25,27].      We      selected      time      to      first      flatus      as      the      primary
+     median (IQR), h             (n =      296)        (n =      297)
+     (ITT analysis)                                                                                                         endpoint, which is consistent with established practice.
+P values are two-sided, and p <       0.05 was considered statistically significant.                                              POGD  is  associated  with  a  complex  pathophysiological  mechanism
+TEAS:   transcutaneous   electrical   acupoint   stimulation;   CI:   confidence   interval;                                involving    inflammation,    fluid    administration,    medication    effects,    and
+IQR: interquartile range; PP: per protocol; ITT: intention to treat.                                                        ischemia-reperfusion          injury         [26,28,29].         TEAS         is         widely          applied         in
+  a  Based on the Mann–      Whitney U test.                                                                                clinical     settings     as     an     economical,     non-invasive,     and     straightforward
+                                                                                                                            approach   for   managing   gastrointestinal   disorders,   pain,   stress   urinary
+                                                                                                                            incontinence,  and  conditions  related  to  reproductive  medicine  [17,20,
+                                                                                                                            30–      33].  However,  the  underlying  mechanisms  of  TEAS  remain  largely
+                                                                                                                            unclear. Factors such as the number of sessions, selection of acupoints,
+                                                                                                                            optimal timing, and environmental conditions influence the efficacy of
+                                                                                                                            electroacupuncture.          In          this          study,          the          selected          acupoints          included
+                                                                                                                            Zusanli     (ST36),     Neiguan     (PC6),     and     Hegu     (LI4).     The     Zusanli     (ST36)
+                                                                                                                            acupoint,     located     on     the     Foot     Yang     Ming     stomach     meridian,     has     an
+                                                                                                                            important effect on modulating the stomach and spleen while enhancing
+                                                                                                                            gastrointestinal motility. In modern mechanistic studies, TEAS at ST36
+                                                                                                                            enhances    gastrointestinal    recovery    by    activating    the    vagus    nerve    and
+                                                                                                                            inhibiting     inflammation,     as     evidenced      by     increased     plasma     levels     of
+                                                                                                                            acetylcholine     and     IL-10     alongside     decreased     levels     of     IL-6     and     iNOS
+                                                                                                                            [19].    Electroacupuncture    at    ST36    has    been    shown    to    relieve    chronic
+                                                                                                                            constipation    by     increasing    vagal     activity    and    decreasing    sympathetic
+                                                                                                                            activity          [34].          Additionally,          Liu          et          al.          have          reported          that          electro-
+                                                                                                                            acupuncture   at   ST36   could   relieve   gastroesophageal   reflux   disease   by
+                                                                                                                            modulating    autonomic    function    [35].    The    Neiguan    (PC6)    acupoint,    a
+                                                                                                                            Luo-connecting point on the Pericardium Meridian of Hand Jueyin, can
+Fig.  2.            Kaplan-Meier  curves for  cumulative  no  flatus rate.                                                  effectively         alleviate         gastrointestinal         symptoms         such         as         nausea         and
+TEAS                                                                                                                        vomiting, likely through modulation of the vagus nerve [36]. Similarly,
+transcutaneous  electrical acupoint stimulation;  HR:  hazard  ratio.                                                       Hegu     (LI4),     a     Yuan-source     point     on     the     Large     Intestinal    Meridian     of
+                                                                                                                            Hand-Yangming   [37],   activates   the   vagal   anti-inflammatory   pathway,
+
+flatus (44.3 h vs. 58.9 h), as well as earlier tolerance of a semiliquid diet
+(105.8   h  vs.   116.5  h)   and  solid   food  (181.8   h  vs.   190.3  h),   compared                                    Table 5
+with  the  SA  group.  In  another  multicenter  randomized  clinical  trial  of                                            Postoperative complications and adverse events.
+colorectal     surgery,     Gao     et     al.     [19]     reported     that     postoperative     TEAS
+significantly        reduced        the        rate        of        postoperative        paralytic        ileus        after  Adverse event                               TEAS                     Sham-TEAS                      aP
+colorectal   surgery   by   9.7%.   The   intervention   comprised   four   sessions:                                                                                      (n =      294)           (n =      293)                 value
+the first in the PACU upon reaching a Steward recovery score of 4, and                                                         Overall, n (%)                              8 (2.7)                  7 (2.4)                        0.799
+the remaining three once daily between 9 and 11 a.m. on postoperative                                                          Severe adverse events, n (%)                0                        0                              ​
+days  1-3  on  the  ward.  However,  definitions  of  postoperative  ileus  and                                                Subcutaneous hematoma, n                    0                        0                              0.995
+                                                                                                                                  (%)                                      6 (2.0)                  6 (2.0)                        0.565
+gastrointestinal             dysfunction             remain             unstandardized             across             studies     Rubefaction, n (%)                       2 (0.7)                  1 (0.3)
+investigating TEAS for postoperative gastrointestinal recovery.                                                                   Hydroderma, n (%)
+     POI   is   characterized   by   impaired   gastrointestinal   transit   following                                      P values are two-sided, and p <       0.05 was considered statistically significant.
+abdominal              surgery              [7].              Despite              significant              efforts,              a              universally TEAS: transcutaneous electrical acupoint stimulation.
+accepted      definition      of      ileus      has      not      been      established.      Variability      in             a  Based on the Chi-square test or Fisher's exact test.
+
+
+
+Table 4
+Secondary outcome measures in the TEAS and sham-TEAS groups.
+
+  Secondary outcomes                                                           TEAS (n =      294)                               Sham-TEAS (n =      293)                          Effect size (95% CI)                            P value
+  time to defecation, median (IQR), h                                          41.2 (38.5–     45.0)                             46.0 (42.0–     52.0)                                         4.78 (            3.8 to             6.0)a<0.001
+  24 h PONV, n (%)                                                             44 (15)                                           67 (22.9)                                         0.59 (0.39–     0.90)                           b0.015
+  Incidence of abdominal distention, n (%)                                     62 (21.1)                                         87 (29.7)                                         0.63 (0.43–     0.92)                           b0.017
+  Hospital cost, median (IQR), Chinese yuan                                    22646.44 (20226.03–     27808.88)                 21957.81 (20099.88–     25367.38)                             624.59 (            1309.47 to 24.33)a0.059
+  Length of postoperative hospital stay, median (IQR)                          3.0 (2–     4)                                    3.0 (2–     4)                                    ​                                               a0.725
+
+P values are two-sided, and p <       0.05 was considered statistically significant.
+TEAS: transcutaneous electric acupoint stimulation; CI: confidence interval; IQR: interquartile range; PONV: postoperative nausea and vomiting; NRS: numeric rating
+scale.
+  a  Based on the Mann–      Whitney U test.
+  b  Based on the Chi-square test or Fisher's exact test.
+
+
+                                                                                                                       5
+
+=== PDF PAGE 6 ===
+X.  Jiang et al.                                                                                                                                                                                                                                    Complementary Therapies in Clinical Practice 64 (2026) 102076
+
+thereby                                           downregulating                                           cytokine                                           storms                                           and                                           exerting immuno-cytokine mechanisms in  patients with cholecystolithiasis,
+anti-inflammatory effects [38].                                                                                                Neuromodulation 22 (5) (2019 Jul) 546–     554, https://doi.org/10.1111/ner.12856.
+                                                                                                                          [5]  W. Gao, L. Zhang, X. Han, L. Wei, J. Fang, X.  Zhang, et al., Transcutaneous
+     This study had several strengths, including large sample size and the                                                     electrical acupoint stimulation decreases the incidence of postoperative nausea and
+use of a sham stimulus, which minimized subjective bias in the control                                                         vomiting after laparoscopic non-gastrointestinal surgery: a multi-center
+group   and  ensured  credible   findings.  However,  there  are   some  limita-                                               randomized controlled trial, Front Med (Lausanne) 9 (2022 Mar 14) 766244,
+tions. First, caution should be exercised when generalizing our findings                                                       https://doi.org/10.3389/fmed.2022.766244.
+                                                                                                                          [6]  T.L. Hedrick, M.D. McEvoy, M.M.G. Mythen, R. Bergamaschi, R. Gupta, S.
+to       other      populations      or       settings      because      of       its      single-center       nature.         D. Holubar, et al., American society for enhanced recovery and perioperative
+Second,     despite     strict     blinding     protocols,     the     study     did     not     evaluate                      quality initiative joint consensus statement on postoperative gastrointestinal
+whether     the     blinding     was     effective     by     asking     patients     to     guess     their                   dysfunction within an enhanced recovery pathway for elective colorectal surgery,
+                                                                                                                               Anesth. Analg. 126 (6) (2018 Jun) 1896–     1907, https://doi.org/10.1213/
+assigned         stimulation.          Third,         the         use         of         fixed          block         randomization ANE.0000000000002742.
+introduced      potential      bias      due      to      treatment      allocation      predictability.                  [7]  D. Bragg, A.M. El-Sharkawy, E. Psaltis, C.A. Maxwell-Armstrong, D.N. Lobo,
+Fourth, the precise impact of TEAS on gastrointestinal activity remains                                                        Postoperative ileus: recent developments in pathophysiology and management,
+                                                                                                                               Clin. Nutr. 34 (3) (2015 Jun) 367–     376, https://doi.org/10.1016/j.
+unclear, necessitating further studies to elucidate its mechanisms.                                                            clnu.2015.01.016.
+                                                                                                                          [8]  C.I. Wells, T.G.E. Milne, S.H.B. Seo, S.J. Chapman, R. Vather, I.P. Bissett, et al.,
+5.                 Conclusion                                                                                                  Postoperative ileus: definitions, mechanisms  and controversies, ANZ J. Surg. 92
+                                                                                                                               (1–     2) (2022 Jan) 62–     68, https://doi.org/10.1111/ans.17297.
+                                                                                                                          [9]  N. Stakenborg, P.J. Gomez-Pinilla, G.E. Boeckxstaens, Postoperative ileus:
+     In     young     and     middle-aged     patients     undergoing     laparoscopic     non-                                pathophysiology, current therapeutic approaches,  Handb. Exp. Pharmacol. 239
+gastrointestinal  surgery,  TEAS  significantly  reduces  time  to  first  flatus                                              (2017) 39–     57, https://doi.org/10.1007/164_2016_108.
+                                                                                                                        [10]    S.R. Steele, J.T. Brady, Z. Cao, D.L. Baumer, S.B. Robinson, H.K. Yang, et al.,
+and        defecation,        as        well        as        the        incidence        of        PONV        and        abdominal Evaluation of healthcare use  and clinical outcomes of alvimopan in  patients
+distension,        without        affecting        hospital        stay        duration        or        costs.        These    undergoing bowel resection: a propensity score-matched analysis, Dis. Colon
+findings  suggest  that  TEAS  may  be  a  useful  adjunctive  therapy  in  this                                                Rectum 61 (12) (2018 Dec) 1418–     1425, https://doi.org/10.1097/
+setting.   Further   research   is   needed   to   explore   the   mechanisms   under-                                          DCR.0000000000001181.
+                                                                                                                        [11]    V. Short, G. Herbert, R. Perry, C. Atkinson, A.R. Ness, C. Penfold, et al., Chewing
+lying      such      interventions      and      to     validate      these      results      across      diverse               gum for  postoperative recovery  of gastrointestinal function, Cochrane Database
+populations and clinical settings.                                                                                              Syst. Rev. 2015 (2) (2015 Feb 20), https://doi.org/10.1002/14651858.CD006506.
+                                                                                                                                pub3. CD006506.
+                                                                                                                        [12]    G.N. Silva, V.G. Brand˜ao, M.V. Perez, K.U. Lewandrowski, R.K.A. Fiorelli, Effects of
+Funding  sources                                                                                                                dexmedetomidine on immunomodulation and pain control in  videolaparoscopic
+                                                                                                                                cholecystectomies: a randomized, two-arm, double-blinded, placebo-controlled
+     This    study    was    supported    by    Tianjin    Key    Medical    Discipline    Con-                                 trial, J. Personalized Med. 13 (4) (2023 Apr 1) 622, https://doi.org/10.3390/
+                                                                                                                                jpm13040622.
+struction          Project          (Grant          No.          TJYXZDXK-3-013B)          and          Fundamental     [13]    J. An, H. Noh, E. Kim, J. Lee, K. Woo, H. Kim, Neuromuscular  blockade reversal
+Research Program of Shanxi Province (Grant No. 202403021222405).                                                                with sugammadex versus pyridostigmine/glycopyrrolate in laparoscopic
+                                                                                                                                cholecystectomy: a randomized trial of  effects on postoperative gastrointestinal
+                                                                                                                                motility, Korean J. Anesthesiol. 73 (2) (2020 Apr) 137–     144, https://doi.org/
+CRediT  authorship  contribution  statement                                                                                     10.4097/kja.19360.
+                                                                                                                        [14]    M. Li, F. Xu, M. Liu, Y. Li, J. Zheng, Y. Zhu, et al., Effects and mechanisms  of
+     Xianhong     Jiang:     Data     curation,     Methodology,     Writing          –                original                 transcutaneous electrical acustimulation on postoperative recovery after elective
+                                                                                                                                cesarean section, Neuromodulation 23 (6) (2020 Aug) 838–     846, https://doi.org/
+draft. Yuan Zhang: Conceptualization, Methodology. Jiaqi Tan: Formal                                                            10.1111/ner.13178.
+analysis,   Investigation.   Ping   Zhuang:   Methodology.   Aili   Fang:   Meth-                                       [15]    W.J. Li, C. Gao, L.X. An, Y.W. Ji, F.S. Xue, Y. Du, Perioperative transcutaneous
+odology. Xiaomin Yue: Data curation. Jun Pang: Data curation. Ying                                                              electrical acupoint stimulation for  improving postoperative gastrointestinal
+                                                                                                                                function: a randomized controlled trial, J. Integr. Med. 19 (3) (2021 May)
+Kong: Data curation. Ke Zhang: Investigation. Yanfang Zhang: Inves-                                                             211–     218, https://doi.org/10.1016/j.joim.2021.01.005.
+tigation,      Methodology.      Jianbo      Yu:      Conceptualization,      Methodology,                              [16]    Y. Zhang, Z. Meng, L. Wu, X. Liu, C. Guo,  J. Yu, et al., Protective effect of
+Supervision.                                                                                                                    electroacupuncture on the barrier function of intestinal injury in endotoxemia
+                                                                                                                                through HO-1/PINK1 pathway-mediated mitochondrial dynamics  regulation,
+                                                                                                                                Oxid. Med. Cell. Longev. (2023 Jan 7) 1464853, https://doi.org/10.1155/2023/
+Conflicts  of  interest                                                                                                         1464853, 2023.
+                                                                                                                        [17]    S. Li, Q. Zhang,  X. Yin, H. Yue, W. Zhang, L. Lao, et al., Electroacupuncture for
+                                                                                                                                postoperative pain after nasal endoscopic surgery: study protocol for  a pilot
+     The authors have no competing interests.                                                                                   randomized controlled trial, Trials 21 (1)  (2020 Feb 11) 163, https://doi.org/
+                                                                                                                                10.1186/s13063-020-4064-2.
+                                                                                                                        [18]    T.  Nechay, S. Titkova, A. Tyagunov, M. Anurov, A. Sazhin, Modified enhanced
+Acknowledgements                                                                                                                recovery after surgery protocol in patients with acute cholecystitis: efficacy, safety
+                                                                                                                                and feasibility. Multicenter randomized control study, Updates Surg. 73 (4) (2021
+     The authors  thank Professor  Junyan Zhang  for  his invaluable  assis-                                                    Aug) 1407–     1417, https://doi.org/10.1007/s13304-021-01031-5.
+                                                                                                                        [19]    W. Gao, W. Li, Y. Yan, R. Yang, Y. Zhang, M. Jin, et al., Transcutaneous electrical
+tance in revising the manuscript.                                                                                               acupoint stimulation applied in lower limbs decreases the incidence of paralytic
+                                                                                                                                ileus after colorectal surgery: a multicenter randomized controlled trial, Surgery
+Appendix  A.                 Supplementary  data                                                                                170 (6) (2021 Dec) 1618–     1626, https://doi.org/10.1016/j.surg.2021.08.007.
+                                                                                                                        [20]    F. Wang, P. Peng, Y. Zheng, S. Cheng, Y. Chen, Effect of acupuncture on
+                                                                                                                                postoperative pain in  patients after laparoscopic cholecystectomy: a randomized
+     Supplementary data to this article can be found online at https://doi.                                                     clinical trial, Evid. Based Complement. Alternat. Med. 2023 (2023 Jan 13)
+org/10.1016/j.ctcp.2026.102076.                                                                                                 3697223, https://doi.org/10.1155/2023/3697223.
+                                                                                                                        [21]    X.D. Wu, L.X. Huang, J.S. Zhao, [Interpretation of China national standard
+                                                                                                                                Nomenclature and Location of Meridian Points (GB/T 12346-2021)], Zhongguo Zhen
+References                                                                                                                      Jiu 42 (5) (2022 May 12) 579–     582, https://doi.org/10.13703/j.0255-
+                                                                                                                                2930.20220117-k0001.
+ [1]   S. Yu, S. Shi, X. Zhu, Clinical effect of  laparoscopic cholecystectomy in the                                   [22]    Y. Sun, Y. Liu, B. Liu, K. Zhou, Z. Yue, W. Zhang, et al., Efficacy of acupuncture for
+       treatment of chronic cholecystitis with gallstones, Biotechnol. Genet. Eng. Rev. 40                                      chronic prostatitis/chronic pelvic pain syndrome: a randomized trial, Ann. Intern.
+       (4)  (2024 Dec) 4000–     4012, https://doi.org/10.1080/02648725.2023.2204710.                                           Med. 174 (10) (2021 Oct) 1357–     1366, https://doi.org/10.7326/M21-1814.
+ [2]   J. Speth, Guidelines in  practice: minimally invasive surgery, AORN J. 118 (4)                                   [23]    Y.F. Zhang, X.Y. Li, X.Y. Liu, Y. Zhang, L.R. Gong, J. Shi, et al., Transcutaneous
+       (2023 Oct) 250–     257, https://doi.org/10.1002/aorn.14001.                                                             electrical acupoints stimulation improves spontaneous voiding recovery  after
+ [3]   H. Nakanishi, S. Miangul, R. Wang, J. El Haddad, N. El Ghazal, F.A. Abdulsalam, et                                       laparoscopic cholecystectomy: a randomized clinical trial, World J. Surg. 47 (5)
+       al., Open versus laparoscopic surgery in the management of adrenocortical                                                (2023 May) 1153–     1162, https://doi.org/10.1007/s00268-023-06924-7.
+       carcinoma: a systematic review and meta-analysis, Ann. Surg Oncol. 30 (2) (2023                                  [24]    C. Rosow, P.J. Manberg, Bispectral index  monitoring, Anesthesiol. Clin. 19 (4)
+       Feb) 994–     1005, https://doi.org/10.1245/s10434-022-12711-w.                                                          (2001 Dec), https://doi.org/10.1016/s0889-8537(01)80018-3, 947-66, xi.
+ [4]   B. Zhang, K. Zhu, P. Hu, F. Xu, L. Zhu,  J.D.Z. Chen, Needleless transcutaneous                                  [25]    Y. Wang, J.W. Yang, S.Y. Yan, Y. Lu, J.G. Han, W. Pei, et al., Electroacupuncture vs
+       neuromodulation accelerates postoperative recovery mediated via autonomic and                                            sham electroacupuncture in the treatment of postoperative ileus after laparoscopic
+
+
+                                                                                                                   6
+
+=== PDF PAGE 7 ===
+X.  Jiang et al.                                                                                                                                                                                                                                    Complementary Therapies in Clinical Practice 64 (2026) 102076
+
+       surgery for colorectal cancer: a multicenter, randomized clinical trial, JAMA Surg.                             [32]    Y.K. Moon, M.H. Kim, H.J. Nam, Comparison of  the effectiveness between
+       158 (1) (2023 Jan 1) 20–     27, https://doi.org/10.1001/jamasurg.2022.5674.                                            transcutaneous electrical nerve stimulation, manual acupuncture, and
+[26]   R. Vather, S. Trivedi, I. Bissett, Defining postoperative ileus: results of a systematic                                electroacupuncture on tinnitus: study protocol for a randomized controlled trial,
+       review  and global survey, J. Gastrointest. Surg. 17 (5) (2013 May) 962–     972,                                       Trials 19  (1) (2018 Jun 27) 342, https://doi.org/10.1186/s13063-018-2738-9.
+       https://doi.org/10.1007/s11605-013-2148-y.                                                                      [33]    Z. Liu, Y. Liu, B. Liu, Acupuncture for stress urinary incontinence-reply, JAMA 318
+[27]   Y. Lu, P.P. Fang, Y.Q. Yu, X.Q. Cheng, X.M. Feng, G.T.C. Wong, et al., Effect of                                        (15) (2017 Oct 17) 1500, https://doi.org/10.1001/jama.2017.13428.
+       intraoperative  dexmedetomidine on recovery of  gastrointestinal function after                                 [34]    N. Zhang, Z. Huang, F. Xu,  Y. Xu, J. Chen, J. Yin, et al., Transcutaneous
+       abdominal surgery in older adults: a randomized clinical trial, JAMA Netw. Open 4                                       neuromodulation at posterior tibial nerve and ST36 for chronic constipation, Evid.
+       (10) (2021 Oct 1)  e2128886, https://doi.org/10.1001/                                                                   Based Complement. Alternat. Med. 2014 (2014) 560802, https://doi.org/10.1155/
+       jamanetworkopen.2021.28886.                                                                                             2014/560802.
+[28]   N.P. Sommer, R. Schneider, S. Wehner, J.C. Kalff, T.O. Vilz, State-of-the-art                                   [35]    Z. Liu, D. Lu, J. Guo, Y. Liu, Z. Shi, F. Xu, et al., Elevation of  lower esophageal
+       colorectal disease: postoperative ileus, Int. J. Colorectal Dis. 36 (9) (2021 Sep)                                      sphincter pressure  with acute transcutaneous electrical acustimulation
+       2017–     2025, https://doi.org/10.1007/s00384-021-03939-1.                                                             synchronized with inspiration, Neuromodulation 22 (5) (2019 Jul) 586–     592,
+[29]   D.  Gero, O. Gi´e,  M. Hübner, N. Demartines, D. Hahnloser, Postoperative ileus: in                                     https://doi.org/10.1111/ner.12967.
+       search of an international consensus on definition, diagnosis, and treatment,                                   [36]    L.Q. Sun, F.L. Luo, S. Chen, Q.H. Zheng, L. Wang, Y.J. Hou, et al., Acupuncture as
+       Langenbecks Arch. Surg. 402 (1) (2017 Feb)  149–     158, https://doi.org/10.1007/                                      an adjunctive therapy for gastric ulcer: a modified Delphi consensus study, Compl.
+       s00423-016-1485-1.                                                                                                      Ther. Med. 79 (2023 Dec) 102997, https://doi.org/10.1016/j.ctim.2023.102997.
+[30]   K. Zhang, C. Li, C. Gao, C. Zhao, Q. Tang, J. Zhai, et al., Efficacy and safety of                              [37]    K. Umemoto, M. Naito, K. Tano, H. Terayama, T. Koike,  M. Ohmichi, et al.,
+       acupuncture as an adjuvant treatment for  acute pancreatitis: a protocol of                                             Acupuncture point "Hegu" (LI4) is close to the vascular branch from the superficial
+       systematic review and meta-analysis, BMJ Open 9 (7) (2019 Jul 4) e029327,                                               branch of the radial nerve, Evid. Based Complement. Alternat. Med. 2019 (2019
+       https://doi.org/10.1136/bmjopen-2019-029327.                                                                            Jun 25) 6879076, https://doi.org/10.1155/2019/6879076.
+[31]   W. Wang, Y. Liu, S. Sun,  B. Liu, T.  Su, J. Zhou, et al., Electroacupuncture for                               [38]    W.X. Pan, A.Y. Fan, S. Chen, S.F. Alemi, Acupuncture modulates immunity in
+       postmenopausal women with stress urinary incontinence: secondary analysis  of a                                         sepsis: toward a science-based protocol, Auton. Neurosci. 232 (2021 May) 102793,
+       randomized controlled trial, World J. Urol. 37 (7) (2019 Jul) 1421–     1427, https://                                  https://doi.org/10.1016/j.autneu.2021.102793.
+       doi.org/10.1007/s00345-018-2521-2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                   7

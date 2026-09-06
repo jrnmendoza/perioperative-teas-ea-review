@@ -1,0 +1,872 @@
+=== PDF PAGE 1 ===
+                                                                                                                         TYPE       Clinical Trial
+                                                                                                                         PUBLISHED       20 November 2025
+                                                                                                                         DOI10.3389/fneur.2025.1580759
+
+
+                                                     Effects of electroacupuncture on
+
+
+OPEN ACCESS                                          the incidence of postoperative
+
+EDITED BY
+Zhaolan Hu,                                          supraventricular arrhythmia and
+Central South University, China
+
+REVIEWED BY                                          sleep quality in patients
+Yijian Chen,
+Ganzhou People’s Hospital, China
+Heng Liu,                                            undergoing thoracoscopic
+Agency for Science, Technology and
+Research (A*STAR), Singapore
+                                                     surgery: a randomized controlled
+*CORRESPONDENCE
+Ying Cao
+  yingcao@163.com                                    trial
+Caineng Wu
+  wucaineng861010@163.com
+                                                     Jie Liu   1,2,3, Longfei Ding        1,2, Wuhua Ma        2,3, Jiyong Wang         3,4,
+RECEIVED 21 February 2025
+ACCEPTED 11 July 2025                                Xiuling Song        2,3, Ying Cao      5* and Caineng Wu            2,3*
+PUBLISHED 20 November 2025
+                                                     1First Clinical Medical College, Guangzhou University of Chinese Medicine, Guangzhou, China,
+CITATION                                             2
+Liu J, Ding L, Ma W, Wang J, Song X,                  Department of Anesthesiology, The First Affiliated Hospital of Guangzhou University of Chinese
+Cao Y and Wu C (2025) Effects of                     Medicine, Guangzhou, China, 3Guangdong Clinical Research Academy of Chinese Medicine,
+electroacupuncture on the incidence of               Guangzhou, China, 4Department of Thoracic Surgery, The First Affiliated Hospital of Guangzhou
+postoperative supraventricular arrhythmia and        University of Chinese Medicine, Guangzhou, China, 5NMPA Key Laboratory for Research and
+sleep quality in patients undergoing                 Evaluation of Drug Metabolism, Guangdong Provincial Key Laboratory of New Drug Screening,
+thoracoscopic surgery: a randomized                  School of Pharmaceutical Sciences, Southern Medical University, Guangzhou, China
+controlled trial.
+Front. Neurol. 16:1580759.
+doi: 10.3389/fneur.2025.1580759
+
+COPYRIGHT                                            Background: Supraventricular arrhythmia and sleep disturbance frequently occur
+© 2025 Liu, Ding, Ma, Wang, Song, Cao and            after thoracoscopic surgery for lung cancer. The present study is designed to
+Wu. This is an open-access article distributed       evaluate the hypothesis that electroacupuncture is an effective treatment of
+under the terms of the Creative Commons
+Attribution License (CC BY). The use,                supraventricular arrhythmia and sleep disorders following thoracoscopic lung
+distribution or reproduction in other forums is      cancer surgery.
+permitted, provided the original author(s) and
+the copyright owner(s) are credited and that         Methods: Adult patients scheduled for single-port thoracoscopic lung cancer
+the original publication in this journal is cited,   surgery were randomly assigned to the Electroacupuncture (EA) and control groups.
+in accordance with accepted academic                 The primary outcome of this trial was the incidence of new-onset supraventricular
+practice. No use, distribution or reproduction
+is permitted which does not comply with              tachycardia (SVT) including atrial flutter, atrial fibrillation, atrial tachycardia and
+these terms.                                         atrioventricular junctional tachycardia during the first 24h after surgery.
+
+                                                     Results: The authors analyzed 77 patients (EA, 38; control, 39). The incidence
+                                                     of new-onset SVT was significantly lower in the EA group compared with the
+                                                     control group during the first 24 postoperative hours; 4 (10.5%) vs. 13 (33.3%),
+                                                     respectively, p=      0.02. Patients in the EA group had longer total sleep time (119.0
+                                                     vs. 209.5, p=     0.02), longer duration of nonrapid eye movement sleep on the first
+                                                     postoperative night (p <                     0.05). The awake time was significantly shorter compared
+                                                     with the control group (134.5.0 vs. 225.0, p=               0.01). Dosage of remifentanil and
+                                                     incidence of intraoperative hypotension were significantly reduced in the EA group
+                                                     (911.1 vs. 1095.9, p=    0.01). However, VAS scores after surgery did not differ between
+                                                     groups. In all the patients recruited, adverse effects such as redness, swelling and
+                                                     inflammatory reactions were not observed at the acupuncture site.
+                                                     Conclusion: The results of this study suggest that perioperative
+                                                     electroacupuncture treatment could be      a promising strategy to reduce
+                                                     the incidence of new-onset SVT and improve sleep disturbance in patients
+                                                     undergoing thoracoscopic surgery for lung cancer. This potential impact on
+                                                     future treatments should inspire hope and optimism in the medical community.
+                                                     Clinical trial registration:        https://www.chictr.org.cn/indexEN.html, identifier
+                                                     ChiCTR2300077984.
+
+
+Frontiers in Neurology                                                     01                                                              frontiersin.org
+
+=== PDF PAGE 2 ===
+Liu et al.                                                                                                                                           10.3389/fneur.2025.1580759
+
+
+
+
+
+
+                                                               KEYWORDS
+                                                               electroacupuncture, thoracoscopic surgery, supraventricular tachycardia, sleep
+                                                               disturbance, lung cancer
+
+
+1 Introduction                                                                                arrhythmia; history of thoracic surgery or sleep disturbances
+                                                                                              (subjective sleep quality in the participant’s daily life was assessed
+     As a malignant tumor, lung cancer has a high incidence and fast                          according to the preoperative Sleep Quality Numerical Rating Scale,
+growth rate not only in China but also all over the world.                                    which is a numerical scale from 0 to 10, with 0 indicating excellent
+Thoracoscopic surgery has been widely adopted for lung cancer.                                sleep quality and 10 indicating complete sleep deprivation throughout
+Despite its small incision and minimal tissue trauma, the incidence of                        the night. A score of 6 or higher on the Sleep Quality Numerical
+postoperative arrhythmias and sleep disturbances remains high (1, 2).                         Rating Scale indicates a sleep disorder, while a score of less than 6
+Our previous study showed that new-onset arrhythmia was obser ved                             indicates a non-sleep disorder. Sleep disorder was excluded based on
+in about 40% of the patients undergoing thoracoscopic surger y, the                           this criterion) (10), perioperative electrolyte disturbances; abnormal
+most common of which was postoperative supraventricular                                       thyroid function or mental impairment; usage of antiarrhythmic
+tachycardia (POSVT) (31.8%) (3). This may increase the risk of                                drugs in 3                                                                                                                        days before the surger y ; skin infection or ner ve damage at
+hemodynamic instability and endanger the postoperative safety of                              the selected acupuncture points; patients already enrolled in other
+lung cancer patients (4). Sleep disturbance is also a common symptom                          clinical trials.
+in patients with lung cancer, which may contribute to a decelerated
+postoperative recover y (5).
+     Electroacupuncture (EA), a nonpharmacological adjunctive                                 2.3 Randomization and blinding
+inter vention, has been employed in clinical practice and has proved to
+be   an effective treatment for patients with atrial fibrillation (6–8).                           A statistical researcher generated Randomization sequences using
+Moreover, although some studies have reported that the application                            SPSS in a 1:1 ratio. According to the randomization sequence, eligible
+of EA is effective in improving sleep quality and regulating circadian                        patients were randomly divided into one of the two groups (the EA or
+sleep rhythms (9), whether the use of EA is associated with a lower                           the control group). Group allocation was concealed in serially
+incidence of postoperative arrhythmias and better sleep quality in                            numbered, sealed opaque envelopes by a researcher blind to the
+patients after thoracic surger y has not yet been confirmed. To verify,                       groups. On the operation day, the EA provider opened the envelope
+we performed this randomized clinical trial to explore the efficacy of                        and documented the predetermined group allocation of each patient
+EA in preventing supraventricular arrhythmia and sleep disorders                              in a secluded place and a consistent tone. The surgeons,
+undergoing thoracic surger y.                                                                 anesthesiologists, patients, data collectors and statisticians were
+                                                                                              unaware of the groups throughout the study.
+2 Methods
+                                                                                              2.4 Interventions
+2.1 Ethics approval and informed consent
+                                                                                                   The selection of EA acupoints is determined in consultation with
+     The present study was approved by the Ethics Committee of First                          an acupuncturist expert. The location of Neiguan (PC6) and Gongsun
+Affiliated Hospital of Guangzhou University of Chinese Medicine                               (SP4) are described in The National Standards for Acupoint Location
+(Approval No. K-2023-128) in November 2023. It was registered at the                          (11). In the EA group, patients initially received EA treatment 30                                                            min
+Chinese Clinical Trial Registr y (Registration No. ChiCTR2300077984).                         before anesthetic induction at Neiguan (PC6) and Gongsun (SP4)
+Written informed consent was obtained from each patient enrolled.                             acupoints on the surgical side of the patient. This treatment lasted
+The work has been reported per the CONSORT criteria.                                          until the end of the surger y and was repeated for 30                                min at the 24th
+                                                                                              hour after the surgery. Sterilized and disposable needles (size
+                                                                                              0.25                                            ×              25                        mm, Suzhou Medical Supplies Factory Co., Ltd., China)
+2.2 Participants                                                                              were inserted to a depth of 3–5                                                                      mm at Neiguan (PC6) and Gongsun
+                                                                                              (SP4) acupoints on the surgical side of the patient. The needles were
+     Inclusion criteria were: ASA (American Society of                                        carefully manipulated until a de qi sensation (most commonly
+Anesthesiologists) physical status 1 to 3, single-port thoracoscopic                          fullness, numbness, and soreness) was experienced by the patient.
+lung cancer surger y ; age between 20 and 80                                                               years old; volunteered to Then, the needles were connected to an EA stimulator (SDZ-II,
+participate in this trial. Exclusion criteria included any cardiac,                           Suzhou Medical Supplies Factor y Co., Ltd., China). The stimulation
+pulmonary, hepatic or renal dysfunction; pre-existed cardiac                                  was performed with a frequency of 2/100                                                                                          Hz and at the maximum
+                                                                                              current the patient can tolerate, usually between 8 and 12                                                              mA. In the
+                                                                                              control group, needles were inserted to the same depth at non-specific
+Abbreviations: SVT, Supraventricular tachycardia; EA, Electroacupuncture; ASA,                acupoints near PC6 and SP4. The acupuncturist then used the same
+American Society of Anesthesiologists; REM, Rapid eye movement; NREM,                         operation as PC6 and SP4 in the EA group.
+Non-REM sleep; TST, Total sleep time; VAS, Visual analog scores; OLV, One lung                     After sterilizing the skin in the surgical area, the areas were
+ventilation.                                                                                  covered with sterile sheets to ensure blinding of the study. All the EA
+
+
+
+Frontiers in Neurology                                                                    02                                                                          frontiersin.org
+
+=== PDF PAGE 3 ===
+Liu et al.                                                                                                                                                    10.3389/fneur.2025.1580759
+
+
+
+
+treatment and anesthesia induction in both groups were performed                                   β-receptor blockers were used to terminate serious SVT by a thoracic
+by the same qualified anesthesiologist with the patients placed in a                               physician blind to the grouping.
+supine position. The anesthesiologist was specially trained in                                           During the first postoperative night, sleep status was monitored
+acupuncture and had more than 5                                                     years of experience in acupuncture. using Lifelines Trakit TM Sleep (an ambulatory sleep recorder, 7
+Another anesthesiologist blind to the grouping was responsible for the                             Clarendon Court, Over Wallop, Nr. Stockbridge, Hants, UK). An
+subsequent anesthesia management. All the surgeries were performed                                 experienced physician who was unaware of the grouping analyzed the
+by the same surgical team. The surgeons, anesthesiologist, patients,                               sleep condition. Sleep pattern was divided into rapid eye movement
+data collectors, ECG physicians, sleep physicians and statisticians were                           (REM) sleep and non-REM sleep (NREM). NREM sleep was further
+unaware of the groups throughout the study. Group assignments were                                 divided into stage N1, stage N2 and stage N3 sleep.
+not revealed to outcome assessors, and they did not participate in the
+EA treatment.
+                                                                                                   2.7 Study outcomes
+
+2.5 Anesthetic technique                                                                                 The primary outcome of this trial was the incidence of SVT
+                                                                                                   including atrial flutter, atrial fibrillation, atrial tachycardia and
+     On the day of the surgery, noninvasive blood pressure,                                        atrioventricular junctional tachycardia during the first 24                                     h after
+electrocardiography and pulse oximetr y were routinely monitored                                   surger y. Supraventricular ectopic beat and ventricular premature beat
+after patient admission to the operating room. After preoxygenation                                were also documented. Total sleep time (TST), defined as the sum of
+for 5 min, intravenous induction was started with 0.3                              μgkg    −1      time spent in sleep during the first postoperative night (from 18:00
+sufentanil, 1 to 2.5                                  mg            kg−1 propofol and 0.1                                  mg            kg−1 vecuronium to 08:00), time of REM sleep and time of non-REM sleep were
+bromide. Patients were then intubated with a double-lumen tube of                                  recorded as the secondar y outcomes. Awake time was the total time
+appropriate size for one-lung ventilation. Auscultation and fiberoptic                             spent awake between the initial sleep onset and the last sleep end
+bronchoscopy were performed to confirm the correct placement of                                    during the first postoperative night. By dividing TST by the sum of
+the tube. The ventilator parameters were: oxygen flow rate 2                                              L                         min−1, TST and awake time sleep efficiency was calculated. Meanwhile,
+FiO2 60%, VT 6 to 8           mL                                   kg−1, RR 12 times min−1, to maintain a usage of β-receptor blockers and postoperative pain score were
+normal end-tidal carbon dioxide pressure. Remifentanil                                             recorded. Postoperative pain scores were expressed by visual analog
+0.1–0.2   μgkg    −1 min  −1and sevoflurane 1–3% were used in combination                          scores (VAS).
+for anesthesia maintenance. The infusion rate of remifentanil and
+sevoflurane was adjusted to keep bispectral index values between 40
+and 60. The neuromuscular blockade was maintained by the addition                                  2.8 Sample size
+of vecuronium intermittently. Before surgical skin incision, parecoxib
+sodium 50                                                                                                               mg was injected intravenously. At 5                                             min before the end of The primar y outcome of this study was the incidence of POSVT
+the surgery, 0.1       μgkg   −1 sufentanil was administered for analgesia                         during the first 24                                                           h after thoracoscopic surger y. Our previous study
+transition and 0.5% (0.2                                                                                                                                                                                                 mL                                                            kg−1) ropivacaine was infiltrated into the had shown that the incidence of POSVT was 40% in patients
+surgical wound. A patient-controlled intravenous analgesia (PCIA)                                  undergoing non-cardiac thoracic surger y (1). Due to scarce similar
+pump was connected for postoperative analgesia (sufentanil 1.5                           μg/       studies, we    carried out a pilot study before the start of this trial.
+mL, PCIA dose: 3                                                  mL, background dose: 2                                                  mL/h, inter val: 20                                                             min, We found that the incidence of POSVT after thoracoscopic surger y
+and duration: 2 days).                                                                             was reduced to about 11% with EA treatment. Therefore, it was
+     Intraoperative hypotension, defined as more than 20% reduction                                supposed that POSVT would occur in 40% of the control group and
+in systolic blood pressure from the baseline (measured before                                      11% of the EA group. With a two-sided significance level of 5%,
+anesthesia induction) was treated by adequate infusion and                                         power of 80% and drop-out rate of 10%, the minimum number of
+intravenous ephedrine or noradrenaline. Bradycardia (heart rate less                               patients required to detect a significant difference between the two
+than 45                                                                       bpm), was treated with 0.5                                                                              mg atropine intravenously during groups was set at 80 (40 patients in each group).
+the procedure. In addition, hypertension or tachycardia (more than
+20% increase from baseline) was managed by increasing the
+concentration of sevoflurane or the rate of remifentanil infusion and                              2.9 Statistical methods
+intravenous injection of urapidil.
+                                                                                                         Continuous variables were presented as mean (SD) for normal
+                                                                                                   distribution or median (IQR (interquartile range) [range]) for skewed
+2.6 Postoperative period                                                                           distributions. The normality of data was previously tested with
+                                                                                                   Shapiro–Wilk test. Categorical variables were reported as counts
+     Patients were closely monitored in the thoracic surger y ward after                           (percentage). Continuously normally distributed data were compared
+surgery. The ECG with a multichannel 24-h Holter ECG was                                           using independent samples t-test and continuously nonnormally
+continuously monitored during the first 24                                  h postoperatively. An  distributed data using Mann–Whitney U-test. Categorical variables
+experienced physician, who was unaware of the group allocation, was                                were analyzed using χ2 test or Fisher’s exact test. Analyses were
+responsible for analyzing the 24-h Holter results with a DMS ECG                                   performed using SPSS (IBM SPSS Statistics Version 22; SPSS Inc.,
+Holter System (DM Systems Co, Ltd., Beijing, China). SVT including                                 Chicago, IL, United     States). Results were considered statistically
+atrial flutter, atrial fibrillation and other SVT was documented.                                  significant with p values less than 0.05.
+
+
+
+Frontiers in Neurology                                                                         03                                                                              frontiersin.org
+
+=== PDF PAGE 4 ===
+Liu et al.                                                                                                                                       10.3389/fneur.2025.1580759
+
+
+3 Results                                                                                  remifentanil was significantly reduced in the EA group; 1095.9 (362.2)
+                                                                                           vs. 911.1 (233.8) μg, p=     0.01. The incidence of intraoperative hypotension
+     Between December 2023 and July 2024, 132 patients were screened                       in the EA group was significantly lower than in the control group; 15
+for eligibility. 52 (39%) were excluded according to the exclusion                         (38.5%) vs. 6 (15.8%), p=          0.05. No other significant differences were
+criteria, and 80 patients were enrolled in this study. In the EA group, one                obser ved between the groups during anesthesia (Table 2             ).
+patient had an additional incision during thoracoscopic procedure, and                          Postoperative arrhythmia was commonly observed in patients
+another patient had the ECG leads detached during ECG monitoring.                          after thoracoscopic surger y for lung cancer. Compared with the EA
+Therefore, these two patients were withdrawn from the study. In the                        group, the incidence of new-onset SVT was significantly higher in the
+control group, there was also a patient who dropped out of the study due                   control group during the first 24h; 13 (33.3%) vs. 4 (10.5%),               p=   0.02
+to massive intraoperative bleeding and the requirement for ICU deliver y                   (Table   3). There were no significant differences in the incidence of
+postoperatively (Figure  1). Finally, 77 patients finished the study and                   supraventricular ectopic beat and ventricular premature beat between
+were included in the analysis. In all the patients recruited, adverse effects              groups (Table      3 ). A significantly more frequent use of β-blockers
+such as redness, swelling and inflammator y reactions were not obser ved                   during the first 24 postoperative hours was obser ved in the control
+at the acupuncture site.                                                                   group; 11 (28.2%) vs. 3 (7.9%), p=          0.04 (Table 3   ).
+     There were no significant differences between groups in baseline                           There were significant differences in the TST and sleep efficiency
+demographics and patient characteristics (Table              1    ). The dose of           during the first postoperative night between the two groups; 119
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    FIGURE 1
+    Study flow diagram.
+
+
+
+
+
+Frontiers in Neurology                                                                 04                                                                        frontiersin.org
+
+=== PDF PAGE 5 ===
+Liu et al.                                                                                                                                                                    10.3389/fneur.2025.1580759
+
+
+
+
+
+TABLE 1        Baseline demographics and characteristics.
+
+  Characteristic                                  Control group,                             EA group,                   Difference in mean, medians                                        P value
+                                                          n=39                                  n=38                           or proportions (95%CI)
+
+  Age (year)                                             61.3±10.5                             60.3±11.9                               1.02 (−4.06 to 6.01)                                     0.69
+
+  Sex (M/F)                                                 20/19                                 15/23                                0.12 (−0.10 to 0.34)                                     0.41
+
+  Weight (kg)                                            60.2±10.0                             60.4±6.0                               −0.16 (−3.91 to 3.58)                                     0.93
+
+  Height(cm)                                             161.4±7.3                             161.7±7.7                              −0.22(−3.64 to 3.19)                                      0.90
+
+  ASA, n
+
+                                  I                      13 (33.3%)                             8 (21.1%)                              0.12 (−0.07 to 0.32)                                     0.23
+
+                                  II                     22 (56.4%)                            29 (76.3%)                             −0.20 (−0.41 to 0.01)                                     0.07
+
+                                  III                     4 (10.3%)                              1 (2.6)                               0.08 (−0.03 to 0.18)                                     0.18
+
+  History of smoking, n                                  14 (35.9%)                            11 (28.9%)                              0.07 (−0.14 to 0.28)                                     0.52
+
+  Type of surgery, n
+
+                                   Segmentectomy         25 (64.1%)                            22 (57.9%)                              0.06 (−0.16 to 0.28)                                     0.58
+
+                                 Lobectomy               14 (35.9%)                            16 (42.1%)                             −0.06 (−0.28 to 0.16)                                     0.58
+
+                                  SQ-NRS                  2 [1 to 3]                            2 [1 to 3]                                   0 (0 to 0)                                         0.74
+
+Values are mean ± SD or number (proportion) or median [IQR]. EA, electroacupuncture; M/F, Male/Female; SQ-NRS, Sleep Quality Numerical Rating Scale; ASA, American Society of
+Anaesthesiologists; IQR, interquartile range; CI, Confidence Interval.
+
+
+
+TABLE 2        Intraoperative data.
+
+  Intraoperative data                                   Control group                            EA group                     Difference in mean, medians                                     p value
+                                                              (n=39)                               (n=38)                          or proportions (95%CI)
+
+  Duration of surgery (min)                                     153±53                              146±46                                6.87 (−15.54 to 29.28)                                  0.54
+
+  Duration of OLV (min)                                         137±53                              130±45                                6.27 (−16.13 to 28.67)                                  0.58
+
+  Dose of propofol (mg)                                         116±24                              119±14                                −2.54 (−11.32 to 6.25)                                  0.57
+
+  Dose of vecuronium (mg)                                      8 [7 to 8]                           8 [8 to 9]                              0.00 (−1.00 to 0.00)                                  0.07
+
+  Dose of sufentanil (μg)                                      24.1±4.0                             24.0±2.8                                0.02 (−1.56 to 1.61)                                  0.98
+
+  Dose of remifentanil (μg)                                 1095.9±362.2                          911.1±233.8                            184.82 (46.02 to 323.62)                                 0.01
+
+  Blood loss (ml)                                            25 [20 to 30]                        28 [20 to 36]                            −2.50 (−5.00 to 0.00)                                  0.33
+
+  Intraoperative infusion volume (ml)                   1,450 [1,200 to 1,600]               1,350 [1,062 to 1,500]                           100 (−50 to 250)                                    0.14
+
+  Intraoperative hypertension                                   2 (5.1%)                              0 (0%)                                0.05 (−0.02 to 0.12)                                  0.25
+
+  Intraoperative hypotension                                  15 (38.5%)                            6 (15.8%)                                0.23 (0.04 to 0.42)                                  0.05
+
+  Intraoperative tachycardia                                    2 (5.1%)                              0 (0%)                                0.05 (−0.02 to 0.12)                                  0.25
+
+  Intraoperative bradycardia                                   4 (10.3%)                             1 (2.6%)                               0.08 (−0.03 to 0.18)                                  0.37
+
+Values are mean ± SD, number (proportion) or median [IQR]. EA, electroacupuncture; OLV, one lung ventilation; IQR, interquartile range.
+
+(48–193 [10–294]) vs. 209.5 (73.8–261.5 [16–349]), p=                               0.02 and 0.34            −0.64 (−1.05 to −0.23), p<0.001; 0.41 (0.00–0.82),                               p=    0.05. In the
+(0.14–0.57 [0.03–0.95]) vs. 0.60 (0.23–0.79 [0.03–0.95]), p=                                         0.02,   EA group, significant differences of VAS scores were found only at 6                                  h
+respectively. Compared with the EA group, patients in the control                                            and 48                                        h postoperatively, with results of −0.87 (−1.40to −0.34),
+group experienced significantly longer awake time; 225.0 (153.0–316.0                                        p<0.001; 0.71 (0.28–1.14),                p<0.001.
+[17–372]) vs. 134.5 (72.8–248.3 [16–349], p=                                     0.01). The sleep                   Univariate and multivariate logistic regression analyses examined
+duration of stage N1 and stage N2 was significantly longer in the EA                                         the relationship between EA and POSVT (Table     5                              ). In univariate
+group; 95.0 (38.0–123.0 [10–208]) vs. 135 (56.2–177.3 [9–242]),                                              analysis, EA was a protective factor for POSVT (OR 0.24, 95% CI
+p=   0.05 and 28 (12–58 [0–125]) vs. 68.5 (21.0–94.3 [0–139]),                             p=   0.02,        0.07–0.81,        p =         0.02). Other important variables in the univariate
+respectively (Table 4         ).                                                                             analysis included age, duration of surger y, duration of OLV (one lung
+      From 1                                                                   h to 48                                                                          h after surger y, the VAS scores were all comparable ventilation), dose of propofol, dose of sufentanil, dose of remifentanil,
+between the two groups and postoperative pain was well controlled                                            blood loss, ASA classification, types of surger y. After adjusting for age,
+(Figure 2     ). Comparisons at different time points showed that in the                                     duration of surgery, duration of OLV, doses of propofol, dose of
+control group, the VAS scores at 1               h postoperatively differed                                  sufentanil, dose of remifentanil, blood loss, ASA classification, and
+significantly from those at 6                                h, 12                                                                  h, and 48                                                          h postoperatively, with types of surger y, EA remained protective against POSVT (OR 0.18,
+mean differences and 95% CI of −                     1.38 (−1.79 to −0.98), p<0.001;                         95% CI 0.04–0.77, p =         0.02). In contrast, in both univariate and
+
+
+
+Frontiers in Neurology                                                                                  05                                                                                       frontiersin.org
+
+=== PDF PAGE 6 ===
+Liu et al.                                                                                                                                           10.3389/fneur.2025.1580759
+
+
+
+
+
+TABLE 3        Incidence of postoperative arrhythmia.
+
+                                           Control group,                     EA group, (n=38)                          Difference                             P value
+                                                 (n=39)                                                          proportions (95%CI)
+
+ POSVT                                           13 (33.3%)                           4 (10.5%)                        0.18 (0.01 to 0.35)                         0.02
+
+ Segmentectomy                                    8 (32.0%)                            2 (9.1%)                        0.23 (0.01 to 0.45)                         0.12
+
+ Lobectomy                                        5 (35.7%)                           2 (12.5%)                       0.23 (−0.07 to 0.53)                         0.29
+
+ SVEBs                                           23 (59.0%)                           18 (47.4%)                      0.12 (−0.11 to 0.34)                         0.31
+
+ VPBs                                            26 (66.7%)                           17 (44.7%)                       0.22 (0.00 to 0.44)                         0.05
+
+ Use of β-blockers                               11 (28.2%)                            3 (7.9%)                        0.20 (0.04 to 0.37)                         0.04
+
+Values are number (proportion). EA, electroacupuncture; POSVT, postoperative supraventricular tachycardia; SVEB, supraventricular ectopic beat; VPB, ventricular premature beat; CI,
+Confidence Interval.
+
+
+TABLE 4        Sleep stages.
+
+                                               Control group,                   EA group, (n=38)                        Difference in                           P value
+                                                     (n=39)                                                          medians (95%CI)
+
+ TST (min)                                         119 [48 to 193]                  209.5 [73.8 to 261.5]              −90.5 (−109 to −10)                         0.02
+
+ Sleep efficiency                                0.34 [0.14 to 0.57]                 0.60 [0.23 to 0.79]              −0.26 (−0.32 to −0.02)                       0.02
+
+ Awake time (min)                              225.0 [153.0 to 316.0]               134.5 [72.8 to 248.3]                 90.5 (14 to 112)                         0.01
+
+ Stage N1 (min)                                  95.0 [38.0 to 123.0]               135 [56.2 to 177.3]                  −40 (−59 to −1)                           0.05
+
+ Stage N2 (min)                                     28 [12 to 58]                    68.5 [21.0 to 94.3]                −40.5 (−50 to −5)                          0.02
+
+ Stage N3 (min)                                       0 [0 to 0]                         0 [0 to 2]                          0 (0 to 0)                            0.08
+
+ REM (min)                                            0 [0 to 0]                         0 [0 to 0]                          0 (0 to 0)                           >0.99
+
+Values are median IQR [range].
+Values are median [IQR]. EA, electroacupuncture; TST, total sleep time; REM, rapid eye movement sleep; CI, Confidence Interval.
+
+
+multivariate logistic analyses, variables other than EA did not seem to
+significantly affect on POSVT.
+     We performed subgroup analyses to explore the relationship
+between EA and POSVT in different subgroups (Figure     3                     ). These
+subgroups were analyzed based on factors such as age, gender, ASA
+classification, smoking history, duration of surgery, and types of
+surger y to reveal significant associations between several factors and
+POSVT. However, these factors did not show significant associations
+with outcomes. No interactions were obser ved between subgroups.
+For detailed results of the subgroup analysis, please refer to Figure 3                .
+
+
+
+
+                                                                                                   FIGURE 2
+4 Discussion                                                                                       VAS scores from 1 to 48h postoperatively in the EA group and the
+                                                                                                   control group. No significant difference between groups.
+     In this study, we investigated the effect of EA treatment on the
+incidence of supraventricular arrhythmia and sleep disorders in
+patients undergoing thoracoscopic surger y for lung cancer. The main                          autonomic ner vous system imbalance, oxidative activation, inadequate
+results indicated that peri-operative EA treatment was effectively                            pain control and postoperative inflammatory response (14–17).
+reduced the incidence of POSVT and improved the sleep quality. It                             Autonomic imbalance has been shown as the most frequent trigger of
+was also beneficial for maintaining intraoperative hemodynamic                                POSVT (18, 19). Our two previous studies showed that reducing in
+stability. Last not the least, the minimally invasive EA treatment                            the tone of cardiac autonomic sympathetic ner ves may help decrease
+appears to be safe and well tolerated in all the patients recruited. To                       the occurrence of POSVT (3, 20).
+the best of our knowledge, this is the first study to explore the effect                           In 1958, traditional acupuncture was first used to complement the
+of EA treatment on the prevention of SVT and sleep disorders in                               anesthetic. Acupuncture has been shown to enhance the rehabilitation
+patients undergoing thoracoscopic surger y.                                                   of patients perioperatively, and it has also developed rapidly (21, 22).
+     SVT has been recognized as a common complication after                                        In the present study, we found the beneficial effect of EA treatment
+thoracoscopic surger y. It is associated with hemodynamic instability,                        in reducing SVT in patients after thoracoscopic surgery for lung
+prolonged hospital stay and increased risk of perioperative mortality                         cancer. The results were consistent with the study by Lomuscio et al.
+(12, 13). Potential factors associated with POSVT included cardiac                            (23) Lomuscio et al. have proved that acupuncture helps decrease the
+
+
+
+Frontiers in Neurology                                                                    06                                                                          frontiersin.org
+
+=== PDF PAGE 7 ===
+Liu et al.                                                                                                                                       10.3389/fneur.2025.1580759
+
+
+
+
+
+TABLE 5        Univariate and multivariate analysis of factors associated with POSVT.
+
+ Variable                                               Univariate                                                                 Multivariate
+                                   OR                     95% CI                        P                       OR                     95% CI                       P
+ Intervention
+
+ Simulated EA                                             Reference                                                                    Reference
+
+ EA                                 0.24                  0.07 to 0.81                 0.02                     0.18                  0.04 to 0.77                 0.02
+
+ Age                                1.05                  0.99 to 1.11                 0.10                     1.03                  0.96 to 1.11                 0.44
+
+ Duration of surgery                1.00                  1.00 to 1.02                 0.23                     1.02                  0.90 to 1.15                 0.80
+
+ Duration of OLV                    1.00                  1.00 to 1.02                 0.22                     1.02                  0.90 to 1.15                 0.79
+
+ Dose of propofol                   1.00                  0.97 to 1.02                 0.77                     1.00                  0.95 to 1.06                 0.84
+
+ Dose of sufentanil                 1.02                  0.88 to 1.19                 0.79                     0.99                  0.72 to 1.35                 0.93
+
+ Dose of remifentanil               1.00                  0.99 to 1.00                 0.37                     1.00                  0.99 to 1.00                 0.28
+
+ Blood loss                         0.99                  0.95 to 1.03                 0.64                     0.94                  0.87 to 1.01                 0.91
+
+ ASA
+
+ I                                                        Reference                                                                    Reference
+
+ II                                 1.85                  0.46 to 7.36                 0.39                     4.44                  0.64 to 30.62                0.13
+
+ III                                 4                   0.46 to 34.92                 0.21                     7.61                 0.40 to 145.30                0.18
+ Types of surgery
+
+ Segmentectomy                                            Reference                                                                    Reference
+
+ Lobectomy                          1.54                  0.52 to 4.56                 0.44                     1.17                  0.30 to 4.68                 0.82
+
+SVT, supraventricular tachycardia; CI, confidence interval; EA, electroacupuncture; ASA, American Society of Anaesthesiologists; OLV, One Lung Ventilation.
+
+
+recurrences of atrial fibrillation after electrical cardioversion and the                  treated due to the side effects of current medication treatment (31).
+antiarrhythmic efficacy of acupuncture was similar to that of                              Our present study demonstrated the significant therapeutic effects of
+amiodarone. In another study, the findings indicated that acupuncture                      EA on patients with postoperative insomnia. This is consistent with
+may exert an antiarrhythmic effect in patients with both persistent and                    the results of another study on the effect of acupuncture on insomnia
+paroxysmal atrial fibrillation (24). The antiarrhythmic effect of                          in breast cancer patients (32). The study showed that acupuncture
+acupuncture may be  exerted by modulating the cardiac autonomic                            could be  considered as an effective management of chemotherapy-
+ner vous system (25). Acupuncture has been widely proven effective in                      associated insomnia in breast cancer patients. Another study by Zhang
+reducing the incidence of atrial fibrillation, both in basic research and                  et al. also investigated the clinical efficacy of acupuncture and found
+clinical trials (25, 26). An experiment in a canine model suggested that                   that acupuncture can significantly improve insomnia (33). The
+acupuncture decreased cardiac sympathetic activity and suppressed                          mechanisms of EA in treating insomnia are still under investigation.
+atrial electrical remodeling by decreasing the levels of inflammator y                     Clinical studies indicated that acupuncture may improve sleep quality
+cytokines in the atrium (27). In the present study, we chose Neiguan                       through multiple pathways. Among them, autonomic ner vous system
+(PC6) and Gongsun (SP4) acupoints because they are related to the                          plays a pivotal role in sleep physiology. Insomnia is usually
+regulation of the cardiac autonomic ner vous system in the theor y of                      accompanied by autonomic ner vous dysfunction. Acupuncture may
+Traditional Chinese Medicine. While non-specific acupoints are not                         improve sleep quality by regulating the autonomic nervous system
+thought to have similar specific effects. Studies have noted that EA                       (34). Acupuncture can also regulate neurotransmitters. It may
+treatment may attenuate sympathoexcitator y cardiovascular responses                       promote sleep quality by lowering cortisol levels in the stress response
+by promoting the secretion of brain inhibitory neurotransmitters,                          and increasing the level of 5-HT, a key inhibitor y neurotransmitter
+including opioids and gamma-aminobutyric acid (28). Moreover, it                           involved in the regulation of the sleep cycle (35). Another mechanism
+has also been reported that EA treatment might affect the firing rate                      of acupuncture in treating sleep disturbances is its anti-inflammator y
+of the amygdala nucleus which exerts a modulator y function on the                         effect. Studies have reported that EA treatment might alleviate the
+cardiac autonomic ner vous system (29). Autonomic imbalance has                            production of inflammator y cytokines, including IL-4 and IL-10 (36,
+been shown as the most common cause of POSVT (19). This may                                37). Inflammation is supposed to be   associated with various sleep
+explain the mechanism by which EA treatment reduces the incidence                          disorders (38). Therefore, EA treatment may promote sleep quality by
+of POSVT.                                                                                  reducing inflammator y cytokines.
+     In addition, our results indicated that most patients experienced                           Intraoperative hypotension is prevalent among patients
+severe insomnia characterized by decreased TST and NREM sleep                              undergoing thoracic surgery. We    observed that the incidence of
+during the first postoperative night after thoracoscopic surgery for                       hypotension was as high as 38% during surger y, which may be due to
+lung cancer. Postoperative sleep disorders are frequently obser ved in                     the relatively advanced age of patients (more than 60                                            years old).
+patients undergoing major surger y (30). Despite the high prevalence,                      We       found that EA treatment can reduce the incidence of
+insomnia was often not given enough attention and was not adequately                       intraoperative hypotension. The hemodynamics of patients in the EA
+
+
+
+Frontiers in Neurology                                                                 07                                                                         frontiersin.org
+
+=== PDF PAGE 8 ===
+Liu et al.                                                                                                                                10.3389/fneur.2025.1580759
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    FIGURE 3
+    Subgroup analyses of the association between the EA and control group.
+
+
+
+
+group seems to be more stable. This effect of EA treatment in patients                 minimizes the differences in patient management between groups. It
+undergoing thoracic surger y is rarely investigated and reported. The                  was reported that stimulation of acupoints could evoke antiarrhythmic
+cardiac autonomic nervous system is suppressed during general                          and anti-inflammator y effect, while non-acupoint stimulation failed
+anesthesia, and patients are predispositional to hypotension. EA may                   to exert the same effect (47).
+reduce the incidence of hypotension by regulation of an imbalanced
+autonomic nervous system (39). At present, the most common
+treatments for SVT after thoracoscopic surgery mainly include                          4.1 Study limitations
+β-blockers, calcium channel blockers, and amiodarone. However, all
+of these medications are associated with hypotension and                                    Our study also has a few limitations. Firstly, this present study
+bradycardia, with occurrences as high as 49 and 25%, respectively                      investigated the effect of EA treatment on the incidence of
+(40,  41). They are usually contraindicated in patients with                           postoperative supraventricular arrhythmia and sleep quality in
+hemodynamic instability. Due to the hemodynamic advantages, EA                         patients after thoracic surgery. However, the relationship between
+may be a promising and feasible method to prevent POSVT during                         postoperative new-onset arrhythmias and sleep disturbances cannot
+thoracic surger y.                                                                     be  determined. Secondly, the sample size of this study is relatively
+    Our data showed that EA treatment reduced intraoperative                           small, and is a single-center clinical study. Our center is a tertiary
+remifentanil consumption by almost 17%, indicating an analgesic                        hospital. The patients who come for surger y are relatively older and
+effect of EA. Nevertheless, postoperative pain scores were similar in                  have more complex conditions and more comorbidities compared
+both groups. Although there is a study with similar results to ours exits              with the patients in lower-level hospitals. This may limit the
+(42), we cannot rule out the cause of heterogeneity. Several literatures               generalizability of the results to other populations or settings and
+have reported the analgesic effect of EA treatment and the mechanism                   thus affect the study’s external validity. A larger multicenter clinical
+may be related to endogenous opioid system activation (43–46).                         trial with a longer follow-up period to investigate the sustained effects
+    In our study, the control group received EA treatment at                           of EA treatment on postoperative arrhythmias and sleep disturbances
+non-acupoints as a reasonable placebo. Non-acupoints stimulation                       would be a valuable extension of this study.
+
+
+
+Frontiers in Neurology                                                             08                                                                    frontiersin.org
+
+=== PDF PAGE 9 ===
+Liu et al.                                                                                                                                             10.3389/fneur.2025.1580759
+
+
+5 Conclusion                                                                                   Resources, Super vision, Writing – original draft, Writing – review &
+                                                                                               editing.
+     In conclusion, POSVT and sleep disturbances are commonly
+observed in patients undergoing thoracoscopic surgery for lung
+cancer. EA treatment as a minimally invasive procedure appears to                              Funding
+be    effective in reducing the incidence of POSVT and improving
+postoperative sleep quality.                                                                        The author(s) declare that financial support was received for the
+                                                                                               research and/or publication of this article. This work was funded by
+                                                                                               National Natural Science Foundation of China (82374451).
+Data availability statement
+
+     The original contributions presented in the study are included in                         Acknowledgments
+the article/supplementar y material, further inquiries can be directed
+to the corresponding authors.                                                                       We gratefully thank the financial support from National Natural
+                                                                                               Science Foundation of China (82374451) and all the patients in our study.
+Ethics statement                                                                               Conflict of interest
+
+     The studies involving humans were approved by the Ethics
+Committee of First Affiliated Hospital of Guangzhou University of                                   The authors declare that the research was conducted in the
+Chinese Medicine. The studies were conducted in accordance with                                absence of any commercial or financial relationships that could
+the local legislation and institutional requirements. The                                      be construed as a potential conflict of interest.
+participants provided their written informed consent to participate
+in this study.
+                                                                                               Generative AI statement
+Author contributions                                                                                The authors declare that no Gen AI was used in the creation of
+                                                                                               this manuscript.
+     JL: Data curation, Formal analysis, Investigation, Methodology,
+Project administration, Writing – original draft, Writing – review &
+editing. LD: Data curation, Investigation, Project administration,                             Publisher’s note
+Writing   – original draft, Writing   – review & editing. WM: Data
+curation, Investigation, Writing – original draft. JW: Data curation,                               All claims expressed in this article are solely those of the authors
+Investigation, Writing     – original draft. XS: Conceptualization,                            and do not necessarily represent those of their affiliated organizations,
+Formal analysis, Writing – review & editing. YC: Conceptualization,                            or those of the publisher, the editors and the reviewers. Any product
+Formal analysis, Investigation, Writing – original draft, Writing –                            that may be evaluated in this article, or claim that may be made by its
+review & editing. CW: Conceptualization, Funding acquisition,                                  manufacturer, is not guaranteed or endorsed by the publisher.
+
+References
+
+  1.    Liu J, Huang Y, Ma W, Liu H, Cao Y, Wu C. Prediction, prevention and management          7.    Yin J, Yang M, Yu S, Fu H, Huang H, Yang B, et al. Effect of acupuncture at Neiguan
+of new onset perioperative atrial fibrillation and flutter in patients undergoing non-         point combined with amiodarone therapy on early recurrence after pulmonary vein
+cardiac thoracic surgery. Minerva Anestesiol. (2022) 88:490–8. doi:                            electrical isolation in patients with persistent atrial fibrillation. J Cardiovasc
+10.23736/s0375-9393.21.16034-1                                                                 Electrophysiol. (2019) 30:910–7. doi: 10.1111/jce.13924
+  2.  Park BJ, Zhang H, Rusch VW, Amar D. Video-assisted thoracic surgery does not               8.  Feingold KL, Moskowitz JT, Elenbaas C, Andrei AC, Victorson D, Kruse J, et al.
+reduce the incidence of postoperative atrial fibrillation after pulmonary lobectomy. J         Acupuncture after valve surgery is feasible and shows promise in reducing postoperative
+Thorac Cardiovasc Surg. (2007) 133:775–9. doi: 10.1016/j.jtcvs.2006.09.022                     atrial fibrillation: the ACU-heart pilot trial. JTCVS open. (2023) 16:321–32. doi:
+  3.  Wu C-N, Wu X-H, Yu D-N, Ma W-H, Shen C-H, Cao Y. A single-dose of stellate               10.1016/j.xjon.2023.05.010
+ganglion block for the prevention of postoperative dysrhythmias in patients undergoing           9. Song B, Luo M, Zhu J. The efficacy of acupuncture in postoperative sleep
+thoracoscopic surgery for cancer. Eur J Anaesthesiol. (2020) 37:323–31. doi:                   quality: a literature review. Sleep Breath. (2021) 25:571–7. doi:
+10.1097/eja.0000000000001137                                                                   10.1007/s11325-020-02187-x
+  4. Diallo EH, Brouillard P, Raymond JM, Liberman M, Duceppe E, Potter BJ.                      10.                                 Ou-Yang CL, Ma LB, Wu XD, Ma YL, Liu YH, Tong L, et al. Association of sleep
+Predictors and impact of postoperative atrial fibrillation following thoracic surgery: a       quality on the night of operative day with postoperative delirium in elderly patients: a
+state-of-the-art review. Anaesthesia. (2023) 78:491–500. doi: 10.1111/anae.15957               prospective cohort study. Eur J Anaesthesiol. (2024) 41:226–33. doi:
+  5. Takemura N, Cheung DST, Fong DYT, Lee AWM, Lam TC, Ho JC, et al.                          10.1097/eja.0000000000001952
+Effectiveness of aerobic exercise and tai chi interventions on sleep quality in patients         11. Zhou K, Fang J, Wang X, Wang Y, Hong Y, Liu J, et al. Characterization of de qi
+with advanced lung cancer: a randomized clinical trial. JAMA Oncol. (2024) 10:176–84.          with electroacupuncture at acupoints with different properties. J Altern Complement
+doi: 10.1001/jamaoncol.2023.5248                                                               Med. (2011) 17:1007–13. doi: 10.1089/acm.2010.0652
+  6.  Li Y, Song J, Wu B, Wang X, Han L, Han Z. Acupuncture versus pharmacological               12. LaPar DJ, Speir AM, Crosby IK, Fonner E Jr, Brown M, Rich JB, et al.
+conversation in treatment of atrial fibrillation in a randomized controlled trial: a           Postoperative atrial fibrillation significantly increases mortality, hospital
+systemic review and meta-analysis. Eur J Med Res. (2022) 27:110. doi:                          readmission, and hospital costs.        Ann Thorac Surg. (2014) 98:527–33. doi:
+10.1186/s40001-022-00738-4                                                                     10.1016/j.athoracsur.2014.03.039
+
+
+
+
+
+Frontiers in Neurology                                                                     09                                                                           frontiersin.org
+
+=== PDF PAGE 10 ===
+Liu et al.                                                                                                                                                                            10.3389/fneur.2025.1580759
+
+
+
+
+
+  13.                                     Segar MW, Marzec A, Razavi M, Mullins K, Molina-Razavi JE, Chatterjee S, et al. 31. Wang Z, Huang Y, Wang S, Chen J, Meiduo G, Jin M, et al. A case report of fatal
+Incidence, risk score performance, and in-hospital outcomes of postoperative atrial                               familial insomnia with cerebrospinal fluid leukocytosis during the COVID-19 epidemic
+fibrillation after cardiac surgery. Tex Heart Inst J. (2023) 50:e238221. doi:                                     and review of the literature. Prion. (2024) 18:1–10. doi: 10.1080/19336896.2023.2298520
+10.14503/thij-23-8221                                                                                                32. Zhang J, Qin Z, So TH, Chang TY, Yang S, Chen H, et al. Acupuncture for
+  14. de Oliveira RM, Tenório SB, Tanaka PP, Precoma D. Control of pain through                                   chemotherapy-associated insomnia in breast cancer patients: an assessor-participant
+epidural block and incidence of cardiac dysrhythmias in postoperative period of thoracic                          blinded, randomized, sham-controlled trial. Breast Cancer Res. (2023) 25:49. doi:
+and major abdominal surgical procedures: a comparative study. Rev Bras Anestesiol.                                10.1186/s13058-023-01645-0
+(2012) 62:10–8. doi: 10.1016/s0034-7094(12)70098-3                                                                   33. Zhang L, Tang Y, Hui R, Zheng H, Deng Y, Shi Y, et al. The effects of active
+  15.                                    Frendl G, Sodickson AC, Chung MK, Waldo AL, Gersh BJ, Tisdale JE, et al. 2014 acupuncture and placebo acupuncture on insomnia patients: a randomized controlled
+AATS guidelines for the prevention and management of perioperative atrial fibrillation                            trial. Psychol Health Med. (2020) 25:1201–15. doi: 10.1080/13548506.2020.1738015
+and flutter for thoracic surgical procedures. Executive summary. J Thorac Cardiovasc                                 34.                                     Akita T, Kurono Y, Yamada A, Hayano J, Minagawa M. Effects of acupuncture on
+Surg. (2014) 148:772–91. doi: 10.1016/j.jtcvs.2014.06.037                                                         autonomic nervous functions during sleep: comparison with nonacupuncture site
+  16.                                      Zhu Y, Jing W, Lv P, Zhu Y, Liu Z. Clinical factors associated with arrhythmia and stimulation using a crossover design. J Integr Complement Med. (2022) 28:791–8. doi:
+short-term prognosis following mitral valve repair: a retrospective cohort study.                                 10.1089/jicm.2022.0526
+Cardiovasc Diagn Ther. (2022) 12:114–22. doi: 10.21037/cdt-21-400                                                    35. Feng XX, Huang KY, Chen L, Zhou K. Clinical efficacy of the shallow puncture
+  17. Shen J, Hao C, Yuan S, Chen W, Tong T, Chen Y, et al. Acupuncture alleviates                                and more-twirling acupuncture method in migraine treatment and its effects on serum
+CUMS-induced depression-like behaviors of rats by regulating oxidative stress,                                    5-HT and β-EP levels. Technol Health Care. (2023) 31:533–40. doi: 10.3233/thc-23604
+neuroinflammation and ferroptosis. Brain Res. (2024) 1826:148715. doi:                                               36. Wang Z, Yi T, Long M, Gao Y, Cao C, Huang C, et al. Electro-acupuncture at
+10.1016/j.brainres.2023.148715                                                                                    Zusanli Acupoint (ST36) suppresses inflammation in allergic contact dermatitis via
+  18. Tan AY, Zhou S, Ogawa M, Song J, Chu M, Li H, et al. Neural mechanisms of                                   triggering local IL-10 production and inhibiting p 38 MAPK activation. Inflammation                         .
+paroxysmal atrial fibrillation and paroxysmal atrial tachycardia in ambulatory canines.                           (2017) 40:1351–64. doi: 10.1007/s10753-017-0578-5
+Circulation. (2008) 118:916–25. doi: 10.1161/circulationaha.108.776203                                               37. Liu H, Chen Y, Xu S, Chen H, Qiu F, Liang CL, et al. Electroacupuncture and
+  19.                                        Tsai WC, Hung TC, Kusayama T, Han S, Fishbein MC, Chen LS, et al. Autonomic methotrexate cooperate to ameliorate psoriasiform skin inflammation by regulating the
+modulation of atrial fibrillation. JACC Basic Transl Sci. (2023) 8:1398–410. doi:                                 immune balance of Th17/Treg. Int Immunopharmacol. (2024) 140:112702. doi:
+10.1016/j.jacbts.2023.03.019                                                                                      10.1016/j.intimp.2024.112702
+  20. Wu C, Ma W, Cen Q, Cai Q, Wang J, Cao Y. A comparison of the incidence of                                      38. Zhai S, Li T, Zhang D, Qu Y, Xie Y, Wu X, et al. Insomnia trajectories predict
+supraventricular arrhythmias between thoracic paravertebral and intercostal nerve                                 chronic inflammation over 2                                        years at the transition to adulthood. J Sleep Res. (2023)
+blocks in patients undergoing thoracoscopic surgery. Eur J Anaesthesiol. (2018)                                   32:e13906. doi: 10.1111/jsr.13906
+35:792–8. doi: 10.1097/eja.0000000000000837                                                                          39. Yuan W, Wang Q. Perioperative acupuncture medicine. Chin Med J. (2019)
+  21. Wiles MD, Mamdani J, Pullman M, Andrzejowski JC. A randomised controlled                                    132:707–15. doi: 10.1097/cm9.0000000000000123
+trial examining the effect of acupuncture at the EX-HN3 (Yintang) point on pre-                                      40. Saran T, Perkins GD, Javed MA, Annam V, Leong L, Gao F, et al. Does the
+operative anxiety levels in neurosurgical patients. Anaesthesia. (2017) 72:335–42. doi:                           prophylactic administration of magnesium sulphate to patients undergoing thoracotomy
+10.1111/anae.13785                                                                                                prevent postoperative supraventricular arrhythmias? A randomized controlled trial. Br
+  22. Lu Z, Dong H, Wang Q, Xiong L. Perioperative acupuncture modulation: more                                   J Anaesth. (2011) 106:785–91. doi: 10.1093/bja/aer096
+than anaesthesia. Br J Anaesth. (2015) 115:183–93. doi: 10.1093/bja/aev227                                           41. Bayliff CD, Massel DR, Inculet RI, Malthaner RA, Quinton SD, Powell FS, et al.
+  23. Lomuscio A, Belletti S, Battezzati PM, Lombardi F. Efficacy of acupuncture in                               Propranolol for the prevention of postoperative arrhythmias in general thoracic surgery.
+preventing atrial fibrillation recurrences after electrical cardioversion. J Cardiovasc                           Ann Thorac Surg. (1999) 67:182–6. doi: 10.1016/s0003-4975(98)01226-0
+Electrophysiol. (2011) 22:241–7. doi: 10.1111/j.1540-8167.2010.01878.x                                               42. Chen KB, Huang Y, Jin XL, Chen GF. Electroacupuncture or transcutaneous
+  24. Lombardi F, Belletti S, Battezzati PM, Lomuscio A. Acupuncture for paroxysmal                               electroacupuncture for postoperative ileus after abdominal surgery : a systematic review
+and persistent atrial fibrillation: an effective non-pharmacological tool? World J Cardiol.                       and meta-analysis. Int J Surg. (2019) 70:93–101. doi: 10.1016/j.ijsu.2019.08.034
+(2012) 4:60–5. doi: 10.4330/wjc.v4.i3.60
+  25. Lin Y, Wang X, Li XB, Wu BQ, Zhang ZH, Guo WH, et al. Acupuncture for                                          43. Huang S, Peng W, Tian X, Liang H, Jia Z, Lo T, et al. Effects of transcutaneous
+persistent atrial fibrillation after catheter ablation: study protocol for a pilot randomized                     electrical acupoint stimulation at different frequencies on perioperative anesthetic
+controlled trial. Tr  i  a l  s. (2021) 22:35. doi: 10.1186/s13063-020-04967-y                                    dosage, recovery, complications, and prognosis in video-assisted thoracic surgical
+                                                                                                                  lobectomy: a randomized, double-blinded, placebo-controlled trial. J Anesth. (2017)
+  26. Witt CM, Bolona L, Kinney MO, Moir C, Ackerman MJ, Kapa S, et al. Denervation                               31:58–65. doi: 10.1007/s00540-015-2057-1
+of the extrinsic cardiac sympathetic nervous system as a treatment modality for                                      44.                                      Li Y, Ma Y, Guo W, Ge W, Cheng Y, Jin C, et al. Effect of transcutaneous electrical
+arrhythmia. Europace. (2017) 19:1075–83. doi: 10.1093/europace/eux011                                             acupoint stimulation on postoperative pain in pediatric orthopedic surgery with the
+  27. Zhao Q, Zhang S, Zhao H, Zhang S, Dai Z, Qian Y, et al. Median nerve stimulation                            enhanced recovery after surgery protocol: a prospective, randomized controlled trial.
+prevents atrial electrical remodelling and inflammation in a canine model with rapid                              Anaesth Crit Care Pain Med. (2023) 42:101273. doi: 10.1016/j.accpm.2023.101273
+atrial pacing. EP Europace. (2018) 20:712–8. doi: 10.1093/europace/eux003                                            45.    Wang D, Shi H, Yang Z, Liu W, Qi L, Dong C, et al. Efficacy and safety of transcutaneous
+  28.                                      Li J, Li J, Chen Z, Liang F, Wu S, Wang H. The influence of PC6 on cardiovascular electrical acupoint stimulation for postoperative pain: a meta-analysis of randomized
+disorders: a review of central neural mechanisms. Acupunc t Med. (2012) 30:47–50. doi:                            controlled trials. Pain Res Manag. (2022):2022: 7570533. doi: 10.1155/2022/7570533
+10.1136/acupmed-2011-010060                                                                                          46. Feng XZ, Ye TS, Wang ZD, Chen XF, Cong WJ, Chen Y, et al. Transcutaneous
+  29.                                     Lai Z, Cao Q, Chen S, Han Z. Role of amygdaloid nucleus in the correlation between acupoint electrical stimulation pain management after surgical abortion: a cohort study.
+the heart and the acupoint neiguan in rabbits. J Trad Chinese Med. (1991) 11:128–38.                              Int J Surg. (2016) 30:104–8. doi: 10.1016/j.ijsu.2016.04.042
+  30. Yan S, Wang Y, Yu L, Xia W, Xue F, Yu Y, et al. Stellate ganglion block alleviates                             47.                                     Yang M, Yang J, Zeng F, Liu P, Lai Z, Deng S, et al. Electroacupuncture stimulation at
+postoperative sleep disturbance in patients undergoing radical surgery for gastrointestinal                       sub-specific acupoint and non-acupoint induced distinct brain glucose metabolism change
+malignancies. J Clin Sleep Med. (2023) 19:1633–42. doi: 10.5664/jcsm.10632                                        in migraineurs: a PET-CT study. J Transl Med. (2014) 12:351. doi: 10.1186/s12967-014-0351-6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Frontiers in Neurology                                                                                       10                                                                                           frontiersin.org

@@ -1,0 +1,626 @@
+=== PDF PAGE 1 ===
+Clinical Interventions in Aging                                                                                                            Dove      press
+
+                                                                                                                  open access to scientific and medical research
+
+
+   Open Access Full Text Article                                                                                     ORIGINAL              RESEARCH
+Effects of Transcutaneous Electrical Acupoint
+Stimulation on Postoperative Cognitive Decline in
+Elderly Patients: A Pilot Study
+
+
+
+
+
+
+Tianlin    Liu1,2                                Background: Postoperative cognitive decline (POCD) in the old ages seriously delays the
+Chunping        Yin1                             rapid recovery. Here, we aimed to investigate the effects of transcutaneous electrical acupoint
+Yanan     Li1                                    stimulation (TEAS) against POCD in elderly patients undergoing laparoscopic radical colon
+Fang    Gao1                                     cancer surgery, as well as the potential mechanism.
+Lili Yu1,2                                       Methods: A prospective, single-center, parallel-group, randomized trial was designed. A total
+Zhigang      Wang1                               of 100 patients (age ≥65 years) undergoing laparoscopic radical resection of colon cancer were
+                        1                        involved and randomly divided into TEAS (Group T) and control (Group C) groups. The patients
+Qiujun      Wang                                 in Group T were performed with percutaneous acupoint electrical stimulation in bilateral Hegu,
+
+1Department of Anesthesiology, The               Neiguan and Zusanli points from 30 minutes before anesthesia induction to the end of surgery.
+Third Hospital of Hebei Medical                  A  Z-score based on Mini-Mental State Exam (MMSE) was used to assess the incidence of
+University, Shijiazhuang City, Hebei,
+People’s Republic of China; 2Department          POCD. The levels of serum IL-6, hs-CRP, CGRP at 0 min before TEAS (T0), 1 h after beginning
+of Anesthesiology, Cangzhou Central              of surgery (T1) and the end of surgery (T2) were evaluated.
+Hospital, Cangzhou, Hebei, People’s              Results: Our data showed that the cumulative duration of POCD on postoperative day 2 and
+Republic of China
+                                                 3 in Group T was significantly decreased compared to Group C (P < 0.05). Compared with
+                                                 T0, the levels of serum IL-6, hs-CRP, and CGRP in both Group T and C were statistically
+                                                 elevated   at T1 and T2      (P <   0.05).  Moreover,    the levels of serum IL-6        and  hs-CRP were
+                                                 decreased, but the level of CGRP was increased in Group T compared to Group C at T1 and
+                                                 T2 (P < 0.05).
+                                                 Conclusion:      TEAS is associated with         a  lower   cumulative    duration   of  POCD     in  elderly
+                                                 patients undergoing laparoscopic radical colon cancer surgery, which may be related to the
+                                                 regulation of inflammatory factors and neuropeptides interacted with gut–brain axis.
+                                                 Keywords: cognitive decline, gut–brain axis, transcutaneous electrical acupoint stimulation,
+                                                 colon cancer, elder
+
+
+                                                 Introduction
+                                                 Postoperative cognitive decline (POCD) is usually defined as a significant alteration
+                                                 of cognitive     function     after  anesthesia and       surgery. As      one of    the   common       post-
+                                                 operative     complications       in   elderly    patients,    POCD      seriously     affects    the  rapid
+                                                 recovery     after   surgery.    In   addition,    it  was    reported    that   POCD       also   prolongs
+                                                 hospital    stays   and    increases     the   long-term     mortality     in   the   population     of   old
+                                                 ages.1   However,      the   mechanism of        POCD      remains     unclear. Until      now, there     are
+                                                 few efficient precautions and interventions against POCD.
+Correspondence: Qiujun Wang                          It has been suggested that the inflammatory response to anesthesia and surgery
+Tel +86 311 8860 2072                                                                                            2–5
+Email wangqiujunsy@163.com                       may be     involved     into   the incidence      of POCD.           Note that     intestinal microbiota
+
+
+                                                 Clinical Interventions in Aging 2021:16 757–765                                                              757
+                                                              © 2021 Liu et al. This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.php
+                                                              and incorporate the Creative Commons Attribution – Non Commercial (unported, v3.0) License (http://creativecommons.org/licenses/by-nc/3.0/). By accessing the work
+                                                 you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For
+                                                 permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).
+
+=== PDF PAGE 2 ===
+Liu et al                                                                                                                                                               Dovepress
+
+perturbation-induced inflammatory response after surgical                        ChiCTR2000040397).             Written     informed      consents    of   the
+trauma has been revealed to play an important role in the                        study were collected from all the candidate subjects before
+pathogenesis      and   progression      of   cognitive    dysfunction.6         randomization. Patients who underwent laparoscopic radi-
+The gut–brain axis, which is formed by the central nervous                       cal resection of colon cancer in Cangzhou Central Hospital
+system,    the    enteric    innervation      that   includes     extrinsic      from    December       1st,   2020    to  February     15th,   2021    were
+fibers   of  the   autonomous        nervous     system     and   intrinsic      enrolled    into this    trial. The inclusion       criteria for    patients
+neurons of the enteric nervous system, the HPA-axis                     and      who     underwent      surgery     were    as  follows:    (1)   aged    ≥65
+the intestinal microbiota, may provide a fresh perspective                       years;    and    (2)  ASA      grade    I–II.  The    exclusion      criteria
+between inflammatory response and subsequent cognitive                           included     (1)  history    of  neurological      and   psychiatric     dis-
+decline.7   Moreover,       the  changes     of  intestinal    microbiota        orders; (2) use of anti-inflammatory drugs, glucocorticoids
+via  gut–brain     axis   are   likely   to  be   associated     with    the     or other hormonal drugs, alcohol or drug dependence; (3)
+pathologies     of   Alzheimer’s       disease.8    In  patients    under-       severe    cardiac, pulmonary,         hepatic, or     renal  dysfunction;
+going gastroenteric surgeries,           increased    levels   of inflam-        (4)   difficulty   talking,    aural   or  visual    disorders;    (5)  skin
+matory factors released from injured intestinal tissue after                     damage located in the cutaneous acupoints performed; (6)
+anesthesia    and   surgery     may    be  related to POCD.9          Thus,      the Mini-Mental State Exam (MMSE) ≤23.
+the inhibition of inflammatory response via gut–brain axis
+may become a potential therapy for cognitive dysfunction.                        TEAS
+    As   a  traditional Chinese medicine treatment, acupunc-                     According to a        random number          table, patients were        ran-
+ture  has attached great importance to             prevent occurrences           domly     divided into     two groups: control group (Group C)
+and development of diseases.10 Compared with acupuncture                         and TEAS group (Group T). The randomization was per-
+alone,     transcutaneous        electrical     acupoint      stimulation        formed     using    an   online   randomization        tool  (http://www.
+(TEAS)     using    electrical    stimulation     on   the  skin    surface      randomization.com). From 30 min before the induction of
+exerts   significant     advantages,      such    as   non-trauma,      and      anesthesia to the end of surgery, TEAS was performed in
+acceptant. It    was suggested that TEAS             not only regulates          patients    in  Group     T   at  acupoints     Neiguan     (PC6),     Hegu
+the  levels of    neuropeptides,11       but  also participates in       the     (LI4)    and   Zusanli     (ST36).     TEAS     was    conducted      under
+changes of gastrointestinal inflammatory factors.12 The anti-                    the   guidance      of   acupuncturists       who     hold    the   post   of
+inflammation mechanism of acupuncture may be related to                          attending physician in rehabilitation centers.
+the   homeostatic       restoration     of    intestinal    microbiota.13             The acupoint       Neiguan (PC6)        is located    on the palmar
+Previous studies from         our   group    showed     that   TEAS can          side of the forearm, two inches across the wrist,                  between
+improve     cognitive     decline    in  elderly   patients    with   focal      the palmar longus tendon and              the  radial flexor carpi ten-
+lacunar    infarction.14    However,       the   effects   of   TEAS      on     don. The acupoint Hegu (LI4) is located at the back of the
+POCD in      elderly patients undergoing laparoscopic radical                    hand, between the         1st and     2nd   metacarpal     bones,    on   the
+resection of colon cancer remain to be explored.                                 midpoint      of the   radial   side   of  the  2nd    metacarpal      bone.
+    In this current study, we aimed to investigate whether                       The location of Zusanli (ST36) is in the anterolateral leg, 3
+TEAS could reduce the incidence and duration of POCD                             inches under the acupoint Dubi, 1               transverse finger away
+in elderly    patients   undergoing laparoscopic radical resec-                  from tibia anterior margin. Parameters were set as density
+tion of colon cancer. In addition, we determined the corre-                      wave,    frequency      2–100Hz, and        current intensity      was    the
+lation    between      TEAS       and     gut–brain      axis-associated         maximum        patient could      tolerate   (Figure 1). In      Group     C,
+inflammatory factors and neuropeptides.                                          electrodes     were placed in the same            position as Group        T,
+                                                                                 but no electric current stimulation was performed.
+Methods                                                                          Anesthesia Management
+Patients and Setting                                                             Electrocardiograph         (ECG),      non-invasive       blood    pressure
+The present study was performed with the approval of the                         (NBP), pulse oxygen saturation (SPO2), body temperature,
+ethics   committee      of  Cangzhou       Central    Hospital     (ethical      end-tidal     carbon     dioxide    partial   pressure     (PetCO2)      and
+register   number:      2020-153-02)        and   was    in   compliance         bispectral     index    (BIS)    were     performed      in   all  patients.
+with the Helsinki Declaration. The project                was registered         Ultrasound-guided right internal             jugular    vein catheteriza-
+in  China     Clinical    Trial    Registry     (registration     number:        tion and right radial artery catheterization were performed
+
+
+758        https://doi.org/10.2147/CIA.S309082                                                                                                                                                                                                                                   Clinical Interventions in Aging 2021:16
+           DovePress
+
+=== PDF PAGE 3 ===
+Dove  press                                                                                                                                                               Liu et al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1 The location of the acupoints for transcutaneous electrical acupoint stimulation.
+
+
+to  continuously detect central            venous pressure         and   inva-       pump (CP-3100; Beijing Silugao Medical Technology Co
+sive blood pressure.                                                                 Ltd, Beijing, China), which was                used   to administer nore-
+                                                                                     pinephrine or       nicardipine (in μg/min), supplemented with
+Anesthesia Induction                                                                 boluses. If the patient represented significant bradycardia,
+Anesthesia      was    induced     by   intravenous      injection     of  2–5       atropine boluses         (0.3–0.5    mg)     were    administered.       When
+μg/kg    fentanyl,     2–5   mg/kg      propofol     and    0.2–0.3     mg/kg        patient’s consciousness returns, coughing and swallowing
+cis-atracurium.       3  minutes      later,   tracheal    intubation      was       reflexes    return,    tidal   volume      and   ventilation     per   minute
+performed       using    a  video    laryngoscope.        The     respiratory        return     to   preoperative       levels,    tracheal     intubation       was
+rate of ventilator was set          to 12–20 times per minute. The                   removed.
+ratio of inspiratory/expiratory was 1.0:1.5, inhalation oxy-
+gen   concentration       was    40%,     oxygen     flow    was    2  L/min,        Postoperative Analgesia
+and   PetCO2      was    maintained      between      35   and    45   mmHg          Electronic      pump      controlled     intravenous       analgesia      (con-
+(SL2400, Spacelabs, MA, UA).                                                         taining    0.15    μg/kg    sufentanil      in  100    mL    saline)    for  all
+                                                                                     patients after surgery. The parameters were set as follow-
+Maintenance of Anesthesia                                                            ing:   (flow rate, 2 mL/h;         bolus,    0.5 mL;      lockout    time,   15
+Anesthetic      maintenance        involved      remifentanil      (0.25–0.4         min). Visual Analogue Score (VAS) was used to evaluate
+μg/kg/min)       plus    propofol      (total   intravenous       anesthesia         postoperative pain within 24 h after surgery, and the num-
+[TIVA], 4–12 mg/kg/h) at the discretion of the anesthesiol-                          ber of analgesic pump compressions was also recorded.
+ogist. The     intravenous fluid goal          was 500–to–1000           mL/h
+for each hour. Cis-atracurium was intermittent intravenous                           Baseline Assessment
+injected    to   maintain     muscle      relaxation.     BIS    was    main-        Basic    information       including     gender,     age,   height,    weight,
+tained   within the range of          40–60 (qCON2000, Quantium                      academic background (education ≥9 years), physical status
+Medical Co Ltd, Spain). The fluctuation of MAP was kept                              classification, and heavy drinking (>40g/d for men or >20 g/
+within the range of 20% of the baseline. If                   mean arterial          d for women) was collected. History of underlying diseases
+pressure     (MAP)      was    lower     or  higher     than   20%     of   the      (hypertension,       diabetes     mellitus,     coronary      heart   disease,
+baseline,     MAP      changes      were    achieved       by   an   infusion        hypoproteinemia), and smoking history were also collected.
+
+
+
+Clinical Interventions in Aging 2021:16                                                                                             https://doi.org/10.2147/CIA.S309082                                                                                                                                                                                                                       759
+                                                                                                                                                DovePress
+
+=== PDF PAGE 4 ===
+Liu et al                                                                                                                                                               Dovepress
+Collection of Blood Samples                                                     IBM     Corporation,      Armonk,      NY,    USA).     The   data   were
+As  0  min    before TEAS        (T0),  1  h  after  the beginning of           reported as the Mean ± SD or Median ± Quartile according
+surgery (T1), and the       end of surgery (T2), 3 mL of blood                  to  normal     distribution.    Categorical      variables    were    ana-
+was collected using an aseptic ethylene diamine tetraacetic                     lyzed through Chi-squared test or the Fisher’s exact prob-
+acid tube. After centrifugation at 3, 000×g for 15 min, the                     ability  test  (when    appropriate) and       presented as numbers
+collected serum was stored at −80°C. The levels of serum                        (%).   Comparisons        between     two   groups    were    performed
+interleukin-6 (IL-6)      (Lot: 131161131210,          Code:    EK0410,         with   Student’s t-test.     Repeated measurements            were com-
+Boster Biological Technology Co, Wuhan, China), and cal-                        pared   using    One-way      repeated    measures     ANOVA,        when
+citonin-gene-related peptide         (CGRP)      (Lot:   71515561210,           the   spherical     hypothesis     is   not   satisfied,   Greenhouse-
+Code: EK1169, Boster Biological Technology Co, Wuhan,                           Geisser    (P  <  0.75)    and   Huynh-Feldt      (P   >  0.75)   method
+China) were detected by ELISA according to the manufac-                         were    used   for  correction.     Tukey’s    multiple    comparisons
+turer’s instructions. High sensitivity C-reactive protein (hs-                  test   was    used    for   post-mortem        analysis     of   one-way
+CRP)      (Lot:     201110,       Code:      CH0402311,         Maccura         repeated    measures      ANOVA.        The    measurement        data   of
+Biotechnology, China) was detected by latex immunoturbi-                        non-normal      distribution    were    tested   by   signed-rank     test.
+dimetric method according to the manufacturer’s instruction.                    P<0.05 was considered statistically significant.
+
+Assessment of POCD                                                              Results
+The   Mini-Mental State        Exam (MMSE) is           the most     often      Clinical Characteristics of Patients and
+used short screening tool for providing a clear impression                      Surgical Results
+of overall cognitive decline and facilitating monitoring of                     During     this  study    period,    105   patients    who    underwent
+the  progress and      resolution of     delirium after     surgery.15,16       laparoscopic       radical    resection     of   colon     cancer    were
+MMSE      score   was assessed at one day           before surgery,      as     involved in this trial. Five patients were excluded because
+well   as   postoperative      days    1,   2,  and    3.  The    trained       of history of neurological and psychiatric disorders (n = 1
+researchers who performed the MMSE score were blinded                           [0.95%]), use of anti-inflammatory drugs (n = 1 [0.95%]),
+to    the     grouping       of     patients.     As      in    previous        aural disorders inability       to cooperate (n = 2 [1.9%]), skin
+publications,15,16     POCD      was   defined    as  a  Z-score     ≤  −2      damage      located    on   the   right   ST36     acupoints      (n  =   1
+based on a pre- and postoperative            MMSE. The following                [0.95%]).     The    remaining      100    patients    were    randomly
+formula     was   used:    [(postoperative      MMSE–preoperative               divided into Group T and Group C (Figure 2).
+MMSE)-ΔX          MMSE        normative       population]/[SD         (ΔX
+MMSE normative population)]. The ΔX MMSE normative                              Patient Characteristics
+population     is the   mean    value    for  changes     in  MMSE       in     The   patients included      into   this  final cohort    were    all Han
+a  normative       population      and    standard     deviation      (ΔX       Chinese,    the   general   characteristics of      the  entire   patients
+MMSE       normative     population)      is the   standard    deviation        included     gender    [female,     49   (49%)],     age   (70.24±5.143
+for changes in MMSE in a normative population, as mea-                          years),   BMI     (24.78±3.04       kg/m2),    American       Society    of
+sured in a cognitively normal sample. In this current study,                    Anesthesiologists (ASA) [52 (52%)], education ≥9 years [20
+ΔX    MMSE       normative      population     =   0.5,   and   SD    (ΔX       (20%)], heavy drinking [19 (19%)], smoker [49 (49%)], pre-
+MMSE normative population) = 1.5 were used to calculate                         operative hypoproteinemia [13 (13%)], history of                  diabetes
+Z-score.15 Once the patient developed POCD, an intramus-                        mellitus [25 (25%)], hypertension [58 (58%)], coronary heart
+cular injection of 5 mg haloperidol was administered.                           disease [17 (17%)], surgical duration (215.2±55.623 min), and
+                                                                                anesthesia duration (265.4±56.294 min). The               characteristics
+Statistical Analyses                                                            between patients in Group T and C are summarized in Table 1
+MedCalc 15.2.2 software was used to calculate the sample                        (details in Supplementary Table S1).
+size.  According       to  previous      reports,   the   incidence      of
+POCD in the elderly population is 30%,17 through calcula-                       Intraoperative and Postoperative
+tion, the overall sample size was 94. Considering a 10–20%                      Variables
+abscission rate,     a total  of  105   patients   were    selected. All        There were no significant statistical differences of infusion
+data were analyzed by SPSS (version               21.0 for Windows;             volume,     blood   loss,   urine   volume,    surgical    duration    and
+
+
+760        https://doi.org/10.2147/CIA.S309082                                                                                                                                                                                                                                   Clinical Interventions in Aging 2021:16
+           DovePress
+
+=== PDF PAGE 5 ===
+Dove   press                                                                                                                                                                Liu et al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2 Experimental flow of this study.
+
+
+anesthesia time between Group T and C (Table 2). For the                                     levels      of   serum       IL-6     [F    (1.044,      51.165)       =    615.190,
+postoperative variables, there were no differences in length                                 P <     0.001], hs-CRP [F (1.821,                 89.218)      = 5320.781, P <
+of stays, VAS score and number of compressions 24h after                                     0.001]      and     CGRP        [F   (1.776,      87.013)      =   716.741,        P   <
+surgery between Group T and C (Table 2).                                                     0.001]       were     significantly        increased        at   T1     and     T2    in
+                                                                                             Group C. However, the levels of serum IL-6 (t = 19.033,
+IL-6, hs-CRP and CGRP Levels                                                                 P < 0.001 for T1; t = 22.733, P                     < 0.001 for T2)           and hs-
+As   shown in        Figure      2,  compared        with     T0,    the   levels    of      CRP (t = 34.785, P < 0.001 for T1; t =23.906, P < 0.001
+serum IL-6 [F (1.057, 51.771) = 415.596, P < 0.001], hs-                                     for T2) were decreased, but the level of CGRP (t = –8.290,
+CRP [F (1.584, 77.602) = 5075.619, P < 0.001] and CGRP                                       P   <   0.001     for   T1;    t  = –22.652,        P   <   0.001 for       T2)    was
+[F  (1.715,      84.039)      =  2107.192,        P < 0.001] were             signifi-       increased in Group T compared to Group C at T1 and T2
+cantly    increased at T1 and             T2 in Group T. Likewise, the                       (Figure 3) (details in Supplementary Table S2).
+
+
+Table 1 Clinical Characteristics of Patients
+
+  Characteristics                                    Entire (n=100)                      Group T (n=50)                      Group C (n=50)                            P
+
+  Age [years, mean (SD)]                                70.24 (5.14)                        70.80 (5.41)                         69.68 (4.85)                        0.209
+  Gender [Female (%)]                                      49 (49)                             22 (44)                              27 (54)                          0.317
+  Weight [kg, mean (SD)]                                66.72 (9.17)                        66.72 (8.51)                         66.72 (9.87)                        0.204
+  BMI [kg/m2, mean (SD)]                                24.78 (3.04)                        24.75 (2.57)                         24.82 (3.47)                        0.114
+  ASA (I, %)                                               52 (52)                             25 (50)                              27 (54)                          0.689
+  Education ≥ 9 years [n (%)]                              20 (20)                             11 (22)                               9 (18)                          0.617
+  Hypertension [n (%)]                                     58 (58)                             30 (60)                              28 (56)                          0.685
+  Diabetes mellitus [n (%)]                                25 (25)                             11 (22)                              14 (28)                          0.488
+  Coronary heart disease [n (%)]                           17 (17)                              9 (18)                               8 (16)                          0.790
+  Hypoproteinemia [n (%)]                                  13 (13)                              7 (14)                               6 (12)                          0.766
+  Smoker [n (%)]                                           49 (49)                             24 (48)                              25 (50)                          0.841
+  Heavy drinking [n (%)]                                   19 (19)                             11 (22)                               8 (16)                          0.444
+
+Abbreviations: BMI, body mass index; ASA, American Society of Anesthesiologists; C, control; T, transcutaneous electrical acupoint stimulation.
+
+
+
+Clinical Interventions in Aging 2021:16                                                                                                    https://doi.org/10.2147/CIA.S309082                                                                                                                                                                                                                       761
+                                                                                                                                                              DovePress
+
+=== PDF PAGE 6 ===
+Liu et al                                                                                                                                                               Dovepress
+
+Table 2 Intraoperative and Postoperative Variables
+
+ Variables                                                  Entire (n=100)               Group T (n=50)                Group C (n=50)                        P
+
+ Infusion volume [mL, mean (SD)]                                2121±521                      2189±498                      2053±539                       0.193
+ Blood loss [mL, mean (SD)]                                      309±85                        305±85                         312±85                       0.683
+ Urine volume [mL, mean (SD)]                                    442±112                       454±118                       430±105                       0.291
+ Surgical duration [minutes, mean (SD)]                        215.2±55.62                   225.6±53.28                   204.8±57.05                     0.063
+ Anesthesia time [minutes, mean (SD)]                          265.4±56.29                   272.2±56.88                   258.6±55.44                     0.229
+ VAS rest [point, mean (SD)]                                    2.59±0.57                    2.52±0.505                    2.66±0.626                      0.221
+ VAS coughing [point, mean (SD)]                                3.18±0.63                    3.20±0.571                    3.16±0.681                      0.751
+ Number of compressions [times, mean (SD)]                      17.5±3.28                    17.62±2.687                   17.38±3.801                     0.716
+ Length of stays [days, mean (SD)]                             16.28±2.18                    16.10±2.30                    16.46±2.06                      0.412
+
+Abbreviations: C, control; T, transcutaneous electrical acupoint stimulation; VAS, Visual Analogue Scale.
+The Incidence of POCD                                                                   including       CGRP        was     elevated       after    treatment       with
+On    postoperative        1  (POD1),       5   cases     (10%)     of   POCD           TEAS.      The    changes      of  inflammatory factors            and    neuro-
+occurred in Group T, but 11 cases (25%) in Group C. On                                  peptides may provide ideas for the effect of TEAS on the
+POD2, 4 cases of POCD in Group T (8%) but 8 cases in                                    gut–brain axis.
+Group C (16%) remain. On POD3, only 2 cases of POCD                                         The incidence of POCD in elderly patients undergoing
+in Group T (4%) but 5 cases in Group C (10%) remain. In                                 laparoscopic       radical    resection      of  colon     cancer     has   been
+addition,    there    were    no    new    cases    on   POD2      and    3.  On        reported to be 8.2–54%.18 In the current study, we reported
+POD1–3, the incidence of POCD was compared between                                      the incidence of POCD in the population received laparo-
+the two groups was not statistically significant (P = 0.102,                            scopic    radical    resection of      colon    cancer was 35%, which
+POD1; P = 0.218, POD2; P = 0.436, POD3). However, the                                   consistent      with    a  previous       study.18    There      are   growing
+cumulative       duration of      POCD       was also      used    to  evaluate         evidence that the risk factors             of  POCD include advanced
+the effects of TEAS. Interestingly, the cumulative duration                             age, surgical damages, anesthetic drug use, gut–brain axis
+of  POCD       on   POD2      in   Group     T was significantly lower                  imbalance       and   so   on.19    In   the   elderly    patients     received
+than   Group      C   (P   =   0.026).    In   addition,     the   cumulative           radical     resection      of    colon     cancer,      surgical      damages,
+incidence of POCD on POD3 in Group T was significantly                                  destruction      of  gut–brain       axis,   and    cerebral     degeneration
+lower than that in group C (P = 0.006) (Figure 4).                                      may be involved in the incidence of POCD.
+                                                                                            According         to   traditional      Chinese       medicine       theory,
+Discussion                                                                              Hegu is the original point of the large intestine meridian,
+In  the   present     study,    we    found     that   TEAS      significantly          the total treatment of the head and face of various diseases.
+decreased      the   cumulative       duration     of POCD        in  old-aged          Neiguan is one of the most important                    points in the body,
+patients    receiving      laparoscopic       radical    colon    cancer     sur-       which     exhibits     an   excellent      effect    on   neurological        and
+gery. In addition, inflammatory factors including IL-6 and                              mental     system     diseases.     Besides,     Neiguan      is  also   one    of
+hs-CRP        were     heavily       attenuated,       but     neuropeptides            the   main      points     of   the    treatment       for   gastrointestinal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 3 The level of IL-6 (A), hs-CRP (B), and CGRP (C) at different time points. Compared to T0, *P < 0.05 in the same group. Compared to the corresponding Group
+C, #P < 0.05. T0: 0 min before transcutaneous electrical acupoint stimulation, T1: 1 h after the beginning of surgery; T2: the end of surgery.
+Abbreviations: IL-6, interleukin-6; hs-CRP, high sensitive C-reactive protein; CGRP, calcitonin-gene-related peptide.
+
+
+762         https://doi.org/10.2147/CIA.S309082                                                                                                                                                                                                                                   Clinical Interventions in Aging 2021:16
+            DovePress
+
+=== PDF PAGE 7 ===
+Dove  press                                                                                                                                                               Liu et al
+
+                                                                                   CGRP      can   improve learning         and memory        ability via     the
+                                                                                   inhibition of tumor necrosis factor-α and induction of insu-
+                                                                                   lin-like growth       factor   1.28  In  addition,    CGRP       have   been
+                                                                                   demonstrated to play an important role in the communica-
+                                                                                   tion of the gut–brain axis.29 Data from this study indicated
+                                                                                   that TEAS can reduce the levels of serum IL-6 and hs-CRP
+                                                                                   to inhibit inflammatory response in the elderly during sur-
+                                                                                   gery, which is consistent with previous studies.14,21,30 Also,
+                                                                                   our data showed that the level of serum CGRP after treat-
+                                                                                   ments with TEAS was significantly elevated compared to
+                                                                                   control. These results revealed that the decreased cumulative
+                                                                                   duration    of   POCD      after   treatments     with    TEAS      may    be
+                                                                                   related to the changes of          gut–brain axis-associated inflam-
+                                                                                   matory factors and neuropeptides.
+                                                                                        Admittedly, there were several limitations in the current
+                                                                                   study. Firstly, the number of patients was relatively small.
+
+Figure 4 Cumulative duration of postoperative cognitive decline. Compared to the   Secondly,     there   were    only   three acupoints selected in           the
+corresponding Group C, *P < 0.05.                                                  current    study,   and   the   other   acupoints      should    be   further
+                                                                                   investigated. Thirdly,        in  this  current study, a      MMSE       was
+diseases. Zusanli is one of the main acupoints of “Zusanli                         only   used    to  evaluate the      incidence of      POCD, but        more
+stomach     meridian”. The stimulation of             Zusanli may con-             examinations should be applied. In addition, the long-term
+tribute to gastrointestinal peristalsis, appetizing, and diges-                    effects   of   TEAS      on   the   incidence     of  POCD       should    be
+tion.  Moreover, the        stimulation     of Zusanli     has   been    also      examined in our further study. Finally, we did not measure
+suggested       to     promote        the    recovery        of    cerebral        the length of the bowel           resection, which       might    affect the
+dysfunction.20      Collectively, we       selected    these above acu-            results. However, despite these limitations, our results pro-
+points   that may     contribute to bi-directional regulation              of      vided preliminary evidences of             a  neuroprotective effect        of
+gut–brain     axis.  Although the        incidence     of  POCD       within       TEAS in patients undergoing intestinal surgery.
+the  first 3   days   after   surgery    in patients     received     TEAS              In conclusion, treatment with TEAS reduced the cumu-
+was not significantly attenuated, but the cumulative dura-                         lative   duration    of   POCD      in  patients    undergoing       laparo-
+tion of POCD on POD2 and 3 was significantly decreased                             scopic radical colon cancer surgery. The                mechanism may
+compared      to   control,   which     is  consistent     with    previous        be   related   to  the   regulation     of  gut–brain     axis-associated
+studies.14,21                                                                      inflammatory factors and neuropeptides.
+
+    To further explore the roles of neuroinflammation in the                       Data Sharing Statement
+pathogenesis of       POCD,       the  levels    of  IL-6,    hs-CRP     and       The   datasets generated during and/or analyzed during the
+CGRP were assessed according to previous studies.5,17,22,23
+IL-6,  a  key   pro-inflammatory factor in            the  acute   stage of        current    study    will   be   available    upon    reasonable      request
+trauma,    is  produced rapidly        in  response to      infection and          from Cangzhou Central Hospital. Email: 1377689587@qq.
+
+                   24                                                              com; Telephone: +86 18003370383.
+tissue damage.        Hs-CRP, one of the most common markers
+of  systemic     inflammation, can         rise  sharply    within    a  few       Ethical Approval
+hours once our body suffered from damage, inflammation,                            The    study   was    approved      by   Cangzhou       Central    Hospital
+and infection. Some publications demonstrated that the con-                        Ethics Committee (ethical register number: 2020-153-02).
+centration of serum hs-CRP is an independent risk factor of                        Trial Registration: ChiCTR2000040397.
+POCD      in  elderly    patients   undergoing       laparoscopic colon
+cancer surgery.25      CGRP, one of the common neuropeptides                       Acknowledgments
+distributed in the central nervous system, exhibits neuropro-                      We    would    like   to  thank    Limin    Zhang,     Zhaohui      Liu and
+tective    effects    against    ischemia/reperfusion          injury    and       Yangyang Guo for their support of this project. This pro-
+inflammatory       responses.26,27      It  was    also   suggested      that      ject   was     supported      by    the   National      Natural     Science
+
+
+
+
+Clinical Interventions in Aging 2021:16                                                                                             https://doi.org/10.2147/CIA.S309082                                                                                                                                                                                                                       763
+                                                                                                                                            DovePress
+
+=== PDF PAGE 8 ===
+Liu et al                                                                                                                                                                 Dovepress
+
+Foundation of China (81771134), Hebei Province technol-                                        11. Kaptchuk TJ. Acupuncture: theory, efficacy, and practice. Ann Intern
+ogy    Innovation         guide      Project      Science       and     Technology                  Med.    2002;136(5):374–383.         doi:10.7326/0003-4819-136-5-2002030
+                                                                                                    50-00010
+Winter       Olympics         special      project       (19977790D),            Hebei         12. Bai YF, Gao C, Li WJ, et al. Transcutaneous electrical acupuncture
+Provincial government funded the specialty capacity build-                                          stimulation (TEAS) for gastrointestinal dysfunction in adults under-
+ing and specialty leader training program.                                                          going abdominal surgery: study protocol for a prospective randomized
+                                                                                                    controlled     trial.  Trials.   2020;21(1):617.       doi:10.1186/s13063-020-
+                                                                                                    04470-4
+                                                                                               13.  Jang JH, Yeom MJ, Ahn S, et al. Acupuncture inhibits neuroinflam-
+Author Contributions                                                                                mation and gut microbial dysbiosis in a mouse model of Parkinson’s
+All authors made substantial contributions to the                             concep-               disease.    Brain     Behav     Immun.      2020;89:641–655.        doi:10.1016/j.
+                                                                                                    bbi.2020.08.015
+tion and design, acquisition of data, or analysis and inter-                                   14. Gao     F,  Zhang    Q,   Li  Y,  et  al. Transcutaneous       electrical   acupoint
+pretation      of    data;     took     part    in   drafting       the    article     or           stimulation     for  prevention     of  postoperative      delirium    in  geriatric
+revising      it   critically     for    important        intellectual        content;              patients   with   silent   lacunar    infarction:   a  preliminary     study.   Clin
+                                                                                                    Interv Aging. 2018;13:2127–2134. doi:10.2147/CIA.S183698
+agreed to submit to the current journal; gave final approval                                   15. Hensel A, Angermeyer MC, Riedel-Heller SG. Measuring cognitive
+of the version to be published; and agree to be accountable                                         change in older adults: reliable change indices for               the  mini-mental
+for all aspects of the work.                                                                        state    examination.      J    Neurol     Neurosurg       Psychiatry.     2007;78
+                                                                                                    (12):1298–1303. doi:10.1136/jnnp.2006.109074
+                                                                                               16. Momeni M, Meyer S,            Docquier MA, et al. Predicting postoperative
+                                                                                                    delirium and postoperative cognitive decline with combined intraopera-
+Disclosure                                                                                          tive electroencephalogram monitoring and cerebral near-infrared spec-
+The authors report no conflicts of interest in this work.                                           troscopy    in patients undergoing       cardiac interventions. J       Clin Monit
+                                                                                                    Comput. 2019;33(6):999–1009. doi:10.1007/s10877-019-00253-8
+                                                                                               17. Quan C, Chen J, Luo Y, et al. BIS-guided deep anesthesia decreases
+                                                                                                    short-term postoperative cognitive dysfunction and peripheral inflam-
+References                                                                                          mation    in   elderly   patients   undergoing      abdominal      surgery.    Brain
+ 1. Sun Y, Feng       H,  Zou T, et al. Assessment         of  risk factors for post-               Behav. 2019;9(4):e01238. doi:10.1002/brb3.1238
+    operative cognitive dysfunction after coronary artery bypass surgery:                      18. Scholz AF, Oldroyd C, McCarthy K, et al.                  Systematic review and
+    a   single-centre    retrospective     cohort    study.   Biosci    Rep.   2021;41.             meta-analysis of risk factors for postoperative delirium among older
+    doi:10.1042/BSR20190719                                                                         patients undergoing gastrointestinal surgery. Br J Surg. 2016;103(2):
+ 2. Faraco    G, Brea D,      Garcia-Bonilla L,       et  al. Dietary salt promotes                 e21–28. doi:10.1002/bjs.10062
+    neurovascular       and   cognitive    dysfunction      through    a   gut-initiated       19.  Lin   X,  Chen Y,     Zhang    P, et  al. The potential     mechanism      of  post-
+    TH17     response.     Nat   Neurosci.     2018;21(2):240–249.        doi:10.1038/              operative    cognitive     dysfunction     in   older   people.    Exp    Gerontol.
+    s41593-017-0059-z                                                                               2020;130:110791. doi:10.1016/j.exger.2019.110791
+ 3. Ho YS, Zhao        FY, Yeung WF, et al. Application of acupuncture to                      20. Tida    JA,   Catalão   CHR, Garcia CAB,           et  al. Acupuncture      at  ST36
+    attenuate    immune      responses    and   oxidative    stress  in  postoperative              exerts neuroprotective effects via inhibition of reactive astrogliosis in
+                                                                                                    infantile    rats    with     hydrocephalus.       Acupunct       Med.     2018;36
+    cognitive    dysfunction:     what    do  we   know     so  far?  Oxid    Med    Cell           (6):386–393. doi:10.1136/acupmed-2017-011515
+    Longev. 2020;2020:9641904. doi:10.1155/2020/9641904                                        21. Zhang     Q,   Li   YN,   Guo    YY,    et  al. Effects    of  preconditioning      of
+ 4. Glumac S, Kardum G, Karanovic N. Postoperative cognitive decline                                electro-acupuncture        on    postoperative      cognitive     dysfunction      in
+    after  cardiac    surgery:   a  narrative   review    of  current    knowledge     in           elderly:    a   prospective,     randomized,      controlled     trial.  Medicine.
+    2019.      Med      Sci     Monit.      2019;25:3262–3270.           doi:10.12659/              2017;96(26):e7375. doi:10.1097/MD.0000000000007375
+    MSM.914435                                                                                 22.  Safavynia SA, Goldstein PA. The role of neuroinflammation in post-
+ 5. Glumac S, Kardum G, Sodic L, et al. Effects of dexamethasone on                                 operative     cognitive     dysfunction:      moving       from    hypothesis      to
+    early cognitive decline after cardiac surgery: a randomised controlled                          treatment.        Front        Psychiatr.        2018;9:752.          doi:10.3389/
+    trial. Eur J Anaesthesiol. 2017;34(11):776–784. doi:10.1097/EJA.000                             fpsyt.2018.00752
+    0000000000647                                                                              23. Lei D, Sha Y, Wen S, et al. Dexmedetomidine may reduce IL-6 level and
+ 6. Yang     XD,     Wang      LK,    Wu     HY,    et   al.   Effects    of   prebiotic            the risk of postoperative cognitive dysfunction in patients after surgery:
+    galacto-oligosaccharide        on postoperative      cognitive dysfunction       and            a   meta-analysis.       Dose-Response.        2020;18(1):1559325820902345.
+    neuroinflammation        through     targeting   of  the   gut-brain    axis.  BMC              doi:10.1177/1559325820902345
+    Anesthesiol. 2018;18(1):177. doi:10.1186/s12871-018-0642-1                                 24. Tanaka T, Narazaki M, Kishimoto T. IL-6 in inflammation, immunity,
+ 7. Agustí A, García-Pardo MP, López-Almela I, et al. Interplay between                             and   disease. Cold Spring       Harb    Perspect Biol.     2014;6(10):a016295.
+    the gut-brain axis,      obesity and cognitive        function.   Front   Neurosci.             doi:10.1101/cshperspect.a016295
+    2018;12:155. doi:10.3389/fnins.2018.00155                                                  25. Xiang     D, Xing     H,  Tai  H,  et al. Preoperative C-reactive protein as
+ 8. Lin C, Zhao S, Zhu Y, et al. Microbiota-gut-brain axis and toll-like                            a risk factor for postoperative delirium in elderly patients undergoing
+    receptors     in  Alzheimer’s      disease.    Comput      Struct   Biotechnol      J.          laparoscopic      surgery     for   colon     carcinoma.      Biomed      Res    Int.
+    2019;17:1309–1317. doi:10.1016/j.csbj.2019.09.008                                               2017;2017:5635640. doi:10.1155/2017/5635640
+ 9. Wang R, Chen J, Wu G. Variable lung protective mechanical ventila-                         26. Edvinsson L, Haanes KA, Warfvinge K, et al. CGRP as the target of new
+    tion   decreases    incidence     of  postoperative     delirium    and   cognitive             migraine therapies – successful translation from bench to clinic. Nat Rev
+    dysfunction     during    open   abdominal      surgery.   Int  J  Clin  Exp    Med.            Neurol. 2018;14(6):338–350. doi:10.1038/s41582-018-0003-1
+    2015;8(11):21208–21214.                                                                    27. Tian J, Yang L, Wang P, et al. Exogenous CGRP regulates apoptosis
+10. Cheng     FK.   The    use  of   acupuncture     in  patients   with    Parkinson’s             and autophagy to alleviate traumatic brain injury through Akt/mTOR
+    disease.      Geriatr       Nurs.      2017;38(4):302–314.           doi:10.1016/j.             signalling     pathway.      Neurochem         Res.    2020;45(12):2926–2938.
+    gerinurse.2016.11.010                                                                           doi:10.1007/s11064-020-03141-9
+
+
+764          https://doi.org/10.2147/CIA.S309082                                                                                                                                                                                                                                   Clinical Interventions in Aging 2021:16
+             DovePress
+
+=== PDF PAGE 9 ===
+Dove    press                                                                                                                                                                               Liu et al
+
+
+28. Yang X,       Shi  Z, Li    X,   et al. Impacts of stellate ganglion             block on         30. Chen      Y,  Huang     W,    Li  Z,  et  al.  The effect of       acupuncture on        the
+     plasma NF-κB and inflammatory factors of TBI patients. Int J Clin                                     expression      of  inflammatory        factors   TNF-α,      IL-6,IL-1     and   CRP     in
+     Exp Med. 2015;8(9):15630–15638.                                                                       cerebral     infarction:     a   protocol     of   systematic      review     and    meta-
+29. Wei     P, Keller    C,   Li  L.   Neuropeptides        in  gut-brain    axis   and   their            analysis.      Medicine.        2019;98(24):e15408.            doi:10.1097/MD.0000
+     influence on host immunity and stress. Comput Struct Biotechnol J.                                    000000015408
+     2020;18:843–851. doi:10.1016/j.csbj.2020.02.018
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Clinical Interventions in Aging                                                                                                                                    Dove         press
+      Publish your work in this journal
+
+      Clinical    Interventions      in  Aging    is  an international,       peer-reviewed           Bibliographic       databases.      The    manuscript      management         system     is
+      journal    focusing     on   evidence-based        reports   on   the   value    or  lack       completely online         and   includes a very        quick and fair      peer-review
+      thereof    of  treatments      intended     to  prevent     or  delay    the   onset    of      system,     which is     all easy to use. Visit        http://www.dovepress.com/
+      maladaptive      correlates     of  aging    in human      beings.    This   journal    is      testimonials.php to read real quotes from published authors.
+      indexed on PubMed Central, MedLine, CAS, Scopus and the Elsevier
+
+      Submit your manuscript here: https://www.dovepress.com/clinical-interventions-in-aging-journal
+
+
+
+Clinical Interventions in Aging 2021:16                                                                                                                                      DovePress                                                                                                                         765

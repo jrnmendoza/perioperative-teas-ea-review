@@ -1,0 +1,665 @@
+=== PDF PAGE 1 ===
+   W              J               C              O               World Journal of
+                                                                 Clinical Oncology
+
+
+ Submit a Manuscript: https://www.f6publishing.com                                     World J Clin Oncol 2026 February 24; 17(2): 114431
+
+ DOI: 10.5306/wjco.v17.i2.114431                                                                                 ISSN 2218-4333 (online)
+
+                                                                                                              ORIGINAL ARTICLE
+Case Control Study
+Effects of electroacupuncture combined with flurbiprofen axetil on
+postoperative pain and early functional recovery after breast cancer
+surgery
+
+
+
+Bi-Mei He, Xiao-Lin Sun, Xiao-Yu Huang, Sen-Sen Zhang, Qing-Xiong Hong
+
+
+Provenance and peer review:            Bi-Mei He, Xiao-Lin Sun, Xiao-Yu Huang, Sen-Sen Zhang, Qing-Xiong Hong, Department of
+Unsolicited article; Externally peer   Anesthesiology,  The Second Affiliated  Hospital of Guangzhou  University  of Chinese
+reviewed.                              Medicine, Guangzhou 510000, Guangdong Province, China
+
+Peer-review model: Single blind        ORCID number: Qing-Xiong Hong 0009-0007-0048-1499.
+
+Peer-review report’s classification    Corresponding  author:     Qing-Xiong  Hong, Department  of Anesthesiology,  The Second
+Scientific Quality: Grade B, Grade     Affiliated Hospital of Guangzhou University of Chinese Medicine, No. 111 Dade Road,
+B, Grade C                             Guangzhou 510000, Guangdong Province, China. gaoheiamk@163.com
+
+Novelty: Grade A, Grade C, Grade
+C                                      Abstract
+Creativity or Innovation: Grade A,
+Grade C, Grade C                       BACKGROUND
+Scientific Significance: Grade B,      Breast cancer surgery often leads to acute postoperative pain that affects early
+Grade B, Grade C                       recovery. Electroacupuncture (EA) is a potential adjunct to analgesics such as flu-
+                                       rbiprofen axetil (FA), but evidence on its perioperative benefits remains limited.
+P-Reviewer: Hua X, PhD, China;         AIM
+Xu JJ, MD, China                       To investigate the effects of EA combined with FA on postoperative pain and
+
+Received: September 19, 2025           early functional recovery after breast cancer surgery.
+Revised: November 18, 2025             METHODS
+Accepted: January 9, 2026              A total of 130 patients with breast cancer were randomly divided into EA group
+Published online: February 24, 2026    (n = 65) and control group (n = 65). Patients received EA or sham acupuncture
+Processing time: 140 Days and 22.9     from 30 minutes before anesthesia induction until surgery end. Both groups
+Hours                                  received FA postoperatively. We observed the occurrence of postoperative pain
+©The Author(s) 2026. Published by      (incidence  of moderate-to-severe  pain during movement and at rest, Visual
+Baishideng Publishing Group Inc.       Analog Scale score) at 24 hours, 48 hours, 72 hours postoperatively, the score of
+All rights reserved.                   basic activities of daily living (BADL) at 24 hours postoperatively and complic-
+                                       ations after surgery in both groups of patients.
+
+                                       RESULTS
+                                       Compared with the control group, the EA group lowered the incidence  of
+                                       moderate-to-severe movement-evoked pain at 24 hours postoperatively (P < 0.05),
+                                       and reduced Visual Analog Scale scores during movement and at rest 24 hours
+                                       after surgery (P < 0.01). The scores of BADL for grooming, dressing, toileting, and
+                                       transferring (moving in and out of a bed or chair) were significantly better in the
+
+
+
+
+          https://dx.doi.org/10.5306/wjco.v17.i2.114431             1                    February 24, 2026     Volume 17        Issue 2
+
+=== PDF PAGE 2 ===
+He BM et al. EA plus flurbiprofen for postoperative pain
+
+
+EA group than in the control group 24 hours after surgery (P < 0.05), the total BADL score was significantly higher
+(P < 0.01). The incidence of postoperative complications (nausea, vomiting, loss of appetite) was significantly
+reduced in the EA group (P < 0.05).
+
+CONCLUSION
+EA combined with flurbiprofen FA can reduce the occurrence of postoperative pain and complications, improve
+early postoperative functional recovery after breast cancer surgery.
+
+Key Words: Electroacupuncture; Breast cancer; Postoperative pain; Flurbiprofen axetil; Quality of life
+
+
+ Core Tip: This study demonstrates that electroacupuncture (EA) combined with flurbiprofen axetil (FA) provides superior
+ analgesia and functional recovery after breast cancer surgery compared with FA alone. EA + FA reduced postoperative pain,
+ shortened recovery time, and improved quality of life. These findings highlight EA as an effective non-pharmacological
+ adjunct to enhance perioperative care and promote early rehabilitation in breast cancer patients.
+
+
+Citation: He BM, Sun XL, Huang XY, Zhang SS, Hong QX. Effects of electroacupuncture  combined with flurbiprofen axetil on
+postoperative pain and early functional recovery after breast cancer surgery. World J Clin Oncol 2026; 17(2): 114431
+URL: https://www.wjgnet.com/2218-4333/full/v17/i2/114431.htm
+DOI: https://dx.doi.org/10.5306/wjco.v17.i2.114431
+
+
+
+INTRODUCTION
+Breast cancer has the highest worldwide incidence in women among all malignancies, with a rising incidence in recent
+years[1]. Surgical treatment is the most important part of the comprehensive treatment of breast cancer[2]. but post-
+operative pain is a common complication after breast cancer surgery[3]. Opioids and nonsteroidal drugs are commonly
+used in postoperative pain management[3], because of its side effects, it seriously affects the rapid recovery after surgery.
+Acupuncture has shown promise in the perioperative period, such as reducing postoperative pain[4]. Therefore, this
+study aims to explore the effects of electroacupuncture (EA) combined with flurbiprofen axetil (FA) on postoperative pain
+and early functional recovery of breast cancer patients, and provide reference for the promotion and application of
+acupuncture in perioperative medicine.
+
+
+MATERIALS AND METHODS
+Research participants
+The research protocol was approved by the Ethics Committee of Guangdong Provincial Hospital of Chinese Medicine
+(Approval No. Ethics Committee of Guangdong Provincial Hospital of Chinese Medicine BF2018-006-01).  Written,
+informed participant assent or certifier consent was obtained for all patients. This study selected patients between
+February 12, 2019 and January 10, 2020 in our hospital (The Second Affiliated Hospital of Guangzhou University of
+Chinese Medicine).
+Inclusion criteria: (1) Undergoing elective breast cancer surgery; (2) Age 18-75 years; (3) Body mass index 18-30 kg/m2;
+(4) American Society of Anesthesiologists  class I-III; (5) Karnofsky Performance Status score ≥ 60; and (6) Voluntary
+signing of informed consent before participating in the study.
+
+Exclusion criteria: (1) Contraindication  for EA stimulation, including patients with local skin damage, infection, or
+electrophysiological devices implanted at the acupoints; (2) Communication disorders and inability to cooperate with
+researchers, such as those caused by language comprehension deficits and certain mental illnesses; (3) Unstable angina or
+myocardial infraction within 3 months and New York Heart Association functional class ≥ 3; (4) Blood pressure ≥ 180/100
+mmHg during preoperative visits, in accordance with the World Health Organization-International   Society of Hy-
+pertension guidelines; (5) History of peptic ulcer/bleeding/perforation; (6) Severe liver or kidney function abnormalities
+(liver dysfunction: More than twice the normal upper limit of any of alanine transaminase, aspartate transaminase,
+alkaline phosphatase,  or total bilirubin; renal dysfunction:  Creatinine clearance rate of < 30 mL/minute or blood
+creatinine > 177 μmol/L); (7) Known allergies to nonsteroidal drugs; and (8) Participation in other clinical trials within
+3 months before selection for this study.
+
+Criteria for dropout cases: (1) Serious adverse events (e.g., second operation, death), complications, or certain phy-
+siological changes that rendered the participant unsuitable for continuing the tests; (2) Withdrawal from the study on
+their own, not due to curative-effect factors or at the request of a guardian; (3) Request to withdraw by the researchers;
+and (4) Being lost to follow-up.
+
+
+
+
+           https://dx.doi.org/10.5306/wjco.v17.i2.114431                 2                     February 24, 2026       Volume 17         Issue 2
+
+=== PDF PAGE 3 ===
+                                                                                      He BM et al. EA plus flurbiprofen for postoperative pain
+
+
+
+Discontinuation criteria: (1) Not meeting either the inclusion or exclusion criteria; (2) Consumption of drugs other than
+the prescribed medication, meaning that the efficacy and safety of drugs could not be evaluated in the participant; and (3)
+Becoming unblinded during the study.
+
+Randomization
+Patients were randomly assigned (1:1) to EA group and control group. Randomization was performed by block. Blocks of
+random length are used through the computer. No stratification factors were used. Randomization was conducted by
+investigators who were not involved in anesthesia or research index recording. Acupuncturists, anesthesiologists, statist-
+icians, data collectors, and record managers involved in this trial worked independently and performed only their
+designated tasks. Once the protocol was initiated, there was no private communication between any researchers.
+
+Interventions
+We preoperatively evaluated patients and assigned them their random numbers once we had selected them for the study.
+After patients were randomized, they received their corresponding interventions by grouping. The EA group was given
+electrical  stimulation  at the Zusanli and Sanyinjiao  acupoints  (Hanyi Acupuncture  Needles,                             0.18 mm × 20 mm;
+Changchun AIK Medical Devices Co. Ltd., Changchun, China). The skin at the selected acupoints was disinfected by
+alcohol wipe and then connected to an electrical stimulator (Huatuo Sdz-V Nerve and Muscle Stimulator; Suzhou
+Medical Appliance Factory, Suzhou, China) to provide 2/10 Hz sparse-dense wave stimulation. Stimulation intensity was
+based on the tolerance and degree of soreness of individual patients, but was adjusted within a standardized and
+predefined safe range. All procedures were delivered by trained acupuncturists  following an identical protocol to
+enhance reproducibility.  Patients in the control group received sham acupuncture;  the acupuncture needles were
+connected to the electrical stimulator and used to create a shallow puncture 0.5 cm away from the Zusanli and Sanyinjiao
+acupoints, with no needle manipulation. Patients in both groups were given uniform general anesthesia 30 minutes
+afterward, induced with propofol (2 mg/kg) and sufentanil (0.5 μg/kg). We performed routine monitoring of all patients
+by electrocardiogram and for peripheral oxygen saturation, blood pressure, and bispectral index. Each patient underwent
+peripheral intravenous (intravenous  injection) cannulation to infuse Ringer’s solution at a rate of 8 mL/kg/hour.
+Vecuronium (0.1 mg/kg) was administered when muscle relaxants were needed. During surgery, we continued to deliver
+the abovementioned drugs to patients at the maintenance doses requested by the surgeons according to patients’ vital
+signs and to maintain depth of anesthesia (bispectral index 50 ± 5). None of the patients received inhalational anesthesia.
+Electrocardiogram, heart rate, blood pressure, respiratory rate, peripheral oxygen saturation, end-tidal CO2, and amount
+of intake and output were intraoperatively monitored for each patient. When suturing was complete, the anesthetic-
+infusion pump was stopped, and each patient received an intravenous injection of 4.48 mg tropisetron and 50 mg FA. If
+additional analgesia was required, rescue analgesics such as morphine (1-3 mg intravenous injection) or paracetamol
+(1000 mg intravenous injection) were administered  based on pain severity [Visual Analog Scale (VAS) scores]. EA
+stimulation was simultaneously terminated. All patients were sent to the recovery room after surgery; once they met the
+standard for discharge from the recovery room, they were transferred to the wards. We assessed the postoperative qua-
+lity of life of patients.
+   Modern evidence also supports the use of Zusanli and Sanyinjiao for postoperative  analgesia. Clinical and neu-
+rophysiological  studies have shown that stimulation of these acupoints modulates nociceptive signaling, enhances
+autonomic regulation, and promotes endogenous opioid release[5-9]. Randomized controlled trials further demonstrate
+that acupuncture at Zusanli and Sanyinjiao reduces postoperative pain and perioperative analgesic requirements[10,11].
+Therefore, Zusanli and Sanyinjiao were selected based on both traditional theory and contemporary evidence.
+   To reduce performance and assessment bias, patients and postoperative outcome assessors were blinded to group
+allocation. Sham acupuncture was performed by inserting needles superficially near the true acupoints and connecting
+them to an inactive stimulator to mimic the appearance of EA. Assessors and data analysts were not involved in
+treatment delivery and remained blinded throughout the study. Acupuncturists could not be blinded due to the nature of
+the intervention but did not participate in postoperative assessments.
+
+Outcomes
+The primary outcome was the incidence of moderate-to-severe movement-evoked pain (VAS > 4) at 24 hours postoper-
+atively, assessed by the intensity of pain during ipsilateral upper-arm movement or walking. Secondary outcomes
+included: (1) Incidence of moderate to severe pain during exercise 48 hours and 72 hours after surgery; (2) Incidence of
+moderate to severe pain at rest 24 hours, 48 hours and 72 hours after surgery; (3) VAS pain scores 24 hours, 48 hours and
+72 hours after surgery; (4) 24 hours postoperative basic activities of daily living (BADL) score: Using the modified Barthel
+Index assessment form[12], It includes washing (5 points), getting dressed and undressed (10 points), moving the bed and
+chair (15 points), eating (10 points), going to the bathroom (10 points), going up and down stairs (10 points), walking on
+the ground (15 points), taking a shower (5 points), stool control (10 points), and urination control (10 points). The full
+score is 100. Total score ≤ 40, heavy dependence, all need others care; 41 to 60, moderate dependence, most need others
+care; 61-99, mild dependence, a few need others care; 100 points no dependence, no need for other people to care; and (5)
+Occurrence of postoperative complications.
+
+Sample size calculations
+In our pilot trial of 23 patients undergoing elective breast cancer surgery, we observed that 5 patients of 12 patients
+(41.6%) in the EA group reported exercise-induced moderate to severe pain 24 hours after surgery, compared to 7 of 11
+
+
+
+           https://dx.doi.org/10.5306/wjco.v17.i2.114431                3                     February 24, 2026       Volume 17         Issue 2
+
+=== PDF PAGE 4 ===
+He BM et al. EA plus flurbiprofen for postoperative pain
+
+
+patients (63.6%) in the control group, assuming α = 0.05 and β = 0.2. With a possible 20% dropout rate, the final sample
+size was calculated as 65 patients for each group.
+
+Statistical analysis
+The investigator reviewed and retrieved the case observation forms after the trial and sent them to a specially assigned
+person for data processing. The database was locked after verification  and confirmation.  Measurement data were
+presented as mean ± SD and median (interquartile range); count data were presented as n (%) of cases. We used SPSS
+version 17.0 (IBM Corp., Armonk, NY, United States) for statistical analysis in this study.
+   We first analyzed the baseline demographics and characteristics of both groups to examine how well the groups were
+balanced and their comparability.  Therapeutic  efficacies were then compared between the groups. We compared
+quantitative data, such as age, height, and weight, between the groups using an independent-sample t test. Between-
+group clinical efficacies were compared using t test and rank-sum test. All statistical tests were two-sided. P < 0.05 was
+considered to be statistically significant.
+
+
+RESULTS
+Patient demographics and characteristics
+Patient baseline characteristics were important for comparisons between the two groups. Given that age, height, weight,
+comorbidities, Surgical procedure, anesthesia time, and intake and output were factors with potential effects on the
+quality of postoperative recovery of patients, we collected and recorded all possible demographic and characteristic data
+as a baseline to describe the homogeneity of both groups of breast cancer patients. 130 patients were included in the
+statistics. No significant differences in baseline characteristics were found between the two groups (P > 0.05; Table 1).
+
+Primary outcome
+EA reduced the incidence of moderate to severe pain during exercise 24 hours after surgery. Specifically, 32 of 65 (49.2%)
+in the EA group reported moderate to severe pain during exercise 24 hours after surgery (30 moderate and 2 severe),
+compared to 42 of 65 (64.6%) in the control group (41 moderate and 1 severe; P < 0.05; Table 2).
+
+Secondary outcomes
+Post-operation pain: Compared with the control group, EA did not reduce the incidence of moderate to severe pain
+during exercise at 48 hours and 72 hours after surgery (P > 0.05). There was no significant difference in the incidence of
+moderate to severe pain during rest at 24 hours, 48 hours, and 72 hours after surgery (P > 0.05). In addition, the VAS
+score of pain both exercise and rest at 24 hours after surgery was decreased by EA (P < 0.01). However, there was no
+significant difference in VAS scores of exercises and rest pain between the two groups at 48 hours and 72 hours after
+surgery (P > 0.05; Table 2).
+
+BADL scores 24 hours post-surgery: BADL scores and degree for bathing, grooming, dressing, toileting, and transferring
+(moving in and out of a bed or chair) in the EA group were significantly better than in the control group at 24 hours post-
+surgery (P < 0.05). The total BADL score of the EA group at 24 hours post-surgery was significantly higher than that of
+the control group (P < 0.01). Data are shown in Table 3.
+
+Postoperative  complications:           Compared with the control group, EA can significantly  reduce the incidence  of
+postoperative nausea and vomiting (PONV) and improve postoperative appetite (P < 0.05; Table 4).
+
+
+DISCUSSION
+In our study, FA was used as basic postoperative analgesic therapy in both groups. Our results showed that EA combined
+with FA significantly reduced the incidence of moderate-to-severe  pain during exercise and VAS scores at 24 hours
+postoperative.
+   From a traditional Chinese medicine perspective, postoperative pain is primarily caused by Qi stagnation and blood
+deficiency. Zusanli, a He-sea point of the stomach meridian, invigorates the spleen and stomach, while Sanyinjiao, located
+at the intersection of the three Yin channels, nourishes the liver, spleen, and kidney Qi. Their combined use enhances Qi
+and blood circulation, addressing the root causes of pain and promoting early recovery, which aligns with our observed
+improvements in movement-induced pain and functional recovery. EA therapy combines traditional acupuncture with
+electrical stimulation, providing continuous stimulation to specific acupoints. This approach induces morphological and
+functional changes in target organs and tissues, contributing to the analgesic effects[8]. In addition, low-frequency and
+high-frequency electrical stimulation have distinct effects on specific brain regions involved in pain modulation. Low-
+frequency stimulation has been shown to activate the hypothalamic arcuate nucleus, while high-frequency stimulation
+primarily targets the pontine parabrachial nucleus, both of which play key roles in pain perception and autonomic
+regulation.  The alternating  stimulation  of these regions promotes the simultaneous  release of enkephalins  and
+dynorphins, endogenous opioid peptides that bind to opioid receptors in the central nervous system, effectively lowering
+the pain threshold and enhancing analgesic effects[6]. This combined mechanism of neural modulation is thought to
+
+
+
+
+           https://dx.doi.org/10.5306/wjco.v17.i2.114431                 4                     February 24, 2026       Volume 17         Issue 2
+
+=== PDF PAGE 5 ===
+                                                                                                   He BM et al. EA plus flurbiprofen for postoperative pain
+
+
+ Table 1 Patients demographic characteristics in two groups, median (interquartile range)/n (%)
+
+ Demographic characteristics                                                        Control group (n = 65)                         EA group (n = 65)
+
+ Year                                                                               52 (43.5-61)                                   52 (43.5-61.5)
+
+ Height (cm)                                                                        156 (151.5-160)                                155 (152-159)
+
+ Weight (kg)                                                                        55 (50-60.25)                                  57 (51.25-67.75)
+
+ Combined disease                                                                   29 (44.60)                                     36 (55.40)
+
+ Breast cancer location
+
+ Right                                                                              29 (44.60)                                     33 (50.80)
+
+ Left                                                                               36 (55.40)                                     32 (49.20)
+
+ Basic information of operation
+
+ Incoming (mL)                                                                      1000 (1000-1000)                               1000 (1000-1000)
+
+ Output (mL)                                                                        120 (30-230)                                   110 (20-250)
+
+ Anesthesia time (minutes)                                                          240 (190-285)                                  240 (189.5-277.5)
+
+ Operation procedure
+
+ Partial resection + sentinel lymph node biopsy                                     7 (5.38)                                       8 (6.16)
+
+ Partial resection + axillary dissection                                            9 (6.92)                                       8 (6.16)
+
+ Total mastectomy + sentinel lymph node biopsy                                      36 (27.69)                                     30 (23.08)
+
+ Total mastectomy + axillary dissection                                             18 (13.85)                                     14 (10.76)
+
+
+
+EA: Electroacupuncture.
+
+
+
+ Table 2 Occurrence of postoperative pain in two groups
+
+ Time after surgery                          n (moderate/severe pain) (%)                                    VAS score (mean ± SD)
+                                             Control group                       EA group                    Control group                    EA group
+
+ 24 hours after surgery
+
+ Pain during exercise                        41/1 (64.6)                         30/2 (49.2)a                3.954 ± 0.233                    2.862 ± 0.233b
+
+ Pain at rest                                11/1 (18.5)                         7/1 (12.3)                  2.692 ± 0.174                    1.789 ± 0.174b
+
+ 48 hours after surgery
+
+ Pain during exercise                        29/0 (44.6)                         24/1 (38.5)                 2.108 ± 0.18                     1.785 ± 0.18
+
+ Pain at rest                                6/0 (9.2)                           5/0 (7.7)                   1.169 ± 0.119                    0.631 ± 0.119
+
+ 72 hours after surgery
+
+ Pain during exercise                        19/0 (29.2)                         16/0 (24.6)                 1.215 ± 0.12                     1.115 ± 0.12
+
+ Pain at rest                                2/0 (3.1)                           3/0 (4.6)                   0.631 ± 0.08                     0.415 ± 0.086
+
+
+
+
+
+aP < 0.05 vs control group.
+
+bP < 0.01 vs control group.
+EA: Electroacupuncture.
+
+
+contribute to the observed improvements in postoperative pain relief and functional recovery. Moreover, the activation of
+these brain regions can also influence autonomic functions, including heart rate and blood pressure regulation, which
+further supports the role of EA in promoting recovery beyond pain management.
+   Functional magnetic resonance imaging has also been used to assess the effects of acupuncture on brain connectivity
+networks, with task-positive network activation and task-invisible network inactivation observed during acupuncture,
+thus modifying pain[7,9]. Moreover, according to the specificity of acupuncture, the brain has different regulation of true
+and false acupoint response[5]. Therefore, in this study, 2/100 Hz EA stimulation was selected, sham acupuncture (false
+acupoint) was used as a control, and combined with FA was used to play a better analgesic effect. At present, relevant
+clinical studies have confirmed that the combination of both can play a synergistic role in analgesia[10,11], the results are
+similar with our study. But our study also found that EA combined with FA was more effective at relieving exercise-
+
+
+
+            https://dx.doi.org/10.5306/wjco.v17.i2.114431                           5                        February 24, 2026          Volume 17           Issue 2
+
+=== PDF PAGE 6 ===
+He BM et al. EA plus flurbiprofen for postoperative pain
+
+
+ Table 3 Basic living ability scores 24 hours post-surgery in two groups, median (interquartile range)
+
+ BADL item                                                     Control group (n = 65)                             EA group (n = 65)
+
+ Eating                                                        10 (10-10)                                         10 (10-10)
+
+ Bathing                                                       0 (0-2.5)                                          0 (0-5)
+
+ Grooming                                                      0 (0-5)                                            5 (5-5)b
+
+ Dressing                                                      5 (5-10)                                           10 (5-10)b
+
+ Controlling defecation                                        10 (5-10)                                          10 (10-10)
+
+ Controlling urination                                         10 (5-10)                                          10 (10-10)
+
+ Toileting                                                     10 (5-10)                                          10 (10-10)a
+
+ Transferring                                                  15 (10-15)                                         15 (10-15)a
+
+ Walking                                                       15 (15-15)                                         15 (15-15)
+
+ Climbing up and down the stairs                               5 (0-5)                                            5 (0-10)
+
+ Total score                                                   80 (65-87.5)                                       85 (75-90)b
+
+
+
+
+
+aP < 0.05 vs control group.
+
+bP < 0.01 vs control group.
+BADL: Basic activities of daily living; EA: Electroacupuncture.
+
+
+
+ Table 4 Postoperative complications in two groups, n (%)
+
+ Complication                                                                           Control group                            EA group
+
+ Dizziness                                                                              5 (7.8)                                  4 (6.2)
+
+ Appetite loss                                                                          36 (55.4)                                27 (41.5)a
+
+ Postoperative nausea and vomiting                                                      22 (33.8)                                13 (20.0)a
+
+ Diarrhoea                                                                              4 (6.2)                                  4 (6.2)
+
+ Constipation                                                                           4 (6.2)                                  4 (6.2)
+
+
+
+
+
+aP < 0.05 vs control group.
+EA: Electroacupuncture.
+
+
+induced pain, especially if the pain is moderate. This was rarely reported in previous studies.
+   The results of our study also showed no difference in the incidence of moderate to severe pain (including resting pain
+and exercise pain) and VAS scores between the two groups at 48 hours and 72 hours after surgery. This may be related to
+the timeliness of acupuncture. After EA stimulation, acupuncture effect does not exist persistently, that is time-efficient
+[13]. There is a brief description of the frequency of acupuncture in “one day”, “two days”, and “Long sick, evil into the
+deep...and from time to time, they stab again” in Linshu - Zhongsh. It is suggested that the frequency of acupuncture
+treatment should be selected according to the kinds of diseases.
+   Because exercise-induced pain interferes normal daily activities, such as dressing, grooming, toileting and walking, the
+quality of life after operation is affected. Moderate to severe pain induced by daily activities after breast cancer surgery
+often reduces the pain by restricting the movement of the affected upper arm, which results in impaired functional
+recovery after surgery. Therefore, the improvement in BADL scores at 24 hours after surgery, including grooming,
+dressing, toilet use, and bed chair movement, may be due to the relief of exercise-induced pain, reflecting enhanced early
+functional recovery. At the same time, EA can reduce the occurrence of postoperative complications (nausea, vomiting
+and loss of appetite). As we all know, acupuncture is a safe, non-drug measure with no adverse reactions. Fourth
+Consensus Guidelines for the Management of PONV is clearly suggested that acupuncture has the same effect as any of
+the 6 antinausea drugs commonly used in clinical prevention and treatment of PONV, and the effect is better than false
+acupuncture[14]. Our study is also same. Given its low cost, minimal risk, and non-pharmacological characteristics, EA is
+a potentially cost-effective adjunct to multimodal analgesia, although formal economic evaluation was beyond the scope
+of this study. Incorporating EA may help reduce functional impairment and improve short-term postoperative recovery
+in a resource-efficient manner.
+   EA has good efficacy and safety in this study, but there are still some limitations: (1) Although a standardized sham
+procedure was applied, complete blinding in acupuncture trials is inherently challenging. Acupuncturists could not be
+blinded, and subtle differences  in sensation might have been detected by some patients, potentially  introducing
+expectation bias. However, the use of sham stimulation and blinded outcome assessors minimized the risk of such bias;
+
+
+
+            https://dx.doi.org/10.5306/wjco.v17.i2.114431                     6                      February 24, 2026         Volume 17          Issue 2
+
+=== PDF PAGE 7 ===
+                                                                                                  He BM et al. EA plus flurbiprofen for postoperative pain
+
+
+(2) In our study, the time window of EA treatment was only limited to 30 minutes before surgery to the end of surgery,
+which may be the reason why exercise-induced  pain could only be relieved within 24 hours, while there was no
+significant difference in pain at 48 hours and 72 hours after surgery; (3) Postoperative acupuncture is not continued,
+which may reduce the analgesic effect. However, it provides a novel postoperative analgesia strategy that incorporates
+EA into postoperative multimodal analgesia, including postoperative acute and chronic pain. Therefore, it is necessary to
+conduct a comprehensive study on this issue in the future; (4) This study assessed only short-term outcomes and lacked
+long-term follow-up; therefore, the potential effects of perioperative acupuncture on chronic postoperative pain and
+sustained functional recovery remain unknown. In addition, rescue opioid consumption was not recorded or compared
+between groups, limiting the ability to quantify the incremental  analgesic effect of EA; and (5) Patient-reported
+satisfaction is an important indicator of the acceptability of traditional medicine interventions, but was not evaluated in
+this study. Moreover, the BADL assessment at 24 hours may not fully reflect functional mobility in the acute inpatient
+setting, and future studies should consider using scales validated for early postoperative recovery.
+
+
+CONCLUSION
+
+In summary, EA combined with FA can significantly reduce the incidence of moderate to severe pain during exercise 24
+hours after surgery, reduce pain VAS score 24 hours after surgery, reduce postoperative complications, and improve
+early functional recovery 24 hours after surgery.
+
+
+REFERENCES
+
+1       Bray F, Ferlay J, Soerjomataram I, Siegel RL, Torre LA, Jemal A. Global cancer statistics 2018: GLOBOCAN estimates of incidence and
+        mortality worldwide for 36 cancers in 185 countries. CA Cancer J Clin 2018; 68: 394-424 [RCA] [PMID: 30207593 DOI: 10.3322/caac.21492]
+        [FullText]
+2       Bianchi A, Salgarello M, Hayashi A, Visconti G. Breast cancer related upper limb lymphedema: approach and surgical management. Minerva
+        Surg 2021; 76: 575-579 [RCA] [PMID: 34338471 DOI: 10.23736/S2724-5691.21.09013-4] [FullText]
+3       Humble SR, Dalton AJ, Li L. A systematic review of therapeutic interventions to reduce acute and chronic post-surgical pain after amputation,
+        thoracotomy or mastectomy. Eur J Pain 2015; 19: 451-465 [RCA] [PMID: 25088289 DOI: 10.1002/ejp.567] [FullText] [Full Text(PDF)]
+4       Ye XX, Gao YZ, Xu ZB, Liu QX, Zhan CJ. Effectiveness of Perioperative Auricular Therapy on Postoperative Pain after Total Hip
+        Arthroplasty: A Systematic Review and Meta-Analysis of Randomised Controlled Trials. Evid Based Complement Alternat Med 2019; 2019:
+        2979780 [RCA] [PMID: 30941191 DOI: 10.1155/2019/2979780] [FullText] [Full Text(PDF)]
+5       Huang W, Pach D, Napadow V, Park K, Long X, Neumann J, Maeda Y, Nierhaus T, Liang F, Witt CM. Characterizing acupuncture stimuli
+        using brain imaging with FMRI--a systematic review and meta-analysis of the literature. PLoS One 2012; 7: e32960 [RCA] [PMID: 22496739
+        DOI: 10.1371/journal.pone.0032960] [FullText] [Full Text(PDF)]
+6       Liu S, Wang ZF, Su YS, Ray RS, Jing XH, Wang YQ, Ma Q. Somatotopic Organization and Intensity Dependence in Driving Distinct NPY-
+        Expressing Sympathetic Pathways by Electroacupuncture. Neuron 2020; 108: 436-450.e7 [RCA] [PMID: 32791039 DOI:
+        10.1016/j.neuron.2020.07.015] [FullText]
+7       Maeda Y, Kettner N, Lee J, Kim J, Cina S, Malatesta C, Gerber J, McManus C, Im J, Libby A, Mezzacappa P, Morse LR, Park K, Audette J,
+        Napadow V. Acupuncture-evoked response in somatosensory and prefrontal cortices predicts immediate pain reduction in carpal tunnel
+        syndrome. Evid Based Complement Alternat Med 2013; 2013: 795906 [RCA] [PMID: 23843881 DOI: 10.1155/2013/795906] [FullText] [Full
+        Text(PDF)]
+8       Mao JJ, Liou KT, Baser RE, Bao T, Panageas KS, Romero SAD, Li QS, Gallagher RM, Kantoff PW. Effectiveness of Electroacupuncture or
+        Auricular Acupuncture vs Usual Care for Chronic Musculoskeletal Pain Among Cancer Survivors: The PEACE Randomized Clinical Trial.
+        JAMA Oncol 2021; 7: 720-727 [RCA] [PMID: 33734288 DOI: 10.1001/jamaoncol.2021.0310] [FullText]
+9       Zhao L, Liu J, Zhang F, Dong X, Peng Y, Qin W, Wu F, Li Y, Yuan K, von Deneen KM, Gong Q, Tang Z, Liang F. Effects of long-term
+        acupuncture treatment on resting-state brain activity in migraine patients: a randomized controlled trial on active acupoints and inactive
+        acupoints. PLoS One 2014; 9: e99538 [RCA] [PMID: 24915066 DOI: 10.1371/journal.pone.0099538] [FullText] [Full Text(PDF)]
+10      Guo XF, Ke H, Chen P, Yan MZ, Du WS. [Efficacy of acupuncture combined with flurbiprofen axetil in postoperative analgesia of adhesive
+        shoulder joint capsitis]. Zhongguo Tengtong Yixue Zazhi 2023; 29: 550-553 [DOI: 10.3969/j.issn.1006-9852.2023.07.012] [FullText]
+11      Pei XX, Wang Y. G, He Z, Li X, Du N. [Efficacy Observation of Electroacupuncture Combined with Flurbiprofen Axetil for Headache After
+        Spinal Anesthesia]. Shanghai Zhenjiu Zazhi 2021; 40: 294-297 [DOI: 10.13460/j.issn.1005-0957.2021.03.0294] [FullText]
+12      Tennant A, Geddes JM, Chamberlain MA. The Barthel Index: an ordinal score or interval level measure? Clin Rehabil 1996; 10: 301-308
+        [RCA] [DOI: 10.1177/026921559601000407] [FullText]
+13      Zhang L, Xue XX, Mu DJ, Yan HW, Han L. [Research progress on the relationship between acupuncture curative effect and acupuncture
+        retention and interval time]. Tianjin Zhongyiyao Daxue Xuebao 2021; 40: 666-674. [DOI: 10.11656/j.issn.1673-9043.2021.05.26] [FullText]
+14      Gan TJ, Belani KG, Bergese S, Chung F, Diemunsch P, Habib AS, Jin Z, Kovac AL, Meyer TA, Urman RD, Apfel CC, Ayad S, Beagley L,
+        Candiotti K, Englesakis M, Hedrick TL, Kranke P, Lee S, Lipman D, Minkowitz HS, Morton J, Philip BK. Fourth Consensus Guidelines for
+        the Management of Postoperative Nausea and Vomiting. Anesth Analg 2020; 131: 411-448 [RCA] [PMID: 32467512 DOI:
+        10.1213/ANE.0000000000004833] [FullText]
+
+
+
+
+
+
+
+
+
+
+            https://dx.doi.org/10.5306/wjco.v17.i2.114431                         7                        February 24, 2026          Volume 17           Issue 2
+
+=== PDF PAGE 8 ===
+He BM et al. EA plus flurbiprofen for postoperative pain
+
+
+FOOTNOTES
+Specialty type: Oncology
+
+Country of origin: China
+
+Author contributions: He BM did the statistical analyses; He BM and Hong QX initiated the project, generated research funds and ideas,
+led and coordinated the project, interpreted data, and wrote the paper; Sun XL provided intellectual input; Sun XL and Huang XY
+initiated and performed the experiments; Huang XY and Zhang SS were responsible for patients’ inclusion, follow-up, and adjudication
+of outcomes. All authors have read and agreed to the published version of the manuscript.
+
+Supported by Guangdong Provincial Department of Science and Technology Project, No. 2017ZC0181.
+
+Institutional review board statement: The research protocol was approved by the Ethics Committee of Guangdong Provincial Hospital of
+Chinese Medicine (Approval No. Ethics Committee of Guangdong Provincial Hospital of Chinese Medicine BF2018-006-01).
+
+Informed consent statement: All patients gave written informed consent.
+
+Conflict-of-interest statement: All the authors report no relevant conflicts of interest for this article.
+
+Data sharing statement: No additional data needs to be shared.
+
+STROBE statement: The authors have read the STROBE Statement-checklist of items, and the manuscript was prepared and revised
+according to the STROBE Statement-checklist of items.
+
+Open Access: This article is an open-access article that was selected by an in-house editor and fully peer-reviewed by external reviewers.
+It is distributed in accordance with the Creative Commons Attribution NonCommercial (CC BY-NC 4.0) license, which permits others to
+distribute, remix, adapt, build upon this work non-commercially, and license their derivative works on different terms, provided the
+original work is properly cited and the use is non-commercial. See: https://creativecommons.org/Licenses/by-nc/4.0/
+
+S-Editor: Zuo Q
+L-Editor: A
+P-Editor: Wang CH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            https://dx.doi.org/10.5306/wjco.v17.i2.114431                         8                        February 24, 2026          Volume 17           Issue 2
+
+=== PDF PAGE 9 ===
+        Published by Baishideng Publishing Group Inc
+7041 Koll Center Parkway, Suite 160, Pleasanton, CA 94566, USA
+                    Telephone: +1-925-3991568
+                   E-mail: office@baishideng.com
+      Help Desk: https://www.f6publishing.com/helpdesk
+                       https://www.wjgnet.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         © 2026 Baishideng Publishing Group Inc. All rights reserved.

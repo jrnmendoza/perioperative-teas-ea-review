@@ -1,0 +1,306 @@
+{
+  "Study_ID": "S032",
+  "Study": "Lu 2022",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "identity": {
+    "title": "Acupoint Stimulation for Enhanced Recovery After Colon Surgery: A Prospective Multicenter Randomized Controlled Trial",
+    "year": 2022,
+    "doi": "10.2147/JMDH.S391852",
+    "pdf": "getfile.php-3.pdf",
+    "registration": "NCT02921529; first posted2016-10-03 before November2016 start; current record updated June2018"
+  },
+  "arms": {
+    "TEAS": {
+      "randomized": 50,
+      "analyzed": 47
+    },
+    "sham_no_current": {
+      "randomized": 50,
+      "analyzed": 47
+    }
+  },
+  "denominator_evidence": "Figure1 visually checked: TEAS3 open conversions; sham2 open conversions+1 rejected intervention. Supplement8 confirms center totals50/47 per arm.",
+  "intervention": "Surface TEAS 2/10Hz 4–11mA30min preinduction and mornings POD1–3; sham electrode/no current; article says PC6/ST36 but supplement1 includes LI4/PC6/ST36/SP6.",
+  "results": {
+    "source_location": "Table3 pp5–6 visually checked; values TEAS vs sham",
+    "flatus_hours_mean_sd": [
+      [
+        34.5,
+        16.7
+      ],
+      [
+        42.4,
+        22.9
+      ]
+    ],
+    "defecation_hours_mean_sd": [
+      [
+        42,
+        25
+      ],
+      [
+        55.4,
+        29.7
+      ]
+    ],
+    "water_hours_mean_sd": [
+      [
+        33.5,
+        22.3
+      ],
+      [
+        28.9,
+        17.5
+      ]
+    ],
+    "discharge_days_as_printed": [
+      [
+        6,
+        1.8
+      ],
+      [
+        7,
+        2.4
+      ]
+    ],
+    "discharge_format_conflict": "Narrative median±; table mean±SD footnote. Confirm with authors if synthesized.",
+    "PONV_events_24_48_72": [
+      [
+        30,
+        22
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        8,
+        4
+      ]
+    ],
+    "PONV_window": "Registry cumulative end-surgery→24/48/72; decreasing later counts incompatible with cumulative event counts, so later interval definition unresolved.",
+    "VAS_rest_median_min_max_24_48_72": [
+      [
+        [
+          2.2,
+          0,
+          10
+        ],
+        [
+          1.2,
+          0,
+          8.1
+        ]
+      ],
+      [
+        [
+          1.2,
+          0,
+          6.7
+        ],
+        [
+          1.6,
+          0,
+          6
+        ]
+      ],
+      [
+        [
+          0.6,
+          0,
+          5
+        ],
+        [
+          1,
+          0,
+          6.2
+        ]
+      ]
+    ],
+    "VAS_cough_median_min_max_24_48_72": [
+      [
+        [
+          5.8,
+          0.4,
+          10
+        ],
+        [
+          5.5,
+          1.4,
+          10
+        ]
+      ],
+      [
+        [
+          5,
+          0.3,
+          10
+        ],
+        [
+          5,
+          0.7,
+          10
+        ]
+      ],
+      [
+        [
+          3.5,
+          0.1,
+          10
+        ],
+        [
+          4,
+          0.3,
+          10
+        ]
+      ]
+    ],
+    "PCA_attempts_median_min_max_24_48_72": [
+      [
+        [
+          8,
+          3,
+          18
+        ],
+        [
+          16.5,
+          8,
+          38
+        ]
+      ],
+      [
+        [
+          13,
+          5,
+          22
+        ],
+        [
+          26,
+          11.5,
+          45.5
+        ]
+      ],
+      [
+        [
+          13,
+          5,
+          24
+        ],
+        [
+          24.5,
+          13,
+          46
+        ]
+      ]
+    ],
+    "PCA_deliveries_median_min_max_24_48_72": [
+      [
+        [
+          5,
+          2,
+          12
+        ],
+        [
+          12,
+          6,
+          22
+        ]
+      ],
+      [
+        [
+          7,
+          3,
+          14
+        ],
+        [
+          16.5,
+          8,
+          35
+        ]
+      ],
+      [
+        [
+          7,
+          3,
+          20
+        ],
+        [
+          16.5,
+          10,
+          36
+        ]
+      ]
+    ],
+    "PCA_24_typo": "TEAS delivery median printed5.0.0; preserve source typo, interpreted5.0 provisional.",
+    "QoR15_median_min_max_table_24_48_72": [
+      [
+        [
+          54.5,
+          15,
+          92
+        ],
+        [
+          59,
+          27,
+          136
+        ]
+      ],
+      [
+        [
+          59,
+          35,
+          104
+        ],
+        [
+          62,
+          0,
+          130
+        ]
+      ],
+      [
+        [
+          67,
+          31,
+          113
+        ],
+        [
+          67,
+          11,
+          136
+        ]
+      ]
+    ],
+    "QoR15_narrative_24_median_IQR": [
+      [
+        50.5,
+        42.3,
+        61.8
+      ],
+      [
+        44.5,
+        35,
+        57
+      ]
+    ],
+    "QoR15_conflict": "Table24 TEAS worse P=.01, narrative values TEAS numerically better but calls lower P=.04. Do not resolve by picking agreement. High priority author query."
+  },
+  "analgesia": {
+    "drug": "Insufficient information / not reported.",
+    "route": "Insufficient information / not reported.",
+    "formulation": "Insufficient information / not reported.",
+    "rescue": "Insufficient information / not reported.",
+    "evidence": "Supplement2 only standard PCA + preincision ropivacaine infiltration; no drug concentration. Button counts cannot become mg."
+  },
+  "source_review": "Entire9-page article read; pp4–6 visually checked; official supplement downloaded and text read; official registry API checked before baseline.",
+  "rob_independent": {
+    "D1": "Some concerns: computer sequence; sealed envelopes not established opaque; only analyzed cohort baseline reported. 1.1Y1.2NI1.3NI.",
+    "D2": "Some concerns: patients/interventionist unmasked; standardized ERAS no clear trial-context cointervention, but6 postrandomization eligible exclusions; mITT conditional on receipt not appropriate ITT, substantial impact uncertain.",
+    "D3": "Some concerns for GI/pain/QoR:94/100, conversions prognostic for recovery; no sensitivity; could depend on true outcome but actual differential missingness not demonstrated.",
+    "D4": "Some concerns for pain, QoR, nausea, self-reported flatus; observer masked but participant aware. Defecation more observable but timing relies reporting; no strong evidence probable influence.",
+    "D5": "Some concerns: registry prospective but original detailed SAP unavailable; QoR conflicting numbers not proof results-based selection, numerically unresolved."
+  },
+  "opioid_decision": "Excluded: attempts/deliveries proxy, no postoperative dose.",
+  "independence": "Distinct colon RCT from Lu2021 mastectomy, same investigator not same cohort."
+}

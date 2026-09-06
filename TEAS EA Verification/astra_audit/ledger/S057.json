@@ -1,0 +1,24 @@
+{
+  "Study_ID": "S057",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_at": "2026-09-05T15:16:57.167Z",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows": 1,
+  "reviewed_rows": 1,
+  "reviewed_row_ids": [
+    16
+  ],
+  "result_specific_rob_count": 1,
+  "unresolved": [
+    {
+      "missing_information": "Randomized arm counts; individualabsoluteopioiddoses/rescuetotals andstarttime",
+      "why_it_matters": "Cannot infer16/16 or convertug/kgusingmeanweight",
+      "analysis_affected": "Primaryopioid",
+      "can_proceed_without": "Rawug/kgdescriptive result withHighRoB",
+      "priority": "HIGH",
+      "exact_question": "Please confirm initialrandomizedarmcounts and provide absolute0-24hend-of-surgery fentanyl plusrescuemorphine/fentanyl meanSD/n, including excludedpatients andinfusionstarttimes."
+    }
+  ],
+  "summary": "Singleassignedrowadjudicated. Removedunsupported16/16randomizedn; addedP<.002; correctedwindowto24hfrominfusionstart. ug/kg andunknownrescueexcludeprimaryIVmorphinesynthesis.",
+  "adjudicated_at": "2026-09-05T15:17:41.388Z"
+}

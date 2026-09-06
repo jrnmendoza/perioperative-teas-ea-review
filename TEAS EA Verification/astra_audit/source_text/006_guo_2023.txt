@@ -1,0 +1,737 @@
+=== PDF PAGE 1 ===
+                                                                  Contents lists available at ScienceDirect
+
+                                                                                     Heliyon
+
+
+                                                               journal  homepage:  www.cell.com/heliyon
+
+
+Effect  of  transcutaneous  electrical  acupoint  stimulation  on
+postoperative  cognitive  function  in  older  patients  with  lung
+cancer:  A  randomized,  double-blind,  placebo-controlled  trial
+
+Fei  Guo     1,  Ruili  Han      1,  Li  Sun     1,  Lanlan  Zheng,  Yanzheng  Wang,  Yuting  Yan,
+Chen  Liu,  Yuan  Qin,  Chen  Yuan,  Shuang  Wang,  Xude  Sun     **,  Changjun  Gao      *
+
+Department of Anesthesiology, The Second Affiliated Hospital of Air Force Medical University, Xi’an, People’s Republic  of China
+
+
+
+ARTICLE INFO                                                    ABSTRACT
+
+Keywords:                                                       Objective:  This   trial  was  to  examine   the  effect  of   transcutaneous  electrical   acupoint  stimulation
+Transcutaneous electrical acupoint stimulation                  (TEAS)  on  postoperative  cognitive  function  in  older  patients  who  underwent  thoracoscopic  pul-
+(TEAS)                                                          monary resection.
+Postoperative cognitive dysfunction(POCD)                       Methods:    This    was    a    prospective,    randomized,    double-blind,    placebo-controlled    study.    128    pa-
+Quality of life                                                 tients scheduled for surgery were randomly assigned to the TEAS group and sham-TEAS group. A
+Lung cancer                                                     standardized intervention of TEAS or sham-TEAS on the acupoints of Baihui (DU20) and bilateral
+Older patients
+                                                                Neiguan (PC6), Hegu (LI4), and Zusanli (ST36) from 30 min before anesthesia induction until the
+                                                                end   of   the   surgery,   combined   with   a   general   anesthetic   protocol   performed   in   the   two   groups
+                                                                respectively.     The     primary     outcome     was     the     incidence     of     postoperative     cognitive     dysfunction
+                                                                (POCD)   assessed   via   the   Montreal   Cognitive   Assessment   (MoCA)   scale   at   each   time   point.   The
+                                                                secondary outcomes included the results of the Mini-Mental State Examination (MMSE) score, the
+                                                                Numerical   Rating   Scale   (NRS)   on   pain   and   sleep,   the   European   Organization   for   Research   and
+                                                                Treatment     of     Cancer     Quality     of     Life     (EORTC-QLQ-C30),     and     a     chronic     pain     questionnaire     at
+                                                                relative  time points.
+                                                                Results:  Participants  who  completed  the  12-month  trial  of  the  two  groups  were  well-matched  in
+                                                                baseline  demographic  and  clinical  parameters.  At   postoperative  day  1,  day  7,  and  day  30  time
+                                                                points, the incidence of POCD in the sham-TEAS group was always significantly higher than in the
+                                                                TEAS group (65.4% vs 20%, 43.6% vs 7.3%, 40% vs 3.6%, all P <       0.001). Also, the TEAS group
+                                                                showed   better   scores   of   MMSE,   sleep,   and   pain   compared   with   the   sham-TEAS   group   (all   P      <
+                                                                0.001).  At 6  and  12  months points,  the  global  health  scores of  the  TEAS  group  were  still signif-
+                                                                icantly  higher  than  the  sham-TEAS  group,  and  the  prevalence  of  chronic  pain  was  significantly
+                                                                lower than  the  sham-TEAS group  (all P   <        0.05).
+                                                                Conclusion:   TEAS   could   effectively   improve   the   postoperative   cognitive   function   and   long-term
+                                                                life quality of geriatric  patients  with lung  cancer.
+
+
+
+
+
+  *           Corresponding author. Department of Anesthesiology, The Second Affiliated Hospital of Air Force Medical University, Xi’an, 710038, People’s
+Republic of China.
+ **           Corresponding author. Department of Anesthesiology, The Second Affiliated Hospital of Air Force Medical University, Xi’an, 710038, People’s
+Republic of China.
+    E-mail addresses: sunxude@fmmu.edu.cn  (X. Sun),  gaocj74@163.com (C.  Gao).
+  1       These  authors  contributed equally  to this work.
+
+
+https://doi.org/10.1016/j.heliyon.2023.e19386
+Received  22 February  2023; Received  in revised  form 28  July 2023;  Accepted 21  August 2023
+
+=== PDF PAGE 2 ===
+F. Guo et al.
+
+1.                Introduction
+
+    Lung cancer is the  second most diagnosed  cancer among men and women  worldwide and  is the  leading cause of cancer-related
+death    [1].    With    the    development    of    early    detection,    a    growing    number    of    elderly    patients    diagnosed    with    stage    I    or    II    diseases
+have the potential to be cured by surgery [2]. Unlike past cancer treatments aimed primarily at survival, the perioperative field is now
+increasingly recognized for its rapid recovery and high quality of life in surgical patients [3]. Thus, several practical strategies, such as
+minimally invasive surgery and proper anesthesia management, have been widely adopted to implement the enhanced recovery after
+surgery   (ERAS)   pathway   [4].   However,   given   the   large   number   of   elderly   patients   suffering  from   basic   diseases,   a   relatively   high
+prevalence of postoperative complications remains recognized as a major barrier to their optimal recovery.
+    Postoperative cognitive dysfunction (POCD) is a neurological complication that frequently occurs in elderly surgical patients and
+lasts    for    an    indefinite    duration    (from    a    few    weeks    to    several    years)    after    surgery    [5].    It    is    defined    as    an    abnormal    condition    of
+orientation, attention, perception, consciousness, and judgment that might produce cluster adverse impacts such as prolonged stay in
+the hospital, delayed functional recovery, and increased mortality [6,7]. Over the past decades, several clinical studies have adopted a
+broad range of surgical or anesthesia procedures to minimize the impact of POCD [8]. Nevertheless, these perioperative interventions
+produced negative or inconclusive results due to the complex causes of POCD [9,10]. Therefore, perioperative medicine is encouraged
+to investigate techniques that would help cognitive function achieve an ideal recovery for geriatric patients after surgery [11].
+    Transcutaneous electrical acupoint stimulation (TEAS) has been used to facilitate postoperative recovery  in various surgical pa-
+tients.         This         noninvasive         and         nonpharmacological         adjunctive         intervention         was         born         and         developed         from         traditional         Chinese
+acupuncture and modern electroacupuncture. Multiple randomized controlled trials have suggested that TEAS could be effective in
+preventing nausea and vomiting, alleviating psychological symptoms, lowering anesthetic consumption, and synergizing with seda-
+tives    and    analgesics    among    various    surgical    patients    [12–15].    However,    the    clinical    application    of    this    technology    was    reported
+limitedly in patients with carcinoma of the lung, and the impact on long-term life quality has not been studied beyond 12 months.
+    Based on these considerations, the main objective of this study was to determine if TEAS could reduce POCD and promote post-
+operative recovery in elderly patients undergoing thoracoscopic lung cancer resection. We hypothesized that TEAS could improve the
+postoperative cognition function of elderly patients with lung cancer in the early stages and further promote their quality of life.
+
+2.                Materials  and  methods
+
+2.1.                 Study  design
+
+    This was a prospective, randomized, double-blind, placebo-controlled study. It was approved by the Research Ethics Committee of
+the Second Affiliated Hospital of Air Force Medical University (NO.202006–03) and registered at the Chinese Clinical Trial Registry
+(Registration                   number:                   ChiCTR2000035552)                   and                   the                   Chinese                   Medicine                   Clinical                   Trial                   Registry                   (Registration                   number:
+ChiMCTR2000003560). All procedures in this study were performed following the 1964 Helsinki Declaration and its later amendments
+or        comparable        ethical         standards.        Before         participating,        all         patients        signed         the         informed         consent         form        without        any        financial
+compensation.
+
+
+2.2.                 Participants
+
+    Those who were scheduled for thoracoscopic pulmonary resection for suspected lung cancer between August 26, 2020, and January
+4, 2021, at the Department of Thoracic Surgery, the Second Affiliated Hospital of Air Force Medical University, were consecutively
+screened and enrolled. The inclusion criteria were: (1) Patients were scheduled for thoracoscopic pulmonary resection, which may last
+more than 2 h; (2) Patients aged ≥65 years; (3) BMI: 18–30 kg/m                                                                 2; (4) American Society of Anesthesiologists status was I to III; (5)
+Patients with primary tumor who never had radiotherapy or chemotherapy; (6) Patients planning to conduct pulmonary isolation with
+a double-lumen tube (DLT); (7) Patients with normal cognitive function. Patients were excluded as the following criteria: (1) Patients
+refused to take part in this study; (2) Patients with communication disorders such as language comprehension disorder, mental dis-
+orders, epilepsy, a history of Parkinson’s disease or Myasthenia Gravis, and other disorders impairing their ability to communicate; (3)
+History of opioid, alcohol, or other drug abuse and addiction; (4) Patients with TEAS contraindications, including partially damaged
+skin, infection, or implantable internal electrophysiologic device; (5) History of severe comorbidities in major organ system, including
+pre-existing   coagulopathy,   hypertension   (systolic   pressure       ≥180   mmHg   and/or   diastolic   pressure                                                        ≥110   mmHg),   hepatic   or   renal
+insufficiency,  cardiovascular disease,  diabetes, and  chronic  obstructive pulmonary disease;  (6) History of  pulmonary operation; (7)
+Unilateral     pulmonary     resection     or     bilateral     pulmonary     operation;     (8)     Massive     hemorrhage     in     operation;     (9)     Taking     pulmonary
+sequestration ways such as difficult airway, tracheotomy, occluder, artificial pneumothorax excluded DLT; (10) Patients took part in
+other clinical trials within 3 months; (11) Patients considered inappropriate by the physician in charge (provided that the reasons were
+detailed and recorded).
+
+
+2.3.                 Randomization  and  blinding
+
+    A randomization sequence was generated by Statistical Product and Service Solutions (SPSS 25.0) software, and the allocation code
+was performed by an independent technician, 128 patients were enrolled and randomly assigned to the TEAS group and the sham-
+
+=== PDF PAGE 3 ===
+F. Guo et al.
+
+TEAS group (1:1). The patients, anesthesiologists, surgeons, and observers were blinded to group assignment. Until the 12 months trial
+was completed, the technician didn’t share the information about divided groups with the statistician.
+
+2.4.                 Interventions
+
+    This part was performed by an experienced technician who held a Good Clinical Practice Certificate. According to the allocation
+code  of  the  enrolled  patients  with  the  time  sequence,  they  were  given  TEAS  and  sham-TEAS  interventions,  respectively.  In  detail,
+electrodes  were  attached  to  the  acupoints  of  Baihui  (DU20)  and  bilateral  Neiguan  (PC6),  Hegu  (LI4),  and  Zusanli  (ST36)  (Supple                                               -
+mentary Material 1) in all patients. For the TEAS group, two Han’s Acupoint Nerve Stimulators (HANS-200 A; Nanjing Jisheng Medical
+Technology Co., Ltd; China) were applied to stimulate these combined acupoints with fixed parameters (disperse-dense waves; 2/100
+Hz, and 10–30 mA) from 30 min before anesthesia induction until the end of the surgery. In the sham-TEAS group, the stimulators were
+also connected, but the power was turned off.
+    To reduce the bias, a standardized anesthetic protocol was elaborated and performed throughout the surgery. No anesthetic was
+given  to  the  patients  before  anesthesia  induction.  The  content  of  intraoperative  monitoring  included  electroencephalogram  (EEG),
+bispectral index (BIS), arterial blood pressure (ABP), pulse oxygen saturation (SPO2), end-tidal carbon dioxide tension (EtCO2), core
+body temperature (CBT), and urine volume. Dexamethasone (4–5 mg) was used to prevent postoperative nausea and vomiting. The
+intravenous induction was started with midazolam (0.015–0.03 mg/kg), sufentanil (0.4–0.8                                                                                                                                                                                                                                                                                                                                                                             μ       g/kg), propofol (1.5–2.5 mg/kg), and
+rocuronium bromide (0.6 mg/kg), and then a double-lumen tube was intubated at an appropriate depth. Anesthesia was maintained by
+using  a  target-controlled  infusion  (TCI)  system  of  propofol,  rocuronium,  and  remifentanil  (adjusting  the  BIS  to  40–60).  During  the
+procedure,  mechanical  ventilation  was  set  as  follows:  tidal  volume  (6–8  ml/kg),  PEEP  (5  cm  H                                       2O),  pause  pressure  (≤30  cm  H                               2O),
+respiratory    rate    (12–16    breaths/minute),    and    oxygen    (50%).    The    volume    of   intravenous    infusion    was    managed   according    to    the
+clinical indication. Patients were given relaxant antagonists (neostigmine and atropine) after extubation. At the end of the surgery, a
+patient-controlled intravenous analgesia (PCIA) pump (sufentanil: 0.04 μ       g/kg/h, bolus: 0.01 μ       g/kg, PCIA dose: 3 ml, background dose:
+2 ml/h, interval: 15 min, and duration: 48 h) was connected immediately.
+
+2.5.                 Measures  and data  collection
+
+    A standardized case report form (Supplementary Material 2) was designed to collect all enrolled patients’                                                                                                                               information throughout
+the trial. It consisted of three sections, as follows: (1) On the first preoperative day, the surgeon would share the basic information,
+physical condition, and surgical schedule of potential subjects with the visitor. All the patients were screened according to the enrolling
+and  excluding  criteria.  The  effects  of  the  preoperative  interviews  were  ensured  by  workload,  operation  schedule,  nurse  talent,  and
+coordination between the operating room and the clinical wards. Preoperative evaluation includes demographic data, past medical
+history, an assessment of Barthel’s index, and cognitive function. Demographic data include age, gender, race, BMI, education level,
+allergic history, smoking history, drinking history, and surgical history. Chronic diseases such as hypertension, diabetes, and cardi-
+opathy  were  also  collected.  All  the  neuropsychological  tests  were  conducted  at  the  hospital  during  daily  working  hours.  To  obtain
+cognitive baseline information, the Mini-Mental State Examination (MMSE) and Montreal Cognitive Assessment (MoCA) were used in
+the preoperative evaluation [16,17]. The MMSE consists of 20 separate items which add up to a maximum score of 30. In the present
+study, a score >27 was considered indicative of normal cognitive function, and the MMSE values were corrected for age and education.
+The     MoCA     has     taken     the     originally     recommended     26/30     cutoff     score.     (2)     Perioperative     information     on     surgical     and     anesthesia
+management    includes    the    duration    of    anesthesia    and    anesthesia    recovery,    the    proportion    of    lung    resected,    the    dose    of    propofol,
+sufentanil, and remifentanil, fluid administration, and the frequency of remedial analgesia in the hospital. (3) Postoperative follow-up
+of cognitive function, quality of life, and chronic pain was also collected. During the postoperative follow-up, the primary outcome was
+the incidence of POCD which was diagnosed when the MoCA score declined 1 standard deviation (SD) or more compared with the
+preoperative MoCA score on postoperative day 1, day 7, and day 30 [18]. Secondary outcomes included the results of MMSE scores, the
+Numerical Rating Scale (NRS) on pain and sleep on Day 1, Day 7, and Day 30 after surgery [19,20], the quality of life assessed by the
+European Organization for Research and Treatment of Cancer Quality of Life Questionnaire (EORTC-QLQ-C30) at 6 months and 12
+months [21], and a questionnaire on chronic pain at 12 months.
+    Adverse    events    were    reported    by    participants    and    collected    by    the    investigator    throughout    the    trial.    All    adverse    events    were
+categorized  by  a  discussion  between   the   anesthesiologists  and  surgeons   as  related  or   unrelated  to   the   intervention  within  24   h  of
+occurrence. Serious adverse events should be immediately reported to the principal investigator and the ethics committee within 24 h.
+Any of the reported adverse events should be resolved with proper measures.
+
+2.6.                 Statistical  analysis
+
+    According   to    the   previous    study,    the    incidence    of   POCD    was    41.4%    in   older    surgical    patients    at    hospital   discharge    [22].   We
+assumed that TEAS could decrease the incidence of POCD to 25.4% in patients who underwent thoracoscopic lung cancer resection.
+Using an α            value of 0.05 and a power (1-β) of 80%, we calculated that a sample size of 102 was required. Considering a 20% dropout
+rate, the sample size was computed to be 128 by the population correction formula.
+    All statistical analyses were performed using SPSS 25.0. In this study, the continuous variables were presented as mean ±      SD. If the
+data conforms to the normal distribution, it would be compared by an independent-sample t-test. Otherwise, a Mann-Whitney        U test
+would      be      used.     Categorical     data      were      expressed     as     numbers      and     percentages,      and      compared      with            χ      2        or     Fisher’s      exact     test      as
+
+=== PDF PAGE 4 ===
+F. Guo et al.
+
+appropriate. A 2-sided P value less than 0.05 was considered significant.
+
+3.                Results
+
+3.1.                 Participant  characteristics
+
+    Between August 2020 and January 2021, a total of 412 patients who underwent thoracoscopic pulmonary resection for suspected
+lung cancer were screened for eligibility. 128 of them were enrolled and randomly assigned to the TEAS or sham-TEAS group, and 110
+(85.94%)  completed  the  trial,  while 18  (14.06%)  patients dropped  out  of  the  study,  so  their  data  were  excluded  from the  analyses
+(Fig.   1).   No   significant   difference   in   baseline   characteristics   was   found   between   the   dropped   patients   and   the   completed   patients
+(Supplementary Material 3).
+
+3.2.                 Baseline  and demographic  characteristics
+
+    Overall, patients who completed the trial in the TEAS and the sham-TEAS groups were well-matched for baseline characteristics
+(Table 1). There were no significant differences in age, sex, education level, chronic diseases, and MoCA, or MMSE scores between the
+two groups at baseline. In the total sample, the mean age was 70.33 years (SD  =        4.27), 42.7% of the participants were female, and
+77.3% of them were educated more than 9 years, the mean MoCA score at baseline was 27.85 (SD =      1.52), and the mean MMSE score
+was 28.17 (SD =        1.23).
+    According to the perioperative information of the study population (Table 2), it was found that there were no significant differences
+between the two groups in the duration of anesthesia, the proportion of lung resected, the consumption of propofol and sufentanil, the
+total of input or output fluid, or the frequency of remedial analgesics. However, the consumption of remifentanil in the sham-TEAS
+group was significantly higher than in the TEAS group (1.01 ±        0.39 vs 0.87 ±        0.30 mg, P =        0.040).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                          Fig. 1.            Study flow  diagram.
+
+=== PDF PAGE 5 ===
+F. Guo et al.
+
+Table 1
+Baseline characteristics of patients who completed the trial (n [%], mean ±       SD).
+
+                 Characteristic                                                                                                                                                                                                                                                                                                                TEAS group (n =      55)                                                                                                                                                                                                                                                                                      Sham-TEAS group (n =      55)                                                                                                                                                                                                                                                                                      P-value
+
+                 Age (years)                                                                                                                                                                                                                                                                                                                                      70.09 ±      3.95                                                                                                                                                                                                                                                                                                                                                                   70.56 ±      4.59                                                                                                                                                                                                                                                                                                                                                                                                                               0.69a
+                 Race                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     –
+                                   Han                                                                                                                                                                                                                                                                                                                                                                                       54 (98.18%)                                                                                                                                                                                                                                                                                                                                                                         54 (98.18%)
+                                   Other                                                                                                                                                                                                                                                                                                                                                                        1 (1.82%)                                                                                                                                                                                                                                                                                                                                                                                                  1 (1.82%)
+                 Gender                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 0.18
+                                   Female                                                                                                                                                                                                                                                                                                                                                         20 (36.40%)                                                                                                                                                                                                                                                                                                                                                                         27 (49.10%)
+                                   Male                                                                                                                                                                                                                                                                                                                                                                               35 (63.60%)                                                                                                                                                                                                                                                                                                                                                                         28 (50.90%)
+                 BMI (kg/m2)                                                                                                                                                                                                                                                                                                                         24.09 ±      2.78                                                                                                                                                                                                                                                                                                                                                                   23.63 ±      2.85                                                                                                                                                                                                                                                                                                                                                                                                                               0.52a
+                 Education                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      0.12
+                                   <9 years                                                                                                                                                                                                                                                                                                                                                         12 (21.80%)                                                                                                                                                                                                                                                                                                                                                                         13 (23.60%)
+                                   9–12 years                                                                                                                                                                                                                                                                                                                                             36 (65.50%)                                                                                                                                                                                                                                                                                                                                                                         27 (49.10%)
+                                   >12 years                                                                                                                                                                                                                                                                                                                                             7 (12.70%)                                                                                                                                                                                                                                                                                                                                                                                     15 (27.30%)
+                 Allergic history                                                                                                                                                                                                                                                                                                8 (14.50%)                                                                                                                                                                                                                                                                                                                                                                                     10 (18.20%)                                                                                                                                                                                                                                                                                                                                                                                                                                      0.61
+                 Smoking history                                                                                                                                                                                                                                                                                       23 (41.80%)                                                                                                                                                                                                                                                                                                                                                                         20 (36.40%)                                                                                                                                                                                                                                                                                                                                                                                                                                      0.56
+                 Drinking history                                                                                                                                                                                                                                                                                      5 (9.10%)                                                                                                                                                                                                                                                                                                                                                                                                  7 (12.70%)                                                                                                                                                                                                                                                                                                                                                                                                                                                  0.54
+                 Surgical history                                                                                                                                                                                                                                                                                             33 (60.00%)                                                                                                                                                                                                                                                                                                                                                                         27 (49.10%)                                                                                                                                                                                                                                                                                                                                                                                                                                      0.25
+                 Chronic diseases
+                                   Hypertension                                                                                                                                                                                                                                                                                              19 (34.50%)                                                                                                                                                                                                                                                                                                                                                                         22 (40.00%)                                                                                                                                                                                                                                                                                                                                                                                                                                      0.55
+                                   Diabetes                                                                                                                                                                                                                                                                                                                                            6 (10.90%)                                                                                                                                                                                                                                                                                                                                                                                     3 (5.50%)                                                                                                                                                                                                                                                                                                                                                                                                                                                              0.49b
+                                   Cardiopathy                                                                                                                                                                                                                                                                                                        3 (5.50%)                                                                                                                                                                                                                                                                                                                                                                                                  7 (12.70%)                                                                                                                                                                                                                                                                                                                                                                                                                                                  0.19
+                 MMSE Score                                                                                                                                                                                                                                                                                                                           28.27 ±      1.22                                                                                                                                                                                                                                                                                                                                                                   28.07 ±      1.25                                                                                                                                                                                                                                                                                                                                                                                                                               0.45a
+                 MoCA Score                                                                                                                                                                                                                                                                                                                              27.84 ±      1.21                                                                                                                                                                                                                                                                                                                                                                   27.86 ±      1.78                                                                                                                                                                                                                                                                                                                                                                                                                               0.57a
+                 NYHA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          0.05
+                 I                                                                                                                                                                                                                                                                                                                                                                                                                                             53 (96.40%)                                                                                                                                                                                                                                                                                                                                                                         47 (85.50%)
+                 II                                                                                                                                                                                                                                                                                                                                                                                                                                      2 (3.60%)                                                                                                                                                                                                                                                                                                                                                                                                  8 (14.50%)
+
+Abbreviations: BMI, body mass index; MMSE, Mini-Mental State Examination; MoCA, Montreal Cognitive Assessment; NYHA, New York Heart As-
+sociation Functional Classification.
+               a            Indicates Mann-Whitney U test.
+               b            Indicates Fisher’s exact test.
+
+
+
+Table 2
+Perioperative information of the study population (mean ±       SD).
+
+                 Perioperative information                                                                                                                                                                                                                                                                                                                                                                                                                                                    TEAS group (n =      55)                                                                                                                                                          Sham-TEAS group (n =                                 55)                                                                                                                                                          P-value
+
+                 Duration of anesthesia (min)                                                                                                                                                                                                                                                                                                                                                                                                                         159.36 ±                                                                                39.68                                                                                                                                                                                                             146.82 ±                                                                                38.36                                                                                                                                                                                                                                                                          0.095
+                 Duration of anesthesia recovery (min)                                                                                                                                                                                                                                                                                                                               22.64 ±      9.37                                                                                                                                                                                                                                      24.45 ±      8.80                                                                                                                                                                                                                                                                                                  0.297
+                 The proportion of lung resected (%)                                                                                                                                                                                                                                                                                                                                                  33.82 ±      13.78                                                                                                                                                                                                                          34.09 ±      15.93                                                                                                                                                                                                                                                                                      0.886a
+                 Dose of propofol (mg)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         643.00 ±                                                                                213.08                                                                                                                                                                                                 626.09 ±                                                                                233.47                                                                                                                                                                                                                                                              0.680a
+                 Dose of sufentanil (ug)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  29.42 ±      7.62                                                                                                                                                                                                                                      30.55 ±      7.94                                                                                                                                                                                                                                                                                                  0.433a
+                 Dose of remifentanil (mg)                                                                                                                                                                                                                                                                                                                                                                                                                                                    0.87 ±      0.30                                                                                                                                                                                                                                                  1.01 ±      0.39                                                                                                                                                                                                                                                                                                               0.040
+                 Fluid administration (ml)
+                                   Input                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     1489.09 ±      346.24                                                                                                                                                                                     1431.82 ±      395.62                                                                                                                                                                                                                                                 0.417a
+                                   Output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    508.46 ±                                                                                258.96                                                                                                                                                                                                 494.27 ±                                                                                294.39                                                                                                                                                                                                                                                              0.482a
+                 Frequency of remedial analgesic in the hospital (times)                                                                                                                                                          2.29 ±      1.76                                                                                                                                                                                                                                                  1.96 ±      1.97                                                                                                                                                                                                                                                                                                               0.361
+
+               a            Indicates Mann-Whitney U test.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 Fig. 2.            The  incidence rate of  POCD.  “*”                                  indicates  P   <        0.001 as  the  TEAS  group  compared with the  sham-TEAS  group at  relative  time points.
+
+=== PDF PAGE 6 ===
+F. Guo et al.
+
+3.3.                 Primary  and  secondary  outcomes
+
+3.3.1.                The  incidence  of  POCD
+    The primary outcome results are shown in Fig. 2. Following the study procedure, the incidence of POCD in the sham-TEAS group
+was always significantly higher than in the TEAS group (postoperative day 1: 65.4% vs 20%, postoperative day 7: 43.6% vs 7.3%, and
+postoperative day 30: 40% vs 3.6%, all P <     0.001). The peak incidence of POCD in the TEAS group and the sham-TEAS group was both
+on day 1 after surgery, and then a descending trend lasted until 30 days.
+
+3.3.2.                MMSE,  pain, and  sleep  scores
+    The secondary short-term outcome results are shown in Fig. 3. On day 1, day 7, and day 30 after surgery, the pain scores in the TEAS
+group were significantly lower than those in the sham-TEAS group. The peak values of pain scores in the TEAS group and the sham-
+TEAS group were both on day 1 after surgery, and then a reverse trend lasted until 30 days (Fig. 3B). On the contrary, the MMSE and
+sleep scores of the TEAS group were significantly higher than that of the sham-TEAS group at the three-time points. The lowest values
+of MMSE and sleep scores both occurred in the two groups on day 1 after surgery and then an increasing trend was observed up to 30
+days (Fig. 3A and C).
+
+3.3.3.                Quality  of  life
+    EORTC-QLQ-C30 scores were used to assess the long-term quality of life in patients (Table 3). At 6 months after surgery, the mean
+scores of emotional function and global health in the TEAS group were significantly higher than those in the sham-TEAS group (96.82
+±       9.28 vs 91.67 ±       11.79, P =       0.002; 75.61 ±       10.98 vs 70 ±       10.71, P =       0.007), while the fatigue and pain scores in the TEAS group
+were lower than in the sham-TEAS group (6.67 ±       12.58 vs 11.92 ±       13.16, P =       0.01; 3.64 ±       8.30 vs 7.58 ±       11.03, P =       0.032). At 12
+months  after  surgery,  no  difference  was  found  between  the  two  groups  except  that  the  mean  score  of  global  health  and  emotional
+function in the TEAS group was higher than that in the sham-TEAS group (74.70 ±      11.78 vs 69.70 ±      11.82, P =      0.029; 95.45 ±      11.21
+vs 92.58 ±        10.60, P =        0.024).
+    The information on pain persistence and the presence of chronic pain was collected 12 months after surgery (Table 4). Compared
+with the TEAS group, larger proportions of patients in the sham-TEAS group reported suffering postoperative pain (23.6% vs 7.3%, P =
+0.018) with a longer duration (3.46  ±        3.94 vs 1.68  ±        1.52 months; P  =        0.043) even more than two months (32.7% vs 14.5%, P  =
+0.025).
+
+3.4.                 Safety
+
+    During the 12-month trial, adverse events were reported in 6 (10.90%) patients of the TEAS group and 9 (16.36%) of the sham-
+TEAS  group.  No  serious  adverse  events  were  reported  in  either  group.  Intervention-related  adverse  events  were  mild  and  transient
+(Table 5).
+
+4.                Discussion
+
+    This  trial  investigated  the  effect  of  TEAS  on  postoperative  cognitive  function  and  quality  of  life  in  elderly  patients  for  up  to  12
+months. We found that TEAS could significantly decrease the incidence of POCD, and improve pain and sleep after patients underwent
+thoracoscopic     pulmonary     resection     for     lung     cancer.     In     addition,     good     recovery     of     brain     health     (three     key     intervention     targets:
+cognition, pain, and sleep) may contribute to their long-term quality of life.
+    In this study, the factors that the average age of the sample was more than 70 years and a certain number of patients had a lower
+level of education were taken into consideration. To investigate the effect of TEAS on postoperative cognitive function, we performed
+neuropsychological tests using the MMSE and MoCA scales on the same day. The design could take advantage of the good specificity of
+the  MMSE  and  the  sensitivity  of  the   MoCA  in  detecting  mild  cognitive  impairment  [17].  In  addition,  several   clinical  observations
+demonstrated    that    anesthesia,    surgical    stress,    inflammation,    and    neurotoxicity    might    be    conducive    to    POCD    [23].    Therefore,    all
+enrolled patients in this study underwent thoracoscopic pulmonary resection, which was characterized by fewer incisions and rapid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 3.            (A) Changes in the MMSE scores. (B) Changes in the NRS on pain scores. (C) Changes in the NRS on sleep scores. “*”                                indicates P <      0.001 as
+the  TEAS  group compared  with the  sham-TEAS group  at relative  time points.
+
+=== PDF PAGE 7 ===
+F. Guo et al.
+
+Table 3
+Comparison of the EORTC-QLQ-C30 scores between the two groups at relative time points (mean ±       SD).
+
+          Domain                                                                                                                                                                     6 months                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 12 months
+
+                                                                                                                                          TEAS group (n =      55)                                    Sham-TEAS group (n =                                 55)                                    P-value            a                                     TEAS group (n =      55)                                    Sham-TEAS group (n =      55)                                    P-value            a
+
+          Function scale
+          Physical function                                                                          93.82 ±      10.01                                                                                                    92.73 ±      9.45                                                                                                                                                                            0.311                                                            91.64 ±      10.20                                                                                                    92.24 ±      9.50                                                                                                                                                                            0.772
+          Role function                                                                                                              95.15 ±      10.48                                                                                                    91.52 ±      13.56                                                                                                                                                                0.078                                                            92.73 ±      12.32                                                                                                    90.61 ±      14.26                                                                                                                                                                0.385
+          Emotional function                                                       96.82 ±      9.28                                                                                                                91.67 ±      11.79                                                                                                                                                                0.002                                                            95.45 ±      11.21                                                                                                    92.58 ±      10.60                                                                                                                                                                0.024
+          Cognitive function                                                             92.73 ±      14.26                                                                                                    90.30 ±      11.87                                                                                                                                                                0.09                                                                        90.91 ±      16.30                                                                                                    89.09 ±      12.92                                                                                                                                                                0.164
+          Social function                                                                                                96.36 ±      9.99                                                                                                                97.58 ±      8.13                                                                                                                                                                            0.529                                                            96.36 ±      9.99                                                                                                                97.58 ±      8.13                                                                                                                                                                            0.529
+          Symptom scale
+          Fatigue                                                                                                                                                                         6.67 ±      12.58                                                                                                                11.92 ±      13.16                                                                                                                                                                0.01                                                                        10.71 ±      14.18                                                                                                    13.94 ±      13.73                                                                                                                                                                0.151
+          Nausea and vomiting                                    0                                                                                                                                                                                                                                    2.42 ±      10.35                                                                                                                                                                             0.043                                                            0                                                                                                                                                                                                                                    0.30 ±      2.24                                                                                                                                                                                         0.317
+          Pain                                                                                                                                                                                                      3.64 ±      8.30                                                                                                                            7.58 ±      11.03                                                                                                                                                                             0.032                                                            2.73 ±      7.70                                                                                                                            5.45 ±      10.17                                                                                                                                                                            0.092
+          Dyspnea                                                                                                                                                               21.82 ±      20.51                                                                                                    29.70 ±      34.94                                                                                                                                                                0.236                                                            16.97 ±      16.82                                                                                                    21.21 ±      19.63                                                                                                                                                                0.299
+          Sleep disturbance                                                                      10.91 ±      19.30                                                                                                    18.18 ±      27.08                                                                                                                                                                0.198                                                            12.12 ±      20.65                                                                                                    16.36 ±      24.74                                                                                                                                                                0.429
+          Appetite loss                                                                                                                    6.67 ±      17.45                                                                                                                12.73 ±      23.56                                                                                                                                                                0.106                                                            5.45 ±      14.00                                                                                                                7.88 ±      16.93                                                                                                                                                                            0.439
+          Constipation                                                                                                                      6.06 ±      17.0                                                                                                                            12.12 ±      22.56                                                                                                                                                                0.093                                                            4.85 ±      14.93                                                                                                                6.06 ±      15.83                                                                                                                                                                            0.584
+          Diarrhea                                                                                                                                                            3.64 ±      12.29                                                                                                                3.03 ±      11.61                                                                                                                                                                             0.734                                                            2.42 ±      8.74                                                                                                                            1.21 ±      6.30                                                                                                                                                                                         0.403
+          Financial difficulties                                           2.42 ±      8.74                                                                                                                            0.61 ±      4.50                                                                                                                                                                                         0.172                                                            2.42 ±      8.74                                                                                                                            0.60 ±      4.50                                                                                                                                                                                         0.172
+          Global health                                                                                                    75.61 ±      10.98                                                                                                    70 ±      10.71                                                                                                                                                                                               0.007                                                            74.70 ±      11.78                                                                                                    69.70 ±      11.82                                                                                                                                                                0.029
+Abbreviations: EORTC-QLQ-C30, European Organization for Research and Treatment of Cancer Quality of Life Questionnaire.
+         a            Indicates Mann-Whitney U test.
+
+
+
+Table 4
+Information on chronic pain collected at 12 months after surgery (n [%] or mean ±       SD).
+
+                                                                                                                                                                                                                                                                                                                                                                                                                     TEAS group (n =      55)                                                                                                                        Sham-TEAS group (n =      55)                                                                                                                        P-value
+
+          Postoperative pain duration >2 months                                                                                                                                                                                                                                                                                                                                                                                                   8 (14.5%)                                                                                                                                                                                                                                    18 (32.7%)                                                                                                                                                                                                                                                                                    0.025
+          Pain duration (month)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       1.68 ±      1.52                                                                                                                                                                                                                 3.46 ±      3.94                                                                                                                                                                                                                                                                             0.043a
+          Current Pain                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      4 (7.3%)                                                                                                                                                                                                                                                13 (23.6%)                                                                                                                                                                                                                                                                                    0.018
+          The maximum score of postoperative pain                                                                                                                                                                                                                                                                                                                                                         7.00 ±      1.14                                                                                                                                                                                                                 7.31 ±      1.09                                                                                                                                                                                                                                                                             0.11a
+          Movement disorders on the shoulder or arm of the operation side                                                                                                                        1 (1.8%)                                                                                                                                                                                                                                                1 (1.8%)                                                                                                                                                                                                                                                                                                             1.00
+          Movement disorders in daily washing activities                                                                                                                                                                                                                                                                                                        0                                                                                                                                                                                                                                                                                                                        1 (1.8%)                                                                                                                                                                                                                                                                                                             1.00
+          See a doctor for the pain                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  0                                                                                                                                                                                                                                                                                                                        1 (1.8%)                                                                                                                                                                                                                                                                                                             1.00
+
+         a            Indicates Mann-Whitney U test.
+
+
+
+          Table 5
+          Adverse events reported after surgery (n [%]).
+
+                    Adverse events                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          TEAS group (n =      55)                                                                                                                                                                                                                                                                                            Sham-TEAS group (n =      55)
+
+                    Any                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  6 (10.90%)                                                                                                                                                                                                                                                                                                                                                                                            9 (16.36%)
+                    Unrelated to the intervention
+                    Headache                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            1 (1.82%)                                                                                                                                                                                                                                                                                                                                                                                                        0
+                    Anorexia                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            2 (3.63%)
+                    Edema of the lower extremity                                                                                                                                                                                                                                                                                                                                                                                                                                                                           0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            1 (1.82%)
+                    Nausea and vomiting                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              2 (3.63%)                                                                                                                                                                                                                                                                                                                                                                                                        5 (9.09%)
+                    Related to the intervention
+                    Localized allergic dermatitis (For the electrode)                                                                                                                                                                                                                                                                                               1 (1.82%)                                                                                                                                                                                                                                                                                                                                                                                                        1 (1.82%)
+                    Discomfort feeling (For the electric stimulation)                                                                                                                                                                                                                                                                                            2 (3.63%)                                                                                                                                                                                                                                                                                                                                                                                                        0
+
+
+recovery   that   could   minimize   individual   differences.   Furthermore,   previous   studies   had   shown   that   old   age,   preexisting   cerebral,
+cardiac, and vascular diseases, alcohol abuse, a low level of education, and postoperative complications were risk factors for POCD
+[24]. After strict randomization, these variables were well-matched to reduce the probability of bias in this study. Consequently, we
+believe that our experimental protocol and data could be powered to support the effect of TEAS on cognitive function.
+                     According to the longitudinal data source in the older patients, the basic tendency of the cognitive trajectories of patients in the two
+groups was consistent with the same analysis of patients enrolled in the Oxford Project to Investigate Memory and Ageing (OPTIMA)
+study [25]. Patients in the two groups experienced the worst cognition on the first day after surgery, and then a recovery trend was
+observed up to 30 days. It should be noted that the incidence of POCD in the TEAS group was dramatically decreased at all the other
+time   points   tested,   while   the   values   of   the   sham-TEAS   group   were   always   higher   than   40%,  a   value  similar   to   that  observed   in   a
+previous study [24]. Similarly, we found the MMSE scores in the TEAS group almost returned to the baseline level on postoperative day
+7,  while  the  sham-TEAS  group  still  had  a  gap  with  the  baseline  scores  on  postoperative  day  30.  Thus,  we  supposed  that  the  TEAS
+intervention could help facilitate rapid recovery from cognitive decline in elderly patients who underwent thoracoscopic pulmonary
+resection.
+
+=== PDF PAGE 8 ===
+F. Guo et al.
+
+    A recent study highlighted the importance of sleep, pain, and cognition on the risk of perioperative brain health [26]. This study
+also collected NRS scores for pain and sleep as secondary outcomes within 30 days postoperatively. As a result, the symptoms of sleep
+and pain in the TEAS group were always better than in the sham-TEAS group at relative time points. Additionally, the present study
+confirmed  that  TEAS  could  significantly  reduce  the  intraoperative  consumption  of  remifentanil,  which  was  in  line  with  the  aim  of
+avoidance or minimization of opioids in the ERAS program [27]. These findings extended previous observations and supported the
+notion        that        opioids        might        be        linked        to        disturbed        sleep        architecture        and        hyperalgesia        postoperatively        [28,29].        Alternatively,
+opioid-related side effects such as sedation or hallucinations might hurt cognitive function [30]. Given that there is a large degree of
+overlap   between   sleep   disorders,   pain,   and   cognitive   decline,   our   novel   findings   may   provide   new   insights   into   reaching   an   ideal
+recovery of perioperative brain health.
+    Over the past decades, clinical observations have demonstrated that pain, insomnia, and fatigue are the most frequently observed
+symptoms  in  elderly  patients  with  lung  cancer  [31].  To  explore  the  potential  impacts  of  early  postoperative  cognitive  function  on
+patients’                                                                                                    long-term life quality, we also observed the changes in these symptoms of EORTC-QLQ-C30 scores in patients at 6 months and
+12 months. Similar to former studies, our study has shown that the rapid recovery of cognition facilitated by the TEAS intervention can
+significantly reverse the decline in quality of life, especially in terms of improved global function, emotional function, fatigue, and pain
+scores, even at 6 months [32]. It was consistent with previous observations that good cognitive function could help patients improve
+their self-esteem, set goals in their lives, and enjoy activities that help them to achieve better mental health [33]. In addition, this study
+was in agreement with previous research showing that TEAS could alleviate acute pain and prevent its transition to chronic pain after
+surgery [34]. Moreover, we speculated that these reciprocally beneficial interactions eventually promoted a better quality of life for
+the patients who received TEAS.
+    As  is  evidenced  in  previous  studies,  the  potential  functional  mechanisms  of  TEAS  on  the  human  body  depend  on  selective  and
+specific  acupoints.  In  particular,  a  recent  study  revealed  the  neuroanatomical  basis  for  the  acupoints  in  driving  specific  autonomic
+pathways,   making   the   basic   theoretical   development   of   TEAS   more   robust   and   reliable   [35].   It   is   also   proposed   by   the   theory   of
+traditional  Chinese  medicine  and  proven  in  the  current  literature,  the  stimulation  of  the  four  combined  acupoints  [Neiguan  (PC6),
+Hegu (LI4), Zusanli (ST36), and Baihui (DU20)] in this study could exhibit a good effect on neurological and mental system diseases
+[36,37]. Furthermore, the clinical effects of acupoint stimulation on improving postoperative cognitive function could be attributed to
+inhibiting inflammatory activity and regulating immunity in previous studies [38]. While the present study examined the effect and
+safety of TEAS on postoperative cognitive function and quality of life by a 12-month trial, future research should also look into po-
+tential interventions to avoid or control postoperative complications in elderly individuals as well as the mechanism underlying TEAS’s
+effects.
+    As   society   ages,   more   and   more   patients   require   surgical    treatment.   Particularly   with   the   development    of   minimally   invasive
+techniques, there has been an expansion of surgical indications for older patients and those with more comorbidities. However, a high
+rate of postoperative complications, which present a considerable burden to families and caregivers, remains an obstacle to patient
+recovery. Given the seriousness of postoperative pain, sleep disorders, and cognitive dysfunction, a significant amount of research has
+focused on investigating effective pharmaceutical agents. However, all commonly used drugs, such as opioids, acetaminophen, non-
+steroidal    anti-inflammatory    drugs    (NSAIDs),    gabapentin,    benzodiazepine,    parecoxib,    statins,    and    dexmedetomidine,    have    various
+limitations  and  adverse effects [39–41]. For  instance,  opioid analgesics  could significantly prevent  acute pain, but the  drugs  might
+cause            severe            gastrointestinal            reactions,            cognitive            impairment,            and            psychological            dependence            [42].            Therefore,            interest            in
+non-pharmacological strategies to manage postoperative problems is increasing.
+    Current     non-pharmacological     interventions     for     cognition     cover     a     diverse     and     broad     range     of     categories,     including     cognitive
+training,      physical      exercise,       dietary      treatments,      art-oriented      therapy,      and       reminiscence      therapy      [43].      Compared      with      these      in-
+terventions, TEAS could not only decrease the incidence of POCD but also improve pain and sleep. The outcome of this paper enriched
+the basic theoretical framework of non-pharmacological treatment of postoperative complications and directed the future research of
+TEAS.  Developing  more  personalized  TEAS  treatments  that  can  be  better  integrated  with  patients’         family  therapy  will  be  an  unre-
+mitting pursuit of clinical medicine. To reach this goal, future efforts should focus on optimizing the operational simplicity of TEAS
+devices,      implementing      TEAS      into      various      home      care      settings,      and      conducting      longer      follow-up      periods      in      trials.      Furthermore,
+improved knowledge of the functional mechanism of TEAS would help set standardized dosing parameters, which is of great signif-
+icance for promoting its broader application.
+
+4.1.                 Limitations
+
+    Some  limitations  should  be  considered  in  this  study.  Given  the  clinical  heterogeneity  of  the  collected  data  in  terms  of  the  par-
+ticipants recruited, setting time, and the prevalence of POCD in patients with lung cancer, the applicability of the findings in this study
+may   be   limited   to   patients   who   underwent   minimally   invasive   approaches.   In   addition,   although   we   prolonged   the   interval   time
+between each test point appropriately, patients may develop a learning memory for the content of the MMSE and the MoCA which
+might  influence  the  accuracy  of  the  assessment.  Furthermore,  the  research  method  of  obtaining  a  single  satisfactory  result  by  con-
+trolling variables in small and medium-sized samples was limited in its comprehensiveness and ability to reflect real-world situations
+in complex medical environments. Future research should use larger, more varied samples and incorporate measurements of potential
+confounding factors to address the limitations of this study.
+
+=== PDF PAGE 9 ===
+F. Guo et al.
+
+5.                Conclusions
+
+    In  conclusion,  thoracoscopic  surgery  is  now  generally  applied  to  elderly  patients  with  lung  cancer,  but  evidence  from  previous
+studies and our results have shown that poor sleep, pain, and cognitive decline might hamper their postoperative recovery. Within this
+context, the present study suggests that TEAS could be a promising technology for improving the postoperative cognitive function and
+long-term life quality of geriatric patients.
+
+Ethics  statement
+
+    This study’s design was reviewed and approved by the Research Ethics Committee of the Second Affiliated Hospital of Air Force
+Medical University (NO.202006–03). All participants provided their written informed consent.
+
+Author  contribution  statement
+
+    Xude Sun; Changjun Gao: Conceived and designed the experiments; Contributed reagents, materials, analysis tools or data.
+    Lanlan Zheng; Yanzheng Wang; Yuting Yan; Chen Liu; Yuan Qin; Chen Yuan: Performed the experiments; Analyzed and interpreted
+the data.
+    Shuang Wang: Contributed reagents, materials, analysis tools or data.
+    Fei  Guo;  Ruili  Han; Li  Sun:  Conceived  and  designed  the  experiments; Performed  the  experiments;  Analyzed and  interpreted  the
+data; Wrote the paper.
+    1 - Conceived and designed the experiments.
+    2 - Performed the experiments.
+    3 - Analyzed and interpreted the data.
+    4 - Contributed reagents, materials, analysis tools or data.
+    5 - Wrote the paper.
+
+Data  availability  statement
+
+    Data included in article/supplementary material/referenced in article.
+
+Funding
+
+    This research was supported by the National Natural Science Foundation of China (No. Grant number 81971225) and the Clinical
+Research Project of the Air Force Medical University (No. 2021LC2207).
+
+
+Declaration  of  competing interest
+
+    The authors declare that they have no known competing financial interests or personal relationships that could have appeared to
+influence the work reported in this paper.
+
+
+Acknowledgments
+
+    This    study    would    not    have    been    possible    without    the    enduring    and    passionate    commitment    of    the    whole    team    consisting    of
+graduate students, anesthesiologists, anesthetists, and surgeons. In addition, we sincerely thank all the participating patients and their
+relatives afford any convenient communication during this trial.
+
+Appendix A.                 Supplementary  data
+
+    Supplementary data to this article can be found online at https://doi.org/10.1016/j.heliyon.2023.e19386.
+
+
+
+
+
+References
+
+ [1]             H. Sung, J. Ferlay, R.L. Siegel, M. Laversanne, I. Soerjomataram, A. Jemal, F. Bray, Global cancer statistics 2020: globocan estimates of incidence and mortality
+      worldwide for 36 cancers in  185 countries, Ca-Cancer J. Clin. 71 (2021) 209–249,                                                 https://doi.org/10.3322/caac.21660.
+ [2]             M.B. Schabath, M.L. Cote, Cancer progress and priorities: lung cancer, Cancer Epidemiol.  Biomarkers Prev. 28 (2019) 1563–1579,                                                             https://doi.org/10.1158/
+      1055-9965.EPI-19-0221.
+ [3]             L. Weerink, B.L. van Leeuwen, S. Gernaat, A.R. Absalom, M.G. Huisman, H. van der Wal-Huisman, G.J. Izaks, G.H. de Bock, Vitamin status and the development
+      of postoperative cognitive decline in  elderly surgical  oncologic patients, Ann. Surg Oncol. 25 (2018)  231–238,                                                 https://doi.org/10.1245/s10434-017-6118-6.
+
+=== PDF PAGE 10 ===
+F. Guo et al.
+
+ [4]             T. Batchelor, N.J. Rasburn, E. Abdelnour-Berchtold, A. Brunelli, R.J. Cerfolio, M. Gonzalez, O. Ljungqvist, R.H. Petersen, W.M. Popescu, P.D. Slinger, B. Naidu,
+        Guidelines for enhanced recovery  after lung surgery: recommendations of  the enhanced recovery after surgery (eras(r)) society and the  european society of
+        thoracic surgeons (ests), Eur. J. Cardio. Thorac. Surg. 55 (2019)  91–115,                                     https://doi.org/10.1093/ejcts/ezy301.
+ [5]             J.T. Moller, P. Cluitmans, L.S. Rasmussen, P. Houx, H. Rasmussen, J. Canet, P. Rabbitt, J. Jolles, K. Larsen, C.D. Hanning, O. Langeron, T. Johnson, P.M. Lauven,
+        P.A. Kristensen, A. Biedler, H. van Beem, O.  Fraidakis, J.H. Silverstein, J.E. Beneken, J.S. Gravenstein, Long-term postoperative cognitive dysfunction in the
+        elderly ispocd1 study. Ispocd investigators. International study of post-operative cognitive dysfunction, Lancet 351 (1998) 857–861,                                                https://doi.org/10.1016/
+        s0140-6736(97)07382-0.
+ [6]             Y. Shen, X. Li, J. Yao, Develop a clinical prediction model for postoperative cognitive dysfunction after major noncardiac surgery in elderly patients: a protocol
+        for a prospective observational study, Gerontology 68 (2022) 538–545,                                                 https://doi.org/10.1159/000517511.
+ [7]             J. Steinmetz, K.B. Christensen, T. Lund, N. Lohse, L.S. Rasmussen, Long-term consequences of postoperative cognitive dysfunction, Anesthesiology 110 (2009)
+        548–555,                                                 https://doi.org/10.1097/ALN.0b013e318195b569.
+ [8]             N. Kotekar, A. Shenkar, R. Nagaraj, Postoperative cognitive dysfunction - current preventive strategies, Clin. Interv. Aging 13 (2018) 2267–2273,                                                             https://doi.
+        org/10.2147/CIA.S133896.
+ [9]             M.S. Avidan, H.R. Maybrier, A.B. Abdallah, E. Jacobsohn, P.E. Vlisides, K.O. Pryor, R.A. Veselis, H.P. Grocott, D.A. Emmert, E.M. Rogers, R.J. Downey,
+        H. Yulico, G.J. Noh, Y.H. Lee, C.M. Waszynski, V.K. Arya, P.S. Pagel, J.A. Hudetz,  M.R. Muench,  B.A. Fritz, W. Waberski, S.K. Inouye, G.A. Mashour,
+        Intraoperative ketamine for  prevention of postoperative delirium or pain after major surgery in  older adults: an international, multicentre, double-blind,
+        randomised clinical trial, Lancet 390 (2017) 267–275,                                                 https://doi.org/10.1016/S0140-6736(17)31467-8.
+[10]             F.M. Radtke, M. Franck, J. Lendner, S. Kruger, K.D. Wernecke, C.D. Spies, Monitoring  depth of  anaesthesia in  a randomized  trial decreases the  rate of
+        postoperative delirium but not postoperative cognitive dysfunction, Br. J. Anaesth. 110 (Suppl 1) (2013) i98–i105,                                           https://doi.org/10.1093/bja/aet055.
+[11]             S. Deiner, X. Liu, H.M. Lin, R. Jacoby, J. Kim, M.G. Baxter, F. Sieber, K. Boockvar, M. Sano, Does postoperative cognitive decline result in new disability after
+        surgery? Ann. Surg. 274 (2021) e1108–e1114,                                                                        https://doi.org/10.1097/SLA.0000000000003764.
+[12]             H. Li, Q. Wen, L. Lu, H. Hu, Y. He, Y. Zhou, X. Wu, N. Li, Transcutaneous electrical acupoint stimulation combined with electroacupuncture for rapid recovery of
+        patients after laparotomy for  gastrointestinal surgery: a study protocol for a randomised controlled trial, BMJ Open 11 (2021), e53309, https://doi.org/
+        10.1136/bmjopen-2021-053309.
+[13]             Y.L. Chi,  W.L. Zhang,  F. Yang, F. Su, Y.K. Zhou, Transcutaneous electrical acupoint stimulation for  improving postoperative recovery, reducing stress and
+        inflammatory responses in elderly patient undergoing knee surgery, Am. J. Chin. Med. 47 (2019) 1445–1458,                                                             https://doi.org/10.1142/S0192415X19500745.
+[14]             B. Feng, Y. Zhang, L.Y. Luo, J.Y. Wu, S.J. Yang, N. Zhang,  Q.R. Tan, H.N.  Wang, N. Ge, F. Ning, Z.L. Zheng, R.M. Zhu, M.C. Qian, Z.Y. Chen, Z.J. Zhang,
+        Transcutaneous electrical acupoint stimulation for post-traumatic stress disorder: assessor-blinded, randomized controlled study, Psychiatr. Clin. Neurosci. 73
+        (2019) 179–186,                                                 https://doi.org/10.1111/pcn.12810.
+[15]             J. Chen, Q. Tu,  S. Miao, Z. Zhou, S. Hu, Transcutaneous electrical acupoint stimulation for  preventing postoperative nausea and vomiting after general
+        anesthesia: a meta-analysis of randomized controlled trials, Int. J. Surg. 73 (2020) 57–64,                                     https://doi.org/10.1016/j.ijsu.2019.10.036.
+[16]             A. Braekhus, K. Laake, K. Engedal, The mini-mental state examination: identifying the most efficient variables for detecting cognitive impairment in the elderly,
+        J. Am.  Geriatr. Soc.  40 (1992) 1139–1145,                                                             https://doi.org/10.1111/j.1532-5415.1992.tb01804.x.
+[17]             Z.S. Nasreddine, N.A. Phillips, V. Bedirian, S. Charbonneau, V. Whitehead, I. Collin, J.L. Cummings, H. Chertkow, The montreal cognitive assessment, moca: a
+        brief screening tool for mild cognitive impairment, J. Am. Geriatr. Soc. 53 (2005)  695–699,                                                 https://doi.org/10.1111/j.1532-5415.2005.53221.x.
+[18]             L. Evered, B. Silbert, D.S. Knopman, D.A. Scott, S.T. Dekosky, L.S. Rasmussen, E.S. Oh, G. Crosby, M. Berger, R.G. Eckenhoff, Recommendations for  the
+        nomenclature of  cognitive change associated with anaesthesia and surgery-2018, Br. J. Anaesth. 121 (2018) 1005–1012,                                                             https://doi.org/10.1016/j.
+        bja.2017.11.087.
+[19]             M. Ritmala-Castren, R.L. Lakanmaa, I. Virtanen, H. Leino-Kilpi, Evaluating adult patients’                                                                                 sleep: an integrative literature review in critical care, Scand. J. Caring
+        Sci. 28 (2014) 435–448,                                                 https://doi.org/10.1111/scs.12072.
+[20]             C.S. Rodriguez, Pain measurement in the  elderly: a review, Pain Manag. Nurs. 2 (2001) 38–46,                                     https://doi.org/10.1053/jpmn.2001.23746.
+[21]             N.K. Aaronson, S. Ahmedzai, B. Bergman, M. Bullinger, A. Cull, N.J. Duez, A. Filiberti, H. Flechtner, S.B. Fleishman, J.C. de Haes, A. Et, The european
+        organization for research and treatment of cancer  qlq-c30: a quality-of-life instrument for use  in international clinical  trials in oncology, Jnci-J. Natl. Cancer
+        Inst. 85 (1993) 365–376,                                                 https://doi.org/10.1093/jnci/85.5.365.
+[22]             T.G. Monk, B.C. Weldon, C.W. Garvan, D.E. Dede, M.T. van der Aa, K.M. Heilman, J.S. Gravenstein, Predictors of cognitive dysfunction after major noncardiac
+        surgery, Anesthesiology 108 (2008) 18–30,                                     https://doi.org/10.1097/01.anes.0000296071.19434.1e.
+[23]             A.A. Ezhevskaya, A.M. Ovechkin, Z.B. Prusakova, V.I. Zagrekov, S.G. Mlyavykh, D.G. Anderson, Relationship among anesthesia technique, surgical stress, and
+        cognitive dysfunction following spinal surgery: a randomized trial, J. Neurosurg. Spine (2019) 1–8,                         https://doi.org/10.3171/2019.4.SPINE184.
+[24]             I. Rundshagen, Postoperative cognitive dysfunction, Dtsch. Arztebl. Int. 111 (2014) 119–125,                                                 https://doi.org/10.3238/arztebl.2014.0119.
+[25]             D. Patel, A.D. Lunn, A.D. Smith, D.J. Lehmann, K.L. Dorrington, Cognitive decline in the elderly after surgery and anaesthesia: results from the oxford project to
+        investigate memory and ageing (optima) cohort, Anaesthesia  71 (2016) 1144–1152,                                                             https://doi.org/10.1111/anae.13571.
+[26]             B.P. O’Gara, L. Gao, E.R. Marcantonio, B. Subramaniam Sleep, pain, and cognition: modifiable targets for optimal perioperative brain health, Anesthesiology
+        135 (2021)  1132–1152,                                                             https://doi.org/10.1097/ALN.0000000000004046.
+[27]             H. Wang, Y. Xie, Q. Zhang, N. Xu, H. Zhong, H. Dong, L. Liu, T. Jiang, Q. Wang, L. Xiong, Transcutaneous electric acupoint stimulation reduces intra-operative
+        remifentanil consumption and alleviates postoperative side-effects in patients undergoing sinusotomy: a prospective, randomized, placebo-controlled trial, Br. J.
+        Anaesth. 112 (2014) 1075–1082,                                                             https://doi.org/10.1093/bja/aeu001.
+[28]             Y. Fan, L. Yuan, M. Ji, J. Yang, D. Gao, The effect of melatonin on early postoperative cognitive decline in elderly patients undergoing hip arthroplasty: a
+        randomized controlled trial, J. Clin. Anesth. 39 (2017) 77–81,                                     https://doi.org/10.1016/j.jclinane.2017.03.023.
+[29]             Y. Chen, Y.  Yao, Y.  Wu, D. Dai, Q. Zhao, L. Qiu, Transcutaneous  electric acupoint stimulation alleviates remifentanil-induced hyperalgesia in patients
+        undergoing thyroidectomy: a randomized controlled trial, Int. J. Clin. Exp. Med. 8 (2015) 5781–5787.
+[30]             X. Ding, X. Gao, Z. Wang, X. Jiang, S. Lu, J. Xu, G. Qin, Z. Gu, D. Huang, Preoperative chronic and acute pain affects postoperative cognitive function mediated
+        by neurotransmitters, J. Mol. Neurosci. 71  (2021) 515–526,                                                 https://doi.org/10.1007/s12031-020-01673-x.
+[31]             A.J. Hoffman, B.A. Given, A. von Eye, A.G. Gift, C.W. Given, Relationships among pain, fatigue, insomnia, and gender in persons with lung cancer, Oncol. Nurs.
+        Forum 34 (2007) 785–792,                                                 https://doi.org/10.1188/07.ONF.785-792.
+[32]             L. Hou, C. Zhou, Y. Wu, Y. Yu, Y. Hu, Transcutaneous electrical acupoint stimulation (teas) relieved cancer-related fatigue in non-small cell lung cancer (nsclc)
+        patients after chemotherapy, J. Thorac. Dis. 9 (2017) 1959–1966,                                                             https://doi.org/10.21037/jtd.2017.06.05.
+[33]             E. van der Stouwe,  C. Geraets, M. Rutgers, W. Veling, Cognitive behavioral group treatment for low self-esteem in  psychosis: a proof  of concept study, BMC
+        Psychiatr. 21 (2021) 567, https://doi.org/10.1186/s12888-021-03579-3.
+[34]             Z. Lu, Q. Wang, X. Sun, W. Zhang, S. Min, J. Zhang, W. Zhao, J. Jiang, Y. Wang, Y. Zhu, L. Zheng, Y. Wang, Y. Guo, L. Zhang, L. Wang, C. Lei, T. Liu, X. Yang,
+        J. Zhang,  C. Li, N. Zhang, H. Dong, L. Xiong,  Transcutaneous electrical acupoint stimulation before surgery reduces chronic pain after mastectomy: a
+        randomized clinical trial, J. Clin. Anesth.  74 (2021), 110453, https://doi.org/10.1016/j.jclinane.2021.110453.
+[35]             S. Liu, Z. Wang, Y. Su, L. Qi, W. Yang, M. Fu, X. Jing, Y. Wang, Q. Ma, A neuroanatomical basis for electroacupuncture to drive the vagal-adrenal axis, Nature
+        598 (2021)  641–645,                                                 https://doi.org/10.1038/s41586-021-04001-4.
+[36]             J.A. Tida, C. Catalao, C. Garcia, S.A. Dos, C. Salmon, L. Lopes, Acupuncture at st36 exerts neuroprotective effects via  inhibition of reactive astrogliosis in
+        infantile rats with hydrocephalus, Acupunct. Med. 36 (2018)  386–393,                                                 https://doi.org/10.1136/acupmed-2017-011515.
+[37]             F. Gao, Q. Zhang, Y. Li, Y. Tai, X. Xin, X. Wang, Q. Wang, Transcutaneous electrical acupoint stimulation for prevention of postoperative delirium in geriatric
+        patients with silent lacunar infarction:  a preliminary  study, Clin. Interv. Aging 13 (2018)  2127–2134,                                                             https://doi.org/10.2147/CIA.S183698.
+[38]             J. Zhou, W. Peng, M. Xu, W. Li, Z. Liu, The effectiveness and safety of acupuncture for patients with alzheimer disease: a systematic review and meta-analysis of
+        randomized controlled trials, Medicine (Baltim.) 94  (2015) e933, https://doi.org/10.1097/MD.0000000000000933.
+
+=== PDF PAGE 11 ===
+F. Guo et al.
+
+[39]             Z. Xie, F. Chen, W.A. Li, X. Geng, C. Li, X. Meng, Y. Feng, W. Liu, F. Yu, A review of sleep disorders and melatonin, Neurol. Res. 39 (2017) 559–565,                                               https://doi.
+        org/10.1080/01616412.2017.1315864.
+[40]             C. Small,  H. Laycock, Acute postoperative pain management, Br. J. Surg. 107 (2020) e70–e80,                                                https://doi.org/10.1002/bjs.11477.
+[41]             B. Liu, D. Huang, Y. Guo, X. Sun, C. Chen, X. Zhai, X. Jin, H. Zhu, P. Li, W. Yu, Recent advances and perspectives of postoperative neurological disorders in the
+        elderly surgical  patients, CNS Neurosci. Ther. 28 (2022)  470–483,                                                 https://doi.org/10.1111/cns.13763.
+[42]             Y.E. Kutlu, J. Araujo-Duran, A. Turan, Emerging drugs for the treatment of postsurgical pain, Expet Opin. Emerg. Drugs 26 (2021) 371–384,                                                 https://doi.org/
+        10.1080/14728214.2021.2009799.
+[43]             S. Sikkes, Y. Tang, R.J. Jutten, L. Wesselman, L.S. Turkstra, H. Brodaty, L. Clare, E. Cassidy-Eagle, K.L. Cox, G. Chetelat, S. Dautricourt, K. Dhana, H. Dodge, R.
+        M. Droes,  B.M. Hampstead, T. Holland, A. Lampit, K. Laver, A. Lutz, N.T. Lautenschlager, S.M. Mccurry, F. Meiland, M.C. Morris, K.D. Mueller, R. Peters,
+        G. Ridel, A. Spector, J.T. van der Steen, J. Tamplin, Z. Thompson, A. Bahar-Fuchs, Toward a theory-based specification of non-pharmacological treatments in
+        aging and dementia: focused reviews and methodological recommendations, Alzheimers. Dement. 17 (2021)  255–270,                                                 https://doi.org/10.1002/alz.12188.

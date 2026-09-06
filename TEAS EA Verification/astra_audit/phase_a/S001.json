@@ -1,0 +1,343 @@
+{
+  "Study_ID": "S001",
+  "Study": "Zhu 2022",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "source_before_baseline": true,
+  "identity": {
+    "title": "Preoperative electroacupuncture for postoperative nausea and vomiting in laparoscopic gynecological surgery: a randomized controlled trial",
+    "doi": "10.1177/09645284221076517",
+    "year": 2022,
+    "pdf": "covidence_381_full_article.pdf",
+    "read_pages": "1–11; visual inspection PDF pp4,5,6,8"
+  },
+  "arms": {
+    "order": [
+      "Pre",
+      "30",
+      "Comb",
+      "Usual"
+    ],
+    "randomized_figure1": [
+      103,
+      103,
+      103,
+      104
+    ],
+    "randomized_abstract": [
+      103,
+      104,
+      103,
+      103
+    ],
+    "analyzed": [
+      101,
+      98,
+      100,
+      101
+    ],
+    "modality": "EA",
+    "comparator": "usual care; no sham",
+    "protocol": "30 min 20–100 Hz PC6/ST36; day before, 30 min before, or both; standardized general anesthesia"
+  },
+  "source_conflicts": [
+    "Abstract swaps randomized n for Group30 and Usual relative to Figure1. Preserve both; use analyzed table denominators for results.",
+    "Abstract/prose percentages differ from exact Table2 event counts. Do not substitute rounded percentages.",
+    "Pain primary described at24h in methods, table labels 6–24h; retain table interval with qualification."
+  ],
+  "results": [
+    {
+      "outcome": "nausea",
+      "window": "6–24h",
+      "events": [
+        11,
+        18,
+        11,
+        27
+      ],
+      "n": [
+        101,
+        98,
+        100,
+        101
+      ],
+      "location": "Table2 PDFp6"
+    },
+    {
+      "outcome": "vomiting",
+      "window": "6–24h",
+      "events": [
+        5,
+        8,
+        9,
+        22
+      ],
+      "n": [
+        101,
+        98,
+        100,
+        101
+      ],
+      "location": "Table2 PDFp6"
+    },
+    {
+      "outcome": "nausea",
+      "window": "0–6h",
+      "events": [
+        9,
+        11,
+        7,
+        20
+      ],
+      "location": "Table2 PDFp6"
+    },
+    {
+      "outcome": "vomiting",
+      "window": "0–6h",
+      "events": [
+        7,
+        9,
+        6,
+        17
+      ],
+      "location": "Table2 PDFp6"
+    },
+    {
+      "outcome": "nausea",
+      "window": "24–48h",
+      "events": [
+        2,
+        2,
+        2,
+        7
+      ],
+      "location": "Table2 PDFp6"
+    },
+    {
+      "outcome": "vomiting",
+      "window": "24–48h",
+      "events": [
+        1,
+        2,
+        1,
+        5
+      ],
+      "location": "Table2 PDFp6"
+    },
+    {
+      "outcome": "nausea and vomiting separately",
+      "window": "48–72h",
+      "events": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "location": "p421 text; Table2 footnote"
+    },
+    {
+      "outcome": "movement NRS pain",
+      "window": "6–24h",
+      "mean": [
+        1.15,
+        1.21,
+        1.17,
+        1.44
+      ],
+      "sd": [
+        1.02,
+        1.03,
+        1.17,
+        1.3
+      ],
+      "location": "Table3 PDFp8"
+    },
+    {
+      "outcome": "movement NRS pain",
+      "window": "0–6h",
+      "mean": [
+        1.89,
+        2.01,
+        1.97,
+        2.45
+      ],
+      "sd": [
+        1.47,
+        1.25,
+        1.25,
+        1.6
+      ],
+      "location": "Table3 PDFp8"
+    },
+    {
+      "outcome": "movement NRS pain",
+      "window": "24–48h",
+      "mean": [
+        0.4,
+        0.54,
+        0.5,
+        0.73
+      ],
+      "sd": [
+        0.76,
+        0.86,
+        0.96,
+        0.97
+      ],
+      "location": "Table3 PDFp8"
+    },
+    {
+      "outcome": "movement NRS pain",
+      "window": "48–72h",
+      "mean": [
+        0.19,
+        0.23,
+        0.19,
+        0.31
+      ],
+      "sd": [
+        0.56,
+        0.59,
+        0.56,
+        0.7
+      ],
+      "location": "Table3 PDFp8"
+    },
+    {
+      "outcome": "time to first flatus",
+      "unit": "h",
+      "mean": [
+        18.38,
+        18.47,
+        18.82,
+        21.56
+      ],
+      "sd": [
+        6.11,
+        6.47,
+        7.5,
+        8.07
+      ],
+      "location": "Table3 PDFp8"
+    },
+    {
+      "outcome": "QoR15",
+      "window": "Insufficient information / not reported.",
+      "mean": [
+        142.94,
+        144.74,
+        144.61,
+        144.23
+      ],
+      "sd": [
+        6.82,
+        5.21,
+        5.35,
+        4.95
+      ],
+      "location": "Table3 PDFp8; table gives overall without exact assessment time"
+    },
+    {
+      "outcome": "rescue analgesic recipients",
+      "window": "0–48h",
+      "events": [
+        2,
+        3,
+        1,
+        3
+      ],
+      "drug": "flurbiprofen 100mg for NRS>3; nonopioid",
+      "location": "Table3 PDFp8; Methods PDFp3"
+    }
+  ],
+  "opioid": {
+    "decision": "excluded",
+    "reason": "No cumulative postoperative opioid dose. Intraoperative sufentanil and remifentanil are not postoperative consumption; recorded rescue analgesic incidence but not dose.",
+    "drug": "Insufficient information / not reported.",
+    "route": "Insufficient information / not reported.",
+    "pca": "Insufficient information / not reported.",
+    "rescue": "flurbiprofen 100mg; Methods p417",
+    "location": "p422 Limitations"
+  },
+  "rob_independent": {
+    "D1": {
+      "answers": [
+        "Y",
+        "Y",
+        "PN"
+      ],
+      "evidence": "p417 computer sequence; sequential opaque sealed envelopes selected after eligibility; Table1 no concerning imbalances.",
+      "judgment": "Low"
+    },
+    "D2": {
+      "answers": [
+        "Y",
+        "Y",
+        "PN",
+        "NA",
+        "NA",
+        "PY",
+        "NA"
+      ],
+      "evidence": "p417 no EA in usual-care; provider aware but anesthetists, surgeons, nurse masked; standardized care; p418 13 exclusions and p421 modified ITT excludes open conversions. As-randomized available cases reasonable; missing outcomes assessed D3.",
+      "judgment": "Low"
+    },
+    "D3_continuous": {
+      "answers": [
+        "PY",
+        "NA",
+        "NA",
+        "NA"
+      ],
+      "evidence": "Figure1 400/413 observed (~97%); small continuous-outcome loss.",
+      "judgment": "Low"
+    },
+    "D3_binary": {
+      "answers": [
+        "PN",
+        "N",
+        "PY",
+        "PN"
+      ],
+      "evidence": "13 missing vs few event counts, including open conversions, lost followup and Comb intolerance; modified ITT described but supplement not accessible; cannot prove absence of bias; no strong evidence actual nausea/vomiting caused missingness.",
+      "judgment": "Some concerns"
+    },
+    "D4_subjective": {
+      "answers": [
+        "N",
+        "PN",
+        "Y",
+        "Y",
+        "NI"
+      ],
+      "evidence": "p417 participant-reported nausea, pain, QoR15 and flatus with no participant masking; same schedules and masked nurse. Knowledge can influence reporting; degree actually influenced unknown.",
+      "judgment": "Some concerns"
+    },
+    "D4_vomiting": {
+      "answers": [
+        "N",
+        "PN",
+        "Y",
+        "PY",
+        "NI"
+      ],
+      "evidence": "p417 participant asked whether she vomited since last consultation; more concrete event than nausea but unmasked recall, not continuous independent observation.",
+      "judgment": "Some concerns"
+    },
+    "D5": {
+      "answers": [
+        "NI",
+        "NI",
+        "NI"
+      ],
+      "evidence": "Registration 29Nov2016 precedes Dec2016 enrollment, but detailed prospective record not inspected; published protocol 2019 follows Feb2018 trial completion. Publisher protocol fetch403 and supplement fetch failure. Prospective analysis plan not demonstrated.",
+      "judgment": "Some concerns"
+    }
+  },
+  "independence": "Four randomized arms of one trial; three contrasts share Usual control. Li2019 protocol is linked report, not independent; Li2017 pilot is separately described feasibility study, no demonstrated participant overlap.",
+  "missing": "Insufficient information / not reported.",
+  "retrieval_attempts": [
+    "https://journals.sagepub.com/doi/suppl/10.1177/09645284221076517 failed",
+    "https://www.sciencedirect.com/science/article/pii/S1876382019303075 403; protocol metadata verified DOI10.1016/j.eujim.2019.100951"
+  ]
+}

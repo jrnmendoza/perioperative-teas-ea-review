@@ -1,0 +1,326 @@
+{
+  "Study_ID": "S004",
+  "Study": "Zheng 2025",
+  "source_before_baseline": true,
+  "identity": {
+    "title": "Effects of Transcutaneous Electrical Acupoint Stimulation on Recovery After Gynecological Laparoscopic Surgery: A Randomized, Single-Blind, Controlled Trial",
+    "year": 2025,
+    "doi": "10.2147/JPR.S543574",
+    "pdf": "109499.pdf",
+    "read_pages": "1–14 completely; visualFigure1p6,Figure2p8,Tables3–4p10"
+  },
+  "arms": {
+    "order": [
+      "TEAS",
+      "Control"
+    ],
+    "randomized": [
+      44,
+      44
+    ],
+    "analyzed": [
+      42,
+      43
+    ],
+    "protocol": "30min preinduction toend anesthesiaTEAS2/100Hz6–15mA; zero-currentsham; bothTAPblockandondansetron"
+  },
+  "results": {
+    "PONV": {
+      "window": "0–24h",
+      "percent": [
+        42.9,
+        67.4
+      ],
+      "n": [
+        42,
+        43
+      ],
+      "events_direct": null,
+      "events_unique_backcalculation": [
+        18,
+        29
+      ],
+      "p": 0.023,
+      "location": "Results p5; counts uniquely consistent withroundedpercentages, not directlyprinted"
+    },
+    "nausea": {
+      "windows": [
+        "0–2h",
+        "2–4h",
+        "4–6h",
+        "6–24h"
+      ],
+      "events": [
+        [
+          10,
+          21
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "location": "Table2p7"
+    },
+    "vomiting": {
+      "windows": [
+        "0–2h",
+        "2–4h",
+        "4–6h",
+        "6–24h"
+      ],
+      "events": [
+        [
+          5,
+          11
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "location": "Table2p7"
+    },
+    "pain": {
+      "format": "meanSD",
+      "scale": "NRS0–10; rest/movementunspecified",
+      "h6": [
+        [
+          2.9,
+          1.1
+        ],
+        [
+          3.4,
+          1.2
+        ]
+      ],
+      "h24": [
+        [
+          1.7,
+          0.8
+        ],
+        [
+          2.2,
+          1.1
+        ]
+      ],
+      "h48": [
+        [
+          0.9,
+          0.8
+        ],
+        [
+          1,
+          0.9
+        ]
+      ],
+      "p24": "Table4footnote0.422; prose p7 0.042",
+      "p6": 0.022,
+      "location": "Table4p10"
+    },
+    "QoR40": {
+      "h24": "graph-only; noexactarmSD",
+      "h48_prose_means": [
+        184,
+        181
+      ],
+      "sd": null,
+      "location": "p5,p10prose; Figure2p8 graph disagrees; hold unambiguouspointassignment",
+      "scale": "40–200higherbetter"
+    },
+    "PCIA": {
+      "total_meanSD": [
+        [
+          6.3,
+          2.2
+        ],
+        [
+          10.7,
+          3.9
+        ]
+      ],
+      "effective_meanSD": [
+        [
+          3.8,
+          1
+        ],
+        [
+          4.8,
+          1.6
+        ]
+      ],
+      "p": [
+        0.004,
+        0.039
+      ],
+      "location": "Table3pp9–10",
+      "unit": "presses NOTdose",
+      "window": "registry24h; publicationnoexplicitpresswindow"
+    },
+    "GI": {
+      "borborygmus": [
+        [
+          19.2,
+          3.3
+        ],
+        [
+          27.6,
+          2.7
+        ]
+      ],
+      "flatus_labeled": [
+        [
+          24.2,
+          2.5
+        ],
+        [
+          31.6,
+          4.4
+        ]
+      ],
+      "p": [
+        0.035,
+        0.003
+      ],
+      "unit": "h",
+      "location": "Table3p10; p4 defines'flatus'asfirststools"
+    },
+    "intraoperative_remifentanil": {
+      "values": [
+        [
+          233.1,
+          29.6
+        ],
+        [
+          289.5,
+          37.9
+        ]
+      ],
+      "unit": "ug",
+      "p": 0.031,
+      "location": "Table3p9"
+    }
+  },
+  "opioid": {
+    "decision": "excluded",
+    "drug": "sufentanil",
+    "route": "IV",
+    "pca": "Sufentanil2ug/kg plus saline; finalvolume/concentrationunreported;2mL/h basal,0.5mLbolus15minlockout",
+    "rescue": "Insufficient information / not reported.",
+    "reason": "PCIApresses not cumulativeconsumption; unknown concentration andweight; intraoperativeremifentanilnotpostoperative.",
+    "location": "pp3–4,9–10"
+  },
+  "source_conflicts": [
+    "Envelopeopened atinduction butTEASstarts30minbefore; allocationtimingwordinginconsistent.",
+    "Firstflatusdefinedasfirststoolp4; GIclassificationunresolved.",
+    "Pain24hP0.422tableversus0.042prose.",
+    "QoR40graphandprose48hvalues/timepointdiffer; noSDnumerically.",
+    "RegistryVAS24hvsreportNRS; registryQoR40at24hvsreportemphasizes48h.",
+    "Multipleotherarithmetical/proseerrors(agepercentages,PSQIdirection,QoR30typo); sourceQAconcernsnotfixedbyinvention."
+  ],
+  "rob_independent": {
+    "D1": {
+      "answers": [
+        "Y",
+        "PY",
+        "PN"
+      ],
+      "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+      "judgment": "Low"
+    },
+    "D2": {
+      "answers": [
+        "PY",
+        "Y",
+        "PN",
+        "NA",
+        "NA",
+        "PY",
+        "NA"
+      ],
+      "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+      "judgment": "Low"
+    },
+    "D3": {
+      "answers": [
+        "PY",
+        "NA",
+        "NA",
+        "NA"
+      ],
+      "evidence": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+      "judgment": "Low"
+    },
+    "D3_binary": {
+      "answers": [
+        "PY",
+        "NA",
+        "NA",
+        "NA"
+      ],
+      "evidence": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+      "judgment": "Low"
+    },
+    "D4": {
+      "answers": [
+        "N",
+        "PN",
+        "PY",
+        "Y",
+        "NI"
+      ],
+      "evidence": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+      "judgment": "Some concerns"
+    },
+    "D4_GI": {
+      "answers": [
+        "NI",
+        "NI",
+        "PY",
+        "Y",
+        "NI"
+      ],
+      "evidence": "p4flatusactuallydefinedfirststool; Table3saysflatus, cannotknowwhichphenomenonmeasured. Sensorymaskinguncertain; classificationheld.",
+      "judgment": "Some concerns"
+    },
+    "D4_PCA": {
+      "answers": [
+        "N",
+        "PN",
+        "N",
+        "NA",
+        "NA"
+      ],
+      "evidence": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+      "judgment": "Low"
+    },
+    "D5": {
+      "answers": [
+        "NI",
+        "NI",
+        "NI"
+      ],
+      "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+      "judgment": "Some concerns"
+    }
+  },
+  "independence": "NorthernTheaterShenyangApril–Dec2022 distinct fromZhou2025GuilinFeb–June2022.",
+  "registration_source": "https://www.chictr.org.cn/showproj.html?proj=166185; officialindexedfullrecordretrievedbysearch; directopen405",
+  "missing": "Insufficient information / not reported."
+}

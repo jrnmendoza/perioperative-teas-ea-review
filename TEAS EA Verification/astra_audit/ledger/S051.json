@@ -1,0 +1,27 @@
+{
+  "Study_ID": "S051",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_at": "2026-09-05T15:04:49.005Z",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows": 4,
+  "reviewed_rows": 4,
+  "reviewed_row_ids": [
+    217,
+    218,
+    219,
+    220
+  ],
+  "result_specific_rob_count": 3,
+  "unresolved": [
+    {
+      "missing_information": "Valid VAS dispersion and binary counts; randomization/design clarification;corrected surgery counts",
+      "why_it_matters": "Pain table mathematically inconsistent; first-page case-control and STROBE conflict with randomized methods",
+      "analysis_affected": "All pain results",
+      "can_proceed_without": "Retain raw report; hold pooling",
+      "priority": "HIGH",
+      "exact_question": "Are Table2 ±values SD,SE or model errors? Please provide correct mean/SD/n and VAS>4 counts, explain Table1 surgery totals70/60, and confirm prospective randomization with dated protocol and allocation concealment."
+    }
+  ],
+  "summary": "All4 rows adjudicated. Raw pain print confirmed, but continuous and binary pain held due to incompatible distributions. Rescue morphine not recorded. BADL is not QoR and PONV interval remains unspecified.",
+  "adjudicated_at": "2026-09-05T15:05:53.528Z"
+}

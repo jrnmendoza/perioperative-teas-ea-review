@@ -1,0 +1,31 @@
+{
+  "Study_ID": "S052",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_at": "2026-09-05T15:07:25.988Z",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows": 8,
+  "reviewed_rows": 8,
+  "reviewed_row_ids": [
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228
+  ],
+  "result_specific_rob_count": 8,
+  "unresolved": [
+    {
+      "missing_information": "Exact24h volume meanSD; correction of control8h/36h prose/graph; GI t/P reconciliation",
+      "why_it_matters": "Required for numeric opioid candidate and confidence in GI summaries",
+      "analysis_affected": "Opioid/GI",
+      "can_proceed_without": "Pain24h raw result; GI descriptive qualified; no exact24hopioid pooling",
+      "priority": "HIGH",
+      "exact_question": "Please supply PCIA volume mean/SD/n at24h, resolve Figure4/prose discrepancies and Table3 t/P versusmeanSD/n, confirm all systemic opioid exposure and PONV assessment interval."
+    }
+  ],
+  "summary": "All8rows reviewed. Exact24hpain confirmed, activity unspecified. GI descriptive results retained with inference-statistic conflict. PCIAraw unit corrected tomL;8h/36h graph/prose conflict held;24hgraph only.",
+  "adjudicated_at": "2026-09-05T15:08:48.757Z"
+}

@@ -1,0 +1,27 @@
+# Covidence screening checkpoint — 100 votes
+
+- Date: 2026-07-26
+- First Covidence number: #415
+- Last Covidence number: #582
+- Total registered votes: 100
+- Yes: 22
+- Maybe: 19
+- No: 59
+- Protocols excluded: 10
+- Animal studies excluded: 14
+- Non-randomized studies excluded: 2
+- Wrong interventions excluded: 1
+- No-general-anaesthesia exclusions: 4
+- Non-surgical exclusions: 15
+- Timing exclusions: 2
+- Inseparable interventions excluded: 2
+- Ineligible active comparators excluded: 6
+- Ambiguous-randomization Maybe decisions: 0
+- Uncertain-timing Maybe decisions: 12
+- Uncertain-outcome Maybe decisions: 0
+- Possible companion reports: 12
+- Numbering gaps logged: 13
+- Attempted records without a registered vote: 0
+- Interface incidents: 0
+- No conflicts were opened or resolved.
+- JSONL and generated CSV validated with 100 unique, consecutive audit records and 100 unique Covidence numbers.

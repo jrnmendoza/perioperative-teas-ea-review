@@ -1,0 +1,8 @@
+previous_covidence_number,next_covidence_number,missing_number_or_range,reason_visible_in_interface,status_explained_or_unexplained,action_taken,timestamp,notes
+197,199,198,no,unexplained,Logged gap and continued because the next distinct citation was stable in the ascending queue.,2026-07-23T12:56:00.087Z,Covidence interface did not display a reason for the absent number.
+208,211,209-210,no,unexplained,Logged gap and continued because the next distinct citation was stable in the ascending queue.,2026-07-23T13:02:30.384Z,Covidence interface did not display a reason for the absent numbers.
+212,214,213,no,unexplained,Logged gap and continued because the next distinct citation was stable in the ascending queue.,2026-07-23T13:03:47.361Z,Covidence interface did not display a reason for the absent number.
+215,217,216,no,unexplained,Logged gap and continued because the next distinct citation was stable in the ascending queue.,2026-07-23T13:04:47.663Z,Covidence interface did not display a reason for the absent number.
+217,219,218,no,unexplained,Logged gap and continued because the next distinct citation was stable in the ascending queue.,2026-07-23T13:05:42.617Z,Covidence interface did not display a reason for the absent number.
+224,226,225,no,unexplained,Logged gap and continued because the next distinct citation was stable in the ascending queue.,2026-07-23T13:09:24.657Z,Covidence interface did not display a reason for the absent number.
+226,228,227,no,unexplained,Logged gap and continued because the next distinct citation was stable in the ascending queue.,2026-07-23T13:09:57.761Z,Covidence interface did not display a reason for the absent number.

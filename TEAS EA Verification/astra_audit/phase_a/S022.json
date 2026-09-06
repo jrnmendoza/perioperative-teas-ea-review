@@ -1,0 +1,367 @@
+{
+  "Study_ID": "S022",
+  "Study": "Wang 2024",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase": "A",
+  "baseline_accessed": false,
+  "title": "Exploration of treatment strategies and susceptibility gene of postoperative nausea and vomiting in breast cancer patients: a randomised controlled trial",
+  "doi": "10.1007/s12282-024-01606-1",
+  "year": 2024,
+  "pdf_files": [
+    "covidence_212_full_article.pdf"
+  ],
+  "source_read": "Complete9-page publication; visually checked flow and Tables1,3 pp4,6.",
+  "modality": "TEAS",
+  "comparator": "Cut-wire no-current sham plus ondansetron/dexamethasone",
+  "randomized_arms": {
+    "SNVP-ODT": 35,
+    "SNVP-OD": 35,
+    "MNVP-ODT": 35,
+    "MNVP-OD": 35
+  },
+  "analyzed_arms": {
+    "SNVP-ODT": 33,
+    "SNVP-OD": 35,
+    "MNVP-ODT": 35,
+    "MNVP-OD": 35
+  },
+  "denominator_source": "p929 Fig1;35 per treatment subgroup p928;2 postoperative-fever exclusions SNVP-ODT",
+  "population": "18–60 women breast cancer GA; Beijing Feb–Aug2022; history strata not randomized.",
+  "results": [
+    {
+      "outcome": "PONV",
+      "format": "events",
+      "windows": [
+        "0–2h",
+        "2–6h",
+        "6–12h",
+        "12–24h",
+        "24–36h",
+        "total0–36h"
+      ],
+      "SNVP-ODT": [
+        13,
+        12,
+        7,
+        2,
+        0,
+        14
+      ],
+      "SNVP-OD": [
+        20,
+        19,
+        16,
+        11,
+        3,
+        20
+      ],
+      "MNVP-ODT": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        5
+      ],
+      "MNVP-OD": [
+        9,
+        8,
+        3,
+        0,
+        0,
+        10
+      ],
+      "P_SNVP": [
+        ".143",
+        ".138",
+        ".033",
+        ".008",
+        ".085",
+        ".225"
+      ],
+      "P_MNVP": [
+        ".022",
+        ".04",
+        ".643",
+        ".151",
+        "1.00",
+        ".145"
+      ],
+      "source": "p931 Table3 visually verified"
+    },
+    {
+      "outcome": "Vomiting",
+      "window": "0–6h",
+      "SNVP-ODT": {
+        "events": 7,
+        "n": 33
+      },
+      "SNVP-OD": {
+        "events": 19,
+        "n": 35
+      },
+      "P": ".005",
+      "source": "p930 text"
+    },
+    {
+      "outcome": "Intraoperative sufentanil",
+      "unit": "µg",
+      "SNVP-ODT": {
+        "mean": 21.2,
+        "SD": 3.1
+      },
+      "SNVP-OD": {
+        "mean": 21.9,
+        "SD": 3.2
+      },
+      "MNVP-ODT": {
+        "mean": 21,
+        "SD": 3.4
+      },
+      "MNVP-OD": {
+        "mean": 20.9,
+        "SD": 3.1
+      },
+      "source": "p929 Table1; p928 administration",
+      "eligible_postop": false
+    }
+  ],
+  "pain": "Measured2,6,12,24,36h but no numerical pain result published.",
+  "qor": "Insufficient information / not reported.",
+  "GI": "Insufficient information / not reported.",
+  "drug": "Sufentanil intraoperative only",
+  "route": "IV",
+  "pca_formulation": "Insufficient information / not reported.",
+  "rescue_regimen": "Flurbiprofen axetil100mg if painVAS≥3; IV ondansetron4mg for severe PONV. All receive5mg dexamethasone induction and4mg ondansetron +100mg flurbiprofen at surgery end.",
+  "source_conflicts": [
+    "Table3 MNVP-ODT12–24h asymptomatic33(5.7%) is percentage typo;33/35=94.3%; PONV2/35 unaffected.",
+    "SNVP vs MNVP is observational; only ODT vs OD within stratum randomized."
+  ],
+  "independence": "One study with two disjoint randomized strata; no shared controls across strata; do not count as two independent studies.",
+  "rob2": [
+    {
+      "result_id": "S022_PONV_total",
+      "outcome": "PONV",
+      "time_window": "0–36h",
+      "comparison": "ODT vs OD within SNVP and MNVP strata",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer generated random sequence within each history stratum.",
+          "source_location": "p928",
+          "reasoning": "Computer generated random sequence within each history stratum."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "Independent physician prepared sequential envelopes; opacity/sealing not specified.",
+          "source_location": "p928",
+          "reasoning": "Independent physician prepared sequential envelopes; opacity/sealing not specified."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Surgical extent imbalance explained by sentinel-node findings; no compelling evidence of allocation failure.",
+          "source_location": "p929–930 Table1",
+          "reasoning": "Surgical extent imbalance explained by sentinel-node findings; no compelling evidence of allocation failure."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "10mA awake versus cut-wire sham; patients warned stimulation may not be felt.",
+          "source_location": "p928",
+          "reasoning": "10mA awake versus cut-wire sham; patients warned stimulation may not be felt."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Intervention investigator explicitly unblinded; other staff blinded.",
+          "source_location": "p928",
+          "reasoning": "Intervention investigator explicitly unblinded; other staff blinded."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "PN",
+          "evidence": "Same anesthetic/antiemetic regimen and rescue thresholds; no trial-induced cointervention shown.",
+          "source_location": "p928",
+          "reasoning": "Same anesthetic/antiemetic regimen and rescue thresholds; no trial-induced cointervention shown."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No likely trial-context deviation.",
+          "source_location": "p928",
+          "reasoning": "No likely trial-context deviation."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4 not applicable.",
+          "source_location": "p928",
+          "reasoning": "2.4 not applicable."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available cases analysed within randomized strata;2 febrile participants missing.",
+          "source_location": "p929 Fig1",
+          "reasoning": "Missing outcomes considered in D3 rather than treating mITT alone as D2 bias."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "Appropriate available-case assignment comparison.",
+          "source_location": "p929",
+          "reasoning": "Appropriate available-case assignment comparison."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "SNVP68/70 retained;2 TEAS fever exclusions vs14/20 total events; MNVP complete.",
+          "source_location": "p929–931",
+          "reasoning": "For total PONV few missing relative to events; rare later interval needs separate assessment."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "NA",
+          "evidence": "Nearly complete total PONV data.",
+          "source_location": "p929",
+          "reasoning": "Nearly complete total PONV data."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NA",
+          "evidence": "3.1 PY.",
+          "source_location": "p929",
+          "reasoning": "3.1 PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NA",
+          "evidence": "3.1 PY.",
+          "source_location": "p929",
+          "reasoning": "3.1 PY."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Predefined nausea VAS and vomiting episode assessment.",
+          "source_location": "p928",
+          "reasoning": "Predefined nausea VAS and vomiting episode assessment."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Identical scheduled2,6,12,24,36h assessments.",
+          "source_location": "p928",
+          "reasoning": "Identical scheduled2,6,12,24,36h assessments."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Participant nausea assessment may reveal10mA vs absent stimulation.",
+          "source_location": "p928",
+          "reasoning": "Participant nausea assessment may reveal10mA vs absent stimulation."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Nausea is subjective even with blinded interviewers.",
+          "source_location": "p928",
+          "reasoning": "Nausea is subjective even with blinded interviewers."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "No demonstrated masking failure or expectation effect magnitude.",
+          "source_location": "p928",
+          "reasoning": "No demonstrated masking failure or expectation effect magnitude."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Report states28Nov2021 registration beforeFeb2022 recruitment, but registry/SAP detail not retrieved.",
+          "source_location": "p927; official registry search no result",
+          "reasoning": "Report states28Nov2021 registration beforeFeb2022 recruitment, but registry/SAP detail not retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Intervals and total presented, but prospective detailed result plan unavailable.",
+          "source_location": "pp928,931",
+          "reasoning": "Intervals and total presented, but prospective detailed result plan unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No dated pre-unblinding SAP available.",
+          "source_location": "p928",
+          "reasoning": "No dated pre-unblinding SAP available."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Envelope safeguards incomplete.",
+          "source_location": "p928"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Assignment comparisons preserved; no trial-induced deviations evidenced.",
+          "source_location": "p928–929"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Total PONV almost complete; rare intervals evaluated separately.",
+          "source_location": "p929–931"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory differences could influence nausea reporting; likely influence not established.",
+          "source_location": "p928"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective registration claimed but detailed plan not demonstrated.",
+          "source_location": "p927–928"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Concealment, patient masking and prespecification uncertainties; no automatic High from surgical imbalance."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Only intraoperative sufentanil; postoperative analgesic is nonopioid rescue; no cumulative0–24h opioid endpoint."
+  }
+}

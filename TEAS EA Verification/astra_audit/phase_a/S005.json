@@ -1,0 +1,192 @@
+{
+  "Study_ID": "S005",
+  "Study": "Zhan 2020",
+  "source_before_baseline": true,
+  "identity": {
+    "title": "Addition of transcutaneous electric acupoint stimulation to transverse abdominis plane block for postoperative analgesia in abdominal surgery: A randomized controlled trial",
+    "doi": "10.1016/j.eujim.2020.101087",
+    "year": 2020,
+    "pdf": "covidence_1389_full_article.pdf",
+    "read_pages": "1–6 completely; visualpp3–5Figure1Tables1–4"
+  },
+  "arms": {
+    "order": [
+      "TAP",
+      "TAP+TEAS",
+      "usual"
+    ],
+    "randomized": [
+      30,
+      30,
+      30
+    ],
+    "analyzed": [
+      30,
+      30,
+      30
+    ],
+    "protocol": "AllPCIA; TAPbothactivegroups; TEASST36PC62–100Hz30minbeforePACUdischargeand24h; no sham."
+  },
+  "results": {
+    "pain": {
+      "location": "Table2p4",
+      "format": "Literalambiguous x(a ± b); nonparametricKruskal-Wallis/Dunn; no definitionmedian/quartiles. Methods describesVAS100mm but tablevalues2–3.",
+      "h2": [
+        "2(1.7 ± 3.0)",
+        "2(2.0 ± 3.0)",
+        "2(2.0 ± 3.0)"
+      ],
+      "h24": [
+        "2(2.0 ± 3.0)",
+        "2(1.7 ± 2.2)",
+        "3(2.0 ± 4.0)"
+      ],
+      "h48": [
+        "2(2.0 ± 3.0)",
+        "2(1.7 ± 2.0)",
+        "3(2.0 ± 3.2)"
+      ],
+      "pairP_TAPTEAS_vsTAP": [
+        null,
+        0.03,
+        0.03
+      ],
+      "pairP_TAPTEAS_vsusual": [
+        null,
+        "<0.0001",
+        0.004
+      ],
+      "posture": "Insufficient information / not reported.",
+      "numerical_meanSD": null,
+      "numerical_medianquartiles": null
+    },
+    "PONV": {
+      "location": "Table4p5",
+      "label": "Nausea/Vomitting",
+      "events24": [
+        8,
+        3,
+        13
+      ],
+      "events48": [
+        6,
+        1,
+        12
+      ],
+      "events72": [
+        3,
+        0,
+        8
+      ],
+      "p_omnibus": [
+        0.014,
+        0.002,
+        0.005
+      ],
+      "window": "Assessmentsat24/48/72h afterPACU; no explicitintervalboundaries; not necessarilycumulative"
+    },
+    "all_adverse": {
+      "events24": [
+        12,
+        4,
+        18
+      ],
+      "events48": [
+        8,
+        1,
+        13
+      ],
+      "events72": [
+        3,
+        0,
+        8
+      ],
+      "location": "Table4p5; includesdizziness, notPONV"
+    },
+    "GI": {
+      "defecation": "Prose p5 nonsignificantmorecases24/48h; no numbers",
+      "QoR": "Insufficient information / not reported."
+    }
+  },
+  "opioid": {
+    "decision": "excluded",
+    "drug": "sufentanil",
+    "route": "IV",
+    "pca": "100ug sufentanil+6mgtropisetronin100mL; basal2mL/h48h; demandbolusandactualusageunreported",
+    "rescue": "Additionalanalgesicsdiscouraged; actualrescueInsufficient information / not reported.",
+    "reason": "Prescriptionandbasalsettingsonly, noactualcumulativeopioidresult. Cannot infer48ug24hdelivered.",
+    "location": "p3Interventions"
+  },
+  "rob_independent": {
+    "D1": {
+      "answers": [
+        "Y",
+        "NI",
+        "PN"
+      ],
+      "evidence": "p2computersequence andindependentassistantnotifiesanesthetists; concealmentbeforenrollmentnotdescribed; Table1age6yearimbalancecompatiblewithchanceinsmalltrial.",
+      "judgment": "Some concerns"
+    },
+    "D2": {
+      "answers": [
+        "Y",
+        "Y",
+        "PN",
+        "NA",
+        "NA",
+        "Y",
+        "NA"
+      ],
+      "evidence": "p2–3no participantsham; twooperatorsclaimsblindingbuteachknowsprocedure. Allrandomizedreceivedassignedtreatmentandfollowup; noevidencedtrialcontextdeviations.",
+      "judgment": "Low"
+    },
+    "D3": {
+      "answers": [
+        "Y",
+        "NA",
+        "NA",
+        "NA"
+      ],
+      "evidence": "Figure1p3oneparticipantdeclinedbeforerandomization;90/90completed,30each.",
+      "judgment": "Low"
+    },
+    "D4": {
+      "answers": [
+        "NI",
+        "PN",
+        "Y",
+        "Y",
+        "PY"
+      ],
+      "evidence": "PainVASmetricformatuncertain(Table2); unmaskedpatientsarepainassessors; repeatedactiveTEASversusnone likelyinfluencesreports, despiteblindobserver.",
+      "judgment": "High"
+    },
+    "D4_PONV": {
+      "answers": [
+        "N",
+        "PN",
+        "Y",
+        "Y",
+        "NI"
+      ],
+      "evidence": "p2–3assessoraskspatientsnausea/vomiting; participantunmasked; no evidenceofactualdifferentialreportingincompositebinaryevents.",
+      "judgment": "Some concerns"
+    },
+    "D5": {
+      "answers": [
+        "NI",
+        "NI",
+        "NI"
+      ],
+      "evidence": "p2March–August2017enrollment; registryChiCTR-INR-17011598citedwithoutdate; exactregistrysearchnoresult andnoSAPavailable. Trialregistrationnumberalonecannotestablishprospectiveprespecification.",
+      "judgment": "Some concerns"
+    }
+  },
+  "independence": "One3armtrial; TEAS+TAPvsTAPisolatesTEASadjunct; vsusualaddsTAPandTEASpackage, differentestimand; sharedactivearmcannotbeindependentlycounted.",
+  "source_conflicts": [
+    "VAS100mmmethods vs2–3table andambiguousx(a±b)format unresolved.",
+    "91includedtextclarifiedFigure1andResultsp3as90randomized.",
+    "Nausea/Vomiting rowsnotalladverseevents; tableheadings24/48/72notspecifiedintervals."
+  ],
+  "missing": "Insufficient information / not reported."
+}

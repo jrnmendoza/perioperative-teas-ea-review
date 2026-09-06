@@ -1,0 +1,13 @@
+{
+  "Study_ID": "S024",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows_expected": 8,
+  "baseline_rows_reviewed": 8,
+  "result_specific_rob2_count": 18,
+  "limitations": [
+    "ClinicalTrials.gov named but ChiCTR identifier given; identifier2015 postdates2012–2013 study.",
+    "Percentage CIs not SDs/counts. Categorical counts could be reconstructed only with explicit rounding verification and labeling.",
+    "Morphine mg/kg is author conversion intraop, not administered morphine or postop."
+  ]
+}

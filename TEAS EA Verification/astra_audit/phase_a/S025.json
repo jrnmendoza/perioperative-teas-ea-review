@@ -1,0 +1,371 @@
+{
+  "Study_ID": "S025",
+  "Study": "Sim 2002",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase": "A",
+  "baseline_accessed": false,
+  "title": "Effects of Electroacupuncture on Intraoperative and Postoperative Analgesic Requirement",
+  "year": 2002,
+  "doi": "10.1136/aim.20.2-3.56",
+  "pdf_files": [
+    "covidence_952_full_article.pdf"
+  ],
+  "source_read": "Complete10-page article; visual p60 confirmsTable2,Fig2–3.",
+  "modality": "EA",
+  "comparator": "GroupI preop placebo tap/tape needle without penetration/no current45min",
+  "randomized_arms": {
+    "I": 30,
+    "II": 30,
+    "III": 30
+  },
+  "analyzed_arms": {
+    "I": 30,
+    "II": 30,
+    "III": 30
+  },
+  "denominator_source": "pp57,59–60Tables1–2",
+  "population": "Women18–75 hysterectomy±salpingo-oophorectomy GA, Singapore.",
+  "results": [
+    {
+      "outcome": "Morphine cumulative0–24h",
+      "unit": "mg/kg IV morphine",
+      "format": "meanSD",
+      "I": [
+        0.68,
+        0.38
+      ],
+      "II": [
+        0.52,
+        0.19
+      ],
+      "III": [
+        0.58,
+        0.27
+      ],
+      "source": "p59Results, p56abstract",
+      "P": "not significant; exact P not reported"
+    },
+    {
+      "outcome": "Morphine6–12h",
+      "unit": "mg/kg",
+      "format": "median(IQR width), NOT Q1/Q3",
+      "I": [
+        0.1,
+        0.11
+      ],
+      "II": [
+        0.03,
+        0.05
+      ],
+      "III": [
+        0.08,
+        0.1
+      ],
+      "P": "IIvsI .015;IIvsIII .010",
+      "source": "p59text;Fig3"
+    },
+    {
+      "outcome": "RestVAS average over24h",
+      "unit": "0–10",
+      "format": "meanSD",
+      "I": [
+        4.5,
+        2.1
+      ],
+      "II": [
+        4.7,
+        1.8
+      ],
+      "III": [
+        3.9,
+        1.6
+      ],
+      "source": "p60Table2 footnote mean values over24h"
+    },
+    {
+      "outcome": "PONV0–24h",
+      "format": "percentage",
+      "I": 46.6,
+      "II": 43.3,
+      "III": 56.7,
+      "source": "p60Table2",
+      "events": null
+    },
+    {
+      "outcome": "Alfentanil intraop",
+      "unit": "µg/kg/min",
+      "format": "meanSD",
+      "I": [
+        0.51,
+        0.21
+      ],
+      "II": [
+        0.44,
+        0.15
+      ],
+      "III": [
+        0.58,
+        0.22
+      ],
+      "P": "IIvsI .472;IIvsIII .024",
+      "source": "pp59–60Fig2"
+    }
+  ],
+  "drug": "Morphine",
+  "route": "IV",
+  "pca_formulation": "Graseby9300; delivered1mg bolus,5min lockout; concentration/basal not specified.",
+  "rescue_regimen": "Morphine0.1mg/kg immediately after alfentanil cessation at abdominal muscle closure; PACU1–2mg every5min untilVAS≤3 thenPCA. Ondansetron4mg.",
+  "source_conflicts": [
+    "0–24h includes recovery-room stay but inclusion of fixed pre-end-of-surgery0.1mg/kg morphine not explicit.",
+    "PreopEA described45min, discussion says some continued underGA to surgery end.",
+    "Table2VAS is mean over24h, not exact24h.",
+    "PONV46.6% of30 does not match conventional one-decimal rounding of14/30=46.7%; no unqualified direct event count."
+  ],
+  "independence": "One3-arm trial with sharedI control. IIvsI is matched-timing blinded comparison; IIIvsI differs in timing and III awareness. No demonstrated duplicate among assigned trials.",
+  "rob2": [
+    {
+      "result_id": "S025_morphine",
+      "outcome": "IV morphine cumulative",
+      "time_window": "0–24h",
+      "comparison": "IIpreopEA vs Iplacebo",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Random-number table.",
+          "source_location": "p57",
+          "reasoning": "Random-number table."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "NI",
+          "evidence": "No concealment mechanism described.",
+          "source_location": "p57",
+          "reasoning": "No concealment mechanism described."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "PN",
+          "evidence": "Age/weight/incision and surgical durations broadly comparable30/arm.",
+          "source_location": "p59Table1",
+          "reasoning": "Age/weight/incision and surgical durations broadly comparable30/arm."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PN",
+          "evidence": "I/II masking survey mostly unable to guess; tap/tape mock procedure.",
+          "source_location": "pp58,61",
+          "reasoning": "I/II masking survey mostly unable to guess; tap/tape mock procedure."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Acupuncturist and anaesthetists explicitly aware.",
+          "source_location": "p62",
+          "reasoning": "Acupuncturist and anaesthetists explicitly aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "NI",
+          "evidence": "Some preoperativeEA continued intraoperatively; frequency/extent not reported.",
+          "source_location": "pp62–63",
+          "reasoning": "Whether trial-context deviation occurred is unclear."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3NI.",
+          "source_location": "p62",
+          "reasoning": "2.3NI."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p62",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All90 shown in30/arm results; no reclassification.",
+          "source_location": "p59Table1",
+          "reasoning": "All90 shown in30/arm results; no reclassification."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6Y.",
+          "source_location": "p59",
+          "reasoning": "2.6Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "30/arm outcome tables; no losses reported.",
+          "source_location": "pp59–60",
+          "reasoning": "30/arm outcome tables; no losses reported."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "NA",
+          "evidence": "Complete reported cohort.",
+          "source_location": "p60",
+          "reasoning": "Complete reported cohort."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NA",
+          "evidence": "3.1Y.",
+          "source_location": "p60",
+          "reasoning": "3.1Y."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "PCA delivered morphine records and recovery-room doses.",
+          "source_location": "pp58–59",
+          "reasoning": "PCA delivered morphine records and recovery-room doses."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same PCA1mg5min lockout and follow-up.",
+          "source_location": "p58",
+          "reasoning": "Same PCA1mg5min lockout and follow-up."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "Independent postoperative assessor blinded; participants I/II plausibly masked.",
+          "source_location": "pp61–62",
+          "reasoning": "Independent postoperative assessor blinded; participants I/II plausibly masked."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "NA",
+          "evidence": "Blinded consumption recording.",
+          "source_location": "p62",
+          "reasoning": "Blinded consumption recording."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "4.4NA.",
+          "source_location": "p62",
+          "reasoning": "4.4NA."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "No registration/datable SAP provided in2002 publication.",
+          "source_location": "pp56–65",
+          "reasoning": "No registration/datable SAP provided in2002 publication."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "24h and intervals reported but prior detailed intentions unavailable.",
+          "source_location": "p59",
+          "reasoning": "24h and intervals reported but prior detailed intentions unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "No dated analysis plan; multiple comparisons/statistics.",
+          "source_location": "p59",
+          "reasoning": "No dated analysis plan; multiple comparisons/statistics."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Concealment not reported.",
+          "source_location": "p57"
+        },
+        {
+          "domain": 2,
+          "judgment": "Some concerns",
+          "reasoning": "Unclear continuation of preopEA into surgery.",
+          "source_location": "pp62–63"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All90 in results.",
+          "source_location": "pp59–60"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Standard PCA with blinded recording and credible I/II masking.",
+          "source_location": "pp58,61–62"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No prospective analysis plan demonstrated.",
+          "source_location": "p59"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Concealment, intervention continuation and prespecification uncertainties."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "sensitivity",
+    "reason": "Verified cumulative24h IV morphine in mg/kg only; cannot convert with group mean weight. Fixed dose at muscle closure inclusion uncertain. Requires raw mg or IPD for primary mg endpoint.",
+    "postoperative": true,
+    "explicit_0_24h": true,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "Includes recovery-room period; inclusion of fixed intraoperative transition morphine dose uncertain.",
+    "unit": "mg/kg",
+    "raw_values": {
+      "I": [
+        0.68,
+        0.38
+      ],
+      "II": [
+        0.52,
+        0.19
+      ],
+      "III": [
+        0.58,
+        0.27
+      ]
+    },
+    "comparison_selection": "PreferIIvsI;III timing-unmatched sensitivity; sharedI counted once"
+  }
+}

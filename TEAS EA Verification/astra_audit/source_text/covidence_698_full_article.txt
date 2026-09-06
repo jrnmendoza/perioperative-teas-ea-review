@@ -1,0 +1,545 @@
+=== PDF PAGE 1 ===
+The           American           Journal           of           Chinese           Medicine,           Vol.           42,           No.           5,           1099–1109
+©           2014           World           Scientiﬁc           Publishing           Company
+       Institute           for           Advanced           Research           in           Asian           Science           and           Medicine
+DOI:           10.1142/S0192415X14500682
+
+
+   Electro-Acupuncture                      Decreases                     Postoperative
+                  Pain                     and                     Improves                     Recovery                     in                     Patients
+               Undergoing                     a                     Supratentorial                      Craniotomy
+
+
+
+                                                               Li-Xin         An,*         Xue         Chen,†          Xiu-Jun         Ren‡          and         Hai-Feng         Wu§
+
+                                                                      *Department         of          Anesthesia,          Beijing          Tiantan         Hospital
+                                                                        Capital          Medical         University,          Beijing          100050,          China
+                                                                    †Department         of          Anesthesia,          Beijing         Jishuitan         Hospital
+                                                                                                          Beijing          100035,          China
+                                                                                                   ‡Department          of          Acupuncture
+                                                                        Beijing         University          of          Traditional         Chinese          Medicine
+                                                                                                          Beijing          100029,          China
+
+                                                                             §Department          of          Epidemiology          and          Biostatistics
+                                                                        Capital          Medical         University,          Beijing          100069,          China
+
+                                                                                                     Published         28         August         2014
+
+           Abstract:              We              performed              this              study              to              examine              the              effect              of              electro-acupuncture              (EA)              on
+           postoperative        pain,        postoperative        nausea        and        vomiting        (PONV)        and        recovery        in        patients        after
+           a             supratentorial             tumor             resection.             Eighty-eight             patients             requiring             a             supratentorial             tumor             re-
+           section           were           anesthetized           with           sevoﬂurane           and          randomly           allocated           to           a           no          treatment           group
+           (Group           C)           or           an           EA           group           (Group           A).           After           anesthesia           induction,           the           patients           in           Group           A
+           received        EA        at        LI4        and        SJ5,        at        BL63        and        LR3        and        at        ST36        and        GB40        on        the        same        side        as        the
+           craniotomy.         The         stimulation         was         continued         until         the         end         of         the         operation.         Patient-controlled
+           intravenous             analgesia             (PCIA)             was             used             for            the             postoperative             analgesia.             The            postoperative
+           pain          scores,          PONV,          the           degree          of          dizziness          and          appetite          were          recorded.          In          the          ﬁrst          6          hours
+           after           the           operation,           the           mean           total           bolus,           the           effective           times           of           PCIA           bolus           administrations
+           and            the            VAS            scores             were            much            lower            in            the            EA            group            (   p        <          0:05).             In            the            EA            group,            the
+           incidence        of        PONV        and        degree        of        dizziness        and        feeling        of      fullness        in        the        head        within        the       ﬁrst
+           24        hours         after         the        operation         was        much        lower        than         in        the        control        group        (    p        <          0:05).        In         the        EA
+           group,        more        patients        had        a        better        appetite        than        did        the        patients        in        group        C        (51.2%        vs.        27.5%)
+           (    p        <          0:05).            The            use            of            EA            in            neurosurgery            patients            improves            the            quality            of            postoperative
+           analgesia,         promotes         appetite         recovery        and         decreases        some         uncomfortable         sensations,         such         as
+           dizziness           and           feeling           of         fullness           in           the           head.
+
+
+Correspondence           to:           Dr.           Li-Xin           An,           Department           of           Anesthesia,           Beijing           Tiantan           Hospital,           Capital           Medical           Uni-
+versity,          No.          6,          Tiantan          Xili,          Dongcheng          District,          Beijing          100050,         China.          Tel:          (þ86)          10-6709-6658,         Fax:          (þ86)
+10-6709-1947,         E-mail:         anlixin8120@163.com
+
+                                                                                                                              1099
+
+=== PDF PAGE 2 ===
+1100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             L.-X.           AN           et           al.
+
+            Keywords:             Electro-Acupuncture;             Supratentorial             Craniotomy;             Postoperative             Pain;             Appetite;
+            Dizziness.
+
+
+Introduction
+
+In         recent         decades,         more         attention         has         been         given         to         postoperative         pain         after         neurosurgery.
+In                particular,                the                supratentorial                craniotomy                has                been                studied                because                80%                of                patients
+may                experience                mild                to                severe                acute                pain                (Imaev                et               al.,               2013).               In               addition,               increased
+postoperative            pain           is           associated           with           hyper-intracranial            pressure,           postoperative           bleeding,
+dizziness,            anorexia            and            other            symptoms            (      Yeh            et            al.,            2010;             Bilotta             et             al.,            2013).            Patient-
+controlled            intravenous             analgesia             (PCIA)             is             always             utilized            to            control             postoperative             pain
+in                  these                  patients                  and                  to                  provide                  a                  higher                  degree                  of                  satisfaction                  regarding                  pain                  relief
+(Angster              and              Hainsch-Müller,             2005;              Pang              et             al.,             2013).             Although             PCIA             has             signi ﬁcant
+analgesic             effects,            postoperative            nausea            and            vomiting            (PONV),             respiratory             inhibition            and
+somnolence,                     which                     are                     induced                     by                     opioids                     and                     may                     restrict                     the                     early                     neurological
+function               exam,               continue               to               be               a               problem.               Therefore,               it               is               important               to               provide               neuro-
+surgical              patients              with              effective              postoperative              pain              treatment               while              avoiding              PONV              and
+over            sedation.
+          EA           has           been           combined           with           general           anesthesia           to           alleviate           PONV           (Grube           et           al.,           2009;
+Wang            et           al.,           2010;           Lin           and           Chen,           2012),           improve           postoperative           analgesia           (Lin           and           Chen,
+2009;                Yeh                et                al.,               2010;                Langenbach                et                al.,               2012)                and                reduce                the                intraoperative                opioid
+requirement.               The              effect              of              acupuncture              on              the               general               anesthetic              requirements              has               been
+previously         studied         in         volunteers         (Chernyak         et         al.,         2005;         Kumnerddee         and         Pattapong,         2012)
+and          during          clinical          anesthesia          for          different          types          of          surgery          (Liodden           and          Norheim,          2013).
+However,            these            studies            rarely            focused            on            postoperative            pain            treatment            using            acupuncture
+combined                  with                  traditional                  PCIA.                  In                  addition,                  postoperative                  pain                  after                  neurosurgery                  is
+always             combined             other             symptoms,             such             as             dizziness,             feeling             of           fullness             in             the             head,             and
+these          accompanying          symptoms          cannot          be          controlled          by          traditional          analgesic          methods          such
+as          PCIA.          And          postoperative          pain          also          induces          poor          appetite,          which          was          always          ignored          by
+the            investigators.
+          The             aim             of             this             controlled,            randomized,            double-blind             study            was             to             examine             the             effect
+of             EA             combined             with             PCIA             on             postoperative             pain             after             a             supratentorial             craniotomy.             We
+hypothesized           that           EA           would           improve           the           quality           of           postoperative           pain           treatment.           We           also
+examined           recovery           variables           such           as           dizziness,           PONV           and           appetite           as           secondary           outcome
+measures.
+
+
+Materials            and            Methods
+
+Patients
+
+Following               approval               from                the               Human               Research                Committee               of               Beijing               Tiantan               Hospital,
+Capital         Medical         University         and         the         receipt         of         informed          consent,         88         ASA         I–II         adult         patients
+aged                 18–60                 years                 who                 were                 undergoing                 supratentorial                 tumor                 resections                 under                 general
+
+=== PDF PAGE 3 ===
+                                                                            EA           DECREASED           POSTOPERATIVE           PAIN                                                                                                                                                                                                                                                                                                                                                 1101
+
+anesthesia         were         enrolled         in         this         study.         All         the         subjects         involved         were         blinded         regarding         the
+study,             and             the             doctor             who             observed             the             postoperative             pain             and             other             outcomes             was             also
+blinded            to            the            study.
+           Patients              who              were              obese              (BMI         >           30      kg/m2),              pregnant,              taking              any              medication              or              had
+cardiovascular                or                respiratory                diseases                 were                 excluded.                 Additionally,                all                 the                 patients                 un-
+derwent              a              needling              test              before              they              were              included              in              the              study              to              exclude              subjects              who
+were             resistant             to             acupuncture.             Patients             were             also             excluded             if             they             developed             a             postoper-
+ative                  hematoma                  or                  infection.                  Patients                  were                  randomly                  allocated                  into                  2                  groups                  using                  a
+computer-generated            randomized            number            table;            Group            C            was            a            control            group            that            did            not
+receive             EA             during             the             operation             (n       ¼           43)             and             Group             A             was             the             experimental             group             that
+received            EA            (n       ¼           45).
+
+
+Acupuncture
+
+We                 collaborated                 with                 an                 acupuncturist                 from                 Beijing                 University                 of                 Chinese                 Medicine
+to                     perform                     this                     study.                     In                     Group                     A,                     the                     acupuncture                     needles                     (       0:25     /C2                                       40      mm)                     were
+inserted                    into                    acupoints                    at                    LI4                    (Hegu),                    SJ5                    (WaiGuan),                    BL63                    (JinMen),                    LR3                    (Tai-
+Chong),               ST36               (ZuSanLi)               and               GB40               (QiuXu)               on               the               same               side               as               the               craniotomy.               For
+LI4,               SJ5,              BL63,               LR3,               ST36,               and               GB40,              each               acupuncture               point               was              treated               with               one
+needle.               LI4               and               SJ5,               BL63               and               LR3,               as               well               as               ST36               and               GB40,               were               connected               in
+pairs                 to                 the                  acupuncture                  point                  nerve                  stimulator.                  EA                  stimulation                  was                  delivered                  via                  a
+LH202H               HANS               acupuncture               point               nerve               stimulator               (Beijing               Huawei               Co               Ltd;               Beijing,
+China)           using           a           dense-dispersed           wave           with           frequencies           of           2           and           100      Hz           alternating           every
+3      s.            The            waveform            was            a            symmetric            biphasic            curve.            The            stimulation            intensity            was            set            to
+the                level                of                maximum                tolerance                for                each                patient,                and                the                stimulation                lasted                from                the
+induction            of            anesthesia            until            the            end            of            the            operation.            In            Group            C            the            acupuncturist            did
+not              insert              any              needles.
+
+
+Anesthesia             and            Postoperative            Analgesia
+
+Following           pre-oxygenation,           anesthesia           was           induced           in           both           groups           with           an           IV           infusion           of
+sufentanil              0.3     /C22g/kg             and             propofol             2      mg/kg.             A             tracheal              intubation             was              facilitated              with             IV
+vecuronium         0.1      mg/kg.        General        anesthesia        was        initially        maintained         with         sevoﬂurane,        2%        in
+oxygen                at                2      L/min.                At                the                end                of                the                operation,                sevoﬂurane                was                discontinued                and                the
+intravenous           PCIA          pump           was           connected.          Patients          were           sent           to          the          postoperative           anesthesia
+care          unit          (PACU),          where          the          PCIA          device          was          explained          to          each          patient,          and          its          operation
+was          reviewed          prior          to          initiating          the          PCIA          therapy.          The          PCIA          device          was          programmed          and
+contained         10     /C22g/kg         fentanyl         and         8      mg         ondansetron         with         normal         saline         for         a         total         of         100      mL
+without              basal              infusion.             Supplemental              bolus              doses              of              1      mL              could              be              administered              with              a
+minimal          lockout          interval          of          15      min          and          a          maximum          hourly          dose          of          4      mL          if          the          patient          was
+unable                 to                 achieve                 adequate                 pain                 relief               from                 the                 PCIA                 device.                 At                 48                 hours,                 the                 PCIA
+therapy         was         discontinued         in         all         the         patients.         All         the         patients         started         a         liquid         food         diet         in         the
+morning            after            surgery.
+
+=== PDF PAGE 4 ===
+1102                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             L.-X.           AN           et           al.
+
+Data            Recording
+
+All             the             patient             and             surgical             variables             were             monitored             and             recorded.             These             included             age,
+gender,              weight,             ﬂuids              administered,              urine              output,             blood              loss              and             the             duration             of             the             op-
+eration.
+           The         postoperative         pain         score         at         rest         was         assessed         with         a         standard         10         point         visual         analog
+scale          (VAS,          0       ¼          no          pain          to          10       ¼          the          worst          pain          imaginable).          The          incidence          of          PONV          was
+recorded.          Dizziness          and          feeling          of        fullness          in          the          head          were          assessed          at          6,          24          and          48          hours
+(no                dizziness,                 mild                 dizziness,                 moderate                 dizziness,                severe                 dizziness).                Appetite                was                 also
+assessed                  at                  24                 and                 48                 hours                  (1       ¼          unable                  to                  eat,                   2       ¼          very                  few                  liquid                  foods                  or                  water,
+3       ¼          sufficient            liquid            foods            or            some            solid            foods,             4       ¼          normal            eating).
+           The               total              PCIA               boluses,               the               VAS               value,               PONV               and              the               need              for               rescue               anti-emetic
+drugs          were          recorded          at          1-,          2-,          3-,          4-,          6-,          24-          and          48-hour          intervals          during          the          postoperative
+period.            Appetite            and            dizziness            were            recorded            at            24            and            48            hours.
+
+
+Statistical            Analysis
+
+Based            on            our            previous            study,            30            patients            were            required            in            each            group            to            achieve            an            80%
+chance             of             detecting             a             signiﬁcant             difference             in             the             VAS             scores             with             a            5%             level             of             signif-
+icance          (An          et          al.,          2010a,b;          Yang          et          al.,          2012).          The          data          were          tested          for          normal          distribution
+using            the            Kolmogorov–Smirnov            test.            The            number            of            PCIA            demands,            the            doses            of            rescue
+analgesic                  and                  the                  VAS                  values                  are                  presented                  as                  the                  mean     /C6                                     SD,                  and                  differences                  were
+assessed        using        a        one-way        analysis        of        variance        (ANOVA).         A        p        value       <      0.05        was         considered
+statistically              signiﬁcant.              The              occurrence              of              PONV              was              assessed              using              the              R     /C2                                     C         /C31   2                test.
+The             ratio             of             dizziness             and             eating             status             were             compared             using             the              Mann–Whitney              U              test.
+The              data               entry              and              analysis               were               performed               by              statistical               experts              from               Capital              Medical
+University            using            the            SPSS            19.0            statistical             software.
+
+
+Results
+
+A            total            of            88            subjects            participated            in            the            study.            Eighty-one            subjects            completed            the            study,
+and             7             were             excluded             (2             underwent             surgery             again,             2             remained             unconsciousness             after             sur-
+gery,                 and                 3                 lacked                 complete                  information).                 The                 patient                 and                 surgical                  characteristics                 are
+shown             in             Table            1.             There             were             no             signiﬁcant             differences             between             the             2             groups             regarding
+age,          weight,          gender          or          type          and          duration          of          surgery.          Fluid          administration,          urine          output          and
+estimated            blood            loss            were            also            similar            between            the            2            groups.
+
+
+Effects            of            EA            on            Postoperative            Pain
+
+Figure            1            indicates            that            the            pain            level            tended            to            decrease           in            both            groups.            However,            during
+the           ﬁrst           6           hours,           the           VAS           score           of           the           EA           group           was           much           lower           than           that           of           the           control
+group                  (    p         <           0:05).                  We                   then                  calculated                  the                  mean                   total                  PCIA                   bolus                   administration                   and
+the                 effective                 number                 of                 PCIA                 bolus                 administrations                 within                 the                ﬁrst                 6                 hours                 and                 over
+
+=== PDF PAGE 5 ===
+                                                                                                                                                          EA           DECREASED           POSTOPERATIVE           PAIN                                                                                                                                                                                                                                                                                                                                                 1103
+
+                                                                                                                                                                                  Table         1.              Patient         and         Surgical         Characteristics
+
+                                                                                                                                                                                                                                                                                               Group         A         (n     ¼        41)                                                                                                                       Group         C         (n     ¼        40)
+                                                                                                                                                                                                                                                            (Electro-Acupuncture         Group)                                                                                                                                                                      (Control         Group)
+
+                                                                       Age         (yr)                                                                                                                                                                                                                                                                                                                                                                                                                        40.7      /C6                                 12.1                                                                                                                                                                                                            39.1      /C6                                 10.9
+                                                                       Body          weight         (Kg)                                                                                                                                                                                                                                                                                                         63.6      /C6                                 9.5                                                                                                                                                                                                                           65.5      /C6                                 9.6
+                                                                       Male/female                                                                                                                                                                                                                                                                                                                                                                                                                   17/24                                                                                                                                                                                                                                                                                             21/19
+                                                                       Duration         of          surgery         (min)                                                                                                                                                                                            201.2      /C6                                 38.6                                                                                                                                                                                             210.5      /C6                                 56.1
+                                                                       Duration         of          anesthesia         (min)                                                                                                                                                           262.3      /C6                                 59.7                                                                                                                                                                                      284.5      /C6                                 107.2
+                                                                       Type         of          surgery
+                                                                                                   Meningioma                                                                                                                                                                                                                                                                                                                                                                      11                                                                                                                                                                                                                                                                                                                                    17
+                                                                                                   Glioma                                                                                                                                                                                                                                                                                                                                                                                                                                      23                                                                                                                                                                                                                                                                                                                                    11
+                                                                                                   Metastasis         or          others                                                                                                                                                                                                                                                                                   7                                                                                                                                                                                                                                                                                                                                           12
+                                                                       Dose         of          sufentanil         (/C22g)                                                                                                                                                                                                                          36.78      /C6                                 1.33                                                                                                                                                                                             38.12      /C6                                 3.56
+                                                                       Fluid         administration          (ml)                                                                                                                                                                                       3057.4      /C6                                 574.2                                                                                                                                                               3448.1      /C6                                 513.1
+                                                                       Urine         output         (ml)                                                                                                                                                                                                                                                                                  579.31      /C6                                 363.1                                                                                                                                                                      584.6      /C6                                 409.5
+                                                                       Estimated         blood         loss         (ml)                                                                                                                                                                               1503.4      /C6                                 611.4                                                                                                                                                               1619.2      /C6                                 813.8
+
+                                                                       Notes:            Data            are            expressed            as            mean   /C6                            SD            or            numbers.            No            statistically            signiﬁcant            dif-
+                                                                       ferences         were         observed         between         the         two         groups.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure          1.              Changes          in          pain          intensity          (VAS          values)          over          time.          The          data          are          presented          as          the          mean          visual          analog
+score         and         the         error         bars         represent         SD.         *p       <        0:05         vs.          the         control         group.         EA         group     ¼        Electro-acupuncture         group.
+
+
+6–48           hours.           We           found           that           the           mean           total           bolus           administration           and           the           effective           number
+of           PCIA            bolus           administrations           in           the               ﬁrst            6           postoperative           hours           were           much           lower           in            the
+EA              group              than              in              the              control              group              (Table            2),             whereas             there             were              no             differences             6   –48
+hours           postoperatively.           From           the              ﬁrst           6           hours           to           the           second           postoperative           day,           there           were
+no          signiﬁcant          differences          in          the          mean          total          bolus          administration          and          the          effective          number
+of                  bolus                  administrations                  between                  the                  2                  groups.                  There                  was                  no                  difference                  in                  the                  total
+fentanyl              dose              between              the              EA              and              control              groups              (      0:67     /C6                                       0:09      mg              vs.                0:73     /C6                                       0:12      mg,
+respectively).
+
+=== PDF PAGE 6 ===
+1104                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             L.-X.           AN           et           al.
+
+                                                                                                Table         2.              PCIA         Bolus         Administration         in         the         Two         Groups         (Mean   /C6                           SD)
+
+                                                                                                                                                                                                                                                                                                                                  Group         A         (n   ¼        41)                                                                                                            Group         C         (n   ¼        40)
+                                                                                                                                                                                                                                                                                                 (Electro-Acupuncture         Group)                                                                                                                                                      (Control         Group)
+
+           Total         PCIA          Bolus         Administration
+                        0–6     h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               14.43       /C6                                 10.67*                                                                                                                                                                     24.87       /C6                                 14.88
+                        6–48     h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       8.30      /C6                                 2.91                                                                                                                                                                                                           9.63      /C6                                 3.21
+           Effective         Number         of          PCIA         Bolus         Administrations
+                        0–6     h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              4.83       /C6                                 2.95*                                                                                                                                                                                                   9.67      /C6                                 3.35
+                        6–48     h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       5.64      /C6                                 1.23                                                                                                                                                                                                           5.57      /C6                                 1.52
+
+           Notes:            Data           are            expressed           as            mean   /C6                            SD           or            numbers.           *p       <        0:05           compared           to            the           control           group.           PCIA     ¼
+           patient         controlled         intravenous         analgesia.
+
+Secondary            Parameters
+
+On         the        ﬁrst         postoperative         day,         the         incidence         of        PONV         was         14.6%         and         32.5%         in        the         EA        and
+control                              groups,                              respectively,                               with                               no                              signiﬁcant                              difference                              between                              the                              groups
+(/C31   2        ¼           3:599,                  p       ¼           0:058).                 On                 the                 second                 postoperative                 day,                 the                 rate                 of                 PONV                 greatly
+decreased               to               4.9%               and               10.0%               in               the               EA               and               control               groups,               respectively               (/C31    2        ¼           0:744,
+p       ¼           0:379).
+                    Table            3              contains              the              incidence              and              degree              of              dizziness              and              feeling              of            fullness              in              the
+head.             During             the            ﬁrst             6             postoperative             hours,             most             patients             experienced             a             severe             to             mod-
+erate          feeling         of         dizziness          and         fullness          in         the         head,         and         this         feeling         were         more          serious         in         the
+control              group              than              in              the              EA              group              (    p         <           0:05).              Within              6–24              postoperative              hours,              more
+patients              in              the              control              group              suffered              from              moderate              to              severe              dizziness              than              in              the              EA
+group              (   p       ¼           0:001).              However,              these              uncomfortable              feelings              were              largely             resolved              by              the
+next            day            in            both            groups.
+                    Almost            all            patients            could            not            drink            water            within            6            hours            post-surgery            and            were            given
+only               very               little               water               for               lips               and               mouth               humidiﬁcation.               We               found               that                the               patients                in
+the                    EA                   group                    could                   eat                    liquid                    foods                    much                    sooner                    than                    those                    in                   the                    control                   group,
+which              indicates              that              they              had              a              better              appetite              (Fig.            2).              In              particular,              during              the             ﬁrst              24
+
+
+                                                                                                             Table         3.              Dizziness         and         Feeling         of         Fullness         in         the         Head         (Cases/%)
+
+                                                                                                                                                                                                                                     None                                                                                                                                                            Mild                                                                                                                                Moderate                                                                                                                     Severe
+                                                                                                                                                                                                                                                           Ratio                                                                                           Ratio                                                                                           Ratio                                                                                          Ratio
+                                                                                                                                                 Groups                                      Cases                                                      (in         %)                                Cases                                             (in         %)                                Cases                                            (in         %)                                Cases                                             (in         %)
+
+        0–6     h         after          operation                                                               Group         A                                                                      5                                                                       12.2                                                                       11                                                                       26.8                                                                       15                                                                       36.6                                                                       10                                                                       24.4
+                                                                                                                                               Group         C                                                                       2                                                                                      5                                                                                                             4                                                                       10                                                                                              19                                                                       47.5                                                                       15                                                                       37.5
+        6–24     h         after          operation                                                Group         A                                                       10                                                                       24.4                                                                       16                                                                       39.0                                                                       13                                                                       31.7                                                                                      2                                                                                      4.9
+                                                                                                                                               Group         C                                                                       2                                                                                      5.0                                                                       10                                                                       25                                                                                              20                                                                       50                                                                                                             8                                                                       20.0
+        24–48     h         after          operation                                 Group         A                                                       27                                                                       65.9                                                                                      9                                                                       22.0                                                                                      4                                                                                      9.8                                                                                      1                                                                                      2.4
+                                                                                                                                               Group         C                                                        20                                                                       50.0                                                                                      7                                                                       17.5                                                                                      9                                                                       27.5                                                                                      2                                                                                      5.0
+
+        Notes:              Data             are             expressed             as             numbers             and             percentages.             During             0–6     hrs             and             6–24     hrs             after             operation,             the
+        difference         between         two         groups        was         signiﬁcant,         p       <        0:05.         Group         A     ¼        Electro-acupuncture         group,         Group         C     ¼
+        control          group.
+
+=== PDF PAGE 7 ===
+                                                                                   EA           DECREASED           POSTOPERATIVE           PAIN                                                                                                                                                                                                                                                                                                                                                 1105
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure        2.              Dietary        status        within        the        ﬁrst        24        hours        post-surgery.        In        group        A,        more        patients        were        able        to        consume        a
+sufﬁcient        liquid        diet        than        in        group        C        (the        ratio        was        51.2%        vs.        27.5%).        Using        the        non-parametric        test        and        the        rank
+sum          test,           p     ¼        0:03.           1     ¼        unable          to          eat,           2     ¼        very          few          liquid          foods          or           water,           3     ¼        sufficient          liquid          foods          or          some
+solid         foods         and          4     ¼        normal         eating.         Group         A     ¼        electro-acupuncture         group,         Group         C     ¼        control          group.
+
+postoperative           hours,           signiﬁcantly           more           patients           in           the           EA           group           than           in           the           control           group
+were         able         to         eat         a         sufﬁcient         liquid         diet         (51.2%         vs.         27.5%)         (    p       ¼           0:03).         In         both         groups,         most
+patients                  began                  to                  eat                  solid                  foods,                  such                  as                  eggs,                  on                  the                  third                  morning.                  More                  patients
+exhibited           mild           or           moderate           anorexia           in            the           control           group            than           in            the           EA            group;           however,
+this            difference            was            not            statistically            signiﬁcant            (   p       ¼           0:058)            (Fig.            3).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure         3.              Dietary         status         24–48          hours         post-surgery.          In         group         A,         more         patients         were         able         to          consume         a          sufﬁcient
+liquid        diet        and        even        eat        a        normal        diet        than        in        group        C        (39%        vs.        22.8%).        Using        a        non-parametric        test        and        the        rank
+sum           test,            p     ¼        0:058,           with           no           differences           between           the           groups.            1     ¼        unable           to           eat,            2     ¼        very           few           liquid           foods           or
+water,            3     ¼        sufficient           liquid           foods           or           some           solid           foods           and            4     ¼        normal           eating.           Group           A     ¼        electro-acupuncture
+group,         Group         C     ¼        control         group.
+
+=== PDF PAGE 8 ===
+1106                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             L.-X.           AN           et           al.
+
+Discussion
+
+The           main          ﬁnding           of          the          present          study           is          that           EA          reduces           postoperative          pain          and           decreases
+the            number            of            effective            PCIA            bolus            administrations            when            used            as            an            adjuvant            to            general
+anesthesia             during             a             supratentorial             tumor             resection.             Moreover,             EA             also             improves             appetite
+recovery            and            decreases            some            uncomfortable            side            effects,            such            as            dizziness            and            feeling            of
+fullness            in            the            head.
+           Based          on          the          VAS          score,          we          found          that          the          postoperative          pain          of          neurosurgery          patients
+was,              on              average,              greatest               on              the              day              of              surgery,              especially              within              24              hours.              This              study
+revealed                that                the                 pain                after                 neurosurgery                was                moderate                and                decreased                over                time.                This
+ﬁnding           is          similar           to          other          studies          that          have          demonstrated          a          reduction          in          postoperative          pain
+over         time         (Sommer         et         al.,         2008;         Yeh         et         al.,         2010;         Dong         et         al.,         2013).         The         use         of         EA         during
+anesthesia         contributes         to         the         achievement         of         2         important         aims.         First,         it         reduces         the         effective
+number             of             PCIA            bolus             administrations             and             reduces             the             dose             of             conventional             drugs             (e.g.,
+fentanyl)                 and                 their                 side                 effects.                 Second,                 EA                 helps                 to                 maintain                 pain                 intensity                 within                 a
+tolerable               range.               The               differences               in               the               VAS               score               and               number               of              PCIA               bolus               adminis-
+trations                between                the                2                groups                were                signiﬁcant,                especially                in                the               ﬁrst                6                hours                after                the
+operation.             This             result             is             somewhat             different             from             other             similar             studies,             which             have             dem-
+onstrated                that               EA               continuously               improves               acute               postoperative               pain               up               to               the               third               post-
+operative          day          (Yeh          et          al.,          2010).          The          reasons          for          this          difference          may          include          differences          in
+the         surgical         site         and         the         frequency         and         duration         of         the         EA         application         (Lin         and         Chen,         2008;
+Leung,                  2012).                  Both                   clinical                   and                   laboratory                   results                   indicate,                   after                   the                  EA                  stimulation,
+modulation         of         the         noradrenaline         and         5-HT         signaling         system,         the         production         of         endogenous
+neuropeptides                  acting                  upon                  the                /C22-opioid                  and                  N/OPQ                  receptors,                  and                  the                  production                  of
+somatostatin               and               other               related              neurotrophins              that               together               enhance               the               descending               inhi-
+bition              of              nociception              on              the              spinal              afferents              (Leung,              2012).              But              there              was              no              deﬁnitive
+evidence            regarding            the            duration            of           this            analgesia            effect            of            EA            after            the            discontinuation           of
+stimulation.              In              the             present              study,              the              supplementary              analgesic              effect              of              EA              was              concen-
+trated                  within                  the                 ﬁrst                  6                  postoperative                  hours,                  but                  the                  other                  effects,                  such                  as                  improving
+recovery,            were            maintained            for            a            longer            time.
+           The             choice             of             acupoints             in             our             study             was             based             on             the             principle             of             “acupoints             along
+meridians”          (Han,          1997)          from          the          theory          of          “treating          disease          of          the          upper          part          by          managing
+the             lower”.             In             our             previous             studies,             we             found             that             EA             combined             with             general             anesthesia
+decreases          the          anesthetic          requirement          and          hastens          recovery          after          anesthesia.          In          addition,          the
+most             effective              acupoints             used             in             supratentorial             neurosurgery             are             LI4             and             SJ5,             BL63             and
+LR3,            and            ST36            and            GB40            (An            et            al.,            2010a,b;            Yang            et            al.,            2012).            Therefore,            we            applied
+the          same          acupoints          and          stimulation          intensity          in          the          present          study          to          obtain          the          best          adjunct
+analgesia            effect            for            postoperative            pain.
+           Many                  previous                  studies                   have                  demonstrated                  that                  EA                  may                  decrease                  the                  incidence                  of
+PONV.            Wang             et            al.             found            that             EA            stimulation            at             the             P6            points             is            an             effective             adjunct             to
+anti-emetic                    drug                    therapy                   for                    PONV                    in                   patients                    undergoing                    supratentorial                    craniotomy
+(Wang          et          al.,         2010),         and          Lv         also         obtained          the         same          result         (Lv          et          al.,         2013).          EA         stimulation
+may         mediate         the         release         of         bendorphins         in         the         cerebrospinal        ﬂuid,         activate         serotonergic         and
+
+=== PDF PAGE 9 ===
+                                                                           EA           DECREASED           POSTOPERATIVE           PAIN                                                                                                                                                                                                                                                                                                                                                 1107
+
+norepinephrinergic             ﬁbers,              and             change             the             serotonin             transmission.             Enhancing              gastric              mo-
+tility         is         also          a         possible          role         for          central         dopaminergic         receptors          in          EA’s         anti-emetic          function
+(Wang         et         al.,         2010).         Although         in         the         present         study,         we         found         that         the         patients         who         received
+EA          stimulation          had          a          lower          incidence          of          PONV          compared          to          the          control          group          (14.6%          vs.
+32.5%),         the         difference         was         not         signiﬁcant         (    p       ¼           0:058).         This         result         may         be         explained         by         the
+preventive           use           of           the           anti-emetic           drug           ondansetron           in           the           PCIA,           which           may           lead           to           a           low
+incidence            of            PONV.
+          Another                  primary                  clinical                 advantage                 of                  EA                 is                 the                 improved                 postoperative                 recovery,
+including              a              reduction              in              the              degree              of              uncomfortable              side              effects,              such              as              dizziness              and
+feeling              of            fullness              in              the              head,              and              improved              appetite              restoration.              In              this              study,              EA              de-
+creased            the            degree            of            dizziness            within            24            hours            postoperatively.            In            fact,            these            unpleasant
+side                  effects                  are                  very                  common                  and                 even                  serious                 in                 neurosurgery                  patients.                  There                 are                  2
+possible              explanations              for               this              observation.               First,               EA               reduces               the              postoperative               pain              that
+may             produce             these             unpleasant             side             effects;             second,             the             conditioning             effects             of             traditional
+Chinese               acupuncture               through               its               regulation               of               inherent               neuro–endocrine–immune               (NEI)
+network,         are         possible         explanations         for         this        phenomenon        (Ding         et         al.,        2014).         EA        stimulation
+has                 a                 long                 history                 of                 improving                 appetite                  (Yang                  et                 al.,                 2013).                 In                 this                 study,                 after                 EA
+stimulation,                more                 patients                 were                able                 to                eat                 a                sufﬁcient                 liquid                 diet                than                 patients                 in                the
+control            group            (51.2%            vs.            27.5%).            Undoubtedly,            this            will            promote            patient            recovery.
+          A              very              important              advantage              of              the              present              study              is              that              it              is              double-blinded.              In              fact,
+most               Chinese              studies              regarding              acupuncture              during              an              operation              were               not              truly              double-
+blinded,            which            may            affect            the            objectivity            and            accuracy             of            the            results.            In            this            study,            stim-
+ulation           was           applied          after           the          patients           were           sedated;          therefore,           they          were           not          aware          of           their
+EA               status.               In               addition,               the               physician               who               observed               the               pain               status               and               other               operative
+outcomes              was              also              unaware              of              the              patients’              EA              status.              To              avoid              bias,              all              the              data              were
+collected            by            the            same            person            asking            the            same            questions.            However,            the            results            are            limited
+by          the          fact           that          the          data          obtained          relied          on          patient          reporting,           which          may          be          affected          by          the
+patient’s            level            of            education            and            understanding.
+          In                  summary,                  the                  use                  of                  EA                  in                  supratentorial                  tumor                  resection                  patients                  signiﬁcantly
+reduces                postoperative               pain               and               decreases               the               effective                number               of               PCIA               bolus               adminis-
+trations.             Moreover,             EA             also             improves              appetite              recovery             and             decreases             the             occurrence             of
+uncomfortable            side            effects,            such            as            dizziness            and            feeling            of          fullness            in            the            head.
+
+
+Acknowledgment
+
+Financial           support           for           this           study           was           provided           by           the           National           Basic           Research            Program            of
+China            (973            Program),            No.            2007CB512503.
+
+
+References
+
+An,              L.X.,              Y.              He,              X.J.              Ren,              S.Q.              Li,              R.Q.              Han              and              B.G.              Wang.              Effect              of              electroacupuncture              on
+                    Sevoﬂurane              anesthesia              in              patients              undergoing               resection              of              supratentorial               tumor.               Zhongguo
+                    Zhen           Jiu           30:           669–673,           2010a.
+
+=== PDF PAGE 10 ===
+1108                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             L.-X.           AN           et           al.
+
+An,               L.X.,               J.               Li,                X.J.               Ren,               Y.N.               Liu               and               B.G.               Wang.               Effects                of               electroacupuncture               of               different
+                    acupoint            groups            on            sevoﬂurane            anesthesia            in            patients            undergoing            resection            of            supratentorial
+                    tumors.           Zhen           Ci           Yan           Jiu           35:           368–374,           2010b.
+Angster,                R.                and                I.                Hainsch-Müller.               Postoperative                pain               management.                Anaesthesist                54:                505–531,
+                    2005.
+Bilotta,          F.,          C.          Guerra          and          G.          Rosa.          Update          on          anesthesia          for          craniotomy.          Curr.          Opin.          Anaesthesiol.
+                    29,           2013.           [Epub           ahead           of           print]
+Chernyak,                   G.,                  P.                   Sengupta,                   R.                  Lenhardt,                  E.                   Liem,                  A.G.                   Doufas,                  D.I.                  Sessier                   and                   O.                   Akca.
+                    The             timing             of              acupuncture             does             not              inﬂuence             anesthetic             requirement.              Anesth.             Analg.             100:
+                    387–392,           2005.
+Ding,         S.S.,         S.H.         Hong,         C.         Wang,         Y.         Guo,         Z.K.         Wang         and         Y.         Xu.         Acupuncture         modulates         the         neuro-
+                    endocrine-immune           network.           QJM           107:           341–345,           2014.
+Dong,         Z.,         Y.         Sun,         P.         Lu,         Y.         Wang          and         G.         Wu.         Electroacupuncture         and         lumbar         transplant         of         GDNF-
+                    secreting         ﬁbroblasts         synergistically         attenuate         hyperalgesia         after         sciatic         nerve         constriction.          Am.
+                    J.           Chin.           Med.           41:           459–472,           2013.
+Grube,        T.,        C.         Uhlemann,         T.        Weiss         and        W.        Meissner.        Inﬂuence        of         acupuncture        on         postoperative         pain,
+                    nausea           and           vomiting           after           visceral           surgery:           A           prospective,           randomized           comparative           study           of
+                    metamizole           and           standard           treatment.           Schmerz           23:           370–376,           2009.
+Han,           J.S.          Acupuncture           anesthesia           and           acupuncture           assistant           anesthesia.           Acupunct.           Res.          26:           97–102,
+                    1997.
+Imaev,             A.A.,             E.V.             Dolmatova             and             A.             Lubnin.             Management             of             postoperative             analgesia             in             patients
+                    after           craniotomy.           Zh.           Vopr.           Neirokhir.           Im.           N.           N.           Burdenko.           77:           54–61,           2013.
+Kumnerddee,                W.                and                N.                Pattapong.                Efﬁcacy                of                electro-acupuncture                in                chronic                plantar                fasciitis:
+                    A           randomized           controlled           trial.           Am.           J.           Chin.           Med.           40:           1167–1176,           2012.
+Langenbach,           M.R.,           K.           Aydemir-Dogruyol,           R.           Issel           and           S.           Sauerland.           Randomized           sham-controlled
+                    trial        of        acupuncture        for        postoperative        pain        control        after        stapled        haemorrhoidopexy.        Colorectal.
+                    Dis.           14:           e486–e491,           2012.
+Leung,                   L.                   Neurophysiological                   basis                   of                   acupuncture-induced                   analgesia                   —                   An                   updated                   review.
+                    J.           Acupunct.           Meridian           Study           5:           261–270,           2012.
+Lin,        J.G.       and       W.L.        Chen.       Acupuncture       analgesia:        A       review        of       its       mechanisms        of       actions.        Am.       J.       Chin.
+                    Med.           36:           635–645,           2008.
+Lin,            J.G.            and            W.L.            Chen.            Review:            Acupuncture            analgesia            in            clinical            trials.            Am.            J.            Chin.            Med.            37:
+                    1–18,           2009.
+Lin,          J.G.          and          Y.H.          Chen.          The          role          of          acupuncture          in          cancer          supportive           care.           Am.           J.          Chin.           Med.          40:
+                    219–229,           2012.
+Liodden,           I.           and           A.J.           Norheim.           Acupuncture           and           related           techniques           in           ambulatory           anesthesia.           Curr.
+                    Opin.           Anaesthesiol.           21,           2013.           [Epub           ahead           of           print]
+Lv,           J.Q.,           R.Z.           Feng           and           N.           Li.           P6           acupoint           stimulation           for           prevention           of           postoperative           nausea           and
+                    vomiting         in         patients         undergoing         craniotomy:         Study         protocol         for         a         randomized         controlled         trial.
+                    Trials           28:           14–15,           2013.
+Pang,                 W.,                 Y.C.                 Liu,                  E.                  Maboudou,                  T.X.                  Chen,                  J.M.                 Chois,                 C.C.                  Liao                  and                 R.S.                 Wu.                 Meto-
+                    clopramide              improves              the              quality              of              tramadol              PCA              indistinguishable              to              morphine              PCA:              A
+                    prospective,                   randomized,                   double                   blind                   clinical                   comparison.                   Pain                   Med.                   14:                   1426–1434,
+                    2013.
+Sommer,        M.,        L.M.        de        Rijke,        M.        van        Kleef,        A.G.        Kesseis,        M.L.        Peters,        J.W.        Geurts,        H.F.        Gramke        and
+                    M.A.           Marcus.           The           prevalence           of           postoperative           pain           in           a           sample           of           1490           surgical           inpatients.
+                    Eur.           J.           Anaesthesiol.           25:           267–274,           2008.
+Wang,               X.Q.,               J.L.               Yu,               Z.Y.               Du,               R.               Xu,               C.C.               Jiang               and               X.               Cao.               Electroacupoint               stimulation               for
+                    postoperative           nausea           and           vomiting           in           patients           undergoing           supratentorial           craniotomy.           J.           Neu-
+                    rosurg.           Anesthesiol.           22:           128–131,           2010.
+
+=== PDF PAGE 11 ===
+                                                                               EA           DECREASED           POSTOPERATIVE           PAIN                                                                                                                                                                                                                                                                                                                                                 1109
+
+Yang,            C.,           L.            An,            R.            Han,            S.           Lin,            X.            Kang            and            B.            Wang.            Effects            of            combining            electroacupuncture
+                     with             general             anesthesia             induced             by             sevoﬂurane             in             patients             undergoing             supratentorial             crani-
+                     otomy              and              improvements               in              their              clinical               recovery              proﬁle              &              blood              enkephalin.               Acupunct.
+                     Electrother.           Res.           37:           125–138,           2012.
+Yang,        M.,        X.        Li,        S.        Liu,        Z.        Li,        M.        Xue,        D.        Gao,        X.        Li        and        S.        Yang.        Meta-analysis        of        acupuncture        for
+                     relieving             non-organic             dyspeptic             symptoms             suggestive             of             diabetic             gastroparesis.             BMC             Com-
+                     plement.           Altern.           Med.           13:           311–320,           2013.
+Yeh,           M.L.,           M.Y.           Tsou           and           B.Y.           Lee.           Effects           of           auricular           acupressure           on           pain           reduction           in           patient-
+                     controlled          analgesia          after          lumbar          spine          surgery.          Acta.          Anaesthesiol.          Taiwan          48:          80–86,          2010.

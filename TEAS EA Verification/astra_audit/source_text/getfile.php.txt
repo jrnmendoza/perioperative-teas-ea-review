@@ -1,0 +1,695 @@
+=== PDF PAGE 1 ===
+Journal             of             Pain             Research                                                                                                                                                                                                          Dove               press
+
+                                                                                                                                                                                                                       open      access      to      scientific      and      medical      research
+
+
+      Open       Access       Full       Text       Article                                                                                                                                                     CLINICAL     TRIAL       REPORT
+Effects                               of                               Preoperative                               Electroacupuncture                               on
+Remifentanil-Induced                               Post-Infusion                               Hyperalgesia
+in                               Patients                               Undergoing                               Thyroidectomy:
+A                               Double-Blind                               Randomized                               Controlled                               Trial
+
+Sha            Li,            Cheng            Hu,            Juan            Zhu,            Yudi            Zhou,            Yaomei            Cui,            Qian            Xu,            Weiqian            Tian
+
+Department        of        Anesthesiology,        Affiliated        Hospital        of        Nanjing        University        of        Chinese        Medicine,         Jiangsu        Province        Hospital        of        Chinese        Medicine,        Nanjing,
+Jiangsu,          People’s          Republic          of          China
+
+Correspondence:            Weiqian            Tian,            Department            of            Anesthesiology,            Affiliated            Hospital            of            Nanjing            University           of            Chinese            Medicine,            Jiangsu
+Province            Hospital            of            Chinese            Medicine,            Hanzhong            Road            155,            Nanjing,            Jiangsu,            210029,            People’s            Republic            of            China,            Tel            +86            139            14764426,
+Email            tianweiqiantwq6@126.com
+
+
+Objective:                  Electroacupuncture       (EA)       delivered       one       day        before       surgery        could        reduce       postoperative       pain.        Remifentanil-induced       post-
+infusion         hyperalgesia        (RPH)         was         occurred        after         exposure         to         high-dose         remifentanil.         This        study         aimed         to         investigate         the         effects        of
+preoperative       EA       on       RPH       in       patients       undergoing       thyroidectomy.
+Methods:                 A     total     of     80     patients     who     were     scheduled     to     undergo     elective     thyroidectomy     were     randomly     assigned     to     two     groups:     an     EA
+group      and      a      sham      EA      (SEA)      group.      EA    was      delivered      at      the      Zusanli      (ST36)      and      Neiguan      (PC6)      acupoints      24      h      before      the      surgery.      To
+ensure        uniformity        across        all        patients,        remifentanil        was        administered        at        the        same        set        rate        (0.3        μg/kg/min)        to        all        patients.        Mechanical
+pain      thresholds      were      recorded      by      an      electronic     von      Frey      device      around      the      skin      incision      and      on      the      arm      before      surgery     as      well      as      at      30
+min       and       6,       24,       and       48       h       after       surgery.
+Results:              At        30        min        and        6        h        after        surgery,        the        EA        group        showed        considerably        greater        mechanical        pain        thresholds        surrounding        the
+surgical      site      compared      with      the      SEA      group.      At      30      min      and      6      h      after      surgery,      the      patients      in      the      SEA      group      showed      a      greater      incidence
+of        postoperative        hyperalgesia        surrounding        the        surgical        site        than        those        in        the        EA        group.        At        24        and        48        h        after        surgery,        no        significant
+differences        were        found        between        the        two        groups,        although        the        pain        intensity        of        the        EA        group        was        less        than        that        of        the        SEA        group.
+There        were        also        no        substantial        differences        between        the        two        groups        in        the        frequency        of        postoperative        adverse        reactions        and        rescue
+analgesia       needed.
+Conclusion:                     EA       administered       24       h       before       surgery       could       alleviate       RPH       in       patients       undergoing       thyroidectomy.
+Keywords:                   electroacupuncture,      remifentanil-induced,       post-infusion       hyperalgesia,      thyroidectomy,       Zusanli      acupoint,       Neiguan       acupoint
+
+
+Introduction
+Opioids       are       the       standard       drug       intervention       for       moderate       and       severe       pain,       with       remifentanil       (a       short-acting       opioid)       being
+frequently              used              for              general              anesthesia.1                However,              experimental              and              clinical              studies              have              reported              a              paradoxical
+phenomenon          termed          remifentanil-induced          post-infusion          hyperalgesia          (RPH),          in          which          pain          sensitivity          increases           after
+the            administration            of            high            doses            of            remifentanil            during            surgery.2–4                       The            proposed            mechanism            for            this            condition            is
+associated           with          the           N-methyl-D-aspartate          (NMDA)           receptors           activated          by           remifentanil.5                                                                   RPH          is           also           believed          to           be
+related          to          central          sensitization          and         belongs          to          the         category          of          secondary          hyperalgesia.6,7                                         Recently,          some          studies          have
+reported           that           a           continuous           infusion           of           remifentanil           at           a           dosage           of           0.3           μg/kg/min           during           general           anesthesia           leads           to
+RPH.4,8              Several       drugs       (eg,       dexmedetomidine,       low-dose       buprenorphine,       and       intraoperative       naloxone)       and       transcutaneous
+electric        acupoint        stimulation        have        been        used        to        mitigate        RPH.6,8–10
+
+
+
+
+                                                                                            Journal          of          Pain          Research          2022:15          1465–1474                                                                                                            1465
+                                                                                                                     ©      2022      Li      et      al.      This      work      is      published     and      licensed      by      Dove      Medical      Press      Limited.      The      full      terms      of      this      license      are      available      at      https://www.dovepress.com/terms.php
+                                                                                                                     and      incorporate      the      Creative      Commons      Attribution      –      Non      Commercial      (unported,      v3.0)      License      (http://creativecommons.org/licenses/by-nc/3.0/).      By      accessing      the      work
+                                                                                            you      hereby      accept      the      Terms.      Non-commercial      uses      of      the      work      are      permitted      without      any      further      permission      from      Dove      Medical      Press      Limited,      provided      the      work      is      properly      attributed.      For
+                                                                                            permission       for      commercial       use       of       this       work,      please       see       paragraphs       4.2       and       5      of       our       Terms      (https://www.dovepress.com/terms.php).
+
+=== PDF PAGE 2 ===
+Li          et          al                                                                                                                                                                                                                                                Dovepress
+
+        A        quantitative        sensory        test        (QST)        is        a        reliable        method        of        quantifying        hyperalgesia        and        evaluating        the        magnitude        of
+changes       in       pain       sensation       in       surgical       patients.       Furthermore,       it       can       adequately       distinguish       between       hyperalgesia       and       pain
+intensity.11               Clinical       trials       have       reported       the       use       of       QST       in       patients       undergoing       thyroidectomy       who       experienced       RPH       (9,
+10).      Von      Frey      monofilament      (VFM)      testing      is      also      used      as      a      QST      to      explore      mechanical      hyperalgesia,12                                                                          and      an      electronic
+von      Frey      monofilament      (EvF)      device      has      been      found      to      be      more      dependable      and      less      time      consuming      in      the      measurement
+of        mechanical        pain        levels        than        traditional        VFM        devices.12
+        Electroacupuncture            (EA),            also            called            acupuncture            analgesia,            is            a            type            of            non-pharmacological            therapy            that            has
+multiple          therapeutic          effects,          including          the          alleviation          of          various          types          of          pain.          This          makes          it          an          attractive          technique
+for       assessing       pain       threshold.       Although       animal       experiments       have       suggested       that       EA       attenuates       morphine       tolerance,13,14                                                                                             a
+few        clinical         trials         have         shown         that         it         can         help         treat         RPH.         Furthermore,         although        previous         studies         have         shown         that         EA
+delivered          one          day          before          surgery          can          reduce          postoperative          pain,15,16                                the          best          time          to          administer          EA          to          relieve          RPH
+remains       unclear,       and       the       effect       of       preoperative       EA       on       RPH       in       patients       who       have       undergone       thyroidectomy       has       not       been
+explored.          The          present           study          therefore          utilized          an          EvF          device          to          examine          the          effects          of          preoperative          EA          on          RPH          in
+patients            undergoing            thyroidectomy.            We            hypothesized            that            EA            delivered            at            the            Zusanli            (ST36)            and            Neiguan            (PC6)
+acupoints        24        h        before        surgery        could        alleviate        RPH,        relieve        postoperative        pain        in        patients        undergoing        thyroidectomy.
+
+Materials                and                Methods
+Study                  Design
+Randomization        and        double-blinding        methods        were        used        in        this        prospective        single-center        trial.        Approval        of        the        research
+was        granted         by        the        Human         Research        Ethics         Committee        of         the         Affiliated         Hospital        of         Nanjing        University         of         Traditional
+Chinese            Medicine,             Nanjing,            China             (2021NL-198-02),            and             it            was             registered             at            the             Chinese             Clinical            Trial            Registry
+(ChiCTR2100050235)         before         patient         enrollment.         All         patients         were         briefed         on         the         procedures         and         methodologies         used
+in         the          research         before         it          began,          regardless         of          whether          they         were         in          the          EA         group          or         sham          EA          (SEA)         group.          Written
+informed        consent        was        obtained        from        each        patient        before        participation        in        the        study.
+
+Study                  Population
+Between         December         2021         and         January         2022,         a         total         of         83         patients         of         either         sex         were         considered         for         enrollment         in         the
+study,        with        80        finally        being        included.
+        Inclusion        criteria:        (1)        aged        18–80        years;        (2)        American        Society        of        Anesthesiologists        physical        status        class        I        or        II;        (3)
+receiving        elective        thyroidectomy        under        general        anesthesia.
+        Exclusion       criteria:       (1)       history       of       operative       treatment;       (2)       history       of       severe       pain,       including       current       pain       treatment;       (3)
+pregnant          or          breastfeeding;           (4)          mental          or          neurological          disorder           or          intellectual          disabilities;          (5)          implanted           cardiac           defi-
+brillator,      cardioverter,      or      pacemaker;      (6)      a      rash      or      local      infection      on      the      stimulated      skin      area;      (7)      unexpected      development
+of           intraoperative           drug           allergies           or           requirement           for           surgical           intervention           associated           with           postoperative           complications
+during        the        study.
+
+Randomization                  and                  Blinding
+Randomization      was       performed       at       a       1:1       ratio       using       a      computer-generated      list.       The       80       patients       were       assigned       at       random       to
+one        of        two        groups        using        a        sealed        envelope:        an        EA        group        and        an        SEA        group        (n        =        40        each).
+        All        study        personnel,        including        patients,        the        anesthetist,        the        investigator,        the        surgeons,        and        the        recovery        ward        nurses
+who        collected        the        data,        were        blinded        to        the        group        assignments.
+
+Inter ventional                  Procedures
+EA             Group
+Patients       in       the       EA       group       were       administered       EA       at       the       bilateral       Zusanli       (ST36)       and       Neiguan       (PC6)       acupoints       within       24       h
+before      surgery      in      the      general      surgical      ward.      Stainless      steel      needles      (0.30      ×      40      mm;      Suzhou      Medical      Supplies      Factory      Co.
+Ltd,          China)          were          used          for          the          acupuncture.          A          stimulator          (XS-998B,          Nanjing          Xiaosong          Medical          Instrument          Research
+
+
+1466                 https://doi.org/10.2147/JPR.S365587                                                                                                                                                                           Journal           of          Pain           Research          2022:15
+                     DovePress
+
+=== PDF PAGE 3 ===
+Dove        press                                                                                                                                                                                                                                                                             Li          et          al
+
+Institute,      Nanjing,      China)      was      then      used      to      provide      electrical      stimulation      in      the      dense-disperse      stimulation      mode      (20–100
+Hz)        for        30        min,        after        which        a        registered        acupuncturist        delivered        EA.        Although        the        intensity        of        the        EA        stimulation        was
+high,          the          patients          judged          it          to          be          both          safe          and          comfortable;          if          any          patient          had          reported          discomfort          or          dizziness,          the
+treatment        would        have        been        stopped.
+
+SEA             Group
+Patients       in       the       SEA       group       were       administered       a       non-invasive       SEA       method       reported       by       Zheng       et       al.17                                                                  To       begin,       an       empty
+plastic        guiding        tube        was        used        to        produce        discernible        sensation,        after        which        the        tube        was        pressed        onto        the        non-acupoint
+close        to        the        real        point        but        not        along        any        meridians.        Then,        bent        needles        (the        same        as        those        used        in        the        EA        group)        with
+adhesive           bandages           were           placed           on           each           acupoint’s           dermal           surface.           The           needles           were           attached           by           means           of           an           EA
+stimulator         that         did         not         provide         electrical         stimulation.         The         stimulator,         which         displayed         a         continually         flashing         light,         was
+positioned         within         the         subject’s         line         of         sight.         The         acupuncturist         repositioned         the         stimulator         twice         and         applied         the         bent
+needles         to         the         skin         three         times         during         the         procedure         to         ensure         that         there         was         a         distinct         feeling         and         not         merely         a         Deqi
+sensation.
+
+Anesthesia                  Protocol
+All        patients        underwent        a        standardized        anesthetic        protocol        on        the        day        of        surgery        and        were        asked        to        fast        for        at        least        8        h
+before      anesthesia.      A      single      anesthetist,      who      was      not      aware      of      the      group      division,      administered      the      anesthetic      (lidocaine      1
+mg/kg          intravenous          (i.v.),          midazolam          0.05          mg/kg          i.v.,          propofol          2–3          mg/kg          i.v.,          and          sufentanil          0.2–0.4          µg/kg          i.v.)          and
+endotracheal      intubation      to      all      patients,      followed      by      vecuronium      0.1      mg/kg      i.v.      To      avoid      postsurgical      nausea      and      vomiting
+(PONV),       both       groups       received       granisetron       3       mg       i.v.       following       induction.       To       maintain       general       anesthesia      and       a       bispectral
+(BIS)        index        of         40–60,        all        patients        were        given        a        steady        intravenous        injection        of        propofol        with        the        rate        of        3–5        mg/kg/h,
+vecuronium,         and         remifentanil         at         a         constant         rate         of         0.3         μg/kg/min.         All         patients         received         standard         monitoring         protocols,
+consisting       of      a       BIS      index,       end-tidal      CO2,      pulse       oximetry,      non-invasive      blood       pressure,       and      electrocardiography.      Ringer’s
+lactate           solution           was           obtained           through           the           peripheral           intravenous           line           predicated           on           presurgical           deficiencies,           surgical
+technique,         and         anticipated         intraoperative         hemorrhage.         Volume-controlled         mechanical         ventilation         was         used         to         keep         the
+patient’s       tidal       volume       and       respiratory       rate       within       acceptable       normocapnia       limits       (35–45       mmHg       end-tidal       CO2).       As       a       last
+resort      for      postoperative      pain      relief,      patients      were      given      50      mg      of      flurbiprofen      i.v.      Atropine      0–2.5      mg      and      neostigmine      0–5
+mg        were        used        to        counteract        remaining        muscle        relaxant        impacts        preceding        tracheal        extubation.
+
+Outcome                  Measures
+In           the           30           min           after           surgery,           the           primary           outcome           measure           was           the           mechanical           pain           threshold           surrounding           the           skin
+incision.
+        A      QST     was      conducted      by      a      professional      investigator      blinded      to      the      group      division,      utilizing      an      EvF      device      (IITC      Life
+Science,      Woodland      Hills,      CA,      USA).      The      presence      of      QST    was      identified      the      day      before      surgery      and      confirmed      at      30      min
+and       6,      24,      and      48      h      after      surgery.      The      EvF      device      was      composed      of      an      800      g      probe      with      a      stiff      tip,      the      diameter      of      which
+was       0.8       mm.       In       a       regulated       and       right-angle       motion,       the       probe       was       pushed       against       the       surface       of       the       skin       with       increasing
+force      at      a      controlled      pace.      When      the      subject      felt      pain,      the      data      was      recorded      and      presented      in      grams.      Afterward,      the      probe
+was        removed       (see                 Figure       1).        Mechanical        pain       tolerance        was        then       determined        as        the        mean       of        six        findings       obtained        2       cm
+vertically           above           and           below           the           center           and           bilateral           borders           of           the           skin           incision.           Subsequently,           the           average           of           three
+measures         taken         at         3,         6,         and         9         cm         from         the         midpoint         of         the         antecubital         crease         on         the         non-dominant         inner         forearm         was
+calculated.          The          time          interval          for          each          measurement          was          30          seconds.          Postoperative          hyperalgesia          was          determined          and
+characterized              as              a              significant              reduction              in              the              postoperative              mechanical              level              of              pain              when              compared              with              the
+preoperative        value.
+
+Secondar y                  Outcome                  Measures
+At             30             min             after             surgery,             the             forearm’s             mechanical             pain             threshold             was             measured             as             the             secondary             outcome.             The
+mechanical          pain          thresholds          in          the          forearm          and          surrounding          the          skin          incision          were          also          measured          at          6,          24,          and          48          h
+
+
+
+Journal          of          Pain          Research          2022:15                                                                                                                                                                 https://doi.org/10.2147/JPR.S365587                       1467
+                                                                                                                                                                                                                                                                    DovePress
+
+=== PDF PAGE 4 ===
+Li          et          al                                                                                                                                                                                                                                                         Dovepress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure       1    Electronic         von         Frey         (EvF)         device.
+
+
+after             surgery,             and             the             occurrence             of             postoperative             hyperalgesia             in             the             forearm             and             surrounding             the             skin             incision,
+postoperative        pain        scores        (numerical        rating        scale,        NRS),        and        the        need        for        rescue        analgesics        were        recorded.
+        Demographic            data            and            baseline            data,            such            as            body            mass             index            (BMI),            gender,            age,            and             perioperative            indexes
+(including         surgical         type,         surgery         time,         the         dosage         of         anesthetic         drug         (propofol         and         remifentanil),         extubation         time,         and
+side      effects)      were      documented.      All      outcome      measures      were      evaluated      by      an      independent      research      nurse      who      was      blinded
+to        the        group        division        and        not        engaged        in        the        care        of        the        patients.
+
+Statistical                  Analysis
+The       data        were        analyzed        using        the        Statistical        Package        for        Social        Sciences       for        Windows        version        22.0.        For        the        purpose        of
+comparing       the       explanatory       data       across       the       two       groups,       Bonferroni-corrected       independent       sample                                                                                         t-tests       were       carried       out.
+To      contrast      categorical      data,      specified      as      frequency      (f)      and      numbers      (%),      Fisher’s      exact      test      or      a                                                                 χ2    test      were      performed.                       P
+<        0.05        was        considered        statistically        significant.
+        Using       the       data       of       our       pilot       study,       the       mean       ±       SD       mechanical       pain       threshold       was       99.5       ±13.8g       around       the       skin       incision
+30        minutes        after        surgery        in        patients        treated        with        sham        EA,        the        result        in        group        EA      was        89.3        ±14.2g.        We        calculated        the
+sample          size          needed          is          29          per          group          to          detect          a          significant          difference          with          90%          power          (α=0.05).          Considering          a          35%
+potential        drop        out        rate,        40        subjects        per        group,        or        a        total        of        80        patients,        should        be        reasonable        for        our        study.
+
+Results
+Patient                  Features,                  Surger y,                  and                  Anesthesia
+All       83       eligible       subjects       were        included       in       the       study,       with       80       being       hospitalized       and       randomly       assigned       to       one       of        the       two
+groups.       One       patient       dropped       out       of       the       EA       group       after       declining       to       undergo       the       procedure.       The       records       of       the       remaining
+79        patients        were        analyzed.                     Figure        2         depicts        the        study’s        flow        diagram.
+
+
+1468                  https://doi.org/10.2147/JPR.S365587                                                                                                                                                                                  Journal           of          Pain           Research          2022:15
+                      DovePress
+
+=== PDF PAGE 5 ===
+Dove          press                                                                                                                                                                                                                                                                                                                   Li          et          al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure        2     Consolidated         standards        of         reporting         trials         (CONSORT)         diagram         of         patient         recruitment.
+Abbreviations:         EA,         electroacupuncture;         SEA,         sham         electroacupuncture.
+
+
+         Table           1         summarizes           the           perioperative           features           of           the           patients,           including           age,           gender,           BMI,           type           of           surgery,           and
+anesthesia-related         data.         Baseline         features         and         surgical         and         anesthetic         variables         did         not         differ         significantly         between         the
+two        groups.
+
+Mechanical                  Pain                  Thresholds
+Prior        to        surgery,        there        was        no        significant        difference        between        the        two        groups        in        preoperative        mechanical        pain        threshold.
+At        30        min        and        6        h        after        surgery,        the        mechanical        pain        thresholds        of        patients        in        the        EA        group        were        higher        than        those        of
+
+
+
+                                          Table          1       Patient           Age           and           Perioperative           Variables           (Mean           [SD])           or           n           (%)
+
+                                              Variable                                                                        Group         EA         (n         =         39)                                                                      Group         SEA         (n         =         40)P-value
+
+                                              Preoperative          factors
+                                              Age          (year)                                                                           35.2          (6.1)                                              34.4          (9.1)                                            0.745
+                                              Sex          (male/female)                                                                          9/30                                                           10/30                                                      0.842
+                                              Body          mass          index          (BMI)                                              23.1          (2.9)                                              23.2          (2.7)                                            0.823
+                                              Type          of          surgery
+                                              Thyroidectomy          (total/partial)                                                            12/27                                                            14/26                                                      0.689
+                                              Amount          of          anesthetic          drug
+                                              Propofol          (mg)                                                                        547          (262)                                              553          (251)                                              0.321
+                                              Remifentanil          (µg)                                                                2009          (143.2)                                            1989          (158.7)                                              0.555
+                                              Duration          of          surgery          (min)                                        82.5          (26.8)                                             87.5          (31.8)                                             0.449
+                                              Extubation          time          (min)                                                        9.4          (2.9)                                               9.7          (3.1)                                            0.594
+                                              Intraoperative          sufentanil          (µg)                                                                                                                                                              41.6          (2.3)41.5          (2.6)0.947
+                                              Hospital          stay          (d)                                                            6.7          (0.6)                                               6.7          (0.7)                                            0.597
+
+                                          Note:         Values         are         mean         (standard        deviation)        or         number         (%).
+                                          Abbreviations:         EA,         electroacupuncture;        SEA,         sham         electroacupuncture.
+
+
+
+
+
+
+Journal          of          Pain          Research          2022:15                                                                                                                                                                                                 https://doi.org/10.2147/JPR.S365587                              1469
+                                                                                                                                                                                                                                                                                                         DovePress
+
+=== PDF PAGE 6 ===
+Li          et          al                                                                                                                                                                                                                                                                                                    Dovepress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure      3       Mechanical       pain       thresholds       around       the       skin       incision.       Mechanical       pain       thresholds       are       presented       as       mean       and       standard       deviation      (SD)       and       analyzed       using       Bonferroni-
+corrected         independent         sample         t-tests.         *Statistically         significant         difference         between        EA         and         SEA.
+Abbreviations:         EA,         electroacupuncture;        SEA,         sham        electroacupuncture.
+
+
+patients      in      the      SEA      group.      No      difference      between      the      two      groups      was      found      at      24      and      48      h      after      surgery      (see                                                                                                           Table      2           and
+Figure        3).
+         There         was         no         significant         difference         between         the         two         groups         in         the         baseline         data         of         the         forearm’s         mechanical         pain
+threshold.        However,        the        EA        group        had        greater        mechanical        pain        tolerance        at        30        min        and        6        h        after        surgery        than        the        SEA
+group.       No       differences       between       the       two       groups       were       reported       in       mechanical       pain       thresholds       at       24       and       48       h       after       surgery
+(see         Table        2          and          Figure        4).
+
+
+
+
+                                          Table               2     Mechanical                 Pain                 Thresholds                Around                 the                 Skin                 Incision                 and                 on                 the                 Forearm                 Before                the
+                                          Surgery,           at           30           min,           6           h,           24           h,           and           48           h           After            the           Surgery           (g,           Mean           [SD])
+
+                                              Variable                                                                       Group         EA         (n         =         39)                                                                                                         Group         SEA         (n         =         40)P-value
+
+                                              Mechanical          pain          thresholds
+                                              before          surgery
+                                              Skin          incision                                                                     99.6          (13.2)                                                     99.1          (13.9)                                              0.863
+                                              Forearm                                                                                   143.8          (12.5)                                                   144.3          (11.1)                                               0.847
+                                              30          minutes          after          surgery
+                                              Skin          incision                                                                     94.3          (13.0)                                                     75.9          (13.1)                                          <0.0001*
+                                              Forearm                                                                                   141.8          (12.4)                                                   120.9          (13.9)                                           <0.0001*
+                                              6          h          after          surgery
+                                              Skin          incision                                                                     97.3          (12.9)                                                       89.3          (13)                                            0.0098*
+                                              Forearm                                                                                   143.4          (11.2)                                                   132.3          (11.7)                                           <0.0001*
+                                              24          h          after          surgery
+                                              Skin          incision                                                                     98.3          (12.9)                                                     99.4          (11.9)                                              0.696
+                                              Forearm                                                                                   144.5          (10.6)                                                   141.1          (12.1)                                               0.188
+                                              48          h          after          surgery
+                                              Skin          incision                                                                     98.1          (13.1)                                                     99.8          (12.2)                                              0.535
+                                              Forearm                                                                                   144.1          (11.2)                                                   141.9          (12.2)                                               0.396
+
+                                          Notes:         Values         are        mean         (standard        deviation),        *Statistically         significant         difference        between        EA         and         SEA.
+                                          Abbreviations:         EA,         electroacupuncture;         SEA,         sham         electroacupuncture.
+
+
+
+
+
+1470                     https://doi.org/10.2147/JPR.S365587                                                                                                                                                                                                                    Journal           of          Pain           Research          2022:15
+                         DovePress
+
+=== PDF PAGE 7 ===
+Dove          press                                                                                                                                                                                                                                                                                                                            Li          et          al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure          4     Mechanical           pain           thresholds           on           the           forearm.           Mechanical           pain           thresholds           are           presented           as           mean           and           standard           deviation           (SD)           and           analyzed           using           Bonferroni-
+corrected        independent         sample         t-tests.         *Statistically         significant         difference         between        EA         and         SEA.
+Abbreviations:         EA,         electroacupuncture;         SEA,         sham         electroacupuncture.
+
+Hyperalgesia                  Incidence                  and                  Pain                  Intensity
+A      lower      occurrence      rate      of      hyperalgesia      was      seen      in      the      forearm      and      surrounding      the      skin      incision      30      min      after      surgery      in
+the      EA      group      than      in      the      SEA      group.      At      6      h      after      surgery,      the      incidence      of      hyperalgesia      surrounding      the      skin      incision      was
+lower         in         the         EA         group         than         in         the         SEA         group,         but         there         was         no         significant         difference         between         the         two         groups         in         the
+incidence      of      hyperalgesia      in      the      forearm.      Furthermore,      no      statistically      significant      differences      were      found      between      the      two
+groups           24           and           48           h           after           surgery           (see            Table           3).           Although           the           numerical           rating           scale           for           both           groups           was           low,           EA
+treatment       reduced       it       at       30       min       and       6       h       after       surgery      (see                                            Table       3).       Moreover,       no       differences       were       found       between       the       two
+groups        in        terms        of        the        proportion        of        patients        who        needed        rescue        analgesics        (see                                                                           Table        3).
+
+
+                            Table         3         Incidence           of           Hyperalgesia          Around          the           Skin          Incision           and          on           the          Forearm          at          30          Min,           6          h,           24          h,          and           48          h
+                            After            the           Surgery,           and           Pain           Score           Around           the           Skin           Incision           (Mean           [SD])
+
+                                Variable                                                                                                        Group         EA         (n         =         39)                                                                                                                      Group         SEA         (n         =         40)P-value
+
+                                30          minutes          after          surgery
+                                Skin          incision          (incidence,          n          [%])                                                               12.8%                                                                       47.5%                                                     0.001*
+                                Forearm          (incidence,          n          [%])                                                                                   0                                                                        25%                                                     0.003*
+                                Pain          acore          (NRS,          median          [IQR])                                                         2.4          (2.0–3.0)                                                      2.7          (2.0–3.0)                                            0.005*
+                                6h          after          surgery
+                                Skin          incision          (incidence,          n          [%])                                                               10.3%                                                                       42.5%                                                     0.001*
+                                Forearm          (incidence,          n          [%])                                                                                   0                                                                          5%                                                      0.157
+                                Pain          acore          (NRS,          median          [IQR])                                                         1.9          (1.3–3.0)                                                      2.2          (2.0–3.0)                                            0.006*
+                                24h          after          surgery
+                                Skin          incision          (incidence,          n          [%])                                                                    0                                                                       2.5%                                                       0.324
+                                Forearm          (incidence,          n          [%])                                                                                   0                                                                           0
+                                Pain          acore          (NRS,          median          [IQR])                                                         1.5          (1.0–3.0)                                                      1.6          (1.0–3.0)                                              0.223
+                                48h          after          surgery
+                                Skin          incision          (incidence,          n          [%])                                                                    0                                                                           0
+                                Forearm          (incidence,          n          [%])                                                                                   0                                                                           0
+                                Pain          acore          (NRS,          median          [IQR])                                                         1.5          (1.0–3.0)                                                      1.5          (1.0–3.0)                                              0.736
+                                Analgesics          0–48          h          after          surgery          (n          (%])                                       0          (0)                                                              0          (0)
+
+                            Notes:         Values         are        mean         (standard        deviation),        median         (IQR)         or         number         (%),         *Statistically         significant         difference        between         EA         and         SEA.
+                            Abbreviations:         EA,         electroacupuncture;         SEA,         sham         electroacupuncture.
+
+
+
+Journal          of          Pain          Research          2022:15                                                                                                                                                                                                        https://doi.org/10.2147/JPR.S365587                                 1471
+                                                                                                                                                                                                                                                                                                                 DovePress
+
+=== PDF PAGE 8 ===
+Li          et          al                                                                                                                                                                                                                                                Dovepress
+
+Postoperative                  Side                  Effects
+Two       patients       (one       in       the       EA       group       and       one       in       the       SEA       group)       complained       of       pain       at       the       needle       sites.       As       the       complaints
+were       mild,       however,       medical       attention       was       not       required.       The       EA       and       SEA       treatments       were       well       tolerated       by       all       patients.
+
+Discussion
+The        findings        of        this        clinical        trial        suggest        that        patients        undergoing        thyroidectomy        can        exhibit        postoperative        hyperalgesia
+after      the      administration      of      0.3      μg/kg/min      intraoperative      remifentanil.      EA      treatment      delivered      one      day      prior      to      surgery      not
+only              increases              mechanical              pain              thresholds              but              also              decreases              the              incidence              of              hyperalgesia              in              the              forearm              and
+surrounding        the        skin        incision,        lowering        the        patient’s        pain        score.
+        The      present      study      found      that      mechanical      pain      thresholds      decreased      in      the      forearm      and      surrounding      the      skin      incision      at
+30       min       and       6       h       after       surgery       in       the       SEA       group,       suggesting       the       occurrence       of       postoperative       hyperalgesia.       This       finding       is
+similar            to            those            reported            previously.18                As            previously            reported,            RPH            may            be            linked            to            central            sensitization,            which
+activates         and         upregulates         the         spinal         NMDA         receptors.5,19                                      The         synergistic         effects         of         intraoperative         opioids         and         surgery
+could          contribute          to          postoperative          hyperalgesia.20                                     Because          of          the          low          relativity          between          subjective          pain          intensity          and
+objective        pain        thresholds        in        a        QST,20                    an        EvF        device        can        assess        a        QST       rapidly        with        good        reproducibility.12                                  The        present
+study         found         that         the         results         obtained         using         an         EvF         device         and         by         subjective         pain         intensity         were         identical.         In         addition,
+compared        with        subjective        pain        intensity,        an        EvF        device        is        more        sensitive        and        objective        for        when        performing        a        QST.
+        The       present       study       also       showed       that       EA       treatment       increased       mechanical       pain       thresholds       in       the       forearm       and       surround-
+ing        the        skin        incision        at        30        min        and        6        h        after        surgery.        Moreover,        EA      was        found        to        alleviate        RPH        in        patients        undergoing
+thyroidectomy,         further         confirming         its         analgesic         effect.         The         mechanisms         of         EA’s         analgesic         effects         are         complicated,         but
+evidence         suggests         that         it         relieves         pain         by         activating         bioactive         chemicals,         triggering         endogenous         pathways         and         directly
+inhibiting        the        opioid-sensitive        spinal        cord        interneurons.21,22
+        The       present       study       selected       the       bilateral       Zusanli       (ST36)       and       Neiguan       (PC6)       acupoints       for       EA       treatment.       According       to
+traditional        Chinese        medicine,        PC6        is        located        along        the        hand-Jueyin        in        the        pericardium        meridian.        Stimulation        of        PC6        is
+known               to               alleviate               the               symptoms               of               angina,               lessen               the               incidence               of               PONV,               and               mitigate               remifentanil-induced
+hyperalgesia.15,22,23                             Traditional             Chinese              medicine             states              that              ST36             belongs              to             the              stomach              meridian             of              the              foot-
+Yangming,         and         its         stimulation         is         known         to         adjust         qi         and         blood.         In         a         mouse         cancer         pain         model,         EA         treatment         at         ST36
+induced        analgesic        activity.24                           A        previous        study        also        demonstrated        that        combined        stimulation        of        PC6        and        ST36        produced
+better      anti-emesis      and      analgesic      effects.15,25                                        The      timing      of      acupuncture      intervention      has      remained      controversial,      however.
+Although        some        studies         have        reported        the        delivery         of        acupuncture         after        surgery,         the        majority        have         reported        its        delivery
+before         surgery.15,26–28                        Coura         et         al16     reported         that         acupuncture         produced         better         pain         reduction         when         delivered         one         day
+prior      to      surgery      compared      to      30      min      before      surgery.      Our      previous      study      suggested      that      it      was      safe      and      effective      to      deliver
+EA      treatment      within      24h      prior      to      surgery      in      patients      undergoing      gynecologic      laparoscopic      surgery.15                                                                                   In      the      present      study,
+EA    was       delivered      one       day       before       surgery,      with       the       results       indicating      that       preoperative       EA      is       effective      in      mitigating       RPH.
+        The       present       study       had       some       limitations.       First,       it       exclusively       investigated       pressure-induced       pain       levels,       even       though       a
+QST     can       be       utilized       to       assess       the       severity       of       a       variety       of       nociceptive       stimuli,       such       as       touch       pressure,       vibration,       and       heat.
+Second,      blood      samples      were      not      collected      to      study      changes      in      EA-induced      endogenous      opioid      peptides,      so      the      underlying
+mechanism       remains       unclear.       Last,       the       research       was       conducted       at       a       single       center       with       a       limited       sample       of       participants,       so
+it       is       uncertain       whether       the       findings       can       be       extended       to       other       centers.       Further       studies       are       required       to       address       these       issues.
+
+Conclusion
+The           present           study           demonstrated           that          EA           delivered           at           the           Zusanli           (ST36)          and           Neiguan          (PC6)           acupoints           24           h           before
+surgery          can          effectively          alleviate          RPH          in          patients          undergoing          thyroidectomy.          However,          future          research          is          required          to
+explore        the        underlying        mechanism.
+
+
+
+
+
+1472                 https://doi.org/10.2147/JPR.S365587                                                                                                                                                                           Journal           of          Pain           Research          2022:15
+                     DovePress
+
+=== PDF PAGE 9 ===
+Dove       press                                                                                                                                                                                                                                                              Li          et          al
+
+Abbreviations
+EA,       electroacupuncture;      RPH,       remifentanil-induced      post-infusion      hyperalgesia;      EvF,      electronic       von      Frey;      ST36,       Zusanli;
+PC6,               Neiguan;               QST,               Quantitative               sensory               testing;               VFM,               Von               Frey               monofilaments;               ASA,               American               Society               of
+Anesthesiologists;        I.V,        intravenous;        PONV,        postsurgical        nausea        and        vomiting;        BMI,        body        mass        index.
+
+Clinical                Trial                Registration                Number
+Approval        of        the        research        was        granted        by        the        Human        Research        Ethics        Committee        of         the        Affiliated        Hospital        of         Nanjing
+University       of        Traditional       Chinese       Medicine,       Nanjing,       China       (2021NL-198-02).       It       was       registered       at       the       Chinese       Clinical
+Trial        Registry        (ChiCTR2100050235)        before        patient        enrollment.
+
+Data                Sharing                Statement
+We          would          like          to          sharing          all          the          individual          participant          data.          The          data          in          this          study          available          from          the          corresponding
+author        on        reasonable        request        in        two        years        after        this        article        published        online.
+
+Ethics                Approval                and                Consent                to                Participate
+Approval        of        the        research        was        granted        by        the        Human        Research        Ethics        Committee        of         the        Affiliated        Hospital        of         Nanjing
+University       of       Traditional       Chinese       Medicine,       Nanjing,       China       (2021NL-198-02).       This       study       was       conducted       in       accordance
+with        the        declaration        of        Helsinki.        Written        informed        consent        was        obtained        from        all        participants.
+
+Acknowledgments
+We        thank        Bullet        Edits        Limited        for        the        linguistic        editing        and        proofreading        of        the        manuscript.
+
+Funding
+This         study        was         funded         by         a         research         grant         from         the         Postgraduate         Research         &         Practice         Innovation         Program         of         Jiangsu
+Province        (grant        numbers        SJCX21_0783),        China.
+
+Disclosure
+The        authors        declare        that        they        have        no        competing        interests        in        this        work.
+
+References
+
+  1.     Komatsu           R,           Turan           AM,           Orhan-Sungur           M,           McGuire           J,           Radke           OC,           Apfel           CC.           Remifentanil           for          general           anaesthesia:           a           systematic          review.
+       Anaesthesia.             2007;62:1266–1280.      doi:10.1111/j.1365-2044.2007.05221.x
+  2.     Angst       MS,       Koppert       W,       Pahl       I,       Clark       DJ,       Schmelz       M.       Short-term       infusion       of       the       mu-opioid       agonist       remifentanil       in       humans       causes       hyperalgesia
+       during      withdrawal.              Pain.       2003;106:49–57.      doi:10.1016/S0304-3959(03)00276-8
+  3.     Petersen      KL,      Jones      B,      Segredo      V,      Dahl      JB,      Rowbotham      MC.      Effect      of      remifentanil      on      pain      and      secondary      hyperalgesia      associated      with      the      heat–
+       capsaicin      sensitization      model      in      healthy      volunteers.                      Anesthesiology.                2001;94:15–20.      doi:10.1097/00000542-200101000-00008
+  4.     Zhang          L,          Shu          R,          Zhao          Q,          Li          Y,          Yu          Y,          Wang          G.          Preoperative          butorphanol          and          flurbiprofen          axetil          therapy          attenuates          remifentanil-induced
+       hyperalgesia               after               laparoscopic               gynecological               surgery:               a               randomized               double-blind               controlled               trial.Br               J               Anaesth.2016;117:504–511.
+       doi:10.1093/bja/aew248
+  5.     Zhao      M,      Joo      DT.      Enhancement      of      spinal      N-methyl-D-aspartate      receptor      function      by      remifentanil      action      at      delta-opioid      receptors      as      a      mechanism
+       for      acute      opioid-induced      hyperalgesia      or      tolerance.                      Anesthesiology.                2008;109:308–317.      doi:10.1097/ALN.0b013e31817f4c5d
+  6.     Mercieri     M,     Palmisani     S,     De     Blasi     RA,     et     al.     Low-dose     buprenorphine     infusion     to     prevent     postoperative     hyperalgesia     in     patients     undergoing     major
+       lung        surgery        and        remifentanil        infusion:        a        double-blind,        randomized,        active-controlled        trial.                       Br        J        Anaesth.  2017;119:792–802.        doi:10.1093/bja/
+       aex174
+  7.     Chu            LF,           Angst            MS,           Clark            D.           Opioid-induced           hyperalgesia           in           humans:           molecular           mechanisms            and           clinical           considerations.Clin           J           Pain.
+       2008;24:479–496.      doi:10.1097/AJP.0b013e31816b2f43
+  8.     Lee       C,       Kim       YD,       Kim       JN.       Antihyperalgesic       effects       of       dexmedetomidine       on       high-dose       remifentanil-induced       hyperalgesia.                                        Korean       J       Anesthesiol.
+       2013;64:301–307.      doi:10.4097/kjae.2013.64.4.301
+  9.     Koo        CH,        Yoon        S,        Kim        BR,        et        al.        Intraoperative        naloxone        reduces        remifentanil-induced        postoperative        hyperalgesia        but        not        pain:        a        randomized
+       controlled      trial.        Br      J      Anaesth.     2017;119:1161–1168.      doi:10.1093/bja/aex253
+10.     Chen     Y,     Yao     Y,     Wu     Y,     Dai     D,     Zhao     Q,     Qiu     L.     Transcutaneous     electric     acupoint     stimulation     alleviates     remifentanil-induced     hyperalgesia     in     patients
+       undergoing      thyroidectomy:      a      randomized      controlled      trial.                             Int      J      Clin      Exp      Med. 2015;8:5781–5787.
+11.     Samuelsen      PJ,      Nielsen     CS,      Wilsgaard      T,      Stubhaug      A,      Svendsen     K,      Eggen      AE.      Pain      sensitivity      and      analgesic      use     among      10,486      adults:      the      tromsø
+       study.      BMC      Pharmacol      T      Oxicol.               2017;18:45.      doi:10.1186/s40360-017-0149-2
+
+
+
+Journal          of          Pain          Research          2022:15                                                                                                                                                    https://doi.org/10.2147/JPR.S365587                   1473
+                                                                                                                                                                                                                                                      DovePress
+
+=== PDF PAGE 10 ===
+Li          et          al                                                                                                                                                                                                                                                   Dovepress
+
+
+12.     Tena      B,      Escobar      B,      Arguis      MJ,      Cantero      C,      Rios      J,      Gomar      C.      Reproducibility      of      electronic      von      Frey      and      von      Frey      monofilaments      testing.                                     Clin      J
+       Pain.       2012;28:318–323.      doi:10.1097/AJP.0b013e31822f0092
+13.     Shi      RY,      Fu      TF,      Cai      YQ,      et      al.      Electroacupuncture      intervention      relieves      pain      possibly      by      promoting      MOR      endocytosis      in      locus      coeruleus      in      bone
+       cancer      pain      rats      with      morphine      tolerance.                  Zhen      Ci      Yan      Jiu.   2019;44:161–169.      Chinese.      doi:10.13702/j.1000-0607.180635
+14.     Jiang     B,     Zhong     XM,     Fang     JF,     et     al.     Electroacupuncture     attenuates     morphine     tolerance     in     rats     with     bone     cancer     pain     by     inhibiting     PI3K/Akt/JNK1/2
+       signaling      pathway      in      the      spinal      dorsal      horn.              Integr      Cancer      Ther.            2021;20:1534735421995237.      doi:10.1177/1534735421995237
+15.     Li      S,      Zheng      M,      Wu      WZ,      Guo      J,      Ji      F,      Zheng      Z.      Effects      of      electroacupuncture      administered      24      hours      prior      to      surgery      on      postoperative      nausea      and
+       vomiting           and           pain           in           patients           undergoing           gynecologic           laparoscopic           surgery:           a           feasibility           study.Explore.         2017;13:313–318.           doi:10.1016/j.
+       explore.2017.06.002
+16.     Coura      LE,      Manoel      CH,      Poffo      R,      Bedin      A,      Westphal      GA.      Randomised,      controlled      study      of      preoperative      electroacupuncture      for      postoperative      pain
+       control      after      cardiac      surgery.             Acupunc      Med.             2011;29:16–20.      doi:10.1136/aim.2010.003251
+17.     Zheng        Z,        Bai        LH,        O’Loughlan        M,        Li        CG,        Xue        CC.        Does        electroacupuncture        have        different        effects        on        peripheral        and        central        sensitization        in
+       humans:      a      randomized      controlled      study.                      Front      Integr      Neurosci.              2019;13:61.      doi:10.3389/fnint.2019.00061
+18.     Wu         ZJ,         Yu         JJ,         Lin         QH,         et         al.         Effects         of         an         intraoperative         intravenous         bolus         dose         of         dexmedetomidine         on         remifentanil-induced         postinfusion
+       hyperalgesia        in        patients        undergoing        thyroidectomy:        a        double-blind        randomized        controlled        trial.                                    Anesth        Analg.         2021;132:320–328.        doi:10.1213/
+       ANE.0000000000005003
+19.     Guntz       E,       Dumont       H,       Roussel       C,       et       al.       Effects       of       remifentanil       on       N-methyl-D-aspartate       receptor:       an       electrophysiologic       study       in       rat       spinal       cord.
+       Anesthesiology.                 2005;102:1235–1241.      doi:10.1097/00000542-200506000-00025
+20.     Song          JW,          Lee          YW,          Yoon          KB,          Park          SJ,          Shim          YH.          Magnesium          sulfate          prevents          remifentanil-induced          postoperative          hyperalgesia          in          patients
+       undergoing      thyroidectomy.                        Anesth      Analg.           2011;113:390–397.      doi:10.1213/ANE.0b013e31821d72bc
+21.     Liu      YJ,      Du      JY,      Fang      JF,      et      al.      Electroacupuncture      inhibits      the      interaction      between      peripheral      TRPV1      and      P2X3      in      rats      with      different      pathological
+       pain.      Physiol      Res.         2021;70:635–647.      doi:10.33549/physiolres.934649
+22.     Zhang      RX,      Lao      LX,      Ren      K,      Berman      BM.      Mechanisms      of      acupuncture-electroacupuncture      on      persistent      pain.                                                   Anesthesiology.                 2014;120:482–503.
+       doi:10.1097/ALN.0000000000000101
+23.     Zhang       HX,        Liu        LG,        Huang        GH,        et        al.        Protective        effect       of        electroacupuncture        at        the        Neiguan        point        in        a        rabbit        model        of        myocardial        ischemia-
+       reperfusion      injury.              Can      J      Cardiol.       2009;25:359–363.      doi:10.1016/S0828-282X(09)70095-9
+24.     Lee     HJ,     Lee     JH,     Lee     EO,     et     al.     Substance     P     and     beta     endorphin     mediate     electroacupuncture     induced     analgesic     activity     in     mouse     cancer     pain     model.
+       Acupunct      Electrother      Res.                  2009;34:27–40.      doi:10.3727/036012909803861095
+25.     Lu        DX,        Lu        DR,        Liu        YY,        et        al.        TCM        basic        theory        and        contemporary        study        on        cancerous        pain        treated        with        acupuncture        at        Zusanli        (ST36)        and
+       Neiguan      (PC6).             World      J      Integr      Tradit      Western      Med.              2017;12:593–597.      Chinese.
+26.     Yang      XY,      Xiao      J,      Chen       YH,      et       al.      Dexamethasone      alone      vs      in      combination      with       transcutaneous      electrical      acupoint      stimulation      or      tropisetron      for
+       prevention       of       postoperative       nausea       and       vomiting       in       gynaecological       patients       undergoing       laparoscopic       surgery.                                               Br       J       Anaesth.    2015;115:883–889.
+       doi:10.1093/bja/aev352
+27.     Li       SS,       Zhang       Q,       Yin       X,       et        al.       Electroacupuncture       for       postoperative       pain       after       nasal       endoscopic       surgery:       study       protocol       for       a       pilot       randomized
+       controlled      trial.          Trials.       2020;21:163.      doi:10.1186/s13063-020-4064-2
+28.     Park     S,     Gu     JH,     Jang     HK,     Oh     MS,     Lee     EJ,     Jung     IC.     Electroacuncture     for     post-thoracotomy     pain:     protocol     for     a     systematic     review     and     meta-analysis.
+       Medicine.            2020;99:e19312.      doi:10.1097/MD.0000000000019312
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         Journal        of        Pain         Research                                                                                                                                                                                                  Dove               press
+         Publish            your              work              in              this              journal
+
+         The      Journal      of      Pain      Research      is      an      international,      peer      reviewed,      open      access,      online      journal      that      welcomes      laboratory      and      clinical      findings      in      the
+         fields       of       pain       research       and       the       prevention       and        management       of       pain.       Original       research,       reviews,       symposium       reports,       hypothesis        formation       and
+         commentaries       are       all       considered       for       publication.       The       manuscript       management       system       is       completely       online       and       includes       a       very       quick       and       fair
+         peer-review      system,      which       is      all       easy      to       use.      Visit       http://www.dovepress.com/testimonials.php      to      read       real      quotes       from      published       authors.
+
+         Submit       your       manuscript       here:https://www.dovepress.com/journal-of-pain-research-journal
+
+
+1474                                                         DovePress                                                                                                                                                              Journal          of          Pain          Research          2022:15

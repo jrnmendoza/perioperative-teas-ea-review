@@ -1,0 +1,314 @@
+{
+  "Study_ID": "S055",
+  "Study": "Gao 2021",
+  "identity": {
+    "title": "Transcutaneous electrical acupoint stimulation applied in lower limbs decreases the incidence of paralytic ileus after colorectal surgery: A multicenter randomized controlled trial",
+    "year": 2021,
+    "doi": "10.1016/j.surg.2021.08.007",
+    "pdf": "covidence_400_full_article.pdf"
+  },
+  "design": {
+    "modality": "TEAS",
+    "comparator": "Severed-wire sham TEAS",
+    "randomized": {
+      "TEAS": 303,
+      "sham": 307
+    },
+    "analyzed": {
+      "TEAS": 303,
+      "sham": 307
+    },
+    "population": "10Chinesehospitals;adultscolorectalsurgeryGA;May2018-Aug/Sep2019",
+    "intervention": "PostoperativeST36/ST37/SP6,2-10Hzmax tolerated,30min PACU andPOD1-3",
+    "location": "pp2-3;TableIIIp6",
+    "attrition": "All610ITT; exclusions occurred before finalpostsurgeryrandomization"
+  },
+  "regimen": {
+    "drug": "Postoperative opioid consumption not reported",
+    "route": "Insufficient information / not reported.",
+    "pca": "Insufficient information / not reported.",
+    "rescue": "Insufficient information / not reported.",
+    "location": "TableII postoperativeanalgesiayes/no297/303vs304/307"
+  },
+  "results": [
+    {
+      "outcome": "POI noflatus>72h",
+      "T": [
+        98,
+        303
+      ],
+      "C": [
+        126,
+        307
+      ],
+      "p": ".026",
+      "location": "p6 TableIII"
+    },
+    {
+      "outcome": "Firstflatus",
+      "T": [
+        63.4,
+        29,
+        303
+      ],
+      "C": [
+        76.3,
+        37.9,
+        307
+      ],
+      "format": "meanSD",
+      "unit": "h",
+      "reported_MD": -12.8,
+      "p": ".001",
+      "location": "p6 TableIII"
+    },
+    {
+      "outcome": "Firstdefecation",
+      "T": [
+        106.7,
+        65.6,
+        303
+      ],
+      "C": [
+        121.5,
+        65.6,
+        307
+      ],
+      "format": "meanSD",
+      "unit": "h",
+      "reported_MD": -14.9,
+      "p": ".005",
+      "location": "TableIII"
+    },
+    {
+      "outcome": "Normaldiet",
+      "T": [
+        373.9,
+        224.9,
+        303
+      ],
+      "C": [
+        425.5,
+        235.6,
+        307
+      ],
+      "format": "meanSD",
+      "unit": "h",
+      "reported_MD": -51.6,
+      "p": ".006",
+      "location": "TableIII"
+    },
+    {
+      "outcome": "Firstbowelsounds",
+      "T": [
+        41.4,
+        22.6,
+        303
+      ],
+      "C": [
+        46,
+        24.1,
+        307
+      ],
+      "format": "meanSD",
+      "unit": "h",
+      "p": ".016",
+      "location": "TableIII"
+    },
+    {
+      "outcome": "Abdominalpain",
+      "T": [
+        1.4,
+        1.4,
+        303
+      ],
+      "C": [
+        1.3,
+        1.5,
+        307
+      ],
+      "format": "meanSD",
+      "window": "72hpostoperative summary",
+      "p": ".555",
+      "location": "p4resultstext;p6TableIII"
+    },
+    {
+      "outcome": "Nauseascore",
+      "T": [
+        1,
+        1.6,
+        303
+      ],
+      "C": [
+        1.1,
+        1.7,
+        307
+      ],
+      "format": "meanSD",
+      "window": "72hpostoperative summary",
+      "p": ".624",
+      "location": "TableIII"
+    },
+    {
+      "outcome": "Numbervomitingepisodes",
+      "T": [
+        0,
+        0.5,
+        303
+      ],
+      "C": [
+        0,
+        0.1,
+        307
+      ],
+      "format": "roundedmeanSD,NOTevents",
+      "window": "72hpostoperative",
+      "p": ".155",
+      "location": "TableIII"
+    }
+  ],
+  "source_conflicts": [
+    "TableIIImeansSDvsFig2axisMedianIQR;useTableIIIasexplicitnumericformat.",
+    "Roundedmeans yieldMD-12.9(flatus),-14.8(defecation) versusreported-12.8/-14.9;retainreported estimatesasroundingdifference.",
+    "GI clockstartsStewardscore4immediatelypostsurgery,notpreciselysurgeryend.",
+    "NauseascoreandvomitingepisodecountsNOTPONVincidence.",
+    "TableIIdrugdosesunitglyphsrequirevisualifeverused;notpostoperativeconsumption."
+  ],
+  "retrieval": {
+    "registry": "NCT03086304firstposted2017-03-22beforerecruitment2018-05-28;current2019recordlistsPOI72h/GImilestones;datedSAPnotverified",
+    "appendix": "Localsourcenone;officialCDNmmc1.pdfattempt404;fullpaperavailable;Appendix1notretrieved."
+  },
+  "independence": "Singlemulticentertrial;centersnotindependentstudies.",
+  "rob_independent": {
+    "questions": {
+      "1.1": [
+        "Y",
+        "SPSSblockrandomization,size4",
+        "p3"
+      ],
+      "1.2": [
+        "PY",
+        "Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence",
+        "p3"
+      ],
+      "1.3": [
+        "N",
+        "Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment",
+        "TablesI-II"
+      ],
+      "2.1": [
+        "Y",
+        "Authorsadmitpatientscanfeelstimulationversusnone",
+        "p8limitations"
+      ],
+      "2.2": [
+        "Y",
+        "Executordeliversmax-toleratedcurrent;clinicalstaffblinded",
+        "p3"
+      ],
+      "2.3": [
+        "PN",
+        "Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures",
+        "pp3-4"
+      ],
+      "2.4": [
+        "NA",
+        "Noneidentified",
+        "p3"
+      ],
+      "2.5": [
+        "NA",
+        "Noneidentified",
+        "p3"
+      ],
+      "2.6": [
+        "Y",
+        "All610analyzedITT",
+        "p3"
+      ],
+      "2.7": [
+        "NA",
+        "ITT",
+        "p3"
+      ],
+      "3.1": [
+        "Y",
+        "All303/307includedprimaryandsecondary",
+        "p3;TableIII"
+      ],
+      "3.2": [
+        "NA",
+        "Complete",
+        "p3"
+      ],
+      "3.3": [
+        "NA",
+        "Complete",
+        "p3"
+      ],
+      "3.4": [
+        "NA",
+        "Complete",
+        "p3"
+      ],
+      "4.1": [
+        "N",
+        "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint",
+        "p3"
+      ],
+      "4.2": [
+        "PN",
+        "Samecaregiverrecordingrequirementsandblindedcollection",
+        "pp2-3"
+      ],
+      "4.3": [
+        "Y",
+        "Patient/familyreportflatus;participantsfeelactivecurrent",
+        "pp2-3,8"
+      ],
+      "4.4": [
+        "Y",
+        "Reportedmilestonetimecanbeinfluencedbyknowledge",
+        "pp2-3"
+      ],
+      "4.5": [
+        "PY",
+        "BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely",
+        "p2compliance;p3intervention;p8limitations"
+      ],
+      "5.1": [
+        "NI",
+        "Prospectiveregistrationexistsbutdatedanalysisplanunverified",
+        "registryNCT03086304"
+      ],
+      "5.2": [
+        "PN",
+        "Clearlyspecified72hPOIendpointconcordantwithregistry",
+        "registry;TableIII"
+      ],
+      "5.3": [
+        "NI",
+        "Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable",
+        "p3;registry"
+      ]
+    },
+    "domains": [
+      "Low",
+      "Low",
+      "Low",
+      "High",
+      "Some concerns"
+    ],
+    "overall": "High",
+    "reason": "POIandfirstflatusdependonunblindedpatientrecordingwithexplicitbenefitexpectations;prespecifiedanalysisdetailunverified."
+  },
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Postoperativeanalgesiayes/noonly,noconsumeddose."
+  },
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "saved_at": "2026-09-05T15:14:16.193Z",
+  "missing_information_convention": "Insufficient information / not reported."
+}

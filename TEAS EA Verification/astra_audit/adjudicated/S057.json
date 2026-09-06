@@ -1,0 +1,705 @@
+{
+  "Study_ID": "S057",
+  "Study": "Coura 2011",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first-page identity confirmed",
+    "title": "Randomised, controlled study of preoperative eletroacupuncture for postoperative pain control after cardiac surgery",
+    "year": 2011,
+    "doi": "10.1136/aim.2010.003251",
+    "pdf_files": [
+      "covidence_819_full_article.pdf"
+    ],
+    "randomized_arms": {
+      "total": 32,
+      "EA": null,
+      "control": null
+    },
+    "analyzed_arms": {
+      "EA": 13,
+      "control": 9
+    },
+    "modality": "EA",
+    "comparator_class": "Sham surface TENS 300Hz5seconds then off30min",
+    "independence": "SingleBraziltrial; cardiactrial distinct from thoracotomyreferencedstudies.",
+    "source_locations": "pp1-3, Fig1",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 16,
+      "final": {
+        "Canonical study": "Coura 2011",
+        "Comparison ID": "COURA11_EA_vs_SHAM",
+        "Intervention arm": "Preoperative EA",
+        "Comparator arm": "Sham stimulation",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative fentanyl",
+        "Timepoint/window": "24h from start of postoperative fentanyl infusion",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": null,
+        "Randomized n comparator": null,
+        "Analyzed n intervention": 13,
+        "Analyzed n comparator": 9,
+        "Mean intervention": 13.1,
+        "SD intervention": 2.2,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 16.3,
+        "SD comparator": 1.6,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg/kg fentanyl",
+        "Reported P": "<0.002",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "MD",
+        "Derived effect": -3.200000000000001,
+        "Exact 0-24 h postoperative opioid?": "No — time origin is infusion start",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Retain ug/kg raw endpoint for separate descriptive/weight-normalized sensitivity only; requires individual absolute doses and total rescue coverage for IV morphine mg synthesis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Randomized arm n16/16 unsupported;32total only.10excluded. Clock andug/kg prevent primaryendpoint; rescuecoverage unknown.",
+        "Source location": "PDFp2 Methods;PDFp3 Table2/Fig1",
+        "Source PDF URL": "https://drive.google.com/file/d/120NJxCmxsdiyqWTXzjmaUWAaVa1i8iZz/view?usp=drivesdk",
+        "Record status": "CORRECTED / NOT PRIMARY IV MORPHINE ELIGIBLE"
+      },
+      "verification_status": "CORRECTED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Coura 2011",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "COURA11_EA_vs_SHAM",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Preoperative EA",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham stimulation",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative fentanyl",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24h from start of postoperative fentanyl infusion",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 13,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 9,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 13.1,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 2.2,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 16.3,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 1.6,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg/kg fentanyl",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.002",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -3.200000000000001,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No — time origin is infusion start",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Retain ug/kg raw endpoint for separate descriptive/weight-normalized sensitivity only; requires individual absolute doses and total rescue coverage for IV morphine mg synthesis",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Randomized arm n16/16 unsupported;32total only.10excluded. Clock andug/kg prevent primaryendpoint; rescuecoverage unknown.",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "PDFp2 Methods;PDFp3 Table2/Fig1",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/120NJxCmxsdiyqWTXzjmaUWAaVa1i8iZz/view?usp=drivesdk",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "CORRECTED / NOT PRIMARY IV MORPHINE ELIGIBLE",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Randomized n intervention",
+          "old_value": 16,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Randomized n comparator",
+          "old_value": 16,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Timepoint/window",
+          "old_value": "First 24 h postoperatively",
+          "source_value": "24h from start of postoperative fentanyl infusion",
+          "final_value": "24h from start of postoperative fentanyl infusion",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Reported P",
+          "old_value": null,
+          "source_value": "<0.002",
+          "final_value": "<0.002",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "old_value": "Yes",
+          "source_value": "No — time origin is infusion start",
+          "final_value": "No — time origin is infusion start",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "old_value": "Conditional",
+          "source_value": "No",
+          "final_value": "No",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Potentially eligible after confirming whether discretionary supplemental opioids were included",
+          "source_value": "Retain ug/kg raw endpoint for separate descriptive/weight-normalized sensitivity only; requires individual absolute doses and total rescue coverage for IV morphine mg synthesis",
+          "final_value": "Retain ug/kg raw endpoint for separate descriptive/weight-normalized sensitivity only; requires individual absolute doses and total rescue coverage for IV morphine mg synthesis",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "10/32 post-randomization exclusions; supplemental morphine/fentanyl inclusion unclear",
+          "source_value": "Randomized arm n16/16 unsupported;32total only.10excluded. Clock andug/kg prevent primaryendpoint; rescuecoverage unknown.",
+          "final_value": "Randomized arm n16/16 unsupported;32total only.10excluded. Clock andug/kg prevent primaryendpoint; rescuecoverage unknown.",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Published cumulative first-24-h fentanyl result",
+          "source_value": "PDFp2 Methods;PDFp3 Table2/Fig1",
+          "final_value": "PDFp2 Methods;PDFp3 Table2/Fig1",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / QC HOLD",
+          "source_value": "CORRECTED / NOT PRIMARY IV MORPHINE ELIGIBLE",
+          "final_value": "CORRECTED / NOT PRIMARY IV MORPHINE ELIGIBLE",
+          "source_location": "PDFp2 Methods;PDFp3 Table2/Fig1/prose",
+          "reason": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_819_full_article.pdf",
+      "source_evidence": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+      "drug": "fentanyl",
+      "route": "IV",
+      "pca_formulation": "0.4ug/kg/h continuous;0.3ug/kg bolus,15minlockout,30mL/4hlimit;0.04mL/kg/h and0.03mL/kg bolus ofsolution(fentanyl50mL+saline200mL), concentrationstocknotreported",
+      "rescue_regimen": "Supplementary morphine or fentanyl permitted byICUspecialist;individualamounts notreported. NoNSAID/localanesthetic. Anestheticsnotstandardized.",
+      "critical_qc": "Totalfentanyl13.1±2.2ug/kg EA(n13)vs16.3±1.6control(n9),meanSD,P<.002;MD-3.2.32totalrandomized butarmnnotreported. Windowexplicitly24hfromfentanylinfusionstart,notprovensurgeryend. Additionalmorphine/fentanyl allowed;totalcoverageunknown.",
+      "analysis_eligibility": "Retain ug/kg raw endpoint for separate descriptive/weight-normalized sensitivity only; requires individual absolute doses and total rescue coverage for IV morphine mg synthesis",
+      "notes": "Phase A source-first followed by field-level comparison."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "fentanyl24_from_infusion",
+      "outcome": "Total fentanyl ug/kg",
+      "time_window": "24h frompostoperativeinfusionstart",
+      "comparison": "Sham surface TENS 300Hz5seconds then off30min",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "PY",
+          "evidence": "Permutationblockrandomization stated, sequenceimplementationnotfullydetailed",
+          "source_location": "p2",
+          "reasoning": "Permutationblockrandomization stated, sequenceimplementationnotfullydetailed"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "No concealmentmechanismreported",
+          "source_location": "p2",
+          "reasoning": "No concealmentmechanismreported"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Only22 analyzed baseline;sex imbalance10/13malevs4/9 couldreflectexclusions",
+          "source_location": "p3 Table1",
+          "reasoning": "Only22 analyzed baseline;sex imbalance10/13malevs4/9 couldreflectexclusions"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "Deepneedles30min versus surfaceelectrodes5seconds createsperceptibledifference",
+          "source_location": "p2",
+          "reasoning": "Deepneedles30min versus surfaceelectrodes5seconds createsperceptibledifference"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Acupuncturist knows needleversussurfaceintervention;clinicalstaffblinded",
+          "source_location": "p2",
+          "reasoning": "Acupuncturist knows needleversussurfaceintervention;clinicalstaffblinded"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "PCAchanges for drowsiness protocolallowed; no reportedtrial-contextdeviations",
+          "source_location": "pp2-3",
+          "reasoning": "PCAchanges for drowsiness protocolallowed; no reportedtrial-contextdeviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No identifiedtrial-contextdeviations",
+          "source_location": "p2",
+          "reasoning": "No identifiedtrial-contextdeviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No identifieddeviations",
+          "source_location": "p2",
+          "reasoning": "No identifieddeviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "N",
+          "evidence": "10randomized patients excludedbasedonpostoperativeinstability/PCAability",
+          "source_location": "pp2-3",
+          "reasoning": "10randomized patients excludedbasedonpostoperativeinstability/PCAability"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "Y",
+          "evidence": "31.25% excluded withclinicallyimportantreasons; armexclusionsunknown",
+          "source_location": "Fig1",
+          "reasoning": "31.25% excluded withclinicallyimportantreasons; armexclusionsunknown"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "N",
+          "evidence": "22/32 analyzed",
+          "source_location": "p3 Fig1",
+          "reasoning": "22/32 analyzed"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "N",
+          "evidence": "No missing-outcomesensitivityanalysis",
+          "source_location": "pp2-3",
+          "reasoning": "No missing-outcomesensitivityanalysis"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "Y",
+          "evidence": "Instability/intubation/confusion stronglylinkedtoanalgesicrequirements",
+          "source_location": "p2",
+          "reasoning": "Instability/intubation/confusion stronglylinkedtoanalgesicrequirements"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "PY",
+          "evidence": "Exclusiondepends onrecoveryconditionscloselylinkedtoopioidexposure/pain",
+          "source_location": "pp2-3",
+          "reasoning": "Exclusiondepends onrecoveryconditionscloselylinkedtoopioidexposure/pain"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "PN",
+          "evidence": "PCAfentanyl recordappropriate forthisendpoint;doesnotguaranteeallopioids",
+          "source_location": "p2",
+          "reasoning": "PCAfentanyl recordappropriate forthisendpoint;doesnotguaranteeallopioids"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Samepump protocol andblindednurses",
+          "source_location": "p2",
+          "reasoning": "Samepump protocol andblindednurses"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "ICU/anaesthetist/nursesblind; objectivepumpdose",
+          "source_location": "p2",
+          "reasoning": "ICU/anaesthetist/nursesblind; objectivepumpdose"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Dosecollectorsblind",
+          "source_location": "p2",
+          "reasoning": "Dosecollectorsblind"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NA",
+          "evidence": "Dosecollectorsblind;patientdemandbehaviornotautomaticallymeasurementbias",
+          "source_location": "p2",
+          "reasoning": "Dosecollectorsblind;patientdemandbehaviornotautomaticallymeasurementbias"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "No protocol/registration/SAPreported",
+          "source_location": "fullpublicationpp1-5",
+          "reasoning": "No protocol/registration/SAPreported"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Several opioid/painsummaries,prospectivespecificationunavailable",
+          "source_location": "pp2-3",
+          "reasoning": "Several opioid/painsummaries,prospectivespecificationunavailable"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No datedSAP;averagingpainmethodunclear",
+          "source_location": "pp2-3",
+          "reasoning": "No datedSAP;averagingpainmethodunclear"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Permutationblockrandomization stated, sequenceimplementationnotfullydetailed; No concealmentmechanismreported; Only22 analyzed baseline;sex imbalance10/13malevs4/9 couldreflectexclusions",
+          "source_location": "p2; p2; p3 Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "High",
+          "reasoning": "Deepneedles30min versus surfaceelectrodes5seconds createsperceptibledifference; Acupuncturist knows needleversussurfaceintervention;clinicalstaffblinded; PCAchanges for drowsiness protocolallowed; no reportedtrial-contextdeviations; No identifiedtrial-contextdeviations; No identifieddeviations; 10randomized patients excludedbasedonpostoperativeinstability/PCAability; 31.25% excluded withclinicallyimportantreasons; armexclusionsunknown",
+          "source_location": "p2; p2; pp2-3; p2; p2; pp2-3; Fig1"
+        },
+        {
+          "domain": 3,
+          "judgment": "High",
+          "reasoning": "22/32 analyzed; No missing-outcomesensitivityanalysis; Instability/intubation/confusion stronglylinkedtoanalgesicrequirements; Exclusiondepends onrecoveryconditionscloselylinkedtoopioidexposure/pain",
+          "source_location": "p3 Fig1; pp2-3; p2; pp2-3"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "PCAfentanyl recordappropriate forthisendpoint;doesnotguaranteeallopioids; Samepump protocol andblindednurses; ICU/anaesthetist/nursesblind; objectivepumpdose; Dosecollectorsblind; Dosecollectorsblind;patientdemandbehaviornotautomaticallymeasurementbias",
+          "source_location": "p2; p2; p2; p2; p2"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No protocol/registration/SAPreported; Several opioid/painsummaries,prospectivespecificationunavailable; No datedSAP;averagingpainmethodunclear",
+          "source_location": "fullpublicationpp1-5; pp2-3; pp2-3"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Large prognosticallydrivenpostrandomizationexclusions compromiseassignmentestimate.",
+      "old_selected_overall": "High",
+      "changes_from_old": "OverallHigh retained;D2raisedHigh forremoving31% randomizedbasedonrecovery/PCAability. Randomizedarm16/16notestablished."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Weight-normalized dose, nonidentical clock andunmeasuredrescue preclude lockedprimaryIVmorphinemgmetric.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "fentanyl plus discretionary morphine/fentanyl",
+    "route": "IV",
+    "unit": "ug/kg fentanyl",
+    "raw_values": {
+      "Tmean": 13.1,
+      "Tsd": 2.2,
+      "Tn": 13,
+      "Cmean": 16.3,
+      "Csd": 1.6,
+      "Cn": 9
+    },
+    "comparison_selection": "EA versusshamTENS",
+    "multiarm_handling": "Twoarms; randomizedarmsizesunknown,total32",
+    "source_location": "pp2-3"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Randomized arm counts; individualabsoluteopioiddoses/rescuetotals andstarttime",
+      "why_it_matters": "Cannot infer16/16 or convertug/kgusingmeanweight",
+      "analysis_affected": "Primaryopioid",
+      "can_proceed_without": "Rawug/kgdescriptive result withHighRoB",
+      "priority": "HIGH",
+      "exact_question": "Please confirm initialrandomizedarmcounts and provide absolute0-24hend-of-surgery fentanyl plusrescuemorphine/fentanyl meanSD/n, including excludedpatients andinfusionstarttimes."
+    }
+  ],
+  "summary": "Singleassignedrowadjudicated. Removedunsupported16/16randomizedn; addedP<.002; correctedwindowto24hfrominfusionstart. ug/kg andunknownrescueexcludeprimaryIVmorphinesynthesis.",
+  "unblinded_supplemental_checks": [],
+  "phase_a_source": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/phase_a/S057.json",
+  "guidance_source": "Official RoB2 22 August 2019; local batch6_rob2_guidance.pdf"
+}

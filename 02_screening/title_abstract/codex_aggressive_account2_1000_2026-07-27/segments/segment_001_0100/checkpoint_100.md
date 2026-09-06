@@ -1,0 +1,32 @@
+# Segment 1 completion checkpoint
+
+- Completion timestamp: 2026-07-27T09:44:03Z
+- Global sequences: 1–100
+- Segment sequences: 1–100
+- First Covidence number: 630
+- Last Covidence number: 740
+- Registered votes: 100
+- Decisions: 28 Yes, 5 Maybe, 67 No
+- Protocol exclusions: 6
+- Animal exclusions: 23
+- Non-surgical exclusions: 7
+- No-general-anaesthesia exclusions: 10
+- Wrong-intervention exclusions: 2
+- Non-randomized exclusions: 3
+- Inseparable-intervention exclusions: 4
+- Active-comparator exclusions: 1
+- No-eligible-outcome exclusions: 8
+- Missing-abstract exclusions: 1
+- Maybe by criterion: timing 2; general anaesthesia 3
+- Numbering gaps logged: 11
+- Attempted records without registered votes: 1, subsequently reconciled as not registered and then voted once
+- Browser incidents: 2 interruption events plus successful reconciliation
+- JSONL validation: passed
+- CSV validation: passed
+- Unique Covidence numbers: 100
+- Unique timestamps: 100
+- Other reviewer decisions viewed: no
+- Conflicts opened or resolved: no
+- Reloaded Screen references: 2,341, matching 2,441 − 100
+- First untouched citation: Covidence #741
+- Checkpoint screenshot: `screenshots/covidence_checkpoint_0100.png`

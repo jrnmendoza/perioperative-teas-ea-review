@@ -1,0 +1,17 @@
+{
+  "Study_ID": "S021",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows_expected": 5,
+  "baseline_rows_reviewed": 5,
+  "result_specific_rob2_count": 8,
+  "unblinded_supplemental_checks": [
+    "PSQI/AIS POD1",
+    "VAS instrument range"
+  ],
+  "limitations": [
+    "Specify rescue agent, dose, route, total0–24h opioid exposure.",
+    "Provide numerical Fig4 means/SD and reasons for five protocol breaches.",
+    "Provide dated SAP and confirm relationship of reports sharing ChiCTR2100054971."
+  ]
+}

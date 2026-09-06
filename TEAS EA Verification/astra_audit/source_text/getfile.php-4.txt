@@ -1,0 +1,789 @@
+=== PDF PAGE 1 ===
+Journal    of    Pain    Research                                                                                                                                          Dove        press
+
+                                                                                                                                            open  access  to  scientific  and  medical  research
+
+
+    Open  Access  Full  Text  Article                                                                                                   CLINICAL TRIAL REPORT
+Transcutaneous     Electrical     Acupoint     Stimulation
+Accelerates     the     Recover y    of     Patients     Undergoing
+Laparoscopic     Myomectomy:     A     Randomized
+Controlled     Trial
+
+Yuanyuan Pan                  1,*, Yifan Shao                  2,*, Zhanghuan Chi                       3,*, Shenhui Jin             1, Junlu Wang             1
+
+
+
+1Department  of  Anesthesia,  The  First  Affiliated  Hospital  of  Wenzhou  Medical  University,  Wenzhou,  People’s  Republic  of  China;                               2Department  of
+Anesthesia,  Sir  Run  Run  Shaw  Hospital,  Affiliated  with  the  Zhejiang  University School  of  Medicine,  Hangzhou,  People’s  Republic  of  China;
+3Department  of  Anesthesia,  Wenzhou  People’s  Hospital,  Wenzhou,  People’s  Republic  of  China
+
+*These  authors  contributed  equally  to  this  work
+
+Correspondence:  Junlu  Wang,  Departments  of  Anesthesiology,  The  First  Affiliated  Hospital  of  Wenzhou  Medical  University,  Wenzhou,  Zhejiang,
+People’s  Republic  of  China,  Tel  +86  13806689854,  Fax  +86  0577-55578999-689854,  Email  wangjunlu973@163.com
+
+
+Purpose: To evaluate transcutaneous electrical acupoint stimulation (TEAS) on the perioperative rehabilitation of patients undergoing
+laparoscopic   myomectomy.
+Patients   and   Methods: One     hundred     and     five     women     undergoing     laparoscopic     hysteromyomectomy     were     randomly     divided     into
+TEAS group (Group T) and control group (Group C). Propofol and remifentanil were used to stabilize patient blood pressure and keep
+BIS     between     40     and     60.     Group     T     patients     received     TEAS     at     LI4/PC6     30     minutes     before     the     operation     and     lasting     until     the     end     of
+anesthesia,   followed   by    TEAS   at   ST36/SP6   for   30   minutes   in   PACU.   All   required    indicators   were   recorded.
+Results: Group      T      patients     required      lower      dosages     of      remifentanil      and      vasoactive      drugs,     and      had      a     reduced      incidence     of      propofol
+injection  pain  and  intraoperative  hypotension  compared  to  Group  C.  Group  T also  had  a  lower  maximum  NRS  score  in  PACU,  lower
+NRS  scores  at  1  hour  and  24  hours,  and  a  lower  incidence  of  vomiting  within  24  hours.  In  addition,  the  QoR-40  score  for  Group  T at
+24   hours    after   operation   was   higher   in   terms   of   physical   comfort,   emotional    state,   pain   and   total   score.
+Conclusion: TEAS     can     reduce     the     amount     of     anesthetic,     maintain     hemodynamic     stability,     reduce     postoperative     pain,     reduce     post-
+operative           vomiting,           enhance           the           recovery           of           gastrointestinal           function,           increase           the           quality           of           postoperative          recovery           and           thus
+accelerate   overall   patient   recovery.
+Keywords: TEAS,   laparoscopic   myomectomy,   QoR-40
+
+
+Introduction
+Uterine     leiomyoma    is    an    abnormal     hyperplasia    of    uterine     smooth    muscle    cells.    Women    aged    between    30    and    50    years
+have      a      high      incidence      of      this      condition,      with      20–40%      having      obvious      symptoms,      menstrual      disorders,      dysmenorrhea,
+abdominal     and     pelvic     pain,    and     even     infertility,     abortion     and     other    diseases.1,2            This    can     have     major     adverse    effects     on
+their  physical  and  mental  health,  as  well  as  on  their  quality  of  daily  life.  For  patients  with  serious  clinical  symptoms  and
+ineffective    conservative     treatment     with     drugs,     the     early     treatment     plan     often     involves     surgery.     Laparoscopic     myomect-
+omy    is    more    easily    accepted    by    patients,    with    less    trauma    and    less    intraoperative    bleeding.    It    is    a    well    established    and
+simple     operation     that     is     widely     performed.3,4           However,     various     adverse     reactions     often     occur     during     the     perioperative
+period,      including      stress      reactions      caused      by      long-term      pneumoperitoneum,      head      low      position,      anesthesia      and      surgical
+stimulation during the operation, the use of drugs to promote uterine contraction, and the use of anesthesia and analgesics
+after    the    operation.    These    can    cause    postoperative    nausea    and    vomiting,    pelvic    pain,    dizziness    and    other    complications
+that    affect    the    recovery    of    patients.5–9
+
+
+                                                            Journal  of  Pain  Research  2023:16  809–819                                                                                    809
+                                                                            © 2023 Pan et al. This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.php
+                                                                            and incorporate the Creative Commons Attribution – Non Commercial (unported, v3.0) License (http://creativecommons.org/licenses/by-nc/3.0/). By accessing the work
+                                                            you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For
+                                                            permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).
+
+=== PDF PAGE 2 ===
+Pan  et  al                                                                                                                                                                                                  Dovepress
+
+      Transcutaneous     electrical     acupoint      stimulation      (TEAS)     is      a      non-invasive     operation     whereby      the     acupoint      electrode
+piece           is           pasted           onto           the           skin           of           the           corresponding           acupoint           of           the           patient.           Once           connected           to           the           corresponding
+instruments         and         equipment,         a         specified         intensity         of         electrical         stimulation         is         given         in         order         to         achieve         the         effect         of
+traditional   electric   acupuncture.10 Various   studies   have   demonstrated   that   TEAS   has   analgesic   and   sedative   effects.11–13
+Application   of   TEAS   during   surgery   can   protect   vital   functions   of   the   heart,   brain,   liver,   stomach   and   other   organs.14,15
+TEAS        can        also       reduce        inflammatory       reactions,        improve        immune       function,        and        lower        the        frequency       of        postoperative
+complications.16,17 The goal of this work was to evaluate TEAS with regard to the perioperative rehabilitation of patients
+undergoing    laparoscopic    myomectomy.
+
+Materials   and   Methods
+Study   Design   and   Participant   Recruitment
+In             this             double-blind             randomized             control-group             clinical             trial,             we             studied             about             Transcutaneous             electrical             acupoint
+stimulation            accelerates            the            recovery             of             patients            undergoing            laparoscopic            myomectomy.            The            Ethics            Committee             of
+Wenzhou     Medical     University     (WMU)     approved     this     study     (clinical     trial     number:     ChiCTR2100045173;     Registry     URL:
+YJLCYJ-2020-148).       The       study       was       conducted       in       accordance       with       the      Declaration       of      Helsinki.       Included       in       the       study
+cohort    were     120     women     (ASA    I     and     II)     aged     18     to     60    years     and     who     received    laparoscopic     myomectomy     at    the    First
+Affiliated   Hospital,   WMU,   Zhejiang,   China,   from   May   2021   to   December   2021.   Patients   were   assigned   to   TEAS   group
+(Group    T)    and    control    group    (Group    C)    using    random    number    tables.    All    participants    provided    informed    consent.
+      Exclusion  criteria included: incision or surgical scar at acupoint; infection of acupoint; nerve injury in any limb; prior
+spinal     surgery;     allergic     reaction     to     any     of     the     drugs     used     in     this     study;     sinus     bradycardia;     severe     neurological     disease;
+severe             respiratory            disease;             smoking;             severe             cardiovascular             disease;             addiction             to             an             anaesthetic;             recent             history             of
+opioid   use.
+
+Types   of   Outcomes
+Transcutaneous   Electrical   Acupoint  Stimulation   (TEAS)
+Patients   in   Group   T  received   TEAS.   The   anesthesiologist   selected   acupoints   of   LI4   (Hegu)   and   PC6   (Neiguan)   on   both
+hands     of      the     patients,      stuck      the      electrodes,     and      connected     Han’s      Acupoint      Nerve      Stimulator      (Nanjing     Jinan      Xinsheng
+Technology,  Jinan,  Nanjing,  China)  capable  of  producing  a  dilatational  wave  with  a  frequency  of  2/100  HZ,  which  is  the
+maximum tolerable for patients receiving −1 mA of electrical  stimulation for 30  minutes before  the  operation and lasting
+until  the   end  of   anesthesia.   Using  the   same  method   at  bilateral   acupoints   of   ST36   (Zusanli)  and   SP6   (Sanyinjiao)   for   30
+minutes    while    in    PACU    (Postanesthesia    care    unit).    Patients    in    Group    C    did    not    undergo    TEAS.    The    acupoint    locations
+are    shown    in Figure    1.
+
+Numerical  Rating   Scale   (NRS)
+1h       and       24h       after       the       procedure,       a       PACU       nurse,       who       was       unaware       of       the       group       of       each       patient,       assisted       patients       to
+evaluate   their   pain    level   by   using    a   numerical   rating    scale   (NRS:   0–10,0   =    none,   10   =    most   severe,    1–3   mild    pain,   4–6
+moderate    pain,    7–10    severe    pain).
+
+Grade   of  Abdominal   Distension   Severity
+Grade      0:      No      or      transient      abdominal      distension;      Grade      1:      mild      abdominal      distension,      or      temporary      sudden      abdominal
+distension,      gas      movement      in      the      abdomen,      but      does      not      affect      rest      and      sleep,      mild      abdominal      bulge,      abdominal      wall
+tension;          Grade           2:          moderate           abdominal           distension,           nausea,          rest,           sleep,           moderate           abdominal           bulge,          large           abdominal
+tension;   Grade   3:   severe   abdominal   distension,   severe   nausea,   vomiting,   irritability,   serious   sleep,   significant   abdominal
+swelling,    and    percussion.
+
+Anesthesia,   Surgical   Procedures,   and   Analgesia
+A 22-gauge trocar was used to obtain venous access on the dorsal side of the non-dominant hand prior when the patient is
+in   the   preoperative   preparation   room.   After   the   infusion   channel   was   connected   to   the   extension   tube,   500   mL   Ringer ’s
+
+
+810             https://doi.org/10.2147/JPR.S399249                                                                                                                                                                                                                                   Journal  of  Pain  Research  2023:16
+                DovePress
+
+=== PDF PAGE 3 ===
+Dove     press                                                                                                                                                                                                      Pan  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure  1 Illustration  of  the  acupoints.
+
+
+solution       was       infused       through       the      channel,       with      an       infusion       speed       of       20       mL/min.      No       medications       were       given.       Blood
+pressure,  oxygen  saturation and  electrocardiography were monitored  while  in  operating theatre.  The  anesthesia  induction
+sequence  was  started with  intravenous sufentanil  (0.5  µg/kg) (Yichang  Renfu,  Yichang,  Hubei,  China)  over  two seconds,
+propofol  (2mg/kg)  (Aspen  Pharma  Trading  Limited)  and  cisatracurium  (2mg/kg)  (Jiangsu  Hengrui,  Jiangsu,  China)  were
+given     and     endotracheal     intubation     was     performed.     Propofol     and     remifentanil     (Yichang     Renfu,     Yichang,     Hubei,     China)
+were         injected         by         electronic         pump         during         anesthesia         maintenance         to         kept         the         patient’s         blood         pressure         stable         during
+operation   and   BIS(Bispectral   Index)   maintained   between   40   and   60.   Add   the   cisatracurium   or   sufentanil   and    record   the
+dosage   according   to   the   actual   situation.   Both   groups   were   given   tropisetron   5mg   immediately   at   the   start   of   surgery   to
+prevent           postoperative            nausea           and           vomiting           and           flurbiprofen           100mg            for           postoperative            analgesia.           The            surgeon           was
+instructed     to     administer     ropivacaine     for     local     infiltration     analgesia     around     the     incision     at     the     end     of     the     procedure.     At
+the      end     of      surgery,     the     muscle      relaxation     antagonism     (neostigmine     1mg,      atropine     0.5mg)     was     given     immediately,     and
+20mg   was   given   to   promote   the   recovery   of   spontaneous   breathing.   When   the   patient   recovered   spontaneous   breathing,
+tidal     volume     was     >6     mL/kg,     respiratory     waveform     was     regular,     he     could     respond     to     oral     instructions,     and     the     tracheal
+tube    was    removed   after    sputum    suction   and    the    patient   was    taken   to    the    PACU.    Norepinephrine(4ug)   was    administered
+intravenously   every   time   when   systolic   blood   pressure   fell   to   <90   mmHg   or   diastolic   blood   pressure   fell   to   <60   mmHg.
+Atropine    (0.5    mg)    was    administered    when    the    heart    rate    fell    below    50    per    minute    (Figure    2).
+
+
+
+
+
+Journal  of  Pain  Research  2023:16                                                                                                                                        https://doi.org/10.2147/JPR.S399249                                                                                                                                                                                                                       811
+                                                                                                                                                                                                   DovePress
+
+=== PDF PAGE 4 ===
+Pan  et  al                                                                                                                                                                                                         Dovepress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2 Test  flowchart.
+Abbreviations: TEAS, transcutaneousacupoint electrical stimulation; BP, Blood Pressure; SaO2, Arterial Oxygen Saturation; ECG, Electrocardiogram; BIS, Bispectral Index;
+PACU,  Postanesthesia  care unit;  QoR40,  Quality  of  Recovery  Score-40.
+
+Obser vation   Indexes
+The          main          observation          indexes          included          the          40          items          in          QoR-40          24          hours          after          surgery          to          evaluate          the          quality          of
+postoperative       rehabilitation.       The       secondary       outcome       measures:       the       general       patient       condition,       dosage        of       remifentanil,
+propofol,   any   vasoactive   drugs,   etc   used   during   the   operation,   incidence   of   pain   caused   by   propofol   injection   during   the
+operation,  and   the   incidence   of   cough   induced   by   sufentanil   during   anesthesia   induction.   Ten   recordings   of   the   patients’
+mean  arterial  pressure  (MAP),  HR  (Heart  Rate),  SaO2  (oxygen  saturation),  BIS  were  recorded  at  the  following  times:  in
+the           operating           room           and           patient           calmed           (T0),           immediately           before           tracheal           intubation           (T1),           one           min           after           tracheal
+intubation       (T2),       two       min       after       tracheal       intubation       (T3),       immediately       at       the       beginning       of       operation       (T4),       pneumoper-
+itoneum   at   5   min    (T5),    pneumoperitoneum   at    30   min    (T6),   suture    of   the   operation   (T7),    immediately   before   extubation
+(T8), one min after extubation (T9). Records were also made of bleeding, urine volume, liquid, the time of anesthesia, the
+time    of     operation,     the     incidence     of     intraoperative    hemodynamic     instability,     the    utilization     rate    of     vasoactive    drugs,     the
+postoperative      respiratory      recovery       time,      the      conscious      time,      the      extubation      time,      Aldrete      score,      highest      pain      score       in
+PACU,   the   retention   time   in   PACU,   the   utilization   rate   of   remedial   drugs   in   PACU,   NRS   (Numerical   Rating   Scale)   at   1
+h  and  24  h  after  the  operation,  the  occurrence  of  adverse  reactions  including  nausea,  vomiting,  abdominal  distention,  the
+utilization      rate      of      analgesic      and      antiemetic      drugs      in      24h,      the      time      to      first      postoperative      anal      exhaust,      the      time      to      first
+postoperative   water   intake,   the   time   to   solid   food   tolerance,   the   time   to   catheter   removal,   the    time   to   first   postoperative
+implantation   activity,    the    time    of    postoperative    hospitalization.
+
+
+812              https://doi.org/10.2147/JPR.S399249                                                                                                                                                                                                                                   Journal  of  Pain  Research  2023:16
+                 DovePress
+
+=== PDF PAGE 5 ===
+Dove     press                                                                                                                                                                                               Pan  et  al
+Statistical   Analysis
+The  necessary  sample  size  was  estimated  based  on  an  improvement  of  4  points  in  the  QoR-40  evaluation.  With  a  =  0.05
+and β =  0.20, at  least 49  patients were needed  in each group. All  data were analyzed by  SPSS 23.0. The mean ± standard
+deviation       of       measurement       data       that       had       a       normal       distribution       was       used       in       statistical       descriptions.       The       median       (with
+interquartile    spacing)    was    used    for    statistical    description    of    measurement    data    not    conforming    to    a    normal    distribution.
+Two-sample   independent t-test   was   employed    to    evaluate   measurement    indexes   with    normal    distribution    and    to   test   the
+homogeneity   of   variance.  Rank   sum   test  was   employed  to  evaluate   non-conforming  normal  distribution.   Numerical  data
+were expressed as a percentage (%) and was compared using chi-square test. Statistical tests were bilateral, with p < 0.05
+considered    as    statistically    significant.
+
+Results
+The       overall       study       cohort       was       comprised       of       105       patients,       with       52       in       Group       T     and       53       in       Group       C.       Six       patients       used
+analgesic        drugs        other        than        those        in        the        experimental        plan,        6        patients        underwent        a        different        surgical        procedure,        two
+patients    used    PCIA    (Patient-controlled    intravenous    analgesia),    and    one    patient    had    intraoperative    bleeding    (Figure    3).
+
+General   Characteristics
+The  general  preoperative  (Table  1)  and  intraoperative  (Table  2)  conditions   were  compared  between  Groups  T and  C.  No
+statistically    significant   differences   were    observed   for    ASA,    age,   weight,    BMI,    MAP,    HR,    BIS,    temperature,    duration    of
+anesthesia,   duration   of   operation,   intraoperative    blood   loss,    intraoperative   urine    volume,   dosage   of   sufentanil,   propofol,
+or       atracurium       cisbenzenesulfonate.       However,       the       dosage       of       remifentanil       used       in       Group       T    was       significantly       lower       by
+almost    15%    relative    to    Group    C.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure  3 Flowchart  for  inclusion,  exclusion  and  missing  interviews.
+
+
+
+Journal  of  Pain  Research  2023:16                                                                                                                                  https://doi.org/10.2147/JPR.S399249                                                                                                                                                                                                                       813
+                                                                                                                                                                                             DovePress
+
+=== PDF PAGE 6 ===
+Pan  et  al                                                                                                                                                                                      Dovepress
+
+                                                        Table 1 Preoperative General Conditions Between Two Groups
+
+                                                                                 GroupT  (N=52)                  Group  C  (N=53)                   P
+
+                                                          ASA  (I/II)                     34/18                            36/17                  0.78
+                                                          Age  (Y)                      42.2±5.5                        43.2±6.3                  0.27
+                                                          Weight  (kg)                  58.5±7.9                        56.2±6.6                  0.11
+                                                          BMI  (kg/m2)                  23.2±2.8                        22.2±2.5                  0.06
+
+                                                        Abbreviations: BMI, means body mass index; ASA, means American Society of
+                                                        Anesthesiologists.
+
+
+
+                                           Table  2 Intraoperative  General  Conditions  in  Between  Two  Groups
+
+                                                                                             Group  T  (N=52)                Group  C  (N=53)                   P
+
+                                             Induction  Sufentanil  (ug)                            22.6±2.9                        21.6±2.7                  0.09
+                                             Induction  Propofol  (mg)                            116.0±15.4                       110.8±12.8                 0.06
+                                             Induction  Cisatracurium  (mg)                         11.4±1.5                        11.0±1.3                  0.15
+                                             Duration  Propofol  (mg)                            596.1±270.3                      611.0±232.2                 0.76
+                                             Duration  Remifentanil  (ug)                        740.1±276.9                      854.0±287.5                 0.04*
+                                             Bleeding  (mL)                                    20.0  (20.0,50.0)                20.0  (20.0,50.0)             0.57
+                                             Urine  volume  (mL)                             100.0  (56.3,200.0)              100.0  (50.0,150.0)             0.20
+                                             Liquid  (mL)                                   600.0  (500.0,600.0)             500.0  (500.0,600.0)             0.07
+                                             Time  of  anesthesia  (min)                      81.5  (63.5,113.8)               82.0  (67.5,103.5)             0.82
+                                             Time  of  operation  (min)                       75.5  (61.0,108.8)                73.0  (59.5,92.5)             0.47
+
+                                           Notes:  *Represents statistically  significant  differences  compared to  group.
+
+Intraoperative   Evaluation   Index   and   PACU   Evaluation   Index
+The incidence of propofol injection pain was significantly lower in Group T (Table 3). Group T also showed a lower incidence
+of sufentanil-induced cough response, although this was not statistically different. Several significant differences in hemody-
+namics         were         apparent         between         Groups         T      and         C         at         all         of         the         T0-T9         times         (Table         4).         The         frequency         of         intraoperative
+
+
+
+                                             Table      3 The      Incidence      of      Propofol      Injection      Pain      and      Sufentanil-Induced
+                                             Cough  in  the  Two  Groups
+
+                                                                                            Group  T  (N=52)                Group  C  (N=53)                  P
+
+                                               Propofol  injection  pain  (n,%)                      22  (42)                       43  (81)               0.00*
+                                               Incidence  of  cough  (n,%)                            5  (9)                        10  (19)                0.18
+
+                                             Notes:  *Represents statistically  significant  differences  compared  to  the  group  C.
+
+
+Table  4 Intraoperative  Hemodynamic  Comparison  Between  the  Two  Groups
+
+                          Time              T0                T1               T2               T3                T4               T5                T6               T7               T8                T9
+
+  MAP  (mmHg)           Group  T         95.2±9.6         71.8±9.6         71.3±8.9*         75.1±8.4         86.3±12.9        93.2±14.7         90.2±14.1        98.8±14.6         99.2±11.0        90.1±10.3
+                        Group  C        94.0±13.3         70.9±13.2         67.5±9.7         71.6±10.8        84.8±15.9        93.0±16.5         89.5±15.9        97.2±16.2         99.8±13.9        91.6±15.8
+  HR  (bpm)             Group  T        77.6±13.4         62.4±9.9          59.1±9.7         57.1±8.5         59.0±10.6         56.7±8.3          57.6±9.5        71.0±13.9         74.3±10.7        66.4±10.2
+                        Group  C        74.4±10.3         61.6±10.4         58.1±9.2         54.9±6.3          53.9±8.8         55.7±8.7         58.4±11.3        67.1±15.4         72.1±11.6         64.4±8.9
+  SaO2  (%)             Group  T         98.4±1.3         99.9±0.4         100.0±0.3         100.0±0.0        100.0±0.1        100.0±0.3         100.0±0.3        100.0±0.4         98.0±1.9          97.6±2.0
+                        Group  C         98.4±1.3         99.8±0.6         100.0±0.2         99.9±0.5         100.0±0.2         99.8±0.6          99.9±0.4         99.6±1.0         97.4±2.5          97.8±2.3
+  BIS                   Group  T         96.3±2.2         46.4±7.7          54.6±7.2         51.2±7.6          52.0±8.1         44.8±5.3         55.6±13.6         79.8±6.7         85.8±3.8          87.6±4.2
+                        Group  C         95.8±3.7         46.9±8.4         55.6±10.1         49.6±6.8          52.1±6.8         42.9±6.4         57.5±15.2         80.0±7.4         85.3±5.6          87.8±5.4
+
+Notes:  *Represents statistically  significant  differences  compared  to  the  group  C.
+Abbreviations:  MAP,  means  mean  arterial  pressure;  HR,  means  heart  rate;  SaO2,  means  arterial  oxygen  saturation;  BIS,  means  bispectral  index.
+
+
+
+814            https://doi.org/10.2147/JPR.S399249                                                                                                                                                                                                                                   Journal  of  Pain  Research  2023:16
+               DovePress
+
+=== PDF PAGE 7 ===
+Dove    press                                                                                                                                                                                       Pan  et  al
+
+                                        Table            5 The            Incidence            of            Intraoperative           Hemodynamic            Instability            and            the
+                                        Utilization  Rate  of  Vasoactive  Drugs  Were  Compared  in  the  Two  Groups
+
+                                                                                              Group  T  (N=52)                Group  C  (N=53)                  P
+
+                                          Intraoperative  hypotension  (n,%)                          10  (19)                        24  (45)                0.00*
+                                          Intraoperative  hypertension  (n,%)                         18  (34)                        23  (43)                0.36
+                                          Intraoperative  bradycardia  (n,%)                          23  (44)                        33  (62)                0.06
+                                          Intraoperative  tachycardia  (n,%)                            4  (7)                         8  (15)                0.23
+                                          Vasoactive  drug  (n,%)                                     17  (32)                        28  (53)                0.04*
+
+                                        Notes:  *Represents  statistically  significant  differences  compared to  the  group  C.
+
+
+                           Table  6 Comparison  of  Anesthesia  Indicators  and  the  Indicators  of  PACU  in  the  Two  Groups
+
+                                                                                                            Group  T  (N=52)               Group  C  (N=53)                  P
+
+                              Time  of  respiratory  recovery  (min)                                               10.2±2.7                       10.9±3.7                 0.22
+                              Time  of  conscious  (min)                                                           10.7±2.7                       11.3±3.8                 0.28
+                              Time  of  extubation  (min)                                                          11.4±3.0                       12.1±3.8                 0.27
+                              PACU  aldrete  score                                                                  8.8±0.8                        8.9±0.8                 0.79
+                              PACU  highest  NRS  score                                                              0  (0.1)                       0  (0.2)              0.00*
+                              PACU  retention  time  (min)                                                        50.9±20.9                      52.7±17.6                 0.62
+                              The  utilization  rate  of  remedial  drugs  in  PACU  (n,%)                          10  (19)                       18  (34)                0.09
+
+                           Notes:  *Represents  statistically  significant  differences  compared to  the  group  C.
+                           Abbreviations:  PACU,  means  postanesthesia  care  unit;  NRS,  means  numerical  rating  scale.
+
+
+hypotension   and   the   use   of   vasoactive   drugs   were   also   lower   in   Group   T   (Table   5).   No   significant   difference   was   observed
+between the two Groups for the anesthesia recovery index (Table 6). The maximum NRS score for Group T was significantly
+less    than    that    of    Group    C.    Remedial    drug    use    in    PACU    was    lower    in    Group    T,    but    this    was    not    significantly   different.   No
+significant  differences between  the  two  groups  were  seen  for  PACU  aldrete  score  and  retention  time  (Table  6).
+
+Postoperative   Recover y   Evaluation   Index
+The    NRS    score    while    in    the    mobile    state     was    significantly    lower    in    Group    T  at    1    hour    and    at    24    hours    after    operation
+(Table 7). Within the first 24 hours, vomiting was significantly less in Group T than in Group C. Analgesic and antiemetic
+drug  use  at  24  h  were  also   both  less  frequent  in  Group  T.  However,   these  did  not  reach  statistical  significance  (Table  7).
+Some         mild         and         moderate         abdominal        distension         was         recorded         for         Group         T         (Table         8),        but         this         was         not         significantly
+different  to  Group  C  (P  =  0.24).  Group  T  patients  had  significantly  shorter  times  for  first  postoperative  anal  exhaust  and
+solid   food   tolerance.   However,   the   times   for   first   postoperative   water   intake,   removal   of   the   catheter,   first   postoperative
+implantation  activity,  and  postoperative  hospitalization  were  not  statistically  different  between  the  two  Groups  (Table  9).
+
+
+                                            Table 7 Comparison of NRS, the Incidence of Vomiting and Utilization Rate
+                                            of  Analgesic  and  Antiemetic  Drugs  in  24h  Between  the  Two  Groups
+
+                                                                                     Group  T  (N=52)                  Group  C  (N=53)                  P
+
+                                               NRS  1h                                        2  (1.4)                          3  (2.4)                 0.04*
+                                               NRS  24h                                       2  (2.3)                          3  (3.4)                 0.00*
+                                               Vomiting  at  1h                                2  (4)                            3  (5)                  0.66
+                                               Vomiting  at  24h                              9  (17)                          19  (35)                  0.03*
+                                               Analgesic  drugs  (n%)                        19  (37)                          23  (43)                  0.47
+                                               Antiemetic  drugs  (n%)                       25  (48)                          34  (64)                  0.10
+
+                                            Notes:  *Represents statistically  significant  differences  compared to  the  group  C.
+                                            Abbreviations:  NRS,  means  numerical  rating  scale.
+
+
+
+
+Journal  of  Pain  Research  2023:16                                                                                                                           https://doi.org/10.2147/JPR.S399249                                                                                                                                                                                                                       815
+                                                                                                                                                                                    DovePress
+
+=== PDF PAGE 8 ===
+Pan  et  al                                                                                                                                                                                     Dovepress
+
+                                         Table  8 Abdominal  Distension  at  24h  After  Surgery  Between  Both  Groups
+
+                                                                        Grade 0          Grade 1           Grade 2          Grade 3           Grades  1–3 (%)
+
+                                           Group  T  (N=52)                 28                19                 5                0                      46
+                                           Group C (N=53)                   20                25                 8                0                      62
+
+
+
+
+                       Table  9 Postoperative  Gastrointestinal  Function  Recovery   Between  the  Two  Groups
+
+                                                                                                         Group  T  (N=52)                     Group  C  (N=53)                     P
+
+                          First  postoperative  anal  exhaust  time  (min)                             1020.0  (675.8,1278.0)               1210.0  (896.5,1427.0)              0.01*
+                          First  postoperative water  intake  time  (min)                                698.0  (389.8,900.5)                 698.0  (494.5,946.0)               0.33
+                          Frist  solid  food  tolerance  time  (min)                                   1207.5  (998.5,1414.5)              1328.0  (1133.5,1521.5)              0.02*
+                          Removing  the  catheter  time  (min)                                        1389.0  (1015.0,2505.3)              1375.0  (1148.5,2400.0)               0.76
+                          First  postoperative  implantation  activity  time  (min)                    1253.0  (992.8,1496.3)              1360.0  (1019.0,1526.0)               0.40
+                          The  postoperative  hospitalization  time  (Day)                                       4.1±2.3                              4.1±1.5                    0.88
+
+                       Notes:  *Represents statistically  significant  differences compared  to  group.
+
+
+                                               Table   10 Comparison   of   QoR-40   Recovery   Quality   Score   Scale   at   24h
+                                               Between  the  Two  Groups
+
+                                                                                       Group  T  (N=52)                 Group  C  (N=53)                   P
+
+                                                 Physical  comfort                            54.6±2.8                         52.3±3.6                  0.00*
+                                                 Emotional  state                             41.7±2.3                         39.7±2.9                  0.00*
+                                                 Physical  independence                       20.9±3.3                         20.4±3.1                  0.37
+                                                 Psychological  support                       32.5±2.3                         32.0±1.9                  0.19
+                                                 Pain                                         32.9±1.3                         32.0±1.5                  0.00*
+                                                 Total  score                                182.7±6.9                        176.4±7.1                  0.00*
+
+                                               Notes:  *Represents  statistically  significant  differences  compared to  group.
+
+
+At  24  hours  after  operation,  Group  T  had  significantly  higher  QoR-40  scores  for  physical  comfort,  emotional  state,  pain,
+and          total          score.          However,          no          significant          differences          were           observed          for          self-care          ability           and          psychological           support
+(Table    10).
+
+Discussion
+This   study   found    that   TEAS   was   associated   with   a   reduced    dosage   of   anesthetic,   better    hemodynamic   stability,   a   lower
+postoperative  pain   NRS   score,   reduced   incidence   of   postoperative   vomiting,   better   recovery   of   gastrointestinal   function,
+improved    quality    of    postoperative    recovery,    and    an    accelerated    recovery    process.
+      TEAS  is  a  non-invasive  operation  compared  to  traditional  electroacupuncture (EA).  The  stimulation  intensity is  more
+moderate,       stable       and       continuous,       and       similar       clinical       results       to       traditional       EA       can       be       obtained.18 A       large       number       of
+clinical   and   animal   studies   have   shown   numerous   beneficial   effects   of   TEAS,   and   there   is   now   consensus   both   at   home
+and abroad regarding the advantages of TEAS.19 However, the parameters and acupoints used for stimulation have varied
+in     different     studies.     In     the     present     study,     Hegu     (LI4),     Neiguan     (PC6),     Zusanli     (ST36)     and     Sanyinjiao     (SP6)     were     used
+(Figure  1).  Some  studies  have  reported  that  the  analgesic  effect  of  TEAS  derives  from  release  of  the  endogenous  opioids
+enkephalin,   β-endorphin,    and    dendorphine.20,21 The    analgesic    effect    obtained    from    high-frequency    (100    Hz)    EA    occurs
+after  the  release  of  dynorphins  from  the  central  nervous  system.  The  levels  of   endorphins  and  of  mandorphins  in  human
+CSF    both    increase    after    30    minutes    of    low    (2    Hz)    and    high    frequency    (100    Hz)    electroinjection.
+      TEAS        can        significantly        reduce        propofol         injection        pain        and        TEAS        may        activate        sympathetic         nerve        fibers,        inhibit
+inflammatory          mediators,          reduce          vascular           permeability          (directly          and           indirectly),          and          reduce          the          contact           opportunity
+
+
+816            https://doi.org/10.2147/JPR.S399249                                                                                                                                                                                                                                   Journal  of  Pain  Research  2023:16
+               DovePress
+
+=== PDF PAGE 9 ===
+Dove    press                                                                                                                                                                                      Pan  et  al
+
+between  propofol  and  peripheral nerves,  thus  lowering the  injection  pain. Moreover,  TEAS  is able  to  increase  the  patient
+pain          threshold          and          produce          a          reliable          endogenous          opioid          effect          by          inducing         the          central          release          of          multiple          opioid
+peptides.22 This  could  also  explain  why  the  highest  NRS  score  for  PACU,  as  well  as  postoperative  NRS  at  1  h  and  24  h,
+were    lower    in    Group    T    than    Group    C.
+     Endogenous       opioid       peptides       induced       by       TEAS       can       positively       and       negatively       regulate       blood       pressure       through       the
+blood pressure regulation zone. Central blood pressure regulation is somewhat related to the central analgesic mechanism
+of TEAS.23–25 The reduction in MAP at 2 min after intubation was less in Group T, whereas differences in intraoperative
+MAP,     HR,     oxygen     saturation,     and     BIS     between     the     two     groups     at     other     T0-T9     times     were     not     statistically     significant.
+However,         the         dosage         of         remifentanil         required         for         intraoperative         maintenance         was         reduced         by         about         15%         in         Group
+T relative  to  Group  C.  Intraoperative  hypotension  was  also  significantly  less  frequent  in  Group  T,  as  well  as  the  need  for
+vasoactive   drugs.   These   results   indicate   that   TEAS   plays   a   role   in   maintaining   the   stability   of   intraoperative   circulation,
+thus    reducing    the    need    for    drug    intervention.
+     LI4    and    PC6    have    been    shown    in    many    clinical    trials    to    reduce    the    incidence    of    PONV    (Postoperative    Nausea    and
+Vomiting).26–28            In     the    present     study,     Group     T  showed     less     frequent    vomiting     within     24    h     than     Group     C.    However,     the
+incidence   of   vomiting   within   1    h   was   not    significantly   different    between   the    two    groups,   possibly   because   preoperative
+antiemetic  drug  use  effectively  prevented  the  occurrence  of  early  postoperative  nausea  and  vomiting.  ST36  is  the  classic
+acupuncture       point      of       traditional      Chinese       medicine      used       in       the      treatment       of      gastrointestinal      diseases.       It      stimulates       the
+parasympathetic      nerve      and      improves      gastrointestinal      smooth      muscle      excitability,      gastrointestinal      microcirculation,      and
+intestinal    and    endocrine    function,    thereby    promoting   the    recovery    of    gastrointestinal   function.29–31                                            In   the    current    study,
+the    times    for    first    postoperative    anal    exhaust   and    postoperative    solid    food    tolerance    were    significantly    shorter    in    Group
+T    patients,    indicating    that    TEAS    promotes    the    recovery    of    gastrointestinal    function    after    surgery.
+     Previous   studies   found   that   TEAS   could   reduce   the   dosage   of   intraoperative   propofol   used   in   craniotomy   patients,32
+as        well        as       accelerating       analepsia.33  In       the        present       study,        however,        no       significant        differences        were        observed       between
+Groups T and C for the use of propofol, respiratory recovery time, anesthesia awake time, and tracheal catheter extraction
+time.    This    may    have    been    due    to    the    short    operation    time,    or    because    the    benefits    of    TEAS    are    acupoint-specific.
+     QoR-40  is  an  objective  measure  of  the  quality  of  anesthesia  and  of  postoperative  recovery,  and  has  been  widely  used
+to     evaluate     postoperative     rehabilitation.     It     consists     of     40     questions     and     provides     a     total     score     from     five     dimensions     of
+subitem    scores,    comprised    of    psychological    support,    physical    comfort,    emotional    status,    self-care    ability    and    pain.34–36
+This     study     indicates     that     TEAS     can     improve     the     quality     of     recovery     after     laparoscopic     myomectomy     and     concur     with
+those         of         Chen         et         al32 who         studied         patients         treated         with         gynecological         laparoscopic         surgery.         The         improvements         are
+probably due to the reduction of postoperative pain, a lower frequency of adverse reactions (nausea, vomiting, abdominal
+distension), reduced complications from high-dose opioid use, and improved patient satisfaction and comfort. In addition,
+it was easier for patients to turn over in bed, get out of bed, and to perform other activities after surgery, thus helping with
+gastrointestinal          recovery.          Postoperative          gastrointestinal          nutritional          support          can          be          carried          out          in          advance          to          further
+accelerate    the    recovery    of    patients.
+     In the current study, we evaluated patient recovery only within 24 h of surgery, and continuous postoperative recovery
+thereafter   was  not  assessed.   Nevertheless,   this   limitation   was  partially  compensated   by  observing   multiple   indicators  for
+each    patient,    which    is    likely    to    have    more    clinical    significance.
+
+Conclusion
+TEAS promotes rapid perioperative recovery of patients who undergo laparoscopic uterine myomectomy by reducing the
+incidence of postoperative complications. TEAS is a simple operation with no obvious toxic or side effects and with high
+economic    benefits,    thereby    justifying    its    wide    use    in    clinical    practice.
+
+Data   Sharing   Statement
+Once    received,    the    clinical    datasets    generated    during    and/or    analyzed    during    the    current    study    are    available   from    Junlu
+WANG    (wangjunlu973@163.com)    on    reasonable    request    within    6    months.
+
+
+
+Journal  of  Pain  Research  2023:16                                                                                                                          https://doi.org/10.2147/JPR.S399249                                                                                                                                                                                                                       817
+                                                                                                                                                                                    DovePress
+
+=== PDF PAGE 10 ===
+Pan  et  al                                                                                                                                                                                                            Dovepress
+
+Acknowledgment
+We       thank       all       the       individuals       who       contributed       to       this       study.       This       work       was       supported       by       the       National       Foundation       of
+Natural     Science     of     China     (No.81573742     and     82104622)     and     the     Wenzhou     Municipal     Science     and     Technology     Bureau
+(No:Y20180568),the    Yuhuan    Municipal    Science    and    Technology    Bureau    (No:Y202211).
+
+Disclosure
+The    authors    report    no    conflicts    of    interest    in    this    work.
+
+References
+
+  1. Styer   AK,   Rueda   BR.   The   epidemiology   and   genetics   of   uterine   leiomyoma. Best   Pract   Res   Clin   Obstet   Gynaecol. 2016;34:3–12.   doi:10.1016/j.
+      bpobgyn.2015.11.018
+  2. Lewis        TD,        Malik        M,        Britten        J,        et        al.        A        comprehensive        review        of        the        pharmacologic        management        of        uterine        leiomyoma. Biomed        Res        Int.
+      2018;2018:2414609.   doi:10.1155/2018/2414609
+  3. Takmaz   O,   Ozbasli   E,   Gundogan   S,   et   al.   Symptoms   and   health   quality   after   laparoscopic   and   robotic   myomectomy. JSLS. 2018;22:4.
+  4. Bhave   Chittawar   P,   Franik   S,   Pouwer   AW,   et   al.Minimally   invasive   surgical   techniques   versus   open   myomectomy   for   uterine   fibroids. Cochrane
+      Database   Syst   Rev. 2014;(10):CD004638.   doi:10.1002/14651858.CD004638.pub3
+  5. Buckley    VA,    Nesbitt-Hawes    EM,    Atkinson    P,    et    al.    Laparoscopic    myomectomy:    clinical    outcomes    and    comparative    evidence. J    Minim    Invasive
+      Gynecol. 2015;22(1):11–25.   doi:10.1016/j.jmig.2014.08.007
+  6. Suarez-Pierre     A,     Terasaki     Y,     Magruder     JT,     et     al.     Complications     of     CO     2     insufflation     during     endoscopic     vein     harvesting. J     Card     Surg. 2017;32
+      (12):783–789.   doi:10.1111/jocs.13249
+  7. Son        JS,        Oh        JY,        Ko        S.        Effects        of        hypercapnia        on        postoperative       nausea        and        vomiting        after        laparoscopic       surgery:       a        double-blind        randomized
+      controlled   study. Surg   Endosc. 2017;31(11):4576–4582.   doi:10.1007/s00464-017-5519-8
+  8. Saccardi   C,    Gizzo   S,   Vitagliano   A,   et   al.   Peri-incisional   and   intraperitoneal   ropivacaine   administration:   a   new   effective   tool   in   pain   control   after
+      laparoscopic  surgery  in  gynecology:  a  randomized  controlled  clinical  trial. Surg  Endosc. 2016;30(12):5310–5318.  doi:10.1007/s00464-016-4881-2
+  9. Kwack JY, Ahn KH, Kwon YS. Postoperative pain control with ropivacaine following laparoscopic myomectomy: a randomized double-blind, pilot
+      study. J   Obstet   Gynaecol   Res. 2019;45(4):871–876.   doi:10.1111/jog.13910
+10. Han            JS,            Ho            YS.            Global            trends            and            performances            of            acupuncture            research. Neurosci            Biobehav            Rev. 2011;35(3):680–687.            doi:10.1016/j.
+      neubiorev.2010.08.006
+11. Hou      Y,      Yan      Q,      An      H,      et      al.      The      use      and      protective      effects     of      transcutaneous      electrical      acupoint      stimulation      during      abdominal      surgery:      study
+      protocol   for   a   multicenter   randomized   parallel   controlled   trial. Trials. 2019;20(1):462.   doi:10.1186/s13063-019-3558-2
+12. Grech     D,     Li     Z,     Morcillo     P,     et     al.     Intraoperative     low-frequency     electroacupuncture     under    general     anesthesia     improves     postoperative     recovery     in
+      a   randomized   trial. J   Acupunct   Meridian   Stud. 2016;9(5):234–241.   doi:10.1016/j.jams.2016.03.009
+13. Chen L, Tang J, White PF, et al. The effect of location of transcutaneous electrical nerve stimulation on postoperative opioid analgesic requirement:
+      acupoint   versus   nonacupoint   stimulation. Anesth   Analg. 1998;87(5):1129–1134.
+14. Mo    Y,    Zhang    A,    Zheng    B,    et    al.                                                                          [Effect   of   transcutaneous    electrical    acupoint    stimulation    on    gastric
+      emptying   in   patients   undergoing   surgery]. Zhongguo   Zhen   Jiu. 2017;37(12):1261–1264.   Chinese.   doi:10.13703/j.0255-2930.2017.12.002
+15. Wang    JL,    Ren    QS,    Pei    SL.                                                                                                  [Effect    of    transcutaneous    acupoint    electrical    stimulation    on
+      brain   oxygen   and   glucose   metabolism   in   the   perioperative   period   of   the   craniocerebral  operation]. Zhongguo   Zhong   Xi   Yi   Jie   He   Za   Zhi. 2008;28
+      (3):201–205.   Chinese.
+16. Shan    JG,     Xue    S,    Xu    G-X,    et    al.                                                                                             [Effects    of    acupuncture-drug    compound    anesthesia    on
+      perioperative   inflammatory   factors   in   patients   undergoing   cardiac   surgery]. Zhongguo   Zhen   Jiu. 2010;30(7):585–588.   Chinese.
+17. Lin           SY,           Yin           Z-L,           Gao           J,           et           al.                                                                   TNF-α、        IL-1β、       IL-6                [Effect           of
+      acupuncture-anesthetic    composite    anesthesia    on    the    incidence    of    POCD    and    TNF-alpha,    IL-1beta,    IL-6    in    elderly    patients]. Zhongguo    Zhong    Xi
+      Yi   Jie   He   Za   Zhi. 2014;34(7):795–799.   Chinese.
+18. Gao          YQ,          Jia          Q,          Xie          S,          et          al.                                                                          [Clinical          trials          for          thyroidectomy          under
+      acupuncture-aided    anesthesia     by    using     electroacupuncture    or    transcutaneous    acupoint    electrical    stimulation     of    different    acupoints]. Zhen    Ci    Yan
+      Jiu. 2017;42(4):332–337.   Chinese.
+19. Wu  MS,  Chen  K-H,  Chen  I-F,  et  al.  The  efficacy  of  acupuncture  in  post-operative  pain  management:  a  systematic  review  and  meta-analysis. PLoS
+      One. 2016;11(3):e0150367.   doi:10.1371/journal.pone.0150367
+20. Mayor    D.     An     exploratory    review     of     the    electroacupuncture     literature:     clinical     applications     and     endorphin    mechanisms. Acupunct     Med. 2013;31
+      (4):409–415.   doi:10.1136/acupmed-2013-010324
+21. Jiang QY, Wang M-Y, Li L, et al. Electroacupuncture relieves labour pain and influences the spinal dynorphin/kappa-opioid receptor system in rats.
+      Acupunct   Med. 2016;34(3):223–228.   doi:10.1136/acupmed-2015-010951
+22. Huang L, Pan Y, Chen S, et al. Prevention of propofol injection-related pain using pretreatment transcutaneous electrical acupoint stimulation. Turk
+      J   Med   Sci. 2017;47(4):1267–1276.   doi:10.3906/sag-1611-35
+23. Yu       HC,       Geng       WJ,       Tang       HL.                                                                                                                       [Preventive       effect       of       transcutaneous
+      electro-acupuncture on  the  intratracheal  extubation  stress  response  in  general anesthesia  of  patients  with  breast  cancer  undergoing modified  radical
+      mastectomy]. Zhongguo   Zhong   Xi   Yi   Jie   He   Za   Zhi. 2009;29(11):990–992.   Chinese.
+24. Wu   JC,   Ziea   ET,   Lao   L,   et   al.   Effect   of   electroacupuncture   on   visceral   hyperalgesia,   serotonin   and   fos   expression   in   an   animal   model   of   irritable
+      bowel   syndrome. J   Neurogastroenterol   Motil. 2010;16(3):306–314.   doi:10.5056/jnm.2010.16.3.306
+25. Min Y, Zhu Y, Zhou H, et al.                                                                                                                                [Clinical research of lung resection surgery with
+      microinjection  acupuncture   and   drug   anesthesia  instead   of   traditional  acupuncture   anesthesia]. Zhongguo  Zhen   Jiu. 2015;35(4):367–371.   Chinese.
+
+
+818              https://doi.org/10.2147/JPR.S399249                                                                                                                                                                                                                                   Journal  of  Pain  Research  2023:16
+                 DovePress
+
+=== PDF PAGE 11 ===
+Dove     press                                                                                                                                                                                                        Pan  et  al
+
+
+26. Kim KH, Kim DH, Bae JM, et al. Acupuncture and PC6 stimulation for the prevention of postoperative nausea and vomiting in patients undergoing
+     elective        laparoscopic       resection       of       colorectal       cancer:       a        study       protocol       for       a       three-arm       randomised       pilot        trial. BMJ       Open. 2017;7(1):e013457.
+     doi:10.1136/bmjopen-2016-013457
+27. Li    QW,   Yu   M-W,    Yang   G-W,    et   al.   Effect    of   acupuncture   in   prevention   and   treatment   of   chemotherapy-induced   nausea   and   vomiting   in   patients
+     with   advanced   cancer:   study   protocol   for   a   randomized   controlled   trial. Trials. 2017;18(1):185.   doi:10.1186/s13063-017-1927-2
+28. Sridharan       K,       Sivaramakrishnan       G.       Interventions       for      treating       nausea       and       vomiting      in       pregnancy:       a       network      meta-analysis       and       trial      sequential
+     analysis   of   randomized   clinical   trials. Expert   Rev   Clin   Pharmacol. 2018;11(11):1143–1150.   doi:10.1080/17512433.2018.1530108
+29. Wu  GJ,  Xu  F,  Sun  XM,  et  al.  Transcutaneous  Neuromodulation  at  ST36  (Zusanli)  is  more  effective  than  transcutaneous  tibial  nerve  stimulation  in
+     treating   constipation. J   Clin   Gastroenterol. 2019;54(6):536–544.
+30. Chao   HL,  Miao  S-J,  Liu  P-F,  et  al.  The  beneficial  effect  of  ST-36  (Zusanli)  acupressure  on  postoperative  gastrointestinal  function  in   patients  with
+     colorectal   cancer. Oncol   Nurs   Forum. 2013;40(2):E61–8.   doi:10.1188/13.ONF.E61-E68
+31. Lee  CH,  Kim  DK,  Yook  TH,  et  al.  Effectiveness  of  electroacupuncture  at  Zusanli  (ST36)  on  the  immunohistochemical  density  of  enteroendocrine
+     cells   related   to   gastrointestinal   function. J   Acupunct   Meridian   Stud. 2012;5(2):63–71.   doi:10.1016/j.jams.2012.01.002
+32. Chen  B, Zhang F, Zhang  J, et  al.  Effect  of acupuncture on  quality of  recovery during early  period after gynecological  laparoscopic surgery: quality
+     of   Recovery-40   questionnaire. Chin   Asian   J   Anesthesiol. 2015;   12:   1428–1430
+33. Mi   Z,   Gao  J,  Chen   X,  et   al.  Effects  of  transcutaneous   electrical  acupoint  stimulation  on  quality  of   recovery  during   early  period  after   laparoscopic
+     cholecystectomy. Zhongguo   Zhen   Jiu. 2018;38(3):256–260.   doi:10.13703/j.0255-2930.2018.03.007
+34. Myles    PS,    Weitkamp    B,    Jones    K,    et    al.    Validity    and    reliability    of    a    postoperative    quality    of    recovery    score:    the    QoR-40. Br    J    Anaesth. 2000;84
+     (1):11–15.   doi:10.1093/oxfordjournals.bja.a013366
+35. Gornall    BF,    Myles    PS,    Smith    CL,    et    al.    Measurement    of    quality    of    recovery    using    the    QoR-40:    a    quantitative    systematic    review. Br    J    Anaesth.
+     2013;111(2):161–169.   doi:10.1093/bja/aet014
+36. Guimaraes-Pereira L, Costa M, Sousa G, et al. Quality of recovery after anaesthesia measured with QoR-40: a prospective observational study. Braz
+     J   Anesthesiol. 2016;66(4):369–375.   doi:10.1016/j.bjane.2014.11.010
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       Journal   of   Pain   Research                                                                                                                                                            Dove          press
+       Publish your   work   in   this   journal
+
+       The  Journal  of  Pain  Research  is  an  international,  peer  reviewed,  open  access,  online  journal  that  welcomes  laboratory  and  clinical  findings  in  the
+       fields     of     pain     research     and     the     prevention     and     management     of     pain.     Original     research,     reviews,     symposium     reports,     hypothesis     formation     and
+       commentaries     are     all     considered     for     publication.     The     manuscript     management     system     is     completely     online     and     includes     a     very     quick     and     fair
+       peer-review    system,    which   is    all    easy   to    use.   Visit    http://www.dovepress.com/testimonials.php   to    read    real   quotes    from   published   authors.
+
+       Submit  your  manuscript  here: https://www.dovepress.com/journal-of-pain-research-journal
+
+
+
+Journal  of  Pain  Research  2023:16                                                                                                                                                                 DovePress                                                                                                                         819

@@ -1,0 +1,966 @@
+=== PDF PAGE 1 ===
+Journal    of    Pain    Research
+
+
+
+
+    Open  Access  Full  Text  Article                                                                                                             ORIGINAL RESEARCH
+Effects     of     Transcutaneous     Electrical     Acupoint
+Stimulation     on     Recover y     After     Gynecological
+Laparoscopic     Surger y:     A     Randomized,
+Single-Blind,     Controlled     Trial
+
+Jia Zheng         1, Huipeng Zhou                  2, Yugang Diao               1, Pei Song          1, Zhuo Yi           1, Xuewei Guo                 1, Lin Li      1
+
+
+
+1Department  of  Anesthesiology,  General  Hospital  of  Northern  Theater  Command,  Shenyang,  110016,  People’s  Republic  of  China;                                         2Department  of
+Anesthesiology,  The  964TH  Hospital  of  Chinese  People’s  Liberation  Army  Joint  Logistics  Support  Force,  Changchun,  130000,  People’s  Republic  of
+China
+
+Correspondence: Lin  Li,  Department  of  Anesthesiology,  General  Hospital  of  Northern  Theater  Command,  No.  83,  Wenhua  Road,  Shenhe  District,
+Shenyang,  110016,  People’s  Republic  of  China,  Tel  +86  13304042711,  Email  lilinslashofmine@qq.com
+
+
+Purpose: Gynecological laparoscopic surgery is a common minimally invasive procedure, but postoperative recovery quality remains
+an important clinical concern. This study aimed to evaluate the effects of transcutaneous electrical acupoint stimulation (TEAS) on the
+quality    of   recovery   in   patients   undergoing    gynecological   laparoscopic   surgery.
+Patients  and  Methods: In   this   prospective,   randomized,   single-blind,   controlled   trial,   patients   scheduled   for   gynecological   laparo-
+scopic   surgery   under   general   anesthesia   at   a   tertiary   hospital   in   China   between   April   and   December   2022   were   enrolled.   Participants
+were  randomized into the  TEAS  group and the control  group. In  the TEAS  group, bilateral stimulation  of Neiguan,  Zusanli,  and Hegu
+acupoints was initiated 30 minutes before anesthesia induction and maintained until the end of surgery. In the control group, electrodes
+were     applied     without     electrical     stimulation     (sham     procedure).     The     primary     outcome     was     the     incidence     of     postoperative     nausea     and
+vomiting       (PONV)       within       24       hours.       Secondary       outcomes       included       the       Quality       of       Recovery-40       (QoR-40)       scores,       Pittsburgh       Sleep
+Quality   Index   (PSQI)   scores,   pain   intensity   assessed   by   numerical   rating   scale   (NRS),   and   patient-controlled   analgesia   (PCA)   usage.
+Results: A  total  of   85  patients  completed   the  study  (TEAS  group,  n=42;  control  group,  n=43).  The  incidence   of  24-hour  PONV  was
+significantly        lower        in        the        TEAS        group        compared        to        the        control        group        (42.9%        vs        67.4%,        P=0.023).        QoR-40        scores        at        48        hours
+postoperatively  were  significantly  higher  in  the  TEAS  group  (P<0.001).  Additionally,  the  TEAS  group  exhibited  lower  blood  glucose
+levels   30   minutes   after   skin   incision   (P=0.045),   reduced   intraoperative   remifentanil   consumption   (P=0.031),   fewer   total   and   effective
+PCA    demands   (P=0.004    and   P=0.039,   respectively),   and   earlier   recovery   of   gastrointestinal   function   (all   P<0.05).
+Conclusion: Perioperative TEAS effectively reduces the incidence of early postoperative nausea and vomiting and enhances recovery
+quality            in            patients            undergoing            gynecological            laparoscopic            surgery,            but            the            improvements            in            QoR-30            scores            were            statistically
+significant    but    not    clinically    significant.    These    benefits    may    be    attributed    to    attenuated    stress    responses,    improved    sleep    quality,    and
+decreased   analgesic   requirements.
+Keywords:          laparoscopic         surgery,         gynecological        surgery,        transcutaneous         electrical         acupoint        stimulation,         postoperative        recovery,
+postoperative   nausea   and   vomiting
+
+
+Introduction
+Laparoscopic    surgery    in    gynecology    presents    numerous    advantages    over    traditional    open    surgical    techniques,    including
+smaller     incisions,     expedited      recovery,     and     diminished     postoperative     pain.1,2 Despite      its     minimally     invasive      nature     and
+associations with reduced blood loss and shorter hospital stays, laparoscopic surgery may induce physiological alterations
+in   the   body   owing   to   the   establishment   of   artificial   pneumoperitoneum   and   intraoperative   positional   changes,  which   can
+lead           to           adverse           reactions.3,4 These           adverse           reactions           encompass           pain,           bleeding,           infection           or           fever,           gastrointestinal
+dysfunction,           and           anesthesia-related           effects           such           as           dizziness,           headache,           and           drowsiness,           all           of           which           may           hinder
+
+
+                                                             Journal  of  Pain  Research  2025:18  6449–6462                                                                                  6449
+                                                                              © 2025 Zheng et al. This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.
+                                                                              php and incorporate the Creative Commons Attribution – Non Commercial (unported, v4.0) License (http://creativecommons.org/licenses/by-nc/4.0/). By accessing the
+                                                             work you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For
+                                                             permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).
+
+=== PDF PAGE 2 ===
+Zheng  et  al
+
+rehabilitation             and             prolong             hospitalization.5,6     Among              gynecological             patients             presenting             with              high-risk             factors,             the
+incidence of postoperative nausea and vomiting (PONV) can ascend to 70% to 80%, with postoperative pain, drowsiness,
+and  fatigue  reported  in  45%,  42%,  and  21%  of  patients,  respectively.7,8 The  discontinuation  of  analgesic  treatment  often
+arises from inadequate  efficacy  or  the  emergence  of side  effects,  thereby  increasing  the  demand  for non-pharmacological
+alternative    analgesic    approaches.
+      Transcutaneous  electrical  acupoint  stimulation  (TEAS)  is  a  technique  that  integrates  principles  of  traditional  Chinese
+acupuncture     with      transcutaneous     nerve      electrical      stimulation,     administering      specific      pulse      currents     through      the      skin      at
+designated           acupuncture           points.9           TEAS           is           characterized           by           its           ease           of           use,           safety,           non-invasive           nature,           and           broad
+acceptance  and   application   across   various   medical   disciplines,   including  obstetrics,   gynecology,   gastrointestinal   surgery,
+and          oncology.10,11         The          technique          has          demonstrated          efficacy          as          an          adjunct          to          perioperative          sedation          and          analgesia,
+contributing to reduced anxiety, alleviation of the stress response, mitigation of PONV, and enhancement of postoperative
+cognitive function.11–14 A recent meta-analysis found that TEAS significantly reduced postoperative pain and opioid use,
+with        signals        toward        reducing        PONV,        although        heterogeneity        was        substantial.15                    More        recently,        Szmit        et        al10 system-
+atically     reviewed     22     RCTs     and     confirmed     perioperative     benefits     for     PONV and     pain     reduction,     but     highlighted     metho-
+dological   variability   and   small   sample   sizes.   Nevertheless,   there   remains   a   lack   of   high-quality   evidence   to   evaluate   the
+impact    of    TEAS    on    the    recovery    duration    of    patients    undergoing    gynecological    laparoscopic    surgery.    Although    several
+drugs   can   be   used   to   improve   the   quality   of   recovery,   non-pharmacological   approaches   could   be   useful   as   an   adjunct   to
+pharmacological    therapy,    when    there    are    drug    interaction    issues,    or    to    decrease    opioid    use.
+      Consequently,          the          present          study          aims          to          investigate          the          effect          of          TEAS          on          the          quality          of          recovery          in          patients
+undergoing   gynecologic   laparoscopic   surgery.   The   findings   are   expected   to   inform   the   potential   role   of   TEAS   as   a   non-
+pharmacological adjunct for improving postoperative outcomes and minimizing perioperative complications. The present
+trial   specifically   evaluates   TEAS   within   gynecological   laparoscopy   and   extends   outcomes   to   validated   recovery   indices,
+addressing    a    gap    in    prior    evidence.
+
+Materials   and   Methods
+Study   Design   and   Participants
+This    prospective,    randomized,    single-blind,    controlled    trial    was    conducted    at    the    Northern    Theater    General    Hospital    of
+the  People’s  Liberation  Army  of  China  between  April  and  December  2022.  Patients  scheduled  to  undergo  gynecological
+laparoscopic    surgery    under   general    anesthesia    were    screened    for    eligibility.
+      Inclusion      criteria      were      as      follows:      (1)      age      between      18      and      65      years,      (2)      body      mass      index      (BMI)      between      18      and
+30      kg/m2,      and      (3)      American       Society      of      Anesthesiologists      (ASA)      physical      status      classification      I–II.      Exclusion      criteria
+included:   (1)   presence   of   rash   or   infection   at   the   acupoint   stimulation   sites;   (2)   long-term   use   of   sedatives   or   analgesics
+(ie,           regular           use           for           >3           months           of           any           benzodiazepines,           non-benzodiazepine           sedatives,           opioids,           non-steroidal           anti-
+inflammatory      drugs      (NSAIDs),      or     gabapentinoids);      (3)      history      of      substance      abuse;      (4)      diabetes      mellitus;      (5)      impaired
+hepatic     or     renal     function;     (6)     cognitive      impairment;     (7)     severe      cardiovascular     disease;     (8)      history     of     chronic     pain;     (9)
+prior        experience        with        acupoint        stimulation        therapy;        (10)        presence        of        a        pacemaker;        and        (11)        participation        in        another
+clinical  trial  within  the  preceding  three  months.  Participants  were  withdrawn  from  the  study  if  there  was  a  change  in  the
+surgical  plan,  if  the  duration  of  surgery  exceeded  three  hours,  or  if  postoperative  transfer  to  the  intensive  care  unit  (ICU)
+was    required.
+      The        study        protocol        adhered        to        the        principles        outlined        in        the        Declaration        of        Helsinki        and        Good        Clinical        Practice
+guidelines.     Ethical    approval     was     obtained     from    the     Ethics     Committee    of     the     Northern    Theater     General     Hospital     of    the
+People’s          Liberation          Army          of          China          (Approval          No.          Y(2021)138).          Written          informed          consent          was          obtained          from          all
+participants      or      their      legal      representatives      prior      to      enrollment.      The      trial      was      registered      with      the      Chinese      Clinical      Trial
+Registry (Registration No. ChiCTR2200058283), and the full trial details are publicly available at https://www.chictr.org.
+cn/showproj.html?proj=166185.        The         full        study         protocol        is         available        from         the         corresponding        author         upon        reasonable
+request.
+
+
+6450            https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 3 ===
+                                                                                                                                                                                                          Zheng  et  al
+
+Randomization   and   Blinding
+Prior to surgery, a research staff member not involved in the trial’s implementation generated the randomization sequence
+using                a                computer-based                random                number               generator.                The                random                allocation                in                this                study                was                performed                using
+a         computerized        random        number        generator.        A         third-party         statistician        not         involved        in         participant        enrollment         used        the
+random   number  generation   function   of   SPSS.   A   fixed   seed   number   (eg,   12345)   was   preset   to   generate   random   numbers
+ranging  between  0  and  1.  Participants  with  a  random  number  ≤0.5  were  assigned  to  the  experimental  group,  while  those
+with  a  random  number  >0.5  were  allocated  to  the  control  group,  ensuring  a  1:1  ratio  between  the  two  groups.  The  group
+assignments  were  concealed  in  sequentially  numbered,  opaque,  sealed  envelopes,  which  were  opened  only  at  the  time  of
+anesthesia   induction.   At  that   point,  the   designated  operators   were  informed   of   the  group   allocation   and  administered  the
+corresponding    interventions.    All    participants    and    outcome    assessors    remained    blinded    to    group    assignments    throughout
+the    study.    The    anesthesiologists    performing    the    intervention    were    not    involved    in    data    collection    or    analysis.    Although
+the         anesthesiologists         were         unblinded         due         to         the         nature         of         the         intervention,         all         outcome         assessors         and        data         analysts
+remained    blinded    to    minimize    performance    and    detection    bias.
+
+Inter vention
+All interventions were performed by a licensed acupuncturist with internationally recognized certification and 5–10 years
+of     clinical     experience.     In      accordance     with     traditional     Chinese     medicine     principles     and     anatomical     landmarks,     bilateral
+Neiguan,     Zusanli,     and     Hegu     acupoints     were     selected     for     TEAS.     Stimulation     was     administered     for     30     minutes     prior     to
+anesthesia       induction       using       disposable       silicone       electrodes.       TEAS       was       delivered       with       a       Huatuo       electronic       acupuncture
+device   (SDZ-V   model,   Suzhou   Medical   Devices   Co.,   Ltd.,   Suzhou,   China).   The   device   was   set   to   a   frequency   of   2/100
+Hz    for    sparse   and    dense    wave   stimulation,   with    the    intensity    gradually   increased   from   6   mA    to    the   maximum    tolerable
+level    for    the    participant,    not    exceeding    15    mA.    The    stimulation    aimed    to    induce    slight    muscle    twitching,    achieving    the
+optimal    “De    Qi”    sensation.    Electrical    stimulation    was    terminated    at    the    end    of    anesthesia.
+      In   the  control   group,   identical   electrodes   were   applied  and   connected   to  the   device,   but  no   electrical   stimulation   was
+delivered. After 30 minutes, anesthesia induction proceeded as planned. To maintain blinding, participants were informed
+preoperatively          that          they          might          or          might          not          experience          electrical          stimulation.          Regardless          of          group          assignment,          all
+participants         were         asked         three         times         if         they         tolerated         the         stimulation,         ensuring         that         they         remained         unaware         of         their
+group    allocation    and    were    blinded    to    the    intervention.
+
+Anesthesia   and   Perioperative   Management
+All    participants   fasted    for    8    hours   and    refrained    from   liquid    intake    for    4   hours    prior   to   surgery.   Standard   intraoperative
+monitoring     included     electrocardiogram     (ECG),     heart     rate     (HR),     pulse     oximetry     (SpO2),     invasive     blood     pressure     (IBP),
+bispectral    index    (BIS),    and    body    temperature.    Following    a    5-minute    rest    period,    the    mean    arterial    pressure    (MAP)    was
+recorded    as    the    baseline    (MAP0).
+      After          anesthesia          induction,          bilateral          TAP          blocks          were          performed          under          ultrasound          guidance.          The          patients          were
+positioned      supine      with      abdominal      skin      disinfected.      The      ultrasound      transducer      was      placed       between      the      iliac      crest      and
+subcostal       margin       along       the       midaxillary       line       for       axial       scanning       to       identify       the       external       oblique,       internal       oblique,       and
+transversus      abdominis      muscles.      Using      an      in-plane      ultrasound      technique,      the      needle      was      advanced      to      the      fascial      plane
+between     the     internal     oblique     and     transversus     abdominis     muscles,     with     15     mL     of     0.375%     ropivacaine     injected     on     each
+side.
+      Anesthesia      induction      was      performed      using      sufentanil      0.15      µg/kg,      rocuronium      0.6      mg/kg,      and      propofol      2.0      mg/kg.
+Anesthesia      maintenance      was      performed      using      propofol      infusion      at      4–8      mg/kg/h,      remifentanil      at      0.6–1.0      µg/kg/h,      and
+sevoflurane inhalation. Sevoflurane is a risk factor for PONV;16 therefore, the MAC was set at 0.3 with a concentration of
+1%-2%. This balanced anesthesia technique was employed to minimize sevoflurane exposure and thereby reduce the risk
+of   PONV,   while   ensuring   adequate   depth   of   anesthesia   as   monitored   by  BIS.   The   infusion  rate   of   propofol  was   adjusted
+to  ensure  the  depth  of anesthesia  at  BIS  of  40–60.  If  the  anesthesia  was  too  deep  or  too  shallow  during  the  operation,  the
+participant     exited     the    trial.     The     remifentanil     infusion     rate    was     adjusted     to     maintain    MAP     within     20%     of     MAP0.     When
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                   https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                   6451
+
+=== PDF PAGE 4 ===
+Zheng  et  al
+
+MAP was <25% of MAP0, 40 µg of phenylephrine (HR ≥50 bpm) or 3 mg of ephedrine (HR <50 bpm) was administered.
+When   MAP    was   ≥25%    of   MAP0,   5    mg    of   urapidil    was    administered.   When    HR   was    ≤40   bpm,    0.5    mg    of   atropine    was
+administered.     If     the     surgery     duration     exceeded     1     hour,     an     additional     0.15     mg/kg     of     rocuronium     bromide     was     adminis-
+tered.  At  the  beginning  of  suturing,  an  intravenous  infusion  of  ondansetron  8  mg  and  flurbiprofen  ester  50  mg  was  given
+for      prophylactic      antiemetic      and      analgesic      purposes.      At      the      end      of      suturing,      a      patient-controlled      intravenous      analgesia
+(PCIA)     pump     (sufentanil     2     µg/kg     +     0.9%     sodium     chloride)     was     established.     The     flow     rate     was     2     mL/h,     with     a     single
+additional      dose      of      0.5      mL      after      pressing      and      a      lock      time      of      15      minutes.      The      participant      was      transferred      to      the      post-
+anesthesia    care    unit    (PACU)    for    observation    after    tracheal    tube    removal.
+      The  opioid-sparing  regimen  was  deliberately  designed  based on  three key  pharmacological  principles. (1)  Synergistic
+effects       of        multimodal       anesthesia:        Remifentanil        was       combined       with       sevoflurane       (1–2%)        and        propofol       (4–8       mg/kg/h),
+allowing  significant  opioid  reduction.  Volatile  anesthetics  reduce  remifentanil  EC50 by  >40%.17,18 (2)  Procedure-specific
+requirements:    Gynecologic    laparoscopy    involves    moderate    surgical    stress    (compared    to    open    surgery).    The    dose    aligns
+with           enhanced           recovery           after           surgery           (ERAS)           guidelines           for           minimally           invasive           procedures.           (3)           Adjunct           regional
+analgesia:   All    patients   received   bilateral    TAP    blocks    with    0.375%   ropivacaine,   providing    somatic   analgesia   that    further
+reduced    opioid    demand.
+
+Outcomes
+The      primary      outcome      was      the      incidence      of      PONV      within      the      first      24      hours      after      surgery.      PONV  events      were      further
+categorized       based        on       postoperative       periods:       0–2       hours,        2–4        hours,       4–6        hours,        and       6–24        hours.        Secondary       outcomes
+included the Quality of Recovery-40 (QoR-40) score, Pittsburgh Sleep Quality Index (PSQI), postoperative pain assessed
+via the Numeric Rating Scale (NRS), total and effective patient-controlled intravenous analgesia (PCIA) usage, incidence
+of    gastrointestinal    function    recovery,    adverse    events,    time    to    first    flatus,    and    length    of    hospital    stay.
+      Nausea    was    defined    as    a    subjective    unpleasant    sensation    in    the    epigastrium    accompanied    by    an    involuntary    urge    to
+vomit.      Vomiting      was      defined      as      sustained,      forceful      contraction      of      abdominal      muscles      with      either      expulsion      of      gastric
+contents    or    retching    (without    content    expulsion)    occurring    ≥2    times    within    5    minutes.    It    was    clarified    in    the    Methods.
+      The      QoR-40,      a     well-established      tool     in      clinical     research,      was      used     to      assess     recovery      quality     due      to     its      reliability,
+validity,        and        responsiveness.19             The        QoR-40        consists        of        40        items        across        five        dimensions,        each       rated        on        a        1–5        scale,
+yielding      a      total      score      range      of      40–200,      with      higher      scores      indicating      better      recovery      quality.20                  The      NRS,      an      11-point
+scale      ranging      from      0      (no      pain)      to      10      (worst      pain      imaginable),      was      utilized      to      assess      pain      intensity.      The      PSQI,      which
+evaluates   sleep   quality,   consists   of   seven   components,   each   rated    on   a   scale    from   0   to   3,   yielding   a   total   score   range   of
+0–21,    with    higher    scores    indicating    poorer    sleep    quality.
+      Additional    perioperative    parameters    were    recorded,    including    MAP    and    HR    at    the    following    time    points:    preopera-
+tively    (T0),    at    intubation    (T1),    at    skin    incision    (T2),    after    pneumoperitoneum    establishment    (T3),    at    the    end    of    surgery
+(T4),  and  5  minutes  post-extubation  (T5).  Other  perioperative  factors,  such  as  anesthesia  duration,  recovery  time,  PACU
+stay,       blood       loss,       and       anesthesia        drug       consumption,       were       also       documented.       Biochemical       measures       included       glycemia
+30  minutes  post-skin  incision.  The  time  to  first  flatus  was  the  time  between  the  end  of  surgery  and  the  first  stools  passed
+by    the    participants.
+
+Sample   Size
+Based on the literature, the incidence of PONV in patients undergoing gynecological laparoscopic surgery within the first
+24 hours is approximately 66.7%,21 which was used as the reference value for the control group. It was hypothesized that
+TEAS    could    lead    to    an    absolute    reduction    in    the    incidence    of    PONV    by    30%,    with    a    clinically    significant    reduction    of
+20%.22        The        assumed        30%        absolute        reduction        in        PONV      incidence        was        based        on        a        previous        RCT     showing        that        non-
+pharmacologic       interventions       combined       with       antiemetics       can       achieve       such       an       effect       in       a       similar       patient       population.22
+Assuming   a   two-sided   confidence   level   of   95%   (α   =   0.05)   and   a   statistical   power   of   80%   (β   =   0.2),   the   required   sample
+size  was  calculated  using  G*Power  software.  The  results  indicated  40  participants  per group  (80  in  total).  To  account  for
+a       10%       dropout       rate,       4       additional       participants       were       added       to       each       group,       resulting       in       a       final       target       enrollment       of        44
+participants    per   group    (88    in    total).
+
+
+6452            https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 5 ===
+                                                                                                                                                                                                   Zheng  et  al
+
+Statistical   Analysis
+Data       analysis       was       performed       using       SPSS       version       26.0      (Armonk,       NY,       USA).       Continuous       variables       were      assessed       for
+normality     using     the    Shapiro–Wilk     test.     For    normally     distributed    continuous    variables,     data    were    expressed    as     means    ±
+standard   deviations   (SDs),  while   non-normally  distributed  variables   were  presented   as   medians  with   interquartile  ranges
+(IQRs).         Comparisons         between         groups         for         normally         distributed         continuous         variables         were         conducted         using         the         two-
+sample t-test,     assuming     equal     variance.     Welch’s t-test     was     applied     for     comparisons     when     variances     were     unequal.     For
+non-normally      distributed      continuous      variables,      the      Wilcoxon      rank-sum      test      was      employed.      Categorical      variables      were
+presented       as       frequencies       (n)       and       percentages       (%).       Differences       between       categorical       variables       in       the       two       groups       were
+analyzed    using    the    chi-squared    test    or    Fisher ’s    exact    test,    as    appropriate.
+      The   primary   outcome   was   assessed   using   generalized   estimating   equations   (GEE),   with   the   identification   number   as
+the   clustering   variable,   time   as   the   within-subject   variable,   and   the   occurrence   of   PONV as   the   dependent   variable.   The
+interaction    between     the    intervention    and     time    was     evaluated     to     determine    whether    the     effect    of     the    intervention    varied
+over   time.  P-values  were   calculated   for  the   interaction  effect,  with  main   effects   of   time  and   intervention  excluded  in  the
+analysis    to    isolate    the    interaction.
+      Two-way     analysis     of     variance    (ANOVA)     was     utilized     to     compare     the     postoperative    recovery     scale    scores,     HR,     and
+MAP   between   the   two   groups   at   each   time   point   during   the   perioperative   period.   Sidak’s   multiple   comparisons   test   was
+employed  to  adjust  for  multiple   comparisons.  The  analysis  was  performed   following  the  modified  intent-to-treat  (mITT)
+principle.
+
+Results
+Participants   Characteristics
+A         total         of         112         patients         scheduled         for         gynecological         laparoscopic         surgery         were         screened         for         eligibility.         Fourteen
+patients    were    excluded    as    they    did    not    meet    the    inclusion    criteria,    and    ten    declined    to    participate.    The    remaining    88
+patients   were   randomly  assigned  to   either  the   TEAS  or   the   control  group.  Three  patients   were   subsequently  excluded
+from the mITT analysis due to a change in procedure (n=2) or a procedure time exceeding 3 hours (n=1). Thus, a final
+total      of      85      patients      were      included      in      the      analysis,      and      therefore,      a      modified      intention-to-treat      (mITT)      analysis      was
+employed       (Figure       1).       No       significant       differences       in       baseline       characteristics       were       observed       between       the       two       groups
+(Table   1).
+
+Primar y   Outcome
+The       incidence       of       PONV       within       the       24-hour       postoperative       period       differed       significantly       between       the       two       groups.       The
+TEAS group had an incidence of 42.9%, while the control group had a significantly higher incidence of 67.4% (P=0.023;
+odds ratio [OR] = 2.762; 95% confidence interval [CI]: 1.142, 6.681). When considering nausea and vomiting separately,
+no    significant    differences    were    observed    in    the    incidence    of    vomiting    between    the    two    groups    at    various    postoperative
+follow-up    intervals.
+      For     nausea,     the     differences     in     incidence     between     the     two     groups     were     as     follows:     0.25     (CI:     0.05,     −0.45,     P=0.013)
+within   the  first  0–2  hours,  0.09  (CI:   −0.10,  0.27,  P=0.351)  within  2–4  hours,  and   0.04  (CI:  −0.10,  0.19,  P=0.561)  within
+4–6    hours    (Table    2).
+
+Secondar y   Outcomes
+ANOVA   conducted   on   the   QoR-40   scores   at   48   hours   postoperatively   revealed   that   the   TEAS   group   had   a   significantly
+higher      total      score     (184.0)      compared      to      the      control      group      (181.0),      with      a      difference      of      −2.9%      (95%      CI:      −4.07,      −1.78,
+P<0.001).     Additionally,     the     scores     across     all     five     dimensions     were     significantly     higher     in     the     TEAS     group     than     in     the
+control    group    at    the    same    time    point    (P<0.001).
+      Multiple comparisons of the QoR-40 scores at different postoperative time points demonstrated that, prior to surgery, the
+quality     of     recovery     scores     were     similar     between     the     two     groups.     However,     the     TEAS     group     exhibited     significantly     better
+recovery  at 24  and  48  hours  postoperatively,  with differences  of  −7.0%  (95%  CI:  −9.05, −4.95,  P<0.0001) and  −2.0%  (95%
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                             https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                   6453
+
+=== PDF PAGE 6 ===
+Zheng  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1 Flow  diagram  of  the  study.
+
+CI:  −3.63, −0.37,  P=0.010),  respectively.  The  difference  in  QoR-40  scores  at  6  hours  postoperatively  was  −0.02% (95%  CI:
+−1.23,  1.17,  P=0.068),  which  was  not  statistically  significant.  The  specific  differences  in  the  five  dimensions  of  the  QoR-40
+scores  are  presented  in Figure  2.
+
+
+                                             Table 1 Baseline Characteristics of the Participants in the Modified Intention-to
+                                             -Treat  Analysis
+
+                                                Characteristics                                  TEAS  (n=42)                           Control  (n=43)                   P
+
+                                                Age  (year)                                      42.1  (16.3)                           44.9  (12.6)                      0.417
+                                                Height  (cm)                                     159.8  (4.2)                           161.0  (3.8)                      0.522
+                                                Weight  (kg)                                     63.2  (9.5)                            64.4  (6.0)                       0.448
+                                                Body  mass  index  (kg/m2)                       24.7  (2.2)                            25.1  (2.3)                       0.729
+
+                                                ASA  physical  status                                                                                                     0.462
+                                                    I                                            12  (27.9%)                            14  (32.6%)
+                                                    II                                           30  (71.4%)                            29  (67.4%)
+                                                Type  of  surgery                                                                                                         0.156
+                                                    Ovarian  cystectomy                          20  (47.6%)                            19  (44.2%)
+                                                    Myomectomy  surgery                          16  (30.1%)                            16  (37.2%)
+                                                    Hysterectomy  surgery                        6  (14.3%)                             8  (18.6%)
+                                                Duration  of  surgery  (min)                     113.5  (93.75–125.75)                  112  (98.25–123.25)               0.689
+                                                Duration  of  anesthesia  (min)                  152.5  (133.25–162.75)                 149  (135.5–161)                  0.499
+                                                PNP  pressure  (mmHg)                            13.0  (12–13)                          13  (13–13)                       0.247
+                                                Baseline  QoR-40                                 191.3  (7.3)                           190.7  (6.8)                      0.701
+                                                Baseline  glycemia  (mmol/L)                     5.0  (0.4)                             5.1  (0.5)                        0.467
+
+                                             Notes:  Data  are  presented  as  mean  (SD),  numbers  (%),  or  medians  (interquartile  range).
+                                             Abbreviations:       TEAS,       transcutaneous       electrical       acupoint       stimulation;       ASA,       American       Society       of
+                                             Anesthesiologists;  PNP,  pneumoperitoneum;  QoR-40,  Quality  of  Recovery  40  questionnaire.
+
+
+6454            https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 7 ===
+                                                                                                                                                                                                                 Zheng  et  al
+
+Table  2 Comparison  of  the  Incidence  of  PONV  Between  Two  Groups  at  Different  Time  Points
+
+  Variables                                      TEAS  (n=42)                Control  (n=43)                Difference  in  Risk or  Means                       P              PTime          PGroup          PInteraction
+                                                                                                            (95%  CI)
+
+  Incidence  of  nausea,  n  (%)                                                                                                                                                <0.001         0.001           0.002
+  0–2  h                                         10  (23.8%)                 21  (48.8%)                    0.25  (0.05,  0.45)                                  0.013*
+  2–4  h                                         8  (19%)                    12  (27.9%)                    0.09  (−0.10,  0.27)                                 0.351
+  4–6  h                                         5  (11.9%)                  7  (16.3%)                     0.04  (−0.10,  0.19)                                 0.561
+  6–24  h                                        0  (0)                      0  (0)                         0  (0,0)                                             0.999
+  Incidence  of  vomiting,  n  (%)                                                                                                                                              0.001          0.020           0.001
+  0–2  h                                         5  (11.9%)                  11  (25.6%)                    0.14  (−0.03,  0.30)                                 0.100
+  2–4  h                                         3  (7.1%)                   5  (11.6%)                     0.04  (−0.08,  0.17)                                 0.477
+  4–6  h                                         2  (4.8%)                   4  (9.3%)                      0.05  (−0.06,  0.15)                                 0.410
+  6–24  h                                        0                           1  (2.3%)                      0.02  (−0.02,0.07)                                   0.312
+
+Abbreviations:  TEAS,  transcutaneous  electrical  acupoint  stimulation;  CI,  confidence  interval.
+
+
+      There       were       no       significant       differences       in       HR       between       the       two       groups       (P>0.05).       However,       MAP       was       significantly
+higher in  the  TEAS group  compared  to the  control group  (86.3  vs 84.2 mmHg,  P<0.0001).  MAP levels  were comparable
+at baseline (T0); however, following the initiation of surgery, MAP decreased significantly more in the control group than
+in        the        TEAS        group        at        T1,        T2,        and        T4,        with        the        most        pronounced        difference        occurring        at        the        time        of        skin        incision
+(P<0.0001)   (Figure  3).  Although  HR  varied  across  time  points,  there  were  no  significant  differences  between  the  groups
+(P>0.05).
+      The TEAS group also demonstrated lower blood glucose levels 30 minutes after skin incision compared to the control
+group              (P=0.045),              reduced              remifentanil              consumption              during              surgery             (P=0.031),              fewer              total              and              effective              patient-
+controlled       intravenous        analgesia       (PCIA)       presses        (P=0.004       and       P=0.039,        respectively),       and        faster       recovery        of        gastro-
+intestinal   function   (P<0.05)   (Table   3).   No   significant   differences   were   observed   between   the   two   groups   with   respect   to
+propofol       and       sevoflurane       usage       during       surgery,       the       number       of       emergency       rescue       analgesia       events,       the       occurrence       of
+adverse    events,    awakening    time,    PACU    stay,    or    hospital    length    of    stay    (all    P>0.05)    (Table    3).
+      Although    the    two    groups    had     similar    preoperative    sleep    quality,     the    TEAS    group    reported    significantly    better    sleep
+quality             on             the             first             and             second             postoperative             days,             as             indicated             by             higher             PSQI             scores             (P=0.015             and             P=0.024,
+respectively).       Furthermore,      the      TEAS      group       had      lower      NRS      pain      scores       at      6       and      24       hours      postoperatively      (P=0.022
+and    P=0.042,    respectively)    (Table    4).
+
+Discussion
+This        randomized,        single-blind,        controlled        trial        evaluated        the        effects        of        TEAS        on        the        quality        of        recovery        in        patients
+undergoing       gynecological        laparoscopic        surgery.        The        findings        demonstrate       that        preoperative        and        intraoperative        TEAS
+significantly   reduce   the   incidence   of   early   PONV,   enhance   recovery   outcomes,   alleviate   stress   responses,   improve   sleep
+quality, and reduce the  occurrence of adverse events. Nevertheless, it is important to  note that the improvements  in QoR-
+30    scores    were    statistically    significant    but    not    clinically    significant.
+      This            randomized            controlled            trial            demonstrated            that            TEAS            enhanced            postoperative            recovery            quality            in            patients
+undergoing          gynecological          laparoscopic          surgery          by          modulating          early          PONV      and          multiple          recovery          parameters.          The
+results    revealed    a     24.5%    reduction    in     24-hour    PONV  incidence    in     the    TEAS    group    compared    with    controls    (42.9%    vs
+67.4%).   This  finding   aligns   with  the   mechanistic  study  by  Cheong   et  al,23 which   demonstrated  that   acupoint  stimulation
+suppresses         5-HT3         receptor         activity         through         the         vagal         nucleus         tractus         solitarius         pathway.         The         5-HT3         receptor         plays
+a  crucial  role in  nausea and  vomiting. Serotonin,  when released,  can activate 5-HT3  receptors  in the  gastrointestinal  tract
+and the central nervous system, ultimately triggering nausea and vomiting. Antagonizing the 5-HT3 receptor is a strategy
+used   to   treat   PONV   by   blocking   the   effects   of   serotonin   at   these   receptors.24,25 The   TEAS   group   had   a   shorter   recovery
+time    for   gastrointestinal    functions    and    a    significantly    lower    incidence    of    PONV,    similar    to    previous    studies.26–28 TEAS
+exhibited       a       distinct       time-dependent       antiemetic       effect:       the       absolute       risk       reduction       for       nausea       reached       25%       during       the
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                         https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                   6455
+
+=== PDF PAGE 8 ===
+Zheng  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2 Scores  of  QoR-40  and  scores of  the  five dimensions.  X-axis  1,  2,  3,  and  4  represent  baseline  and  postoperative  6,  24,  and  48  h,  respectively.  The  solid  red  line
+represents   the   transcutaneous   electrical   acupoint   stimulation   (TEAS)   group,   and   the   dotted   black   line   represents   the   control.   Data   are   presented   as   means   ±   standard
+deviations.  *P<0.05.
+
+
+
+
+
+6456                  https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 9 ===
+                                                                                                                                                                                                                   Zheng  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 3 Intraoperative hemodynamic outcomes. (A) MAP at different time points in the two groups. (B) HR at different time points in the two groups. Data are presented
+as  means  ±  standard  deviations.  *P<0.05,  ***P<0.001,****P<0.0001.
+Abbreviations:  MAP,  mean  arterial  pressure;  HR,  heart  rate.
+
+
+critical    0–2    hour    postoperative    window,    while   its    efficacy    gradually    attenuated    in    the    subsequent    2–6    hour    period.   This
+temporal    kinetic   profile    suggests   that    TEAS   may    primarily    exert    its    effects   through    transient    modulation    of   enterochro-
+maffin    cell    signaling    rather    than    sustained    alteration    of    neurotransmitter    levels,    which    shows    intrinsic    consistency    with
+the    multiphase    regulatory    model    of    postoperative    nausea    proposed    by    Gan    et    al.29
+
+
+
+                                                  Table  3 Perioperative  Data  Between  the  Two  Groups
+
+                                                    Variables                                                     TEAS  (n=42)                Con  (n=43)              P
+
+                                                    After  skin  incision  glycemia  (mmol/L)                     5.5  (0.5)                  5.9  (0.4)               0.045
+                                                    Remifentanil  (µg)                                            233.1  (29.6)               289.5  (37.9)            0.031
+                                                    Propofol  (mg)                                                495.1  (151.5)              511.8  (162.1)           0.178
+                                                    Sevoflurane  (mL)                                             13.1  (2.3)                 13.2  (2.2)              0.470
+                                                    Blood  loss  (mL)                                             50  (30–100)                50  (40–100)             0.335
+                                                    Wake-up  time  (min)                                          12.9  (2.5)                 13.0  (2.4)              0.476
+                                                    PACU  stay  time  (min)                                       26.8  (4.4)                 28.0  (8.1)              0.156
+                                                    Times  of  total  PCIA  use                                   6.3  (2.2)                  10.7  (3.9)              0.004
+
+                                                                                                                                                             (Continued)
+
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                          https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                   6457
+
+=== PDF PAGE 10 ===
+Zheng  et  al
+
+                                                  Table  3 (Continued).
+
+                                                   Variables                                                   TEAS  (n=42)               Con  (n=43)             P
+
+                                                   Times  of  effective  PCIA  use                             3.8  (1.0)                 4.8  (1.6)              0.039
+                                                   Incidence  of  adverse  reactions
+                                                   Fever                                                       6  (14.3%)                 8  (18.6%)              0.243
+                                                   Dizziness  and  headache                                    2  (4.8%)                  3  (7.0%)               0.061
+                                                   Drowsiness                                                  0                          0
+                                                   Gastrointestinal  function
+                                                      Time  to  first  borborygmus  (h)                        19.2  (3.3)                27.6  (2.7)             0.035
+                                                      Time  to  first  flatus  (h)                             24.2  (2.5)                31.6  (4.4)             0.003
+                                                   Hospital  stay  duration  (d)                               4  (3–5)                   4  (3–5)                0.722
+
+                                                Notes:  Data  are  presented  as  mean  (SD),  numbers  (%),  or  medians  (interquartile  range).
+                                                Abbreviations:     TEAS,     transcutaneous     electrical     acupoint     stimulation;     PACU,     post-anesthesia
+                                                care unit;  PCIA,  patient-controlled  intravenous  analgesia.
+
+
+
+
+                                                        Table       4    NRS       and       PSQI       Scores       Were       Compared       at       Different
+                                                        Points  in  Time
+
+                                                           Variables           Group           Baseline           6  h             24  h             48  h
+                                                           NRS                 TEAS            0                  2.9±1.1a         1.7±0.8b          0.9±0.8
+                                                                               Con             0                  3.4±1.2          2.2±1.1           1.0±0.9
+                                                           PSQI                TEAS            4.5±3.3            –                11.5±6.9c         7.4±5.2d
+                                                                               Con             4.2±3.8            –                15.7±8.1          10.6±5.4
+                                                        Notes: Data are presented as Mean ± SDs. aP=0.022, bP=0.422, cP=0.015, dP=0.024.
+                                                        Abbreviations:        NRS,        Numerical        Rating        Scale;        TEAS,        transcutaneous        electrical
+                                                        acupoint  stimulation;  PSQI,  Pittsburgh  Sleep  Quality  Index.
+
+
+
+      The     TEAS     group    demonstrated    a     statistically    significant    improvement    in     recovery    quality     assessment,    as    shown     by
+higher   QoR-40   total   scores   compared   with   controls   at   48   hours   postoperatively   (184.0    vs   181.0,   p<0.001),   representing
+47.6%       of       the       established       minimal       clinically       important       difference       (MCID=6.3       points).20                            The       concurrent       improvement
+across     all     five     subdomains     (physical     comfort,     emotional     state,     physical     independence,     psychological     support,     and     pain
+control)  suggests  that  TEAS  likely  exerts  its  therapeutic  effects  through  multiple  interconnected  physiological  pathways.
+Yao   et   al30 reported   higher   QoR-40   scores   in   the   TEAS   group   after   gynecological   laparoscopic   surgery.   Notably,   TEAS
+demonstrated a characteristic delayed-enhancement pattern in overall recovery quality improvement: while no significant
+difference  was   observed  in  QoR-40   scores   at  6  hours   postoperatively  (P=0.068),   the   treatment  effect  peaked  at   24  hours
+(P<0.0001).       This      temporal       pattern       likely       reflects       the      requisite       time      window       for       hypothalamic-pituitary-adrenal      (HPA)
+axis recalibration, which aligns precisely with the postoperative recovery phase model,31,32 featuring initial physiological
+stabilization (<6 h), followed by functional recovery (6–24 h), and ultimately psychosocial adaptation (>24 h). Therefore,
+TEAS,       as       a       non-pharmacological       intervention,       appears       clinically       important       in       reducing       the       incidence       of       PONV   after
+gynecological    laparoscopy    and    promoting    the    early    recovery    of    the    patients.
+      Poor         quality         of        postoperative         recovery         in         patients        undergoing         gynecological         laparoscopic         surgery         can        be         due         to
+several       factors.       CO2        inflation       increases       intra-thoracic       and       intra-abdominal       pressures,       leading       to       a       decrease       in       cardiac
+output    and    an    increase    in    sympathetic    activity.33,34 In    addition,    excessive    CO2                                         in    the    blood    predisposes    to    hypercapnia
+and   stimulates   the   release   of   humoral   factors   such   as   catecholamines   and   cortisol   from   aortic   body   chemoreceptors.35,36
+These               changes               initiate               the               stress               response               through               the               sympathetic-adrenomedullary               and               hypothalamic-pituitary-
+adrenocortical    dual    systems,    causing    fluctuations    in    blood    flow    and    damage    to    target    organs,    affecting    the    perfusion    of
+vital      organs.37,38         TEAS      can      make      the      perioperative      blood      pressure      and      HR      smoother,      and      by      regulating      the      levels      of
+
+
+
+6458            https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 11 ===
+                                                                                                                                                                                                                    Zheng  et  al
+
+plasma        cortisol       and        adrenocorticotropic        hormone,        it        can        alleviate        the        stress        response        to        a       certain        degree,        preventing
+damage  to  the  body  caused  by  overstress.  It  can  also   reduce  the  secondary  damage  caused   by  stress,   enhance  the  body’s
+ability    to    resist    damage    and    repair    trauma,    promote    postoperative    recovery,    and    improve    prognosis.14
+      Elevated glycemia is a common sign of stress induced by surgical trauma.37 In a study of hysterectomies, it was found
+that   the  simultaneous   preoperative  stimulation   of   the  Sanyinjiao  and   the  Foot   Sanli  had   a  significant  inhibitory   effect  on
+intraoperative    glycemia    and    insulin    tolerance.39 In    another   study    of    craniotomy   in    elderly    patients,   TEAS    was    found    to
+reduce     the     stress     response     during     extubation,     and     hemodynamic     parameters     and     plasma     concentrations     of     epinephrine,
+norepinephrine, and cortisol decreased during extubation in the TEAS group.40 The results of this trial also found that the
+glycemia   in  the  TEAS   group   was  significantly  lower  than   in  the   control  group  at   30  min  after   skin   incision,   while   MAP
+and      HR      fluctuated      less      compared      with      basal      values      after      intubation,      but      MAP      and      HR      fluctuated      quite      a      bit      at      other
+moments,    which    might    be    related    to    the    regulation    of    the    depth    of    anesthesia    after    intubation.
+      Perioperative     pain    is     one    of     the     main    aspects     affecting    the     quality     of     postoperative    recovery,     not    only    affecting    the
+patient’s       emotional      state       but       also       associated       with       postoperative       sleep       disturbances.41,42                              Pain       leads       to       prolonged       sleep
+latency           and           reduced           total           sleep           time,           whereas           sleep           disturbances           also           increase           pain           sensitivity           and           decrease           pain
+threshold.43,44 TEAS    analgesia    acts    as    a    complex    network   of    regulatory    mechanisms,   from    the    peripheral    to    the    central
+nervous     system,     involving     multiple     molecular     pathways,     inflammatory     factors,     neurotransmitters,     and     the     properties     of
+the   acupoints   themselves.45 A   growing   number   of   clinical   trials15,46–48                                                    demonstrated   that   TEAS   can   increase   anesthesia
+effect,     effectively     reduce      the      need     for      perioperative      analgesia,      produce      organ      protection,      and      promote      the      recovery      of
+gastrointestinal  function.  Acupuncture  on  LI4  and  PC6  can  stimulate  the  release  of  endogenous  opioid  peptides  from  the
+center,          impede          the          upward          transmission          of          pain          messages,          and          enhance          postoperative          analgesia.49     TEAS          not          only
+significantly      relieves      acute     pain      up      to      24      hours      after      surgery50                but      also      alleviates      chronic      pain      up      to      half      a      year      after
+radical      mastectomy      for      breast      cancer.46                   The      present      study      showed      that      the      TEAS      group      consumed      less      intraoperative
+remifentanil      and     had      a      lower     number      of      PCIA      uses.      Kjolhede     et      al51 concluded     that     sleep      quality     after     gynecological
+surgery     is     an     important     factor     influencing     postoperative     recovery,     with     a     PSQI     score     of     ≥6     defined     as     the     presence     of
+a  sleep  disorder.52 Here,  the  study  showed  lower PSQI  scores in  the  TEAS  group  within  2  days  after  surgery,  concluding
+that    TEAS    may    improve    postoperative    sleep    quality.
+
+Limitations   of   the   Study
+This     study     presents     several     limitations.     Firstly,     the     inclusion     criteria     encompassed     only     ASAI-II     patients,     necessitating
+further  confirmation  of  the  generalizability  of  the  findings.  Secondly,  this  trial  implemented  preoperative  and  intraopera-
+tive      TEAS,      which     may      limit      compatibility      with      other     studies      that     utilized      different     protocols.      Thirdly,      the      duration      of
+follow-up           was          relatively          short,           and          the          data          collected           were          limited          in          scope.          Fourth,          the          single-blind           design          may
+introduce  performance  bias,  as  the  anesthesiologists  administering  TEAS  were  not  blinded.  However,  outcome  assessors
+and       data       analysts       were       blinded       to       minimize       bias.       Fifth,       this       was       a       single-center       study,       which       may       limit       the       general-
+izability of the findings. Future multicenter trials are warranted to confirm these results. Lastly, improvements in  QoR-40
+scores       were      statistically      significant       but       below       the      minimal       clinically      important      difference,       limiting      clinical       relevance.
+Consequently,    the    effects   of    TEAS    on    the    long-term    postoperative    recovery    of    patients    warrant    further    investigation.
+
+Conclusion
+This      trial      indicates      that      TEAS      was      associated      with      improvements      in      the      quality      of      postoperative      recovery      in      patients
+undergoing     gynecological     laparoscopic     surgery.     Still,     the     improvements     in     QoR-30     scores     were     statistically     significant
+but             fell             short             of             being             clinically             significant.             TEAS             appears             to             mitigate             perioperative             blood             flow             fluctuations             by
+diminishing           the           stress           response,           reducing           the           incidence           of          PONV,           and           lowering          the           requirement           for           perioperative
+analgesia.            Additionally,            it            may            facilitate            a            quicker            return            of            gastrointestinal            function,            improve            sleep            quality,            and
+contribute    to    a    more    rapid    recovery    during    the    postoperative    period.
+
+Data   Sharing   Statement
+All    data    generated    or    analyzed    during    this    study    are    included    in    this    published    article.
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                            https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                   6459
+
+=== PDF PAGE 12 ===
+Zheng  et  al
+
+Ethics   Approval   and   Consent   to   Participate
+The      study      was      approved      by      the      Ethics      Committee      of      the      General      Hospital      of      the      Northern      Theatre      Command      of      the
+Chinese People’s Liberation Army (Approval No. Y (2021)138). All participants were informed about the  study protocol
+and           provided           written           informed           consent           to           participate           in           the           study.           I           confirm           that           all           methods           were           performed           in
+accordance     with      the      relevant      guidelines.      All      procedures      were      performed      in      accordance      with      the      ethical      standards     laid
+down    in    the    1964    Declaration    of    Helsinki    and    its    later    amendments.
+
+Author   Contributions
+All          authors          made          a          significant          contribution          to          the          work          reported,          whether          that          is          in          the          conception,          study          design,
+execution,  acquisition  of  data,  analysis  and  interpretation,  or  in  all  these  areas;  took part  in  drafting,  revising  or  critically
+reviewing   the   article;   gave   final   approval   of   the   version   to   be   published;   have   agreed   on   the   journal   to   which   the   article
+has    been    submitted;    and    agree    to    be    accountable    for    all    aspects    of    the    work.
+
+Funding
+This    study    was    supported    by    the    Liaoning    Provincial    Joint    Science    and    Technology    Program    (2024JH2/102600283).
+
+Disclosure
+The    authors    declare    that    they    have    no    competing    interests.
+
+References
+
+  1. Levy   L,   Tsaltas   J.   Recent   advances   in   benign   gynecological   laparoscopic   surgery. Fac   Rev. 2021;10:60.   doi:10.12703/r/10-60
+  2. Tica VI, Tica AA, De Wilde RL. The Future in Standards of Care for Gynecologic Laparoscopic Surgery to Improve Training and Education. J Clin
+      Med. 2022;11(8):2192.   doi:10.3390/jcm11082192
+  3. Ferrari  F,  Forte  S,  Sbalzer  N,  et  al.  Validation  of  an  enhanced  recovery  after  surgery  protocol  in  gynecologic  surgery:  an  Italian  randomized  study.
+      Am   J   Clin   Exp   Obstet   Gynecol. 2020;223(4):543.e1–543.e14.   doi:10.1016/j.ajog.2020.07.003
+  4. Stone R, Carey E, Fader AN, et al. Enhanced Recovery and Surgical Optimization Protocol for Minimally Invasive Gynecologic Surgery: an AAGL
+      White   Paper. J   Minimally   Invasive   Gynecol. 2021;28(2):179–203.   doi:10.1016/j.jmig.2020.08.006
+  5. Philosophe   R.   Avoiding   complications   of   laparoscopic   surgery. Fertil   Steril. 2003;80(4):30–39.   doi:10.1016/s0015-0282(03)01189-0
+  6. Atkinson         TM,          Giraud          GD,         Togioka          BM,          Jones         DB,          Cigarroa          JE.          Cardiovascular         and          Ventilatory          Consequences          of         Laparoscopic          Surgery.
+      Circulation. 2017;135(7):700–710.   doi:10.1161/CIRCULATIONAHA.116.023262
+  7. Gan  TJ,  Belani  KG,  Bergese  S,  et  al.  Fourth  Consensus  Guidelines  for  the  Management  of  Postoperative  Nausea  and  Vomiting. Anesthesia  Analg.
+      2020;131(2):411–448.   doi:10.1213/ane.0000000000004833
+  8. Wu          CL,          Berenholtz         SM,         Pronovost         PJ,          Fleisher          LA.         Systematic          review          and         analysis          of          postdischarge         symptoms         after          outpatient         surgery.
+      Anesthesiology. 2002;96(4):994–1003.   doi:10.1097/00000542-200204000-00030
+  9. Yuan   W,   Wang   Q.  Perioperative   acupuncture   medicine:   a   novel   concept   instead   of   acupuncture   anesthesia. Chinese   Med   J. 2019;132(6):707–715.
+      doi:10.1097/cm9.0000000000000123
+10. Szmit      M,      Krajewski      R,      Rudnicki      J,      Agrawal      S.      Application      and      efficacy      of      transcutaneous      electrical      acupoint      stimulation      (TEAS)      in      clinical
+      practice:   a   systematic   review. Adv   Clin   Exp   Med. 2023;32(9):1063–1074.   doi:10.17219/acem/159703
+11. Yu        X,        Zhang        F,        Chen        B.        The        effect        of        TEAS        on        the        quality        of        early        recovery        in        patients        undergoing        gynecological        laparoscopic        surgery:
+      a   prospective,   randomized,   placebo-controlled   trial. Trials. 2020;21(1):43.   doi:10.1186/s13063-019-3892-4
+12. Chen       J,       Zhang       Y,       Li       X,       et       al.       Efficacy       of       transcutaneous       electrical       acupoint       stimulation       combined       with       general       anesthesia       for       sedation       and
+      postoperative analgesia  in  minimally  invasive lung cancer  surgery: a randomized, double-blind,  placebo-controlled trial. Thoracic  Cancer. 2020;11
+      (4):928–934.   doi:10.1111/1759-7714.13343
+13. Li          WJ,          Gao          C,          An          LX,          Ji          YW,          Xue          FS,          Du          Y.          Perioperative          transcutaneous          electrical          acupoint          stimulation          for          improving          postoperative
+      gastrointestinal   function:   a   randomized   controlled   trial. J   Integr   Med. 2021;19(3):211–218.   doi:10.1016/j.joim.2021.01.005
+14. Chi YL, Zhang WL, Yang F, Su F, Zhou YK. Transcutaneous Electrical Acupoint Stimulation for Improving Postoperative Recovery, Reducing Stress and
+      Inflammatory Responses in  Elderly  Patient Undergoing Knee Surgery. Am  J Chin  Med. 2019;47(7):1445–1458. doi:10.1142/s0192415x19500745
+15. Wang   D,   Shi   H,   Yang   Z,   et   al.   Efficacy   and   Safety   of   Transcutaneous   Electrical   Acupoint   Stimulation   for   Postoperative   Pain:  a   Meta-Analysis   of
+      Randomized   Controlled   Trials. Pain   Res   Manag. 2022;2022:7570533.   doi:10.1155/2022/7570533
+16. Hoshijima  H,  Miyazaki  T,  Mitsui  Y,  Omachi  S,  Yamauchi  M,  Mizuta  K.  Machine  learning-based  identification  of  the  risk  factors  for  postoperative
+      nausea   and   vomiting   in   adults. PLoS   One. 2024;19(8):e0308755.   doi:10.1371/journal.pone.0308755
+17. Nöst R, Thiel-Ritter A, Scholz S, Hempelmann G, Müller M. Balanced anesthesia with remifentanil and desflurane: clinical considerations for dose
+      adjustment   in   adults. J   Opioid   Manag   Sep-Oct. 2008;4(5):305–309.   doi:10.5055/jom.2008.0034
+18. Lang          E,          Kapila          A,          Shlugman          D,          Hoke          JF,          Sebel          PS,          Glass          PS.          Reduction          of          isoflurane          minimal          alveolar          concentration          by          remifentanil.
+      Anesthesiology. 1996;85(4):721–728.   doi:10.1097/00000542-199610000-00006
+19. Gornall    BF,    Myles    PS,    Smith    CL,    et    al.    Measurement    of    quality    of    recovery    using    the    QoR-40:    a    quantitative    systematic    review. Br    J    Anaesth.
+      2013;111(2):161–169.   doi:10.1093/bja/aet014
+
+
+6460             https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2025:18
+
+=== PDF PAGE 13 ===
+                                                                                                                                                                                                                   Zheng  et  al
+
+
+20. Wessels E, Perrie H, Scribante J, Jooma Z. Quality of recovery in the perioperative setting: a narrative review. J Clini Anesthesia. 2022;78:110685.
+     doi:10.1016/j.jclinane.2022.110685
+21. Echeverria-Villalobos     M,     Fiorda-Diaz     J,     Uribe     A,     Bergese     SD.     Postoperative     Nausea     and     Vomiting     in     Female     Patients     Undergoing     Breast     and
+     Gynecological Surgery: a Narrative Review of Risk Factors and Prophylaxis. Front Med Lausanne. 2022;9:909982. doi:10.3389/fmed.2022.909982
+22. Yan S, Xu M, Zou X, et al. Acupuncture combined with ondansetron for prevention of postoperative nausea and vomiting in high-risk patients undergoing
+     laparoscopic  gynaecological surgery: a randomised controlled  trial. United Eur  Gastroenterol  J. 2023;11(6):564–575. doi:10.1002/ueg2.12421
+23. Cheong    K.    Neuromodulatory    Effects    of    Acupoint    Stimulation    on    5-HT3    Receptor    Signaling    in    the    Solitary    Tract    Nucleus. J    Neurogastroenterol
+     Motility. 2021;2021:1.
+24. Theriot   J,   Wermuth   HR,   Ashurst   JV.   Antiemetics,   Selective   5-HT3   Antagonists. StatPearls. 2025;2025:1.
+25. Smith   HS,   Cox   LR,   Smith   EJ.   5-HT3   receptor   antagonists   for   the   treatment   of   nausea/vomiting. Ann   Palliative   Med. 2012;1(2):2.
+26. Gao   W,   Li   W,   Yan   Y,   et   al.   Transcutaneous    electrical   acupoint   stimulation   applied   in   lower   limbs   decreases   the   incidence   of   paralytic   ileus   after
+     colorectal   surgery:   a   multicenter   randomized   controlled   trial. Surgery. 2021;170(6):1618–1626.   doi:10.1016/j.surg.2021.08.007
+27. Wang     N,     Ding     P,     Zheng     DY,     et     al.     Wearable     transcutaneous     electrical     acupoint     stimulation     bracelet     for     prevention     of     postoperative     nausea     and
+     vomiting           in           patients           undergoing           hysteroscopic           surgery:           a           randomised           controlled           trial. Br           J           Anaesth. 2022;129(4):e85–e87.           doi:10.1016/j.
+     bja.2022.06.028
+28. Li   S,   Zheng   M,   Wu   W,   Guo   J,   Ji   F,   Zheng   Z.   Effects  of   Electroacupuncture   Administered   24hours   Prior   to   Surgery   on   Postoperative   Nausea   and
+     Vomiting    and    Pain    in    Patients    Undergoing    Gynecologic    Laparoscopic    Surgery:    a    Feasibility    Study. Explore. 2017;13(5):313–318.    doi:10.1016/j.
+     explore.2017.06.002
+29. Gan   T.   Mechanisms   and   Management   of   Postoperative   Nausea:   a   Comprehensive   Review. Anesthesiology. 2023;138(2):280–295.
+30. Yao Y, Zhao Q, Gong C, et al. Transcutaneous Electrical Acupoint Stimulation Improves the Postoperative Quality of Recovery and Analgesia after
+     Gynecological   Laparoscopic   Surgery:   a   Randomized   Controlled   Trial. eCAM. 2015;2015:324360.   doi:10.1155/2015/324360
+31. Lee       L,       Tran       T,       Mayo       NE,       Carli       F,       Feldman       LS.       What       does       it       really       mean       to       “recover”       from       an       operation? Surgery. 2014;155(2):211–216.
+     doi:10.1016/j.surg.2013.10.002
+32. Bowyer          AJ,         Royse          CF.         Postoperative          recovery         and          outcomes          –         what         are          we         measuring          and          for         whom? Anaesthesia. 2016;71(S1):72–77.
+     doi:10.1111/anae.13312
+33. Gutt       CN,       Oniu       T,       Mehrabi       A,       et       al.       Circulatory       and       Respiratory       Complications       of       Carbon       Dioxide       Insufflation. Digestive       Surgery. 2004;21
+     (2):95–105.   doi:10.1159/000077038
+34. Popowicz   P,   Newman   RK,   Dominique   E.   Abdominal   Compartment   Syndrome. StatPearls. 2025;2025:1.
+35. Henny   CP,   Hofland   J.  Laparoscopic   surgery:  pitfalls  due   to   anesthesia,   positioning,   and   pneumoperitoneum. Surg   Endosc. 2005;19(9):1163–1171.
+     doi:10.1007/s00464-004-2250-z
+36. Andersson  LE,  Bååth  M,  Thörne  A,  Aspelin  P,  Odeberg-Wernerman  S.  Effect  of  carbon  dioxide  pneumoperitoneum  on  development  of  atelectasis
+     during   anesthesia,   examined   by   spiral   computed   tomography. Anesthesiology. 2005;102(2):293–299.   doi:10.1097/00000542-200502000-00009
+37. Finnerty    CC,    Mabvuure    NT,    Ali    A,    Kozar    RA,    Herndon    DN.    The    surgically    induced    stress    response. JPEN    J    Parenter    Enteral    Nutr. 2013;37(5
+     Suppl):21s–9s.   doi:10.1177/0148607113496117
+38. Chen L, Shen Y, Liu S, Cao Y. Transcutaneous Electrical Acupoint Stimulation Improved Preoperative Blood Pressure in Gynecological Malignant
+     Tumor   Patients   With   Hypertension:   a   Randomized,   Controlled   Trial. Front   Oncol. 2022;12:906528.   doi:10.3389/fonc.2022.906528
+39. Man     KM,     Man     SS,     Shen     JL,     et     al.     Transcutaneous     electrical     nerve     stimulation     on     ST36     and     SP6     acupoints     prevents     hyperglycaemic     response
+     during   anaesthesia:   a   randomised   controlled   trial. Eur   J   Anaesthesiol. 2011;28(6):420–426.   doi:10.1097/EJA.0b013e32833fad52
+40. Bai  WY,  Yang  YC,  Teng  XF,  Wan  YX,  Wei  W,  Zhu  JC.  Effects  of  Transcutaneous  Electrical  Acupoint  Stimulation  on  the  Stress  Response  During
+     Extubation    After    General    Anesthesia    in    Elderly    Patients     Undergoing     Elective    Supratentorial    Craniotomy:    a    Prospective    Randomized    Controlled
+     Trial. J   Neurosurg   Anesthesiol. 2018;30(4):337–346.   doi:10.1097/ana.0000000000000460
+41. Li    Q,    Zhu    ZY,    Lu    J,    et    al.    Sleep    deprivation    of    rats    increases    postsurgical    expression    and    activity    of    L-type    calcium    channel    in    the    dorsal     root
+     ganglion   and   slows   recovery   from   postsurgical   pain. Acta   Neuropathol   Commun. 2019;7(1):217.   doi:10.1186/s40478-019-0868-2
+42. Song      B,      Luo      M,      Zhu      J.      The      efficacy      of      acupuncture      in      postoperative      sleep      quality:      a      literature      review. Sleep      Breathing. 2021;25(2):571–577.
+     doi:10.1007/s11325-020-02187-x
+43. Haack         M,         Simpson         N,         Sethna         N,         Kaur         S,         Mullington         J.         Sleep         deficiency         and         chronic         pain:         potential         underlying         mechanisms         and         clinical
+     implications. Neuropsychopharmacology. 2020;45(1):205–216.   doi:10.1038/s41386-019-0439-z
+44. Letzen    JE,    Remeniuk    B,    Smith    MT,    Irwin    MR,    Finan    PH,    Seminowicz    DA.    Individual    differences    in    pain    sensitivity    are    associated    with    cognitive
+     network functional connectivity following one night of experimental sleep disruption. Human Brain Mapp. 2020;41(3):581–593. doi:10.1002/hbm.24824
+45. Shah  S,  Godhardt  L,  Spofford  C.  Acupuncture  and  Postoperative  Pain  Reduction. Current  Pain  Headache  Rep. 2022;26(6):453–458.  doi:10.1007/
+     s11916-022-01048-4
+46. Lu   Z,   Wang   Q,   Sun   X,   et   al.   Transcutaneous   electrical   acupoint   stimulation   before   surgery   reduces   chronic   pain   after   mastectomy:   a   randomized
+     clinical   trial. J   Clini   Anesthesia. 2021;74:110453.   doi:10.1016/j.jclinane.2021.110453
+47. Li H, Du C, Lu L, et al. Transcutaneous electrical acupoint stimulation combined with electroacupuncture promotes rapid recovery after abdominal
+     surgery:   study   protocol   for   a   randomized   controlled   trial. Front   Public   Health. 2022;10:1017375.   doi:10.3389/fpubh.2022.1017375
+48. Pan P, Zhang X, Qian H, et al. Effects of electro-acupuncture on endothelium-derived endothelin-1 and endothelial nitric oxide synthase of rats with
+     hypoxia-induced   pulmonary   hypertension. Experiment   Biol   Med. 2010;235(5):642–648.   doi:10.1258/ebm.2010.009353
+49. Chen J, Tu Q, Miao S, Zhou Z, Hu S. Transcutaneous electrical acupoint stimulation for preventing postoperative nausea and vomiting after general
+     anesthesia:   a   meta-analysis   of   randomized   controlled   trials. Int   J   Surg. 2020;73:57–64.   doi:10.1016/j.ijsu.2019.10.036
+50. Liu X,  Li S, Wang B, An L, Ren X,  Wu H. Intraoperative and postoperative anaesthetic and analgesic effect of multipoint transcutaneous electrical
+     acupuncture         stimulation         combined         with         sufentanil         anaesthesia         in         patients         undergoing         supratentorial         craniotomy. Acupuncture         Med. 2015;33
+     (4):270–276.   doi:10.1136/acupmed-2014-010749
+51. Kjølhede   P,   Langström   P,   Nilsson   P,   Wodlin   NB,   Nilsson   L.   The   impact   of   quality   of   sleep   on   recovery   from   fast-track   abdominal   hysterectomy.
+     J   Clin   Sleep   Med. 2012;8(4):395–402.   doi:10.5664/jcsm.2032
+52. Tsai    PS,    Wang    SY,    Wang    MY,    et    al.    Psychometric    evaluation    of    the    Chinese    version    of    the    Pittsburgh    Sleep    Quality    Index    (CPSQI)    in    primary
+     insomnia   and   control   subjects. Qual   Life   Res. 2005;14(8):1943–1952.   doi:10.1007/s11136-005-4346-x
+
+
+
+
+Journal  of  Pain  Research  2025:18                                                                                                                                          https://doi.org/10.2147/JPR.S543574                                                                                                                                                                                                                                                                                                                                                                                                   6461
+
+=== PDF PAGE 14 ===
+Zheng  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       Journal   of   Pain   Research
+       Publish your   work   in   this   journal
+
+       The  Journal  of  Pain  Research  is  an  international,  peer  reviewed,  open  access,  online  journal  that  welcomes  laboratory  and  clinical  findings  in  the
+       fields     of     pain     research     and     the     prevention     and     management     of     pain.     Original     research,     reviews,     symposium     reports,     hypothesis     formation     and
+       commentaries     are     all     considered     for     publication.     The     manuscript     management     system     is     completely     online     and     includes     a     very     quick     and     fair
+       peer-review   system,    which    is   all    easy   to    use.   Visit    http://www.dovepress.com/testimonials.php    to   read    real   quotes    from   published    authors.
+
+       Submit  your  manuscript  here: https://www.dovepress.com/journal-of-pain-research-journal
+
+
+6462                                                                                                                                                                                       Journal  of  Pain  Research  2025:18

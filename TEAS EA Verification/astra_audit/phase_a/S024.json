@@ -1,0 +1,490 @@
+{
+  "Study_ID": "S024",
+  "Study": "Sun 2017",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase": "A",
+  "baseline_accessed": false,
+  "title": "Perioperative Transcutaneous Electrical Acupoint Stimulation for Postoperative Pain Relief Following Laparoscopic Surgery: A Randomized Controlled Trial",
+  "year": 2017,
+  "doi": "10.1097/AJP.0000000000000400",
+  "pdf_files": [
+    "sun2017-2.pdf"
+  ],
+  "source_read": "Complete8 pages; visually inspected Fig3/Table2p344.",
+  "modality": "TEAS",
+  "comparator": "SSS brief minimal perceptible current sham5min each session; electrodes30min",
+  "randomized_arms": {
+    "SSS": 95,
+    "TSS": 95,
+    "TTS": 95,
+    "TST": 95
+  },
+  "analyzed_arms": {
+    "SSS": 90,
+    "TSS": 91,
+    "TTS": 91,
+    "TST": 89
+  },
+  "denominator_source": "p342 Fig1",
+  "population": "Adults18–70 GA laparoscopic cholecystectomy/gynecological; Zhejiang July2012–Oct2013.",
+  "results": [
+    {
+      "outcome": "Activity/cough VAS24h",
+      "format": "median[IQR]",
+      "SSS": [
+        4,
+        3.8,
+        5
+      ],
+      "TSS": [
+        4,
+        4,
+        5
+      ],
+      "TTS": [
+        4,
+        3,
+        4
+      ],
+      "TST": [
+        3,
+        3,
+        4
+      ],
+      "source": "p342 results;Fig3c",
+      "P": "TSTvsSSS/TSS<.001;TTSvsTSS<.001; no significantTTSvsTST"
+    },
+    {
+      "outcome": "ActivityVAS6h",
+      "SSS": [
+        5,
+        4,
+        6
+      ],
+      "TSS": [
+        5,
+        5,
+        6
+      ],
+      "TTS": [
+        3,
+        3,
+        4
+      ],
+      "TST": [
+        3,
+        2.5,
+        5
+      ],
+      "source": "p342"
+    },
+    {
+      "outcome": "ActivityVAS48h",
+      "SSS": [
+        3,
+        3,
+        4
+      ],
+      "TSS": [
+        3,
+        3,
+        4
+      ],
+      "TST": [
+        3,
+        2,
+        3
+      ],
+      "TTS": null,
+      "source": "p342; TTS graph-only"
+    },
+    {
+      "outcome": "RestVAS1,6,24,48h",
+      "format": "graph-only median/IQR; whiskers min/max",
+      "source": "Fig2p343",
+      "numeric_values": null
+    },
+    {
+      "outcome": "Nausea0–48h",
+      "format": "percent[95%CI]",
+      "SSS": [
+        25.6,
+        16.5,
+        34.6
+      ],
+      "TSS": [
+        34.1,
+        24.3,
+        43.9
+      ],
+      "TTS": [
+        26.4,
+        17.3,
+        35.5
+      ],
+      "TST": [
+        34.8,
+        24.8,
+        44.8
+      ],
+      "P": ".376 omnibus",
+      "source": "p344 Table2"
+    },
+    {
+      "outcome": "Vomiting0–48h",
+      "format": "percent[95%CI]",
+      "SSS": [
+        22.2,
+        13.6,
+        30.8
+      ],
+      "TSS": [
+        25.3,
+        16.3,
+        34.3
+      ],
+      "TTS": [
+        26.4,
+        17.3,
+        35.5
+      ],
+      "TST": [
+        29.2,
+        19.7,
+        38.7
+      ],
+      "P": ".759 omnibus",
+      "source": "p344 Table2"
+    },
+    {
+      "outcome": "Supplemental flurbiprofen0–48h",
+      "format": "percent[95%CI]",
+      "SSS": [
+        23.3,
+        14.5,
+        32.1
+      ],
+      "TSS": [
+        11,
+        4.5,
+        17.5
+      ],
+      "TTS": [
+        15.4,
+        8,
+        22.8
+      ],
+      "TST": [
+        7.9,
+        2.2,
+        13.58
+      ],
+      "P": ".020 omnibus;TSTvsSSS<.05",
+      "source": "p344 Table2; p342 text"
+    },
+    {
+      "outcome": "First flatus h",
+      "format": "meanSD",
+      "SSS": [
+        41.5,
+        19.6
+      ],
+      "TSS": [
+        45.2,
+        19.9
+      ],
+      "TTS": [
+        44.7,
+        16.6
+      ],
+      "TST": [
+        41.6,
+        18.1
+      ],
+      "P": ".391 omnibus",
+      "source": "p344 Table2"
+    },
+    {
+      "outcome": "First defecation h",
+      "format": "meanSD",
+      "SSS": [
+        63.4,
+        22.9
+      ],
+      "TSS": [
+        63.6,
+        19.8
+      ],
+      "TTS": [
+        61.8,
+        15.7
+      ],
+      "TST": [
+        57.3,
+        20.6
+      ],
+      "P": ".127 omnibus",
+      "source": "p344 Table2"
+    },
+    {
+      "outcome": "Intraop author-converted morphine equivalents",
+      "unit": "mg/kg",
+      "format": "meanSD",
+      "SSS": [
+        1.5,
+        0.4
+      ],
+      "TSS": [
+        1.6,
+        0.4
+      ],
+      "TTS": [
+        1.6,
+        0.4
+      ],
+      "TST": [
+        1.5,
+        0.4
+      ],
+      "P": ".303 omnibus",
+      "source": "p344 Table2",
+      "postoperative": false
+    }
+  ],
+  "drug": "Intraop sufentanil/remifentanil; postoperative flurbiprofen nonopioid",
+  "route": "IV",
+  "pca_formulation": "Insufficient information / not reported.",
+  "rescue_regimen": "IV flurbiprofen50mg surgery end then50mg forVAS≥4/request within48h; none >1 supplement. Tropisetron5mg at end and5mg rescue vomiting/persistent nausea2h.",
+  "independence": "One4-arm trial; SSS shared across3 active schedules; parent must select schedule or valid multiarm method. TSSpreonly,TTSpre+intra,TSTpre+post.",
+  "source_conflicts": [
+    "ClinicalTrials.gov named but ChiCTR identifier given; identifier2015 postdates2012–2013 study.",
+    "Percentage CIs not SDs/counts. Categorical counts could be reconstructed only with explicit rounding verification and labeling.",
+    "Morphine mg/kg is author conversion intraop, not administered morphine or postop."
+  ],
+  "rob2": [
+    {
+      "result_id": "S024_pain24",
+      "outcome": "Cough VAS",
+      "time_window": "24h",
+      "comparison": "TST/TTS/TSS vs sharedSSS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "SPSS random-number table1:1:1:1.",
+          "source_location": "p341",
+          "reasoning": "SPSS random-number table1:1:1:1."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "Sealed opaque envelope informs operator after enrollment.",
+          "source_location": "p341",
+          "reasoning": "Sealed opaque envelope informs operator after enrollment."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "Table1 analysed participants only; no striking imbalance evident.",
+          "source_location": "p343",
+          "reasoning": "Table1 analysed participants only; no striking imbalance evident."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "NI",
+          "evidence": "Sham perceptible5min minimal current, active maximal tolerable30min; masking plausible but duration differs.",
+          "source_location": "p341,p346",
+          "reasoning": "Sham perceptible5min minimal current, active maximal tolerable30min; masking plausible but duration differs."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and intervention providers aware?",
+          "answer": "Y",
+          "evidence": "Only TEAS operators aware.",
+          "source_location": "p341",
+          "reasoning": "Only TEAS operators aware."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of the trial context?",
+          "answer": "PN",
+          "evidence": "Same care and rescue thresholds; no trial-context deviations described.",
+          "source_location": "p341",
+          "reasoning": "Same care and rescue thresholds; no trial-context deviations described."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "2.3PN.",
+          "source_location": "p341",
+          "reasoning": "2.3PN."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "2.4NA.",
+          "source_location": "p341",
+          "reasoning": "2.4NA."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "Available cases remain assigned groups; missingness addressed D3.",
+          "source_location": "p342 Fig1",
+          "reasoning": "Available cases remain assigned groups; missingness addressed D3."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Could failure to analyse as randomized substantially affect the result?",
+          "answer": "NA",
+          "evidence": "2.6PY.",
+          "source_location": "p342",
+          "reasoning": "2.6PY."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PN",
+          "evidence": "19/380 missing; TST6/95 vsSSS5/95; surgical changes/complications relevant.",
+          "source_location": "p342 Fig1",
+          "reasoning": "19/380 missing; TST6/95 vsSSS5/95; surgical changes/complications relevant."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence that missing data did not bias the result?",
+          "answer": "N",
+          "evidence": "No missing-data sensitivity.",
+          "source_location": "p341–342",
+          "reasoning": "No missing-data sensitivity."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on its true value?",
+          "answer": "PY",
+          "evidence": "Conversion/open surgery and complications can change postoperative pain andGI.",
+          "source_location": "p342 Fig1",
+          "reasoning": "Conversion/open surgery and complications can change postoperative pain andGI."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on its true value?",
+          "answer": "NI",
+          "evidence": "Not demonstrated that actual measured pain/GI values drove missingness.",
+          "source_location": "p342",
+          "reasoning": "Not demonstrated that actual measured pain/GI values drove missingness."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "10cm VAS rest/cough appropriate.",
+          "source_location": "p341",
+          "reasoning": "10cm VAS rest/cough appropriate."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same1,6,24,48h schedule.",
+          "source_location": "p341",
+          "reasoning": "Same1,6,24,48h schedule."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "NI",
+          "evidence": "Patients blinded by brief sham sensation but no empirical test.",
+          "source_location": "p341,p346",
+          "reasoning": "Patients blinded by brief sham sensation but no empirical test."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence assessment?",
+          "answer": "Y",
+          "evidence": "Patient-reported pain and GI timing could reflect knowledge.",
+          "source_location": "p341",
+          "reasoning": "Patient-reported pain and GI timing could reflect knowledge."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "Authors infer masking from efficacy, not masking assessment.",
+          "source_location": "p346",
+          "reasoning": "Authors infer masking from efficacy, not masking assessment."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was analysis in accordance with a plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "Registry identifier15006032 vs completed2012–2013 recruitment; no prospective SAP retrieved.",
+          "source_location": "p341",
+          "reasoning": "Registry identifier15006032 vs completed2012–2013 recruitment; no prospective SAP retrieved."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the reported result likely selected from multiple eligible measurements based on results?",
+          "answer": "NI",
+          "evidence": "Multiple schedules, rest/activity and times; detailed pre-unblinding plan unavailable.",
+          "source_location": "p341–342",
+          "reasoning": "Multiple schedules, rest/activity and times; detailed pre-unblinding plan unavailable."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the reported result likely selected from multiple eligible analyses based on results?",
+          "answer": "NI",
+          "evidence": "Kruskal–Wallis/Dunn and two-wayANOVA reported, no dated analysis selection plan.",
+          "source_location": "p342",
+          "reasoning": "Kruskal–Wallis/Dunn and two-wayANOVA reported, no dated analysis selection plan."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Random sequence and probably concealed allocation.",
+          "source_location": "p341"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-induced deviations; assignment analysis available cases.",
+          "source_location": "p341–342"
+        },
+        {
+          "domain": 3,
+          "judgment": "Some concerns",
+          "reasoning": "Surgical-status exclusions can affect result.",
+          "source_location": "p342"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Sensory-duration masking uncertain for pain andGI reporting.",
+          "source_location": "p341"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospective analysis plan unestablished.",
+          "source_location": "p341–342"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Missing outcomes, sensory masking and prespecification uncertainties; no high-risk domain established."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "No postoperative opioid consumption; author-converted intraop opioid and nonopioid rescue only."
+  }
+}

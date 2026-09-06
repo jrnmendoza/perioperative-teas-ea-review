@@ -1,0 +1,235 @@
+{
+  "Study_ID": "S009",
+  "Study": "Yu 2020",
+  "source_before_baseline": true,
+  "identity": {
+    "title": "The effect of TEAS on the quality of early recovery in patients undergoing gynecological laparoscopic surgery: a prospective, randomized, placebo-controlled trial",
+    "doi": "10.1186/s13063-019-3892-4",
+    "year": 2020,
+    "pdf": "s13063-019-3892-4.pdf",
+    "read_pages": "1–9 complete; visualFigures1/3 pp3/5,Figure4/5 p6,Tables2/3 p7; official registryNCT02619578; PMC article correction search"
+  },
+  "arms": {
+    "order": [
+      "TEAS",
+      "control"
+    ],
+    "randomized": [
+      30,
+      30
+    ],
+    "analyzed": [
+      30,
+      30
+    ],
+    "protocol": "Guizhou Nov2013–Nov2014 adult gynecologiclaparoscopyGA. Methods GV20/EXHN3/ST36/PC6,12–15mA2/100Hz30minpreanesthesia,maximumtoleratedtwitch; identicalelectrodes/no-currentcontrol. Figure3disagrees."
+  },
+  "results": {
+    "QoR40": {
+      "format": "meanSD numerical abstract, not graph extraction",
+      "POD1": [
+        [
+          175.33,
+          9.66
+        ],
+        [
+          166.07,
+          8.44
+        ]
+      ],
+      "POD2": [
+        [
+          191.4,
+          5.74
+        ],
+        [
+          187.73,
+          5.47
+        ]
+      ],
+      "preop1": [
+        [
+          195.83,
+          5.17
+        ],
+        [
+          197.5,
+          2.57
+        ]
+      ],
+      "p_POD1": 0.04,
+      "p_POD2": 0.015,
+      "scale": "QoR40 higherbetter maximum200",
+      "location": "Abstractp1; prosepp4/6 andFigure4p6; graphPOD2controldifferent anderrorbars incompatible"
+    },
+    "pain_rest": {
+      "format": "meanSD table",
+      "POD1": [
+        [
+          3.7,
+          1.53
+        ],
+        [
+          4.73,
+          1.53
+        ]
+      ],
+      "POD2": [
+        [
+          1.83,
+          0.98
+        ],
+        [
+          2.3,
+          0.95
+        ]
+      ],
+      "abstract_TEAS_SD": [
+        1.41,
+        0.88
+      ],
+      "scale": "Abstract/registry100mmVAS; table numeric reporting scale unspecified, do not infer0–10 or multiply10",
+      "p_POD1": 0.042,
+      "p_POD2_prose": 0.26,
+      "p_POD2_table": "<0.05",
+      "location": "Table2p7,abstractp1,results p5"
+    },
+    "PONV": {
+      "events": [
+        7,
+        17
+      ],
+      "n": [
+        30,
+        30
+      ],
+      "window": "First24h after surgery",
+      "p": "<0.01",
+      "location": "Table3p7 and results p5"
+    },
+    "rescue_analgesia": {
+      "events": [
+        13,
+        24
+      ],
+      "n": [
+        30,
+        30
+      ],
+      "drug": "sufentanil",
+      "route": "Insufficient information / not reported.",
+      "dose": "Insufficient information / not reported.",
+      "window": "Postoperative; paragraph groups with24hPONV but analgesia window not separately explicit",
+      "p": "<0.01",
+      "location": "Results p5/Table3p7"
+    },
+    "rescue_antiemetic": {
+      "events": [
+        7,
+        16
+      ],
+      "n": [
+        30,
+        30
+      ],
+      "drug": "tropisetron",
+      "p": "<0.02",
+      "location": "Results p5/Table3p7"
+    },
+    "GI": "Insufficient information / not reported."
+  },
+  "opioid": {
+    "decision": "excluded",
+    "drug": "Postoperative sufentanil rescue; intraoperative IVremifentanil",
+    "route": "Insufficient information / not reported.",
+    "pca": "Insufficient information / not reported.",
+    "rescue": "Sufentanil used in13/30TEAS vs24/30control; trigger,route,dose and timing not reported",
+    "reason": "Binary rescue use is not cumulative amount; no postoperative0–24h opioid dose or dispersion. No conversion.",
+    "location": "Methods pp2–3 andResults p5/Table3p7"
+  },
+  "source_conflicts": [
+    "TEAS painSD1.53/0.98 Table2 vs1.41/0.88abstract; not resolved by choosing matching derivatives.",
+    "VAS100mm specified but values3.70/4.73 without reportingunit; no authorizedscaleconversion.",
+    "POD2painP.26prose vs significanttableasterisk/abstract.",
+    "Figure4POD2control plotted belowabstract187.73; errorbars farlarger than abstractSD andextendbeyondQoR40maximum200. No numericgraphread.",
+    "Figure3addsKI3and2/10Hz6–9mA whereasMethods2/100Hz12–15mAand4points; modalityremainsTEAS(no needles).",
+    "MMSEprosesayslowerTEAS contraryabstractandplot; outside requestedfamilies, noteddataQC.",
+    "Authors explicitly acknowledge no externalmonitoring/auditingand cannot prove existence/error-free data; evaluate integrity separately fromautomaticRoB2High."
+  ],
+  "registration": {
+    "identifier": "NCT02619578",
+    "url": "https://clinicaltrials.gov/api/v2/studies/NCT02619578",
+    "first_submitted": "2015-11-20",
+    "first_posted": "2015-12-02",
+    "trial_completion": "2014-11",
+    "prespecification": "Retrospectiveaftercompletion; no preanalysisSAP or results posted despite dataavailabilityclaim.",
+    "correction_search": "ExactDOI/title correction search retrievedPMC6951027 same conflictingTable2; no corrective publication located. No claim exhaustive absence."
+  },
+  "rob_independent": {
+    "D1": {
+      "answers": [
+        "Y",
+        "NI",
+        "PN"
+      ],
+      "judgment": "Some concerns",
+      "evidence": "Methods p2 computersequence,nurseassigns and informs acupuncturistjustbeforeTEAS; concealmentfromenrollingnurse not described. Baseline no clearallocationfailure."
+    },
+    "D2": {
+      "answers": [
+        "PY",
+        "Y",
+        "PN",
+        "NA",
+        "NA",
+        "Y",
+        "NA"
+      ],
+      "judgment": "Low",
+      "evidence": "Methods pp2–3 active12–15mAmuscletwitch vsnone,patientrecognitionpossible; acupuncturistaware butanesthesia/surgeon/PACUmasked. No trial-contextdeviation documented; all60 analyzed byassignment/ITT."
+    },
+    "D3": {
+      "answers": [
+        "Y",
+        "NA",
+        "NA",
+        "NA"
+      ],
+      "judgment": "Low",
+      "evidence": "Figure1p3 zero exclusions/losses;30/30received andanalyzed, complete datasetsall60 statedp3."
+    },
+    "D4": {
+      "answers": [
+        "N",
+        "PN",
+        "PY",
+        "Y",
+        "NI"
+      ],
+      "judgment": "Some concerns",
+      "evidence": "SubjectiveQoR40,pain andnausea-containingPONV patientcanrecognizemuscle-twitchTEAS versusnone; blindedBNadministeredquestionnaires sameway. Influencepossible, actualresult-dependentreportingNI; unit/SDerrors aredataextractionholds."
+    },
+    "D4_rescue": {
+      "answers": [
+        "N",
+        "PN",
+        "PN",
+        "NA",
+        "NA"
+      ],
+      "judgment": "Low",
+      "evidence": "Results p5 recordedwhether sufentanilrescuegiven; PACUphysicians/data collector masked. Missingthreshold affectsclinicalmeaning butnot evidence ofdifferentialrecording; patientrequestbehavior distinct fromrecord accuracy."
+    },
+    "D5": {
+      "answers": [
+        "N",
+        "NI",
+        "NI"
+      ],
+      "judgment": "Some concerns",
+      "evidence": "OfficialNCT02619578 registeredDec2015 afterNov2014completion. No timelySAP, repeatedQoR/pain days andcovariate analyses. ConflictingSD/P/figures do not demonstrate selectionbecauseofresults; exact underlyingnumbermustbeconfirmed."
+    }
+  },
+  "independence": "Guizhou2013–2014gynecologiccohort,NCT02619578, distinct from Wenzhou2024–25 S006 and Hangzhou gynecologicS012; not duplicate merelysame surgery.",
+  "missing": "Insufficient information / not reported."
+}

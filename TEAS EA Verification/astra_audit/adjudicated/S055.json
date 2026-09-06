@@ -1,0 +1,2688 @@
+{
+  "Study_ID": "S055",
+  "Study": "Gao 2021",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first-page identity confirmed",
+    "title": "Transcutaneous electrical acupoint stimulation applied in lower limbs decreases the incidence of paralytic ileus after colorectal surgery: A multicenter randomized controlled trial",
+    "year": 2021,
+    "doi": "10.1016/j.surg.2021.08.007",
+    "pdf_files": [
+      "covidence_400_full_article.pdf"
+    ],
+    "randomized_arms": {
+      "TEAS": 303,
+      "sham": 307
+    },
+    "analyzed_arms": {
+      "TEAS": 303,
+      "sham": 307
+    },
+    "modality": "TEAS",
+    "comparator_class": "Severed-wire sham TEAS",
+    "independence": "Singlemulticentertrial;centersnotindependentstudies.",
+    "source_locations": "pp2-3;TableIIIp6",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 238,
+      "final": {
+        "Canonical study": "Gao 2021",
+        "Comparison ID": "GAO21_TEAS_vs_SHAM_POI",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no-current TEAS",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Postoperative paralytic ileus: no flatus >72 h",
+        "Timepoint/window": "No flatus >72h after surgery",
+        "Data type": "Events/total",
+        "Randomized n intervention": 303,
+        "Randomized n comparator": 307,
+        "Analyzed n intervention": 303,
+        "Analyzed n comparator": 307,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 98,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 126,
+        "Unit/scale": "participants",
+        "Reported P": "0.026",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.788045471213788,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous POI analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Full ITT of all 610 randomized; participant sensory masking limited because active TEAS was perceptible",
+        "Source location": "p6 TableIII;pp2-3 Outcomes",
+        "Source PDF URL": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Gao 2021",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "GAO21_TEAS_vs_SHAM_POI",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no-current TEAS",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Postoperative paralytic ileus: no flatus >72 h",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "No flatus >72h after surgery",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 303,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 307,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 303,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 307,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 98,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 126,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.026",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.788045471213788,
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous POI analysis",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Full ITT of all 610 randomized; participant sensory masking limited because active TEAS was perceptible",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p6 TableIII;pp2-3 Outcomes",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "Postoperative",
+          "source_value": "No flatus >72h after surgery",
+          "final_value": "No flatus >72h after surgery",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "reason": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Primary POI outcome",
+          "source_value": "p6 TableIII;pp2-3 Outcomes",
+          "final_value": "p6 TableIII;pp2-3 Outcomes",
+          "source_location": "p6 TableIII;pp2-3 Outcomes",
+          "reason": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_400_full_article.pdf",
+      "source_evidence": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+      "drug": "Postoperative opioid consumption not reported",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "POI defined as no flatus >72h: TEAS98/303 versus sham126/307; all randomized analyzed; P.026. RR(98/303)/(126/307)=0.78804547. Do not confuse author OR0.68 with RR.",
+      "analysis_eligibility": "Eligible for dichotomous POI analysis",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 239,
+      "final": {
+        "Canonical study": "Gao 2021",
+        "Comparison ID": "GAO21_TEAS_vs_SHAM_FLATUS",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no-current TEAS",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Time to first flatus",
+        "Timepoint/window": "From postoperative Steward recovery score4 to first flatus",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 303,
+        "Randomized n comparator": 307,
+        "Analyzed n intervention": 303,
+        "Analyzed n comparator": 307,
+        "Mean intervention": 63.4,
+        "SD intervention": 29,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 76.3,
+        "SD comparator": 37.9,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "hours",
+        "Reported P": "0.001",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "MD",
+        "Derived effect": -12.899999999999999,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for GI-recovery analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "UseTableIIImeanSD;Fig2medianIQRnotinterchangeable. DerivedMD-12.9 differsbyroundingfromauthorMD-12.8.",
+        "Source location": "p6 TableIII;p3 Outcomes",
+        "Source PDF URL": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Gao 2021",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "GAO21_TEAS_vs_SHAM_FLATUS",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no-current TEAS",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to first flatus",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "From postoperative Steward recovery score4 to first flatus",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 303,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 307,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 303,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 307,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 63.4,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 29,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 76.3,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 37.9,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "hours",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.001",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -12.899999999999999,
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for GI-recovery analysis",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "UseTableIIImeanSD;Fig2medianIQRnotinterchangeable. DerivedMD-12.9 differsbyroundingfromauthorMD-12.8.",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p6 TableIII;p3 Outcomes",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "Postoperative",
+          "source_value": "From postoperative Steward recovery score4 to first flatus",
+          "final_value": "From postoperative Steward recovery score4 to first flatus",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "reason": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "GI recovery outcomes",
+          "source_value": "p6 TableIII;p3 Outcomes",
+          "final_value": "p6 TableIII;p3 Outcomes",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "reason": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Full randomized sample retained; participant awareness may influence self-reported GI milestones",
+          "source_value": "UseTableIIImeanSD;Fig2medianIQRnotinterchangeable. DerivedMD-12.9 differsbyroundingfromauthorMD-12.8.",
+          "final_value": "UseTableIIImeanSD;Fig2medianIQRnotinterchangeable. DerivedMD-12.9 differsbyroundingfromauthorMD-12.8.",
+          "source_location": "p6 TableIII;p3 clock definition",
+          "reason": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_400_full_article.pdf",
+      "source_evidence": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+      "drug": "Postoperative opioid consumption not reported",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "MeanSD first flatus63.4±29.0 versus76.3±37.9h,n303/307. DerivedMD=-12.9 fromroundedmeans; authorMD=-12.8(CI-18.2,-7.5). TableP.001. Clock starts Stewardscore4 immediatelypostsurgery;Fig2 displaysmedianIQR separately.",
+      "analysis_eligibility": "Eligible for GI-recovery analysis",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 240,
+      "final": {
+        "Canonical study": "Gao 2021",
+        "Comparison ID": "GAO21_TEAS_vs_SHAM_DEFEC",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no-current TEAS",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Time to first defecation",
+        "Timepoint/window": "From postoperative Steward recovery score4 to first defecation",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 303,
+        "Randomized n comparator": 307,
+        "Analyzed n intervention": 303,
+        "Analyzed n comparator": 307,
+        "Mean intervention": 106.7,
+        "SD intervention": 65.6,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 121.5,
+        "SD comparator": 65.6,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "hours",
+        "Reported P": "0.005",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "MD",
+        "Derived effect": -14.799999999999997,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for GI-recovery analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "TableIIImeanSD;authorMD-14.9 differs from roundedmeansMD-14.8. Fig2boxplot/P differ.",
+        "Source location": "p6 TableIII;p3 Outcomes",
+        "Source PDF URL": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Gao 2021",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "GAO21_TEAS_vs_SHAM_DEFEC",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no-current TEAS",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to first defecation",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "From postoperative Steward recovery score4 to first defecation",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 303,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 307,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 303,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 307,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 106.7,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 65.6,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 121.5,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 65.6,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "hours",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.005",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -14.799999999999997,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for GI-recovery analysis",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "TableIIImeanSD;authorMD-14.9 differs from roundedmeansMD-14.8. Fig2boxplot/P differ.",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p6 TableIII;p3 Outcomes",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "Postoperative",
+          "source_value": "From postoperative Steward recovery score4 to first defecation",
+          "final_value": "From postoperative Steward recovery score4 to first defecation",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "reason": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "GI recovery outcomes",
+          "source_value": "p6 TableIII;p3 Outcomes",
+          "final_value": "p6 TableIII;p3 Outcomes",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "reason": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Full randomized sample retained; participant awareness may influence self-reported GI milestones",
+          "source_value": "TableIIImeanSD;authorMD-14.9 differs from roundedmeansMD-14.8. Fig2boxplot/P differ.",
+          "final_value": "TableIIImeanSD;authorMD-14.9 differs from roundedmeansMD-14.8. Fig2boxplot/P differ.",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "reason": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_400_full_article.pdf",
+      "source_evidence": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+      "drug": "Postoperative opioid consumption not reported",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "First defecation106.7±65.6 versus121.5±65.6h,n303/307;P.005. DerivedMD-14.8 fromroundedmeans;authorMD-14.9(CI-25.3,-4.4). ClockstartsSteward4.",
+      "analysis_eligibility": "Eligible for GI-recovery analysis",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 241,
+      "final": {
+        "Canonical study": "Gao 2021",
+        "Comparison ID": "GAO21_TEAS_vs_SHAM_DIET",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no-current TEAS",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Time to resume normal diet",
+        "Timepoint/window": "From postoperative Steward recovery score4 to normal diet",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 303,
+        "Randomized n comparator": 307,
+        "Analyzed n intervention": 303,
+        "Analyzed n comparator": 307,
+        "Mean intervention": 373.9,
+        "SD intervention": 224.9,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 425.5,
+        "SD comparator": 235.6,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "hours",
+        "Reported P": "0.006",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "MD",
+        "Derived effect": -51.60000000000002,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for GI-recovery analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Full randomized sample retained; participant awareness may influence self-reported GI milestones",
+        "Source location": "p6 TableIII;p3 Outcomes",
+        "Source PDF URL": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+        "Record status": "SOURCE-VERIFIED"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Gao 2021",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "GAO21_TEAS_vs_SHAM_DIET",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no-current TEAS",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to resume normal diet",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "From postoperative Steward recovery score4 to normal diet",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 303,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 307,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 303,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 307,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 373.9,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 224.9,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 425.5,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 235.6,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "hours",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.006",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -51.60000000000002,
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for GI-recovery analysis",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Full randomized sample retained; participant awareness may influence self-reported GI milestones",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p6 TableIII;p3 Outcomes",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE-VERIFIED",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "Postoperative",
+          "source_value": "From postoperative Steward recovery score4 to normal diet",
+          "final_value": "From postoperative Steward recovery score4 to normal diet",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "reason": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "GI recovery outcomes",
+          "source_value": "p6 TableIII;p3 Outcomes",
+          "final_value": "p6 TableIII;p3 Outcomes",
+          "source_location": "p6 TableIII;p3 Outcomes",
+          "reason": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_400_full_article.pdf",
+      "source_evidence": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+      "drug": "Postoperative opioid consumption not reported",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Normal diet373.9±224.9 versus425.5±235.6h,n303/307,meanSD;MD-51.6;P.006. Hours asprinted; do not correct tootherunit. Normaldiet distinct fromfirstfeeding/bowelsounds.",
+      "analysis_eligibility": "Eligible for GI-recovery analysis",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 242,
+      "final": {
+        "Canonical study": "Gao 2021",
+        "Comparison ID": "GAO21_OPIOID24",
+        "Intervention arm": "Postoperative TEAS",
+        "Comparator arm": "Sham/no-current TEAS",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative postoperative opioid consumption",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 303,
+        "Randomized n comparator": 307,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "Insufficient information / not reported.",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Main article reports only whether postoperative analgesia was used, not drug-specific dose/route/PCA consumption",
+        "Source location": "p5 TableII",
+        "Source PDF URL": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+        "Record status": "MISSING / NOT REPORTED"
+      },
+      "verification_status": "NOT ANALYSIS ELIGIBLE",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Gao 2021",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "GAO21_OPIOID24",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Postoperative TEAS",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no-current TEAS",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative postoperative opioid consumption",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 303,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 307,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "Insufficient information / not reported.",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Main article reports only whether postoperative analgesia was used, not drug-specific dose/route/PCA consumption",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p5 TableII",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1QbM6CNi8KfBXmMTqG1ASm3hK05cz_hKQ/view?usp=drivesdk",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "MISSING / NOT REPORTED",
+          "source_location": "p5 TableII",
+          "evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 303,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p5 TableII",
+          "reason": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 307,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p5 TableII",
+          "reason": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "severity": "material"
+        },
+        {
+          "field": "Unit/scale",
+          "old_value": "mg/µg",
+          "source_value": "Insufficient information / not reported.",
+          "final_value": "Insufficient information / not reported.",
+          "source_location": "p5 TableII",
+          "reason": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Postoperative analgesia section",
+          "source_value": "p5 TableII",
+          "final_value": "p5 TableII",
+          "source_location": "p5 TableII",
+          "reason": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_400_full_article.pdf",
+      "source_evidence": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+      "drug": "Postoperative opioid consumption not reported",
+      "route": "Insufficient information / not reported.",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Postoperativeanalgesia use297/303vs304/307 only; no actualopioiddose/route/formulation/24hwindow. Trialnnotconsumptionoutcomen.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+      "notes": "Phase A source-first followed by field-level comparison."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "POI72",
+      "outcome": "POI noflatus>72h",
+      "time_window": ">72h",
+      "comparison": "Severed-wire sham TEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "SPSSblockrandomization,size4",
+          "source_location": "p3",
+          "reasoning": "SPSSblockrandomization,size4"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "PY",
+          "evidence": "Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence",
+          "source_location": "p3",
+          "reasoning": "Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "N",
+          "evidence": "Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment",
+          "source_location": "TablesI-II",
+          "reasoning": "Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Authorsadmitpatientscanfeelstimulationversusnone",
+          "source_location": "p8limitations",
+          "reasoning": "Authorsadmitpatientscanfeelstimulationversusnone"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Executordeliversmax-toleratedcurrent;clinicalstaffblinded",
+          "source_location": "p3",
+          "reasoning": "Executordeliversmax-toleratedcurrent;clinicalstaffblinded"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures",
+          "source_location": "pp3-4",
+          "reasoning": "Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "Noneidentified",
+          "source_location": "p3",
+          "reasoning": "Noneidentified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "Noneidentified",
+          "source_location": "p3",
+          "reasoning": "Noneidentified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All610analyzedITT",
+          "source_location": "p3",
+          "reasoning": "All610analyzedITT"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "ITT",
+          "source_location": "p3",
+          "reasoning": "ITT"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "All303/307includedprimaryandsecondary",
+          "source_location": "p3;TableIII",
+          "reasoning": "All303/307includedprimaryandsecondary"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint",
+          "source_location": "p3",
+          "reasoning": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Samecaregiverrecordingrequirementsandblindedcollection",
+          "source_location": "pp2-3",
+          "reasoning": "Samecaregiverrecordingrequirementsandblindedcollection"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Patient/familyreportflatus;participantsfeelactivecurrent",
+          "source_location": "pp2-3,8",
+          "reasoning": "Patient/familyreportflatus;participantsfeelactivecurrent"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "Y",
+          "evidence": "Reportedmilestonetimecanbeinfluencedbyknowledge",
+          "source_location": "pp2-3",
+          "reasoning": "Reportedmilestonetimecanbeinfluencedbyknowledge"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "PY",
+          "evidence": "BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely",
+          "source_location": "p2compliance;p3intervention;p8limitations",
+          "reasoning": "BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospectiveregistrationexistsbutdatedanalysisplanunverified",
+          "source_location": "registryNCT03086304",
+          "reasoning": "Prospectiveregistrationexistsbutdatedanalysisplanunverified"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "PN",
+          "evidence": "Clearlyspecified72hPOIendpointconcordantwithregistry",
+          "source_location": "registry;TableIII",
+          "reasoning": "Clearlyspecified72hPOIendpointconcordantwithregistry"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable",
+          "source_location": "p3;registry",
+          "reasoning": "Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "SPSSblockrandomization,size4; Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence; Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment",
+          "source_location": "p3; p3; TablesI-II"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Authorsadmitpatientscanfeelstimulationversusnone; Executordeliversmax-toleratedcurrent;clinicalstaffblinded; Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures; Noneidentified; Noneidentified; All610analyzedITT; ITT",
+          "source_location": "p8limitations; p3; pp3-4; p3; p3; p3; p3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All303/307includedprimaryandsecondary; Complete; Complete; Complete",
+          "source_location": "p3;TableIII; p3; p3; p3"
+        },
+        {
+          "domain": 4,
+          "judgment": "High",
+          "reasoning": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint; Samecaregiverrecordingrequirementsandblindedcollection; Patient/familyreportflatus;participantsfeelactivecurrent; Reportedmilestonetimecanbeinfluencedbyknowledge; BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely",
+          "source_location": "p3; pp2-3; pp2-3,8; pp2-3; p2compliance;p3intervention;p8limitations"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospectiveregistrationexistsbutdatedanalysisplanunverified; Clearlyspecified72hPOIendpointconcordantwithregistry; Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable",
+          "source_location": "registryNCT03086304; registry;TableIII; p3;registry"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "POIandfirstflatusdependonunblindedpatientrecordingwithexplicitbenefitexpectations;prespecifiedanalysisdetailunverified.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "POI raised toHigh: D4High based on explicitbenefitexpectations plusknownsensoryunmasking andpatient-recordedflatus;notawarenessalone. D5Someconcerns pendingdatedSAP, despiteprospectiveregistration. Diet assessed separately."
+    },
+    {
+      "result_id": "flatus",
+      "outcome": "Time to first flatus",
+      "time_window": "FromSteward4postsurgery",
+      "comparison": "Severed-wire sham TEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "SPSSblockrandomization,size4",
+          "source_location": "p3",
+          "reasoning": "SPSSblockrandomization,size4"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "PY",
+          "evidence": "Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence",
+          "source_location": "p3",
+          "reasoning": "Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "N",
+          "evidence": "Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment",
+          "source_location": "TablesI-II",
+          "reasoning": "Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Authorsadmitpatientscanfeelstimulationversusnone",
+          "source_location": "p8limitations",
+          "reasoning": "Authorsadmitpatientscanfeelstimulationversusnone"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Executordeliversmax-toleratedcurrent;clinicalstaffblinded",
+          "source_location": "p3",
+          "reasoning": "Executordeliversmax-toleratedcurrent;clinicalstaffblinded"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures",
+          "source_location": "pp3-4",
+          "reasoning": "Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "Noneidentified",
+          "source_location": "p3",
+          "reasoning": "Noneidentified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "Noneidentified",
+          "source_location": "p3",
+          "reasoning": "Noneidentified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All610analyzedITT",
+          "source_location": "p3",
+          "reasoning": "All610analyzedITT"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "ITT",
+          "source_location": "p3",
+          "reasoning": "ITT"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "All303/307includedprimaryandsecondary",
+          "source_location": "p3;TableIII",
+          "reasoning": "All303/307includedprimaryandsecondary"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint",
+          "source_location": "p3",
+          "reasoning": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Samecaregiverrecordingrequirementsandblindedcollection",
+          "source_location": "pp2-3",
+          "reasoning": "Samecaregiverrecordingrequirementsandblindedcollection"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Patient/familyreportflatus;participantsfeelactivecurrent",
+          "source_location": "pp2-3,8",
+          "reasoning": "Patient/familyreportflatus;participantsfeelactivecurrent"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "Y",
+          "evidence": "Reportedmilestonetimecanbeinfluencedbyknowledge",
+          "source_location": "pp2-3",
+          "reasoning": "Reportedmilestonetimecanbeinfluencedbyknowledge"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "PY",
+          "evidence": "BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely",
+          "source_location": "p2compliance;p3intervention;p8limitations",
+          "reasoning": "BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospectiveregistrationexistsbutdatedanalysisplanunverified",
+          "source_location": "registryNCT03086304",
+          "reasoning": "Prospectiveregistrationexistsbutdatedanalysisplanunverified"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "GI timing methods in registry but detailedprospectiveanalysis unavailable",
+          "source_location": "NCT03086304;TableIII",
+          "reasoning": "GI timing methods in registry but detailedprospectiveanalysis unavailable"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable",
+          "source_location": "p3;registry",
+          "reasoning": "Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "SPSSblockrandomization,size4; Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence; Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment",
+          "source_location": "p3; p3; TablesI-II"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Authorsadmitpatientscanfeelstimulationversusnone; Executordeliversmax-toleratedcurrent;clinicalstaffblinded; Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures; Noneidentified; Noneidentified; All610analyzedITT; ITT",
+          "source_location": "p8limitations; p3; pp3-4; p3; p3; p3; p3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All303/307includedprimaryandsecondary; Complete; Complete; Complete",
+          "source_location": "p3;TableIII; p3; p3; p3"
+        },
+        {
+          "domain": 4,
+          "judgment": "High",
+          "reasoning": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint; Samecaregiverrecordingrequirementsandblindedcollection; Patient/familyreportflatus;participantsfeelactivecurrent; Reportedmilestonetimecanbeinfluencedbyknowledge; BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely",
+          "source_location": "p3; pp2-3; pp2-3,8; pp2-3; p2compliance;p3intervention;p8limitations"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospectiveregistrationexistsbutdatedanalysisplanunverified; GI timing methods in registry but detailedprospectiveanalysis unavailable; Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable",
+          "source_location": "registryNCT03086304; NCT03086304;TableIII; p3;registry"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "POIandfirstflatusdependonunblindedpatientrecordingwithexplicitbenefitexpectations;prespecifiedanalysisdetailunverified.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "POI raised toHigh: D4High based on explicitbenefitexpectations plusknownsensoryunmasking andpatient-recordedflatus;notawarenessalone. D5Someconcerns pendingdatedSAP, despiteprospectiveregistration. Diet assessed separately."
+    },
+    {
+      "result_id": "defecation",
+      "outcome": "Time to first defecation",
+      "time_window": "FromSteward4postsurgery",
+      "comparison": "Severed-wire sham TEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "SPSSblockrandomization,size4",
+          "source_location": "p3",
+          "reasoning": "SPSSblockrandomization,size4"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "PY",
+          "evidence": "Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence",
+          "source_location": "p3",
+          "reasoning": "Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "N",
+          "evidence": "Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment",
+          "source_location": "TablesI-II",
+          "reasoning": "Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Authorsadmitpatientscanfeelstimulationversusnone",
+          "source_location": "p8limitations",
+          "reasoning": "Authorsadmitpatientscanfeelstimulationversusnone"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Executordeliversmax-toleratedcurrent;clinicalstaffblinded",
+          "source_location": "p3",
+          "reasoning": "Executordeliversmax-toleratedcurrent;clinicalstaffblinded"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures",
+          "source_location": "pp3-4",
+          "reasoning": "Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "Noneidentified",
+          "source_location": "p3",
+          "reasoning": "Noneidentified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "Noneidentified",
+          "source_location": "p3",
+          "reasoning": "Noneidentified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All610analyzedITT",
+          "source_location": "p3",
+          "reasoning": "All610analyzedITT"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "ITT",
+          "source_location": "p3",
+          "reasoning": "ITT"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "All303/307includedprimaryandsecondary",
+          "source_location": "p3;TableIII",
+          "reasoning": "All303/307includedprimaryandsecondary"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint",
+          "source_location": "p3",
+          "reasoning": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Samecaregiverrecordingrequirementsandblindedcollection",
+          "source_location": "pp2-3",
+          "reasoning": "Samecaregiverrecordingrequirementsandblindedcollection"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "Y",
+          "evidence": "Patient/familyreportflatus;participantsfeelactivecurrent",
+          "source_location": "pp2-3,8",
+          "reasoning": "Patient/familyreportflatus;participantsfeelactivecurrent"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "Y",
+          "evidence": "Reportedmilestonetimecanbeinfluencedbyknowledge",
+          "source_location": "pp2-3",
+          "reasoning": "Reportedmilestonetimecanbeinfluencedbyknowledge"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "PY",
+          "evidence": "BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely",
+          "source_location": "p2compliance;p3intervention;p8limitations",
+          "reasoning": "BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospectiveregistrationexistsbutdatedanalysisplanunverified",
+          "source_location": "registryNCT03086304",
+          "reasoning": "Prospectiveregistrationexistsbutdatedanalysisplanunverified"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "GI timingmethods inregistry;detailedprospectiveanalysisunavailable",
+          "source_location": "registry;TableIII",
+          "reasoning": "GI timingmethods inregistry;detailedprospectiveanalysisunavailable"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable",
+          "source_location": "p3;registry",
+          "reasoning": "Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "SPSSblockrandomization,size4; Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence; Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment",
+          "source_location": "p3; p3; TablesI-II"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Authorsadmitpatientscanfeelstimulationversusnone; Executordeliversmax-toleratedcurrent;clinicalstaffblinded; Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures; Noneidentified; Noneidentified; All610analyzedITT; ITT",
+          "source_location": "p8limitations; p3; pp3-4; p3; p3; p3; p3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All303/307includedprimaryandsecondary; Complete; Complete; Complete",
+          "source_location": "p3;TableIII; p3; p3; p3"
+        },
+        {
+          "domain": 4,
+          "judgment": "High",
+          "reasoning": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint; Samecaregiverrecordingrequirementsandblindedcollection; Patient/familyreportflatus;participantsfeelactivecurrent; Reportedmilestonetimecanbeinfluencedbyknowledge; BenefitsincludingPOIpreventionexplainedtoencouragecompliance;repeatedmax-toleratedsensorytreatmentandpatient-recordedflatusmakesexpectancyinfluencelikely",
+          "source_location": "p3; pp2-3; pp2-3,8; pp2-3; p2compliance;p3intervention;p8limitations"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospectiveregistrationexistsbutdatedanalysisplanunverified; GI timingmethods inregistry;detailedprospectiveanalysisunavailable; Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable",
+          "source_location": "registryNCT03086304; registry;TableIII; p3;registry"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "POIandfirstflatusdependonunblindedpatientrecordingwithexplicitbenefitexpectations;prespecifiedanalysisdetailunverified.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "POI raised toHigh: D4High based on explicitbenefitexpectations plusknownsensoryunmasking andpatient-recordedflatus;notawarenessalone. D5Someconcerns pendingdatedSAP, despiteprospectiveregistration. Diet assessed separately."
+    },
+    {
+      "result_id": "diet",
+      "outcome": "Time to normal diet",
+      "time_window": "FromSteward4postsurgery",
+      "comparison": "Severed-wire sham TEAS",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "SPSSblockrandomization,size4",
+          "source_location": "p3",
+          "reasoning": "SPSSblockrandomization,size4"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "PY",
+          "evidence": "Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence",
+          "source_location": "p3",
+          "reasoning": "Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "N",
+          "evidence": "Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment",
+          "source_location": "TablesI-II",
+          "reasoning": "Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "Y",
+          "evidence": "Authorsadmitpatientscanfeelstimulationversusnone",
+          "source_location": "p8limitations",
+          "reasoning": "Authorsadmitpatientscanfeelstimulationversusnone"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Executordeliversmax-toleratedcurrent;clinicalstaffblinded",
+          "source_location": "p3",
+          "reasoning": "Executordeliversmax-toleratedcurrent;clinicalstaffblinded"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures",
+          "source_location": "pp3-4",
+          "reasoning": "Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "Noneidentified",
+          "source_location": "p3",
+          "reasoning": "Noneidentified"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "Noneidentified",
+          "source_location": "p3",
+          "reasoning": "Noneidentified"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "Y",
+          "evidence": "All610analyzedITT",
+          "source_location": "p3",
+          "reasoning": "All610analyzedITT"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "ITT",
+          "source_location": "p3",
+          "reasoning": "ITT"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "Y",
+          "evidence": "All303/307includedprimaryandsecondary",
+          "source_location": "p3;TableIII",
+          "reasoning": "All303/307includedprimaryandsecondary"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Complete",
+          "source_location": "p3",
+          "reasoning": "Complete"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint",
+          "source_location": "p3",
+          "reasoning": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Samecaregiverrecordingrequirementsandblindedcollection",
+          "source_location": "pp2-3",
+          "reasoning": "Samecaregiverrecordingrequirementsandblindedcollection"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "NI",
+          "evidence": "Surgeons decide routine diet and are described blinded, but patients/family report milestone; relative roles unclear",
+          "source_location": "p3",
+          "reasoning": "Surgeons decide routine diet and are described blinded, but patients/family report milestone; relative roles unclear"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "PY",
+          "evidence": "Diet decision andpatient tolerance may be influenced",
+          "source_location": "p3",
+          "reasoning": "Diet decision andpatient tolerance may be influenced"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NI",
+          "evidence": "No evidence thatblinded surgeon decisions systematicallyinfluenced",
+          "source_location": "p3",
+          "reasoning": "No evidence thatblinded surgeon decisions systematicallyinfluenced"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "Prospectiveregistrationexistsbutdatedanalysisplanunverified",
+          "source_location": "registryNCT03086304",
+          "reasoning": "Prospectiveregistrationexistsbutdatedanalysisplanunverified"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Normaldiet registrylisted, preciseprospectivespecification unavailable",
+          "source_location": "registry",
+          "reasoning": "Normaldiet registrylisted, preciseprospectivespecification unavailable"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable",
+          "source_location": "p3;registry",
+          "reasoning": "Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "SPSSblockrandomization,size4; Centraladministratoropenssealedenvelopeafterpostsurgeryeligibilityconfirmation;notinferfromsequence; Baselineimbalancescompatiblewithchance;plasmausetreatedasadjustment",
+          "source_location": "p3; p3; TablesI-II"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Authorsadmitpatientscanfeelstimulationversusnone; Executordeliversmax-toleratedcurrent;clinicalstaffblinded; Routinecarewithgoodcompliance;noevidenceoftrial-contextdepartures; Noneidentified; Noneidentified; All610analyzedITT; ITT",
+          "source_location": "p8limitations; p3; pp3-4; p3; p3; p3; p3"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All303/307includedprimaryandsecondary; Complete; Complete; Complete",
+          "source_location": "p3;TableIII; p3; p3; p3"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Definednoflatus>72handtimemilestonesvalidforthedefinedendpoint; Samecaregiverrecordingrequirementsandblindedcollection; Surgeons decide routine diet and are described blinded, but patients/family report milestone; relative roles unclear; Diet decision andpatient tolerance may be influenced; No evidence thatblinded surgeon decisions systematicallyinfluenced",
+          "source_location": "p3; pp2-3; p3; p3; p3"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "Prospectiveregistrationexistsbutdatedanalysisplanunverified; Normaldiet registrylisted, preciseprospectivespecification unavailable; Adjusted/unadjusted/stratifiedanalyses;prospectiveSAPunavailable",
+          "source_location": "registryNCT03086304; registry; p3;registry"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Diet milestone combines clinicaldecisions andpatienttolerance;uncertaintywithout evidence oflikelybiasedassessment.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "POI raised toHigh: D4High based on explicitbenefitexpectations plusknownsensoryunmasking andpatient-recordedflatus;notawarenessalone. D5Someconcerns pendingdatedSAP, despiteprospectiveregistration. Diet assessed separately."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "No quantitative postoperativeopioid consumption.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Insufficient information / not reported.",
+    "route": "Insufficient information / not reported.",
+    "unit": "Insufficient information / not reported.",
+    "raw_values": {},
+    "comparison_selection": "TEAS versusno-current sham",
+    "multiarm_handling": "Singlemulticentertrial",
+    "source_location": "p5 TableII"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "DatedAppendix1/SAP; exactGIclock and opioidregimen/doses",
+      "why_it_matters": "Prespecification and exposureclassification",
+      "analysis_affected": "GI RoB5 andopioidavailability",
+      "can_proceed_without": "GI with statedRoB/clockqualifications; noopioidpooling",
+      "priority": "MEDIUM",
+      "exact_question": "Please provide datedprotocol/SAP andAppendix1, confirmGIclockfromSteward4,and provideactual0-24hdrug-specificpostoperativeopioiddata if collected."
+    }
+  ],
+  "summary": "All5rows reviewed. DirectTableIII counts/means/SDs confirmed;timeoriginSteward4qualified. POI/firstflatusHighrisk forlikelyexpectancyinfluencedreporting;dietSomeconcerns. Noopioidconsumptionresult.",
+  "unblinded_supplemental_checks": [],
+  "phase_a_source": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/phase_a/S055.json",
+  "guidance_source": "Official RoB2 22 August 2019; local batch6_rob2_guidance.pdf"
+}

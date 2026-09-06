@@ -1,0 +1,2153 @@
+{
+  "Study_ID": "S051",
+  "Study": "He 2026 (breast/WJCO)",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first-page identity confirmed",
+    "title": "Effects of electroacupuncture combined with flurbiprofen axetil on postoperative pain and early functional recovery after breast cancer surgery",
+    "year": 2026,
+    "doi": "10.5306/wjco.v17.i2.114431",
+    "pdf_files": [
+      "covidence_41_verified.pdf"
+    ],
+    "randomized_arms": {
+      "EA": 65,
+      "control": 65
+    },
+    "analyzed_arms": {
+      "EA": 65,
+      "control": 65
+    },
+    "modality": "EA",
+    "comparator_class": "Superficial nonacupoint needling with inactive stimulator; both receive flurbiprofen axetil",
+    "independence": "Distinct from He hepatectomy article by first-page identity, operation and setting; no linked cohort identified.",
+    "source_locations": "pp2-4;Tables1-4",
+    "identity_notes": "First page labels Case Control Study, footnote STROBE; methods describe prospective computer block randomized trial. Accept randomized description provisionally; clarify editorial/design inconsistency."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 217,
+      "final": {
+        "Canonical study": "He 2026 (breast/WJCO)",
+        "Comparison ID": "HEBREAST26_EA_vs_SHAM_MODMOV24",
+        "Intervention arm": "Perioperative EA + flurbiprofen",
+        "Comparator arm": "Sham acupuncture + flurbiprofen",
+        "Outcome family": "Pain",
+        "Outcome/result": "Moderate-to-severe movement-evoked pain (VAS >4)",
+        "Timepoint/window": "24 h",
+        "Data type": "Events/total",
+        "Randomized n intervention": 65,
+        "Randomized n comparator": 65,
+        "Analyzed n intervention": 65,
+        "Analyzed n comparator": 65,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 32,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 42,
+        "Unit/scale": "participants",
+        "Reported P": "<0.05",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.7619047619047619,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Hold pain synthesis pending reconciliation of binary counts with incompatible continuous pain distribution",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Counts ofVAS>4 conflict mathematically with printed mean/SD; allocation table surgery totals70/60 versus65/65.",
+        "Source location": "pp3-5;Table2",
+        "Source PDF URL": "https://drive.google.com/file/d/1D6Js5nTN2AwL5-BB-NIJVoCKVtcbcczH/view?usp=drivesdk",
+        "Record status": "SOURCE COUNTS CONFIRMED / INTERNAL CONSISTENCY HOLD"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "He 2026 (breast/WJCO)",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "HEBREAST26_EA_vs_SHAM_MODMOV24",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative EA + flurbiprofen",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham acupuncture + flurbiprofen",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Moderate-to-severe movement-evoked pain (VAS >4)",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 65,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 65,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 65,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 65,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 32,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 42,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.7619047619047619,
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Hold pain synthesis pending reconciliation of binary counts with incompatible continuous pain distribution",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Counts ofVAS>4 conflict mathematically with printed mean/SD; allocation table surgery totals70/60 versus65/65.",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "pp3-5;Table2",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1D6Js5nTN2AwL5-BB-NIJVoCKVtcbcczH/view?usp=drivesdk",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "SOURCE COUNTS CONFIRMED / INTERNAL CONSISTENCY HOLD",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Source location",
+          "old_value": "Primary outcome / 24-h movement pain",
+          "source_value": "pp3-5;Table2",
+          "final_value": "pp3-5;Table2",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "reason": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for dichotomous 24-h movement-pain analysis",
+          "source_value": "Hold pain synthesis pending reconciliation of binary counts with incompatible continuous pain distribution",
+          "final_value": "Hold pain synthesis pending reconciliation of binary counts with incompatible continuous pain distribution",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "reason": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "SOURCE COUNTS CONFIRMED / INTERNAL CONSISTENCY HOLD",
+          "final_value": "SOURCE COUNTS CONFIRMED / INTERNAL CONSISTENCY HOLD",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "reason": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "All 130 analyzed; participant masking intended with shallow sham puncture, but sensory differences were possible",
+          "source_value": "Counts ofVAS>4 conflict mathematically with printed mean/SD; allocation table surgery totals70/60 versus65/65.",
+          "final_value": "Counts ofVAS>4 conflict mathematically with printed mean/SD; allocation table surgery totals70/60 versus65/65.",
+          "source_location": "p3 Outcomes;p4 Primary outcome;p5 Table2",
+          "reason": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_41_verified.pdf",
+      "source_evidence": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+      "drug": "morphine rescue (not measured); intraoperative sufentanil",
+      "route": "IV",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Morphine1-3mg IV or paracetamol1000mg IV according to VAS; FA50mg at suturing; tropisetron4.48mg IV",
+      "critical_qc": "EA30moderate+2severe=32/65; control41+1=42/65;24h VAS>4 during arm movement/walking. RR32/42=0.76190476. Printed P<0.05 retained as reported, not endorsed inferentially. Counts conflict with mean/SD distribution in same table.",
+      "analysis_eligibility": "Hold pain synthesis pending reconciliation of binary counts with incompatible continuous pain distribution",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 218,
+      "final": {
+        "Canonical study": "He 2026 (breast/WJCO)",
+        "Comparison ID": "HEBREAST26_EA_vs_SHAM_VASMOV24",
+        "Intervention arm": "Perioperative EA + flurbiprofen",
+        "Comparator arm": "Sham acupuncture + flurbiprofen",
+        "Outcome family": "Pain",
+        "Outcome/result": "Movement VAS",
+        "Timepoint/window": "24 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 65,
+        "Randomized n comparator": 65,
+        "Analyzed n intervention": 65,
+        "Analyzed n comparator": 65,
+        "Mean intervention": 2.862,
+        "SD intervention": 0.233,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 3.954,
+        "SD comparator": 0.233,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "VAS",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "MD",
+        "Derived effect": -1.092,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Mathematical inconsistency, not merely small SD:32/65EA patientsVAS>4 whilemean2.862 SD0.233.",
+        "Source location": "p5 Table2",
+        "Source PDF URL": "https://drive.google.com/file/d/1D6Js5nTN2AwL5-BB-NIJVoCKVtcbcczH/view?usp=drivesdk",
+        "Record status": "AUTHOR DATA NEEDED / DISPERSION INCONSISTENCY"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "He 2026 (breast/WJCO)",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "HEBREAST26_EA_vs_SHAM_VASMOV24",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative EA + flurbiprofen",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham acupuncture + flurbiprofen",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Movement VAS",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 65,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 65,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 65,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 65,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 2.862,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.233,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 3.954,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.233,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "VAS",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -1.092,
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Mathematical inconsistency, not merely small SD:32/65EA patientsVAS>4 whilemean2.862 SD0.233.",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p5 Table2",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1D6Js5nTN2AwL5-BB-NIJVoCKVtcbcczH/view?usp=drivesdk",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED / DISPERSION INCONSISTENCY",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Source location",
+          "old_value": "Postoperative VAS table",
+          "source_value": "p5 Table2",
+          "final_value": "p5 Table2",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "reason": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for 24-h movement-pain meta-analysis",
+          "source_value": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+          "final_value": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "reason": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / DISPERSION QC",
+          "source_value": "AUTHOR DATA NEEDED / DISPERSION INCONSISTENCY",
+          "final_value": "AUTHOR DATA NEEDED / DISPERSION INCONSISTENCY",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "reason": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Article labels values mean±SD, but identical very small dispersions across arms/timepoints warrant source-verification caution",
+          "source_value": "Mathematical inconsistency, not merely small SD:32/65EA patientsVAS>4 whilemean2.862 SD0.233.",
+          "final_value": "Mathematical inconsistency, not merely small SD:32/65EA patientsVAS>4 whilemean2.862 SD0.233.",
+          "source_location": "p5 Table2 visually inspected;p3 threshold",
+          "reason": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_41_verified.pdf",
+      "source_evidence": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+      "drug": "morphine rescue (not measured); intraoperative sufentanil",
+      "route": "IV",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Morphine1-3mg IV or paracetamol1000mg IV according to VAS; FA50mg at suturing; tropisetron4.48mg IV",
+      "critical_qc": "Printed24h movement EA2.862±0.233 vs control3.954±0.233 meanSD,n65 each; MD=-1.092. At least32 EA values>4 incompatible with SD0.233 (even partial squared deviations exceed total reported variance). Preserve raw SD, never substitute SEM.",
+      "analysis_eligibility": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 219,
+      "final": {
+        "Canonical study": "He 2026 (breast/WJCO)",
+        "Comparison ID": "HEBREAST26_EA_vs_SHAM_VASREST24",
+        "Intervention arm": "Perioperative EA + flurbiprofen",
+        "Comparator arm": "Sham acupuncture + flurbiprofen",
+        "Outcome family": "Pain",
+        "Outcome/result": "Resting VAS",
+        "Timepoint/window": "24 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 65,
+        "Randomized n comparator": 65,
+        "Analyzed n intervention": 65,
+        "Analyzed n comparator": 65,
+        "Mean intervention": 1.789,
+        "SD intervention": 0.174,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 2.692,
+        "SD comparator": 0.174,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "VAS",
+        "Reported P": "<0.01",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "No",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.9030000000000002,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "8/65EA and12/65control VAS>4 conflict with printed rest means/SDs.",
+        "Source location": "p5 Table2",
+        "Source PDF URL": "https://drive.google.com/file/d/1D6Js5nTN2AwL5-BB-NIJVoCKVtcbcczH/view?usp=drivesdk",
+        "Record status": "AUTHOR DATA NEEDED / DISPERSION INCONSISTENCY"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "He 2026 (breast/WJCO)",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "HEBREAST26_EA_vs_SHAM_VASREST24",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative EA + flurbiprofen",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham acupuncture + flurbiprofen",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Resting VAS",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 65,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 65,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 65,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 65,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 1.789,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.174,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 2.692,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.174,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "VAS",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.01",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.9030000000000002,
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "DERIVED ARITHMETIC CHECKED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "8/65EA and12/65control VAS>4 conflict with printed rest means/SDs.",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p5 Table2",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1D6Js5nTN2AwL5-BB-NIJVoCKVtcbcczH/view?usp=drivesdk",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED / DISPERSION INCONSISTENCY",
+          "source_location": "p5 Table2 visually inspected",
+          "evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Source location",
+          "old_value": "Postoperative VAS table",
+          "source_value": "p5 Table2",
+          "final_value": "p5 Table2",
+          "source_location": "p5 Table2 visually inspected",
+          "reason": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for 24-h rest-pain meta-analysis",
+          "source_value": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+          "final_value": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+          "source_location": "p5 Table2 visually inspected",
+          "reason": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "severity": "material"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / DISPERSION QC",
+          "source_value": "AUTHOR DATA NEEDED / DISPERSION INCONSISTENCY",
+          "final_value": "AUTHOR DATA NEEDED / DISPERSION INCONSISTENCY",
+          "source_location": "p5 Table2 visually inspected",
+          "reason": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Same dispersion-format caution as movement VAS",
+          "source_value": "8/65EA and12/65control VAS>4 conflict with printed rest means/SDs.",
+          "final_value": "8/65EA and12/65control VAS>4 conflict with printed rest means/SDs.",
+          "source_location": "p5 Table2 visually inspected",
+          "reason": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_41_verified.pdf",
+      "source_evidence": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+      "drug": "morphine rescue (not measured); intraoperative sufentanil",
+      "route": "IV",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Morphine1-3mg IV or paracetamol1000mg IV according to VAS; FA50mg at suturing; tropisetron4.48mg IV",
+      "critical_qc": "Printed24h rest EA1.789±0.174 vs control2.692±0.174 meanSD,n65 each; MD=-0.903.8EA and12control patientsVAS>4 impossible with these reported mean/SD pairs. No dispersion conversion.",
+      "analysis_eligibility": "HOLD — author clarification of incompatible mean/SD and VAS>4 counts required before continuous pooling",
+      "notes": "Phase A source-first followed by field-level comparison."
+    },
+    {
+      "baseline_row": 220,
+      "final": {
+        "Canonical study": "He 2026 (breast/WJCO)",
+        "Comparison ID": "HEBREAST26_OPIOID24",
+        "Intervention arm": "Perioperative EA + flurbiprofen",
+        "Comparator arm": "Sham acupuncture + flurbiprofen",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Cumulative rescue morphine consumption",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 65,
+        "Randomized n comparator": 65,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "mg IV morphine",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Rescue morphine 1-3 mg IV was allowed, but authors explicitly state rescue opioid consumption was not recorded or compared",
+        "Source location": "p3 interventions;p7 limitation4",
+        "Source PDF URL": "https://drive.google.com/file/d/1D6Js5nTN2AwL5-BB-NIJVoCKVtcbcczH/view?usp=drivesdk",
+        "Record status": "MISSING / NOT RECORDED"
+      },
+      "verification_status": "NOT ANALYSIS ELIGIBLE",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "He 2026 (breast/WJCO)",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "HEBREAST26_OPIOID24",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative EA + flurbiprofen",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham acupuncture + flurbiprofen",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Cumulative rescue morphine consumption",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 65,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 65,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "mg IV morphine",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "NOT REPORTED / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Rescue morphine 1-3 mg IV was allowed, but authors explicitly state rescue opioid consumption was not recorded or compared",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p3 interventions;p7 limitation4",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1D6Js5nTN2AwL5-BB-NIJVoCKVtcbcczH/view?usp=drivesdk",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "ADMINISTRATIVE IDENTIFIER"
+        },
+        {
+          "field": "Record status",
+          "source_value": "MISSING / NOT RECORDED",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "status": "SOURCE CHECKED / ADJUDICATED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 65,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "reason": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 65,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p3 Interventions;p7 limitation4",
+          "reason": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Postoperative analgesia limitation",
+          "source_value": "p3 interventions;p7 limitation4",
+          "final_value": "p3 interventions;p7 limitation4",
+          "source_location": "p3 Interventions;p7 limitation4",
+          "reason": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "covidence_41_verified.pdf",
+      "source_evidence": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+      "drug": "morphine rescue (not measured); intraoperative sufentanil",
+      "route": "IV",
+      "pca_formulation": "Insufficient information / not reported.",
+      "rescue_regimen": "Morphine1-3mg IV or paracetamol1000mg IV according to VAS; FA50mg at suturing; tropisetron4.48mg IV",
+      "critical_qc": "Morphine1-3mg IV rescue allowed; p7 explicitly consumption not recorded or compared. No meanSD, actual delivered dose or outcome n.65/65 are trial arms.",
+      "analysis_eligibility": "Not eligible for continuous 24-h opioid/MME meta-analysis",
+      "notes": "Phase A source-first followed by field-level comparison."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "moderate_movement24",
+      "outcome": "VAS>4 movement pain",
+      "time_window": "24h",
+      "comparison": "Superficial nonacupoint needling with inactive stimulator; both receive flurbiprofen axetil",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer random length blocks explicitly described",
+          "source_location": "p3",
+          "reasoning": "Computer random length blocks explicitly described"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified",
+          "source_location": "p3",
+          "reasoning": "Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled",
+          "source_location": "p5 Table1",
+          "reasoning": "Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences",
+          "source_location": "pp3,6",
+          "reasoning": "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Acupuncturists unblinded, independent of assessors",
+          "source_location": "p3",
+          "reasoning": "Acupuncturists unblinded, independent of assessors"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Uniform anesthesia and rescue protocol; no documented trial-context departures",
+          "source_location": "p3",
+          "reasoning": "Uniform anesthesia and rescue protocol; no documented trial-context departures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No identified trial-context deviations",
+          "source_location": "p3",
+          "reasoning": "No identified trial-context deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No identified deviations",
+          "source_location": "p3",
+          "reasoning": "No identified deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "130 included in statistics,65 each; no reported exclusions",
+          "source_location": "p4",
+          "reasoning": "130 included in statistics,65 each; no reported exclusions"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "Analysis apparently as randomized",
+          "source_location": "p4",
+          "reasoning": "Analysis apparently as randomized"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "All130 reportedly analyzed; no attrition indicated",
+          "source_location": "p4",
+          "reasoning": "All130 reportedly analyzed; no attrition indicated"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "All reportedly analyzed",
+          "source_location": "p4",
+          "reasoning": "All reportedly analyzed"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "All reportedly analyzed",
+          "source_location": "p4",
+          "reasoning": "All reportedly analyzed"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "All reportedly analyzed",
+          "source_location": "p4",
+          "reasoning": "All reportedly analyzed"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "VAS appropriate; internal reporting inconsistency handled separately from instrument validity",
+          "source_location": "pp3,5",
+          "reasoning": "VAS appropriate; internal reporting inconsistency handled separately from instrument validity"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same VAS schedule and movements",
+          "source_location": "p3",
+          "reasoning": "Same VAS schedule and movements"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Patients self-assess and sensory masking uncertain",
+          "source_location": "pp3,6",
+          "reasoning": "Patients self-assess and sensory masking uncertain"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "Y",
+          "evidence": "Pain subject to expectancy",
+          "source_location": "p6 limitations",
+          "reasoning": "Pain subject to expectancy"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NI",
+          "evidence": "Authors identify possible expectancy but do not establish likelihood",
+          "source_location": "p6",
+          "reasoning": "Authors identify possible expectancy but do not establish likelihood"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "No registration or prospectively finalized SAP in publication/official page",
+          "source_location": "pp2-8",
+          "reasoning": "No registration or prospectively finalized SAP in publication/official page"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple pain measures/times without prospective specification",
+          "source_location": "pp3,5",
+          "reasoning": "Multiple pain measures/times without prospective specification"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No dated analysis plan and dispersion label inconsistent",
+          "source_location": "pp4-5",
+          "reasoning": "No dated analysis plan and dispersion label inconsistent"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer random length blocks explicitly described; Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified; Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled",
+          "source_location": "p3; p3; p5 Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences; Acupuncturists unblinded, independent of assessors; Uniform anesthesia and rescue protocol; no documented trial-context departures; No identified trial-context deviations; No identified deviations; 130 included in statistics,65 each; no reported exclusions; Analysis apparently as randomized",
+          "source_location": "pp3,6; p3; p3; p3; p3; p4; p4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All130 reportedly analyzed; no attrition indicated; All reportedly analyzed; All reportedly analyzed; All reportedly analyzed",
+          "source_location": "p4; p4; p4; p4"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "VAS appropriate; internal reporting inconsistency handled separately from instrument validity; Same VAS schedule and movements; Patients self-assess and sensory masking uncertain; Pain subject to expectancy; Authors identify possible expectancy but do not establish likelihood",
+          "source_location": "pp3,5; p3; pp3,6; p6 limitations; p6"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No registration or prospectively finalized SAP in publication/official page; Multiple pain measures/times without prospective specification; No dated analysis plan and dispersion label inconsistent",
+          "source_location": "pp2-8; pp3,5; pp4-5"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Multiple unresolved concerns in design/allocation reporting, subjective assessment and prospective analysis substantially lower confidence; continuous pain additionally held for internally impossible printed SDs.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Domains remain Some concerns/Low/Low/Some concerns/Some concerns; overall raised High because combined unresolved allocation/design reporting and subjective unmasking/prespecification concerns substantially lower confidence. Numerical inconsistency independently requires data hold."
+    },
+    {
+      "result_id": "VAS_movement24",
+      "outcome": "Continuous movement VAS (held)",
+      "time_window": "24h",
+      "comparison": "Superficial nonacupoint needling with inactive stimulator; both receive flurbiprofen axetil",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer random length blocks explicitly described",
+          "source_location": "p3",
+          "reasoning": "Computer random length blocks explicitly described"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified",
+          "source_location": "p3",
+          "reasoning": "Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled",
+          "source_location": "p5 Table1",
+          "reasoning": "Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences",
+          "source_location": "pp3,6",
+          "reasoning": "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Acupuncturists unblinded, independent of assessors",
+          "source_location": "p3",
+          "reasoning": "Acupuncturists unblinded, independent of assessors"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Uniform anesthesia and rescue protocol; no documented trial-context departures",
+          "source_location": "p3",
+          "reasoning": "Uniform anesthesia and rescue protocol; no documented trial-context departures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No identified trial-context deviations",
+          "source_location": "p3",
+          "reasoning": "No identified trial-context deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No identified deviations",
+          "source_location": "p3",
+          "reasoning": "No identified deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "130 included in statistics,65 each; no reported exclusions",
+          "source_location": "p4",
+          "reasoning": "130 included in statistics,65 each; no reported exclusions"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "Analysis apparently as randomized",
+          "source_location": "p4",
+          "reasoning": "Analysis apparently as randomized"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "All130 reportedly analyzed; no attrition indicated",
+          "source_location": "p4",
+          "reasoning": "All130 reportedly analyzed; no attrition indicated"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "All reportedly analyzed",
+          "source_location": "p4",
+          "reasoning": "All reportedly analyzed"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "All reportedly analyzed",
+          "source_location": "p4",
+          "reasoning": "All reportedly analyzed"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "All reportedly analyzed",
+          "source_location": "p4",
+          "reasoning": "All reportedly analyzed"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "VAS appropriate; internal reporting inconsistency handled separately from instrument validity",
+          "source_location": "pp3,5",
+          "reasoning": "VAS appropriate; internal reporting inconsistency handled separately from instrument validity"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same VAS schedule and movements",
+          "source_location": "p3",
+          "reasoning": "Same VAS schedule and movements"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Patients self-assess and sensory masking uncertain",
+          "source_location": "pp3,6",
+          "reasoning": "Patients self-assess and sensory masking uncertain"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "Y",
+          "evidence": "Pain subject to expectancy",
+          "source_location": "p6 limitations",
+          "reasoning": "Pain subject to expectancy"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NI",
+          "evidence": "Authors identify possible expectancy but do not establish likelihood",
+          "source_location": "p6",
+          "reasoning": "Authors identify possible expectancy but do not establish likelihood"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "No registration or prospectively finalized SAP in publication/official page",
+          "source_location": "pp2-8",
+          "reasoning": "No registration or prospectively finalized SAP in publication/official page"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple pain measures/times without prospective specification",
+          "source_location": "pp3,5",
+          "reasoning": "Multiple pain measures/times without prospective specification"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No dated analysis plan and dispersion label inconsistent",
+          "source_location": "pp4-5",
+          "reasoning": "No dated analysis plan and dispersion label inconsistent"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer random length blocks explicitly described; Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified; Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled",
+          "source_location": "p3; p3; p5 Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences; Acupuncturists unblinded, independent of assessors; Uniform anesthesia and rescue protocol; no documented trial-context departures; No identified trial-context deviations; No identified deviations; 130 included in statistics,65 each; no reported exclusions; Analysis apparently as randomized",
+          "source_location": "pp3,6; p3; p3; p3; p3; p4; p4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All130 reportedly analyzed; no attrition indicated; All reportedly analyzed; All reportedly analyzed; All reportedly analyzed",
+          "source_location": "p4; p4; p4; p4"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "VAS appropriate; internal reporting inconsistency handled separately from instrument validity; Same VAS schedule and movements; Patients self-assess and sensory masking uncertain; Pain subject to expectancy; Authors identify possible expectancy but do not establish likelihood",
+          "source_location": "pp3,5; p3; pp3,6; p6 limitations; p6"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No registration or prospectively finalized SAP in publication/official page; Multiple pain measures/times without prospective specification; No dated analysis plan and dispersion label inconsistent",
+          "source_location": "pp2-8; pp3,5; pp4-5"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Multiple unresolved concerns in design/allocation reporting, subjective assessment and prospective analysis substantially lower confidence; continuous pain additionally held for internally impossible printed SDs.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Domains remain Some concerns/Low/Low/Some concerns/Some concerns; overall raised High because combined unresolved allocation/design reporting and subjective unmasking/prespecification concerns substantially lower confidence. Numerical inconsistency independently requires data hold."
+    },
+    {
+      "result_id": "VAS_rest24",
+      "outcome": "Continuous rest VAS (held)",
+      "time_window": "24h",
+      "comparison": "Superficial nonacupoint needling with inactive stimulator; both receive flurbiprofen axetil",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "Computer random length blocks explicitly described",
+          "source_location": "p3",
+          "reasoning": "Computer random length blocks explicitly described"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned to interventions?",
+          "answer": "NI",
+          "evidence": "Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified",
+          "source_location": "p3",
+          "reasoning": "Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with the randomization process?",
+          "answer": "NI",
+          "evidence": "Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled",
+          "source_location": "p5 Table1",
+          "reasoning": "Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences",
+          "source_location": "pp3,6",
+          "reasoning": "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware of assignment?",
+          "answer": "Y",
+          "evidence": "Acupuncturists unblinded, independent of assessors",
+          "source_location": "p3",
+          "reasoning": "Acupuncturists unblinded, independent of assessors"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention arising because of trial context?",
+          "answer": "PN",
+          "evidence": "Uniform anesthesia and rescue protocol; no documented trial-context departures",
+          "source_location": "p3",
+          "reasoning": "Uniform anesthesia and rescue protocol; no documented trial-context departures"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "No identified trial-context deviations",
+          "source_location": "p3",
+          "reasoning": "No identified trial-context deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "No identified deviations",
+          "source_location": "p3",
+          "reasoning": "No identified deviations"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "130 included in statistics,65 each; no reported exclusions",
+          "source_location": "p4",
+          "reasoning": "130 included in statistics,65 each; no reported exclusions"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyse as randomized?",
+          "answer": "NA",
+          "evidence": "Analysis apparently as randomized",
+          "source_location": "p4",
+          "reasoning": "Analysis apparently as randomized"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were outcome data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "All130 reportedly analyzed; no attrition indicated",
+          "source_location": "p4",
+          "reasoning": "All130 reportedly analyzed; no attrition indicated"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing outcome data?",
+          "answer": "NA",
+          "evidence": "All reportedly analyzed",
+          "source_location": "p4",
+          "reasoning": "All reportedly analyzed"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "All reportedly analyzed",
+          "source_location": "p4",
+          "reasoning": "All reportedly analyzed"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true outcome value?",
+          "answer": "NA",
+          "evidence": "All reportedly analyzed",
+          "source_location": "p4",
+          "reasoning": "All reportedly analyzed"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the method of measuring the outcome inappropriate?",
+          "answer": "N",
+          "evidence": "VAS appropriate; internal reporting inconsistency handled separately from instrument validity",
+          "source_location": "pp3,5",
+          "reasoning": "VAS appropriate; internal reporting inconsistency handled separately from instrument validity"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Same VAS schedule and movements",
+          "source_location": "p3",
+          "reasoning": "Same VAS schedule and movements"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "Patients self-assess and sensory masking uncertain",
+          "source_location": "pp3,6",
+          "reasoning": "Patients self-assess and sensory masking uncertain"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by intervention knowledge?",
+          "answer": "Y",
+          "evidence": "Pain subject to expectancy",
+          "source_location": "p6 limitations",
+          "reasoning": "Pain subject to expectancy"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was assessment likely influenced by intervention knowledge?",
+          "answer": "NI",
+          "evidence": "Authors identify possible expectancy but do not establish likelihood",
+          "source_location": "p6",
+          "reasoning": "Authors identify possible expectancy but do not establish likelihood"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was the analysis plan finalized before unblinded outcome data were available?",
+          "answer": "NI",
+          "evidence": "No registration or prospectively finalized SAP in publication/official page",
+          "source_location": "pp2-8",
+          "reasoning": "No registration or prospectively finalized SAP in publication/official page"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was this result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "Multiple pain measures/times without prospective specification",
+          "source_location": "pp3,5",
+          "reasoning": "Multiple pain measures/times without prospective specification"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was this result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "No dated analysis plan and dispersion label inconsistent",
+          "source_location": "pp4-5",
+          "reasoning": "No dated analysis plan and dispersion label inconsistent"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Some concerns",
+          "reasoning": "Computer random length blocks explicitly described; Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified; Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled",
+          "source_location": "p3; p3; p5 Table1"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences; Acupuncturists unblinded, independent of assessors; Uniform anesthesia and rescue protocol; no documented trial-context departures; No identified trial-context deviations; No identified deviations; 130 included in statistics,65 each; no reported exclusions; Analysis apparently as randomized",
+          "source_location": "pp3,6; p3; p3; p3; p3; p4; p4"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "All130 reportedly analyzed; no attrition indicated; All reportedly analyzed; All reportedly analyzed; All reportedly analyzed",
+          "source_location": "p4; p4; p4; p4"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "VAS appropriate; internal reporting inconsistency handled separately from instrument validity; Same VAS schedule and movements; Patients self-assess and sensory masking uncertain; Pain subject to expectancy; Authors identify possible expectancy but do not establish likelihood",
+          "source_location": "pp3,5; p3; pp3,6; p6 limitations; p6"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No registration or prospectively finalized SAP in publication/official page; Multiple pain measures/times without prospective specification; No dated analysis plan and dispersion label inconsistent",
+          "source_location": "pp2-8; pp3,5; pp4-5"
+        }
+      ],
+      "overall": "High",
+      "overall_reasoning": "Multiple unresolved concerns in design/allocation reporting, subjective assessment and prospective analysis substantially lower confidence; continuous pain additionally held for internally impossible printed SDs.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Domains remain Some concerns/Low/Low/Some concerns/Some concerns; overall raised High because combined unresolved allocation/design reporting and subjective unmasking/prespecification concerns substantially lower confidence. Numerical inconsistency independently requires data hold."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Authors explicitly state rescue opioid consumption was not recorded.",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "morphine",
+    "route": "IV",
+    "unit": "mg",
+    "raw_values": {},
+    "comparison_selection": "EA versus superficial inactive sham; bothFA",
+    "multiarm_handling": "Two arms",
+    "source_location": "p7 limitation4"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Valid VAS dispersion and binary counts; randomization/design clarification;corrected surgery counts",
+      "why_it_matters": "Pain table mathematically inconsistent; first-page case-control and STROBE conflict with randomized methods",
+      "analysis_affected": "All pain results",
+      "can_proceed_without": "Retain raw report; hold pooling",
+      "priority": "HIGH",
+      "exact_question": "Are Table2 ±values SD,SE or model errors? Please provide correct mean/SD/n and VAS>4 counts, explain Table1 surgery totals70/60, and confirm prospective randomization with dated protocol and allocation concealment."
+    }
+  ],
+  "summary": "All4 rows adjudicated. Raw pain print confirmed, but continuous and binary pain held due to incompatible distributions. Rescue morphine not recorded. BADL is not QoR and PONV interval remains unspecified.",
+  "unblinded_supplemental_checks": [],
+  "phase_a_source": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/phase_a/S051.json",
+  "guidance_source": "Official RoB2 22 August 2019; local batch6_rob2_guidance.pdf"
+}

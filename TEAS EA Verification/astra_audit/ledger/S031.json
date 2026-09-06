@@ -1,0 +1,11 @@
+{
+  "Study_ID": "S031",
+  "Study": "Lu 2021",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "rows_expected": 7,
+  "rows_reviewed": 7,
+  "rob2_results_reviewed": 6,
+  "missing_result": "Postoperative opioid not reported; no estimable RoB result",
+  "adjudicated_file": "adjudicated/S031.json"
+}

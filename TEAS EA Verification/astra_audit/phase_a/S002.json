@@ -1,0 +1,288 @@
+{
+  "Study_ID": "S002",
+  "Study": "Zhou 2025",
+  "identity": {
+    "title": "Efficacy of Transcutaneous Electrical Acupoint Stimulation Applied During the Post-Anesthesia Recovery Period in Improving Postoperative Recovery Quality After Gynecological Laparoscopic Surgery: A Randomized Controlled Trial",
+    "doi": "10.2147/TCRM.S507856",
+    "year": 2025,
+    "pdf": "105119.pdf",
+    "read_pages": "1–12 completely, Tables1–6 visualpp7–8"
+  },
+  "source_before_baseline": true,
+  "arms": {
+    "order": [
+      "TEAS",
+      "Sham"
+    ],
+    "randomized": [
+      50,
+      50
+    ],
+    "analyzed": [
+      48,
+      49
+    ],
+    "protocol": "PACU30min TEAS2/10Hz10–15mA atLI4/PC6/ST36/SP6; sham no current; preanesthesia intensity calibration reported."
+  },
+  "results": {
+    "QoR15": {
+      "format": "mean SD",
+      "location": "Table2p7",
+      "POD1": [
+        [
+          112,
+          10.67
+        ],
+        [
+          107.62,
+          10.27
+        ]
+      ],
+      "POD2": [
+        [
+          120.88,
+          10.91
+        ],
+        [
+          117.02,
+          8.79
+        ]
+      ],
+      "POD3": [
+        [
+          124.82,
+          9.6
+        ],
+        [
+          124.84,
+          9.6
+        ]
+      ],
+      "p": [
+        0.042,
+        0.058,
+        0.275
+      ]
+    },
+    "pain": {
+      "format": "median Q1 Q3; VAS scale limits not explicitly stated",
+      "location": "Table3p8",
+      "rest_POD1": [
+        [
+          3,
+          3,
+          4
+        ],
+        [
+          4,
+          4,
+          5
+        ]
+      ],
+      "rest_POD2": [
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "rest_POD3": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "movement_POD1": [
+        [
+          4,
+          4,
+          5
+        ],
+        [
+          5,
+          4,
+          6
+        ]
+      ],
+      "movement_POD2": [
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          4,
+          3,
+          4
+        ]
+      ],
+      "movement_POD3": [
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "p": [
+        "<0.001",
+        "0.675",
+        "0.673",
+        "0.008",
+        "0.036",
+        "0.410"
+      ]
+    },
+    "PONV": {
+      "location": "Table4p8",
+      "events_POD1": [
+        10,
+        19
+      ],
+      "events_POD2": [
+        5,
+        9
+      ],
+      "events_POD3": [
+        2,
+        3
+      ],
+      "p": [
+        0.047,
+        0.249,
+        0.646
+      ]
+    },
+    "rescue_analgesia": {
+      "events": [
+        6,
+        13
+      ],
+      "window": "first3postoperative days",
+      "p": 0.124,
+      "location": "Table3p8; Methodspp3–4",
+      "dose": null
+    },
+    "rescue_antiemetic": {
+      "events": [
+        10,
+        20
+      ],
+      "window": "first3postoperative days",
+      "p": 0.033,
+      "location": "Table4p8"
+    },
+    "first_flatus": {
+      "format": "mean SD",
+      "unit": "h",
+      "values": [
+        [
+          14.1,
+          3.19
+        ],
+        [
+          15.88,
+          3.78
+        ]
+      ],
+      "p": 0.014,
+      "location": "Table5p8"
+    }
+  },
+  "opioid": {
+    "decision": "excluded",
+    "drug": "tramadol",
+    "route": "IV",
+    "pca": "Insufficient information / not reported.",
+    "rescue": "IV tramadol50–100mg every6h as needed at gynecologist discretion; administered amount not reported.",
+    "reason": "Recipients only over3days; no cumulative24h dose; preclosure sufentanil outside postoperative target."
+  },
+  "source_conflicts": [
+    "POD3QoR15 P0.275 is inconsistent with nearly identical means/SDs under stated t-test; preserve source values and flag.",
+    "No POD1=exact24h evidence; no pain scale endpoints explicitly defined."
+  ],
+  "rob_independent": {
+    "D1": {
+      "answers": [
+        "Y",
+        "Y",
+        "PN"
+      ],
+      "evidence": "p3 computer sequence and sequential opaque sealed envelopes opened by independent assistant inPACU; Table1 clinical characteristics compatible with chance.",
+      "judgment": "Low"
+    },
+    "D2": {
+      "answers": [
+        "PY",
+        "Y",
+        "PN",
+        "NA",
+        "NA",
+        "PY",
+        "NA"
+      ],
+      "evidence": "pp3–5 sham no current, sensoryTEAS; provider unmasked but scripted neutral interaction, anesthesia/surgeons blinded, assigned treatment received by all; available-case randomized groups used.",
+      "judgment": "Low"
+    },
+    "D3": {
+      "answers": [
+        "PY",
+        "NA",
+        "NA",
+        "NA"
+      ],
+      "evidence": "p5 97/100 assessed,2vs1 withdrew. For QoR/pain/flatus3% loss unlikely materially alter continuous results.",
+      "judgment": "Low"
+    },
+    "D3_binary": {
+      "answers": [
+        "PN",
+        "N",
+        "PY",
+        "NI"
+      ],
+      "evidence": "3withdrawals vs lowPONV event counts; reason beyond decision to withdraw unavailable; no sensitivity analysis.",
+      "judgment": "Some concerns"
+    },
+    "D4": {
+      "answers": [
+        "N",
+        "PN",
+        "PY",
+        "Y",
+        "NI"
+      ],
+      "evidence": "pp3–4 active10–15mA vs zero current, possible sensory recognition despite identical interaction; subjectiveQoR,pain,PONV/flatus. p10 admits beliefs/expectations not assessed.",
+      "judgment": "Some concerns"
+    },
+    "D5": {
+      "answers": [
+        "NI",
+        "NI",
+        "NI"
+      ],
+      "evidence": "p2 prospectiveJan7 registration beforeFeb2022enrollment corroborated by officialChiCTR2200055338 index; fullrecord405 and historicalSAP unavailable. TablesreportPOD1–3, but numerical analysis prespecification not demonstrable.",
+      "judgment": "Some concerns"
+    }
+  },
+  "independence": "GuilinFeb–June2022 cohort; distinct setting/year fromYao2015 andZhu2022.",
+  "retrieval_attempts": [
+    "OfficialChiCTR https://www.chictr.org.cn/showproj.html?proj=139618 indexed Jan7 2022 registration, last refreshJan29 2023; directopen405."
+  ],
+  "missing": "Insufficient information / not reported."
+}

@@ -1,0 +1,531 @@
+=== PDF PAGE 1 ===
+Anesth Pain Med. 2016 December; 6(6):e40106.                                                                                doi:10.5812/aapm.40106.
+
+Published online 2016 October 29.                                                                                                    Research Article
+Intraoperative Electroacupuncture Reduces Postoperative Pain,
+Analgesic Requirement and Prevents Postoperative Nausea and
+Vomiting in Gynaecological Surgery: A Randomised Controlled Trial
+
+S Praveena Seevaunnamtum,1,* Kavita Bhojwani,2 and Nik Abdullah1
+1Department of Anaesthesiology and Critical Care, Universiti Sains Malaysia, Kubang Kerian, Kelantan, Malaysia
+2Hospital Raja Permaisuri Bainun Ipoh, Jalan Hospital, 30990 Ipoh, Perak, Malaysia
+
+
+*Correspondingauthor: S Praveena Seevaunnamtum, Department of Anaesthesiology and Critical Care, School of Medical Sciences, Health Campus, Universiti Sains Malaysia,
+16150 Kubang Kerian, Kelantan, Malaysia. Tel: +60-122275562, E-mail: praveenaseeva@gmail.com
+Received 2016 June 16; Revised 2016 August 21;Accepted 2016 October 01.
+
+  Abstract
+
+  Background: Electroacupuncture (EA) is believed to modulate the pain pathway via the release of endogenous opioid substances
+  and stimulation of descending pain inhibitory pathways. In this study, the use of intraoperative 2 Hertz EA stimulation is investi-
+  gated to determine any opioid-sparing eﬀect and reduction of postoperative nausea and vomiting (PONV) in patients undergoing
+  gynaecological surgery.
+  Patient and Methods: This was a prospective, double blinded randomized study conducted in a tertiary hospital in Malaysia. Pa-
+  tients (n = 64) were randomly allocated to receive 2 Hertz EA and compared to a control group. EA was started intraoperatively till
+  the end of the surgery (mean duration of surgery was 149.06± 42.64 minutes) under general anaesthesia. Postoperative numer-
+  ical rating scale (NRS), the incidence of nausea, vomiting and usage of rescue antiemetics were recorded at 30 minutes, 2, 4, and
+  24 hours, respectively.  The total morphine demand and usage from the patient-controlled analgesia Morphine (PCAM) were also
+  recorded in the ﬁrst 24 hours postoperatively.
+  Results: The mean NRS was 2.75 (SD = 2.34) at 30 minutes and 2.25 (SD = 1.80) at 2 hours postoperatively in the EA group that was
+  signiﬁcantly lower than the mean NRS in the control group as 4.50 (SD = 2.37) at 30 minutes and 3.88 (SD = 2.21) at 2 hours.  The
+  meanPCAmorphinedemandwas27.28(SD=21.61)timespressedintheEAgroupand55.25(SD=46.85)timespressedinthecontrol
+  group within 24 hours postoperatively, which showed a signiﬁcant reduction in the EA group than the control group.  Similarly,
+  totalmorphinerequirementwassigniﬁcantlylowerintheEAgroupwiththevalueof 21.38(SD=14.38)mgcomparedtothecontrol
+  group with the value of 33.94 (SD = 20.24) mg within 24 hours postoperatively. Incidence of postoperative nausea also signiﬁcantly
+  reduced in the EA group at 30 minutes (15.6%) compared to the control group (46.9%).
+  Conclusions: ItcanbeconcludedthatsubjectsreceivingEAintraoperativelyexperiencedlesspainandPONV.Hence,itisplausible
+  that EA has an opioid-sparing eﬀect and can reduce PONV.
+
+  Keywords: Electroacupuncture, Postoperative Pain, Postoperative Nausea and Vomiting, Opioid Usage, Gynaecological Surgery
+
+
+
+1. Background                                                                   imens that act as adjuvants to produce an opioid-sparing
+                                                                                eﬀect for enhanced recovery postoperatively (5-7).
+    Poorperioperativepaincontrolisoneof themajorfac-                                 Acupuncture  is  a  form  of  complementary  medicine
+tors that impede recovery from anaesthesia and surgery.                         that  practices  insertion  of   needles  into  tissues  along
+Unrelieved acute pain after surgery usually elicits patho-                      meridian lines.  EA is diﬀerent from acupuncture in that
+physiologic neural alterations including not only periph-                       it  applies  needling  stimulation  and  electric  pulses  to
+eralbutalsocentralsensitizationthatevolvesintochronic                           acupuncture meridians and points in order to strengthen
+pain syndromes (1,2).                                                           the stimulating eﬀect of treatment (8).
+    In gynaecological surgeries,  the common periopera-                              The mechanisms by which electroacupuncture exert
+tive analgesic treatment modalitiy is intravenous opioid                        their  analgesic  action  have  not  been  completely  eluci-
+analgesics or regional analgesia.  However, excessive opi-                      dated. However,possiblemechanismsincludestimulation
+oids administration is associated with a variety of side ef-                    of descending pain inhibitory pathways, an inhibition of
+fects including ventilatory depression, drowsiness and se-                      substance-P release in central nervous system (CNS) struc-
+dation,nauseaandvomiting,pruritus,ileus,urinaryreten-                           tures  and  the  release  of  endogenous  opioid  substances
+tion, and constipation (1,3,4). For optimum perioperative                       within the CNS (9-12).
+paincontrol,weneedtoexploremultimodalanalgesicreg-                                   EA applicability in various painful disorders still re-
+
+
+
+Copyright © 2016, Iranian Society of Regional Anesthesia and Pain Medicine (ISRAPM). This is an open-access article distributed under the terms of the Creative Commons
+Attribution-NonCommercial 4.0 International License (http://creativecommons.org/licenses/by-nc/4.0/) which permits copy and redistribute the material just in
+noncommercial usages, provided the original work is properly cited.
+
+=== PDF PAGE 2 ===
+                                                          PraveenaSeevaunnamtumSetal.
+
+
+
+mains controversial beacuse of its variable results, weak                   3.2.RandomisationandBlinding
+analgesiceﬀect,andpossiblilityof placeboeﬀect(13). Stud-                        Subjects were randomised into two groups (EA group
+ies carried out to elucidate acupuncture analgesic eﬀect                    and control group) using a computer-generated randomi-
+especially in postoperative pain show conﬂicting results                    sation list. EA group received intraoperative 2 Hz EA at bi-
+(14). However, the major diﬀerence among these studies is                   lateral Pericardium Meridian point 6 (p6) and large intes-
+the lack of looking into stimulation modality and the con-                  tine meridian point 4 (p4) (Figure 1) in addition to stan-
+comitant study of its side eﬀect proﬁle (15).                               dardcare. Controlgrouponlyreceivedstandardcare. Stan-
+    Theaimof thisstudyistodeterminetheeﬃcacyof the                          dardcarewasdeﬁnedasgeneralanaesthesiawithintraop-
+useof lowfrequency2HertzEAasanadjuvanttostandard                            erative analgesia of IV Morphine 0.1 mg/kg and postopera-
+opioidanalgesiainmodulatingpostoperativepainaswell                          tive patient-controlled analgesia Morphine (PCAM).
+as its opioid related side eﬀects like PONV.                                    Double blinding was ensured by starting EA after pa-
+                                                                            tients were induced under general anaesthesia and the as-
+2. Objectives                                                               sessors did not know if the patient received EA or not. The
+                                                                            anaesthetist was not involved in the assessment of the pa-
+    The aim of this study is to examine the eﬀect of EA on                  tients.
+reducing postoperative pain, analgesic requirement and                      3.3.StudyProtocol
+nausea and vomiting on subjects recovering from elective
+totalabdominalhysterectomy(TAH).Thehypothesisisthat                             All   patients   scheduled   to   have   surgery   were   ap-
+patients receiving EA would demonstrate increased anal-                     proached and given time to read the information sheet,
+gesic and antiemetic relief over a duration of time and re-                 and entered into the study after signing the consent form.
+duced opioid related side eﬀects compared to a control                      The consent was obtained the night before the operation
+group.                                                                      once the patients were warded.   They were taught how
+                                                                            to use the patient controlled analgesia (PCA) pump, as a
+                                                                            standard practice.
+3. Patients and Methods                                                         Patients were anaesthetised following a standardised
+    A prospective, double blinded randomized study was                      anaestheticprotocol. TheywereinducedwithI.VFentanyl1
+conducted at a 990-bed multidisciplinary tertiary govern-                   -2µg/kg,I.VPropofol2-4mg/kgandneuromuscularblock-
+ment hospital in Malaysia.    The study was approved by                     ade was provided with either I.V Atracurium 0.5 mg/kg or
+National medical research and ethics committee with the                     I.V Rocuronium 0.6 mg/kg.   Anaesthesia was maintained
+protocol numbered NMRR 13-128-14785 and by human re-                        with Sevoﬂurane MAC 1 to 1.2 and oxygen to air mixture
+search ethics committee, University Sains Malaysia (FWA                     of 1:1.   For both study groups, analgesia was provided by
+Reg.  No.:  00007718; IRB Reg.  No.:  00004494) in compli-                  inducing I.V Morphine 0.1 mg/kg while no antiemetic was
+ance with the declaration of Helsinki. We enrolled 64 con-                  given throughout the surgery.  If the patient’s heart rate
+sented elective patients scheduled for TAH to study the ef-                 andbloodpressureincreased20% abovebaselineoritwas
+fect of  EA in addition to standard opioid analgesia with                   more than 2 hours from the last Morphine dose, I.V Fen-
+respect to postoperative pain and opioid-related side ef-                   tanyl 1µg/kg rescue analgesia was provided. Residual neu-
+fectsovera12-monthperiod. Samplesizewascalculatedin                         romuscular block was antagonized in all patients with I.V
+agreementwiththestudybyLee(16)attwo-sided5% signif-                         Neostigmine (2.5 mg) and Atropine (1 mg).
+icancelevelwithpowerof 90%. Givenananticipateddrop-                             Patients in the EA group had the acupuncture needles
+out rate of 10%  with a SD of 3.43 mg, Zα of 1.96, and Zβ of                insertedatbilateralPericardiumMeridianpoint6(p6)and
+1.28, a sample size of 32 per each group was necessary.                     largeintestinemeridianpoint4(p4)(Figure1)afterinduc-
+                                                                            tion of anaesthesia.
+3.1.Patients                                                                    The pericardium meridian p6 point (Neiguan) was de-
+                                                                            ﬁned as follows.   The patient’s four ﬁngerbreadths were
+    Eligible participants were patients scheduled for TAH                   placedonthemedialaspectof theirforearmwiththeedge
+who  met  inclusion  criteria.    The  inclusion  criteria  con-            of  the 4th ﬁnger on the wrist crease.   This is then sub-
+sistedof femalepatientsaged18to70yearswithanAmeri-                          tracted from the width of the interphalangeal joint of her
+cansocietyof anaesthesiologyscoreof 1or2. Ourexclusion                      thumb.  The point between the tendons of extensor carpi
+criteria were as follows: patients who were chronic opioid                  radialis and palmaris longus was the pericardium merid-
+users,bodymassindex(BMI)ofmorethan30,priorhistory                           ian p6 point (Neiguan) (Figure 1).
+of PONV,suﬀeringfromcoagulopathy,preagnancy,having                              Thelargeintestinep4point(Hegu)locatedonthedor-
+a pacemaker, or having local site infection at upper limbs.                 sumof thehand,betweentheﬁrstandsecondmetacarpal
+
+
+2                                                                                                                                                                                          Anesth Pain Med. 2016; 6(6):e40106.
+
+=== PDF PAGE 3 ===
+                                                            PraveenaSeevaunnamtumSetal.
+
+
+
+
+
+Figure 1. Steps for Location of EA Points
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A,step1: tostarttolocatepericardiummeridianp6point(Neiguan),B,step2: toﬁnallylocatepericardiummeridianp6point(Neiguan)markedx,C,locationof largeintestine
+p4 point (Hegu) marked with black circle.
+
+
+bones,atthemidpointof thesecondmetacarpalboneand                               despite being on PCAM. These doses were included in our
+close to its radial border (Figure 1).                                         data entry.
+    The needles were inserted by a trained acupuncturist                            If at any time postoperatively the patient experienced
+using a “ﬂicking in” technique with a needling guide tube                      vomiting,I.VMetoclopramide20mgwasgivenasﬁrstline,
+to ensure it is at an appropriate depth.   The EA needles                      followed by I.V Granisetron 1.5 mg 30 minutes later as sec-
+werestimulatedbeforethestartof surgeryuntiltheendof                            ond line if persistent vomiting.
+surgeryatafrequencyof2HertzthatwasproducedbyElec-                                   The recovery nurses who assessed the patients at 30-
+tronic Acupuncture Treatment Instrument (Hwato brand,                          minute postoperatively were blinded to the study group.
+model SDZ - IV). It was set at intensity level 1 with contin-                  Once  discharged  from  operation  theatre  (OT),  patients
+uous wave emission. This device used alternating current                       were transferred to the general gynaecological wards for
+(AC) for a substantial step-down in voltage and amperage                       theremainderof theirstay. Theywereputundertheacute
+and ensured that there was virtually no current transmit-                      pain services (APS) that followed up the patients 2 hourly
+ted through the patient’s body for intraoperative safety.                      as part of  their standard practice.   Respiratory rate and
+The proximal and distal electrodes were clipped on to the                      drowsiness were evaluated by the APS team but these vari-
+sterile single use acupuncture needles.    No local anaes-                     ables were not studied.   The patients were evaluated by
+thetics were used at the end of surgery.  Stimulation was                      blinded assessors at 2 hours, 4 hours, and 24 hours post-
+stopped and needles removed before the patient woke up                         operatively for study purposes.
+at end of surgery.
+    Intherecoveryroom,patientsfrombothstudygroups                              3.4.Assessment
+were put on a PCAM machine.  PCAM was set as a bolus IV                             We analysed postoperative analagesia via numerical
+Morphine1mgdeliveredwitheach‘ondemand’ dose,and                                rating scale (NRS) at 30 minutes, 2 hours, 4 hours, and 24
+lock-outperiodof 5minuteswithnobackgroundinfusion.                             hours.  The NRS is used to determine the amount of per-
+Rescue analgesia in the postoperative period included IV                       ceived pain felt by each subject. It is a 0 to 10 scale with 0
+Morphine boluses if the patient experienced severe pain                        being no pain and 10 being most severe pain.
+
+
+Anesth Pain Med. 2016; 6(6):e40106.                                                                                                                                                                                                    3
+
+=== PDF PAGE 4 ===
+                                                          PraveenaSeevaunnamtumSetal.
+
+
+
+    Data on the total PCAM demand and total PCAM doses                      post  operatively,  opioid  demand,  and  total  opioid  con-
+in the ﬁrst 24 hours were collected.  We also analysed in-                  sumptionintheﬁrst24hours. Thelowfrequencystimula-
+cidence  of  nausea  and  postoperative  antiemesis  use  by                tion also reduced the incidence of opioid-induced side ef-
+looking at incidences of  need for rescue pharmacologic                     fects like PONV up to the ﬁrst 30 minutes.
+antiemetic in the ﬁrst 30 minutes and 24 hours.                                  PatientsinthisstudywerestartedonEAaftertheywere
+                                                                            induced under general anaesthesia. They were blinded to
+3.5.StatisticalMethods                                                      the intervention. Hence, we avoided any possible placebo
+    Data  entry  and  analysis  was  conducted  using  PASW                 eﬀect attributed to the intervention.  However, according
+StatisticsDataEditor(StatisticalPackageforSocialSciences                    to the traditional Chinese medicine theory, acupuncture
+SPSS Version 21).   The data were analysed using Indepen-                   provided intraoperatively may not be as comparable as
+dentsamplesTtestfornumericaldata(NRSforpain,PCAM                            those provided in a conscious subjects.   This is because
+demand,andtotalPCAMdoses)betweenEAgroupandcon-                              of  the  failure  to  establish  the  De  Qi  sensation  that  im-
+trol group and expressed as mean± standard deviations.                      proves the eﬃcacy of acupuncture (17). Anaesthetics such
+    Chi Square and Fisher exact test were applied to cat-                   as propofol also reduces the neurophysiological response
+egorical  data  (incidence  of  nausea  and  need  for  rescue              toacupuncturestimulationasshowninthestudyof Wang
+pharmacologic  antiemetic).      Incidence  of  nausea  and                 (18). Despitethis,ourstudywithitsrigorousmethodology
+antiemeticusagewasexpressedasfrequencies(n)andper-                          shows a statistically signiﬁcant eﬀect on opioid reduction
+centages(%). Wedeﬁnedthelevelof signiﬁcanceatpvalue                         which will contribute to the body of work regarding opti-
+of < 0.05                                                                   mal timing of acupuncture in the perioperative period.
+                                                                                 This study shows a transient antinociceptive eﬀect up
+                                                                            to 2 hours postoperatively with a reduction in total opioid
+4. Results                                                                  dose and demand in the ﬁrst 24 hours. There is not much
+                                                                            evidence with regard to how long the EA analgesic eﬀect
+    A total of  64 patients were enrolled into this study.                  lasts postoperatively as it is attributed to the endogenous
+All patients were examined and no drop-out was occurred                     opioid production in the acute postoperative period. In a
+(Figure 2). The study was performed from July 2013 to July                  meta-analysis by Sun et al. that looked into 10 randomised
+2014. Patients from both study groups were homogenous                       controlledtrials,therewereopioidsparing-eﬀectsat8,24,
+in all demographic parameters (Table 1).                                    and 72 hours postoperatively at rates of 21%, 23%, and 29%,
+    In this study,  the mean pain score was signiﬁcantly                    which were clinically signiﬁcant (19).   This meta-analysis
+lowerintheEAgroupthanthecontrolgroupat30minutes                             also concluded that the analgesic eﬀect of a single session
+and2hours(Pvalue< 0.05). At4hours,however,themean                           EAwilllastforabouttwotothreehours,whichissimilarto
+pain score was similar in both groups.   At 24 hours, the                   our study.
+meanpainscorewaslowerintheEAgroupthanthecontrol                                  The results of this study accurately follow the predic-
+groupwithnostatisticallysigniﬁcantdiﬀerence(Figure3).                       tion of  risk of  PONV by Apfel simpliﬁed risk score (20).
+    The mean PCAM demand within 24 hours was signiﬁ-                        If  we intended to assess the baseline risk factor for our
+cantly lower in EA group compared to the control group                      study  population  according  to  the  Apfel  simpliﬁed  risk
+(P value < 0.05). The opioid consumption within 24 hours                    score,thisstudycomprisedfemalepatientsasstudypopu-
+showed a signiﬁcant reduction in EA group compared to                       lationandusedpostoperativeopioidinmethodology. This
+the control group (P value < 0.05) (Table 2).                               givesascoreof 2thatindicatesmediumrisk. Accordingto
+    Incidence  of  postoperative  nausea  signiﬁcantly  re-                 theApfelsimpliﬁedscoringsystem,subjectswithmedium
+duced  in  EA  group  at  30  minutes  compared  to  control                riskwouldreportanincidenceof approximately40%. Sim-
+group (P value <  0.05) (Figure 4).  Incidence of postoper-                 ilarly, we recorded an incidence of 46.88%  in the control
+ative nausea also reduced at 2 hours and increased at 4                     group in the ﬁrst 30 minutes.   Subjects receiving EA re-
+hours but both groups were not statistically diﬀerent in                    ported lesser incidence of nausea as expected.
+these terms.                                                                     However, one of the limitations in the current study
+                                                                            was that we did not collect data on whether our patients
+                                                                            were smokers or not, which is part of the Apfel simpliﬁed
+5. Discussion                                                               risk score.   If  we knew the patient’s smoking status,  we
+                                                                            could have classiﬁed baseline risk of PONV as high risk in
+    We found low frequency stimulation of 2 Hertz EA in-                    the non-smoker group.
+traoperativelyduringagynaecologicalsurgerythatshows                              Inconclusion,thisstudyexplorespotentialbeneﬁtsof
+a signiﬁcant reduction in mean pain scores up to 2 hours                    intraoperativeEA.Theﬁndingsofthisstudycancontribute
+
+
+4                                                                                                                                                                                         Anesth Pain Med. 2016; 6(6):e40106.
+
+=== PDF PAGE 5 ===
+                                                                                                      PraveenaSeevaunnamtumSetal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2. Flow Chart of patients in Trial
+
+
+
+Table 1. Baseline Characteristics Between Electroacupuncture Group and Control Group
+
+
+   Variables                                                  EA Group, n = 32, Mean (SD)            Control Group, n = 32, Mean (SD)            Mean Diﬀerence (95% CI)           t Statistic (df)          P Valuea
+
+   Age, y                                                                              47.50 (7.94)                                                         48.72 (6.72)                                                   -1.22 (-4.89,2.47)                              -0.66 (62)                   0.510a
+
+   Weight, kg                                                     60.22 (8.75)                                             59.25 (9.71)                                       0.97 (-3.65,5.59)                           0.42 (62)                  0.676a
+
+   Height, m                                                                     1.57 (0.06)                                                            1.58 (0.07)                                                  -0.01 (-0.04,0.03)                             -0.32 (62)                   0.754a
+
+   BMI value, kg/m2                                               24.28 (2.97)                                             23.71 (3.16)                                       0.57 (-0.96,2.10)                           0.75 (62)                  0.458a
+
+   Duration of surgery, min                             149.06 (42.64)                                                     151.97 (50.71)                                                                                                                     0.805a
+
+   aIndependent t test.
+
+
+
+to the body of work which encourages the use of cost ef-                                                                               Acknowledgments
+ﬁcient non-pharmacological agents with minimal side ef-
+fect proﬁle.                                                                                                                                   TheauthorswishtoacknowledgeSisterChooWaiLing,
+                                                                                                                                       medical oﬃcers of department of anaesthesia and inten-
+
+
+Anesth Pain Med. 2016; 6(6):e40106.                                                                                                                                                                                                   5
+
+=== PDF PAGE 6 ===
+                                                                          PraveenaSeevaunnamtumSetal.
+
+
+
+
+
+Table 2. Comparison of Mean Total PCA Morphine Demand and Dose within 24 Hours Between Electroacupuncture and Control Groups
+
+
+  Variable                                                               EA Group, n = 32, Mean (SD)             Control Group, n = 32, MeanMean Diﬀerence, (95% CI)         t Statistic (df)         P Valuea
+                                                                                               (SD)
+
+  Total PCA Morphine in 24
+  hours
+
+          Demand (times pressed)                    27.28 (21.61)                         55.25 (46. 85)                     -27.97 (-46.20,-9,74)            -3.07 (62)         0.003*
+
+          Dose, mg                                                                 21.38 (14.38)                                                   33.94 (20.24)                                           -12.56 (-21.34,-3.79)                           -2.86 (62)                  0.006*
+
+  aIndependent t test.
+
+
+
+                                                                                                 sive  care  of  hospital  Raja  Permaisuri  Bainun  Ipoh  and
+                                                                                                 nursesfromtheacutepainservice(APS)forhelpinginthis
+                                                                                                 study.
+
+
+                                                                                                 Footnotes
+
+                                                                                                 Authors’   Contribution:   Study  concept  and  design,  S
+                                                                                                 Praveena Seevaunnamtum and Kavita Bhojwani; analysis
+                                                                                                 and interpretation of data, S Praveena Seevaunnamtum;
+                                                                                                 drafting the manuscript, S Praveena Seevaunnamtum and
+                                                                                                 KavitaBhojwani,criticalrevisionof themanuscriptforim-
+                                                                                                 portant intellectual content, S Praveena Seevaunnamtum
+                                                                                                 and Nik Abdullah; statistical analysis, S Praveena Seevaun-
+                                                                                                 namtum; administrative, technical, and material support,
+                                                                                                 Kavita Bhojwani; study supervision, Kavita Bhojwani and
+Figure 3.   Mean Numerical Rating Score at Various Time Intervals Between Elec-                  Nik Abdullah.
+troacupuncture and Control Groups
+                                                                                                 Funding/Support: We also would like to acknowlege the
+                                                                                                 provisionof equipmentandsupportprovidedbyministry
+                                                                                                 of health, Malaysia.
+
+
+                                                                                                 References
+
+                                                                                                   1.ImaniF.Postoperativepainmanagement.  AnesthPainMed. 2011;1(1):6–
+                                                                                                      7. doi:10.5812/kowsar.22287523.1810. [PubMed:25729647].
+                                                                                                  2.Crombez G, Eccleston C, Van Damme S, Vlaeyen JW, Karoly P. Fear-
+                                                                                                      avoidance  model  of   chronic  pain:     the  next  generation.  Clin  J
+                                                                                                      Pain.  2012;28(6):475–83. doi:10.1097/AJP.0b013e3182385392. [PubMed:
+                                                                                                      22673479].
+                                                                                                  3.Macintyre PE, Schug SA. Acute pain management: a practical guide.
+                                                                                                      US: CRC Press; 2014.
+                                                                                                  4.Sadhasivam S, Chidambaran V. Pharmacogenomics of opioids and
+                                                                                                      perioperativepainmanagement.Pharmacogenomics. 2012;13(15):1719–
+                                                                                                      40. doi:10.2217/pgs.12.152. [PubMed:23171337].
+                                                                                                  5.Kehlet H. Acute pain control and accelerated postoperative surgical
+                                                                                                      recovery.SurgClinNorthAm.  1999;79(2):431–43. [PubMed:10352662].
+                                                                                                  6.Farzi F, Naderi Nabi B, Mirmansouri A, Fakoor F, Atrkar Roshan Z,
+                                                                                                      Biazar G, et al. Postoperative Pain After Abdominal Hysterectomy:
+                                                                                                      A  Randomized,  Double-Blind,  Controlled  Trial  Comparing  the  Ef-
+Figure 4.  Incidence of Nausea at Various Time Intervals Between Electroacupunc-                      fectsof TramadolandGabapentinasPremedication.AnesthPainMed.
+ture and Control Groups                                                                               2016;6(1):32360. doi:10.5812/aapm.32360. [PubMed:27110531].
+                                                                                                   7.Gharaei H, Imani F, Almasi F, Solimani M. The Eﬀect of Ultrasound-
+                                                                                                      guided TAPB on Pain Management after Total Abdominal Hysterec-
+                                                                                                      tomy. Korean J Pain.   2013;26(4):374–8. doi:10.3344/kjp.2013.26.4.374.
+                                                                                                      [PubMed:24156004].
+
+
+6                                                                                                                                                                                         Anesth Pain Med. 2016; 6(6):e40106.
+
+=== PDF PAGE 7 ===
+                                                                          PraveenaSeevaunnamtumSetal.
+
+
+
+
+ 8.WilkinsonJ,FaleiroR.Acupunctureinpainmanagement.   Continuing                                       operative Pain and Analgesic Consumption in Patients Undergoing
+     Education in Anaesthesia, Critical Care and Pain.   2007;7(4):135–8. doi:                         Thoracic Surgery:  A Randomized Study. Evidence-Based Complemen-
+     10.1093/bjaceaccp/mkm021.                                                                         taryandAlternativeMedicine.  2016;2016.
+ 9.SunR,YangY,LiZ,LiY,ChengS,ZengF.Connectomics: anewdirection                                    15.Lin JG, Lo MW, Wen YR, Hsieh CL, Tsai SK, Sun WZ. The eﬀect of high
+     inresearchtounderstandthemechanismof acupuncture.EvidBased                                        andlowfrequencyelectroacupunctureinpainafterlowerabdominal
+     ComplementAlternatMed. 2014;2014:568429.doi:10.1155/2014/568429.                                  surgery.Pain. 2002;99(3):509–14. [PubMed:12406527].
+     [PubMed:24523823].                                                                           16.Lee DC. Using silver spike point needle-free electro-acupuncture for
+10.Lundeberg T. Mechanisms Of Acupuncture In Pain:  A Physiological                                    postoperative pain management. Victoria: Victoria University; 2008.
+     Perspective In A Clinical Context. Acupuncture: Theories And Evidence.                       17.Lu Z, Dong H, Wang Q, Xiong L. Perioperative acupuncture modu-
+     2013;1(1).                                                                                        lation:  more than anaesthesia. Br J Anaesth.   2015;115(2):183–93. doi:
+11.da Silva MD, Bobinski F, Sato KL, Kolker SJ, Sluka KA, Santos AR. IL-10                             10.1093/bja/aev227. [PubMed:26170347].
+     cytokine released from M2 macrophages is crucial for analgesic and                           18.Wang   SM,   Constable   RT,   Tokoglu   FS,   Weiss   DA,   Freyle   D,   Kain
+     anti-inﬂammatory eﬀects of acupuncture in a model of inﬂamma-                                     ZN.  Acupuncture-induced  blood  oxygenation  level-dependent  sig-
+     tory muscle pain. Mol Neurobiol.  2015;51(1):19–31. doi:10.1007/s12035-                           nals  in  awake  and  anesthetized  volunteers:   a  pilot  study. Anesth
+     014-8790-x. [PubMed:24961568].                                                                    Analg.  2007;105(2):499–506. doi:10.1213/01.ane.0000270216.71234.f5.
+12.Tobaldini G, Aisengart B, Lima MM, Tambeli CH, Fischer L. Ascend-                                   [PubMed:17646512].
+     ing nociceptive control contributes to the antinociceptive eﬀect of                          19.Sun  Y,  Gan  TJ,  Dubose  JW,  Habib  AS.  Acupuncture  and  related
+     acupuncture in a rat model of acute pain. J Pain.  2014;15(4):422–34.                             techniques  for  postoperative  pain:    a  systematic  review  of  ran-
+     doi:10.1016/j.jpain.2013.12.008. [PubMed:24412800].                                               domized  controlled  trials.  Br  J  Anaesth.     2008;101(2):151–60.  doi:
+13.Bauml J, Xie SX, Farrar JT, Bowman MA, Li SQ, Bruner D, et al. Ex-                                  10.1093/bja/aen146. [PubMed:18522936].
+     pectancy in real and sham electroacupuncture: does believing make                            20.Gan  TJ,  Diemunsch  P,  Habib  AS,  Kovac  A,  Kranke  P,  Meyer  TA,
+     itso?.JNatlCancerInstMonogr. 2014;2014(50):302–7.doi:10.1093/jnci-                                et  al.  Consensus  guidelines  for  the  management  of   postopera-
+     monographs/lgu029. [PubMed:25749596].                                                             tive  nausea  and  vomiting.  Anesth  Analg.     2014;118(1):85–113.  doi:
+14.Chen T, Wang KJ, Ma W, Zhou J. Electroacupuncture Reduces Post-                                     10.1213/ANE.0000000000000002. [PubMed:24356162].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Anesth Pain Med. 2016; 6(6):e40106.                                                                                                                                                                                                    7

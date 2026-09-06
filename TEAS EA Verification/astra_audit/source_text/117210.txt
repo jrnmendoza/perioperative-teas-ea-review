@@ -1,0 +1,941 @@
+=== PDF PAGE 1 ===
+Journal    of    Pain    Research
+
+
+
+
+    Open  Access  Full  Text  Article                                                                                                     CLINICAL TRIAL REPORT
+Preoperative     Transcutaneous     Electrical     Acupoint
+Stimulation     Alleviates     Postoperative     Pain     and
+Improves     Sleep     Quality     in     Breast     Cancer     Patients
+with     Preoperative     Sleep     Disturbance:     A     Partially
+Randomized     Controlled     Trial
+
+Can Ma         1,2, Hong Xiong                3, Wenchao Fu                1, Shihua Lv            1, Lijuan Zhang               1,2, Dengming Zhao                     1,2, Cong Hu             1,
+Xiuli Wang            4, Wenzhi Li            1,2
+
+
+
+1The  Key  Laboratory  of  Anesthesiology  and  Intensive  Care  Research  of  Heilongjiang  Province,  Harbin,  Heilongjiang,  People’s  Republic  of  China;
+2Department of Anesthesiology, Second Affiliated Hospital of Harbin Medical University, Harbin, Heilongjiang, People’s Republic of China;                                                3The Third
+People’s  Hospital  of  Chengdu,  Chengdu,  Sichuan,  People’s  Republic  of  China;                     4Department  of  Anesthesiology,  The  Third  Hospital  of  Hebei  Medical
+University,  Shijiazhuang,  Hebei,  People’s  Republic  of  China
+
+Correspondence: Wenzhi Li, Department of Anesthesiology, Second Affiliated Hospital of Harbin Medical University, No. 246 Xuefu Road, Nangang
+District,  Harbin,  Heilongjiang,  People’s  Republic  of  China,  Tel  +86  18045159998,  Email  wenzhili9@126.com
+
+
+Purpose:        Preoperative        sleep        disturbance        exacerbates        postoperative        pain        and        delays        recovery.        Transcutaneous        electrical        acupoint
+stimulation        (TEAS)        may        alleviate        insomnia        and        pain.        This        trial        evaluated        preoperative        TEAS        on        postoperative        pain,        sleep,        and
+intraoperative   hemodynamics   in   breast   cancer   patients    with   preoperative   sleep   disturbance.
+Patients      and      Methods:          Fifty-nine       breast       cancer       patients       (aged       37–70       years)       were       stratified       by       Pittsburgh       Sleep       Quality       Index
+(PSQI): PSQI < 6 were assigned to the non-randomized control group (Group C, n = 26), while patients with PSQI ≥ 6 were randomly
+allocated   (1:1)   to   the   sleep   disturbance   group   (Group   S,   n   =   16)   or   the   TEAS   group   (Group   T,   n   =   17).   TEAS   (2/100   Hz,   8–12   mA,
+30    min)    was    delivered   pre-anesthesia   at    LI4,   HT7,    and   PC6.   Pain   was    assessed    via    Numerical   Rating   Scale    (NRS)   at    4,   24,   48,    and
+72 h postoperatively. Sleep was measured with Athens Insomnia Scale (AIS). Intraoperative systolic blood pressure variability (sdSBP,
+cvSBP)   was   recorded.
+Results: In    observational    comparisons,     Group    S     exhibited    elevated    NRS    scores    at    24,     48,    and     72    h     vs    Group    C    (p <     0.05).    TEAS
+significantly    reduced     NRS    scores    across    all    time    points    (p <     0.05)    and     improved    AIS    scores    on    postoperative     days    1–2    (p <    0.05).
+Intraoperative   sdSBP   and   cvSBP   were   lower   in  Group   T  than   Group  S   (9.31  ±   2.73   vs   18.85   ±   6.74;  0.08   ±   0.02  vs   0.16   ±   0.05; p <
+0.05).  Among  non-TEAS  patients  (Groups  C  and  S),  preoperative  PSQI  positively  correlated  with  postoperative  NRS  and  AIS  scores.
+Conclusion:           Preoperative          TEAS          significantly          attenuates          postoperative          pain          and          improves          sleep          in          breast          cancer          patients          with
+preoperative    sleep    disturbance,    possibly    associated    with    reduced    intraoperative    blood    pressure    variability.    Preoperative    sleep    quality
+may   predict   postoperative   outcomes.
+Keywords: transcutaneous     electrical     acupoint      stimulation,      postoperative     pain,      sleep      disturbance,     breast      cancer,     autonomic      nervous
+system
+
+
+Introduction
+Postoperative pain remains a significant clinical challenge, with up to 40–60% of surgical patients experiencing moderate
+to       severe       pain       in       the       early      postoperative       period.1 Inadequate      pain       control       not       only       prolongs       hospital      stay       and       delays
+functional     recovery     but     also     increases     the     risk     of     chronic     postsurgical     pain     and     long-term     opioid     use.2,3                Breast     cancer
+patients      scheduled      for     elective      surgery      represent      a     particularly      vulnerable     population,      facing      both      surgical      trauma      and
+profound            psychological            distress            related            to            cancer            diagnosis            and            the            prospect            of            mastectomy            or            breast-conserving
+
+
+                                                             Journal  of  Pain  Research  2026:19  619125                                                                                            1
+                                                                              © 2026 Ma et al. This work is published and licensed by Dove Medical Press Limited. The full terms of this license are available at https://www.dovepress.com/terms.php
+                                                                              and incorporate the Creative Commons Attribution – Non Commercial (unported, v4.0) License (http://creativecommons.org/licenses/by-nc/4.0/). By accessing the work
+                                                             you hereby accept the Terms. Non-commercial uses of the work are permitted without any further permission from Dove Medical Press Limited, provided the work is properly attributed. For
+                                                             permission for commercial use of this work, please see paragraphs 4.2 and 5 of our Terms (https://www.dovepress.com/terms.php).
+
+=== PDF PAGE 2 ===
+Ma  et  al
+
+surgery.4        According      to       the      latest       GLOBOCAN      estimates,      female       breast       cancer       was       the      second      most       common       cancer
+globally in 2022, with approximately 2.3 million new cases and 666,000 deaths, accounting for 11.6% of all cancer cases
+and    6.9%    of    all    cancer    deaths    worldwide.5                    Identifying    effective,    low-risk    analgesic    strategies    that    complement    conven-
+tional   pharmacotherapy    is    therefore    of    considerable    clinical    importance.
+      Sleep    disorders    are    highly    prevalent    among    breast    cancer    patients,    with    reported    rates   ranging    from    60%    to    90%.6,7
+Importantly, preoperative sleep disturbance is not merely a benign comorbidity, it actively exacerbates postoperative pain
+perception       through       multiple       neurobiological       mechanisms,       including       enhanced       central       sensitization8,9                                        and       sympathetic
+hyperactivation.10 The      bidirectional     relationship      between      sleep      and      pain     is      well      established:      poor      sleep     amplifies      pain
+perception,      while      unrelieved      pain      fragments      sleep      architecture.10,11                           This      vicious      cycle      underscores      the      need      for      inter-
+ventions   that    can    simultaneously    address    both    pain    and    sleep    disturbance    in    the    perioperative    setting.
+      Transcutaneous    electrical    acupoint    stimulation    (TEAS),    a    non-invasive    acupuncture    modality    that    delivers    electrical
+current    through   surface    electrodes    placed    at    specific   acupoints,    has    emerged    as    a    promising    complementary    therapy   for
+pain      management11,12                and      sleep      improvement.13               Systematic      reviews      and      meta-analyses     have      demonstrated      that      TEAS
+significantly       reduces       postoperative       pain        scores        and       decreases        cumulative        opioid       consumption       across        various       surgical
+procedures.14,15              Despite         this         evidence,        few         studies         have         specifically         examined         TEAS        in         breast         cancer         patients        with
+documented preoperative sleep disturbance—a population at particularly high risk for exacerbated postoperative pain and
+delayed    recovery.    Moreover,    the    potential   of    preoperative    TEAS    to   stabilize    intraoperative    hemodynamics   and    improve
+postoperative   pain   outcomes   in   this   high-risk   subgroup    has   not    been   comprehensively   evaluated.   Therefore,   the    present
+randomized     controlled      trial     was      designed     to     investigate:      (1)     whether      preoperative     sleep      disturbance     is      associated     with
+worsened       postoperative       pain       and       intraoperative       hemodynamic       fluctuations       in       breast       cancer       patients;       and       (2)       whether
+a        single        session        of        TEAS        administered        prior        to        anesthesia        can        attenuate        postoperative        pain        intensity,        improve        sleep
+quality,    and    reduce    sympathetic    excitability    during    surgery.
+
+Materials   and   Methods
+Ethical   Approval   and   Trial   Registration
+This      prospective,      partially      randomized      controlled      trial      was      approved      by      the      Medical      Ethics     Committee      of      the      Second
+Affiliated Hospital of Harbin Medical University (approval number: KY2022-193)  and conducted in accordance with the
+ethical    principles    of     the    Declaration     of    Helsinki.     The     trial    was     prospectively    registered    with    the     Chinese     Clinical    Trial
+Registry       (http://www.chictr.org.cn/,       registration       number:       ChiCTR2200062959,       registration       date:       2022–08-25).       Written
+informed      consent       was      obtained       from      all       participants      prior       to      enrollment.       The      full       trial      protocol      is      available      from      the
+corresponding           author           upon           reasonable           request.           Patients           and           the           public           were           not           involved           in           the           design,           conduct,
+reporting,    or    dissemination    plans    of    this    research.
+
+Participants
+Patients    with    histopathologically    confirmed    breast    cancer    scheduled    for    elective    surgery    at    our    institution    between    July
+and      November      2022       were       screened      for       eligibility.       Inclusion       criteria      were:       (1)      American       Society       of      Anesthesiologists
+(ASA)  physical   status   I–III;   (2)   age   18–70   years;   (3)   normal   cognitive   function   and   no   communication   impairment;  and
+(4)     anticipated     surgical     duration      ≥      30      minutes.      Exclusion      criteria     were:      (1)      declined      participation;      (2)      development     of
+severe  postoperative  complications; (3)  requirement  for intensive  care unit  admission;  (4)  presence  of cardiac  pacemaker
+or       implantable       electronic       device;       (5)       severe       underlying       conditions       including       cardiovascular,       cerebrovascular,        hepatic,
+renal, or hematopoietic diseases; (6) infection or injury at the designated TEAS electrode placement sites; and (7) history
+of       severe       neurological        or       psychiatric        disorders.       Surgical       procedures        included       breast-conserving       surgery        with       sentinel
+lymph    node    biopsy    (BCS    +    SLNB),    simple    mastectomy    with    sentinel    lymph    node    biopsy    (SM    +    SLNB),    and    modified
+radical    mastectomy    (MRM),    as    determined    by    tumor    stage    and    multidisciplinary    team    consensus.
+
+
+
+
+
+2               https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2026:19
+
+=== PDF PAGE 3 ===
+                                                                                                                                                                                                   Ma  et  al
+
+Group   Allocation   and   Randomization
+On   the   day  prior   to   surgery,   all   enrolled   patients  were   assessed   for   their  sleep   status  over   the   preceding  month   using  the
+Chinese version of the Pittsburgh Sleep Quality Index (PSQI), a validated 19-item self-report questionnaire that evaluates
+seven components  of sleep quality (total  scores: 0–21, higher scores indicating  poorer sleep  quality). This instrument has
+demonstrated  good   reliability  and   validity  in  Chinese  cancer  populations  (Cronbach’s  α =   0.82–0.85).16 The  full   version
+used    in    this    study    is    provided    as Supplementary    Material    1.
+     This     was     a     partially     randomized     controlled     trial.     Patients     with     PSQI     scores     <     6     (indicating     no     clinically     significant
+sleep  disturbance)  were  assigned  to  the  non-randomized  reference  control  group  (Group  C).  Patients  with  PSQI  scores  ≥
+6 (indicating poor sleep quality) were randomly allocated in a 1:1 ratio to either the sleep disturbance group (Group S) or
+the      TEAS     intervention      group      (Group      T)      using      a      computer-generated      random      number      table      Consequently,      the      primary
+randomized         comparison         was         between         Group         S         and         Group         T;         comparisons         involving         Group         C         versus         Groups         S         or
+T should be interpreted as observational. Allocation concealment was not feasible due to the physical nature of the TEAS
+intervention  (researchers  performing  TEAS  were  necessarily  aware  of  treatment  allocation);  however,  outcome  assessors
+were     blinded     to     group     assignment.     Randomization     was     performed     by     a     researcher     not     involved     in     patient     recruitment,
+intervention    delivery,    or    outcome    assessment.
+
+Sample   Size   Calculation
+Sample size was estimated based on preliminary data from 30 patients (10 per group). Pairwise comparisons between Group
+C and Group S, and between Group T and Group S, were performed using postoperative Athens Insomnia Scale (AIS) score
+as  the  primary  outcome.  Power  analysis  conducted  using  the  Power  and  Sample  Size  software  indicated  that  16  patients  per
+group   would   provide   80%    power   to   detect   a   clinically   meaningful   difference   in   AIS    scores   with   a   type   I    error   (α)   of   0.05.
+Postoperative     NRS     pain     intensity     was     designated     as     a     co-primary     outcome     of     equal     clinical     importance;     however,     formal
+power           calculation          for           NRS           was           not           performed           in           the           preliminary          phase           due           to           incomplete           data           collection.           Post-hoc
+inspection          of         the          final         NRS         results         confirmed         that          the         achieved         sample         size         detected          statistically         significant          between-
+group    differences    at    all    time    points.    To    account    for    potential    dropouts,    a    total    of    72    patients    were    enrolled.
+
+Anesthesia   Protocol
+A standardized general anesthesia protocol was applied to all patients. Anesthesia was induced with intravenous propofol
+(1.5–2.0      mg/kg),     sufentanil     (0.3–0.5      μg/kg),     and     cis-atracurium     (0.1     mg/kg).     Following     tracheal     intubation,     anesthesia
+was   maintained   with   sevoflurane   inhalation   (1.0–2.0%   end-tidal   concentration)   and   continuous   intravenous   remifentanil
+infusion  (0.1–0.3   μg/kg/min),  titrated   to  maintain  bispectral  index   (BIS)   values  between   45  and   60.  Intraoperative  blood
+pressure   was  maintained  within  20%  of   baseline   values;  ephedrine  (5–10  mg  intravenous   bolus)  was  administered  when
+systolic         blood        pressure        decreased         by         more         than        20%         from        baseline.         For        postoperative         analgesia,         flurbiprofen         axetil
+(100     mg)     was     administered     intravenously     30     minutes     before     the     end     of     surgery     and     subsequently     once     daily     for     three
+consecutive        days.        No         other        regional        blocks         or        additional         analgesics        were        administered        intraoperatively.        All        patients
+received         standard         perioperative         care         including         prophylactic         antiemetics         (dexamethasone         and         granisetron)         to         prevent
+postoperative    nausea    and    vomiting.
+
+TEAS   Inter vention
+Patients  in  Group  T received  a  single  30-minute  session  of  TEAS  prior  to  anesthesia  induction.  A  standardized  electrical
+stimulator       (HANS-200A,       Nanjing       Jisheng       Medical       Technology       Co.,       Ltd.,       China)       delivered       biphasic       square       waves       at
+alternating    frequencies    of   2    Hz    and    100    Hz    (dense-disperse    mode),   with    current    intensity    individually    adjusted   to    8–12
+mA    based    on    patient   tolerance    (visible    local   muscle    twitching    without   discomfort).    Four    acupoints   were    selected   based
+on traditional Chinese medicine principles for their established roles in pain modulation and sleep regulation: Hegu (LI4)
+and Shenmen (HT7) on the left upper limb, and Hegu (LI4) and Neiguan (PC6) on the right upper limb. LI4 is located on
+the dorsum of the hand, between the first and second metacarpal bones, at the midpoint of the second metacarpal bone on
+the       radial       side.       HT7       is       located       at       the       ulnar       end       of       the       transverse        crease       of       the       wrist,       in       the       depression       between       the
+
+
+
+Journal  of  Pain  Research  2026:19                                                                                                                         https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                       3
+
+=== PDF PAGE 4 ===
+Ma  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 1 Anatomical  locations  of  the  acupoints  used  for  transcutaneous  electrical  acupoint  stimulation  (TEAS).
+Notes: LI4 (Hegu) is located on the dorsum of the hand between the first and second metacarpal bones. HT7 (Shenmen) is located at the ulnar end of the transverse wrist
+crease. PC6 (Neiguan) is located approximately 2 cun proximal to the transverse wrist crease between the tendons of the palmaris longus and flexor carpi radialis muscles.
+
+
+pisiform       bone        and       the        ulna.        PC6        is        located        approximately        2       cun        (≈6.7        cm)        proximal        to       the        transverse        wrist        crease,
+between the tendons of the palmaris longus and flexor carpi radialis muscles. The anatomical locations of these acupoints
+are    illustrated    in Figure    1.     Electrode    placement    and    stimulation    parameters    were    standardized    across    all    participants    in
+Group    T.    Patients    in    Groups    C    and    S    did    not    receive    TEAS    or    sham    stimulation.
+
+Outcome   Measures
+Primary   Outcome:   Postoperative  Pain  Intensity   and  Sleep   Quality
+The primary  outcome  was postoperative  pain intensity assessed using  the 11-point Numerical  Rating  Scale (NRS; 0  =  no
+pain,    10    =     worst     pain    imaginable).     Pain    scores     were    recorded     at    rest     at    four     time    points:     4,     24,     48,    and     72    hours     after
+surgery.         The          NRS          is         a         well-validated,         reliable          tool         for         assessing         acute          postoperative         pain          and         demonstrates         strong
+correlation    with    visual    analog    scales    in    surgical    populations.
+      Sleep    quality    was    assessed    using    the    Athens    Insomnia    Scale    (AIS),    a    validated    8-item    self-report    instrument    that
+evaluates          sleep          induction,          nocturnal          awakenings,          final          awakening,          total          sleep          duration,          sleep          quality,          well-being,
+functioning         capacity,         and         daytime          sleepiness.          The         AIS          has          demonstrated          good          reliability         (        Cronbach’s          α         =         0.87–
+0.90)       and       validity       in       both       preoperative       and       postoperative       settings,       with       scores       ≥       6       indicating       clinically       significant
+insomnia.17 AIS scores were recorded at four time points: one day before surgery (T0), on the day of surgery (T1), and
+on             the             first             (T2)             and             second             (T3)             postoperative             days.             Additionally,             the             number             of             nocturnal             awakenings             was
+documented.
+
+Secondary   Outcomes:   Intraoperative  Hemodynamics  and   Recovery
+Intraoperative        hemodynamic        stability        was        assessed        using        two        derived        parameters:        the        standard        deviation        of        systolic
+blood           pressure           (sdSBP),           which           quantifies           overall           blood           pressure           variability           during           surgery;          and           the           coefficient           of
+variation  of  systolic  blood  pressure  (cvSBP),  calculated  as  sdSBP  divided  by  mean  systolic  blood  pressure,  which  serves
+as      a      normalized      index      of      sympathetic      nervous      system      activity.18,19                              Blood      pressure      measurements      were      recorded      at      5-
+minute         intervals         throughout          surgery,         and         sdSBP         and         cvSBP         were         computed         from          all         intraoperative         readings.         Total
+intraoperative    ephedrine    consumption    was    also    recorded    as    an    indicator    of    hemodynamic    instability.
+      Secondary  clinical outcomes included: incidence of postoperative nausea and vomiting (PONV) within 24 hours after
+surgery;       preoperative       anxiety       assessed       using       the       Chinese       version       of       the       Self-Rating       Anxiety       Scale       (SAS);       heart       rate
+variability      (HRV)      parameters      (LF/HF      ratio)      derived      from      preoperative      Holter      monitoring;      and      total      length      of      hospital
+stay.    Preoperative    risk    of    PONV    was    assessed    using    the    Adult    Apfel    simplified    scoring    scale.
+
+
+4                https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2026:19
+
+=== PDF PAGE 5 ===
+                                                                                                                                                                                                              Ma  et  al
+
+Data   Collection
+An    outcome    assessor    blinded    to    group    allocation    performed    all    data    collection.    Baseline    demographic    and    clinical    data
+including  age,  body  mass  index  (BMI),  history  of  surgery  and  chemotherapy,  comorbidities,  baseline  blood  pressure  and
+heart     rate,     intraoperative    blood     loss,     fluid     resuscitation    volume,     and    surgical    duration     were     recorded.     All     postoperative
+assessments       (NRS       pain       scores,       AIS       sleep       scores,       PONV     incidence)       were       conducted       by       the       same       blinded       assessor       to
+minimize  inter-rater  variability.  No  serious  adverse  events  related  to  TEAS  or  study  procedures  were  reported  during  the
+trial    period.
+
+Statistical   Analysis
+Continuous   variables   are   expressed   as   mean   ±   SD   and   categorical   variables   as   frequencies   (%).   Normality   was   assessed
+using      the     Kolmogorov–Smirnov      test.     Between-group      comparisons     for      continuous      data      were     performed      using      one-way
+ANOVA with  Bonferroni  post-hoc  correction  (normally  distributed)  or  the  Kruskal–Wallis  test  with  Dunn’s  post-hoc  test
+(non-normally    distributed).    Categorical    variables    were    compared    using    Fisher ’s    exact    test,    Pearson’s    chi-square    test,    or
+the    Cochran–Mantel–Haenszel    test    as    appropriate.
+      For  longitudinal  outcomes  (NRS  and  AIS),  two-way  repeated-measures  ANOVA was  employed  with  Group  (C,  S,  T)
+as    the    between-subjects   factor    and    Time    as    the    within-subjects    factor.    Mauchly’s    test    was    used    to    assess    sphericity;    the
+Greenhouse–Geisser correction was applied when violated. Main effects of Group and Time, as well as the Group × Time
+interaction,            were            examined.            Bonferroni-corrected            pairwise            comparisons            were            performed            when            the            interaction            was
+significant    or    marginally    significant    (p <    0.10).    Effect    sizes    were    reported    as    partial    eta-squared    (η2).
+      Linear      regression      analysis      was      used      to      examine      associations      between      preoperative      PSQI      scores      and      intraoperative
+hemodynamic          parameters          (sdSBP,          cvSBP)          and          postoperative         outcomes          (AIS          scores,          NRS          pain          scores).          Results         are
+reported    as    standardized    coefficients    (β)    with    95%    confidence    intervals    (CI),    adjusted    R2,    and    two-tailed p values.
+      Categorical       variables       were       analyzed       using       Pearson’s       chi-square       test       when       expected       cell       frequencies       were       ≥       5,       or
+Fisher ’s       exact       test       when       expected       frequencies       were       <       5.       The       exact       test       used       for       each       comparison       is       specified       in       the
+corresponding    table    footnote.
+      A   two-tailed p <   0.05   was   considered   statistically   significant.   All   analyses   were   performed   using   SPSS   version   22.0
+(IBM    Corp.,    Armonk,    NY,    USA)    and    GraphPad    Prism    version    9.5    (GraphPad    Software,    San    Diego,    CA,    USA).
+
+Results
+Patient   Enrollment   and   Disposition
+A     total     of     72     breast     cancer     patients     were     screened     for     eligibility.     Eight     patients     declined     participation,     and     three
+patients   were   excluded   for   not   meeting   inclusion   criteria.   Sixty-one   patients   were   enrolled:   26   patients   with   PSQI
+<   6   were   assigned   to   the   non-randomized   control   group   (Group   C),   and   35   patients   with   PSQI   ≥   6   were   randomly
+allocated     (1:1)     to     the     sleep     disturbance     group     (Group     S,     n     =     17)     or     the     TEAS     intervention     group     (Group     T,     n     =
+18).     During    the     follow-up    period,    one    patient    in    Group     S    and    one     patient    in    Group     T  were    lost    to    follow-up    due
+to             incomplete             postoperative             data.            Consequently,             59            patients            (aged            37–70             years)             were            included            in             the             final
+analysis:     Group     C     (n    =     26),     Group     S    (n     =     16),     and     Group     T     (n    =     17).     The    CONSORT     flow     diagram    is    provided
+as Figure      2.
+
+Baseline   Characteristics
+Demographic           and           baseline          clinical           characteristics          of          the           three           groups          are           summarized          in Table           1.          There           were           no
+statistically    significant     differences    among    groups     in     age,    BMI,     Apfel    PONV   risk    scores,    prevalence     of    hypertension     or
+diabetes,   history   of   prior   surgery   or   chemotherapy,   type   of   surgical   procedure,   duration   of   surgery,   preoperative   systolic
+blood pressure, preoperative heart rate, intraoperative blood loss, or fluid resuscitation volume (all p > 0.05). LF/HF ratio
+from    preoperative    Holter    monitoring    also    did    not    differ    significantly    among    groups    (p =    0.418).
+      As      expected      based      on      group      allocation      criteria,      significant      differences      were      observed      in      preoperative      PSQI      scores
+(Group C: 4.46 ± 0.76; Group S: 9.63 ± 2.68; Group T: 8.71 ± 1.36; p < 0.001), preoperative AIS scores (Group C: 3.92 ±
+
+
+
+Journal  of  Pain  Research  2026:19                                                                                                                                   https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                       5
+
+=== PDF PAGE 6 ===
+Ma  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2 CONSORT  flow  diagram  showing  patient  enrollment,  allocation,  follow-up,  and  analysis.
+
+
+
+1.74;   Group    S:   7.19   ±   1.56;   Group   T:   7.82   ±   1.78; p <   0.001),   and   preoperative   SAS   anxiety   scores   (Group   C:   29.23   ±
+3.18;     Group     S:     31.41     ±     2.23;     Group     T:     31.99     ±     3.18; p =     0.008).     Importantly,     there     were     no     significant     differences     in
+these   baseline   sleep   and   anxiety   parameters   between   Group   S   and   Group   T,   confirming   successful   randomization   of   the
+sleep-disordered   cohort.
+
+
+
+                      Table  1 Baseline  Demographic  and  Clinical  Characteristics
+
+                         Characteristic                                       Group  C  (n=26)                  Group  S  (n=16)                  Group  T  (n=17)                    p value
+
+                         Age  (years)                                               54.62±9.41                         59±9.216                       55.12±8.558                       0.296
+                         BMI  (kg/m2)                                               23.37±3.30                       23.44±2.91                        22.36±1.92                       0.453
+
+                         Apfel  PONV  score                                         2.15±0.46                         2.31±0.79                         2.18±0.53                       0.681
+                         Hypertension,  n  (%)                                        7  (26.9)                         5  (31.3)                        5  (29.4)                      1.000
+                         Diabetes,  n  (%)                                             1  (3.8)                         3  (18.8)                         1  (5.9)                      0.260
+                         Prior  chemotherapy,  n  (%)                                 7  (26.9)                         4  (25.0)                        4  (23.5)                      1.000
+                         Type  of  surgery  [n  (%)]                                                                                                                                    0.762
+                             BCS  +  SLNB                                             8  (30.8)                          8  (50)                         8  (47.1)
+                            Simple  mastectomy  +  SLNB                               7  (26.9)                         3  (18.8)                        3  (17.6)
+                            Modified  radical  mastectomy                            11  (42.3)                         5  (31.3)                        6  (31.3)
+                         Surgical  duration  (min)                                120.65±27.39                     137.19±29.44                      129.41±30.67                       0.199
+                         Preoperative  SBP  (mmHg)                               126.27±14.907                     137.31±20.963                    132.53±18.297                       0.143
+                         Preoperative  HR  (bpm)                                   76.50±4.852                      74.56±5.703                       72.82±4.760                       0.072
+                         Blood  loss  (mL)                                         80.00±16.25                      78.13±15.15                       72.94±16.87                       0.374
+                         Fluid  resuscitation  (mL)                               494.23±76.59                     481.25±60.21                      488.24±74.01                       0.850
+
+                                                                                                                                                                                   (Continued)
+
+
+
+6               https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2026:19
+
+=== PDF PAGE 7 ===
+                                                                                                                                                                                                                           Ma  et  al
+
+                         Table  1 (Continued).
+
+                          Characteristic                                          Group  C  (n=26)                   Group  S  (n=16)                   Group  T  (n=17)                      p value
+
+                          LF/HF  ratio                                                  1.00±0.78                          1.39±1.73                           1.37±0.66                        0.418
+                          PSQI  score                                                   4.46±0.76                          9.63±2.68#                         8.71±1.36#                        0.000
+                          SAS  score                                                   29.23±3.18                         31.41±2.23#                        31.99±3.18#                        0.008
+                          Preoperative  AIS                                             3.92±1.74                          7.19±1.56#                         7.82±1.78#                        0.000
+
+                       Notes:   Data   were   presented   as   mean   ±   SD   or   n   (%).   Categorical   variables   were   analyzed   using   Pearson’s   chi-square   test   (expected
+                       frequency  ≥  5)  or  Fisher’s  exact  test  (expected  frequency <  5). #p <  0.05  vs  Group  C.
+                       Abbreviations:     BMI,     body     mass     index;     PONV,     postoperative    nausea     and     vomiting;     BCS:     breast-conserving     surgery;    SLNB:     sentinel
+                       lymph     node     biopsy;     SBP,     systolic     blood     pressure;     HR,     heart     rate;     LF/HF,     low-frequency/high-frequency     ratio;     PSQI,     Pittsburgh     Sleep
+                       Quality  Index;  SAS,  Self-Rating  Anxiety  Scale;  AIS,  Athens  Insomnia  Scale.
+
+Postoperative   Pain   Outcomes
+Postoperative          NRS          pain          scores          at          rest          are          presented          in Figure          3.          In          observational          comparisons,          patients          in          Group
+S               exhibited               significantly               higher               NRS               scores               at               24,               48,               and               72               hours               postoperatively               compared               with               the               non-
+randomized    control    group    (Group    C)    (p <    0.05    at    each    time    point).    TEAS    intervention    (Group    T)    significantly    reduced
+NRS pain scores compared with Group S at all postoperative time points (p < 0.05). Notably, pain scores in Group T were
+comparable          to          those          in          Group          C          across          all          time          points,          suggesting          that         preoperative          TEAS          effectively          normalized
+postoperative    pain    perception    in    patients    with    baseline    sleep    disturbance.
+
+Postoperative   Sleep   Quality
+AIS     scores      and     nocturnal     awakening     frequency     are     presented      in Figure     4.     At     baseline     (T0),     both      Group     S     and     Group
+T   had  significantly  higher   AIS   scores  than   Group  C  (p <  0.05).   On  the  day   of  surgery  (T1),   sleep  quality  was  uniformly
+poor  across  all  three  groups,  with  no  significant  between-group  differences  (p >  0.05).  However,  on  postoperative  days  1
+(T2)    and    2    (T3),    both    Group    C    and    Group    T    demonstrated    significantly    greater    improvements    in    AIS    scores    compared
+with         Group         S         (p <         0.05).         The         number         of         nocturnal         awakenings         in         Group         T         progressively         decreased         after         surgery,
+mirroring    the    trend    observed    in    Group    C.
+
+Intraoperative   Hemodynamic   Parameters
+Intraoperative        hemodynamic        parameters        and        vasopressor        requirements        are        summarized        in                                         Table        2.        Both        sdSBP        and
+cvSBP   were   significantly   lower   in   Group   C   and   Group   T compared   with   Group   S   (p <   0.05).   Specifically,   mean   sdSBP
+values were: Group C, 12.09 ± 3.56; Group S, 18.85 ± 6.74; Group T, 9.31 ± 2.73 (p < 0.001). Mean cvSBP values were:
+Group C, 0.10 ± 0.03; Group S, 0.16 ± 0.05; Group T,  0.08 ± 0.02 (p <  0.001). Notably, patients receiving TEAS (Group
+T)   demonstrated   the   lowest   sdSBP   and   cvSBP   values   among   all   groups,   even   lower   than   those   in   Group   C.   Meanwhile,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure  3 Postoperative  NRS  pain  scores  at  rest.
+Notes:    Data   were    presented   as    mean    ±    SD.    Two-way    repeated-measures    ANOVA    revealed   a    significant    main    effect    of   Group    (p <   0.001)    and    Time    (p <    0.001),    and
+a  marginally  significant  Group  ×  Time  interaction  (p =  0.075).  *p <  0.05  vs  Group  S  (Bonferroni  post-hoc  test).
+Abbreviations:  NRS,  numerical  rating  scale  (NRS;  0  =  no  pain,  10  =  worst  pain  imaginable).
+
+
+
+Journal  of  Pain  Research  2026:19                                                                                                                                             https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                       7
+
+=== PDF PAGE 8 ===
+Ma  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure  4 Postoperative   sleep   quality.   (A)   Athens   Insomnia   Scale   (AIS)   scores  across   the   perioperative   period   in   the   three  groups.   T0,   baseline;   T1,   day  of   surgery;   T2,
+postoperative day  1;  T3,  postoperative  day  2.  (B)  Number of  nocturnal  awakenings.
+Notes: Data were presented as mean ± SD. Two-way repeated-measures ANOVA revealed significant main effects of Group (p < 0.001) and Time (p < 0.001), and a highly
+significant  Group  ×  Time  interaction  (p <  0.001). #p <  0.05  vs  Group  C;  *p <  0.05  vs  Group  S  (Bonferroni  post-hoc  test).
+
+
+intraoperative       ephedrine       consumption       was       significantly       lower       in       Group       C       (10.73       ±       6.01       mg)       and       Group       T       (11.29       ±
+5.15    mg)    compared    with    Group    S    (16.31    ±    7.26    mg)    (p =    0.016).
+
+Postoperative   Nausea,   Vomiting,   and   Length   of   Stay
+The incidence of postoperative nausea and vomiting and length of hospital stay are presented in Table 3. The incidence of
+nausea within 24 hours postoperatively was 50% (13/26) in Group C, 50% (8/16) in Group S, and 35.3% (6/17) in Group
+T;       the       incidence       of       vomiting       was       42.3%       (11/26)       in       Group       C,       43.8%       (7/16)       in       Group       S,       and       35.3%       (6/17)       in       Group
+T.      Although      Group      T   exhibited      numerically      lower      rates      of      both      nausea      and      vomiting,      these      differences      did      not      reach
+statistical       significance      (p =       0.590       and p             =       0.863,       respectively).       Length      of       hospital      stay       was       slightly       longer      in       Group
+S (8.06 ± 2.29 days) compared with Group C (7.27 ± 2.41 days) and Group T (6.82 ± 1.68 days); however, this difference
+was    not    statistically    significant    (p =    0.266).
+
+Correlations   Between   Preoperative   Sleep   Quality   and   Perioperative   Outcomes
+Linear       regression       analysis       was       performed       in       the       combined       non-TEAS       cohort       (Groups       C       and       S,       n       =       42)       to       examine
+associations    between    preoperative    PSQI    scores    and    perioperative    outcomes.
+
+
+                                Table  2 Intraoperative  Hemodynamic  Parameters  and  Vasopressor  Use
+
+                                  Parameter                               Group  C  (n=26)                 Group  S  (n=16)                Group  T  (n=17)                   p value
+                                  sdSBP                                       12.09±3.56*                      18.85±6.74#                     9.31±2.73*#                     <0.001
+                                  cvSBP                                        0.10±0.03*                       0.16±0.05#                     0.08±0.02*#                     <0.001
+
+                                  Ephedrine  dosage  (mg)                     10.73±6.01*                       16.31±7.26                     11.29±5.15*                      0.016
+                                Notes:  Data were  presented  as  mean  ±  SD. #p <  0.05  vs  Group  C;  *p <  0.05  vs  Group  S.
+                                Abbreviations:     sdSBP,     standard     deviation     of     systolic     blood     pressure;     cvSBP,     coefficient     of     variation     of     systolic     blood
+                                pressure.
+
+
+
+                           Table  3 Postoperative  Nausea,  Vomiting,  and  Length  of  Hospital  Stay
+
+                              Outcome                                          Group  C  (n=26)                Group  S  (n=16)                Group  T  (n=17)                   p value
+
+                              Postoperative  nausea,  n  (%)                          13  (50.0)                       8  (50.0)                       6  (35.3)                    0.590
+                              Postoperative vomiting,  n  (%)                         11  (42.3)                       7  (43.8)                       6  (35.3)                    0.863
+                              Length  of  hospital  stay  (days)                     7.27±2.41                       8.06±2.29                        6.82±1.68                     0.266
+
+                           Notes:  Data were  presented  as  mean  ±  SD  or  n  (%).  Postoperative nausea  and  vomiting:  Fisher’s  exact  test.
+
+
+
+8               https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2026:19
+
+=== PDF PAGE 9 ===
+                                                                                                                                                                                                                                Ma  et  al
+
+      Preoperative    PSQI   score   was   significantly   and    positively   associated   with    intraoperative   sdSBP    (B   =   0.903,   95%   CI:
+0.355–1.451,    β    =    0.466, p =    0.002,    adjusted    R2 =    0.197)    and    cvSBP    (B    =    0.007,    95%    CI:    0.003–0.011,    β    =    0.493, p <
+0.001,     adjusted     R2            =     0.224)     (Figure     5).     This     indicates     that     patients     with     poorer     preoperative     sleep     quality     experienced
+greater    intraoperative    blood    pressure    fluctuations.
+      Furthermore,      preoperative     PSQI      scores      were      significantly     associated     with      postoperative      AIS      scores      on      day      1     (B      =
+0.291, 95% CI: 0.152–0.430, β = 0.556, p < 0.001, adjusted R2 = 0.292) and day 2 (B = 0.329, 95% CI: 0.203–0.456, β =
+0.639, p <      0.001,      adjusted      R2                  =      0.394)      (Figure      6).      Similarly,      significant      positive      associations      were      observed      between
+preoperative    PSQI   scores   and    postoperative   NRS   pain    scores   at    24   hours   (B   =    0.080,   95%   CI:    0.027–0.134,   β   =    0.432,
+p =  0.004,  adjusted  R2 =  0.166),  48  hours  (B  =  0.132,  95%  CI:  0.047–0.217,  β  =  0.446, p =  0.003,  adjusted  R2 =  0.179),
+and    72    hours    (B    =    0.176,    95%    CI:    0.084–0.268,    β    =    0.521, p <    0.001,    adjusted    R2 =    0.253)    (Figure    7).    These    findings
+suggest           that          preoperative          sleep           quality,          as          quantified          by           PSQI,          may           serve          as          a          clinically          useful          predictor           of          both
+postoperative    pain    intensity    and    sleep    disturbance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 5 Linear regression analysis between preoperative PSQI scores and intraoperative hemodynamic parameters. (A) PSQI scores and sdSBP and (B) PSQI scores and
+cvSBP  in  patients  not  receiving  TEAS  (Groups  C  and  S  combined).
+Abbreviations:  PSQI,  Pittsburgh  Sleep  Quality  Index;  sdSBP,  standard  deviation of  systolic  blood  pressure;  cvSBP,  coefficient  of  variation  of  systolic  blood  pressure.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure    6 Linear    regression    analysis    between    preoperative    PSQI    scores   and    postoperative   AIS    scores   on    days    1    and    2    in    patients    not    receiving    TEAS    (Groups    C    and
+S  combined).
+Abbreviations:  PSQI,  Pittsburgh  Sleep  Quality  Index;  AIS,  Athens  Insomnia  Scale.
+
+
+
+
+
+
+Journal  of  Pain  Research  2026:19                                                                                                                                                https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                       9
+
+=== PDF PAGE 10 ===
+Ma  et  al
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 7 Linear regression analysis between preoperative PSQI scores and postoperative NRS pain scores at 24, 48, and 72 hours in patients not receiving TEAS (Groups
+C  and  S  combined).
+Abbreviations:  PSQI,  Pittsburgh  Sleep  Quality  Index;  NRS,  numerical  rating  scale.
+
+Adverse   Events
+No    serious    adverse     events    attributable    to     TEAS     or    study     procedures     were    reported     during    the    trial     period.    All    patients
+tolerated  the  TEAS  intervention  well,  with  no  reports  of  skin  irritation,  burns,  or  discomfort  requiring  discontinuation  of
+stimulation.
+
+Discussion
+The    principal    findings    of    this    partially    randomized    controlled    trial    are    fourfold.    First,    preoperative    sleep    disturbance    in
+breast      cancer      patients      is      associated      with      significantly      elevated      postoperative      pain      intensity,      poorer      postoperative      sleep
+quality,     and     greater     intraoperative     hemodynamic     instability.     Second,     a     single     30-minute     session     of     TEAS     administered
+prior      to      anesthesia      effectively      attenuates      postoperative      pain,      improves      postoperative      sleep      quality,      and      reduces      intrao-
+perative       blood       pressure       variability       in       patients       with       documented       preoperative       sleep       disturbance.       Third,       TEAS       reduces
+cvSBP—a  normalized  index  of  blood  pressure  variability—suggesting  that  its  clinical  benefits  may  be  mediated,  at  least
+in    part,    through    modulation    of    autonomic    balance.    Fourth,    preoperative    PSQI    scores    were    significantly    associated    with
+postoperative      pain      and      sleep       quality,      highlighting      the      potential      utility      of      routine      preoperative      sleep       screening      for      risk
+stratification   and    targeted   intervention.
+
+Preoperative   Sleep   Disturbance   Exacerbate   Postoperative   Pain
+The          observation          that          patients          with          preoperative          sleep          disturbance          (Group          S)          experienced          significantly          higher          post-
+operative  pain  scores  across  all  time  points  aligns  with  a  growing  body  of  evidence  linking  sleep  disruption  to  enhanced
+pain            sensitivity.            Neuroimaging             studies            have             demonstrated            that            sleep            deprivation            amplifies            activity            in            pain-related
+somatosensory           cortical           regions           while           simultaneously           reducing           activity           in           key           pain-modulatory           areas           including           the
+cingulate       gyrus,        insular       cortex,        thalamus,        and        nucleus        accumbens.8                          Moreover,        sleep        loss       reduces        endogenous        opioid
+production   and   decreases    μ-   and    δ-opioid   receptor   binding   affinity,   effectively   impairing   the   descending    pain   inhibitory
+system.9          The       positive       correlation       between       preoperative       PSQI       scores       and       postoperative       NRS       pain       scores       (β       =       0.432–
+0.521)   observed   in   our   study   provides   clinical   confirmation   of   this   sleep–pain   relationship   in   the   surgical   setting.   These
+findings    underscore    the    importance    of    identifying    patients    with    preoperative    poor    sleep    quality    as    a    high-risk    subgroup
+warranting    proactive    analgesic    intervention.
+
+TEAS   Provides   Multimodal   Analgesic   and   Sleep-Promoting   Effects
+TEAS      produced      clinically      meaningful      reductions      in      postoperative      pain      scores      across      all      assessment      time      points,      with
+Group         T      achieving         pain         levels         comparable         to         those         of         patients         without         baseline         sleep         disturbance         (Group         C).         This
+analgesic                     effect                     is                     consistent                     with                      the                     known                     neurobiological                      mechanisms                     of                      acupuncture-related                     therapies.
+Mechanistically,               TEAS               generates               action               potentials               in               peripheral               afferent               nerve               fibers,11,20 and               electrical               signals
+
+
+
+10               https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2026:19
+
+=== PDF PAGE 11 ===
+                                                                                                                                                                                                                              Ma  et  al
+
+transmitted      to      the      central      nervous      system      trigger      the      release      of      endogenous      opioid      peptides      (β-endorphin,      enkephalin,
+dynorphin),          serotonin,          and          adenosine,12                while          concurrently          inhibiting          spinal          nociceptive          transmission          through          gate-
+control mechanisms.21 The dense-disperse frequency mode (2/100 Hz) employed in our protocol is particularly effective,
+as 2 Hz stimulation preferentially releases enkephalins and β-endorphin, whereas 100 Hz stimulation promotes dynorphin
+release.22          A       recent       review       further       summarized       the       comprehensive       mechanisms       of       TEAS       in       the       perioperative       period,
+including         regulation         of         the         neuroendocrine         network,         inhibition         of         oxidative         stress,         and         modulation         of         inflammatory
+responses.23             Furthermore,    TEAS    has    been    shown    to    reduce    microglial    activation    in    the    spinal    cord,    thereby    attenuating
+central    sensitization    and    hyperalgesia.24
+      Beyond                  its                  direct                  analgesic                  effects,                  TEAS                  significantly                  improved                  postoperative                  sleep                  quality,                  with                  Group
+T           demonstrating           AIS           score           trajectories           that           paralleled           those           of           Group           C.           This           dual           benefit           on           pain           and           sleep           is
+particularly            noteworthy,            as             effective            pain            management            is             known            to            enhance            sleep             quality,            while             improved            sleep
+reciprocally         reduces         pain         perception.25,26                  The         sleep-promoting         mechanisms         of         TEAS         are         multifaceted.         Acupuncture
+and      related      techniques      have      been      shown      to      activate      sleep-regulating      brain      regions      including      the      hypothalamus,27                                                    and
+systematic    reviews    indicate    that    acupuncture    improves    both    subjective    and    objective    sleep    parameters    through    modula-
+tion     of     neurotransmitters,     inflammatory     cytokines,     the      hypothalamic–pituitary–adrenal     axis,     and      melatonin     secretion.28
+Beyond            acupuncture,            direct            evidence            supports            TEAS            efficacy:            a            recent            pilot            RCT            found            that           TEAS            significantly
+improved        sleep        quality        (measured        by        PSQI)        in        hypertensive        patients        with        comorbid        sleep        disorders,        with        both        low-
+and            high-frequency            stimulation            proving            similarly            effective.29           Collectively,            these            findings            suggest            that            TEAS,            like
+acupuncture,    promotes    sleep    through    multimodal    neuroendocrine    and    autonomic    modulation.    The    acupoints    selected    in
+our     study     were     specifically     chosen     for     their     traditional     and     modern     evidence     in     promoting     sleep:     HT7     (Shenmen),     the
+Yuan-source      point      of      the      Heart      meridian,      is      classically      used      for      calming      the      Shen      (spirit)      and      treating      insomnia;      PC6
+(Neiguan),          the          Luo-connecting          point          of          the          Pericardium          meridian,          is          renowned          for          its          broad          regulatory          effects          on
+autonomic        function        and        stress        responses;        and        LI4       (Hegu),        the        Yuan-source        point       of        the        Large       Intestine       meridian,       is
+a master point for pain modulation and general homeostasis. The convergence of these acupoints provides a rational basis
+for    the    observed    improvements    in    both    pain    and    sleep    outcomes.
+
+TEAS   Is   Associated   with   Reduced   Intraoperative   Blood   Pressure   Variability
+A       novel      observation       of       our       study       is       that      preoperative       TEAS       was       associated       with      significantly       reduced       intraoperative
+cvSBP,  a  normalized index  of blood pressure variability.19 Patients with poor  sleep quality  exhibited elevated cvSBP  and
+sdSBP    during    surgery,     consistent    with    the    known     association    between    sleep    deprivation    and    heightened    cardiovascular
+lability       coupled       with       diminished       baroreceptor       sensitivity.30                             Sleep       loss       increases       daytime       catecholamine       levels,       which
+likely   contributes   to   intraoperative   blood   pressure   fluctuations.   TEAS   treatment   preoperatively   reduced   cvSBP   in   sleep-
+disordered          patients          to          levels          even          lower          than          those          observed          in          control          patients,          suggesting          that          TEAS          may          exert
+a    modulatory    effect    on    autonomic    tone    that    contributes    to    hemodynamic    stability.
+      The beneficial effects of TEAS observed in this study may be attributed to its capacity to influence autonomic nervous
+system        balance.       A       2025        comprehensive       review        highlighted       that       TEAS        modulates       autonomic        balance       by       suppressing
+excessive            sympathetic            excitability            and            restoring            parasympathetic            tone,23            and            a            2023            meta-analysis            confirmed            that
+acupuncture    significantly    increases    parasympathetic    tone    as    reflected    by    improved    heart    rate    variability    parameters.31
+      Mechanistically, these effects are hypothesized to be mediated through central pathways, wherein acupuncture signals
+are   transmitted   to  the   hypothalamus  and   integrated  to   regulate   autonomic   output.32 In   the   present  study,   the  reduction   in
+cvSBP    provides    direct    clinical   evidence    that    TEAS   may    attenuates   sympathetic    hyperactivation    during    surgery,    thereby
+stabilizing    intraoperative    hemodynamics.    The    positive    correlation    between    preoperative    PSQI    scores    and    intraoperative
+sdSBP/cvSBP    further    supports    the    concept    that    poor    sleep    quality    predisposes    patients    to    greater    hemodynamic    lability
+during    surgical    stress.
+      However,        we       emphasize       that       sdSBP       and       cvSBP       are       indirect       and        imperfect       markers       of       autonomic       activity.        These
+measures      are      influenced      by      multiple      perioperative      factors,      including      anesthetic      depth,      opioid      dosing,      vasopressor      use,
+surgical      stimulation,      baseline      blood      pressure,      and      anxiety.      Our      standardized      anesthesia      protocol      mitigates      some      inter-
+
+
+
+Journal  of  Pain  Research  2026:19                                                                                                                                               https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                      11
+
+=== PDF PAGE 12 ===
+Ma  et  al
+
+patient        variability,        but        these        hemodynamic        parameters        cannot        definitively        establish        altered        sympathetic        tone        without
+direct    neurochemical    or    microneurographic    measurements.
+
+Clinical   Implications   and   Predictors
+Our findings  carry  important clinical  implications.  First, routine preoperative sleep  assessment  using  validated tools  such
+as         the         PSQI          may         help         identify         high-risk         patients         for         postoperative         pain         and         sleep         disturbance,          facilitating         targeted
+perioperative         management.         Second,         TEAS         represents          a         non-invasive,         safe,          and         low-cost          adjunct          that         can         be          easily
+integrated      into      existing      perioperative      care      pathways      without      significant      additional      resource      requirements.      Importantly,
+TEAS   is    not   associated   with   the    adverse   effects   commonly   seen   with   opioid   analgesics   (respiratory   depression,   nausea,
+sedation)    or    sedative-hypnotics    (daytime    drowsiness,    dependence),    making    it    a    particularly    attractive    option    for    vulner-
+able          populations           such          as          elderly           patients           or          those           with           comorbidities.          Third,          the           combination          of          analgesic,          sleep-
+promoting,       and        sympatholytic        effects        positions       TEAS        as        a        uniquely        multimodal        intervention        that        addresses        multiple
+interrelated    aspects    of    perioperative    pathophysiology.
+
+Limitations
+Several   limitations   of   this   study   warrant   consideration.   First,   this   study   employed   a   partially   randomized   design:   Group
+C       (PSQI       <       6)       served       as       a       non-randomized,       sleep-healthy       reference       cohort,       whereas       the       randomized       comparison       was
+confined            to            Group            S            versus            Group            T.            Consequently,            comparisons            involving            Group            C            versus            Groups            S            or            T         are
+observational           and           should           be           interpreted           as           stratified           by           baseline           sleep           status           rather           than           as           randomized           contrasts.
+Second,         the         lack        of         a         sham         TEAS         group         precludes         exclusion         of         placebo         effects        on         subjective         outcomes.         Although
+outcome           assessor           blinding           was           maintained,          participant           blinding          was           not           feasible           given           the           physical           nature           of          the
+intervention.       Third,       the       sample       size       was       relatively       small       (final       n       =       59,       with       approximately       16–26       per       group),       which
+may    have    limited    statistical    power    to    detect    differences    in    secondary    outcomes;    the    secondary    and    exploratory    findings
+should    be    interpreted    as    hypothesis-generating    rather    than    confirmatory.    Fourth,    sleep    quality    was    assessed    exclusively
+using    subjective    self-report    instruments    (PSQI    and    AIS)    without    objective    polysomnography    or    actigraphy    monitoring.
+Fifth,           allocation           concealment           and           participant           blinding           were           not            feasible           due           to           the           physical           nature           of           the           TEAS
+intervention.        Sixth,         this        study        employed         a        single        30-minute         preoperative        TEAS        session,         whereas        prior        studies        have
+used        multiple        perioperative        sessions        with        extended        postoperative        applications.33                                            Combined        with        our        short        follow-up
+period      (pain      assessed      for       72      h,       sleep       for      2       days),      this      design      limits       evaluation      of      both      the      durability      and      cumulative
+effects    of    TEAS;     no    inference    regarding    chronic    postsurgical    pain     or    longer-term     recovery    can    be    drawn.     Seventh,    the
+mechanisms        underlying       TEAS        effects       were        inferred       from        indirect        measures        (cvSBP,        HRV)        rather        than        direct        neuro-
+chemical     assays     (eg,     plasma     catecholamines,     endogenous     opioid     levels).     Finally,     this     is     a     unicentric     study,     which     may
+limit          the          generalizability          of          our          findings          to          other          institutions,          geographic          regions,          or          healthcare          settings.          Although
+baseline covariates were balanced across groups, future studies with larger cohorts should perform multivariable analyses
+to    further    confirm    the    independence   of    these    associations.
+
+Conclusion
+In      conclusion,      this      partially      randomized      controlled      trial      demonstrates      that      preoperative      sleep      disturbance      is      associated
+with   significantly   exacerbated   postoperative   pain,   impaired   sleep   quality,   and    intraoperative   hemodynamic   instability    in
+breast        cancer        patients.        A        single        preoperative        TEAS        may        effectively        attenuate        postoperative        pain,        and        improve        post-
+operative    sleep    quality,    and    is    associated    with    reduced    intraoperative    blood    pressure    variability.    Furthermore,    preopera-
+tive             sleep              quality             may             serve              as             a             clinically              useful             predictor             of             postoperative              outcomes,             suggesting              that              routine
+preoperative       sleep       screening       may       facilitate       risk       stratification       and       targeted       intervention.       TEAS       represents       a       safe,       non-
+pharmacologic,     and     multimodal     adjunct     that     warrants     consideration     for     incorporation     into     perioperative     care     pathways
+for    breast    cancer    patients,    particularly    those    identified    as    having    preoperative    sleep    disturbance.
+
+
+
+12                https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Journal  of  Pain  Research  2026:19
+
+=== PDF PAGE 13 ===
+                                                                                                                                                                                                                                    Ma  et  al
+
+Data   Sharing   Statement
+The   data   that   support   the   findings   of   this   study   are   available   on  request   from   the  corresponding   author.   The   data   are   not
+publicly           available           due           to           ethical           and           legal          restrictions           imposed           by           the           informed           consent           agreement           signed           by           all
+participants        and       the       ethical       approval       granted       by       the       Medical       Ethics        Committee       of        the       Second       Affiliated        Hospital       of
+Harbin          Medical          University          (approval          number:          KY2022-193).          The          informed         consent          document          explicitly         states          that
+participants’ personal information  will be  strictly  protected and kept confidential,  and that study results  will  be  published
+without   disclosing   any   personal   identifying   information.   Individual   deidentified   participant   data   will   not   be   deposited   in
+public      repositories     or      shared      with     external      researchers.     Requests     for      data      access      will      be     considered      on     a      case-by-case
+basis    and    require    approval    from    the    corresponding    author    and    the    institutional    ethics    committee.
+
+Acknowledgments
+The   authors   thank   all   the   patients   who   participated   in   this   study   and   the   clinical   staff   who   assisted   with   data   collection.
+
+Funding
+This    research    received    no    specific    grant    from    any    funding    agency.
+
+Disclosure
+The    authors    declare    that    they    have    no    conflicts    of    interest    in    this    work.
+
+References
+
+  1. Xu      J,      Liu      X,      Zhao      J,      et      al.      Comprehensive      review      on      personalized      pain      assessment      and      multimodal      interventions      for      postoperative      recovery
+      optimization. J   Pain   Res. 2025;18:2791–2804.   doi:10.2147/jpr.S516249
+  2. Glare      P,      Aubrey      KR,      Myles     PS.      Transition     from      acute     to     chronic      pain      after      surgery. Lancet. 2019;393(10180):1537–1546.      doi:10.1016/s0140-
+      6736(19)30352-6
+  3. Martinez        V,        Lehman        T,        Lavand’homme        P,        et        al.        Chronic        postsurgical        pain:        a        European        survey. Europ        J        Anaesthesiol. 2024;41(5):351–362.
+      doi:10.1097/eja.0000000000001974
+  4. Yang          C,          Liu          Y,          Xiao          B,          et          al.          Evidence          summary          for          the          management          of          sleep          disorders          after          malignant          tumor          surgery. Front          Neurol.
+      2025;16:1580216.   doi:10.3389/fneur.2025.1580216
+  5. Bray F, Laversanne M, Sung H, et al. Global cancer statistics 2022: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in
+      185   countries. Ca   a   Cancer   J   Clin. 2024;74(3):229–263.   doi:10.3322/caac.21834
+  6. Lin   D,   Huang   X,   Sun   Y,   et   al.   Perioperative   sleep   disorder:   a   review. Front   Med. 2021;8:640416.   doi:10.3389/fmed.2021.640416
+  7. Savard  J,  Ivers  H,  Savard  MH,  et  al.  Cancer  treatments  and  their  side  effects  are  associated  with  aggravation  of  insomnia:  results  of  a  longitudinal
+      study. Cancer. 2015;121(10):1703–1711.   doi:10.1002/cncr.29244
+  8. Wilson   JM,   Franqueiro   AR,   Rosado   E,   et   al.   Preoperative   decreased   physical   activity   is   associated   with   greater   postoperative   pain:   the   mediating
+      role   of   preoperative   sleep   disturbance. Support   Care   Cancer. 2024;32(7):429.   doi:10.1007/s00520-024-08625-w
+  9. Stroemel-Scheder   C,    Kundermann   B,   Lautenbacher   S.   The   effects   of   recovery   sleep   on   pain   perception:   a   systematic   review. Neurosci   Biobehav
+      Rev. 2020;113:408–425.   doi:10.1016/j.neubiorev.2020.03.028
+10. Al   Haddad   N,   Costanian   C,   Zibara   V,   et   al.   The   association   between   sleep   disturbances   and   blood   pressure   variability:   a   review   of   the   literature.
+      J   Clin   Sleep   Med. 2023;19(8):1533–1544.   doi:10.5664/jcsm.10566
+11. Kagitani   F,   Uchida   S,   Hotta   H,   et   al.   Manual   acupuncture   needle   stimulation   of   the   rat   hindlimb   activates   groups   I,   II,   III   and   IV   single   afferent
+      nerve   fibers   in   the   dorsal   spinal   roots. Jpn   J   Physiol. 2005;55(3):149–155.   doi:10.2170/jjphysiol.R2120
+12. Han         JS.         Acupuncture:         neuropeptide        release         produced         by         electrical         stimulation        of         different        frequencies. Trends         Neurosci. 2003;26(1):17–22.
+      doi:10.1016/s0166-2236(02)00006-1
+13. Ning     J,     An     CF,     Li     LM,     et     al.     Effects     of     perioperative     transcutaneous     electrical     acupoint     stimulation     on     sleep     quality     after     general     anaesthesia:
+      a   systematic   review   and   meta-analysis. J   College   Phys   Surg–Pakistan. 2026;36(2):223–232.   doi:10.29271/jcpsp.2026.02.223
+14. Song  B,  Chang  Y,  Li  Y,  et  al.  Effects  of  transcutaneous  electrical  acupoint  stimulation  on  the  postoperative  sleep  quality  and  pain  of  patients  after
+      video-assisted   thoracoscopic   surgery:   a   prospective,   randomized   controlled   trial. Nat   Sci   Sleep. 2020;12:809–819.   doi:10.2147/nss.S270739
+15. Wang        J,        Lu        FF,        Ge        MM,        et        al.        Transcutaneous        electrical        acupoint        stimulation        improves        postoperative        sleep        quality        in        patients        undergoing
+      laparoscopic   gastrointestinal   tumor   surgery:   a   prospective,   randomized   controlled   trial. Pain   Ther. 2023;12(3):707–722.   doi:10.1007/s40122-023-
+      00493-2
+16. Tsai     PS,     Wang     SY,     Wang     MY,     et     al.     Psychometric     evaluation     of     the     Chinese     version     of     the     pittsburgh    sleep     quality     index     (CPSQI)     in     primary
+      insomnia   and   control   subjects. Qual   Life   Res. 2005;14(8):1943–1952.   doi:10.1007/s11136-005-4346-x
+17. Soldatos  CR,  Dikeos  DG,  Paparrigopoulos  TJ.  Athens  insomnia  scale:  validation  of  an  instrument  based  on  ICD-10  criteria. J  Psychosomatic  Res.
+      2000;48(6):555–560.   doi:10.1016/s0022-3999(00)00095-7
+18. Parati         G,         Ochoa         JE,         Lombardi         C,         et        al.         Assessment         and         management         of        blood-pressure        variability. Nat         Rev        Cardiol. 2013;10(3):143–155.
+      doi:10.1038/nrcardio.2013.1
+19. Schutte      AE,     Kollias     A,     Stergiou     GS.      Blood     pressure      and     its     variability:     classic      and     novel     measurement      techniques. Nat      Rev     Cardiol.                    2022;19
+      (10):643–654.   doi:10.1038/s41569-022-00690-0
+
+
+
+Journal  of  Pain  Research  2026:19                                                                                                                                                    https://doi.org/10.2147/JPR.S619125                                                                                                                                                                                                                                                                                                                                                                                                      13
+
+=== PDF PAGE 14 ===
+Ma  et  al
+
+
+20. Fan  Z,  Dou  B,  Wang  J,  et  al.  Effects  and  mechanisms  of  acupuncture  analgesia  mediated  by  afferent nerves  in  acupoint  microenvironments. Front
+      Neurosci. 2023;17:1239839.   doi:10.3389/fnins.2023.1239839
+21. Kato  Y,  Yachi  K,  Hoshi  H,  et  al.  Two  distinct  neural  mechanisms  underlying  acupuncture  analgesia. Front  Pain  Res. 2022;3:869884.  doi:10.3389/
+      fpain.2022.869884
+22. Zhang          R,           Lao           L,           Ren           K,          et           al.          Mechanisms           of           acupuncture-electroacupuncture          on           persistent          pain. Anesthesiology. 2014;120(2):482–503.
+      doi:10.1097/aln.0000000000000101
+23. Jiang    X,    Li    M,    Tang    Y,    et    al.    Research    progress    on    the    mechanism    of    transcutaneous    electrical    acupoint    stimulation    in    the    perioperative    period.
+      Front   Neurol. 2025;16:1563681.   doi:10.3389/fneur.2025.1563681
+24. Lin         L,         Skakavac         N,         Lin         X,         et          al.         Acupuncture-induced         analgesia:         the         role         of         microglial         inhibition. Cell         Transplant. 2016;25(4):621–628.
+      doi:10.3727/096368916x690872
+25. Giordano   NA,   Kent   M,   Andersen   SG,   et   al.   Postoperative   pain   mediates   the   association   between   peripheral   nerve   blocks   and   postoperative   sleep
+      following   lower   extremity   arthroplasty. Clin   J   Pain. 2021;37(7):487–493.   doi:10.1097/ajp.0000000000000942
+26. Niklasson A, Finan PH, Smith MT, et al. The relationship between preoperative sleep disturbance and acute postoperative pain control: a systematic
+      review   and   meta-analysis. Sleep   Med   Rev. 2025;79:102014.   doi:10.1016/j.smrv.2024.102014
+27. Spence    DW,    Kayumov    L,    Chen    A,    et    al.    Acupuncture    increases    nocturnal    melatonin    secretion    and    reduces    insomnia    and    anxiety:    a    preliminary
+      report. J   Neuropsychiatr   Clin   Neurosci. 2004;16(1):19–28.   doi:10.1176/jnp.16.1.19
+28. Zhao  FY,  Spencer  SJ,  Kennedy  GA,  et  al.  Acupuncture  for  primary  insomnia:  effectiveness,  safety,  mechanisms  and  recommendations  for  clinical
+      practice. Sleep   Med   Rev. 2024;74:101892.   doi:10.1016/j.smrv.2023.101892
+29. Bao  XY,  Liu  CZ,  Qian  ZT,  et  al.  Transcutaneous  electrical  acupoint  stimulation  for  hypertension  complicated  by  anxiety  or  sleep  disorders:  a  pilot
+      randomized   controlled   trial. Complementary   Ther   Med. 2025;89:103138.   doi:10.1016/j.ctim.2025.103138
+30. Hori   A,   Su   X,   Sagasaki   S,   et   al.   Sleep   deprivation   elevates   resting   and   exercise   blood   pressures   and   augments   pressor   response   at   exercise   onset.
+      Med   Sci   Sports   Exercise. 2025;57(5):996–1007.   doi:10.1249/mss.0000000000003640
+31. Hamvas         S,         Hegyi         P,         Kiss         S,         et         al.         Acupuncture         increases         parasympathetic         tone,         modulating         HRV      -         Systematic         review         and         meta-analysis.
+      Complementary   Ther   Med. 2023;72:102905.   doi:10.1016/j.ctim.2022.102905
+32. Zhou       X,       Zhou       J,       Zhang       F,       et       al.       Key       targets       of       signal       transduction       neural       mechanisms       in       acupuncture       treatment       of       cardiovascular       diseases:
+      hypothalamus   and   autonomic   nervous   system. Heliyon. 2024;10(19):e38197.   doi:10.1016/j.heliyon.2024.e38197
+33. Yan L, Sun B, Zhou M, et al. [Effect of transcutaneous electrical acupoint stimulation on postoperative pain in patients undergoing modified radical
+      mastectomy   for   breast   cancer]. Zhongguo   Zhen   Jiu. 2025;45(2):162–166.   doi:10.13703/j.0255-2930.20240206-k0002
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       Journal   of   Pain   Research
+       Publish your   work   in   this   journal
+
+       The  Journal  of  Pain  Research  is  an  international,  peer  reviewed,  open  access,  online  journal  that  welcomes  laboratory  and  clinical  findings  in  the
+       fields     of     pain     research     and     the     prevention     and     management     of     pain.     Original     research,     reviews,     symposium     reports,     hypothesis     formation     and
+       commentaries     are     all     considered     for     publication.     The     manuscript     management     system     is     completely     online     and     includes     a     very     quick     and     fair
+       peer-review   system,    which    is   all    easy   to    use.   Visit    http://www.dovepress.com/testimonials.php    to   read    real   quotes    from   published    authors.
+
+       Submit  your  manuscript  here: https://www.dovepress.com/journal-of-pain-research-journal
+
+
+14                                                                                                                                                                                   Journal  of  Pain  Research  2026:19

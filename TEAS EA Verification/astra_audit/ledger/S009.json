@@ -1,0 +1,23 @@
+{
+  "Study_ID": "S009",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "outcome_rows_expected": 1,
+  "outcome_rows_reviewed": 1,
+  "rob_results_reviewed": 6,
+  "baseline_rows": [
+    9
+  ],
+  "limitations": [
+    "QoRdispersion/figure inconsistency author-datahold",
+    "Painunits,SDandPcontradictions",
+    "No0–24h cumulativeopioid amount",
+    "Retrospectiveregistration andunverifieddataavailability"
+  ],
+  "files": [
+    "phase_a/S009.json",
+    "adjudicated/S009.json",
+    "ledger/S009.json"
+  ],
+  "summary": "Onebaseline rowfullyaudited; sixresult-specificRoB2 assessments. POD1notexact24h; abstractQoRmeanSD preserved but quantitativehold forsourcecontradictions. PONV24h7/30vs17/30 andbinarysufentanil13/30vs24/30 verified inPhaseA; no opioid amount."
+}

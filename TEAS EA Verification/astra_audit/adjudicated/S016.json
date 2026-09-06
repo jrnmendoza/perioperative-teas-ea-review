@@ -1,0 +1,3511 @@
+{
+  "Study_ID": "S016",
+  "Study": "Xing 2022",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "Source first page verified",
+    "title": "Effect of Transcutaneous Electrical Acupoint Stimulation Combined with Transversus Abdominis Plane Block on Postoperative Recovery in Elderly Patients Undergoing Laparoscopic Gastric Cancer Surgery: A Randomized Controlled Trial",
+    "year": 2022,
+    "doi": "10.1007/s40122-022-00429-2",
+    "pdf_files": [
+      "s40122-022-00429-2.pdf"
+    ],
+    "randomized_arms": {
+      "G": 30,
+      "NG": 30,
+      "NTG": 30
+    },
+    "analyzed_arms": {
+      "G": 29,
+      "NG": 29,
+      "NTG": 29
+    },
+    "modality": "TEAS",
+    "comparator_class": "NTG TEAS+activeTAPB vsNG no-currentTEAS+activeTAPB isolatesTEAS; vsG no-currentTEAS+salineTAPB tests combined package",
+    "independence": "No duplicate established from reviewed source",
+    "source_locations": "Complete publication; see Phase A and row-specific locators",
+    "identity_notes": "Insufficient information / not reported."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 61,
+      "final": {
+        "Canonical study": "Xing 2022",
+        "Comparison ID": "XING22_NTG_vs_NG_REMI",
+        "Intervention arm": "TEAS + active TAPB",
+        "Comparator arm": "Sham TEAS + active TAPB",
+        "Outcome family": "Intraoperative opioid",
+        "Outcome/result": "Total remifentanil consumption",
+        "Timepoint/window": "Intraoperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 29,
+        "Analyzed n comparator": 29,
+        "Mean intervention": 1182.61,
+        "SD intervention": 253.61,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 1415.41,
+        "SD comparator": 295.67,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg remifentanil",
+        "Reported P": "<0.05 pairwise",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw doses direct; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -232.8,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Intraoperative ancillary result only; not postoperative opioid endpoint. MatchedTAPB contrast isolatesTEAS.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+        "Source location": "p1336 Table3; p1329 methods",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xing 2022",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XING22_NTG_vs_NG_REMI",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + active TAPB",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham TEAS + active TAPB",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Intraoperative opioid",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total remifentanil consumption",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Intraoperative",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 29,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 29,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 1182.61,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 253.61,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 1415.41,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 295.67,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg remifentanil",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05 pairwise",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw doses direct; MD arithmetic",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -232.8,
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Intraoperative ancillary result only; not postoperative opioid endpoint. MatchedTAPB contrast isolatesTEAS.",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1336 Table3; p1329 methods",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1336 Table3; p1329 methods",
+          "evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw doses direct; MD arithmetic",
+          "final_value": "Raw doses direct; MD arithmetic",
+          "source_location": "p1336 Table3; p1329 methods",
+          "reason": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -232.80000000000018,
+          "source_value": -232.8,
+          "final_value": -232.8,
+          "source_location": "p1336 Table3; p1329 methods",
+          "reason": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for incremental TEAS intraoperative opioid-sparing analysis",
+          "source_value": "Intraoperative ancillary result only; not postoperative opioid endpoint. MatchedTAPB contrast isolatesTEAS.",
+          "final_value": "Intraoperative ancillary result only; not postoperative opioid endpoint. MatchedTAPB contrast isolatesTEAS.",
+          "source_location": "p1336 Table3; p1329 methods",
+          "reason": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Direct TEAS contrast is NTG vs NG; do not attribute NTG-vs-G combined package entirely to TEAS",
+          "source_value": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "final_value": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "source_location": "p1336 Table3; p1329 methods",
+          "reason": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 3, p10",
+          "source_value": "p1336 Table3; p1329 methods",
+          "final_value": "p1336 Table3; p1329 methods",
+          "source_location": "p1336 Table3; p1329 methods",
+          "reason": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1h3IGpQ56nSh7H16xBEVyTzCBkWOXRSxK/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3; p1329 methods",
+          "reason": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1336 Table3; p1329 methods",
+          "reason": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-022-00429-2.pdf",
+      "source_evidence": "NTG29 1182.61±253.61 vsNG29 1415.41±295.67ug remifentanil, meanSD, intraoperative. Table3 # indicatesNTGvsNG P<.05;30randomized each.",
+      "drug": "sufentanil; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "100mL .5ug/mLsufentanil;2mLbolus15minlockout,no basal;2days",
+      "rescue_regimen": "flurbiprofen50mgIV ifmovementVAS>4",
+      "critical_qc": "Do not substitute NTGvsG combined package or intraoperative dose for postoperative exposure.",
+      "analysis_eligibility": "Intraoperative ancillary result only; not postoperative opioid endpoint. MatchedTAPB contrast isolatesTEAS.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 62,
+      "final": {
+        "Canonical study": "Xing 2022",
+        "Comparison ID": "XING22_NTG_vs_NG_FLATUS",
+        "Intervention arm": "TEAS + active TAPB",
+        "Comparator arm": "Sham TEAS + active TAPB",
+        "Outcome family": "GI recovery",
+        "Outcome/result": "Time to first flatus",
+        "Timepoint/window": "Surgery to first postoperative flatus",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 29,
+        "Analyzed n comparator": 29,
+        "Mean intervention": 32.57,
+        "SD intervention": 6.94,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 36.83,
+        "SD comparator": 6.19,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "hours",
+        "Reported P": "<0.05 pairwise",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw means direct; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -4.26,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible time-to-first-flatus, matchedTAPB shamstratum, Some concerns.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Participant awareness possible; no bowel movement substitution.",
+        "Source location": "p1336 Table3; p1331 outcomes",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xing 2022",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XING22_NTG_vs_NG_FLATUS",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + active TAPB",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham TEAS + active TAPB",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "GI recovery",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Time to first flatus",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Surgery to first postoperative flatus",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 29,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 29,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 32.57,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 6.94,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 36.83,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 6.19,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "hours",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05 pairwise",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw means direct; MD arithmetic",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -4.26,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible time-to-first-flatus, matchedTAPB shamstratum, Some concerns.",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Participant awareness possible; no bowel movement substitution.",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1336 Table3; p1331 outcomes",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "Postoperative",
+          "source_value": "Surgery to first postoperative flatus",
+          "final_value": "Surgery to first postoperative flatus",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "reason": "Participant awareness possible; no bowel movement substitution.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw means direct; MD arithmetic",
+          "final_value": "Raw means direct; MD arithmetic",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "reason": "Participant awareness possible; no bowel movement substitution.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -4.259999999999998,
+          "source_value": -4.26,
+          "final_value": -4.26,
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "reason": "Participant awareness possible; no bowel movement substitution.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for GI-recovery analysis",
+          "source_value": "Eligible time-to-first-flatus, matchedTAPB shamstratum, Some concerns.",
+          "final_value": "Eligible time-to-first-flatus, matchedTAPB shamstratum, Some concerns.",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "reason": "Participant awareness possible; no bowel movement substitution.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Three-arm study; use NTG vs NG for incremental TEAS effect",
+          "source_value": "Participant awareness possible; no bowel movement substitution.",
+          "final_value": "Participant awareness possible; no bowel movement substitution.",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "reason": "Participant awareness possible; no bowel movement substitution.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Postoperative recovery results",
+          "source_value": "p1336 Table3; p1331 outcomes",
+          "final_value": "p1336 Table3; p1331 outcomes",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "reason": "Participant awareness possible; no bowel movement substitution.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1h3IGpQ56nSh7H16xBEVyTzCBkWOXRSxK/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "reason": "Participant awareness possible; no bowel movement substitution.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1336 Table3; p1331 outcomes",
+          "reason": "Participant awareness possible; no bowel movement substitution.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-022-00429-2.pdf",
+      "source_evidence": "NTG29 32.57±6.94h vsNG29 36.83±6.19h meanSD, #P<.05;30randomized each.",
+      "drug": "sufentanil; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "100mL .5ug/mLsufentanil;2mLbolus15minlockout,no basal;2days",
+      "rescue_regimen": "flurbiprofen50mgIV ifmovementVAS>4",
+      "critical_qc": "Participant awareness possible; no bowel movement substitution.",
+      "analysis_eligibility": "Eligible time-to-first-flatus, matchedTAPB shamstratum, Some concerns.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 63,
+      "final": {
+        "Canonical study": "Xing 2022",
+        "Comparison ID": "XING22_NTG_vs_NG_PONV",
+        "Intervention arm": "TEAS + active TAPB",
+        "Comparator arm": "Sham TEAS + active TAPB",
+        "Outcome family": "PONV",
+        "Outcome/result": "PONV incidence",
+        "Timepoint/window": "0–48 h after surgery",
+        "Data type": "Events/total",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 29,
+        "Analyzed n comparator": 29,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 5,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 11,
+        "Unit/scale": "participants",
+        "Reported P": "<0.05 pairwise",
+        "Directly reported?": "Yes; counts directly printed in Table3 and results",
+        "Derived/converted?": "Counts direct; RR arithmetic",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.4545454545454546,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible compositePONV0–48h, matchedTAPB shamstratum.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+        "Source location": "p1336 Table3; p1333 results",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+        "Record status": "CORRECTED"
+      },
+      "verification_status": "CORRECTED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xing 2022",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XING22_NTG_vs_NG_PONV",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + active TAPB",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham TEAS + active TAPB",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "PONV incidence",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0–48 h after surgery",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 29,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 29,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 5,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 11,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05 pairwise",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes; counts directly printed in Table3 and results",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Counts direct; RR arithmetic",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.4545454545454546,
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible compositePONV0–48h, matchedTAPB shamstratum.",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1336 Table3; p1333 results",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "CORRECTED",
+          "source_location": "p1336 Table3; p1333 results",
+          "evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "Postoperative",
+          "source_value": "0–48 h after surgery",
+          "final_value": "0–48 h after surgery",
+          "source_location": "p1336 Table3; p1333 results",
+          "reason": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "severity": "material"
+        },
+        {
+          "field": "Directly reported?",
+          "old_value": "Percentages reported; counts exactly reconstructed from 17.24% and 37.93%",
+          "source_value": "Yes; counts directly printed in Table3 and results",
+          "final_value": "Yes; counts directly printed in Table3 and results",
+          "source_location": "p1336 Table3; p1333 results",
+          "reason": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "Yes",
+          "source_value": "Counts direct; RR arithmetic",
+          "final_value": "Counts direct; RR arithmetic",
+          "source_location": "p1336 Table3; p1333 results",
+          "reason": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for dichotomous PONV analysis",
+          "source_value": "Eligible compositePONV0–48h, matchedTAPB shamstratum.",
+          "final_value": "Eligible compositePONV0–48h, matchedTAPB shamstratum.",
+          "source_location": "p1336 Table3; p1333 results",
+          "reason": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Counts reconstructed from n=29 analyzed per arm",
+          "source_value": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "final_value": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "source_location": "p1336 Table3; p1333 results",
+          "reason": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Postoperative complications",
+          "source_value": "p1336 Table3; p1333 results",
+          "final_value": "p1336 Table3; p1333 results",
+          "source_location": "p1336 Table3; p1333 results",
+          "reason": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1h3IGpQ56nSh7H16xBEVyTzCBkWOXRSxK/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3; p1333 results",
+          "reason": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / COUNTS DERIVED",
+          "source_value": "CORRECTED",
+          "final_value": "CORRECTED",
+          "source_location": "p1336 Table3; p1333 results",
+          "reason": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-022-00429-2.pdf",
+      "source_evidence": "p1333 explicitly reports within48h:NTG5,NG11,G13;Table3 n29each,5(17.24%)vs11(37.93%), #P<.05. Counts directly printed, not reconstructed.",
+      "drug": "sufentanil; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "100mL .5ug/mLsufentanil;2mLbolus15minlockout,no basal;2days",
+      "rescue_regimen": "flurbiprofen50mgIV ifmovementVAS>4",
+      "critical_qc": "Baseline lacked explicit48h and incorrectly called counts derived. ReportedP<.05 preserved aspublished; not independently recalculated significance.",
+      "analysis_eligibility": "Eligible compositePONV0–48h, matchedTAPB shamstratum.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 64,
+      "final": {
+        "Canonical study": "Xing 2022",
+        "Comparison ID": "XING22_NTG_vs_NG_RESTVAS24",
+        "Intervention arm": "TEAS + active TAPB",
+        "Comparator arm": "Sham TEAS + active TAPB",
+        "Outcome family": "Pain",
+        "Outcome/result": "Rest pain VAS",
+        "Timepoint/window": "24 h",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 29,
+        "Analyzed n comparator": 29,
+        "Mean intervention": 1.18,
+        "SD intervention": 0.42,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 1.4,
+        "SD comparator": 0.52,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "VAS 0-10",
+        "Reported P": "Exact pairwise P not reported; no NTG-vs-NG significance symbol at24h",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw meanSD direct; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -0.22,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible exact24h restpain; movementVAS separate; Some concerns.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+        "Source location": "p1336 Table3 restVAS24h",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xing 2022",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XING22_NTG_vs_NG_RESTVAS24",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + active TAPB",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham TEAS + active TAPB",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Pain",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Rest pain VAS",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "24 h",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 29,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 29,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 1.18,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 0.42,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 1.4,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 0.52,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "VAS 0-10",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "Exact pairwise P not reported; no NTG-vs-NG significance symbol at24h",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw meanSD direct; MD arithmetic",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -0.22,
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible exact24h restpain; movementVAS separate; Some concerns.",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1336 Table3 restVAS24h",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1336 Table3 restVAS24h",
+          "evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Reported P",
+          "old_value": "NS for NTG vs NG at 24 h",
+          "source_value": "Exact pairwise P not reported; no NTG-vs-NG significance symbol at24h",
+          "final_value": "Exact pairwise P not reported; no NTG-vs-NG significance symbol at24h",
+          "source_location": "p1336 Table3 restVAS24h",
+          "reason": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw meanSD direct; MD arithmetic",
+          "final_value": "Raw meanSD direct; MD arithmetic",
+          "source_location": "p1336 Table3 restVAS24h",
+          "reason": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -0.21999999999999997,
+          "source_value": -0.22,
+          "final_value": -0.22,
+          "source_location": "p1336 Table3 restVAS24h",
+          "reason": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible for 24-h pain analysis",
+          "source_value": "Eligible exact24h restpain; movementVAS separate; Some concerns.",
+          "final_value": "Eligible exact24h restpain; movementVAS separate; Some concerns.",
+          "source_location": "p1336 Table3 restVAS24h",
+          "reason": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "At 24 h both TAPB groups improved versus G, but incremental NTG-vs-NG difference was not reported significant",
+          "source_value": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "final_value": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "source_location": "p1336 Table3 restVAS24h",
+          "reason": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "24-h pain result",
+          "source_value": "p1336 Table3 restVAS24h",
+          "final_value": "p1336 Table3 restVAS24h",
+          "source_location": "p1336 Table3 restVAS24h",
+          "reason": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1h3IGpQ56nSh7H16xBEVyTzCBkWOXRSxK/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3 restVAS24h",
+          "reason": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p1336 Table3 restVAS24h",
+          "reason": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-022-00429-2.pdf",
+      "source_evidence": "NTG29 1.18±.42vsNG29 1.40±.52 VAS0–10atrest24h. Asterisk isvsG; no# at24h, so no precise pairwiseP can be inferred.",
+      "drug": "sufentanil; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "100mL .5ug/mLsufentanil;2mLbolus15minlockout,no basal;2days",
+      "rescue_regimen": "flurbiprofen50mgIV ifmovementVAS>4",
+      "critical_qc": "Do not treat significance versusG asNTGvsNG. No prospective result-specific SAP.",
+      "analysis_eligibility": "Eligible exact24h restpain; movementVAS separate; Some concerns.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 65,
+      "final": {
+        "Canonical study": "Xing 2022",
+        "Comparison ID": "XING22_NTG_vs_NG_PRESS",
+        "Intervention arm": "TEAS + active TAPB",
+        "Comparator arm": "Sham TEAS + active TAPB",
+        "Outcome family": "Opioid demand",
+        "Outcome/result": "PCIA pump press count",
+        "Timepoint/window": "Postoperative PCIA observation; exact press-count interval not explicitly stated",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 29,
+        "Analyzed n comparator": 29,
+        "Mean intervention": 6.55,
+        "SD intervention": 3.19,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 9.97,
+        "SD comparator": 3.8,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "presses",
+        "Reported P": "<0.05 pairwise",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Raw count meanSD direct; MD arithmetic",
+        "Derived effect measure": "MD",
+        "Derived effect": -3.42,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Demand-count description only; no delivered drug inference and no fixed-window synthesis without clarification.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+        "Source location": "p1336 Table3; p1330 PCIA",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+        "Record status": "CORRECTED"
+      },
+      "verification_status": "CORRECTED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xing 2022",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XING22_NTG_vs_NG_PRESS",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + active TAPB",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham TEAS + active TAPB",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid demand",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "PCIA pump press count",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative PCIA observation; exact press-count interval not explicitly stated",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 29,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 29,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 6.55,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 3.19,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 9.97,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 3.8,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "presses",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "<0.05 pairwise",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Raw count meanSD direct; MD arithmetic",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -3.42,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "ARITHMETIC CHECK; NOT SOURCE-REPORTED"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Demand-count description only; no delivered drug inference and no fixed-window synthesis without clarification.",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1336 Table3; p1330 PCIA",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "CORRECTED",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Timepoint/window",
+          "old_value": "48-h / 2-day PCIA period",
+          "source_value": "Postoperative PCIA observation; exact press-count interval not explicitly stated",
+          "final_value": "Postoperative PCIA observation; exact press-count interval not explicitly stated",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "reason": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Raw count meanSD direct; MD arithmetic",
+          "final_value": "Raw count meanSD direct; MD arithmetic",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "reason": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived effect",
+          "old_value": -3.420000000000001,
+          "source_value": -3.42,
+          "final_value": -3.42,
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "reason": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "severity": "material"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Eligible only as PCA-demand outcome, not exact opioid consumption",
+          "source_value": "Demand-count description only; no delivered drug inference and no fixed-window synthesis without clarification.",
+          "final_value": "Demand-count description only; no delivered drug inference and no fixed-window synthesis without clarification.",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "reason": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "Press attempts may not equal successful delivered boluses; do not multiply by 1 µg",
+          "source_value": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "final_value": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "reason": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Table 3 / PCIA press count",
+          "source_value": "p1336 Table3; p1330 PCIA",
+          "final_value": "p1336 Table3; p1330 PCIA",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "reason": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1h3IGpQ56nSh7H16xBEVyTzCBkWOXRSxK/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "reason": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / DOSE NOT RECONSTRUCTABLE",
+          "source_value": "CORRECTED",
+          "final_value": "CORRECTED",
+          "source_location": "p1336 Table3; p1330 PCIA",
+          "reason": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-022-00429-2.pdf",
+      "source_evidence": "NTG29 6.55±3.19vsNG29 9.97±3.80presses,#P<.05. PCIA prescribed2days, but Table3 does not explicitly bind press tally to exact48h or distinguish successful boluses.",
+      "drug": "sufentanil; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "100mL .5ug/mLsufentanil;2mLbolus15minlockout,no basal;2days",
+      "rescue_regimen": "flurbiprofen50mgIV ifmovementVAS>4",
+      "critical_qc": "2-day device prescription does not prove exact recordingwindow. Presses may include lockout attempts.",
+      "analysis_eligibility": "Demand-count description only; no delivered drug inference and no fixed-window synthesis without clarification.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    },
+    {
+      "baseline_row": 66,
+      "final": {
+        "Canonical study": "Xing 2022",
+        "Comparison ID": "XING22_NTG_vs_NG_OPIOID24",
+        "Intervention arm": "TEAS + active TAPB",
+        "Comparator arm": "Sham TEAS + active TAPB",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative postoperative sufentanil delivered",
+        "Timepoint/window": "0-24 h",
+        "Data type": "Not reported",
+        "Randomized n intervention": 30,
+        "Randomized n comparator": 30,
+        "Analyzed n intervention": 29,
+        "Analyzed n comparator": 29,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg sufentanil",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible strict24h opioid synthesis.",
+        "Shared-control / multi-arm issue": "Yes",
+        "Source-QC issue": "Need observed dose rather than prescription orbutton presses.",
+        "Source location": "p1330–31 methods; p1336 Table3",
+        "Source PDF URL": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Xing 2022",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "XING22_NTG_vs_NG_OPIOID24",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "ADMINISTRATIVE LABEL RETAINED"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "TEAS + active TAPB",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham TEAS + active TAPB",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative postoperative sufentanil delivered",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "0-24 h",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 30,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 30,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 29,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 29,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg sufentanil",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "NO SOURCE NUMBER / NOT APPLICABLE"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible strict24h opioid synthesis.",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "Yes",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Need observed dose rather than prescription orbutton presses.",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source location",
+          "source_value": "p1330–31 methods; p1336 Table3",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+          "status": "AUTHOR DATA NEEDED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Other analysis eligibility",
+          "old_value": "Not eligible for continuous 24-h opioid meta-analysis without author data",
+          "source_value": "Not eligible strict24h opioid synthesis.",
+          "final_value": "Not eligible strict24h opioid synthesis.",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "reason": "Need observed dose rather than prescription orbutton presses.",
+          "severity": "material"
+        },
+        {
+          "field": "Source-QC issue",
+          "old_value": "PCIA wording is internally contradictory and only press counts are reported",
+          "source_value": "Need observed dose rather than prescription orbutton presses.",
+          "final_value": "Need observed dose rather than prescription orbutton presses.",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "reason": "Need observed dose rather than prescription orbutton presses.",
+          "severity": "material"
+        },
+        {
+          "field": "Source location",
+          "old_value": "Exact 24-h endpoint absent",
+          "source_value": "p1330–31 methods; p1336 Table3",
+          "final_value": "p1330–31 methods; p1336 Table3",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "reason": "Need observed dose rather than prescription orbutton presses.",
+          "severity": "minor"
+        },
+        {
+          "field": "Source PDF URL",
+          "old_value": "https://drive.google.com/file/d/1h3IGpQ56nSh7H16xBEVyTzCBkWOXRSxK/view?usp=drivesdk",
+          "source_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "final_value": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/astra_audit/../Source PDFs/s40122-022-00429-2.pdf",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "reason": "Need observed dose rather than prescription orbutton presses.",
+          "severity": "minor"
+        },
+        {
+          "field": "Record status",
+          "old_value": "MISSING / AUTHOR DATA NEEDED",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "p1330–31 methods; p1336 Table3",
+          "reason": "Need observed dose rather than prescription orbutton presses.",
+          "severity": "minor"
+        }
+      ],
+      "source_pdf": "s40122-022-00429-2.pdf",
+      "source_evidence": "No cumulative sufentanil delivered0–24h reported; only pressnumbers. PCA.5ug/mL,2mLbolus15minlockout does not establish successful delivered boluses. Numericnulls retained.",
+      "drug": "sufentanil; intraoperative remifentanil",
+      "route": "IV",
+      "pca_formulation": "100mL .5ug/mLsufentanil;2mLbolus15minlockout,no basal;2days",
+      "rescue_regimen": "flurbiprofen50mgIV ifmovementVAS>4",
+      "critical_qc": "Need observed dose rather than prescription orbutton presses.",
+      "analysis_eligibility": "Not eligible strict24h opioid synthesis.",
+      "notes": "Phase A source extraction precedes baseline; administrative labels retained; numeric nulls do not assert zero. Any effect is arithmetic only, no opioid conversion."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S016_remifentanil_intraop",
+      "outcome": "Intraoperative remifentanil",
+      "time_window": "Intraoperative",
+      "comparison": "NTGvsNG;activeTAPB both",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p1329 Randomization:computer-generated random numbers",
+          "source_location": "p1329 Randomization",
+          "reasoning": "p1329 Randomization:computer-generated random numbers"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p1329:sealed envelope relayed to independent nurse",
+          "source_location": "p1329",
+          "reasoning": "p1329:sealed envelope relayed to independent nurse"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "p1332 Table1:only completer baseline available; single loss per arm",
+          "source_location": "p1332 Table1",
+          "reasoning": "p1332 Table1:only completer baseline available; single loss per arm"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p1329,p1336:pre-induction twitching can reveal active TEAS",
+          "source_location": "p1329,p1336",
+          "reasoning": "p1329,p1336:pre-induction twitching can reveal active TEAS"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked",
+          "source_location": "p1329",
+          "reasoning": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established outcome-relevant deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established outcome-relevant deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established imbalanced deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established imbalanced deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "p1331–32:29 of30 in each assigned group analyzed",
+          "source_location": "p1331–32",
+          "reasoning": "p1331–32:29 of30 in each assigned group analyzed"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p1331:no reassignment described",
+          "source_location": "p1331",
+          "reasoning": "p1331:no reassignment described"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "p1331:one loss per arm;87/90; nearly all",
+          "source_location": "p1331",
+          "reasoning": "p1331:one loss per arm;87/90; nearly all"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p1330–31:standard measurement appropriate for named result",
+          "source_location": "p1330–31",
+          "reasoning": "p1330–31:standard measurement appropriate for named result"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p1329,p1331:same procedures and followup observers masked",
+          "source_location": "p1329,p1331",
+          "reasoning": "p1329,p1331:same procedures and followup observers masked"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "p1329:anesthesia team and outcome recorders masked",
+          "source_location": "p1329",
+          "reasoning": "p1329:anesthesia team and outcome recorders masked"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "p1330–31:objective drug/demand record; patient-driven demand is behavior defining endpoint",
+          "source_location": "p1330–31",
+          "reasoning": "p1330–31:objective drug/demand record; patient-driven demand is behavior defining endpoint"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:masked objective recording",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:masked objective recording"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p1329:registry cited but dated outcome-specific SAP not available",
+          "source_location": "p1329",
+          "reasoning": "p1329:registry cited but dated outcome-specific SAP not available"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated",
+          "source_location": "p1331",
+          "reasoning": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved",
+          "source_location": "p1331",
+          "reasoning": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Computer sequence and independently handled envelope",
+          "source_location": "p1329 Randomization"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departure; intendedTAPB balanced",
+          "source_location": "p1329,p1336"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "One loss of30each; nearlyall",
+          "source_location": "p1331"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Masked objective records",
+          "source_location": "p1330–31"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No demonstrated prospective SAP",
+          "source_location": "p1329"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S016_flatus",
+      "outcome": "Firstflatus",
+      "time_window": "Surgery toevent",
+      "comparison": "NTGvsNG;activeTAPB both",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p1329 Randomization:computer-generated random numbers",
+          "source_location": "p1329 Randomization",
+          "reasoning": "p1329 Randomization:computer-generated random numbers"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p1329:sealed envelope relayed to independent nurse",
+          "source_location": "p1329",
+          "reasoning": "p1329:sealed envelope relayed to independent nurse"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "p1332 Table1:only completer baseline available; single loss per arm",
+          "source_location": "p1332 Table1",
+          "reasoning": "p1332 Table1:only completer baseline available; single loss per arm"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p1329,p1336:pre-induction twitching can reveal active TEAS",
+          "source_location": "p1329,p1336",
+          "reasoning": "p1329,p1336:pre-induction twitching can reveal active TEAS"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked",
+          "source_location": "p1329",
+          "reasoning": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established outcome-relevant deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established outcome-relevant deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established imbalanced deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established imbalanced deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "p1331–32:29 of30 in each assigned group analyzed",
+          "source_location": "p1331–32",
+          "reasoning": "p1331–32:29 of30 in each assigned group analyzed"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p1331:no reassignment described",
+          "source_location": "p1331",
+          "reasoning": "p1331:no reassignment described"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "p1331:one loss per arm;87/90; nearly all",
+          "source_location": "p1331",
+          "reasoning": "p1331:one loss per arm;87/90; nearly all"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p1330–31:standard measurement appropriate for named result",
+          "source_location": "p1330–31",
+          "reasoning": "p1330–31:standard measurement appropriate for named result"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p1329,p1331:same procedures and followup observers masked",
+          "source_location": "p1329,p1331",
+          "reasoning": "p1329,p1331:same procedures and followup observers masked"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "p1336:preoperative stimulation may unmask patient; assessor for symptoms is participant",
+          "source_location": "p1336",
+          "reasoning": "p1336:preoperative stimulation may unmask patient; assessor for symptoms is participant"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "PY",
+          "evidence": "p1336:knowledge can influence symptom ratings despite masked interviewer",
+          "source_location": "p1336",
+          "reasoning": "p1336:knowledge can influence symptom ratings despite masked interviewer"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NI",
+          "evidence": "p1336:possible lack of masking acknowledged; insufficient evidence it actually influenced this result",
+          "source_location": "p1336",
+          "reasoning": "p1336:possible lack of masking acknowledged; insufficient evidence it actually influenced this result"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p1329:registry cited but dated outcome-specific SAP not available",
+          "source_location": "p1329",
+          "reasoning": "p1329:registry cited but dated outcome-specific SAP not available"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated",
+          "source_location": "p1331",
+          "reasoning": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved",
+          "source_location": "p1331",
+          "reasoning": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Computer sequence and independently handled envelope",
+          "source_location": "p1329 Randomization"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departure; intendedTAPB balanced",
+          "source_location": "p1329,p1336"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "One loss of30each; nearlyall",
+          "source_location": "p1331"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Preoperative sensory unmasking possible for patient symptom report",
+          "source_location": "p1330–31"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No demonstrated prospective SAP",
+          "source_location": "p1329"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S016_PONV48",
+      "outcome": "PONV",
+      "time_window": "0–48h",
+      "comparison": "NTGvsNG;activeTAPB both",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p1329 Randomization:computer-generated random numbers",
+          "source_location": "p1329 Randomization",
+          "reasoning": "p1329 Randomization:computer-generated random numbers"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p1329:sealed envelope relayed to independent nurse",
+          "source_location": "p1329",
+          "reasoning": "p1329:sealed envelope relayed to independent nurse"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "p1332 Table1:only completer baseline available; single loss per arm",
+          "source_location": "p1332 Table1",
+          "reasoning": "p1332 Table1:only completer baseline available; single loss per arm"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p1329,p1336:pre-induction twitching can reveal active TEAS",
+          "source_location": "p1329,p1336",
+          "reasoning": "p1329,p1336:pre-induction twitching can reveal active TEAS"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked",
+          "source_location": "p1329",
+          "reasoning": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established outcome-relevant deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established outcome-relevant deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established imbalanced deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established imbalanced deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "p1331–32:29 of30 in each assigned group analyzed",
+          "source_location": "p1331–32",
+          "reasoning": "p1331–32:29 of30 in each assigned group analyzed"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p1331:no reassignment described",
+          "source_location": "p1331",
+          "reasoning": "p1331:no reassignment described"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "p1331:one loss per arm;87/90; nearly all",
+          "source_location": "p1331",
+          "reasoning": "p1331:one loss per arm;87/90; nearly all"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p1330–31:standard measurement appropriate for named result",
+          "source_location": "p1330–31",
+          "reasoning": "p1330–31:standard measurement appropriate for named result"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p1329,p1331:same procedures and followup observers masked",
+          "source_location": "p1329,p1331",
+          "reasoning": "p1329,p1331:same procedures and followup observers masked"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "p1336:preoperative stimulation may unmask patient; assessor for symptoms is participant",
+          "source_location": "p1336",
+          "reasoning": "p1336:preoperative stimulation may unmask patient; assessor for symptoms is participant"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "PY",
+          "evidence": "p1336:knowledge can influence symptom ratings despite masked interviewer",
+          "source_location": "p1336",
+          "reasoning": "p1336:knowledge can influence symptom ratings despite masked interviewer"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NI",
+          "evidence": "p1336:possible lack of masking acknowledged; insufficient evidence it actually influenced this result",
+          "source_location": "p1336",
+          "reasoning": "p1336:possible lack of masking acknowledged; insufficient evidence it actually influenced this result"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p1329:registry cited but dated outcome-specific SAP not available",
+          "source_location": "p1329",
+          "reasoning": "p1329:registry cited but dated outcome-specific SAP not available"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated",
+          "source_location": "p1331",
+          "reasoning": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved",
+          "source_location": "p1331",
+          "reasoning": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Computer sequence and independently handled envelope",
+          "source_location": "p1329 Randomization"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departure; intendedTAPB balanced",
+          "source_location": "p1329,p1336"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "One loss of30each; nearlyall",
+          "source_location": "p1331"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Preoperative sensory unmasking possible for patient symptom report",
+          "source_location": "p1330–31"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No demonstrated prospective SAP",
+          "source_location": "p1329"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S016_restVAS24",
+      "outcome": "RestVAS",
+      "time_window": "24h",
+      "comparison": "NTGvsNG;activeTAPB both",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p1329 Randomization:computer-generated random numbers",
+          "source_location": "p1329 Randomization",
+          "reasoning": "p1329 Randomization:computer-generated random numbers"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p1329:sealed envelope relayed to independent nurse",
+          "source_location": "p1329",
+          "reasoning": "p1329:sealed envelope relayed to independent nurse"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "p1332 Table1:only completer baseline available; single loss per arm",
+          "source_location": "p1332 Table1",
+          "reasoning": "p1332 Table1:only completer baseline available; single loss per arm"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p1329,p1336:pre-induction twitching can reveal active TEAS",
+          "source_location": "p1329,p1336",
+          "reasoning": "p1329,p1336:pre-induction twitching can reveal active TEAS"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked",
+          "source_location": "p1329",
+          "reasoning": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established outcome-relevant deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established outcome-relevant deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established imbalanced deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established imbalanced deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "p1331–32:29 of30 in each assigned group analyzed",
+          "source_location": "p1331–32",
+          "reasoning": "p1331–32:29 of30 in each assigned group analyzed"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p1331:no reassignment described",
+          "source_location": "p1331",
+          "reasoning": "p1331:no reassignment described"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "p1331:one loss per arm;87/90; nearly all",
+          "source_location": "p1331",
+          "reasoning": "p1331:one loss per arm;87/90; nearly all"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p1330–31:standard measurement appropriate for named result",
+          "source_location": "p1330–31",
+          "reasoning": "p1330–31:standard measurement appropriate for named result"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p1329,p1331:same procedures and followup observers masked",
+          "source_location": "p1329,p1331",
+          "reasoning": "p1329,p1331:same procedures and followup observers masked"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PY",
+          "evidence": "p1336:preoperative stimulation may unmask patient; assessor for symptoms is participant",
+          "source_location": "p1336",
+          "reasoning": "p1336:preoperative stimulation may unmask patient; assessor for symptoms is participant"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "PY",
+          "evidence": "p1336:knowledge can influence symptom ratings despite masked interviewer",
+          "source_location": "p1336",
+          "reasoning": "p1336:knowledge can influence symptom ratings despite masked interviewer"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NI",
+          "evidence": "p1336:possible lack of masking acknowledged; insufficient evidence it actually influenced this result",
+          "source_location": "p1336",
+          "reasoning": "p1336:possible lack of masking acknowledged; insufficient evidence it actually influenced this result"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p1329:registry cited but dated outcome-specific SAP not available",
+          "source_location": "p1329",
+          "reasoning": "p1329:registry cited but dated outcome-specific SAP not available"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated",
+          "source_location": "p1331",
+          "reasoning": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved",
+          "source_location": "p1331",
+          "reasoning": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Computer sequence and independently handled envelope",
+          "source_location": "p1329 Randomization"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departure; intendedTAPB balanced",
+          "source_location": "p1329,p1336"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "One loss of30each; nearlyall",
+          "source_location": "p1331"
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "Preoperative sensory unmasking possible for patient symptom report",
+          "source_location": "p1330–31"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No demonstrated prospective SAP",
+          "source_location": "p1329"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    },
+    {
+      "result_id": "S016_pump_presses",
+      "outcome": "PCIApresses",
+      "time_window": "Unspecified postoperative",
+      "comparison": "NTGvsNG;activeTAPB both",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p1329 Randomization:computer-generated random numbers",
+          "source_location": "p1329 Randomization",
+          "reasoning": "p1329 Randomization:computer-generated random numbers"
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was the allocation sequence concealed until participants were enrolled and assigned?",
+          "answer": "PY",
+          "evidence": "p1329:sealed envelope relayed to independent nurse",
+          "source_location": "p1329",
+          "reasoning": "p1329:sealed envelope relayed to independent nurse"
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a problem with randomization?",
+          "answer": "NI",
+          "evidence": "p1332 Table1:only completer baseline available; single loss per arm",
+          "source_location": "p1332 Table1",
+          "reasoning": "p1332 Table1:only completer baseline available; single loss per arm"
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of their assigned intervention?",
+          "answer": "PY",
+          "evidence": "p1329,p1336:pre-induction twitching can reveal active TEAS",
+          "source_location": "p1329,p1336",
+          "reasoning": "p1329,p1336:pre-induction twitching can reveal active TEAS"
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers and people delivering interventions aware?",
+          "answer": "Y",
+          "evidence": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked",
+          "source_location": "p1329",
+          "reasoning": "p1329:independent nurse delivering stimulation knew allocation; other clinicians masked"
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations from intended intervention because of trial context?",
+          "answer": "PN",
+          "evidence": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:matched active TAPB and common anesthesia in NTG/NG; no trial-context departures reported"
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established outcome-relevant deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established outcome-relevant deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were these deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p1329–31:conditional, no established imbalanced deviation",
+          "source_location": "p1329–31",
+          "reasoning": "p1329–31:conditional, no established imbalanced deviation"
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate the effect of assignment?",
+          "answer": "PY",
+          "evidence": "p1331–32:29 of30 in each assigned group analyzed",
+          "source_location": "p1331–32",
+          "reasoning": "p1331–32:29 of30 in each assigned group analyzed"
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze participants in assigned groups?",
+          "answer": "NA",
+          "evidence": "p1331:no reassignment described",
+          "source_location": "p1331",
+          "reasoning": "p1331:no reassignment described"
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "p1331:one loss per arm;87/90; nearly all",
+          "source_location": "p1331",
+          "reasoning": "p1331:one loss per arm;87/90; nearly all"
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "p1331:conditional after nearly complete followup",
+          "source_location": "p1331",
+          "reasoning": "p1331:conditional after nearly complete followup"
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p1330–31:standard measurement appropriate for named result",
+          "source_location": "p1330–31",
+          "reasoning": "p1330–31:standard measurement appropriate for named result"
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could measurement or ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p1329,p1331:same procedures and followup observers masked",
+          "source_location": "p1329,p1331",
+          "reasoning": "p1329,p1331:same procedures and followup observers masked"
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of intervention received?",
+          "answer": "PN",
+          "evidence": "p1329:anesthesia team and outcome recorders masked",
+          "source_location": "p1329",
+          "reasoning": "p1329:anesthesia team and outcome recorders masked"
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could assessment be influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "p1330–31:objective drug/demand record; patient-driven demand is behavior defining endpoint",
+          "source_location": "p1330–31",
+          "reasoning": "p1330–31:objective drug/demand record; patient-driven demand is behavior defining endpoint"
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Is assessment likely influenced by knowledge of intervention?",
+          "answer": "NA",
+          "evidence": "Conditional:masked objective recording",
+          "source_location": "Conditional",
+          "reasoning": "Conditional:masked objective recording"
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Were data analyzed according to a prespecified plan finalized before unblinded outcome data?",
+          "answer": "NI",
+          "evidence": "p1329:registry cited but dated outcome-specific SAP not available",
+          "source_location": "p1329",
+          "reasoning": "p1329:registry cited but dated outcome-specific SAP not available"
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was result selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated",
+          "source_location": "p1331",
+          "reasoning": "p1331:multiple outcomes/timepoints, prospective selection not demonstrated"
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was result selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved",
+          "source_location": "p1331",
+          "reasoning": "p1331:analysis methods reported after trial; selection among eligible analyses unresolved"
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "Computer sequence and independently handled envelope",
+          "source_location": "p1329 Randomization"
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "No trial-context departure; intendedTAPB balanced",
+          "source_location": "p1329,p1336"
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "One loss of30each; nearlyall",
+          "source_location": "p1331"
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Masked objective records",
+          "source_location": "p1330–31"
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "No demonstrated prospective SAP",
+          "source_location": "p1329"
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unresolved domain uncertainties justify Some concerns; no established high-risk mechanism beyond those documented.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "Reassessed independently in Phase A; domain reasons above govern, not previous judgment."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Postoperative delivered sufentanil0–24h absent; press counts are not dose",
+    "postoperative": true,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "sufentanil",
+    "route": "IV",
+    "unit": "ug",
+    "raw_values": {},
+    "comparison_selection": "NTGvsNG isolatesTEAS;NTGvsG combinedpackage excluded fromisolatedTEAS",
+    "multiarm_handling": "Threearms; do not independently count shared participants",
+    "source_location": "p1330 PCIA;p1336Table3"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "SuccessfulPCAbolus/delivereddose0–24h and pressrecordingwindow",
+      "why_it_matters": "Cannotturn attemptedpresses into consumption",
+      "analysis_affected": "Postoperativeopioid",
+      "can_proceed_without": "Other outcomes usable",
+      "priority": "HIGH",
+      "exact_question": "Provide cumulativeIVsufentanil actually delivered from surgeryend to24h, meanSD/n, and identify whether presscounts are allattempts or successfulboluses and their timewindow."
+    }
+  ],
+  "summary": "Six rows reviewed. PONV has direct counts and explicit48h interval. Press-count window downgraded from inferred48h. Postoperative dose absent; primary QoR15 numeric values captured inPhaseA.",
+  "contacts": [
+    {
+      "missing_information": "SuccessfulPCAbolus/delivereddose0–24h and pressrecordingwindow",
+      "why_it_matters": "Cannotturn attemptedpresses into consumption",
+      "analysis_affected": "Postoperativeopioid",
+      "can_proceed_without": "Other outcomes usable",
+      "priority": "HIGH",
+      "exact_question": "Provide cumulativeIVsufentanil actually delivered from surgeryend to24h, meanSD/n, and identify whether presscounts are allattempts or successfulboluses and their timewindow."
+    }
+  ]
+}

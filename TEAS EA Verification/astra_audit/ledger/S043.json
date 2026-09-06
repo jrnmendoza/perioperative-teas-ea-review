@@ -1,0 +1,22 @@
+{
+  "Study_ID": "S043",
+  "Study": "Lee 2011",
+  "stage": "ADJUDICATED",
+  "phase_a": "phase_a/S043.json",
+  "adjudicated": "adjudicated/S043.json",
+  "baseline_rows": 4,
+  "reviewed_rows": 4,
+  "reviewed_result_specific_rob": 5,
+  "phase_a_saved_before_baseline": true,
+  "consequential_findings": "Four rows audited; three primary opioid rows materially downgraded to hold. Surface SSP classified TEAS. Published values retained, exact0–24h flag corrected; adult eligibility unresolved.",
+  "limitations": [
+    {
+      "missing_information": "Adult subset and PCA regimen/dose arithmetic",
+      "why_it_matters": "Locked adult0–24h eligibility",
+      "analysis_affected": "All results; opioid totals",
+      "can_proceed_without": "No primary analysis; preserve raw data",
+      "priority": "HIGH",
+      "exact_question": "Is Table2 minimum age14 correct? Supply adult-only arm data and reconcile Table8 mg with0.8mg bolus/delivery counts; confirm POR inclusion and rescue use."
+    }
+  ]
+}

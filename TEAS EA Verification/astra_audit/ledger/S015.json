@@ -1,0 +1,15 @@
+{
+  "Study_ID": "S015",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "source_publication_read_complete": true,
+  "outcome_rows_total": 5,
+  "outcome_rows_adjudicated": 5,
+  "rob2_results": 4,
+  "limitations": "Five rows reviewed. Rescueantiemetic counts are direct. ReportedRRs inconsistent withevents. Opioid remains ineligible withoutwindow/route/rawabsolute dose; subjective PONVRoBHigh.",
+  "artifacts": [
+    "phase_a/S015.json",
+    "adjudicated/S015.json"
+  ],
+  "reviewer_model": "gpt-6-astra"
+}

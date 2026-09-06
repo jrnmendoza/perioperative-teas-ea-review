@@ -1,0 +1,49 @@
+{
+  "database": "PubMed",
+  "esearch_count": 1009,
+  "files": [
+    {
+      "bytes": 3250,
+      "path": "01_search_strategy/pubmed/pubmed_v0_2_transport.txt",
+      "sha256": "13828be90c898a43bfe8b5fc31bdd0ff97434d24cb623b2f3bd79c855793fa90"
+    },
+    {
+      "bytes": 4272,
+      "path": "02_search_exports/raw/pubmed/2026-07-21_v0_2/PubMed_TEAS_EA_v0_2_2026-07-21_ESearch.xml",
+      "sha256": "42c5723fd84ae4a5fe7a0c712228ecef99b2a06f01aa40252f5ff6c1069a76cb"
+    },
+    {
+      "bytes": 15213347,
+      "path": "02_search_exports/raw/pubmed/2026-07-21_v0_2/PubMed_TEAS_EA_v0_2_2026-07-21_Records.xml",
+      "sha256": "c7945931f3f83566929469671cf5ed049a6b6c2978c514950ac6ea0ef3b7a55b"
+    },
+    {
+      "bytes": 9040,
+      "path": "02_search_exports/derived/pubmed/2026-07-21_v0_2/PubMed_TEAS_EA_v0_2_2026-07-21_PMIDs.txt",
+      "sha256": "e816d565624e666af4909d0c1f6bba8119c39dbfdfa9b3942433fcb2bf1190d8"
+    },
+    {
+      "bytes": 2872694,
+      "path": "02_search_exports/derived/pubmed/2026-07-21_v0_2/Covidence_PubMed_TEAS_EA_v0_2_2026-07-21_N-1009.ris",
+      "sha256": "aa0bc86658a67adb340608542f86e75992a0c68e5d8c3125ea9f99f4fd5446bc"
+    }
+  ],
+  "ncbi_api_key_status": "available",
+  "query_sha256": "13828be90c898a43bfe8b5fc31bdd0ff97434d24cb623b2f3bd79c855793fa90",
+  "review": "Perioperative_TEAS_EA_Review_2026",
+  "ris_record_count": 1009,
+  "run_timestamp": "2026-07-21T21:08:16+02:00",
+  "sentinel_recall": {
+    "denominator": 25,
+    "missed_pmids": [
+      "29391879"
+    ],
+    "numerator": 24
+  },
+  "status": "full PubMed citation export prepared for manual Covidence upload; not uploaded",
+  "strategy_version": "v0.2",
+  "unique_pmid_count": 1009,
+  "xml_book_article_count": 1,
+  "xml_journal_article_count": 1008,
+  "xml_record_count": 1009
+}

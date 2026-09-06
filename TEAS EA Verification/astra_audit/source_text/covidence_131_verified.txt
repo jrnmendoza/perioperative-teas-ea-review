@@ -1,0 +1,699 @@
+=== PDF PAGE 1 ===
+Am J Transl Res 2025;17(4):2743-2753
+www.ajtr.org /ISSN:1943-8141/AJTR0162065
+
+Original Ar  ticle
+Electroacupuncture for recover y of gastrointestinal
+function af ter laparoscopic hysterectomy surger y:
+a prospective, randomized, controlled trial
+
+
+Zhi-Man Huang1, Yong Wang2, Mu-Chu Ni1, Li Deng1, Yong-Zhou Wang1
+
+
+
+1Depar tment of Gynaecology, The Affiliated Traditional Chinese Medicine Hospital, Southwest Medical University,
+Luzhou 646000, Sichuan, China; 2Depar tment of Anesthesiology, The Affiliated Traditional Chinese Medicine
+Hospital, Southwest Medical University, Luzhou 646000, Sichuan, China
+Received November 16, 2024; Accepted March 8, 2025; Epub April 15, 2025; Published April 30, 2025
+
+Abstract: Objectives: This study aimed to evaluate the effectiveness and feasibility of electroacupuncture (EA) in
+improving gastrointestinal peristalsis after laparoscopic surgery. Methods: This was a single-center, two-arm, pro-
+spective randomized trial in which patients were randomly allocated in a 1:1 ratio into two groups after surgery at
+the Affiliated Traditional Chinese Medicine Hospital, Southwest Medical University, China. Members of both groups
+consented to standard postoperative treatment, and the intervention group received EA treatment starting 3-5
+hours  after  surger y,  as  well  as  in  the  morning  and  afternoon  on  the  first  postoperative  day.  Defecation  and  flatus
+times were the co-primar y outcomes. Results: Among 88 patients who completed the outcome measurements, 43
+patients were allocated to the intervention group and 45 to the control group. The mean (SD) time to first flatus was
+36.4 (8.0) hours and 42.2 (8.5) hours in the intervention and control groups, respectively (HR 1.9, 95% CI, 1.2-2.9;
+P < 0.001). The mean (SD) time to first defecation was 46.0 (8.0) hours and 51.3 (9.4) hours in the intervention and
+control groups, respectively (HR 1.9, 95% CI, 1.2-3.0; P = 0.01). The Visual Analogue Scale (VAS) pain scores and
+Intake, Feeling nauseated, Emesis, Examination, and Duration of symptoms (I-FEED) scores were significantly lower
+in the inter vention group compared to the control group (P < 0.001). Conclusion: EA demonstrates promising ef fects
+in accelerating the recovery of GI function and has potential for widespread adoption across diverse healthcare
+systems globally. However, its exact mechanism requires fur ther in-depth research.
+
+Keywords: Electroacupuncture, postoperative gastrointestinal dysfunction, enhanced recovery after surgery, gyne-
+cological surgery, laparoscopy, clinical trial
+
+Introduction                                                            of patients, depending on the type and site of
+                                                                        surger y [3, 4]. The delayed recover y of GI func-
+One of the most frequent side ef fects following                        tion is associated with prolonged leng th of stay
+abdominal surgery is Postoperative gastroin-                            (LOS) and increased risks of postoperative com-
+testinal   dysfunction   (POGD),   defined   as   a   tem-              plications [5]. According to a comprehensive
+porar y impairment of gastrointestinal (GI) func-                       global meta-analysis, POGD results in a me-
+tion [1]. It is as sociated with perioperative drug                     an increase in overall hospitalization costs by
+stimulation, surgical stress, and excessive po -                        8233 euros (66.3%), significantly escalating the
+stoperative  inflammator y  response  and  mostly                       financial            burden            on            patients            and            healthcare
+manifests as nausea, vomiting, abdominal dis-                           systems [6, 7]. Due to the restriction of normal
+tension,  delayed  flatus,  delayed  defecation,  in-                   social activities and increased healthcare cost s
+testinal obstruction, and gastrointestinal bleed-                       and resource burdens, POGD has a profound
+ing [2]. Although several strategies, such as                           negative impact on patients and societ y.
+early postoperative feeding, minimally invasive
+surgery, and symptomatic medications, have                              In recent years, laparoscopic surger y has been
+been employed to prevent POGD, their ef ficacy                          widely        used        in        g ynecological        fields        due        to        its
+remains limited, and the incidence of POGD                              advantages of minimal trauma, rapid recover y,
+remains high, ranging between 10% and 30%                               and aesthetic incisions [8]. Moreover, improve-
+
+
+
+                                                                                              https://doi.org/10.62347/WNTO7078
+
+=== PDF PAGE 2 ===
+            Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+ments in patients’ physical states and the im-                                       the           Gynecolog y           Depar tment           of           the           Af filiated
+plementation of ERAS protocols have result-                                          Traditional Chinese Medicine Hospital of Sou-
+ed in reduced complications, shor ter LOS, and                                       thwest            Medical            Universit y,            China.            This            study
+lower costs [9]. However, these improvements                                         adhered to the principles of the Declaration of
+remain insuf ficient, as POGD continues to be a                                      Helsinki. The trial was approved by the hospital
+significant   postoperative   is sue,   of ten   requiring                           ethics committee (approval number: KY2024-
+adjunctive conventional suppor tive measures,                                        023) and registered at medicalresearch.org.cn
+such as cof fee consumption, hot-pack therapy,                                       (registration number: MR-51-24-038798). All
+and prokinetics [10]. Never theless, only a few                                      patients provided written informed consent
+studies      have      demonstrated      a      clear      benefit      of           prior to par ticipation.
+these strategies, and their ef ficacy, costs, com-
+plications, and applicability remain controver-                                      Par ticipation conditions
+sial [11]. Thus, there is an urgent need for safer                                   Par ticipants meeting the following criteria were
+and more ef fective treatments.                                                      included: women aged 35 -75 years (inclusive);
+
+Increasing research is being conducted on EA                                         American Society of Anesthesiologists (ASA)
+as a potential therapy for gut microbiota dis-                                       Physical Status Grades I - III; scheduled for lapa-
+orders,      neuroinflammation,      and      postoperative                          roscopic hysterectomy with or without salpingo -
+pain [12]. EA therapy at Zusanli (ST36) and                                          oophorectomy or salpingectomy under general
+Sanyinjiao (SP6) acupoints downregulates the                                         anesthesia; and willing to provide informed
+Nesfatin-1 ERK/CREB pathway, reducing the                                            consent and par ticipate in the study.
+reactivity of the HPA axis induced by acute sur-
+gical trauma and subsequent anxiety [13].                                            Par ticipants were excluded if they met any of
+Moreover, EA stimulation at the Dazhui acu-                                          the following criteria: severe cardiac, hepatic,
+point (GV14) using polyphenol-mediated con-                                          or renal insuf ficiency; skin infection or ner ve da-
+ductive hydrogel microneedles ef fectively redu-                                     mage near the experimental acupoint s [Zusanli
+ced local and systemic inflammation, creating a                                      (ST36), Shang  juxu (ST37), and Xiajuxu (ST39)];
+positive feedback loop that enhanced periph-                                         a histor y of gastrointestinal disorders, such as
+eral nerve and diabetic wound tissue repair                                          gastrointestinal tumors, chronic constipation,
+while reducing depres sive -like behaviors in rat s                                  or peptic ulcers; par ticipation in other clinical
+[14]. A recent animal study demonstrated that                                        trials within the past month or receipt of acu-
+E A      can      activate      the      vagal-adrenal      anti-inflam-             puncture treatment within the last 3 months; or
+mator y                axis                in                mice                through                specific                body inability to cooperate, such as major depres-
+regions [15]. ST36 (Zusanli), ST37 (Shang   juxu),                                   sion or impaired communication.
+and ST39 (Xiajuxu) are the most frequently                                           Dropout criteria included: violation of the trial
+selected acupoints for treating gastrointestinal
+dysfunction, as suppor ted by a meta-analysis,                                       protocol; failure to complete the full course of
+and are all located along the “Stomach Me-                                           treatment; occurrence of serious postoperative
+ridian” according to Chinese Medicine Theory                                         complications or adverse events; conversion to
+[16]. Additionally, these three acupoints have                                       open laparotomy; or admission to the intensive
+been empirically ef fective in alleviating postop-                                   care unit for more than 24 hours postoper-
+erative symptoms such as abdominal pain and                                          atively.
+distension in our clinical practice. Therefore,                                      Randomization
+this study aimed to evaluate the feasibility and
+ef ficacy of a specific E A combination within the                                   Af ter       confirming       eligibilit y       and       obtaining       infor-
+ERAS protocol to accelerate the recovery of                                          med consent, patient s were randomly as signed
+gastrointestinal function following laparoscopic                                     (1:1) to one of two treatment groups: E A (ST36,
+g ynecological surger y.                                                             ST37, ST39) plus standard care or standard
+Methods                                                                              care alone. A centralized randomization system
+                                                                                     ensured allocation concealment. The random-
+Ethics statement                                                                     ization sequence was computer-generated by
+                                                                                     an independent statistician using SPSS 27.0
+This single-center, two-arm, single-blind, pro-                                      sof tware, and patients were automatically as-
+spective randomized study was conducted                                              signed to their respective groups only af ter for-
+between June 2024 and September 2024 at                                              mal enrollment. This process ensured that nei-
+
+
+2  74    4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Am J Transl Res 2025;17(4):2743-2753
+
+=== PDF PAGE 3 ===
+            Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+ Table 1. Locations of ST36 (Zusanli), ST37 (Shangjuxu) and ST39 (Xiajuxu)
+ Acupoints                                 Locations                                                Corresponding position of human body
+ Zusanli (ST36)                            On the lateral side of the lower leg
+                                           and the tibialis anterior muscle,
+                                           3 cun below ST35, on the line
+                                           between ST35 and ST41.
+ Shangjuxu (ST37)                          On the lateral side of the lower leg
+                                           and the tibialis anterior muscle,
+                                           6 cun below ST35, on the line
+                                           between ST35 and ST41.
+ Xiajuxu (ST39)                            On the lateral side of the lower leg
+                                           and the tibialis anterior muscle,
+                                           9 cun below ST35, on the line
+                                           between ST35 and ST41.
+ Annotation                                Dubi (ST35): Central depression of the lateral aspect of the patellar ligament.
+                                           Jiexi (ST41): Central depression of the front ankle joint, between the extensor
+                                           digitorum longus and extensor digitorum tendons.
+
+
+ther the enrolling researchers nor the patients                                         Shang  juxu (ST37, located 6 cun below ST35),
+could predict or influence treatment allocation.                                        and Xiajuxu (ST39, located 9 cun below ST35),
+Patient s were blinded to their treatment alloca-                                       totaling six acupuncture points (Table 1). The
+tion to minimize per formance bias, par ticularly                                       acupoint locations were determined according
+for subjective outcomes such as VAS scores.                                             to “Nomenclature and Location of Meridian
+The acupuncture operators were necessarily                                              Points” (GB/ T 12346 -2021) [17]. Af ter confirm-
+aware of group assignments due to the nature                                            ing the acupoint locations, the skin was cleaned
+of the intervention. However, outcome asses-                                            with 75% alcohol. Once the skin sur face dried,
+sors remained blinded to treatment allocation                                           disposable stainless-steel needles (leng th: 40
+throughout the trial. For example, assessors                                            mm; diameter: 0.25 mm; Beijing Hanyi Medical
+collecting           time           to           first           flatus           and           defecation Instruments Co., Ltd., China) were inser ted to a
+were unaware of patients’ group assignments,                                            depth of 20 - 40 mm at the six acupoints. Af ter
+and all data were anonymized before analysis.                                           30 seconds of manipulation, Deqi - a sensation
+Additionally, the statistician responsible for                                          of soreness, numbness, swelling, or heaviness
+data analysis remained blinded to treatment                                             - was achieved. Finally, bilateral connections
+allocation              until              the              final              analysis              was              com- between ST36, ST37, and ST39 were estab-
+pleted.                                                                                 lished using three electrodes from an electric
+                                                                                        device (G6805-I acupoint nerve stimulator,
+Inter ventions                                                                          Qingdao Xinsheng Industrial Co., Ltd., China).
+                                                                                        The electrical intensity was adjusted to the
+All treatments commenced 3-5 hours postop-                                              maximum level tolerated by each patient, rang-
+eratively. Recruited patients, along with their                                         ing from 0.5 mA to 2.0 mA . This range was cho-
+family members and caregivers, were informed                                            sen to balance patient comfor t and therapeutic
+about the importance of accurately recording                                            ef ficacy.   The   intensit y   was   gradually   increased
+the              timing              of              first              flatus              and              defecation              to during the initial session to determine the opti-
+ensure comparability between the two treat-                                             mal level for each patient, which was then con-
+ment groups during the study. All E A treatment s                                       sistently applied in subsequent sessions. Sti-
+were per formed by a senior Chinese medicine                                            mulation was applied continuously for 30 min-
+practitioner with over five years of clinical expe-                                     utes at a frequency of 2 Hz, a setting widely
+rience, who had undergone standardized oper-                                            used in E A studies for its analgesic and thera-
+ating procedure training prior to the trial.                                            peutic ef fect s. To ensure consistency, the same
+Patients in the EA group received bilateral                                             E A device (G6805 -I acupoint ner ve stimulator)
+treatment at the following acupoints: Zusanli                                           was used for all patients, and the intensity and
+(ST36, located on the lateral side of the lower                                         frequency settings were documented for each
+leg and the tibialis anterior muscle, 3 cun below                                       session. Treatments were administered 3-5
+ST35, on the line between ST35 and ST41),                                               hours postoperatively, as well as in the morning
+
+
+2  74    5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Am J Transl Res 2025;17(4):2743-2753
+
+=== PDF PAGE 4 ===
+           Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+(07:00 - 09:00) and af ternoon (17:00 -19:00) on                                    assessing the overall quality of recover y af ter
+the first postoperative day. In the control group,                                  surger y                and                anesthesia,                encompas sing                five
+the same postoperative care was provided                                            dimensions (patient support, comfort, emo-
+without E A or any additional inter ventions that                                   tions, physical independence, and pain) with
+could affect GI function recovery, such as                                          40 items. Scores range from 40 to 200, with
+Chinese medicine prescriptions, enemas, or                                          higher scores indicating better recovery [20].
+adjunctive medications. Postoperative man-                                          QoR-40 scores were recorded on the day of
+agement followed “the Clinical Practice Guide -                                     admis sion    and    discharge.    LOS    was    defined    as
+lines for Prevention and Treatment of Posto-                                        the number of night s spent in the hospital post-
+perative Gastrointestinal Disorders with Inte-                                      operatively. All adverse events were recorded,
+grated Traditional Chinese and Western Me-                                          categorized as either related or unrelated to the
+dicine”, which included early food intake and                                       treatment, and monitored until resolution. All
+early ambulation [18].                                                              enrollment, interventions, and assessments
+                                                                                    were conducted according to the participant
+Outcomes                                                                            timeline (Table 2).
+
+The primary outcomes were the time (in min-                                         Statistical analysis
+utes)        to        first        flatus        and        bowel        movement,        as Sample size calculation was based on a previ-
+recorded by patients, family members, or care-                                      ous pilot study conducted in 2023, forty pa-
+givers postoperatively. Secondary outcomes                                          tients in each group underwent laparoscopic
+included LOS, use of additional analgesic s, inci-                                  hysterectomy   surger y.   The   mean   time   to   flatus
+dence of vomiting or bowel obstruction, com-                                        was 36.20 ± 8.20 hours in group A (EA with
+plete blood count parameters (lymphocy te-to-                                       standard care) and 42.72 ± 8.76 hours in group
+monocy  te ratio [LMR] and platelet-to -neutrophil                                  B (standard care alone). Based on this esti-
+ratio [PNR]), VAS scores, I-FEED scores, and                                        mate,   with   a   double -tailed   α   =   0.05,   β   =   0.10,
+QoR- 40 (Quality of Recover y- 40 questionnaire)                                    arm proportion = 1:1, and a dropout rate of
+scores. Blood work included LMR and PNR on                                          10%, we computed that 43 patients were nec-
+postoperative day 2. Analgesic and antiemetic                                       essary to identify a statistical difference in
+treatments were not routinely administered to                                       each group (according to https://www.medsta.
+patients         within         the         first         24         hours         postopera-cn/software). Continuous variables are pre-
+tively. Metoclopramide (10 mg intramuscularly)                                      sented as mean (standard deviation, SD) and
+was administered to patients with an I-FEED                                         median (min-max), while categorical variables
+score of ≥ 6 or those who requested antiemetic                                      are summarized as percentages. Fur thermore,
+treatment within 24 hours postoperatively,                                          an independent t-test was used for normally
+while ketorolac tromethamine (30 mg intramus-                                       distributed   data,   and   the   Mann-Whitney   U   test
+cularly) was given to patients with a VAS pain                                      was applied for non-normally distributed data.
+score  of  ≥  6  or  those  who  requested  analgesic                               Categorical variables were analyzed with the
+treatment within 24 hours postoperatively.                                          Fisher exact test and summarized as percent-
+Patients recorded their pain levels once daily                                      ages. Additionally, two - sided P values and 95%
+from postoperative days 1 to 5 using a VAS                                          confidence inter vals (CIs) were provided for the
+ranging from 0 (no pain) to 10 (severe pain).                                       calculated hazard ratios (HRs), with values les s
+Postoperative GI function was assessed from                                         than            0.05            being            deemed            significant.            An            im-
+days 1 to 5 using the I-FEED scoring system,                                        partial statistician used IBM SPSS Statisti-
+developed by a global panel of specialists in                                       cs version 27.0 to accomplish the statistical
+anesthesia, nursing, nutrition, and surger y with                                   analysis.
+exper tise in perioperative medicine and ERAS                                       Results
+pathways during the second Perioperative Qu-
+ality Initiative [19]. Based on clinical presenta-                                  Patient characteristics
+tion, the I-FEED system assigns 0 -2 points to
+each       of       five       components,       clas sif ying       patients       From June 2024 through September 2024,
+as having normal gastrointestinal function (0 -2                                    after 129 patients underwent screening, 28
+points), postoperative gastrointestinal intoler-                                    were deemed ineligible or declined to par tici-
+ance (POGI; 3-5 points), or postoperative gas-                                      pate. The remaining patients were randomly
+trointestinal           dysfunction           (POGD;           ≥           6           points). allocated to the E A arm (n = 51) or the Standard
+The QoR- 40 is a comprehensive questionnaire                                        care group (n = 50). After excluding patients
+
+
+2  74    6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Am J Transl Res 2025;17(4):2743-2753
+
+=== PDF PAGE 5 ===
+               Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+ Table 2. Time schedule of the protocol
+                                                                                                             Perioperative period
+ Time points                                                                              Day-n after surgery                                                          Day of discharge
+                                                      Day -1           Day 0          Day 1           Day 2          Day 3           Day 4           Day 5
+ ENROLLMENT
+ Selection criteria                                        ○
+ Informed consent                                          ○
+ Random assignment                                         ○
+ Basic information                                         ○
+ INTERWENTION
+ Group A (EA with ERAS)                                                   ○               ○
+ Group B (ERAS alone)                                                     ○               ○
+ ASSESSMENTS
+ Time to first flatus
+ Time to first defecation
+ Blood work                                                ○                                              ○
+ VAS score
+ I-FEED score
+ QoR-40 Questionnaire                                      ○                                                                                                                        ○
+ Postoperative complications
+ Adverse events
+ Length of hospital stay
+ Supervision
+
+
+                                                                                                                                               who dropped out, 88 patients
+                                                                                                                                               were recruited in total (Figure
+                                                                                                                                               1). The patient s in both groups
+                                                                                                                                               had comparable demographic
+                                                                                                                                               and clinical features at base-
+                                                                                                                                               line (Table 3). The mean (SD)
+                                                                                                                                               age of the participants was
+                                                                                                                                               49.1 (6.1) years (EA group)
+                                                                                                                                               and 51.0 (6.3) year s (St andard
+                                                                                                                                               care             group).             Uterine             myoma
+                                                                                                                                               was the most common surgi-
+                                                                                                                                               cal indication, accompanied
+                                                                                                                                               by high - grade squamous intra -
+                                                                                                                                               epithelial lesions (HSIL) and
+                                                                                                                                               endometriosis in both groups.
+
+                                                                                                                                               Primar y and secondar y out-
+                                                                                                                                               comes
+
+                                                                                                                                               Table 4 summarizes the de-
+                                                                                                                                               tails of the study outcome me -
+                                                                                                                                               asurements. In the postoper-
+                                                                                                                                               ative phase, the time (Mean ±
+                                                                                                                                               SD)    to    first    flatus    (36.4    ±    8.0
+Figure 1. Flowchart of the study. EA group*: Electroacupuncture at Zusanli                                                                     vs 42.2 ± 8.5 hours, HR 1.9,
+(ST36), Shangjuxu (ST37) and Xiajuxu (ST39) combined with standard care.                                                                       95% CI, 1.2-2.9; P < 0.001)
+Hou-Pu-Pai-Qi Tang+: This type of Chinese patent medication could mess                                                                         and   first   feces   (46.0   ±   8.0   vs
+with the results by improving gastrointestinal motility.                                                                                       51.3 ± 9.4 hours, HR 1.9,
+
+
+2  74 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Am J Transl Res 2025;17(4):2743-2753
+
+=== PDF PAGE 6 ===
+             Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+ Table 3. Demographics and baseline characteristics
+ Characteristic                                                          EA group (n = 43)                 Standard care group (n = 45)                          P-value
+ Age, mean (SD), years                                                         49.1 (6.1)                                 51.0 (6.3)                              0.140
+ BMIa, mean (SD), kg/m2                                                        25.1 (4.2)                                 24.1 (3.6)                              0.245
+ Postmenopausal, n (%)                                                         10 (23.3)                                  17 (37.8)                               0.140
+ Current smoker, n (%)                                                           2 (4.7)                                      0 (0)                               0.236
+ Current drinker, n (%)                                                          4 (9.3)                                    3 (6.7)                               0.950
+ Hyper tension, n (%)                                                           7 (16.3)                                   5 (11.1)                               0.480
+ Diabetes, n (%)                                                                 3 (7.0)                                    4 (8.9)                               1.000
+ Previous abdominal surgery, n (%)                                             13 (30.2)                                  11 (24.4)                               0.542
+ Type of operationb, n (%)                                                                                                                                        0.714
+     Total hysterectomy                                                          1 (2.3)                                    2 (4.4)
+     Total hysterectomy + OS                                                     2 (4.7)                                      0 (0)
+     Total hysterectomy + BS                                                    7 (16.3)                                   7 (15.6)
+     Total hysterectomy + OSO                                                    2 (4.7)                                    1 (2.2)
+     Total hysterectomy + BSO                                                  31 (72.1)                                  35 (77.8)
+ ASAc (I/II/III), n (%)                                                                                                                                           0.476
+     I                                                                         11 (25.6)                                  14 (31.1)
+     II                                                                        30 (69.8)                                  31 (68.9)
+     III                                                                         2 (4.7)                                      0 (0)
+ Duration of surgery, mean (SD), h                                              1.7 (0.8)                                  1.5 (0.6)                              0.126
+ Anesthesia time, mean (SD), h                                                  2.8 (0.9)                                  2.6 (0.7)                              0 .1 57
+ Intraoperative blood loss, mean (SD), mL                                    66.5 (52.7)                                70.9 (69.1)                               0.740
+ Self-controlled analgesia pump, n (%)                                         43 (100)                                   42 (93.3)                               0.242
+ Major diagnosis, n (%)                                                                                                                                           0.624
+     Uterine myoma                                                             16 (37.2)                                  22 (48.9)
+     Endometriosis                                                             11 (25.6)                                   9 (20.0)
+     HSILd                                                                     11 (25.6)                                  11 (24.4)
+     Endometrial cancer                                                            0 (0)                                    1 (2.2)
+     Heavy menstrual bleeding                                                    4 (9.3)                                    2 (4.4)
+     POPe                                                                        1 (2.3)                                      0 (0)
+
+ a: Body mass index. Computed by dividing height in square meters by weight in kilos. b: OS, One-side salpingectomy. BS,
+ Bilateral salpingectomy. OSO, One-side salpingectomy-oophorectomy. BSO, Bilateral salpingectomy-oophorectomy. c: American
+ Society of Anesthesiologists grade. d: High-grade squamous intraepithelial lesions. e: Pelvic organ prolapse.
+
+
+95%        CI,        1.2-3.0;        P        =        0.01)        were        significantly  orders. She was discharged af ter symptomatic
+reduced by E A treatment (Figure 2). The medi-                                                  treatment. In both arms, there were no serious
+an postoperative pain scores and I - FEED scores                                                adverse events or fatalities. All 88 (100%)
+in the EA group were lower than those in the                                                    patients were discharged unevent fully.
+standard care arm at 24, 48, and 72 hours (P <
+0.001). The QoR-40 scores on the day of dis-                                                    Discussion
+charge were also lower in the E A group than in                                                 By evaluating the clinical effectiveness and
+the standard care group (P < 0.001). There was
+no                    significant                    dif ference                    between                    the                    two safet y  of  specific  acupuncture  combinations  in
+groups in LMR and PNR on postoperative day 2,                                                   patients following laparoscopic gynecological
+leng th of hospital stay, incidence of vomiting,                                                surgery, the study aims to explore the role of
+use of additional analgesics, and incidence of                                                  these combinations in aiding the recovery of
+bowel obstruction. One patient in the E A group                                                 GI function. We hypothesized that adjunctive
+was diagnosed with paraly  tic bowel obstruction                                                therapy (EA treatment) combined with the
+on postoperative day 3, as she ate hard and                                                     ERAS pathway could fur ther improve recover y
+indigestible food without following the doctor’s                                                for patients undergoing panhysterectomy with
+
+
+2  74    8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Am J Transl Res 2025;17(4):2743-2753
+
+=== PDF PAGE 7 ===
+              Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+ Table 4. Study outcome measurements
+ Outcome                                                                      EA group (n = 43)                    Standard care group (n = 45)                                 P-value
+ Primar y Outcome
+     Time to first flatus, mean (SD), h                                              36.4 (8.0)                                    42.2 (8.5)                                  < 0.001
+     Time to first defecation, mean (SD), h                                          46.0 (8.0)                                    51.3 (9.4)                                    0.010
+ Secondar y Outcome
+     LMRa/Day 2, mean (SD)                                                            2.1 (0.8)                                     2.1 (0.8)                                    0.958
+     PNRb/Day 2, mean (SD)                                                          34.0 (12.2)                                   31.4 (14.0)                                    0.349
+ VA Sc scores, median (min-max)
+     Postoperative 24 h                                                                 5 (3-7)                                       6 (4-8)                                  < 0.001
+     Postoperative 48 h                                                                 3 (1-5)                                       4 (1-7)                                  < 0.001
+     Postoperative 72 h                                                                 2 (1-4)                                       3 (1-5)                                  < 0.001
+ I-FEEDd scores, median (min-max)
+     Postoperative 24 h                                                                 3 (2-4)                                       3 (2-4)                                  < 0.001
+     Postoperative 48 h                                                                 2 (0-2)                                       2 (1-3)                                  < 0.001
+     Postoperative 72 h                                                                 1 (0-2)                                       2 (1-3)                                  < 0.001
+ QoR-40e scores, median (min-max)
+     Day of discharge                                                            196 (192-198)                                 192 (188-198)                                   < 0.001
+     Length of hospital stay, mean (SD), d                                            6.1 (1.7)                                     6.2 (1.3)                                    0.793
+     Vomiting, n (%)                                                                    3 (7.0)                                      9 (20.0)                                    0.142
+     Use of additional analgesic, n (%)                                                 1 (2.3)                                       4 (8.9)                                    0.385
+     Bowel obstruction, n (%)                                                           1 (2.3)                                         0 (0)                                    0.489
+ a: Lymphocyte to monocyte ratio. b: Platelet to neutrophil ratio. c: Pain scores on visual analogue scale. d: Intake, feeling
+ nauseated, emesis, physical examination, and duration of symptoms. e: Quality of recovery-40 questionnaire.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2. A. Time to first flatus is compared using the Kaplan-Meier curve. Curve Interpretation: The faster the curve
+falls, the earlier the event occurs. The cur ve declined more rapidly in the EA group, indicating that patients in the EA
+group had their first flatus significantly earlier than those in the control group. HR value: HR = 1.9 (95% CI, 1.2-2.9),
+indicating that the time to first flatus was 1.9 times faster in the EA group than in the control group, i.e., patients in
+the EA group had earlier flatus. P value: P < 0.001, indicating a statistically significant difference between groups.
+B.    Time    to    first    defecation    is    compared    using    the    Kaplan-Meier    curve.    Curve    Interpretation:    The    faster    the    curve
+falls, the earlier the event occurs. The curve declined more rapidly in the EA group, indicating that patients in the
+EA group had their first defecation significantly earlier than those in the control group. HR value: HR = 1.9 (95% CI,
+1.2-3.0), indicating that the time to first defecation was 1.9 times faster in the EA group than in the control group,
+i.e., patients in the EA group had earlier defecation. P value: P = 0.01, indicating a statistically significant difference
+between groups.
+
+
+
+
+2  74    9                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Am J Transl Res 2025;17(4):2743-2753
+
+=== PDF PAGE 8 ===
+            Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+or without additional resection of uterine                                              analysis, laparoscopic surger y was linked, albe-
+adnexa.                                                                                 it only in subgroup analysis, to a lower overall
+                                                                                        incidence of late postoperative intestinal block-
+Our study demonstrated that EA (ST36/ST37/                                              age               following               cancer               surgeries               [24].               Inflam-
+ST39)    combined    with    ERAS    significantly    shor t-                           matory pain, neuropathic pain, or pain based
+ened           the           time           to           first           flatus           and           defecation on hyperalgesia could be ameliorated by the
+compared to the standard care arm for the                                               use of intraoperative anesthesia and postop-
+recover y of gastrointestinal motility. The HR for                                      erative analgesic pumps, however, dif ferent an-
+time to first flatus was 1.9 (95% CI, 1.2-2.9; P <                                      esthesia regimens may have adverse effects
+0.001),   and   the   HR   for   time   to   first   defecation                         on postoperative gastrointestinal recover y [25].
+was 1.9 (95% CI, 1.2-3.0; P = 0.01), indicating                                         Unfor tunately, preventive measures are limited,
+that patients receiving E A experienced a signifi-                                      and fur ther research is needed.
+cantly faster recover y of GI function compared
+to          the          control          group.          Specifically,          these          HRs A recent animal study revealed that EA of hi-
+suggest that EA was associated with an app-                                             ndlimb regions (bilateral ST36 acupoint) inhib-
+roximately 90% increase in the likelihood of                                            ited the expres sion of GABA A receptors in DMV
+earlier flatus and defecation compared to stan-                                         neurons, which excited the vagal ner ve and, in
+dard care alone. In practical terms, this accel-                                        turn,     suppres sed     IM -induced     inflammation     via
+eration in GI recovery is clinically meaningful,                                        activation                  of                  the                  α7nAChR-mediated                  JAK2/
+as earlier restoration is closely linked to shor ter                                    STAT3 signaling pathway [26]. A s demonstrated
+hospital stays and improved postoperative out-                                          in another animal study, E A at ST36 is a nonin-
+comes [21].  However,  there were no significant                                        vasive and effective technique that, indepen-
+differences in secondary outcomes such as                                               dent of the spleen, reduces local intestinal in-
+LOS, and the following points can explain this.                                         flammation      via      the      vagus      ner ve      [27].      A      meta-
+First, LOS is influenced by a multitude of factors                                      analysis of six teen clinical trials (1562 patient s)
+beyond GI motility, including surgical compli-                                          indicates that EA enhances digestive system
+cations, pain management, patient mobility,                                             activity and reduces pain intensity following
+and overall physiological recovery. Second,                                             abdominal surgery [28]. Moreover, periopera-
+although      E A      significantly      improved      GI      motilit y,              tive acupuncture treatments are practical and
+the magnitude of this ef fect may not have been                                         safe for patients undergoing abdominal sur-
+suf ficient  to  translate  into  a  statistically  signifi-                            ger y, as demonstrated by a recent randomized
+cant reduction in LOS. Third, hospitals often                                           controlled trial [29]. Chronic inflammation leads
+have standardized discharge criteria that are                                           to gastrointestinal dyskinesia, manifested by
+not solely based on GI recover y. Finally, dif fer-                                     delayed gastric empt ying and prolonged intesti-
+ences in baseline characteristics, comorbidi-                                           nal      transit      time.      Inflammator y      factors      can      act
+ties, or surgical procedures among patients                                             directly on the enteric nervous system (ENS)
+may introduce variability that masks the ef fect                                        and smooth muscle cells, inhibiting their func-
+of E A on LOS.                                                                          tion [30]. EA has been shown to activate the
+                                                                                        vagus nerve, leading to the release of neu-
+POGD is the most serious form of impaired GI                                            rotransmitters such as acetylcholine. Acetyl-
+function recover y and is consistent with what is                                       choline      binds      to      α7      nicotinic      acet ylcholine      re -
+considered a postoperative ileus by most clini-                                         ceptors   (α7nAChR)   on   macrophages   and   other
+cians. Additionally, it is associated with pro-                                         immune cells, inhibiting the release of pro-
+longed LOS, increased surgical complications,                                           inflammator y         cy tokines         (e.g.,         TNF- α         and         IL- 6)
+and increased costs [22]. A series of intricate                                         and            thereby            reducing            systemic            inflammation
+neurological,             inflammator y,             hydro - electroly tic,             [15]. Additionally, EA-induced vagal activation
+and pharmacological mechanisms are involved                                             can       influence       the       composition       and       activit y       of
+in the opening of the peritoneal cavity and                                             gut microbiota, promoting the grow th of benefi-
+manipulation of the digestive tract, culminating                                        cial      bacteria      (e.g.,      Lactobacillus      and      Bifidoba-
+in the temporar y paralysis of the digestive tract                                      cterium) that produce anti-inflammator y metab-
+and the cessation of peristalsis [23]. Laparo-                                          olites such as shor t-chain fatty acids (SCFAs),
+scopic surger y involves shor ter incisions, less                                       and these SCFAs further modulate immune
+tis sue trauma, les s bleeding, lower potential for                                     responses      and       reduce      inflammation       [31,       32].
+desiccation, and lower potential for contamina-                                         EA modulates GI function by stimulating the
+tion by foreign bodies. According to a meta-                                            vagal nerve system and generating an anti-
+
+
+2750                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Am J Transl Res 2025;17(4):2743-2753
+
+=== PDF PAGE 9 ===
+            Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+inflammator y    ef fect.    Additionally,    E A    has    been                     subjective measures should be supplemented
+found to protect interstitial cells of Cajal (ICC),                                  with objective measures (e.g., imaging studies,
+pacemaker cells in the gastrointestinal tract                                        motion markers). Fif th, although this study was
+that regulate gut motility, potentially through                                      conducted using the ERAS methodology, no
+the release of neurotransmitters such as nitric                                      of ficial  compliance  measurement s  were  taken,
+oxide         (NO)         and         serotonin         (5 - HT),         which         influ-which may have impacted the comparability of
+ence smooth muscle contraction and relax-                                            the results. Lastly, hospitalization cost analysis
+ation [33, 34]. In this study, patients assigned                                     was not included in this study. Incorporating an
+to receive EA treatment during the early post-                                       economic component into the results would
+operative period experienced earlier flatus and                                      enhance its applicability to healthcare policy-
+defecation compared to the control group. The                                        makers and clinical practice. The streng ths of
+median postoperative pain levels and I-FEED                                          our trial include standardized electroacupunc-
+scores in the E A group were lower than those in                                     ture procedures, low experimental costs, a rig-
+the control arm at 24, 48 and 72 hours af ter                                        orous combination of acupuncture points, and
+the surgery. Nonetheless, the exact mecha-                                           a strict recruitment and time schedule pro-
+nisms underlying acupuncture’s role in gastro-                                       tocol.
+intestinal function recovery warrant further
+investigation. Acupuncture is a safe, cost- ef fec-                                  Conclusions
+tive, noninvasive, and widely available nonphar-
+macological therapy for managing various dis-                                        In summary, individuals who have undergone
+orders.          Scientific          research          and          clinical          appli- surgery should have access to adequate and
+cations of acupuncture have expanded world-                                          effective supplemental methods to prevent
+wide [35]. Similarly, EA was well tolerated dur-                                     chronic gastrointestinal dysmotilit y and postop-
+ing our study, and no serious adverse event s or                                     erative ileus (POI). This randomized clinical trial
+complications related to the procedure were                                          revealed that specific acupuncture points com-
+recorded.                                                                            bined with the ERAS protocol shortened the
+Several limitations must be acknowledged.                                            time   to   first   flatus   and   defecation   af ter   laparo-
+First, a key limitation is the absence of a sham                                     scopic surger y for g ynecological patients. Early
+acupuncture control group. Given the well- doc-                                      perioperative electroacupuncture treatment is
+umented placebo ef fects associated with acu-                                        a safe, af fordable, and ef fective approach that
+puncture, the lack of a sham inter vention may                                       may contribute to reducing healthcare dispari-
+introduce bias in patient-reported outcomes.                                         ties by providing cost- ef fective alternatives for
+This        limitation        could        influence        the        interpreta-   postoperative care in low-resource settings.
+tion of the obser ved therapeutic ef fect s, as the                                  Future studies should investigate the long-term
+placebo response cannot be fully accounted for                                       benefits  of  E A  acros s  diverse  surgical  contex ts
+in the current study design. Future studies                                          and explore its integration into standardized
+could incorporate a sham EA group, which                                             perioperative care protocols. More impor tantly,
+involves non-penetrative needling or stimula-                                        we could ef fectively promote the application of
+tion at non-acupoint sites, to help control for                                      acupuncture in clinical training and multidisci-
+placebo effects and improve blinding. This                                           plinar y cooperation, enhancing it s clinical value
+approach would provide a more robust assess-                                         by incorporating acupuncture into clinical train-
+ment of the specific ef fects of E A and enhance                                     ing programs, forming multidisciplinar y teams,
+the validit y of the findings. Second, the trial was                                 conducting joint research, standardizing opera-
+conducted with women af ter laparoscopic sur-                                        tions, enhancing regulation, and promoting evi-
+gery, and the small sample size necessitates                                         dence -based medicine.
+cautious        ex trapolation        of        the        findings.        Future
+research      should      as ses s      E A’s      ef ficacy      in      more       Acknowledgements
+diverse populations. Third, the primary out-
+comes of this study are subjective and vulner-                                       We thank the trial par ticipants, Southwest Me -
+able to potential biases of self-reporting, as                                       dical        Universit y,        and        The        Af filiated        Traditional
+some patients may not have recorded exact                                            Chinese Medicine Hospital of Southwest Me-
+times. Four th, VAS and I-FEED scales are sub-                                       dical       Universit y.       This       study       was       suppor ted       by
+jective, as each individual has dif ferent thresh-                                   the School - level research project s of Southwest
+olds for pain and bloating. In future studies,                                       Medical Universit y [2023QN113].
+
+
+27  51                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Am J Transl Res 2025;17(4):2743-2753
+
+=== PDF PAGE 10 ===
+            Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+Disclosure of conflict of interest                                                               and meta-analysis. Asian J Surg 2023; 46:
+                                                                                                 4462-4464.
+None.                                                                                   [9]      Boitano TKL, Smith HJ, Rushton T, Johnston
+                                                                                                 MC, Lawson P, Leath CA 3rd, Xhaja A, Guthrie
+Address correspondence to: Li Deng and Yong-Zhou                                                 MP and Straughn JM Jr. Impact of enhanced
+Wang,         Depar tment         of         Gynaecolog y,         The         Af filiated       recovery after surgery (ERAS) protocol on gas-
+Traditional Chinese Medicine Hospital, Southwest                                                 trointestinal function in gynecologic oncology
+Medical Universit y, Luzhou 646000, Sichuan, China.                                              patients undergoing laparotomy. Gynecol On-
+Tel: +8 6     -1 871579 9116; E-  mail: 2022039 91 20  070 @                                     col 2018; 151: 282-286.
+stu.swmu.edu.cn (LD); Tel: +86-13398280018;                                             [10]     Gungorduk K, Paskal EK, Demirayak G, Kö-
+E-mail: 20220299120137@stu.swmu.edu.cn ( Y Z W)                                                  seoğlu     SB,     Akbaba     E     and     Ozdemir     IA.     Coffee
+                                                                                                 consumption for recover y of intestinal function
+References                                                                                       after laparoscopic gynecological surgery: a
+                                                                                                 randomized controlled trial. Int J Surg 2020;
+[1]     Mazzotta E, Villalobos-Hernandez EC, Fiorda-                                             82: 130-135.
+        Diaz J, Harzman A and Christofi FL. Postopera-                                  [11]     Wang Y, Yang JW, Yan SY, Lu Y, Han JG, Pei W,
+        tive Ileus and postoperative gastrointestinal                                            Zhao JJ, Li ZK, Zhou H, Yang NN, Wang LQ,
+        tract dysfunction: pathogenic mechanisms                                                 Yang YC and Liu CZ. Electroacupuncture vs
+        and novel treatment strategies beyond colorec-                                           sham electroacupuncture in the treatment of
+        tal enhanced recovery after surgery protocols.                                           postoperative ileus after laparoscopic surgery
+        Front Pharmacol 2020; 11: 583422.                                                        for colorectal cancer: a multicenter, random-
+[2]     Wang Y, Wang L, Ni X, Jiang M and Zhao L. Ef-                                            ized clinical trial. JAMA Surg 2023; 158: 20-27.
+        fect of acupuncture therapy for postoperative                                   [12]     Yang L, Ding W, Dong Y, Chen C, Zeng Y, Jiang
+        gastrointestinal dysfunction in gastric and                                              Z, Gan S, You Z, Zhao Y, Zhang Y, Ren X, Wang
+        colorectal cancers: an umbrella review. Front                                            S, Dai J, Chen Z, Zhu S, Chen L, Shen S, Mao J
+        Oncol 2024; 14: 1291524.                                                                 and Xie Z. Electroacupuncture attenuates sur-
+[3]     He GZ, Bu N, Li YJ, Gao Y, Wang G, Kong ZD,                                              gical pain-induced delirium-like behavior in
+        Zhao M, Zhang SS and Gao W. Extra loading                                                mice via remodeling gut microbiota and den-
+        dose of dexmedetomidine enhances intestinal                                              dritic spine. Front Immunol 2022; 13: 955581.
+        function recovery after colorectal resection: a                                 [13]     Zheng J, Wang Y, Zhang C, Zhang A, Zhou Y, Xu
+        retrospective cohort study. Front Pharmacol                                              Y, Yu J and Tian Z. Electroacupuncture nega-
+        2022; 13: 806950.                                                                        tively regulates the Nesfatin-1/ERK/CREB pa-
+[4]     Li WJ, Gao C, An LX, Ji YW, Xue FS and Du Y.                                             thway to alleviate HPA axis hyperactivity and
+        Perioperative transcutaneous electrical acu-                                             anxiety-like behaviors caused by surgical trau-
+        point stimulation for improving postoperative                                            ma. Chin Med 2024; 19: 108.
+        gastrointestinal function: a randomized con-                                    [14]     Hou Y, Guo X, Ran J, Lu X and Xie C. Conductive
+        trolled trial. J Integr Med 2021; 19: 211-218.                                           polyphenol microneedles coupled with elec-
+[5]     Yang JW, Shao JK, Wang Y, Liu Q, Liang JW, Yan                                           troacupuncture to accelerate wound healing
+        SY, Zhou SC, Yang NN, Wang LQ, Shi GX, Pei W                                             and alleviate depressive-like behaviors in dia-
+        and Liu CZ. Effect of acupuncture on postop-                                             betes. Bioact Mater 2025; 44: 516-530.
+        erative ileus after laparoscopic elective color-                                [15]     Liu S, Wang Z, Su Y, Qi L, Yang W, Fu M, Jing X,
+        ectal surgery: a prospective, randomised, con-                                           Wang Y and Ma Q. A neuroanatomical basis for
+        trolled trial. EClinicalMedicine 2022; 49:                                               electroacupuncture to drive the vagal-adrenal
+        10147 2 .                                                                                axis. Nature 2021; 598: 641-645.
+[6]     Sun L, Wei X, Feng T, Gu Q, Li J, Wang K and                                    [16]     Chen KB, Huang Y, Jin XL and Chen GF. Elec-
+        Zhou J. Electroacupuncture promotes gastro-                                              troacupuncture or transcutaneous electroacu-
+        intestinal functional recovery after radical                                             puncture for postoperative ileus after abdomi-
+        colorectal cancer surgery: a protocol of multi-                                          nal surgery: a systematic review and meta-
+        center randomized controlled trial (CORRECT                                              analysis. Int J Surg 2019; 70: 93-101.
+        trial). Int J Colorectal Dis 2024; 39: 198.                                     [17]     Wu XD, Huang LX and Zhao JS. Interpretation
+[7]     Wolthuis AM, Bislenghi G, Fieuws S, de Buck                                              of China national standard Nomenclature and
+        van Overstraeten A, Boeckxstaens G and                                                   Location of Meridian Points (GB/T 12346-
+        D’Hoore A. Incidence of prolonged postopera-                                             2021). Zhongguo Zhen Jiu 2022; 42: 579-
+        tive ileus af ter colorectal surger y: a systematic                                      582.
+        review and meta-analysis. Colorectal Dis 2016;                                  [18]     Xue J, Xu Z, Wang Q, Hou H, Wei L, Zhang J,
+        18: O1-9.                                                                                Zhao X, Chen L, Ding F, Ma L, Zhao Y, Wang Y,
+[8]     Huang   WH,   Zhang   J,   Ding   SS   and   Xue   JJ.   Effi-                           Ma D, Wang T, Liu R, Gan TJ, Robinson N, Frank
+        cacy of acupuncture for nausea and vomiting                                              Y, Su F, Chi Y, Yang D, Liu S, Cui S, Wei Y, Chen
+        af ter laparoscopic surger y: a systematic review                                        Z, Qin Y, Cao L, Chen G, Shu K, Xiao Z, Zhang H,
+
+
+2752                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Am J Transl Res 2025;17(4):2743-2753
+
+=== PDF PAGE 11 ===
+            Electroacupuncture for recover y of gastrointestinal function af ter surger y
+
+
+        Yu J, Hu Z, Cheng H, Ma W, Liu G, Wang X, Cao                                    [26]     Yang NN, Yang JW, Ye Y, Huang J, Wang L,
+        X, Gao J, Kong G, Tao Q, Wang B, Wang J, Li H,                                            Wang Y, Su XT, Lin Y, Yu FT, Ma SM, Qi LY, Lin
+        Lyu C, Zhang Z, Li T and Yang K. Clinical prac-                                           LL, Wang LQ, Shi GX, Li HP and Liu CZ. Elec-
+        tice guidelines for prevention and treatment of                                           troacupuncture       ameliorates       intestinal       inflam-
+        postoperative gastrointestinal disorder with                                              mation           by           activating           α7nAChR-mediated           JA-
+        Integrated Traditional Chinese and Western                                                K2/STAT3 signaling pathway in postoperative
+        Medicine (2023). J Evid Based Med 2024; 17:                                               ileus. Theranostics 2021; 11: 4078-4089.
+        207-223.                                                                         [27]     Liu S, Fu W, Fu J, Chen G, He Y, Zheng T and Ma
+[19]    Alsharqawi N, Alhashemi M, Kaneva P, Baldini                                              T. Electroacupuncture alleviates intestinal in-
+        G, Fiore JF Jr, Feldman LS and Lee L. Validity of                                         flammation via a distinct neuro-immune signal
+        the I-FEED score for postoperative gastrointes-                                           pathway in the treatment of postoperative ile-
+        tinal function in patients undergoing color-                                              us. Biomed Pharmacother 2024; 173: 116387.
+        ectal surgery. Surg Endosc 2020; 34: 2219-                                       [28]     Chen HT, Hung KC, Huang Y T, Wu JY, Hsing CH,
+        2226.                                                                                     Lin  CM,  Chen  IW  and  Sun  CK.  Efficacy  of  elec-
+[20]    Vignaud M, Morel C, Henault A, Futier E,                                                  troacupuncture in improving postoperative ile-
+        Pereira B, Lamber t C and Beloeil H. Variability                                          us in patients receiving colorectal surgery: a
+        and reliability of the french version of the qual-                                        systematic review and meta-analysis. Int J
+        ity of recovery-40 questionnaire (QoR-40). An-                                            Surg 2024; 110: 1113-1125.
+        aesth Crit Care Pain Med 2021; 40: 100822.                                       [29]     Lam WL, Wang J, Yeung WF, Cheung CW, Chan
+[21]    Kong Q, Chen LM, Liu CY, Li W and Yin PH. The                                             KKL, Ngan HYS, Wong CKH, Jiang F, Ma PWS,
+        effect of acupuncture on gastrointestinal re-                                             Leung TW, Leung WC, Liu TC, Chen H and Lao
+        cover y after abdominal surger y: a narrative re-                                         L. A combination of electroacupuncture and
+        view from clinical trials. Int J Surg 2024; 110:                                          auricular acupuncture for postoperative pain
+        5713-5721.                                                                                af ter abdominal surger y for gynaecological dis-
+[22]    Hedrick TL, McEvoy MD, Mythen MMG, Berga-                                                 eases: a randomized controlled trial. Phyto-
+        maschi R, Gupta R, Holubar SD, Senagore AJ,                                               medicine 2022; 104: 154292.
+        Gan TJ, Shaw AD, Thacker JKM, Miller TE, Wis-                                    [30]     Bercik P, Collins SM and Verdu EF. Microbes
+        chmeyer PE, Carli F, Evans DC, Guilber t S, Ko-                                           and the gut-brain axis. Neurogastroenterol Mo-
+        zar R, Pryor A, Thiele RH, Everett S, Grocott M,                                          til 2012; 24: 405-413.
+        Abola RE, Bennett-Guerrero E, Kent ML, Feld-                                     [31]     Xu H, Wen Q, Hu H, Yang S, Lu L, Hu X, Li H,
+        man LS and Fiore JF Jr. American society for                                              Huang X and Li N. Electroacupuncture at ST36
+        enhanced recovery and perioperative quality                                               modulates the intestinal microecology and
+        initiative joint consensus statement on post-                                             may help repair the intestinal barrier in the rat
+        operative gastrointestinal dysfunction within                                             model of severe acute pancreatitis. Microb
+        an enhanced recovery pathway for elective                                                 Biotechnol 2024; 17: e14401.
+        colorectal surgery. Anesth Analg 2018; 126:                                      [32]     Bonaz B, Bazin T and Pellissier S. The vagus
+        1896-1907.                                                                                nerve at the interface of the microbiota-gut-
+[23]    Buscail E and Deraison C. Postoperative ileus:                                            brain axis. Front Neurosci 2018; 12: 49.
+        a pharmacological perspective. Br J Pharma-                                      [33]     Liu M, Zhang S, Gai Y, Xie M and Qi Q. Changes
+        col 2022; 179: 3283-3305.                                                                 in the interstitial cells of cajal and immunity in
+[24]    Yamada T, Okabayashi K, Hasegawa H, Tsuruta                                               chronic psychological stress rats and thera-
+        M, Yoo JH, Seishima R and Kitagawa Y. Meta-                                               peutic effects of acupuncture at the zusanli
+        analysis of the risk of small bowel obstruction                                           point (ST36). Evid Based Complement Alternat
+        following open or laparoscopic colorectal sur-                                            Med 2016; 2016: 1935372.
+        ger y. Br J Surg 2016; 103: 493-503.                                             [34]     Zhang R, Lao L, Ren K and Berman BM. Mech-
+[25]    Weibel S, Jelting Y, Pace NL, Helf A, Eberhart                                            anisms of acupuncture-electroacupuncture on
+        LH, Hahnenkamp K, Hollmann MW, Poepping                                                   persistent pain. Anesthesiology 2014; 120:
+        DM, Schnabel A and Kranke P. Continuous                                                   482-503.
+        intravenous perioperative lidocaine infusion                                     [35]     Song G, Fiocchi C and Achkar JP. Acupuncture
+        for postoperative pain and recovery in adults.                                            in inflammator y bowel disease. Inflamm Bowel
+        Cochrane Database Syst Rev 2018; 6:                                                       Dis 2019; 25: 1129-1139.
+        CD009642.
+
+
+
+
+
+
+
+
+
+
+2753                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Am J Transl Res 2025;17(4):2743-2753

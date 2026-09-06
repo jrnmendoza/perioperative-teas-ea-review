@@ -1,0 +1,2102 @@
+{
+  "Study_ID": "S004",
+  "Study": "Zheng 2025",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase_a_saved_before_baseline": true,
+  "study": {
+    "identity_status": "CONFIRMED",
+    "title": "Effects of Transcutaneous Electrical Acupoint Stimulation on Recovery After Gynecological Laparoscopic Surgery: A Randomized, Single-Blind, Controlled Trial",
+    "year": 2025,
+    "doi": "10.2147/JPR.S543574",
+    "pdf_files": [
+      "109499.pdf"
+    ],
+    "randomized_arms": "[44,44]",
+    "analyzed_arms": "[42,43]",
+    "modality": "TEAS",
+    "comparator_class": "sham/no-current",
+    "independence": "NorthernTheaterShenyangApril–Dec2022 distinct fromZhou2025GuilinFeb–June2022.",
+    "source_locations": "1–14 completely; visualFigure1p6,Figure2p8,Tables3–4p10",
+    "identity_notes": "First-page identity and full source checked before baseline."
+  },
+  "outcomes": [
+    {
+      "baseline_row": 33,
+      "final": {
+        "Canonical study": "Zheng 2025",
+        "Comparison ID": "ZHENG25_TEAS_vs_SHAM_PONV",
+        "Intervention arm": "Perioperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "PONV",
+        "Outcome/result": "Any PONV",
+        "Timepoint/window": "Within 24 h postoperatively",
+        "Data type": "Events/total",
+        "Randomized n intervention": 44,
+        "Randomized n comparator": 44,
+        "Analyzed n intervention": 42,
+        "Analyzed n comparator": 43,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": 18,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": 29,
+        "Unit/scale": "participants",
+        "Reported P": "0.023",
+        "Directly reported?": "Percentages directly reported; counts derived",
+        "Derived/converted?": "Yes",
+        "Derived effect measure": "RR",
+        "Derived effect": 0.6354679802955665,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for dichotomous 24-h PONV analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Counts 18/42 and 29/43 are reconstructed from reported 42.9% and 67.4%; use percentages as source truth",
+        "Source location": "Primary outcome / 24-h PONV result",
+        "Source PDF URL": "https://drive.google.com/file/d/1-JWKZgQXaQQQBZgMSDqyIP-vG9aAxBqb/view?usp=drivesdk",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Zheng 2025",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "ZHENG25_TEAS_vs_SHAM_PONV",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative TEAS",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "PONV",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Any PONV",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Within 24 h postoperatively",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Events/total",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 44,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 44,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 42,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 43,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": 18,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": 29,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "participants",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.023",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Percentages directly reported; counts derived",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "RR",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": 0.6354679802955665,
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for dichotomous 24-h PONV analysis",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Counts 18/42 and 29/43 are reconstructed from reported 42.9% and 67.4%; use percentages as source truth",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Primary outcome / 24-h PONV result",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1-JWKZgQXaQQQBZgMSDqyIP-vG9aAxBqb/view?usp=drivesdk",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / COUNTS DERIVED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "p5Primaryoutcome; Figure1p6",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "109499.pdf",
+      "source_evidence": "42.9%of42 and67.4%of43 uniquely correspond18and29cases. P0.023. Countsderivedfromroundedpercentages, notsumofintervals; randomized44/44. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+      "drug": "sufentanil",
+      "route": "IV",
+      "pca_formulation": "Sufentanil2ug/kg plus saline; finalvolume/concentrationunreported;2mL/h basal,0.5mLbolus15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+      "analysis_eligibility": "Qualified0–24hPONVsynthesis",
+      "notes": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow."
+    },
+    {
+      "baseline_row": 34,
+      "final": {
+        "Canonical study": "Zheng 2025",
+        "Comparison ID": "ZHENG25_TEAS_vs_SHAM_REMI",
+        "Intervention arm": "Perioperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Intraoperative opioid",
+        "Outcome/result": "Total intraoperative remifentanil consumption",
+        "Timepoint/window": "Intraoperative",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 44,
+        "Randomized n comparator": 44,
+        "Analyzed n intervention": 42,
+        "Analyzed n comparator": 43,
+        "Mean intervention": 233.1,
+        "SD intervention": 29.6,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 289.5,
+        "SD comparator": 37.9,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg remifentanil",
+        "Reported P": "0.031",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — MD calculated; raw summary values unconverted",
+        "Derived effect measure": "MD",
+        "Derived effect": -56.400000000000006,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for intraoperative opioid-sparing analysis, not postoperative 24-h opioid analysis",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Not a postoperative endpoint",
+        "Source location": "Table 3, p9",
+        "Source PDF URL": "https://drive.google.com/file/d/1-JWKZgQXaQQQBZgMSDqyIP-vG9aAxBqb/view?usp=drivesdk",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Zheng 2025",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "ZHENG25_TEAS_vs_SHAM_REMI",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative TEAS",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Intraoperative opioid",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total intraoperative remifentanil consumption",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Intraoperative",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 44,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 44,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 42,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 43,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 233.1,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 29.6,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 289.5,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 37.9,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg remifentanil",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.031",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — MD calculated; raw summary values unconverted",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -56.400000000000006,
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for intraoperative opioid-sparing analysis, not postoperative 24-h opioid analysis",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Not a postoperative endpoint",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Table 3, p9",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1-JWKZgQXaQQQBZgMSDqyIP-vG9aAxBqb/view?usp=drivesdk",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — MD calculated; raw summary values unconverted",
+          "final_value": "Yes — MD calculated; raw summary values unconverted",
+          "source_location": "Table3p9; anesthesiamethodsp3",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "109499.pdf",
+      "source_evidence": "Intraoperativeremifentanil233.1SD29.6 versus289.5SD37.9ug; P0.031printed; analyzed42/43. Pvalue seems inconsistentwithstatedt-test; retainprintedvaluewithflag. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+      "drug": "sufentanil",
+      "route": "IV",
+      "pca_formulation": "Sufentanil2ug/kg plus saline; finalvolume/concentrationunreported;2mL/h basal,0.5mLbolus15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+      "analysis_eligibility": "Onlyintraoperativeendpoint; nottargetpostoperative",
+      "notes": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow."
+    },
+    {
+      "baseline_row": 35,
+      "final": {
+        "Canonical study": "Zheng 2025",
+        "Comparison ID": "ZHENG25_TEAS_vs_SHAM_PCA_PRESS",
+        "Intervention arm": "Perioperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Opioid demand",
+        "Outcome/result": "Total PCIA button presses",
+        "Timepoint/window": "Postoperative; registry specifies24h, publication duration not explicit",
+        "Data type": "Mean/SD",
+        "Randomized n intervention": 44,
+        "Randomized n comparator": 44,
+        "Analyzed n intervention": 42,
+        "Analyzed n comparator": 43,
+        "Mean intervention": 6.3,
+        "SD intervention": 2.2,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": 10.7,
+        "SD comparator": 3.9,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "presses",
+        "Reported P": "0.004",
+        "Directly reported?": "Yes",
+        "Derived/converted?": "Yes — MD calculated; raw summary values unconverted",
+        "Derived effect measure": "MD",
+        "Derived effect": -4.3999999999999995,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Eligible for PCA-demand analysis only",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "PCIA final volume/concentration is NR, so presses cannot be converted to sufentanil mass",
+        "Source location": "Postoperative PCIA results",
+        "Source PDF URL": "https://drive.google.com/file/d/1-JWKZgQXaQQQBZgMSDqyIP-vG9aAxBqb/view?usp=drivesdk",
+        "Record status": "VERIFIED WITH QUALIFICATION"
+      },
+      "verification_status": "VERIFIED WITH QUALIFICATION",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Zheng 2025",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "ZHENG25_TEAS_vs_SHAM_PCA_PRESS",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative TEAS",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid demand",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Total PCIA button presses",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Postoperative; registry specifies24h, publication duration not explicit",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Mean/SD",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 44,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 44,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": 42,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": 43,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": 6.3,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": 2.2,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": 10.7,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": 3.9,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "presses",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": "0.004",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "Yes",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "Yes — MD calculated; raw summary values unconverted",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": "MD",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": -4.3999999999999995,
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Eligible for PCA-demand analysis only",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "PCIA final volume/concentration is NR, so presses cannot be converted to sufentanil mass",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "Postoperative PCIA results",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1-JWKZgQXaQQQBZgMSDqyIP-vG9aAxBqb/view?usp=drivesdk",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Record status",
+          "old_value": "SOURCE-VERIFIED / DOSE NOT RECONSTRUCTABLE",
+          "source_value": "VERIFIED WITH QUALIFICATION",
+          "final_value": "VERIFIED WITH QUALIFICATION",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        },
+        {
+          "field": "Derived/converted?",
+          "old_value": "No",
+          "source_value": "Yes — MD calculated; raw summary values unconverted",
+          "final_value": "Yes — MD calculated; raw summary values unconverted",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        },
+        {
+          "field": "Timepoint/window",
+          "old_value": "Postoperative; exact pump duration NR",
+          "source_value": "Postoperative; registry specifies24h, publication duration not explicit",
+          "final_value": "Postoperative; registry specifies24h, publication duration not explicit",
+          "source_location": "Table3p9; pumpmethodsp4; officialChiCTR166185",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "109499.pdf",
+      "source_evidence": "TotalPCIApresses6.3SD2.2 versus10.7SD3.9; P0.004; analyzed42/43. Sufentanil2ug/kg withunknownfinalvolume; presscountnotdose. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+      "drug": "sufentanil",
+      "route": "IV",
+      "pca_formulation": "Sufentanil2ug/kg plus saline; finalvolume/concentrationunreported;2mL/h basal,0.5mLbolus15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+      "analysis_eligibility": "Presscountonly; windowqualification",
+      "notes": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow."
+    },
+    {
+      "baseline_row": 36,
+      "final": {
+        "Canonical study": "Zheng 2025",
+        "Comparison ID": "ZHENG25_TEAS_vs_SHAM_OPIOID24",
+        "Intervention arm": "Perioperative TEAS",
+        "Comparator arm": "Sham/no current",
+        "Outcome family": "Opioid consumption",
+        "Outcome/result": "Exact cumulative postoperative sufentanil mass",
+        "Timepoint/window": "Requested0–24h cumulative dose: Insufficient information / not reported.",
+        "Data type": "Not reported",
+        "Randomized n intervention": 44,
+        "Randomized n comparator": 44,
+        "Analyzed n intervention": null,
+        "Analyzed n comparator": null,
+        "Mean intervention": null,
+        "SD intervention": null,
+        "Median intervention": null,
+        "Q1 intervention": null,
+        "Q3 intervention": null,
+        "Events intervention": null,
+        "Mean comparator": null,
+        "SD comparator": null,
+        "Median comparator": null,
+        "Q1 comparator": null,
+        "Q3 comparator": null,
+        "Events comparator": null,
+        "Unit/scale": "µg sufentanil",
+        "Reported P": null,
+        "Directly reported?": "No",
+        "Derived/converted?": "No",
+        "Derived effect measure": null,
+        "Derived effect": null,
+        "Exact 0-24 h postoperative opioid?": "No",
+        "Primary opioid meta-analysis eligible?": "No",
+        "Other analysis eligibility": "Not eligible for continuous 24-h opioid meta-analysis without author data",
+        "Shared-control / multi-arm issue": "No",
+        "Source-QC issue": "Final PCIA volume/concentration and exact cumulative sufentanil mass are not reported",
+        "Source location": "PCIA formulation section / missing outcome",
+        "Source PDF URL": "https://drive.google.com/file/d/1-JWKZgQXaQQQBZgMSDqyIP-vG9aAxBqb/view?usp=drivesdk",
+        "Record status": "AUTHOR DATA NEEDED"
+      },
+      "verification_status": "AUTHOR DATA NEEDED",
+      "field_checks": [
+        {
+          "field": "Canonical study",
+          "source_value": "Zheng 2025",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparison ID",
+          "source_value": "ZHENG25_TEAS_vs_SHAM_OPIOID24",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Intervention arm",
+          "source_value": "Perioperative TEAS",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Comparator arm",
+          "source_value": "Sham/no current",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome family",
+          "source_value": "Opioid consumption",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Outcome/result",
+          "source_value": "Exact cumulative postoperative sufentanil mass",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Timepoint/window",
+          "source_value": "Requested0–24h cumulative dose: Insufficient information / not reported.",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        },
+        {
+          "field": "Data type",
+          "source_value": "Not reported",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n intervention",
+          "source_value": 44,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Randomized n comparator",
+          "source_value": 44,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Mean intervention",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "SD intervention",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Median intervention",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 intervention",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 intervention",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events intervention",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Mean comparator",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "SD comparator",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Median comparator",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q1 comparator",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Q3 comparator",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Events comparator",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Unit/scale",
+          "source_value": "µg sufentanil",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Reported P",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Directly reported?",
+          "source_value": "No",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived/converted?",
+          "source_value": "No",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Derived effect measure",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Derived effect",
+          "source_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "NOT APPLICABLE / NO SOURCE NUMBER"
+        },
+        {
+          "field": "Exact 0-24 h postoperative opioid?",
+          "source_value": "No",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Primary opioid meta-analysis eligible?",
+          "source_value": "No",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Other analysis eligibility",
+          "source_value": "Not eligible for continuous 24-h opioid meta-analysis without author data",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Shared-control / multi-arm issue",
+          "source_value": "No",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source-QC issue",
+          "source_value": "Final PCIA volume/concentration and exact cumulative sufentanil mass are not reported",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source location",
+          "source_value": "PCIA formulation section / missing outcome",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Source PDF URL",
+          "source_value": "https://drive.google.com/file/d/1-JWKZgQXaQQQBZgMSDqyIP-vG9aAxBqb/view?usp=drivesdk",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "VERIFIED WITH QUALIFICATION"
+        },
+        {
+          "field": "Record status",
+          "source_value": "AUTHOR DATA NEEDED",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+          "status": "CORRECTED"
+        }
+      ],
+      "changes": [
+        {
+          "field": "Record status",
+          "old_value": "MISSING / AUTHOR DATA NEEDED",
+          "source_value": "AUTHOR DATA NEEDED",
+          "final_value": "AUTHOR DATA NEEDED",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n intervention",
+          "old_value": 42,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        },
+        {
+          "field": "Analyzed n comparator",
+          "old_value": 43,
+          "source_value": null,
+          "final_value": null,
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        },
+        {
+          "field": "Timepoint/window",
+          "old_value": "0-24 h",
+          "source_value": "Requested0–24h cumulative dose: Insufficient information / not reported.",
+          "final_value": "Requested0–24h cumulative dose: Insufficient information / not reported.",
+          "source_location": "p4pumpformulation; no consumptionresult",
+          "reason": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+          "severity": "material"
+        }
+      ],
+      "source_pdf": "109499.pdf",
+      "source_evidence": "No numericcumulativesufentanil24hresult; noresult-specificdenominators; trialrandomization44/44retained. Alltypedresultnumbersnull. AdministrativeID/URL retainedprovenance; nullalternateformatfieldsnotapplicable.",
+      "drug": "sufentanil",
+      "route": "IV",
+      "pca_formulation": "Sufentanil2ug/kg plus saline; finalvolume/concentrationunreported;2mL/h basal,0.5mLbolus15minlockout",
+      "rescue_regimen": "Insufficient information / not reported.",
+      "critical_qc": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow.",
+      "analysis_eligibility": "No24hdoseanalysis",
+      "notes": "Source internal inconsistencies retained: flatus/stooldefinition, QoRgraph/prose, painP0.422/0.042. No opioidconversion. Registry24hpresswindowdoesnotestablishreportedtablewindow."
+    }
+  ],
+  "rob2": [
+    {
+      "result_id": "S004_ROW33",
+      "outcome": "anyPONV",
+      "time_window": "0–24h",
+      "comparison": "TEASversussham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "PY",
+          "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "PN",
+          "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers/intervention providers aware?",
+          "answer": "Y",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of trial context?",
+          "answer": "PN",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate assignment effect?",
+          "answer": "PY",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze by randomized assignment?",
+          "answer": "NA",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+          "source_location": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+          "reasoning": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+          "source_location": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+          "reasoning": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+          "source_location": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+          "reasoning": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+          "source_location": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+          "reasoning": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "source_location": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "reasoning": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "source_location": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "reasoning": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of assignment?",
+          "answer": "PY",
+          "evidence": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "source_location": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "reasoning": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "Y",
+          "evidence": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "source_location": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "reasoning": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "source_location": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "reasoning": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was a prespecified analysis plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV.",
+          "source_location": "85/88and47PONVcases; missing3smallrelativetoevents, surgery-basedexclusions ratherthanPONV."
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown.",
+          "source_location": "p3zero-currentshamdespitesensorymusclecontraction; participantreportedsymptomsQoR/PONV/pain; consistentmeasurementbutactualexpectationinfluencenotshown."
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Sensoryunmaskingandunavailableprospectiveanalysisdetails; primaryeventnumeratorbackcalculationtransparent.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "SelectedPONVoverallSomeconcernsunchanged; D2Lowbecauseno trial-contextdeviationsevidence."
+    },
+    {
+      "result_id": "S004_ROW34",
+      "outcome": "intraoperativeremifentanil",
+      "time_window": "intraoperative",
+      "comparison": "TEASversussham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "PY",
+          "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "PN",
+          "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers/intervention providers aware?",
+          "answer": "Y",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of trial context?",
+          "answer": "PN",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate assignment effect?",
+          "answer": "PY",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze by randomized assignment?",
+          "answer": "NA",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "source_location": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "reasoning": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "source_location": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "reasoning": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of assignment?",
+          "answer": "Y",
+          "evidence": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "source_location": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "reasoning": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "Y",
+          "evidence": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "source_location": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "reasoning": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NI",
+          "evidence": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "source_location": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "reasoning": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was a prespecified analysis plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 4,
+          "judgment": "Some concerns",
+          "reasoning": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated.",
+          "source_location": "p3unmaskedanesthetist titratesremifentaniltoMAP/BISunderstandardprotocol; totaldoseisrecordable but providerdecisionmayinfluenceneed; actualbiasnotdemonstrated."
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Unmaskedtitration; unclearprospectiveanalyses; excludedfrompostoperativeopioidsynthesisregardless.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "SelectedPONVoverallSomeconcernsunchanged; D2Lowbecauseno trial-contextdeviationsevidence."
+    },
+    {
+      "result_id": "S004_ROW35",
+      "outcome": "totalPCIApresses",
+      "time_window": "postoperative, registry24h",
+      "comparison": "TEASversussham",
+      "effect_of_interest": "assignment to intervention",
+      "signaling_questions": [
+        {
+          "domain": 1,
+          "question": "1.1 Was the allocation sequence random?",
+          "answer": "Y",
+          "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 1,
+          "question": "1.2 Was allocation concealed until enrollment and assignment?",
+          "answer": "PY",
+          "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 1,
+          "question": "1.3 Did baseline differences suggest a randomization problem?",
+          "answer": "PN",
+          "evidence": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 2,
+          "question": "2.1 Were participants aware of assignment?",
+          "answer": "PY",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.2 Were carers/intervention providers aware?",
+          "answer": "Y",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.3 Were there deviations arising because of trial context?",
+          "answer": "PN",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.4 Were these deviations likely to affect the outcome?",
+          "answer": "NA",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.5 Were deviations balanced between groups?",
+          "answer": "NA",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.6 Was an appropriate analysis used to estimate assignment effect?",
+          "answer": "PY",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 2,
+          "question": "2.7 Was there potential for substantial impact of failure to analyze by randomized assignment?",
+          "answer": "NA",
+          "evidence": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 3,
+          "question": "3.1 Were data available for all or nearly all randomized participants?",
+          "answer": "PY",
+          "evidence": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 3,
+          "question": "3.2 Is there evidence the result was not biased by missing data?",
+          "answer": "NA",
+          "evidence": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 3,
+          "question": "3.3 Could missingness depend on the true outcome value?",
+          "answer": "NA",
+          "evidence": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 3,
+          "question": "3.4 Is it likely missingness depended on the true value?",
+          "answer": "NA",
+          "evidence": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 4,
+          "question": "4.1 Was the outcome measurement method inappropriate?",
+          "answer": "N",
+          "evidence": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "source_location": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "reasoning": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption."
+        },
+        {
+          "domain": 4,
+          "question": "4.2 Could ascertainment differ between groups?",
+          "answer": "PN",
+          "evidence": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "source_location": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "reasoning": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption."
+        },
+        {
+          "domain": 4,
+          "question": "4.3 Were outcome assessors aware of assignment?",
+          "answer": "N",
+          "evidence": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "source_location": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "reasoning": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption."
+        },
+        {
+          "domain": 4,
+          "question": "4.4 Could knowledge influence outcome assessment?",
+          "answer": "NA",
+          "evidence": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "source_location": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "reasoning": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption."
+        },
+        {
+          "domain": 4,
+          "question": "4.5 Was outcome assessment likely influenced by knowledge?",
+          "answer": "NA",
+          "evidence": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "source_location": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "reasoning": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption."
+        },
+        {
+          "domain": 5,
+          "question": "5.1 Was a prespecified analysis plan finalized before unblinded data were available?",
+          "answer": "NI",
+          "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        },
+        {
+          "domain": 5,
+          "question": "5.2 Was the numerical result likely selected from multiple eligible outcome measurements?",
+          "answer": "NI",
+          "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        },
+        {
+          "domain": 5,
+          "question": "5.3 Was the numerical result likely selected from multiple eligible analyses?",
+          "answer": "NI",
+          "evidence": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        }
+      ],
+      "domains": [
+        {
+          "domain": 1,
+          "judgment": "Low",
+          "reasoning": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance.",
+          "source_location": "p3SPSScomputer,opaque sequentialenvelopes; conflictingtimeofopeningvsstartTEAS but likelyconcealedpriorassignment; baselineTable1notcompellingimbalance."
+        },
+        {
+          "domain": 2,
+          "judgment": "Low",
+          "reasoning": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext.",
+          "source_location": "p3maximumtoleratedcurrentvsnone; blindedassessors/unblindedanesthetists; standardizedTAPandPCA; procedureexclusions3notknowntoarisefromtrialcontext."
+        },
+        {
+          "domain": 3,
+          "judgment": "Low",
+          "reasoning": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable.",
+          "source_location": "Figure1 85/88observed;2proceduralchangesTEAS,1longsurgerycontrol; nearlyallcontinuousoutcomesavailable."
+        },
+        {
+          "domain": 4,
+          "judgment": "Low",
+          "reasoning": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption.",
+          "source_location": "Maskedrecorders assessrecordedpresscounts; electroniccountnot alteredbyassessorbelief. Selfdosingbehaviorcanrespondtoexperiencebutthisisnotproofmeasurementbias; notdrugconsumption."
+        },
+        {
+          "domain": 5,
+          "judgment": "Some concerns",
+          "reasoning": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown.",
+          "source_location": "OfficialChiCTR2200058283indexedrecordregisteredApril4priorApril20recruitment; listsPONV2/4/6/24h,VAS24h,QoR4024h,PCA24h; latestDec2022versionnotoriginalSAP. Publicationadds48h andNRS; nature/reason/amendmenttimingunknown."
+        }
+      ],
+      "overall": "Some concerns",
+      "overall_reasoning": "Objectivelyrecordedcountlowmeasurementbias; reportingwindowandanalysisprespecificationuncertain.",
+      "old_selected_overall": "Some concerns",
+      "changes_from_old": "SelectedPONVoverallSomeconcernsunchanged; D2Lowbecauseno trial-contextdeviationsevidence."
+    }
+  ],
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "PCIApresses not cumulativeconsumption; unknown concentration andweight; intraoperativeremifentanilnotpostoperative.",
+    "postoperative": false,
+    "explicit_0_24h": false,
+    "cumulative_consumption": false,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "sufentanil",
+    "route": "IV",
+    "unit": "Insufficient information / not reported.",
+    "raw_values": {},
+    "comparison_selection": "No verified cumulative postoperative0–24h result",
+    "multiarm_handling": "Two-arm trial",
+    "source_location": "pp3–4,9–10"
+  },
+  "duplicate_map": [],
+  "author_contact": [
+    {
+      "missing_information": "Dose/concentration/window and source internal discrepancies",
+      "why_it_matters": "Preventsvalidopioid,GIfamilyandQoRextraction",
+      "analysis_affected": "opioid24h,GI,QoR,pain",
+      "can_proceed_without": "QualifiedPONV andrawpresscounts",
+      "priority": "HIGH",
+      "exact_question": "Pleaseprovide exact0–24h cumulativesufentanilmass andpumpconcentration; clarifywhetherGIeventwasflatusorstool; provideQoR40means/SDbytime andresolve24hNRS P0.422vs0.042."
+    }
+  ],
+  "unblinded_supplemental_checks": [
+    "PostbaselinecheckedderivedRR/MD; intraoperativeremifentanilPprinted0.031retainedwithstatisticalinconsistencyflag."
+  ],
+  "summary": "Fourrowsaudited; PONVcountsconfirmedasderived; remifentanilintraoperative andPCApressesnotpostoperativedose. Threeobservedrow-specificRoBcompleted; absentdoseheld. MajoradditionalGI/QoRsourceconflictsdocumented."
+}

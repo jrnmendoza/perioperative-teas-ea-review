@@ -1,0 +1,33 @@
+{
+  "Study_ID": "S061",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_at": "2026-09-05T15:27:44.068Z",
+  "phase_a_saved_before_baseline": true,
+  "baseline_rows": 2,
+  "reviewed_rows": 2,
+  "reviewed_row_ids": [
+    254,
+    255
+  ],
+  "result_specific_rob_count": 3,
+  "unresolved": [
+    {
+      "missing_information": "Fentanyl units, window and complete opioid accounting",
+      "why_it_matters": "Printed totals and no-difference statement do not reconcile with mean/SD/n or PCA delivery description.",
+      "analysis_affected": "Any opioid dose synthesis",
+      "can_proceed_without": "Preserve raw reported data; exclude primary24h and hold48h pooling.",
+      "priority": "HIGH",
+      "exact_question": "Please confirm whether0.67±0.09 and0.73±0.12 are mg fentanyl, specify the accumulation interval and all additional opioid doses, explain consistency with effective1-mL boluses from10µg/kg in100mL without basal infusion, and provide exact0–24h means/SDs/n."
+    },
+    {
+      "missing_information": "Numerical24h VAS SD, excluded-patient outcomes and cohort dates",
+      "why_it_matters": "SDs are unlabeled graph bars, clinical exclusions may bias outcomes, and overlap with previous reports is unresolved.",
+      "analysis_affected": "Pain/PONV and independence assessment",
+      "can_proceed_without": "Means and derived PONV counts retained with high RoB; no VAS mean/SD pooling.",
+      "priority": "HIGH",
+      "exact_question": "Please provide24h resting VAS SDs, arm-specific reasons/outcomes for all seven exclusions, precise PONV clock, and recruitment dates/nonoverlap with An2010a/b and Yang2012."
+    }
+  ],
+  "summary": "Both baseline rows adjudicated. Preserved printed fentanyl summaries but replaced automatic48h eligibility with an author-data hold; no exact24h opioid endpoint. Source-first inspection additionally recovered24h resting VAS means2.6/3.07 (SD unavailable) and corrected abstract PONV significance using full-text P=.058.",
+  "adjudicated_at": "2026-09-05T15:30:19.997Z"
+}

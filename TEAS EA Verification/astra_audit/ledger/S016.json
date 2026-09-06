@@ -1,0 +1,15 @@
+{
+  "Study_ID": "S016",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "source_publication_read_complete": true,
+  "outcome_rows_total": 6,
+  "outcome_rows_adjudicated": 6,
+  "rob2_results": 5,
+  "limitations": "Six rows reviewed. PONV has direct counts and explicit48h interval. Press-count window downgraded from inferred48h. Postoperative dose absent; primary QoR15 numeric values captured inPhaseA.",
+  "artifacts": [
+    "phase_a/S016.json",
+    "adjudicated/S016.json"
+  ],
+  "reviewer_model": "gpt-6-astra"
+}

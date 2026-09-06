@@ -1,0 +1,426 @@
+{
+  "Study_ID": "S062",
+  "Study": "Chen 2015 thyroidectomy QoR",
+  "identity": {
+    "title": "Does transcutaneous electric acupoint stimulation improve the quality of recovery after thyroidectomy? A prospective randomized controlled trial",
+    "year": 2015,
+    "doi": "Insufficient information / not reported.",
+    "pdf": "037_chen_2015_thyroidectomy_lund.pdf",
+    "notes": "Yanqing Chen, Yang Yang, Yusheng Yao, Dongsheng Dai, Bin Qian, Pingping Liu; IJCEM8(8):13622–13627, PMID26550304, IJCEM0010937; publishedAugust30,2015."
+  },
+  "source_review": {
+    "full_publication": "All six PDF pages read.",
+    "visual_inspection": [
+      "p3 CONSORT Figure2",
+      "p4 Tables1–3 and conflicting narrative"
+    ],
+    "registration": {
+      "id": "NCT02333747",
+      "source": "https://clinicaltrials.gov/api/v2/studies/NCT02333747",
+      "local": "batch6_S062_registry.json",
+      "first_submitted": "2015-01-02",
+      "first_posted": "2015-01-07",
+      "study_start_precision": "January2015; exact day unavailable",
+      "last_update": "2016-02-23",
+      "finding": "Current record specifies primary globalQoR40 at24h; secondaryPONV,pain,satisfaction. Rescue counts and PACU duration are not listed in current outcomes. No dated SAP or earliest registry-version content verified; chronology within enrollment month is uncertain."
+    }
+  },
+  "design": {
+    "population": "Women18–60,ASA I–II, elective thyroidectomy under GA; Fujian Provincial Hospital January–May2015.",
+    "randomized": {
+      "TEAS": 42,
+      "sham": 42
+    },
+    "analyzed": {
+      "TEAS": 41,
+      "sham": 42
+    },
+    "modality": "TEAS",
+    "comparator": "Sham / no-current electrodes at same acupoints",
+    "location": "pp1–4; Figure2p3",
+    "intervention": "BilateralLI4/PC6,2/10Hz,6–9mA adjusted to slight muscle twitch/maximum tolerance,30min awake before induction.",
+    "randomization": "Computer-generated table; sequentially numbered opaque sealed envelopes.",
+    "blinding": "Claims patients, attending anesthesiologist, surgeons and collector blinded, but awake perceptible stimulation contrasts with inactive sham; no blinding-success assessment.",
+    "attrition": "One TEAS patient discontinued for unspecified protocol breach;83/84 analyzed.",
+    "ethics": "K2014-12-003"
+  },
+  "regimen": {
+    "drug": "Morphine rescue; sufentanil at induction",
+    "route": "Intravenous",
+    "pca": "No PCA reported; standardized2mg IV morphine rescue boluses when VAS needs reduction below4.",
+    "rescue": "IV morphine2mg per rescue to maintainVAS<4; no other postoperative opioid regimen reported.",
+    "anesthesia": "Sufentanil0.5µg/kg and propofol2mg/kg induction; sevoflurane maintenance; tropisetron5mg before end."
+  },
+  "independent_outcomes": [
+    {
+      "result": "GlobalQoR40",
+      "window": "24h",
+      "format": "Median[IQR]",
+      "n": [
+        41,
+        42
+      ],
+      "intervention": [
+        183,
+        172,
+        190
+      ],
+      "comparator": [
+        168,
+        154,
+        183
+      ],
+      "scale": "40–200; higher better",
+      "p": "<0.001",
+      "location": "Table2p4",
+      "conflict": "Narrative p4 gives control upper quartile186, whereas table's explicit cell is183. Preserve both as source conflict; table chosen provisionally, not as independent numerical truth from repeated agreement."
+    },
+    {
+      "result": "QoR40 dimensions",
+      "window": "24h",
+      "format": "Median[IQR]",
+      "EA": {
+        "emotional": [
+          41,
+          36,
+          45
+        ],
+        "comfort": [
+          50,
+          45,
+          54
+        ],
+        "support": [
+          34,
+          33,
+          35
+        ],
+        "independence": [
+          24,
+          23,
+          25
+        ],
+        "pain": [
+          30,
+          25,
+          36
+        ]
+      },
+      "control": {
+        "emotional": [
+          38,
+          33,
+          42
+        ],
+        "comfort": [
+          43,
+          40,
+          47
+        ],
+        "support": [
+          34,
+          33,
+          35
+        ],
+        "independence": [
+          24,
+          23,
+          25
+        ],
+        "pain": [
+          25,
+          22,
+          30
+        ]
+      },
+      "p": {
+        "emotional": 0.023,
+        "comfort": "<0.001",
+        "support": 0.174,
+        "independence": 0.252,
+        "pain": "<0.001"
+      },
+      "location": "Table2p4",
+      "conflict": "EA pain-domainQ3=36 is impossible for seven five-point items(max35) under instrument definitionp2. Do not repair; ask whether domain/global scores were calculated correctly."
+    },
+    {
+      "result": "Average pain score",
+      "window": "Within first24h; repeated1/2/4/8/24h assessments; averaging rule not explicit",
+      "format": "Mean(SD)",
+      "n": [
+        41,
+        42
+      ],
+      "mean_EA": 2.6,
+      "sd_EA": 0.7,
+      "mean_control": 3.9,
+      "sd_control": 0.9,
+      "p": 0.013,
+      "scale": "VAS0–10; activity unspecified",
+      "location": "Table3p4; methodsp2",
+      "conflict": "Reported independent t-test P=.013 does not agree with printed mean/SD/n (t about7.35). Preserve raw summaries and printedP; query, not recalculate as replacement."
+    },
+    {
+      "result": "Maximum pain score",
+      "window": "Within24h, not point24h",
+      "format": "Median[IQR]",
+      "EA": [
+        5,
+        4,
+        6
+      ],
+      "control": [
+        6,
+        5,
+        7
+      ],
+      "p": 0.021,
+      "scale": "VAS0–10; activity unspecified",
+      "location": "Table3p4"
+    },
+    {
+      "result": "Time to first rescue analgesia",
+      "window": "Within24h; exact time origin unspecified",
+      "format": "Mean(SD)",
+      "mean_EA": 69,
+      "sd_EA": 8,
+      "mean_control": 37,
+      "sd_control": 9,
+      "unit": "min",
+      "p": "<0.001",
+      "location": "Table3p4"
+    },
+    {
+      "result": "Cumulative number of rescue analgesia administrations",
+      "window": "24h after surgery",
+      "format": "Median[IQR]",
+      "EA": [
+        1,
+        1,
+        3
+      ],
+      "control": [
+        3.5,
+        2,
+        7
+      ],
+      "unit": "administrations",
+      "p": 0.004,
+      "location": "Table3p4; methodsIVmorphine2mg p2",
+      "qualification": "Not mg,notmean/SD,notbuttonpresses. Fixed2mg rescue described; no conversion performed and all-systemic coverage not independently confirmed. AbstractP<.001 conflicts with table/proseP=.004."
+    },
+    {
+      "result": "AnyPONV",
+      "window": "24h after surgery",
+      "events": [
+        10,
+        26
+      ],
+      "n": [
+        41,
+        42
+      ],
+      "percent": [
+        24.4,
+        61.9
+      ],
+      "p": 0.001,
+      "location": "Table3p4; explicitdefinitionp2"
+    },
+    {
+      "result": "PACU stay",
+      "format": "Mean(SD)",
+      "EA": [
+        26,
+        6
+      ],
+      "control": [
+        37,
+        7
+      ],
+      "unit": "min",
+      "p": "<0.001",
+      "location": "Table3p4",
+      "qualification": "Not hospital length of stay or QoR."
+    },
+    {
+      "result": "Satisfaction",
+      "window": "24h",
+      "format": "Median[IQR]",
+      "EA": [
+        8,
+        6,
+        8
+      ],
+      "control": [
+        6,
+        5,
+        7
+      ],
+      "scale": "1–10;higherbetter",
+      "p": 0.002,
+      "location": "Table3p4",
+      "qualification": "NotQoR40."
+    }
+  ],
+  "source_conflicts": [
+    "QoR40 controlQ3 table183 vs narrative186",
+    "QoR40 pain-domainQ3=36 exceeds35 maximum",
+    "AverageVAS mean/SD/n incompatible with printedP=.013 under stated independentt-test",
+    "Abstract analgesicP<.001 versus table/proseP=.004"
+  ],
+  "independence": "Source-comparison with S063 establishes nonoverlapping enrollment periods (S063Aug–Dec2014;S062Jan–May2015), different ethics approvals(K2014-07-003 vsK2014-12-003), sample sizes and anesthesia/rescue regimens. Same center, PI and TEAS parameters do not imply duplicate patients.",
+  "opioid_candidate": {
+    "decision": "sensitivity",
+    "reason": "Direct24h rescue-administration counts with a documented fixed2mg IV morphine regimen can support a count/median sensitivity result. Not a reported mass mean/SD; no conversion performed. All-systemic coverage needs confirmation.",
+    "postoperative": true,
+    "explicit_0_24h": true,
+    "cumulative_consumption": true,
+    "covers_all_systemic_opioid": "Insufficient information / not reported.",
+    "drug": "Morphine",
+    "route": "Intravenous",
+    "unit": "Rescue administrations",
+    "raw_values": {
+      "median_intervention": 1,
+      "q1_intervention": 1,
+      "q3_intervention": 3,
+      "n_intervention": 41,
+      "median_comparator": 3.5,
+      "q1_comparator": 2,
+      "q3_comparator": 7,
+      "n_comparator": 42
+    },
+    "comparison_selection": "TEAS versus inactive same-site sham",
+    "multiarm_handling": "Two arms;no sharedcontrol",
+    "source_location": "Table3p4; rescue methodsp2",
+    "conversion_performed": false
+  },
+  "rob_independent": {
+    "questions": {
+      "1.1": [
+        "Y",
+        "Computer-generated randomized-number table.",
+        "p2"
+      ],
+      "1.2": [
+        "Y",
+        "Sequentially numbered opaque sealed envelopes.",
+        "p2"
+      ],
+      "1.3": [
+        "PN",
+        "No compelling imbalance suggesting failure;83/84 baseline reported. Several printed P values are questionable, but raw demographic contrasts do not establish compromised randomization.",
+        "Table1p4"
+      ],
+      "2.1": [
+        "PY",
+        "Awake6–9mA stimulation with muscle twitch versus no current; claimed blinding has no success test.",
+        "p2"
+      ],
+      "2.2": [
+        "Y",
+        "Operator necessarily knows whether delivering stimulation.",
+        "p2"
+      ],
+      "2.3": [
+        "NI",
+        "One unspecified protocol breach; cannot establish whether caused by trial context.",
+        "Figure2p3;resultsp4"
+      ],
+      "2.4": [
+        "NI",
+        "Nature of protocol breach not reported; its influence on recovery cannot be assessed.",
+        "pp3–4"
+      ],
+      "2.5": [
+        "NI",
+        "Only one TEAS breach reported; no details of corresponding cointerventions or deviations.",
+        "pp3–4"
+      ],
+      "2.6": [
+        "N",
+        "One randomized TEAS participant omitted because of protocol breach.",
+        "pp3–4"
+      ],
+      "2.7": [
+        "PN",
+        "Only1/84 omitted; substantial impact on15-point medianQoR contrast or16-event PONV difference is unlikely, though not full ITT.",
+        "Tables2–3;Figure2"
+      ],
+      "3.1": [
+        "Y",
+        "83/84(98.8%) available; essentially all for these sizable contrasts.",
+        "pp3–4"
+      ],
+      "3.2": [
+        "NA",
+        "Nearly all outcome data available.",
+        "Figure2p3"
+      ],
+      "3.3": [
+        "NA",
+        "Nearly all outcome data available.",
+        "Figure2p3"
+      ],
+      "3.4": [
+        "NA",
+        "Nearly all outcome data available.",
+        "Figure2p3"
+      ],
+      "4.1": [
+        "N",
+        "QoR40 is an appropriate validated patient-reported instrument; impossible domain quartile is a reporting/scoring QC problem requiring clarification, not proof of differential measurement.",
+        "p2;Table2p4"
+      ],
+      "4.2": [
+        "PN",
+        "Same questionnaire and follow-up timing, blinded collector.",
+        "p2"
+      ],
+      "4.3": [
+        "PY",
+        "Participant is the QoR assessor and may discern perceptible preoperative current versus inactive sham.",
+        "p2"
+      ],
+      "4.4": [
+        "Y",
+        "Self-reported recovery can be influenced by treatment expectancy.",
+        "p2"
+      ],
+      "4.5": [
+        "NI",
+        "No masking-success data or direct evidence of expectancy-related reporting; cannot claim likely influence solely from sensation.",
+        "pp2,5"
+      ],
+      "5.1": [
+        "NI",
+        "Registry first postedJan7,2015 within enrollment month; current2016 record is not a dated detailed SAP before unblinding.",
+        "NCT02333747API;pp1–2"
+      ],
+      "5.2": [
+        "PN",
+        "Global24hQoR40 is clearly primary and consistent with current registration; no evidence of selecting a QoR instrument/time based on significance.",
+        "p2;Table2;registry"
+      ],
+      "5.3": [
+        "NI",
+        "No dated analysis plan establishing median/global/domain handling before access to outcomes.",
+        "pp2–3;registry"
+      ]
+    },
+    "domains": [
+      "Low",
+      "Some concerns",
+      "Low",
+      "Some concerns",
+      "Some concerns"
+    ],
+    "overall": "Some concerns",
+    "reason": "Good sequence/concealment and near-complete follow-up; unspecified protocol breach, possible sensory unmasking of self-reports and unavailable prospective detailed analysis plan. Source numerical conflicts are separately flagged, not solved by RoB rating."
+  },
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "saved_at": "2026-09-05T15:32:49.613Z",
+  "missing_information_convention": "Insufficient information / not reported."
+}

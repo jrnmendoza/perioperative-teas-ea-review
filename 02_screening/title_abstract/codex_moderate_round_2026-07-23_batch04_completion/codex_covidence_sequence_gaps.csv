@@ -1,0 +1,12 @@
+previous_covidence_number,next_covidence_number,missing_number_or_range,previous_vote_registered_yes_no,queue_order_confirmed_yes_no,visible_record_bypassed_yes_no,status,action_taken,timestamp,notes
+231,234,232-233,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:35:00.162Z,Covidence displayed no reason for the absent numbers.
+236,238,237,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:36:32.270Z,Covidence displayed no reason for the absent number.
+239,241,240,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:37:34.907Z,Covidence displayed no reason for the absent number.
+241,243,242,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:38:11.245Z,Covidence displayed no reason for the absent number.
+246,248,247,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:40:49.923Z,Covidence displayed no reason for the absent number.
+250,252,251,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:42:26.408Z,Covidence displayed no reason for the absent number.
+252,255,253-254,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:44:06.274Z,Covidence displayed no reason for the absent numbers.
+255,257,256,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:44:35.085Z,Covidence displayed no reason for the absent number.
+258,260,259,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:45:24.523Z,Covidence displayed no reason for the absent number.
+261,263,262,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:47:37.705Z,Covidence displayed no reason for the absent number.
+263,266,264-265,yes,yes,no,UNEXPLAINED_NUMBERING_GAP,Logged gap and continued with the next distinct ascending citation.,2026-07-23T13:48:05.892Z,Covidence displayed no reason for the absent numbers.

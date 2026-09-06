@@ -1,0 +1,167 @@
+{
+  "Study_ID": "S011",
+  "Study": "Yeh 2011",
+  "title": "Pain reduction of acupoint electrical stimulation for patients with spinal surgery: A placebo-controlled study",
+  "year": 2011,
+  "doi": "10.1016/j.ijnurstu.2010.10.009",
+  "pdf": "covidence_828_full_article.pdf",
+  "randomized": "90 randomized 30 each after99 eligible",
+  "analyzed": {
+    "AES": 30,
+    "Sham": 30,
+    "Control": 30
+  },
+  "route": "intravenous central venous line p704; linked2010 says epidural",
+  "timing": "third/fourth postoperative hour from recovery-room transfer,20min each; no preoperative session",
+  "results": {
+    "opioid24": {
+      "unit": "mg",
+      "format": "mean SD",
+      "AES": [
+        19.3,
+        9.7
+      ],
+      "Sham": [
+        21.6,
+        13.1
+      ],
+      "Control": [
+        28,
+        12.1
+      ],
+      "location": "p707 Table3 visually verified; n30 each footnote but F(2,84) implies87 observations, unresolved"
+    },
+    "pain_worst24": {
+      "AES": [
+        5.4,
+        1.6
+      ],
+      "Sham": [
+        6.5,
+        1.6
+      ],
+      "Control": [
+        6.5,
+        1.7
+      ]
+    },
+    "pain_average24": {
+      "AES": [
+        2.1,
+        1.3
+      ],
+      "Sham": [
+        3,
+        1.4
+      ],
+      "Control": [
+        3,
+        1.4
+      ]
+    },
+    "pain_interference": {
+      "special": [
+        [
+          1.6,
+          1.8
+        ],
+        [
+          1.9,
+          2.1
+        ],
+        [
+          2.3,
+          2.5
+        ]
+      ],
+      "position": [
+        [
+          5.2,
+          1.5
+        ],
+        [
+          6.1,
+          1.5
+        ],
+        [
+          6.4,
+          1.7
+        ]
+      ],
+      "daily": [
+        [
+          5.3,
+          1.4
+        ],
+        [
+          6.1,
+          1.5
+        ],
+        [
+          6.5,
+          1.7
+        ]
+      ],
+      "talk": [
+        [
+          0.3,
+          0.7
+        ],
+        [
+          0.8,
+          1.3
+        ],
+        [
+          1.1,
+          1.3
+        ]
+      ],
+      "sleep": [
+        [
+          1.1,
+          1.2
+        ],
+        [
+          2.1,
+          2.2
+        ],
+        [
+          2.4,
+          1.7
+        ]
+      ],
+      "emotion": [
+        [
+          0.2,
+          0.6
+        ],
+        [
+          0.3,
+          0.8
+        ],
+        [
+          0.4,
+          0.8
+        ]
+      ]
+    },
+    "pain_location": "p707 Table2 mean SD BPI0–10 recalled first24h, NOT exact24 rest/movement. Fig3 early present pain graph-only.",
+    "other": "PONV event counts, GI and QoR absent."
+  },
+  "rob": "D1 Y/PN/PN:computer sequence, 'without sealed envelopes' visually verified p704; no alternative concealment; baseline differences compatible with chance. High D1. D2 PN/Y/PN/NA/NA/PY/NA:active sham, unblinded researchers, no reported trial-context departures; completers assigned groups. D3 pain Y/NA/NA/NA90/90; opioid NI/NI/NI/NI because n90 conflicts F df84. D4 pain N/PN/PY/PY/NI:unblinded researchers and no independent assessor, active sham mitigates expectancy; opioid N/PN/PY/PN/NA objective recorded delivered drug (self-dosing behavior distinguished). D5 NI/NI/NI:no prospective SAP, multiple endpoints/analyses. Overall High from D1.",
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "phase": "A_SOURCE_ONLY",
+  "baseline_accessed": false,
+  "source_read": "Complete page-delimited publication read; key numeric tables rendered and visually inspected.",
+  "modality": "TEAS",
+  "acupoints": "BL40 GB34 HT7 P6 bilateral,2/100Hz,4–7mA",
+  "pca": "morphine1mg bolus10min lockout;2010 no basal infusion;2011 basal formulation/rescue Insufficient information / not reported.",
+  "comparators": "off-point active stimulation sham and no stimulation usual care; separate comparisons sharing active arm",
+  "family": {
+    "classification": "UNRESOLVED",
+    "evidence": "Strong evidence of overlapping cohort/reanalysis, insufficient to distinguish SAME TRIAL from PARTIAL COHORT OVERLAP. Four shared authors (Yeh, Chung, Kang-Min Chen, Hsing-Hsia Chen); Tsou additionally in 2010. Same northern Taiwan lumbar surgery/GA population, BL40 GB34 HT7 P6, 2/100 Hz 4–7 mA 20 min and 2-cm nonmeridian sham. All three age means/SD identical (60.7±12.0,57.2±15.7,63.2±14.0). Sham arm n=30, sex 9/21, diagnoses 5/10/15, chronic disease 17/8/5/0, blood loss 477.7±459.1, opioid 21.6±13.1, button presses 47.4±39.7 and initial demand 92.8±109.1 identical. Differences: 2010 99 included/94 analyzed 33/30/31 versus 2011 99 eligible/90 randomized/analyzed 30 each; 4000 versus 3000 beds; 2010 preoperative and ward+1/+2h versus 2011 recovery+3/+4h; epidural versus explicit central-line IV PCA; active/control opioid 18.6±9.7/27.2±12.5 versus19.3±9.7/28.0±12.1. Recruitment calendar dates absent in both. Does not prove independent cohorts.",
+    "source_location": "2010 pp11,13–15 Tables2–4;2011 pp704–707 Fig1 Tables1–3",
+    "analysis_handling": "Hold both publications from independent counting. Hold opioid family until author confirms patient overlap, route, analyzed denominators and authoritative numerical dataset. Preserve separate report values; never substitute numbers across publications."
+  }
+}

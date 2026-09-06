@@ -1,0 +1,23 @@
+{
+  "Study_ID": "S005",
+  "stage": "ADJUDICATED",
+  "phase_a_saved_before_baseline": true,
+  "outcome_rows_expected": 2,
+  "outcome_rows_reviewed": 2,
+  "rob_results_reviewed": 1,
+  "baseline_rows": [
+    37,
+    38
+  ],
+  "limitations": [
+    "VASunits/formatunresolved",
+    "Noactualopioiddose",
+    "Registry/SAPnotaccessible"
+  ],
+  "files": [
+    "phase_a/S005.json",
+    "adjudicated/S005.json",
+    "ledger/S005.json"
+  ],
+  "summary": "Bothrowsauditedandheldforauthordata; painliteralformatverifiedvisuallyandHighRoB; PCAsettingsnotconsumption. AdditionalPONVrawcountsretainedinPhaseA."
+}

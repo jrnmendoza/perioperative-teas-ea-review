@@ -1,0 +1,343 @@
+{
+  "Study_ID": "S051",
+  "Study": "He 2026 (breast/WJCO)",
+  "identity": {
+    "title": "Effects of electroacupuncture combined with flurbiprofen axetil on postoperative pain and early functional recovery after breast cancer surgery",
+    "year": 2026,
+    "doi": "10.5306/wjco.v17.i2.114431",
+    "pdf": "covidence_41_verified.pdf",
+    "notes": "First page labels Case Control Study, footnote STROBE; methods describe prospective computer block randomized trial. Accept randomized description provisionally; clarify editorial/design inconsistency."
+  },
+  "design": {
+    "modality": "EA",
+    "comparator": "Superficial nonacupoint needling with inactive stimulator; both receive flurbiprofen axetil",
+    "randomized": {
+      "EA": 65,
+      "control": 65
+    },
+    "analyzed": {
+      "EA": 65,
+      "control": 65
+    },
+    "location": "pp2-4;Tables1-4",
+    "population": "Adults18-75 breast surgery, IV general anesthesia; Feb2019-Jan2020",
+    "intervention": "ST36/SP6 needles,2/10Hz per methods,30min preinduction through end; discussion2/100Hz conflicting"
+  },
+  "regimen": {
+    "drug": "morphine rescue (not measured); intraoperative sufentanil",
+    "route": "IV",
+    "pca": "Insufficient information / not reported.",
+    "rescue": "Morphine1-3mg IV or paracetamol1000mg IV according to VAS; FA50mg at suturing; tropisetron4.48mg IV",
+    "location": "p3; p7 explicitly rescue opioid not recorded"
+  },
+  "results": [
+    {
+      "outcome": "VAS exercise",
+      "format": "printed mean SD",
+      "window": "24/48/72h",
+      "T": [
+        [
+          2.862,
+          0.233
+        ],
+        [
+          1.785,
+          0.18
+        ],
+        [
+          1.115,
+          0.12
+        ]
+      ],
+      "C": [
+        [
+          3.954,
+          0.233
+        ],
+        [
+          2.108,
+          0.18
+        ],
+        [
+          1.215,
+          0.12
+        ]
+      ],
+      "n": [
+        65,
+        65
+      ],
+      "location": "p5 Table2 visually inspected"
+    },
+    {
+      "outcome": "VAS rest",
+      "format": "printed mean SD",
+      "window": "24/48/72h",
+      "T": [
+        [
+          1.789,
+          0.174
+        ],
+        [
+          0.631,
+          0.119
+        ],
+        [
+          0.415,
+          0.086
+        ]
+      ],
+      "C": [
+        [
+          2.692,
+          0.174
+        ],
+        [
+          1.169,
+          0.119
+        ],
+        [
+          0.631,
+          0.08
+        ]
+      ],
+      "n": [
+        65,
+        65
+      ],
+      "location": "p5 Table2"
+    },
+    {
+      "outcome": "Moderate/severe exercise pain VAS>4",
+      "window": "24/48/72h",
+      "T": [
+        32,
+        25,
+        16
+      ],
+      "C": [
+        42,
+        29,
+        19
+      ],
+      "n": [
+        65,
+        65
+      ],
+      "location": "p3 threshold; p5 Table2 moderate/severe subcounts30/2,24/1,16/0 vs41/1,29/0,19/0"
+    },
+    {
+      "outcome": "Moderate/severe rest pain",
+      "window": "24/48/72h",
+      "T": [
+        8,
+        5,
+        3
+      ],
+      "C": [
+        12,
+        6,
+        2
+      ],
+      "n": [
+        65,
+        65
+      ],
+      "location": "p5 Table2"
+    },
+    {
+      "outcome": "PONV composite",
+      "window": "Postoperative, interval unspecified",
+      "T": [
+        13,
+        65
+      ],
+      "C": [
+        22,
+        65
+      ],
+      "location": "p6 Table4"
+    },
+    {
+      "outcome": "Appetite loss",
+      "T": [
+        27,
+        65
+      ],
+      "C": [
+        36,
+        65
+      ],
+      "location": "p6 Table4"
+    },
+    {
+      "outcome": "Constipation and diarrhea separately",
+      "T": [
+        4,
+        65
+      ],
+      "C": [
+        4,
+        65
+      ],
+      "location": "p6 Table4"
+    },
+    {
+      "outcome": "BADL total (not QoR)",
+      "window": "24h",
+      "format": "median IQR",
+      "T": [
+        85,
+        75,
+        90,
+        65
+      ],
+      "C": [
+        80,
+        65,
+        87.5,
+        65
+      ],
+      "location": "p6 Table3"
+    }
+  ],
+  "source_conflicts": [
+    "VAS mean/SD pairs incompatible with numbersVAS>4, e.g. EA24h movement32/65>4 but mean2.862 SD0.233. Preserve print; no SEM assumption or correction.",
+    "Surgery counts Table1 total70 controls and60 EA despite65 each; percentages use130.",
+    "Methods2/10Hz vs discussion2/100Hz.",
+    "Editorial Case Control/STROBE vs randomized methods. No registration/SAP identified in full paper or official article page."
+  ],
+  "independence": "Distinct from He hepatectomy article by first-page identity, operation and setting; no linked cohort identified.",
+  "rob_independent": {
+    "questions": {
+      "1.1": [
+        "Y",
+        "Computer random length blocks explicitly described",
+        "p3"
+      ],
+      "1.2": [
+        "NI",
+        "Randomization investigator independent of anesthesia/recording, but concealment before enrollment unspecified",
+        "p3"
+      ],
+      "1.3": [
+        "NI",
+        "Surgery categories sum70/60 versus claimed65/65; baseline allocation table cannot be reconciled",
+        "p5 Table1"
+      ],
+      "2.1": [
+        "PY",
+        "Sensation-driven EA versus superficial inactive sham; authors acknowledge detectable differences",
+        "pp3,6"
+      ],
+      "2.2": [
+        "Y",
+        "Acupuncturists unblinded, independent of assessors",
+        "p3"
+      ],
+      "2.3": [
+        "PN",
+        "Uniform anesthesia and rescue protocol; no documented trial-context departures",
+        "p3"
+      ],
+      "2.4": [
+        "NA",
+        "No identified trial-context deviations",
+        "p3"
+      ],
+      "2.5": [
+        "NA",
+        "No identified deviations",
+        "p3"
+      ],
+      "2.6": [
+        "PY",
+        "130 included in statistics,65 each; no reported exclusions",
+        "p4"
+      ],
+      "2.7": [
+        "NA",
+        "Analysis apparently as randomized",
+        "p4"
+      ],
+      "3.1": [
+        "PY",
+        "All130 reportedly analyzed; no attrition indicated",
+        "p4"
+      ],
+      "3.2": [
+        "NA",
+        "All reportedly analyzed",
+        "p4"
+      ],
+      "3.3": [
+        "NA",
+        "All reportedly analyzed",
+        "p4"
+      ],
+      "3.4": [
+        "NA",
+        "All reportedly analyzed",
+        "p4"
+      ],
+      "4.1": [
+        "N",
+        "VAS appropriate; internal reporting inconsistency handled separately from instrument validity",
+        "pp3,5"
+      ],
+      "4.2": [
+        "PN",
+        "Same VAS schedule and movements",
+        "p3"
+      ],
+      "4.3": [
+        "PY",
+        "Patients self-assess and sensory masking uncertain",
+        "pp3,6"
+      ],
+      "4.4": [
+        "Y",
+        "Pain subject to expectancy",
+        "p6 limitations"
+      ],
+      "4.5": [
+        "NI",
+        "Authors identify possible expectancy but do not establish likelihood",
+        "p6"
+      ],
+      "5.1": [
+        "NI",
+        "No registration or prospectively finalized SAP in publication/official page",
+        "pp2-8"
+      ],
+      "5.2": [
+        "NI",
+        "Multiple pain measures/times without prospective specification",
+        "pp3,5"
+      ],
+      "5.3": [
+        "NI",
+        "No dated analysis plan and dispersion label inconsistent",
+        "pp4-5"
+      ]
+    },
+    "domains": [
+      "Some concerns",
+      "Low",
+      "Low",
+      "Some concerns",
+      "Some concerns"
+    ],
+    "overall": "High",
+    "reason": "Multiple unresolved concerns in design/allocation reporting, subjective assessment and prospective analysis substantially lower confidence; continuous pain additionally held for internally impossible printed SDs."
+  },
+  "opioid_candidate": {
+    "decision": "excluded",
+    "reason": "Rescue opioid consumption explicitly not recorded, p7."
+  },
+  "reviewer_model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "baseline_accessed": false,
+  "saved_at": "2026-09-05T15:04:49.005Z",
+  "missing_information_convention": "Insufficient information / not reported."
+}
