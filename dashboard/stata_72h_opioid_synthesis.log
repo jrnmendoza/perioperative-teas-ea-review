@@ -1,0 +1,381 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_72h_opioid_synt
+> hesis.log
+  log type:  text
+ opened on:   6 Sep 2026, 11:20:03
+
+. 
+. * ------------------------------------------------------------------------------
+. * 1. LOAD 72-H OPIOID CONSUMPTION DATASET
+. * ------------------------------------------------------------------------------
+. import delimited "dashboard/stata_72h_opioid_synthesis_data.csv", clear varnames(1)
+(encoding automatically selected: UTF-8)
+(30 vars, 4 obs)
+
+. 
+. describe
+
+Contains data
+ Observations:             4                  
+    Variables:            30                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_id        long    %12.0g                
+canonical_name  str10   %10s                  
+author          str5    %9s                   
+year            int     %8.0g                 
+modality        str4    %9s                   
+comparator      str10   %10s                  
+comparator_type str38   %38s                  
+stratum         str16   %16s                  
+native_drug     str13   %13s                  
+native_unit     str3    %9s                   
+mme_factor      byte    %8.0g                 
+arm1_n          byte    %8.0g                 
+arm1_mean_nat~e float   %9.0g                 
+arm1_sd_native  float   %9.0g                 
+arm2_n          byte    %8.0g                 
+arm2_mean_nat~e float   %9.0g                 
+arm2_sd_native  float   %9.0g                 
+arm1_mean       float   %9.0g                 
+arm1_sd         float   %9.0g                 
+arm2_mean       float   %9.0g                 
+arm2_sd         float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+opioid_status   str14   %14s                  
+rob2_overall    str13   %13s                  
+surgery_categ~y str29   %29s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. list canonical_name modality comparator md_mme se_mme hedges_g hedges_se opioid_status rob2_overal
+> l
+
+     +---------------------------------------------------------------------------------------------+
+  1. | canonica~e | modality | comparator | md_mme | se_mme | hedges_g | hedges~e |  opioid_status |
+     | Zhang 2025 |     TEAS |       Sham |  -26.2 |  3.044 |    -1.84 |     .257 | Primary Direct |
+     |---------------------------------------------------------------------------------------------|
+     |                                         rob2_overall                                        |
+     |                                                  Low                                        |
+     +---------------------------------------------------------------------------------------------+
+
+     +---------------------------------------------------------------------------------------------+
+  2. | canonica~e | modality | comparator | md_mme | se_mme | hedges_g | hedges~e |  opioid_status |
+     |   Xie 2014 |       EA |       Sham |  -18.5 |  2.062 |   -2.781 |     .443 | Primary Direct |
+     |---------------------------------------------------------------------------------------------|
+     |                                         rob2_overall                                        |
+     |                                        Some concerns                                        |
+     +---------------------------------------------------------------------------------------------+
+
+     +---------------------------------------------------------------------------------------------+
+  3. | canonica~e | modality | comparator | md_mme | se_mme | hedges_g | hedges~e |  opioid_status |
+     |  Wong 2006 |       EA |       Sham |   -8.4 |  7.099 |    -.467 |     .406 | Primary Direct |
+     |---------------------------------------------------------------------------------------------|
+     |                                         rob2_overall                                        |
+     |                                        Some concerns                                        |
+     +---------------------------------------------------------------------------------------------+
+
+     +---------------------------------------------------------------------------------------------+
+  4. | canonica~e | modality | comparator | md_mme | se_mme | hedges_g | hedges~e |  opioid_status |
+     |  Yang 2024 |       EA | Usual Care |    -.5 |  1.826 |    -.041 |     .149 | Primary Direct |
+     |---------------------------------------------------------------------------------------------|
+     |                                         rob2_overall                                        |
+     |                                        Some concerns                                        |
+     +---------------------------------------------------------------------------------------------+
+
+. 
+. * ------------------------------------------------------------------------------
+. * 2. CONTINUOUS 72-H OPIOID CONSUMPTION (IV MME mg)
+. * ------------------------------------------------------------------------------
+. meta set md_mme se_mme, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "72-H OPIOID SYNTHESIS: ALL 4 TRIALS (TEAS + EA, N=331)"
+72-H OPIOID SYNTHESIS: ALL 4 TRIALS (TEAS + EA, N=331)
+
+. di as txt "Random-Effects REML + Hartung-Knapp-Sidik-Jonkman (HKSJ) Adjustment"
+Random-Effects REML + Hartung-Knapp-Sidik-Jonkman (HKSJ) Adjustment
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      4
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 125.8055
+SE adjustment: Knapp–Hartung                        I2 (%) =   94.69
+                                                        H2 =   18.85
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zhang 2025 |        -26.200     -32.166     -20.234     25.97
+         Xie 2014 |        -18.500     -22.541     -14.459     26.97
+        Wong 2006 |         -8.400     -22.314       5.514     19.91
+        Yang 2024 |         -0.500      -4.079       3.079     27.16
+------------------+-------------------------------------------------
+            theta |        -13.600     -31.946       4.745
+--------------------------------------------------------------------
+95% prediction interval for theta: [-67.861,40.660]
+
+Test of theta = 0: t(3) = -2.36                  Prob > |t| = 0.0995
+Test of homogeneity: Q = chi2(3) = 71.30           Prob > Q = 0.0000
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "PRIMARY STRATUM 1: TEAS vs Sham at 72 Hours (k=1 Trial, N=86)"
+PRIMARY STRATUM 1: TEAS vs Sham at 72 Hours (k=1 Trial, N=86)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta summarize if modality == "TEAS", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      1
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =       .
+                                                        H2 =       .
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zhang 2025 |        -26.200     -32.166     -20.234     100.00
+------------------+-------------------------------------------------
+            theta |        -26.200           .           .
+--------------------------------------------------------------------
+Test of theta = 0: t(0) =   .                    Prob > |t| =     .
+Test of homogeneity: Q = chi2(0) = 0.00            Prob > Q =     .
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "PRIMARY STRATUM 2: EA vs Control / Sham at 72 Hours (k=3 Trials, N=245)"
+PRIMARY STRATUM 2: EA vs Control / Sham at 72 Hours (k=3 Trials, N=245)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta summarize if modality == "EA", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 89.0302
+SE adjustment: Knapp–Hartung                        I2 (%) =   92.87
+                                                        H2 =   14.02
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+         Xie 2014 |        -18.500     -22.541     -14.459     37.33
+        Wong 2006 |         -8.400     -22.314       5.514     24.97
+        Yang 2024 |         -0.500      -4.079       3.079     37.70
+------------------+-------------------------------------------------
+            theta |         -9.192     -32.950      14.566
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = -1.66                  Prob > |t| = 0.2379
+Test of homogeneity: Q = chi2(2) = 42.71           Prob > Q = 0.0000
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "SENSITIVITY: SHAM-CONTROLLED TRIALS ONLY (k=3 Trials, N=151)"
+SENSITIVITY: SHAM-CONTROLLED TRIALS ONLY (k=3 Trials, N=151)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta summarize if comparator == "Sham", random(reml) se(kh)
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 39.6420
+SE adjustment: Knapp–Hartung                        I2 (%) =   77.86
+                                                        H2 =    4.52
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zhang 2025 |        -26.200     -32.166     -20.234     37.63
+         Xie 2014 |        -18.500     -22.541     -14.459     41.93
+        Wong 2006 |         -8.400     -22.314       5.514     20.44
+------------------+-------------------------------------------------
+            theta |        -19.333     -39.160       0.494
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = -4.20                  Prob > |t| = 0.0524
+Test of homogeneity: Q = chi2(2) = 7.33            Prob > Q = 0.0256
+
+. 
+. * Generate 72-h MME Forest Plot Subgrouped by Modality (Protocol Standard)
+. meta forestplot, subgroup(modality) ///
+>     title("Cumulative 0-72h Opioid Sparing (IV MME mg): Modality Stratified", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Random-Effects REML + Hartung-Knapp (k=4, N=331)", size(small)) //
+> /
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: canonical_name
+
+. graph export "dashboard/stata_forest_72h_opioid_mme.png", width(1600) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_forest_72h_opioid_mme.
+    > png saved as PNG format
+
+. 
+. * ------------------------------------------------------------------------------
+. * 3. STANDARDIZED MEAN DIFFERENCE (HEDGES' G SMD) — SCALE-INDEPENDENT
+. * ------------------------------------------------------------------------------
+. meta set hedges_g hedges_se, studylabel(canonical_name)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: canonical_name
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Effect size
+          Variable: hedges_g
+
+         Precision
+         Std. err.: hedges_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "STANDARDIZED EFFECT SIZE: 72-h Opioid Consumption (Hedges' g SMD)"
+STANDARDIZED EFFECT SIZE: 72-h Opioid Consumption (Hedges' g SMD)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Effect size
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: canonical_name
+
+Meta-analysis summary                     Number of studies =      4
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  1.4528
+SE adjustment: Knapp–Hartung                        I2 (%) =   94.95
+                                                        H2 =   19.80
+
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zhang 2025 |         -1.840      -2.344      -1.336     25.71
+         Xie 2014 |         -2.781      -3.649      -1.913     23.68
+        Wong 2006 |         -0.467      -1.263       0.329     24.14
+        Yang 2024 |         -0.041      -0.333       0.251     26.47
+------------------+-------------------------------------------------
+            theta |         -1.255      -3.251       0.740
+--------------------------------------------------------------------
+95% prediction interval for theta: [-7.101, 4.591]
+
+Test of theta = 0: t(3) = -2.00                  Prob > |t| = 0.1391
+Test of homogeneity: Q = chi2(3) = 61.49           Prob > Q = 0.0000
+
+. 
+. meta forestplot, subgroup(modality) ///
+>     title("Standardized Mean Difference (Hedges' g): 0-72h Opioid Consumption", size(medium)) ///
+>     subtitle("StataNow 19.5 SE: Scale-Free Random Effects REML + Hartung-Knapp", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Effect size
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: canonical_name
+
+. graph export "dashboard/stata_forest_72h_opioid_smd.png", width(1600) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_forest_72h_opioid_smd.
+    > png saved as PNG format
+
+. 
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "STATA 72-H OPIOID SYNTHESIS COMPLETED SUCCESSFULLY"
+STATA 72-H OPIOID SYNTHESIS COMPLETED SUCCESSFULLY
+
+. di as txt "=================================================================="
+==================================================================
+
+. capture log close

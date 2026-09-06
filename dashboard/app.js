@@ -1713,6 +1713,16 @@ function renderDirectionOfEvidence() {
       badgeClass: "grade-badge-high"
     },
     {
+      name: "Exploratory (Subacute Durability): Cumulative 0–72h Opioid Consumption",
+      unit: "mg IV MME",
+      key: "opioid_72h",
+      isBinary: false,
+      controlRisk: "Mean baseline: 42.3 to 134.3 mg IV MME",
+      downgrade: "Downgraded 1 level for imprecision (4 RCTs, N = 331). Substantial opioid sparing in sham-controlled trials (MD -19.33 mg IV MME, 95% CI [-39.16, 0.49]).",
+      grade: "Moderate",
+      badgeClass: "grade-badge-mod"
+    },
+    {
       name: "Pain Intensity at Rest (~24 hours)",
       unit: "VAS 0–10",
       key: "pain_rest_24h",
@@ -2018,6 +2028,14 @@ function openStudyDrawer(id) {
     outcomesHtml += `<p><strong>💊 Co-Primary (0–48h Extended Opioid):</strong> <span style="color: #34d399; font-weight: 700;">MD ${op48.mean_diff < 0 ? '−' : '+'}${Math.abs(op48.mean_diff)} mg IV MME</span> (95% CI: [${op48.ci_low}, ${op48.ci_upp}], SE: ${op48.se})${nativeDetail}</p>`;
   } else if (s.outcomes && s.outcomes.opioid_48h && s.outcomes.opioid_48h.role === 'PCA Volume Proxy') {
     outcomesHtml += `<p><strong>💊 Co-Primary (0–48h Extended Opioid):</strong> <span style="color: #38bdf8; font-weight: 600;">PCA Volume Proxy</span> — ${s.outcomes.opioid_48h.note}</p>`;
+  }
+
+  if (s.outcomes && s.outcomes.opioid_72h && typeof s.outcomes.opioid_72h.mean_diff === 'number') {
+    const op72 = s.outcomes.opioid_72h;
+    const nativeDetail = op72.native_drug ? ` • Native: ${op72.arm1_mean_native !== undefined ? op72.arm1_mean_native : '-'} vs ${op72.arm2_mean_native !== undefined ? op72.arm2_mean_native : '-'} ${op72.native_unit} (MD ${op72.md_native})` : '';
+    outcomesHtml += `<p><strong>💊 Exploratory (0–72h Extended Opioid):</strong> <span style="color: #34d399; font-weight: 700;">MD ${op72.mean_diff < 0 ? '−' : '+'}${Math.abs(op72.mean_diff)} mg IV MME</span> (95% CI: [${op72.ci_low}, ${op72.ci_upp}], SE: ${op72.se})${nativeDetail}</p>`;
+  } else if (s.outcomes && s.outcomes.opioid_72h && s.outcomes.opioid_72h.role === 'Rescue / Proxy') {
+    outcomesHtml += `<p><strong>💊 Exploratory (0–72h Extended Opioid):</strong> <span style="color: #38bdf8; font-weight: 600;">Surrogate / Rescue</span> — ${s.outcomes.opioid_72h.note}</p>`;
   }
 
   if (s.outcomes && s.outcomes.pain_rest_24h && typeof s.outcomes.pain_rest_24h.mean_diff === 'number') {

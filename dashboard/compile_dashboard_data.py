@@ -487,6 +487,95 @@ def build_complete_dataset():
                 "mean_diff": None, "se": None
             }
 
+        # 1C. 72h Opioid Data Extraction (Subacute Extended Durability)
+        opioid_72h_data = None
+        if sid == "1879896013": # Zhang 2025
+            opioid_72h_data = {
+                "status": "Reported in Source Paper",
+                "metric_name": "Cumulative 0–72h Opioid Consumption",
+                "timepoint": "72h (POD 0–3)",
+                "arm1_n": 43, "arm1_mean": 78.4, "arm1_sd": 12.2,
+                "arm2_n": 43, "arm2_mean": 104.6, "arm2_sd": 15.8,
+                "mean_diff": -26.2, "se": 3.044, "ci_low": -32.17, "ci_upp": -20.23,
+                "unit": "mg IV MME",
+                "native_drug": "IV sufentanil", "native_unit": "µg",
+                "arm1_mean_native": 78.4, "arm1_sd_native": 12.2,
+                "arm2_mean_native": 104.6, "arm2_sd_native": 15.8,
+                "md_native": -26.2, "se_native": 3.044,
+                "note": "Total cumulative sufentanil consumption from POD 0 to POD 3: 78.4 ± 12.2 vs 104.6 ± 15.8 µg (MD -26.20 µg, P<0.001; 1 µg sufentanil = 1.0 mg IV MME).",
+                "favors": "Intervention"
+            }
+        elif sid == "1879897074": # Xie 2014
+            opioid_72h_data = {
+                "status": "Reported in Source Paper",
+                "metric_name": "Cumulative 0–72h Opioid Consumption",
+                "timepoint": "72h (POD 1–3)",
+                "arm1_n": 20, "arm1_mean": 115.0, "arm1_sd": 6.0,
+                "arm2_n": 20, "arm2_mean": 133.5, "arm2_sd": 7.0,
+                "mean_diff": -18.5, "se": 2.062, "ci_low": -22.54, "ci_upp": -14.46,
+                "unit": "mg IV MME",
+                "native_drug": "IV sufentanil", "native_unit": "µg",
+                "arm1_mean_native": 115.0, "arm1_sd_native": 6.0,
+                "arm2_mean_native": 133.5, "arm2_sd_native": 7.0,
+                "md_native": -18.5, "se_native": 2.062,
+                "note": "Cumulative postoperative PCIA sufentanil through POD 3: 115.0 ± 6.0 vs 133.5 ± 7.0 µg (MD -18.50 µg, P<0.05; 1 µg sufentanil = 1.0 mg IV MME).",
+                "favors": "Intervention"
+            }
+        elif sid == "1879897414": # Wong 2006
+            opioid_72h_data = {
+                "status": "Reported in Source Paper",
+                "metric_name": "Cumulative 0–72h Opioid Consumption",
+                "timepoint": "72h (Day 0–2 / POD 1–3)",
+                "arm1_n": 13, "arm1_mean": 33.9, "arm1_sd": 12.8,
+                "arm2_n": 12, "arm2_mean": 42.3, "arm2_sd": 21.3,
+                "mean_diff": -8.4, "se": 7.099, "ci_low": -22.31, "ci_upp": 5.51,
+                "unit": "mg IV MME",
+                "native_drug": "IV morphine", "native_unit": "mg",
+                "arm1_mean_native": 33.9, "arm1_sd_native": 12.8,
+                "arm2_mean_native": 42.3, "arm2_sd_native": 21.3,
+                "md_native": -8.4, "se_native": 7.099,
+                "note": "Total cumulative PCA morphine over first 3 postoperative days: 33.9 ± 12.8 vs 42.3 ± 21.3 mg morphine (MD -8.40 mg IV MME, P=0.25). Statistically significant sparing on POD 2 (7.5 ± 5.0 vs 15.7 ± 12.0 mg, P=0.035).",
+                "favors": "Intervention"
+            }
+        elif sid == "1879896323": # Yang 2024
+            opioid_72h_data = {
+                "status": "Reported in Source Paper",
+                "metric_name": "Cumulative 0–72h Opioid Consumption",
+                "timepoint": "72h (POD 1–3)",
+                "arm1_n": 90, "arm1_mean": 127.0, "arm1_sd": 12.0,
+                "arm2_n": 90, "arm2_mean": 127.5, "arm2_sd": 12.5,
+                "mean_diff": -0.5, "se": 1.826, "ci_low": -4.08, "ci_upp": 3.08,
+                "unit": "mg IV MME",
+                "native_drug": "IV morphine", "native_unit": "mg",
+                "arm1_mean_native": 127.0, "arm1_sd_native": 12.0,
+                "arm2_mean_native": 127.5, "arm2_sd_native": 12.5,
+                "md_native": -0.5, "se_native": 1.826,
+                "note": "Table 3 Cumulative IV PCA morphine consumption on POD 1–3: EA 127.0 ± 12.0 vs Usual Care 127.5 ± 12.5 mg (MD -0.50 mg IV MME, P=0.785).",
+                "favors": "Intervention"
+            }
+        elif sid == "1879896394": # Wang 2023
+            opioid_72h_data = {
+                "status": "Conditional / Separate",
+                "role": "Rescue / Proxy",
+                "metric_name": "Cumulative Rescue Analgesia Doses (72h)",
+                "note": "Cumulative rescue analgesia administrations within 72 h: TEAS 0.53 ± 0.55 vs Sham 0.98 ± 0.96 doses (MD -0.45 doses, 46% reduction, P=0.011*).",
+                "mean_diff": None, "se": None
+            }
+        elif sid == "1879896426": # Lu 2022
+            opioid_72h_data = {
+                "status": "Conditional / Separate",
+                "role": "Rescue / Proxy",
+                "metric_name": "PCA Pump Delivery Attempts (72h)",
+                "note": "Cumulative PCA demand attempts and deliveries significantly reduced through 72 h (P=0.001*); specific opioid mass in mg omitted from published tables (author outreach pending).",
+                "mean_diff": None, "se": None
+            }
+        else:
+            opioid_72h_data = {
+                "status": "Unreported in Source Paper",
+                "note": "Cumulative 72-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+                "mean_diff": None, "se": None
+            }
+
         # 2. 24h Pain Intensity at Rest (Objective 2)
         pain_data = None
         pain_m = re.search(r'pain.*(?:rest|24h|pod 1)[^:]*:\s*(?:[A-Za-z\s\(\)=\d]+)?([\d\.]+)\s*±\s*([\d\.]+)[^v]+vs[^v]+(?:[A-Za-z\s\(\)=\d]+)?([\d\.]+)\s*±\s*([\d\.]+)', cons_text, re.I)
@@ -771,6 +860,7 @@ def build_complete_dataset():
             "outcomes": {
                 "opioid_24h": opioid_data,
                 "opioid_48h": opioid_48h_data,
+                "opioid_72h": opioid_72h_data,
                 "pain_rest_24h": pain_data,
                 "pain_movement_24h": pain_movement_data,
                 "ponv_24h": ponv_data,
