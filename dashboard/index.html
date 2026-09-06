@@ -754,6 +754,7 @@
             <select id="meta-outcome-select" class="filter-select" style="min-width: 340px;">
               <optgroup label="Main Protocol Outcomes">
                 <option value="opioid_24h">[Obj 1] Cumulative 0–24h Opioid Consumption (mg IV MME) [Main]</option>
+                <option value="opioid_48h">[Obj 1] Cumulative 0–48h Opioid Consumption (mg IV MME) [Extended]</option>
                 <option value="pain_rest_24h">[Obj 2] Pain Intensity at Rest at ~24h (VAS 0–10) [Co-Outcome]</option>
                 <option value="pain_movement_24h">[Obj 2] Pain Intensity During Movement at ~24h (VAS 0–10) [Co-Outcome]</option>
               </optgroup>
@@ -980,6 +981,15 @@
             <a href="stata_secondary_synthesis_data.csv" download class="btn-preset" style="background: rgba(255,255,255,0.08); color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📈</span> Download Secondary Dataset (CSV)
             </a>
+            <a href="stata_48h_opioid_synthesis.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.25); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📥</span> 48h Stata .do File
+            </a>
+            <a href="stata_48h_opioid_synthesis_data.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📊</span> 48h Opioid CSV
+            </a>
+            <a href="stata_48h_opioid_synthesis.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📋</span> 48h Stata Log
+            </a>
             <a href="stata_audited_synthesis.log" download class="btn-preset" style="background: rgba(255,255,255,0.05); color: #94a3b8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📋</span> Download Stata Log
             </a>
@@ -1116,6 +1126,137 @@
         </div>
       </div>
 
+      <!-- Section 2B: Extended 48-Hour Opioid Consumption Evidence Strata Grid -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #818cf8;">
+        <div class="card-header">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="badge badge-indigo">Extended Follow-up Endpoint</span>
+              <span class="badge badge-emerald">StataNow 19.5 SE Verified</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">k = 5 Trials • N = 2,183 Patients</span>
+            </div>
+            <h2 style="margin-top: 0.25rem;">Cumulative 0–48h Opioid Sparing Syntheses (IV MME mg)</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
+              Rigorous random-effects meta-analysis (REML + Hartung–Knapp adjustment) executed in StataNow 19.5 SE for trials reporting cumulative 48-hour systemic opioid requirements.
+            </p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.25rem;">
+          
+          <!-- Stratum 1: TEAS vs Sham (k=3, N=2,077) -->
+          <div class="stratum-card primary-stratum" style="border-top: 3px solid #818cf8;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-indigo">TEAS vs Sham (48h)</span>
+              <span style="font-size: 0.72rem; color: #818cf8; font-weight: 700;">Double-Blind Sham</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">TEAS Stratum (0–48h)</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #818cf8; margin-top: 0.4rem;">
+              −2.16 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Knapp–Hartung CI:</strong> [−3.26, −1.06] • <strong style="color: #34d399;">p = 0.0137</strong>
+            </div>
+            <div style="font-size: 0.78rem; color: #38bdf8; margin-top: 0.25rem;">
+              <strong>Test of Effect:</strong> t(2) = −8.45 (Statistically Significant)
+            </div>
+            <div style="font-size: 0.78rem; color: #fbbf24; margin-top: 0.35rem; font-weight: 600;">
+              <strong>95% Prediction Interval:</strong> [−5.42, +1.09] mg
+            </div>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Analyzable Cohort:</strong> k = 3 RCTs • N = 2,077 patients</div>
+              <div><strong>Included Trials:</strong> Chen 2020 (N=80), He 2026 (N=159), Zhang 2023 (N=1,838)</div>
+              <div><strong>Heterogeneity:</strong> τ² = 0.2081, I² = 45.45%, Q = 3.67 (p = 0.1597)</div>
+            </div>
+          </div>
+
+          <!-- Stratum 2: EA vs Control / Sham (k=2, N=106) -->
+          <div class="stratum-card primary-stratum" style="border-top: 3px solid #06b6d4;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-cyan">EA vs Control / Sham (48h)</span>
+              <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 700;">k = 2 Trials</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">EA Stratum (0–48h)</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #38bdf8; margin-top: 0.4rem;">
+              −6.24 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Knapp–Hartung CI:</strong> [−15.37, +2.89] • t(1) = −8.68, p = 0.0730
+            </div>
+            <div style="font-size: 0.78rem; color: #38bdf8; margin-top: 0.25rem;">
+              <strong>Hedges' g SMD:</strong> −0.55 [95% CI: −1.00, −0.10]
+            </div>
+            <div style="font-size: 0.78rem; color: #34d399; margin-top: 0.35rem; font-weight: 600;">
+              <strong>Zero Heterogeneity:</strong> τ² = 0.0000, I² = 0.00%
+            </div>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Analyzable Cohort:</strong> k = 2 RCTs • N = 106 patients</div>
+              <div><strong>Included Trials:</strong> An 2014 (N=81, MD −6.00 mg), Wong 2006 (N=25, MD −8.40 mg)</div>
+              <div><strong>Homogeneity Test:</strong> Q = chi²(1) = 0.10 (p = 0.7484)</div>
+            </div>
+          </div>
+
+          <!-- Combined Reference Pool (k=5, N=2,183) -->
+          <div class="stratum-card primary-stratum" style="border-top: 3px solid #10b981;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-emerald">Combined 48-h Pool</span>
+              <span style="font-size: 0.72rem; color: #34d399; font-weight: 700;">k = 5 Trials</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">All 5 Trials (0–48h)</h3>
+            <div style="font-size: 1.6rem; font-weight: 800; color: #34d399; margin-top: 0.4rem;">
+              −2.19 <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-secondary);">mg IV MME</span>
+            </div>
+            <div style="font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem;">
+              <strong>95% Knapp–Hartung CI:</strong> [−3.43, −0.96] • <strong style="color: #34d399;">p = 0.0078</strong>
+            </div>
+            <div style="font-size: 0.78rem; color: #38bdf8; margin-top: 0.25rem;">
+              <strong>Test of Effect:</strong> t(4) = −4.96 (Highly Significant)
+            </div>
+            <div style="font-size: 0.78rem; color: #34d399; margin-top: 0.35rem; font-weight: 600;">
+              <strong>95% Prediction Interval:</strong> [−4.20, −0.19] mg (Strictly Beneficial)
+            </div>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.73rem; color: var(--text-muted); line-height: 1.5;">
+              <div><strong>Analyzable Cohort:</strong> k = 5 RCTs • N = 2,183 patients</div>
+              <div><strong>Heterogeneity:</strong> τ² = 0.2289, I² = 29.80%, Q = 5.70 (p = 0.2228)</div>
+              <div style="margin-top: 0.4rem; color: #6ee7b7; font-weight: 600;">Direct-only sensitivity (k=4, N=345): MD = −2.08 mg [−3.85, −0.32], p = 0.0329.</div>
+            </div>
+          </div>
+
+          <!-- Volume Proxies & Functional Endpoints -->
+          <div class="stratum-card supportive-stratum" style="border-top: 3px solid #f59e0b;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <span class="badge badge-amber">Separate Proxies</span>
+              <span style="font-size: 0.72rem; color: #fbbf24; font-weight: 700;">PCA Volume Endpoints</span>
+            </div>
+            <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">48-h PCA Volume Trials</h3>
+            <div style="margin-top: 0.6rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.78rem;">
+              <div style="background: rgba(255,255,255,0.03); padding: 0.5rem 0.65rem; border-radius: var(--radius-sm);">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong style="color: #34d399;">Ao 2021 (TEAS, N=65):</strong>
+                  <span style="font-weight: 700; color: #34d399;">MD −17.8 mL</span>
+                </div>
+                <div style="color: var(--text-muted); font-size: 0.72rem;">102.8 vs 120.6 mL (P&lt;0.001) • Presses: 6.2 vs 12.3 (P&lt;0.001)</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 0.5rem 0.65rem; border-radius: var(--radius-sm);">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong style="color: #38bdf8;">Long 2025 (TEAS, N=106):</strong>
+                  <span style="font-weight: 700; color: #38bdf8;">MD −3.0 mL</span>
+                </div>
+                <div style="color: var(--text-muted); font-size: 0.72rem;">86.2 vs 89.2 mL (P=0.008) • Compressions: 7.1 vs 8.6 (P=0.008)</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); padding: 0.5rem 0.65rem; border-radius: var(--radius-sm);">
+                <div style="display: flex; justify-content: space-between;">
+                  <strong style="color: #a78bfa;">Jin 2023 (EA, N=105):</strong>
+                  <span style="font-weight: 700; color: #a78bfa;">MD −12.5 mL</span>
+                </div>
+                <div style="color: var(--text-muted); font-size: 0.72rem;">82.4 vs 94.9 mL (P&lt;0.001) • NAPC: 1.0 vs 9.0 presses (P&lt;0.001)</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
       <!-- Section 3: High-Resolution Stata Forest Plot Showcase Gallery -->
       <div class="dashboard-card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
@@ -1168,6 +1309,44 @@
             </div>
             <div class="stata-plot-footer">
               <p><strong>Scale-Independent Effect:</strong> Hedges' g = <strong>−0.99</strong> [95% CI: −1.69 to −0.29], t(10) = −3.17, <strong style="color: #34d399;">p = 0.0100</strong>, τ² = 0.98, I² = 94.75%. Subgroup Direct (k=6): g = −0.83; Subgroup Derived (k=5): g = −1.18. Confirms consistent, large opioid sparing across diverse surgical regimens.</p>
+            </div>
+          </div>
+
+          <!-- Forest Plot 2B: 48-h Opioid Consumption (IV MME mg) -->
+          <div class="stata-plot-card">
+            <div class="stata-plot-header">
+              <div>
+                <span class="badge badge-emerald">Extended Endpoint (p = 0.0078)</span>
+                <h4 style="font-size: 0.95rem; margin-top: 0.35rem; color: #f8fafc;">Cumulative 0–48h Opioid Sparing (IV MME mg): Modality Stratified</h4>
+              </div>
+              <a href="stata_forest_48h_opioid_mme.png" target="_blank" class="btn-preset" style="font-size: 0.72rem; padding: 0.25rem 0.6rem; text-decoration: none;">🔍 View Full Res</a>
+            </div>
+            <div class="stata-plot-img-wrap">
+              <a href="stata_forest_48h_opioid_mme.png" target="_blank">
+                <img src="stata_forest_48h_opioid_mme.png" alt="Stata 19.5 Forest Plot - 48h Opioid MME" class="stata-plot-img">
+              </a>
+            </div>
+            <div class="stata-plot-footer">
+              <p><strong>Stata 48h Synthesis:</strong> k = 5 RCTs (N = 2,183). Stratified by Modality (TEAS vs EA). Combined REML MD = <strong>−2.19 mg IV MME</strong> [95% CI: −3.43 to −0.96], t(4) = −4.96, <strong style="color: #34d399;">p = 0.0078</strong>. 95% Prediction Interval: [−4.20, −0.19] mg (entirely below zero). TEAS stratum (k=3, N=2,077): MD = <strong>−2.16 mg</strong> [95% CI: −3.26 to −1.06, p = 0.0137]. EA stratum (k=2, N=106): MD = <strong>−6.24 mg</strong> [95% CI: −15.37 to +2.89]. Direct-only trials (k=4, N=345): MD = <strong>−2.08 mg</strong>, p = 0.0329.</p>
+            </div>
+          </div>
+
+          <!-- Forest Plot 2C: 48-h Opioid Consumption (Hedges' g SMD) -->
+          <div class="stata-plot-card">
+            <div class="stata-plot-header">
+              <div>
+                <span class="badge badge-indigo">Extended Endpoint (SMD)</span>
+                <h4 style="font-size: 0.95rem; margin-top: 0.35rem; color: #f8fafc;">Standardized Mean Difference (Hedges' g): 0–48h Opioid Consumption</h4>
+              </div>
+              <a href="stata_forest_48h_opioid_smd.png" target="_blank" class="btn-preset" style="font-size: 0.72rem; padding: 0.25rem 0.6rem; text-decoration: none;">🔍 View Full Res</a>
+            </div>
+            <div class="stata-plot-img-wrap">
+              <a href="stata_forest_48h_opioid_smd.png" target="_blank">
+                <img src="stata_forest_48h_opioid_smd.png" alt="Stata 19.5 Forest Plot - 48h Opioid SMD" class="stata-plot-img">
+              </a>
+            </div>
+            <div class="stata-plot-footer">
+              <p><strong>Scale-Independent Effect:</strong> Hedges' g = <strong>−0.74</strong> [95% CI: −1.90 to +0.43], t(4) = −1.76, p = 0.1539. Subgroup TEAS (k=3, N=2,077): g = −0.83; Subgroup EA (k=2, N=106): g = −0.55 [95% CI: −1.00 to −0.10, p = 0.017].</p>
             </div>
           </div>
 

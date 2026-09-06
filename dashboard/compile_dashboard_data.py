@@ -384,6 +384,109 @@ def build_complete_dataset():
                 "ci_low": -0.11, "ci_upp": -0.01, "se": 0.024, "favors": "Intervention"
             }
 
+        # 1B. 48h Opioid Data Extraction (Extended Follow-up)
+        opioid_48h_data = None
+        if sid == "1879896688": # Chen 2020
+            opioid_48h_data = {
+                "status": "Reported in Source Paper",
+                "metric_name": "Cumulative 0–48h Opioid Consumption",
+                "timepoint": "48h",
+                "arm1_n": 40, "arm1_mean": 11.85, "arm1_sd": 0.98,
+                "arm2_n": 40, "arm2_mean": 14.02, "arm2_sd": 0.79,
+                "mean_diff": -2.16, "se": 0.198, "ci_low": -2.55, "ci_upp": -1.77,
+                "unit": "mg IV MME",
+                "native_drug": "IV sufentanil", "native_unit": "µg",
+                "arm1_mean_native": 118.52, "arm1_sd_native": 9.77,
+                "arm2_mean_native": 140.15, "arm2_sd_native": 7.87,
+                "md_native": -21.63, "se_native": 1.983,
+                "note": "Cumulative 48h PCIA sufentanil: 118.52 ± 9.77 vs 140.15 ± 7.87 µg (MD -21.63 µg, P<0.001; converted to MME using 0.1 ratio).",
+                "favors": "Intervention"
+            }
+        elif sid == "1879895909": # He 2026
+            opioid_48h_data = {
+                "status": "Reported in Source Paper",
+                "metric_name": "Cumulative 0–48h Opioid Consumption",
+                "timepoint": "48h",
+                "arm1_n": 80, "arm1_mean": 39.5, "arm1_sd": 4.0,
+                "arm2_n": 79, "arm2_mean": 40.4, "arm2_sd": 7.1,
+                "mean_diff": -0.90, "se": 0.915, "ci_low": -2.69, "ci_upp": 0.89,
+                "unit": "mg IV MME",
+                "note": "Directly reported in Supplemental Material 2, eTable 1: 39.5 ± 4.0 vs 40.4 ± 7.1 mg MME (MD -0.90 mg MME, P=0.32).",
+                "favors": "Intervention"
+            }
+        elif sid == "1879896412": # Zhang 2023
+            opioid_48h_data = {
+                "status": "Derived / Imputed",
+                "role": "Conditional / Sensitivity",
+                "metric_name": "Cumulative 0–48h Opioid Consumption",
+                "timepoint": "48h",
+                "arm1_n": 922, "arm1_mean": 100.0, "arm1_sd": 22.24,
+                "arm2_n": 916, "arm2_mean": 103.33, "arm2_sd": 14.83,
+                "mean_diff": -3.33, "se": 0.881, "ci_low": -5.06, "ci_upp": -1.60,
+                "unit": "mg IV MME",
+                "note": "Derived via Wan et al. (2014) from reported 48h median (IQR): TEAS 110 (80–110) vs Sham 110 (90–110) mg MME.",
+                "favors": "Intervention"
+            }
+        elif sid == "1879897069": # An 2014
+            opioid_48h_data = {
+                "status": "Reported in Source Paper",
+                "metric_name": "Cumulative 0–48h Opioid Consumption",
+                "timepoint": "48h",
+                "arm1_n": 41, "arm1_mean": 67.0, "arm1_sd": 9.0,
+                "arm2_n": 40, "arm2_mean": 73.0, "arm2_sd": 12.0,
+                "mean_diff": -6.00, "se": 2.361, "ci_low": -10.63, "ci_upp": -1.37,
+                "unit": "mg IV MME",
+                "native_drug": "IV fentanyl", "native_unit": "mg",
+                "arm1_mean_native": 0.67, "arm1_sd_native": 0.09,
+                "arm2_mean_native": 0.73, "arm2_sd_native": 0.12,
+                "md_native": -0.06, "se_native": 0.0236,
+                "note": "Total PCIA fentanyl discontinued at 48h: 0.67 ± 0.09 vs 0.73 ± 0.12 mg fentanyl (converted to MME: 67.0 vs 73.0 mg MME, MD -6.0 mg MME, P<0.05).",
+                "favors": "Intervention"
+            }
+        elif sid == "1879897414": # Wong 2006
+            opioid_48h_data = {
+                "status": "Reported in Source Paper",
+                "metric_name": "Cumulative 0–48h Opioid Consumption",
+                "timepoint": "48h",
+                "arm1_n": 13, "arm1_mean": 33.9, "arm1_sd": 12.8,
+                "arm2_n": 12, "arm2_mean": 42.3, "arm2_sd": 21.3,
+                "mean_diff": -8.40, "se": 7.099, "ci_low": -22.31, "ci_upp": 5.51,
+                "unit": "mg IV MME",
+                "native_drug": "IV morphine", "native_unit": "mg",
+                "arm1_mean_native": 33.9, "arm1_sd_native": 12.8,
+                "arm2_mean_native": 42.3, "arm2_sd_native": 21.3,
+                "md_native": -8.40, "se_native": 7.099,
+                "note": "Total PCA morphine through POD2 (Day 0–2): 33.9 ± 12.8 vs 42.3 ± 21.3 mg morphine (MD -8.4 mg MME).",
+                "favors": "Intervention"
+            }
+        elif sid == "1879896620": # Ao 2021
+            opioid_48h_data = {
+                "status": "Conditional / Separate",
+                "role": "PCA Volume Proxy",
+                "note": "48h PCA solution consumption: 102.8 ± 7.4 vs 120.6 ± 9.2 mL (P<0.001); effective presses: 6.2 ± 3.7 vs 12.3 ± 4.6 (P<0.001). Body weight missing for exact MME.",
+                "mean_diff": None, "se": None
+            }
+        elif sid == "1879896090": # Long 2025
+            opioid_48h_data = {
+                "status": "Conditional / Separate",
+                "role": "PCA Volume Proxy",
+                "note": "48h PCIA solution consumption: 86.22 ± 4.27 vs 89.23 ± 3.67 mL (P=0.008); compressions: 7.11 ± 2.14 vs 8.62 ± 1.84 (P=0.008).",
+                "mean_diff": None, "se": None
+            }
+        elif sid == "1879896440": # Jin 2022
+            opioid_48h_data = {
+                "status": "Conditional / Separate",
+                "role": "PCA Volume Proxy",
+                "note": "48h PCIA fentanyl solution: 82.41 ± 21.18 vs 94.88 ± 9.91 mL (P<0.001); NAPC at 48h: 1.0 (0.0–3.0) vs 9.0 (4.3–12.0) compressions (P<0.001).",
+                "mean_diff": None, "se": None
+            }
+        else:
+            opioid_48h_data = {
+                "status": "Unreported in Source Paper",
+                "note": "Cumulative 48-hour postoperative opioid consumption was not tabulated as continuous mean/SD in source publication.",
+                "mean_diff": None, "se": None
+            }
+
         # 2. 24h Pain Intensity at Rest (Objective 2)
         pain_data = None
         pain_m = re.search(r'pain.*(?:rest|24h|pod 1)[^:]*:\s*(?:[A-Za-z\s\(\)=\d]+)?([\d\.]+)\s*±\s*([\d\.]+)[^v]+vs[^v]+(?:[A-Za-z\s\(\)=\d]+)?([\d\.]+)\s*±\s*([\d\.]+)', cons_text, re.I)
@@ -667,6 +770,7 @@ def build_complete_dataset():
             "author_inquiry": inquiry_meta,
             "outcomes": {
                 "opioid_24h": opioid_data,
+                "opioid_48h": opioid_48h_data,
                 "pain_rest_24h": pain_data,
                 "pain_movement_24h": pain_movement_data,
                 "ponv_24h": ponv_data,
