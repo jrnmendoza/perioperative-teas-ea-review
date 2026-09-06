@@ -202,7 +202,7 @@
               </tr>
               <tr>
                 <td><strong style="color: #818cf8;">Outcomes</strong></td>
-                <td><strong>Primary</strong>: Cumulative 24-h postoperative opioid consumption (mg IV morphine equivalents)<br><strong>Secondary</strong>: Pain intensity (VAS/NRS), PONV, rescue analgesia, time to first flatus, QoR-40/15, PCA demands</td>
+                <td><strong>Primary Analgesic Domain (Dual Timepoints)</strong>: Cumulative postoperative opioid consumption (mg IV morphine equivalents) at 24 h (acute window) and 48 h (extended durability window)<br><strong>Secondary</strong>: Pain intensity (VAS/NRS), PONV, rescue analgesia, time to first flatus, QoR-40/15, PCA demands</td>
                 <td>Studies reporting no quantifiable postoperative outcome within 0–72 hours</td>
               </tr>
               <tr>
@@ -233,12 +233,12 @@
           <div class="action-card" style="border-top: 3px solid #6366f1; cursor: pointer;" onclick="switchTab('primary')">
             <div>
               <div style="display: flex; justify-content: space-between; align-items: center;">
-                <span class="badge badge-indigo">Objective 1 — Primary</span>
+                <span class="badge badge-indigo">Objective 1 — Co-Primary Analgesic Domain</span>
                 <span style="font-size: 0.72rem; color: #818cf8; font-weight: 700;">→ Primary Outcome</span>
               </div>
-              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Quantify 24-h opioid-sparing effect of TEAS vs sham and EA vs sham/control</h3>
+              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Quantify 24-h (acute) &amp; 48-h (extended) opioid-sparing effects of TEAS and EA</h3>
               <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
-                Pooled mean difference in cumulative 0–24 h opioid consumption (mg IV MME), stratified by modality. REML random-effects with Knapp–Hartung adjustment and 95% prediction intervals.
+                Dual-timepoint co-primary synthesis of cumulative 0–24 h (acute) and 0–48 h (extended durability) opioid consumption (mg IV MME), stratified by modality. REML random-effects with Knapp–Hartung adjustment and 95% prediction intervals.
               </p>
             </div>
           </div>
@@ -752,13 +752,15 @@
           <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
             <h2>Dynamic Interactive Forest Plot</h2>
             <select id="meta-outcome-select" class="filter-select" style="min-width: 340px;">
-              <optgroup label="Main Protocol Outcomes">
-                <option value="opioid_24h">[Obj 1] Cumulative 0–24h Opioid Consumption (mg IV MME) [Main]</option>
-                <option value="opioid_48h">[Obj 1] Cumulative 0–48h Opioid Consumption (mg IV MME) [Extended]</option>
-                <option value="pain_rest_24h">[Obj 2] Pain Intensity at Rest at ~24h (VAS 0–10) [Co-Outcome]</option>
-                <option value="pain_movement_24h">[Obj 2] Pain Intensity During Movement at ~24h (VAS 0–10) [Co-Outcome]</option>
+              <optgroup label="⭐ Co-Primary Analgesic Domain (Dual Timepoints)">
+                <option value="opioid_24h" selected>💊 [Co-Primary: Acute] Cumulative 0–24h Opioid Consumption (mg IV MME)</option>
+                <option value="opioid_48h">💊 [Co-Primary: Extended Durability] Cumulative 0–48h Opioid Consumption (mg IV MME)</option>
               </optgroup>
-              <optgroup label="Additional Acute &amp; Functional Endpoints (Objective 6)">
+              <optgroup label="Co-Primary Pain Intensity Endpoints (Objective 2)">
+                <option value="pain_rest_24h">🩹 [Obj 2] Pain Intensity at Rest at ~24h (VAS 0–10)</option>
+                <option value="pain_movement_24h">🩹 [Obj 2] Pain Intensity During Movement at ~24h (VAS 0–10)</option>
+              </optgroup>
+              <optgroup label="Secondary Recovery &amp; Clinical Endpoints (Objective 6)">
                 <option value="pca_presses_24h">🔘 [Obj 6] PCA Pump Demands &amp; Presses (24h) [Mean Difference]</option>
                 <option value="rescue_analgesia">🔘 [Obj 6] Rescue Analgesia Requirements [Risk Ratio]</option>
                 <option value="intraop_opioid">🔘 [Obj 6] Intraoperative Remifentanil Requirements (µg) [Mean Difference]</option>
@@ -1002,10 +1004,11 @@
         <div class="card-header">
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="badge badge-emerald">Audited Reconciled Master v20</span>
+              <span class="badge badge-emerald">Co-Primary Endpoint</span>
+              <span class="badge badge-indigo">Audited Reconciled Master v20</span>
               <span style="font-size: 0.75rem; color: var(--text-muted);">StataNow 19.5 SE Consensus Synthesis</span>
             </div>
-            <h2 style="margin-top: 0.25rem;">Evidence Strata &amp; Primary Opioid Sparing (k = 11 RCTs, N = 945)</h2>
+            <h2 style="margin-top: 0.25rem;">Section 2A: Co-Primary Acute Window — Cumulative 0–24h Opioid Sparing (k = 11 RCTs, N = 945)</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">Executed in StataNow 19.5 SE via <code>meta summarize, random(reml) se(kh) predinterval</code>. Modalities and reporting strata rigorously tested.</p>
           </div>
         </div>
@@ -1131,13 +1134,14 @@
         <div class="card-header">
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span class="badge badge-indigo">Extended Follow-up Endpoint</span>
+              <span class="badge badge-emerald">Co-Primary Endpoint</span>
+              <span class="badge badge-indigo">Extended Durability (POD2)</span>
               <span class="badge badge-emerald">StataNow 19.5 SE Verified</span>
               <span style="font-size: 0.75rem; color: var(--text-muted);">k = 5 Trials • N = 2,183 Patients</span>
             </div>
-            <h2 style="margin-top: 0.25rem;">Cumulative 0–48h Opioid Sparing Syntheses (IV MME mg)</h2>
+            <h2 style="margin-top: 0.25rem;">Section 2B: Co-Primary Extended Durability Window — Cumulative 0–48h Opioid Sparing (IV MME mg)</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Rigorous random-effects meta-analysis (REML + Hartung–Knapp adjustment) executed in StataNow 19.5 SE for trials reporting cumulative 48-hour systemic opioid requirements.
+              Rigorous co-primary random-effects meta-analysis (REML + Hartung–Knapp adjustment) executed in StataNow 19.5 SE for trials reporting cumulative 48-hour systemic opioid requirements.
             </p>
           </div>
         </div>
