@@ -35,6 +35,7 @@
       <button class="nav-btn" data-tab="primary" role="tab">Primary Outcome</button>
       <button class="nav-btn" data-tab="secondary" role="tab">Secondary Outcomes</button>
       <button class="nav-btn" data-tab="mcid" role="tab">Clinical Importance</button>
+      <button class="nav-btn" data-tab="metareg" role="tab">Meta-Regression</button>
 
       <span class="nav-section-label">D</span>
       <button class="nav-btn" data-tab="evidence" role="tab">GRADE Evidence</button>
@@ -256,15 +257,15 @@
             </div>
           </div>
 
-          <div class="action-card" style="border-top: 3px solid #06b6d4; cursor: pointer;" onclick="switchTab('primary')">
+          <div class="action-card" style="border-top: 3px solid #06b6d4; cursor: pointer;" onclick="switchTab('metareg')">
             <div>
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <span class="badge badge-cyan">Objective 3 — Moderators</span>
-                <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 700;">→ Primary Outcome</span>
+                <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 700;">→ Meta-Regression Studio</span>
               </div>
-              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Identify protocol moderators via prespecified subgroup and meta-regression analyses</h3>
+              <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Identify protocol moderators via prespecified subgroup &amp; Stata meta-regression</h3>
               <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
-                Stimulation timing, frequency (2/100 Hz DD vs 100 Hz), cumulative duration, intensity threshold, number of sessions, and surgical specialty.
+                Random-effects REML meta-regression exploring baseline surgical opioid demand (p=0.019, R²=49.1%), publication year (p=0.029, R²=82.8%), and modality confounding.
               </p>
             </div>
           </div>
@@ -1790,6 +1791,182 @@
             <div style="font-size: 0.7rem; color: #34d399;">● Completed (Exit Code 0)</div>
           </div>
           <pre class="stata-terminal-body" id="stata-terminal-content">Loading Stata 19.5 execution stream...</pre>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB: META-REGRESSION & MODERATOR STUDIO (Objective 3) -->
+    <div id="tab-metareg" class="tab-content">
+      
+      <!-- Protocol Header Callout -->
+      <div class="protocol-callout" style="margin-bottom: 1.5rem; border-left: 4px solid #06b6d4;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem;">
+              <span class="badge badge-cyan">Objective 3: Moderator Investigation</span>
+              <span class="badge badge-emerald">StataNow 19.5 SE Verified</span>
+              <span style="font-size: 0.75rem; color: #cbd5e1;">Random-Effects REML + Knapp–Hartung SE</span>
+            </div>
+            <h2 style="font-size: 1.3rem; margin-top: 0.25rem;">StataNow 19.5 SE Meta-Regression &amp; Moderator Studio</h2>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55; max-width: 1000px;">
+              Investigating sources of between-study clinical and statistical heterogeneity (&tau;&sup2;) across the 11 audited primary trials. Evaluates whether the magnitude of opioid sparing is moderated by <strong>baseline surgical opioid demand</strong>, <strong>intervention modality (TEAS vs EA)</strong>, or <strong>secular temporal changes (publication year)</strong>.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <a href="stata_meta_regression_execution.do" download class="btn-preset" style="background: rgba(6, 182, 212, 0.25); border: 1px solid rgba(6, 182, 212, 0.5); color: #67e8f9; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📥</span> Meta-Regression .do File
+            </a>
+            <a href="stata_meta_regression_execution.log" download class="btn-preset" style="background: rgba(255,255,255,0.08); color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📋</span> Stata Execution Log
+            </a>
+            <a href="stata_consensus_synthesis_data.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📊</span> Primary Dataset (CSV)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cochrane Methodological Framework Alert -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border: 1px solid rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.03);">
+        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+          <div style="font-size: 1.8rem; line-height: 1;">⚠️</div>
+          <div>
+            <div style="font-weight: 700; color: #fbbf24; font-size: 0.95rem; margin-bottom: 0.25rem;">
+              Cochrane Handbook Methodological Framework: Sample Size &amp; Degrees of Freedom Rules (v6.4, &sect;10.11.4)
+            </div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;">
+              <strong>The Rule of 10:</strong> Cochrane guidelines advise that meta-regression should generally not be considered with fewer than 10 trials, recommending a minimum ratio of <strong>10 studies per investigated covariate</strong>. With <em>k</em> = 11 analyzable primary trials:
+              <ul style="margin: 0.4rem 0 0.4rem 1.2rem; padding: 0;">
+                <li><strong>Univariable Meta-Regression (1 predictor):</strong> 11 / 1 = 11.0 studies/covariate &rarr; <span style="color: #34d399; font-weight: 600;">Methodologically valid &amp; fully powered for exploratory analysis</span>.</li>
+                <li><strong>Constrained Bivariable Meta-Regression (2 predictors):</strong> 11 / 2 = 5.5 studies/covariate &rarr; <span style="color: #fbbf24; font-weight: 600;">Exploratory / hypothesis-generating only</span>. With Knapp&ndash;Hartung adjustment, degrees of freedom are restricted to <strong>df = 11 &minus; 2 &minus; 1 = 8</strong>.</li>
+                <li><strong>Higher-Order Multivariable Models (&ge; 3 predictors):</strong> Severely vulnerable to overfitting, collinearity (ecological fallacy), and inflated Type I error. Reported strictly for sensitivity context.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Stata KPI Cards -->
+      <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 1.5rem;">
+        <div class="kpi-card" style="border-top: 3px solid #06b6d4;">
+          <div class="kpi-title">Baseline Opioid Demand Slope</div>
+          <div class="kpi-value" style="color: #06b6d4;">&beta; = &minus;0.170</div>
+          <div class="kpi-sub">95% CI: [&minus;0.304, &minus;0.036] &bull; t(9) = &minus;2.87</div>
+          <span class="kpi-badge badge-emerald">p = 0.0186 &bull; R&sup2; = 49.08%</span>
+        </div>
+        <div class="kpi-card" style="border-top: 3px solid #38bdf8;">
+          <div class="kpi-title">Publication Year Secular Trend</div>
+          <div class="kpi-value" style="color: #38bdf8;">&beta; = +0.471</div>
+          <div class="kpi-sub">95% CI: [+0.062, +0.881] &bull; t(9) = +2.60</div>
+          <span class="kpi-badge badge-indigo">p = 0.0287 &bull; R&sup2; = 82.81%</span>
+        </div>
+        <div class="kpi-card" style="border-top: 3px solid #a78bfa;">
+          <div class="kpi-title">Multivariable Modality Adjustment</div>
+          <div class="kpi-value" style="color: #a78bfa;">&beta;_EA = +1.489</div>
+          <div class="kpi-sub">p = 0.781 (Baseline demand retains p = 0.041)</div>
+          <span class="kpi-badge badge-emerald">Confounding Resolved</span>
+        </div>
+        <div class="kpi-card" style="border-top: 3px solid #10b981;">
+          <div class="kpi-title">Knapp&ndash;Hartung Adjustment</div>
+          <div class="kpi-value" style="color: #34d399;">df = 8</div>
+          <div class="kpi-sub">Model F(2, 8) = 4.01 &bull; Prob &gt; F = 0.0622</div>
+          <span class="kpi-badge badge-emerald">Conservative Error Control</span>
+        </div>
+      </div>
+
+      <!-- Bubble Plot Studio -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem;">
+        <div class="card-header">
+          <div>
+            <span class="badge badge-cyan">Interactive Stata Bubble Plot Studio</span>
+            <h2 style="margin-top: 0.25rem;">Meta-Regression Slopes &amp; Study Precision Weights</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
+              Circle size represents the random-effects meta-analytic weight (1 / [v_i + &tau;&sup2;]) of each trial. The solid line represents the fitted meta-regression slope.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="bubble-btn-group">
+            <button class="btn-preset active" id="btn-bubble-base" onclick="switchBubblePlot('base')">🔘 Baseline Opioid (k=11)</button>
+            <button class="btn-preset" id="btn-bubble-year" onclick="switchBubblePlot('year')">🔘 Publication Year (k=11)</button>
+            <button class="btn-preset" id="btn-bubble-teas-base" onclick="switchBubblePlot('teas-base')">🔘 TEAS Stratum (k=8)</button>
+            <button class="btn-preset" id="btn-bubble-ea-base" onclick="switchBubblePlot('ea-base')">🔘 EA Stratum (k=3)</button>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: minmax(320px, 1.8fr) minmax(280px, 1.2fr); gap: 1.5rem; align-items: start; margin-top: 1rem;">
+          <div style="background: rgba(0,0,0,0.3); border-radius: var(--radius-md); padding: 1rem; border: 1px solid var(--border-subtle); text-align: center;">
+            <img id="bubble-plot-img" src="stata_meta_reg_baseline_mme.png" alt="Stata Meta-Regression Bubble Plot" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+            <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem;" id="bubble-plot-caption">
+              StataNow 19.5 SE Random-effects meta-regression bubble plot (REML with Knapp&ndash;Hartung adjustment).
+            </div>
+          </div>
+
+          <div id="bubble-plot-details" class="card-glass" style="padding: 1.25rem; font-size: 0.82rem; line-height: 1.6;">
+            <!-- Rendered dynamically by JS based on selection -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Expected Sparing Estimator (Simulation Matrix) -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #10b981;">
+        <div class="card-header">
+          <div>
+            <span class="badge badge-emerald">Clinical Prediction Tool</span>
+            <h2 style="margin-top: 0.25rem;">Expected Opioid Sparing Estimator (Stata REML Multivariable Model)</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
+              Simulate predicted 24-hour opioid reduction based on baseline surgical pain intensity and intervention modality:
+              <code>MD = 0.0204 &minus; 0.1876 &times; (Baseline Demand) + 1.4895 &times; (EA)</code>.
+            </p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+          <div style="background: var(--bg-panel); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <label style="font-size: 0.8rem; font-weight: 700; color: #cbd5e1; display: block; margin-bottom: 0.5rem;">
+              Control-Group Baseline 24-h Opioid Consumption: <span id="pred-mme-val" style="color: #38bdf8; font-weight: 800; font-size: 1rem;">40</span> mg IV MME
+            </label>
+            <input type="range" id="pred-mme-slider" min="5" max="120" value="40" step="1" style="width: 100%; margin-bottom: 1rem;" oninput="updateMetaRegPrediction()">
+            
+            <label style="font-size: 0.8rem; font-weight: 700; color: #cbd5e1; display: block; margin-bottom: 0.5rem;">
+              Intervention Modality:
+            </label>
+            <div style="display: flex; gap: 0.75rem;">
+              <button type="button" class="btn-preset active" id="btn-pred-teas" onclick="setPredModality('TEAS')">TEAS (Surface)</button>
+              <button type="button" class="btn-preset" id="btn-pred-ea" onclick="setPredModality('EA')">EA (Needle)</button>
+            </div>
+          </div>
+
+          <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.3);">
+            <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: #34d399; margin-bottom: 0.35rem;">Model-Predicted Sparing Effect</div>
+            <div id="pred-result-md" style="font-size: 2rem; font-weight: 800; color: #34d399; margin-bottom: 0.25rem;">&minus;7.48 mg</div>
+            <div id="pred-result-ci" style="font-size: 0.8rem; color: #cbd5e1; margin-bottom: 0.5rem;">Estimated 95% CI: [&minus;10.22, &minus;4.75] mg IV MME</div>
+            <div id="pred-result-badge" class="badge badge-indigo" style="font-size: 0.75rem; padding: 0.3rem 0.6rem;">Sub-Threshold Sparing (&lt; 10 mg MCID)</div>
+            <p id="pred-result-desc" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.65rem; line-height: 1.5;">
+              In surgical procedures requiring 40 mg baseline IV morphine equivalents, TEAS is expected to produce an average reduction of 7.48 mg IV MME.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stata Console Log Viewer for Meta-Regression -->
+      <div class="dashboard-card">
+        <div class="card-header">
+          <div>
+            <span class="badge badge-indigo">StataNow 19.5 SE Live Terminal Output</span>
+            <h2 style="margin-top: 0.25rem;">Verbatim Execution Log: Meta-Regression &amp; Moderator Models</h2>
+          </div>
+          <a href="stata_meta_regression_execution.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; padding: 0.4rem 0.75rem; font-size: 0.75rem;">
+            <span>📥</span> Download Full Log (.log)
+          </a>
+        </div>
+        <div class="stata-terminal" style="margin-top: 0.75rem;">
+          <div class="stata-terminal-header">
+            <span class="stata-terminal-dot red"></span>
+            <span class="stata-terminal-dot yellow"></span>
+            <span class="stata-terminal-dot green"></span>
+            <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem;">stata_meta_regression_execution.log &bull; StataNow 19.5 SE</span>
+          </div>
+          <pre class="stata-terminal-body" id="stata-metareg-terminal-content">Loading Stata meta-regression execution stream...</pre>
         </div>
       </div>
 
