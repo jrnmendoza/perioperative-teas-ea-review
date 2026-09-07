@@ -53,7 +53,7 @@ const TRANSLATIONS = {
       lowRobOnly: "Low Risk of Bias Only",
       someConcerns: "Some Concerns",
       presets: "Presets:",
-      allStudies: "All 63 Studies",
+      allStudies: "All 70 Studies",
       presetLowRob: "Low RoB Only",
       presetSham: "Sham Only",
       presetLarge: "Large (N ≥ 60)"
@@ -61,7 +61,7 @@ const TRANSLATIONS = {
     kpi: {
       includedRcts: "Included RCTs",
       includedRctsSub: "5,089 randomized surgical patients",
-      includedRctsBadge: "49 TEAS • 14 EA",
+      includedRctsBadge: "See Study Explorer for modality breakdown",
       primaryTitle: "Primary Outcome: 24-h Opioid Sparing",
       primaryValue: "TEAS: −14.00 mg • EA: −3.94 mg",
       primarySub: "Supporting Combined Synthesis: −9.91 mg [−20.08, +0.27] (p=0.0545, k=7)",
@@ -245,7 +245,7 @@ const TRANSLATIONS = {
       lowRobOnly: "Endast låg risk för bias",
       someConcerns: "Viss risk för bias",
       presets: "Förval:",
-      allStudies: "Alla 63 studier",
+      allStudies: "Alla 70 studier",
       presetLowRob: "Endast låg RoB",
       presetSham: "Endast sham",
       presetLarge: "Stora studier (N ≥ 60)"
@@ -253,7 +253,7 @@ const TRANSLATIONS = {
     kpi: {
       includedRcts: "Inkluderade RCT:er",
       includedRctsSub: "5 089 randomiserade kirurgiska patienter",
-      includedRctsBadge: "49 TEAS • 14 EA",
+      includedRctsBadge: "See Study Explorer for modality breakdown",
       primaryTitle: "Primärt utfall: 24-h opioidbesparing",
       primaryValue: "TEAS: −14,00 mg • EA: −3,94 mg",
       primarySub: "Kompletterande kombinerad syntes: −9,91 mg [−20,08; +0,27] (p=0,0545, k=7)",
@@ -427,7 +427,7 @@ const STAT_GLOSSARY = {
       term: "k (Number of Contributing Studies)",
       category: "Meta-Analytic Parameters",
       shortDef: "The count of independent randomized controlled trials contributing data to a specific meta-analytic synthesis.",
-      context: "In this review, k = 70 RCTs overall (63 through the tracked database search, plus 7 added directly from source PDFs after the v26 lock), but k for specific synthesized endpoints is smaller (e.g. k = 7 for strict primary 24h opioid sparing) because only trials with verified, non-imputed extractable data are included.",
+      context: "In this review, k = 70 RCTs overall per the review team\u2019s updated 2026-09-07 PRISMA record (69 via the database search route, plus 1 via citation searching), but k for specific synthesized endpoints is smaller (e.g. k = 7 for strict primary 24h opioid sparing) because only trials with verified, non-imputed extractable data are included.",
       jumpTab: "primary"
     },
     nParticipants: {
@@ -653,7 +653,7 @@ const STAT_GLOSSARY = {
       term: "k (Antal ingående studier)",
       category: "Metaanalytiska parametrar",
       shortDef: "Antalet oberoende randomiserade kontrollerade studier som bidrar med data till en specifik metaanalytisk syntes.",
-      context: "I denna översikt ingår k = 70 RCT:er totalt (63 via den spårade databassökningen, plus 7 som lades till direkt från källdokument efter v26-låsningen), men k för specifika synteser är lägre (t.ex. k = 7 för strikt primär 24h opioidbesparing) eftersom endast studier med verifierade, icke-imputerade data inkluderas.",
+      context: "I denna översikt ingår k = 70 RCT:er totalt enligt granskningsteamets uppdaterade PRISMA-underlag från 2026-09-07 (69 via databassökningen, plus 1 via citeringssökning), men k för specifika synteser är lägre (t.ex. k = 7 för strikt primär 24h opioidbesparing) eftersom endast studier med verifierade, icke-imputerade data inkluderas.",
       jumpTab: "primary"
     },
     nParticipants: {

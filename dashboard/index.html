@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=ffdccffe06b1">
+  <link rel="stylesheet" href="styles.css?v=901b1b58e7a7">
 </head>
 <body>
 
@@ -136,7 +136,7 @@
 
     <div style="display: flex; gap: 0.4rem; align-items: center;">
       <span class="filter-label" style="margin-right: 0.3rem;" data-i18n="controls.presets">Presets:</span>
-      <button class="btn-preset active" data-preset="all" data-i18n="controls.allStudies">All 63 Studies</button>
+      <button class="btn-preset active" data-preset="all" data-i18n="controls.allStudies">All 70 Studies</button>
       <button class="btn-preset" data-preset="low_rob" data-i18n="controls.presetLowRob">Low RoB Only</button>
       <button class="btn-preset" data-preset="sham_only" data-i18n="controls.presetSham">Sham Only</button>
       <button class="btn-preset" data-preset="large_studies" data-i18n="controls.presetLarge">Large (N ≥ 60)</button>
@@ -153,9 +153,9 @@
           <span data-i18n="kpi.includedRcts">Included RCTs</span>
           <button class="stat-info-btn" data-stat-term="kStudies" aria-label="Statistical explanation for study count k">ⓘ</button>
         </div>
-        <div class="kpi-value" id="kpi-study-count">63 RCTs</div>
+        <div class="kpi-value" id="kpi-study-count">70 RCTs</div>
         <div class="kpi-sub" id="kpi-patient-sub">5,089 randomized surgical patients</div>
-        <span class="kpi-badge badge-indigo" data-i18n="kpi.includedRctsBadge">49 TEAS • 14 EA</span>
+        <span class="kpi-badge badge-indigo" data-i18n="kpi.includedRctsBadge">See Study Explorer for modality breakdown</span>
       </div>
 
       <div class="kpi-card" id="kpi-effect-card">
@@ -460,7 +460,7 @@
       <div class="dashboard-grid-2">
         <div class="dashboard-card">
           <div class="card-header">
-            <h2>Surgical Specialties Distribution (63 Trials)</h2>
+            <h2>Surgical Specialties Distribution (70 Trials)</h2>
           </div>
           <div id="overview-surgery-bars"></div>
         </div>
@@ -513,19 +513,19 @@
               <span style="font-size: 0.72rem; color: var(--text-muted);">2,704 irrelevant excluded</span>
             </div>
             <div class="prisma-summary-card">
-              <span class="search-meta-label">Full-Text Assessed</span>
-              <span class="prisma-card-count" style="color: #38bdf8;">224</span>
-              <span style="font-size: 0.72rem; color: var(--text-muted);">161 excluded with reasons</span>
+              <span class="search-meta-label">Assessed for Eligibility</span>
+              <span class="prisma-card-count" style="color: #38bdf8;">210</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">224 sought, 14 not retrieved; 141 excluded</span>
             </div>
             <div class="prisma-summary-card success">
               <span class="search-meta-label">Included in Synthesis</span>
-              <span class="prisma-card-count">63</span>
-              <span style="font-size: 0.72rem; color: #34d399;">5,089 randomized patients</span>
+              <span class="prisma-card-count">70</span>
+              <span style="font-size: 0.72rem; color: #34d399;">patient totals under reconciliation</span>
             </div>
           </div>
 
-          <div style="background: rgba(99, 102, 241, 0.08); border-left: 3px solid #6366f1; padding: 0.85rem 1rem; border-radius: var(--radius-sm); font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6; margin-top: 1rem;">
-            <strong style="color: #a5b4fc;">Note on the Study Explorer total (70, not 63):</strong> This flow diagram reports the original tracked database search and screening process above, unchanged since the v26 lock. Since then, 7 additional studies (Wu 2016, Gao 2022, Liu 2015, Oztas 2019, Song 2020, Szmit 2021, Zhang 2018) were added directly from source PDFs found outside this database-search flow &mdash; they were never assigned an Embase/Cochrane/PubMed/CINAHL identification record or a title/abstract or full-text screening disposition in this diagram, so adding them here would fabricate a screening history they did not go through. They are fully browsable in the Study Explorer (RoB 2, citations, extracted outcomes) and are counted in that tab's totals. Only Szmit 2021 contributes to a locked pooled result so far (the strict primary 24-h opioid analysis and the Target D nausea 0&ndash;24h stratum); the other 6 are not yet pooled into any target pending a dedicated eligibility reconciliation pass.
+          <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; padding: 0.85rem 1rem; border-radius: var(--radius-sm); font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6; margin-top: 1rem;">
+            <strong style="color: #6ee7b7;">Updated 2026-09-07:</strong> This flow diagram now reflects the review team's updated PRISMA 2020 record (source: "PRISMA - Protocol characteristics associated with clinic....docx"), which folds the 7 post-lock source-direct additions (Wu 2016, Gao 2022, Liu 2015, Oztas 2019, Song 2020, Szmit 2021, Zhang 2018) into the eligibility and inclusion counts below. Full-text eligibility screening was revisited: 224 reports were sought, 14 could not be retrieved, 210 were assessed, and 141 were excluded (revised reason breakdown below) &mdash; 210 &minus; 141 = 69 records from the database-search route, plus 1 identified via citation searching, gives the 70 studies now included. RoB 2 is complete for all 70 studies in the source workbook (verified 2026-09-07: <code>Corrected_RoB2</code> has a full 5-domain + overall judgement for every row in <code>Study_Master</code>, no gaps) and is reflected in the Study Explorer and RoB 2 tabs. Only Szmit 2021 contributes to a locked pooled result (the strict primary 24-h opioid analysis and the Target D nausea 0&ndash;24h stratum); the other 6 are not yet pooled into any target pending a dedicated eligibility reconciliation pass. The modality split, comparator split, and total randomized-patient count shown in the "Included" card below predate this update, were found to already be inconsistent with the Study Explorer's own per-study data even for the original 63 studies, and remain under reconciliation rather than being extrapolated further.
           </div>
 
           <!-- PRISMA Flow Diagram Structure -->
@@ -610,16 +610,39 @@
             <div class="prisma-stage-row">
               <div class="prisma-stage-header">
                 <span class="prisma-stage-title">Eligibility</span>
-                <span class="prisma-stage-desc">Full-Text Evaluation</span>
+                <span class="prisma-stage-desc">Full-Text Retrieval &amp; Evaluation</span>
               </div>
               <div class="prisma-stage-content">
                 <div class="prisma-card primary">
                   <div class="prisma-card-title">
-                    <span>Reports Assessed for Eligibility</span>
+                    <span>Reports Sought for Retrieval</span>
                     <span class="prisma-card-count">224</span>
                   </div>
                   <div class="prisma-card-body">
-                    Full-text reports retrieved and independently scrutinized in duplicate against explicit PICOS eligibility criteria.
+                    Full-text reports sought following title/abstract screening.
+                  </div>
+                </div>
+
+                <div class="prisma-flow-arrow-right">➔</div>
+
+                <div class="prisma-card excluded">
+                  <div class="prisma-card-title">
+                    <span>Reports Not Retrieved</span>
+                    <span class="prisma-card-count">14</span>
+                  </div>
+                  <div class="prisma-card-body">
+                    Full text could not be obtained despite attempted retrieval.
+                  </div>
+                </div>
+              </div>
+              <div class="prisma-stage-content" style="margin-top: 0.75rem;">
+                <div class="prisma-card primary">
+                  <div class="prisma-card-title">
+                    <span>Reports Assessed for Eligibility</span>
+                    <span class="prisma-card-count">210</span>
+                  </div>
+                  <div class="prisma-card-body">
+                    Retrieved full-text reports independently scrutinized in duplicate against explicit PICOS eligibility criteria.
                   </div>
                 </div>
 
@@ -628,20 +651,17 @@
                 <div class="prisma-card excluded">
                   <div class="prisma-card-title">
                     <span>Reports Excluded</span>
-                    <span class="prisma-card-count">161</span>
+                    <span class="prisma-card-count">141</span>
                   </div>
                   <div class="prisma-card-body">
-                    Exclusion reasons categorized according to Covidence review records:
+                    Exclusion reasons per the review team's updated 2026-09-07 PRISMA record:
                     <ul class="prisma-reason-list">
-                      <li class="prisma-reason-item"><span>Wrong outcomes (no 24h opioid/pain)</span><strong>122 (75.8%)</strong></li>
-                      <li class="prisma-reason-item"><span>Publication language (non-Eng/Chin)</span><strong>12 (7.5%)</strong></li>
-                      <li class="prisma-reason-item"><span>Wrong intervention (manual/moxibustion)</span><strong>9 (5.6%)</strong></li>
-                      <li class="prisma-reason-item"><span>Wrong setting (chronic / non-surgical)</span><strong>9 (5.6%)</strong></li>
-                      <li class="prisma-reason-item"><span>Wrong comparator (active drug only)</span><strong>3 (1.9%)</strong></li>
-                      <li class="prisma-reason-item"><span>Study not retrieved</span><strong>2 (1.2%)</strong></li>
-                      <li class="prisma-reason-item"><span>Wrong patient population (pediatric/animal)</span><strong>2 (1.2%)</strong></li>
-                      <li class="prisma-reason-item"><span>Abstract only (no full report)</span><strong>1 (0.6%)</strong></li>
-                      <li class="prisma-reason-item"><span>Wrong study design (non-RCT)</span><strong>1 (0.6%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong outcomes (no 24h opioid/pain)</span><strong>117 (83.0%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong setting (chronic / non-surgical)</span><strong>9 (6.4%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong intervention (manual/moxibustion)</span><strong>9 (6.4%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong comparator (active drug only)</span><strong>3 (2.1%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong patient population (pediatric/animal)</span><strong>2 (1.4%)</strong></li>
+                      <li class="prisma-reason-item"><span>Wrong study design (non-RCT)</span><strong>1 (0.7%)</strong></li>
                     </ul>
                   </div>
                 </div>
@@ -660,25 +680,19 @@
                 <div class="prisma-card included">
                   <div class="prisma-card-title">
                     <span>Studies Included in Systematic Review &amp; Meta-Analysis</span>
-                    <span class="prisma-card-count">63 RCTs</span>
+                    <span class="prisma-card-count">70 RCTs</span>
                   </div>
                   <div class="prisma-card-body">
-                    A total of <strong>63 randomized controlled trials</strong> encompassing <strong>5,089 surgical participants</strong>:
+                    <strong>70 randomized controlled trials</strong> per the review team's updated 2026-09-07 PRISMA record (69 via the database-search route above, plus 1 identified via citation searching). Full study-level detail, RoB 2, and extracted outcomes for all 70 are in the Study Explorer.
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; margin-top: 0.85rem;">
                       <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 6px;">
-                        <strong style="color: #818cf8;">Modality Stratification:</strong><br>
-                        • TEAS (Surface Electrodes): 49 RCTs<br>
-                        • EA (Acupuncture Needles): 14 RCTs
-                      </div>
-                      <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 6px;">
-                        <strong style="color: #34d399;">Control Design:</strong><br>
-                        • Sham-Controlled (Double-Blind): 44 RCTs<br>
-                        • Usual Care / Open-Label: 19 RCTs
-                      </div>
-                      <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 6px;">
                         <strong style="color: #fbbf24;">Audit &amp; Consensus Status:</strong><br>
-                        • 100% Audited against Source PDFs<br>
+                        • RoB 2 complete for all 70 studies (verified 2026-09-07)<br>
                         • 19/19 P1 issues dispositioned (0 blockers)
+                      </div>
+                      <div style="background: rgba(239, 68, 68, 0.08); padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(239, 68, 68, 0.25);">
+                        <strong style="color: #fca5a5;">Under reconciliation:</strong><br>
+                        Modality split, comparator split, and total randomized-patient count &mdash; not addressed by the 2026-09-07 PRISMA update; see the Study Explorer tab for the live per-study figures this dashboard actually computes from.
                       </div>
                     </div>
                   </div>
@@ -3502,11 +3516,11 @@
   </div>
 
   <!-- Scripts -->
-  <script src="primary_pathway.js?v=ffdccffe06b1"></script>
-  <script src="data.js?v=ffdccffe06b1"></script>
-  <script src="translations.js?v=ffdccffe06b1"></script>
-  <script src="reader_assist.js?v=ffdccffe06b1"></script>
-  <script src="meta_engine.js?v=ffdccffe06b1"></script>
-  <script src="app.js?v=ffdccffe06b1"></script>
+  <script src="primary_pathway.js?v=901b1b58e7a7"></script>
+  <script src="data.js?v=901b1b58e7a7"></script>
+  <script src="translations.js?v=901b1b58e7a7"></script>
+  <script src="reader_assist.js?v=901b1b58e7a7"></script>
+  <script src="meta_engine.js?v=901b1b58e7a7"></script>
+  <script src="app.js?v=901b1b58e7a7"></script>
 </body>
 </html>

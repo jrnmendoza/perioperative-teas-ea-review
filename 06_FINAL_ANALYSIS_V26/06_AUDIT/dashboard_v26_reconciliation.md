@@ -945,3 +945,85 @@ explicit instruction). No new opioid conversion factor was invented for
 Oztas 2019's tramadol/pethidine result. PRISMA identification/screening counts
 were not altered. The pre-existing patient-total inconsistency (§25.6) was
 flagged, not fixed, as it is unrelated to this migration.
+
+---
+
+## 26. Updated PRISMA 2020 record and RoB 2 completeness check (2026-09-07)
+
+The user supplied an updated PRISMA 2020 flow diagram
+(`PRISMA - Protocol characteristics associated with clinic....docx`) and asked
+whether RoB 2 is complete for all studies in the current dataset.
+
+### 26.1 RoB 2 completeness — verified complete
+
+Checked directly against the v32 workbook rather than trusting a summary
+field: every one of the 70 rows in `Study_Master` has a matching row in
+`Corrected_RoB2` with all five domains and an overall judgement populated (0
+gaps, 0 missing rows either direction). All 7 studies added in the v32
+migration (§25) already carry this RoB 2 in `dashboard/data.js`, pulled
+directly from `Corrected_RoB2` at that time. No further RoB 2 work was
+needed; this section only verifies and documents that fact.
+
+### 26.2 PRISMA flow diagram — updated to match the new authoritative record
+
+The supplied docx is a genuinely revised PRISMA record, not merely an
+additive "+7" bolt-on:
+
+| Stage | Old (v26-era) | New (2026-09-07 docx) |
+|---|---|---|
+| Records identified | 5,100 | 5,100 (unchanged) |
+| Removed before screening | 2,160 | 2,160 (unchanged) |
+| Screened | 2,928 | 2,928 (unchanged) |
+| Excluded at screening | 2,704 | 2,704 (unchanged) |
+| Full-text sought | — | 224 |
+| Not retrieved | — | 14 |
+| Assessed for eligibility | 224 | 210 |
+| Excluded at eligibility | 161 | 141 |
+| Included | 63 | 70 |
+
+Reconciles as 210 − 141 = 69 via the database-search route, **+1 via citation
+searching** (given explicitly in the docx), = 70 — matching the Study
+Explorer's study count from the v32 migration exactly. The exclusion-reason
+breakdown also changed (e.g. "Wrong outcomes" 122 → 117; the "Language" and
+"Abstract only" categories no longer appear; "Study not retrieved" moved from
+a small within-161 subcategory to its own dedicated 14-study pre-eligibility
+stage) — transcribed directly from the docx, not recomputed.
+
+`dashboard/index.html`'s PRISMA tab (summary banner, flow-diagram cards, and
+the Eligibility stage, which now has two sub-stages: sought/not-retrieved and
+assessed/excluded) and `app.js`'s "Copy PRISMA Summary" clipboard text were
+updated to match. The `## 25.6` callout explaining why the Study Explorer
+(70) and PRISMA (63) diverged is now **resolved and replaced**: the note now
+documents the update and its source rather than explaining a gap.
+
+### 26.3 What the new PRISMA record does NOT resolve
+
+The docx gives study counts only — no patient totals, no modality or
+comparator breakdown. The pre-existing, unrelated inconsistencies flagged in
+§25.6 (displayed "5,089 patients" / "49 TEAS • 14 EA" / "44 Sham • 19 Usual
+Care" not matching `data.js`'s own `population.total_n` / `modality` /
+`comparator_short` fields even for the original 63 studies) remain
+unresolved. Rather than compound them with further arithmetic on an already-
+wrong base (e.g. a naive "49+7=56 TEAS"), every such figure was replaced with
+an explicit "under reconciliation" note pointing to the Study Explorer, which
+computes these breakdowns live from the same per-study data everywhere else
+on the dashboard reads from.
+
+Also fixed in passing: two more hardcoded study-count strings not caught by
+the v32 migration sweep (`Study-Level Overview: 63 Studies` on the RoB 2 tab,
+now computed live from `STUDIES_DATA.length`; `Surgical Specialties
+Distribution (63 Trials)` heading on the intro tab) and the hero "49 TEAS •
+14 EA" modality badge, replaced with a pointer to the Study Explorer rather
+than a number this session cannot verify.
+
+### 26.4 Verification
+
+Validator 52/52. Full 14-tab × 2-locale browser sweep specifically for
+standalone "63" tokens as a review-wide count: zero remaining (the one match,
+"63 (33/30)" on the Study Explorer, is an individual study's own sample size,
+coincidentally 63, not a review count). RoB 2 tab confirmed to render exactly
+70 table rows.
+
+Not deployed to gh-pages as part of this section; awaiting explicit
+go-ahead, consistent with the standing per-change deployment approval
+requirement.

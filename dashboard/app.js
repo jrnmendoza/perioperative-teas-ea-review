@@ -363,12 +363,12 @@ function renderPrismaView() {
   const btnCopy = document.getElementById('btn-export-prisma-summary');
   if (btnCopy) {
     btnCopy.onclick = () => {
-      const summaryText = `PRISMA 2020 Flow Summary (Perioperative TEAS/EA Systematic Review):
+      const summaryText = `PRISMA 2020 Flow Summary (Perioperative TEAS/EA Systematic Review) -- updated 2026-09-07:
 - Identification: 5,100 records imported (Embase: 1,928; CENTRAL: 1,698; PubMed: 1,009; CINAHL: 465).
-- Removed before screening: 1,652 duplicate records (1,651 Covidence auto + 1 manual); 508 automation ineligible.
+- Removed before screening: 2,160 records (1,651 Covidence auto-duplicates + 1 manual duplicate + 508 automation ineligible).
 - Screening: 2,928 title/abstract records screened; 2,704 irrelevant records excluded.
-- Eligibility: 224 full-text reports assessed; 161 excluded with reasons (Wrong outcomes: 122; Language: 12; Wrong intervention: 9; Wrong setting: 9; Wrong comparator: 3; Not retrieved: 2; Wrong population: 2; Abstract only: 1; Wrong design: 1).
-- Included: 63 randomized controlled trials (5,089 surgical participants).`;
+- Eligibility: 224 reports sought; 14 not retrieved; 210 assessed; 141 excluded with reasons (Wrong outcomes: 117; Wrong setting: 9; Wrong intervention: 9; Wrong comparator: 3; Wrong population: 2; Wrong design: 1).
+- Included: 70 randomized controlled trials (69 via database search + 1 via citation searching). RoB 2 complete for all 70. Modality/comparator split and total patient N are under reconciliation and not restated here.`;
       navigator.clipboard.writeText(summaryText).then(() => {
         const orig = btnCopy.innerText;
         btnCopy.innerText = '✅ Summary Copied!';
@@ -1035,7 +1035,7 @@ function renderRoB2Matrix() {
 
   if (statusBadge) {
     if (activeOutcome === 'summary') {
-      statusBadge.innerHTML = `<span class="badge badge-indigo">Study-Level Overview: 63 Studies</span>`;
+      statusBadge.innerHTML = `<span class="badge badge-indigo">Study-Level Overview: ${window.STUDIES_DATA.length} Studies</span>`;
     } else {
       statusBadge.innerHTML = `<span class="badge badge-emerald">Assessed for Outcome: ${assessedCount}</span> <span class="badge badge-indigo" style="margin-left: 6px;">Outcome Not Reported: ${unmeasuredCount}</span>`;
     }
