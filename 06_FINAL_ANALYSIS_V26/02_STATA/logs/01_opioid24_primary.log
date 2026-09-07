@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/01_opioid24_primary.log
   log type:  text
- opened on:   7 Sep 2026, 09:43:40
+ opened on:   7 Sep 2026, 11:21:23
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta
  Observations:            15                  
-    Variables:            49                  7 Sep 2026 09:43
+    Variables:            49                  7 Sep 2026 11:21
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -790,5 +790,5 @@ SUCCESS: Primary 24-h opioid analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/01_opioid24_primary.log
   log type:  text
- closed on:   7 Sep 2026, 09:43:42
+ closed on:   7 Sep 2026, 11:21:24
 ----------------------------------------------------------------------------------------------------

@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/04_pain.log
   log type:  text
- opened on:   7 Sep 2026, 09:43:43
+ opened on:   7 Sep 2026, 11:21:26
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.dta
  Observations:             2                  
-    Variables:            51                  7 Sep 2026 09:43
+    Variables:            51                  7 Sep 2026 11:21
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -301,5 +301,5 @@ SUCCESS: Target C analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/04_pain.log
   log type:  text
- closed on:   7 Sep 2026, 09:43:44
+ closed on:   7 Sep 2026, 11:21:26
 ----------------------------------------------------------------------------------------------------

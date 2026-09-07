@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/10_broader24h_sensitivity.log
   log type:  text
- opened on:   7 Sep 2026, 11:07:59
+ opened on:   7 Sep 2026, 11:21:31
 
 . 
 . di as txt "=================================================================="
@@ -505,11 +505,9 @@ variable notes was str66 now str162
 
 . 
 . save "06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.dta", replace
-(file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.dta not found)
 file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.dta saved
 
 . export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.csv", replace
-(file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.csv not found)
 file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.csv saved
 
 . list analysis_id k n_participants estimate ci_low ci_high p_value i2, clean noobs
@@ -528,5 +526,5 @@ SUCCESS: broader 24-h sensitivity analysis complete.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/10_broader24h_sensitivity.log
   log type:  text
- closed on:   7 Sep 2026, 11:08:00
+ closed on:   7 Sep 2026, 11:21:31
 ----------------------------------------------------------------------------------------------------

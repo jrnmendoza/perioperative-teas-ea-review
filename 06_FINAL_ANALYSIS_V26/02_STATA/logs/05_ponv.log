@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/05_ponv.log
   log type:  text
- opened on:   7 Sep 2026, 09:43:44
+ opened on:   7 Sep 2026, 11:21:26
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Binary Risk Ratio (RR), REML + Hartung-Knapp
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.dta
  Observations:            11                  
-    Variables:            49                  7 Sep 2026 09:43
+    Variables:            49                  7 Sep 2026 11:21
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -655,5 +655,5 @@ SUCCESS: Target D analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/05_ponv.log
   log type:  text
- closed on:   7 Sep 2026, 09:43:45
+ closed on:   7 Sep 2026, 11:21:27
 ----------------------------------------------------------------------------------------------------

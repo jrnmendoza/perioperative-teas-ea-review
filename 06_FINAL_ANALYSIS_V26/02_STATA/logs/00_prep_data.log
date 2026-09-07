@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/00_prep_data.log
   log type:  text
- opened on:   7 Sep 2026, 09:43:40
+ opened on:   7 Sep 2026, 11:21:23
 
 . 
 . di as txt "=================================================================="
@@ -160,8 +160,8 @@ Saved 01_DATA/opioid_24h_primary.dta (N = 15)
 . tempfile af_rob
 
 . save `af_rob', replace
-(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_20044.000001 not found)
-file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_20044.000001 saved as .dta format
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_28365.000001 not found)
+file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_28365.000001 saved as .dta format
 
 . 
 . * ------------------------------------------------------------------------------
@@ -419,5 +419,5 @@ SUCCESS: All analysis datasets cleanly prepared and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/00_prep_data.log
   log type:  text
- closed on:   7 Sep 2026, 09:43:40
+ closed on:   7 Sep 2026, 11:21:23
 ----------------------------------------------------------------------------------------------------
