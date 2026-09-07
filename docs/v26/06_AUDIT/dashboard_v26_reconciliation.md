@@ -491,3 +491,133 @@ code). Running it immediately caught a live claim the old suite missed.
 | `1891355` | Adversarial validator |
 | `a58c3d8` | Analysed denominators; portable asset links |
 | `e2f132f` | Content-derived cache buster |
+| `7ee0f13` | Primary outcome contribution pathway |
+| `9067dc5` | Pathway audit documentation |
+| `32966e6` | Execution logs refreshed after pathway step |
+| `6d1e820` | Stata edition corrected (SE→BE) |
+| `c9a5d78` | Final reconciliation: comparator hierarchy, sufentanil audit, moderator matrix, wording |
+
+---
+
+## 23. Final reconciliation and verification pass (2026-09-07)
+
+A request to perform a final rigorous verification pass supplied a list of example
+defects (a stale k=11 executive summary, specific withdrawn coefficients, specific
+headline PONV/pain/flatus numbers) as illustrations of what *might* remain. **Most
+of those specific examples did not exist** — they were already resolved in the
+prior session's work (§1–22 above). Per the standing instruction not to trust the
+prompt's numbers over the actual repository state, every claim was re-derived from
+source before any change was made. What follows are the defects that verified as
+real.
+
+### 23.1 EA comparator mislabelled as sham-controlled
+
+| Field | Value |
+| --- | --- |
+| **ISSUE** | Protocol text and `Stata_Manifest.csv` both state sham-controlled comparisons are principal and usual-care is supportive. Audited whether the dashboard's comparator labels matched the actual arms. |
+| **OLD STATE** | All 3 EA strict-primary studies (El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024) are **100% usual-care/open-label control** — verified directly from `opioid_24h_primary.csv`'s `comparator` field. The dashboard labelled this stratum "EA vs Control/Sham" in 7 places (`master_reconciled_results_v26.csv`, `index.html` ×3, `app.js` ×2, `translations.js`), while one other spot in `app.js` already said "EA vs Control / Usual Care" — the inconsistency itself confirmed this was a live bug. |
+| **V26 CORRECT STATE** | "EA vs Usual Care." One sham-controlled EA candidate exists in the whole 24-h pool (Coura 2011), but it is weight-normalised (µg/kg fentanyl) and not strict-poolable per the lock's own prohibition on group-mean-weight reconstruction — so there is currently **no pooled sham-controlled EA efficacy estimate**. |
+| **ACTION TAKEN** | Corrected the label everywhere (7 call sites across `index.html`, `app.js`, `translations.js` EN+SV, `master_reconciled_results_v26.csv`). Added an explicit Comparator Hierarchy caveat card on the Primary tab stating the above plainly. |
+| **FILE(S) CHANGED** | `dashboard/index.html`, `dashboard/app.js`, `dashboard/translations.js`, `06_FINAL_ANALYSIS_V26/03_RESULTS/master_reconciled_results_v26.csv` |
+| **VERIFICATION** | `t_ea_comparator_not_mislabelled_sham` — checks the comparator field of the 3 EA-strict rows directly and greps for the old mislabel. |
+| **STATUS** | **RESOLVED** |
+
+### 23.2 Combined k=6 estimate labelled "Primary"
+
+| Field | Value |
+| --- | --- |
+| **ISSUE** | Protocol text (already present in the dashboard's own Locked Protocol Synthesis Standard) states TEAS and EA are "never combined into a single grand pooled estimate" and that primary comparisons are the modality-specific ones. |
+| **OLD STATE** | The combined k=6 estimate was labelled "Strict Combined Primary" in the KPI card, badge, forest-plot header, and GRADE row — contradicting the protocol text on the same page and the already-existing (but self-contradictory) `hubText` i18n string. |
+| **V26 CORRECT STATE** | TEAS and EA modality-specific estimates are primary; the combined estimate is supporting/contextual. |
+| **ACTION TAKEN** | Renamed to "Supporting Combined Synthesis" throughout (KPI sub-line, badge, forest-plot section title, GRADE SoF row name, both locales' `hubText`/`primarySub`/`primaryBadge`/`combinedPool`/`eaStratum` keys, plus static HTML fallbacks for the same `data-i18n` bindings). |
+| **FILE(S) CHANGED** | `dashboard/index.html`, `dashboard/app.js`, `dashboard/translations.js` |
+| **VERIFICATION** | `t_combined_not_labelled_primary` — greps for the phrase and confirms the replacement framing exists. |
+| **STATUS** | **RESOLVED** |
+
+### 23.3 Sufentanil conversion factor — critical, unresolved
+
+| Field | Value |
+| --- | --- |
+| **ISSUE** | High-priority audit requested for a suspected ten-fold sufentanil conversion discrepancy. |
+| **OLD STATE** | Every sufentanil-converted result (Chen 2020 — 1 of 6 strict primary trials — plus Zhang 2025 and Xie 2014) uses a factor of **0.1 mg MME/µg (100:1)**, hardcoded in `00_prep_data.do` with **no citation**, identical to the fentanyl ratio. The dashboard's own Methods page separately claimed **1000:1** for sufentanil, citing Treillet 2018 / Macintyre 2020 / Knotkova 2012 — sources held nowhere in this repository. |
+| **EXTERNAL VERIFICATION** | Web search of published equianalgesic literature (JPSM "Accuracy in Equianalgesic Dosing Conversion Dilemmas" and secondary syntheses) places IV sufentanil:morphine potency at roughly **500:1–1000:1**, with one acute-postoperative study reporting the ratio itself varies 267:1–791:1 by duration. No source supports 100:1 for sufentanil specifically. CDC 2022 was separately confirmed (via web search of its own stated scope) to be an **outpatient** acute/subacute/chronic prescribing guideline that does not publish perioperative IV route-specific factors — its attribution to the Fentanyl/Hydromorphone/Pethidine/Morphine IV rows was removed. |
+| **V26 CORRECT STATE** | Genuinely **unresolved**. No project-held source justifies either 100:1 or 1000:1 for this specific route/context (systemic IV PCIA, not intrathecal/epidural, where much of the 1000:1 literature originates). |
+| **ACTION TAKEN** | Created `opioid_conversion_audit.csv` (12 rows, full schema) marking sufentanil **UNRESOLVED**. Created `11_sufentanil_conversion_sensitivity.do`, which recomputes the strict primary and Target A broader MDs at factors 0.1/0.5/1.0 **without changing the primary analysis**: strict k=6 moves −4.68 → −7.45 → −10.36 mg; Target A k=4 moves −2.08 → −7.43 → −12.30 mg. Direction is unambiguous — a higher ratio makes the effect **larger**, not smaller. Fixed the Methods page: removed the citation-backed 1000:1 badge (replaced with the actual computed factor, marked "Reference verification required"), flagged a smaller hydromorphone discrepancy the same way (Stata uses 5:1, the page claimed 6.67:1), removed CDC from perioperative IV badges, replaced "Universal conversion factors" with "prespecified equianalgesic conversion framework... with uncertainty assessed in sensitivity analyses." Added a prominent caveat card on the Primary tab. |
+| **A first draft of the sensitivity script did not reproduce baseline** | It retained both Xie 2014 comparison rows instead of the single one `02_targetA_48h.do` uses, giving k=5 instead of k=4. Caught by comparing the factor=0.1 output against the already-committed `OP24_PRIM_SMD`/`TA_INCL_XIE` values before trusting any of the alternative-factor numbers. |
+| **FILE(S) CHANGED** | `06_FINAL_ANALYSIS_V26/06_AUDIT/opioid_conversion_audit.csv` (new), `06_FINAL_ANALYSIS_V26/02_STATA/11_sufentanil_conversion_sensitivity.do` (new), `06_FINAL_ANALYSIS_V26/03_RESULTS/results_sufentanil_conversion_sensitivity.csv` (new), `dashboard/index.html` |
+| **VERIFICATION** | `t_sufentanil_conversion_documented_and_unresolved`; full pipeline re-run confirms all result tables byte-identical (the primary analysis itself is untouched). |
+| **STATUS** | **DOCUMENTED AND FLAGGED — genuinely unresolved pending independent pharmacological verification. Not silently guessed.** |
+
+### 23.4 Moderator matrix — fabricated k=11-era categorical models
+
+| Field | Value |
+| --- | --- |
+| **ISSUE** | Suspected stale k=11 remnants in moderator matrix cells. |
+| **OLD STATE** | All 6 strict primary trials share identical Stimulation Timing ("Preoperative only") and Electrical Frequency ("2/100 Hz Dense-Disperse") — verified directly against `data.js`'s `stricta` fields: zero variance on both, exactly like Number of Sessions (already correctly marked "dropped for zero variance"). Instead, two rows displayed fitted categorical models from the withdrawn 11-trial pool — "Preoperative (k=5) vs Multi-phase (k=5) vs Intraop (k=1)" and "2/100 Hz DD (k=7) vs Fixed 100/2 Hz (k=4)" — both summing to 10–11, both carrying real `t(9)` statistics and p-values, neither possible at k=6. |
+| **V26 CORRECT STATE** | Zero variance on both covariates; dropped by Stata; not modelled. |
+| **ACTION TAKEN** | Corrected both rows to the zero-variance pattern. Also fixed the Patient Sex row, which asserted "No evidence of an association... was detected" directly beneath a "Not estimated" cell — a claim about a fitted model's result attached to a covariate that was never modelled. Reworded to state plainly that no association can be affirmed or ruled out. Softened the Cochrane 10:1 wording from "stipulates... require a minimum of 10" to "advises... generally should not be considered with fewer than approximately 10... depending on the covariate's distribution." |
+| **FILE(S) CHANGED** | `dashboard/index.html` |
+| **VERIFICATION** | `t_moderator_matrix_no_fabricated_categories`, `t_no_false_no_association_claim`, `t_cochrane_wording_not_overstated`. |
+| **STATUS** | **RESOLVED** |
+
+### 23.5 Wording: MCID exploratory label, transformation wording, version tag
+
+| Field | Value |
+| --- | --- |
+| **ISSUE** | Parts 16, 21, 25 wording checks. |
+| **ACTION TAKEN** | MCID/Clinical Importance studio relabelled "Exploratory Paired Opioid–Pain Analysis" throughout (badge, header, tooltip). Cochrane §6.5.2 "mandates mathematical transformation" softened to "provides methods for estimating... where justified" (no MCID overclaiming language — "confirmed analgesia" / "zero risk" / "strictly beneficial" — was found; the studio was already using correctly hedged language for its conclusions). Added a visible "Analysis version: v26 / Locked 2026-09-06" tag to the provenance footer, sourced from the workbook's own `README` sheet rather than invented. |
+| **FILE(S) CHANGED** | `dashboard/index.html` |
+| **VERIFICATION** | `t_mcid_labelled_exploratory`, `t_version_tag_present`. |
+| **STATUS** | **RESOLVED** |
+
+### 23.6 Bug introduced by this pass, caught before commit
+
+| Field | Value |
+| --- | --- |
+| **ISSUE** | `reader_assist.js` applies plain `data-i18n` values via `el.textContent`, which never decodes HTML entities (only `data-i18n-html` uses `innerHTML`). Two new translation strings in this pass used `&amp;`/`&bull;` and rendered as the literal characters `&amp;` on screen. |
+| **CAUGHT BY** | Full-tab browser sweep in both locales before commit — not by static review. |
+| **ACTION TAKEN** | Fixed to real Unicode characters (`&`, `•`). Added a permanent validator check (`t_i18n_textcontent_no_html_entities`) scanning every plain-value key in `translations.js` for entity patterns, so this class of bug cannot recur silently in any future edit to that file. |
+| **STATUS** | **RESOLVED, with a standing regression guard** |
+
+### 23.7 Pre-existing gap found while auditing, unrelated to this pass's edits
+
+| Field | Value |
+| --- | --- |
+| **ISSUE** | `dashboard/v26/02_STATA/logs/` and `docs/v26/02_STATA/logs/` (the `sync_dashboard.sh` mirror of the canonical execution logs) were never git-tracked. |
+| **WHY** | The blanket `*.log` gitignore rule was un-ignored for `06_FINAL_ANALYSIS_V26/02_STATA/logs/` but not for its two mirrors, confirmed with `git ls-files` returning zero results against 13 on-disk files per mirror. |
+| **IMPACT** | The live `gh-pages` deployment was unaffected — that deploy process `rsync`s from local disk, which had the files regardless of git-tracking status. A **fresh clone** of this branch, however, would silently serve a dashboard whose own log download links 404. |
+| **ACTION TAKEN** | Extended `.gitignore` with matching exceptions for both mirror paths; committed all 13 × 2 previously-untracked log files. |
+| **FILE(S) CHANGED** | `.gitignore`, `dashboard/v26/02_STATA/logs/*.log` (13 new), `docs/v26/02_STATA/logs/*.log` (13 new) |
+| **VERIFICATION** | `t_v26_mirror_logs_git_tracked` — compares on-disk files against `git ls-files` for both mirror paths. |
+| **STATUS** | **RESOLVED** |
+
+### 23.8 Verification method
+
+Full pipeline re-run (`00_master.do`, now 12 steps) after every Stata-adjacent
+change: all 20 exported result tables byte-identical to the pre-change snapshot,
+confirming this pass altered **no primary or secondary pooled result** — only
+labelling, wording, and new audit/sensitivity artifacts. Validator grew from 38
+to **49 passing checks**; the 11 new checks were confirmed to actually catch
+regressions by re-introducing three of the original defects and observing the
+expected failures before restoring the fix.
+
+### 23.9 Explicitly not done
+
+Per the standing instructions: PRISMA counts unchanged; the 122 wrong-outcome
+exclusions were not reopened; no study was moved between primary/sensitivity
+sets to increase *k*; no analysis was selected for a smaller p-value; the
+sufentanil/hydromorphone conversion factors were investigated and documented but
+not unilaterally "corrected" absent a verifiable project-held primary source.
+
+### 23.10 Remaining unresolved items requiring investigator judgment
+
+1. **Sufentanil conversion factor** (§23.3) — needs an independent pharmacology
+   reference check against the actual cited texts (Treillet 2018, Macintyre
+   2020, Knotkova 2012) or an equivalent primary source, ideally specific to
+   systemic IV PCIA rather than intrathecal/epidural administration.
+2. **Hydromorphone conversion factor** — smaller (25%) discrepancy between the
+   Stata-computed 5:1 and the Methods page's stated 6.67:1; lower priority but
+   unresolved for the same reason.
+3. **Whether Coura 2011 should be actively pursued for author contact** to
+   resolve its weight-normalisation issue, which is the only barrier to a
+   sham-controlled EA analysis existing at all in this review.
