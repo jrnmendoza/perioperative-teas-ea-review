@@ -52,9 +52,9 @@ else is closed.
 | **ISSUE** | The dashboard asserted "StataNow 19.5 SE verified" without evidence on `main` that the pipeline reproduces. Execution logs existed only on `gh-pages`. |
 | **OLD STATE** | `06_FINAL_ANALYSIS_V26/02_STATA/logs/` absent from `main` (gitignored by `*.log`), though the dashboard linked to files in it. |
 | **V26 CORRECT STATE** | The pipeline reproduces exactly. |
-| **ACTION TAKEN** | Ran `/Users/ryan/bin/stata-se -b do 06_FINAL_ANALYSIS_V26/02_STATA/00_master.do` from the locked workbook. All **18 exported CSVs** (8 locked analysis datasets + 10 result tables, incl. `master_reconciled_results_v26.csv`) are **byte-identical** to the committed outputs. Regenerated `.dta`/`.png` differ only by embedded run timestamps and were restored to HEAD. Un-ignored and committed the 11 execution logs. |
+| **ACTION TAKEN** | Ran `/Users/ryan/bin/stata-se -b do 06_FINAL_ANALYSIS_V26/02_STATA/00_master.do` from the locked workbook. All **17 pipeline-written CSVs** (8 locked analysis datasets + 9 result tables) are **byte-identical** to the committed outputs. Note that `master_reconciled_results_v26.csv` is an aggregate that no do-file writes; it was unchanged by the run rather than regenerated, and the two new broader-sensitivity rows were appended to it explicitly (see §22). Regenerated `.dta`/`.png` differ only by embedded run timestamps and were restored to HEAD. Un-ignored and committed the 11 execution logs. |
 | **FILE(S) CHANGED** | `.gitignore`, `06_FINAL_ANALYSIS_V26/02_STATA/logs/*.log` (11 new) |
-| **VERIFICATION** | `diff` of all 18 CSVs against a pre-run snapshot: identical. |
+| **VERIFICATION** | `diff` of every CSV in `01_DATA/` and `03_RESULTS/` against a pre-run snapshot: identical. |
 | **STATUS** | **RESOLVED** |
 
 ---
@@ -336,6 +336,134 @@ manuscript team:
 
 No dashboard number is wrong as a result; the caveat is about estimand purity on
 the pain axis. Flagging for a human decision rather than resolving unilaterally.
+
+---
+
+## 22. Primary outcome contribution pathway
+
+Added 2026-09-07 so collaborators can answer "why is my paper not in the main
+forest plot?" from the dashboard rather than from the reconciliation workbook.
+
+### Totals (all derived, none hardcoded)
+
+| Bucket | Count | N |
+| --- | --- | --- |
+| RCTs included in the systematic review | **63** | — |
+| Publications reporting potentially relevant ~24-h opioid information | **16** (15 study units) | — |
+| — **strict primary contributors** | **6** | **628** |
+| — conditional / sensitivity only | **5** | **317** |
+| — pending author clarification | **4** | — |
+| Included trials contributing to other outcomes | **30** | — |
+| Included trials contributing to narrative / evidence map only | **17** | — |
+
+16 + 30 + 17 = 63. The builder raises `SystemExit` if this does not reconcile.
+
+The row count (62) is lower than the study count (63) because the **Yeh 2010 /
+Yeh 2011 publication family is one study unit covering two reports**. Catching
+that was the reconciliation guard's first catch: both Yeh publications were
+initially double-counted in the remaining bucket.
+
+### The five studies explaining k=6 → k=11
+
+| Study | Reported as | Why not strict |
+| --- | --- | --- |
+| Chen 2015 | mg IV morphine, Median/IQR | Dose derived from fixed 2-mg rescue boluses; source reports counts, not dose |
+| Chen 2015 (Hyperalgesia) | µg/kg sufentanil, Median/IQR | Derived from fixed 0.05 µg/kg boluses; weight-normalised |
+| Coura 2011 | µg/kg fentanyl | Weight-normalised; 10/32 post-randomisation exclusions; High RoB |
+| Sim 2002 | mg/kg morphine | Weight-normalised; multi-arm with a shared placebo comparator |
+| Zhang 2025 | µg sufentanil | POD1 rather than an explicitly clock-defined 0–24 h window; High RoB |
+
+These are valid randomised trials. The judgement is about **reporting
+compatibility with the primary estimand**, not study quality.
+
+### There is no k=11 pooled mean difference
+
+| Field | Value |
+| --- | --- |
+| **ISSUE** | A broader 24-h analysis was requested at k=11, N=945. |
+| **VERIFIED** | The **composition** verifies exactly: 6 strict + 5 conditional, N = 945. |
+| **BUT** | Only **7 of 11** have an estimable MD in mg IV MME; **9 of 11** have an estimable Hedges' g. |
+| **WHY** | `Sim 2002` — *"do not reconstruct absolute dose from group mean weight"*; `Coura 2011` — *"do not convert to absolute µg/MME using group-average weight"*; both Chen 2015 reports are Median/IQR with no derived mean/SD. |
+| **PRE-V26 BEHAVIOUR** | The retired `stata_consensus_synthesis_data.csv` did exactly what those rows forbid, back-solving absolute doses from assumed body weights — implying **60 kg in one arm of Sim 2002 and 59 kg in the other**, and a flat **70 kg** for Coura 2011. |
+| **ACTION** | No k=11 MD is fitted or displayed. The broader analysis uses the scale-free SMD, which pools weight-normalised with absolute-dose endpoints legitimately. The two Chen 2015 reports remain outside **both** pooled models and are reported narratively. |
+| **STATUS** | **RESOLVED — k=11 MD withdrawn, k=9 SMD substituted** |
+
+### Pooled results (`10_broader24h_sensitivity.do`)
+
+| Analysis | k | N | Estimate | 95% KH CI | CI width | p | I² |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Strict primary — MD | 6 | 628 | −4.68 mg | [−12.26, +2.89] | 15.15 | 0.173 | 98.29% |
+| Strict primary — SMD | 6 | 628 | g = −0.890 | [−2.259, +0.479] | 2.74 | 0.156 | 97.24% |
+| Broader sensitivity — SMD | 9 | 803 | g = −0.880 | [−1.699, −0.060] | 1.64 | 0.038 | 95.19% |
+
+The strict SMD row reproduces the pre-existing `OP24_PRIM_SMD` exactly, which
+cross-validates the new do-file against the established pipeline.
+
+**Interpretation shown on the dashboard:** the point estimate moves by 0.010
+while the interval narrows from 2.74 to 1.64 units. The significance flip is a
+**precision** effect, not an effect-size effect, and the dashboard warns
+explicitly against reading it as the effect becoming real — the broader model
+buys precision by accepting weaker assumptions about what the added trials
+measured. The strict analysis remains the prespecified primary result.
+
+### Author-contact candidates
+
+Included only where the trial carries potentially relevant 24-h opioid
+information **and** a documented reporting gap.
+
+| Study | Available | Missing | Requested | Contact status |
+| --- | --- | --- | --- | --- |
+| **Jin 2023** | PCIA solution volume at 24 h (n=53/52) | Article does not report fentanyl concentration | Concentration of fentanyl in the PCIA solution (µg/mL or total µg in total volume) | CONTACT PREPARED |
+| **Luo 2026** | Published "sufentanil equivalents", perioperative window (n=138/139) | Unit/definition unresolved; window not 0–24 h | Cumulative 24-h systemic opioid consumption (mean ± SD, IV MME) | CONTACT PREPARED |
+| **Zhou 2021** | Any postoperative opioid use, binary (n=41/40) | Exact window not stated; conversion rule differs between Methods and Table footnote (P1-09) | 24-h cumulative opioid separated from whole-stay consumption | CONTACT PREPARED |
+| **Yeh family** | 24-h IV morphine PCA dose (n=30/30) | Cohort overlap with the companion report unadjudicated (P1-01, HARD HOLD) | *Prepared letter requests PONV counts and a registration number* | CONTACT PREPARED — **but see note** |
+
+**Note on Yeh.** The prepared letter does **not** request the cohort-overlap
+clarification that actually blocks the 24-h result. Sending it as drafted would
+not, on its own, make the trial strictly usable. The dashboard states this
+rather than implying the contact is sufficient. Flagged by a keyword check
+(`addresses_primary_blocker`) that is reported, never used to change a category.
+
+**Contact status is never inferred.** The project holds no sent/response field
+anywhere — `author_inquiries.json` has `data_needed`, `draft_letter` and
+`priority` only. A candidate with a draft letter is therefore **CONTACT
+PREPARED**; one without any record would be **STATUS NOT DOCUMENTED**. The
+validator fails on any status implying contact occurred.
+
+### Classification rule
+
+Applied to the 24-h candidate rows in `opioid_24h_primary.csv`:
+
+- **strict** — `inc_primary == 1`
+- **conditional** — `inc_sens == 1 and inc_primary == 0`
+- **candidate** — neither, but the trial carries potentially relevant 24-h
+  opioid information and has a documented reporting gap
+
+### Data sources
+
+`opioid_24h_primary.csv`, `target_{A..F}*.csv`,
+`master_reconciled_results_v26.csv`, `AF_P1_Disposition.csv`,
+`AF_Unresolved.csv`, `author_inquiries.json`, `data.js`.
+
+Generated by `scripts/build_primary_pathway.py` → `dashboard/primary_pathway.js`.
+
+### Terminology
+
+The other included trials are **never** described as "excluded from the review".
+They are included RCTs that do not contribute to *this* estimand, and the
+section names what they do contribute to. A validator check fails on any
+non-negated "excluded from the review" and on a "57 studies excluded" framing.
+
+### Validation
+
+Eight new checks (37/37 total): counts derive from array lengths; buckets
+reconcile to 63; categories mutually exclusive; no candidate silently counted as
+strict; N equals summed analysed denominators; pooled results match Stata
+exactly; no MD fabricated across the candidate pool; contact status documented
+with a source reason; wording rule; markup contains no hardcoded counts.
+
+Verified the k=11 guard still bites by injecting a fake pooled MD — it trips
+four checks.
 
 ---
 
