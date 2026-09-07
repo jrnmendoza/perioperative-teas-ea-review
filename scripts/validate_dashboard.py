@@ -145,9 +145,14 @@ def t_prospero():
     correct = "CRD420251090635"
     hits = []
     for p in list(DASH.rglob("*")) + list(DOCS.rglob("*")):
-        if p.is_file() and p.suffix in {".html", ".js", ".json", ".csv", ".md"}:
-            if obsolete in p.read_text(encoding="utf-8", errors="ignore"):
-                hits.append(str(p.relative_to(ROOT)))
+        if not (p.is_file() and p.suffix in {".html", ".js", ".json", ".csv", ".md"}):
+            continue
+        # Audit trails must be able to name the superseded ID as a corrected
+        # OLD STATE; that is the record of the fix, not a live claim.
+        if "06_AUDIT" in p.parts and p.suffix == ".md":
+            continue
+        if obsolete in p.read_text(encoding="utf-8", errors="ignore"):
+            hits.append(str(p.relative_to(ROOT)))
     ok = not hits and correct in HTML
     check("Obsolete PROSPERO ID absent; CRD420251090635 present", ok,
           f"obsolete found in: {hits}" if hits else f"correct ID present: {correct in HTML}")
@@ -564,10 +569,19 @@ def t_downloads_resolve():
     hrefs |= set(re.findall(r"fetch\('([^']+\.(?:csv|json|log))'\)", APP))
     hrefs |= set(re.findall(r'src="([^"]+\.png)"', HTML))
     for h in sorted(hrefs):
-        if (DASH / h).exists() or (ROOT / h).exists():
+        if h.startswith(("http://", "https://", "data:", "#")):
             continue
-        probs.append(f"unresolvable download/asset: {h}")
-    check(f"All {len(hrefs)} download and image targets resolve", not probs, "\n".join(probs))
+        # Links must be PAGE-relative so they survive being served from any mount
+        # point (gh-pages root, docs/, a subdirectory). A repo-root-relative path
+        # resolves only by accident of where the dashboard happens to sit.
+        if h.startswith("06_FINAL_ANALYSIS_V26/"):
+            probs.append(f"repo-root-relative link will 404 unless the dashboard is at "
+                         f"the site root: {h} (use v26/... instead)")
+            continue
+        if not (DASH / h).exists():
+            probs.append(f"unresolvable download/asset: {h}")
+    check(f"All {len(hrefs)} download and image targets resolve page-relatively",
+          not probs, "\n".join(probs))
 
 
 def t_downloads_are_current():
@@ -613,6 +627,81 @@ def t_forest_matches_table():
         probs.append(f"paired MCID download {mcid_keys} != rendered cohort {js_paired}")
     check("Forest / leave-one-out / MCID study sets match the underlying analysis sets",
           not probs, "\n".join(probs))
+
+
+def t_v26_mirror_current():
+    """dashboard/v26/ is a build artifact; it must equal 06_FINAL_ANALYSIS_V26."""
+    src = ROOT / "06_FINAL_ANALYSIS_V26"
+    dst = DASH / "v26"
+    probs = []
+    if not dst.exists():
+        probs.append("dashboard/v26/ mirror missing - run scripts/sync_dashboard.sh")
+    else:
+        a = {p.relative_to(src): p for p in src.rglob("*") if p.is_file() and p.name != ".DS_Store"}
+        b = {p.relative_to(dst): p for p in dst.rglob("*") if p.is_file() and p.name != ".DS_Store"}
+        missing = sorted(str(x) for x in (set(a) - set(b)))
+        extra = sorted(str(x) for x in (set(b) - set(a)))
+        stale = sorted(str(k) for k in (set(a) & set(b)) if a[k].read_bytes() != b[k].read_bytes())
+        if missing:
+            probs.append(f"missing from mirror: {missing[:5]}")
+        if extra:
+            probs.append(f"stale extras in mirror: {extra[:5]}")
+        if stale:
+            probs.append(f"out-of-date in mirror: {stale[:5]}")
+    check("dashboard/v26/ mirror is current with 06_FINAL_ANALYSIS_V26", not probs,
+          "\n".join(probs))
+
+
+def t_population_denominators():
+    """
+    population.arm1_n/arm2_n are the ANALYSED denominators used in synthesis and
+    must trace to Outcome_Data_AF_LOCK. A block matching neither the randomised
+    nor the analysed n in the workbook is a data defect - this is how He 2026
+    (hepatectomy/JIS) came to display 43/43 for a trial that analysed 80/79.
+    """
+    lock = ROOT / "06_FINAL_ANALYSIS_V26" / "01_DATA" / "authoritative_sheets" / "Outcome_Data_AF_LOCK.csv"
+    if not lock.exists():
+        return check("Population denominators trace to the workbook", False,
+                     "Outcome_Data_AF_LOCK.csv not found")
+    rand, ana = {}, {}
+    for r in read_csv(lock):
+        key = (r.get("Canonicalstudy") or "").strip()
+        for store, ki, kc in ((rand, "Randomizednintervention", "Randomizedncomparator"),
+                              (ana, "Analyzednintervention", "Analyzedncomparator")):
+            try:
+                store.setdefault(key, set()).add((int(float(r[ki])), int(float(r[kc]))))
+            except (ValueError, TypeError, KeyError):
+                pass
+
+    # Multi-cohort trials legitimately aggregate across sub-populations.
+    AGGREGATE_OK = {"Wang 2024"}
+    probs = []
+    for st in STUDIES:
+        key = st["key"]
+        pop = st.get("population") or {}
+        pair = (pop.get("arm1_n"), pop.get("arm2_n"))
+        known = rand.get(key, set()) | ana.get(key, set())
+        if not known or key in AGGREGATE_OK:
+            continue
+        if pair not in known:
+            probs.append(f"{key}: population {pair[0]}/{pair[1]} matches no workbook row "
+                         f"(randomised {sorted(rand.get(key, set()))}, "
+                         f"analysed {sorted(ana.get(key, set()))})")
+        if pop.get("total_n") != (pair[0] or 0) + (pair[1] or 0):
+            probs.append(f"{key}: total_n {pop.get('total_n')} != {pair[0]} + {pair[1]}")
+    check(f"Every population denominator traces to Outcome_Data_AF_LOCK ({len(STUDIES)} studies)",
+          not probs, "\n".join(probs))
+
+
+def t_paired_cohort_n():
+    """The MCID paired cohort N must equal the primary analysis N."""
+    rows = [x for x in read_csv(DATA / "opioid_24h_primary.csv") if x["inc_primary"] == "1"]
+    expected = sum(int(x["n_i"]) + int(x["n_c"]) for x in rows)
+    got = sum((s.get("population") or {}).get("total_n", 0)
+              for s in STUDIES if (s.get("mcid") or {}).get("is_paired") is True)
+    check(f"MCID paired cohort N ({got}) equals the primary analysis N ({expected})",
+          got == expected,
+          f"paired cohort sums to {got}, Stata primary analysis N is {expected}")
 
 
 def t_dashboard_docs_parity():
@@ -696,7 +785,9 @@ def main() -> int:
         ("Withdrawn analyses", [t_no_withdrawn_metareg, t_small_study_effects]),
         ("GRADE", [t_grade_consistent]),
         ("Downloads & deployment", [t_downloads_resolve, t_downloads_are_current,
-                                    t_forest_matches_table, t_dashboard_docs_parity]),
+                                    t_forest_matches_table, t_v26_mirror_current,
+                                    t_population_denominators, t_paired_cohort_n,
+                                    t_dashboard_docs_parity]),
         ("Wording & i18n", [t_outcome_hierarchy, t_translations_do_not_contradict,
                             t_author_contacts_not_stale]),
     ]

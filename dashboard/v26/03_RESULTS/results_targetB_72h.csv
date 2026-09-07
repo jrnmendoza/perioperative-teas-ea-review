@@ -1,0 +1,3 @@
+analysis_id,outcome,stratum,k,estimate,ci_low,ci_high,p_value,tau2,i2,q_stat,model
+TB_STRICT_EXACT,0-72 h Cumulative Postoperative Opioid,Strict Exact 0-72h (Yang 2024 alone),1,-.5,-4.0780001,3.0780001,.78399998,,,,Single study (Not pooled)
+TB_BROADER_SENS,0-72 h Cumulative Postoperative Opioid,Sensitivity: Exact + First 3 Days (Yang + Wong),2,-1.4706032,-34.422806,31.481598,.67160308,4.3316541,13.881284,1.1611878,REML + Hartung-Knapp

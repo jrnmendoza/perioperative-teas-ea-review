@@ -1,0 +1,6 @@
+analysis_id,outcome,stratum,k,estimate,ci_low,ci_high,p_value,tau2,i2,q_stat,model
+OP24_PRIM_COMB,24-h Cumulative Postoperative Opioid,Combined Strict Primary (TEAS + EA),6,-4.6838737,-12.256555,2.8888075,.17271391,31.486238,98.290359,37.92149,REML + Hartung-Knapp
+OP24_TEAS_SHAM,24-h Cumulative Postoperative Opioid,TEAS vs Sham,3,-6.6978846,-32.554836,19.159067,.38102031,85.204315,99.575897,22.502361,REML + Hartung-Knapp
+OP24_EA_CTRL,24-h Cumulative Postoperative Opioid,EA vs Control/Sham,3,-3.9358339,-19.773222,11.901554,.39689466,28.471277,77.152611,7.6678648,REML + Hartung-Knapp
+OP24_LOWROB_ONLY,24-h Cumulative Postoperative Opioid,Sensitivity: Low/Some Concerns RoB only,5,-5.74581,-15.906159,4.4145393,.19147615,47.733494,99.077812,37.859055,REML + Hartung-Knapp
+OP24_PRIM_SMD,24-h Cumulative Postoperative Opioid,Standardized Mean Difference (Hedges g),6,-.88988614,-2.2587249,.47895268,.15555759,1.5974514,97.236259,90.472374,REML + Hartung-Knapp

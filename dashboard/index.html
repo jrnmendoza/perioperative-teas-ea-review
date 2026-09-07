@@ -800,7 +800,7 @@
                 <th>Surgical Category <button class="stat-info-btn" data-stat-term="surgicalCategory" aria-label="Explanation for Surgical Specialty">ⓘ</button></th>
                 <th>Acupoint Formula <button class="stat-info-btn" data-stat-term="acupoints" aria-label="Explanation for Acupoint Selection">ⓘ</button></th>
                 <th>Frequency <button class="stat-info-btn" data-stat-term="frequency" aria-label="Explanation for Stimulation Frequency">ⓘ</button></th>
-                <th>Sample Size (N) <button class="stat-info-btn" data-stat-term="nParticipants" aria-label="Explanation for Sample Size">ⓘ</button></th>
+                <th>Analysed N <button class="stat-info-btn" data-stat-term="nParticipants" aria-label="Explanation for Sample Size">ⓘ</button><div style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;">denominators used in synthesis</div></th>
                 <th>Result-Specific RoB 2 <button class="stat-info-btn" data-stat-term="rob2" aria-label="Explanation for RoB 2">ⓘ</button><div id="explorer-rob-context" style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;"></div></th>
                 <th>Actions</th>
               </tr>
@@ -1003,7 +1003,7 @@
             </div>
             <h2>PAIRED OPIOID + PAIN ANALYSIS (Objective 4 Studio)</h2>
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.35); padding: 0.35rem 0.75rem; border-radius: 4px; margin-top: 0.35rem;">
-              <strong style="color: #a5b4fc; font-size: 0.82rem;">Paired analyzable dataset: k = 6 Strict Trials (N = 628 Patients)</strong>
+              <strong style="color: #a5b4fc; font-size: 0.82rem;">Paired analysable dataset: k = 6 strict trials (N = 628 analysed)</strong>
               <span class="stat-info-btn" title="This dataset includes trials with valid analyzable values for both the primary opioid and pain axes from the locked v26 synthesis." style="cursor: help;">ⓘ</span>
             </div>
             <p id="mcid-subtitle-text" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.35rem;">
@@ -1136,28 +1136,28 @@
             </p>
           </div>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <a href="06_FINAL_ANALYSIS_V26/02_STATA/00_master.do" download class="btn-preset" style="background: var(--accent-primary); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/02_STATA/00_master.do" download class="btn-preset" style="background: var(--accent-primary); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📥</span> Master Pipeline .do (v26)
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/02_STATA/01_opioid24_primary.do" download class="btn-preset" style="background: var(--accent-primary); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/02_STATA/01_opioid24_primary.do" download class="btn-preset" style="background: var(--accent-primary); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📥</span> Primary 24-h .do (v26)
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/01_DATA/opioid_24h_primary.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📊</span> Primary 24-h Dataset (CSV)
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/03_RESULTS/master_reconciled_results_v26.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/03_RESULTS/master_reconciled_results_v26.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📈</span> All 38 Reconciled Results (CSV)
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/02_STATA/02_targetA_48h.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.25); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/02_STATA/02_targetA_48h.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.25); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📥</span> Target A 0–48 h .do (v26)
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/01_DATA/target_A_48h.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📊</span> Target A 0–48 h Dataset (CSV)
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/02_STATA/logs/02_targetA_48h.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/02_STATA/logs/02_targetA_48h.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📋</span> Target A 0–48 h Log
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/02_STATA/logs/01_opioid24_primary.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/02_STATA/logs/01_opioid24_primary.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📋</span> Primary 24-h Log
             </a>
           </div>
@@ -1705,7 +1705,7 @@
             </p>
             <div style="display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; align-items: center;">
               <button class="btn-preset active" id="btn-loo-primary" onclick="switchLooMode('primary')" style="background: var(--accent-primary); color: #fff; border: none; padding: 0.35rem 0.75rem; border-radius: 4px; font-weight: 600; cursor: pointer;">Primary 24-h Opioid Analysis (k = 6)</button>
-              <a href="06_FINAL_ANALYSIS_V26/04_FIGURES/loo_opioid24_primary.png" target="_blank" class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600;">🖼️ View Stata LOO Forest Plot</a>
+              <a href="v26/04_FIGURES/loo_opioid24_primary.png" target="_blank" class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600;">🖼️ View Stata LOO Forest Plot</a>
             </div>
             <div style="margin-top: 0.4rem; font-size: 0.73rem; color: #94a3b8; font-style: italic;">
               Note: All 6 strict direct trials (3 TEAS, 3 EA) are iteratively omitted. In all 6 iterations, the Knapp–Hartung 95% confidence interval crosses zero (p = 0.159 to 0.311).
@@ -2355,20 +2355,20 @@
             </div>
             <h2 style="font-size: 1.3rem; margin-top: 0.25rem;">StataNow 19.5 SE Meta-Regression &amp; Moderator Studio</h2>
             <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55; max-width: 1000px;">
-              Investigating sources of between-study clinical and statistical heterogeneity (&tau;&sup2;) across the strict primary trials (k = 6, N = 628) and expanded exploratory pools. Under the Cochrane 10:1 rule of thumb (&sect;10.11.4), k = 6 trials is underpowered for inferential multivariable meta-regression; univariable modality comparison (TEAS vs EA: difference &minus;1.79 mg, p = 0.807) is exploratory. Egger's test for publication bias was not performed due to k &lt; 10.
+              Investigating sources of between-study clinical and statistical heterogeneity (&tau;&sup2;) across the strict primary trials (k = 6, N = 628). No expanded exploratory pool is reported. Under the Cochrane 10:1 rule of thumb (&sect;10.11.4), k = 6 trials is underpowered for inferential multivariable meta-regression; univariable modality comparison (TEAS vs EA: difference &minus;1.79 mg, p = 0.807) is exploratory. Egger's test for publication bias was not performed due to k &lt; 10.
             </p>
           </div>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <a href="06_FINAL_ANALYSIS_V26/02_STATA/09_subgroups_metareg.do" download class="btn-preset" style="background: rgba(6, 182, 212, 0.25); border: 1px solid rgba(6, 182, 212, 0.5); color: #67e8f9; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/02_STATA/09_subgroups_metareg.do" download class="btn-preset" style="background: rgba(6, 182, 212, 0.25); border: 1px solid rgba(6, 182, 212, 0.5); color: #67e8f9; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📥</span> Subgroup / Meta-Regression .do (v26)
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/02_STATA/logs/09_subgroups_metareg.log" download class="btn-preset" style="background: rgba(255,255,255,0.08); color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/02_STATA/logs/09_subgroups_metareg.log" download class="btn-preset" style="background: rgba(255,255,255,0.08); color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📋</span> Stata Execution Log (v26)
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/03_RESULTS/results_subgroups_metareg.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/03_RESULTS/results_subgroups_metareg.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📊</span> Subgroup / Meta-Regression Results (CSV)
             </a>
-            <a href="06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.csv" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+            <a href="v26/01_DATA/opioid_24h_primary.csv" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>🗂️</span> Locked Primary Dataset (CSV)
             </a>
           </div>
@@ -2667,7 +2667,7 @@
             <span class="badge badge-indigo">StataNow 19.5 SE Live Terminal Output</span>
             <h2 style="margin-top: 0.25rem;">Verbatim Execution Log: v26 Subgroup &amp; Meta-Regression Audit</h2>
           </div>
-          <a href="06_FINAL_ANALYSIS_V26/02_STATA/logs/09_subgroups_metareg.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; padding: 0.4rem 0.75rem; font-size: 0.75rem;">
+          <a href="v26/02_STATA/logs/09_subgroups_metareg.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; padding: 0.4rem 0.75rem; font-size: 0.75rem;">
             <span>📥</span> Download Full Log (.log)
           </a>
         </div>
@@ -3318,11 +3318,11 @@
           <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem;">Export the active filtered dataset containing study-level effect sizes, sample sizes, and RoB 2 classifications for independent statistical auditing, or download the master Stata 19.5 SE replication suite.</p>
           <div style="display: flex; flex-direction: column; gap: 0.6rem;">
             <button class="btn-preset" style="background: var(--accent-primary); color: #fff; border: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; text-align: left;" onclick="exportDatasetCSV()">📥 Download Active Filtered CSV Dataset</button>
-            <a href="06_FINAL_ANALYSIS_V26/03_RESULTS/master_reconciled_results_v26.csv" download class="btn-preset" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Machine-Readable Stata Master Results (master_reconciled_results_v26.csv)</a>
-            <a href="06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Primary 24-h Opioid Dataset — 6 Strict Direct Trials (opioid_24h_primary.csv, k = 6)</a>
-            <a href="06_FINAL_ANALYSIS_V26/04_FIGURES/loo_opioid24_primary.png" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Stata Leave-One-Out High-Res Forest Plot (loo_opioid24_primary.png, k = 6 Iterations)</a>
-            <a href="06_FINAL_ANALYSIS_V26/02_STATA/00_master.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Master Stata Replication Script (00_master.do)</a>
-            <a href="06_FINAL_ANALYSIS_V26/02_STATA/logs/01_opioid24_primary.log" download class="btn-preset" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-subtle); color: var(--text-secondary); text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Primary Stata Execution Verification Log (01_opioid24_primary.log)</a>
+            <a href="v26/03_RESULTS/master_reconciled_results_v26.csv" download class="btn-preset" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Machine-Readable Stata Master Results (master_reconciled_results_v26.csv)</a>
+            <a href="v26/01_DATA/opioid_24h_primary.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Primary 24-h Opioid Dataset — 6 Strict Direct Trials (opioid_24h_primary.csv, k = 6)</a>
+            <a href="v26/04_FIGURES/loo_opioid24_primary.png" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Stata Leave-One-Out High-Res Forest Plot (loo_opioid24_primary.png, k = 6 Iterations)</a>
+            <a href="v26/02_STATA/00_master.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Master Stata Replication Script (00_master.do)</a>
+            <a href="v26/02_STATA/logs/01_opioid24_primary.log" download class="btn-preset" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border-subtle); color: var(--text-secondary); text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Primary Stata Execution Verification Log (01_opioid24_primary.log)</a>
           </div>
         </div>
 

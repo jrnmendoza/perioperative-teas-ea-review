@@ -582,7 +582,7 @@ function renderMCIDStudio() {
   const totalN = validStudies.reduce((acc, s) => acc + ((s.population && s.population.total_n) ? s.population.total_n : 0), 0);
   const subtitleEl = document.getElementById('mcid-subtitle-text');
   if (subtitleEl) {
-    subtitleEl.innerHTML = `Active PROSPERO Criterion: <strong>${threshLabel} Opioid Sparing</strong> with Pain Non-Inferiority Margin <strong>≤ +${marginVal} VAS</strong> (Upper 95% CI examined). Paired Continuous Cohort: <strong>k = ${validStudies.length} trials (N = ${totalN.toLocaleString()})</strong>.`;
+    subtitleEl.innerHTML = `Active PROSPERO Criterion: <strong>${threshLabel} Opioid Sparing</strong> with Pain Non-Inferiority Margin <strong>≤ +${marginVal} VAS</strong> (Upper 95% CI examined). Paired Continuous Cohort: <strong>k = ${validStudies.length} trials (N = ${totalN.toLocaleString()} analysed)</strong>.`;
   }
 
   const width = container.clientWidth || 700;
@@ -1429,7 +1429,7 @@ function loadStataTerminalLog() {
     return;
   }
 
-  fetch('06_FINAL_ANALYSIS_V26/02_STATA/logs/01_opioid24_primary.log')
+  fetch('v26/02_STATA/logs/01_opioid24_primary.log')
     .then(res => {
       if (!res.ok) throw new Error('Network response not ok');
       return res.text();
@@ -2412,7 +2412,9 @@ function openStudyDrawer(id) {
         <div style="font-size: 0.82rem; line-height: 1.6;">
           <p><strong>Surgical Category:</strong> ${s.surgery_category}</p>
           <p><strong>Procedure:</strong> ${s.surgery_procedure}</p>
-          <p><strong>Sample Size:</strong> ${s.population.total_n} randomized (${s.population.arm1_n} ${s.modality} vs ${s.population.arm2_n} ${s.comparator_short})</p>
+          <p><strong>Analysed sample:</strong> ${s.population.total_n} (${s.population.arm1_n} ${s.modality} vs ${s.population.arm2_n} ${s.comparator_short})</p>
+          ${s.population.randomized_total_n && s.population.randomized_total_n !== s.population.total_n
+            ? `<p><strong>Randomised:</strong> ${s.population.randomized_total_n} (${s.population.randomized_arm1_n} vs ${s.population.randomized_arm2_n}) &mdash; <span style="color: var(--text-muted);">post-randomisation losses are reflected in the analysed denominators used for synthesis</span></p>` : ''}
           <p><strong>Mean Age:</strong> ${s.population.arm1_age} vs ${s.population.arm2_age}</p>
           <p><strong>Female %:</strong> ${s.population.arm1_female} vs ${s.population.arm2_female}</p>
           <p><strong>ASA Status:</strong> ${s.population.asa_status}</p>
@@ -2602,7 +2604,7 @@ function loadMetaRegTerminalLog() {
     return;
   }
 
-  fetch('06_FINAL_ANALYSIS_V26/02_STATA/logs/09_subgroups_metareg.log')
+  fetch('v26/02_STATA/logs/09_subgroups_metareg.log')
     .then(res => {
       if (!res.ok) throw new Error('Network response not ok');
       return res.text();

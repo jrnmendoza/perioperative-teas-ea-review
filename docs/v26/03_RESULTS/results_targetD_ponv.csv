@@ -1,0 +1,7 @@
+analysis_id,outcome,stratum,k,rr_estimate,ci_low,ci_high,p_value,tau2,i2,q_stat,model
+TD_PONV_0_24H,Postoperative Nausea & Vomiting (PONV),"Composite PONV 0-24h (Zheng 2025, Lu 2021)",2,.56040233,.13913445,2.2571747,.11912896,4.0633151e-07,.0010739738,.6474992,REML + Hartung-Knapp
+TD_PONV_0_48H,Postoperative Nausea & Vomiting (PONV),"Composite PONV 0-48h (Xiong 2021, Xing 2022)",2,.52337468,.2161516,1.2672638,.068170555,9.2485590e-07,.00067013921,.11140113,REML + Hartung-Knapp
+TD_NAUSEA_0_24H,Postoperative Nausea & Vomiting (PONV),"Nausea 0-24h (Yang 2024, Ma 2026)",2,.62052059,.26881582,1.4323777,.0872804,4.9505417e-07,.00046096882,.12296986,REML + Hartung-Knapp
+TD_NAUSEA_0_48H,Postoperative Nausea & Vomiting (PONV),Nausea 0-48h (Luo 2026 alone),1,.45611158,.29944631,.69474143,,,,,Single study (Not pooled)
+TD_VOMIT_0_24H,Postoperative Nausea & Vomiting (PONV),"Vomiting 0-24h (Yang 2024, Ma 2026)",2,.57549971,.024772631,13.36959,.26816514,3.7292935e-07,.00025780415,.93173766,REML + Hartung-Knapp
+TD_VOMIT_0_48H,Postoperative Nausea & Vomiting (PONV),Vomiting 0-48h (Luo 2026 alone),1,.33574879,.16396759,.68749708,,,,,Single study (Not pooled)
