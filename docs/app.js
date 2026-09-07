@@ -1429,7 +1429,7 @@ function loadStataTerminalLog() {
     return;
   }
 
-  fetch('stata_audited_synthesis.log')
+  fetch('06_FINAL_ANALYSIS_V26/02_STATA/logs/01_opioid24_primary.log')
     .then(res => {
       if (!res.ok) throw new Error('Network response not ok');
       return res.text();
@@ -1441,7 +1441,7 @@ function loadStataTerminalLog() {
     .catch(() => {
       el.innerText = `----------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/dashboard/stata_audited_synthesis.log
+       log:  06_FINAL_ANALYSIS_V26/02_STATA/logs/01_opioid24_primary.log
   log type:  text
  opened on:   5 Sep 2026, 19:52:52
 

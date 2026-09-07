@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260906_rob2_locked">
+  <link rel="stylesheet" href="styles.css?v=20260907_v26_reconciled">
 </head>
 <body>
 
@@ -268,8 +268,8 @@
               </tr>
               <tr>
                 <td><strong style="color: #818cf8;">Outcomes</strong></td>
-                <td><strong>Primary Outcome</strong>: Cumulative 0–24 h postoperative opioid consumption (mg IV morphine equivalents)<br><strong>Key Secondary</strong>: Cumulative 0–48 h postoperative opioid consumption<br><strong>Exploratory</strong>: Cumulative 0–72 h postoperative opioid consumption<br><strong>Secondary Analgesic &amp; Recovery Outcomes</strong>: Pain intensity (VAS/NRS), PONV, rescue analgesia, time to first flatus, QoR-40/15, PCA demands</td>
-                <td>Studies reporting no quantifiable postoperative outcome within 0–72 hours</td>
+                <td><strong>Eligibility-conferring outcomes.</strong> A trial is eligible only if it reports at least one quantifiable perioperative <em>analgesic</em> outcome:<br><strong>Primary</strong>: cumulative 0–24 h postoperative opioid consumption (mg IV morphine equivalents)<br><strong>Key secondary</strong>: cumulative 0–48 h postoperative opioid consumption<br><strong>Exploratory</strong>: cumulative 0–72 h postoperative opioid consumption<br><strong>Also eligibility-conferring</strong>: postoperative pain intensity (VAS/NRS), rescue analgesia, or intraoperative opioid requirement.<div style="margin-top: 0.5rem; padding: 0.5rem 0.65rem; background: rgba(245,158,11,0.08); border-left: 3px solid #f59e0b; border-radius: 4px; font-size: 0.76rem; line-height: 1.5;"><strong>Extracted but not eligibility-conferring:</strong> PONV, time to first flatus and other GI-recovery endpoints, QoR-40/15, PCA demands, length of stay and sleep quality are collected from <em>otherwise eligible</em> trials. Reporting one of these <em>alone</em>, with no eligible analgesic outcome, does not make a trial eligible. This is why Yu Wang et al., <em>JAMA Surgery</em> 2023 (DOI 10.1001/jamasurg.2022.5674) &mdash; which reports time to first flatus but no eligible analgesic outcome &mdash; was excluded at full text for <strong>wrong outcomes</strong>.</div></td>
+                <td>Studies reporting no eligibility-conferring analgesic outcome within 0–72 h, including trials whose only quantifiable endpoints are GI-recovery, PONV, or recovery-quality measures</td>
               </tr>
               <tr>
                 <td><strong style="color: #818cf8;">Study Design</strong></td>
@@ -344,7 +344,7 @@
               </div>
               <h3 style="font-size: 0.92rem; margin-top: 0.5rem; color: #fff;">Identify protocol moderators via prespecified subgroup &amp; Stata meta-regression</h3>
               <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.55;">
-                Random-effects REML meta-regression exploring baseline surgical opioid demand (p=0.019, R²=49.1%), publication year (p=0.029, R²=82.8%), and modality confounding.
+                Prespecified modality subgroups (TEAS k = 3, EA k = 3) with Knapp–Hartung adjustment. One exploratory meta-regression on modality (p = 0.807); with k = 6 no covariate meets the Cochrane 10:1 rule, so no other moderator is modelled.
               </p>
             </div>
           </div>
@@ -1136,26 +1136,29 @@
             </p>
           </div>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <a href="stata_audited_synthesis.do" download class="btn-preset" style="background: var(--accent-primary); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📥</span> Download Stata .do File
+            <a href="06_FINAL_ANALYSIS_V26/02_STATA/00_master.do" download class="btn-preset" style="background: var(--accent-primary); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📥</span> Master Pipeline .do (v26)
             </a>
-            <a href="stata_consensus_synthesis_data.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📊</span> Download Primary Dataset (CSV)
+            <a href="06_FINAL_ANALYSIS_V26/02_STATA/01_opioid24_primary.do" download class="btn-preset" style="background: var(--accent-primary); color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📥</span> Primary 24-h .do (v26)
             </a>
-            <a href="stata_secondary_synthesis_data.csv" download class="btn-preset" style="background: rgba(255,255,255,0.08); color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📈</span> Download Secondary Dataset (CSV)
+            <a href="06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📊</span> Primary 24-h Dataset (CSV)
             </a>
-            <a href="stata_48h_opioid_synthesis.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.25); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📥</span> 48h Stata .do File
+            <a href="06_FINAL_ANALYSIS_V26/03_RESULTS/master_reconciled_results_v26.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📈</span> All 38 Reconciled Results (CSV)
             </a>
-            <a href="stata_48h_opioid_synthesis_data.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📊</span> 48h Opioid CSV
+            <a href="06_FINAL_ANALYSIS_V26/02_STATA/02_targetA_48h.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.25); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📥</span> Target A 0–48 h .do (v26)
             </a>
-            <a href="stata_48h_opioid_synthesis.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📋</span> 48h Stata Log
+            <a href="06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📊</span> Target A 0–48 h Dataset (CSV)
             </a>
-            <a href="stata_audited_synthesis.log" download class="btn-preset" style="background: rgba(255,255,255,0.05); color: #94a3b8; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📋</span> Download Stata Log
+            <a href="06_FINAL_ANALYSIS_V26/02_STATA/logs/02_targetA_48h.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📋</span> Target A 0–48 h Log
+            </a>
+            <a href="06_FINAL_ANALYSIS_V26/02_STATA/logs/01_opioid24_primary.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📋</span> Primary 24-h Log
             </a>
           </div>
         </div>
@@ -2329,7 +2332,7 @@
               <div class="stata-dot stata-dot-yellow"></div>
               <div class="stata-dot stata-dot-green"></div>
             </div>
-            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #8b949e;">stata_audited_synthesis.log — StataNow 19.5 SE</div>
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #8b949e;">06_FINAL_ANALYSIS_V26/02_STATA/logs/01_opioid24_primary.log — StataNow 19.5 SE</div>
             <div style="font-size: 0.7rem; color: #34d399;">● Completed (Exit Code 0)</div>
           </div>
           <pre class="stata-terminal-body" id="stata-terminal-content">Loading Stata 19.5 execution stream...</pre>
@@ -3315,7 +3318,7 @@
           <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1rem;">Export the active filtered dataset containing study-level effect sizes, sample sizes, and RoB 2 classifications for independent statistical auditing, or download the master Stata 19.5 SE replication suite.</p>
           <div style="display: flex; flex-direction: column; gap: 0.6rem;">
             <button class="btn-preset" style="background: var(--accent-primary); color: #fff; border: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; text-align: left;" onclick="exportDatasetCSV()">📥 Download Active Filtered CSV Dataset</button>
-            <a href="results/stata_master_results.csv" download class="btn-preset" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Machine-Readable Stata Master Results (master_reconciled_results_v26.csv)</a>
+            <a href="06_FINAL_ANALYSIS_V26/03_RESULTS/master_reconciled_results_v26.csv" download class="btn-preset" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Machine-Readable Stata Master Results (master_reconciled_results_v26.csv)</a>
             <a href="06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Primary 24-h Opioid Dataset — 6 Strict Direct Trials (opioid_24h_primary.csv, k = 6)</a>
             <a href="06_FINAL_ANALYSIS_V26/04_FIGURES/loo_opioid24_primary.png" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Stata Leave-One-Out High-Res Forest Plot (loo_opioid24_primary.png, k = 6 Iterations)</a>
             <a href="06_FINAL_ANALYSIS_V26/02_STATA/00_master.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; padding: 0.6rem 1.2rem; font-size: 0.82rem; display: block;">📥 Download Master Stata Replication Script (00_master.do)</a>
@@ -3333,6 +3336,35 @@
       </div>
     </div>
 
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- DASHBOARD PROVENANCE (visible on every tab)                     -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <footer id="dashboard-provenance" style="margin: 2rem 0 1rem; padding: 1.15rem 1.35rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-left: 4px solid #34d399; border-radius: var(--radius-md); font-size: 0.78rem; line-height: 1.65; color: var(--text-secondary);">
+      <div style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800; color: #34d399; margin-bottom: 0.6rem;">Dashboard provenance</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem 1.75rem;">
+        <div>
+          <div style="font-weight: 700; color: #f8fafc;">Data source</div>
+          <div><code>TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx</code></div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">Result-level inclusion and RoB 2 govern via <code>AF_Result_Lock</code>.</div>
+        </div>
+        <div>
+          <div style="font-weight: 700; color: #f8fafc;">Statistical source</div>
+          <div>Stata-verified final analysis &mdash; StataNow 19.5 SE</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">Reproduced from <code>06_FINAL_ANALYSIS_V26/02_STATA/00_master.do</code>; all 18 exported result tables verified byte-identical on re-run.</div>
+        </div>
+        <div>
+          <div style="font-weight: 700; color: #f8fafc;">Review registration</div>
+          <div>PROSPERO <strong>CRD420251090635</strong></div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">Lund University.</div>
+        </div>
+      </div>
+      <div style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); font-size: 0.73rem; color: var(--text-muted);">
+        Pooled estimates, <em>k</em>, <em>N</em>, forest plots, GRADE certainty and result-specific RoB 2 on this dashboard derive from the v26 lock and the final Stata run above.
+        Analyses that the v26 pipeline does not reproduce are shown as withdrawn or not pooled rather than restated from earlier releases.
+        Superseded pre-v26 artifacts are retained under <code>99_audit/superseded_dashboard_artifacts/</code>.
+      </div>
+    </footer>
+
   </main>
 
   <!-- Study Detail Drawer Modal -->
@@ -3344,10 +3376,10 @@
   </div>
 
   <!-- Scripts -->
-  <script src="data.js?v=20260906_rob2_locked"></script>
-  <script src="translations.js?v=20260906_rob2_locked"></script>
-  <script src="reader_assist.js?v=20260906_rob2_locked"></script>
-  <script src="meta_engine.js?v=20260906_rob2_locked"></script>
-  <script src="app.js?v=20260906_rob2_locked"></script>
+  <script src="data.js?v=20260907_v26_reconciled"></script>
+  <script src="translations.js?v=20260907_v26_reconciled"></script>
+  <script src="reader_assist.js?v=20260907_v26_reconciled"></script>
+  <script src="meta_engine.js?v=20260907_v26_reconciled"></script>
+  <script src="app.js?v=20260907_v26_reconciled"></script>
 </body>
 </html>
