@@ -1,7 +1,7 @@
 # Final Methodological Quality-Control Audit Report & Independent Statistical Verification
 **Perioperative Transcutaneous Electrical Acupoint Stimulation (TEAS) & Electroacupuncture (EA) for Postoperative Opioid Sparing**  
 **Independent Statistical Engine:** StataNow™ 19.5 SE (Mac 64-bit ARM, StataCorp LLC)  
-**Systematic Review Registration:** PROSPERO CRD42024560773 (Lund University Faculty of Medicine)  
+**Systematic Review Registration:** PROSPERO CRD420251090635 (Lund University Faculty of Medicine)  
 **Date of Audit Completion:** September 6, 2026  
 **Auditor:** Antigravity Advanced Autonomous QC Auditor  
 
@@ -13,7 +13,7 @@ This document represents the definitive, 42-section methodological quality-contr
 ---
 
 ## 1. Definitive Outcome Hierarchy
-In strict adherence to the prespecified PROSPERO protocol (CRD42024560773) and Cochrane Handbook v6.4 standards, the outcome hierarchy is formally locked as:
+In strict adherence to the prespecified PROSPERO protocol (CRD420251090635) and Cochrane Handbook v6.4 standards, the outcome hierarchy is formally locked as:
 1. **PRIMARY OPIOID OUTCOME:** Cumulative 0–24 h postoperative opioid consumption (intravenous morphine milligram equivalents [IV MME], mg).
 2. **KEY SECONDARY OPIOID OUTCOME:** Cumulative 0–48 h postoperative opioid consumption (IV MME, mg).
 3. **EXPLORATORY EXTENDED POSTOPERATIVE OPIOID OUTCOME:** Cumulative 0–72 h postoperative opioid consumption (IV MME, mg) [Sparse data; hypothesis-generating; single-study limitation for TEAS].
@@ -457,7 +457,7 @@ All 63 included trials were verified against PubMed and CrossRef APIs:
 
 ## 36. Protocol History & Amendments Timeline
 - **Initial Drafting:** July 2024 / June 2026.
-- **PROSPERO Registration:** Registered under ID **CRD42024560773** (July 2026).
+- **PROSPERO Registration:** Registered under ID **CRD420251090635** (July 2026).
 - **Scope Locked:** July 21, 2026.
 - **Protocol Amendment 1 (August 14, 2026):** Clarified screening prioritization focusing on cumulative 24-h postoperative systemic opioid consumption.
 - **Protocol Amendment 2 (August 20, 2026):** Formally codified English-language full-text restriction to ensure audit reproducibility across international review teams.

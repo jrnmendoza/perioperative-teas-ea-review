@@ -1,0 +1,109 @@
+LockID,Target,Study,Outcomeestimand,Correctpriority,P1disposition,Includestrict,Includesensitivity,Narrative,QAstatus
+A-001,A,Chen 2020,Cumulative postoperative sufentanil,,,1,0,0,PASS — result-specific mapping
+A-002,A,Zhang 2023,"Post-surgery opioid dose, IV MME",P2,,1,0,0,PASS — result-specific mapping
+A-003,A,An 2014,Total fentanyl PCIA dose,P1,RESOLVED_BY_MANDATORY_SENSITIVITY,1,0,0,PASS — result-specific mapping
+A-004,A,Xie 2014,Total sufentanil,P1,RESOLVED_BY_SENSITIVITY,0,1,0,PASS — result-specific mapping
+A-005,A,He 2026 (breast/WJCO),Eligibility audit,,,0,0,1,PASS — result-specific mapping
+A-006,A,Wong 2006,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+A-007,A,Hou 2023,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+A-008,A,Yao 2015,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+A-009,A,Lin 2002,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+A-010,A,Zhang 2025,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+B-001,B,Yang 2024,Cumulative postoperative morphine,,,1,0,0,PASS — result-specific mapping
+B-002,B,Wong 2006,Total PCA morphine,,,0,1,0,PASS — result-specific mapping
+B-003,B,Zhang 2025,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+B-004,B,Xie 2014,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+C-001,C,Xing 2022,Pain intensity at rest,,,1,0,0,PASS — result-specific mapping
+C-002,C,Liu 2021,Pain intensity at rest,,,1,0,0,PASS — result-specific mapping
+C-003,C,Zhou 2021,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+C-004,C,Wu 2022,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+C-005,C,Wu 2025,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+C-006,C,Ng 2013,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+C-007,C,Luo 2026,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+C-008,C,Long 2025,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+C-009,C,Liu 2026 (ESD),Eligibility audit,,,0,0,1,PASS — result-specific mapping
+D-001,D,Zheng 2025,Composite PONV incidence,,,1,0,0,PASS — result-specific mapping
+D-002,D,Lu 2021,Composite PONV incidence,,,1,0,0,PASS — result-specific mapping
+D-003,D,Xiong 2021,Composite PONV incidence,,,1,0,0,PASS — result-specific mapping
+D-004,D,Xing 2022,Composite PONV incidence,,,1,0,0,PASS — result-specific mapping
+D-005,D,Zhou 2025,Composite PONV incidence,P2,,0,1,0,PASS — result-specific mapping
+D-006,D,Yang 2024,Nausea incidence,,,1,0,0,PASS — result-specific mapping
+D-007,D,Ma 2026,Nausea incidence,,,1,0,0,PASS — result-specific mapping
+D-008,D,Luo 2026,Nausea incidence,,,1,0,0,PASS — result-specific mapping
+D-009,D,Yang 2024,Vomiting incidence,,,1,0,0,PASS — result-specific mapping
+D-010,D,Ma 2026,Vomiting incidence,,,1,0,0,PASS — result-specific mapping
+D-011,D,Luo 2026,Vomiting incidence,,,1,0,0,PASS — result-specific mapping
+D-012,D,Zhu 2022,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+D-013,D,Zhang 2014,Eligibility audit,,,0,0,1,PASS — result-specific mapping
+D-014,D,Wang 2024,Eligibility audit,P3,,0,0,1,PASS — result-specific mapping
+D-015,D,Long 2025,Eligibility audit,P3,,0,0,1,PASS — result-specific mapping
+D-016,D,Liu 2026 (ESD),Eligibility audit,P3,,0,0,1,PASS — result-specific mapping
+E-001,E,Zhou 2025,Time to first postoperative flatus,P2,,1,0,0,PASS — result-specific mapping
+E-002,E,Yang 2020,Time to first postoperative flatus,P2,,1,0,0,PASS — result-specific mapping
+E-003,E,Yang 2024,Time to first postoperative flatus,,,1,0,0,PASS — result-specific mapping
+E-004,E,Xing 2022,Time to first postoperative flatus,P2,,1,0,0,PASS — result-specific mapping
+E-005,E,Wang 2023,Time to first postoperative flatus,,RESOLVED_BY_SCREENING_EXCLUSION,0,0,0,PASS — excluded for wrong outcomes; no unresolved priority
+E-006,E,Lu 2022,Time to first postoperative flatus,P2,,1,0,0,PASS — result-specific mapping
+E-007,E,Ng 2013,Time to first postoperative flatus,P2,,1,0,0,PASS — result-specific mapping
+F-intra-001,F-intra,Liu 2026 (burn),remifentanil,P1,RESOLVED_BY_SOURCE_HIERARCHY,0,0,1,PASS — result-specific mapping
+F-intra-002,F-intra,Hou 2023,remifentanil,,,1,0,0,PASS — result-specific mapping
+F-intra-003,F-intra,Zhang 2014,remifentanil,P3,,1,0,0,PASS — result-specific mapping
+F-intra-004,F-intra,Huang 2017,remifentanil-equivalent opioid,P2,,0,1,0,PASS — result-specific mapping
+F-intra-005,F-intra,Sim 2002,alfentanil,,,1,0,0,PASS — result-specific mapping
+F-intra-006,F-intra,Wu 2022,remifentanil,,,0,1,0,PASS — result-specific mapping
+F-intra-007,F-intra,Xing 2022,remifentanil,,,1,0,0,PASS — result-specific mapping
+F-intra-008,F-intra,Lu 2021,remifentanil,,,1,0,0,PASS — result-specific mapping
+F-intra-009,F-intra,Zheng 2025,remifentanil,,,0,1,0,PASS — result-specific mapping
+F-intra-010,F-intra,Guo 2023,remifentanil,,,0,1,0,PASS — result-specific mapping
+F-intra-011,F-intra,Yang 2024,remifentanil,,,1,0,0,PASS — result-specific mapping
+F-intra-012,F-intra,Liang 2021,remifentanil,,,0,1,0,PASS — result-specific mapping
+F-intra-013,F-intra,Pan 2023,remifentanil,,,0,1,0,PASS — result-specific mapping
+F-exposure-001,F-exposure,Li 2022,Fixed-rate remifentanil exposure,,,0,0,1,PASS — result-specific mapping
+F-exposure-002,F-exposure,Chen 2015 (Hyperalgesia),Fixed-target remifentanil exposure,,,0,0,1,PASS — result-specific mapping
+F-exposure-003,F-exposure,Xie 2014,Intraoperative remifentanil exposure,,,0,1,0,PASS — result-specific mapping
+F-exposure-004,F-exposure,Ntritsou 2014,Intraoperative remifentanil exposure,,,0,1,0,PASS — result-specific mapping
+F-exposure-005,F-exposure,Sun 2017,Author-defined morphine-equivalent intraoperative opioid,,,0,1,0,PASS — result-specific mapping
+F-exposure-006,F-exposure,Jiang 2026,Intraoperative remifentanil + sufentanil exposure,P1,RESOLVED_BY_STRATIFICATION,0,1,0,PASS — result-specific mapping
+F-exposure-007,F-exposure,Wu 2025,Pre-intervention intraoperative opioid exposure,,,0,0,1,PASS — result-specific mapping
+F-rescue-opioid-001,F-rescue-opioid,Yao 2015,Rescue sufentanil administration count,P1,RESOLVED_BY_NATIVE_DATA_RULE,0,0,1,PASS — result-specific mapping
+F-rescue-opioid-002,F-rescue-opioid,Chen 2015 (Hyperalgesia),Rescue sufentanil count,,,1,0,0,PASS — result-specific mapping
+F-rescue-opioid-003,F-rescue-opioid,Chen 2015,Rescue morphine count,,,1,0,0,PASS — result-specific mapping
+F-rescue-opioid-004,F-rescue-opioid,Xie 2014,Rescue dezocine incidence,,,1,0,0,PASS — result-specific mapping
+F-rescue-opioid-005,F-rescue-opioid,Ntritsou 2014,Tramadol→morphine rescue,P1,RESOLVED_BY_NARRATIVE_ONLY,0,0,1,PASS — result-specific mapping
+F-rescue-opioid-006,F-rescue-opioid,Yu 2020,Rescue sufentanil incidence,,,1,0,0,PASS — result-specific mapping
+F-rescue-opioid-007,F-rescue-opioid,Tu 2024,Rescue tramadol incidence,,,1,0,0,PASS — result-specific mapping
+F-rescue-opioid-008,F-rescue-opioid,Liu 2026 (burn),Rescue dezocine incidence,P1,RESOLVED_BY_RAW_DATA_RULE,0,0,1,PASS — result-specific mapping
+F-rescue-opioid-009,F-rescue-opioid,Zhou 2025,Rescue tramadol incidence,,,1,0,0,PASS — result-specific mapping
+F-rescue-nonopioid-001,F-rescue-nonopioid,Li 2022,Rescue flurbiprofen incidence,,,0,0,1,PASS — result-specific mapping
+F-rescue-nonopioid-002,F-rescue-nonopioid,Hou 2023,Rescue flurbiprofen incidence,,,0,0,1,PASS — result-specific mapping
+F-rescue-nonopioid-003,F-rescue-nonopioid,Sun 2017,Supplemental flurbiprofen incidence,,,0,1,0,PASS — result-specific mapping
+F-rescue-nonopioid-004,F-rescue-nonopioid,Lu 2021,Rescue parecoxib incidence,P1,RESOLVED_BY_RAW_DATA_RULE,0,0,1,PASS — result-specific mapping
+F-mixed/undefined-001,F-mixed/undefined,Wang 2023,Mixed/undefined analgesic use,P1,RESOLVED_BY_EXCLUSION,0,0,1,PASS — result-specific mapping
+F-mixed/undefined-002,F-mixed/undefined,Zhang 2025,Mixed/undefined analgesic use,P1,RESOLVED_BY_EXCLUSION,0,0,1,PASS — result-specific mapping
+F-mixed/undefined-003,F-mixed/undefined,Wu 2025,Mixed/undefined analgesic use,,,0,1,0,PASS — result-specific mapping
+F-mixed/undefined-004,F-mixed/undefined,Liang 2021,Mixed/undefined analgesic use,P1,RESOLVED_BY_EXCLUSION,0,0,1,PASS — result-specific mapping
+F-mixed/undefined-005,F-mixed/undefined,Yang 2020,Mixed/undefined analgesic use,P2,,0,0,1,PASS — result-specific mapping
+F-mixed/undefined-006,F-mixed/undefined,Yang 2024,Mixed/undefined analgesic use,P2,,0,0,1,PASS — result-specific mapping
+F-mixed/undefined-007,F-mixed/undefined,Zhou 2021,Mixed/undefined analgesic use,P1,RESOLVED_BY_EXCLUSION,0,0,1,PASS — result-specific mapping
+F-PCA-001,F-PCA,Chen 2020,PCIA total/effective attempts,,,0,1,0,PASS — result-specific mapping
+F-PCA-002,F-PCA,He 2026 (hepatectomy/JIS),PCA attempts/effective deliveries,P1,RESOLVED_BY_PARTIAL_EXCLUSION,0,1,0,PASS — result-specific mapping
+F-PCA-003,F-PCA,Ao 2021,PCA solution use/effective presses,,,0,1,0,PASS — result-specific mapping
+F-PCA-004,F-PCA,Liu 2021,PCA compressions,,,0,1,0,PASS — result-specific mapping
+F-PCA-005,F-PCA,Long 2025,PCIA compressions,,,0,1,0,PASS — result-specific mapping
+F-PCA-006,F-PCA,Zheng 2025,Total/effective PCIA use,P1,RESOLVED_BY_EXCLUSION,0,0,1,PASS — result-specific mapping
+F-PCA-007,F-PCA,Jin 2023,Analgesic pump compressions,,,0,1,0,PASS — result-specific mapping
+F-PCA-008,F-PCA,Lee 2011,PCA demands,P2,,0,1,0,PASS — result-specific mapping
+F-PCA-009,F-PCA,Lu 2022,PCA attempts/deliveries,P2,,0,1,0,PASS — result-specific mapping
+F-PCA-010,F-PCA,Yeh 2010,PCA button pushes,P1,HARD_HOLD_DEPENDENCY,0,0,1,PASS — result-specific mapping
+F-PCA-011,F-PCA,Lin 2002,PCA demands,,,0,1,0,PASS — result-specific mapping
+F-PCA-012,F-PCA,Yeh 2011,PCA button pushes,P1,HARD_HOLD_DEPENDENCY,0,0,1,PASS — result-specific mapping
+F-postop-dose-001,F-postop-dose,Seevaunnamtum 2016,Total morphine incl PCAM + IV rescue,,,1,0,0,PASS — result-specific mapping
+F-postop-dose-002,F-postop-dose,Lee 2011,Delivered morphine,P2,,1,0,0,PASS — result-specific mapping
+F-postop-dose-003,F-postop-dose,Yeh 2010,Delivered morphine,P1,HARD_HOLD_DEPENDENCY,0,0,1,PASS — result-specific mapping
+F-postop-dose-004,F-postop-dose,Chen 1998,Hydromorphone PCA dose,,,0,1,0,PASS — result-specific mapping
+F-postop-dose-005,F-postop-dose,Lin 2002,Morphine PCA dose,,,0,1,0,PASS — result-specific mapping
+F-postop-dose-006,F-postop-dose,Coura 2011,Total fentanyl,,,0,1,0,PASS — result-specific mapping
+F-postop-dose-007,F-postop-dose,El-Rakshy 2009,Morphine/total analgesia,P2,,0,1,0,PASS — result-specific mapping
+F-postop-dose-008,F-postop-dose,Gu 2019,Mixed PCIA solution consumption,P1,RESOLVED_BY_TIMEPOINT_EXCLUSION,0,0,1,PASS — result-specific mapping
+F-postop-dose-009,F-postop-dose,Huang 2024 TKA,Additional PCA dose released,P1,RESOLVED_BY_EXCLUSION,0,0,1,PASS — result-specific mapping
+F-postop-dose-010,F-postop-dose,Yeh 2011,Delivered morphine,P1,HARD_HOLD_DEPENDENCY,0,0,1,PASS — result-specific mapping

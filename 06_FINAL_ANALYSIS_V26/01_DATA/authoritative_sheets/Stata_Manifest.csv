@@ -1,0 +1,35 @@
+analysis_id,analysis_group,endpoint_stratum,provisional_status,strict_k_lock_items,sensitivity_k_lock_items,effect_data_rule,pooling_rule,mandatory_sensitivity_or_hold,notes
+OPIOID24_PRIMARY,Primary outcome,0-24 h cumulative systemic postoperative opioid,PROVISIONAL READY,6,6,Use native group mean/SD or prespecified transform only; convert opioid dose to review-standard IV MME using the prespecified conversion table before pooling.,One independent study unit per trial/publication family; sham-controlled principal analysis; usual-care/supportive comparisons separate.,Run high-RoB / denominator sensitivity excluding El-Rakshy 2009; Yeh family remains held; conditional/weight-normalized/derived rows stay outside primary unless prespecified.,This sheet is inherited from v20 and is not replaced by Targets A-F.
+A_0-48H_CUMULATIVE_OPIOID,Target A,A_0-48h_cumulative_opioid,PROVISIONAL READY,3,1,Continuous dose; harmonize to IV MME only with prespecified conversions.,Strict primary = clean cumulative 0-48 h; broader-window studies sensitivity only.,Mandatory sensitivity excluding An 2014; Xie 2014 broader-window only.,Narrative/hold lock items: 6.
+B_0-72H_CUMULATIVE_OPIOID,Target B,B_0-72h_cumulative_opioid,DESCRIPTIVE / k SMALL,1,1,Continuous cumulative dose; preserve native distributions.,Pool only if ≥2 genuinely compatible exact 0-72 h studies.,Wong first-three-days is approximate sensitivity; strict exact set may be k=1.,Narrative/hold lock items: 2.
+C_REST_PAIN_~24H,Target C,C_rest_pain_~24h,PROVISIONAL READY,2,0,"Continuous pain scale; use MD if same 0-10 scale, otherwise prespecified SMD.",Only pain explicitly at rest around 24 h.,Both currently eligible strict results have High result-level RoB; interpret/sensitivity accordingly.,Narrative/hold lock items: 7.
+D_PONV_0-24H,Target D,D_PONV_0-24h,PROVISIONAL READY,2,0,Binary events/total -> RR with 95% CI.,Do not mix nausea-only or vomiting-only with composite PONV.,POD1 proxy results sensitivity if not explicit 0-24 h.,Narrative/hold lock items: 0.
+D_PONV_0-48H,Target D,D_PONV_0-48h,PROVISIONAL READY,2,0,Binary events/total -> RR with 95% CI.,Composite PONV only.,Keep 24-h and 48-h separate.,Narrative/hold lock items: 0.
+D_PONV_OTHER,A-F,D_PONV_other,PROVISIONAL,0,1,Preserve native source data.,Pool only compatible estimands.,Follow AF lock flags.,Narrative/hold lock items: 0.
+D_NAUSEA_0-24H,Target D,D_nausea_0-24h,PROVISIONAL READY,2,0,Binary events/total -> RR.,Nausea-only stratum.,Do not combine with vomiting/composite.,Narrative/hold lock items: 0.
+D_NAUSEA_0-48H,Target D,D_nausea_0-48h,PROVISIONAL READY,1,0,Binary events/total -> RR.,Nausea-only 48-h.,Do not combine with 24-h.,Narrative/hold lock items: 0.
+D_VOMITING_0-24H,Target D,D_vomiting_0-24h,PROVISIONAL READY,2,0,Binary events/total -> RR.,Vomiting-only stratum.,Do not combine with nausea/composite.,Narrative/hold lock items: 0.
+D_VOMITING_0-48H,Target D,D_vomiting_0-48h,PROVISIONAL READY,1,0,Binary events/total -> RR.,Vomiting-only 48-h.,Do not combine with 24-h.,Narrative/hold lock items: 0.
+D_VOMITING_OTHER,A-F,D_vomiting_other,PROVISIONAL,0,0,Preserve native source data.,Pool only compatible estimands.,Follow AF lock flags.,Narrative/hold lock items: 5.
+E_TIME_TO_FIRST_FLATUS,Target E,E_time_to_first_flatus,READY,6,0,Time-to-event summary data; preserve mean/SD vs median/IQR; do not coerce distributions without a prespecified method.,Pool only under a distribution-compatible method and consistent time origin.,Retain existing timing/ascertainment sensitivity notes for eligible studies; Yu Wang JAMA Surgery 2023 is excluded for wrong outcomes and is not part of this stratum.,Narrative/hold lock items: 1.
+F_PCA_BEHAVIOR,Target F,F_PCA_behavior,EXPLORATORY,0,9,PCA attempts/deliveries/presses are behavioral/device-use outcomes.,Do not treat as cumulative opioid dose.,High RoB common where participant masking failed; keep native time windows.,Narrative/hold lock items: 3.
+F_INTRAOP_FIXED_OR_UNCLEAR_EXPOSURE,Target F,F_intraop_fixed_or_unclear_exposure,DESCRIPTIVE / SEPARATE,0,4,Native intraoperative exposure only.,Do not pool with titrated requirement.,Jiang/Li/Chen-fixed/Xie/Ntritsou/Sun remain separate exposure stratum.,Narrative/hold lock items: 3.
+F_INTRAOP_TITRATED_REQUIREMENT,Target F,F_intraop_titrated_requirement,EXPLORATORY,6,6,Continuous intraoperative opioid requirement; harmonize units/drugs only by prespecified conversion.,Pool only genuinely titrated clinician-controlled opioid requirement results; fixed exposure separate.,Unblinded titrators/high attrition sensitivity analyses.,Narrative/hold lock items: 1.
+F_POSTOP_DELIVERED_DOSE_OR_SOLUTION,Target F,F_postop_delivered_dose_or_solution,EXPLORATORY,2,4,Delivered dose can be quantitative; mixed solution volume stays native volume.,Pool only compatible drugs/units after prespecified conversion; volume proxies separate.,Yeh duplicate family hold; high-RoB older trials sensitivity.,Narrative/hold lock items: 4.
+F_RESCUE_MIXED_OR_UNDEFINED,Target F,F_rescue_mixed_or_undefined,NARRATIVE / HOLD,0,1,Preserve raw source metric only.,No pooled opioid effect until drug/unit/window are known.,"Zhang2025, Liang2021, Zhou2021 etc remain excluded from opioid-specific models.",Narrative/hold lock items: 6.
+F_RESCUE_NONOPIOID,Target F,F_rescue_nonopioid,EXPLORATORY / SEPARATE,0,1,Binary or medication-specific native metric.,Never relabel as opioid rescue.,Keep drug-specific/non-opioid strata.,Narrative/hold lock items: 3.
+F_RESCUE_OPIOID,Target F,F_rescue_opioid,EXPLORATORY,6,0,Binary incidence -> RR; counts/median-IQR remain separate count estimands.,Do not pool incidence with administration counts or different undefined windows.,Use raw events when publication P conflicts; undefined windows remain separate.,Narrative/hold lock items: 3.
+STATA EXPORT RULES,,,,,,,,,
+1,No imputation of unreported values.,,,,,,,,
+2,No conversion of PCA volume/presses/counts into opioid dose without an explicit source-supported concentration and prespecified conversion.,,,,,,,,
+3,Use events/denominators—not conflicting publication P values—for binary meta-analysis.,,,,,,,,
+4,Preserve medians/IQR as medians/IQR unless the statistical analysis plan explicitly specifies a valid method.,,,,,,,,
+5,Final publication dataset remains held for the JAMA Surgery colorectal-EA scope/completeness adjudication.,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+STATA EXPORT RULES,,,,,,,,,
+1,No imputation of unreported values.,,,,,,,,
+2,No conversion of PCA volume/presses/counts into opioid dose without explicit source-supported concentration and prespecified conversion.,,,,,,,,
+3,Use events/denominators—not conflicting publication P values—for binary meta-analysis.,,,,,,,,
+4,Preserve medians/IQR as medians/IQR unless the statistical analysis plan explicitly specifies a valid method.,,,,,,,,
+5,Dataset completeness hold resolved: Yu Wang JAMA Surgery 2023 was excluded at full text for wrong outcomes.,,,,,,,,
