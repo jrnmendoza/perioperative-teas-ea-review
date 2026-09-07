@@ -1027,3 +1027,110 @@ coincidentally 63, not a review count). RoB 2 tab confirmed to render exactly
 Not deployed to gh-pages as part of this section; awaiting explicit
 go-ahead, consistent with the standing per-change deployment approval
 requirement.
+
+---
+
+## 27. Deployment hardening: single CI-based Pages pipeline (2026-09-07)
+
+The user reported that external crawlers/retrieval systems were still returning
+an older dashboard snapshot (v26/63 studies/k=6) despite the browser-visible
+site being current, and asked for the deployment to be made verifiably current
+and resistant to stale-asset caching.
+
+### 27.1 Root causes found
+
+1. **GitHub Pages' legacy branch build type serves a fixed, non-overridable
+   `Cache-Control: max-age=600`** (confirmed via `gh api repos/.../pages` and
+   direct response-header inspection) — no repo file can change this for a
+   branch-sourced Pages site.
+2. **Several static HTML elements were only ever corrected by JavaScript at
+   load time**, not in the raw markup: the "Study Explorer (k=63)" subnav
+   pill, the hero KPI's "5,089 randomized surgical patients" placeholder, and
+   an orphaned `window.PRISMA_DATA` object in `data.js` still carrying
+   pre-migration numbers (63/224/161/5089), never read by any code. A browser
+   always ran the JS that overwrote these; a crawler that does not execute
+   JavaScript reads the stale raw text directly. Confirmed empirically: `curl`
+   against the live `index.html` (no JS execution) returned "5,089" and
+   multiple "k = 6"/"k=6" strings that a real browser never shows.
+3. **Three independently-maintained copies of the site** (`dashboard/` and
+   `docs/` on this branch, plus the `gh-pages` branch) with no automated
+   guarantee any two matched, and no CI to enforce it.
+
+### 27.2 What was fixed
+
+**Content (raw-HTML, non-JS-reliant):**
+- Subnav pill, hero patient-count placeholder, and orphaned `PRISMA_DATA`
+  object corrected/removed.
+- Two more hardcoded study-count strings found in the same sweep: RoB 2 tab's
+  "Study-Level Overview: 63 Studies" (now computed live from
+  `STUDIES_DATA.length`) and the intro tab's "Surgical Specialties
+  Distribution (63 Trials)" heading.
+- Full repo-wide sweep for `v27`-`v31`, `63 RCT`, `5089`/`5,089`, stale `k=6`,
+  `-4.68`, and `"Reconciled Master v26"`: zero remaining live occurrences (all
+  prior hits were already-correct historical/audit-trail prose).
+
+**Infrastructure (single authoritative build path):**
+- `scripts/build_site.py`: new build script. Copies `dashboard/` into a fresh
+  `_site/`, mirrors `06_FINAL_ANALYSIS_V26/` into `_site/v26/`, always
+  refreshes root-level forest/LOO figures from `06_FINAL_ANALYSIS_V26/04_FIGURES/`
+  (closing the same drift class fixed once already in this project, now
+  guaranteed structurally rather than by a manual step), writes
+  `build-meta.json` with `git_commit`/`build_timestamp_utc` plus
+  `canonical_studies` (parsed from `data.js`), `strict_primary_opioid_k`
+  (from the results CSV), and `source_normalized_outcome_rows` (read directly
+  from the v32 workbook's `Summary` sheet) — none hardcoded. Bakes a static
+  `id="build-badge"` element into `index.html` showing `Data v32 • build
+  <sha> • <timestamp>`, visible without JavaScript. Cache-busts the 6 core
+  JS/CSS assets, the two live-log `fetch()` calls, and the `results/`,
+  `v26/01_DATA/`, `v26/03_RESULTS/` download links with the short git SHA
+  (not a static token) so every deployment's asset URLs are distinct.
+- `scripts/deploy_integrity_check.py`: asserts the four `build-meta.json`
+  values above and the absence of specific superseded phrases
+  (`"Reconciled Master v26"`, `"Supporting Combined Synthesis (k=6"`, three
+  more) from live (non-changelog) content. Exits non-zero, aborting
+  deployment, on any failure. Mutation-tested against a corrupted
+  `build-meta.json` value and an injected stale phrase; both caught.
+- `scripts/verify_deployment.py`: post-deploy script that fetches the public
+  URL and `build-meta.json` with cache-busting `?build=<commit-sha>`,
+  retries with backoff, and fails if the live `git_commit` does not match
+  what was just deployed or if any required value/phrase check fails. Prints
+  the cache-busting review URL on success.
+- `.github/workflows/deploy-pages.yml`: build -> integrity-check ->
+  `upload-pages-artifact` -> `deploy-pages` -> live-verify, triggered on push
+  to `claude-v26-dashboard-final` (the actual long-running working branch;
+  `main` is 20 commits behind and unmerged, so triggering on `main` would
+  never fire against current content) plus manual `workflow_dispatch`.
+- **Retired and removed**: `dashboard/v26/` (110 tracked files) and `docs/`
+  (143 tracked files), both hand-synced duplicates with no automated parity
+  guarantee; `scripts/sync_dashboard.sh`, the manual tool that produced them.
+  `build_site.py` generates both mirrors fresh on every build; there is no
+  persisted copy left to drift.
+- `scripts/validate_dashboard.py` updated: removed the three checks that
+  asserted parity between the now-removed mirrors
+  (`t_v26_mirror_current`, `t_v26_mirror_logs_git_tracked`,
+  `t_dashboard_docs_parity`); replaced the logs-tracking check with one
+  scoped to the single remaining canonical copy
+  (`t_v26_logs_git_tracked`); `t_downloads_resolve` now resolves `v26/...`
+  links against `06_FINAL_ANALYSIS_V26/` directly rather than requiring a
+  committed `dashboard/v26/` mirror to exist on disk. Validator count: 52 ->
+  50 (net -2, reflecting fewer things left to validate, not weaker coverage).
+
+### 27.3 Empirical finding: page-level cache-busting query strings are not
+reliable on GitHub's Fastly CDN
+
+Tested directly: `index.html?build=<novel-string>` and the bare `index.html`
+returned identical `Age`/`X-Cache` values from the same edge node, i.e. the
+query string did not change Fastly's cache key for that path in every trial.
+This is inconsistent enough (varies by edge PoP) that `?build=` on the page
+URL should not be relied on as a guaranteed CDN cache-bust — it is retained
+per the user's request as a URL a human reviewer or a crawler with its own
+URL-keyed cache can treat as unambiguously novel, and Actions-based Pages
+deployment (§27.2) is the change actually expected to invalidate the CDN
+cache on each deployment, per GitHub's own documentation of that build type.
+
+### 27.4 Explicitly not done
+
+No statistical result was changed; every number in `build-meta.json` and
+every content fix in §27.2 is either a filename, a commit SHA/timestamp, or a
+value already re-verified against the v32 workbook/results CSV in the prior
+two sessions (§25-26). `main` was not merged into or otherwise touched.

@@ -1,6 +1,0 @@
-analysis_id,outcome,stratum,k,estimate,ci_low,ci_high,p_value,tau2,i2,q_stat,model,notes
-TF_INTRA_REMI_UG,Intraoperative titrated remifentanil,"Titrated remifentanil mass (µg) (Wu, Xing, Lu, Zheng, Guo, Liang, Pan)",7,-114.21,-213.7164,-14.703594,.030817773,8288.4814,80.691177,22.897947,"MD µg, REML + Hartung-Knapp",Intraoperative remifentanil requirement
-TF_POSTOP_DELIVERED_MORPH,Postoperative delivered morphine,"Strict delivered IV morphine (Seevaunnamtum 2016, Lee 2011 High)",2,-7.2670913,-67.226044,52.69186,.36664003,31.018827,68.739777,3.1989534,"MD mg, REML + Hartung-Knapp",Strict delivered morphine mass
-TF_RESCUE_OPIOID_STRICT,Rescue opioid requirement,"Strict binary rescue (Xie 2014, Yu 2020, Tu 2024, Zhou 2025)",4,.50470018,.33950377,.75027823,.011897922,3.6478102e-07,.00015319719,1.2706176,"RR, REML + Hartung-Knapp",Strict binary rescue requirement
-TF_RESCUE_OPIOID_ALL,Rescue opioid requirement,All binary rescue (including Liu 2026 burn),5,.49259737,.36184293,.67060083,.0031095536,6.3673616e-07,.00025515934,1.4673587,"RR, REML + Hartung-Knapp",All reported binary rescue
-TF_PCA_DEMANDS_SMD,PCA demands / button presses,PCA button presses/demands across trials (SMD),8,-1.2685901,-2.7740545,.23687415,.086562939,3.0293593,97.866196,135.36038,"SMD Hedges g, REML + Hartung-Knapp",Standardized mean difference in PCA demands

@@ -1,5 +1,0 @@
-analysis_id,outcome,stratum,k,estimate,ci_low,ci_high,p_value,tau2,i2,q_stat,model
-TA_STRICT,0-48 h Cumulative Postoperative Opioid,"Strict Target A (Chen, Zhang, An)",3,-10.267846,-34.834663,14.298971,.21394686,94.559998,97.07373,71.078476,REML + Hartung-Knapp
-TA_EXCL_AN,0-48 h Cumulative Postoperative Opioid,Mandatory Sensitivity: Exclude An 2014,2,-12.395357,-128.63075,103.84003,.40475306,165.02835,98.59272,71.058952,REML + Hartung-Knapp
-TA_EXCL_ZHANG,0-48 h Cumulative Postoperative Opioid,Sensitivity: Exclude Converted (Zhang 2023),2,-13.86749,-113.16422,85.429245,.3266978,117.39323,96.107048,25.687456,REML + Hartung-Knapp
-TA_INCL_XIE,0-48 h Cumulative Postoperative Opioid,Sensitivity: Broader Window (Include Xie 2014),4,-12.301891,-26.735401,2.131619,.07301347,79.154221,96.455132,101.82667,REML + Hartung-Knapp

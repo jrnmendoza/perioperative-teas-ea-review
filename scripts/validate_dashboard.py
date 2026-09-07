@@ -5,9 +5,15 @@ Dashboard <-> v26 lock consistency validator.
 Fails loudly when the published dashboard disagrees with the authoritative
 sources:
 
-  workbook   TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
+  workbook   TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx
   analysis   06_FINAL_ANALYSIS_V26/{01_DATA,03_RESULTS}
-  dashboard  dashboard/  (canonical)  ->  docs/  (generated mirror)
+  dashboard  dashboard/  (canonical, hand-edited source)
+
+This validates SOURCE content only. dashboard/ no longer carries a committed
+v26/ mirror or a docs/ generated copy -- scripts/build_site.py builds both
+the v26 download mirror and the deployable artifact fresh on every build
+(see .github/workflows/deploy-pages.yml), so there is no separate mirror
+copy left to drift out of sync and no corresponding check for it here.
 
 Design note
 -----------
@@ -37,7 +43,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DASH = ROOT / "dashboard"
-DOCS = ROOT / "docs"
 DATA = ROOT / "06_FINAL_ANALYSIS_V26" / "01_DATA"
 RESULTS = ROOT / "06_FINAL_ANALYSIS_V26" / "03_RESULTS"
 
@@ -191,7 +196,7 @@ def t_prospero():
     obsolete = "CRD42024560773"
     correct = "CRD420251090635"
     hits = []
-    for p in list(DASH.rglob("*")) + list(DOCS.rglob("*")):
+    for p in DASH.rglob("*"):
         if not (p.is_file() and p.suffix in {".html", ".js", ".json", ".csv", ".md"}):
             continue
         # Audit trails must be able to name the superseded ID as a corrected
@@ -627,6 +632,16 @@ def t_downloads_resolve():
             probs.append(f"repo-root-relative link will 404 unless the dashboard is at "
                          f"the site root: {h} (use v26/... instead)")
             continue
+        # v26/... only exists once scripts/build_site.py mirrors
+        # 06_FINAL_ANALYSIS_V26/ into it (see .github/workflows/deploy-pages.yml);
+        # dashboard/ itself no longer carries a committed v26/ copy. Resolve
+        # against the true source instead of requiring that build step here.
+        if h.startswith("v26/"):
+            if not (ROOT / "06_FINAL_ANALYSIS_V26" / h[len("v26/"):]).exists():
+                probs.append(f"unresolvable download/asset (checked against "
+                             f"06_FINAL_ANALYSIS_V26/, the source scripts/build_site.py "
+                             f"mirrors into v26/): {h}")
+            continue
         if not (DASH / h).exists():
             probs.append(f"unresolvable download/asset: {h}")
     check(f"All {len(hrefs)} download and image targets resolve page-relatively",
@@ -676,29 +691,6 @@ def t_forest_matches_table():
         probs.append(f"paired MCID download {mcid_keys} != rendered cohort {js_paired}")
     check("Forest / leave-one-out / MCID study sets match the underlying analysis sets",
           not probs, "\n".join(probs))
-
-
-def t_v26_mirror_current():
-    """dashboard/v26/ is a build artifact; it must equal 06_FINAL_ANALYSIS_V26."""
-    src = ROOT / "06_FINAL_ANALYSIS_V26"
-    dst = DASH / "v26"
-    probs = []
-    if not dst.exists():
-        probs.append("dashboard/v26/ mirror missing - run scripts/sync_dashboard.sh")
-    else:
-        a = {p.relative_to(src): p for p in src.rglob("*") if p.is_file() and p.name != ".DS_Store"}
-        b = {p.relative_to(dst): p for p in dst.rglob("*") if p.is_file() and p.name != ".DS_Store"}
-        missing = sorted(str(x) for x in (set(a) - set(b)))
-        extra = sorted(str(x) for x in (set(b) - set(a)))
-        stale = sorted(str(k) for k in (set(a) & set(b)) if a[k].read_bytes() != b[k].read_bytes())
-        if missing:
-            probs.append(f"missing from mirror: {missing[:5]}")
-        if extra:
-            probs.append(f"stale extras in mirror: {extra[:5]}")
-        if stale:
-            probs.append(f"out-of-date in mirror: {stale[:5]}")
-    check("dashboard/v26/ mirror is current with 06_FINAL_ANALYSIS_V26", not probs,
-          "\n".join(probs))
 
 
 def t_population_denominators():
@@ -1345,22 +1337,23 @@ def t_locale_pooled_numbers_agree():
           not probs, "\n".join(probs))
 
 
-def t_v26_mirror_logs_git_tracked():
+def t_v26_logs_git_tracked():
     """
-    dashboard/v26/ and docs/v26/ are the sync_dashboard.sh mirror of
-    06_FINAL_ANALYSIS_V26/. If their logs subdirectory is not explicitly
-    un-ignored the same way as the canonical directory, a fresh clone of this
-    branch has an empty mirror logs/ folder even though the dashboard links to
-    files in it - a real gap found in this pass (gitignore's blanket *.log
-    caught the mirror but not the canonical copy, so it went undetected until
-    checked directly with `git ls-files`).
+    06_FINAL_ANALYSIS_V26/02_STATA/logs/ is the one remaining copy of the Stata
+    execution logs (dashboard/v26/ and docs/v26/ mirrors of it were retired in
+    favor of scripts/build_site.py generating that mirror fresh at build time
+    -- see .github/workflows/deploy-pages.yml). A blanket *.log gitignore rule
+    can still silently swallow this canonical copy even though it is meant to
+    ship with the analysis package; this is what the un-ignore rule in
+    .gitignore guards, and what this check verifies actually worked.
     """
     import subprocess
+    rel = "06_FINAL_ANALYSIS_V26/02_STATA/logs"
+    d = ROOT / rel
     probs = []
-    for rel in ("dashboard/v26/02_STATA/logs", "docs/v26/02_STATA/logs"):
-        d = ROOT / rel
-        if not d.exists():
-            continue
+    if not d.exists():
+        probs.append(f"{rel} does not exist")
+    else:
         on_disk = {p.name for p in d.glob("*.log")}
         tracked = set(subprocess.run(
             ["git", "ls-files", "--", rel], cwd=ROOT, capture_output=True, text=True
@@ -1368,21 +1361,10 @@ def t_v26_mirror_logs_git_tracked():
         tracked_names = {t.split("/")[-1] for t in tracked}
         missing = on_disk - tracked_names
         if missing:
-            probs.append(f"{rel}: {len(missing)} log(s) on disk but not git-tracked, "
+            probs.append(f"{len(missing)} log(s) on disk but not git-tracked, "
                          f"e.g. {sorted(missing)[:3]}")
-    check("Mirrored dashboard/v26 and docs/v26 execution logs are git-tracked, not just on disk",
+    check("06_FINAL_ANALYSIS_V26 execution logs are git-tracked, not just on disk",
           not probs, "\n".join(probs))
-
-
-def t_dashboard_docs_parity():
-    a = {p.relative_to(DASH): p for p in DASH.rglob("*") if p.is_file()}
-    b = {p.relative_to(DOCS): p for p in DOCS.rglob("*") if p.is_file()}
-    only_a = sorted(str(x) for x in (set(a) - set(b)))
-    only_b = sorted(str(x) for x in (set(b) - set(a)))
-    diff = sorted(str(k) for k in (set(a) & set(b)) if a[k].read_bytes() != b[k].read_bytes())
-    check("dashboard/ (source) and docs/ (generated mirror) are identical",
-          not (only_a or only_b or diff),
-          f"only in dashboard: {only_a}\nonly in docs: {only_b}\ndiffering: {diff}")
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1456,9 +1438,8 @@ def main() -> int:
         ("Withdrawn analyses", [t_no_withdrawn_metareg, t_small_study_effects]),
         ("GRADE", [t_grade_consistent]),
         ("Downloads & deployment", [t_downloads_resolve, t_downloads_are_current,
-                                    t_forest_matches_table, t_v26_mirror_current,
-                                    t_population_denominators, t_paired_cohort_n,
-                                    t_dashboard_docs_parity]),
+                                    t_forest_matches_table,
+                                    t_population_denominators, t_paired_cohort_n]),
         ("Wording & i18n", [t_outcome_hierarchy, t_translations_do_not_contradict,
                             t_author_contacts_not_stale]),
         ("Primary contribution pathway", [t_pathway_counts_derive, t_pathway_categories_disjoint,
@@ -1472,7 +1453,7 @@ def main() -> int:
                                        t_sufentanil_conversion_documented_and_unresolved,
                                        t_cdc_not_misattributed_to_perioperative_iv,
                                        t_mcid_labelled_exploratory, t_version_tag_present,
-                                       t_i18n_textcontent_no_html_entities, t_v26_mirror_logs_git_tracked,
+                                       t_i18n_textcontent_no_html_entities, t_v26_logs_git_tracked,
                                        t_primary_weighting_matrix_matches_stata,
                                        t_no_pre_correction_sufentanil_values,
                                        t_locale_pooled_numbers_agree]),

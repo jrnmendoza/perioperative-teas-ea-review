@@ -1,0 +1,94 @@
+name: Deploy dashboard to GitHub Pages
+
+# Single authoritative deployment path. Replaces the previous manual flow
+# (sync_dashboard.sh -> docs/ on main -> hand-pushed gh-pages branch), which
+# left three copies of the site (main's dashboard/, main's docs/, and the
+# gh-pages branch) with no automated guarantee any two of them matched.
+#
+# claude-v26-dashboard-final is the actual long-running working branch for
+# this dashboard (see 06_FINAL_ANALYSIS_V26/06_AUDIT/deployment_pipeline.md);
+# main has not been merged into and is stale. Trigger on pushes to that
+# branch plus manual dispatch, rather than on main, until/unless the branches
+# are reconciled.
+
+"on":
+  push:
+    branches: [claude-v26-dashboard-final]
+    paths:
+      - "dashboard/**"
+      - "06_FINAL_ANALYSIS_V26/**"
+      - "scripts/build_site.py"
+      - "scripts/deploy_integrity_check.py"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: pip install --quiet openpyxl
+
+      - name: Build site
+        run: python3 scripts/build_site.py --out _site --commit "${{ github.sha }}"
+
+      - name: Deployment integrity check
+        run: python3 scripts/deploy_integrity_check.py --site _site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Print cache-busting review URL
+        run: |
+          SHORT_SHA="${GITHUB_SHA:0:8}"
+          echo "### Deployed" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Commit: \`${GITHUB_SHA}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Page URL: ${{ steps.deployment.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Cache-busting review URL: ${{ steps.deployment.outputs.page_url }}?build=${SHORT_SHA}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- build-meta.json: ${{ steps.deployment.outputs.page_url }}build-meta.json?build=${GITHUB_SHA}" >> "$GITHUB_STEP_SUMMARY"
+
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Live post-deploy verification
+        run: python3 scripts/verify_deployment.py --commit "${{ github.sha }}"

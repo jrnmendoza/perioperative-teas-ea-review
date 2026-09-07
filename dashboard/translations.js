@@ -60,7 +60,7 @@ const TRANSLATIONS = {
     },
     kpi: {
       includedRcts: "Included RCTs",
-      includedRctsSub: "5,089 randomized surgical patients",
+      includedRctsSub: "See Study Explorer for current patient totals",
       includedRctsBadge: "See Study Explorer for modality breakdown",
       primaryTitle: "Primary Outcome: 24-h Opioid Sparing",
       primaryValue: "TEAS: −14.00 mg • EA: −3.94 mg",
@@ -252,7 +252,7 @@ const TRANSLATIONS = {
     },
     kpi: {
       includedRcts: "Inkluderade RCT:er",
-      includedRctsSub: "5 089 randomiserade kirurgiska patienter",
+      includedRctsSub: "Se studieutforskaren för aktuella patienttotaler",
       includedRctsBadge: "See Study Explorer for modality breakdown",
       primaryTitle: "Primärt utfall: 24-h opioidbesparing",
       primaryValue: "TEAS: −14,00 mg • EA: −3,94 mg",

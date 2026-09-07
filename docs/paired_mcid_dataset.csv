@@ -1,7 +1,0 @@
-study_id,study_key,citation,modality,comparator,opioid_timepoint,opioid_md_mme,opioid_unit,pain_timepoint,pain_md_vas,pain_scale,result_rob_opioid_24h,paired_inclusion_status
-1879896688,Chen 2020,"Chen J, et al. *Thorac Cancer*. 2020;11(4):928-934. DOI: 10.1111/1759-7714.13343",TEAS,Sham,0-24 h,-28.19,mg IV MME,~24 h,-0.65,VAS (0-10),Some concerns,Included (v26 strict primary paired cohort)
-1879897506,Chen 1998,"Chen L, et al. *Anesth Analg*. 1998;87(5):1129-1134. DOI: 10.1097/00000539-199811000-00028",TEAS,Sham,0-24 h,-21,mg IV MME,~24 h,-0.8,VAS (0-10),Some concerns,Included (v26 strict primary paired cohort)
-1879896891,Seevaunnamtum 2016,"Praveena Seevaunnamtum S, et al. *Anesth Pain Med*. 2016;6(6):e40106. DOI: 10.5812/aapm.40106. PMID: 28975075",EA,Usual Care,0-24 h,-12.56,mg IV MME,~24 h,-0.03,VAS (0-10),Some concerns,Included (v26 strict primary paired cohort)
-1879897344,El-Rakshy 2009,"El-Rakshy M, et al. *Acupunct Med*. 2009;27(1):9-12. DOI: 10.1136/aim.2008.000075",EA,Usual Care,0-24 h,-1.6,mg IV MME,~24 h,-0.4,VAS (0-10),High,Included (v26 strict primary paired cohort)
-1879895909,He 2026 (hepatectomy/JIS),"He S, et al. *J Invest Surg*. 2026;39(1):2653912. DOI: 10.1080/08941939.2026.2653912",TEAS,Sham,0-24 h,-0.6,mg IV MME,~24 h,-0.2,VAS (0-10),Some concerns,Included (v26 strict primary paired cohort)
-1879896323,Yang 2024,"Yang J, et al. *Explore (NY)*. 2024;20(3):450-455. DOI: 10.1016/j.explore.2023.11.004. PMID: 38007308",EA,Usual Care,0-24 h,-0.3,mg IV MME,~24 h,-0.15,VAS (0-10),Some concerns,Included (v26 strict primary paired cohort)

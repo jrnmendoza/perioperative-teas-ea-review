@@ -1,0 +1,132 @@
+#!/usr/bin/env python3
+"""
+Post-deployment live verification. Fetches the PUBLIC GitHub Pages URL
+(cache-busted) after deployment and confirms the returned content actually
+carries the current v32 analytical state -- never assume a deployment
+succeeded merely because the workflow step that pushed it returned 0.
+
+Usage:
+  python3 scripts/verify_deployment.py --commit <sha> \
+      [--base-url https://jrnmendoza.github.io/perioperative-teas-ea-review]
+
+Exit: 0 if all checks pass, 1 otherwise. Retries with backoff since GitHub
+Pages' CDN can take a short time to reflect a just-completed deployment.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+import time
+import urllib.request
+from urllib.error import URLError, HTTPError
+
+DEFAULT_BASE = "https://jrnmendoza.github.io/perioperative-teas-ea-review"
+REQUIRED_TEXT = ("v32",)  # presence checks against the raw HTML
+REQUIRED_META = {
+    "master_version": "v32",
+    "canonical_studies": 70,
+    "source_normalized_outcome_rows": 364,
+    "strict_primary_opioid_k": 7,
+}
+
+
+def fetch(url: str, timeout: int = 20):
+    req = urllib.request.Request(url, headers={"Cache-Control": "no-cache", "Pragma": "no-cache"})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        body = resp.read().decode("utf-8", errors="replace")
+        headers = dict(resp.headers.items())
+        return resp.status, body, headers
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--commit", required=True, help="commit SHA that was just deployed")
+    ap.add_argument("--base-url", default=DEFAULT_BASE)
+    ap.add_argument("--retries", type=int, default=6)
+    ap.add_argument("--retry-delay", type=int, default=20)
+    args = ap.parse_args()
+
+    short = args.commit[:8]
+    index_url = f"{args.base_url}/index.html?build={args.commit}"
+    meta_url = f"{args.base_url}/build-meta.json?build={args.commit}"
+
+    failures: list[str] = []
+    meta = None
+    headers_index = {}
+
+    for attempt in range(1, args.retries + 1):
+        print(f"[attempt {attempt}/{args.retries}] fetching {meta_url}")
+        try:
+            status, body, headers = fetch(meta_url)
+            if status == 200:
+                meta = json.loads(body)
+                if meta.get("git_commit") == args.commit:
+                    print(f"  build-meta.json reports git_commit={meta.get('git_commit')} -- matches")
+                    break
+                print(f"  build-meta.json reports git_commit={meta.get('git_commit')} "
+                      f"(waiting for {args.commit})")
+            else:
+                print(f"  HTTP {status}")
+        except (URLError, HTTPError) as exc:
+            print(f"  fetch failed: {exc}")
+        if attempt < args.retries:
+            time.sleep(args.retry_delay)
+
+    if meta is None or meta.get("git_commit") != args.commit:
+        failures.append(
+            f"build-meta.json never reported git_commit={args.commit} after "
+            f"{args.retries} attempts (got {meta.get('git_commit') if meta else None!r})"
+        )
+
+    if meta:
+        for key, expected in REQUIRED_META.items():
+            got = meta.get(key)
+            if got != expected:
+                failures.append(f"build-meta.json[{key}] = {got!r}, expected {expected!r}")
+            else:
+                print(f"  OK  build-meta.json[{key}] = {got}")
+
+    print(f"\nfetching {index_url}")
+    try:
+        status, html, headers_index = fetch(index_url)
+        if status != 200:
+            failures.append(f"index.html returned HTTP {status}")
+        else:
+            for needle in REQUIRED_TEXT:
+                if needle not in html:
+                    failures.append(f"index.html does not contain required text {needle!r}")
+                else:
+                    print(f"  OK  index.html contains {needle!r}")
+            if short not in html:
+                failures.append(f"index.html does not contain the deployed short SHA {short!r} "
+                                 f"(build badge missing or stale)")
+            else:
+                print(f"  OK  index.html contains build badge with short SHA {short}")
+            for banned in ("Reconciled Master v26", "Supporting Combined Synthesis (k=6"):
+                if banned in html:
+                    failures.append(f"index.html still contains superseded text {banned!r}")
+                else:
+                    print(f"  OK  index.html does not contain {banned!r}")
+    except (URLError, HTTPError) as exc:
+        failures.append(f"could not fetch index.html: {exc}")
+
+    print("\nResponse headers (index.html):")
+    for h in ("cache-control", "age", "etag", "last-modified"):
+        print(f"  {h}: {headers_index.get(h, headers_index.get(h.title(), '(not present)'))}")
+
+    if failures:
+        print(f"\n{len(failures)} live verification check(s) FAILED:")
+        for f in failures:
+            print(f"  - {f}")
+        return 1
+
+    print("\nAll live verification checks passed.")
+    print(f"\nCache-busting review URL for external reviewers/crawlers:")
+    print(f"  {args.base_url}/?build={short}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

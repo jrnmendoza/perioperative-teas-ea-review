@@ -1,6 +1,0 @@
-analysis_id,outcome,model_spec,k,estimate,ci_low,ci_high,p_value,tau2,i2,q_stat,notes
-TE_FLATUS_MD_REML_KH,Time to first flatus,MD Hours (REML + KH),6,-2.0038936,-3.1418593,-.86592776,.0062446492,3.6119360e-07,.000028153006,6.5292201,"Primary analysis (k=6, Ng 2013 converted from days)"
-TE_FLATUS_SMD_REML_KH,Time to first flatus,SMD Hedges g (REML + KH),6,-.45572984,-.57583761,-.33562213,.0001926441,3.3813683e-07,.00078859221,1.5830934,Standardized Mean Difference (Hedges g)
-TE_FLATUS_EXCL_NG,Time to first flatus,MD Hours excl. Ng 2013 (REML + KH),5,-1.9667689,-3.2026629,-.73087484,.011525543,4.5663631e-07,.000043728884,5.243824,Excluding Ng 2013 (originally reported in days)
-TE_FLATUS_EXCL_HIGH_ROB,Time to first flatus,MD Hours excl. High RoB (REML + KH),5,-3.0761092,-5.3533654,-.7988531,.019939952,1.0944551,28.056484,5.1206908,Sensitivity excluding High RoB
-TE_FLATUS_DL_WALD,Time to first flatus,MD Hours (DL Wald unadjusted),6,-2.2667081,-3.3240693,-1.2093469,.000026497133,.39238751,23.421177,6.5292201,Unadjusted DerSimonian-Laird model

@@ -13,19 +13,10 @@ validate_with_stata.log
 !stata/logs/
 !stata/logs/*.log
 
-# Authoritative v26 Stata execution logs are reproducibility artifacts, not scratch.
-# They are linked from the dashboard and must ship with the analysis package.
-# The dashboard/ and docs/ copies are the dashboard/scripts/sync_dashboard.sh
-# mirror of the same directory and must be un-ignored identically, or a fresh
-# clone of this branch serves a dashboard whose own log download links 404
-# even though the analysis package they mirror is fully tracked.
+# Authoritative v26 Stata execution logs are reproducibility artifacts, not
+# scratch, and must ship with the analysis package.
 !06_FINAL_ANALYSIS_V26/02_STATA/logs/
 !06_FINAL_ANALYSIS_V26/02_STATA/logs/*.log
-!dashboard/v26/02_STATA/logs/
-!dashboard/v26/02_STATA/logs/*.log
-!docs/v26/02_STATA/logs/
-!docs/v26/02_STATA/logs/*.log
-
 
 # Large binary files & intermediate scraping batches
 retrieved_pdfs/
@@ -33,3 +24,12 @@ covidence_batch_20/
 covidence_batch_21_40/
 covidence_batch_41_74/
 scratch_*.json
+
+# Generated deployment artifacts. scripts/build_site.py builds dashboard/ +
+# 06_FINAL_ANALYSIS_V26/ into these directories fresh on every build (see
+# .github/workflows/deploy-pages.yml); neither is committed. dashboard/v26/
+# and docs/ (both retired 2026-09-07 in favor of this single build path) are
+# listed here too in case older local checkouts still have them on disk.
+_site/
+dashboard/v26/
+docs/
