@@ -1,7 +1,7 @@
 * ==============================================================================
 * 04_pain.do: Target C (Pain Intensity at Rest ~24 h)
 * Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
-* Authoritative Engine: StataNow 19.5 SE (Standard Edition)
+* Authoritative Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * Input: 06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.dta
 * ==============================================================================
 
@@ -46,7 +46,7 @@ meta summarize, random(dl)
 * ------------------------------------------------------------------------------
 meta forestplot, ///
     title("TARGET C: Postoperative Pain Intensity at Rest (~24 h)", size(medium)) ///
-    subtitle("Strict At-Rest Pain (StataNow 19.5 SE: REML + Hartung-Knapp, k=2)", size(small)) ///
+    subtitle("Strict At-Rest Pain (StataNow 19.5 BE: REML + Hartung-Knapp, k=2)", size(small)) ///
     nullrefline nonotes
 graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetC_pain24h.png", width(1800) replace
 

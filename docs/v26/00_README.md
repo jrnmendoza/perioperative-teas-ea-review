@@ -2,7 +2,7 @@
 
 **Systematic Review:** Perioperative Transcutaneous Electrical Acupoint Stimulation (TEAS) and Electroacupuncture (EA) for Postoperative Opioid Sparing: Systematic Review and Meta-Analysis of Randomized Controlled Trials  
 **PROSPERO Registration:** CRD420251090635  
-**Engine:** StataNow 19.5 SE (Standard Edition)  
+**Engine:** StataNow 19.5 BE (c(edition)=BE, flavor IC)  
 **Authoritative Input Source:** `/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx`  
 
 ---

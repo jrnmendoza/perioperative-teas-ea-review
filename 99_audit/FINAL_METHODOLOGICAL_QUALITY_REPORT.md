@@ -1,6 +1,6 @@
 # Final Methodological Quality-Control Audit Report & Independent Statistical Verification
 **Perioperative Transcutaneous Electrical Acupoint Stimulation (TEAS) & Electroacupuncture (EA) for Postoperative Opioid Sparing**  
-**Independent Statistical Engine:** StataNow™ 19.5 SE (Mac 64-bit ARM, StataCorp LLC)  
+**Independent Statistical Engine:** StataNow™ 19.5 BE (Mac 64-bit ARM, StataCorp LLC)  
 **Systematic Review Registration:** PROSPERO CRD420251090635 (Lund University Faculty of Medicine)  
 **Date of Audit Completion:** September 6, 2026  
 **Auditor:** Antigravity Advanced Autonomous QC Auditor  
@@ -8,7 +8,7 @@
 ---
 
 ## Executive Summary
-This document represents the definitive, 42-section methodological quality-control audit, forensic data verification, and independent statistical re-analysis for the systematic review and interactive web dashboard evaluating perioperative electrical acupoint stimulation. Every reported effect size, standard error, test statistic, confidence interval, and heterogeneity metric across 24 distinct meta-analyses has been independently re-executed in StataNow 19.5 SE from validated raw datasets. All prohibited terminology ("co-primary 48 h", "dual-timepoint co-primary", "zero risk", "confirms no breakthrough pain", "causal predictor", "fully powered") has been eradicated across all codebases, registries, translations, and dashboard layers.
+This document represents the definitive, 42-section methodological quality-control audit, forensic data verification, and independent statistical re-analysis for the systematic review and interactive web dashboard evaluating perioperative electrical acupoint stimulation. Every reported effect size, standard error, test statistic, confidence interval, and heterogeneity metric across 24 distinct meta-analyses has been independently re-executed in StataNow 19.5 BE from validated raw datasets. All prohibited terminology ("co-primary 48 h", "dual-timepoint co-primary", "zero risk", "confirms no breakthrough pain", "causal predictor", "fully powered") has been eradicated across all codebases, registries, translations, and dashboard layers.
 
 ---
 
@@ -390,7 +390,7 @@ All outcomes were evaluated under the GRADE framework starting at HIGH certainty
 ---
 
 ## 29. Random-Effects Meta-Regression Audit
-Knapp–Hartung random-effects meta-regression was executed in StataNow 19.5 SE to explore sources of between-study variance ($\tau^2 = 30.01$):
+Knapp–Hartung random-effects meta-regression was executed in StataNow 19.5 BE to explore sources of between-study variance ($\tau^2 = 30.01$):
 1. **Baseline Control-Group Opioid Demand:**
    - $\beta = -0.1704$ [95% CI: $-0.3044, -0.0364$], $t(9) = -2.87, p = 0.0186$.
    - $R^2 = 49.08\%$ of between-study variance explained.

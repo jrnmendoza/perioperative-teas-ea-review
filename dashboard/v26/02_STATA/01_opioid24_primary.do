@@ -1,7 +1,7 @@
 * ==============================================================================
 * 01_opioid24_primary.do: Primary 24-h Postoperative Opioid Consumption Analysis
 * Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
-* Authoritative Engine: StataNow 19.5 SE (Standard Edition)
+* Authoritative Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * Input: 06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta
 * ==============================================================================
 
@@ -88,7 +88,7 @@ meta set md_mme se_mme if inc_primary == 1, studylabel(study_unit) eslabel("Mean
 
 meta forestplot if inc_primary == 1, subgroup(modality) ///
     title("PRIMARY OPIOID OUTCOME: 24-h Cumulative Consumption", size(medium)) ///
-    subtitle("Authoritative v26 Lock (StataNow 19.5 SE: REML + Hartung-Knapp, k=6)", size(small)) ///
+    subtitle("Authoritative v26 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=6)", size(small)) ///
     nullrefline nonotes
 graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_opioid24_primary_mme.png", width(1800) replace
 
@@ -96,7 +96,7 @@ graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_opioid24_primary_mme.png",
 meta set hedges_g hedges_se if inc_primary == 1, studylabel(study_unit) eslabel("Standardized Mean Difference (Hedges' g)")
 meta forestplot if inc_primary == 1, subgroup(modality) ///
     title("PRIMARY OPIOID OUTCOME (SMD): 24-h Cumulative Consumption", size(medium)) ///
-    subtitle("Authoritative v26 Lock (StataNow 19.5 SE: REML + Hartung-Knapp, k=6)", size(small)) ///
+    subtitle("Authoritative v26 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=6)", size(small)) ///
     nullrefline nonotes
 graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_opioid24_primary_smd.png", width(1800) replace
 

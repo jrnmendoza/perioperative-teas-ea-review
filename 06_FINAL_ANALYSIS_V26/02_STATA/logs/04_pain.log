@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/04_pain.log
   log type:  text
- opened on:   7 Sep 2026, 11:21:26
+ opened on:   7 Sep 2026, 11:24:02
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.dta
  Observations:             2                  
-    Variables:            51                  7 Sep 2026 11:21
+    Variables:            51                  7 Sep 2026 11:23
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -229,7 +229,7 @@ Test of homogeneity: Q = chi2(1) = 0.23            Prob > Q = 0.6347
 . * ------------------------------------------------------------------------------
 . meta forestplot, ///
 >     title("TARGET C: Postoperative Pain Intensity at Rest (~24 h)", size(medium)) ///
->     subtitle("Strict At-Rest Pain (StataNow 19.5 SE: REML + Hartung-Knapp, k=2)", size(small)) ///
+>     subtitle("Strict At-Rest Pain (StataNow 19.5 BE: REML + Hartung-Knapp, k=2)", size(small)) ///
 >     nullrefline nonotes
 
   Effect-size label: Mean Difference (VAS 0-10)
@@ -301,5 +301,5 @@ SUCCESS: Target C analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/04_pain.log
   log type:  text
- closed on:   7 Sep 2026, 11:21:26
+ closed on:   7 Sep 2026, 11:24:02
 ----------------------------------------------------------------------------------------------------

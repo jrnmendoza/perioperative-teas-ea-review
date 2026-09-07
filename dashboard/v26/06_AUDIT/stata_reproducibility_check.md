@@ -5,7 +5,7 @@
 **Audit Date:** September 6, 2026  
 **Auditor:** Statistical-Analysis and Reproducibility Auditor (DeepMind Antigravity)  
 **Authoritative Input Source:** `/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx`  
-**Execution Engine:** StataNow 19.5 SE (`/Users/ryan/bin/stata-se`), 64-bit macOS  
+**Execution Engine:** StataNow 19.5 BE (`/Users/ryan/bin/stata-se`), 64-bit macOS  
 **Authoritative Analysis Directory:** `/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/`
 
 ---

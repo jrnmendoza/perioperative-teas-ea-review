@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/05_ponv.log
   log type:  text
- opened on:   7 Sep 2026, 11:21:26
+ opened on:   7 Sep 2026, 11:24:02
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Binary Risk Ratio (RR), REML + Hartung-Knapp
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.dta
  Observations:            11                  
-    Variables:            49                  7 Sep 2026 11:21
+    Variables:            49                  7 Sep 2026 11:23
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -365,7 +365,7 @@ Test of homogeneity: Q = chi2(1) = 0.93            Prob > Q = 0.3344
 . * ------------------------------------------------------------------------------
 . meta forestplot if include_strict == 1, subgroup(endpoint_stratum) eform ///
 >     title("TARGET D: Postoperative Nausea & Vomiting (Stratified)", size(medium)) ///
->     subtitle("Strict Stratified Strata (StataNow 19.5 SE: REML + Hartung-Knapp)", size(small)) ///
+>     subtitle("Strict Stratified Strata (StataNow 19.5 BE: REML + Hartung-Knapp)", size(small)) ///
 >     nullrefline nonotes
 
   Effect-size label: Risk Ratio (log scale)
@@ -655,5 +655,5 @@ SUCCESS: Target D analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/05_ponv.log
   log type:  text
- closed on:   7 Sep 2026, 11:21:27
+ closed on:   7 Sep 2026, 11:24:03
 ----------------------------------------------------------------------------------------------------

@@ -3,7 +3,7 @@
 **Review:** Perioperative TEAS and EA for postoperative opioid sparing
 **PROSPERO:** CRD420251090635
 **Authoritative data:** `TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx`
-**Authoritative statistics:** `06_FINAL_ANALYSIS_V26/` — StataNow 19.5 SE
+**Authoritative statistics:** `06_FINAL_ANALYSIS_V26/` — StataNow 19.5 BE
 **Branch:** `claude-v26-dashboard-final`
 **Date:** 2026-09-07
 
@@ -49,7 +49,7 @@ else is closed.
 
 | Field | Value |
 | --- | --- |
-| **ISSUE** | The dashboard asserted "StataNow 19.5 SE verified" without evidence on `main` that the pipeline reproduces. Execution logs existed only on `gh-pages`. |
+| **ISSUE** | The dashboard asserted "StataNow 19.5 BE verified" without evidence on `main` that the pipeline reproduces. Execution logs existed only on `gh-pages`. |
 | **OLD STATE** | `06_FINAL_ANALYSIS_V26/02_STATA/logs/` absent from `main` (gitignored by `*.log`), though the dashboard linked to files in it. |
 | **V26 CORRECT STATE** | The pipeline reproduces exactly. |
 | **ACTION TAKEN** | Ran `/Users/ryan/bin/stata-se -b do 06_FINAL_ANALYSIS_V26/02_STATA/00_master.do` from the locked workbook. All **17 pipeline-written CSVs** (8 locked analysis datasets + 9 result tables) are **byte-identical** to the committed outputs. Note that `master_reconciled_results_v26.csv` is an aggregate that no do-file writes; it was unchanged by the run rather than regenerated, and the two new broader-sensitivity rows were appended to it explicitly (see §22). Regenerated `.dta`/`.png` differ only by embedded run timestamps and were restored to HEAD. Un-ignored and committed the 11 execution logs. |
@@ -306,7 +306,7 @@ else is closed.
 | **ISSUE** | No visible provenance statement; cache-buster was hand-maintained. |
 | **OLD STATE** | Provenance existed only as a `window.DATA_PROVENANCE` object in `data.js`, invisible to readers. The cache token `?v=20260906_rob2_locked` was edited by hand; during QA the browser served a cached `data.js` after the denominator fix, still showing the pre-fix values — exactly what a returning visitor would have seen. |
 | **V26 CORRECT STATE** | A visible footer on every tab naming the data source, the statistical source, and the registration; a token that changes if and only if the assets change. |
-| **ACTION TAKEN** | Added the `#dashboard-provenance` footer (data source: the v26 lock workbook; statistical source: StataNow 19.5 SE, reproduced byte-identically; registration: CRD420251090635; plus a note that non-reproducible analyses are shown as withdrawn rather than restated). Cache token is now a SHA-256 of the concatenated JS/CSS assets. |
+| **ACTION TAKEN** | Added the `#dashboard-provenance` footer (data source: the v26 lock workbook; statistical source: StataNow 19.5 BE, reproduced byte-identically; registration: CRD420251090635; plus a note that non-reproducible analyses are shown as withdrawn rather than restated). Cache token is now a SHA-256 of the concatenated JS/CSS assets. |
 | **FILE(S) CHANGED** | `dashboard/index.html`, `scripts/sync_dashboard.sh` |
 | **VERIFICATION** | Validator requires all three provenance elements and the footer element. Rebuild after the data fix moved the token to `ff18218daf78` and the browser picked up corrected values. |
 | **STATUS** | **RESOLVED** |

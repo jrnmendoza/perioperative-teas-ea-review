@@ -1,7 +1,7 @@
 {
   "provenance": {
     "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx",
-    "statistical_source": "StataNow 19.5 SE - 06_FINAL_ANALYSIS_V26/02_STATA/01_opioid24_primary.do",
+    "statistical_source": "StataNow 19.5 BE - 06_FINAL_ANALYSIS_V26/02_STATA/01_opioid24_primary.do",
     "prospero": "CRD420251090635",
     "cohort": "v26 strict primary 24-h opioid set (inc_primary==1), k=6, N=628",
     "note": "Supersedes the pre-v26 k=11 paired cohort, which counted the overlapping Yeh 2010 / Yeh 2011 reports as independent trials and drew on conditional and non-24-h records."

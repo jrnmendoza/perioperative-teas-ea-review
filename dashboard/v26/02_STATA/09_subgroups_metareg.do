@@ -1,7 +1,7 @@
 * ==============================================================================
 * 09_subgroups_metareg.do: Subgroup Analyses and Meta-Regression Methodological Audit
 * Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
-* Authoritative Engine: StataNow 19.5 SE (Standard Edition)
+* Authoritative Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * ==============================================================================
 
 clear all

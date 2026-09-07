@@ -171,7 +171,7 @@ def t_provenance_block():
     need = [
         "TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx",
         "CRD420251090635",
-        "StataNow 19.5 SE",
+        "StataNow 19.5 BE",
     ]
     missing = [n for n in need if n not in HTML]
     has_footer = 'id="dashboard-provenance"' in HTML
@@ -889,6 +889,39 @@ def t_pathway_is_dynamic():
           not probs, "\n".join(probs))
 
 
+def t_stata_edition_claim():
+    """
+    The engine named on the dashboard must be the engine the logs record.
+
+    The wrapper at /Users/ryan/bin/stata-se launches StataSE.app, but the licence
+    activates Basic Edition: every execution log records `c(edition)` = BE
+    (flavor IC, maxvar 5000). The dashboard claimed "StataNow 19.5 SE (Standard
+    Edition)" in 77 places, including the peer-review-facing provenance footer.
+    The analyses are unaffected - 49 variables and 109 observations are far
+    inside BE's limits - but the provenance statement must not overstate.
+    """
+    logs = sorted((ROOT / "06_FINAL_ANALYSIS_V26" / "02_STATA" / "logs").glob("*.log"))
+    probs = []
+    editions = set()
+    for lg in logs:
+        m = re.search(r"Stata Version:\s*([\d.]+)\s+(\w+)", lg.read_text(encoding="utf-8", errors="ignore"))
+        if m:
+            editions.add(m.group(2))
+    if not editions:
+        probs.append("no execution log records a Stata edition")
+    elif len(editions) > 1:
+        probs.append(f"execution logs disagree on the edition: {sorted(editions)}")
+    else:
+        actual = editions.pop()
+        for name, text in (("index.html", HTML), ("app.js", APP), ("translations.js", TRANS)):
+            for m in re.finditer(r"Stata(?:Now)?\s+[\d.]+\s+([A-Z]{2})\b", text):
+                if m.group(1) != actual:
+                    probs.append(f"{name} claims edition {m.group(1)} but the logs record {actual}")
+                    break
+    check("Stated Stata edition matches what the execution logs record",
+          not probs, "\n".join(probs))
+
+
 def t_dashboard_docs_parity():
     a = {p.relative_to(DASH): p for p in DASH.rglob("*") if p.is_file()}
     b = {p.relative_to(DOCS): p for p in DOCS.rglob("*") if p.is_file()}
@@ -959,7 +992,8 @@ def main() -> int:
     print("=" * 78)
 
     sections = [
-        ("Provenance & identifiers", [t_prospero, t_no_v20_source_label, t_provenance_block]),
+        ("Provenance & identifiers", [t_prospero, t_no_v20_source_label, t_provenance_block,
+                                     t_stata_edition_claim]),
         ("Pooled results vs Stata", [t_primary_matches_stata, t_displayed_k_and_n,
                                      t_target_b_not_pooled]),
         ("Study-set composition", [t_target_a_membership, t_no_old_five_study_48h,

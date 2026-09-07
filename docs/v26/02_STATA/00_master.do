@@ -2,7 +2,7 @@
 * 00_master.do: Master Pipeline Orchestrator for Locked v26 Analysis
 * Systematic Review: Perioperative TEAS & EA for Postoperative Opioid Sparing
 * PROSPERO: CRD420251090635
-* Engine: StataNow 19.5 SE (Standard Edition)
+* Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * ==============================================================================
 
 clear all
@@ -62,7 +62,7 @@ do "06_FINAL_ANALYSIS_V26/02_STATA/10_broader24h_sensitivity.do"
 
 di as txt _n "=================================================================="
 di as txt "MASTER VERIFICATION & ANALYSIS PIPELINE COMPLETED SUCCESSFULLY!"
-di as txt "All models executed under StataNow 19.5 SE."
+di as txt "All models executed under StataNow 19.5 BE."
 di as txt "All datasets, logs, tables, and figures updated in 06_FINAL_ANALYSIS_V26/"
 di as txt "Date/Time: `c(current_date)' `c(current_time)'"
 di as txt "=================================================================="

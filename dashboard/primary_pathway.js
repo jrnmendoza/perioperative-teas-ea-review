@@ -7,12 +7,12 @@
 // dashboard counts follow automatically.
 //
 // Source workbook : TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
-// Statistics      : StataNow 19.5 SE — 06_FINAL_ANALYSIS_V26
+// Statistics      : StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26
 // PROSPERO        : CRD420251090635
 window.PRIMARY_PATHWAY = {
   "generated_by": "scripts/build_primary_pathway.py",
   "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx",
-  "statistical_source": "StataNow 19.5 SE — 06_FINAL_ANALYSIS_V26",
+  "statistical_source": "StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26",
   "prospero": "CRD420251090635",
   "review_included_rcts": 63,
   "candidate_rows": 15,

@@ -1,7 +1,7 @@
 * ==============================================================================
 * 05_ponv.do: Target D (Postoperative Nausea and Vomiting - Stratified)
 * Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
-* Authoritative Engine: StataNow 19.5 SE (Standard Edition)
+* Authoritative Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * Input: 06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.dta
 * ==============================================================================
 
@@ -89,7 +89,7 @@ list study events_i n_i events_c n_c rr if endpoint_stratum == "D_vomiting_0-48h
 * ------------------------------------------------------------------------------
 meta forestplot if include_strict == 1, subgroup(endpoint_stratum) eform ///
     title("TARGET D: Postoperative Nausea & Vomiting (Stratified)", size(medium)) ///
-    subtitle("Strict Stratified Strata (StataNow 19.5 SE: REML + Hartung-Knapp)", size(small)) ///
+    subtitle("Strict Stratified Strata (StataNow 19.5 BE: REML + Hartung-Knapp)", size(small)) ///
     nullrefline nonotes
 graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetD_ponv.png", width(1800) replace
 

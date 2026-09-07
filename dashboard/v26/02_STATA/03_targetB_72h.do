@@ -1,7 +1,7 @@
 * ==============================================================================
 * 03_targetB_72h.do: Target B (0-72 h Cumulative Postoperative Opioid Consumption)
 * Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
-* Authoritative Engine: StataNow 19.5 SE (Standard Edition)
+* Authoritative Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * Input: 06_FINAL_ANALYSIS_V26/01_DATA/target_B_72h.dta
 * ==============================================================================
 

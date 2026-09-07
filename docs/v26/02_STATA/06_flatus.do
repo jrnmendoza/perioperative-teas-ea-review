@@ -1,7 +1,7 @@
 * ==============================================================================
 * 06_flatus.do: Target E (Time to First Postoperative Flatus)
 * Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
-* Authoritative Engine: StataNow 19.5 SE (Standard Edition)
+* Authoritative Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * Input: 06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.dta
 * ==============================================================================
 

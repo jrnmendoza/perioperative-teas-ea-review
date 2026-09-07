@@ -927,7 +927,7 @@ def run():
             f.write('// Complete Audited Consensus Dataset (v26 Reconciled Lock), PRISMA 2020 Flow, and P1 Dispositions\n')
             f.write('window.DATA_PROVENANCE = {\n')
             f.write('  dataSource: "TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx",\n')
-            f.write('  statisticalAnalysis: "StataNow 19.5 SE verified final analysis",\n')
+            f.write('  statisticalAnalysis: "StataNow 19.5 BE verified final analysis",\n')
             f.write('  reconciliationDate: "September 2026",\n')
             f.write('  prospero: "CRD420251090635",\n')
             f.write('  version: "v26_final_lock"\n')

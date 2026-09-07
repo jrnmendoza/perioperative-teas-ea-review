@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/01_opioid24_primary.log
   log type:  text
- opened on:   7 Sep 2026, 11:21:23
+ opened on:   7 Sep 2026, 11:23:59
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta
  Observations:            15                  
-    Variables:            49                  7 Sep 2026 11:21
+    Variables:            49                  7 Sep 2026 11:23
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -491,7 +491,7 @@ Meta-analysis setting information
 . 
 . meta forestplot if inc_primary == 1, subgroup(modality) ///
 >     title("PRIMARY OPIOID OUTCOME: 24-h Cumulative Consumption", size(medium)) ///
->     subtitle("Authoritative v26 Lock (StataNow 19.5 SE: REML + Hartung-Knapp, k=6)", size(small)) 
+>     subtitle("Authoritative v26 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=6)", size(small)) 
 > ///
 >     nullrefline nonotes
 
@@ -535,7 +535,7 @@ Meta-analysis setting information
 
 . meta forestplot if inc_primary == 1, subgroup(modality) ///
 >     title("PRIMARY OPIOID OUTCOME (SMD): 24-h Cumulative Consumption", size(medium)) ///
->     subtitle("Authoritative v26 Lock (StataNow 19.5 SE: REML + Hartung-Knapp, k=6)", size(small)) 
+>     subtitle("Authoritative v26 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=6)", size(small)) 
 > ///
 >     nullrefline nonotes
 
@@ -790,5 +790,5 @@ SUCCESS: Primary 24-h opioid analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/01_opioid24_primary.log
   log type:  text
- closed on:   7 Sep 2026, 11:21:24
+ closed on:   7 Sep 2026, 11:24:01
 ----------------------------------------------------------------------------------------------------

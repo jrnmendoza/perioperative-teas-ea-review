@@ -1,7 +1,7 @@
 * ==============================================================================
 * 02_targetA_48h.do: Target A (0-48 h Cumulative Postoperative Opioid Consumption)
 * Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
-* Authoritative Engine: StataNow 19.5 SE (Standard Edition)
+* Authoritative Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * Input: 06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta
 * ==============================================================================
 
@@ -67,7 +67,7 @@ matrix res_broader = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), 
 * ------------------------------------------------------------------------------
 meta forestplot if include_strict == 1, ///
     title("TARGET A: 0-48h Cumulative Postoperative Opioid Consumption", size(medium)) ///
-    subtitle("Strict Set (StataNow 19.5 SE: REML + Hartung-Knapp, k=3)", size(small)) ///
+    subtitle("Strict Set (StataNow 19.5 BE: REML + Hartung-Knapp, k=3)", size(small)) ///
     nullrefline nonotes
 graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetA_48h_mme.png", width(1800) replace
 

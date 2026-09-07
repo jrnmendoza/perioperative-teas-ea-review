@@ -3,7 +3,7 @@
 *   Broader 24-h opioid sensitivity analysis and estimability audit
 *   Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
 *   PROSPERO: CRD420251090635
-*   Engine: StataNow 19.5 SE (Standard Edition)
+*   Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * ==============================================================================
 *
 * PURPOSE

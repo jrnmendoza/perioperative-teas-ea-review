@@ -1320,7 +1320,7 @@ function toggleStudyInclusion(id) {
 }
 
 // ==============================================================================
-// 6. STATA 19.5 SE DATA SYNTHESIS & FOREST PLOTS HUB
+// 6. STATA 19.5 BE DATA SYNTHESIS & FOREST PLOTS HUB
 // ==============================================================================
 let isStataConsoleExpanded = false;
 
@@ -1521,7 +1521,7 @@ SENSITIVITY ANALYSES: PRIMARY 24-H OPIOID
    tau2 = 1.5973 | I2 (%) = 97.24%
 
 ==================================================================
-TARGETS A–F SUMMARY SYNTHESES (STATA 19.5 SE - REML + KH)
+TARGETS A–F SUMMARY SYNTHESES (STATA 19.5 BE - REML + KH)
 ==================================================================
 Target A (0–48 h Opioid Sparing, mg IV MME):
    Strict k = 3 RCTs (Chen 2020, Zhang 2023, An 2014; N = 2,165)
@@ -2249,7 +2249,7 @@ function renderDirectionOfEvidence() {
   const copyBtn = document.getElementById('btn-export-grade-sof');
   if (copyBtn) {
     copyBtn.onclick = () => {
-      let txt = "GRADE Summary of Findings (Perioperative TEAS & EA Review — StataNow 19.5 SE Reconciled):\n\n";
+      let txt = "GRADE Summary of Findings (Perioperative TEAS & EA Review — StataNow 19.5 BE Reconciled):\n\n";
       resultsList.forEach(item => {
         txt += `• ${item.name}: ${item.mdText} (${item.pVal}) | ${item.n} pts (${item.k} RCTs) | Certainty: ${item.grade} | ${item.downgrade} [${item.robStatus}]\n`;
       });
@@ -2614,7 +2614,7 @@ function loadMetaRegTerminalLog() {
       el.innerText = text;
     })
     .catch(() => {
-      el.innerText = `StataNow 19.5 SE - 09_subgroups_metareg.do (v26 locked pipeline)
+      el.innerText = `StataNow 19.5 BE - 09_subgroups_metareg.do (v26 locked pipeline)
 -------------------------------------------------------------------------------
 Subgroup: TEAS  k=3  MD = -6.6979 mg IV MME  [-32.5550, +19.1593]  p = 0.3810
 Subgroup: EA    k=3  MD = -3.9356 mg IV MME  [-19.7729, +11.9017]  p = 0.3969

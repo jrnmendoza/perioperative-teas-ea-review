@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/03_targetB_72h.log
   log type:  text
- opened on:   7 Sep 2026, 11:21:25
+ opened on:   7 Sep 2026, 11:24:01
 
 . 
 . di as txt "=================================================================="
@@ -22,7 +22,7 @@
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_B_72h.dta
  Observations:             2                  
-    Variables:            51                  7 Sep 2026 11:21
+    Variables:            51                  7 Sep 2026 11:23
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -344,5 +344,5 @@ SUCCESS: Target B analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/03_targetB_72h.log
   log type:  text
- closed on:   7 Sep 2026, 11:21:26
+ closed on:   7 Sep 2026, 11:24:02
 ----------------------------------------------------------------------------------------------------

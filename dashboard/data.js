@@ -1,7 +1,7 @@
 // Complete Audited Consensus Dataset (v26 Reconciled Lock), PRISMA 2020 Flow, and P1 Dispositions
 window.DATA_PROVENANCE = {
   dataSource: "TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx",
-  statisticalAnalysis: "StataNow 19.5 SE verified final analysis",
+  statisticalAnalysis: "StataNow 19.5 BE verified final analysis",
   reconciliationDate: "September 2026",
   prospero: "CRD420251090635",
   version: "v26_final_lock"

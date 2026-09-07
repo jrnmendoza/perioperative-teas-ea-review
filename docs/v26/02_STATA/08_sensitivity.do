@@ -1,7 +1,7 @@
 * ==============================================================================
 * 08_sensitivity.do: Comprehensive Sensitivity & Leave-One-Out Analyses
 * Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
-* Authoritative Engine: StataNow 19.5 SE (Standard Edition)
+* Authoritative Engine: StataNow 19.5 BE (c(edition)=BE, flavor IC)
 * ==============================================================================
 
 clear all

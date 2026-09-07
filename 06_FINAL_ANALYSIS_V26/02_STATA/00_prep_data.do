@@ -2,7 +2,7 @@
 * 00_prep_data.do: Prepare and Export Clean Analysis Datasets from v26 Lock
 * Systematic Review: Perioperative TEAS and EA for Opioid Sparing
 * Source: TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
-* Authoritative Engine: StataNow 19.5 SE
+* Authoritative Engine: StataNow 19.5 BE
 * ==============================================================================
 
 clear all
