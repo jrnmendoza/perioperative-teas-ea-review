@@ -194,9 +194,9 @@
           <span data-i18n="kpi.gradeTitle">GRADE Certainty</span>
           <button class="stat-info-btn" data-stat-term="grade" aria-label="Statistical explanation for GRADE">ⓘ</button>
         </div>
-        <div class="kpi-value" style="color: #fbbf24; font-size: 1.15rem; line-height: 1.25;">⊕⊕⊕◯ Moderate</div>
-        <div class="kpi-sub" data-i18n="kpi.gradeSub">Downgraded 1 level for high heterogeneity (I² = 99.7%)</div>
-        <span class="kpi-badge badge-amber" data-i18n="kpi.gradeBadge">7 Outcomes Synthesized</span>
+        <div class="kpi-value" style="color: #fbbf24; font-size: 1.15rem; line-height: 1.25;">⊕⊕◯◯ Low</div>
+        <div class="kpi-sub" data-i18n="kpi.gradeSub">Primary 24-h opioid outcome: downgraded 2 levels (inconsistency I² = 98.3%; imprecision, 95% KH CI crosses zero)</div>
+        <span class="kpi-badge badge-amber" data-i18n="kpi.gradeBadge">12 Outcomes in GRADE SoF</span>
       </div>
     </section>
 
@@ -674,7 +674,7 @@
                       <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 6px;">
                         <strong style="color: #fbbf24;">Audit &amp; Consensus Status:</strong><br>
                         • 100% Audited against Source PDFs<br>
-                        • 60 Studies with targeted Author Contacts
+                        • 19/19 P1 issues dispositioned (0 blockers)
                       </div>
                     </div>
                   </div>
@@ -1048,7 +1048,7 @@
               </div>
             </div>
 
-            <!-- Quadrant Breakdown Details (Strictly Audited Paired Continuous Cohort, k = 6 Trials, N = 628) -->
+            <!-- Quadrant Breakdown Details (v26 strict primary paired cohort, k = 6 Trials, N = 628). Counts/percentages are written at runtime by renderMCIDStudio(); the prose below names the v26 trials. -->
             <div class="mcid-stats-panel">
               <div class="quadrant-card q1">
                 <div class="quadrant-title">
@@ -1056,7 +1056,7 @@
                   <span class="kpi-badge badge-emerald" id="badge-q1-count">3 Trials (27.3%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  Achieves prespecified primary benchmark (≥ 10 mg IV MME reduction) while maintaining pain non-inferiority (≤ +1.0 VAS difference). Represents substantial clinical opioid sparing without evidence of compromised analgesic comfort (Coura 2011, Ntritsou 2014, Seevaunnamtum 2016).
+                  Achieves the prespecified primary benchmark (≥ 10 mg IV MME reduction) while maintaining pain non-inferiority (≤ +1.0 VAS difference): <strong>Chen 1998 and Seevaunnamtum 2016</strong>. Note that both are single trials within a pooled estimate whose 95% confidence interval crosses zero, so this quadrant describes study-level point estimates, not a demonstrated effect.
                 </div>
               </div>
 
@@ -1066,7 +1066,7 @@
                   <span class="kpi-badge badge-indigo" id="badge-q2-count">5 Trials (45.5%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  Trials showing moderate study-level opioid reduction meeting exploratory benchmarks (5–10 mg MME) without pain worsening (Sim 2002, Wong 2006, Yeh 2010, Yeh 2010 ATHM, Zhang 2025).
+                  Trials showing moderate study-level opioid reduction (5&ndash;10 mg IV MME) without pain worsening. <strong>No trial in the v26 strict primary set falls in this band at the default &ge; 10 mg threshold.</strong> Earlier releases populated this quadrant with Sim 2002, Wong 2006, Yeh 2010, Yeh 2010 ATHM and Zhang 2025 &mdash; a cohort that counted the overlapping Yeh reports twice and drew on conditional and non-24-h records outside the primary set.
                 </div>
               </div>
 
@@ -1076,7 +1076,7 @@
                   <span class="kpi-badge badge-purple" id="badge-q3-count">3 Trials (27.3%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  Modest opioid reduction (&lt; 5 mg MME) while maintaining pain non-inferiority. Observed predominantly in procedures where baseline surgical opioid requirement was relatively low (Chen 2020, Zhou 2021, Yang 2024).
+                  Modest opioid reduction (&lt; 5 mg IV MME) while maintaining pain non-inferiority: <strong>Chen 2020, El-Rakshy 2009, Yang 2024, He 2026</strong>. Observed predominantly where baseline surgical opioid requirement was already low, so the absolute room for sparing is small.
                 </div>
               </div>
 
@@ -1086,7 +1086,7 @@
                   <span class="kpi-badge badge-amber" id="badge-q4-count">0 Trials (0.0%)</span>
                 </div>
                 <div class="quadrant-desc">
-                  <strong>Among trials with paired analyzable opioid and pain outcomes, no study-level point estimate exceeded the prespecified pain-worsening margin (+1.0 VAS).</strong> All 11 trials had pain differences ≤ +0.20 VAS. Across reporting trials, study-level opioid reduction was not accompanied by systematic pain worsening (this study-level finding does not establish zero individual-patient risk).
+                  <strong>No trial in the v26 strict primary set exceeded the prespecified pain-worsening margin (+1.0 VAS).</strong> All six paired point estimates fell on the pain-reduction side (range −0.80 to −0.03 VAS). Across these trials, study-level opioid reduction was not accompanied by systematic pain worsening. This is a study-level finding across six trials and does not establish zero individual-patient risk.
                 </div>
               </div>
             </div>
@@ -2675,7 +2675,7 @@
             </div>
             <h2 style="margin-top: 0.35rem; font-size: 1.3rem;">Author Outreach &amp; Data Clarification Center</h2>
             <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.25rem; line-height: 1.55;">
-              Following our comprehensive 4-way cross-audit, <strong>60 formal author inquiries</strong> have been cataloged with tailored email drafts, corresponding author emails, and institutional affiliations. Reaching out to corresponding authors is our highest-yield ongoing activity to expand the primary opioid synthesis and verify secondary pain and PONV metrics.
+              <strong>No author reply is required to finalize this review.</strong> All 19 P1 issues carry a recorded disposition in the v26 lock (<code>AF_P1_Disposition</code>) and <strong>none is a global final-lock blocker</strong>. Eighteen were resolved analytically &mdash; by the source hierarchy, a raw/native-data rule, exclusion, partial exclusion, timepoint exclusion, field exclusion, stratification, mandatory sensitivity, or narrative-only reporting. One remains a <strong>hard hold</strong>: the Yeh 2010 / Yeh 2011 lumbar-spine cohort-overlap question (P1-01), which is handled by excluding both reports from pooling rather than by waiting on correspondence. The roster below is retained as a provenance record of which clarifications were sought and how each was dispositioned &mdash; not as a queue of outstanding replies.
             </p>
           </div>
         </div>
@@ -2808,7 +2808,7 @@
       <div class="dashboard-card">
         <div class="card-header" style="flex-wrap: wrap; gap: 0.75rem;">
           <div>
-            <h2>Active Author Contact Roster &amp; Targeted Inquiries (60 Trials)</h2>
+            <h2>Author Clarification Roster &amp; Disposition Record (60 catalogued inquiries, 0 outstanding blockers)</h2>
             <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
               Click <strong>"📋 Copy Email"</strong> to copy the ready-to-send draft letter directly to your clipboard, or click the email address to open your mail client.
             </p>
@@ -2822,7 +2822,7 @@
 
         <div style="margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
           <input type="text" id="inquiry-search-input" class="calc-input" placeholder="🔍 Search author name, study key, or data requested..." style="max-width: 420px; margin-top: 0;" oninput="filterInquirySearch(this.value)">
-          <span id="inquiry-counter-badge" class="kpi-badge badge-pending">Showing 60 of 60 Inquiries</span>
+          <span id="inquiry-counter-badge" class="kpi-badge badge-emerald">Showing 60 of 60 catalogued inquiries</span>
         </div>
 
         <div style="overflow-x: auto;">

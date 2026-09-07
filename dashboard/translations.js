@@ -72,8 +72,8 @@ const TRANSLATIONS = {
       smdBadge: "StataNow 19.5 SE Validated",
       gradeTitle: "GRADE Certainty",
       gradeValue: "⊕⊕⊕◯ Moderate",
-      gradeSub: "Downgraded 1 level for high heterogeneity (I² = 98.3%)",
-      gradeBadge: "7 Outcomes Synthesized"
+      gradeSub: "Primary 24-h opioid outcome: downgraded 2 levels (inconsistency I² = 98.3%; imprecision, 95% KH CI crosses zero)",
+      gradeBadge: "12 Outcomes in GRADE SoF"
     },
     cardStructure: {
       statisticalEvidence: "Statistical Evidence",
@@ -264,8 +264,8 @@ const TRANSLATIONS = {
       smdBadge: "Validerad i StataNow 19.5 SE",
       gradeTitle: "GRADE – tillförlitlighet",
       gradeValue: "⊕⊕⊕◯ Måttlig",
-      gradeSub: "Nedgraderad 1 nivå för hög heterogenitet (I² = 98,3 %)",
-      gradeBadge: "7 utfall syntetiserade"
+      gradeSub: "Primärt 24-timmars opioidutfall: nedgraderat 2 nivåer (inkonsistens I² = 98,3 %; imprecision, 95 % KH-KI korsar noll)",
+      gradeBadge: "12 utfall i GRADE SoF"
     },
     cardStructure: {
       statisticalEvidence: "Statistisk evidens",
@@ -695,7 +695,7 @@ const STAT_GLOSSARY = {
       term: "I²-heterogenitetsmått",
       category: "Heterogenitet och prediktion",
       shortDef: "Andelen av den totala variationen i effektestimat mellan studier som beror på verklig heterogenitet snarare än slumpmässig samplingsvariation.",
-      context: "I denna översikt återspeglar I² = 99,7 % stora skillnader i kirurgiskt ingrepp (bröstkirurgi med 5 mg MME kontra öppen hjärtkirurgi med 114 mg MME). Högt I² måste alltid tolkas tillsammans med τ², prediktionsintervall och kliniska moderatoranalyser.",
+      context: "I denna översikt återspeglar I² = 98,3 % stora skillnader i kirurgiskt ingrepp (bröstkirurgi med 5 mg MME kontra öppen hjärtkirurgi med 114 mg MME). Högt I² måste alltid tolkas tillsammans med τ², prediktionsintervall och kliniska moderatoranalyser.",
       jumpTab: "primary"
     },
     tauSquared: {

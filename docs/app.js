@@ -796,6 +796,23 @@ function renderOverview() {
   }
 }
 
+// v26: every catalogued author inquiry carries a recorded disposition
+// (AF_P1_Disposition / AF_Unresolved). None is a global final-lock blocker, so
+// no inquiry may be rendered as an open "Pending" item. Only the single
+// Yeh 2010 / Yeh 2011 cohort-overlap question is still a hard hold.
+function inquiryDisposition(s) {
+  const ai = s && s.author_inquiry;
+  if (!ai || !ai.has_inquiry) return null;
+  const raw = String(ai.status || '').trim();
+  if (/HARD_HOLD/i.test(raw)) return { label: 'Hard hold', cls: 'rose', title: 'Hard hold: cohort-overlap adjudication (handled by exclusion from pooling, not by author reply)' };
+  if (/^Dispositioned:/i.test(raw)) {
+    const cls = raw.replace(/^Dispositioned:\s*/i, '').replace(/_/g, ' ').toLowerCase();
+    return { label: 'Dispositioned', cls: 'emerald', title: 'Dispositioned \u2014 ' + cls + ' (not a final-lock blocker)' };
+  }
+  if (/Complete in Manuscript/i.test(raw)) return { label: 'Complete', cls: 'emerald', title: 'Required data are complete in the published manuscript' };
+  return { label: 'Dispositioned', cls: 'emerald', title: raw || 'Dispositioned in the v26 lock' };
+}
+
 // 3. Study Explorer Table
 function renderStudyExplorer() {
   const filtered = getFilteredStudies(true);
@@ -809,8 +826,9 @@ function renderStudyExplorer() {
           ? `<span class="kpi-badge" style="background: rgba(244,63,94,0.18); color: #fda4af; border: 1px solid rgba(244,63,94,0.3);">High Risk</span>` 
           : `<span class="kpi-badge badge-amber">Some Concerns</span>`);
     
-    const inquiryBadge = s.author_inquiry && s.author_inquiry.has_inquiry 
-      ? `<span class="kpi-badge badge-pending" title="${s.author_inquiry.target_data}">Inquiry Pending</span>` 
+    const disp = inquiryDisposition(s);
+    const inquiryBadge = disp
+      ? `<span class="kpi-badge ${disp.cls === 'rose' ? 'badge-rose' : 'badge-emerald'}" title="${disp.title}">${disp.label}</span>`
       : '';
 
     return `
@@ -948,7 +966,7 @@ function renderMetaLab() {
           <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.4rem;">No Published RCTs Report Quantitative Data for This Endpoint</div>
           <div style="font-size: 0.85rem; color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.6;">
             Among the 63 included trials (${filterModality === 'all' ? 'TEAS & EA' : filterModality}), none tabulated extractable continuous or binary summary metrics for <em>${outcomeLabel}</em>.<br>
-            Please check the <a href="javascript:void(0)" onclick="switchTab('limitations')" style="color: #818cf8; font-weight: 600; text-decoration: underline;">📬 Author Inquiries &amp; Outreach</a> tab to review pending author correspondence for missing trial parameters.
+            See the <a href="javascript:void(0)" onclick="switchTab('limitations')" style="color: #818cf8; font-weight: 600; text-decoration: underline;">📬 Author Clarification Roster</a> tab for the recorded disposition of every clarification sought. No author reply is outstanding as a blocker.
           </div>
         </td>
       </tr>
@@ -1022,8 +1040,9 @@ function renderMetaLab() {
     }
     const boxSize = Math.max(4, Math.min(14, Math.sqrt(weightPct || 1) * 3));
 
-    const inqBadge = s.author_inquiry && s.author_inquiry.has_inquiry 
-      ? `<span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; font-size: 0.68rem; padding: 1px 4px; border-radius: 3px; margin-left: 4px;" title="Author Inquiry Pending">Inquiry</span>` 
+    const inqDisp = inquiryDisposition(s);
+    const inqBadge = inqDisp
+      ? `<span style="background: ${inqDisp.cls === 'rose' ? 'rgba(244,63,94,0.18)' : 'rgba(16,185,129,0.18)'}; color: ${inqDisp.cls === 'rose' ? '#fda4af' : '#6ee7b7'}; font-size: 0.68rem; padding: 1px 4px; border-radius: 3px; margin-left: 4px;" title="${inqDisp.title}">${inqDisp.label}</span>`
       : '';
 
     return `
