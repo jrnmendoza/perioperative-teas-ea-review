@@ -716,11 +716,11 @@ function renderKPIs() {
       effectValEl.innerHTML = 'TEAS: −6.70 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−32.55, +19.16]</span><br>EA: −3.94 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−19.77, +11.90]</span>';
     }
     if (effectSubEl) {
-      effectSubEl.innerText = 'Strict Combined Primary (k=6, N=628): MD = −4.68 mg [−12.26, +2.89], p = 0.173';
+      effectSubEl.innerText = 'Supporting Combined Synthesis (k=6, N=628): MD = −4.68 mg [−12.26, +2.89], p = 0.173';
     }
     if (effectBadgeEl) {
       effectBadgeEl.className = 'kpi-badge badge-emerald';
-      effectBadgeEl.innerHTML = '<span data-i18n="kpi.primaryBadge">PRIMARY: Modality-Specific • Combined: k=6 Strict</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
+      effectBadgeEl.innerHTML = '<span data-i18n="kpi.primaryBadge">PRIMARY: TEAS &amp; EA Modality-Specific &bull; Combined = Supporting</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
     }
   } else if (filterModality === 'TEAS') {
     if (effectTitleEl) {
@@ -748,7 +748,7 @@ function renderKPIs() {
     }
     if (effectBadgeEl) {
       effectBadgeEl.className = 'kpi-badge badge-amber';
-      effectBadgeEl.innerHTML = '<span>PRIMARY MODALITY 2 (EA vs Control/Sham)</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
+      effectBadgeEl.innerHTML = '<span>PRIMARY MODALITY 2 (EA vs Usual Care)</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
     }
   }
 
@@ -2029,7 +2029,7 @@ const STATA_MASTER_RESULTS = {
   },
   "AN-01-EA": {
     id: "AN-01-EA",
-    name: "PRIMARY MODALITY 2: EA vs Control/Sham (0–24h Opioid Consumption)",
+    name: "PRIMARY MODALITY 2: EA vs Usual Care (0–24h Opioid Consumption)",
     role: "PRIMARY",
     outcome: "Cumulative 0–24h Opioid Consumption",
     modality: "EA",
@@ -2046,11 +2046,11 @@ const STATA_MASTER_RESULTS = {
   },
   "AN-01-COMB": {
     id: "AN-01-COMB",
-    name: "STRICT COMBINED PRIMARY: Perioperative Stimulation vs Sham/Control (0–24h)",
-    role: "PRIMARY COMBINED",
+    name: "SUPPORTING COMBINED SYNTHESIS: Perioperative Stimulation vs Sham/Usual Care (0–24h)",
+    role: "SUPPORTING COMBINED",
     outcome: "Cumulative 0–24h Opioid Consumption",
     modality: "Combined (TEAS + EA)",
-    comparator: "Sham / Control",
+    comparator: "Sham (TEAS) / Usual Care (EA)",
     k: 6,
     n: 628,
     mdText: "−4.68 mg IV MME [−12.26, +2.89]",

@@ -922,6 +922,247 @@ def t_stata_edition_claim():
           not probs, "\n".join(probs))
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# 11. Final reconciliation pass: comparator hierarchy, conversions, moderator matrix
+# ─────────────────────────────────────────────────────────────────────────────
+
+def t_ea_comparator_not_mislabelled_sham():
+    """
+    The v26 EA strict primary stratum (El-Rakshy 2009, Seevaunnamtum 2016,
+    Yang 2024) is entirely usual-care / open-label control - none of the three
+    is sham-controlled. Calling this stratum "vs Control/Sham" or "vs Sham"
+    falsely implies a sham-controlled principal comparison the protocol itself
+    prioritises (Stata_Manifest.csv OPIOID24_PRIMARY pooling_rule: "sham-controlled
+    principal analysis; usual-care/supportive comparisons separate").
+    """
+    rows = read_csv(DATA / "opioid_24h_primary.csv")
+    ea_strict = [r for r in rows if r["inc_primary"] == "1"
+                 and r["study_unit"] in ("El-Rakshy 2009", "Seevaunnamtum 2016", "Yang 2024")]
+    probs = []
+    if len(ea_strict) != 3:
+        probs.append(f"expected the 3 EA strict studies, found {len(ea_strict)}")
+    for r in ea_strict:
+        if "sham" in r["comparator"].lower():
+            probs.append(f"{r['study_unit']} comparator {r['comparator']!r} looks sham-controlled; "
+                         f"re-verify the EA-vs-usual-care premise")
+    for bad in re.finditer(r"EA vs (?:Control/Sham|Sham/Control|Sham)", LIVE_UI):
+        probs.append(f"live UI mislabels the EA stratum: {bad.group(0)!r}")
+    if "EA vs Usual Care" not in HTML and "EA vs Usual Care" not in APP:
+        probs.append("expected corrected label 'EA vs Usual Care' not found")
+    check("EA strict stratum is labelled 'vs Usual Care', not 'vs Sham/Control'",
+          not probs, "\n".join(probs))
+
+
+def t_combined_not_labelled_primary():
+    """
+    Protocol text (dashboard's own Locked Protocol Synthesis Standard) states
+    TEAS and EA are "never combined into a single grand pooled estimate" and
+    that primary comparisons are the modality-specific ones. The pooled k=6
+    combined estimate must therefore never be presented as itself "Primary".
+    """
+    probs = []
+    for m in re.finditer(r"Strict Combined Primary", LIVE_UI):
+        probs.append("live UI still calls the combined k=6 estimate 'Strict Combined Primary': "
+                     + LIVE_UI[max(0, m.start()-60):m.end()+20].replace("\n", " "))
+    if "Supporting Combined" not in HTML and "Supporting Combined" not in APP:
+        probs.append("expected 'Supporting Combined ...' framing not found")
+    check("Combined k=6 estimate is labelled supporting, not primary", not probs, "\n".join(probs))
+
+
+def t_moderator_matrix_no_fabricated_categories():
+    """
+    All 6 strict primary trials share identical Stimulation Timing and
+    Electrical Frequency categories (verified against data.js stricta fields:
+    100% 'Preoperative only' / 100% '2/100 Hz (Dense-Disperse)'), i.e. zero
+    variance on both covariates - the same situation as Number of Sessions,
+    which the matrix already correctly marks as dropped for zero variance.
+    A model summing categories to 10 or 11 cannot describe a k=6 dataset.
+    """
+    probs = []
+    timing = {(s.get("stricta") or {}).get("timing_category") for s in STUDIES
+              if s["key"] in ("Chen 1998", "Chen 2020", "El-Rakshy 2009",
+                              "He 2026 (hepatectomy/JIS)", "Seevaunnamtum 2016", "Yang 2024")}
+    freq = {(s.get("stricta") or {}).get("frequency_category") for s in STUDIES
+            if s["key"] in ("Chen 1998", "Chen 2020", "El-Rakshy 2009",
+                            "He 2026 (hepatectomy/JIS)", "Seevaunnamtum 2016", "Yang 2024")}
+    if len(timing) != 1:
+        probs.append(f"strict trials are not identical on timing_category: {timing}")
+    if len(freq) != 1:
+        probs.append(f"strict trials are not identical on frequency_category: {freq}")
+    for pat in (r"k\s*=\s*5.{0,20}k\s*=\s*5", r"k\s*=\s*7.{0,20}k\s*=\s*4"):
+        if re.search(pat, LIVE_UI):
+            probs.append(f"moderator matrix still shows a category split matching pattern {pat!r} "
+                         f"(sums to 10-11, impossible at k=6)")
+    if "t(9)" in LIVE_UI:
+        probs.append("moderator matrix still reports a t(9) statistic (9 residual df implies "
+                     "an ~11-observation model, not k=6)")
+    check("Moderator matrix shows no fabricated categorical models inconsistent with k=6",
+          not probs, "\n".join(probs))
+
+
+def t_no_false_no_association_claim():
+    """A demographic moderator that was never modelled must not be described
+    as showing 'no evidence of an association' - that is a claim about a
+    fitted model's result, not about the absence of one."""
+    probs = []
+    for m in re.finditer(r"[^.]{0,200}\bNot estimated\b[^.]{0,400}", LIVE_UI):
+        window = m.group(0)
+        if re.search(r"no evidence of an? association", window, re.I):
+            probs.append("a 'Not estimated' cell is followed by a 'no evidence of association' "
+                         "claim: " + window[:160].replace("\n", " "))
+    check("No 'Not estimated' moderator row claims 'no evidence of association'",
+          not probs, "\n".join(probs))
+
+
+def t_cochrane_wording_not_overstated():
+    """Cochrane 10.11.4 is guidance ('generally should not be considered with
+    fewer than approximately 10 studies'), not a hard 'stipulates a minimum
+    of 10' rule."""
+    probs = []
+    if re.search(r"stipulates that meta-regression models require a minimum", LIVE_UI):
+        probs.append("Cochrane wording overstated as a hard requirement ('stipulates ... require a minimum')")
+    check("Cochrane 10:1 guidance is not overstated as a hard requirement", not probs, "\n".join(probs))
+
+
+def t_sufentanil_conversion_documented_and_unresolved():
+    """
+    The sufentanil conversion factor actually computed throughout the pipeline
+    (0.1 mg MME/ug in 00_prep_data.do, uncited) must be both (a) documented in
+    a dedicated audit file and (b) not silently presented on the dashboard as
+    equal to a different, contradictory, citation-backed factor.
+    """
+    audit = ROOT / "06_FINAL_ANALYSIS_V26" / "06_AUDIT" / "opioid_conversion_audit.csv"
+    probs = []
+    if not audit.exists():
+        probs.append("opioid_conversion_audit.csv missing")
+    else:
+        rows = read_csv(audit)
+        suf = [r for r in rows if r["opioid"] == "Sufentanil" and "Chen 2020" in r["study_id"]]
+        if not suf or suf[0]["final_status"] != "UNRESOLVED":
+            probs.append("Chen 2020 sufentanil row missing or not marked UNRESOLVED in the audit")
+    # the do-file's actual factor must be documented
+    prep = (ROOT / "06_FINAL_ANALYSIS_V26" / "02_STATA" / "00_prep_data.do").read_text(encoding="utf-8")
+    if "mme_factor = 0.1 if unit ==" not in prep.replace('"', ''):
+        probs.append("expected sufentanil factor 0.1 not found in 00_prep_data.do - audit is stale")
+    # the dashboard must not claim a confident, differently-sourced factor for sufentanil
+    if re.search(r"1\.0 mg MME\s*/\s*[uµ]g \(1000:1\)", LIVE_UI):
+        probs.append("dashboard still displays an authoritative-looking 1000:1 sufentanil factor "
+                     "inconsistent with the 100:1 actually computed")
+    if "UNRESOLVED" not in HTML or "sufentanil" not in HTML.lower():
+        probs.append("no UNRESOLVED sufentanil caveat visible in the dashboard HTML")
+    sens_log = ROOT / "06_FINAL_ANALYSIS_V26" / "02_STATA" / "logs" / "11_sufentanil_conversion_sensitivity.log"
+    if not sens_log.exists():
+        probs.append("sufentanil sensitivity log missing - rerun 11_sufentanil_conversion_sensitivity.do")
+    check("Sufentanil conversion factor is documented, unresolved, and not silently contradicted",
+          not probs, "\n".join(probs))
+
+
+def t_cdc_not_misattributed_to_perioperative_iv():
+    """
+    CDC 2022 is an outpatient acute/subacute/chronic-pain prescribing guideline;
+    it does not publish route-specific IV conversion factors for intraoperative
+    fentanyl/sufentanil/remifentanil. It must not be cited as the source for
+    those specific perioperative IV ratios.
+    """
+    probs = []
+    for m in re.finditer(r"CDC[^<\n]{0,40}", HTML):
+        window = HTML[max(0, m.start()-300):m.end()]
+        if re.search(r"Sufentanil|Fentanyl \(IV\)</strong></td>\s*<td><span[^>]*>0\.10", window):
+            probs.append("CDC still appears attached to a perioperative IV fentanyl/sufentanil row: "
+                         + m.group(0))
+    if re.search(r"Universal conversion factors", LIVE_UI):
+        probs.append("'Universal conversion factors' framing still present (should be a prespecified "
+                     "framework with sensitivity-assessed uncertainty, not a universal claim)")
+    if not re.search(r"outpatient", HTML, re.I):
+        probs.append("no statement that CDC 2022 is scoped to outpatient prescribing")
+    check("CDC 2022 is not misattributed as the source for perioperative IV conversion factors",
+          not probs, "\n".join(probs))
+
+
+def t_mcid_labelled_exploratory():
+    """The paired opioid-pain trade-off studio must be labelled exploratory,
+    not presented as a confirmatory analysis."""
+    probs = []
+    if "EXPLORATORY" not in HTML.upper() or "PAIRED" not in HTML.upper():
+        probs.append("MCID studio is not labelled EXPLORATORY PAIRED ...")
+    for bad in ("confirmed analgesia", "strictly beneficial", "ineffective due to poor stimulation"):
+        if bad in LIVE_UI.lower():
+            probs.append(f"forbidden MCID overclaim present: {bad!r}")
+    if re.search(r"establishes? zero risk", LIVE_UI, re.I):
+        probs.append("MCID text claims to establish zero risk")
+    check("Clinical Importance / MCID studio is labelled exploratory with no overclaiming",
+          not probs, "\n".join(probs))
+
+
+def t_version_tag_present():
+    """A visible analysis version and lock date must be present, using the
+    documented date rather than an invented one."""
+    probs = []
+    if "Analysis version" not in HTML:
+        probs.append("no 'Analysis version' element in the provenance footer")
+    if "2026-09-06" not in HTML:
+        probs.append("documented lock date (2026-09-06, from 06_FINAL_ANALYSIS_V26/00_README.md "
+                     "'v26 reconciliation-complete / final-lock-ready') not shown")
+    wb_readme = DATA / "authoritative_sheets" / "README.csv"
+    if wb_readme.exists():
+        text = wb_readme.read_text(encoding="utf-8-sig")
+        if "2026-09-06" not in text:
+            probs.append("workbook README sheet no longer documents 2026-09-06 as the lock date - update the check")
+    check("Visible analysis version tag uses the actual documented lock date", not probs, "\n".join(probs))
+
+
+def t_i18n_textcontent_no_html_entities():
+    """
+    reader_assist.js applies plain data-i18n values via el.textContent (only
+    data-i18n-html uses innerHTML). A translation string containing HTML
+    entities like &amp; or &bull; therefore renders as the LITERAL characters
+    '&amp;' on screen instead of '&', because textContent never decodes
+    entities. Every plain data-i18n value must use real Unicode characters
+    (&, •, —, –) rather than HTML entities.
+    """
+    ra = (DASH / "reader_assist.js").read_text(encoding="utf-8")
+    plain_keys = set(re.findall(r'data-i18n="([^"]+)"', HTML))
+    probs = []
+    entity_pat = re.compile(r"&(?:amp|bull|mdash|ndash|lt|gt|quot|nbsp);")
+    for m in re.finditer(r'^\s*(\w+):\s*"((?:[^"\\]|\\.)*)",?\s*$', TRANS, re.M):
+        key, val = m.group(1), m.group(2)
+        if entity_pat.search(val):
+            probs.append(f"translations.js key '{key}' contains an HTML entity "
+                         f"({entity_pat.search(val).group(0)}) that will render literally "
+                         f"under textContent: {val[:70]!r}")
+    check("translations.js plain values use real characters, not HTML entities "
+          "(data-i18n applies via textContent)", not probs, "\n".join(probs[:15]))
+
+
+def t_v26_mirror_logs_git_tracked():
+    """
+    dashboard/v26/ and docs/v26/ are the sync_dashboard.sh mirror of
+    06_FINAL_ANALYSIS_V26/. If their logs subdirectory is not explicitly
+    un-ignored the same way as the canonical directory, a fresh clone of this
+    branch has an empty mirror logs/ folder even though the dashboard links to
+    files in it - a real gap found in this pass (gitignore's blanket *.log
+    caught the mirror but not the canonical copy, so it went undetected until
+    checked directly with `git ls-files`).
+    """
+    import subprocess
+    probs = []
+    for rel in ("dashboard/v26/02_STATA/logs", "docs/v26/02_STATA/logs"):
+        d = ROOT / rel
+        if not d.exists():
+            continue
+        on_disk = {p.name for p in d.glob("*.log")}
+        tracked = set(subprocess.run(
+            ["git", "ls-files", "--", rel], cwd=ROOT, capture_output=True, text=True
+        ).stdout.split())
+        tracked_names = {t.split("/")[-1] for t in tracked}
+        missing = on_disk - tracked_names
+        if missing:
+            probs.append(f"{rel}: {len(missing)} log(s) on disk but not git-tracked, "
+                         f"e.g. {sorted(missing)[:3]}")
+    check("Mirrored dashboard/v26 and docs/v26 execution logs are git-tracked, not just on disk",
+          not probs, "\n".join(probs))
+
+
 def t_dashboard_docs_parity():
     a = {p.relative_to(DASH): p for p in DASH.rglob("*") if p.is_file()}
     b = {p.relative_to(DOCS): p for p in DOCS.rglob("*") if p.is_file()}
@@ -1014,6 +1255,13 @@ def main() -> int:
                                           t_pathway_no_fabricated_md_pool,
                                           t_pathway_contact_status_documented,
                                           t_pathway_wording, t_pathway_is_dynamic]),
+        ("Final reconciliation pass", [t_ea_comparator_not_mislabelled_sham, t_combined_not_labelled_primary,
+                                       t_moderator_matrix_no_fabricated_categories,
+                                       t_no_false_no_association_claim, t_cochrane_wording_not_overstated,
+                                       t_sufentanil_conversion_documented_and_unresolved,
+                                       t_cdc_not_misattributed_to_perioperative_iv,
+                                       t_mcid_labelled_exploratory, t_version_tag_present,
+                                       t_i18n_textcontent_no_html_entities, t_v26_mirror_logs_git_tracked]),
     ]
 
     for title, tests in sections:

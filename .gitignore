@@ -15,8 +15,16 @@ validate_with_stata.log
 
 # Authoritative v26 Stata execution logs are reproducibility artifacts, not scratch.
 # They are linked from the dashboard and must ship with the analysis package.
+# The dashboard/ and docs/ copies are the dashboard/scripts/sync_dashboard.sh
+# mirror of the same directory and must be un-ignored identically, or a fresh
+# clone of this branch serves a dashboard whose own log download links 404
+# even though the analysis package they mirror is fully tracked.
 !06_FINAL_ANALYSIS_V26/02_STATA/logs/
 !06_FINAL_ANALYSIS_V26/02_STATA/logs/*.log
+!dashboard/v26/02_STATA/logs/
+!dashboard/v26/02_STATA/logs/*.log
+!docs/v26/02_STATA/logs/
+!docs/v26/02_STATA/logs/*.log
 
 
 # Large binary files & intermediate scraping batches

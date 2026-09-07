@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=31598ec59b40">
+  <link rel="stylesheet" href="styles.css?v=0fd3fa3a455b">
 </head>
 <body>
 
@@ -168,14 +168,14 @@
           EA: −3.94 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−19.77, +11.90]</span>
         </div>
         <div class="kpi-sub" id="kpi-pooled-sub" style="margin-top: 0.25rem;">
-          Strict Combined Primary (k=6, N=628): MD = −4.68 mg [−12.26, +2.89], p = 0.173
+          Supporting Combined Synthesis (k=6, N=628): MD = −4.68 mg [−12.26, +2.89], p = 0.173
         </div>
         <span class="kpi-badge badge-emerald" id="kpi-pooled-badge">
-          <span data-i18n="kpi.primaryBadge">PRIMARY: Modality-Specific • Combined: k=6 Strict</span>
+          <span data-i18n="kpi.primaryBadge">PRIMARY: TEAS &amp; EA Modality-Specific &bull; Combined = Supporting</span>
           <button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
         </span>
         <div class="stat-plain-language" style="margin-top: 0.5rem; font-size: 0.72rem; padding: 0.35rem 0.6rem; border-left-width: 2px;">
-          <strong>Plain Language:</strong> Modality-specific estimates: TEAS showed −6.70 mg IV MME (k=3, p=0.381); EA showed −3.94 mg (k=3, p=0.397). Strict combined primary: −4.68 mg IV MME (k=6, p=0.173).
+          <strong>Plain Language:</strong> TEAS and EA were evaluated separately as the primary modality-specific analyses: TEAS showed −6.70 mg IV MME (k=3, p=0.381); EA showed −3.94 mg (k=3, p=0.397). A combined strict-evidence synthesis pooling both modalities is shown as a supporting contextual analysis: −4.68 mg IV MME (k=6, p=0.173).
         </div>
       </div>
 
@@ -999,12 +999,12 @@
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
               <span class="badge badge-indigo">PROSPERO Objective 4</span>
-              <span class="badge badge-emerald">PAIRED OPIOID + PAIN ANALYSIS</span>
+              <span class="badge badge-amber">EXPLORATORY PAIRED OPIOID&ndash;PAIN ANALYSIS</span>
             </div>
-            <h2>PAIRED OPIOID + PAIN ANALYSIS (Objective 4 Studio)</h2>
+            <h2>Exploratory Paired Opioid&ndash;Pain Analysis (Objective 4 Studio)</h2>
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.35); padding: 0.35rem 0.75rem; border-radius: 4px; margin-top: 0.35rem;">
-              <strong style="color: #a5b4fc; font-size: 0.82rem;">Paired analysable dataset: k = 6 strict trials (N = 628 analysed)</strong>
-              <span class="stat-info-btn" title="This dataset includes trials with valid analyzable values for both the primary opioid and pain axes from the locked v26 synthesis." style="cursor: help;">ⓘ</span>
+              <strong style="color: #a5b4fc; font-size: 0.82rem;">Independent paired study populations: k = 6 (N = 628 analysed)</strong>
+              <span class="stat-info-btn" title="This dataset includes trials with valid analyzable values for both the primary opioid and pain axes from the locked v26 synthesis. Not a prespecified confirmatory analysis." style="cursor: help;">ⓘ</span>
             </div>
             <p id="mcid-subtitle-text" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.35rem;">
               Evaluating whether 0–24h Opioid Reduction achieves prespecified clinical-importance benchmarks (Primary: ≥ 10 mg IV MME) without clinically important worsening of postoperative pain (≤ +1.0 VAS margin; upper 95% CI examined).
@@ -1211,7 +1211,7 @@
               <span>📊</span> Primary 24-h Dataset (CSV)
             </a>
             <a href="v26/03_RESULTS/master_reconciled_results_v26.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📈</span> All 38 Reconciled Results (CSV)
+              <span>📈</span> All 40 Reconciled Results (CSV)
             </a>
             <a href="v26/02_STATA/02_targetA_48h.do" download class="btn-preset" style="background: rgba(99, 102, 241, 0.25); border: 1px solid rgba(99, 102, 241, 0.5); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📥</span> Target A 0–48 h .do (v26)
@@ -1225,6 +1225,22 @@
             <a href="v26/02_STATA/logs/01_opioid24_primary.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📋</span> Primary 24-h Log
             </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparator hierarchy audit + sufentanil conversion caveat -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border: 1px solid rgba(245, 158, 11, 0.35); background: rgba(245, 158, 11, 0.03);">
+        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+          <div style="font-size: 1.6rem; line-height: 1;">⚠️</div>
+          <div>
+            <div style="font-weight: 700; color: #fbbf24; font-size: 0.95rem; margin-bottom: 0.4rem;">Comparator Hierarchy &amp; Sufentanil Conversion — Audited Caveats</div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 0.6rem;">
+              <strong>Comparator hierarchy.</strong> Per protocol, sham/placebo is the principal comparator and usual-care/no-stimulation is supportive. Auditing the six strict primary trials against this rule: the <strong>TEAS stratum (k=3: Chen 1998, Chen 2020, He 2026) is sham-controlled</strong>, consistent with the principal comparator. The <strong>EA stratum (k=3: El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024) is entirely usual-care / open-label control</strong> &mdash; none of the three is sham-controlled. One sham-controlled EA candidate exists in the wider 24-h pool (Coura 2011), but it is weight-normalised (µg/kg fentanyl) and cannot be converted to an absolute dose without the group-mean-weight reconstruction the v26 lock prohibits, so it is not strict-poolable. <strong>There is currently insufficient sham-controlled EA evidence for a pooled primary sham-controlled EA efficacy estimate</strong>; the EA stratum shown throughout this dashboard is a usual-care comparison and should be read as such, not as a sham-controlled efficacy result.
+            </p>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 0;">
+              <strong>Sufentanil conversion (affects Chen 2020, 1 of 6 strict primary trials).</strong> The mg-MME conversion factor applied to sufentanil throughout this pipeline (0.1 mg MME/µg, a 100:1 ratio) is <strong>unresolved</strong>: it is uncited in the source do-file, it equals the fentanyl ratio rather than a sufentanil-specific one, and published equianalgesic literature places IV sufentanil at roughly 500:1&ndash;1000:1 relative to morphine. Recomputing the strict primary MD at those alternative factors moves the point estimate from &minus;4.68 mg (as reported, factor 0.1) to &minus;7.45 mg (factor 0.5) to &minus;10.36 mg (factor 1.0) &mdash; a materially larger effect, not a smaller one, none of it adopted as primary. Full audit: <code>06_FINAL_ANALYSIS_V26/06_AUDIT/opioid_conversion_audit.csv</code>; sensitivity log: <code>06_FINAL_ANALYSIS_V26/02_STATA/logs/11_sufentanil_conversion_sensitivity.log</code>.
+            </p>
           </div>
         </div>
       </div>
@@ -1335,7 +1351,7 @@
           <!-- Primary Stratum 2: EA vs Control / Sham (k = 3, N = 334) -->
           <div class="stratum-card primary-stratum" style="border-top: 3px solid #06b6d4;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-              <span class="badge badge-cyan" data-i18n="primarySection.eaStratum">PRIMARY ANALYSIS 2: EA vs Control / Sham</span>
+              <span class="badge badge-cyan" data-i18n="primarySection.eaStratum">Primary Stratum 2: EA vs Usual Care (k=3, N=334)</span>
               <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 700;">Needle Sham / Control</span>
             </div>
             <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">
@@ -1409,14 +1425,14 @@
           <!-- Supporting Synthesis: Combined 6 Strict Direct Trials -->
           <div class="stratum-card primary-stratum" style="border-top: 3px solid #10b981;">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-              <span class="badge badge-emerald" data-i18n="primarySection.combinedPool">STRICT COMBINED PRIMARY (k=6)</span>
+              <span class="badge badge-emerald" data-i18n="primarySection.combinedPool">Supporting Combined Synthesis (k=6, N=628)</span>
               <span class="badge badge-indigo">
                 REML + Knapp–Hartung
                 <button class="stat-info-btn" data-stat-term="knappHartung" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
               </span>
             </div>
             <h3 style="font-size: 1.05rem; margin-top: 0.5rem; color: #fff;">
-              Strict Combined Primary Synthesis: 0–24h Opioid Consumption
+              Supporting Combined Strict-Evidence Synthesis: 0–24h Opioid Consumption
               <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
             </h3>
             
@@ -1938,7 +1954,7 @@
               </a>
             </div>
             <div class="stata-plot-footer">
-              <p><strong>Modality Comparison:</strong> TEAS vs Sham (k = 3: Chen 1998, Chen 2020, He 2026; N = 294): REML MD = <strong>−6.70 mg IV MME</strong> [95% CI: −32.56 to +19.16], p = 0.3810, I² = 99.58%. EA vs Control/Sham (k = 3: El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024; N = 334): REML MD = <strong>−3.94 mg IV MME</strong> [95% CI: −19.77 to +11.90], p = 0.3969, I² = 77.15%. Meta-regression test for difference: β = −1.79 mg [95% CI: −20.92 to +17.33], t(4) = −0.26, p = 0.8074.</p>
+              <p><strong>Modality Comparison:</strong> TEAS vs Sham (k = 3: Chen 1998, Chen 2020, He 2026; N = 294): REML MD = <strong>−6.70 mg IV MME</strong> [95% CI: −32.56 to +19.16], p = 0.3810, I² = 99.58%. EA vs Usual Care (k = 3: El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024; N = 334): REML MD = <strong>−3.94 mg IV MME</strong> [95% CI: −19.77 to +11.90], p = 0.3969, I² = 77.15%. Meta-regression test for difference: β = −1.79 mg [95% CI: −20.92 to +17.33], t(4) = −0.26, p = 0.8074.</p>
             </div>
           </div>
 
@@ -2381,7 +2397,7 @@
         </div>
         <div style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.65; padding: 0 0.5rem 0.5rem;">
           <p>
-            <strong>The 10:1 Rule for Meta-Regression:</strong> Cochrane Handbook Section 10.11.4.1 stipulates that meta-regression models require a minimum of <strong>10 independent studies per candidate predictor/covariate</strong> to avoid severe overfitting and spurious ecological associations.
+            <strong>The 10:1 Rule for Meta-Regression:</strong> Cochrane Handbook Section 10.11.4.1 advises that meta-regression generally should not be considered with fewer than approximately <strong>10 studies per candidate predictor/covariate</strong>, and more may be required depending on the covariate's distribution, to avoid severe overfitting and spurious ecological associations.
           </p>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 0.75rem;">
             <div style="background: rgba(0,0,0,0.25); padding: 0.85rem; border-radius: var(--radius-sm); border-left: 3px solid #6366f1;">
@@ -2640,22 +2656,16 @@
               <tr>
                 <td style="font-weight: 700;">Stimulation Timing</td>
                 <td>Categorical Protocol</td>
-                <td>Preoperative (k=5) vs Multi-phase (k=5) vs Intraop (k=1)</td>
-                <td>+3.102 [&minus;7.006, +13.211]</td>
-                <td>t(9) = +0.69, p = 0.505</td>
-                <td>0.00%</td>
-                <td><span class="badge badge-amber">Subgroup Preferred</span></td>
-                <td style="font-size: 0.74rem; color: #94a3b8;">Timing alone does not account for residual variance; pre-incisional and multi-phase strategies perform similarly.</td>
+                <td>100% Preoperative-only (k = 6/6)</td>
+                <td colspan="4" style="text-align: center; color: #f59e0b; font-style: italic;">Dropped by Stata due to zero variance (constant across trials)</td>
+                <td style="font-size: 0.74rem; color: #f59e0b;">All six strict primary trials applied preoperative-phase stimulation; the covariate has no variance, so timing cannot be tested. A previously displayed categorical model (Preoperative k=5 vs Multi-phase k=5 vs Intraop k=1, summing to 11) came from the withdrawn 11-trial pool and does not describe the v26 strict set.</td>
               </tr>
               <tr>
                 <td style="font-weight: 700;">Electrical Frequency</td>
                 <td>Categorical Protocol</td>
-                <td>2/100 Hz DD (k=7) vs Fixed 100/2 Hz (k=4)</td>
-                <td>+3.223 [&minus;7.560, +14.006]</td>
-                <td>t(9) = +0.68, p = 0.516</td>
-                <td>0.00%</td>
-                <td><span class="badge badge-amber">Subgroup Preferred</span></td>
-                <td style="font-size: 0.74rem; color: #94a3b8;">Dense-disperse alternating current and fixed frequencies show comparable 24h opioid sparing.</td>
+                <td>100% 2/100 Hz Dense-Disperse (k = 6/6)</td>
+                <td colspan="4" style="text-align: center; color: #f59e0b; font-style: italic;">Dropped by Stata due to zero variance (constant across trials)</td>
+                <td style="font-size: 0.74rem; color: #f59e0b;">All six strict primary trials used the 2/100 Hz dense-disperse waveform; the covariate has no variance, so frequency cannot be tested. A previously displayed categorical model (2/100 Hz DD k=7 vs Fixed 100/2 Hz k=4, summing to 11) came from the withdrawn 11-trial pool and does not describe the v26 strict set.</td>
               </tr>
               <tr style="opacity: 0.75;">
                 <td style="font-weight: 700;">Number of Sessions</td>
@@ -2675,7 +2685,7 @@
                 <td style="color: #94a3b8; font-style: italic;">Not estimated</td>
                 <td style="color: #94a3b8; font-style: italic;">&mdash;</td>
                 <td><span class="badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">Ecological Fallacy</span></td>
-                <td style="font-size: 0.74rem; color: #94a3b8;">No evidence of an association between the study-level proportion of female participants and treatment effect was detected. This does not establish equivalent treatment effects between individual women and men.</td>
+                <td style="font-size: 0.74rem; color: #94a3b8;">Not modelled; k = 6 is insufficient for reliable study-level meta-regression on a continuous demographic moderator. No association can be affirmed or ruled out from this evidence, and study-level aggregates could not establish individual-level effects in either direction (ecological fallacy).</td>
               </tr>
               <tr style="opacity: 0.75;">
                 <td style="font-weight: 700;">
@@ -2970,9 +2980,10 @@
             <div>
               <div style="display: flex; align-items: center; gap: 0.6rem;">
                 <span class="badge badge-emerald">Standardization Protocol</span>
-                <span style="font-size: 0.75rem; color: var(--text-muted);">Cochrane Handbook Ch. 6.5.2 &amp; CDC Guidelines</span>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Cochrane Handbook Ch. 6.5.2</span>
               </div>
               <h2 style="margin-top: 0.35rem; font-size: 1.25rem;">📐 Opioid Conversion Methodology &amp; Literature Reference Hub</h2>
+              <p style="font-size: 0.76rem; color: var(--text-secondary); margin-top: 0.3rem; max-width: 900px;">Prespecified equianalgesic conversion framework used for harmonization to a common IV morphine-milligram-equivalent (IV MME) metric, with uncertainty assessed in sensitivity analyses where a factor is not independently verified. See <code>06_FINAL_ANALYSIS_V26/06_AUDIT/opioid_conversion_audit.csv</code> for the full per-drug audit.</p>
             </div>
             <div class="conv-subnav" style="margin-top: 0; border-bottom: none; padding-bottom: 0;">
               <button class="conv-subnav-btn active" data-conv-tab="equi" onclick="switchConvTab('equi')">1. Equianalgesic Ratios (IV MME)</button>
@@ -3005,36 +3016,38 @@
                   <td><strong>Morphine (IV)</strong></td>
                   <td><span class="badge badge-indigo">1.0 mg / mg</span></td>
                   <td><strong>10.0 mg</strong></td>
-                  <td>Reference standard opioid comparator. Pure $\mu$-opioid receptor agonist.</td>
-                  <td><span class="badge-derivation">CDC 2022 / ANZCA APM:SE 2020</span></td>
+                  <td>Reference standard opioid comparator (self-referential by definition). Pure $\mu$-opioid receptor agonist.</td>
+                  <td><span class="badge-derivation">ANZCA APM:SE 2020</span></td>
                 </tr>
                 <tr>
-                  <td><strong>Sufentanil (IV)</strong></td>
-                  <td><span class="badge badge-emerald">1.0 mg MME / µg (1000:1)</span></td>
-                  <td><strong>10.0 µg (0.01 mg)</strong></td>
-                  <td>Highly potent lipophilic $\mu$-agonist; ~1000-fold more potent than parenteral morphine in acute surgical analgesia. Widely used in Chinese PCIA pumps.</td>
-                  <td><span class="badge-derivation">Treillet 2018 / Macintyre 2020 / Knotkova 2012</span></td>
+                  <td><strong>Sufentanil (IV)</strong> <span class="badge" style="background: rgba(244,63,94,0.2); color: #fda4af; font-size: 0.65rem;">⚠ UNRESOLVED</span></td>
+                  <td><span class="badge" style="background: rgba(245,158,11,0.2); color: #fbbf24;">0.1 mg MME / µg (100:1) &mdash; as computed</span></td>
+                  <td><strong>100.0 µg (0.10 mg)</strong></td>
+                  <td>
+                    <strong>Conversion factor unresolved.</strong> The value actually used to compute every sufentanil-derived result on this dashboard (0.1 mg MME/µg, a 100:1 ratio) is identical to the fentanyl ratio below and carries no documented pharmacological citation in this project. Published equianalgesic literature places IV sufentanil at roughly <strong>500:1 to 1000:1</strong> relative to morphine, with acute-postoperative ratios reported to vary with duration. If the true ratio is materially higher than 100:1, sufentanil-derived opioid-sparing estimates (including Chen 2020, 1 of the 6 strict primary trials) are understated in magnitude, not overstated. See <code>06_AUDIT/opioid_conversion_audit.csv</code> and the sensitivity range in the Primary tab.
+                  </td>
+                  <td><span class="badge-derivation" style="background: rgba(244,63,94,0.15); color: #fda4af;">Reference verification required</span></td>
                 </tr>
                 <tr>
                   <td><strong>Fentanyl (IV)</strong></td>
                   <td><span class="badge badge-emerald">0.10 mg MME / µg (100:1)</span></td>
                   <td><strong>100.0 µg (0.10 mg)</strong></td>
-                  <td>Rapid-onset synthetic $\mu$-agonist; clinically accepted 100:1 equianalgesic ratio with IV morphine in postoperative PCA regimens.</td>
-                  <td><span class="badge-derivation">CDC 2022 / ANZCA 2020 / Nielsen 2016</span></td>
+                  <td>Rapid-onset synthetic $\mu$-agonist; commonly cited 100:1 equianalgesic ratio with IV morphine in postoperative PCA regimens. Consistent between the Stata pipeline and this table (An 2014).</td>
+                  <td><span class="badge-derivation">ANZCA 2020 / Nielsen 2016</span></td>
                 </tr>
                 <tr>
                   <td><strong>Remifentanil (IV)</strong></td>
                   <td><span class="badge badge-emerald">0.10 mg MME / µg (100:1)</span></td>
                   <td><strong>100.0 µg (0.10 mg)</strong></td>
-                  <td>Ultra-short-acting esterase-metabolized $\mu$-agonist; evaluated in intraoperative consumption endpoints ($1\,\mu\text{g} = 0.1\text{ mg}$ IV MME).</td>
-                  <td><span class="badge-derivation">Macintyre 2020 / ASA Practice Guidelines 2012</span></td>
+                  <td>Ultra-short-acting esterase-metabolized $\mu$-agonist; evaluated in intraoperative consumption endpoints ($1\,\mu\text{g} = 0.1\text{ mg}$ IV MME). Not independently re-verified in this audit pass.</td>
+                  <td><span class="badge-derivation">ASA Practice Guidelines 2012</span></td>
                 </tr>
                 <tr>
-                  <td><strong>Hydromorphone (IV)</strong></td>
-                  <td><span class="badge badge-indigo">6.67 mg MME / mg</span></td>
-                  <td><strong>1.5 mg</strong></td>
-                  <td>Semisynthetic hydrogenated ketone of morphine; 5–7 times more potent than parenteral morphine (standard conversion $1.5\text{ mg} \approx 10\text{ mg}$ IV morphine).</td>
-                  <td><span class="badge-derivation">CDC 2022 / Knotkova 2012 / ANZCA 2020</span></td>
+                  <td><strong>Hydromorphone (IV)</strong> <span class="badge" style="background: rgba(245,158,11,0.2); color: #fbbf24; font-size: 0.65rem;">⚠ discrepancy</span></td>
+                  <td><span class="badge" style="background: rgba(245,158,11,0.2); color: #fbbf24;">5.0 mg MME / mg &mdash; as computed</span></td>
+                  <td><strong>2.0 mg</strong></td>
+                  <td>Semisynthetic hydrogenated ketone of morphine. The Stata pipeline uses a 5:1 ratio (no citation); published IV hydromorphone:morphine ratios are commonly cited in the 5:1&ndash;7:1 range, so this is plausible but unverified against a project-held primary source. See <code>opioid_conversion_audit.csv</code>.</td>
+                  <td><span class="badge-derivation" style="background: rgba(245,158,11,0.15); color: #fbbf24;">Reference verification required</span></td>
                 </tr>
                 <tr>
                   <td><strong>Oxycodone (IV)</strong></td>
@@ -3055,7 +3068,7 @@
                   <td><span class="badge badge-amber">0.10–0.13 mg MME / mg</span></td>
                   <td><strong>75.0 – 100.0 mg</strong></td>
                   <td>Synthetic opioid; 75–100 mg parenteral pethidine provides analgesia equivalent to 10 mg parenteral morphine. Converted at $0.10\text{ mg MME/mg}$.</td>
-                  <td><span class="badge-derivation">CDC 2022 / ANZCA 2020 / Knotkova 2012</span></td>
+                  <td><span class="badge-derivation">ANZCA 2020 / Knotkova 2012</span></td>
                 </tr>
                 <tr>
                   <td><strong>Tramadol (IV)</strong></td>
@@ -3273,7 +3286,7 @@
                 <em>Cochrane Handbook for Systematic Reviews of Interventions, Version 6.4. Chapter 6: Choosing effect measures.</em>
               </p>
               <div style="font-size: 0.72rem; margin-top: 0.4rem;">
-                <strong>Application:</strong> Section 6.5.2 mandates mathematical transformation of non-parametric continuous metrics and author contact protocol.
+                <strong>Application:</strong> Section 6.5.2 provides methods for estimating means and standard deviations from median-based summaries where justified, and informs the review's author-contact protocol for otherwise unusable data.
                 <br><a href="https://training.cochrane.org/handbook" target="_blank" style="color: #38bdf8; text-decoration: none;">training.cochrane.org/handbook ↗</a>
               </div>
             </div>
@@ -3288,7 +3301,7 @@
                 <em>CDC Clinical Practice Guideline for Prescribing Opioids for Pain — United States, 2022.</em>
               </p>
               <div style="font-size: 0.72rem; margin-top: 0.4rem;">
-                <strong>Application:</strong> Universal conversion factors for calculating Morphine Milligram Equivalents (MME) in acute postoperative pain.
+                <strong>Application:</strong> Provides the general morphine-milligram-equivalent (MME) framing used for outpatient opioid prescribing. This guideline is scoped to <strong>outpatient</strong> acute (&lt;1 month), subacute, and chronic pain management and does not publish route-specific conversion factors for intraoperative/inpatient IV fentanyl, sufentanil, or remifentanil; it is <strong>not</strong> the source for the perioperative IV conversion factors in the table above (see per-drug references and <code>opioid_conversion_audit.csv</code>).
                 <br><a href="https://doi.org/10.15585/mmwr.rr7103a1" target="_blank" style="color: #38bdf8; text-decoration: none;">DOI: 10.15585/mmwr.rr7103a1 ↗</a>
               </div>
             </div>
@@ -3382,8 +3395,8 @@
           </div>
           <ul style="margin: 0.5rem 0 0 1.2rem; padding: 0;">
             <li><strong>TEAS vs Sham (0–24 h Opioid Sparing, k=3, N=294):</strong> Low certainty evidence (downgraded for inconsistency and imprecision). The pooled estimate was MD −6.70 mg IV MME [95% KH CI: −32.55, +19.16], p = 0.3810; 95% confidence interval crosses zero with substantial between-trial heterogeneity (I² = 99.6%).</li>
-            <li><strong>EA vs Sham/Control (0–24 h Opioid Sparing, k=3, N=334):</strong> Very low certainty evidence (downgraded for inconsistency and very serious imprecision). The pooled point estimate was MD −3.94 mg IV MME [95% KH CI: −19.77, +11.90], p = 0.3969; 95% confidence interval crosses zero and is imprecise.</li>
-            <li><strong>Strict Combined Primary Synthesis (0–24 h, k=6, N=628):</strong> Low certainty evidence (MD −4.68 mg IV MME [95% KH CI: −12.26, +2.89], p = 0.1727, 95% PI [−22.28, +12.91]). Modality-specific estimates remain the primary inferential analyses.</li>
+            <li><strong>EA vs Usual Care (0–24 h Opioid Sparing, k=3, N=334):</strong> Very low certainty evidence (downgraded for inconsistency and very serious imprecision). The pooled point estimate was MD −3.94 mg IV MME [95% KH CI: −19.77, +11.90], p = 0.3969; 95% confidence interval crosses zero and is imprecise.</li>
+            <li><strong>Supporting Combined Strict-Evidence Synthesis (0–24 h, k=6, N=628):</strong> Low certainty evidence (MD −4.68 mg IV MME [95% KH CI: −12.26, +2.89], p = 0.1727, 95% PI [−22.28, +12.91]). Modality-specific estimates remain the primary inferential analyses.</li>
             <li><strong>Note on RoB 2 Domain Status:</strong> <em>Outcome ratings incorporate locked result-specific RoB 2 assessments across primary and key secondary endpoints.</em></li>
           </ul>
         </div>
@@ -3441,18 +3454,24 @@
         <div>
           <div style="font-weight: 700; color: #f8fafc;">Statistical source</div>
           <div>Stata-verified final analysis &mdash; StataNow 19.5 BE</div>
-          <div style="font-size: 0.72rem; color: var(--text-muted);">Reproduced from <code>06_FINAL_ANALYSIS_V26/02_STATA/00_master.do</code>; all 18 exported result tables verified byte-identical on re-run.</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">Reproduced from <code>06_FINAL_ANALYSIS_V26/02_STATA/00_master.do</code>; all 20 exported result tables verified byte-identical on re-run.</div>
         </div>
         <div>
           <div style="font-weight: 700; color: #f8fafc;">Review registration</div>
           <div>PROSPERO <strong>CRD420251090635</strong></div>
           <div style="font-size: 0.72rem; color: var(--text-muted);">Lund University.</div>
         </div>
+        <div>
+          <div style="font-weight: 700; color: #f8fafc;">Analysis version</div>
+          <div><strong>v26</strong> &mdash; reconciliation-complete / final-lock-ready</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">Locked 2026-09-06. Earlier exploratory analyses may differ because the eligible evidence architecture was subsequently refined.</div>
+        </div>
       </div>
       <div style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); font-size: 0.73rem; color: var(--text-muted);">
         Pooled estimates, <em>k</em>, <em>N</em>, forest plots, GRADE certainty and result-specific RoB 2 on this dashboard derive from the v26 lock and the final Stata run above.
         Analyses that the v26 pipeline does not reproduce are shown as withdrawn or not pooled rather than restated from earlier releases.
         Superseded pre-v26 artifacts are retained under <code>99_audit/superseded_dashboard_artifacts/</code>.
+        Two opioid-conversion factors (sufentanil; hydromorphone) remain unresolved pending independent pharmacological verification &mdash; see <code>06_FINAL_ANALYSIS_V26/06_AUDIT/opioid_conversion_audit.csv</code>.
       </div>
     </footer>
 
@@ -3467,11 +3486,11 @@
   </div>
 
   <!-- Scripts -->
-  <script src="primary_pathway.js?v=31598ec59b40"></script>
-  <script src="data.js?v=31598ec59b40"></script>
-  <script src="translations.js?v=31598ec59b40"></script>
-  <script src="reader_assist.js?v=31598ec59b40"></script>
-  <script src="meta_engine.js?v=31598ec59b40"></script>
-  <script src="app.js?v=31598ec59b40"></script>
+  <script src="primary_pathway.js?v=0fd3fa3a455b"></script>
+  <script src="data.js?v=0fd3fa3a455b"></script>
+  <script src="translations.js?v=0fd3fa3a455b"></script>
+  <script src="reader_assist.js?v=0fd3fa3a455b"></script>
+  <script src="meta_engine.js?v=0fd3fa3a455b"></script>
+  <script src="app.js?v=0fd3fa3a455b"></script>
 </body>
 </html>

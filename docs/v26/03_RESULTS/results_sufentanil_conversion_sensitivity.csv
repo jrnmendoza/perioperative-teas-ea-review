@@ -1,0 +1,7 @@
+analysis,sufentanil_factor_mg_mme_per_ug,implied_ratio,k,estimate_mg,ci_low,ci_high,p_value,i2,status
+Strict primary (k=6),0.1,100:1 (as currently computed; matches fentanyl ratio; uncited),6,-4.684,-12.257,2.889,0.1727,98.29,CURRENT / UNVERIFIED
+Strict primary (k=6),0.5,500:1 (lower bound of literature range found),6,-7.447,-16.226,1.332,0.0811,97.92,SENSITIVITY ONLY
+Strict primary (k=6),1.0,1000:1 (dashboard's previously claimed but uncited value),6,-10.363,-22.997,2.271,0.0888,98.82,SENSITIVITY ONLY
+Target A broader incl. Xie 2014 (k=4),0.1,100:1 (as currently computed),4,-2.080,-2.827,-1.333,0.0030,14.91,CURRENT / UNVERIFIED
+Target A broader incl. Xie 2014 (k=4),0.5,500:1 (lower bound of literature range found),4,-7.428,-12.916,-1.940,0.0230,89.63,SENSITIVITY ONLY
+Target A broader incl. Xie 2014 (k=4),1.0,1000:1 (dashboard's previously claimed but uncited value),4,-12.302,-26.735,2.132,0.0730,96.46,SENSITIVITY ONLY

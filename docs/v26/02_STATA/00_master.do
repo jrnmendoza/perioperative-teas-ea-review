@@ -60,6 +60,10 @@ do "06_FINAL_ANALYSIS_V26/02_STATA/09_subgroups_metareg.do"
 di as txt _n ">>> STEP 11: Running 10_broader24h_sensitivity.do ..."
 do "06_FINAL_ANALYSIS_V26/02_STATA/10_broader24h_sensitivity.do"
 
+* 12. Sufentanil Conversion Factor Sensitivity (unresolved - audit only)
+di as txt _n ">>> STEP 12: Running 11_sufentanil_conversion_sensitivity.do ..."
+do "06_FINAL_ANALYSIS_V26/02_STATA/11_sufentanil_conversion_sensitivity.do"
+
 di as txt _n "=================================================================="
 di as txt "MASTER VERIFICATION & ANALYSIS PIPELINE COMPLETED SUCCESSFULLY!"
 di as txt "All models executed under StataNow 19.5 BE."
