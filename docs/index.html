@@ -767,7 +767,28 @@
       <div class="dashboard-card">
         <div class="card-header">
           <h2>Study Characteristics & STRICTA Parameters Explorer</h2>
-          <input type="text" id="study-search-input" class="search-input" placeholder="Search author, year, acupoint, surgery...">
+          <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+            <label for="explorer-rob-outcome" style="font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700;">RoB 2 shown for</label>
+            <select id="explorer-rob-outcome" class="filter-select" style="min-width: 300px;">
+              <option value="opioid_24h" selected>💊 [PRIMARY] 0–24 h Opioid Consumption</option>
+              <option value="opioid_48h">💊 [TARGET A] 0–48 h Opioid Consumption</option>
+              <option value="opioid_72h">💊 [TARGET B] 0–72 h Opioid Consumption</option>
+              <option value="pain_rest_24h">🩹 [TARGET C] Pain at Rest (~24 h)</option>
+              <option value="ponv_24h">🤢 [TARGET D] Composite PONV (0–24 h)</option>
+              <option value="ponv_48h">🤢 [TARGET D] Composite PONV (0–48 h)</option>
+              <option value="nausea_24h">🤢 [TARGET D] Nausea Alone (0–24 h)</option>
+              <option value="nausea_48h">🤢 [TARGET D] Nausea Alone (0–48 h)</option>
+              <option value="vomiting_24h">🤮 [TARGET D] Vomiting Alone (0–24 h)</option>
+              <option value="vomiting_48h">🤮 [TARGET D] Vomiting Alone (0–48 h)</option>
+              <option value="flatus_time">💨 [TARGET E] Time to First Flatus</option>
+              <option value="rescue_analgesia">🔘 [TARGET F] Rescue Analgesia Requirement</option>
+              <option value="intraop_remi">💉 [TARGET F] Intraoperative Titrated Remifentanil</option>
+              <option value="pca_behavior">🔘 [TARGET F] PCA Behaviour (presses/demands)</option>
+              <option value="qor_24h">✨ Quality of Recovery (24 h)</option>
+              <option value="summary">📋 Study-level overview (not result-specific)</option>
+            </select>
+            <input type="text" id="study-search-input" class="search-input" placeholder="Search author, year, acupoint, surgery...">
+          </div>
         </div>
         <div style="overflow-x: auto;">
           <table class="forest-table">
@@ -780,7 +801,7 @@
                 <th>Acupoint Formula <button class="stat-info-btn" data-stat-term="acupoints" aria-label="Explanation for Acupoint Selection">ⓘ</button></th>
                 <th>Frequency <button class="stat-info-btn" data-stat-term="frequency" aria-label="Explanation for Stimulation Frequency">ⓘ</button></th>
                 <th>Sample Size (N) <button class="stat-info-btn" data-stat-term="nParticipants" aria-label="Explanation for Sample Size">ⓘ</button></th>
-                <th>RoB 2 <button class="stat-info-btn" data-stat-term="rob2" aria-label="Explanation for RoB 2">ⓘ</button></th>
+                <th>Result-Specific RoB 2 <button class="stat-info-btn" data-stat-term="rob2" aria-label="Explanation for RoB 2">ⓘ</button><div id="explorer-rob-context" style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;"></div></th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -821,7 +842,9 @@
               <option value="ponv_24h">🤢 [TARGET D] Composite PONV (0–24 h)</option>
               <option value="ponv_48h">🤢 [TARGET D] Composite PONV (0–48 h)</option>
               <option value="nausea_24h">🤢 [TARGET D] Postoperative Nausea Alone (0–24 h)</option>
+              <option value="nausea_48h">🤢 [TARGET D] Postoperative Nausea Alone (0–48 h)</option>
               <option value="vomiting_24h">🤮 [TARGET D] Postoperative Vomiting Alone (0–24 h)</option>
+              <option value="vomiting_48h">🤮 [TARGET D] Postoperative Vomiting Alone (0–48 h)</option>
               <option value="flatus_time">💨 [TARGET E] Time to First Flatus (GI Recovery)</option>
               <option value="rescue_analgesia">🔘 [TARGET F] Supplemental Rescue Analgesia Requirements</option>
               <option value="intraop_remi">💉 [TARGET F] Intraoperative Titrated Remifentanil (µg)</option>

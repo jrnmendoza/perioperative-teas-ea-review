@@ -284,6 +284,14 @@ function initSensitivityControls() {
       renderStudyExplorer();
     });
   }
+
+  const explorerRobSelect = document.getElementById('explorer-rob-outcome');
+  if (explorerRobSelect) {
+    explorerRobSelect.addEventListener('change', (e) => {
+      explorerRobOutcome = e.target.value;
+      renderStudyExplorer();
+    });
+  }
 }
 
 // Get Filtered Studies with simulated overrides applied
@@ -293,7 +301,13 @@ function getFilteredStudies(applyOverrides = true) {
     if (filterModality !== 'all' && s.modality !== filterModality) return false;
     if (filterComparator !== 'all' && s.comparator_short !== filterComparator) return false;
     if (filterSurgery !== 'all' && s.surgery_category !== filterSurgery) return false;
-    if (filterRob !== 'all' && s.rob2.overall !== filterRob) return false;
+    if (filterRob !== 'all') {
+      // Filter on the result-specific judgment for the active context, not on a
+      // single global study-level label.
+      const st = resultRob(s, (activeTab === 'explorer') ? explorerRobOutcome : 'summary').state;
+      const want = robState(filterRob);
+      if (st !== want) return false;
+    }
     if (s.population.total_n < filterMinN) return false;
     if (s.year < filterYearMin || s.year > filterYearMax) return false;
     if (filterSearch && !s.citation.toLowerCase().includes(filterSearch) && !s.key.toLowerCase().includes(filterSearch) && !s.surgery_procedure.toLowerCase().includes(filterSearch)) return false;
@@ -796,6 +810,105 @@ function renderOverview() {
   }
 }
 
+// ═══════════════════════════════════════════════════════════════════════════
+// RESULT-SPECIFIC RoB 2 (Cochrane RoB 2 is a property of a RESULT, not a study)
+// ═══════════════════════════════════════════════════════════════════════════
+// Authoritative source: AF_Result_Lock in
+// TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx, compiled into
+// s.rob2_outcomes[<outcome key>] = {status, d1..d5, overall, outcome_name, timepoint, rationale}.
+//
+// s.rob2.* is a study-level OVERVIEW only. It must never stand in for a
+// result-specific judgment, and an absent judgment must never be shown as High.
+
+// Which result the Study Explorer's RoB column describes.
+let explorerRobOutcome = 'opioid_24h';
+
+const ROB_OUTCOME_LABELS = {
+  summary: 'study-level overview',
+  opioid_24h: '0–24 h opioid consumption',
+  opioid_48h: '0–48 h opioid consumption',
+  opioid_72h: '0–72 h opioid consumption',
+  pain_rest_24h: 'pain at rest ~24 h',
+  ponv_24h: 'composite PONV 0–24 h',
+  ponv_48h: 'composite PONV 0–48 h',
+  nausea_24h: 'nausea alone 0–24 h',
+  nausea_48h: 'nausea alone 0–48 h',
+  vomiting_24h: 'vomiting alone 0–24 h',
+  vomiting_48h: 'vomiting alone 0–48 h',
+  flatus_time: 'time to first flatus',
+  rescue_analgesia: 'rescue analgesia requirement',
+  intraop_remi: 'intraoperative titrated remifentanil',
+  pca_behavior: 'PCA behaviour',
+  qor_24h: 'quality of recovery ~24 h'
+};
+
+// Returns a judgment object for one study x one result.
+// state is one of: 'low' | 'some' | 'high' | 'pending' | 'not-assessed' | 'study-level'
+function resultRob(s, outcomeKey) {
+  if (outcomeKey === 'summary') {
+    const r = (s && s.rob2) || {};
+    return {
+      state: robState(r.overall),
+      isStudyLevel: true,
+      d1: r.d1, d2: r.d2, d3: r.d3, d4: r.d4, d5: r.d5,
+      overall: r.overall,
+      outcome_name: 'Study-level overview',
+      timepoint: '',
+      rationale: r.rationale || 'Study-level consensus overview (not result-specific)'
+    };
+  }
+  const oc = s && s.rob2_outcomes && s.rob2_outcomes[outcomeKey];
+  if (oc && oc.status === 'Assessed') {
+    return {
+      state: robState(oc.overall),
+      isStudyLevel: false,
+      d1: oc.d1, d2: oc.d2, d3: oc.d3, d4: oc.d4, d5: oc.d5,
+      overall: oc.overall,
+      outcome_name: oc.outcome_name,
+      timepoint: oc.timepoint,
+      rationale: oc.rationale
+    };
+  }
+  const pending = oc && /pending/i.test(String(oc.status || ''));
+  return {
+    state: pending ? 'pending' : 'not-assessed',
+    isStudyLevel: false,
+    d1: 'NR', d2: 'NR', d3: 'NR', d4: 'NR', d5: 'NR',
+    overall: pending ? 'Pending' : 'NR',
+    outcome_name: '',
+    timepoint: '',
+    rationale: pending
+      ? 'RoB 2 assessment pending for this result'
+      : 'Outcome not measured or reported in this trial (domain judgments not imputed)'
+  };
+}
+
+// Normalise a raw judgment string to a distinct state. Unrecognised, empty and
+// "not reported" values resolve to 'not-assessed' - NEVER to 'high'.
+function robState(val) {
+  if (val === null || val === undefined) return 'not-assessed';
+  const v = String(val).trim().toLowerCase();
+  if (!v || v === 'nr' || v === 'not reported' || v === 'not assessed' || v === '⋯' || v === 'unmeasured' || v === '-' || v === '—') return 'not-assessed';
+  if (v.includes('pending')) return 'pending';
+  if (v === 'low') return 'low';
+  if (v === 'some concerns' || v === 'some_concerns' || v === 'some') return 'some';
+  if (v === 'high') return 'high';
+  return 'not-assessed';
+}
+
+const ROB_BADGE = {
+  low:           { text: 'Low',           bg: 'rgba(16,185,129,0.18)',  fg: '#6ee7b7', bd: 'rgba(16,185,129,0.35)' },
+  some:          { text: 'Some concerns', bg: 'rgba(245,158,11,0.18)',  fg: '#fbbf24', bd: 'rgba(245,158,11,0.35)' },
+  high:          { text: 'High',          bg: 'rgba(244,63,94,0.18)',   fg: '#fda4af', bd: 'rgba(244,63,94,0.35)' },
+  pending:       { text: 'Pending',       bg: 'rgba(129,140,248,0.18)', fg: '#c7d2fe', bd: 'rgba(129,140,248,0.35)' },
+  'not-assessed':{ text: 'Not assessed',  bg: 'rgba(255,255,255,0.06)', fg: '#94a3b8', bd: 'rgba(255,255,255,0.16)' }
+};
+
+function robBadgeHtml(state, title) {
+  const b = ROB_BADGE[state] || ROB_BADGE['not-assessed'];
+  return `<span class="kpi-badge" style="background: ${b.bg}; color: ${b.fg}; border: 1px solid ${b.bd};" title="${title || b.text}">${b.text}</span>`;
+}
+
 // v26: every catalogued author inquiry carries a recorded disposition
 // (AF_P1_Disposition / AF_Unresolved). None is a global final-lock blocker, so
 // no inquiry may be rendered as an open "Pending" item. Only the single
@@ -820,11 +933,13 @@ function renderStudyExplorer() {
   if (!tbody) return;
 
   tbody.innerHTML = filtered.map((s, idx) => {
-    const robBadge = s.rob2.overall === 'Low' 
-      ? `<span class="kpi-badge badge-emerald">Low Risk</span>`
-      : (s.rob2.overall === 'High' 
-          ? `<span class="kpi-badge" style="background: rgba(244,63,94,0.18); color: #fda4af; border: 1px solid rgba(244,63,94,0.3);">High Risk</span>` 
-          : `<span class="kpi-badge badge-amber">Some Concerns</span>`);
+    const rr = resultRob(s, explorerRobOutcome);
+    const robTitle = rr.isStudyLevel
+      ? 'Study-level overview - not a result-specific judgment'
+      : (rr.state === 'not-assessed' || rr.state === 'pending'
+          ? rr.rationale
+          : `${rr.outcome_name}${rr.timepoint ? ' (' + rr.timepoint + ')' : ''}`);
+    const robBadge = robBadgeHtml(rr.state, robTitle);
     
     const disp = inquiryDisposition(s);
     const inquiryBadge = disp
@@ -847,6 +962,20 @@ function renderStudyExplorer() {
       </tr>
     `;
   }).join('');
+
+  const ctxEl = document.getElementById('explorer-rob-context');
+  if (ctxEl) {
+    const label = ROB_OUTCOME_LABELS[explorerRobOutcome] || explorerRobOutcome;
+    if (explorerRobOutcome === 'summary') {
+      ctxEl.innerHTML = 'study-level overview &mdash; not result-specific';
+    } else {
+      const assessed = filtered.filter(s => {
+        const st = resultRob(s, explorerRobOutcome).state;
+        return st !== 'not-assessed' && st !== 'pending';
+      }).length;
+      ctxEl.innerHTML = `for: ${label} &bull; ${assessed}/${filtered.length} assessed`;
+    }
+  }
 }
 
 // 4. RoB 2 Matrix (Result-Specific and Summary View)
@@ -862,59 +991,32 @@ function renderRoB2Matrix() {
   let assessedCount = 0;
   let unmeasuredCount = 0;
 
+  // Five distinct states. robState() never maps an unknown/absent value to High.
   const dot = (val) => {
-    if (!val || val === 'NR' || val === 'Not Reported' || val === '⋯' || val === 'unmeasured') {
-      return `<span class="rob-dot" style="background: rgba(255,255,255,0.08); color: var(--text-muted); border: 1px dashed rgba(255,255,255,0.2);" title="Outcome not measured or reported in this trial">⋯</span>`;
+    switch (robState(val)) {
+      case 'low':     return `<span class="rob-dot rob-low" title="Low risk of bias">+</span>`;
+      case 'some':    return `<span class="rob-dot rob-some" title="Some concerns">?</span>`;
+      case 'high':    return `<span class="rob-dot rob-high" title="High risk of bias">−</span>`;
+      case 'pending': return `<span class="rob-dot" style="background: rgba(129,140,248,0.2); color: #c7d2fe; border: 1px solid rgba(129,140,248,0.5);" title="RoB 2 assessment pending for this result">⏳</span>`;
+      default:        return `<span class="rob-dot" style="background: rgba(255,255,255,0.08); color: var(--text-muted); border: 1px dashed rgba(255,255,255,0.2);" title="Not assessed: outcome not measured or reported in this trial (domain judgments not imputed)">⋯</span>`;
     }
-    const clean = String(val).trim().toLowerCase();
-    if (clean === 'pending' || clean === 'pending assessment' || clean.includes('pending')) {
-      return `<span class="rob-dot" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.5);" title="Pending assessment">⏳</span>`;
-    }
-    if (clean === 'low') {
-      return `<span class="rob-dot rob-low" title="Low risk of bias">+</span>`;
-    }
-    if (clean === 'some concerns' || clean === 'some_concerns' || clean === 'some') {
-      return `<span class="rob-dot rob-some" title="Some concerns">?</span>`;
-    }
-    if (clean === 'high') {
-      return `<span class="rob-dot rob-high" title="High risk of bias">−</span>`;
-    }
-    return `<span class="rob-dot" style="background: rgba(255,255,255,0.08); color: var(--text-muted); border: 1px dashed rgba(255,255,255,0.2);" title="${val}">⋯</span>`;
   };
 
   tbody.innerHTML = filtered.map((s, idx) => {
-    let d1, d2, d3, d4, d5, overall, rationale;
+    const rr = resultRob(s, activeOutcome);
+    const d1 = rr.d1, d2 = rr.d2, d3 = rr.d3, d4 = rr.d4, d5 = rr.d5;
+    const overall = rr.overall;
+    let rationale;
 
-    if (activeOutcome === 'summary') {
-      d1 = s.rob2.d1;
-      d2 = s.rob2.d2;
-      d3 = s.rob2.d3;
-      d4 = s.rob2.d4;
-      d5 = s.rob2.d5;
-      overall = s.rob2.overall;
-      rationale = s.rob2.rationale || 'Study-level consensus overview';
+    if (rr.isStudyLevel) {
+      rationale = rr.rationale;
       assessedCount++;
+    } else if (rr.state === 'not-assessed' || rr.state === 'pending') {
+      rationale = `<span style="color: var(--text-muted); font-style: italic;">${rr.rationale}</span>`;
+      unmeasuredCount++;
     } else {
-      const ocData = s.rob2_outcomes && s.rob2_outcomes[activeOutcome];
-      if (ocData && ocData.status === 'Assessed') {
-        d1 = ocData.d1;
-        d2 = ocData.d2;
-        d3 = ocData.d3;
-        d4 = ocData.d4;
-        d5 = ocData.d5;
-        overall = ocData.overall;
-        rationale = `<strong>Assessed:</strong> ${ocData.outcome_name} (${ocData.timepoint})`;
-        assessedCount++;
-      } else {
-        d1 = 'NR';
-        d2 = 'NR';
-        d3 = 'NR';
-        d4 = 'NR';
-        d5 = 'NR';
-        overall = 'NR';
-        rationale = '<span style="color: var(--text-muted); font-style: italic;">Outcome not measured or reported in this trial (domain judgments not imputed)</span>';
-        unmeasuredCount++;
-      }
+      rationale = `<strong>Assessed:</strong> ${rr.outcome_name} (${rr.timepoint})`;
+      assessedCount++;
     }
 
     return `
@@ -996,7 +1098,10 @@ function renderMetaLab() {
   } else if (currentSubgroup === 'surgery') {
     groupingFn = s => s.surgery_category;
   } else if (currentSubgroup === 'rob') {
-    groupingFn = s => s.rob2.overall;
+    groupingFn = s => {
+      const st = resultRob(s, currentOutcome).state;
+      return (ROB_BADGE[st] || ROB_BADGE['not-assessed']).text;
+    };
   }
 
   // Set up X axis scale
@@ -2231,11 +2336,17 @@ forest(res_remi, slab=dat$study_key, xlab="Intraoperative Remifentanil MD (µg)"
 // Export Filtered CSV
 function exportDatasetCSV() {
   const filtered = getFilteredStudies(true);
-  let csv = "study_id,study_key,author,year,country,modality,comparator,surgery_category,total_n,arm1_n,arm1_mean,arm1_sd,arm2_n,arm2_mean,arm2_sd,mean_diff,rob2_overall,author_inquiry_status\n";
+  // RoB 2 is result-specific: export the judgment for the outcome being exported,
+  // and keep the study-level overview in a separate, explicitly named column.
+  let csv = "study_id,study_key,author,year,country,modality,comparator,surgery_category,total_n,arm1_n,arm1_mean,arm1_sd,arm2_n,arm2_mean,arm2_sd,mean_diff,exported_outcome,rob2_result_specific,rob2_study_level_overview,author_inquiry_disposition\n";
   filtered.forEach(s => {
     const out = s.outcomes[currentOutcome] || { arm1_n: 30, arm1_mean: 0, arm1_sd: 0, arm2_n: 30, arm2_mean: 0, arm2_sd: 0, mean_diff: 0 };
     const inqStatus = s.author_inquiry && s.author_inquiry.has_inquiry ? s.author_inquiry.status : 'Complete';
-    csv += `"${s.id}","${s.key}","${s.author}",${s.year},"${s.country}","${s.modality}","${s.comparator_short}","${s.surgery_category}",${s.population.total_n},${out.arm1_n},${out.arm1_mean},${out.arm1_sd},${out.arm2_n},${out.arm2_mean},${out.arm2_sd},${out.mean_diff},"${s.rob2.overall}","${inqStatus}"\n`;
+    const rr = resultRob(s, currentOutcome);
+    const rrLabel = (rr.state === 'not-assessed') ? 'Not assessed'
+      : (rr.state === 'pending') ? 'Pending'
+      : (rr.overall || 'Not assessed');
+    csv += `"${s.id}","${s.key}","${s.author}",${s.year},"${s.country}","${s.modality}","${s.comparator_short}","${s.surgery_category}",${s.population.total_n},${out.arm1_n},${out.arm1_mean},${out.arm1_sd},${out.arm2_n},${out.arm2_mean},${out.arm2_sd},${out.mean_diff},"${currentOutcome}","${rrLabel}","${s.rob2.overall}","${inqStatus}"\n`;
   });
 
   const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
@@ -2270,7 +2381,12 @@ function openStudyDrawer(id) {
     <div style="margin-bottom: 1.5rem;">
       <span class="kpi-badge badge-indigo">${s.modality}</span>
       <span class="kpi-badge badge-emerald">${s.comparator_type}</span>
-      <span class="kpi-badge ${s.rob2.overall === 'Low' ? 'badge-emerald' : 'badge-amber'}">RoB 2: ${s.rob2.overall}</span>
+      ${(() => {
+        const rr = resultRob(s, explorerRobOutcome);
+        const ctx = ROB_OUTCOME_LABELS[explorerRobOutcome] || explorerRobOutcome;
+        return robBadgeHtml(rr.state, `RoB 2 for ${ctx}`) +
+          `<span class="kpi-badge" style="background: rgba(255,255,255,0.06); color: var(--text-muted);">RoB 2 context: ${ctx}</span>`;
+      })()}
       <h2 style="font-size: 1.4rem; font-weight: 800; color: #fff; margin-top: 0.5rem;">${s.key}</h2>
       <p style="font-size: 0.85rem; color: var(--text-secondary);">${s.citation}</p>
       ${s.doi ? `<p style="font-size: 0.78rem; color: var(--text-accent); margin-top: 0.2rem;">DOI: <a href="https://doi.org/${s.doi}" target="_blank" style="color: #818cf8;">${s.doi}</a></p>` : ''}
@@ -2306,8 +2422,8 @@ function openStudyDrawer(id) {
 
     <div style="background: var(--bg-panel); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-        <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: var(--text-muted); margin: 0;">Cochrane Risk of Bias 2 (RoB 2) Assessment</h4>
-        <span class="badge ${s.rob2.overall === 'Low' ? 'badge-emerald' : (s.rob2.overall === 'Some concerns' || s.rob2.overall === 'Some Concerns' ? 'badge-amber' : 'badge-rose')}">Overall: ${s.rob2.overall}</span>
+        <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: var(--text-muted); margin: 0;">Cochrane RoB 2 &mdash; study-level overview <span style="text-transform: none; font-weight: 500; color: #94a3b8;">(not result-specific; see the per-result table below)</span></h4>
+        ${robBadgeHtml(robState(s.rob2.overall), 'Study-level overview')}
       </div>
       
       <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.75rem; font-size: 0.72rem;">
