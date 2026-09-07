@@ -36,3 +36,16 @@ rsync -a --delete \
 
 echo "Synced dashboard/ -> docs/"
 diff -rq "$SRC" "$DST" >/dev/null && echo "Parity verified: dashboard/ == docs/"
+
+# 3. Derive the cache-busting token from the CONTENT of the assets it guards.
+#    A hand-maintained token silently serves stale JS to returning visitors
+#    whenever someone edits data.js but forgets to bump it.
+HASH="$(cat "$SRC/data.js" "$SRC/app.js" "$SRC/translations.js" \
+             "$SRC/meta_engine.js" "$SRC/reader_assist.js" "$SRC/styles.css" \
+        | shasum -a 256 | cut -c1-12)"
+/usr/bin/sed -i '' -E "s/\?v=[A-Za-z0-9_]+/?v=${HASH}/g" "$SRC/index.html"
+echo "Cache buster set from content hash: ${HASH}"
+
+# Re-mirror so docs/ picks up the rewritten index.html.
+rsync -a --delete --exclude '.DS_Store' "$SRC/" "$DST/"
+diff -rq "$SRC" "$DST" >/dev/null && echo "Parity re-verified after cache-buster rewrite"
