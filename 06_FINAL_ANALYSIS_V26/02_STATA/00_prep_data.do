@@ -26,11 +26,43 @@ import excel using "`master_xlsx'", sheet("Stata_Opioid24_Primary") firstrow cle
 rename provisional_primary_include inc_primary
 rename provisional_sensitivity_include inc_sens
 
-* Generate MME conversion factor and converted doses
+* ------------------------------------------------------------------------------
+* MME CONVERSION FACTORS (IV morphine milligram equivalents)
+*
+* Prespecified equianalgesic conversion framework. Uncertainty in the sufentanil
+* factor is carried explicitly into 11_sufentanil_conversion_sensitivity.do.
+* Full per-drug audit: 06_FINAL_ANALYSIS_V26/06_AUDIT/opioid_conversion_audit.csv
+*
+*   morphine        1.0 mg MME per mg    reference standard, self-referential
+*   hydromorphone   5.0 mg MME per mg    BC Ministry of Health palliative
+*                                        equianalgesic table: hydromorphone 2 mg
+*                                        parenteral = morphine 10 mg parenteral.
+*                                        (Some tables use 1.5 mg -> 6.67:1; the
+*                                        published parenteral range is 5:1-6.67:1.)
+*   sufentanil      1.0 mg MME per ug    1000:1. BC table: sufentanil 0.01-0.04 mg
+*                                        (10-40 ug) = morphine 10 mg parenteral,
+*                                        i.e. 250:1-1000:1. FDA/Pfizer sufentanil
+*                                        label: "as much as 10 times as potent as
+*                                        fentanyl" in balanced general anaesthesia
+*                                        (5-7x as sole agent), and IV fentanyl is
+*                                        100:1 vs morphine -> 500:1-1000:1.
+*                                        Balanced general anaesthesia is the
+*                                        setting of the contributing trials.
+*
+* CORRECTED 2026-09-07. This factor was previously 0.1 (100:1), identical to the
+* fentanyl ratio and unsupported by any located source, since every source places
+* sufentanil at 5-10x fentanyl's potency. See opioid_conversion_audit.csv for the
+* full record of the discrepancy and the sensitivity analysis across 0.1/0.25/
+* 0.5/1.0 that quantifies the conversion's influence on every affected result.
+*
+* NOTE: Hedges' g below is computed from NATIVE units (mean_i, sd_i), so every
+* standardized (SMD) analysis in this project is invariant to these factors.
+* Only mean-difference-in-MME analyses are affected.
+* ------------------------------------------------------------------------------
 gen mme_factor = .
 replace mme_factor = 1.0 if unit == "mg morphine" | unit == "mg IV morphine" | unit == "mg MME"
 replace mme_factor = 5.0 if unit == "mg hydromorphone"
-replace mme_factor = 0.1 if unit == "µg sufentanil"
+replace mme_factor = 1.0 if unit == "µg sufentanil"
 
 gen mean_i_mme = mean_i * mme_factor
 gen sd_i_mme   = sd_i   * mme_factor
@@ -100,16 +132,16 @@ di as txt "Saved 01_DATA/analysis_dataset_locked.dta (N = " _N ")"
 use "06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta", clear
 keep if target == "A"
 
-* MME Conversion:
-* Chen 2020: sufentanil ug -> MME (factor 0.1)
-* An 2014: fentanyl mg -> MME (factor 100.0)
+* MME Conversion (same prespecified framework as PART 1; see header there):
+* Chen 2020: sufentanil ug -> MME (factor 1.0, 1000:1)   [CORRECTED from 0.1]
+* An 2014: fentanyl mg -> MME (factor 100.0, i.e. 100:1 per ug)
 * Zhang 2023: Median/IQR 110 (80-110) vs 110 (90-110) mg IV MME -> Wan et al. conversion:
 *   arm_i: mean = (80 + 110 + 110)/3 = 100.0, sd = (110 - 80)/1.34898 = 22.239
 *   arm_c: mean = (90 + 110 + 110)/3 = 103.333, sd = (110 - 90)/1.34898 = 14.826
-* Xie 2014: sufentanil ug -> MME (factor 0.1)
+* Xie 2014: sufentanil ug -> MME (factor 1.0, 1000:1)     [CORRECTED from 0.1]
 
 gen mme_factor = .
-replace mme_factor = 0.1 if unit == "µg sufentanil"
+replace mme_factor = 1.0 if unit == "µg sufentanil"
 replace mme_factor = 100.0 if unit == "mg fentanyl"
 replace mme_factor = 1.0 if unit == "mg IV morphine-equivalent"
 

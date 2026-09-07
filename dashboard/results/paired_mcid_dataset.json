@@ -4,10 +4,25 @@
     "statistical_source": "StataNow 19.5 BE - 06_FINAL_ANALYSIS_V26/02_STATA/01_opioid24_primary.do",
     "prospero": "CRD420251090635",
     "cohort": "v26 strict primary 24-h opioid set (inc_primary==1), k=6, N=628",
-    "note": "Supersedes the pre-v26 k=11 paired cohort, which counted the overlapping Yeh 2010 / Yeh 2011 reports as independent trials and drew on conditional and non-24-h records."
+    "conversion_note": "Sufentanil converted at 1000:1 (1.0 mg IV MME per ug) per the corrected prespecified framework; see 06_AUDIT/opioid_conversion_audit.csv."
   },
   "k": 6,
   "studies": [
+    {
+      "study_id": "1879896688",
+      "study_key": "Chen 2020",
+      "citation": "Chen J, et al. *Thorac Cancer*. 2020;11(4):928-934. DOI: 10.1111/1759-7714.13343",
+      "modality": "TEAS",
+      "comparator": "Sham",
+      "opioid_timepoint": "0-24 h",
+      "opioid_md_mme": -28.19,
+      "opioid_unit": "mg IV MME",
+      "pain_timepoint": "~24 h",
+      "pain_md_vas": -0.65,
+      "pain_scale": "VAS (0-10)",
+      "result_rob_opioid_24h": "Some concerns",
+      "paired_inclusion_status": "Included (v26 strict primary paired cohort)"
+    },
     {
       "study_id": "1879897506",
       "study_key": "Chen 1998",
@@ -34,21 +49,6 @@
       "opioid_unit": "mg IV MME",
       "pain_timepoint": "~24 h",
       "pain_md_vas": -0.03,
-      "pain_scale": "VAS (0-10)",
-      "result_rob_opioid_24h": "Some concerns",
-      "paired_inclusion_status": "Included (v26 strict primary paired cohort)"
-    },
-    {
-      "study_id": "1879896688",
-      "study_key": "Chen 2020",
-      "citation": "Chen J, et al. *Thorac Cancer*. 2020;11(4):928-934. DOI: 10.1111/1759-7714.13343",
-      "modality": "TEAS",
-      "comparator": "Sham",
-      "opioid_timepoint": "0-24 h",
-      "opioid_md_mme": -2.82,
-      "opioid_unit": "mg IV MME",
-      "pain_timepoint": "~24 h",
-      "pain_md_vas": -0.65,
       "pain_scale": "VAS (0-10)",
       "result_rob_opioid_24h": "Some concerns",
       "paired_inclusion_status": "Included (v26 strict primary paired cohort)"

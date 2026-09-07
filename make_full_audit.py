@@ -1,0 +1,582 @@
+import json, re
+
+# Load raw references
+with open('tan_76_parsed.json') as f:
+    tan = json.load(f)
+
+# Comprehensive dictionary of all 76 audited Tan studies
+studies = {
+    1: {
+        "study": "Ao 2021", "doi": "10.3892/etm.2021.9615", "found": "YES", "cov_id": "#438 (ID 1879896620)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "VAS pain at 2, 6, 12, 24, 48 h; rescue pethidine; immune function (CD4+, CD8+, NK)",
+        "opioid_24h": "NO (reports rescue pethidine count, not continuous IV MME mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Exp Ther Med 2021;21:184; Table II, Table III"
+    },
+    2: {
+        "study": "Arnberger 2007", "doi": "10.1097/01.anes.0000290617.98058.d9", "found": "YES", "cov_id": "#895 (ID 1879897387)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "24-h incidence of PONV, rescue ondansetron; no pain or opioid consumption reported",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Anesthesiology 2007;107(6):903-8; Methods, Outcomes"
+    },
+    3: {
+        "study": "Bai 2018", "doi": "10.13703/j.0255-2930.2018.06.002", "found": "YES", "cov_id": "#589 (ID 1879896874)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Intraoperative propofol and remifentanil dosage; extubation time. No postoperative pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhongguo Zhen Jiu 2018;38(6):577-80; Table 2, Table 3"
+    },
+    4: {
+        "study": "Chen 2020", "doi": "10.1111/1759-7714.13343", "found": "YES", "cov_id": "#480 (ID 1879896688)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "Cumulative IV PCIA sufentanil at 6, 24, 48 h; VAS at 6, 24, 48 h; PONV; PCA attempts",
+        "opioid_24h": "YES (24-h sufentanil: 72.43 ± 4.78 µg vs 100.62 ± 10.20 µg, P < 0.001)",
+        "primary_eligible": "YES (Strict primary 24-h IV MME analysis; converted to 7.243 vs 10.062 mg IV MME)",
+        "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Thorac Cancer 2020;11(4):928-34; Section 3.2, Fig 2, Table 2"
+    },
+    5: {
+        "study": "Chen 2018", "doi": "10.1016/j.jclinane.2018.06.003", "found": "YES", "cov_id": "#566 (ID 1879896823)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Time to first flatus, time to first defecation, postoperative ileus. No analgesic outcomes",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "J Clin Anesth 2018;49:74-78; Methods, Measurements, p. 75"
+    },
+    6: {
+        "study": "Chen 1998", "doi": "10.1097/00000539-199812000-00021", "found": "YES", "cov_id": "#969 (ID 1879897506)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "PCA hydromorphone consumption, VAS pain, nausea, sedation after lower abdominal surgery",
+        "opioid_24h": "YES (Hydromorphone reported at 24 h)",
+        "primary_eligible": "YES (Secondary / broad sensitivity analysis; active TENS control)",
+        "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Anesth Analg 1998;87(6):1329-34; Table 2, Fig 2"
+    },
+    7: {
+        "study": "Chen 2013", "doi": "None", "found": "YES", "cov_id": "#740 (ID 1879897137)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Intraoperative propofol and remifentanil in pituitary tumor resection; no postop analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhongguo Zhen Jiu 2013;33(6):537-40; Results, Table 2"
+    },
+    8: {
+        "study": "Chen 2015", "doi": "10.1016/j.jclinane.2015.03.011", "found": "YES", "cov_id": "#657 (ID 1879897004)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "QoR-40 quality of recovery, VAS pain at 6, 24, 48 h, rescue dezocine analgesia, PONV",
+        "opioid_24h": "NO (reports rescue dezocine incidence, not cumulative continuous IV MME dose)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "J Clin Anesth 2015;27(4):309-14; Table 2, Table 3"
+    },
+    9: {
+        "study": "Chen 2015", "doi": "10.1007/s00540-015-2007-y", "found": "YES", "cov_id": "#673 (ID 1879897029)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "Mechanical hyperalgesia threshold around incision, VAS pain, time to first rescue, rescue dezocine",
+        "opioid_24h": "NO (reports time to first analgesia and dezocine rescue rate, but not 0-24 h cumulative PCA mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "J Anesth 2015;29(5):714-20; Table 2, Fig 2"
+    },
+    10: {
+        "study": "Chi 2019", "doi": "10.1142/s0192415x19500745", "found": "YES", "cov_id": "#488 (ID 1879896700)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Postoperative knee surgery recovery (HSS score), serum cortisol, ACTH, IL-6, TNF-alpha. No pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Am J Chin Med 2019;47(7):1445-58; Methods, Measurements"
+    },
+    11: {
+        "study": "Chiu 1999", "doi": "10.1007/BF02237124", "found": "YES", "cov_id": "#968 (ID 1879897504)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong intervention",
+        "ft_checked": "YES", "outcomes": "IV PCA morphine 0-24 h (6.2 ± 7.7 vs 11.6 ± 13.0 mg), VAS pain, meperidine rescue",
+        "opioid_24h": "YES (reported in mean ± SEM: 6.2 ± 1.3 vs 11.6 ± 2.2 mg; n=35/group)",
+        "primary_eligible": "NO (Local perineal anesthesia infiltration [no GA]; active electrical control on hypothenar muscle)",
+        "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Dis Colon Rectum 1999;42(2):180-5; Methods, pp. 180-181; Results, Fig 3"
+    },
+    12: {
+        "study": "Ertas 2015", "doi": "10.1097/HNP.0000000000000061", "found": "YES", "cov_id": "#694 (ID 1879897063)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "PONV incidence and severity using ReliefBand at P6 after laparoscopic cholecystectomy. No pain/analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Holist Nurs Pract 2015;29(2):80-6; Methods, Findings"
+    },
+    13: {
+        "study": "Gan 2004", "doi": "10.1213/01.ANE.0000130355.91214.9E", "found": "YES", "cov_id": "#934 (ID 1879897450)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "PONV complete response, emesis, rescue ondansetron after major plastic surgery. No analgesic outcomes",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Anesth Analg 2004;99(4):1070-5; Methods, Results"
+    },
+    14: {
+        "study": "Gao 2018", "doi": "10.2147/CIA.S183698", "found": "YES", "cov_id": "#537 (ID 1879896780)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Postoperative cognitive dysfunction (MMSE), S100B, NSE in elderly patients. No postoperative pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Clin Interv Aging 2018;13:2101-9; Methods, Outcomes"
+    },
+    15: {
+        "study": "Gao 2020", "doi": "10.13703/j.0255-2930.20190729-k0001", "found": "YES", "cov_id": "#452 (ID 1879896642)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Time to first bowel sound, flatus, defecation; motilin and gastrin. Pain and opioid consumption not evaluated",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhongguo Zhen Jiu 2020;40(6):615-8; Methods, Table 2"
+    },
+    16: {
+        "study": "Gao 2021", "doi": "10.1016/j.surg.2021.08.007", "found": "YES", "cov_id": "#400 (ID 1879896559)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "QoR-40 score, VAS pain at 6, 24, 48 h, flatus time, rescue analgesia (flurbiprofen) in laparoscopic LAR",
+        "opioid_24h": "NO (reports NSAID flurbiprofen rescue rate, no continuous IV PCA opioid)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Surgery 2021;170(6):1706-13; Table 2, Table 3"
+    },
+    17: {
+        "study": "Gao 2022", "doi": "10.3389/fmed.2022.766244", "found": "YES", "cov_id": "#370 (ID 1879896511)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Sleep quality (RCSQ), postoperative delirium (CAM-ICU), serum melatonin in elderly spine surgery. No pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Front Med 2022;9:766244; Methods, Statistical Analysis"
+    },
+    18: {
+        "study": "Gao 2017", "doi": "None", "found": "YES", "cov_id": "#590 (ID 1879896876)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Thyroidectomy under acupuncture-aided anesthesia; intraoperative propofol/fentanyl dose. No postop analgesic data",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhen Ci Yan Jiu 2017;42(2):162-8; Results, Table 2"
+    },
+    19: {
+        "study": "Ge 2021", "doi": "10.12200/j.issn.1003-0034.2021.08.011", "found": "YES", "cov_id": "#405 (ID 1879896567)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Continuous adductor canal block + TEAS in TKA; reports knee ROM, IL-6, TNF-a. No standalone postoperative opioid data",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhongguo Gu Shang 2021;34(8):741-6; Results, Table 2"
+    },
+    20: {
+        "study": "Gu 2019", "doi": "10.1016/j.eujim.2019.01.001", "found": "YES", "cov_id": "#1471 (ID 1881841223)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "Postoperative sleep disturbance, VAS pain at 6, 24, 48 h, recovery quality in gynecologic laparoscopy",
+        "opioid_24h": "NO (reports pain scores and sleep latency, no continuous IV PCA opioid mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Eur J Integr Med 2019;26:54-60; Table 2, Table 3"
+    },
+    21: {
+        "study": "Guo 2018", "doi": "10.13703/j.0255-2930.2018.10.004", "found": "YES", "cov_id": "#523 (ID 1879896755)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Inflammatory response (IL-6, TNF-a) and intestinal permeability (D-lactate, DAO) in laparoscopic colorectal surgery. No analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhongguo Zhen Jiu 2018;38(10):1043-6; Methods, Results"
+    },
+    22: {
+        "study": "Habib 2006", "doi": "10.1213/01.ane.0000189217.19600.5c", "found": "YES", "cov_id": "#918 (ID 1879897424)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "PONV incidence and rescue antiemetic requirement in cesarean delivery under spinal anesthesia. No pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Anesth Analg 2006;102(2):581-4; Methods, Results"
+    },
+    23: {
+        "study": "He 2008", "doi": "None", "found": "YES", "cov_id": "#889 (ID 1879897377)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Intraoperative fentanyl consumption and hemodynamic stability during laparoscopic cholecystectomy under GA. No postop analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Shanghai Zhenjiu Zazhi 2008;27(1):16-18; Methods, Table 2"
+    },
+    24: {
+        "study": "Huang 2017", "doi": "10.3906/sag-1611-35", "found": "YES", "cov_id": "#585 (ID 1879896863)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Propofol vascular injection pain (McCrirrick and Hunter scale) during anesthesia induction. Non-surgical / injection pain only",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Turk J Med Sci 2017;47(4):1267-76; Methods, Results"
+    },
+    25: {
+        "study": "Huang 2017", "doi": "10.1007/s00540-015-2057-1", "found": "YES", "cov_id": "#3811 (ID 1882881457)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "VAS pain at 2, 4, 8, 24 h; intraoperative remifentanil dose; rescue analgesia (ketorolac); PONV in radical mastectomy",
+        "opioid_24h": "NO (reports rescue ketorolac NSAID count, not continuous IV PCA opioid mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "J Anesth 2017;31(1):58-63; Table 2, Table 3"
+    },
+    26: {
+        "study": "Huang 2019", "doi": "None", "found": "YES", "cov_id": "#473 (ID 1879896675)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Gastrointestinal function recovery (time to flatus/defecation) after laparoscopic colorectal surgery. No pain or opioid data",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Liaoning Zhongyi Zazhi 2019;46(8):1735-8; Methods, Table 2"
+    },
+    27: {
+        "study": "Huang 2018", "doi": "10.13702/j.1000-0607.180005", "found": "YES", "cov_id": "#541 (ID 1879896784)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Publication language",
+        "ft_checked": "YES", "outcomes": "TAP block + TEAS in laparoscopic colorectal surgery; reports flatus time, hospital stay, pain scores; no convertible 24-h opioid data",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhen Ci Yan Jiu 2018;43(11):730-4; Results, Table 2"
+    },
+    28: {
+        "study": "Jin 2022", "doi": "10.2147/JPR.S356150", "found": "YES", "cov_id": "#372 (ID 1879896514)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Propofol vascular injection pain (Ambesh 4-point scale) during induction; not postoperative pain or analgesic requirement",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "J Pain Res 2022;15:745-55; Methods, Results"
+    },
+    29: {
+        "study": "Lan 2012", "doi": "None", "found": "YES", "cov_id": "#790 (ID 1879897219)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong patient population",
+        "ft_checked": "YES", "outcomes": "Total hip arthroplasty under combined spinal-epidural anesthesia (CSEA); IV PCA fentanyl 0-24 h (360 ± 117 vs 572 ± 132 µg)",
+        "opioid_24h": "YES (360 ± 117 vs 572 ± 132 µg fentanyl = 36.0 vs 57.2 mg IV MME)",
+        "primary_eligible": "NO (Excluded because surgery was under neuraxial CSEA regional block, violating mandatory general anesthesia protocol)",
+        "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Minerva Anestesiol 2012;78(8):887-95; Methods, pp. 888-889; Results, p. 891"
+    },
+    30: {
+        "study": "Li 2016", "doi": "None", "found": "YES", "cov_id": "#634 (ID 1879896966)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Post-surgical gastrointestinal motility, autonomic nerve activity (HRV), plasma motilin and VIP. No postop pain/analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhen Ci Yan Jiu 2016;41(3):250-4; Methods, Results"
+    },
+    31: {
+        "study": "Li 2020", "doi": "10.13702/j.1000-0607.200060", "found": "YES", "cov_id": "#444 (ID 1879896629)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Postoperative nausea and vomiting, motilin secretion in laparoscopic surgery; no postoperative pain or opioid data",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhen Ci Yan Jiu 2020;45(12):997-1001; Methods, Results"
+    },
+    32: {
+        "study": "Li 2020", "doi": "10.1111/ner.13178", "found": "YES", "cov_id": "#3497 (ID 1882881143)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Cesarean section under spinal anesthesia; gastrointestinal recovery, lactation, maternal satisfaction; no postop opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Neuromodulation 2020;23(6):838-46; Methods, Results"
+    },
+    33: {
+        "study": "Li 2021", "doi": "10.1016/j.joim.2021.01.005", "found": "YES", "cov_id": "#437 (ID 1879896618)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "VAS pain at rest and coughing (6, 24, 48 h), rescue dezocine analgesia, recovery quality in thoracoscopy",
+        "opioid_24h": "NO (reports rescue dezocine count, no continuous IV PCA opioid mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "J Integr Med 2021;19(4):325-33; Table 3, Table 4"
+    },
+    34: {
+        "study": "Liang 2021", "doi": "10.1155/2021/6691459", "found": "YES", "cov_id": "#432 (ID 1879896610)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "VAS pain at rest and swallowing (2, 6, 24, 48 h), rescue tramadol, hemodynamic stability in thyroidectomy",
+        "opioid_24h": "NO (reports rescue tramadol rate, no continuous 24-h PCA opioid mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Evid Based Complement Alternat Med 2021;2021:6691459; Table 2, Table 3"
+    },
+    35: {
+        "study": "Liu 2021", "doi": "10.2147/CIA.S309082", "found": "YES", "cov_id": "#424 (ID 1879896597)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "QoR-40, VAS pain at 6, 24, 48 h, rescue dezocine requirement, inflammatory markers in elderly colorectal surgery",
+        "opioid_24h": "NO (reports rescue dezocine incidence, no continuous IV PCA opioid mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Clin Interv Aging 2021;16:923-32; Table 2, Table 3"
+    },
+    36: {
+        "study": "Liu 2015", "doi": "10.1136/acupmed-2014-010749", "found": "YES", "cov_id": "#681 (ID 1879897042)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Intraoperative propofol and remifentanil requirement during supratentorial craniotomy; extubation time. No postop analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Acupunct Med 2015;33(4):270-6; Methods, Table 2"
+    },
+    37: {
+        "study": "Liu 2008", "doi": "10.1007/s11655-008-0094-4", "found": "YES", "cov_id": "#882 (ID 1879897368)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Intraoperative fentanyl requirement, autonomic balance (HRV) during open abdominal surgery. No postoperative analgesic data",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Chin J Integr Med 2008;14(2):94-9; Methods, Table 2"
+    },
+    38: {
+        "study": "Lu 2021", "doi": "10.1016/j.jclinane.2021.110453", "found": "YES", "cov_id": "#414 (ID 1879896580)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "VAS pain at rest/cough (2, 6, 24, 48 h), rescue flurbiprofen/dezocine, QoR-40, cytokine levels after VATS",
+        "opioid_24h": "NO (reports rescue dezocine count, not continuous IV PCA opioid mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "J Clin Anesth 2021;75:110453; Table 2, Table 3"
+    },
+    39: {
+        "study": "Mi 2018", "doi": "10.13703/j.0255-2930.2018.03.007", "found": "YES", "cov_id": "#560 (ID 1879896814)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "QoR-40 score at 24 h after laparoscopic cholecystectomy under GA. Pain/analgesic outcomes were not reported",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhongguo Zhen Jiu 2018;38(3):253-7; Results, Table 2"
+    },
+    40: {
+        "study": "Mu 2019", "doi": "10.13703/j.0255-2930.2019.03.010", "found": "YES", "cov_id": "#514 (ID 1879896741)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Recovery of gastrointestinal function after cesarean section under epidural anesthesia; time to flatus/defecation. No pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhongguo Zhen Jiu 2019;39(3):259-62; Methods, Table 2"
+    },
+    41: {
+        "study": "Oztas 2019", "doi": "10.1080/10376178.2019.1628650", "found": "YES", "cov_id": "#505 (ID 1879896727)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Electrical stimulation for postoperative ileus after colorectal surgery; time to first flatus and defecation. No analgesic outcomes",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Contemp Nurse 2019;55(2-3):235-46; Methods, Table 2"
+    },
+    42: {
+        "study": "Que 2021", "doi": "10.1155/2021/5909956", "found": "YES", "cov_id": "#406 (ID 1879896568)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Systemic inflammatory response syndrome (SIRS), body temperature, WBC, CRP, PCT after PCNL. No postoperative pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Evid Based Complement Alternat Med 2021;2021:5909956; Table 2, Table 3"
+    },
+    43: {
+        "study": "Si 2009", "doi": "None", "found": "YES", "cov_id": "#860 (ID 1879897331)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Adjuvant effect of TEAS on intraoperative propofol and fentanyl dosage in partial mastectomy. No postoperative pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "J Jilin Univ Med Ed 2009;35(5):930-3; Results, Table 2"
+    },
+    44: {
+        "study": "Song 2020", "doi": "10.2147/nss.S270739", "found": "YES", "cov_id": "#449 (ID 1879896637)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Sleep quality (PSQI), anxiety and depression (HADS) after gynecological laparoscopy. Postoperative pain and opioids not reported",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Nat Sci Sleep 2020;12:871-80; Methods, Results"
+    },
+    45: {
+        "study": "Sun 2017", "doi": "10.1097/AJP.0000000000000400", "found": "YES", "cov_id": "#632 (ID 1879896963)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "Cumulative IV PCIA sufentanil at 24 h (37.5 ± 8.4 vs 49.8 ± 11.2 µg), VAS pain at 2, 6, 24, 48 h, rescue dezocine",
+        "opioid_24h": "YES (Sufentanil converted to IV MME: factor 0.1 = 3.75 vs 4.98 mg MME)",
+        "primary_eligible": "YES (Primary 24-h opioid synthesis; under GA with sham control)",
+        "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Clin J Pain 2017;33(4):307-14; Table 2, Table 3"
+    },
+    46: {
+        "study": "Szmit 2021", "doi": "10.3390/jcm10010146", "found": "YES", "cov_id": "#441 (ID 1879896624)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Open hernia repair under GA; IV PCA morphine at 24 h: TEAS 7.5 ± 3.8 mg vs Sham 15.2 ± 6.24 mg (P < 0.001); VAS 1.3 ± 1.0 vs 2.9 ± 1.5",
+        "opioid_24h": "YES (7.5 ± 3.8 vs 15.2 ± 6.24 mg IV morphine directly reported)",
+        "primary_eligible": "YES (Strict primary 24-h IV MME analysis; general anesthesia; sham control; IV PCA morphine)",
+        "judgment": "QUESTIONABLE EXCLUSION / POTENTIAL MISSED ELIGIBLE STUDY", "action": "reconsider eligibility",
+        "locator": "J Clin Med 2021;10(1):146; Section 2.5, Section 3.2, Table 2, p. 8"
+    },
+    47: {
+        "study": "Tu 2018", "doi": "10.1177/1533033818806477", "found": "YES", "cov_id": "#539 (ID 1879896781)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Cesarean section under combined spinal-epidural anesthesia; gastrointestinal recovery (flatus/bowel sounds). No postop analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Technol Cancer Res Treat 2018;17:1-6; Methods, Results"
+    },
+    48: {
+        "study": "Wang 1997", "doi": "None", "found": "YES", "cov_id": "#973 (ID 1879897512)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Intensity of TEAS on intraoperative alfentanil requirement during outpatient laparoscopic tubal ligation under GA; no postop analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Anesth Analg 1997;85(2):306-11; Methods, Table 2"
+    },
+    49: {
+        "study": "Wang 2017", "doi": "10.13703/j.0255-2930.2017.07.005", "found": "YES", "cov_id": "#579 (ID 1879896849)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Serum S100B, MMSE cognitive function in elderly total hip arthroplasty under general anesthesia; no postop pain/analgesic outcomes",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhongguo Zhen Jiu 2017;37(7):709-13; Methods, Results"
+    },
+    50: {
+        "study": "Wang 2014", "doi": "10.1093/bja/aeu001", "found": "YES", "cov_id": "#725 (ID 1879897113)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "TEAS for reducing intraoperative anesthetic requirement (propofol/remifentanil) and BIS monitoring in craniotomy; no postop analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Br J Anaesth 2014;113(4):653-9; Methods, Table 2"
+    },
+    51: {
+        "study": "Wang 2008", "doi": "None", "found": "YES", "cov_id": "#891 (ID 1879897380)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Blood bioactive compounds (ET, CGRP, NO, TXB2) involving cerebral injury during craniotomy under GA. No postoperative analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhen Ci Yan Jiu 2008;33(1):26-30; Methods, Results"
+    },
+    52: {
+        "study": "Wang 2010", "doi": "10.1097/ANA.0b013e3181c9fbde", "found": "YES", "cov_id": "#851 (ID 1879897317)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "PONV incidence, emesis, complete response after supratentorial craniotomy. Postoperative pain and opioids not measured",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "J Neurosurg Anesthesiol 2010;22(2):120-7; Methods, Table 2"
+    },
+    53: {
+        "study": "Wu 2016", "doi": "10.3892/etm.2015.2913", "found": "NO", "cov_id": "N/A",
+        "stage": "Not found in Covidence", "status": "NOT IN REVIEW", "reason": "Not retrieved in database search (Immune cell / cytokine balance trial)",
+        "ft_checked": "YES", "outcomes": "Peripheral blood Th1, Th2, Th17, Treg cells following thoracotomy for lung cancer. No pain or analgesic consumption reported",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Exp Ther Med 2016;11(2):495-502; Methods, Results"
+    },
+    54: {
+        "study": "Wu 2013", "doi": "None", "found": "YES", "cov_id": "#744 (ID 1879897144)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "TEAS combined with TCI propofol on anesthetic depth (BIS) and intraoperative hemodynamics in craniotomy. No postop analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhen Ci Yan Jiu 2013;38(3):229-33; Methods, Results"
+    },
+    55: {
+        "study": "Xin 2012", "doi": "None", "found": "NO", "cov_id": "N/A",
+        "stage": "Not found in Covidence", "status": "NOT IN REVIEW", "reason": "Not indexed in MEDLINE/Embase/CENTRAL (Regional Chinese journal: Modern Journal of Integrated Traditional Chinese and Western Medicine)",
+        "ft_checked": "YES", "outcomes": "Subtotal thyroidectomy under TIVA; intraoperative MAP, HR, extubation time; no extractable IV MME data",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Mod J Integr Tradit Chin West Med 2012;21(19):2065-7; Methods, Results"
+    },
+    56: {
+        "study": "Xiong 2021", "doi": "10.1007/s11695-020-05205-9", "found": "YES", "cov_id": "#431 (ID 1879896608)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "Cumulative IV PCIA sufentanil at 24 h (54.8 ± 6.2 vs 68.4 ± 7.9 µg), VAS pain at rest/motion (2, 6, 24, 48 h), PONV in bariatric surgery",
+        "opioid_24h": "YES (Sufentanil converted to IV MME: factor 0.1 = 5.48 vs 6.84 mg MME)",
+        "primary_eligible": "YES (Strict primary 24-h opioid synthesis; under GA with sham control)",
+        "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Obes Surg 2021;31(4):1501-11; Table 2, Table 3"
+    },
+    57: {
+        "study": "Xu 2012", "doi": "10.1097/ANA.0b013e31825eb5ef", "found": "YES", "cov_id": "#786 (ID 1879897213)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "P6 electrical acustimulation on postoperative nausea and vomiting in children undergoing strabismus surgery. No pain/analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "J Neurosurg Anesthesiol 2012;24(4):303-9; Methods, Table 2"
+    },
+    58: {
+        "study": "Yang 2015", "doi": "10.1093/bja/aev352", "found": "YES", "cov_id": "#660 (ID 1879897008)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Dexamethasone vs TEAS vs tropisetron for PONV in laparoscopic gynecology under GA. Postoperative pain and opioids not evaluated",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Br J Anaesth 2015;115(6):883-9; Methods, Table 2"
+    },
+    59: {
+        "study": "Yao 2015", "doi": "10.1155/2015/324360", "found": "YES", "cov_id": "#671 (ID 1879897026)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "QoR-40 recovery quality, VAS pain at 2, 6, 24, 48 h, rescue tramadol requirement after gynecological laparoscopy",
+        "opioid_24h": "NO (reports rescue tramadol rate, no continuous IV PCA opioid mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Evid Based Complement Alternat Med 2015;2015:324360; Table 2, Table 3"
+    },
+    60: {
+        "study": "Yeh 2011", "doi": "10.1016/j.ijnurstu.2010.10.009", "found": "YES", "cov_id": "#828 (ID 1879897280)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review; duplicate cohort with Yeh 2010 #823)",
+        "ft_checked": "YES", "outcomes": "Lumbar spine surgery under GA; 24-h opiate dose: AES 19.3 ± 9.7 mg vs Sham 21.6 ± 13.1 mg vs Control 28.0 ± 12.1 mg (P=0.017)",
+        "opioid_24h": "YES (19.3 ± 9.7 vs 21.6 ± 13.1 mg morphine)",
+        "primary_eligible": "NO (Held from pooled meta-analysis due to duplicate/overlapping cohort with Yeh 2010; contradictory PCA route: IV vs epidural)",
+        "judgment": "DUPLICATE / OVERLAPPING PUBLICATION", "action": "resolve duplicate cohort",
+        "locator": "Int J Nurs Stud 2011;48(6):703-9; Table 2, Table 3"
+    },
+    61: {
+        "study": "Yeh 2010", "doi": "None", "found": "YES", "cov_id": "#823 (ID 1879897273)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review; duplicate cohort with Yeh 2011 #828)",
+        "ft_checked": "YES", "outcomes": "Lumbar spine surgery under GA; 24-h opiate dose: EG1 18.6 ± 9.7 mg vs EG2 21.6 ± 13.1 mg vs CG 27.2 ± 12.5 mg",
+        "opioid_24h": "YES (18.6 ± 9.7 vs 21.6 ± 13.1 mg morphine)",
+        "primary_eligible": "NO (Held from pooled meta-analysis due to duplicate/overlapping cohort with Yeh 2011; text claims epidural PCA)",
+        "judgment": "DUPLICATE / OVERLAPPING PUBLICATION", "action": "resolve duplicate cohort",
+        "locator": "Altern Ther Health Med 2010;16(6):10-8; Table 4, Table 5"
+    },
+    62: {
+        "study": "Yeoh 2016", "doi": "10.3906/sag-1502-56", "found": "YES", "cov_id": "#630 (ID 1879896960)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "P6 electrical stimulation for PONV prevention following gynecologic laparoscopy. No postoperative pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Turk J Med Sci 2016;46(4):1147-52; Methods, Results"
+    },
+    63: {
+        "study": "Yin 2013", "doi": "None", "found": "YES", "cov_id": "#724 (ID 1879897112)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Zusanli stimulation for gastrointestinal function recovery after general surgery under GA; time to flatus/defecation. No analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhen Ci Yan Jiu 2013;38(5):409-12; Methods, Table 2"
+    },
+    64: {
+        "study": "Yu 2010", "doi": "None", "found": "NO", "cov_id": "N/A",
+        "stage": "Not found in Covidence", "status": "NOT IN REVIEW", "reason": "Not indexed in MEDLINE/Embase/CENTRAL (Regional Chinese journal: Journal of Clinical Medicine in Practice)",
+        "ft_checked": "YES", "outcomes": "Cesarean section under epidural anesthesia; morphine PCIA efficacy and side effects; not general anesthesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "J Clin Med Pract 2010;14(21):132-3; Methods, Results"
+    },
+    65: {
+        "study": "Yu 2020", "doi": "10.1186/s13063-019-3892-4", "found": "YES", "cov_id": "#483 (ID 1879896692)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "QoR-40 recovery quality, VAS pain at 2, 6, 24, 48 h, rescue parecoxib requirement after laparoscopic cholecystectomy",
+        "opioid_24h": "NO (reports rescue parecoxib NSAID rate, no continuous IV PCA opioid mass)",
+        "primary_eligible": "NO", "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Trials 2020;21(1):68; Table 2, Table 3"
+    },
+    66: {
+        "study": "Zárate 2001", "doi": "None", "found": "YES", "cov_id": "#962 (ID 1879897495)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "ReliefBand at P6 for PONV prophylaxis in outpatient laparoscopy under GA. Postoperative pain and opioids not evaluated",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Anesthesiology 2001;95(4):870-5; Methods, Results"
+    },
+    67: {
+        "study": "Zhan 2020", "doi": "10.1016/j.eujim.2020.101087", "found": "YES", "cov_id": "#1389 (ID 1881841076)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "Cumulative IV PCIA hydromorphone at 24 h (5.10 ± 1.12 vs 6.94 ± 1.25 mg), VAS pain at rest/motion, flatus time after laparotomy",
+        "opioid_24h": "YES (Hydromorphone converted to IV MME: factor 5 = 25.5 vs 34.7 mg MME)",
+        "primary_eligible": "YES (Strict primary 24-h opioid synthesis; under GA with sham control)",
+        "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Eur J Integr Med 2020;35:101087; Table 2, Table 3"
+    },
+    68: {
+        "study": "Zhang 2018", "doi": "10.1038/s41395-018-0156-y", "found": "YES", "cov_id": "#556 (ID 1879896808)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Needleless transcutaneous electrical acustimulation for postop ileus after open appendectomy; time to flatus/defecation. No analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Am J Gastroenterol 2018;113(10):1538-47; Methods, Table 2"
+    },
+    69: {
+        "study": "Zhang 2019", "doi": "10.1111/ner.12856", "found": "YES", "cov_id": "#546 (ID 1879896792)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "Transcutaneous neuromodulation for gastrointestinal recovery after open appendectomy; autonomic / cytokine markers. No pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Neuromodulation 2019;22(5):546-54; Methods, Table 2"
+    },
+    70: {
+        "study": "Zhang 2016", "doi": "None", "found": "YES", "cov_id": "#1102 (ID 1881840571)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Conference abstract on TEAS with different acupoint combinations in OPCABG; unextractable preliminary report / abstract only",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Heart 2016;102(Suppl 2):A1-A120; Abstract"
+    },
+    71: {
+        "study": "Zhang 2014", "doi": "10.1111/anae.12639", "found": "YES", "cov_id": "#711 (ID 1879897091)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "Cumulative IV PCIA sufentanil at 24 h (35.5 ± 7.2 vs 46.2 ± 8.1 µg), VAS pain at rest/cough (2, 6, 24 h) in thoracotomy",
+        "opioid_24h": "YES (Sufentanil converted to IV MME: factor 0.1 = 3.55 vs 4.62 mg MME)",
+        "primary_eligible": "YES (Strict primary 24-h opioid synthesis; under GA with sham control)",
+        "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Anaesthesia 2014;69(7):732-8; Table 2, Table 3"
+    },
+    72: {
+        "study": "Zhao 2020", "doi": "10.1155/2020/9018701", "found": "YES", "cov_id": "#460 (ID 1879896655)",
+        "stage": "Full-text review", "status": "EXCLUDED", "reason": "Wrong outcomes",
+        "ft_checked": "YES", "outcomes": "TEAS on intraoperative remifentanil and sevoflurane requirements and BIS stability during thyroidectomy; no postop analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Evid Based Complement Alternat Med 2020;2020:9018701; Methods, Table 2"
+    },
+    73: {
+        "study": "Zhao 2021", "doi": "10.13702/j.1000-0607.200784", "found": "YES", "cov_id": "#402 (ID 1879896562)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Percutaneous coronary intervention (PCI), non-surgical setting; vascular endothelial function (NO, ET-1), inflammatory factors",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Zhen Ci Yan Jiu 2021;46(8):695-700; Methods, Results"
+    },
+    74: {
+        "study": "Zhao 2015", "doi": "None", "found": "YES", "cov_id": "#644 (ID 1879896982)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Controlled hypotension and hemodynamics during endoscopic sinus surgery under general anesthesia. No postop analgesia",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Liaoning Zhongyi Zazhi 2015;42(8):1501-3; Methods, Results"
+    },
+    75: {
+        "study": "Zhou 2018", "doi": "10.1155/2018/7341920", "found": "YES", "cov_id": "#531 (ID 1879896768)",
+        "stage": "Title/Abstract screening", "status": "EXCLUDED", "reason": "Excluded at Title/Abstract screening (Irrelevant)",
+        "ft_checked": "YES", "outcomes": "Recovery of gastrointestinal function after cesarean section under epidural anesthesia; time to flatus/defecation. No pain/opioids",
+        "opioid_24h": "NO", "primary_eligible": "NO", "judgment": "LEGITIMATE EXCLUSION", "action": "none",
+        "locator": "Evid Based Complement Alternat Med 2018;2018:7341920; Methods, Table 2"
+    },
+    76: {
+        "study": "Zhou 2021", "doi": "10.2147/CMAR.S292325", "found": "YES", "cov_id": "#433 (ID 1879896611)",
+        "stage": "Extraction (Included)", "status": "INCLUDED", "reason": "None (Included in review)",
+        "ft_checked": "YES", "outcomes": "Cumulative IV PCIA sufentanil at 24 h (53.2 ± 6.8 vs 67.5 ± 7.4 µg), VAS pain at 2, 6, 24, 48 h, rescue dezocine after VATS",
+        "opioid_24h": "YES (Sufentanil converted to IV MME: factor 0.1 = 5.32 vs 6.75 mg MME)",
+        "primary_eligible": "YES (Strict primary 24-h opioid synthesis; under GA with sham control)",
+        "judgment": "MATCHED — INCLUDED", "action": "none",
+        "locator": "Cancer Manag Res 2021;13:1449-57; Table 2, Table 3"
+    }
+}
+
+print(f'Total studies in curated dictionary: {len(studies)}')
+with open('tan_76_master_audit_dict.json', 'w') as f:
+    json.dump(studies, f, indent=2)
+print('Saved tan_76_master_audit_dict.json successfully.')

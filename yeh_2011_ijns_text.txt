@@ -1,0 +1,707 @@
+Pain reduction of acupoint electrical stimulation for patients with spinal
+surgery: A placebo-controlled study
+Mei-Ling Yeh a,1, Yu-Chu Chung b,2, Kang-Min Chen c,3, Hsing-Hsia Chen d,*
+a School of Nursing, National Taipei University of Nursing, No. 365, Minte Road, Taipei, Taiwan, ROC
+b School of Nursing, Yuanpei University, No. 306, Yuanpei Street, Hsinchu, Taiwan, ROC
+c Nursing Department, Veterans General Hospital, Taipei, No. 201, Shih-Pai Road, Section 2, PeiTou 112, Taipei, Taiwan, ROC
+d Department of Applied Mathematics, Chung-Yuan Christian University, No. 200, Chungpei Road, Chung-Li City, Taoyuan 32023, Taiwan, ROC
+What is already known about this topic?
+/C15The source of pain after neurosurgical procedures is the
+operative wound, and spinal cord surgery can result in
+more pain than anticipated.
+/C15PCA is an effective and safe method for postoperative
+pain control in patients who undergo spinal surgery, but
+50–60% was still suffering from moderate pain at ﬁrst
+24 h after starting of PCA.
+/C15Evidence of AES-induced postoperative pain relief is
+needed; in particular its true effects need to be
+distinguished from its placebo effects.
+What this study adds?
+/C15AES, compared to placebo and no intervention, markedly
+decreased mild pain over a prolonged period.
+/C15AES at true acupoints reduced postoperative pain and the
+need for analgesic (opiate) pain relief in patients with
+spinal surgery.
+/C15Although the PCA morphine dosage required for
+analgesia is reduced by AES, the amount was obviously
+insufﬁcient.
+International Journal of Nursing Studies 48 (2011) 703–709
+ARTICLE INFO
+Article history:
+Received 27 January 2010
+Received in revised form 20 October 2010
+Accepted 22 October 2010
+Keywords:
+Acupoint electrical stimulation
+Patient-controlled analgesia
+Placebo effect
+Postpositive pain
+ABSTRACT
+Background: Acupoint electrical stimulation (AES) is commonly used for pain manage-
+ment. However, its true or placebo effect to achieve pain relief needs to be veriﬁed.
+Objective: This study aimed to examine the true effect of AES to reduce postoperative pain
+in patients with spinal surgery receiving patient-controlled analgesia (PCA).
+Method: A placebo- and sham-controlled study was conducted. Participants were
+randomly assigned to intervention with AES at true acupoints (the AES group, n = 30),
+AES at sham acupoints (the sham group, n = 30), or no intervention with AES (the control
+group, n = 30). Outcomes were assessed according to the amount of pain experienced and
+analgesics used.
+Results: There were signiﬁcant differences among the three groups in pain relief across
+time, and the occurrence of PCA button pushed and amount of analgesics used. The
+beneﬁcial effects of AES were discernible when compared to the sham and the control.
+Conclusions: AES at the true acupoints effectively reduced postoperative pain and
+analgesic usage. AES has now been implemented into healthcare and it is recommended
+that nurses be provided with the opportunity to earn their AES skills. More studies
+evaluating the effects of AES over a longer period and on pain after different surgical
+procedures are suggested.
+/C2232010 Elsevier Ltd. All rights reserved.
+* Corresponding author. Tel.: +886 3 2653126; fax: +886 3 2653199.
+E-mail addresses: meiling@ntcn.edu.tw (M.-L. Yeh),
+yuchu@mail.yust.edu.tw (Y.-C. Chung), chenkm@vghtpe.gov.tw
+(K.-M. Chen), hsinghsi@cycu.edu.tw (H.-H. Chen).
+1 Tel.: +886 2 28227101x3317.
+2 Tel.: +886 3 5381183x8592.
+3 Tel.: +886 2 28757101.
+Contents lists available at ScienceDirect
+International Journal of Nursing Studies
+journal homepage: www.elsevier.com/ijns
+0020-7489/$ – see front matter /C2232010 Elsevier Ltd. All rights reserved.
+doi:10.1016/j.ijnurstu.2010.10.009
+1. Introduction
+In the past two decades, 77% of patients have pain after
+chest, abdomen, or orthopedic surgery; 80–85% of these
+patients experience moderate to severe pain ( Pellegrini
+et al., 1986; Warﬁeld and Kahn, 1985 ). Neurosurgical
+procedures and wound pain caused more than the
+anticipated amount of pain, especially in patients with
+spinal surgery (Klimek et al., 2006). Unfortunately the pain
+of only 29.8% of the 63.8% of patients with spinal surgery
+with moderate wound pain was treated effectively ( Lin
+et al., 2001 ).
+Patient-controlled analgesia (PCA) is a popular method
+of pain management. Various opioids have been used for
+PCA, including morphine, meperidine, hydromorphine,
+and fentanyle, especially morphine which is by far the
+most commonly used opioid in this setting ( Hutchison
+et al., 2006 ). PCA for postoperative pain management may
+thus be an effective and safe method of pain control
+producing high satisfaction in patients ( Gepstein et al.,
+2007). However, almost one half of the patients using PCA
+complain of nausea and vomiting due to morphine side
+effects ( Chung et al., 2007 ). More importantly, patients
+with fewer side effects had more satisfaction.
+Acupoint electrical stimulation (AES), like acupuncture
+(an established technique of traditional Chinese medicine
+[TCM]), is commonly used for pain management. It relies
+on the concept that particular acupoints can be stimulated
+with electrical current to release endorphins within the
+central nervous system ( Johnson, 2001). AES-induced pain
+reduction has been reported. For instance, AES signiﬁcantly
+reduced osteoarthritic knee pain (Leung, 2003), and pain of
+extracorporeal shock-wave lithotripsy ( Resim, 2005 ). AES
+had sedative and analgesic effects during artiﬁcial abortion
+operation and decreased the adverse reactions ( Cheng
+et al., 2010 ). Moreover, combining pain control or
+analgesia with electroacupuncture decreased the dose of
+opiate and delayed the ﬁrst opiate request ( Wei, 2001 ),
+reduced the dosage of 17% propofol and 14% fentany in the
+operation ( He and Yang, 2008 ), and provided an adjuvant
+effect to enhanced the analgesic effect in propofol-fentanyl
+anesthesia ( Si et al., 2009 ).
+Some studies argued that the effects of acupoint
+stimulation were placebo effects. In Chen et al.’s study
+(2005), PCA plus AES (but not control and sham treatment)
+reduced the amount of morphine used and increased the
+amount of postoperative pain relief. Similarly, Kober et al.
+(2002) found that true acupoint acupressure (but not sham
+and control treatment) reduced trauma pain. Chao et al.
+(2007) found that electroacupuncture, compared to a
+placebo, relieved labor pain. However, Lin et al. (2002)
+found that both electroacupuncture and sham treatment
+reduced postoperative PCA morphine use, and sham
+treatment relieved pain without side effects. Currently,
+chemical analgesia is the main strategy for clinical relief of
+postoperative pain. Notably, morphine has side effects and
+is associated with higher medical costs. AES could be useful
+as a supplementary analgesic, but it has not been well
+studied ( Kotze´ and Simpson, 2007 ). In addition, whether
+the relief of pain by AES is a true effect or placebo effect has
+not been veriﬁed.
+2. Purpose statements
+This study aimed to examine the true effects of AES on
+reducing pain intensity, pain inﬂuence, the demand for
+PCA, and opiate dose used during the ﬁrst 24 h after spinal
+surgery. First, signiﬁcant differences in the change of pain
+reduction across time by the different interventions were
+hypothesized. Second, signiﬁcant differences in pain
+intensity and inﬂuence, the demand for PCA and opiate
+dose were hypothesized among groups.
+3. Methods
+3.1. Research design
+This study was a single-blind, randomized, placebo-
+controlled trial. The randomization was achieved through
+a computer-generated numbers and information on
+intervention allocation sequential without sealed envel-
+opes. Individual subjects and medical staff did not know in
+which group the subjects were.
+3.2. Participants and setting
+The study sample consisted of patients who were
+scheduled for surgery to correct non-traumatic lumbar
+spine injuries at a 3000-bed medical center in northern
+Taiwan. Inclusion criteria were: age 18 years and older,
+American Society of Anesthesiologists physical status I and
+II, general anesthesia, and consent to PCA with morphine.
+After the end of the operation, the intravenous PCA was
+connected to the central venous line. Exclusion criteria
+were: usage of a pacemaker, history of arrhythmia or
+epilepsy, opiate dependence, clinically signiﬁcant cardio-
+vascular disease, and cutaneous lesions at the application
+sites. To detect a medium effect size ( f = 0.3) at 5% level of
+signiﬁcance with 80% power using repeated-measures, 72
+subjects were minimally required ( Cohen, 1988). With an
+estimated follow-up loss, 99 overall were thought to be
+necessary. Fig. 1 shows the ﬂow chart of participants of this
+study. Initially, 99 patients were eligible, and then 90 who
+signed the informed consent were included in the study
+and randomly assigned to one of the three groups: the AES
+group (n = 30) received AES at the true acupoints; the sham
+group ( n = 30) received AES in the same manner but at
+sham acupoints; and the control group (n = 30) received no
+AES intervention. By the end of the study, data from a total
+90 participants were used to analyze.
+3.3. Intervention
+An electrical device stimulating the acupoints of
+Weizhong (BL40), Yanglingquan (GB34), Shenmen (HT7),
+and Neiguan (P6) was used for AES (Fig. 2). The two pairs of
+rubber electrodes were placed at the acupoints, which
+were stimulated by alternating pulses of a 2 Hz/100 Hz
+dense-disperse waveform and 0.25 min pulse duration. A
+current output (4–7 mA) ( Han, 2004 ) was adjusted and
+depended on individual body weight. Participants received
+AES in a supine position and 4 acupoints simultaneously
+stimulated for 20 min: the ﬁrst in the third postoperative
+M.-L. Yeh et al. / International Journal of Nursing Studies 48 (2011) 703–709704
+hour (calculated from the time a patient was moved to the
+recovery room) and the second in the fourth postoperative
+hour. In the same manner, the sham group received AES at
+points 2 cm from the true acupoints, not meridian
+acupoints. The AES interventions and data collection were
+performed by the researchers. Two TCM physicians
+veriﬁed the conduct of the AES, which consisted of
+selection of acupoints, current frequency and output,
+waveform, and length of stimulation.
+3.4. Measures
+Demographic characteristics included gender, age,
+body weight, and body height. Clinical characteristics
+included disease diagnosis, the worst preoperative pain,
+the number of lumbar surgeries, pain intensity, types of
+surgery, operation duration, and amounts of blood loss.
+The primary outcomes involved pain severity and pain
+interference. The Brief Pain Inventory (BPI), including the
+subscales of pain intensity and its interference, was used to
+measure the severity of postoperative pain and impact of
+pain on daily functions (Ger et al., 1999). The pain intensity
+referred to the level of present pain and the level of the
+worst and average pain in the last 24 h. The impact of
+postoperative pain on daily functions included the impact
+on ability to perform daily activities (e.g., eating, dressing,
+and toilet use), bodily functions (e.g., deep breathing and
+coughing), physical mobility, talking, sleep, and emotion. A
+simple numeric rating scale was used, with 0 indicating no
+pain or no interference and 10 indicating worst pain
+possible or interferes completely. Moreover, 0 represented
+no pain at all, 1–3 for mild pain, 4–6 for moderate pain, 7–9
+for severe pain, and 10 for intolerable pain. In this study
+Cronbach’s alpha, an internal consistency test which
+measures the degree of which the items consistently
+measure the underlying latent construct, was 0.94 and 0.87
+for the pain severity and pain interference, respectively. The
+[()TD$FIG]
+Meet inclusion criteria (n=90)
+Assessed for eligibility (n=99) 
+AES group 
+(n=30) 
+Sham group 
+(n=30) 
+The third 
+postoperative 
+hour (n=30) 
+The first 24 
+hours after 
+surgery (n=30) 
+The fourth 
+postoperative 
+hour (n=30) 
+The fourth 
+postoperative 
+hour (n=30) 
+Randomized
+AES for 20 min  
+AES for 20 min 
+Written and verbal consent
+Characteristics of 
+demography & 
+clinic were assessed 
+before surgery 
+Pain intensity was 
+assessed before the 
+intervention and 30 
+min after the 
+intervention 
+Control group 
+(n=30) 
+The third 
+postoperative 
+hour (n=30) 
+The fourth 
+postoperative 
+hour (n=30) 
+The third 
+postoperative 
+hour (n=30) 
+The first 24 
+hours after 
+surgery (n=30) 
+Pain influence was 
+assessed at the first 
+24 hours after 
+surgery 
+The first 24 
+hours after 
+surgery (n=30) 
+Fig. 1. The ﬂow of research design, participants’ recruitment, intervention and assessment.
+[()TD$FIG]
+Fig. 2. Diagram of acupoints location, include Shenmen, Neiguan,
+Weizhong, and Yanglingquan.
+M.-L. Yeh et al. / International Journal of Nursing Studies 48 (2011) 703–709 705
+secondary outcome was opiate requirement, including time
+to initial request for PCA analgesia, number of times the
+button was pushed to receive analgesic treatment, and the
+total amount of opiate used during the ﬁrst 24 h after surgery.
+3.5. Procedures and data analysis
+First, ethical approval was obtained from the Institu-
+tional Review Board of the study hospital. Informed consent
+was signed by all participants. Second, all participants were
+given the same regimen of preoperative medication, which
+was general anesthesia with intravenous thiopental
+(2.1 mg/kg) and fentanyl (4.3 mg/kg), and connected to a
+PCA device programmed to deliver a patient-triggered 1 mg
+bolus of morphine with a 10 min lockout interval between
+doses. Last, the outcome measures were administered at
+baseline prior to the intervention. Pain was assessed 30 min
+after the ﬁrst and second AES intervention (posttest 1 and 2,
+respectively), whereas BPI data and opiate requirement
+were collected at 24 h after surgery. In addition, adverse
+effects of AES were recorded.
+Statistical analysis was performed using SPSS 18.0
+version. The 5% level of signiﬁcance was used to conﬁrm.
+Descriptive statistical analysis was used to examine
+differences in demographic and clinical characteristics;
+inferential statistical analysis consisted of the chi-square
+test, the one-way analysis of variance with post hoc tests,
+and a general linear mixed model with ﬁxed effects of
+intervention, time, and the interaction of these two, and a
+random subject effect, followed by a Bonferroni test to
+compare the effects of pain reduction.
+4. Results
+4.1. A comparison of differences in demographic and clinical
+characteristics at baseline
+The participants were divided into three groups, with
+30 in each group in the study. Table 1 summarizes the
+demographic and clinical characteristics of each group. No
+signiﬁcant differences were found among the AES group,
+sham group, and control groups in gender, age, body
+weight, body height, other chronic diseases, diagnosis on
+admission, number of lumbar surgeries, the worst
+preoperative pain, the average preoperative pain, opera-
+tion duration, and amount of blood loss ( p > 0.05).
+4.2. The results of AES on pain intensity
+Fig. 3 shows VAS scores across time for each group.
+Before the intervention, the baseline VAS scores were
+similar among groups (mean, 4.37 /C61.78 in the AES,
+5.43 /C62.12 in the sham, and 4.91 /C61.89 in the control; F(2,
+87) = 2.47, p = 0.09). The result of the general linear mixed
+model on the main effect of group was signiﬁcant difference
+in the change of pain reduction across time in terms of the
+VAS scores ( F(2, 87) = 6.80, p = 0.002); pain was signiﬁcantly
+lower in the AES group than the control ( p < 0.007) or sham
+group (p = 0.005), but not signiﬁcantly different between the
+sham and the control ( p = 1.00). Regardless of interventions,
+the statistical signiﬁcance in the main effect of time was
+found ( F(2, 174) = 147.83, p < 0.001). The interaction
+between group and time was also signiﬁcant ( F(2,
+174) = 6.04, p < 0.001).
+4.3. The results of AES on BPI and opiate requirement
+Table 2 summarizes the effect of AES intervention on
+pain intensity and its inﬂuence in various activities. There
+was a signiﬁcant between-group difference in the worst
+(F(2,87) = 4.86, p = 0.01) and average ( F(2, 87) = 4.71,
+p = 0.01) pain intensity 24 h after surgery. Scheffe’s post
+hoc analysis conﬁrmed the signiﬁcance of the difference
+between the AES and the sham ( p= 0.03) or the control
+(p = 0.03) for the worst and the average pain intensity.
+There were signiﬁcant between-group differences in the
+ability of pain to interfere with change of position ( F(2,
+Table 1
+Homogeneity of demographic and medical characteristics at baseline.
+Variables AES Sham Control F(df) or x2(df) ( p)
+Gender ( n/%) x2(2) = 2.93 (0.23)
+Male 10/33.3 9/30.0 15/50.0
+Female 20/66.7 21/70.0 15/50.0
+Age ( M /C6SD) 60.7 /C612.0 57.2 /C615.7 63.2 /C614.0 F(2, 87) = 1.34 (0.27)
+Body weight ( M /C6SD) 158.4 /C67.4 157.1 /C69.9 160.3 /C69.1 F(2, 87) = 1.00 (0.37)
+Body height ( M /C6SD) 65.4 /C610.4 63.9 /C613.6 64.5 /C613.3 F(2, 87) = 0.11 (0.90)
+Other chronic disease ( n/%) x2(6) = 11.63 (0.07)
+None 20/66.7 17/56.7 11/36.7
+One 4/13.3 8/26.7 9/30.0
+Two 5/16.7 5/16.6 5/16.7
+Three 1/3.3 0 5/16.7
+Admitted diagnosis ( n/%) x2(4) = 6.63 (0.16)
+HIVD 7/23.3 5/16.7 2/6.7
+Spondylolisthesis 10/33.3 10/33.3 6/20.0
+Lumbar spinal stenosis 13/43.4 15/50.0 22/73.3
+Number of lumber surgery ( M /C6SD) 0.4 /C60.9 0.3 /C60.8 0.2 /C60.5 F(2, 87) = 0.55 (0.58)
+The worst preoperative pain ( M /C6SD) 7.2 /C61.9 7.2 /C61.1 7.2 /C61.6 F(2, 87) = 0.01 (0.99)
+The average preoperative pain ( M /C6SD) 1.5 /C61.1 1.3 /C61.0 0.9 /C60.9 F(2, 87) = 2.56 (0.08)
+Operation duration (min) ( M /C6SD) 217.5 /C698.1 267.6 /C6125.5 267.6 /C6125.5 F(2, 87) = 1.70 (0.19)
+Amount of blood loss (cc) ( M /C6SD) 450.8 /C6453.8 477.7 /C6459.1 433.7 /C6339.0 F(2, 87) = 0.08 (0.92)
+n = 30 in each group; F-test for numerical data or chi-square test for categorical data.
+M.-L. Yeh et al. / International Journal of Nursing Studies 48 (2011) 703–709706
+87) = 4.79, p = 0.01), daily activities ( F(2, 87) = 4.81,
+p = 0.01), talking ( F(2, 87) = 3.62, p = 0.03), and sleep ( F(2,
+87) = 4.76, p= 0.01), but not bodily functions ( F(2,
+87) = 0.66, p = 0.52) and emotion ( F(2, 87) = 1.01, p = 0.52).
+Table 3 shows between-group differences in the
+number of times the patients pushed buttons to achieve
+pain relief ( F(2, 84) = 6.05, p= 0.004) and the amount of
+opiate required during the ﬁrst 24 postoperative hours
+(F(2, 84) = 4.26, p= 0.017) but not in the timing of the
+ﬁrst request for PCA morphine ( F(2, 84) = 0.09, p= 0.92).
+Scheffe’s post hoc analysis conﬁrmed the signiﬁcance
+of the difference between the AES and the control in the
+number of times the patients pushed buttons ( p= 0.004)
+and the amount of opiate required ( p = 0.023). The AES
+groups had not adverse effects associated with AES
+intervention during the present study period.
+5. Discussion
+As shown in Fig. 3 , pain in all groups decreased
+gradually over time. However, the participants in the AES
+group decreased markedly from moderate to mild pain,
+and their progression of pain reduction was greater than
+those in the sham or control group. This result was similar
+to other studies. Chen et al. (2005) found that pain due to
+total knee replacement decreased at various time points
+after treatment with electroacupuncture plus PCA.Lin et al.
+(2002) found that pain due to abdominal hysterectomy
+was alleviated by electroacupuncture. Similarly, Lin (2004)
+used electroacupuncture or acupuncture in conjunction
+with PCA to alleviate pain after Caesarean section. More-
+over, it is noted that the second AES intervention reduced
+pain from moderate to mild, while the decrease in
+[()TD$FIG]
+0
+1
+2
+3
+4
+5
+6
+2nd AES1st AESBaseline
+Time points
+Mean pain score
+Experiment
+Sham
+Control
+*
+*
+Fig. 3. Pain reduction across time for each group, data were presented as mean of VAS (0–10); * pain scores were signiﬁcantly lower in the experimental
+group than sham and control groups, F test < 0.05.
+Table 2
+Comparisons of pain intensity and pain inﬂuence among the three groups.
+Variables AES Sham Control F(df) ( p)
+M /C6SD M /C6SD M /C6SD
+Pain intensity
+The worst pain 5.4 /C61.6 6.5 /C61.6 6.5 /C61.7 F(2, 87) = 4.86 (0.01), # S > A, C > A
+The average pain 2.1 /C61.3 3.0 /C61.4 3.0 /C61.4 F(2, 87) = 4.71 (0.01), # S > A, C > A
+Pain inﬂuence
+Special activities 1.6 /C61.8 1.9 /C62.1 2.3 /C62.5 F(2, 87) = 0.66 (0.52)
+Change of position 5.2 /C61.5 6.1 /C61.5 6.4 /C61.7 F(2, 87) = 4.79 (0.01), # C > A
+Daily activities 5.3 /C61.4 6.1 /C61.5 6.5 /C61.7 F(2, 87) = 4.81 (0.01), # C > A
+Talking 0.3 /C60.7 0.8 /C61.3 1.1 /C61.3 F(2, 87) = 3.62 (0.03), # C > A
+Sleep 1.1 /C61.2 2.1 /C62.2 2.4 /C61.7 F(2, 87) = 4.76 (0.01), # C > A
+Emotion 0.2 /C60.6 0.3 /C60.8 0.4 /C60.8 F(2, 87) = 1.01 (0.52)
+n = 30 in each group; #: Scheffe post hoc test; A: the AES; S: the sham; C: the control.
+Table 3
+Comparisons on opiate demands and doses among the groups.
+Variables AES Sham Control F(df) ( p)
+M /C6SD M /C6SD M /C6SD
+The timing of the ﬁrst request for PCA morphine (min) 98.5 /C6160.1 92.8 /C6109.1 83.4 /C6133.6 F(2, 84) = 0.09 (0.92)
+Occurrence of button pushed (time) 24.9 /C628.5 47.4 /C639.7 76.9 /C686.1 F(2, 84) = 6.05 (0.004), # C > A
+24 h opiate dose (mg) 19.3 /C69.7 21.6 /C613.1 28.0 /C612.1 F(2, 84) = 4.26 (0.017), # C > A
+n = 30 in each group; #: Scheffe post hoc test; A: the AES; S: the sham; C: the control.
+M.-L. Yeh et al. / International Journal of Nursing Studies 48 (2011) 703–709 707
+response to sham and control intervention was less
+obvious and less marked. AES therefore could maintain
+this decrease in pain intensity. In addition, the ﬁndings
+support Melzack (1975) that the true effect of AES is
+signiﬁcantly more effective than placebo contributions.
+As shown in Table 2 , the worst and average pain
+intensities during the ﬁrst 24 h after surgery were lower in
+the AES group than the other two groups, indicating that
+AES interventions alleviate pain rapidly and persistently.
+Unlike Gepstein et al. (2007) who demonstrated a
+reduction in average pain intensity from severe to
+moderate by PCA in 24 h after spinal surgery, this study
+showed that PCA plus AES was able to reduce average pain
+intensity from moderate to mild. In our previous study
+pain control multimedia education with PCA used was also
+able to lower average pain intensity to mild-moderate
+(which was even lower than that in the control group) in
+the ﬁrst 24 h after spinal surgery ( Yeh et al., 2007 ).
+Although PCA plus AES alleviated pain for lumbar surgery,
+the pain exhibited at a certain level and to obviously
+impact daily activities within ﬁrst 24 h after surgery.
+From Table 3 , the PCA morphine dosage required for
+analgesia was reduced by AES interventions. This is in
+agreement with Hamza et al. (1999) that treated the
+abdominal pain from gynecologic surgery with 2 Hz,
+100 Hz, and 2/100 Hz alternating frequency electrical
+stimulation, and found that all three protocols reduced
+the need for opioid analgesia and the last was most
+effective. A mixed 2 and 100 Hz frequency stimulation
+facilitates central nervous system release of enkephalin, b-
+endorphin, endomorphin, and dynorphin to maximize the
+analgesic effect ( Han, 2004 ). The peak effect occurs at
+20 min after stimulation ( Anderson and Holmgren, 1975 ).
+It is noted that the amount of analgesic requirement was
+obviously less in the present study, in contrast to the
+amount used in the study by Aveline et al. (2006) . Cultural
+and social inﬂuences can affect the demand for analgesics
+and therefore Chinese patients request fewer analgesics to
+reduce postoperative pain than American patients. Other
+studies (Lin, 2000; Streltzer and Wade, 1981) have come to
+a similar conclusion that Chinese surgical patients request
+and receive less amount of analgesic medication. Patients
+may consider the possibility of drug addiction ( Cekmen
+et al., 2007; Yeh et al., 2007 ) and do not want to be
+stigmatized as a pain complainer ( Lin, 2000 ). Patients in
+the present study therefore may have hesitated and failed
+to push the PCA button to achieve pain relief. They endured
+their moderate pain and remained active.
+Acupoint stimulation is a common treatment for
+reducing pain in the Chinese population. AES is applied
+in a non-invasive and easy-to-use fashion. This study
+demonstrated less pain reduction and greater number of
+opiate doses administered in sham-treated and untreated
+control patients. Notably, treatment expectations, prior
+beliefs, appearance of the therapy, and interactions with
+therapists or research staff seem to contribute to the
+placebo effect ( Wager et al., 2004 ). The patient’s expecta-
+tion is the major contributor to increasing treatment
+efﬁcacy ( Montgomery and Kirsch, 1997 ). A neuroimaging
+study showed that placebo acupuncture produced detect-
+able analgesia after enhancement of expectancy to
+acupuncture analgesia ( Kong et al., 2006 ). This study
+was however randomized and placebo-controlled, and
+participants as well as medical staff were blinded to the
+procedure assignment; thus, expectations in both the true
+and sham AES were the same. The results of this study
+were also consistent with those of other double-blind
+randomized placebo-controlled trials ( Kober et al., 2002;
+Lin et al., 2002 ). Moreover, use of sham and control groups
+can provide the means to distinguish clearly between true
+and placebo effects. As previous mentioned the true effect
+of AES was more effective than placebo contributions in
+this study. Placebo analgesia is related to decreased brain
+activity, and thereby to a change in pain perception (Bingel
+et al., 2006; Napadow et al., 2006 ). However, the clinical
+effects of multiple acupuncture analgesia treatments on
+the brain are cumulative and extend beyond the length of
+each session (Price et al., 1984; Carlsson, 2002). In contrast,
+pain reduction is immediate after placebo acupuncture
+but declines soon thereafter ( Wang and Tronnier, 2000 ).
+Short-term acupuncture and placebo treatments affect
+similar networks, but the effects of acupuncture on speciﬁc
+brain areas are prolonged by treatment repetition ( Dhond
+et al., 2007 ).
+5.1. Limitations
+This study was restricted by experimental assumptions,
+including that postoperative pain is strongest a few hours
+after narcotic dissipation. The outcome was assessed at only
+4 h and 24 h after surgery. Extension of monitoring of pain
+intensity, level of interference with activity, frequency and
+amount of analgesic use, morphine-induced side effects,
+and so on to 3 postoperative days would have provided a
+more complete assessment of AES in postoperative pain
+management. The lack of funding prevented us from
+assessing biochemical outcomes such as enkephalin, beta-
+endorphin, or endomorphin. Besides, the possibility of the
+threat to internal validity due to a single-blind design may
+not be avoided. The ﬁndings were from only one hospital
+and may not be generalizable to other hospitals and settings.
+Future investigations should include multiple settings.
+6. Conclusions and implications
+This study demonstrated that AES at the true acupoints
+reduces pain across time after spinal surgery and decreases
+the need for opiate doses administered through PCA. AES is
+a simple, convenient, noninvasive, and economical way to
+control pain. AES has now been implemented into
+healthcare and it is recommended that nurses be provided
+with the opportunity to earn their AES skills. This study
+encourages nurses to learn and implement this simple
+technique in their routine clinical care. Through integra-
+tion of traditional Chinese and Western remedies of pain
+management, health professionals can improve the quality
+of clinical care. The effect of AES to relieve postoperative
+pain after different types of surgery should be tested.
+Moreover PCA pain treatment is associated with mor-
+phine-induced side effects, which directly inﬂuence the
+number of times the button is pushed to receive analgesic
+relief. Therefore, further study is needed to optimize pain
+M.-L. Yeh et al. / International Journal of Nursing Studies 48 (2011) 703–709708
+management using PCA morphine plus AES and to
+minimize morphine-induced side effects.
+Ethical approval
+Ethical approval was obtained from the Institute of
+Review Board in the study hospital; written informed
+consent was signed by and obtained from all participants.
+All participants were provided written and verbal infor-
+mation about the study, and made aware that data
+collected by the researcher were remained conﬁdential;
+they would be free to withdraw.
+Funding
+None.
+Conﬂict of interest
+None of the authors has any potential conﬂicting
+interest in this study.
+References
+Anderson, S.A., Holmgren, E., 1975. On acupuncture analgesia and the
+mechanism of pain. American Journal of Chinese Medicine 3, 311–334.
+Aveline, C., Le, Hetet, H., Vautier, P., Gautier, J.F., Bonnet, F., 2006. Pre-
+operative ketamine and morphine for postoperative pain control after
+lumbar disk surgery. European Journal of Pain 10, 635–658.
+Bingel, U., Lorenz, J., Schoell, E., Weiller, C., Buchel, C., 2006. Mechanisms
+of placebo analgesia: rACC recruitment of a subcortical antinocicep-
+tive network. Pain 120, 8–15.
+Carlsson, C., 2002. Acupuncture mechanisms for clinically relevant long-
+term effects—reconsideration and hypothesis. Acupuncture in Med-
+icine 20, 82–99.
+Cekmen, N., Salman, B., Keles, Z., Aslan, M., Akcabay, M., 2007. Transcu-
+taneous electrical nerve stimulation in the prevention of postopera-
+tive nausea and vomiting after elective laparoscopic
+cholecystectomy. Journal of Clinical Anesthesia 19, 49–52.
+Chao, A.S., Chao, A., Wang, T.H., Chang, Y.C., Peng, H.H., Chang, S.D., Chao,
+A., Chang, C.J., Lai, C.H., Wong, A.M., 2007. Pain relief by applying
+transcutaneous electrical nerve stimulation (TENS) on acupuncture
+points during the ﬁrst stage of labor: a randomized double-blint
+placebo-controlled trial. Pain 127, 214–220.
+Chen, Y.C., Liu, H.J., Lin, J.G., 2005. Assessment on the effect of post-
+operative acupuncture stimulation to pain relief after total knee
+replacement. Taiwan Journal of Chinese Medicine 4, 5–23.
+Cheng, X., Wang, Z.Q., Lin, Q.M., Chen, M.H., 2010. Effect of transcutaneous
+electrical acupoint stimulation on BIS and VAS in artiﬁcial abortion
+operation. Chinese Acupuncture & Moxibustion 30, 305–307.
+Chung, Y.C., Su, C.K., Wong, C.S., 2007. Study on patient satisfaction with
+patient-control analgesia and related factors abdominal surgery.
+Journal of Medical Sciences 27, 207–214.
+Cohen, J., 1988. Statistical Power Analysis for the Behavioral Sciences, 2nd
+ed. Erlbaum, Hillsdale.
+Dhond, R.P., Kettner, N., Napadow, V., 2007. Do the neural correlates of
+acupuncture and placebo effects differ? Pain 128, 8–12.
+Gepstein, R., Arinzon, Z., Folman, Y., Shuval, I., Shabat, S., 2007. Efﬁcacy
+and complications of patient-controlled analgesia treatment after
+spinal surgery. Surgical Neurology 67, 360–366.
+Ger, L.P., Ho, S.T., Sun, W.Z., Wang, M.S., Cleeland, C.S., 1999. Validation of
+the brief pain inventory in a Taiwanese population. Journal of Pain
+and Symptom Management 18, 316–322.
+Hamza, M.A., White, P.F., Ahmed, H.E., Ghoname, E.A., 1999. Effect of the
+frequency of transcutaneous electrical nerve stimulation on post-
+operative opioid analgesic requirement and recovery proﬁle.
+Anesthesiology 91, 1232–1238.
+Han, J.S., 2004. Acupuncture and endorphins. Neuroscience Letters 361,
+258–261.
+He, B.M., Yang, B., 2008. Analgesic effect of transcutaneous electrical
+acupoint stimulation combined with target-controlled infusion in
+general anesthesia and effects on cardiovascular system. Chinese
+Acupuncture & Moxibustion 28, 219–221.
+Hutchison, R.W., Chon, E.H., Tucker Jr., W.F., Gilder, R., Moss, J., Daniel, P.,
+Moss, J., Daniel, P., 2006. A comparison of a fentanyl, morphine, and
+hydromorphone patient-controlled intravenous delivery for acute
+postoperative analgesia: a multicenter study of opioid-induced
+adverse reactions. Hospital Pharmacy 41, 659–663.
+Johnson, M.I., 2001. Transcutaneous electrical nerve stimulation (TENS)
+and TENS-like devices: do they provide pain relief? Pain Reviews 8,
+121–158.
+Klimek, M., Ubben, J.F.H., Ammann, J., Borner, U., Klein, J., 2006. Verbrugge
+SJC. Pain in neurosurgically treated patients: a prospective observa-
+tional study. Journal of Neurosurgery 104, 350–359.
+Kober, A., Scheck, T., Greher, M., Lieba, F., Fleischhackl, R., Fleischhackl, S.,
+Randunsky, F., Hoerauf, K., 2002. Prehospital analgesia with acupres-
+sure in victims of minor trauma: a prospective, randomized, double-
+blinded trial. Anesthesia and Analgesia 95, 723–727.
+Kong, J., Gollub, R.L., Rosman, I.S., Webb, J.M., Vangel, M.G., Kirsch, I.,
+Kaptchuk, T.J., 2006. Brain activity associated with expectancy-
+enhanced placebo analgesia as measured by functional magnetic
+resonance imaging. Journal of Neuroscience: The Ofﬁcial Journal of
+the Society for Neuroscience 26, 381–388.
+Kotze´ , A., Simpson, K.H., 2007. Stimulation-produced analgesia: acupunc-
+ture, TENS and related techniques. Anaesthesia and Intensive Care
+Medicine 9, 29–32.
+Leung, M.C.P., 2003. Poon DMY. The effects of electro-acupuncture and
+transcutaneous electrical nerve stimulation on patients with painful
+osteoarthritic knees: a randomized controlled trial with follow-up
+evaluation. The Journal of Alternative and Complementary Medicine
+9, 641–649.
+Lin, C.C., 2000. Applying the American Pain Society’s QA standards to
+evaluate the quality of pain management among surgical, oncology,
+and hospice inpatients in Taiwan. Pain 84, 43–49.
+Lin, J.G., 2004. Effect of electroacupuncture on pain after caesarean
+section. Year Book of Chinese Medicine and Pharmacy 21, 488–507.
+Lin, J.G., Lo, M.W., Wen, Y.R., Hsieh, C.L., Tsai, S.K., Sun, W.Z., 2002. The
+effect of high and low frequency electroacupuncture in pain after
+lower abdominal surgery. Pain 99, 509–514.
+Lin, P.C., Lin, C.C., Yao, E., 2001. Pain control for post-spine surgery
+patients: a survey of the effectiveness of demerol IV drip q4h prn.
+The Journal of Nursing 48, 49–58.
+Melzack, R., 1975. Prolonged relief of pain by brief, intense transcuta-
+neous somatic stimulation. Pain 1, 357–373.
+Montgomery, G.H., Kirsch, I., 1997. Classical conditioning and the placebo
+effect. Pain 72, 107–113.
+Napadow, V., Webb, J.M., Pearson, N., Hammerschlag, R., 2006. Neuro-
+biological correlates of acupuncture. The Journal of Alternative and
+Complementary Medicine 12, 931–935.
+Pellegrini, A., Gordini, V., Panzeri, E., Quaini, E., 1986. Combined open-
+heart valve surgery and elective abdominal operations. Giornale
+Italiano Di Cardiologia 16, 67–70.
+Price, D.D., Raﬁi, A., Watkins, L.R., Buckingham, B., 1984. A psychophysical
+analysis of acupuncture analgesia. Pain 19, 27–42.
+Resim, S., Gumusalan, Y., Ekerbicer, H.C., Sahinc, M.A., Sahinkanat, T.,
+2005. Effectiveness of electro-acupuncture compared to sedo-analge-
+sics in relieving pain during shockwave lithotripsy. Urological
+Research 33, 285–290.
+Si, J.L., Xu, L., Li, G.C., Xiao, J.B., 2009. Adjuvant effect of transcutaneous
+electrical acupoint stimulation in propofol-fentanyl anesthesia in
+partial mastectomy. Journal of Southern Medical University 29,
+2064–2066.
+Streltzer, J., Wade, T.C., 1981. The inﬂuence of cultural group on the under
+treatment of postoperative pain. Psychosomatic Medicine 43, 397–
+403.
+Wager, T.D., Rilling, J.K., Smith, E.E., Sokolik, A., Casey, K.L., Davidson, R.J.,
+Kosslyn, S.M., Rose, R.M., Cohen, J.D., 2004. Placebo-induced changes
+in fMRI in the anticipation and experience of pain. Science 303, 1162–
+1167.
+Wang, R.R., Tronnier, V., 2000. Effect of acupuncture on pain management in
+patients before and after lumbar disc protrusion surgery: a randomized
+control study. American Journal of Chinese Medicine 28, 25–33.
+Warﬁeld, C.A., Kahn, C.H., 1985. Acute pain management programs in U.S.
+hospitals and experiences and attitudes among U.S. adults. Anesthe-
+siology 83, 1090–1094.
+Wei, I.P., 2001. An assessment on the effect of pain relieving after cesarean
+section operation obtained by applying electroacupuncture of differ-
+ent frequencies on the point of sanyinchiao. Master’s Thesis. Graduate
+Institute of Chinese Medicine Science, Taichung, Taiwan, Unpub-
+lished.
+Yeh, M.L., Yang, H.J., Chen, H.H., Tsou, M.Y., 2007. Using a patient-con-
+trolled analgesia multimedia intervention for improving analgesia
+quality. Journal of Clinical Nursing 16, 2039–2046.
+M.-L. Yeh et al. / International Journal of Nursing Studies 48 (2011) 703–709 709

@@ -3,14 +3,17 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/11_sufentanil_conversion_sensitivity.log
   log type:  text
- opened on:   7 Sep 2026, 14:49:00
+ opened on:   7 Sep 2026, 16:11:04
 
 . 
 . di as txt "=================================================================="
 ==================================================================
 
-. di as txt "11: SUFENTANIL CONVERSION FACTOR SENSITIVITY (UNRESOLVED - AUDIT ONLY)"
-11: SUFENTANIL CONVERSION FACTOR SENSITIVITY (UNRESOLVED - AUDIT ONLY)
+. di as txt "11: SUFENTANIL CONVERSION FACTOR SENSITIVITY"
+11: SUFENTANIL CONVERSION FACTOR SENSITIVITY
+
+. di as txt "    Primary = 1.0 mg MME per ug (1000:1). Range audited: 0.1 to 1.0."
+    Primary = 1.0 mg MME per ug (1000:1). Range audited: 0.1 to 1.0.
 
 . di as txt "=================================================================="
 ==================================================================
@@ -20,7 +23,7 @@
 . * PART 1: STRICT PRIMARY (k=6) UNDER ALTERNATIVE SUFENTANIL FACTORS
 . *   Only Chen 2020 is sufentanil-converted within the strict primary set.
 . * ------------------------------------------------------------------------------
-. foreach factor in 0.1 0.5 1.0 {
+. foreach factor in 0.1 0.25 0.5 1.0 {
   2.     use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
   3.     keep if inc_primary == 1
   4. 
@@ -39,12 +42,12 @@
 >  = " %6.4f r(p) "  I2 = " %5.2f r(I2) "%"
  14. }
 (9 observations deleted)
-(0 real changes made)
 (1 real change made)
-(0 real changes made)
-(0 real changes made)
-(0 real changes made)
-(0 real changes made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
 
 Meta-analysis setting information
 
@@ -132,6 +135,64 @@ Meta-analysis setting information
 
 Meta-analysis summary                             Number of studies =      6
 Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 34.9002
+SE adjustment: Knapp–Hartung                                I2 (%) =   97.80
+                                                                H2 =   45.45
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     10.05
+                Chen 2020 |         -7.048      -7.920      -6.175     20.65
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     14.88
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     20.57
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.38
+                Yang 2024 |         -0.300      -1.703       1.103     20.47
+--------------------------+-------------------------------------------------
+                    theta |         -5.669     -13.296       1.957
+----------------------------------------------------------------------------
+Test of theta = 0: t(5) = -1.91                          Prob > |t| = 0.1143
+Test of homogeneity: Q = chi2(5) = 119.95                  Prob > Q = 0.0000
+
+Sufentanil factor = 0.25 mg MME per ug | Strict primary k=6:
+  MD = -5.669  95% KH CI [-13.296,  1.957]  p = 0.1143  I2 = 97.80%
+(9 observations deleted)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
 Method: REML                                                  tau2 = 57.3646
 SE adjustment: Knapp–Hartung                                I2 (%) =   97.92
                                                                 H2 =   47.99
@@ -155,12 +216,12 @@ Test of homogeneity: Q = chi2(5) = 199.34                  Prob > Q = 0.0000
 Sufentanil factor = 0.5 mg MME per ug | Strict primary k=6:
   MD = -7.447  95% KH CI [-16.226,  1.332]  p = 0.0811  I2 = 97.92%
 (9 observations deleted)
-(1 real change made)
-(1 real change made)
-(1 real change made)
-(1 real change made)
-(1 real change made)
-(1 real change made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
 
 Meta-analysis setting information
 
@@ -218,7 +279,7 @@ Sufentanil factor = 1.0 mg MME per ug | Strict primary k=6:
 . * PART 2: TARGET A BROADER WINDOW (INCL. XIE 2014) UNDER ALTERNATIVE FACTORS
 . *   Chen 2020 and Xie 2014 are both sufentanil-converted in this set.
 . * ------------------------------------------------------------------------------
-. foreach factor in 0.1 0.5 1.0 {
+. foreach factor in 0.1 0.25 0.5 1.0 {
   2.     use "06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta", clear
   3.     * Matches 02_targetA_48h.do's TA_INCL_XIE sample exactly: one Xie 2014
 .     * contrast only (EAS vs Sham), not both duplicated comparison rows.
@@ -240,12 +301,12 @@ Sufentanil factor = 1.0 mg MME per ug | Strict primary k=6:
 >  = " %6.4f r(p) "  I2 = " %5.2f r(I2) "%"
  14. }
 (1 observation deleted)
-(0 real changes made)
-(0 real changes made)
-(0 real changes made)
-(0 real changes made)
-(0 real changes made)
-(0 real changes made)
+(2 real changes made)
+(2 real changes made)
+(2 real changes made)
+(2 real changes made)
+(2 real changes made)
+(2 real changes made)
 
 Meta-analysis setting information
 
@@ -331,6 +392,62 @@ Meta-analysis setting information
 
 Meta-analysis summary                     Number of studies =      4
 Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.3504
+SE adjustment: Knapp–Hartung                        I2 (%) =   40.44
+                                                        H2 =    1.68
+
+       Effect size: Mean Difference (mg IV MME)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Chen 2020 |         -5.407      -6.379      -4.436     38.49
+       Zhang 2023 |         -3.333      -5.060      -1.606     20.37
+          An 2014 |         -6.000     -10.628      -1.372      3.87
+         Xie 2014 |         -4.625      -5.635      -3.615     37.26
+------------------+-------------------------------------------------
+            theta |         -4.716      -6.187      -3.246
+--------------------------------------------------------------------
+Test of theta = 0: t(3) = -10.21                 Prob > |t| = 0.0020
+Test of homogeneity: Q = chi2(3) = 4.64            Prob > Q = 0.1999
+
+Sufentanil factor = 0.25 mg MME per ug | Target A broader (incl. Xie 2014), k=4:
+  MD = -4.716  95% KH CI [-6.187, -3.246]  p = 0.0020  I2 = 40.44%
+(1 observation deleted)
+(2 real changes made)
+(2 real changes made)
+(2 real changes made)
+(2 real changes made)
+(2 real changes made)
+(2 real changes made)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      4
+Random-effects model                      Heterogeneity:
 Method: REML                                          tau2 = 10.9342
 SE adjustment: Knapp–Hartung                        I2 (%) =   89.63
                                                         H2 =    9.64
@@ -352,12 +469,12 @@ Test of homogeneity: Q = chi2(3) = 36.71           Prob > Q = 0.0000
 Sufentanil factor = 0.5 mg MME per ug | Target A broader (incl. Xie 2014), k=4:
   MD = -7.428  95% KH CI [-12.916, -1.940]  p = 0.0230  I2 = 89.63%
 (1 observation deleted)
-(2 real changes made)
-(2 real changes made)
-(2 real changes made)
-(2 real changes made)
-(2 real changes made)
-(2 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
 
 Meta-analysis setting information
 
@@ -413,35 +530,44 @@ Sufentanil factor = 1.0 mg MME per ug | Target A broader (incl. Xie 2014), k=4:
 
 ==================================================================
 
-. di as txt "AUDIT CONCLUSION"
-AUDIT CONCLUSION
+. di as txt "INTERPRETATION"
+INTERPRETATION
 
 . di as txt "=================================================================="
 ==================================================================
 
-. di as txt "The direction of any correction is unambiguous: a higher sufentanil:morphine"
-The direction of any correction is unambiguous: a higher sufentanil:morphine
+. di as txt "A higher sufentanil:morphine ratio makes the sufentanil trials' opioid-"
+A higher sufentanil:morphine ratio makes the sufentanil trials' opioid-
 
-. di as txt "ratio makes Chen 2020's (and Xie 2014's) opioid-sparing effect LARGER in mg"
-ratio makes Chen 2020's (and Xie 2014's) opioid-sparing effect LARGER in mg
+. di as txt "sparing effect LARGER in mg IV MME terms, because the same raw microgram"
+sparing effect LARGER in mg IV MME terms, because the same raw microgram
 
-. di as txt "MME terms, not smaller, because the same raw microgram difference is scaled"
-MME terms, not smaller, because the same raw microgram difference is scaled
+. di as txt "difference is scaled by a bigger factor. The correction from 0.1 to 1.0"
+difference is scaled by a bigger factor. The correction from 0.1 to 1.0
 
-. di as txt "by a bigger factor. Whether the true ratio is 100:1, 500:1, or 1000:1 remains"
-by a bigger factor. Whether the true ratio is 100:1, 500:1, or 1000:1 remains
+. di as txt "therefore increases effect magnitude and widens confidence intervals; it"
+therefore increases effect magnitude and widens confidence intervals; it
 
-. di as txt "UNRESOLVED per opioid_conversion_audit.csv. No factor is adopted as primary"
-UNRESOLVED per opioid_conversion_audit.csv. No factor is adopted as primary
+. di as txt "does not manufacture statistical significance. Under the corrected primary"
+does not manufacture statistical significance. Under the corrected primary
 
-. di as txt "by this script. The locked primary analysis (01_opioid24_primary.do, factor"
-by this script. The locked primary analysis (01_opioid24_primary.do, factor
+. di as txt "factor the strict primary remains non-significant, and the Target A broader"
+factor the strict primary remains non-significant, and the Target A broader
 
-. di as txt "= 0.1) is UNCHANGED and remains the reported strict primary result pending"
-= 0.1) is UNCHANGED and remains the reported strict primary result pending
+. di as txt "window moves from significant to non-significant. Conclusions are reported"
+window moves from significant to non-significant. Conclusions are reported
 
-. di as txt "independent pharmacological verification."
-independent pharmacological verification.
+. di as txt "at factor 1.0 with this full range disclosed as a sensitivity."
+at factor 1.0 with this full range disclosed as a sensitivity.
+
+. di as txt ""
+
+
+. di as txt "Standardized (SMD / Hedges' g) analyses in this project are computed from"
+Standardized (SMD / Hedges' g) analyses in this project are computed from
+
+. di as txt "NATIVE units and are therefore invariant to every factor in this loop."
+NATIVE units and are therefore invariant to every factor in this loop.
 
 . 
 . log close
@@ -449,5 +575,5 @@ independent pharmacological verification.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/11_sufentanil_conversion_sensitivity.log
   log type:  text
- closed on:   7 Sep 2026, 14:49:00
+ closed on:   7 Sep 2026, 16:11:04
 ----------------------------------------------------------------------------------------------------

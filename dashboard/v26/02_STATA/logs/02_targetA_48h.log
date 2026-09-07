@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/02_targetA_48h.log
   log type:  text
- opened on:   7 Sep 2026, 14:48:53
+ opened on:   7 Sep 2026, 16:10:57
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta
  Observations:             5                  
-    Variables:            57                  7 Sep 2026 14:48
+    Variables:            57                  7 Sep 2026 16:10
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -102,8 +102,8 @@ Sorted by:
        lock_id        study                   comparison_id   includ~t   includ~y   n_i   mean_i~e  
 >  sd_i_mme   n_c   mean_c~e   sd_c_mme      md_mme     se_mme                        unit     rob_o
 > verall  
-  1.     A-001    Chen 2020       CHEN20_TEAS_vs_SHAM_SUF48          1          0    40     11.852  
->      .977    40     14.015       .787      -2.163   .1983619               µg sufentanil   Some co
+  1.     A-001    Chen 2020       CHEN20_TEAS_vs_SHAM_SUF48          1          0    40     118.52  
+>      9.77    40     140.15       7.87      -21.63   1.983619               µg sufentanil   Some co
 > ncerns  
   2.     A-002   Zhang 2023      ZHANG23_TEAS_vs_SHAM_MME48          1          0   922        100  
 >  22.23903   916   103.3333   14.82602   -3.333336   .8811258   mg IV morphine-equivalent   Some co
@@ -111,11 +111,11 @@ Sorted by:
   3.     A-003      An 2014          AN14_EA_vs_CTRL_FENT48          1          0    41         67  
 >         9    40         73         12          -6   2.361273                 mg fentanyl   Some co
 > ncerns  
-  4.     A-004     Xie 2014      XIE14_EAS_vs_SHAM_TOTALSUF          0          1    20       11.5  
->        .6    20      13.35         .7       -1.85   .2061553               µg sufentanil   Some co
+  4.     A-004     Xie 2014      XIE14_EAS_vs_SHAM_TOTALSUF          0          1    20        115  
+>         6    20      133.5          7       -18.5   2.061553               µg sufentanil   Some co
 > ncerns  
-  5.     A-004     Xie 2014   XIE14_EAS_vs_CONTROL_TOTALSUF          0          1    20       11.5  
->        .6    20      13.43        .59       -1.93   .1881622               µg sufentanil   Some co
+  5.     A-004     Xie 2014   XIE14_EAS_vs_CONTROL_TOTALSUF          0          1    20        115  
+>         6    20      134.3        5.9       -19.3   1.881622               µg sufentanil   Some co
 > ncerns  
 
 . 
@@ -166,24 +166,24 @@ Meta-analysis setting information
 
 Meta-analysis summary                     Number of studies =      3
 Random-effects model                      Heterogeneity:
-Method: REML                                          tau2 =  0.7105
-SE adjustment: Knapp–Hartung                        I2 (%) =   49.79
-                                                        H2 =    1.99
+Method: REML                                          tau2 = 94.5600
+SE adjustment: Knapp–Hartung                        I2 (%) =   97.07
+                                                        H2 =   34.17
 
        Effect size: Mean Difference (mg IV MME)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Chen 2020 |         -2.163      -2.552      -1.774     61.59
-       Zhang 2023 |         -3.333      -5.060      -1.606     31.06
-          An 2014 |         -6.000     -10.628      -1.372      7.35
+        Chen 2020 |        -21.630     -25.518     -17.742     33.15
+       Zhang 2023 |         -3.333      -5.060      -1.606     34.25
+          An 2014 |         -6.000     -10.628      -1.372     32.61
 ------------------+-------------------------------------------------
-            theta |         -2.808      -5.986       0.369
+            theta |        -10.268     -34.835      14.299
 --------------------------------------------------------------------
-95% prediction interval for theta: [-17.047,11.431]
+95% prediction interval for theta: [-153.550,133.014]
 
-Test of theta = 0: t(2) = -3.80                  Prob > |t| = 0.0627
-Test of homogeneity: Q = chi2(2) = 4.23            Prob > Q = 0.1209
+Test of theta = 0: t(2) = -1.80                  Prob > |t| = 0.2139
+Test of homogeneity: Q = chi2(2) = 71.08           Prob > Q = 0.0000
 
 . matrix res_strict = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -210,23 +210,23 @@ Test of homogeneity: Q = chi2(2) = 4.23            Prob > Q = 0.1209
 
 Meta-analysis summary                     Number of studies =      2
 Random-effects model                      Heterogeneity:
-Method: REML                                          tau2 =  0.2770
-SE adjustment: Knapp–Hartung                        I2 (%) =   40.44
-                                                        H2 =    1.68
+Method: REML                                          tau2 = 165.0283
+SE adjustment: Knapp–Hartung                        I2 (%) =   98.59
+                                                        H2 =   71.06
 
        Effect size: Mean Difference (mg IV MME)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Chen 2020 |         -2.163      -2.552      -1.774     76.91
-       Zhang 2023 |         -3.333      -5.060      -1.606     23.09
+        Chen 2020 |        -21.630     -25.518     -17.742     49.53
+       Zhang 2023 |         -3.333      -5.060      -1.606     50.47
 ------------------+-------------------------------------------------
-            theta |         -2.433      -8.700       3.834
+            theta |        -12.395    -128.631     103.840
 --------------------------------------------------------------------
 95% prediction interval for theta: [     .,     .]
 
-Test of theta = 0: t(1) = -4.93                  Prob > |t| = 0.1273
-Test of homogeneity: Q = chi2(1) = 1.68            Prob > Q = 0.1950
+Test of theta = 0: t(1) = -1.35                  Prob > |t| = 0.4048
+Test of homogeneity: Q = chi2(1) = 71.06           Prob > Q = 0.0000
 
 . matrix res_noan = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -253,23 +253,23 @@ Test of homogeneity: Q = chi2(1) = 1.68            Prob > Q = 0.1950
 
 Meta-analysis summary                     Number of studies =      2
 Random-effects model                      Heterogeneity:
-Method: REML                                          tau2 =  4.5538
-SE adjustment: Knapp–Hartung                        I2 (%) =   61.86
-                                                        H2 =    2.62
+Method: REML                                          tau2 = 117.3932
+SE adjustment: Knapp–Hartung                        I2 (%) =   96.11
+                                                        H2 =   25.69
 
        Effect size: Mean Difference (mg IV MME)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Chen 2020 |         -2.163      -2.552      -1.774     68.80
-          An 2014 |         -6.000     -10.628      -1.372     31.20
+        Chen 2020 |        -21.630     -25.518     -17.742     50.34
+          An 2014 |         -6.000     -10.628      -1.372     49.66
 ------------------+-------------------------------------------------
-            theta |         -3.360     -25.948      19.228
+            theta |        -13.867    -113.164      85.429
 --------------------------------------------------------------------
 95% prediction interval for theta: [     .,     .]
 
-Test of theta = 0: t(1) = -1.89                  Prob > |t| = 0.3098
-Test of homogeneity: Q = chi2(1) = 2.62            Prob > Q = 0.1054
+Test of theta = 0: t(1) = -1.77                  Prob > |t| = 0.3267
+Test of homogeneity: Q = chi2(1) = 25.69           Prob > Q = 0.0000
 
 . matrix res_noconv = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -298,25 +298,25 @@ Test of homogeneity: Q = chi2(1) = 2.62            Prob > Q = 0.1054
 
 Meta-analysis summary                     Number of studies =      4
 Random-effects model                      Heterogeneity:
-Method: REML                                          tau2 =  0.0198
-SE adjustment: Knapp–Hartung                        I2 (%) =   14.91
-                                                        H2 =    1.18
+Method: REML                                          tau2 = 79.1542
+SE adjustment: Knapp–Hartung                        I2 (%) =   96.46
+                                                        H2 =   28.21
 
        Effect size: Mean Difference (mg IV MME)
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Chen 2020 |         -2.163      -2.552      -1.774     49.16
-       Zhang 2023 |         -3.333      -5.060      -1.606      3.65
-          An 2014 |         -6.000     -10.628      -1.372      0.52
-         Xie 2014 |         -1.850      -2.254      -1.446     46.67
+        Chen 2020 |        -21.630     -25.518     -17.742     24.90
+       Zhang 2023 |         -3.333      -5.060      -1.606     25.88
+          An 2014 |         -6.000     -10.628      -1.372     24.42
+         Xie 2014 |        -18.500     -22.541     -14.459     24.80
 ------------------+-------------------------------------------------
-            theta |         -2.080      -2.827      -1.333
+            theta |        -12.302     -26.735       2.132
 --------------------------------------------------------------------
-95% prediction interval for theta: [-3.257,-0.902]
+95% prediction interval for theta: [-55.269,30.665]
 
-Test of theta = 0: t(3) = -8.86                  Prob > |t| = 0.0030
-Test of homogeneity: Q = chi2(3) = 6.18            Prob > Q = 0.1032
+Test of theta = 0: t(3) = -2.71                  Prob > |t| = 0.0730
+Test of homogeneity: Q = chi2(3) = 101.83          Prob > Q = 0.0000
 
 . matrix res_broader = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -523,20 +523,20 @@ file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetA_48h.csv saved
 . list, clean
 
          analysis_id                                  outcome                                       
->    stratum   k    estimate      ci_low     ci_high    p_value       tau2         i2     q_stat    
->               model  
+>    stratum   k    estimate      ci_low    ci_high    p_value       tau2         i2     q_stat     
+>              model  
   1.       TA_STRICT   0-48 h Cumulative Postoperative Opioid                Strict Target A (Chen, 
-> Zhang, An)   3   -2.808444   -5.985668    .3687785   .0627018   .7105451   49.79492   4.225394   R
-> EML + Hartung-Knapp  
+> Zhang, An)   3   -10.26785   -34.83466   14.29897   .2139469      94.56   97.07373   71.07848   RE
+> ML + Hartung-Knapp  
   2.      TA_EXCL_AN   0-48 h Cumulative Postoperative Opioid           Mandatory Sensitivity: Exclu
-> de An 2014   2   -2.433286   -8.700303     3.83373   .1273173   .2769778     40.444   1.679092   R
-> EML + Hartung-Knapp  
+> de An 2014   2   -12.39536   -128.6308     103.84   .4047531   165.0284   98.59272   71.05895   RE
+> ML + Hartung-Knapp  
   3.   TA_EXCL_ZHANG   0-48 h Cumulative Postoperative Opioid      Sensitivity: Exclude Converted (Z
-> hang 2023)   2   -3.360069   -25.94775    19.22762   .3097964   4.553806   61.86157   2.622027   R
-> EML + Hartung-Knapp  
+> hang 2023)   2   -13.86749   -113.1642   85.42924   .3266978   117.3932   96.10705   25.68746   RE
+> ML + Hartung-Knapp  
   4.     TA_INCL_XIE   0-48 h Cumulative Postoperative Opioid   Sensitivity: Broader Window (Include
->  Xie 2014)   4   -2.079583   -2.826506   -1.332659   .0030306   .0197826   14.91484   6.179837   R
-> EML + Hartung-Knapp  
+>  Xie 2014)   4   -12.30189    -26.7354   2.131619   .0730135   79.15422   96.45513   101.8267   RE
+> ML + Hartung-Knapp  
 
 . 
 . di as txt _n "SUCCESS: Target A analyses completed and exported."
@@ -548,5 +548,5 @@ SUCCESS: Target A analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/02_targetA_48h.log
   log type:  text
- closed on:   7 Sep 2026, 14:48:54
+ closed on:   7 Sep 2026, 16:10:58
 ----------------------------------------------------------------------------------------------------

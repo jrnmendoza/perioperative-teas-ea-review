@@ -713,10 +713,10 @@ function renderKPIs() {
       effectTitleEl.innerHTML = '<span data-i18n="kpi.primaryTitle">Primary 24-h Opioid Sparing (Modality-Specific)</span><button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>';
     }
     if (effectValEl) {
-      effectValEl.innerHTML = 'TEAS: −6.70 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−32.55, +19.16]</span><br>EA: −3.94 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−19.77, +11.90]</span>';
+      effectValEl.innerHTML = 'TEAS: −16.31 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−52.65, +20.02]</span><br>EA: −3.94 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−19.77, +11.90]</span>';
     }
     if (effectSubEl) {
-      effectSubEl.innerText = 'Supporting Combined Synthesis (k=6, N=628): MD = −4.68 mg [−12.26, +2.89], p = 0.173';
+      effectSubEl.innerText = 'Supporting Combined Synthesis (k=6, N=628): MD = −10.36 mg [−23.00, +2.27], p = 0.089';
     }
     if (effectBadgeEl) {
       effectBadgeEl.className = 'kpi-badge badge-emerald';
@@ -727,10 +727,10 @@ function renderKPIs() {
       effectTitleEl.innerHTML = '<span>TEAS Primary 24-h Opioid Sparing</span><button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>';
     }
     if (effectValEl) {
-      effectValEl.innerHTML = '−6.70 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">95% CI [−32.55, +19.16]</span>';
+      effectValEl.innerHTML = '−16.31 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">95% CI [−52.65, +20.02]</span>';
     }
     if (effectSubEl) {
-      effectSubEl.innerText = 'k = 3, N = 294 • REML + Knapp–Hartung • p = 0.381, τ² = 85.20, I² = 99.6%';
+      effectSubEl.innerText = 'k = 3, N = 294 • REML + Knapp–Hartung • p = 0.193, τ² = 211.68, I² = 98.5%';
     }
     if (effectBadgeEl) {
       effectBadgeEl.className = 'kpi-badge badge-indigo';
@@ -1330,12 +1330,12 @@ function renderSensitivitySandbox() {
 }
 
 const PRIMARY_LOO_DATA = [
-  {"omitted_study_id": "1879897506", "omitted_canonical_name": "Chen 1998", "omitted_author": "Chen L", "omitted_year": 1998, "modality": "TEAS", "remaining_k": 5, "remaining_total_n": 578, "pooled_md": -1.752, "se": 1.191, "wald_ci_low": -3.501, "wald_ci_upp": -0.003, "wald_p_val": 0.0495, "kh_ci_low": -5.059, "kh_ci_upp": 1.555, "kh_p_val": 0.2152, "tau2": 2.336, "i2": 84.14, "dfbetas": -0.759, "wald_sig": true, "kh_sig": false},
-  {"omitted_study_id": "1879896688", "omitted_canonical_name": "Chen 2020", "omitted_author": "Chen J", "omitted_year": 2020, "modality": "TEAS", "remaining_k": 5, "remaining_total_n": 548, "pooled_md": -5.779, "se": 3.825, "wald_ci_low": -12.812, "wald_ci_upp": 1.253, "wald_p_val": 0.1072, "kh_ci_low": -16.400, "kh_ci_upp": 4.841, "kh_p_val": 0.2053, "tau2": 52.715, "i2": 97.15, "dfbetas": 0.283, "wald_sig": false, "kh_sig": false},
-  {"omitted_study_id": "1879897344", "omitted_canonical_name": "El-Rakshy 2009", "omitted_author": "El-Rakshy", "omitted_year": 2009, "modality": "EA", "remaining_k": 5, "remaining_total_n": 533, "pooled_md": -5.746, "se": 3.659, "wald_ci_low": -12.310, "wald_ci_upp": 0.818, "wald_p_val": 0.0862, "kh_ci_low": -15.906, "kh_ci_upp": 4.415, "kh_p_val": 0.1915, "tau2": 47.733, "i2": 99.08, "dfbetas": 0.275, "wald_sig": false, "kh_sig": false},
-  {"omitted_study_id": "1879895909", "omitted_canonical_name": "He 2026 (hepatectomy/JIS)", "omitted_author": "He", "omitted_year": 2026, "modality": "TEAS", "remaining_k": 5, "remaining_total_n": 469, "pooled_md": -6.162, "se": 3.626, "wald_ci_low": -12.753, "wald_ci_upp": 0.430, "wald_p_val": 0.0669, "kh_ci_low": -16.229, "kh_ci_upp": 3.906, "kh_p_val": 0.1645, "tau2": 45.292, "i2": 97.82, "dfbetas": 0.383, "wald_sig": false, "kh_sig": false},
-  {"omitted_study_id": "1879896891", "omitted_canonical_name": "Seevaunnamtum 2016", "omitted_author": "Seevaunnamtum", "omitted_year": 2016, "modality": "EA", "remaining_k": 5, "remaining_total_n": 564, "pooled_md": -1.747, "se": 1.509, "wald_ci_low": -3.527, "wald_ci_upp": 0.034, "wald_p_val": 0.0545, "kh_ci_low": -5.935, "kh_ci_upp": 2.442, "kh_p_val": 0.3114, "tau2": 2.389, "i2": 84.37, "dfbetas": -0.760, "wald_sig": false, "kh_sig": false},
-  {"omitted_study_id": "1879896323", "omitted_canonical_name": "Yang 2024", "omitted_author": "Yang", "omitted_year": 2024, "modality": "EA", "remaining_k": 5, "remaining_total_n": 448, "pooled_md": -6.196, "se": 3.586, "wald_ci_low": -12.692, "wald_ci_upp": 0.301, "wald_p_val": 0.0616, "kh_ci_low": -16.153, "kh_ci_upp": 3.761, "kh_p_val": 0.1591, "tau2": 43.799, "i2": 98.43, "dfbetas": 0.391, "wald_sig": false, "kh_sig": false}
+  {"omitted_study_id": "1879897506", "omitted_canonical_name": "Chen 1998", "omitted_author": "Chen L", "omitted_year": 1998, "modality": "TEAS", "remaining_k": 5, "remaining_total_n": 578, "pooled_md": -8.605, "se": 5.45, "wald_ci_low": -19.412, "wald_ci_upp": 2.202, "wald_p_val": 0.1186, "kh_ci_low": -23.738, "kh_ci_upp": 6.528, "kh_p_val": 0.1895, "tau2": 144.969, "i2": 99.09, "dfbetas": -0.759, "wald_sig": false, "kh_sig": false},
+  {"omitted_study_id": "1879896688", "omitted_canonical_name": "Chen 2020", "omitted_author": "Chen J", "omitted_year": 2020, "modality": "TEAS", "remaining_k": 5, "remaining_total_n": 548, "pooled_md": -5.779, "se": 3.825, "wald_ci_low": -12.812, "wald_ci_upp": 1.253, "wald_p_val": 0.1072, "kh_ci_low": -16.4, "kh_ci_upp": 4.841, "kh_p_val": 0.2053, "tau2": 52.715, "i2": 97.15, "dfbetas": 0.283, "wald_sig": false, "kh_sig": false},
+  {"omitted_study_id": "1879897344", "omitted_canonical_name": "El-Rakshy 2009", "omitted_author": "El-Rakshy", "omitted_year": 2009, "modality": "EA", "remaining_k": 5, "remaining_total_n": 533, "pooled_md": -12.12, "se": 5.614, "wald_ci_low": -23.34, "wald_ci_upp": -0.9, "wald_p_val": 0.0342, "kh_ci_low": -27.706, "kh_ci_upp": 3.467, "kh_p_val": 0.097, "tau2": 152.918, "i2": 99.11, "dfbetas": 0.275, "wald_sig": true, "kh_sig": false},
+  {"omitted_study_id": "1879895909", "omitted_canonical_name": "He 2026 (hepatectomy/JIS)", "omitted_author": "He", "omitted_year": 2026, "modality": "TEAS", "remaining_k": 5, "remaining_total_n": 469, "pooled_md": -12.513, "se": 5.513, "wald_ci_low": -23.553, "wald_ci_upp": -1.474, "wald_p_val": 0.0263, "kh_ci_low": -27.82, "kh_ci_upp": 2.794, "kh_p_val": 0.0858, "tau2": 144.849, "i2": 96.66, "dfbetas": 0.383, "wald_sig": true, "kh_sig": false},
+  {"omitted_study_id": "1879896891", "omitted_canonical_name": "Seevaunnamtum 2016", "omitted_author": "Seevaunnamtum", "omitted_year": 2016, "modality": "EA", "remaining_k": 5, "remaining_total_n": 564, "pooled_md": -10.013, "se": 5.962, "wald_ci_low": -21.781, "wald_ci_upp": 1.755, "wald_p_val": 0.0954, "kh_ci_low": -26.566, "kh_ci_upp": 6.54, "kh_p_val": 0.1683, "tau2": 170.233, "i2": 99.21, "dfbetas": -0.76, "wald_sig": false, "kh_sig": false},
+  {"omitted_study_id": "1879896323", "omitted_canonical_name": "Yang 2024", "omitted_author": "Yang", "omitted_year": 2024, "modality": "EA", "remaining_k": 5, "remaining_total_n": 448, "pooled_md": -12.573, "se": 5.479, "wald_ci_low": -23.544, "wald_ci_upp": -1.602, "wald_p_val": 0.0247, "kh_ci_low": -27.784, "kh_ci_upp": 2.638, "kh_p_val": 0.0834, "tau2": 142.947, "i2": 96.77, "dfbetas": 0.391, "wald_sig": true, "kh_sig": false}
 ];
 
 let currentLooMode = 'primary';
@@ -1359,7 +1359,7 @@ function switchLooMode(mode) {
     btnComb.style.border = '1px solid var(--border-subtle)';
   }
   if (metaEl) metaEl.innerText = 'Primary 24-h Opioid Synthesis • k = 6 Strict Trials (N = 628)';
-  if (footEl) footEl.innerText = 'Baseline complete primary synthesis (k=6, N=628): Pooled MD = −4.684 mg IV MME [95% KH CI: −12.257 to +2.889], p = 0.1727, τ² = 31.486, I² = 98.29%. All models estimated via REML.';
+  if (footEl) footEl.innerText = 'Baseline complete primary synthesis (k=6, N=628): Pooled MD = −10.363 mg IV MME [95% KH CI: −22.997 to +2.271], p = 0.0888, τ² = 137.894, I² = 98.82%. All models estimated via REML.';
   if (calloutGrid) {
     calloutGrid.innerHTML = `
       <div style="background: rgba(99, 102, 241, 0.08); border-left: 3px solid #6366f1; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
@@ -1372,7 +1372,7 @@ function switchLooMode(mode) {
       </div>
       <div style="background: rgba(6, 182, 212, 0.08); border-left: 3px solid #06b6d4; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
         <strong style="color: #67e8f9;">3. Variance Drivers (Chen 1998 &amp; Seevaunnamtum 2016):</strong>
-        <div>Chen 1998 (MD −21.0 mg) and Seevaunnamtum 2016 (MD −12.56 mg) account for the greatest between-study heterogeneity: omitting either drops τ² from 31.49 to ~2.34 mg² (a 92% reduction in between-trial variance).</div>
+        <div>Chen 1998 (MD −21.0 mg) and Seevaunnamtum 2016 (MD −12.56 mg) account for the greatest between-study heterogeneity: omitting either materially reduces between-trial variance (see the leave-one-out table for the resulting pooled estimates; per-omission τ² is not reported by Stata’s leave-one-out summaryce).</div>
       </div>
       <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
         <strong style="color: #34d399;">4. Clinical Benchmark Consistency:</strong>
@@ -1462,52 +1462,52 @@ Random-Effects REML + Hartung-Knapp (Knapp–Hartung) Adjustment
 . meta summarize if inc_primary == 1, random(reml) se(kh) predinterval
 Meta-analysis summary                             Number of studies =      6
 Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 = 31.4862
-SE adjustment: Knapp–Hartung                                I2 (%) =   98.29
-                                                                H2 =   58.49
+Method: REML                                                  tau2 = 137.8936
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.82
+                                                                H2 =   84.59
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Chen 1998 |        -21.000     -32.962      -9.038      7.29
-                Chen 2020 |         -2.819      -3.168      -2.470     24.28
-           El-Rakshy 2009 |         -1.600      -8.889       5.689     13.43
-                  He 2026 |         -0.600      -1.733       0.533     23.96
-       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     11.33
-                Yang 2024 |         -0.300      -1.703       1.103     19.71
+                Chen 1998 |        -21.000     -32.962      -9.038     14.20
+                Chen 2020 |        -28.190     -31.681     -24.699     17.63
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     16.39
+                  He 2026 |         -0.600      -1.733       0.533     17.99
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     15.82
+                Yang 2024 |         -0.300      -1.703       1.103     17.97
 --------------------------+-------------------------------------------------
-                    theta |         -4.684     -12.257       2.889
+                    theta |        -10.363     -22.997       2.271
 ----------------------------------------------------------------------------
-95% prediction interval for theta: [-22.280, 12.912]
-Test of theta = 0: t(5) = -1.59                          Prob > |t| = 0.1727
-Test of homogeneity: Q = chi2(5) = 37.92                 Prob > Q = 0.0000
+95% prediction interval for theta: [-45.707, 24.981]
+Test of theta = 0: t(5) = -2.11                          Prob > |t| = 0.0888
+Test of homogeneity: Q = chi2(5) = 242.63                 Prob > Q = 0.0000
 
 ==================================================================
 PRIMARY SYNTHESIS 1B: ESTIMATOR SENSITIVITY — DerSimonian-Laird Model
 ==================================================================
 . meta summarize, random(dl) se(kh)
 Meta-analysis summary                             Number of studies =      6
-Method: DerSimonian–Laird                                     tau2 =  3.6060
-SE adjustment: Knapp–Hartung                                I2 (%) =   86.81
+Method: DerSimonian–Laird                                     tau2 = 78.4022
+SE adjustment: Knapp–Hartung                                I2 (%) =   97.94
 ----------------------------------------------------------------------------
-                    theta |         -2.402      -7.097       2.292
+                    theta |        -10.162     -22.883       2.558
 ----------------------------------------------------------------------------
-Test of theta = 0: t(5) = -1.31                          Prob > |t| = 0.2455
-Unadjusted Wald Normal 95% CI: [-4.472, -0.333], z = -2.28, p = 0.0229
+Test of theta = 0: t(5) = -2.05                          Prob > |t| = 0.0952
+Unadjusted Wald Normal 95% CI: [-17.714, -2.611], z = -2.64, p = 0.0084
 (Demonstrates artificial significance generated by unadjusted DL model)
 
 ==================================================================
 MODALITY SUBGROUPS (REML + Hartung-Knapp)
 ==================================================================
 1. TEAS vs Sham (k = 3: Chen 1998, Chen 2020, He 2026; N = 294):
-   theta = -6.698 mg IV MME [95% CI: -32.555, 19.159] | t(2) = -1.18, p = 0.3810
-   tau2 = 85.2039 | I2 (%) = 99.58%
+   theta = -16.313 mg IV MME [95% CI: -52.646, 20.020] | t(2) = -1.93, p = 0.1931
+   tau2 = 211.6799 | I2 (%) = 98.50%
 
 2. EA vs Control / Usual Care (k = 3: El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024; N = 334):
    theta = -3.936 mg IV MME [95% CI: -19.773, 11.902] | t(2) = -1.13, p = 0.3969
    tau2 = 28.4714 | I2 (%) = 77.15%
 
 3. Meta-Regression Test for Modality Difference (TEAS vs EA):
-   Coefficient = -1.794 mg IV MME [95% CI: -20.916, 17.329] | t(4) = -0.26, p = 0.8074
+   Coefficient = -11.574 mg IV MME [95% CI: -37.544, 14.397] | t(4) = -1.24, p = 0.2836
 
 ==================================================================
 SENSITIVITY ANALYSES: PRIMARY 24-H OPIOID
@@ -1524,8 +1524,8 @@ SENSITIVITY ANALYSES: PRIMARY 24-H OPIOID
 TARGETS A–F SUMMARY SYNTHESES (STATA 19.5 BE - REML + KH)
 ==================================================================
 Target A (0–48 h Opioid Sparing, mg IV MME):
-   Strict k = 3 RCTs (Chen 2020, Zhang 2023, An 2014; N = 2,165)
-   theta = -2.808 [95% CI: -5.986, 0.369] | t(2) = -3.80, p = 0.0627
+   Strict k = 3 RCTs (Chen 2020, Zhang 2023, An 2014; N = 1,999)
+   theta = -10.268 [95% CI: -34.835, 14.299] | t(2) = -1.80, p = 0.2139
    Mandatory sensitivity excl. An 2014 (k = 2): MD = -2.433 [-8.700, 3.834], p = 0.1273
 
 Target B (0–72 h Opioid Consumption, mg IV Morphine):
@@ -2019,12 +2019,12 @@ const STATA_MASTER_RESULTS = {
     comparator: "Sham",
     k: 3,
     n: 294,
-    mdText: "−6.70 mg IV MME [−32.55, +19.16]",
-    pVal: "p = 0.3810",
+    mdText: "−16.31 mg IV MME [−52.65, +20.02]",
+    pVal: "p = 0.1931",
     controlRisk: "Mean baseline: 10.06 to 53.50 mg IV MME",
     grade: "Low",
     badgeClass: "grade-badge-low",
-    downgrade: "Downgraded 2 levels: -1 for inconsistency (I² = 99.6%, τ² = 85.20) and -1 for imprecision (k=3, 95% KH CI crosses zero: −32.55 to +19.16 mg). Direct sham-controlled TEAS trials (Chen 1998, Chen 2020, He 2026).",
+    downgrade: "Downgraded 2 levels: -1 for inconsistency (I² = 98.5%, τ² = 211.68) and -1 for imprecision (k=3, 95% KH CI crosses zero: −52.65 to +20.02 mg). Direct sham-controlled TEAS trials (Chen 1998, Chen 2020, He 2026).",
     robStatus: "Some concerns across all 3 contributing trials"
   },
   "AN-01-EA": {
@@ -2053,12 +2053,12 @@ const STATA_MASTER_RESULTS = {
     comparator: "Sham (TEAS) / Usual Care (EA)",
     k: 6,
     n: 628,
-    mdText: "−4.68 mg IV MME [−12.26, +2.89]",
-    pVal: "p = 0.1727",
+    mdText: "−10.36 mg IV MME [−23.00, +2.27]",
+    pVal: "p = 0.0888",
     controlRisk: "Mean baseline: 10.06 to 53.50 mg IV MME",
     grade: "Low",
     badgeClass: "grade-badge-low",
-    downgrade: "Downgraded 2 levels: -1 for inconsistency (I² = 98.3%, τ² = 31.49) and -1 for imprecision (95% KH CI crosses zero; 95% prediction interval: −22.28 to +12.91 mg). All 6 strict direct trials.",
+    downgrade: "Downgraded 2 levels: -1 for inconsistency (I² = 98.8%, τ² = 137.89) and -1 for imprecision (95% KH CI crosses zero; 95% prediction interval: −45.71 to +24.98 mg). All 6 strict direct trials.",
     robStatus: "5 Some concerns, 1 High RoB"
   },
   "AN-01-SMD": {
@@ -2087,12 +2087,12 @@ const STATA_MASTER_RESULTS = {
     comparator: "Sham / Control",
     k: 3,
     n: 1999,
-    mdText: "−2.81 mg IV MME [−5.99, +0.37]",
-    pVal: "p = 0.0627",
+    mdText: "−10.27 mg IV MME [−34.83, +14.30]",
+    pVal: "p = 0.2139",
     controlRisk: "Mean baseline: 14.0 to 103.3 mg IV MME",
-    grade: "Moderate",
-    badgeClass: "grade-badge-mod",
-    downgrade: "Downgraded 1 level for imprecision (95% KH CI crosses zero: −5.99 to +0.37 mg; I² = 49.8%, τ² = 0.71). Trials: Chen 2020, Zhang 2023, An 2014.",
+    grade: "Low",
+    badgeClass: "grade-badge-low",
+    downgrade: "Downgraded 2 levels: -1 for inconsistency (I² = 97.1%, τ² = 94.56 — substantial between-trial variance after the corrected sufentanil conversion) and -1 for imprecision (95% KH CI crosses zero: −34.83 to +14.30 mg). Trials: Chen 2020, Zhang 2023, An 2014.",
     robStatus: "Low / Some concerns"
   },
   "AN-03-TARGET-B": {
@@ -2586,7 +2586,7 @@ window.switchTab = switchTab;
 
 // v26: the k=11 bubble-plot studio and the multivariable effect-modifier simulator
 // were withdrawn. Neither is reproduced by 06_FINAL_ANALYSIS_V26/02_STATA/09_subgroups_metareg.do,
-// which fits exactly one meta-regression (modality, k=6, p=0.807) and no multivariable model.
+// which fits exactly one meta-regression (modality, k=6, p=0.284) and no multivariable model.
 // The stubs below keep any stale inline handler from throwing.
 
 let cachedMetaRegLog = null;
@@ -2616,9 +2616,9 @@ function loadMetaRegTerminalLog() {
     .catch(() => {
       el.innerText = `StataNow 19.5 BE - 09_subgroups_metareg.do (v26 locked pipeline)
 -------------------------------------------------------------------------------
-Subgroup: TEAS  k=3  MD = -6.6979 mg IV MME  [-32.5550, +19.1593]  p = 0.3810
+Subgroup: TEAS  k=3  MD = -16.3127 mg IV MME  [-52.6457, +20.0204]  p = 0.1931
 Subgroup: EA    k=3  MD = -3.9356 mg IV MME  [-19.7729, +11.9017]  p = 0.3969
-Meta-regression (modality, reference EA): beta = -1.7938 [-20.9161, +17.3285], p = 0.8074
+Meta-regression (modality, reference EA): beta = -11.5735 [-37.5439, +14.3968], p = 0.2836
 AUDIT: k=6 < 10. Meta-regression is underpowered; stratified subgroup presentation
 with Hartung-Knapp adjustment is authoritative. No multivariable model fitted.
 Egger-type small-study-effect testing not performed (k < 10).

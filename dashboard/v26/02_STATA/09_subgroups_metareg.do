@@ -52,6 +52,17 @@ di as txt "for each study-level covariate. Here, k=6 (TEAS k=3, EA k=3)."
 di as txt "Executing exploratory meta-regression on modality for completeness:"
 di as txt "------------------------------------------------------------------"
 
+* Capture each modality stratum FROM THE DATA rather than transcribing it.
+* These rows were previously hardcoded literals (estimate = -6.69786 etc.), which
+* silently failed to track the underlying dataset - exposed when the sufentanil
+* conversion factor was corrected on 2026-09-07 and OP24_TEAS_SHAM moved while
+* SUB_MODALITY_TEAS did not. Now computed, so the two can never diverge again.
+meta summarize if modality == "TEAS", random(reml) se(kh)
+matrix res_teas = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
+
+meta summarize if modality == "EA", random(reml) se(kh)
+matrix res_ea = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
+
 encode modality, gen(modality_code)
 * 1=EA, 2=TEAS
 meta regress i.modality_code, random(reml) se(kh)
@@ -83,26 +94,26 @@ gen notes = ""
 replace analysis_id = "SUB_MODALITY_TEAS" in 1
 replace analysis_type = "Subgroup" in 1
 replace subgroup_variable = "Modality: TEAS (Chen 1998, Chen 2020, He 2026)" in 1
-replace k = 3 in 1
-replace estimate = -6.69786 in 1
-replace ci_low = -32.55502 in 1
-replace ci_high = 19.1593 in 1
-replace p_value = 0.38096 in 1
-replace tau2 = 85.2039 in 1
-replace i2 = 99.584 in 1
+replace k = res_teas[1,5] in 1
+replace estimate = res_teas[1,1] in 1
+replace ci_low = res_teas[1,2] in 1
+replace ci_high = res_teas[1,3] in 1
+replace p_value = res_teas[1,4] in 1
+replace tau2 = res_teas[1,6] in 1
+replace i2 = res_teas[1,7] in 1
 replace notes = "REML + Hartung-Knapp (t df=2)" in 1
 
 * Row 2: EA Stratum
 replace analysis_id = "SUB_MODALITY_EA" in 2
 replace analysis_type = "Subgroup" in 2
 replace subgroup_variable = "Modality: EA (El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024)" in 2
-replace k = 3 in 2
-replace estimate = -3.93557 in 2
-replace ci_low = -19.77287 in 2
-replace ci_high = 11.90174 in 2
-replace p_value = 0.39687 in 2
-replace tau2 = 28.4714 in 2
-replace i2 = 77.153 in 2
+replace k = res_ea[1,5] in 2
+replace estimate = res_ea[1,1] in 2
+replace ci_low = res_ea[1,2] in 2
+replace ci_high = res_ea[1,3] in 2
+replace p_value = res_ea[1,4] in 2
+replace tau2 = res_ea[1,6] in 2
+replace i2 = res_ea[1,7] in 2
 replace notes = "REML + Hartung-Knapp (t df=2)" in 2
 
 * Row 3: Meta-regression on Modality

@@ -621,3 +621,148 @@ not unilaterally "corrected" absent a verifiable project-held primary source.
 3. **Whether Coura 2011 should be actively pursued for author contact** to
    resolve its weight-normalisation issue, which is the only barrier to a
    sham-controlled EA analysis existing at all in this review.
+
+---
+
+## 24. Sufentanil conversion factor — resolution and correction (2026-09-07)
+
+Section 23.3 and §23.10 item 1 left the sufentanil:morphine conversion factor
+**unresolved**. This section closes it. The factor was **corrected from 0.1 to
+1.0 mg MME per µg (100:1 → 1000:1)**, and the correction propagated through the
+Stata pipeline, the exported results, and the dashboard in both locales.
+
+### 24.1 What was wrong
+
+`00_prep_data.do` applied `0.1` to sufentanil in two places. That value:
+
+- is **identical to the fentanyl ratio** used a few lines above it in the same
+  file, which is what made it look plausible during earlier review;
+- carried **no citation** anywhere in the repository;
+- **contradicted the dashboard's own methods page**, which had always stated
+  1000:1;
+- is supported by **no source located during this audit**. Every source found
+  places sufentanil at 5–10× fentanyl, not equal to it.
+
+### 24.2 Sources actually consulted
+
+| Source | What it states | Implied ratio |
+|---|---|---|
+| BC Ministry of Health equianalgesic table | sufentanil 0.01–0.04 mg (10–40 µg) ≡ morphine 10 mg parenteral | 250:1 – 1000:1 |
+| FDA/Pfizer sufentanil citrate label | "as much as 10 times as potent as fentanyl" in balanced general anaesthesia | ≈1000:1 (given fentanyl 100:1) |
+
+CDC 2022 was **not** used: it is scoped to outpatient oral opioid prescribing
+and cannot source a perioperative IV factor. A validator check enforces that it
+is never cited for this purpose.
+
+Treillet 2018, Macintyre 2020 and Knotkova 2012 — named in §23.10 as the texts
+to check — are **not held in this repository**, so no claim in this section is
+attributed to them. The correction rests only on the two sources above.
+
+### 24.3 Decision
+
+`1.0` (1000:1) was adopted as the prespecified primary factor: it is the value
+the methods page already declared, and it is the upper bound of the sourced BC
+range. Because the sourced range (250:1–1000:1) is wide, the choice of point
+within it is reported as an explicit sensitivity rather than presented as a
+settled constant — see `11_sufentanil_conversion_sensitivity.do`, which spans
+0.1, 0.25, 0.5 and 1.0.
+
+### 24.4 Effect on results — the correction does not favour the intervention
+
+A larger ratio scales the same microgram difference by a larger factor, so
+effects grow in magnitude. It creates statistical significance nowhere:
+
+| Analysis | Before (0.1) | After (1.0) |
+|---|---|---|
+| Strict primary, k=6 | MD −4.68, KH CI [−12.26, +2.89], p = 0.173 | MD −10.36, KH CI [−23.00, +2.27], **p = 0.089** |
+| Target A broader, k=4 | MD −2.08, KH CI [−2.83, −1.33], **p = 0.0030** | MD −12.30, KH CI [−26.74, +2.13], **p = 0.0730** |
+
+The strict primary remains non-significant. The Target A broader window moved
+**from significant to non-significant** — the correction removed a positive
+finding rather than producing one.
+
+**All standardized (SMD / Hedges' g) analyses are unchanged.** `00_prep_data.do`
+computes `d` from native units (`mean_i`, `sd_i`), so every SMD in the project is
+invariant to these factors. Pooled g = −0.890 before and after, which is an
+independent confirmation that only the MME-scaled quantities moved.
+
+### 24.5 Other conversion factors re-checked at the same time
+
+- **Hydromorphone 5:1** (§23.10 item 2) — the pipeline value is BC-supported;
+  the Methods page's 6.67:1 was the incorrect figure. Status: VERIFIED.
+- **Fentanyl 0.1 (100:1)** — unchanged and correct; the Coura 2011 derivation
+  card legitimately shows a 0.1 factor because Coura reports **fentanyl**.
+- **Chen 2015 (Hyperalgesia)** — recorded as NOT APPROPRIATE TO CONVERT. The
+  pipeline leaves `mean_i_mme` missing and `inc_primary = 0`, but the dashboard
+  was nonetheless *displaying* a converted MD of −1.122 mg computed at the old
+  factor. The card now states that the trial is not converted and explains why
+  (per-bolus weight-adjusted dosing is not reconstructible from arm-mean
+  weights without assuming every bolus was given at the nominal 0.05 µg/kg).
+- **Zhang 2023, He 2026** — source-supplied MME; NOT APPLICABLE.
+
+### 24.6 Stale display values found while propagating the correction
+
+The correction rescaled a large number of published figures. Beyond the
+pipeline, these hand-maintained displays were found still showing
+pre-correction values **beside** corrected ones:
+
+1. Target A strict card — MD, t statistic, Q, and prediction interval.
+2. Target A broader-window card — MD and all heterogeneity statistics.
+3. Target A forest footer — prediction interval, both leave-one-out models, and
+   a broader-model CI that was significant next to a non-significant p.
+4. Primary forest footer — Q, the DerSimonian–Laird model, and the exclude-High-
+   RoB sensitivity (whose CI did not even bracket its own point estimate).
+5. The k=6 weighting matrix — Chen 2020's row plus **every** REML and DL weight.
+6. The DL derivation box and the Hartung–Knapp box, the latter internally
+   contradicting itself (SE 2.946 in prose, 4.911 in the arithmetic beside it).
+7. Zhang 2025 derivation card — computed at the old factor.
+8. Six Swedish strings that had drifted behind their English counterparts,
+   including a stale TEAS stratum estimate (−6.70 vs −16.31 mg).
+9. Two English glossary errors found in passing: the PONV risk ratio was stated
+   as 0.66/34% against a Stata value of 0.560 (the Swedish text was right), and
+   the Target A broader p-value was 0.003 rather than 0.073.
+
+Two unsupported claims were also removed: "Approaches Significance" on a
+non-significant result, and "Confirms that Target A findings are consistent
+across trial exclusions" — a k=2 leave-one-out model with a CI spanning
+[−128.63, +103.84] confirms nothing, and now says so.
+
+### 24.7 A validator blind spot found and fixed
+
+`strip_withdrawal_prose()` splits text on **HTML element boundaries** to exempt
+explicitly-superseded prose from absence checks. Applied to `translations.js` and
+`app.js` — which contain no such elements — it collapsed each file into a single
+"paragraph", so one occurrence of the word "withdrawn" anywhere **blanked the
+entire file** and every absence check over it passed vacuously.
+
+This was not theoretical: the first version of the new absence check reported
+PASS on both `.js` files while stale values were sitting in them. It was caught
+by mutation testing, not by the check itself. `strip_withdrawal_lines()` now
+strips per line for `.js` sources, and re-running the check immediately exposed
+the stale Swedish strings in §24.6 item 8.
+
+The locale check had the same class of weakness: asserting a value appeared
+*somewhere* in `translations.js` was satisfied by English alone. It now resolves
+each locale's own section and asserts per-locale.
+
+### 24.8 Verification
+
+- Full `00_master.do` re-run (12 steps). Sensitivity script at factor 0.1
+  reproduces the superseded results exactly, and at 1.0 reproduces the new
+  production results exactly, confirming the two agree on their shared inputs.
+- `09_subgroups_metareg.do`'s hardcoded literals were replaced with values
+  computed from `r()` matrices, so subgroup rows can no longer silently fail to
+  track the data.
+- Every `τ²`, `I²`, `Q` and `MD` value displayed in `index.html`, `app.js` and
+  `translations.js` was matched programmatically against the Stata logs: **zero
+  unmatched**.
+- Validator 49 → **52 checks**, all passing. Each new check was mutation-tested
+  by re-introducing the specific defect it targets and confirming failure.
+- Browser sweep: 14 tabs × 2 locales = 28 combinations, no stale values and no
+  JavaScript errors.
+
+### 24.9 Status of §23.10
+
+1. Sufentanil conversion factor — **RESOLVED** (this section).
+2. Hydromorphone conversion factor — **RESOLVED**; pipeline value was correct.
+3. Coura 2011 author contact — **still open**; investigator judgment.

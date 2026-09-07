@@ -63,8 +63,8 @@ const TRANSLATIONS = {
       includedRctsSub: "5,089 randomized surgical patients",
       includedRctsBadge: "49 TEAS • 14 EA",
       primaryTitle: "Primary Outcome: 24-h Opioid Sparing",
-      primaryValue: "TEAS: −6.70 mg • EA: −3.94 mg",
-      primarySub: "Supporting Combined Synthesis: −4.68 mg [−12.26, +2.89] (p=0.173, k=6)",
+      primaryValue: "TEAS: −16.31 mg • EA: −3.94 mg",
+      primarySub: "Supporting Combined Synthesis: −10.36 mg [−23.00, +2.27] (p=0.089, k=6)",
       primaryBadge: "PRIMARY: TEAS & EA Modality-Specific • Combined = Supporting",
       smdTitle: "Standardized Effect Size",
       smdValue: "Hedges' g = −0.89",
@@ -72,7 +72,7 @@ const TRANSLATIONS = {
       smdBadge: "StataNow 19.5 BE Validated",
       gradeTitle: "GRADE Certainty",
       gradeValue: "⊕⊕⊕◯ Moderate",
-      gradeSub: "Primary 24-h opioid outcome: downgraded 2 levels (inconsistency I² = 98.3%; imprecision, 95% KH CI crosses zero)",
+      gradeSub: "Primary 24-h opioid outcome: downgraded 2 levels (inconsistency I² = 98.8%; imprecision, 95% KH CI crosses zero)",
       gradeBadge: "12 Outcomes in GRADE SoF"
     },
     cardStructure: {
@@ -89,7 +89,7 @@ const TRANSLATIONS = {
       badgeCompliance: "Cochrane & PRISMA 2020 Compliance",
       badgeStata: "StataNow 19.5 BE Verified",
       hubTitle: "StataNow 19.5 BE Consensus Synthesis & Forest Plots Hub",
-      hubText: "Locked Protocol Synthesis Standard: TEAS and EA were evaluated separately for primary modality-specific inference (TEAS vs Sham: MD = −6.70 mg, p = 0.381; EA vs Usual Care: MD = −3.94 mg, p = 0.397). A combined strict-evidence synthesis pooling both modalities (MD = −4.68 mg [−12.26, +2.89], p = 0.173, k = 6, N = 628) is shown as a supporting contextual analysis. Between-study variance is estimated using restricted maximum likelihood (REML) with Knapp–Hartung confidence intervals and 95% prediction intervals [−22.28, +12.91].",
+      hubText: "Locked Protocol Synthesis Standard: TEAS and EA were evaluated separately for primary modality-specific inference (TEAS vs Sham: MD = −16.31 mg, p = 0.193; EA vs Usual Care: MD = −3.94 mg, p = 0.397). A combined strict-evidence synthesis pooling both modalities (MD = −10.36 mg [−23.00, +2.27], p = 0.089, k = 6, N = 628) is shown as a supporting contextual analysis. Between-study variance is estimated using restricted maximum likelihood (REML) with Knapp–Hartung confidence intervals and 95% prediction intervals [−45.71, +24.98].",
       section2ATitle: "Section 2A: PRIMARY OPIOID OUTCOME — Cumulative 0–24h Opioid Sparing (Strict Modality Primary: TEAS k=3, EA k=3; Combined k=6)",
       section2ASub: "Executed in StataNow 19.5 BE via meta summarize, random(reml) se(kh) predinterval.",
       section2BTitle: "KEY SECONDARY OPIOID OUTCOME — Cumulative 0–48h Opioid Sparing (Target A: k = 3 strict RCTs, N = 1,999)",
@@ -100,7 +100,7 @@ const TRANSLATIONS = {
       combinedPool: "Supporting Combined Synthesis (k=6, N=628)",
       teasStratum: "Primary Stratum 1: TEAS vs Sham (k=3, N=294)",
       eaStratum: "Primary Stratum 2: EA vs Usual Care (k=3, N=334)",
-      threshold10mgNotice: "Primary prespecified clinical-importance benchmark: 10 mg IV MME. The pooled average (−4.68 mg, 95% KH CI [−12.26, +2.89]) does not reach statistical significance or the 10 mg benchmark, though individual high-demand surgical cohorts achieve substantial sparing.",
+      threshold10mgNotice: "Primary prespecified clinical-importance benchmark: 10 mg IV MME. The pooled average (−10.36 mg, 95% KH CI [−23.00, +2.27]) marginally exceeds that benchmark as a point estimate but does not reach statistical significance, so it does not establish the 10 mg benchmark, though individual high-demand surgical cohorts achieve substantial sparing.",
       altModelsToggle: "Alternative Model Estimates & Estimator Sensitivity",
       dlModel: "DerSimonian–Laird MD",
       waldCi: "Normal Wald 95% CI",
@@ -168,12 +168,12 @@ const TRANSLATIONS = {
       pubBias: "Publication Bias: Assesses potential selective publication of positive or statistically significant findings."
     },
     interpretations: {
-      primary24h: "Across the 6 strict primary trials (N = 628), the combined synthesis of perioperative electrical acupoint stimulation showed an estimated 24-hour postoperative opioid reduction of 4.68 mg IV morphine equivalents (95% KH CI [−12.26, +2.89] mg, p = 0.173, tau2 = 31.49, I2 = 98.29%; 95% PI [−22.28, +12.91]). Modality-specific analyses: TEAS vs sham (k = 3, N = 294) showed MD = −6.70 mg (95% KH CI [−32.55, +19.16], p = 0.381), and EA vs control (k = 3, N = 334) showed MD = −3.94 mg (95% KH CI [−19.77, +11.90], p = 0.397). Because the Knapp–Hartung confidence intervals include zero across all strata, evidence does not demonstrate a statistically significant 24-hour opioid-sparing effect.",
-      teasStratum: "In the double-blind sham-controlled TEAS stratum (k = 3 strict trials: Chen 1998, Chen 2020, He 2026; N = 294), opioid sparing averaged 6.70 mg IV MME (Knapp–Hartung 95% CI [−32.55, +19.16], p = 0.381, tau2 = 85.20, I2 = 99.58%). High between-study heterogeneity reflects differing surgical baseline pain and anesthesia protocols.",
+      primary24h: "Across the 6 strict primary trials (N = 628), the combined synthesis of perioperative electrical acupoint stimulation showed an estimated 24-hour postoperative opioid reduction of 10.36 mg IV morphine equivalents (95% KH CI [−23.00, +2.27] mg, p = 0.089, tau2 = 137.89, I2 = 98.82%; 95% PI [−45.71, +24.98]). Modality-specific analyses: TEAS vs sham (k = 3, N = 294) showed MD = −16.31 mg (95% KH CI [−52.65, +20.02], p = 0.193), and EA vs control (k = 3, N = 334) showed MD = −3.94 mg (95% KH CI [−19.77, +11.90], p = 0.397). Because the Knapp–Hartung confidence intervals include zero across all strata, evidence does not demonstrate a statistically significant 24-hour opioid-sparing effect.",
+      teasStratum: "In the double-blind sham-controlled TEAS stratum (k = 3 strict trials: Chen 1998, Chen 2020, He 2026; N = 294), opioid sparing averaged 16.31 mg IV MME (Knapp–Hartung 95% CI [−52.65, +20.02], p = 0.193, tau2 = 211.68, I2 = 98.50%). High between-study heterogeneity reflects differing surgical baseline pain and anesthesia protocols.",
       eaStratum: "In the needle electroacupuncture stratum (k = 3 strict trials: El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024; N = 334), opioid sparing averaged 3.94 mg IV MME (Knapp–Hartung 95% CI [−19.77, +11.90], p = 0.397, tau2 = 28.47, I2 = 77.15%). Across all 6 leave-one-out sensitivity models, omission of any single trial leaves the 95% confidence interval spanning zero.",
-      opioid48h: "At 48 hours postoperatively (Target A strict: k = 3 trials, N = 1,999), cumulative opioid reduction averaged 2.81 mg IV MME (95% KH CI [−5.99, +0.37], p = 0.0627; REML + Knapp–Hartung, tau2 = 0.71, I2 = 49.79%). Excluding An 2014 yields MD = −2.43 mg (p = 0.127), while broader inclusion of Xie 2014 yields MD = −2.08 mg (p = 0.003).",
-      modalityMultivar: "The apparent raw difference between EA and TEAS (unadjusted difference −1.79 mg, p = 0.807) was not statistically significant. Meta-regression between modalities is underpowered (k = 6 < 10) and demonstrates no statistically detectable difference in opioid sparing between transcutaneous electrodes and needle electroacupuncture.",
-      primaryOpioid: "Across the 6 strict primary trials (N = 628), the combined synthesis of perioperative electrical acupoint stimulation showed an estimated 24-hour postoperative opioid reduction of 4.68 mg IV morphine equivalents (95% KH CI [−12.26, +2.89] mg, p = 0.173, tau2 = 31.49, I2 = 98.29%; 95% PI [−22.28, +12.91]). Modality-specific analyses: TEAS vs sham (k = 3, N = 294) showed MD = −6.70 mg (95% KH CI [−32.55, +19.16], p = 0.381), and EA vs control (k = 3, N = 334) showed MD = −3.94 mg (95% KH CI [−19.77, +11.90], p = 0.397). Because the Knapp–Hartung confidence intervals include zero across all strata, evidence does not demonstrate a statistically significant 24-hour opioid-sparing effect."
+      opioid48h: "At 48 hours postoperatively (Target A strict: k = 3 trials, N = 1,999), cumulative opioid reduction averaged 10.27 mg IV MME (95% KH CI [−34.83, +14.30], p = 0.2139; REML + Knapp–Hartung, tau2 = 94.56, I2 = 97.07%). Excluding An 2014 yields MD = −12.40 mg (p = 0.405), while broader inclusion of Xie 2014 yields MD = −12.30 mg (p = 0.073).",
+      modalityMultivar: "The apparent raw difference between EA and TEAS (unadjusted difference −11.57 mg, p = 0.284) was not statistically significant. Meta-regression between modalities is underpowered (k = 6 < 10) and demonstrates no statistically detectable difference in opioid sparing between transcutaneous electrodes and needle electroacupuncture.",
+      primaryOpioid: "Across the 6 strict primary trials (N = 628), the combined synthesis of perioperative electrical acupoint stimulation showed an estimated 24-hour postoperative opioid reduction of 10.36 mg IV morphine equivalents (95% KH CI [−23.00, +2.27] mg, p = 0.089, tau2 = 137.89, I2 = 98.82%; 95% PI [−45.71, +24.98]). Modality-specific analyses: TEAS vs sham (k = 3, N = 294) showed MD = −16.31 mg (95% KH CI [−52.65, +20.02], p = 0.193), and EA vs control (k = 3, N = 334) showed MD = −3.94 mg (95% KH CI [−19.77, +11.90], p = 0.397). Because the Knapp–Hartung confidence intervals include zero across all strata, evidence does not demonstrate a statistically significant 24-hour opioid-sparing effect."
     },
     stats: {
       meanDifference: "Mean Difference",
@@ -256,7 +256,7 @@ const TRANSLATIONS = {
       includedRctsBadge: "49 TEAS • 14 EA",
       primaryTitle: "Primärt utfall: 24-h opioidbesparing",
       primaryValue: "TEAS: −6,70 mg • EA: −3,94 mg",
-      primarySub: "Kompletterande kombinerad syntes: −4,68 mg [−12,26; +2,89] (p=0,173, k=6)",
+      primarySub: "Kompletterande kombinerad syntes: −10,36 mg [−23,00; +2,27] (p=0,089, k=6)",
       primaryBadge: "PRIMÄR: TEAS & EA modalitetsspecifik • Kombinerad = kompletterande",
       smdTitle: "Standardiserad effektstorlek",
       smdValue: "Hedges' g = −0,89",
@@ -264,7 +264,7 @@ const TRANSLATIONS = {
       smdBadge: "Validerad i StataNow 19.5 BE",
       gradeTitle: "GRADE – tillförlitlighet",
       gradeValue: "⊕⊕⊕◯ Måttlig",
-      gradeSub: "Primärt 24-timmars opioidutfall: nedgraderat 2 nivåer (inkonsistens I² = 98,3 %; imprecision, 95 % KH-KI korsar noll)",
+      gradeSub: "Primärt 24-timmars opioidutfall: nedgraderat 2 nivåer (inkonsistens I² = 98,8 %; imprecision, 95 % KH-KI korsar noll)",
       gradeBadge: "12 utfall i GRADE SoF"
     },
     cardStructure: {
@@ -281,7 +281,7 @@ const TRANSLATIONS = {
       badgeCompliance: "Följer Cochrane & PRISMA 2020",
       badgeStata: "Verifierad i StataNow 19.5 BE",
       hubTitle: "Konsensussyntes och skogsdiagram (StataNow 19.5 BE)",
-      hubText: "Låst protokollstandard för syntes: TEAS och EA utvärderades separat som de primära modalitetsspecifika analyserna (TEAS mot sham: MD = −6,70 mg, p = 0,381; EA mot sedvanlig vård: MD = −3,94 mg, p = 0,397). En kombinerad syntes av båda modaliteterna (MD = −4,68 mg [−12,26; +2,89], p = 0,173, k = 6, N = 628) visas som en kompletterande kontextuell analys. Varians mellan studier estimeras med Restricted Maximum Likelihood (REML) med Knapp–Hartung-konfidensintervall och 95 % prediktionsintervall [−22,28; +12,91].",
+      hubText: "Låst protokollstandard för syntes: TEAS och EA utvärderades separat som de primära modalitetsspecifika analyserna (TEAS mot sham: MD = −16,31 mg, p = 0,193; EA mot sedvanlig vård: MD = −3,94 mg, p = 0,397). En kombinerad syntes av båda modaliteterna (MD = −10,36 mg [−23,00; +2,27], p = 0,089, k = 6, N = 628) visas som en kompletterande kontextuell analys. Varians mellan studier estimeras med Restricted Maximum Likelihood (REML) med Knapp–Hartung-konfidensintervall och 95 % prediktionsintervall [−45,71; +24,98].",
       section2ATitle: "Sektion 2A: PRIMÄRT OPIOIDUTFALL — Kumulativ 0–24h opioidbesparing (Strikt modalitetsprimär: TEAS k=3, EA k=3; Kombinerad k=6)",
       section2ASub: "Beräknad i StataNow 19.5 BE via meta summarize, random(reml) se(kh) predinterval.",
       section2BTitle: "VIKTIGT SEKUNDÄRT OPIOIDUTFALL — Kumulativ 0–48h opioidbesparing (Target A: k = 3 strikta RCT:er, N = 1 999)",
@@ -292,7 +292,7 @@ const TRANSLATIONS = {
       combinedPool: "Kompletterande kombinerad syntes (k=6, N=628)",
       teasStratum: "Primärt stratum 1: TEAS mot sham (k=3, N=294)",
       eaStratum: "Primärt stratum 2: EA mot sedvanlig vård (k=3, N=334)",
-      threshold10mgNotice: "Primär förspecificerad referenspunkt för klinisk betydelse: 10 mg IV MME. Det sammanvägda genomsnittet (−4,68 mg, 95 % KH KI [−12,26; +2,89]) når inte statistisk signifikans eller 10 mg-referenspunkten, men enskilda patientgrupper med högt basalt opioidbehov uppnår betydande besparing.",
+      threshold10mgNotice: "Primär förspecificerad referenspunkt för klinisk betydelse: 10 mg IV MME. Det sammanvägda genomsnittet (−10,36 mg, 95 % KH KI [−23,00; +2,27]) överskrider marginellt referenspunkten som punktestimat men når inte statistisk signifikans, och etablerar därför inte 10 mg-referenspunkten, även om enskilda patientgrupper med högt basalt opioidbehov uppnår betydande besparing.",
       altModelsToggle: "Alternativa modellestimat & känslighet för estimator",
       dlModel: "DerSimonian–Laird MD",
       waldCi: "Normalfördelat Wald 95 % KI",
@@ -360,12 +360,12 @@ const TRANSLATIONS = {
       pubBias: "Publikationsbias: Utvärderar risk för selektiv publicering av positiva eller statistiskt signifikanta fynd."
     },
     interpretations: {
-      primary24h: "Över de 6 strikta primära studierna (N = 628) visade den kombinerade syntesen av perioperativ elektrisk akupunkturstimulering en estimerad 24-timmars postoperativ opioidminskning på 4,68 mg IV morfinekvivalenter (95 % KH KI [−12,26; +2,89] mg, p = 0,173, tau2 = 31,49, I2 = 98,29 %; 95 % PI [−22,28; +12,91]). Modalitetsspecifika analyser: TEAS mot sham (k = 3, N = 294) visade MD = −6,70 mg (95 % KH KI [−32,55; +19,16], p = 0,381), och EA mot kontroll (k = 3, N = 334) visade MD = −3,94 mg (95 % KH KI [−19,77; +11,90], p = 0,397). Eftersom Knapp–Hartung-konfidensintervallen omfattar noll över samtliga strata påvisar evidensen ingen statistiskt signifikant 24-timmars opioidbesparing.",
+      primary24h: "Över de 6 strikta primära studierna (N = 628) visade den kombinerade syntesen av perioperativ elektrisk akupunkturstimulering en estimerad 24-timmars postoperativ opioidminskning på 10,36 mg IV morfinekvivalenter (95 % KH KI [−23,00; +2,27] mg, p = 0,089, tau2 = 137,89, I2 = 98,82 %; 95 % PI [−45,71; +24,98]). Modalitetsspecifika analyser: TEAS mot sham (k = 3, N = 294) visade MD = −16,31 mg (95 % KH KI [−52,65; +20,02], p = 0,193), och EA mot kontroll (k = 3, N = 334) visade MD = −3,94 mg (95 % KH KI [−19,77; +11,90], p = 0,397). Eftersom Knapp–Hartung-konfidensintervallen omfattar noll över samtliga strata påvisar evidensen ingen statistiskt signifikant 24-timmars opioidbesparing.",
       teasStratum: "Inom det dubbelblinda sham-kontrollerade TEAS-stratumet (k = 3 strikta studier: Chen 1998, Chen 2020, He 2026; N = 294) var den genomsnittliga opioidbesparingen 6,70 mg IV MME (Knapp–Hartung 95 % KI [−32,55; +19,16], p = 0,381, tau2 = 85,20, I2 = 99,58 %). Hög heterogenitet mellan studier speglar variation i basalt postoperativt smärtbehov och anestesiprotokoll.",
       eaStratum: "Inom nålelektroakupunkturstratumet (k = 3 strikta studier: El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024; N = 334) var den genomsnittliga besparingen 3,94 mg IV MME (Knapp–Hartung 95 % KI [−19,77; +11,90], p = 0,397, tau2 = 28,47, I2 = 77,15 %). Över samtliga sex leave-one-out-känslighetsmodeller korsar konfidensintervallet noll vid uteslutande av vilken enskild studie som helst.",
-      opioid48h: "Vid 48 timmar postoperativt (Target A strikt: k = 3 studier, N = 1 999) var den kumulativa opioidminskningen i genomsnitt 2,81 mg IV MME (95 % KH KI [−5,99; +0,37], p = 0,0627; REML + Knapp–Hartung, tau2 = 0,71, I2 = 49,79 %). Uteslutande av An 2014 ger MD = −2,43 mg (p = 0,127), medan bredare inklusion av Xie 2014 ger MD = −2,08 mg (p = 0,003).",
-      modalityMultivar: "Den observerade råa skillnaden mellan EA och TEAS (ojusterad skillnad −1,79 mg, p = 0,807) var inte statistiskt signifikant. Metaregression mellan modaliteter saknar statistisk styrka (k = 6 < 10) och visar ingen statistiskt påvisbar skillnad i opioidbesparing mellan transkutana elektroder och nålelektroakupunktur.",
-      primaryOpioid: "Över de 6 strikta primära studierna (N = 628) visade den kombinerade syntesen av perioperativ elektrisk akupunkturstimulering en estimerad 24-timmars postoperativ opioidminskning på 4,68 mg IV morfinekvivalenter (95 % KH KI [−12,26; +2,89] mg, p = 0,173, tau2 = 31,49, I2 = 98,29 %; 95 % PI [−22,28; +12,91]). Modalitetsspecifika analyser: TEAS mot sham (k = 3, N = 294) visade MD = −6,70 mg (95 % KH KI [−32,55; +19,16], p = 0,381), och EA mot kontroll (k = 3, N = 334) visade MD = −3,94 mg (95 % KH KI [−19,77; +11,90], p = 0,397). Eftersom Knapp–Hartung-konfidensintervallen omfattar noll över samtliga strata påvisar evidensen ingen statistiskt signifikant 24-timmars opioidbesparing."
+      opioid48h: "Vid 48 timmar postoperativt (Target A strikt: k = 3 studier, N = 1 999) var den kumulativa opioidminskningen i genomsnitt 10,27 mg IV MME (95 % KH KI [−34,83; +14,30], p = 0,2139; REML + Knapp–Hartung, tau2 = 94,56, I2 = 97,07 %). Uteslutande av An 2014 ger MD = −12,40 mg (p = 0,405), medan bredare inklusion av Xie 2014 ger MD = −12,30 mg (p = 0,073).",
+      modalityMultivar: "Den observerade råa skillnaden mellan EA och TEAS (ojusterad skillnad −11,57 mg, p = 0,287) var inte statistiskt signifikant. Metaregression mellan modaliteter saknar statistisk styrka (k = 6 < 10) och visar ingen statistiskt påvisbar skillnad i opioidbesparing mellan transkutana elektroder och nålelektroakupunktur.",
+      primaryOpioid: "Över de 6 strikta primära studierna (N = 628) visade den kombinerade syntesen av perioperativ elektrisk akupunkturstimulering en estimerad 24-timmars postoperativ opioidminskning på 10,36 mg IV morfinekvivalenter (95 % KH KI [−23,00; +2,27] mg, p = 0,089, tau2 = 137,89, I2 = 98,82 %; 95 % PI [−45,71; +24,98]). Modalitetsspecifika analyser: TEAS mot sham (k = 3, N = 294) visade MD = −16,31 mg (95 % KH KI [−52,65; +20,02], p = 0,193), och EA mot kontroll (k = 3, N = 334) visade MD = −3,94 mg (95 % KH KI [−19,77; +11,90], p = 0,397). Eftersom Knapp–Hartung-konfidensintervallen omfattar noll över samtliga strata påvisar evidensen ingen statistiskt signifikant 24-timmars opioidbesparing."
     },
     stats: {
       meanDifference: "Medelskillnad",
@@ -399,7 +399,7 @@ const STAT_GLOSSARY = {
       term: "Mean Difference (MD)",
       category: "Effect Measures",
       shortDef: "The absolute difference between average outcomes in the intervention and comparator groups, expressed in original measurement units.",
-      context: "For postoperative opioid consumption, negative values indicate lower opioid use in the TEAS/EA group. For example, an MD of −4.68 mg IV MME means patients receiving neuromodulation required on average 4.68 mg less intravenous morphine than control patients.",
+      context: "For postoperative opioid consumption, negative values indicate lower opioid use in the TEAS/EA group. For example, an MD of −10.36 mg IV MME means patients receiving neuromodulation required on average 10.36 mg less intravenous morphine than control patients.",
       jumpTab: "primary"
     },
     ivMme: {
@@ -497,7 +497,7 @@ const STAT_GLOSSARY = {
       term: "Risk Ratio (RR)",
       category: "Effect Measures",
       shortDef: "The probability of an event in the intervention group divided by the probability of the event in the control group.",
-      context: "Used for binary postoperative complications such as Postoperative Nausea and Vomiting (PONV). An RR of 0.66 indicates a 34% relative risk reduction. Absolute benefit depends heavily on baseline control incidence.",
+      context: "Used for binary postoperative complications such as Postoperative Nausea and Vomiting (PONV). An RR of 0.56 indicates a 44% relative risk reduction. Absolute benefit depends heavily on baseline control incidence.",
       jumpTab: "secondary"
     },
     clinicalThreshold: {
@@ -625,7 +625,7 @@ const STAT_GLOSSARY = {
       term: "Medelskillnad (MD)",
       category: "Effektmått",
       shortDef: "Den absoluta skillnaden mellan medelvärdet i interventionsgruppen och kontrollgruppen, uttryckt i utfallsmåttets ursprungliga enhet.",
-      context: "För postoperativ opioidkonsumtion anger negativa värden lägre opioidförbrukning i TEAS/EA-gruppen. Exempelvis betyder en MD på −4,68 mg IV MME att patienter som fick neuromodulering i genomsnitt använde 4,68 mg mindre intravenöst morfin än kontrollpatienter.",
+      context: "För postoperativ opioidkonsumtion anger negativa värden lägre opioidförbrukning i TEAS/EA-gruppen. Exempelvis betyder en MD på −10,36 mg IV MME att patienter som fick neuromodulering i genomsnitt använde 10,36 mg mindre intravenöst morfin än kontrollpatienter.",
       jumpTab: "primary"
     },
     ivMme: {
@@ -688,14 +688,14 @@ const STAT_GLOSSARY = {
       term: "95 % Prediktionsintervall",
       category: "Heterogenitet och prediktion",
       shortDef: "Det estimerade intervallet för sanna behandlingseffekter som rimligen kan förväntas i en framtida enskild studie eller jämförbar klinisk miljö.",
-      context: "Ett konfidensintervall beskriver osäkerheten kring den sammanvägda genomsnittliga effekten. Ett prediktionsintervall beskriver hur mycket den underliggande sanna effekten varierar mellan olika kliniska miljöer. För 24h opioidbesparing korsar prediktionsintervallet [−18,33; +8,26] noll, vilket visar att effekten varierar med ingreppets invasivitet.",
+      context: "Ett konfidensintervall beskriver osäkerheten kring den sammanvägda genomsnittliga effekten. Ett prediktionsintervall beskriver hur mycket den underliggande sanna effekten varierar mellan olika kliniska miljöer. För 24h opioidbesparing korsar prediktionsintervallet [−45,71; +24,98] noll, vilket visar att effekten varierar med ingreppets invasivitet.",
       jumpTab: "primary"
     },
     iSquared: {
       term: "I²-heterogenitetsmått",
       category: "Heterogenitet och prediktion",
       shortDef: "Andelen av den totala variationen i effektestimat mellan studier som beror på verklig heterogenitet snarare än slumpmässig samplingsvariation.",
-      context: "I denna översikt återspeglar I² = 98,3 % stora skillnader i kirurgiskt ingrepp (bröstkirurgi med 5 mg MME kontra öppen hjärtkirurgi med 114 mg MME). Högt I² måste alltid tolkas tillsammans med τ², prediktionsintervall och kliniska moderatoranalyser.",
+      context: "I denna översikt återspeglar I² = 98,8 % stora skillnader i kirurgiskt ingrepp (bröstkirurgi med 5 mg MME kontra öppen hjärtkirurgi med 114 mg MME). Högt I² måste alltid tolkas tillsammans med τ², prediktionsintervall och kliniska moderatoranalyser.",
       jumpTab: "primary"
     },
     tauSquared: {

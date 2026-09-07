@@ -135,6 +135,51 @@ def strip_withdrawal_prose(text: str) -> str:
     return "".join(out)
 
 
+WITHDRAWAL_MARKERS = (
+    "Withdrawn", "withdrawn", "Earlier releases", "previously displayed",
+    "previously offered", "previously let readers", "Not modelled in v26",
+    "came from the withdrawn", "has been withdrawn", "Removed", "superseded",
+    "Superseded", "no k = 11", "not estimable", "is NOT estimable",
+    "no pooled result exists",
+)
+
+
+def strip_withdrawal_lines(text: str) -> str:
+    """
+    Line-based equivalent of strip_withdrawal_prose for .js sources.
+
+    strip_withdrawal_prose splits on HTML element boundaries, which do not exist
+    in translations.js or app.js. Applied to those files it collapses the whole
+    source into one "paragraph", so a single occurrence of the word "withdrawn"
+    anywhere blanks the ENTIRE file and every absence check over it silently
+    passes. That is exactly what happened: the first version of
+    t_no_pre_correction_sufentanil_values was blind to both .js files. Strip per
+    line instead, since each translation key and each log line is one line.
+    """
+    return "\n".join(
+        ln for ln in text.splitlines()
+        if not any(m in ln for m in WITHDRAWAL_MARKERS)
+    )
+
+
+def translations_by_locale() -> dict[str, str]:
+    """
+    Split translations.js into per-locale text. The file contains more than one
+    translation object, each with its own `en:` / `sv:` section, so accumulate
+    by locale rather than assuming a single pair.
+    """
+    out: dict[str, list[str]] = {"en": [], "sv": []}
+    current = None
+    for ln in TRANS.splitlines():
+        m = re.match(r"^\s{0,4}(en|sv)\s*:\s*\{", ln)
+        if m:
+            current = m.group(1)
+            continue
+        if current:
+            out[current].append(ln)
+    return {k: "\n".join(v) for k, v in out.items()}
+
+
 LIVE_UI = strip_withdrawal_prose(ALL_UI)
 
 
@@ -1038,22 +1083,37 @@ def t_sufentanil_conversion_documented_and_unresolved():
     else:
         rows = read_csv(audit)
         suf = [r for r in rows if r["opioid"] == "Sufentanil" and "Chen 2020" in r["study_id"]]
-        if not suf or suf[0]["final_status"] != "UNRESOLVED":
-            probs.append("Chen 2020 sufentanil row missing or not marked UNRESOLVED in the audit")
+        if not suf:
+            probs.append("Chen 2020 sufentanil row missing from the audit")
+        elif suf[0]["final_status"] not in ("CORRECTED", "VERIFIED", "UNRESOLVED"):
+            probs.append(f"Chen 2020 sufentanil status {suf[0]['final_status']!r} is not a recognised audit state")
+        elif not suf[0]["reference"].strip():
+            probs.append("Chen 2020 sufentanil row carries no reference")
     # the do-file's actual factor must be documented
+    # The factor the pipeline actually computes with must match what the audit
+    # records as verified, and must appear on the dashboard's conversion table.
     prep = (ROOT / "06_FINAL_ANALYSIS_V26" / "02_STATA" / "00_prep_data.do").read_text(encoding="utf-8")
-    if "mme_factor = 0.1 if unit ==" not in prep.replace('"', ''):
-        probs.append("expected sufentanil factor 0.1 not found in 00_prep_data.do - audit is stale")
+    m = re.search(r"replace mme_factor = ([0-9.]+) if unit == .{0,3}\u00b5g sufentanil", prep)
+    if not m:
+        probs.append("could not locate the sufentanil mme_factor assignment in 00_prep_data.do")
+    else:
+        used = float(m.group(1))
+        if suf and suf[0]["final_status"] == "CORRECTED":
+            if abs(used - 1.0) > 1e-9:
+                probs.append(f"audit records sufentanil as CORRECTED to 1000:1 but the pipeline uses {used}")
+            if "1000:1" not in HTML:
+                probs.append("dashboard conversion table does not show the corrected 1000:1 sufentanil ratio")
+        if re.search(r"0\.1 mg MME\s*/\s*[u\u00b5]g \(100:1\)", LIVE_UI):
+            probs.append("dashboard still presents the superseded 100:1 sufentanil factor as current")
     # the dashboard must not claim a confident, differently-sourced factor for sufentanil
-    if re.search(r"1\.0 mg MME\s*/\s*[uµ]g \(1000:1\)", LIVE_UI):
-        probs.append("dashboard still displays an authoritative-looking 1000:1 sufentanil factor "
-                     "inconsistent with the 100:1 actually computed")
-    if "UNRESOLVED" not in HTML or "sufentanil" not in HTML.lower():
-        probs.append("no UNRESOLVED sufentanil caveat visible in the dashboard HTML")
+    if "sufentanil" not in HTML.lower():
+        probs.append("no sufentanil conversion caveat visible in the dashboard HTML")
+    if "results_sufentanil_conversion_sensitivity.csv" not in HTML:
+        probs.append("dashboard does not reference the published sufentanil sensitivity range")
     sens_log = ROOT / "06_FINAL_ANALYSIS_V26" / "02_STATA" / "logs" / "11_sufentanil_conversion_sensitivity.log"
     if not sens_log.exists():
         probs.append("sufentanil sensitivity log missing - rerun 11_sufentanil_conversion_sensitivity.do")
-    check("Sufentanil conversion factor is documented, unresolved, and not silently contradicted",
+    check("Sufentanil conversion factor is documented, sourced, and matches what the pipeline computes",
           not probs, "\n".join(probs))
 
 
@@ -1132,6 +1192,133 @@ def t_i18n_textcontent_no_html_entities():
                          f"under textContent: {val[:70]!r}")
     check("translations.js plain values use real characters, not HTML entities "
           "(data-i18n applies via textContent)", not probs, "\n".join(probs[:15]))
+
+
+
+STATA_LOGS = ROOT / "06_FINAL_ANALYSIS_V26" / "02_STATA" / "logs"
+
+
+def _stata_study_block(log_name: str, occurrence: int = 0) -> list[tuple[str, float, float]]:
+    """
+    Parse the nth `meta summarize` per-study table out of a Stata log.
+
+    Returns [(study_label, effect_size, percent_weight), ...]. Used so weight
+    expectations are DERIVED from the engine output rather than transcribed,
+    which is what let the k=6 weighting matrix drift: every weight in it was a
+    hand-typed literal, so re-running Stata silently invalidated the whole
+    column without any check noticing.
+    """
+    text = (STATA_LOGS / log_name).read_text(encoding="utf-8", errors="replace")
+    blocks = text.split("Meta-analysis summary")
+    rows = []
+    for line in blocks[occurrence + 1].splitlines():
+        if line.startswith("---") or line.startswith("==="):
+            if rows:
+                break
+            continue
+        m = re.match(r"^(.*?)\s*\|\s*(-?[\d.]+)\s+-?[\d.]+\s+-?[\d.]+\s+([\d.]+)\s*$", line)
+        if m and m.group(1).strip() not in ("Study", "theta"):
+            rows.append((m.group(1).strip(), float(m.group(2)), float(m.group(3))))
+    return rows
+
+
+def t_primary_weighting_matrix_matches_stata():
+    """
+    DERIVED. The k=6 random-effects weighting matrix in index.html lists each
+    trial's effect size and its REML weight. Those are static table cells, so
+    nothing forces them to track the engine. After the sufentanil conversion
+    correction rescaled Chen 2020 by 10x, every REML and DL weight in that
+    table shifted, but the published table still showed the pre-correction
+    column. Assert each study's effect size and REML weight from the log are
+    actually the ones displayed.
+    """
+    rows = _stata_study_block("01_opioid24_primary.log", 0)
+    flat = HTML.replace("−", "-").replace("&minus;", "-")
+    probs = []
+    if len(rows) != 6:
+        probs.append(f"expected 6 studies in the primary block, parsed {len(rows)}")
+    for label, es, wt in rows:
+        if f"{abs(es):.3f} mg" not in flat:
+            probs.append(f"{label}: effect size {es:.3f} not displayed")
+        if f"{wt:.2f}%" not in flat:
+            probs.append(f"{label}: REML weight {wt:.2f}% not displayed")
+    tot = sum(w for _, _, w in rows)
+    if not (99.0 <= tot <= 101.0):
+        probs.append(f"parsed REML weights sum to {tot:.2f}, not ~100")
+    check("k=6 weighting matrix effect sizes and REML weights match the Stata log",
+          not probs, "\n".join(probs))
+
+
+def t_no_pre_correction_sufentanil_values():
+    """
+    ABSENCE. The sufentanil factor was corrected from 0.1 to 1.0 mg MME/ug on
+    2026-09-07, which rescales every sufentanil-derived MME figure by 10x. The
+    superseded values are visually plausible next to the corrected ones - the
+    exact failure mode this validator exists to catch - so ban them outright as
+    live claims. Each entry is a pre-correction number that no longer describes
+    any current analysis. Withdrawal prose is stripped first, so a value may
+    still be discussed as explicitly superseded.
+    """
+    superseded = {
+        "-4.68": "pre-correction pooled primary MD",
+        "-4,68": "pre-correction pooled primary MD (sv)",
+        "-12.26": "pre-correction primary CI lower bound",
+        "-12,26": "pre-correction primary CI lower bound (sv)",
+        "-2.819": "pre-correction Chen 2020 MD",
+        "-2.81 ": "pre-correction Target A strict MD",
+        "-2,81 ": "pre-correction Target A strict MD (sv)",
+        "-2.43 mg": "pre-correction Target A excl. An 2014 MD",
+        "-3.36 mg": "pre-correction Target A excl. Zhang 2023 MD",
+        "-0.326 mg": "pre-correction Zhang 2025 derived MD",
+        "-2.402": "pre-correction DerSimonian-Laird pooled estimate",
+        "-18,33": "pre-correction prediction interval bound (sv)",
+    }
+    probs = []
+    for blob, src, strip in ((HTML, "index.html", strip_withdrawal_prose),
+                             (TRANS, "translations.js", strip_withdrawal_lines),
+                             (APP, "app.js", strip_withdrawal_lines)):
+        flat = strip(blob).replace("−", "-").replace("&minus;", "-")
+        for needle, why in superseded.items():
+            if needle in flat:
+                probs.append(f"{src}: superseded value '{needle.strip()}' still present ({why})")
+        # A 0.1 mg/ug factor is CORRECT for fentanyl (100:1) and only wrong for
+        # sufentanil, so ban it by context rather than by the literal alone.
+        for m in re.finditer(r"0\.1 mg\s*(?:MME\s*)?/\s*(?:µg|&micro;g|ug)", flat):
+            window = flat[max(0, m.start() - 700):m.end() + 400].lower()
+            if "sufentanil" in window and "previously" not in window and "corrected" not in window:
+                probs.append(f"{src}: a 0.1 mg/ug factor is applied in sufentanil context "
+                             f"near offset {m.start()} (superseded 100:1 ratio)")
+    check("No pre-correction sufentanil-scale values survive as live claims",
+          not probs, "\n".join(probs))
+
+
+def t_locale_pooled_numbers_agree():
+    """
+    STRUCTURAL. Swedish strings are a second, independent copy of every headline
+    number and drifted behind the English ones during the sufentanil correction.
+    A presence-anywhere test cannot catch that, because English still satisfies
+    it. Assert the current pooled primary result appears inside EACH locale's
+    own section, in that locale's decimal convention, and that neither section
+    still carries the pre-correction values.
+    """
+    r = BY_ID["OP24_PRIM_COMB"]
+    md, lo, hi = (abs(float(r[k])) for k in ("estimate", "ci_low", "ci_high"))
+    locales = translations_by_locale()
+    probs = []
+    for loc, blob in locales.items():
+        if not blob.strip():
+            probs.append(f"no '{loc}' section found in translations.js")
+            continue
+        flat = blob.replace("−", "-").replace("&minus;", "-")
+        for val, name in ((md, "pooled MD"), (lo, "CI lower"), (hi, "CI upper")):
+            needle = f"{val:.2f}" if loc == "en" else f"{val:.2f}".replace(".", ",")
+            if needle not in flat:
+                probs.append(f"{loc}: {name} {needle} missing")
+        for stale in ("4.68", "4,68", "12.26", "12,26"):
+            if (loc == "en") == ("." in stale) and stale in flat:
+                probs.append(f"{loc}: pre-correction value {stale} still present")
+    check("EN and SV translation strings both carry the current pooled primary result",
+          not probs, "\n".join(probs))
 
 
 def t_v26_mirror_logs_git_tracked():
@@ -1261,7 +1448,10 @@ def main() -> int:
                                        t_sufentanil_conversion_documented_and_unresolved,
                                        t_cdc_not_misattributed_to_perioperative_iv,
                                        t_mcid_labelled_exploratory, t_version_tag_present,
-                                       t_i18n_textcontent_no_html_entities, t_v26_mirror_logs_git_tracked]),
+                                       t_i18n_textcontent_no_html_entities, t_v26_mirror_logs_git_tracked,
+                                       t_primary_weighting_matrix_matches_stata,
+                                       t_no_pre_correction_sufentanil_values,
+                                       t_locale_pooled_numbers_agree]),
     ]
 
     for title, tests in sections:

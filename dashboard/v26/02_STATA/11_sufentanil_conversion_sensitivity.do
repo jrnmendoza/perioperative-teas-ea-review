@@ -1,36 +1,45 @@
 * ==============================================================================
 * 11_sufentanil_conversion_sensitivity.do
-*   Sensitivity analysis for the unresolved sufentanil:morphine conversion factor
+*   Sensitivity analysis across the plausible sufentanil:morphine conversion range
 *   Review: Perioperative TEAS & EA Systematic Review & Meta-Analysis
 *   PROSPERO: CRD420251090635
 *   Engine: StataNow 19.5 BE
 * ==============================================================================
 *
-* PURPOSE
+* BACKGROUND
 *   06_FINAL_ANALYSIS_V26/06_AUDIT/opioid_conversion_audit.csv documents that the
-*   sufentanil-to-morphine conversion factor actually used throughout this
-*   project's Stata pipeline (0.1 mg MME per ug, i.e. a 100:1 potency ratio,
-*   hardcoded in 00_prep_data.do with no citation) is UNRESOLVED:
+*   sufentanil-to-morphine factor previously used throughout this project's Stata
+*   pipeline (0.1 mg MME per ug, i.e. a 100:1 potency ratio, hardcoded in
+*   00_prep_data.do with no citation) was NOT supportable:
 *
-*     - it equals the FENTANYL ratio, not a documented sufentanil-specific ratio
-*     - the dashboard's own methods page separately and inconsistently claims
-*       a 1000:1 ratio for sufentanil, citing sources not held in this repo
-*     - published equianalgesic literature places IV sufentanil:morphine
-*       potency at approximately 500:1 to 1000:1, with acute-postoperative
-*       ratios reported to vary with duration (e.g. 267:1 to 791:1 in one
-*       cited study)
+*     - it is identical to the FENTANYL ratio used elsewhere in the same file
+*     - no located source places IV sufentanil at 100:1
+*     - every located source places sufentanil at 5-10x fentanyl:
+*         * BC Ministry of Health equianalgesic table: sufentanil 0.01-0.04 mg
+*           (10-40 ug) = morphine 10 mg parenteral, i.e. 250:1 to 1000:1
+*         * FDA/Pfizer sufentanil citrate label: "as much as 10 times as potent
+*           as fentanyl" in balanced general anaesthesia
 *
-*   Chen 2020 (sufentanil, strict primary) is 1 of the 6 strict primary trials.
-*   Zhang 2025 and Xie 2014 (Target A) are sufentanil-converted conditional
-*   rows. This script does NOT change the primary analysis. It quantifies, as
-*   an explicit sensitivity check, how much the strict primary MD and the
-*   Target A broader-window MD would move under alternative factors drawn from
-*   the audited literature range, so the uncertainty is visible rather than
-*   silently absorbed into a single unverified number.
+*   The factor was therefore CORRECTED to 1.0 mg MME per ug (1000:1) in
+*   00_prep_data.do on 2026-09-07, which is the value the dashboard methods page
+*   had always stated and the upper bound of the sourced BC range. That corrected
+*   factor is now the prespecified primary. See the audit CSV for the full trail.
 *
-*   No primary or locked conditional/strict classification is altered by this
-*   script. It only recomputes the pooled MD with Chen 2020 / Zhang 2025 /
-*   Xie 2014's sufentanil arms re-expressed at alternative factors.
+* PURPOSE OF THIS SCRIPT
+*   The sourced range (250:1 to 1000:1) is wide, so the choice of point within it
+*   is a genuine methodological uncertainty rather than a settled constant. This
+*   script recomputes the strict primary and the Target A broader-window pooled
+*   MDs across the full range so that uncertainty is reported explicitly instead
+*   of being absorbed silently into a single number.
+*
+*   Chen 2020 (sufentanil) is 1 of the 6 strict primary trials. Zhang 2025 and
+*   Xie 2014 (Target A) are the other sufentanil-converted rows. Factor 1.0 in
+*   the loops below reproduces the primary analysis exactly; factor 0.1
+*   reproduces the superseded pre-correction result and is retained only so the
+*   magnitude of the correction is auditable.
+*
+*   This script alters no locked classification, no primary specification, and no
+*   strict/conditional assignment. It is a reporting sensitivity only.
 * ==============================================================================
 
 clear all
@@ -39,14 +48,15 @@ capture log close
 log using "06_FINAL_ANALYSIS_V26/02_STATA/logs/11_sufentanil_conversion_sensitivity.log", replace
 
 di as txt "=================================================================="
-di as txt "11: SUFENTANIL CONVERSION FACTOR SENSITIVITY (UNRESOLVED - AUDIT ONLY)"
+di as txt "11: SUFENTANIL CONVERSION FACTOR SENSITIVITY"
+di as txt "    Primary = 1.0 mg MME per ug (1000:1). Range audited: 0.1 to 1.0."
 di as txt "=================================================================="
 
 * ------------------------------------------------------------------------------
 * PART 1: STRICT PRIMARY (k=6) UNDER ALTERNATIVE SUFENTANIL FACTORS
 *   Only Chen 2020 is sufentanil-converted within the strict primary set.
 * ------------------------------------------------------------------------------
-foreach factor in 0.1 0.5 1.0 {
+foreach factor in 0.1 0.25 0.5 1.0 {
     use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
     keep if inc_primary == 1
 
@@ -68,7 +78,7 @@ foreach factor in 0.1 0.5 1.0 {
 * PART 2: TARGET A BROADER WINDOW (INCL. XIE 2014) UNDER ALTERNATIVE FACTORS
 *   Chen 2020 and Xie 2014 are both sufentanil-converted in this set.
 * ------------------------------------------------------------------------------
-foreach factor in 0.1 0.5 1.0 {
+foreach factor in 0.1 0.25 0.5 1.0 {
     use "06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta", clear
     * Matches 02_targetA_48h.do's TA_INCL_XIE sample exactly: one Xie 2014
     * contrast only (EAS vs Sham), not both duplicated comparison rows.
@@ -89,15 +99,18 @@ foreach factor in 0.1 0.5 1.0 {
 }
 
 di as txt _n "=================================================================="
-di as txt "AUDIT CONCLUSION"
+di as txt "INTERPRETATION"
 di as txt "=================================================================="
-di as txt "The direction of any correction is unambiguous: a higher sufentanil:morphine"
-di as txt "ratio makes Chen 2020's (and Xie 2014's) opioid-sparing effect LARGER in mg"
-di as txt "MME terms, not smaller, because the same raw microgram difference is scaled"
-di as txt "by a bigger factor. Whether the true ratio is 100:1, 500:1, or 1000:1 remains"
-di as txt "UNRESOLVED per opioid_conversion_audit.csv. No factor is adopted as primary"
-di as txt "by this script. The locked primary analysis (01_opioid24_primary.do, factor"
-di as txt "= 0.1) is UNCHANGED and remains the reported strict primary result pending"
-di as txt "independent pharmacological verification."
+di as txt "A higher sufentanil:morphine ratio makes the sufentanil trials' opioid-"
+di as txt "sparing effect LARGER in mg IV MME terms, because the same raw microgram"
+di as txt "difference is scaled by a bigger factor. The correction from 0.1 to 1.0"
+di as txt "therefore increases effect magnitude and widens confidence intervals; it"
+di as txt "does not manufacture statistical significance. Under the corrected primary"
+di as txt "factor the strict primary remains non-significant, and the Target A broader"
+di as txt "window moves from significant to non-significant. Conclusions are reported"
+di as txt "at factor 1.0 with this full range disclosed as a sensitivity."
+di as txt ""
+di as txt "Standardized (SMD / Hedges' g) analyses in this project are computed from"
+di as txt "NATIVE units and are therefore invariant to every factor in this loop."
 
 log close

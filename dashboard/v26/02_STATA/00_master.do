@@ -60,7 +60,7 @@ do "06_FINAL_ANALYSIS_V26/02_STATA/09_subgroups_metareg.do"
 di as txt _n ">>> STEP 11: Running 10_broader24h_sensitivity.do ..."
 do "06_FINAL_ANALYSIS_V26/02_STATA/10_broader24h_sensitivity.do"
 
-* 12. Sufentanil Conversion Factor Sensitivity (unresolved - audit only)
+* 12. Sufentanil Conversion Factor Sensitivity (primary = 1.0; range 0.1-1.0)
 di as txt _n ">>> STEP 12: Running 11_sufentanil_conversion_sensitivity.do ..."
 do "06_FINAL_ANALYSIS_V26/02_STATA/11_sufentanil_conversion_sensitivity.do"
 
