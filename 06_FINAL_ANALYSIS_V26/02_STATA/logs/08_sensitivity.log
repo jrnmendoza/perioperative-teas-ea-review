@@ -1,0 +1,779 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/08_sensitivity.log
+  log type:  text
+ opened on:   7 Sep 2026, 09:43:46
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "08: SENSITIVITY ANALYSES & LEAVE-ONE-OUT INFLUENCE DIAGNOSTICS"
+08: SENSITIVITY ANALYSES & LEAVE-ONE-OUT INFLUENCE DIAGNOSTICS
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. * ------------------------------------------------------------------------------
+. * PART 1: LEAVE-ONE-OUT FOR PRIMARY 24-H OPIOID (k=6)
+. * ------------------------------------------------------------------------------
+. use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
+
+. keep if inc_primary == 1
+(9 observations deleted)
+
+. 
+. meta set md_mme se_mme, studylabel(study_unit) eslabel("Mean Difference (mg IV MME)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. di as txt _n "=== FULL PRIMARY 24-H MODEL (k=6) [REML + KH] ==="
+
+=== FULL PRIMARY 24-H MODEL (k=6) [REML + KH] ===
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 31.4862
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.29
+                                                                H2 =   58.49
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      9.65
+                Chen 2020 |         -2.819      -3.168      -2.470     21.05
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     14.64
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     20.85
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.07
+                Yang 2024 |         -0.300      -1.703       1.103     20.73
+--------------------------+-------------------------------------------------
+                    theta |         -4.684     -12.257       2.889
+----------------------------------------------------------------------------
+Test of theta = 0: t(5) = -1.59                          Prob > |t| = 0.1727
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. 
+. di as txt _n "=== LEAVE-ONE-OUT ANALYSIS: PRIMARY 24-H OPIOID ==="
+
+=== LEAVE-ONE-OUT ANALYSIS: PRIMARY 24-H OPIOID ===
+
+. * Stata meta leaveoneout
+. meta summarize, random(reml) se(kh) leaveoneout
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Leave-one-out meta-analysis summary           Number of studies =      6
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+                     theta: Overall Mean Difference (mg IV MME)
+------------------------------------------------------------------------
+            Omitted study |       theta    [95% conf. interval]  p-value
+--------------------------+---------------------------------------------
+                Chen 1998 |      -1.752      -5.059       1.555    0.215
+                Chen 2020 |      -5.779     -16.400       4.841    0.205
+           El-Rakshy 2009 |      -5.746     -15.906       4.415    0.191
+He 2026 (hepatectomy/JIS) |      -6.162     -16.229       3.906    0.165
+       Seevaunnamtum 2016 |      -1.747      -5.935       2.442    0.311
+                Yang 2024 |      -6.196     -16.153       3.761    0.159
+--------------------------+---------------------------------------------
+                    theta |      -4.684     -12.257       2.889    0.173
+------------------------------------------------------------------------
+
+. 
+. * Export leave-one-out forest plot / graph
+. meta forestplot, leaveoneout ///
+>     title("Leave-One-Out Influence: Primary 24-h Opioid (mg IV MME)", size(medium)) ///
+>     subtitle("Random-Effects REML + Hartung-Knapp", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+. graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/loo_opioid24_primary.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/loo_o
+    > pioid24_primary.png saved as PNG format
+
+. 
+. * ------------------------------------------------------------------------------
+. * PART 2: ESTIMATOR SENSITIVITY GRID FOR PRIMARY 24-H OPIOID
+. * ------------------------------------------------------------------------------
+. di as txt _n "=== ESTIMATOR SENSITIVITY GRID: PRIMARY 24-H OPIOID ==="
+
+=== ESTIMATOR SENSITIVITY GRID: PRIMARY 24-H OPIOID ===
+
+. 
+. * 1. REML + KH (Reference)
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 31.4862
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.29
+                                                                H2 =   58.49
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      9.65
+                Chen 2020 |         -2.819      -3.168      -2.470     21.05
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     14.64
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     20.85
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.07
+                Yang 2024 |         -0.300      -1.703       1.103     20.73
+--------------------------+-------------------------------------------------
+                    theta |         -4.684     -12.257       2.889
+----------------------------------------------------------------------------
+Test of theta = 0: t(5) = -1.59                          Prob > |t| = 0.1727
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. matrix est_reml_kh = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
+
+. 
+. * 2. REML Wald (unadjusted)
+. meta summarize, random(reml)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 31.4862
+                                                            I2 (%) =   98.29
+                                                                H2 =   58.49
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      9.65
+                Chen 2020 |         -2.819      -3.168      -2.470     21.05
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     14.64
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     20.85
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.07
+                Yang 2024 |         -0.300      -1.703       1.103     20.73
+--------------------------+-------------------------------------------------
+                    theta |         -4.684      -9.732       0.365
+----------------------------------------------------------------------------
+Test of theta = 0: z = -1.82                             Prob > |z| = 0.0690
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. matrix est_reml_wald = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
+
+. 
+. * 3. DL + KH
+. meta summarize, random(dl) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: DerSimonian–Laird                                     tau2 =  3.6060
+SE adjustment: Knapp–Hartung                                I2 (%) =   86.81
+                                                                H2 =    7.58
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      2.73
+                Chen 2020 |         -2.819      -3.168      -2.470     30.64
+           El-Rakshy 2009 |         -1.600      -8.888       5.688      6.39
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     28.29
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      4.87
+                Yang 2024 |         -0.300      -1.703       1.103     27.07
+--------------------------+-------------------------------------------------
+                    theta |         -2.402      -7.097       2.292
+----------------------------------------------------------------------------
+Test of theta = 0: t(5) = -1.32                          Prob > |t| = 0.2455
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. matrix est_dl_kh = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
+
+. 
+. * 4. DL Wald (unadjusted)
+. meta summarize, random(dl)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: DerSimonian–Laird                                     tau2 =  3.6060
+                                                            I2 (%) =   86.81
+                                                                H2 =    7.58
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      2.73
+                Chen 2020 |         -2.819      -3.168      -2.470     30.64
+           El-Rakshy 2009 |         -1.600      -8.888       5.688      6.39
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     28.29
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      4.87
+                Yang 2024 |         -0.300      -1.703       1.103     27.07
+--------------------------+-------------------------------------------------
+                    theta |         -2.402      -4.472      -0.333
+----------------------------------------------------------------------------
+Test of theta = 0: z = -2.28                             Prob > |z| = 0.0229
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. matrix est_dl_wald = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
+
+. 
+. * 5. Empirical Bayes (EB) + KH
+. meta summarize, random(ebayes) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: Empirical Bayes                                       tau2 = 47.9045
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.87
+                                                                H2 =   88.47
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     11.18
+                Chen 2020 |         -2.819      -3.168      -2.470     19.85
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     15.42
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     19.73
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     14.17
+                Yang 2024 |         -0.300      -1.703       1.103     19.66
+--------------------------+-------------------------------------------------
+                    theta |         -5.110     -13.040       2.820
+----------------------------------------------------------------------------
+Test of theta = 0: t(5) = -1.66                          Prob > |t| = 0.1585
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. matrix est_eb_kh = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
+
+. 
+. * 6. Paule-Mandel (PM) + KH
+. meta summarize, random(pmandel) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: Paule–Mandel                                          tau2 = 47.9045
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.87
+                                                                H2 =   88.47
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     11.18
+                Chen 2020 |         -2.819      -3.168      -2.470     19.85
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     15.42
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     19.73
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     14.17
+                Yang 2024 |         -0.300      -1.703       1.103     19.66
+--------------------------+-------------------------------------------------
+                    theta |         -5.110     -13.040       2.820
+----------------------------------------------------------------------------
+Test of theta = 0: t(5) = -1.66                          Prob > |t| = 0.1585
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. matrix est_pm_kh = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
+
+. 
+. * 7. Fixed-effect (common effect) model
+. meta summarize, common
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Common-effect model
+Method: Inverse-variance 
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      0.07
+                Chen 2020 |         -2.819      -3.168      -2.470     86.09
+           El-Rakshy 2009 |         -1.600      -8.888       5.688      0.20
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533      8.17
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      0.14
+                Yang 2024 |         -0.300      -1.703       1.103      5.33
+--------------------------+-------------------------------------------------
+                    theta |         -2.528      -2.852      -2.204
+----------------------------------------------------------------------------
+Test of theta = 0: z = -15.30                            Prob > |z| = 0.0000
+
+. matrix est_fixed = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), 0, 0)
+
+. 
+. * ------------------------------------------------------------------------------
+. * PART 3: LEAVE-ONE-OUT FOR TARGET A (0-48 H CUMULATIVE OPIOID, k=3)
+. * ------------------------------------------------------------------------------
+. use "06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta", clear
+
+. keep if include_strict == 1
+(2 observations deleted)
+
+. 
+. meta set md_mme se_mme, studylabel(study) eslabel("Mean Difference (mg IV MME)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. di as txt _n "=== FULL TARGET A MODEL (k=3) [REML + KH] ==="
+
+=== FULL TARGET A MODEL (k=3) [REML + KH] ===
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.7105
+SE adjustment: Knapp–Hartung                        I2 (%) =   49.79
+                                                        H2 =    1.99
+
+       Effect size: Mean Difference (mg IV MME)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Chen 2020 |         -2.163      -2.552      -1.774     61.59
+       Zhang 2023 |         -3.333      -5.060      -1.606     31.06
+          An 2014 |         -6.000     -10.628      -1.372      7.35
+------------------+-------------------------------------------------
+            theta |         -2.808      -5.986       0.369
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = -3.80                  Prob > |t| = 0.0627
+Test of homogeneity: Q = chi2(2) = 4.23            Prob > Q = 0.1209
+
+. 
+. di as txt _n "=== LEAVE-ONE-OUT ANALYSIS: TARGET A ==="
+
+=== LEAVE-ONE-OUT ANALYSIS: TARGET A ===
+
+. meta summarize, random(reml) se(kh) leaveoneout
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      3
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+             theta: Overall Mean Difference (mg IV MME)
+----------------------------------------------------------------
+    Omitted study |       theta    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+        Chen 2020 |      -3.767     -16.268       8.735    0.163
+       Zhang 2023 |      -3.360     -25.948      19.228    0.310
+          An 2014 |      -2.433      -8.700       3.834    0.127
+------------------+---------------------------------------------
+            theta |      -2.808      -5.986       0.369    0.063
+----------------------------------------------------------------
+
+. 
+. meta forestplot, leaveoneout ///
+>     title("Leave-One-Out Influence: Target A (0-48 h Cumulative Opioid)", size(medium)) ///
+>     subtitle("Random-Effects REML + Hartung-Knapp", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+. graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/loo_targetA_48h.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/loo_t
+    > argetA_48h.png saved as PNG format
+
+. 
+. * ------------------------------------------------------------------------------
+. * PART 4: EXPORT ESTIMATOR SENSITIVITY GRID TABLE
+. * ------------------------------------------------------------------------------
+. clear
+
+. set obs 7
+Number of observations (_N) was 0, now 7.
+
+. 
+. gen estimator = ""
+(7 missing values generated)
+
+. gen se_adj = ""
+(7 missing values generated)
+
+. gen k = .
+(7 missing values generated)
+
+. gen estimate = .
+(7 missing values generated)
+
+. gen ci_low = .
+(7 missing values generated)
+
+. gen ci_high = .
+(7 missing values generated)
+
+. gen p_value = .
+(7 missing values generated)
+
+. gen tau2 = .
+(7 missing values generated)
+
+. gen i2 = .
+(7 missing values generated)
+
+. gen note = ""
+(7 missing values generated)
+
+. 
+. replace estimator = "REML" in 1
+variable estimator was str1 now str4
+(1 real change made)
+
+. replace se_adj = "Hartung-Knapp (KH)" in 1
+variable se_adj was str1 now str18
+(1 real change made)
+
+. replace k = est_reml_kh[1,5] in 1
+(1 real change made)
+
+. replace estimate = est_reml_kh[1,1] in 1
+(1 real change made)
+
+. replace ci_low = est_reml_kh[1,2] in 1
+(1 real change made)
+
+. replace ci_high = est_reml_kh[1,3] in 1
+(1 real change made)
+
+. replace p_value = est_reml_kh[1,4] in 1
+(1 real change made)
+
+. replace tau2 = est_reml_kh[1,6] in 1
+(1 real change made)
+
+. replace i2 = est_reml_kh[1,7] in 1
+(1 real change made)
+
+. replace note = "PRIMARY AUTHORITATIVE BENCHMARK" in 1
+variable note was str1 now str31
+(1 real change made)
+
+. 
+. replace estimator = "REML" in 2
+(1 real change made)
+
+. replace se_adj = "Wald (unadjusted)" in 2
+(1 real change made)
+
+. replace k = est_reml_wald[1,5] in 2
+(1 real change made)
+
+. replace estimate = est_reml_wald[1,1] in 2
+(1 real change made)
+
+. replace ci_low = est_reml_wald[1,2] in 2
+(1 real change made)
+
+. replace ci_high = est_reml_wald[1,3] in 2
+(1 real change made)
+
+. replace p_value = est_reml_wald[1,4] in 2
+(1 real change made)
+
+. replace tau2 = est_reml_wald[1,6] in 2
+(1 real change made)
+
+. replace i2 = est_reml_wald[1,7] in 2
+(1 real change made)
+
+. replace note = "Unadjusted standard errors" in 2
+(1 real change made)
+
+. 
+. replace estimator = "DerSimonian-Laird (DL)" in 3
+variable estimator was str4 now str22
+(1 real change made)
+
+. replace se_adj = "Hartung-Knapp (KH)" in 3
+(1 real change made)
+
+. replace k = est_dl_kh[1,5] in 3
+(1 real change made)
+
+. replace estimate = est_dl_kh[1,1] in 3
+(1 real change made)
+
+. replace ci_low = est_dl_kh[1,2] in 3
+(1 real change made)
+
+. replace ci_high = est_dl_kh[1,3] in 3
+(1 real change made)
+
+. replace p_value = est_dl_kh[1,4] in 3
+(1 real change made)
+
+. replace tau2 = est_dl_kh[1,6] in 3
+(1 real change made)
+
+. replace i2 = est_dl_kh[1,7] in 3
+(1 real change made)
+
+. replace note = "DL moments estimator with KH" in 3
+(1 real change made)
+
+. 
+. replace estimator = "DerSimonian-Laird (DL)" in 4
+(1 real change made)
+
+. replace se_adj = "Wald (unadjusted)" in 4
+(1 real change made)
+
+. replace k = est_dl_wald[1,5] in 4
+(1 real change made)
+
+. replace estimate = est_dl_wald[1,1] in 4
+(1 real change made)
+
+. replace ci_low = est_dl_wald[1,2] in 4
+(1 real change made)
+
+. replace ci_high = est_dl_wald[1,3] in 4
+(1 real change made)
+
+. replace p_value = est_dl_wald[1,4] in 4
+(1 real change made)
+
+. replace tau2 = est_dl_wald[1,6] in 4
+(1 real change made)
+
+. replace i2 = est_dl_wald[1,7] in 4
+(1 real change made)
+
+. replace note = "Demonstrates artificial significance under unadjusted DL" in 4
+variable note was str31 now str56
+(1 real change made)
+
+. 
+. replace estimator = "Empirical Bayes (EB)" in 5
+(1 real change made)
+
+. replace se_adj = "Hartung-Knapp (KH)" in 5
+(1 real change made)
+
+. replace k = est_eb_kh[1,5] in 5
+(1 real change made)
+
+. replace estimate = est_eb_kh[1,1] in 5
+(1 real change made)
+
+. replace ci_low = est_eb_kh[1,2] in 5
+(1 real change made)
+
+. replace ci_high = est_eb_kh[1,3] in 5
+(1 real change made)
+
+. replace p_value = est_eb_kh[1,4] in 5
+(1 real change made)
+
+. replace tau2 = est_eb_kh[1,6] in 5
+(1 real change made)
+
+. replace i2 = est_eb_kh[1,7] in 5
+(1 real change made)
+
+. replace note = "Iterative empirical Bayes estimator" in 5
+(1 real change made)
+
+. 
+. replace estimator = "Paule-Mandel (PM)" in 6
+(1 real change made)
+
+. replace se_adj = "Hartung-Knapp (KH)" in 6
+(1 real change made)
+
+. replace k = est_pm_kh[1,5] in 6
+(1 real change made)
+
+. replace estimate = est_pm_kh[1,1] in 6
+(1 real change made)
+
+. replace ci_low = est_pm_kh[1,2] in 6
+(1 real change made)
+
+. replace ci_high = est_pm_kh[1,3] in 6
+(1 real change made)
+
+. replace p_value = est_pm_kh[1,4] in 6
+(1 real change made)
+
+. replace tau2 = est_pm_kh[1,6] in 6
+(1 real change made)
+
+. replace i2 = est_pm_kh[1,7] in 6
+(1 real change made)
+
+. replace note = "Paule-Mandel estimator" in 6
+(1 real change made)
+
+. 
+. replace estimator = "Fixed-effect (Common)" in 7
+(1 real change made)
+
+. replace se_adj = "None (Common effect)" in 7
+variable se_adj was str18 now str20
+(1 real change made)
+
+. replace k = est_fixed[1,5] in 7
+(1 real change made)
+
+. replace estimate = est_fixed[1,1] in 7
+(1 real change made)
+
+. replace ci_low = est_fixed[1,2] in 7
+(1 real change made)
+
+. replace ci_high = est_fixed[1,3] in 7
+(1 real change made)
+
+. replace p_value = est_fixed[1,4] in 7
+(1 real change made)
+
+. replace tau2 = 0 in 7
+(1 real change made)
+
+. replace i2 = 0 in 7
+(1 real change made)
+
+. replace note = "Common-effect inverse-variance model" in 7
+(1 real change made)
+
+. 
+. save "06_FINAL_ANALYSIS_V26/03_RESULTS/results_sensitivity_estimators_grid.dta", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_sensitivity_estimators_grid.dta saved
+
+. export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_sensitivity_estimators_grid.csv", repla
+> ce
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_sensitivity_estimators_grid.csv saved
+
+. list, clean
+
+                    estimator                 se_adj   k    estimate      ci_low     ci_high    p_va
+> lue       tau2         i2                                                       note  
+  1.                     REML     Hartung-Knapp (KH)   6   -4.683874   -12.25655    2.888808   .1727
+> 139   31.48624   98.29036                            PRIMARY AUTHORITATIVE BENCHMARK  
+  2.                     REML      Wald (unadjusted)   6   -4.683874   -9.732265    .3645178   .0689
+> 961   31.48624   98.29036                                 Unadjusted standard errors  
+  3.   DerSimonian-Laird (DL)     Hartung-Knapp (KH)   6   -2.402311    -7.09685    2.292228   .2454
+> 538   3.605987   86.81487                               DL moments estimator with KH  
+  4.   DerSimonian-Laird (DL)      Wald (unadjusted)   6   -2.402311   -4.471673   -.3329495   .0228
+> 872   3.605987   86.81487   Demonstrates artificial significance under unadjusted DL  
+  5.     Empirical Bayes (EB)     Hartung-Knapp (KH)   6    -5.11026   -13.04039    2.819873     .15
+> 852   47.90448   98.86968                        Iterative empirical Bayes estimator  
+  6.        Paule-Mandel (PM)     Hartung-Knapp (KH)   6    -5.11026   -13.04039    2.819873     .15
+> 852   47.90448   98.86968                                     Paule-Mandel estimator  
+  7.    Fixed-effect (Common)   None (Common effect)   6   -2.528237   -2.852134    -2.20434        
+>   0          0          0                       Common-effect inverse-variance model  
+
+. 
+. di as txt _n "SUCCESS: Sensitivity analyses completed and exported."
+
+SUCCESS: Sensitivity analyses completed and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/08_sensitivity.log
+  log type:  text
+ closed on:   7 Sep 2026, 09:43:47
+----------------------------------------------------------------------------------------------------

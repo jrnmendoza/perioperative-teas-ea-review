@@ -13,6 +13,11 @@ validate_with_stata.log
 !stata/logs/
 !stata/logs/*.log
 
+# Authoritative v26 Stata execution logs are reproducibility artifacts, not scratch.
+# They are linked from the dashboard and must ship with the analysis package.
+!06_FINAL_ANALYSIS_V26/02_STATA/logs/
+!06_FINAL_ANALYSIS_V26/02_STATA/logs/*.log
+
 
 # Large binary files & intermediate scraping batches
 retrieved_pdfs/

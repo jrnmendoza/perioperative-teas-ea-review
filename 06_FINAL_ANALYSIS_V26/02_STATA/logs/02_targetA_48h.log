@@ -1,0 +1,552 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/02_targetA_48h.log
+  log type:  text
+ opened on:   7 Sep 2026, 09:43:42
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "02: TARGET A: 0-48 H CUMULATIVE POSTOPERATIVE OPIOID CONSUMPTION"
+02: TARGET A: 0-48 H CUMULATIVE POSTOPERATIVE OPIOID CONSUMPTION
+
+. di as txt "Model: Random-Effects REML + Hartung-Knapp (se(kh))"
+Model: Random-Effects REML + Hartung-Knapp (se(kh))
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta", clear
+
+. describe
+
+Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta
+ Observations:             5                  
+    Variables:            57                  7 Sep 2026 09:43
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+lock_id         str22   %22s                  lock_id
+target          str18   %18s                  target
+endpoint_stra~m str35   %35s                  endpoint_stratum
+study           str25   %25s                  study
+comparison_id   str35   %35s                  comparison_id
+intervention    str46   %46s                  intervention
+comparator      str38   %38s                  comparator
+outcome         str69   %69s                  outcome
+time_window     str101  %101s                 time_window
+data_type       str42   %42s                  data_type
+n_i             int     %10.0g                n_i
+n_c             int     %10.0g                n_c
+mean_i          double  %10.0g                mean_i
+sd_i            double  %10.0g                sd_i
+median_i        double  %10.0g                median_i
+q1_i            double  %10.0g                q1_i
+q3_i            double  %10.0g                q3_i
+events_i        byte    %10.0g                events_i
+mean_c          double  %10.0g                mean_c
+sd_c            double  %10.0g                sd_c
+median_c        double  %10.0g                median_c
+q1_c            double  %10.0g                q1_c
+q3_c            double  %10.0g                q3_c
+events_c        byte    %10.0g                events_c
+unit            str57   %57s                  unit
+reported_p      str54   %54s                  reported_p
+derived_effec~e str2    %9s                   derived_effect_measure
+derived_effect  double  %10.0g                derived_effect
+rob_overall     str13   %13s                  rob_overall
+include_strict  byte    %10.0g                include_strict
+include_sensi~y byte    %10.0g                include_sensitivity
+narrative_only  byte    %10.0g                narrative_only
+author_priority str2    %9s                   author_priority
+p1_disposition  str33   %33s                  p1_disposition
+analysis_action str20   %20s                  analysis_action
+overlap_family  str30   %30s                  overlap_family
+hold_reason     str33   %33s                  hold_reason
+shared_contro~e str3    %9s                   shared_control_issue
+source_qc       str179  %179s                 source_qc
+record_status   str59   %59s                  record_status
+source_url      str83   %83s                  source_url
+Sourceverifie~t str88   %88s                  Source-verified result
+rob_d1          str13   %13s                  D1
+rob_d2          str13   %13s                  D2
+rob_d3          str13   %13s                  D3
+rob_d4          str13   %13s                  D4
+rob_d5          str13   %13s                  D5
+result_rob      str13   %13s                  Overall RoB
+KeyQCnote       str128  %128s                 Key QC note
+mme_factor      float   %9.0g                 
+mean_i_mme      float   %9.0g                 
+sd_i_mme        float   %9.0g                 
+mean_c_mme      float   %9.0g                 
+sd_c_mme        float   %9.0g                 
+is_median_con~d float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. 
+. * List all Target A entries
+. di as txt _n "=== ALL TARGET A STUDIES ==="
+
+=== ALL TARGET A STUDIES ===
+
+. list lock_id study comparison_id include_strict include_sensitivity n_i mean_i_mme sd_i_mme n_c me
+> an_c_mme sd_c_mme md_mme se_mme unit rob_overall, clean
+
+       lock_id        study                   comparison_id   includ~t   includ~y   n_i   mean_i~e  
+>  sd_i_mme   n_c   mean_c~e   sd_c_mme      md_mme     se_mme                        unit     rob_o
+> verall  
+  1.     A-001    Chen 2020       CHEN20_TEAS_vs_SHAM_SUF48          1          0    40     11.852  
+>      .977    40     14.015       .787      -2.163   .1983619               µg sufentanil   Some co
+> ncerns  
+  2.     A-002   Zhang 2023      ZHANG23_TEAS_vs_SHAM_MME48          1          0   922        100  
+>  22.23903   916   103.3333   14.82602   -3.333336   .8811258   mg IV morphine-equivalent   Some co
+> ncerns  
+  3.     A-003      An 2014          AN14_EA_vs_CTRL_FENT48          1          0    41         67  
+>         9    40         73         12          -6   2.361273                 mg fentanyl   Some co
+> ncerns  
+  4.     A-004     Xie 2014      XIE14_EAS_vs_SHAM_TOTALSUF          0          1    20       11.5  
+>        .6    20      13.35         .7       -1.85   .2061553               µg sufentanil   Some co
+> ncerns  
+  5.     A-004     Xie 2014   XIE14_EAS_vs_CONTROL_TOTALSUF          0          1    20       11.5  
+>        .6    20      13.43        .59       -1.93   .1881622               µg sufentanil   Some co
+> ncerns  
+
+. 
+. * Declare Meta-Analysis Setting for MME
+. meta set md_mme se_mme, studylabel(study) eslabel("Mean Difference (mg IV MME)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 5
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * ------------------------------------------------------------------------------
+. * 1. PRINCIPAL STRICT TARGET A MODEL (k=3: Chen 2020, Zhang 2023, An 2014)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. STRICT TARGET A (k=3: Chen 2020, Zhang 2023, An 2014) [REML + KH]"
+1. STRICT TARGET A (k=3: Chen 2020, Zhang 2023, An 2014) [REML + KH]
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if include_strict == 1, random(reml) se(kh) predinterval
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.7105
+SE adjustment: Knapp–Hartung                        I2 (%) =   49.79
+                                                        H2 =    1.99
+
+       Effect size: Mean Difference (mg IV MME)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Chen 2020 |         -2.163      -2.552      -1.774     61.59
+       Zhang 2023 |         -3.333      -5.060      -1.606     31.06
+          An 2014 |         -6.000     -10.628      -1.372      7.35
+------------------+-------------------------------------------------
+            theta |         -2.808      -5.986       0.369
+--------------------------------------------------------------------
+95% prediction interval for theta: [-17.047,11.431]
+
+Test of theta = 0: t(2) = -3.80                  Prob > |t| = 0.0627
+Test of homogeneity: Q = chi2(2) = 4.23            Prob > Q = 0.1209
+
+. matrix res_strict = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 2. MANDATORY SENSITIVITY: Exclude An 2014 (PCA plausibility concern) -> k=2
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. MANDATORY SENSITIVITY: Exclude An 2014 -> k=2 (Chen 2020, Zhang 2023)"
+2. MANDATORY SENSITIVITY: Exclude An 2014 -> k=2 (Chen 2020, Zhang 2023)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if include_strict == 1 & study != "An 2014", random(reml) se(kh) predinterval
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.2770
+SE adjustment: Knapp–Hartung                        I2 (%) =   40.44
+                                                        H2 =    1.68
+
+       Effect size: Mean Difference (mg IV MME)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Chen 2020 |         -2.163      -2.552      -1.774     76.91
+       Zhang 2023 |         -3.333      -5.060      -1.606     23.09
+------------------+-------------------------------------------------
+            theta |         -2.433      -8.700       3.834
+--------------------------------------------------------------------
+95% prediction interval for theta: [     .,     .]
+
+Test of theta = 0: t(1) = -4.93                  Prob > |t| = 0.1273
+Test of homogeneity: Q = chi2(1) = 1.68            Prob > Q = 0.1950
+
+. matrix res_noan = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 3. SENSITIVITY: Exclude Median/IQR Converted Study (Zhang 2023) -> k=2
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. SENSITIVITY: Exclude Converted Median/IQR (Zhang 2023) -> k=2"
+3. SENSITIVITY: Exclude Converted Median/IQR (Zhang 2023) -> k=2
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if include_strict == 1 & is_median_converted == 0, random(reml) se(kh) predinterval
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  4.5538
+SE adjustment: Knapp–Hartung                        I2 (%) =   61.86
+                                                        H2 =    2.62
+
+       Effect size: Mean Difference (mg IV MME)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Chen 2020 |         -2.163      -2.552      -1.774     68.80
+          An 2014 |         -6.000     -10.628      -1.372     31.20
+------------------+-------------------------------------------------
+            theta |         -3.360     -25.948      19.228
+--------------------------------------------------------------------
+95% prediction interval for theta: [     .,     .]
+
+Test of theta = 0: t(1) = -1.89                  Prob > |t| = 0.3098
+Test of homogeneity: Q = chi2(1) = 2.62            Prob > Q = 0.1054
+
+. matrix res_noconv = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 4. SENSITIVITY: Broader 48-h Window (Including Xie 2014 Sham Contrast) -> k=4
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "4. SENSITIVITY: Broader 48-h Window Including Xie 2014 (vs Sham) -> k=4"
+4. SENSITIVITY: Broader 48-h Window Including Xie 2014 (vs Sham) -> k=4
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. * Keep one contrast for Xie 2014 (EAS vs Sham)
+. meta summarize if include_strict == 1 | comparison_id == "XIE14_EAS_vs_SHAM_TOTALSUF", random(reml
+> ) se(kh) predinterval
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      4
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0198
+SE adjustment: Knapp–Hartung                        I2 (%) =   14.91
+                                                        H2 =    1.18
+
+       Effect size: Mean Difference (mg IV MME)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Chen 2020 |         -2.163      -2.552      -1.774     49.16
+       Zhang 2023 |         -3.333      -5.060      -1.606      3.65
+          An 2014 |         -6.000     -10.628      -1.372      0.52
+         Xie 2014 |         -1.850      -2.254      -1.446     46.67
+------------------+-------------------------------------------------
+            theta |         -2.080      -2.827      -1.333
+--------------------------------------------------------------------
+95% prediction interval for theta: [-3.257,-0.902]
+
+Test of theta = 0: t(3) = -8.86                  Prob > |t| = 0.0030
+Test of homogeneity: Q = chi2(3) = 6.18            Prob > Q = 0.1032
+
+. matrix res_broader = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 5. GENERATE AND EXPORT FOREST PLOT
+. * ------------------------------------------------------------------------------
+. meta forestplot if include_strict == 1, ///
+>     title("TARGET A: 0-48h Cumulative Postoperative Opioid Consumption", size(medium)) ///
+>     subtitle("Strict Set (StataNow 19.5 SE: REML + Hartung-Knapp, k=3)", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+. graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetA_48h_mme.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
+    > t_targetA_48h_mme.png saved as PNG format
+
+. 
+. * ------------------------------------------------------------------------------
+. * 6. EXPORT SUMMARY ESTIMATES TO STATA DATASET & CSV
+. * ------------------------------------------------------------------------------
+. clear
+
+. set obs 4
+Number of observations (_N) was 0, now 4.
+
+. gen analysis_id = ""
+(4 missing values generated)
+
+. gen outcome = "0-48 h Cumulative Postoperative Opioid"
+
+. gen stratum = ""
+(4 missing values generated)
+
+. gen k = .
+(4 missing values generated)
+
+. gen estimate = .
+(4 missing values generated)
+
+. gen ci_low = .
+(4 missing values generated)
+
+. gen ci_high = .
+(4 missing values generated)
+
+. gen p_value = .
+(4 missing values generated)
+
+. gen tau2 = .
+(4 missing values generated)
+
+. gen i2 = .
+(4 missing values generated)
+
+. gen q_stat = .
+(4 missing values generated)
+
+. gen model = "REML + Hartung-Knapp"
+
+. 
+. replace analysis_id = "TA_STRICT" in 1
+variable analysis_id was str1 now str9
+(1 real change made)
+
+. replace stratum = "Strict Target A (Chen, Zhang, An)" in 1
+variable stratum was str1 now str33
+(1 real change made)
+
+. replace estimate = res_strict[1,1] in 1
+(1 real change made)
+
+. replace ci_low   = res_strict[1,2] in 1
+(1 real change made)
+
+. replace ci_high  = res_strict[1,3] in 1
+(1 real change made)
+
+. replace p_value  = res_strict[1,4] in 1
+(1 real change made)
+
+. replace k        = res_strict[1,5] in 1
+(1 real change made)
+
+. replace tau2     = res_strict[1,6] in 1
+(1 real change made)
+
+. replace i2       = res_strict[1,7] in 1
+(1 real change made)
+
+. replace q_stat   = res_strict[1,8] in 1
+(1 real change made)
+
+. 
+. replace analysis_id = "TA_EXCL_AN" in 2
+variable analysis_id was str9 now str10
+(1 real change made)
+
+. replace stratum = "Mandatory Sensitivity: Exclude An 2014" in 2
+variable stratum was str33 now str38
+(1 real change made)
+
+. replace estimate = res_noan[1,1] in 2
+(1 real change made)
+
+. replace ci_low   = res_noan[1,2] in 2
+(1 real change made)
+
+. replace ci_high  = res_noan[1,3] in 2
+(1 real change made)
+
+. replace p_value  = res_noan[1,4] in 2
+(1 real change made)
+
+. replace k        = res_noan[1,5] in 2
+(1 real change made)
+
+. replace tau2     = res_noan[1,6] in 2
+(1 real change made)
+
+. replace i2       = res_noan[1,7] in 2
+(1 real change made)
+
+. replace q_stat   = res_noan[1,8] in 2
+(1 real change made)
+
+. 
+. replace analysis_id = "TA_EXCL_ZHANG" in 3
+variable analysis_id was str10 now str13
+(1 real change made)
+
+. replace stratum = "Sensitivity: Exclude Converted (Zhang 2023)" in 3
+variable stratum was str38 now str43
+(1 real change made)
+
+. replace estimate = res_noconv[1,1] in 3
+(1 real change made)
+
+. replace ci_low   = res_noconv[1,2] in 3
+(1 real change made)
+
+. replace ci_high  = res_noconv[1,3] in 3
+(1 real change made)
+
+. replace p_value  = res_noconv[1,4] in 3
+(1 real change made)
+
+. replace k        = res_noconv[1,5] in 3
+(1 real change made)
+
+. replace tau2     = res_noconv[1,6] in 3
+(1 real change made)
+
+. replace i2       = res_noconv[1,7] in 3
+(1 real change made)
+
+. replace q_stat   = res_noconv[1,8] in 3
+(1 real change made)
+
+. 
+. replace analysis_id = "TA_INCL_XIE" in 4
+(1 real change made)
+
+. replace stratum = "Sensitivity: Broader Window (Include Xie 2014)" in 4
+variable stratum was str43 now str46
+(1 real change made)
+
+. replace estimate = res_broader[1,1] in 4
+(1 real change made)
+
+. replace ci_low   = res_broader[1,2] in 4
+(1 real change made)
+
+. replace ci_high  = res_broader[1,3] in 4
+(1 real change made)
+
+. replace p_value  = res_broader[1,4] in 4
+(1 real change made)
+
+. replace k        = res_broader[1,5] in 4
+(1 real change made)
+
+. replace tau2     = res_broader[1,6] in 4
+(1 real change made)
+
+. replace i2       = res_broader[1,7] in 4
+(1 real change made)
+
+. replace q_stat   = res_broader[1,8] in 4
+(1 real change made)
+
+. 
+. save "06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetA_48h.dta", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetA_48h.dta saved
+
+. export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetA_48h.csv", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetA_48h.csv saved
+
+. list, clean
+
+         analysis_id                                  outcome                                       
+>    stratum   k    estimate      ci_low     ci_high    p_value       tau2         i2     q_stat    
+>               model  
+  1.       TA_STRICT   0-48 h Cumulative Postoperative Opioid                Strict Target A (Chen, 
+> Zhang, An)   3   -2.808444   -5.985668    .3687785   .0627018   .7105451   49.79492   4.225394   R
+> EML + Hartung-Knapp  
+  2.      TA_EXCL_AN   0-48 h Cumulative Postoperative Opioid           Mandatory Sensitivity: Exclu
+> de An 2014   2   -2.433286   -8.700303     3.83373   .1273173   .2769778     40.444   1.679092   R
+> EML + Hartung-Knapp  
+  3.   TA_EXCL_ZHANG   0-48 h Cumulative Postoperative Opioid      Sensitivity: Exclude Converted (Z
+> hang 2023)   2   -3.360069   -25.94775    19.22762   .3097964   4.553806   61.86157   2.622027   R
+> EML + Hartung-Knapp  
+  4.     TA_INCL_XIE   0-48 h Cumulative Postoperative Opioid   Sensitivity: Broader Window (Include
+>  Xie 2014)   4   -2.079583   -2.826506   -1.332659   .0030306   .0197826   14.91484   6.179837   R
+> EML + Hartung-Knapp  
+
+. 
+. di as txt _n "SUCCESS: Target A analyses completed and exported."
+
+SUCCESS: Target A analyses completed and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/02_targetA_48h.log
+  log type:  text
+ closed on:   7 Sep 2026, 09:43:42
+----------------------------------------------------------------------------------------------------

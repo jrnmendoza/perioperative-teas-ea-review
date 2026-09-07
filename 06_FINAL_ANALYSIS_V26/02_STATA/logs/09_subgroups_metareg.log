@@ -1,0 +1,441 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/09_subgroups_metareg.log
+  log type:  text
+ opened on:   7 Sep 2026, 09:43:47
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "09: SUBGROUP ANALYSES AND META-REGRESSION METHODOLOGICAL AUDIT"
+09: SUBGROUP ANALYSES AND META-REGRESSION METHODOLOGICAL AUDIT
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
+
+. keep if inc_primary == 1
+(9 observations deleted)
+
+. 
+. meta set md_mme se_mme, studylabel(study_unit) eslabel("Mean Difference (mg IV MME)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * ------------------------------------------------------------------------------
+. * 1. MODALITY SUBGROUP ANALYSIS: TEAS VS EA (k=6)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. MODALITY SUBGROUP ANALYSIS: TEAS vs EA (k=6) [REML + Hartung-Knapp]"
+1. MODALITY SUBGROUP ANALYSIS: TEAS vs EA (k=6) [REML + Hartung-Knapp]
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh) subgroup(modality)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Subgroup meta-analysis summary                    Number of studies =      6
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+Group: modality
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+Group: EA                 |
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     14.64
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.07
+                Yang 2024 |         -0.300      -1.703       1.103     20.73
+                          |
+                    theta |         -3.936     -19.773      11.902
+--------------------------+-------------------------------------------------
+Group: TEAS               |
+                Chen 1998 |        -21.000     -32.962      -9.038      9.65
+                Chen 2020 |         -2.819      -3.168      -2.470     21.05
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     20.85
+                          |
+                    theta |         -6.698     -32.555      19.159
+--------------------------+-------------------------------------------------
+Overall                   |
+                    theta |         -4.684     -12.257       2.889
+----------------------------------------------------------------------------
+
+Heterogeneity summary
+-----------------------------------------------------------------------------
+         Group |      df          Q   P > Q        tau2       % I2         H2
+---------------+-------------------------------------------------------------
+            EA |       2       7.67   0.022      28.471      77.15       4.38
+          TEAS |       2      22.50   0.000      85.204      99.58     235.79
+---------------+-------------------------------------------------------------
+       Overall |       5      37.92   0.000      31.486      98.29      58.49
+-----------------------------------------------------------------------------
+Test of group differences: Q_b = chi2(1) = 0.17            Prob > Q_b = 0.678
+
+. 
+. * Subgroup forest plot
+. meta forestplot, subgroup(modality) ///
+>     title("Primary 24-h Opioid Consumption by Modality (mg IV MME)", size(medium)) ///
+>     subtitle("Random-Effects REML + Hartung-Knapp (k=6)", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+. graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_subgroup_modality_primary.png", width(1800) 
+> replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
+    > t_subgroup_modality_primary.png saved as PNG format
+
+. 
+. * ------------------------------------------------------------------------------
+. * 2. COMPARATOR TYPE SUBGROUP: SHAM VS USUAL CARE (k=6)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. COMPARATOR TYPE SUBGROUP: SHAM vs USUAL CARE (k=6)"
+2. COMPARATOR TYPE SUBGROUP: SHAM vs USUAL CARE (k=6)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize, random(reml) se(kh) subgroup(comparator_type)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Subgroup meta-analysis summary                    Number of studies =      6
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+Group: comparator_type
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+Group: Sham               |
+                Chen 1998 |        -21.000     -32.962      -9.038      9.65
+                Chen 2020 |         -2.819      -3.168      -2.470     21.05
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     20.85
+                          |
+                    theta |         -6.698     -32.555      19.159
+--------------------------+-------------------------------------------------
+Group: Usual Care / Cont~l|
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     14.64
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.07
+                Yang 2024 |         -0.300      -1.703       1.103     20.73
+                          |
+                    theta |         -3.936     -19.773      11.902
+--------------------------+-------------------------------------------------
+Overall                   |
+                    theta |         -4.684     -12.257       2.889
+----------------------------------------------------------------------------
+
+Heterogeneity summary
+-----------------------------------------------------------------------------
+         Group |      df          Q   P > Q        tau2       % I2         H2
+---------------+-------------------------------------------------------------
+          Sham |       2      22.50   0.000      85.204      99.58     235.79
+Usual Care /~l |       2       7.67   0.022      28.471      77.15       4.38
+---------------+-------------------------------------------------------------
+       Overall |       5      37.92   0.000      31.486      98.29      58.49
+-----------------------------------------------------------------------------
+Test of group differences: Q_b = chi2(1) = 0.17            Prob > Q_b = 0.678
+
+. 
+. * ------------------------------------------------------------------------------
+. * 3. META-REGRESSION METHODOLOGICAL ASSESSMENT
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. META-REGRESSION METHODOLOGICAL ASSESSMENT & POWER AUDIT"
+3. META-REGRESSION METHODOLOGICAL ASSESSMENT & POWER AUDIT
+
+. di as txt "According to Cochrane Handbook (Section 10.11.4), meta-regression"
+According to Cochrane Handbook (Section 10.11.4), meta-regression
+
+. di as txt "should generally NOT be considered unless there are at least 10 studies"
+should generally NOT be considered unless there are at least 10 studies
+
+. di as txt "for each study-level covariate. Here, k=6 (TEAS k=3, EA k=3)."
+for each study-level covariate. Here, k=6 (TEAS k=3, EA k=3).
+
+. di as txt "Executing exploratory meta-regression on modality for completeness:"
+Executing exploratory meta-regression on modality for completeness:
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. 
+. encode modality, gen(modality_code)
+
+. * 1=EA, 2=TEAS
+. meta regress i.modality_code, random(reml) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+
+Random-effects meta-regression                      Number of obs  =         6
+Method: REML                                        Residual heterogeneity:
+SE adjustment: Knapp–Hartung                                    tau2 =   51.53
+                                                              I2 (%) =   98.67
+                                                                  H2 =   75.06
+                                                       R-squared (%) =    0.00
+                                                    Model F(1,4)   =      0.07
+                                                    Prob > F       =    0.8074
+-------------------------------------------------------------------------------
+     _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+--------------+----------------------------------------------------------------
+modality_code |
+        TEAS  |  -1.793807   6.887334    -0.26   0.807    -20.91611     17.3285
+        _cons |  -4.269296   4.902031    -0.87   0.433    -17.87952    9.340923
+-------------------------------------------------------------------------------
+Test of residual homogeneity: Q_res = chi2(4) = 30.17    Prob > Q_res = 0.0000
+
+. matrix res_metareg = (r(table)[1,2], r(table)[2,2], r(table)[5,2], r(table)[6,2], r(table)[4,2], r
+> (N), r(tau2), r(I2))
+
+. 
+. di as txt _n "AUDIT CONCLUSION: Meta-regression with k=6 is severely underpowered"
+
+AUDIT CONCLUSION: Meta-regression with k=6 is severely underpowered
+
+. di as txt "and subject to extreme risk of false-positive / false-negative conclusions."
+and subject to extreme risk of false-positive / false-negative conclusions.
+
+. di as txt "Stratified subgroup presentation with Hartung-Knapp adjustment is authoritative."
+Stratified subgroup presentation with Hartung-Knapp adjustment is authoritative.
+
+. 
+. * ------------------------------------------------------------------------------
+. * 4. EXPORT SUBGROUP AND META-REGRESSION AUDIT SUMMARY
+. * ------------------------------------------------------------------------------
+. clear
+
+. set obs 3
+Number of observations (_N) was 0, now 3.
+
+. 
+. gen analysis_id = ""
+(3 missing values generated)
+
+. gen analysis_type = ""
+(3 missing values generated)
+
+. gen subgroup_variable = ""
+(3 missing values generated)
+
+. gen k = .
+(3 missing values generated)
+
+. gen estimate = .
+(3 missing values generated)
+
+. gen ci_low = .
+(3 missing values generated)
+
+. gen ci_high = .
+(3 missing values generated)
+
+. gen p_value = .
+(3 missing values generated)
+
+. gen tau2 = .
+(3 missing values generated)
+
+. gen i2 = .
+(3 missing values generated)
+
+. gen notes = ""
+(3 missing values generated)
+
+. 
+. * Row 1: TEAS Stratum
+. replace analysis_id = "SUB_MODALITY_TEAS" in 1
+variable analysis_id was str1 now str17
+(1 real change made)
+
+. replace analysis_type = "Subgroup" in 1
+variable analysis_type was str1 now str8
+(1 real change made)
+
+. replace subgroup_variable = "Modality: TEAS (Chen 1998, Chen 2020, He 2026)" in 1
+variable subgroup_variable was str1 now str46
+(1 real change made)
+
+. replace k = 3 in 1
+(1 real change made)
+
+. replace estimate = -6.69786 in 1
+(1 real change made)
+
+. replace ci_low = -32.55502 in 1
+(1 real change made)
+
+. replace ci_high = 19.1593 in 1
+(1 real change made)
+
+. replace p_value = 0.38096 in 1
+(1 real change made)
+
+. replace tau2 = 85.2039 in 1
+(1 real change made)
+
+. replace i2 = 99.584 in 1
+(1 real change made)
+
+. replace notes = "REML + Hartung-Knapp (t df=2)" in 1
+variable notes was str1 now str29
+(1 real change made)
+
+. 
+. * Row 2: EA Stratum
+. replace analysis_id = "SUB_MODALITY_EA" in 2
+(1 real change made)
+
+. replace analysis_type = "Subgroup" in 2
+(1 real change made)
+
+. replace subgroup_variable = "Modality: EA (El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024)" in 2
+variable subgroup_variable was str46 now str60
+(1 real change made)
+
+. replace k = 3 in 2
+(1 real change made)
+
+. replace estimate = -3.93557 in 2
+(1 real change made)
+
+. replace ci_low = -19.77287 in 2
+(1 real change made)
+
+. replace ci_high = 11.90174 in 2
+(1 real change made)
+
+. replace p_value = 0.39687 in 2
+(1 real change made)
+
+. replace tau2 = 28.4714 in 2
+(1 real change made)
+
+. replace i2 = 77.153 in 2
+(1 real change made)
+
+. replace notes = "REML + Hartung-Knapp (t df=2)" in 2
+(1 real change made)
+
+. 
+. * Row 3: Meta-regression on Modality
+. replace analysis_id = "METAREG_MODALITY" in 3
+(1 real change made)
+
+. replace analysis_type = "Meta-regression" in 3
+variable analysis_type was str8 now str15
+(1 real change made)
+
+. replace subgroup_variable = "Modality: TEAS vs EA (reference: EA)" in 3
+(1 real change made)
+
+. replace k = res_metareg[1,6] in 3
+(0 real changes made)
+
+. replace estimate = res_metareg[1,1] in 3
+(1 real change made)
+
+. replace ci_low = res_metareg[1,3] in 3
+(1 real change made)
+
+. replace ci_high = res_metareg[1,4] in 3
+(1 real change made)
+
+. replace p_value = res_metareg[1,5] in 3
+(1 real change made)
+
+. replace tau2 = res_metareg[1,7] in 3
+(0 real changes made)
+
+. replace i2 = res_metareg[1,8] in 3
+(0 real changes made)
+
+. replace notes = "Difference between TEAS and EA; underpowered (k=6 < 10)" in 3
+variable notes was str29 now str55
+(1 real change made)
+
+. 
+. save "06_FINAL_ANALYSIS_V26/03_RESULTS/results_subgroups_metareg.dta", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_subgroups_metareg.dta saved
+
+. export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_subgroups_metareg.csv", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_subgroups_metareg.csv saved
+
+. list, clean
+
+             analysis_id     analysis_type                                              subgroup_var
+> iable   k    estimate      ci_low    ci_high    p_value      tau2       i2                        
+>                              notes  
+  1.   SUB_MODALITY_TEAS          Subgroup                 Modality: TEAS (Chen 1998, Chen 2020, He 
+> 2026)   3    -6.69786   -32.55502    19.1593     .38096   85.2039   99.584                        
+>      REML + Hartung-Knapp (t df=2)  
+  2.     SUB_MODALITY_EA          Subgroup   Modality: EA (El-Rakshy 2009, Seevaunnamtum 2016, Yang 
+> 2024)   3    -3.93557   -19.77287   11.90174     .39687   28.4714   77.153                        
+>      REML + Hartung-Knapp (t df=2)  
+  3.    METAREG_MODALITY   Meta-regression                           Modality: TEAS vs EA (reference
+> : EA)   .   -1.793807   -20.91611    17.3285   .8073747         .        .   Difference between TE
+> AS and EA; underpowered (k=6 < 10)  
+
+. 
+. di as txt _n "SUCCESS: Subgroup and meta-regression analyses completed and exported."
+
+SUCCESS: Subgroup and meta-regression analyses completed and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/09_subgroups_metareg.log
+  log type:  text
+ closed on:   7 Sep 2026, 09:43:48
+----------------------------------------------------------------------------------------------------

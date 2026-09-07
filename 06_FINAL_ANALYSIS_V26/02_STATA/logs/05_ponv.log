@@ -1,0 +1,659 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/05_ponv.log
+  log type:  text
+ opened on:   7 Sep 2026, 09:43:44
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "05: TARGET D: STRATIFIED POSTOPERATIVE NAUSEA AND VOMITING (PONV)"
+05: TARGET D: STRATIFIED POSTOPERATIVE NAUSEA AND VOMITING (PONV)
+
+. di as txt "Model: Binary Risk Ratio (RR), REML + Hartung-Knapp"
+Model: Binary Risk Ratio (RR), REML + Hartung-Knapp
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.dta", clear
+
+. describe
+
+Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.dta
+ Observations:            11                  
+    Variables:            49                  7 Sep 2026 09:43
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+lock_id         str22   %22s                  lock_id
+target          str18   %18s                  target
+endpoint_stra~m str35   %35s                  endpoint_stratum
+study           str25   %25s                  study
+comparison_id   str35   %35s                  comparison_id
+intervention    str46   %46s                  intervention
+comparator      str38   %38s                  comparator
+outcome         str69   %69s                  outcome
+time_window     str101  %101s                 time_window
+data_type       str42   %42s                  data_type
+n_i             int     %10.0g                n_i
+n_c             int     %10.0g                n_c
+mean_i          double  %10.0g                mean_i
+sd_i            double  %10.0g                sd_i
+median_i        double  %10.0g                median_i
+q1_i            double  %10.0g                q1_i
+q3_i            double  %10.0g                q3_i
+events_i        byte    %10.0g                events_i
+mean_c          double  %10.0g                mean_c
+sd_c            double  %10.0g                sd_c
+median_c        double  %10.0g                median_c
+q1_c            double  %10.0g                q1_c
+q3_c            double  %10.0g                q3_c
+events_c        byte    %10.0g                events_c
+unit            str57   %57s                  unit
+reported_p      str54   %54s                  reported_p
+derived_effec~e str2    %9s                   derived_effect_measure
+derived_effect  double  %10.0g                derived_effect
+rob_overall     str13   %13s                  rob_overall
+include_strict  byte    %10.0g                include_strict
+include_sensi~y byte    %10.0g                include_sensitivity
+narrative_only  byte    %10.0g                narrative_only
+author_priority str2    %9s                   author_priority
+p1_disposition  str33   %33s                  p1_disposition
+analysis_action str20   %20s                  analysis_action
+overlap_family  str30   %30s                  overlap_family
+hold_reason     str33   %33s                  hold_reason
+shared_contro~e str3    %9s                   shared_control_issue
+source_qc       str179  %179s                 source_qc
+record_status   str59   %59s                  record_status
+source_url      str83   %83s                  source_url
+Sourceverifie~t str88   %88s                  Source-verified result
+rob_d1          str13   %13s                  D1
+rob_d2          str13   %13s                  D2
+rob_d3          str13   %13s                  D3
+rob_d4          str13   %13s                  D4
+rob_d5          str13   %13s                  D5
+result_rob      str13   %13s                  Overall RoB
+KeyQCnote       str128  %128s                 Key QC note
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. 
+. * List all Target D studies and strata
+. di as txt _n "=== ALL TARGET D STUDIES AND STRATA ==="
+
+=== ALL TARGET D STUDIES AND STRATA ===
+
+. list lock_id study endpoint_stratum include_strict include_sensitivity events_i n_i events_c n_c r
+> esult_rob, clean
+
+       lock_id        study   endpoint_stratum   includ~t   includ~y   events_i   n_i   events_c   n
+> _c      result_rob  
+  1.     D-001   Zheng 2025       D_PONV_0-24h          1          0         18    42         29    
+> 43   Some concerns  
+  2.     D-002      Lu 2021       D_PONV_0-24h          1          0         35   190         68   1
+> 88            High  
+  3.     D-003   Xiong 2021       D_PONV_0-48h          1          0         13    31         24    
+> 31            High  
+  4.     D-004    Xing 2022       D_PONV_0-48h          1          0          5    29         11    
+> 29            High  
+  5.     D-005    Zhou 2025       D_PONV_other          0          1         10    48         19    
+> 49   Some concerns  
+  6.     D-006    Yang 2024     D_nausea_0-24h          1          0         24    90         40    
+> 90            High  
+  7.     D-007      Ma 2026     D_nausea_0-24h          1          0          6    17          8    
+> 16            High  
+  8.     D-008     Luo 2026     D_nausea_0-48h          1          0         24   138         53   1
+> 39            High  
+  9.     D-009    Yang 2024   D_vomiting_0-24h          1          0         12    90         25    
+> 90   Some concerns  
+ 10.     D-010      Ma 2026   D_vomiting_0-24h          1          0          6    17          7    
+> 16   Some concerns  
+ 11.     D-011     Luo 2026   D_vomiting_0-48h          1          0          9   138         27   1
+> 39   Some concerns  
+
+. 
+. * Calculate log RR and SE
+. gen p_i = events_i / n_i
+
+. gen p_c = events_c / n_c
+
+. gen rr = p_i / p_c
+
+. gen lnrr = ln(rr)
+
+. gen se_lnrr = sqrt((1/events_i - 1/n_i) + (1/events_c - 1/n_c))
+
+. 
+. * Declare meta setting
+. meta set lnrr se_lnrr, studylabel(study) eslabel("Risk Ratio (log scale)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 11
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Risk Ratio (log scale)
+          Variable: lnrr
+
+         Precision
+         Std. err.: se_lnrr
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * ------------------------------------------------------------------------------
+. * 1. STRATUM 1: COMPOSITE PONV 0-24 H (k=2: Zheng 2025, Lu 2021)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. COMPOSITE PONV 0-24 H (k=2: Zheng 2025, Lu 2021)"
+1. COMPOSITE PONV 0-24 H (k=2: Zheng 2025, Lu 2021)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if endpoint_stratum == "D_PONV_0-24h", random(reml) se(kh) eform
+
+  Effect-size label: Risk Ratio (log scale)
+        Effect size: lnrr
+          Std. err.: se_lnrr
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
+                                                        H2 =    1.00
+
+           exp(ES): exp(Risk Ratio (log scale))
+--------------------------------------------------------------------
+            Study |        exp(ES)    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zheng 2025 |          0.635       0.423       0.954     43.21
+          Lu 2021 |          0.509       0.357       0.726     56.79
+------------------+-------------------------------------------------
+       exp(theta) |          0.560       0.139       2.257
+--------------------------------------------------------------------
+Test of theta = 0: t(1) = -5.28                  Prob > |t| = 0.1191
+Test of homogeneity: Q = chi2(1) = 0.65            Prob > Q = 0.4210
+
+. matrix res_ponv24 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q)
+> , r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 2. STRATUM 2: COMPOSITE PONV 0-48 H (k=2: Xiong 2021, Xing 2022)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. COMPOSITE PONV 0-48 H (k=2: Xiong 2021, Xing 2022)"
+2. COMPOSITE PONV 0-48 H (k=2: Xiong 2021, Xing 2022)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if endpoint_stratum == "D_PONV_0-48h", random(reml) se(kh) eform
+
+  Effect-size label: Risk Ratio (log scale)
+        Effect size: lnrr
+          Std. err.: se_lnrr
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
+                                                        H2 =    1.00
+
+           exp(ES): exp(Risk Ratio (log scale))
+--------------------------------------------------------------------
+            Study |        exp(ES)    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Xiong 2021 |          0.542       0.343       0.854     80.41
+        Xing 2022 |          0.455       0.181       1.144     19.59
+------------------+-------------------------------------------------
+       exp(theta) |          0.523       0.216       1.267
+--------------------------------------------------------------------
+Test of theta = 0: t(1) = -9.30                  Prob > |t| = 0.0682
+Test of homogeneity: Q = chi2(1) = 0.11            Prob > Q = 0.7386
+
+. matrix res_ponv48 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q)
+> , r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 3. STRATUM 3: NAUSEA 0-24 H (k=2: Yang 2024, Ma 2026)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. NAUSEA ALONE 0-24 H (k=2: Yang 2024, Ma 2026)"
+3. NAUSEA ALONE 0-24 H (k=2: Yang 2024, Ma 2026)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if endpoint_stratum == "D_nausea_0-24h", random(reml) se(kh) eform
+
+  Effect-size label: Risk Ratio (log scale)
+        Effect size: lnrr
+          Std. err.: se_lnrr
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
+                                                        H2 =    1.00
+
+           exp(ES): exp(Risk Ratio (log scale))
+--------------------------------------------------------------------
+            Study |        exp(ES)    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Yang 2024 |          0.600       0.397       0.907     79.31
+          Ma 2026 |          0.706       0.314       1.585     20.69
+------------------+-------------------------------------------------
+       exp(theta) |          0.621       0.269       1.432
+--------------------------------------------------------------------
+Test of theta = 0: t(1) = -7.25                  Prob > |t| = 0.0873
+Test of homogeneity: Q = chi2(1) = 0.12            Prob > Q = 0.7258
+
+. matrix res_naus24 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q)
+> , r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 4. STRATUM 4: NAUSEA 0-48 H (k=1: Luo 2026) -> Single study
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "4. NAUSEA ALONE 0-48 H (k=1: Luo 2026): NOT POOLED (Single Study)"
+4. NAUSEA ALONE 0-48 H (k=1: Luo 2026): NOT POOLED (Single Study)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. list study events_i n_i events_c n_c rr if endpoint_stratum == "D_nausea_0-48h", clean
+
+          study   events_i   n_i   events_c   n_c         rr  
+  8.   Luo 2026         24   138         53   139   .4561116  
+
+. 
+. * ------------------------------------------------------------------------------
+. * 5. STRATUM 5: VOMITING 0-24 H (k=2: Yang 2024, Ma 2026)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "5. VOMITING ALONE 0-24 H (k=2: Yang 2024, Ma 2026)"
+5. VOMITING ALONE 0-24 H (k=2: Yang 2024, Ma 2026)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if endpoint_stratum == "D_vomiting_0-24h", random(reml) se(kh) eform
+
+  Effect-size label: Risk Ratio (log scale)
+        Effect size: lnrr
+          Std. err.: se_lnrr
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
+                                                        H2 =    1.00
+
+           exp(ES): exp(Risk Ratio (log scale))
+--------------------------------------------------------------------
+            Study |        exp(ES)    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Yang 2024 |          0.480       0.257       0.895     65.05
+          Ma 2026 |          0.807       0.345       1.888     34.95
+------------------+-------------------------------------------------
+       exp(theta) |          0.575       0.025      13.370
+--------------------------------------------------------------------
+Test of theta = 0: t(1) = -2.23                  Prob > |t| = 0.2682
+Test of homogeneity: Q = chi2(1) = 0.93            Prob > Q = 0.3344
+
+. matrix res_vom24 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q),
+>  r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 6. STRATUM 6: VOMITING 0-48 H (k=1: Luo 2026) -> Single study
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "6. VOMITING ALONE 0-48 H (k=1: Luo 2026): NOT POOLED (Single Study)"
+6. VOMITING ALONE 0-48 H (k=1: Luo 2026): NOT POOLED (Single Study)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. list study events_i n_i events_c n_c rr if endpoint_stratum == "D_vomiting_0-48h", clean
+
+          study   events_i   n_i   events_c   n_c         rr  
+ 11.   Luo 2026          9   138         27   139   .3357488  
+
+. 
+. * ------------------------------------------------------------------------------
+. * 7. GENERATE AND EXPORT FOREST PLOT
+. * ------------------------------------------------------------------------------
+. meta forestplot if include_strict == 1, subgroup(endpoint_stratum) eform ///
+>     title("TARGET D: Postoperative Nausea & Vomiting (Stratified)", size(medium)) ///
+>     subtitle("Strict Stratified Strata (StataNow 19.5 SE: REML + Hartung-Knapp)", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Risk Ratio (log scale)
+        Effect size: lnrr
+          Std. err.: se_lnrr
+        Study label: study
+
+. graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetD_ponv.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
+    > t_targetD_ponv.png saved as PNG format
+
+. 
+. * ------------------------------------------------------------------------------
+. * 8. EXPORT SUMMARY ESTIMATES TO STATA DATASET & CSV
+. * ------------------------------------------------------------------------------
+. clear
+
+. set obs 6
+Number of observations (_N) was 0, now 6.
+
+. gen analysis_id = ""
+(6 missing values generated)
+
+. gen outcome = "Postoperative Nausea & Vomiting (PONV)"
+
+. gen stratum = ""
+(6 missing values generated)
+
+. gen k = .
+(6 missing values generated)
+
+. gen rr_estimate = .
+(6 missing values generated)
+
+. gen ci_low = .
+(6 missing values generated)
+
+. gen ci_high = .
+(6 missing values generated)
+
+. gen p_value = .
+(6 missing values generated)
+
+. gen tau2 = .
+(6 missing values generated)
+
+. gen i2 = .
+(6 missing values generated)
+
+. gen q_stat = .
+(6 missing values generated)
+
+. gen model = ""
+(6 missing values generated)
+
+. 
+. replace analysis_id = "TD_PONV_0_24H" in 1
+variable analysis_id was str1 now str13
+(1 real change made)
+
+. replace stratum = "Composite PONV 0-24h (Zheng 2025, Lu 2021)" in 1
+variable stratum was str1 now str42
+(1 real change made)
+
+. replace rr_estimate = res_ponv24[1,1] in 1
+(1 real change made)
+
+. replace ci_low      = res_ponv24[1,2] in 1
+(1 real change made)
+
+. replace ci_high     = res_ponv24[1,3] in 1
+(1 real change made)
+
+. replace p_value     = res_ponv24[1,4] in 1
+(1 real change made)
+
+. replace k           = res_ponv24[1,5] in 1
+(1 real change made)
+
+. replace tau2        = res_ponv24[1,6] in 1
+(1 real change made)
+
+. replace i2          = res_ponv24[1,7] in 1
+(1 real change made)
+
+. replace q_stat      = res_ponv24[1,8] in 1
+(1 real change made)
+
+. replace model       = "REML + Hartung-Knapp" in 1
+variable model was str1 now str20
+(1 real change made)
+
+. 
+. replace analysis_id = "TD_PONV_0_48H" in 2
+(1 real change made)
+
+. replace stratum = "Composite PONV 0-48h (Xiong 2021, Xing 2022)" in 2
+variable stratum was str42 now str44
+(1 real change made)
+
+. replace rr_estimate = res_ponv48[1,1] in 2
+(1 real change made)
+
+. replace ci_low      = res_ponv48[1,2] in 2
+(1 real change made)
+
+. replace ci_high     = res_ponv48[1,3] in 2
+(1 real change made)
+
+. replace p_value     = res_ponv48[1,4] in 2
+(1 real change made)
+
+. replace k           = res_ponv48[1,5] in 2
+(1 real change made)
+
+. replace tau2        = res_ponv48[1,6] in 2
+(1 real change made)
+
+. replace i2          = res_ponv48[1,7] in 2
+(1 real change made)
+
+. replace q_stat      = res_ponv48[1,8] in 2
+(1 real change made)
+
+. replace model       = "REML + Hartung-Knapp" in 2
+(1 real change made)
+
+. 
+. replace analysis_id = "TD_NAUSEA_0_24H" in 3
+variable analysis_id was str13 now str15
+(1 real change made)
+
+. replace stratum = "Nausea 0-24h (Yang 2024, Ma 2026)" in 3
+(1 real change made)
+
+. replace rr_estimate = res_naus24[1,1] in 3
+(1 real change made)
+
+. replace ci_low      = res_naus24[1,2] in 3
+(1 real change made)
+
+. replace ci_high     = res_naus24[1,3] in 3
+(1 real change made)
+
+. replace p_value     = res_naus24[1,4] in 3
+(1 real change made)
+
+. replace k           = res_naus24[1,5] in 3
+(1 real change made)
+
+. replace tau2        = res_naus24[1,6] in 3
+(1 real change made)
+
+. replace i2          = res_naus24[1,7] in 3
+(1 real change made)
+
+. replace q_stat      = res_naus24[1,8] in 3
+(1 real change made)
+
+. replace model       = "REML + Hartung-Knapp" in 3
+(1 real change made)
+
+. 
+. replace analysis_id = "TD_NAUSEA_0_48H" in 4
+(1 real change made)
+
+. replace stratum = "Nausea 0-48h (Luo 2026 alone)" in 4
+(1 real change made)
+
+. replace rr_estimate = (24/138) / (53/139) in 4
+(1 real change made)
+
+. replace ci_low      = exp(ln((24/138)/(53/139)) - 1.96*sqrt(1/24 - 1/138 + 1/53 - 1/139)) in 4
+(1 real change made)
+
+. replace ci_high     = exp(ln((24/138)/(53/139)) + 1.96*sqrt(1/24 - 1/138 + 1/53 - 1/139)) in 4
+(1 real change made)
+
+. replace p_value     = . in 4
+(0 real changes made)
+
+. replace k           = 1 in 4
+(1 real change made)
+
+. replace model       = "Single study (Not pooled)" in 4
+variable model was str20 now str25
+(1 real change made)
+
+. 
+. replace analysis_id = "TD_VOMIT_0_24H" in 5
+(1 real change made)
+
+. replace stratum = "Vomiting 0-24h (Yang 2024, Ma 2026)" in 5
+(1 real change made)
+
+. replace rr_estimate = res_vom24[1,1] in 5
+(1 real change made)
+
+. replace ci_low      = res_vom24[1,2] in 5
+(1 real change made)
+
+. replace ci_high     = res_vom24[1,3] in 5
+(1 real change made)
+
+. replace p_value     = res_vom24[1,4] in 5
+(1 real change made)
+
+. replace k           = res_vom24[1,5] in 5
+(1 real change made)
+
+. replace tau2        = res_vom24[1,6] in 5
+(1 real change made)
+
+. replace i2          = res_vom24[1,7] in 5
+(1 real change made)
+
+. replace q_stat      = res_vom24[1,8] in 5
+(1 real change made)
+
+. replace model       = "REML + Hartung-Knapp" in 5
+(1 real change made)
+
+. 
+. replace analysis_id = "TD_VOMIT_0_48H" in 6
+(1 real change made)
+
+. replace stratum = "Vomiting 0-48h (Luo 2026 alone)" in 6
+(1 real change made)
+
+. replace rr_estimate = (9/138) / (27/139) in 6
+(1 real change made)
+
+. replace ci_low      = exp(ln((9/138)/(27/139)) - 1.96*sqrt(1/9 - 1/138 + 1/27 - 1/139)) in 6
+(1 real change made)
+
+. replace ci_high     = exp(ln((9/138)/(27/139)) + 1.96*sqrt(1/9 - 1/138 + 1/27 - 1/139)) in 6
+(1 real change made)
+
+. replace p_value     = . in 6
+(0 real changes made)
+
+. replace k           = 1 in 6
+(1 real change made)
+
+. replace model       = "Single study (Not pooled)" in 6
+(1 real change made)
+
+. 
+. save "06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetD_ponv.dta", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetD_ponv.dta saved
+
+. export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetD_ponv.csv", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetD_ponv.csv saved
+
+. list, clean
+
+           analysis_id                                  outcome                                     
+>    stratum   k   rr_est~e     ci_low    ci_high    p_value       tau2         i2     q_stat       
+>                 model  
+  1.     TD_PONV_0_24H   Postoperative Nausea & Vomiting (PONV)     Composite PONV 0-24h (Zheng 2025
+> , Lu 2021)   2   .5604023   .1391345   2.257175    .119129   4.06e-07    .001074   .6474992       
+>  REML + Hartung-Knapp  
+  2.     TD_PONV_0_48H   Postoperative Nausea & Vomiting (PONV)   Composite PONV 0-48h (Xiong 2021, 
+> Xing 2022)   2   .5233747   .2161516   1.267264   .0681706   9.25e-07   .0006701   .1114011       
+>  REML + Hartung-Knapp  
+  3.   TD_NAUSEA_0_24H   Postoperative Nausea & Vomiting (PONV)              Nausea 0-24h (Yang 2024
+> , Ma 2026)   2   .6205206   .2688158   1.432378   .0872804   4.95e-07    .000461   .1229699       
+>  REML + Hartung-Knapp  
+  4.   TD_NAUSEA_0_48H   Postoperative Nausea & Vomiting (PONV)                  Nausea 0-48h (Luo 2
+> 026 alone)   1   .4561116   .2994463   .6947414          .          .          .          .   Sing
+> le study (Not pooled)  
+  5.    TD_VOMIT_0_24H   Postoperative Nausea & Vomiting (PONV)            Vomiting 0-24h (Yang 2024
+> , Ma 2026)   2   .5754997   .0247726   13.36959   .2681651   3.73e-07   .0002578   .9317377       
+>  REML + Hartung-Knapp  
+  6.    TD_VOMIT_0_48H   Postoperative Nausea & Vomiting (PONV)                Vomiting 0-48h (Luo 2
+> 026 alone)   1   .3357488   .1639676   .6874971          .          .          .          .   Sing
+> le study (Not pooled)  
+
+. 
+. di as txt _n "SUCCESS: Target D analyses completed and exported."
+
+SUCCESS: Target D analyses completed and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/05_ponv.log
+  log type:  text
+ closed on:   7 Sep 2026, 09:43:45
+----------------------------------------------------------------------------------------------------

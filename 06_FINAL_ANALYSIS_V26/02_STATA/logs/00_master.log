@@ -1,0 +1,43 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/00_master.log
+  log type:  text
+ opened on:   7 Sep 2026, 09:43:40
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "STARTING MASTER VERIFICATION & ANALYSIS PIPELINE (LOCKED v26 DATA)"
+STARTING MASTER VERIFICATION & ANALYSIS PIPELINE (LOCKED v26 DATA)
+
+. di as txt "Date/Time: `c(current_date)' `c(current_time)'"
+Date/Time:  7 Sep 2026 09:43:40
+
+. di as txt "Stata Version: `c(stata_version)' `c(edition)'"
+Stata Version: 19.5 BE
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. * 1. Data Preparation & Harmonization
+. di as txt _n ">>> STEP 1: Running 00_prep_data.do ..."
+
+>>> STEP 1: Running 00_prep_data.do ...
+
+. do "06_FINAL_ANALYSIS_V26/02_STATA/00_prep_data.do"
+
+. * ==============================================================================
+. * 00_prep_data.do: Prepare and Export Clean Analysis Datasets from v26 Lock
+. * Systematic Review: Perioperative TEAS and EA for Opioid Sparing
+. * Source: TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
+. * Authoritative Engine: StataNow 19.5 SE
+. * ==============================================================================
+. 
+. clear all
+
+. set more off
+
+. capture log close

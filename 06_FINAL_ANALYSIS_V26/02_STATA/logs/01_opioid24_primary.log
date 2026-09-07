@@ -1,0 +1,794 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/01_opioid24_primary.log
+  log type:  text
+ opened on:   7 Sep 2026, 09:43:40
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "01: PRIMARY OPIOID OUTCOME: 24-H CUMULATIVE POSTOPERATIVE OPIOID"
+01: PRIMARY OPIOID OUTCOME: 24-H CUMULATIVE POSTOPERATIVE OPIOID
+
+. di as txt "Model: Random-Effects REML + Hartung-Knapp (se(kh))"
+Model: Random-Effects REML + Hartung-Knapp (se(kh))
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
+
+. describe
+
+Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta
+ Observations:            15                  
+    Variables:            49                  7 Sep 2026 09:43
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study_unit      str83   %83s                  study_unit
+comparison_id   str34   %34s                  comparison_id
+intervention    str46   %46s                  intervention
+comparator      str38   %38s                  comparator
+outcome         str81   %81s                  outcome
+time_window     str60   %60s                  time_window
+data_type       str12   %12s                  data_type
+n_i             int     %10.0g                n_i
+n_c             int     %10.0g                n_c
+mean_i          double  %10.0g                mean_i
+sd_i            double  %10.0g                sd_i
+median_i        double  %10.0g                median_i
+q1_i            double  %10.0g                q1_i
+q3_i            double  %10.0g                q3_i
+events_i        byte    %10.0g                events_i
+mean_c          double  %10.0g                mean_c
+sd_c            double  %10.0g                sd_c
+median_c        double  %10.0g                median_c
+q1_c            double  %10.0g                q1_c
+q3_c            double  %10.0g                q3_c
+events_c        byte    %10.0g                events_c
+unit            str43   %43s                  unit
+v20_primary_d~n str58   %58s                  v20_primary_decision
+inc_primary     byte    %10.0g                provisional_primary_include
+inc_sens        byte    %10.0g                provisional_sensitivity_include
+hard_hold       byte    %10.0g                hard_hold
+rob_overall     str13   %13s                  rob_overall
+conversion_ne~d str83   %83s                  conversion_needed
+sensitivity_f~g str95   %95s                  sensitivity_flag
+duplicate_mul~g str118  %118s                 duplicate_multiarm_handling
+source_qc       str208  %208s                 source_qc
+source_url      str83   %83s                  source_url
+mme_factor      float   %9.0g                 
+mean_i_mme      float   %9.0g                 
+sd_i_mme        float   %9.0g                 
+mean_c_mme      float   %9.0g                 
+sd_c_mme        float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+ci_low_mme      float   %9.0g                 
+ci_upp_mme      float   %9.0g                 
+s_pooled        float   %9.0g                 
+d               float   %9.0g                 
+j_corr          float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+modality        str4    %9s                   
+comparator_type str20   %20s                  
+study_label     str83   %83s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: inc_primary  study_unit
+
+. 
+. * List the 6 Strict Primary Studies
+. di as txt _n "=== STRICT PRIMARY STUDIES (k = 6) ==="
+
+=== STRICT PRIMARY STUDIES (k = 6) ===
+
+. list study_unit modality comparator_type n_i mean_i_mme sd_i_mme n_c mean_c_mme sd_c_mme md_mme se
+> _mme rob_overall if inc_primary == 1, clean
+
+                      study_unit   modality        comparator_type   n_i   mean_i~e   sd_i_mme   n_c
+>    mean_c~e   sd_c_mme      md_mme     se_mme     rob_overall  
+ 10.                   Chen 1998       TEAS                   Sham    25       32.5       17.5    25
+>        53.5         25         -21   6.103278   Some concerns  
+ 11.                   Chen 2020       TEAS                   Sham    40      7.243       .478    40
+>      10.062       1.02      -2.819    .178107   Some concerns  
+ 12.              El-Rakshy 2009         EA   Usual Care / Control    42       35.3         18    53
+>        36.9         18   -1.600002   3.718534            High  
+ 13.   He 2026 (hepatectomy/JIS)       TEAS                   Sham    80         20        2.5    79
+>        20.6        4.5   -.6000004   .5783201   Some concerns  
+ 14.          Seevaunnamtum 2016         EA   Usual Care / Control    32      21.38      14.38    32
+>       33.94      20.24      -12.56   4.389056   Some concerns  
+ 15.                   Yang 2024         EA   Usual Care / Control    90       43.7        4.7    90
+>          44        4.9   -.2999992    .715697   Some concerns  
+
+. 
+. * Declare Meta-Analysis Setting for MME
+. meta set md_mme se_mme if inc_primary == 1, studylabel(study_unit) eslabel("Mean Difference (mg IV
+>  MME)")
+(9 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. * ------------------------------------------------------------------------------
+. * 1. PRINCIPAL PRIMARY MODEL: Strict Direct k=6 Trials (REML + Hartung-Knapp)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. PRINCIPAL PRIMARY MODEL: STRICT DIRECT k=6 (REML + Hartung-Knapp)"
+1. PRINCIPAL PRIMARY MODEL: STRICT DIRECT k=6 (REML + Hartung-Knapp)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if inc_primary == 1, random(reml) se(kh) predinterval
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 31.4862
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.29
+                                                                H2 =   58.49
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      9.65
+                Chen 2020 |         -2.819      -3.168      -2.470     21.05
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     14.64
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     20.85
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.07
+                Yang 2024 |         -0.300      -1.703       1.103     20.73
+--------------------------+-------------------------------------------------
+                    theta |         -4.684     -12.257       2.889
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-22.280,12.912]
+
+Test of theta = 0: t(5) = -1.59                          Prob > |t| = 0.1727
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. matrix res_prim = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 2. MODALITY STRATIFIED: TEAS vs Sham (k=3 Trials)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. MODALITY STRATUM: TEAS vs Sham (k=3 Trials)"
+2. MODALITY STRATUM: TEAS vs Sham (k=3 Trials)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if inc_primary == 1 & modality == "TEAS", random(reml) se(kh) predinterval
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      3
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 85.2043
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.58
+                                                                H2 =  235.79
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     25.85
+                Chen 2020 |         -2.819      -3.168      -2.470     37.14
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     37.01
+--------------------------+-------------------------------------------------
+                    theta |         -6.698     -32.555      19.159
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-146.650,133.254]
+
+Test of theta = 0: t(2) = -1.11                          Prob > |t| = 0.3810
+Test of homogeneity: Q = chi2(2) = 22.50                   Prob > Q = 0.0000
+
+. matrix res_teas = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 3. MODALITY STRATIFIED: EA vs Control / Sham (k=3 Trials)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. MODALITY STRATUM: EA vs Control / Sham (k=3 Trials)"
+3. MODALITY STRATUM: EA vs Control / Sham (k=3 Trials)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if inc_primary == 1 & modality == "EA", random(reml) se(kh) predinterval
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                      Number of studies =      3
+Random-effects model                       Heterogeneity:
+Method: REML                                           tau2 = 28.4713
+SE adjustment: Knapp–Hartung                         I2 (%) =   77.15
+                                                         H2 =    4.38
+
+        Effect size: Mean Difference (mg IV MME)
+---------------------------------------------------------------------
+             Study |    Effect size    [95% conf. interval]  % weight
+-------------------+-------------------------------------------------
+    El-Rakshy 2009 |         -1.600      -8.888       5.688     29.89
+Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     26.49
+         Yang 2024 |         -0.300      -1.703       1.103     43.62
+-------------------+-------------------------------------------------
+             theta |         -3.936     -19.773      11.902
+---------------------------------------------------------------------
+95% prediction interval for theta: [-86.301,78.429]
+
+Test of theta = 0: t(2) = -1.07                   Prob > |t| = 0.3969
+Test of homogeneity: Q = chi2(2) = 7.67             Prob > Q = 0.0216
+
+. matrix res_ea = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 4. SENSITIVITY: Exclude High Risk of Bias (El-Rakshy 2009) -> k=5 Trials
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "4. SENSITIVITY: Exclude High RoB (El-Rakshy 2009) -> k=5 Trials"
+4. SENSITIVITY: Exclude High RoB (El-Rakshy 2009) -> k=5 Trials
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if inc_primary == 1 & rob_overall != "High", random(reml) se(kh) predinterval
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      5
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 47.7335
+SE adjustment: Knapp–Hartung                                I2 (%) =   99.08
+                                                                H2 =  108.44
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     13.20
+                Chen 2020 |         -2.819      -3.168      -2.470     23.48
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     23.33
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     16.74
+                Yang 2024 |         -0.300      -1.703       1.103     23.25
+--------------------------+-------------------------------------------------
+                    theta |         -5.746     -15.906       4.415
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-30.627,19.135]
+
+Test of theta = 0: t(4) = -1.57                          Prob > |t| = 0.1915
+Test of homogeneity: Q = chi2(4) = 37.86                   Prob > Q = 0.0000
+
+. matrix res_lowrob = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=6)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=6)"
+5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=6)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta summarize if inc_primary == 1, random(dl) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: DerSimonian–Laird                                     tau2 =  3.6060
+SE adjustment: Knapp–Hartung                                I2 (%) =   86.81
+                                                                H2 =    7.58
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      2.73
+                Chen 2020 |         -2.819      -3.168      -2.470     30.64
+           El-Rakshy 2009 |         -1.600      -8.888       5.688      6.39
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     28.29
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      4.87
+                Yang 2024 |         -0.300      -1.703       1.103     27.07
+--------------------------+-------------------------------------------------
+                    theta |         -2.402      -7.097       2.292
+----------------------------------------------------------------------------
+Test of theta = 0: t(5) = -1.32                          Prob > |t| = 0.2455
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. meta summarize if inc_primary == 1, random(dl)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: DerSimonian–Laird                                     tau2 =  3.6060
+                                                            I2 (%) =   86.81
+                                                                H2 =    7.58
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038      2.73
+                Chen 2020 |         -2.819      -3.168      -2.470     30.64
+           El-Rakshy 2009 |         -1.600      -8.888       5.688      6.39
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     28.29
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958      4.87
+                Yang 2024 |         -0.300      -1.703       1.103     27.07
+--------------------------+-------------------------------------------------
+                    theta |         -2.402      -4.472      -0.333
+----------------------------------------------------------------------------
+Test of theta = 0: z = -2.28                             Prob > |z| = 0.0229
+Test of homogeneity: Q = chi2(5) = 37.92                   Prob > Q = 0.0000
+
+. 
+. * ------------------------------------------------------------------------------
+. * 6. STANDARDIZED MEAN DIFFERENCE (Hedges' g SMD): Strict k=6 Trials
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "6. STANDARDIZED MEAN DIFFERENCE (Hedges' g): Strict k=6 Trials"
+6. STANDARDIZED MEAN DIFFERENCE (Hedges' g): Strict k=6 Trials
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta set hedges_g hedges_se if inc_primary == 1, studylabel(study_unit) eslabel("Standardized Mean
+>  Difference (Hedges' g)")
+(9 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Standardized Mean Difference (Hedges' g)
+          Variable: hedges_g
+
+         Precision
+         Std. err.: hedges_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize if inc_primary == 1, random(reml) se(kh) predinterval
+
+  Effect-size label: Standardized Mean Difference (Hedges' g)
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  1.5975
+SE adjustment: Knapp–Hartung                                I2 (%) =   97.24
+                                                                H2 =   36.18
+
+               Effect size: Standardized Mean Difference (Hedges' g)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |         -0.958      -1.543      -0.373     16.39
+                Chen 2020 |         -3.505      -4.203      -2.807     16.03
+           El-Rakshy 2009 |         -0.088      -0.493       0.317     16.86
+He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147     17.04
+       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202     16.62
+                Yang 2024 |         -0.062      -0.354       0.230     17.07
+--------------------------+-------------------------------------------------
+                    theta |         -0.890      -2.259       0.479
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-4.698, 2.918]
+
+Test of theta = 0: t(5) = -1.67                          Prob > |t| = 0.1556
+Test of homogeneity: Q = chi2(5) = 90.47                   Prob > Q = 0.0000
+
+. matrix res_smd = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 7. GENERATE AND EXPORT FOREST PLOTS
+. * ------------------------------------------------------------------------------
+. * Reset to MME
+. meta set md_mme se_mme if inc_primary == 1, studylabel(study_unit) eslabel("Mean Difference (mg IV
+>  MME)")
+(9 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. meta forestplot if inc_primary == 1, subgroup(modality) ///
+>     title("PRIMARY OPIOID OUTCOME: 24-h Cumulative Consumption", size(medium)) ///
+>     subtitle("Authoritative v26 Lock (StataNow 19.5 SE: REML + Hartung-Knapp, k=6)", size(small)) 
+> ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+. graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_opioid24_primary_mme.png", width(1800) repla
+> ce
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
+    > t_opioid24_primary_mme.png saved as PNG format
+
+. 
+. * Export SMD Forest Plot
+. meta set hedges_g hedges_se if inc_primary == 1, studylabel(study_unit) eslabel("Standardized Mean
+>  Difference (Hedges' g)")
+(9 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Standardized Mean Difference (Hedges' g)
+          Variable: hedges_g
+
+         Precision
+         Std. err.: hedges_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta forestplot if inc_primary == 1, subgroup(modality) ///
+>     title("PRIMARY OPIOID OUTCOME (SMD): 24-h Cumulative Consumption", size(medium)) ///
+>     subtitle("Authoritative v26 Lock (StataNow 19.5 SE: REML + Hartung-Knapp, k=6)", size(small)) 
+> ///
+>     nullrefline nonotes
+
+  Effect-size label: Standardized Mean Difference (Hedges' g)
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: study_unit
+
+. graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_opioid24_primary_smd.png", width(1800) repla
+> ce
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
+    > t_opioid24_primary_smd.png saved as PNG format
+
+. 
+. * ------------------------------------------------------------------------------
+. * 8. EXPORT SUMMARY ESTIMATES TO STATA DATASET & CSV
+. * ------------------------------------------------------------------------------
+. clear
+
+. set obs 5
+Number of observations (_N) was 0, now 5.
+
+. gen analysis_id = ""
+(5 missing values generated)
+
+. gen outcome = "24-h Cumulative Postoperative Opioid"
+
+. gen stratum = ""
+(5 missing values generated)
+
+. gen k = .
+(5 missing values generated)
+
+. gen estimate = .
+(5 missing values generated)
+
+. gen ci_low = .
+(5 missing values generated)
+
+. gen ci_high = .
+(5 missing values generated)
+
+. gen p_value = .
+(5 missing values generated)
+
+. gen tau2 = .
+(5 missing values generated)
+
+. gen i2 = .
+(5 missing values generated)
+
+. gen q_stat = .
+(5 missing values generated)
+
+. gen model = "REML + Hartung-Knapp"
+
+. 
+. replace analysis_id = "OP24_PRIM_COMB" in 1
+variable analysis_id was str1 now str14
+(1 real change made)
+
+. replace stratum = "Combined Strict Primary (TEAS + EA)" in 1
+variable stratum was str1 now str35
+(1 real change made)
+
+. replace estimate = res_prim[1,1] in 1
+(1 real change made)
+
+. replace ci_low   = res_prim[1,2] in 1
+(1 real change made)
+
+. replace ci_high  = res_prim[1,3] in 1
+(1 real change made)
+
+. replace p_value  = res_prim[1,4] in 1
+(1 real change made)
+
+. replace k        = res_prim[1,5] in 1
+(1 real change made)
+
+. replace tau2     = res_prim[1,6] in 1
+(1 real change made)
+
+. replace i2       = res_prim[1,7] in 1
+(1 real change made)
+
+. replace q_stat   = res_prim[1,8] in 1
+(1 real change made)
+
+. 
+. replace analysis_id = "OP24_TEAS_SHAM" in 2
+(1 real change made)
+
+. replace stratum = "TEAS vs Sham" in 2
+(1 real change made)
+
+. replace estimate = res_teas[1,1] in 2
+(1 real change made)
+
+. replace ci_low   = res_teas[1,2] in 2
+(1 real change made)
+
+. replace ci_high  = res_teas[1,3] in 2
+(1 real change made)
+
+. replace p_value  = res_teas[1,4] in 2
+(1 real change made)
+
+. replace k        = res_teas[1,5] in 2
+(1 real change made)
+
+. replace tau2     = res_teas[1,6] in 2
+(1 real change made)
+
+. replace i2       = res_teas[1,7] in 2
+(1 real change made)
+
+. replace q_stat   = res_teas[1,8] in 2
+(1 real change made)
+
+. 
+. replace analysis_id = "OP24_EA_CTRL" in 3
+(1 real change made)
+
+. replace stratum = "EA vs Control/Sham" in 3
+(1 real change made)
+
+. replace estimate = res_ea[1,1] in 3
+(1 real change made)
+
+. replace ci_low   = res_ea[1,2] in 3
+(1 real change made)
+
+. replace ci_high  = res_ea[1,3] in 3
+(1 real change made)
+
+. replace p_value  = res_ea[1,4] in 3
+(1 real change made)
+
+. replace k        = res_ea[1,5] in 3
+(1 real change made)
+
+. replace tau2     = res_ea[1,6] in 3
+(1 real change made)
+
+. replace i2       = res_ea[1,7] in 3
+(1 real change made)
+
+. replace q_stat   = res_ea[1,8] in 3
+(1 real change made)
+
+. 
+. replace analysis_id = "OP24_LOWROB_ONLY" in 4
+variable analysis_id was str14 now str16
+(1 real change made)
+
+. replace stratum = "Sensitivity: Low/Some Concerns RoB only" in 4
+variable stratum was str35 now str39
+(1 real change made)
+
+. replace estimate = res_lowrob[1,1] in 4
+(1 real change made)
+
+. replace ci_low   = res_lowrob[1,2] in 4
+(1 real change made)
+
+. replace ci_high  = res_lowrob[1,3] in 4
+(1 real change made)
+
+. replace p_value  = res_lowrob[1,4] in 4
+(1 real change made)
+
+. replace k        = res_lowrob[1,5] in 4
+(1 real change made)
+
+. replace tau2     = res_lowrob[1,6] in 4
+(1 real change made)
+
+. replace i2       = res_lowrob[1,7] in 4
+(1 real change made)
+
+. replace q_stat   = res_lowrob[1,8] in 4
+(1 real change made)
+
+. 
+. replace analysis_id = "OP24_PRIM_SMD" in 5
+(1 real change made)
+
+. replace stratum = "Standardized Mean Difference (Hedges g)" in 5
+(1 real change made)
+
+. replace estimate = res_smd[1,1] in 5
+(1 real change made)
+
+. replace ci_low   = res_smd[1,2] in 5
+(1 real change made)
+
+. replace ci_high  = res_smd[1,3] in 5
+(1 real change made)
+
+. replace p_value  = res_smd[1,4] in 5
+(1 real change made)
+
+. replace k        = res_smd[1,5] in 5
+(1 real change made)
+
+. replace tau2     = res_smd[1,6] in 5
+(1 real change made)
+
+. replace i2       = res_smd[1,7] in 5
+(1 real change made)
+
+. replace q_stat   = res_smd[1,8] in 5
+(1 real change made)
+
+. 
+. save "06_FINAL_ANALYSIS_V26/03_RESULTS/results_opioid24_primary.dta", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_opioid24_primary.dta saved
+
+. export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_opioid24_primary.csv", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_opioid24_primary.csv saved
+
+. list, clean
+
+            analysis_id                                outcome                                   str
+> atum   k    estimate      ci_low    ci_high    p_value       tau2         i2     q_stat           
+>        model  
+  1.     OP24_PRIM_COMB   24-h Cumulative Postoperative Opioid       Combined Strict Primary (TEAS +
+>  EA)   6   -4.683874   -12.25655   2.888808   .1727139   31.48624   98.29036   37.92149   REML + H
+> artung-Knapp  
+  2.     OP24_TEAS_SHAM   24-h Cumulative Postoperative Opioid                              TEAS vs 
+> Sham   3   -6.697885   -32.55484   19.15907   .3810203   85.20432    99.5759   22.50236   REML + H
+> artung-Knapp  
+  3.       OP24_EA_CTRL   24-h Cumulative Postoperative Opioid                        EA vs Control/
+> Sham   3   -3.935834   -19.77322   11.90155   .3968947   28.47128   77.15261   7.667865   REML + H
+> artung-Knapp  
+  4.   OP24_LOWROB_ONLY   24-h Cumulative Postoperative Opioid   Sensitivity: Low/Some Concerns RoB 
+> only   5    -5.74581   -15.90616   4.414539   .1914762   47.73349   99.07781   37.85905   REML + H
+> artung-Knapp  
+  5.      OP24_PRIM_SMD   24-h Cumulative Postoperative Opioid   Standardized Mean Difference (Hedge
+> s g)   6   -.8898861   -2.258725   .4789527   .1555576   1.597451   97.23626   90.47237   REML + H
+> artung-Knapp  
+
+. 
+. di as txt _n "SUCCESS: Primary 24-h opioid analyses completed and exported."
+
+SUCCESS: Primary 24-h opioid analyses completed and exported.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/01_opioid24_primary.log
+  log type:  text
+ closed on:   7 Sep 2026, 09:43:42
+----------------------------------------------------------------------------------------------------
