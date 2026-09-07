@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/10_broader24h_sensitivity.log
   log type:  text
- opened on:   7 Sep 2026, 16:11:04
+ opened on:   7 Sep 2026, 20:38:23
 
 . 
 . di as txt "=================================================================="
@@ -42,7 +42,7 @@
 ------------------------------------------------------------------
 
 . count if strict == 1
-  6
+  7
 
 . local k_strict = r(N)
 
@@ -62,7 +62,7 @@
 
 . 
 . count if broadpool == 1
-  11
+  12
 
 . local k_pool = r(N)
 
@@ -72,13 +72,13 @@
 
 . 
 . di as txt "Strict primary contributors      : k = `k_strict', N = `n_strict'"
-Strict primary contributors      : k = 6, N = 628
+Strict primary contributors      : k = 7, N = 676
 
 . di as txt "Conditional (broader assumptions): k = `k_cond', N = `n_cond'"
 Conditional (broader assumptions): k = 5, N = 317
 
 . di as txt "Combined candidate pool          : k = `k_pool', N = `n_pool'"
-Combined candidate pool          : k = 11, N = 945
+Combined candidate pool          : k = 12, N = 993
 
 . 
 . di as txt _n "Conditional study units:"
@@ -110,21 +110,21 @@ Conditional study units:
 
 . 
 . count if broadpool == 1 & !missing(md_mme, se_mme)
-  7
+  8
 
 . local k_md = r(N)
 
 . count if broadpool == 1 & !missing(hedges_g, hedges_se)
-  9
+  10
 
 . local k_smd = r(N)
 
 . 
 . di as txt "Pool members with an MD in mg IV MME : `k_md' of `k_pool'"
-Pool members with an MD in mg IV MME : 7 of 11
+Pool members with an MD in mg IV MME : 8 of 12
 
 . di as txt "Pool members with Hedges' g          : `k_smd' of `k_pool'"
-Pool members with Hedges' g          : 9 of 11
+Pool members with Hedges' g          : 10 of 12
 
 . 
 . di as txt _n "Members with NO estimable MD (weight-normalised or Median/IQR):"
@@ -152,7 +152,7 @@ Members with NO estimable SMD (Median/IQR, no derived mean/SD):
 . 
 . di as txt _n "CONCLUSION: a k=`k_pool' mean-difference pool is NOT estimable without"
 
-CONCLUSION: a k=11 mean-difference pool is NOT estimable without
+CONCLUSION: a k=12 mean-difference pool is NOT estimable without
 
 . di as txt "reconstructing absolute doses from group-mean body weights, which the"
 reconstructing absolute doses from group-mean body weights, which the
@@ -178,7 +178,7 @@ v26 lock explicitly prohibits. No such model is fitted.
 . gen byte broad_smd = (broadpool == 1 & !missing(hedges_g, hedges_se))
 
 . count if broad_smd == 1
-  9
+  10
 
 . local k_broadsmd = r(N)
 
@@ -187,7 +187,7 @@ v26 lock explicitly prohibits. No such model is fitted.
 . local n_broadsmd = r(sum)
 
 . di as txt "Broader SMD set: k = `k_broadsmd', N = `n_broadsmd'"
-Broader SMD set: k = 9, N = 803
+Broader SMD set: k = 10, N = 851
 
 . list study_unit unit if broad_smd == 1, clean noobs
 
@@ -200,6 +200,7 @@ Broader SMD set: k = 9, N = 803
                El-Rakshy 2009     mg IV morphine  
     He 2026 (hepatectomy/JIS)             mg MME  
            Seevaunnamtum 2016        mg morphine  
+                   Szmit 2021     mg IV morphine  
                     Yang 2024        mg morphine  
 
 . 
@@ -210,7 +211,7 @@ Broader SMD set: k = 9, N = 803
 Meta-analysis setting information
 
  Study information
-    No. of studies: 9
+    No. of studies: 10
        Study label: study_unit
         Study size: N/A
 
@@ -235,30 +236,31 @@ Meta-analysis setting information
           Std. err.: hedges_se
         Study label: study_unit
 
-Meta-analysis summary                             Number of studies =      9
+Meta-analysis summary                             Number of studies =     10
 Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 =  1.0283
-SE adjustment: Knapp–Hartung                                I2 (%) =   95.19
-                                                                H2 =   20.79
+Method: REML                                                  tau2 =  0.9408
+SE adjustment: Knapp–Hartung                                I2 (%) =   94.50
+                                                                H2 =   18.18
 
                Effect size: Standardized Mean Difference (Hedges' g)
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-               Coura 2011 |         -1.553      -2.519      -0.587      9.67
-                 Sim 2002 |         -0.526      -1.040      -0.011     11.20
-               Zhang 2025 |         -0.670      -1.088      -0.252     11.44
-                Chen 1998 |         -0.958      -1.543      -0.373     11.00
-                Chen 2020 |         -3.505      -4.203      -2.807     10.64
-           El-Rakshy 2009 |         -0.088      -0.493       0.317     11.47
-He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147     11.66
-       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202     11.22
-                Yang 2024 |         -0.062      -0.354       0.230     11.70
+               Coura 2011 |         -1.553      -2.519      -0.587      8.62
+                 Sim 2002 |         -0.526      -1.040      -0.011     10.11
+               Zhang 2025 |         -0.670      -1.088      -0.252     10.35
+                Chen 1998 |         -0.958      -1.543      -0.373      9.91
+                Chen 2020 |         -3.505      -4.203      -2.807      9.56
+           El-Rakshy 2009 |         -0.088      -0.493       0.317     10.38
+He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147     10.57
+       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202     10.14
+               Szmit 2021 |         -1.466      -2.103      -0.829      9.76
+                Yang 2024 |         -0.062      -0.354       0.230     10.60
 --------------------------+-------------------------------------------------
-                    theta |         -0.880      -1.699      -0.060
+                    theta |         -0.934      -1.665      -0.203
 ----------------------------------------------------------------------------
-Test of theta = 0: t(8) = -2.48                          Prob > |t| = 0.0383
-Test of homogeneity: Q = chi2(8) = 96.46                   Prob > Q = 0.0000
+Test of theta = 0: t(9) = -2.89                          Prob > |t| = 0.0178
+Test of homogeneity: Q = chi2(9) = 105.07                  Prob > Q = 0.0000
 
 . matrix res_broad = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
 
@@ -286,7 +288,7 @@ file
 ------------------------------------------------------------------
 
 . di as txt "4. STRICT SMD REFERENCE (same metric, k=`k_strict')"
-4. STRICT SMD REFERENCE (same metric, k=6)
+4. STRICT SMD REFERENCE (same metric, k=7)
 
 . di as txt "------------------------------------------------------------------"
 ------------------------------------------------------------------
@@ -298,7 +300,7 @@ file
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study_unit
         Study size: N/A
 
@@ -323,27 +325,28 @@ Meta-analysis setting information
           Std. err.: hedges_se
         Study label: study_unit
 
-Meta-analysis summary                             Number of studies =      6
+Meta-analysis summary                             Number of studies =      7
 Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 =  1.5975
-SE adjustment: Knapp–Hartung                                I2 (%) =   97.24
-                                                                H2 =   36.18
+Method: REML                                                  tau2 =  1.3660
+SE adjustment: Knapp–Hartung                                I2 (%) =   96.50
+                                                                H2 =   28.54
 
                Effect size: Standardized Mean Difference (Hedges' g)
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Chen 1998 |         -0.958      -1.543      -0.373     16.39
-                Chen 2020 |         -3.505      -4.203      -2.807     16.03
-           El-Rakshy 2009 |         -0.088      -0.493       0.317     16.86
-He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147     17.04
-       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202     16.62
-                Yang 2024 |         -0.062      -0.354       0.230     17.07
+                Chen 1998 |         -0.958      -1.543      -0.373     14.07
+                Chen 2020 |         -3.505      -4.203      -2.807     13.72
+           El-Rakshy 2009 |         -0.088      -0.493       0.317     14.54
+He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147     14.72
+       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202     14.30
+               Szmit 2021 |         -1.466      -2.103      -0.829     13.91
+                Yang 2024 |         -0.062      -0.354       0.230     14.75
 --------------------------+-------------------------------------------------
-                    theta |         -0.890      -2.259       0.479
+                    theta |         -0.967      -2.086       0.153
 ----------------------------------------------------------------------------
-Test of theta = 0: t(5) = -1.67                          Prob > |t| = 0.1556
-Test of homogeneity: Q = chi2(5) = 90.47                   Prob > Q = 0.0000
+Test of theta = 0: t(6) = -2.11                          Prob > |t| = 0.0790
+Test of homogeneity: Q = chi2(6) = 100.09                  Prob > Q = 0.0000
 
 . matrix res_strictsmd = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
 
@@ -512,9 +515,9 @@ file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.csv saved
 
 . list analysis_id k n_participants estimate ci_low ci_high p_value i2, clean noobs
 
-         analysis_id   k   n_part~s    estimate      ci_low     ci_high    p_value         i2  
-     OP24_STRICT_SMD   6        628   -.8898861   -2.258725    .4789527   .1555576   97.23626  
-    OP24_BROADER_SMD   9        803   -.8798046   -1.699115   -.0604942    .038334   95.18996  
+         analysis_id    k   n_part~s    estimate      ci_low     ci_high    p_value         i2  
+     OP24_STRICT_SMD    7        676   -.9667498   -2.086176    .1526764   .0790245   96.49673  
+    OP24_BROADER_SMD   10        851   -.9343767    -1.66529   -.2034638   .0178298   94.49993  
 
 . 
 . di as txt _n "SUCCESS: broader 24-h sensitivity analysis complete."
@@ -526,5 +529,5 @@ SUCCESS: broader 24-h sensitivity analysis complete.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/10_broader24h_sensitivity.log
   log type:  text
- closed on:   7 Sep 2026, 16:11:04
+ closed on:   7 Sep 2026, 20:38:24
 ----------------------------------------------------------------------------------------------------

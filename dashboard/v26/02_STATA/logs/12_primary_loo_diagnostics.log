@@ -1,0 +1,347 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/12_primary_loo_diagnostics.log
+  log type:  text
+ opened on:   7 Sep 2026, 20:38:24
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "12: PRIMARY 24-H OPIOID -- FULL LEAVE-ONE-OUT DIAGNOSTIC TABLE (k=7)"
+12: PRIMARY 24-H OPIOID -- FULL LEAVE-ONE-OUT DIAGNOSTIC TABLE (k=7)
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
+
+. keep if inc_primary == 1
+(9 observations deleted)
+
+. meta set md_mme se_mme, studylabel(study_unit) eslabel("Mean Difference (mg IV MME)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Mean Difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      7
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 113.9105
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.57
+                                                                H2 =   69.89
+
+               Effect size: Mean Difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     11.69
+                Chen 2020 |        -28.190     -31.681     -24.699     15.09
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     13.83
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     15.47
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.27
+               Szmit 2021 |         -7.700     -10.623      -4.777     15.21
+                Yang 2024 |         -0.300      -1.703       1.103     15.44
+--------------------------+-------------------------------------------------
+                    theta |         -9.907     -20.079       0.265
+----------------------------------------------------------------------------
+Test of theta = 0: t(6) = -2.38                          Prob > |t| = 0.0545
+Test of homogeneity: Q = chi2(6) = 254.61                  Prob > Q = 0.0000
+
+. local theta_full = r(theta)
+
+. di as txt "Full-model theta = " %6.4f `theta_full'
+Full-model theta = -9.9070
+
+. 
+. levelsof study_unit, local(studies)
+`"Chen 1998"' `"Chen 2020"' `"El-Rakshy 2009"' `"He 2026 (hepatectomy/JIS)"' `"Seevaunnamtum 2016"' 
+> `"Szmit 2021"' `"Yang 2024"'
+
+. 
+. tempname results
+
+. tempfile out
+
+. postfile `results' str40 study double(remaining_k remaining_n pooled_md se_kh ///
+>     wald_lo wald_hi wald_p kh_lo kh_hi kh_p tau2 i2 dfbetas) using `out', replace
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_57264.000001 not found)
+
+. 
+. foreach s of local studies {
+  2.     preserve
+  3.     quietly count if study_unit == "`s'"
+  4.     local sN = r(N)
+  5.     drop if study_unit == "`s'"
+  6.     quietly count
+  7.     local rk = r(N)
+  8.     quietly summarize n_i
+  9.     local rn_i = r(sum)
+ 10.     quietly summarize n_c
+ 11.     local rn_c = r(sum)
+ 12.     local rn = `rn_i' + `rn_c'
+ 13. 
+.     meta set md_mme se_mme, studylabel(study_unit) eslabel("Mean Difference (mg IV MME)")
+ 14. 
+.     quietly meta summarize, random(reml)
+ 15.     local w_lo = r(ci_lb)
+ 16.     local w_hi = r(ci_ub)
+ 17.     local w_p  = r(p)
+ 18.     local md   = r(theta)
+ 19.     local tau2 = r(tau2)
+ 20.     local i2   = r(I2)
+ 21. 
+.     quietly meta summarize, random(reml) se(kh)
+ 22.     local k_lo = r(ci_lb)
+ 23.     local k_hi = r(ci_ub)
+ 24.     local k_p  = r(p)
+ 25.     local se_kh = (r(ci_ub) - r(theta)) / invttail(r(df), 0.025)
+ 26. 
+.     local dfbetas = (`theta_full' - `md') / `se_kh'
+ 27. 
+.     post `results' ("`s'") (`rk') (`rn') (`md') (`se_kh') (`w_lo') (`w_hi') (`w_p') ///
+>         (`k_lo') (`k_hi') (`k_p') (`tau2') (`i2') (`dfbetas')
+ 28. 
+.     restore
+ 29. }
+(1 observation deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(1 observation deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(1 observation deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(1 observation deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(1 observation deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(1 observation deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+(1 observation deleted)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean Difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. postclose `results'
+
+. 
+. use `out', clear
+
+. gen wald_sig = (wald_lo > 0 | wald_hi < 0)
+
+. gen kh_sig   = (kh_lo > 0 | kh_hi < 0)
+
+. 
+. format pooled_md se_kh wald_lo wald_hi kh_lo kh_hi tau2 dfbetas %9.3f
+
+. format wald_p kh_p %9.4f
+
+. format i2 %9.2f
+
+. 
+. di as txt _n "=== FULL LEAVE-ONE-OUT DIAGNOSTIC TABLE ==="
+
+=== FULL LEAVE-ONE-OUT DIAGNOSTIC TABLE ===
+
+. list study remaining_k remaining_n pooled_md se_kh wald_lo wald_hi wald_p ///
+>     kh_lo kh_hi kh_p tau2 i2 dfbetas wald_sig kh_sig, clean noobs
+
+                        study   remain~k   remain~n   pooled~d   se_kh   wald_lo   wald_hi   wald_p 
+>     kh_lo    kh_hi     kh_p      tau2      i2   dfbetas   wald_sig   kh_sig  
+                    Chen 1998          6        626     -8.439   4.449   -17.253     0.375   0.0606 
+>   -19.875    2.997   0.1163   115.199   98.81    -0.330          0        0  
+                    Chen 2020          6        596     -5.831   3.011   -11.256    -0.406   0.0351 
+>   -13.571    1.910   0.1106    36.769   95.93    -1.354          1        0  
+               El-Rakshy 2009          6        581    -11.273   4.633   -20.494    -2.052   0.0166 
+>   -23.182    0.636   0.0591   123.599   98.87     0.295          1        0  
+    He 2026 (hepatectomy/JIS)          6        517    -11.616   4.557   -20.704    -2.529   0.0122 
+>   -23.331    0.099   0.0513   117.452   97.11     0.375          1        0  
+           Seevaunnamtum 2016          6        612     -9.551   4.865   -19.120     0.018   0.0504 
+>   -22.057    2.955   0.1068   134.531   98.97    -0.073          0        0  
+                   Szmit 2021          6        628    -10.363   4.915   -20.137    -0.589   0.0377 
+>   -22.997    2.271   0.0888   137.894   98.82     0.093          1        0  
+                    Yang 2024          6        496    -11.665   4.531   -20.701    -2.630   0.0114 
+>   -23.313   -0.018   0.0498   116.030   97.27     0.388          1        1  
+
+. 
+. export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_primary_loo_diagnostics.csv", replace
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_primary_loo_diagnostics.csv saved
+
+. 
+. di as txt _n "Saved 03_RESULTS/results_primary_loo_diagnostics.csv"
+
+Saved 03_RESULTS/results_primary_loo_diagnostics.csv
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/12_primary_loo_diagnostics.log
+  log type:  text
+ closed on:   7 Sep 2026, 20:38:24
+----------------------------------------------------------------------------------------------------

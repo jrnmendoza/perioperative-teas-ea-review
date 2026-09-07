@@ -64,6 +64,10 @@ do "06_FINAL_ANALYSIS_V26/02_STATA/10_broader24h_sensitivity.do"
 di as txt _n ">>> STEP 12: Running 11_sufentanil_conversion_sensitivity.do ..."
 do "06_FINAL_ANALYSIS_V26/02_STATA/11_sufentanil_conversion_sensitivity.do"
 
+* 13. Full Leave-One-Out Diagnostic Table for the Strict Primary Pool
+di as txt _n ">>> STEP 13: Running 12_primary_loo_diagnostics.do ..."
+do "06_FINAL_ANALYSIS_V26/02_STATA/12_primary_loo_diagnostics.do"
+
 di as txt _n "=================================================================="
 di as txt "MASTER VERIFICATION & ANALYSIS PIPELINE COMPLETED SUCCESSFULLY!"
 di as txt "All models executed under StataNow 19.5 BE."

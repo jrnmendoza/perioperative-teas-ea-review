@@ -743,14 +743,35 @@ def t_population_denominators():
 
 
 def t_paired_cohort_n():
-    """The MCID paired cohort N must equal the primary analysis N."""
+    """
+    The MCID paired cohort N must equal the primary analysis N, UNLESS every
+    gap is a strict-primary study genuinely present in STUDIES_DATA but not
+    flagged mcid.is_paired -- i.e. a documented, deliberate exclusion (e.g.
+    Szmit 2021, added 2026-09-07: its only pain result is at hospital
+    discharge with no exact postoperative time, so it has no clean ~24h
+    opioid+pain pairing) rather than a study silently missing altogether.
+    """
     rows = [x for x in read_csv(DATA / "opioid_24h_primary.csv") if x["inc_primary"] == "1"]
     expected = sum(int(x["n_i"]) + int(x["n_c"]) for x in rows)
-    got = sum((s.get("population") or {}).get("total_n", 0)
-              for s in STUDIES if (s.get("mcid") or {}).get("is_paired") is True)
-    check(f"MCID paired cohort N ({got}) equals the primary analysis N ({expected})",
-          got == expected,
-          f"paired cohort sums to {got}, Stata primary analysis N is {expected}")
+    primary_units = {x["study_unit"] for x in rows}
+    paired_studies = [s for s in STUDIES if (s.get("mcid") or {}).get("is_paired") is True]
+    got = sum((s.get("population") or {}).get("total_n", 0) for s in paired_studies)
+
+    by_key = {s.get("key"): s for s in STUDIES}
+    paired_keys = {s.get("key") for s in paired_studies}
+    gap_units = primary_units - paired_keys
+    probs = []
+    for unit in gap_units:
+        if unit not in by_key:
+            probs.append(f"{unit} is a strict primary study but has no STUDIES_DATA record at all "
+                         f"(not merely unpaired -- entirely missing)")
+    gap_n = sum((by_key[u].get("population") or {}).get("total_n", 0) for u in gap_units if u in by_key)
+    if got + gap_n != expected:
+        probs.append(f"paired cohort ({got}) + accounted-for gap studies ({gap_n}) = {got + gap_n}, "
+                     f"but Stata primary analysis N is {expected} -- an unexplained discrepancy remains")
+    check(f"MCID paired cohort N ({got}) plus documented gap studies ({sorted(gap_units)}) "
+          f"accounts for the full primary analysis N ({expected})",
+          not probs, "\n".join(probs))
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1224,19 +1245,22 @@ def _stata_study_block(log_name: str, occurrence: int = 0) -> list[tuple[str, fl
 
 def t_primary_weighting_matrix_matches_stata():
     """
-    DERIVED. The k=6 random-effects weighting matrix in index.html lists each
+    DERIVED. The random-effects weighting matrix in index.html lists each
     trial's effect size and its REML weight. Those are static table cells, so
     nothing forces them to track the engine. After the sufentanil conversion
-    correction rescaled Chen 2020 by 10x, every REML and DL weight in that
-    table shifted, but the published table still showed the pre-correction
+    correction rescaled Chen 2020 by 10x, and again when Szmit 2021 was added
+    to the strict primary pool (v32, 2026-09-07), every REML and DL weight in
+    that table shifted, but a stale table would still show a superseded
     column. Assert each study's effect size and REML weight from the log are
-    actually the ones displayed.
+    actually the ones displayed, and that the row count matches the CSV's own
+    k for OP24_PRIM_COMB rather than a hardcoded count.
     """
+    expected_k = int(BY_ID["OP24_PRIM_COMB"]["k"])
     rows = _stata_study_block("01_opioid24_primary.log", 0)
     flat = HTML.replace("−", "-").replace("&minus;", "-")
     probs = []
-    if len(rows) != 6:
-        probs.append(f"expected 6 studies in the primary block, parsed {len(rows)}")
+    if len(rows) != expected_k:
+        probs.append(f"expected {expected_k} studies in the primary block (per OP24_PRIM_COMB), parsed {len(rows)}")
     for label, es, wt in rows:
         if f"{abs(es):.3f} mg" not in flat:
             probs.append(f"{label}: effect size {es:.3f} not displayed")
@@ -1245,7 +1269,7 @@ def t_primary_weighting_matrix_matches_stata():
     tot = sum(w for _, _, w in rows)
     if not (99.0 <= tot <= 101.0):
         probs.append(f"parsed REML weights sum to {tot:.2f}, not ~100")
-    check("k=6 weighting matrix effect sizes and REML weights match the Stata log",
+    check(f"k={expected_k} weighting matrix effect sizes and REML weights match the Stata log",
           not probs, "\n".join(probs))
 
 

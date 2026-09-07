@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/09_subgroups_metareg.log
   log type:  text
- opened on:   7 Sep 2026, 16:11:03
+ opened on:   7 Sep 2026, 20:38:22
 
 . 
 . di as txt "=================================================================="
@@ -27,7 +27,7 @@
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study_unit
         Study size: N/A
 
@@ -47,14 +47,14 @@ Meta-analysis setting information
 
 . 
 . * ------------------------------------------------------------------------------
-. * 1. MODALITY SUBGROUP ANALYSIS: TEAS VS EA (k=6)
+. * 1. MODALITY SUBGROUP ANALYSIS: TEAS VS EA (k=7)
 . * ------------------------------------------------------------------------------
 . di as txt _n "------------------------------------------------------------------"
 
 ------------------------------------------------------------------
 
-. di as txt "1. MODALITY SUBGROUP ANALYSIS: TEAS vs EA (k=6) [REML + Hartung-Knapp]"
-1. MODALITY SUBGROUP ANALYSIS: TEAS vs EA (k=6) [REML + Hartung-Knapp]
+. di as txt "1. MODALITY SUBGROUP ANALYSIS: TEAS vs EA (k=7) [REML + Hartung-Knapp]"
+1. MODALITY SUBGROUP ANALYSIS: TEAS vs EA (k=7) [REML + Hartung-Knapp]
 
 . di as txt "------------------------------------------------------------------"
 ------------------------------------------------------------------
@@ -66,7 +66,7 @@ Meta-analysis setting information
           Std. err.: se_mme
         Study label: study_unit
 
-Subgroup meta-analysis summary                    Number of studies =      6
+Subgroup meta-analysis summary                    Number of studies =      7
 Random-effects model
 Method: REML 
 SE adjustment: Knapp–Hartung
@@ -77,21 +77,22 @@ Group: modality
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
 Group: EA                 |
-           El-Rakshy 2009 |         -1.600      -8.888       5.688     16.39
-       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     15.82
-                Yang 2024 |         -0.300      -1.703       1.103     17.97
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     13.83
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.27
+                Yang 2024 |         -0.300      -1.703       1.103     15.44
                           |
                     theta |         -3.936     -19.773      11.902
 --------------------------+-------------------------------------------------
 Group: TEAS               |
-                Chen 1998 |        -21.000     -32.962      -9.038     14.20
-                Chen 2020 |        -28.190     -31.681     -24.699     17.63
-He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     17.99
+                Chen 1998 |        -21.000     -32.962      -9.038     11.69
+                Chen 2020 |        -28.190     -31.681     -24.699     15.09
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     15.47
+               Szmit 2021 |         -7.700     -10.623      -4.777     15.21
                           |
-                    theta |        -16.313     -52.646      20.020
+                    theta |        -13.995     -34.181       6.190
 --------------------------+-------------------------------------------------
 Overall                   |
-                    theta |        -10.363     -22.997       2.271
+                    theta |         -9.907     -20.079       0.265
 ----------------------------------------------------------------------------
 
 Heterogeneity summary
@@ -99,17 +100,17 @@ Heterogeneity summary
          Group |      df          Q   P > Q        tau2       % I2         H2
 ---------------+-------------------------------------------------------------
             EA |       2       7.67   0.022      28.471      77.15       4.38
-          TEAS |       2     225.48   0.000     211.680      98.50      66.52
+          TEAS |       3     232.89   0.000     156.882      98.59      70.96
 ---------------+-------------------------------------------------------------
-       Overall |       5     242.63   0.000     137.894      98.82      84.59
+       Overall |       6     254.61   0.000     113.911      98.57      69.89
 -----------------------------------------------------------------------------
-Test of group differences: Q_b = chi2(1) = 1.75            Prob > Q_b = 0.185
+Test of group differences: Q_b = chi2(1) = 1.87            Prob > Q_b = 0.172
 
 . 
 . * Subgroup forest plot
 . meta forestplot, subgroup(modality) ///
 >     title("Primary 24-h Opioid Consumption by Modality (mg IV MME)", size(medium)) ///
->     subtitle("Random-Effects REML + Hartung-Knapp (k=6)", size(small)) ///
+>     subtitle("Random-Effects REML + Hartung-Knapp (k=7)", size(small)) ///
 >     nullrefline nonotes
 
   Effect-size label: Mean Difference (mg IV MME)
@@ -125,14 +126,14 @@ file
 
 . 
 . * ------------------------------------------------------------------------------
-. * 2. COMPARATOR TYPE SUBGROUP: SHAM VS USUAL CARE (k=6)
+. * 2. COMPARATOR TYPE SUBGROUP: SHAM VS USUAL CARE (k=7)
 . * ------------------------------------------------------------------------------
 . di as txt _n "------------------------------------------------------------------"
 
 ------------------------------------------------------------------
 
-. di as txt "2. COMPARATOR TYPE SUBGROUP: SHAM vs USUAL CARE (k=6)"
-2. COMPARATOR TYPE SUBGROUP: SHAM vs USUAL CARE (k=6)
+. di as txt "2. COMPARATOR TYPE SUBGROUP: SHAM vs USUAL CARE (k=7)"
+2. COMPARATOR TYPE SUBGROUP: SHAM vs USUAL CARE (k=7)
 
 . di as txt "------------------------------------------------------------------"
 ------------------------------------------------------------------
@@ -144,7 +145,7 @@ file
           Std. err.: se_mme
         Study label: study_unit
 
-Subgroup meta-analysis summary                    Number of studies =      6
+Subgroup meta-analysis summary                    Number of studies =      7
 Random-effects model
 Method: REML 
 SE adjustment: Knapp–Hartung
@@ -155,33 +156,34 @@ Group: comparator_type
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
 Group: Sham               |
-                Chen 1998 |        -21.000     -32.962      -9.038     14.20
-                Chen 2020 |        -28.190     -31.681     -24.699     17.63
-He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     17.99
+                Chen 1998 |        -21.000     -32.962      -9.038     11.69
+                Chen 2020 |        -28.190     -31.681     -24.699     15.09
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     15.47
+               Szmit 2021 |         -7.700     -10.623      -4.777     15.21
                           |
-                    theta |        -16.313     -52.646      20.020
+                    theta |        -13.995     -34.181       6.190
 --------------------------+-------------------------------------------------
 Group: Usual Care / Cont~l|
-           El-Rakshy 2009 |         -1.600      -8.888       5.688     16.39
-       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     15.82
-                Yang 2024 |         -0.300      -1.703       1.103     17.97
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     13.83
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.27
+                Yang 2024 |         -0.300      -1.703       1.103     15.44
                           |
                     theta |         -3.936     -19.773      11.902
 --------------------------+-------------------------------------------------
 Overall                   |
-                    theta |        -10.363     -22.997       2.271
+                    theta |         -9.907     -20.079       0.265
 ----------------------------------------------------------------------------
 
 Heterogeneity summary
 -----------------------------------------------------------------------------
          Group |      df          Q   P > Q        tau2       % I2         H2
 ---------------+-------------------------------------------------------------
-          Sham |       2     225.48   0.000     211.680      98.50      66.52
+          Sham |       3     232.89   0.000     156.882      98.59      70.96
 Usual Care /~l |       2       7.67   0.022      28.471      77.15       4.38
 ---------------+-------------------------------------------------------------
-       Overall |       5     242.63   0.000     137.894      98.82      84.59
+       Overall |       6     254.61   0.000     113.911      98.57      69.89
 -----------------------------------------------------------------------------
-Test of group differences: Q_b = chi2(1) = 1.75            Prob > Q_b = 0.185
+Test of group differences: Q_b = chi2(1) = 1.87            Prob > Q_b = 0.172
 
 . 
 . * ------------------------------------------------------------------------------
@@ -200,8 +202,8 @@ According to Cochrane Handbook (Section 10.11.4), meta-regression
 . di as txt "should generally NOT be considered unless there are at least 10 studies"
 should generally NOT be considered unless there are at least 10 studies
 
-. di as txt "for each study-level covariate. Here, k=6 (TEAS k=3, EA k=3)."
-for each study-level covariate. Here, k=6 (TEAS k=3, EA k=3).
+. di as txt "for each study-level covariate. Here, k=7 (TEAS k=4, EA k=3)."
+for each study-level covariate. Here, k=7 (TEAS k=4, EA k=3).
 
 . di as txt "Executing exploratory meta-regression on modality for completeness:"
 Executing exploratory meta-regression on modality for completeness:
@@ -222,24 +224,25 @@ Executing exploratory meta-regression on modality for completeness:
           Std. err.: se_mme
         Study label: study_unit
 
-Meta-analysis summary                             Number of studies =      3
+Meta-analysis summary                             Number of studies =      4
 Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 = 211.6799
-SE adjustment: Knapp–Hartung                                I2 (%) =   98.50
-                                                                H2 =   66.52
+Method: REML                                                  tau2 = 156.8823
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.59
+                                                                H2 =   70.96
 
                Effect size: Mean Difference (mg IV MME)
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Chen 1998 |        -21.000     -32.962      -9.038     30.01
-                Chen 2020 |        -28.190     -31.681     -24.699     34.76
-He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     35.23
+                Chen 1998 |        -21.000     -32.962      -9.038     21.42
+                Chen 2020 |        -28.190     -31.681     -24.699     25.98
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.45
+               Szmit 2021 |         -7.700     -10.623      -4.777     26.14
 --------------------------+-------------------------------------------------
-                    theta |        -16.313     -52.646      20.020
+                    theta |        -13.995     -34.181       6.190
 ----------------------------------------------------------------------------
-Test of theta = 0: t(2) = -1.93                          Prob > |t| = 0.1931
-Test of homogeneity: Q = chi2(2) = 225.48                  Prob > Q = 0.0000
+Test of theta = 0: t(3) = -2.21                          Prob > |t| = 0.1145
+Test of homogeneity: Q = chi2(3) = 232.89                  Prob > Q = 0.0000
 
 . matrix res_teas = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
 
@@ -282,30 +285,30 @@ Test of homogeneity: Q = chi2(2) = 7.67             Prob > Q = 0.0216
         Effect size: md_mme
           Std. err.: se_mme
 
-Random-effects meta-regression                      Number of obs  =         6
+Random-effects meta-regression                      Number of obs  =         7
 Method: REML                                        Residual heterogeneity:
-SE adjustment: Knapp–Hartung                                    tau2 =   127.3
-                                                              I2 (%) =   96.46
-                                                                  H2 =   28.25
-                                                       R-squared (%) =    7.69
-                                                    Model F(1,4)   =      1.53
-                                                    Prob > F       =    0.2836
+SE adjustment: Knapp–Hartung                                    tau2 =   110.2
+                                                              I2 (%) =   97.20
+                                                                  H2 =   35.73
+                                                       R-squared (%) =    3.22
+                                                    Model F(1,5)   =      1.29
+                                                    Prob > F       =    0.3079
 -------------------------------------------------------------------------------
      _meta_es | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
 --------------+----------------------------------------------------------------
 modality_code |
-        TEAS  |  -11.57351   9.353817    -1.24   0.284    -37.54387    14.39685
-        _cons |  -4.572846   6.602209    -0.69   0.527    -22.90352    13.75782
+        TEAS  |  -9.324212   8.215591    -1.13   0.308    -30.44306    11.79464
+        _cons |  -4.537925   6.228398    -0.73   0.499    -20.54853    11.47268
 -------------------------------------------------------------------------------
-Test of residual homogeneity: Q_res = chi2(4) = 233.15   Prob > Q_res = 0.0000
+Test of residual homogeneity: Q_res = chi2(5) = 240.56   Prob > Q_res = 0.0000
 
 . matrix res_metareg = (r(table)[1,2], r(table)[2,2], r(table)[5,2], r(table)[6,2], r(table)[4,2], r
 > (N), r(tau2), r(I2))
 
 . 
-. di as txt _n "AUDIT CONCLUSION: Meta-regression with k=6 is severely underpowered"
+. di as txt _n "AUDIT CONCLUSION: Meta-regression with k=7 is severely underpowered"
 
-AUDIT CONCLUSION: Meta-regression with k=6 is severely underpowered
+AUDIT CONCLUSION: Meta-regression with k=7 is severely underpowered
 
 . di as txt "and subject to extreme risk of false-positive / false-negative conclusions."
 and subject to extreme risk of false-positive / false-negative conclusions.
@@ -464,7 +467,7 @@ variable analysis_type was str8 now str15
 . replace i2 = res_metareg[1,8] in 3
 (0 real changes made)
 
-. replace notes = "Difference between TEAS and EA; underpowered (k=6 < 10)" in 3
+. replace notes = "Difference between TEAS and EA; underpowered (k=7 < 10)" in 3
 variable notes was str29 now str55
 (1 real change made)
 
@@ -481,14 +484,14 @@ file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_subgroups_metareg.csv saved
 > iable   k    estimate      ci_low    ci_high    p_value       tau2         i2                     
 >                                 notes  
   1.   SUB_MODALITY_TEAS          Subgroup                 Modality: TEAS (Chen 1998, Chen 2020, He 
-> 2026)   3   -16.31267   -52.64574    20.0204   .1931112   211.6799   98.49659                     
+> 2026)   4   -13.99528   -34.18084   6.190291   .1144761   156.8823   98.59068                     
 >         REML + Hartung-Knapp (t df=2)  
   2.     SUB_MODALITY_EA          Subgroup   Modality: EA (El-Rakshy 2009, Seevaunnamtum 2016, Yang 
 > 2024)   3   -3.935834   -19.77322   11.90155   .3968947   28.47128   77.15261                     
 >         REML + Hartung-Knapp (t df=2)  
   3.    METAREG_MODALITY   Meta-regression                           Modality: TEAS vs EA (reference
-> : EA)   .   -11.57351   -37.54387   14.39685   .2836451          .          .   Difference between
->  TEAS and EA; underpowered (k=6 < 10)  
+> : EA)   .   -9.324212   -30.44306   11.79464     .30786          .          .   Difference between
+>  TEAS and EA; underpowered (k=7 < 10)  
 
 . 
 . di as txt _n "SUCCESS: Subgroup and meta-regression analyses completed and exported."
@@ -500,5 +503,5 @@ SUCCESS: Subgroup and meta-regression analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/09_subgroups_metareg.log
   log type:  text
- closed on:   7 Sep 2026, 16:11:04
+ closed on:   7 Sep 2026, 20:38:23
 ----------------------------------------------------------------------------------------------------

@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/02_targetA_48h.log
   log type:  text
- opened on:   7 Sep 2026, 16:10:57
+ opened on:   7 Sep 2026, 20:38:16
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta
  Observations:             5                  
-    Variables:            57                  7 Sep 2026 16:10
+    Variables:            57                  7 Sep 2026 20:38
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -35,8 +35,8 @@ target          str18   %18s                  target
 endpoint_stra~m str35   %35s                  endpoint_stratum
 study           str25   %25s                  study
 comparison_id   str35   %35s                  comparison_id
-intervention    str46   %46s                  intervention
-comparator      str38   %38s                  comparator
+intervention    str128  %128s                 intervention
+comparator      str75   %75s                  comparator
 outcome         str69   %69s                  outcome
 time_window     str101  %101s                 time_window
 data_type       str42   %42s                  data_type
@@ -67,11 +67,11 @@ p1_disposition  str33   %33s                  p1_disposition
 analysis_action str20   %20s                  analysis_action
 overlap_family  str30   %30s                  overlap_family
 hold_reason     str33   %33s                  hold_reason
-shared_contro~e str3    %9s                   shared_control_issue
+shared_contro~e str101  %101s                 shared_control_issue
 source_qc       str179  %179s                 source_qc
 record_status   str59   %59s                  record_status
 source_url      str83   %83s                  source_url
-Sourceverifie~t str88   %88s                  Source-verified result
+Sourceverifie~t str108  %108s                 Source-verified result
 rob_d1          str13   %13s                  D1
 rob_d2          str13   %13s                  D2
 rob_d3          str13   %13s                  D3
@@ -548,5 +548,5 @@ SUCCESS: Target A analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/02_targetA_48h.log
   log type:  text
- closed on:   7 Sep 2026, 16:10:58
+ closed on:   7 Sep 2026, 20:38:17
 ----------------------------------------------------------------------------------------------------

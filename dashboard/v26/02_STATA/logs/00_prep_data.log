@@ -3,31 +3,31 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/00_prep_data.log
   log type:  text
- opened on:   7 Sep 2026, 16:10:55
+ opened on:   7 Sep 2026, 20:38:14
 
 . 
 . di as txt "=================================================================="
 ==================================================================
 
-. di as txt "00: PREPARING CLEAN ANALYSIS DATASETS FROM AUTHORITATIVE V26 WORKBOOK"
-00: PREPARING CLEAN ANALYSIS DATASETS FROM AUTHORITATIVE V26 WORKBOOK
+. di as txt "00: PREPARING CLEAN ANALYSIS DATASETS FROM AUTHORITATIVE V32 WORKBOOK"
+00: PREPARING CLEAN ANALYSIS DATASETS FROM AUTHORITATIVE V32 WORKBOOK
 
-. di as txt "Source: TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx"
-Source: TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
+. di as txt "Source: TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
+Source: TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx
 
 . di as txt "=================================================================="
 ==================================================================
 
 . 
 . local master_xlsx "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TE
-> AS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx"
+> AS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
 
 . 
 . * ------------------------------------------------------------------------------
 . * PART 1: PRIMARY 24-H OPIOID CONSUMPTION
 . * ------------------------------------------------------------------------------
 . import excel using "`master_xlsx'", sheet("Stata_Opioid24_Primary") firstrow clear
-(32 vars, 15 obs)
+(32 vars, 16 obs)
 
 . 
 . * Standardize variable names
@@ -70,10 +70,10 @@ Source: TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
 . * Only mean-difference-in-MME analyses are affected.
 . * ------------------------------------------------------------------------------
 . gen mme_factor = .
-(15 missing values generated)
+(16 missing values generated)
 
 . replace mme_factor = 1.0 if unit == "mg morphine" | unit == "mg IV morphine" | unit == "mg MME"
-(6 real changes made)
+(7 real changes made)
 
 . replace mme_factor = 5.0 if unit == "mg hydromorphone"
 (1 real change made)
@@ -127,23 +127,23 @@ Source: TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
 . 
 . * Classify intervention modality and comparator
 . gen modality = ""
-(15 missing values generated)
+(16 missing values generated)
 
 . replace modality = "TEAS" if strpos(intervention, "TEAS") > 0 | strpos(intervention, "TENS") > 0
 variable modality was str1 now str4
-(8 real changes made)
+(9 real changes made)
 
 . replace modality = "EA"   if strpos(intervention, "EA") > 0 & modality == ""
 (6 real changes made)
 
 . 
 . gen comparator_type = ""
-(15 missing values generated)
+(16 missing values generated)
 
 . replace comparator_type = "Sham" if strpos(comparator, "Sham") > 0 | strpos(comparator, "Placebo")
 >  > 0 | strpos(comparator, "No-current") > 0
 variable comparator_type was str1 now str4
-(7 real changes made)
+(8 real changes made)
 
 . replace comparator_type = "Usual Care / Control" if comparator_type == ""
 variable comparator_type was str4 now str20
@@ -164,7 +164,7 @@ file 06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.csv saved
 
 . 
 . di as txt "Saved 01_DATA/opioid_24h_primary.dta (N = " _N ")"
-Saved 01_DATA/opioid_24h_primary.dta (N = 15)
+Saved 01_DATA/opioid_24h_primary.dta (N = 16)
 
 . 
 . * ------------------------------------------------------------------------------
@@ -192,8 +192,8 @@ Saved 01_DATA/opioid_24h_primary.dta (N = 15)
 . tempfile af_rob
 
 . save `af_rob', replace
-(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_44356.000001 not found)
-file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_44356.000001 saved as .dta format
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_57264.000001 not found)
+file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_57264.000001 saved as .dta format
 
 . 
 . * ------------------------------------------------------------------------------
@@ -211,6 +211,133 @@ file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_44356.000001 saved as .
     -----------------------------------------
 
 . 
+. * ------------------------------------------------------------------------------
+. * POST-LOCK ADDITION 2026-09-07: Szmit 2021, Target D nausea 0-24h
+. *
+. *   Szmit 2021 is a post-lock source-direct addition (v32 workbook); it has no
+. *   row in the frozen AF_Result_Lock/Stata_AF_Long sheets. Its per-outcome flags
+. *   in Outcome_Data_AF_LOCK were checked directly (comparison_id
+. *   SZMIT21_TEAS_vs_SHAM_NAUSEA24): AF include strict = 1, AF target = D,
+. *   AF endpoint stratum = D_nausea_0-24h -- the workbook's own curator marked
+. *   this ready for the same D_nausea_0-24h pool 05_ponv.do already computes
+. *   (previously k=2: Yang 2024, Ma 2026). Every other new-study row surfaced by
+. *   this migration (Gao 2022, Song 2020, and Szmit's own alternate PCA-only and
+. *   pain rows) is flagged include_strict=0 AND include_sensitivity=0 or held for
+. *   unresolved QC/digitization, and is deliberately NOT added here or anywhere
+. *   else in the pipeline. See 06_AUDIT/dashboard_v26_reconciliation.md for the
+. *   full per-study readiness audit.
+. *
+. *   RoB 2 (D1-D5, overall) is copied from Corrected_RoB2's Szmit 2021 row, the
+. *   only RoB 2 assessment the workbook records for this study (result-specific
+. *   RoB is normally one assessment per study in this workbook, applied across
+. *   the study's contributing results per this project's existing convention).
+. * ------------------------------------------------------------------------------
+. local n = _N + 1
+
+. set obs `n'
+Number of observations (_N) was 108, now 109.
+
+. replace lock_id = "SZMIT21-POSTLOCK" in `n'
+(1 real change made)
+
+. replace target = "D" in `n'
+(1 real change made)
+
+. replace endpoint_stratum = "D_nausea_0-24h" in `n'
+(1 real change made)
+
+. replace study = "Szmit 2021" in `n'
+(1 real change made)
+
+. replace comparison_id = "SZMIT21_TEAS_vs_SHAM_NAUSEA24" in `n'
+(1 real change made)
+
+. replace intervention = "Postoperative TEAS: bilateral LI4 + ipsilateral peri-incisional ashi point
+> s; alternating 2/100 Hz; 30 min every 2 h through 24 h" in `n'
+variable intervention was str46 now str128
+(1 real change made)
+
+. replace comparator = "Sham TEAS: identical devices/placement with no electrical stimulation + PCA"
+>  in `n'
+variable comparator was str38 now str75
+(1 real change made)
+
+. replace outcome = "Nausea incidence" in `n'
+(1 real change made)
+
+. replace time_window = "Postoperative observation period; PCA/TEAS discontinued at 24 h" in `n'
+(1 real change made)
+
+. replace data_type = "Events/total" in `n'
+(1 real change made)
+
+. replace n_i = 24 in `n'
+(1 real change made)
+
+. replace n_c = 24 in `n'
+(1 real change made)
+
+. replace events_i = 0 in `n'
+(1 real change made)
+
+. replace events_c = 4 in `n'
+(1 real change made)
+
+. replace unit = "participants with nausea" in `n'
+(1 real change made)
+
+. replace reported_p = "0.116 (3-group overall)" in `n'
+(1 real change made)
+
+. replace rob_overall = "Some concerns" in `n'
+(1 real change made)
+
+. replace include_strict = 1 in `n'
+(1 real change made)
+
+. replace include_sensitivity = 0 in `n'
+(1 real change made)
+
+. replace shared_control_issue = "Alternative comparator exists (TEAS-vs-PCA-only, SZMIT21_TEAS_vs_C
+> TRL_NAUSEA24); do not double count." in `n'
+variable shared_control_issue was str3 now str101
+(1 real change made)
+
+. replace source_qc = "Zero events in TEAS; use events/denominators directly rather than the non-sig
+> nificant three-group overall P value (P=0.116)." in `n'
+(1 real change made)
+
+. replace record_status = "SOURCE-VERIFIED" in `n'
+(1 real change made)
+
+. replace source_url = "https://drive.google.com/file/d/1SbgHRO4KEP9X0Unz75vDMFCvlkDTEgk3/view?usp=d
+> rivesdk" in `n'
+(1 real change made)
+
+. replace result_rob = "Some concerns" in `n'
+(1 real change made)
+
+. replace rob_d1 = "Low" in `n'
+(1 real change made)
+
+. replace rob_d2 = "Low" in `n'
+(1 real change made)
+
+. replace rob_d3 = "Low" in `n'
+(1 real change made)
+
+. replace rob_d4 = "Low" in `n'
+(1 real change made)
+
+. replace rob_d5 = "Some concerns" in `n'
+(1 real change made)
+
+. replace Sourceverifiedresult = "Nausea 0/24 (TEAS) vs 4/24 (sham) during postoperative observation
+>  through 24 h; three-group overall P=0.116" in `n'
+variable Sourceverifiedresult was str88 now str108
+(1 real change made)
+
+. 
 . * Save Master Locked Dataset
 . save "06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta", replace
 file 06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta saved
@@ -219,7 +346,7 @@ file 06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta saved
 file 06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.csv saved
 
 . di as txt "Saved 01_DATA/analysis_dataset_locked.dta (N = " _N ")"
-Saved 01_DATA/analysis_dataset_locked.dta (N = 108)
+Saved 01_DATA/analysis_dataset_locked.dta (N = 109)
 
 . 
 . * ------------------------------------------------------------------------------
@@ -228,7 +355,7 @@ Saved 01_DATA/analysis_dataset_locked.dta (N = 108)
 . use "06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta", clear
 
 . keep if target == "A"
-(103 observations deleted)
+(104 observations deleted)
 
 . 
 . * MME Conversion (same prespecified framework as PART 1; see header there):
@@ -302,7 +429,7 @@ Saved 01_DATA/target_A_48h.dta (N = 5)
 . use "06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta", clear
 
 . keep if target == "B"
-(106 observations deleted)
+(107 observations deleted)
 
 . 
 . gen md = mean_i - mean_c
@@ -326,7 +453,7 @@ Saved 01_DATA/target_B_72h.dta (N = 2)
 . use "06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta", clear
 
 . keep if target == "C"
-(106 observations deleted)
+(107 observations deleted)
 
 . 
 . gen md = mean_i - mean_c
@@ -360,7 +487,7 @@ file 06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.dta saved
 file 06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.csv saved
 
 . di as txt "Saved 01_DATA/target_D_ponv.dta (N = " _N ")"
-Saved 01_DATA/target_D_ponv.dta (N = 11)
+Saved 01_DATA/target_D_ponv.dta (N = 12)
 
 . 
 . * ------------------------------------------------------------------------------
@@ -369,7 +496,7 @@ Saved 01_DATA/target_D_ponv.dta (N = 11)
 . use "06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta", clear
 
 . keep if target == "E"
-(102 observations deleted)
+(103 observations deleted)
 
 . 
 . * Note: Ng 2013 is in days; others are in hours.
@@ -429,7 +556,7 @@ Saved 01_DATA/target_E_flatus.dta (N = 6)
 . use "06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta", clear
 
 . keep if substr(target, 1, 1) == "F"
-(26 observations deleted)
+(27 observations deleted)
 
 . 
 . save "06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.dta", replace
@@ -451,5 +578,5 @@ SUCCESS: All analysis datasets cleanly prepared and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/00_prep_data.log
   log type:  text
- closed on:   7 Sep 2026, 16:10:56
+ closed on:   7 Sep 2026, 20:38:15
 ----------------------------------------------------------------------------------------------------

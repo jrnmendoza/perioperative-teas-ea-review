@@ -32,7 +32,7 @@
 *   MDs across the full range so that uncertainty is reported explicitly instead
 *   of being absorbed silently into a single number.
 *
-*   Chen 2020 (sufentanil) is 1 of the 6 strict primary trials. Zhang 2025 and
+*   Chen 2020 (sufentanil) is 1 of the 7 strict primary trials. Zhang 2025 and
 *   Xie 2014 (Target A) are the other sufentanil-converted rows. Factor 1.0 in
 *   the loops below reproduces the primary analysis exactly; factor 0.1
 *   reproduces the superseded pre-correction result and is retained only so the
@@ -53,7 +53,7 @@ di as txt "    Primary = 1.0 mg MME per ug (1000:1). Range audited: 0.1 to 1.0."
 di as txt "=================================================================="
 
 * ------------------------------------------------------------------------------
-* PART 1: STRICT PRIMARY (k=6) UNDER ALTERNATIVE SUFENTANIL FACTORS
+* PART 1: STRICT PRIMARY (k=7) UNDER ALTERNATIVE SUFENTANIL FACTORS
 *   Only Chen 2020 is sufentanil-converted within the strict primary set.
 * ------------------------------------------------------------------------------
 foreach factor in 0.1 0.25 0.5 1.0 {
@@ -70,7 +70,7 @@ foreach factor in 0.1 0.25 0.5 1.0 {
     meta set md_mme se_mme, studylabel(study_unit) eslabel("Mean Difference (mg IV MME)")
     meta summarize, random(reml) se(kh)
 
-    di as txt _n "Sufentanil factor = `factor' mg MME per ug | Strict primary k=6:"
+    di as txt _n "Sufentanil factor = `factor' mg MME per ug | Strict primary k=7:"
     di as txt "  MD = " %6.3f r(theta) "  95% KH CI [" %6.3f r(ci_lb) ", " %6.3f r(ci_ub) "]  p = " %6.4f r(p) "  I2 = " %5.2f r(I2) "%"
 }
 

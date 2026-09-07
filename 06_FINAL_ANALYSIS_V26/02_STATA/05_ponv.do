@@ -23,11 +23,22 @@ di as txt _n "=== ALL TARGET D STUDIES AND STRATA ==="
 list lock_id study endpoint_stratum include_strict include_sensitivity events_i n_i events_c n_c result_rob, clean
 
 * Calculate log RR and SE
-gen p_i = events_i / n_i
-gen p_c = events_c / n_c
+* Continuity correction (+0.5 to all four cells, Cochrane Handbook SS10.4.4):
+* applied ONLY to rows with a zero cell, since an untreated zero makes ln(rr)
+* and/or se_lnrr undefined (division by zero / ln(0)). First needed by the
+* Szmit 2021 nausea 0-24h row added 2026-09-07 (0/24 vs 4/24); no pre-existing
+* Target D row had a zero cell before this addition.
+gen zero_cell = (events_i == 0 | events_c == 0)
+gen events_i_cc = events_i + 0.5 * zero_cell
+gen events_c_cc = events_c + 0.5 * zero_cell
+gen n_i_cc = n_i + 0.5 * zero_cell
+gen n_c_cc = n_c + 0.5 * zero_cell
+
+gen p_i = events_i_cc / n_i_cc
+gen p_c = events_c_cc / n_c_cc
 gen rr = p_i / p_c
 gen lnrr = ln(rr)
-gen se_lnrr = sqrt((1/events_i - 1/n_i) + (1/events_c - 1/n_c))
+gen se_lnrr = sqrt((1/events_i_cc - 1/n_i_cc) + (1/events_c_cc - 1/n_c_cc))
 
 * Declare meta setting
 meta set lnrr se_lnrr, studylabel(study) eslabel("Risk Ratio (log scale)")
@@ -51,10 +62,10 @@ meta summarize if endpoint_stratum == "D_PONV_0-48h", random(reml) se(kh) eform
 matrix res_ponv48 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
 * ------------------------------------------------------------------------------
-* 3. STRATUM 3: NAUSEA 0-24 H (k=2: Yang 2024, Ma 2026)
+* 3. STRATUM 3: NAUSEA 0-24 H (k=3: Yang 2024, Ma 2026, Szmit 2021)
 * ------------------------------------------------------------------------------
 di as txt _n "------------------------------------------------------------------"
-di as txt "3. NAUSEA ALONE 0-24 H (k=2: Yang 2024, Ma 2026)"
+di as txt "3. NAUSEA ALONE 0-24 H (k=3: Yang 2024, Ma 2026, Szmit 2021)"
 di as txt "------------------------------------------------------------------"
 meta summarize if endpoint_stratum == "D_nausea_0-24h", random(reml) se(kh) eform
 matrix res_naus24 = (exp(r(theta)), exp(r(ci_lb)), exp(r(ci_ub)), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))

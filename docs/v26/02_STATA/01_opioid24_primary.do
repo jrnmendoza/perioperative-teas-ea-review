@@ -19,17 +19,17 @@ use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
 describe
 
 * List the 6 Strict Primary Studies
-di as txt _n "=== STRICT PRIMARY STUDIES (k = 6) ==="
+di as txt _n "=== STRICT PRIMARY STUDIES (k = 7) ==="
 list study_unit modality comparator_type n_i mean_i_mme sd_i_mme n_c mean_c_mme sd_c_mme md_mme se_mme rob_overall if inc_primary == 1, clean
 
 * Declare Meta-Analysis Setting for MME
 meta set md_mme se_mme if inc_primary == 1, studylabel(study_unit) eslabel("Mean Difference (mg IV MME)")
 
 * ------------------------------------------------------------------------------
-* 1. PRINCIPAL PRIMARY MODEL: Strict Direct k=6 Trials (REML + Hartung-Knapp)
+* 1. PRINCIPAL PRIMARY MODEL: Strict Direct k=7 Trials (REML + Hartung-Knapp)
 * ------------------------------------------------------------------------------
 di as txt _n "------------------------------------------------------------------"
-di as txt "1. PRINCIPAL PRIMARY MODEL: STRICT DIRECT k=6 (REML + Hartung-Knapp)"
+di as txt "1. PRINCIPAL PRIMARY MODEL: STRICT DIRECT k=7 (REML + Hartung-Knapp)"
 di as txt "------------------------------------------------------------------"
 meta summarize if inc_primary == 1, random(reml) se(kh) predinterval
 matrix res_prim = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
@@ -62,19 +62,19 @@ meta summarize if inc_primary == 1 & rob_overall != "High", random(reml) se(kh) 
 matrix res_lowrob = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
 * ------------------------------------------------------------------------------
-* 5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=6)
+* 5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=7)
 * ------------------------------------------------------------------------------
 di as txt _n "------------------------------------------------------------------"
-di as txt "5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=6)"
+di as txt "5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=7)"
 di as txt "------------------------------------------------------------------"
 meta summarize if inc_primary == 1, random(dl) se(kh)
 meta summarize if inc_primary == 1, random(dl)
 
 * ------------------------------------------------------------------------------
-* 6. STANDARDIZED MEAN DIFFERENCE (Hedges' g SMD): Strict k=6 Trials
+* 6. STANDARDIZED MEAN DIFFERENCE (Hedges' g SMD): Strict k=7 Trials
 * ------------------------------------------------------------------------------
 di as txt _n "------------------------------------------------------------------"
-di as txt "6. STANDARDIZED MEAN DIFFERENCE (Hedges' g): Strict k=6 Trials"
+di as txt "6. STANDARDIZED MEAN DIFFERENCE (Hedges' g): Strict k=7 Trials"
 di as txt "------------------------------------------------------------------"
 meta set hedges_g hedges_se if inc_primary == 1, studylabel(study_unit) eslabel("Standardized Mean Difference (Hedges' g)")
 meta summarize if inc_primary == 1, random(reml) se(kh) predinterval
@@ -88,7 +88,7 @@ meta set md_mme se_mme if inc_primary == 1, studylabel(study_unit) eslabel("Mean
 
 meta forestplot if inc_primary == 1, subgroup(modality) ///
     title("PRIMARY OPIOID OUTCOME: 24-h Cumulative Consumption", size(medium)) ///
-    subtitle("Authoritative v26 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=6)", size(small)) ///
+    subtitle("Authoritative v32 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=7)", size(small)) ///
     nullrefline nonotes
 graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_opioid24_primary_mme.png", width(1800) replace
 
@@ -96,7 +96,7 @@ graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_opioid24_primary_mme.png",
 meta set hedges_g hedges_se if inc_primary == 1, studylabel(study_unit) eslabel("Standardized Mean Difference (Hedges' g)")
 meta forestplot if inc_primary == 1, subgroup(modality) ///
     title("PRIMARY OPIOID OUTCOME (SMD): 24-h Cumulative Consumption", size(medium)) ///
-    subtitle("Authoritative v26 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=6)", size(small)) ///
+    subtitle("Authoritative v32 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=7)", size(small)) ///
     nullrefline nonotes
 graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_opioid24_primary_smd.png", width(1800) replace
 

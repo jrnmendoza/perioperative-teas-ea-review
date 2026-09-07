@@ -1,8 +1,8 @@
 estimator,se_adj,k,estimate,ci_low,ci_high,p_value,tau2,i2,note
-REML,Hartung-Knapp (KH),6,-10.362823,-22.997046,2.2713997,.088797532,137.89365,98.817833,PRIMARY AUTHORITATIVE BENCHMARK
-REML,Wald (unadjusted),6,-10.362823,-20.136761,-.58888406,.037704509,137.89365,98.817833,Unadjusted standard errors
-DerSimonian-Laird (DL),Hartung-Knapp (KH),6,-10.162278,-22.88273,2.5581739,.095203161,78.402199,97.939285,DL moments estimator with KH
-DerSimonian-Laird (DL),Wald (unadjusted),6,-10.162278,-17.714054,-2.6105015,.0083523262,78.402199,97.939285,Demonstrates artificial significance under unadjusted DL
-Empirical Bayes (EB),Hartung-Knapp (KH),6,-10.353777,-22.991848,2.2842956,.089077532,133.74106,98.78157,Iterative empirical Bayes estimator
-Paule-Mandel (PM),Hartung-Knapp (KH),6,-10.353777,-22.991848,2.2842956,.089077532,133.74106,98.78157,Paule-Mandel estimator
-Fixed-effect (Common),None (Common effect),6,-2.3292191,-3.1719873,-1.4864509,6.0643409e-08,0,0,Common-effect inverse-variance model
+REML,Hartung-Knapp (KH),7,-9.9070034,-20.079363,.2653563,.054538377,113.91055,98.569153,PRIMARY AUTHORITATIVE BENCHMARK
+REML,Wald (unadjusted),7,-9.9070034,-18.145546,-1.6684605,.018428519,113.91055,98.569153,Unadjusted standard errors
+DerSimonian-Laird (DL),Hartung-Knapp (KH),7,-9.7261419,-19.93322,.4809356,.058510989,68.514259,97.64344,DL moments estimator with KH
+DerSimonian-Laird (DL),Wald (unadjusted),7,-9.7261419,-16.256094,-3.1961892,.0035081895,68.514259,97.64344,Demonstrates artificial significance under unadjusted DL
+Empirical Bayes (EB),Hartung-Knapp (KH),7,-9.8998098,-20.073538,.27391884,.054691162,111.26288,98.535599,Iterative empirical Bayes estimator
+Paule-Mandel (PM),Hartung-Knapp (KH),7,-9.8998098,-20.073538,.27391884,.054691162,111.26288,98.535599,Paule-Mandel estimator
+Fixed-effect (Common),None (Common effect),7,-2.7414382,-3.5512185,-1.9316577,3.2388758e-11,0,0,Common-effect inverse-variance model

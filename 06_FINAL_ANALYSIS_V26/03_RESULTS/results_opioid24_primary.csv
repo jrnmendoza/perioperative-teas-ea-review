@@ -1,6 +1,6 @@
 analysis_id,outcome,stratum,k,estimate,ci_low,ci_high,p_value,tau2,i2,q_stat,model
-OP24_PRIM_COMB,24-h Cumulative Postoperative Opioid,Combined Strict Primary (TEAS + EA),6,-10.362823,-22.997046,2.2713997,.088797532,137.89365,98.817833,242.6344,REML + Hartung-Knapp
-OP24_TEAS_SHAM,24-h Cumulative Postoperative Opioid,TEAS vs Sham,3,-16.31267,-52.645737,20.020397,.19311118,211.67987,98.49659,225.48221,REML + Hartung-Knapp
+OP24_PRIM_COMB,24-h Cumulative Postoperative Opioid,Combined Strict Primary (TEAS + EA),7,-9.9070034,-20.079363,.2653563,.054538377,113.91055,98.569153,254.60857,REML + Hartung-Knapp
+OP24_TEAS_SHAM,24-h Cumulative Postoperative Opioid,TEAS vs Sham,4,-13.995275,-34.180843,6.1902914,.11447614,156.88229,98.590675,232.89413,REML + Hartung-Knapp
 OP24_EA_CTRL,24-h Cumulative Postoperative Opioid,EA vs Control/Sham,3,-3.9358339,-19.773222,11.901554,.39689466,28.471277,77.152611,7.6678648,REML + Hartung-Knapp
-OP24_LOWROB_ONLY,24-h Cumulative Postoperative Opioid,Sensitivity: Low/Some Concerns RoB only,5,-12.119866,-27.706308,3.4665756,.097004607,152.91791,99.114365,242.59543,REML + Hartung-Knapp
-OP24_PRIM_SMD,24-h Cumulative Postoperative Opioid,Standardized Mean Difference (Hedges g),6,-.88988614,-2.2587249,.47895268,.15555759,1.5974514,97.236259,90.472374,REML + Hartung-Knapp
+OP24_LOWROB_ONLY,24-h Cumulative Postoperative Opioid,Sensitivity: Low/Some Concerns RoB only,6,-11.272961,-23.181637,.63571644,.059135512,123.59916,98.866768,254.51317,REML + Hartung-Knapp
+OP24_PRIM_SMD,24-h Cumulative Postoperative Opioid,Standardized Mean Difference (Hedges g),7,-.96674985,-2.0861762,.15267643,.079024479,1.3659765,96.496735,100.08619,REML + Hartung-Knapp

@@ -19,25 +19,25 @@ keep if inc_primary == 1
 meta set md_mme se_mme, studylabel(study_unit) eslabel("Mean Difference (mg IV MME)")
 
 * ------------------------------------------------------------------------------
-* 1. MODALITY SUBGROUP ANALYSIS: TEAS VS EA (k=6)
+* 1. MODALITY SUBGROUP ANALYSIS: TEAS VS EA (k=7)
 * ------------------------------------------------------------------------------
 di as txt _n "------------------------------------------------------------------"
-di as txt "1. MODALITY SUBGROUP ANALYSIS: TEAS vs EA (k=6) [REML + Hartung-Knapp]"
+di as txt "1. MODALITY SUBGROUP ANALYSIS: TEAS vs EA (k=7) [REML + Hartung-Knapp]"
 di as txt "------------------------------------------------------------------"
 meta summarize, random(reml) se(kh) subgroup(modality)
 
 * Subgroup forest plot
 meta forestplot, subgroup(modality) ///
     title("Primary 24-h Opioid Consumption by Modality (mg IV MME)", size(medium)) ///
-    subtitle("Random-Effects REML + Hartung-Knapp (k=6)", size(small)) ///
+    subtitle("Random-Effects REML + Hartung-Knapp (k=7)", size(small)) ///
     nullrefline nonotes
 graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_subgroup_modality_primary.png", width(1800) replace
 
 * ------------------------------------------------------------------------------
-* 2. COMPARATOR TYPE SUBGROUP: SHAM VS USUAL CARE (k=6)
+* 2. COMPARATOR TYPE SUBGROUP: SHAM VS USUAL CARE (k=7)
 * ------------------------------------------------------------------------------
 di as txt _n "------------------------------------------------------------------"
-di as txt "2. COMPARATOR TYPE SUBGROUP: SHAM vs USUAL CARE (k=6)"
+di as txt "2. COMPARATOR TYPE SUBGROUP: SHAM vs USUAL CARE (k=7)"
 di as txt "------------------------------------------------------------------"
 meta summarize, random(reml) se(kh) subgroup(comparator_type)
 
@@ -48,7 +48,7 @@ di as txt _n "------------------------------------------------------------------
 di as txt "3. META-REGRESSION METHODOLOGICAL ASSESSMENT & POWER AUDIT"
 di as txt "According to Cochrane Handbook (Section 10.11.4), meta-regression"
 di as txt "should generally NOT be considered unless there are at least 10 studies"
-di as txt "for each study-level covariate. Here, k=6 (TEAS k=3, EA k=3)."
+di as txt "for each study-level covariate. Here, k=7 (TEAS k=4, EA k=3)."
 di as txt "Executing exploratory meta-regression on modality for completeness:"
 di as txt "------------------------------------------------------------------"
 
@@ -68,7 +68,7 @@ encode modality, gen(modality_code)
 meta regress i.modality_code, random(reml) se(kh)
 matrix res_metareg = (r(table)[1,2], r(table)[2,2], r(table)[5,2], r(table)[6,2], r(table)[4,2], r(N), r(tau2), r(I2))
 
-di as txt _n "AUDIT CONCLUSION: Meta-regression with k=6 is severely underpowered"
+di as txt _n "AUDIT CONCLUSION: Meta-regression with k=7 is severely underpowered"
 di as txt "and subject to extreme risk of false-positive / false-negative conclusions."
 di as txt "Stratified subgroup presentation with Hartung-Knapp adjustment is authoritative."
 
@@ -127,7 +127,7 @@ replace ci_high = res_metareg[1,4] in 3
 replace p_value = res_metareg[1,5] in 3
 replace tau2 = res_metareg[1,7] in 3
 replace i2 = res_metareg[1,8] in 3
-replace notes = "Difference between TEAS and EA; underpowered (k=6 < 10)" in 3
+replace notes = "Difference between TEAS and EA; underpowered (k=7 < 10)" in 3
 
 save "06_FINAL_ANALYSIS_V26/03_RESULTS/results_subgroups_metareg.dta", replace
 export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_subgroups_metareg.csv", replace

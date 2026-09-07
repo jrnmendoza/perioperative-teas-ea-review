@@ -14,9 +14,9 @@ window.PRIMARY_PATHWAY = {
   "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx",
   "statistical_source": "StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26",
   "prospero": "CRD420251090635",
-  "review_included_rcts": 63,
-  "candidate_rows": 15,
-  "publications_with_24h_info": 16,
+  "review_included_rcts": 70,
+  "candidate_rows": 16,
+  "publications_with_24h_info": 17,
   "primary_strict": [
     {
       "study_unit": "Chen 1998",
@@ -175,6 +175,38 @@ window.PRIMARY_PATHWAY = {
       "source_sheet": "Stata_Opioid24_Primary / opioid_24h_primary.csv",
       "also_contributes_to": [
         "Target F — exploratory opioid outcomes"
+      ],
+      "category": "strict",
+      "qualifies_because": "INCLUDE IN PRIMARY"
+    },
+    {
+      "study_unit": "Szmit 2021",
+      "study_id": "NEW32_SZMIT2021",
+      "study_ids": [
+        "NEW32_SZMIT2021"
+      ],
+      "covers_publications": 1,
+      "comparison_id": "SZMIT21_TEAS_vs_SHAM_MORPH24",
+      "n_i": 24,
+      "n_c": 24,
+      "n_total": 48,
+      "data_type": "Mean/SD",
+      "unit": "mg IV morphine",
+      "time_window": "0-24 h postoperative",
+      "outcome": "Total IV PCA morphine dose",
+      "result_rob": "Some concerns",
+      "md_mme": -7.7,
+      "se_mme": 1.4913,
+      "hedges_g": -1.466,
+      "hedges_se": 0.3251,
+      "v26_decision": "INCLUDE IN PRIMARY",
+      "source_qc": "Source reports both mean/SD and median/IQR; primary outcome prespecified and directly reported.",
+      "conversion_note": "None",
+      "sensitivity_note": "Three-arm RCT; PCA-only control is an alternative correlated comparator.",
+      "source_url": "https://drive.google.com/file/d/1SbgHRO4KEP9X0Unz75vDMFCvlkDTEgk3/view?usp=drivesdk",
+      "source_sheet": "Stata_Opioid24_Primary / opioid_24h_primary.csv",
+      "also_contributes_to": [
+        "Target D — PONV"
       ],
       "category": "strict",
       "qualifies_because": "INCLUDE IN PRIMARY"
@@ -879,71 +911,101 @@ window.PRIMARY_PATHWAY = {
       "study_unit": "Liu 2026 (ESD)",
       "study_id": "1879896009",
       "also_contributes_to": []
+    },
+    {
+      "study_unit": "Gao 2022",
+      "study_id": "NEW32_GAO2022",
+      "also_contributes_to": []
+    },
+    {
+      "study_unit": "Song 2020",
+      "study_id": "NEW32_SONG2020",
+      "also_contributes_to": []
+    },
+    {
+      "study_unit": "Wu 2016",
+      "study_id": "NEW32_WU2016",
+      "also_contributes_to": []
+    },
+    {
+      "study_unit": "Liu 2015",
+      "study_id": "NEW32_LIU2015",
+      "also_contributes_to": []
+    },
+    {
+      "study_unit": "Oztas 2019",
+      "study_id": "NEW32_OZTAS2019",
+      "also_contributes_to": []
+    },
+    {
+      "study_unit": "Zhang 2018",
+      "study_id": "NEW32_ZHANG2018",
+      "also_contributes_to": []
     }
   ],
   "reconciles": true,
   "counts": {
-    "included_rcts": 63,
-    "reporting_relevant_24h_info": 16,
-    "candidate_rows": 15,
-    "strict": 6,
-    "strict_n": 628,
+    "included_rcts": 70,
+    "reporting_relevant_24h_info": 17,
+    "candidate_rows": 16,
+    "strict": 7,
+    "strict_n": 676,
     "conditional": 5,
     "conditional_n": 317,
-    "candidate_pool": 11,
-    "candidate_pool_n": 945,
+    "candidate_pool": 12,
+    "candidate_pool_n": 993,
     "author_contact_candidates": 4,
     "other_outcome_contributors": 30,
-    "no_pooled_model": 17,
-    "broader_smd_k": 9,
-    "broader_smd_n": 803
+    "no_pooled_model": 23,
+    "broader_smd_k": 10,
+    "broader_smd_n": 851
   },
   "results": {
     "strict_md": {
       "analysis_id": "OP24_PRIM_COMB",
-      "k": 6,
+      "k": 7,
       "effect_measure": "MD (mg IV MME)",
-      "estimate": -10.3628,
-      "ci_low": -22.997,
-      "ci_high": 2.2714,
-      "p_value": 0.0888,
-      "tau2": 137.8937,
-      "i2": 98.82,
+      "estimate": -9.907,
+      "ci_low": -20.0794,
+      "ci_high": 0.2654,
+      "p_value": 0.05454,
+      "tau2": 113.9106,
+      "i2": 98.57,
       "model": "REML + Hartung-Knapp",
       "stratum": "Combined Strict Primary (TEAS + EA)"
     },
     "strict_smd": {
       "analysis_id": "OP24_STRICT_SMD",
-      "k": 6,
+      "k": 7,
       "effect_measure": "Hedges g (SMD)",
-      "estimate": -0.8899,
-      "ci_low": -2.2587,
-      "ci_high": 0.479,
-      "p_value": 0.15556,
-      "tau2": 1.5975,
-      "i2": 97.24,
+      "estimate": -0.9667,
+      "ci_low": -2.0862,
+      "ci_high": 0.1527,
+      "p_value": 0.07902,
+      "tau2": 1.366,
+      "i2": 96.5,
       "model": "REML + Hartung-Knapp",
       "stratum": "Strict primary 24-h opioid, Hedges g"
     },
     "broader_smd": {
       "analysis_id": "OP24_BROADER_SMD",
-      "k": 9,
+      "k": 10,
       "effect_measure": "Hedges g (SMD)",
-      "estimate": -0.8798,
-      "ci_low": -1.6991,
-      "ci_high": -0.0605,
-      "p_value": 0.03833,
-      "tau2": 1.0283,
-      "i2": 95.19,
+      "estimate": -0.9344,
+      "ci_low": -1.6653,
+      "ci_high": -0.2035,
+      "p_value": 0.01783,
+      "tau2": 0.9408,
+      "i2": 94.5,
       "model": "REML + Hartung-Knapp",
       "stratum": "Strict + conditional 24-h opioid, Hedges g"
     }
   },
   "md_pool_estimability": {
-    "candidate_pool_k": 11,
-    "candidate_pool_n": 945,
-    "with_estimable_md": 7,
-    "with_estimable_smd": 9,
+    "candidate_pool_k": 12,
+    "candidate_pool_n": 993,
+    "with_estimable_md": 8,
+    "with_estimable_smd": 10,
     "unpoolable_units": [
       "Chen 2015",
       "Chen 2015 (Hyperalgesia)"

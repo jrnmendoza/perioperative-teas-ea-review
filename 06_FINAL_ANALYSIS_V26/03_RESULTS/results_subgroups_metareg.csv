@@ -1,4 +1,4 @@
 analysis_id,analysis_type,subgroup_variable,k,estimate,ci_low,ci_high,p_value,tau2,i2,notes
-SUB_MODALITY_TEAS,Subgroup,"Modality: TEAS (Chen 1998, Chen 2020, He 2026)",3,-16.31267,-52.645737,20.020397,.19311118,211.67987,98.49659,REML + Hartung-Knapp (t df=2)
+SUB_MODALITY_TEAS,Subgroup,"Modality: TEAS (Chen 1998, Chen 2020, He 2026)",4,-13.995275,-34.180843,6.1902914,.11447614,156.88229,98.590675,REML + Hartung-Knapp (t df=2)
 SUB_MODALITY_EA,Subgroup,"Modality: EA (El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024)",3,-3.9358339,-19.773222,11.901554,.39689466,28.471277,77.152611,REML + Hartung-Knapp (t df=2)
-METAREG_MODALITY,Meta-regression,Modality: TEAS vs EA (reference: EA),,-11.573511,-37.543873,14.396848,.28364509,,,Difference between TEAS and EA; underpowered (k=6 < 10)
+METAREG_MODALITY,Meta-regression,Modality: TEAS vs EA (reference: EA),,-9.3242121,-30.443062,11.794637,.30785999,,,Difference between TEAS and EA; underpowered (k=7 < 10)

@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/00_master.log
   log type:  text
- opened on:   7 Sep 2026, 16:10:55
+ opened on:   7 Sep 2026, 20:38:14
 
 . 
 . di as txt "=================================================================="
@@ -13,7 +13,7 @@
 STARTING MASTER VERIFICATION & ANALYSIS PIPELINE (LOCKED v26 DATA)
 
 . di as txt "Date/Time: `c(current_date)' `c(current_time)'"
-Date/Time:  7 Sep 2026 16:10:55
+Date/Time:  7 Sep 2026 20:38:14
 
 . di as txt "Stata Version: `c(stata_version)' `c(edition)'"
 Stata Version: 19.5 BE
@@ -30,10 +30,22 @@ Stata Version: 19.5 BE
 . do "06_FINAL_ANALYSIS_V26/02_STATA/00_prep_data.do"
 
 . * ==============================================================================
-. * 00_prep_data.do: Prepare and Export Clean Analysis Datasets from v26 Lock
+. * 00_prep_data.do: Prepare and Export Clean Analysis Datasets from v32 Lock
 . * Systematic Review: Perioperative TEAS and EA for Opioid Sparing
-. * Source: TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
+. * Source: TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx
 . * Authoritative Engine: StataNow 19.5 BE
+. *
+. * MIGRATED 2026-09-07 from v26 to v32 (v32 = v31 base + Zhang 2018 append; v31
+. * itself is not held in this repo, only described in v32's own README). Schema
+. * of every sheet this script reads (Stata_Opioid24_Primary, AF_Result_Lock,
+. * Stata_AF_Long) is byte-identical to v26. Row-by-row diff against v26 found:
+. *   - AF_Result_Lock, Stata_AF_Long: 0 rows added/removed/changed -> Targets
+. *     A-F, which are sourced entirely from these two sheets, are unaffected.
+. *   - Stata_Opioid24_Primary: +1 row (Szmit 2021, TEAS vs sham, direct-reported
+. *     mean/SD IV morphine, provisional_primary_include=1, hard_hold=0) versus
+. *     v26's 6 studies. Included under the same unfiltered
+. *     provisional_primary_include rule already applied to the other 6, per
+. *     project decision 2026-09-07. Strict primary moves from k=6 to k=7.
 . * ==============================================================================
 . 
 . clear all

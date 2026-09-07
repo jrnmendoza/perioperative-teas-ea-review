@@ -766,3 +766,182 @@ each locale's own section and asserts per-locale.
 1. Sufentanil conversion factor — **RESOLVED** (this section).
 2. Hydromorphone conversion factor — **RESOLVED**; pipeline value was correct.
 3. Coura 2011 author contact — **still open**; investigator judgment.
+
+---
+
+## 25. Migration to v32 authoritative master (2026-09-07)
+
+`TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx` replaced v26 as the
+pipeline's data source. This section documents the migration: what was found,
+what changed, what was deliberately left unchanged, and why.
+
+### 25.1 Locating and verifying the file
+
+Exactly one v32 file exists on disk (`TEAS EA Verification/`), no ambiguity to
+resolve. The v32 README describes it as v31 (not held in this repository,
+described only in v32's own README) plus a Zhang 2018 append. Repo-wide search
+found no other file or code path reading v27–v31; the only literal v26 read
+path was `06_FINAL_ANALYSIS_V26/02_STATA/00_prep_data.do`'s `master_xlsx`
+local, now repointed to v32 with the change documented in that file's header.
+A handful of standalone `inspect_*.do` scratch scripts (never called by
+`00_master.do`) still hardcode v26; they are diagnostic, not pipeline, code
+and were left alone.
+
+### 25.2 Schema and scope of the actual change
+
+All 29 sheets in v32 have byte-identical column headers to v26. Of the three
+sheets `00_prep_data.do` reads:
+
+- `AF_Result_Lock`, `Stata_AF_Long` (109 rows each): **0 rows added, removed,
+  or changed** — row-by-row diffed by `Lock ID`/`lock_id`. Targets A–F, PONV,
+  pain, and GI recovery are consequently **byte-identical** to v26 wherever
+  they are sourced from these two sheets (confirmed: every `results_target*.csv`
+  is untouched).
+- `Stata_Opioid24_Primary` (16 → 17 rows): **+1 row, Szmit 2021** — a
+  three-arm RCT (TEAS vs sham vs PCA-only), direct-reported mean/SD IV
+  morphine, `provisional_primary_include = 1`, `hard_hold = 0`.
+
+Study_Master itself grew from 64 to 71 rows (63 → 70 canonical studies) — 7
+new studies entered the workbook since v26 (Wu 2016, Gao 2022, Liu 2015,
+Oztas 2019, Song 2020, Szmit 2021, Zhang 2018), all as "post-lock source-direct
+additions." Only Szmit's primary-opioid row carries `provisional_primary_include
+= 1`; this is the only new row the frozen AF lock mechanism itself flags ready.
+
+### 25.3 What was promoted, and the exact rule used
+
+**Rule applied throughout: promote a row only where the workbook's own
+per-outcome flag (`provisional_primary_include` for the primary-opioid staging
+sheet; `AF include strict` for every other target) says the row is ready.**
+Two rows met this bar:
+
+1. **Szmit 2021, opioid 24h** (`SZMIT21_TEAS_vs_SHAM_MORPH24`) → strict
+   primary pool, k=6 → **k=7**.
+2. **Szmit 2021, nausea 0–24h** (`SZMIT21_TEAS_vs_SHAM_NAUSEA24`,
+   `AF include strict = 1`, `AF target = D`, `AF endpoint stratum =
+   D_nausea_0-24h`) → Target D nausea stratum, k=2 → **k=3**.
+
+Everything else — Szmit's own alternate PCA-only comparator rows, Gao 2022's
+and Song 2020's pain/PONV rows, and every row for Wu 2016, Liu 2015, Oztas
+2019, and Zhang 2018 — carries `include_strict = 0` (at most
+`include_sensitivity = 1`, several `0/0` outright) and was **not** pooled into
+any target. This was verified by pulling the row-level flags directly, not
+inferred from the workbook's higher-level "Analysis readiness" prose, after an
+initial, corrected misstep (§25.4).
+
+A **continuity correction** (+0.5 to all four cells, Cochrane Handbook
+§10.4.4) was added to `05_ponv.do`'s nausea-stratum computation because Szmit's
+0/24 TEAS-arm event count would otherwise force `ln(rr)` and `se_lnrr` to be
+undefined; it is applied only to rows with a zero cell, documented inline.
+
+A new script, `12_primary_loo_diagnostics.do`, was written to compute the full
+per-omission leave-one-out diagnostic table (Wald CI/p, KH CI/p, τ², I²,
+DFBETAS) that `dashboard/app.js`'s `PRIMARY_LOO_DATA` array carries — no prior
+do-file produced this table; it was hand-maintained with no verifiable
+provenance. DFBETAS uses `(θ_full − θ_(−i)) / SE_KH(θ_(−i))` (Viechtbauer &
+Cheung 2010), this project's existing KH-adjusted SE convention.
+
+### 25.4 A correction made mid-pass
+
+Gao 2022 was initially represented as ready for promotion into Targets C and D
+based on its Study_Master "Analysis readiness: SOURCE-NORMALIZED" summary
+text. Pulling the actual `AF include strict`/`AF include sensitivity` flags
+for its individual outcome rows in `Outcome_Data_AF_LOCK` showed both were `0`
+— the workbook's curator had held it back for an unresolved blinding QC issue
+(patients could tell whether stimulation was real), not merely pending
+digitization. This was caught and corrected before any pooling was performed;
+Gao 2022 and Song 2020 (same pattern — an ITT/per-protocol denominator
+inconsistency) are represented in the Study Explorer as browsable studies
+only, with the specific QC reason recorded on each affected outcome.
+
+Oztas 2019's opioid outcome (tramadol + rescue pethidine) could not be
+converted to MME: the same BC Ministry of Health / BC Renal equianalgesic
+source family already relied on elsewhere in this project (sufentanil,
+hydromorphone) does not list tramadol or pethidine at all (verified
+2026-09-07). It is recorded as `NOT POOLED — no sourced conversion factor`,
+not silently converted with an invented ratio, per this project's standing
+"pending source verification" rule.
+
+### 25.5 Effect of the correction
+
+| Analysis | v26 (k=6) | v32 (k=7) |
+|---|---|---|
+| Strict primary (combined) | MD −10.36, CI[−23.00,+2.27], p=0.089 | MD −9.91, CI[−20.08,+0.27], **p=0.0545** |
+| TEAS stratum | MD −16.31, CI[−52.65,+20.02], k=3, p=0.193 | MD −14.00, CI[−34.18,+6.19], k=4, p=0.1145 |
+| Hedges' g (SMD) | g=−0.890, p=0.156 | g=−0.967, p=0.079 |
+| Target D nausea 0–24h | RR 0.621, k=2, p=0.087 | RR 0.603, k=3, p=0.088 |
+
+The strict primary remains non-significant at α=0.05 in both versions; no
+result crossed the significance threshold as a consequence of this migration.
+
+### 25.6 Study Explorer vs PRISMA — a deliberate, documented divergence
+
+All 7 new studies were added as full Study Explorer records (citations, RoB 2,
+STRICTA fields, extracted outcomes) — dynamic dashboard counts now read 70
+studies. The PRISMA 2020 flow diagram (`dashboard/index.html`'s `tab-prisma`,
+a static rendering of the same `identification → screening → eligibility →
+included` counts as the unused `PRISMA_DATA` object in `data.js`) was
+**deliberately left at 63/5,089**: these 7 studies entered via direct PDF
+addition, not the tracked Embase/Cochrane/PubMed/CINAHL search-and-screening
+flow, so giving them upstream identification/screening counts would fabricate
+a history they did not go through. A note was added directly on the PRISMA tab
+explaining the discrepancy and which studies it covers.
+
+The pre-existing "5,089 randomized surgical patients" / "49 TEAS • 14 EA"
+figures were found to already be **inconsistent with `data.js`'s own
+`population.total_n`/`modality` fields for the original 63 studies** (true sum
+8,675; true split 41 TEAS / 22 EA) — a bug that predates this migration. It was
+not fixed here (root cause not investigated); the two prose mentions of the
+overall patient total were given an explicit "under reconciliation" caveat
+rather than a fabricated replacement number.
+
+### 25.7 A validator blind spot fixed after being caught by mutation testing
+
+`t_paired_cohort_n` previously asserted the MCID paired cohort N exactly
+equals the primary analysis N. That equality broke as soon as any primary
+study is added without a qualifying ~24h paired pain result (Szmit 2021's only
+pain result is at hospital discharge with no exact time), which is a real and
+correct state, not a bug. Rewritten to accept the gap only when every
+excluded study is a genuine, present Study Explorer record (catching silent
+complete omission) rather than requiring strict equality; verified by
+mutation-deleting Szmit's record entirely and confirming the check fails with
+a clear "not merely unpaired — entirely missing" message.
+
+`t_primary_weighting_matrix_matches_stata` previously hardcoded an expected
+row count of 6; it now derives the expected count from `OP24_PRIM_COMB`'s own
+`k` in the results CSV.
+
+### 25.8 Verification
+
+- Full `00_master.do` re-run (13 steps, including the new LOO diagnostics
+  script), zero errors.
+- Every MD, τ², I², and Q value displayed across `index.html`, `app.js`, and
+  `translations.js` (EN + SV) was matched programmatically against the Stata
+  logs: zero unmatched, across three passes as successive rounds of manual
+  review found additional hand-authored display blocks (a "TEAS Stratum
+  (Subgroup)" KPI card and a full second "4 Questions" card set for the TEAS
+  stratum) that the automated regex sweep alone did not catch.
+- `sync_dashboard.sh` was fixed to copy root-level `forest_*.png`/`loo_*.png`
+  figures from `06_FINAL_ANALYSIS_V26/04_FIGURES/` on every sync — the
+  regenerated Stata figures had only been mirrored into `dashboard/v26/`, not
+  copied to the root-level files the page actually embeds, a second silent-
+  drift class this pass found and closed permanently rather than patching
+  once.
+- Validator held at 52 checks (two rewritten for the reasons above —
+  `t_paired_cohort_n` and `t_primary_weighting_matrix_matches_stata`, the
+  latter already present from the sufentanil pass, now confirmed to
+  generalize to k=7 by deriving its expected row count from the CSV instead
+  of a hardcoded 6). All 52 pass (the 53rd row this pass touches, log
+  git-tracking, resolves at commit once the new log files are added). Every
+  rewritten check was mutation-tested against the specific defect it targets.
+- Browser sweep: 14 tabs × 2 locales = 28 combinations, no stale primary-
+  opioid values, no JavaScript errors.
+
+### 25.9 Explicitly not done
+
+Per the corrected, user-approved scope: Gao 2022, Song 2020, Wu 2016, Liu
+2015, Oztas 2019, and Zhang 2018 were not pooled into any target. Zhang 2018's
+graph-only GI-recovery/pain values were not digitized (the workbook's own
+explicit instruction). No new opioid conversion factor was invented for
+Oztas 2019's tramadol/pethidine result. PRISMA identification/screening counts
+were not altered. The pre-existing patient-total inconsistency (§25.6) was
+flagged, not fixed, as it is unrelated to this migration.

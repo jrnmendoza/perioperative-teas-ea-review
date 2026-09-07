@@ -1,8 +1,20 @@
 * ==============================================================================
-* 00_prep_data.do: Prepare and Export Clean Analysis Datasets from v26 Lock
+* 00_prep_data.do: Prepare and Export Clean Analysis Datasets from v32 Lock
 * Systematic Review: Perioperative TEAS and EA for Opioid Sparing
-* Source: TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
+* Source: TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx
 * Authoritative Engine: StataNow 19.5 BE
+*
+* MIGRATED 2026-09-07 from v26 to v32 (v32 = v31 base + Zhang 2018 append; v31
+* itself is not held in this repo, only described in v32's own README). Schema
+* of every sheet this script reads (Stata_Opioid24_Primary, AF_Result_Lock,
+* Stata_AF_Long) is byte-identical to v26. Row-by-row diff against v26 found:
+*   - AF_Result_Lock, Stata_AF_Long: 0 rows added/removed/changed -> Targets
+*     A-F, which are sourced entirely from these two sheets, are unaffected.
+*   - Stata_Opioid24_Primary: +1 row (Szmit 2021, TEAS vs sham, direct-reported
+*     mean/SD IV morphine, provisional_primary_include=1, hard_hold=0) versus
+*     v26's 6 studies. Included under the same unfiltered
+*     provisional_primary_include rule already applied to the other 6, per
+*     project decision 2026-09-07. Strict primary moves from k=6 to k=7.
 * ==============================================================================
 
 clear all
@@ -11,11 +23,11 @@ capture log close
 log using "06_FINAL_ANALYSIS_V26/02_STATA/logs/00_prep_data.log", replace
 
 di as txt "=================================================================="
-di as txt "00: PREPARING CLEAN ANALYSIS DATASETS FROM AUTHORITATIVE V26 WORKBOOK"
-di as txt "Source: TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx"
+di as txt "00: PREPARING CLEAN ANALYSIS DATASETS FROM AUTHORITATIVE V32 WORKBOOK"
+di as txt "Source: TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
 di as txt "=================================================================="
 
-local master_xlsx "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx"
+local master_xlsx "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
 
 * ------------------------------------------------------------------------------
 * PART 1: PRIMARY 24-H OPIOID CONSUMPTION
@@ -120,6 +132,60 @@ save `af_rob', replace
 * ------------------------------------------------------------------------------
 import excel using "`master_xlsx'", sheet("Stata_AF_Long") firstrow clear
 merge m:1 lock_id using `af_rob', keep(master match) nogenerate
+
+* ------------------------------------------------------------------------------
+* POST-LOCK ADDITION 2026-09-07: Szmit 2021, Target D nausea 0-24h
+*
+*   Szmit 2021 is a post-lock source-direct addition (v32 workbook); it has no
+*   row in the frozen AF_Result_Lock/Stata_AF_Long sheets. Its per-outcome flags
+*   in Outcome_Data_AF_LOCK were checked directly (comparison_id
+*   SZMIT21_TEAS_vs_SHAM_NAUSEA24): AF include strict = 1, AF target = D,
+*   AF endpoint stratum = D_nausea_0-24h -- the workbook's own curator marked
+*   this ready for the same D_nausea_0-24h pool 05_ponv.do already computes
+*   (previously k=2: Yang 2024, Ma 2026). Every other new-study row surfaced by
+*   this migration (Gao 2022, Song 2020, and Szmit's own alternate PCA-only and
+*   pain rows) is flagged include_strict=0 AND include_sensitivity=0 or held for
+*   unresolved QC/digitization, and is deliberately NOT added here or anywhere
+*   else in the pipeline. See 06_AUDIT/dashboard_v26_reconciliation.md for the
+*   full per-study readiness audit.
+*
+*   RoB 2 (D1-D5, overall) is copied from Corrected_RoB2's Szmit 2021 row, the
+*   only RoB 2 assessment the workbook records for this study (result-specific
+*   RoB is normally one assessment per study in this workbook, applied across
+*   the study's contributing results per this project's existing convention).
+* ------------------------------------------------------------------------------
+local n = _N + 1
+set obs `n'
+replace lock_id = "SZMIT21-POSTLOCK" in `n'
+replace target = "D" in `n'
+replace endpoint_stratum = "D_nausea_0-24h" in `n'
+replace study = "Szmit 2021" in `n'
+replace comparison_id = "SZMIT21_TEAS_vs_SHAM_NAUSEA24" in `n'
+replace intervention = "Postoperative TEAS: bilateral LI4 + ipsilateral peri-incisional ashi points; alternating 2/100 Hz; 30 min every 2 h through 24 h" in `n'
+replace comparator = "Sham TEAS: identical devices/placement with no electrical stimulation + PCA" in `n'
+replace outcome = "Nausea incidence" in `n'
+replace time_window = "Postoperative observation period; PCA/TEAS discontinued at 24 h" in `n'
+replace data_type = "Events/total" in `n'
+replace n_i = 24 in `n'
+replace n_c = 24 in `n'
+replace events_i = 0 in `n'
+replace events_c = 4 in `n'
+replace unit = "participants with nausea" in `n'
+replace reported_p = "0.116 (3-group overall)" in `n'
+replace rob_overall = "Some concerns" in `n'
+replace include_strict = 1 in `n'
+replace include_sensitivity = 0 in `n'
+replace shared_control_issue = "Alternative comparator exists (TEAS-vs-PCA-only, SZMIT21_TEAS_vs_CTRL_NAUSEA24); do not double count." in `n'
+replace source_qc = "Zero events in TEAS; use events/denominators directly rather than the non-significant three-group overall P value (P=0.116)." in `n'
+replace record_status = "SOURCE-VERIFIED" in `n'
+replace source_url = "https://drive.google.com/file/d/1SbgHRO4KEP9X0Unz75vDMFCvlkDTEgk3/view?usp=drivesdk" in `n'
+replace result_rob = "Some concerns" in `n'
+replace rob_d1 = "Low" in `n'
+replace rob_d2 = "Low" in `n'
+replace rob_d3 = "Low" in `n'
+replace rob_d4 = "Low" in `n'
+replace rob_d5 = "Some concerns" in `n'
+replace Sourceverifiedresult = "Nausea 0/24 (TEAS) vs 4/24 (sham) during postoperative observation through 24 h; three-group overall P=0.116" in `n'
 
 * Save Master Locked Dataset
 save "06_FINAL_ANALYSIS_V26/01_DATA/analysis_dataset_locked.dta", replace

@@ -28,6 +28,21 @@ rsync -a --delete \
   "$V26/" "$SRC/v26/"
 echo "Mirrored 06_FINAL_ANALYSIS_V26/ -> dashboard/v26/"
 
+# 1b. Copy the root-level forest/LOO figures the page embeds directly
+#     (e.g. <img src="forest_opioid24_primary_mme.png">) from the same source
+#     as the v26/04_FIGURES/ mirror above. A prior pass regenerated the Stata
+#     figures but only copied them into dashboard/v26/04_FIGURES/ (via step 1),
+#     leaving the root-level copies the page actually renders silently stale --
+#     exactly the class of drift this script exists to prevent. Only refresh
+#     figures already present at the dashboard root; this does not introduce
+#     new download links.
+for png in "$SRC"/forest_*.png "$SRC"/loo_*.png; do
+  [ -e "$png" ] || continue
+  name="$(basename "$png")"
+  [ -e "$V26/04_FIGURES/$name" ] && cp "$V26/04_FIGURES/$name" "$png"
+done
+echo "Refreshed root-level forest/LOO figures from 06_FINAL_ANALYSIS_V26/04_FIGURES/"
+
 # 2. Mirror the whole dashboard into the generated copy.
 mkdir -p "$DST"
 rsync -a --delete \

@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/07_targetF.log
   log type:  text
- opened on:   7 Sep 2026, 16:11:01
+ opened on:   7 Sep 2026, 20:38:20
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Stratified Analyses: Intraoperative Titrated, Postop Delivered, Rescue Opioid
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.dta
  Observations:            82                  
-    Variables:            49                  7 Sep 2026 16:10
+    Variables:            49                  7 Sep 2026 20:38
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -35,8 +35,8 @@ target          str18   %18s                  target
 endpoint_stra~m str35   %35s                  endpoint_stratum
 study           str25   %25s                  study
 comparison_id   str35   %35s                  comparison_id
-intervention    str46   %46s                  intervention
-comparator      str38   %38s                  comparator
+intervention    str128  %128s                 intervention
+comparator      str75   %75s                  comparator
 outcome         str69   %69s                  outcome
 time_window     str101  %101s                 time_window
 data_type       str42   %42s                  data_type
@@ -67,11 +67,11 @@ p1_disposition  str33   %33s                  p1_disposition
 analysis_action str20   %20s                  analysis_action
 overlap_family  str30   %30s                  overlap_family
 hold_reason     str33   %33s                  hold_reason
-shared_contro~e str3    %9s                   shared_control_issue
+shared_contro~e str101  %101s                 shared_control_issue
 source_qc       str179  %179s                 source_qc
 record_status   str59   %59s                  record_status
 source_url      str83   %83s                  source_url
-Sourceverifie~t str88   %88s                  Source-verified result
+Sourceverifie~t str108  %108s                 Source-verified result
 rob_d1          str13   %13s                  D1
 rob_d2          str13   %13s                  D2
 rob_d3          str13   %13s                  D3
@@ -253,9 +253,9 @@ file
 > d_c                                                      unit      result_rob   includ~t  
   1.   Seevaunnamtum 2016                SEEVA16_EA_vs_UC    32    21.38   14.38    32    33.94   20
 > .24                                               mg morphine   Some concerns          1  
-  2.             Lee 2011      LEE11_HIGH_vs_SHAM_MORPH24    12    31.14    8.15    12     34.2     
+  2.             Lee 2011       LEE11_LOW_vs_SHAM_MORPH24    10    29.29    8.89    12     34.2     
 > 6.4                                            mg IV morphine   Some concerns          1  
-  3.             Lee 2011       LEE11_LOW_vs_SHAM_MORPH24    10    29.29    8.89    12     34.2     
+  3.             Lee 2011      LEE11_HIGH_vs_SHAM_MORPH24    12    31.14    8.15    12     34.2     
 > 6.4                                            mg IV morphine   Some concerns          1  
   4.             Yeh 2010       YEH10_AES_vs_SHAM_MORPH24    33     18.6     9.7    30     21.6    1
 > 3.1         mg morphine; source explicitly calls PCA epidural   Some concerns          0  
@@ -271,10 +271,10 @@ file
 >  18                                            mg IV morphine            High          0  
  10.              Gu 2019       GU19_LTEAS_vs_CTEAS_PCIA8    58    20.55    4.59    59    24.63    3
 > .94   mL solution = numerically same µg sufentanil at 1 µg/mL   Some concerns          0  
- 11.              Gu 2019      GU19_LTEAS_vs_CTEAS_PCIA36    58    72.64    9.74    59    76.01   10
-> .43   mL solution = numerically same µg sufentanil at 1 µg/mL   Some concerns          0  
- 12.              Gu 2019       GU19_LTEAS_vs_CTEAS_PCIA4    58    10.02    2.26    59    13.38    2
+ 11.              Gu 2019       GU19_LTEAS_vs_CTEAS_PCIA4    58    10.02    2.26    59    13.38    2
 > .98   mL solution = numerically same µg sufentanil at 1 µg/mL   Some concerns          0  
+ 12.              Gu 2019      GU19_LTEAS_vs_CTEAS_PCIA36    58    72.64    9.74    59    76.01   10
+> .43   mL solution = numerically same µg sufentanil at 1 µg/mL   Some concerns          0  
  13.           Huang 2024   HUANG24_CONTRA_vs_SHAM_PCA_D2    38        .       .    38        .     
 >   .                                  source unit not reported   Some concerns          0  
  14.             Yeh 2011       YEH11_AES_vs_SHAM_MORPH24    30     19.3     9.7    30     21.6    1
@@ -559,9 +559,9 @@ file
 > 8.62    1.84                presses            High  
   8.                  Zheng 2025    ZHENG25_TEAS_vs_SHAM_PCA_PRESS    42      6.3     2.2    43     
 > 10.7     3.9                presses   Some concerns  
-  9.                    Lee 2011    LEE11_HIGH_vs_SHAM_PCADEMAND24    12    52.17   21.87    12    7
+  9.                    Lee 2011     LEE11_LOW_vs_SHAM_PCADEMAND24    10     41.6   36.47    12    7
 > 4.18   39.33            PCA demands   Some concerns  
- 10.                    Lee 2011     LEE11_LOW_vs_SHAM_PCADEMAND24    10     41.6   36.47    12    7
+ 10.                    Lee 2011    LEE11_HIGH_vs_SHAM_PCADEMAND24    12    52.17   21.87    12    7
 > 4.18   39.33            PCA demands   Some concerns  
  11.                    Yeh 2010       YEH10_AES_vs_SHAM_PCAPUSH24    33     25.3    28.5    30     
 > 47.4    39.7          button pushes   Some concerns  
@@ -986,5 +986,5 @@ SUCCESS: Target F analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/07_targetF.log
   log type:  text
- closed on:   7 Sep 2026, 16:11:02
+ closed on:   7 Sep 2026, 20:38:21
 ----------------------------------------------------------------------------------------------------

@@ -7,12 +7,12 @@
 * ==============================================================================
 *
 * PURPOSE
-*   The strict primary analysis (01_opioid24_primary.do) pools k=6 trials whose
+*   The strict primary analysis (01_opioid24_primary.do) pools k=7 trials whose
 *   24-h cumulative opioid results are directly reported or defensibly
 *   harmonisable to a common dose metric.
 *
 *   Five further trials in opioid_24h_primary.dta carry potentially relevant
-*   24-h opioid information but were flagged CONDITIONAL in the v26 lock
+*   24-h opioid information but were flagged CONDITIONAL in the v32 lock
 *   (inc_sens==1 & inc_primary==0):
 *
 *       Chen 2015                 derived from fixed 2-mg rescue boluses; Median/IQR

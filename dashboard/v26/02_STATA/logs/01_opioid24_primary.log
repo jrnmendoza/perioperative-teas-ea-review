@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/01_opioid24_primary.log
   log type:  text
- opened on:   7 Sep 2026, 16:10:56
+ opened on:   7 Sep 2026, 20:38:15
 
 . 
 . di as txt "=================================================================="
@@ -24,16 +24,16 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 . describe
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta
- Observations:            15                  
-    Variables:            49                  7 Sep 2026 16:10
+ Observations:            16                  
+    Variables:            49                  7 Sep 2026 20:38
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
 ----------------------------------------------------------------------------------------------------
 study_unit      str83   %83s                  study_unit
 comparison_id   str34   %34s                  comparison_id
-intervention    str46   %46s                  intervention
-comparator      str38   %38s                  comparator
+intervention    str128  %128s                 intervention
+comparator      str75   %75s                  comparator
 outcome         str81   %81s                  outcome
 time_window     str60   %60s                  time_window
 data_type       str12   %12s                  data_type
@@ -84,9 +84,9 @@ Sorted by: inc_primary  study_unit
 
 . 
 . * List the 6 Strict Primary Studies
-. di as txt _n "=== STRICT PRIMARY STUDIES (k = 6) ==="
+. di as txt _n "=== STRICT PRIMARY STUDIES (k = 7) ==="
 
-=== STRICT PRIMARY STUDIES (k = 6) ===
+=== STRICT PRIMARY STUDIES (k = 7) ===
 
 . list study_unit modality comparator_type n_i mean_i_mme sd_i_mme n_c mean_c_mme sd_c_mme md_mme se
 > _mme rob_overall if inc_primary == 1, clean
@@ -103,7 +103,9 @@ Sorted by: inc_primary  study_unit
 >        20.6        4.5   -.6000004   .5783201   Some concerns  
  14.          Seevaunnamtum 2016         EA   Usual Care / Control    32      21.38      14.38    32
 >       33.94      20.24      -12.56   4.389056   Some concerns  
- 15.                   Yang 2024         EA   Usual Care / Control    90       43.7        4.7    90
+ 15.                  Szmit 2021       TEAS                   Sham    24        7.5        3.8    24
+>        15.2       6.24        -7.7   1.491331   Some concerns  
+ 16.                   Yang 2024         EA   Usual Care / Control    90       43.7        4.7    90
 >          44        4.9   -.2999992    .715697   Some concerns  
 
 . 
@@ -115,7 +117,7 @@ Sorted by: inc_primary  study_unit
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study_unit
         Study size: N/A
 
@@ -135,14 +137,14 @@ Meta-analysis setting information
 
 . 
 . * ------------------------------------------------------------------------------
-. * 1. PRINCIPAL PRIMARY MODEL: Strict Direct k=6 Trials (REML + Hartung-Knapp)
+. * 1. PRINCIPAL PRIMARY MODEL: Strict Direct k=7 Trials (REML + Hartung-Knapp)
 . * ------------------------------------------------------------------------------
 . di as txt _n "------------------------------------------------------------------"
 
 ------------------------------------------------------------------
 
-. di as txt "1. PRINCIPAL PRIMARY MODEL: STRICT DIRECT k=6 (REML + Hartung-Knapp)"
-1. PRINCIPAL PRIMARY MODEL: STRICT DIRECT k=6 (REML + Hartung-Knapp)
+. di as txt "1. PRINCIPAL PRIMARY MODEL: STRICT DIRECT k=7 (REML + Hartung-Knapp)"
+1. PRINCIPAL PRIMARY MODEL: STRICT DIRECT k=7 (REML + Hartung-Knapp)
 
 . di as txt "------------------------------------------------------------------"
 ------------------------------------------------------------------
@@ -154,29 +156,30 @@ Meta-analysis setting information
           Std. err.: se_mme
         Study label: study_unit
 
-Meta-analysis summary                             Number of studies =      6
+Meta-analysis summary                             Number of studies =      7
 Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 = 137.8936
-SE adjustment: Knapp–Hartung                                I2 (%) =   98.82
-                                                                H2 =   84.59
+Method: REML                                                  tau2 = 113.9105
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.57
+                                                                H2 =   69.89
 
                Effect size: Mean Difference (mg IV MME)
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Chen 1998 |        -21.000     -32.962      -9.038     14.20
-                Chen 2020 |        -28.190     -31.681     -24.699     17.63
-           El-Rakshy 2009 |         -1.600      -8.888       5.688     16.39
-He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     17.99
-       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     15.82
-                Yang 2024 |         -0.300      -1.703       1.103     17.97
+                Chen 1998 |        -21.000     -32.962      -9.038     11.69
+                Chen 2020 |        -28.190     -31.681     -24.699     15.09
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     13.83
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     15.47
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.27
+               Szmit 2021 |         -7.700     -10.623      -4.777     15.21
+                Yang 2024 |         -0.300      -1.703       1.103     15.44
 --------------------------+-------------------------------------------------
-                    theta |        -10.363     -22.997       2.271
+                    theta |         -9.907     -20.079       0.265
 ----------------------------------------------------------------------------
-95% prediction interval for theta: [-45.707,24.981]
+95% prediction interval for theta: [-39.350,19.536]
 
-Test of theta = 0: t(5) = -2.11                          Prob > |t| = 0.0888
-Test of homogeneity: Q = chi2(5) = 242.63                  Prob > Q = 0.0000
+Test of theta = 0: t(6) = -2.38                          Prob > |t| = 0.0545
+Test of homogeneity: Q = chi2(6) = 254.61                  Prob > Q = 0.0000
 
 . matrix res_prim = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -201,26 +204,27 @@ Test of homogeneity: Q = chi2(5) = 242.63                  Prob > Q = 0.0000
           Std. err.: se_mme
         Study label: study_unit
 
-Meta-analysis summary                             Number of studies =      3
+Meta-analysis summary                             Number of studies =      4
 Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 = 211.6799
-SE adjustment: Knapp–Hartung                                I2 (%) =   98.50
-                                                                H2 =   66.52
+Method: REML                                                  tau2 = 156.8823
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.59
+                                                                H2 =   70.96
 
                Effect size: Mean Difference (mg IV MME)
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Chen 1998 |        -21.000     -32.962      -9.038     30.01
-                Chen 2020 |        -28.190     -31.681     -24.699     34.76
-He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     35.23
+                Chen 1998 |        -21.000     -32.962      -9.038     21.42
+                Chen 2020 |        -28.190     -31.681     -24.699     25.98
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.45
+               Szmit 2021 |         -7.700     -10.623      -4.777     26.14
 --------------------------+-------------------------------------------------
-                    theta |        -16.313     -52.646      20.020
+                    theta |        -13.995     -34.181       6.190
 ----------------------------------------------------------------------------
-95% prediction interval for theta: [-230.059,197.434]
+95% prediction interval for theta: [-74.403,46.413]
 
-Test of theta = 0: t(2) = -1.93                          Prob > |t| = 0.1931
-Test of homogeneity: Q = chi2(2) = 225.48                  Prob > Q = 0.0000
+Test of theta = 0: t(3) = -2.21                          Prob > |t| = 0.1145
+Test of homogeneity: Q = chi2(3) = 232.89                  Prob > Q = 0.0000
 
 . matrix res_teas = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -289,41 +293,42 @@ Test of homogeneity: Q = chi2(2) = 7.67             Prob > Q = 0.0216
           Std. err.: se_mme
         Study label: study_unit
 
-Meta-analysis summary                             Number of studies =      5
+Meta-analysis summary                             Number of studies =      6
 Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 = 152.9179
-SE adjustment: Knapp–Hartung                                I2 (%) =   99.11
-                                                                H2 =  112.91
+Method: REML                                                  tau2 = 123.5992
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.87
+                                                                H2 =   88.24
 
                Effect size: Mean Difference (mg IV MME)
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Chen 1998 |        -21.000     -32.962      -9.038     17.23
-                Chen 2020 |        -28.190     -31.681     -24.699     20.99
-He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     21.38
-       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     19.03
-                Yang 2024 |         -0.300      -1.703       1.103     21.36
+                Chen 1998 |        -21.000     -32.962      -9.038     13.76
+                Chen 2020 |        -28.190     -31.681     -24.699     17.46
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     17.86
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     15.49
+               Szmit 2021 |         -7.700     -10.623      -4.777     17.59
+                Yang 2024 |         -0.300      -1.703       1.103     17.83
 --------------------------+-------------------------------------------------
-                    theta |        -12.120     -27.706       3.467
+                    theta |        -11.273     -23.182       0.636
 ----------------------------------------------------------------------------
-95% prediction interval for theta: [-55.339,31.100]
+95% prediction interval for theta: [-44.713,22.167]
 
-Test of theta = 0: t(4) = -2.16                          Prob > |t| = 0.0970
-Test of homogeneity: Q = chi2(4) = 242.60                  Prob > Q = 0.0000
+Test of theta = 0: t(5) = -2.43                          Prob > |t| = 0.0591
+Test of homogeneity: Q = chi2(5) = 254.51                  Prob > Q = 0.0000
 
 . matrix res_lowrob = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
 . 
 . * ------------------------------------------------------------------------------
-. * 5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=6)
+. * 5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=7)
 . * ------------------------------------------------------------------------------
 . di as txt _n "------------------------------------------------------------------"
 
 ------------------------------------------------------------------
 
-. di as txt "5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=6)"
-5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=6)
+. di as txt "5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=7)"
+5. ESTIMATOR SENSITIVITY: DerSimonian-Laird (DL) Model (k=7)
 
 . di as txt "------------------------------------------------------------------"
 ------------------------------------------------------------------
@@ -335,27 +340,28 @@ Test of homogeneity: Q = chi2(4) = 242.60                  Prob > Q = 0.0000
           Std. err.: se_mme
         Study label: study_unit
 
-Meta-analysis summary                             Number of studies =      6
+Meta-analysis summary                             Number of studies =      7
 Random-effects model                              Heterogeneity:
-Method: DerSimonian–Laird                                     tau2 = 78.4022
-SE adjustment: Knapp–Hartung                                I2 (%) =   97.94
-                                                                H2 =   48.53
+Method: DerSimonian–Laird                                     tau2 = 68.5143
+SE adjustment: Knapp–Hartung                                I2 (%) =   97.64
+                                                                H2 =   42.43
 
                Effect size: Mean Difference (mg IV MME)
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Chen 1998 |        -21.000     -32.962      -9.038     12.84
-                Chen 2020 |        -28.190     -31.681     -24.699     18.20
-           El-Rakshy 2009 |         -1.600      -8.888       5.688     16.10
-He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     18.85
-       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     15.20
-                Yang 2024 |         -0.300      -1.703       1.103     18.81
+                Chen 1998 |        -21.000     -32.962      -9.038     10.50
+                Chen 2020 |        -28.190     -31.681     -24.699     15.48
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     13.48
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     16.12
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     12.65
+               Szmit 2021 |         -7.700     -10.623      -4.777     15.69
+                Yang 2024 |         -0.300      -1.703       1.103     16.08
 --------------------------+-------------------------------------------------
-                    theta |        -10.162     -22.883       2.558
+                    theta |         -9.726     -19.933       0.481
 ----------------------------------------------------------------------------
-Test of theta = 0: t(5) = -2.05                          Prob > |t| = 0.0952
-Test of homogeneity: Q = chi2(5) = 242.63                  Prob > Q = 0.0000
+Test of theta = 0: t(6) = -2.33                          Prob > |t| = 0.0585
+Test of homogeneity: Q = chi2(6) = 254.61                  Prob > Q = 0.0000
 
 . meta summarize if inc_primary == 1, random(dl)
 
@@ -364,38 +370,39 @@ Test of homogeneity: Q = chi2(5) = 242.63                  Prob > Q = 0.0000
           Std. err.: se_mme
         Study label: study_unit
 
-Meta-analysis summary                             Number of studies =      6
+Meta-analysis summary                             Number of studies =      7
 Random-effects model                              Heterogeneity:
-Method: DerSimonian–Laird                                     tau2 = 78.4022
-                                                            I2 (%) =   97.94
-                                                                H2 =   48.53
+Method: DerSimonian–Laird                                     tau2 = 68.5143
+                                                            I2 (%) =   97.64
+                                                                H2 =   42.43
 
                Effect size: Mean Difference (mg IV MME)
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Chen 1998 |        -21.000     -32.962      -9.038     12.84
-                Chen 2020 |        -28.190     -31.681     -24.699     18.20
-           El-Rakshy 2009 |         -1.600      -8.888       5.688     16.10
-He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     18.85
-       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     15.20
-                Yang 2024 |         -0.300      -1.703       1.103     18.81
+                Chen 1998 |        -21.000     -32.962      -9.038     10.50
+                Chen 2020 |        -28.190     -31.681     -24.699     15.48
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     13.48
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     16.12
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     12.65
+               Szmit 2021 |         -7.700     -10.623      -4.777     15.69
+                Yang 2024 |         -0.300      -1.703       1.103     16.08
 --------------------------+-------------------------------------------------
-                    theta |        -10.162     -17.714      -2.611
+                    theta |         -9.726     -16.256      -3.196
 ----------------------------------------------------------------------------
-Test of theta = 0: z = -2.64                             Prob > |z| = 0.0084
-Test of homogeneity: Q = chi2(5) = 242.63                  Prob > Q = 0.0000
+Test of theta = 0: z = -2.92                             Prob > |z| = 0.0035
+Test of homogeneity: Q = chi2(6) = 254.61                  Prob > Q = 0.0000
 
 . 
 . * ------------------------------------------------------------------------------
-. * 6. STANDARDIZED MEAN DIFFERENCE (Hedges' g SMD): Strict k=6 Trials
+. * 6. STANDARDIZED MEAN DIFFERENCE (Hedges' g SMD): Strict k=7 Trials
 . * ------------------------------------------------------------------------------
 . di as txt _n "------------------------------------------------------------------"
 
 ------------------------------------------------------------------
 
-. di as txt "6. STANDARDIZED MEAN DIFFERENCE (Hedges' g): Strict k=6 Trials"
-6. STANDARDIZED MEAN DIFFERENCE (Hedges' g): Strict k=6 Trials
+. di as txt "6. STANDARDIZED MEAN DIFFERENCE (Hedges' g): Strict k=7 Trials"
+6. STANDARDIZED MEAN DIFFERENCE (Hedges' g): Strict k=7 Trials
 
 . di as txt "------------------------------------------------------------------"
 ------------------------------------------------------------------
@@ -407,7 +414,7 @@ Test of homogeneity: Q = chi2(5) = 242.63                  Prob > Q = 0.0000
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study_unit
         Study size: N/A
 
@@ -432,29 +439,30 @@ Meta-analysis setting information
           Std. err.: hedges_se
         Study label: study_unit
 
-Meta-analysis summary                             Number of studies =      6
+Meta-analysis summary                             Number of studies =      7
 Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 =  1.5975
-SE adjustment: Knapp–Hartung                                I2 (%) =   97.24
-                                                                H2 =   36.18
+Method: REML                                                  tau2 =  1.3660
+SE adjustment: Knapp–Hartung                                I2 (%) =   96.50
+                                                                H2 =   28.54
 
                Effect size: Standardized Mean Difference (Hedges' g)
 ----------------------------------------------------------------------------
                     Study |    Effect size    [95% conf. interval]  % weight
 --------------------------+-------------------------------------------------
-                Chen 1998 |         -0.958      -1.543      -0.373     16.39
-                Chen 2020 |         -3.505      -4.203      -2.807     16.03
-           El-Rakshy 2009 |         -0.088      -0.493       0.317     16.86
-He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147     17.04
-       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202     16.62
-                Yang 2024 |         -0.062      -0.354       0.230     17.07
+                Chen 1998 |         -0.958      -1.543      -0.373     14.07
+                Chen 2020 |         -3.505      -4.203      -2.807     13.72
+           El-Rakshy 2009 |         -0.088      -0.493       0.317     14.54
+He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147     14.72
+       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202     14.30
+               Szmit 2021 |         -1.466      -2.103      -0.829     13.91
+                Yang 2024 |         -0.062      -0.354       0.230     14.75
 --------------------------+-------------------------------------------------
-                    theta |         -0.890      -2.259       0.479
+                    theta |         -0.967      -2.086       0.153
 ----------------------------------------------------------------------------
-95% prediction interval for theta: [-4.698, 2.918]
+95% prediction interval for theta: [-4.193, 2.260]
 
-Test of theta = 0: t(5) = -1.67                          Prob > |t| = 0.1556
-Test of homogeneity: Q = chi2(5) = 90.47                   Prob > Q = 0.0000
+Test of theta = 0: t(6) = -2.11                          Prob > |t| = 0.0790
+Test of homogeneity: Q = chi2(6) = 100.09                  Prob > Q = 0.0000
 
 . matrix res_smd = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -470,7 +478,7 @@ Test of homogeneity: Q = chi2(5) = 90.47                   Prob > Q = 0.0000
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study_unit
         Study size: N/A
 
@@ -491,7 +499,7 @@ Meta-analysis setting information
 . 
 . meta forestplot if inc_primary == 1, subgroup(modality) ///
 >     title("PRIMARY OPIOID OUTCOME: 24-h Cumulative Consumption", size(medium)) ///
->     subtitle("Authoritative v26 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=6)", size(small)) 
+>     subtitle("Authoritative v32 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=7)", size(small)) 
 > ///
 >     nullrefline nonotes
 
@@ -515,7 +523,7 @@ file
 Meta-analysis setting information
 
  Study information
-    No. of studies: 6
+    No. of studies: 7
        Study label: study_unit
         Study size: N/A
 
@@ -535,7 +543,7 @@ Meta-analysis setting information
 
 . meta forestplot if inc_primary == 1, subgroup(modality) ///
 >     title("PRIMARY OPIOID OUTCOME (SMD): 24-h Cumulative Consumption", size(medium)) ///
->     subtitle("Authoritative v26 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=6)", size(small)) 
+>     subtitle("Authoritative v32 Lock (StataNow 19.5 BE: REML + Hartung-Knapp, k=7)", size(small)) 
 > ///
 >     nullrefline nonotes
 
@@ -765,19 +773,19 @@ file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_opioid24_primary.csv saved
 > atum   k    estimate      ci_low    ci_high    p_value       tau2         i2     q_stat           
 >        model  
   1.     OP24_PRIM_COMB   24-h Cumulative Postoperative Opioid       Combined Strict Primary (TEAS +
->  EA)   6   -10.36282   -22.99705     2.2714   .0887975   137.8936   98.81783   242.6344   REML + H
+>  EA)   7   -9.907003   -20.07936   .2653563   .0545384   113.9105   98.56915   254.6086   REML + H
 > artung-Knapp  
   2.     OP24_TEAS_SHAM   24-h Cumulative Postoperative Opioid                              TEAS vs 
-> Sham   3   -16.31267   -52.64574    20.0204   .1931112   211.6799   98.49659   225.4822   REML + H
+> Sham   4   -13.99528   -34.18084   6.190291   .1144761   156.8823   98.59068   232.8941   REML + H
 > artung-Knapp  
   3.       OP24_EA_CTRL   24-h Cumulative Postoperative Opioid                        EA vs Control/
 > Sham   3   -3.935834   -19.77322   11.90155   .3968947   28.47128   77.15261   7.667865   REML + H
 > artung-Knapp  
   4.   OP24_LOWROB_ONLY   24-h Cumulative Postoperative Opioid   Sensitivity: Low/Some Concerns RoB 
-> only   5   -12.11987   -27.70631   3.466576   .0970046   152.9179   99.11436   242.5954   REML + H
+> only   6   -11.27296   -23.18164   .6357164   .0591355   123.5992   98.86677   254.5132   REML + H
 > artung-Knapp  
   5.      OP24_PRIM_SMD   24-h Cumulative Postoperative Opioid   Standardized Mean Difference (Hedge
-> s g)   6   -.8898861   -2.258725   .4789527   .1555576   1.597451   97.23626   90.47237   REML + H
+> s g)   7   -.9667498   -2.086176   .1526764   .0790245   1.365976   96.49673   100.0862   REML + H
 > artung-Knapp  
 
 . 
@@ -790,5 +798,5 @@ SUCCESS: Primary 24-h opioid analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/01_opioid24_primary.log
   log type:  text
- closed on:   7 Sep 2026, 16:10:57
+ closed on:   7 Sep 2026, 20:38:16
 ----------------------------------------------------------------------------------------------------

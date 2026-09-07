@@ -14,14 +14,14 @@ di as txt "08: SENSITIVITY ANALYSES & LEAVE-ONE-OUT INFLUENCE DIAGNOSTICS"
 di as txt "=================================================================="
 
 * ------------------------------------------------------------------------------
-* PART 1: LEAVE-ONE-OUT FOR PRIMARY 24-H OPIOID (k=6)
+* PART 1: LEAVE-ONE-OUT FOR PRIMARY 24-H OPIOID (k=7)
 * ------------------------------------------------------------------------------
 use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
 keep if inc_primary == 1
 
 meta set md_mme se_mme, studylabel(study_unit) eslabel("Mean Difference (mg IV MME)")
 
-di as txt _n "=== FULL PRIMARY 24-H MODEL (k=6) [REML + KH] ==="
+di as txt _n "=== FULL PRIMARY 24-H MODEL (k=7) [REML + KH] ==="
 meta summarize, random(reml) se(kh)
 
 di as txt _n "=== LEAVE-ONE-OUT ANALYSIS: PRIMARY 24-H OPIOID ==="
