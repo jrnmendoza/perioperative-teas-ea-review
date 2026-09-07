@@ -1745,7 +1745,7 @@
             </div>
             <h2 style="margin-top: 0.25rem;">StataNow 19.5 SE Forest Plot Gallery</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Generated directly from StataNow 19.5 SE via <code>meta forestplot</code> for audited primary (k=11) and secondary outcomes. Click any plot to view or download high-resolution figure.
+              Generated directly from StataNow 19.5 SE via <code>meta forestplot</code> for the strict primary analysis (k = 6) and the secondary/exploratory targets. Click any plot to view or download high-resolution figure.
             </p>
           </div>
         </div>
@@ -2015,7 +2015,7 @@
             </div>
           </div>
           <p style="font-size: 0.8rem; color: var(--text-secondary);">
-            Full algebraic formulas, parametric conversions, and exact numerical matrix weights used by StataNow 19.5 SE to pool all 11 trials into the primary outcome synthesis.
+            Full algebraic formulas, parametric conversions, and exact numerical matrix weights used by StataNow 19.5 SE to pool the six strict primary trials into the primary outcome synthesis.
           </p>
         </div>
 
@@ -2333,14 +2333,17 @@
             </p>
           </div>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <a href="stata_meta_regression_execution.do" download class="btn-preset" style="background: rgba(6, 182, 212, 0.25); border: 1px solid rgba(6, 182, 212, 0.5); color: #67e8f9; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📥</span> Meta-Regression .do File
+            <a href="06_FINAL_ANALYSIS_V26/02_STATA/09_subgroups_metareg.do" download class="btn-preset" style="background: rgba(6, 182, 212, 0.25); border: 1px solid rgba(6, 182, 212, 0.5); color: #67e8f9; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📥</span> Subgroup / Meta-Regression .do (v26)
             </a>
-            <a href="stata_meta_regression_execution.log" download class="btn-preset" style="background: rgba(255,255,255,0.08); color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📋</span> Stata Execution Log
+            <a href="06_FINAL_ANALYSIS_V26/02_STATA/logs/09_subgroups_metareg.log" download class="btn-preset" style="background: rgba(255,255,255,0.08); color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📋</span> Stata Execution Log (v26)
             </a>
-            <a href="stata_consensus_synthesis_data.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
-              <span>📊</span> Primary Dataset (CSV)
+            <a href="06_FINAL_ANALYSIS_V26/03_RESULTS/results_subgroups_metareg.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📊</span> Subgroup / Meta-Regression Results (CSV)
+            </a>
+            <a href="06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.csv" download class="btn-preset" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.4); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>🗂️</span> Locked Primary Dataset (CSV)
             </a>
           </div>
         </div>
@@ -2358,82 +2361,95 @@
               <strong>The Rule of 10:</strong> Cochrane guidelines advise that meta-regression should generally not be considered with fewer than 10 trials, recommending a minimum ratio of <strong>10 studies per investigated covariate</strong>.
               <ul style="margin: 0.4rem 0 0.4rem 1.2rem; padding: 0;">
                 <li><strong>Strict Primary Clean Sample (k = 6, N = 628):</strong> With k = 6 trials, meta-regression is formally underpowered per the Cochrane 10:1 ratio recommendation. Univariable exploration of modality (TEAS vs EA: &beta; = &minus;1.79 mg [&minus;20.92, +17.33], p = 0.807) reveals no statistically significant moderator effect. Publication bias testing via Egger linear regression was not performed because k &lt; 10.</li>
-                <li><strong>Expanded Sensitivity Cohort (k = 11, N = 945):</strong> In exploratory sensitivity modeling across 11 trials, univariable baseline opioid demand (&beta; = &minus;0.170, p = 0.0186) and publication year (&beta; = +0.471, p = 0.0287) were evaluated, but multivariable models (df = 8) remain hypothesis-generating only.</li>
-                <li><strong>Multivariable &amp; Higher-Order Models:</strong> Severely vulnerable to overfitting, collinearity (ecological fallacy), and inflated Type I error. Reported strictly for sensitivity context.</li>
+                <li><strong>Withdrawn: expanded k = 11 moderator cohort.</strong> Earlier releases of this dashboard reported univariable baseline-opioid-demand (&beta; = &minus;0.170, p = 0.0186) and publication-year (&beta; = +0.471, p = 0.0287) meta-regressions, plus a multivariable model, fitted to an 11-trial pool. That pool is <strong>not</strong> the v26 primary analysis set: it mixed conditional, proxy and excluded records, and counted the overlapping Yeh 2010 / Yeh 2011 lumbar-spine reports as two independent trials. Those models are not reproduced by the locked v26 pipeline and have been withdrawn rather than restated.</li>
+                <li><strong>Multivariable &amp; higher-order models are not reported.</strong> With k = 6 no multivariable meta-regression is estimable at acceptable risk of overfitting, collinearity (ecological fallacy) and inflated Type I error. None is presented, in any form, including as &ldquo;sensitivity context&rdquo;.</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 4 Stata KPI Cards -->
+      <!-- v26 authoritative subgroup / meta-regression results (09_subgroups_metareg.do) -->
       <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 1.5rem;">
         <div class="kpi-card" style="border-top: 3px solid #06b6d4;">
           <div class="kpi-title">
-            <span>Baseline Opioid Demand Slope</span>
-            <button class="stat-info-btn" data-stat-term="betaCoefficient" aria-label="Statistical explanation for beta coefficient">ⓘ</button>
+            <span>TEAS Stratum (Subgroup)</span>
+            <button class="stat-info-btn" data-stat-term="knappHartung" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
           </div>
-          <div class="kpi-value" style="color: #06b6d4;">&beta; = &minus;0.170</div>
-          <div class="kpi-sub">95% CI: [&minus;0.304, &minus;0.036] &bull; t(9) = &minus;2.87</div>
-          <span class="kpi-badge badge-emerald">p = 0.0186 &bull; R&sup2; = 49.08%</span>
+          <div class="kpi-value" style="color: #06b6d4;">&minus;6.70 mg</div>
+          <div class="kpi-sub">95% KH CI: [&minus;32.55, +19.16] &bull; k = 3 &bull; I&sup2; = 99.58%</div>
+          <span class="kpi-badge badge-amber">p = 0.381 &bull; not significant</span>
         </div>
         <div class="kpi-card" style="border-top: 3px solid #38bdf8;">
           <div class="kpi-title">
-            <span>Publication Year Secular Trend</span>
-            <button class="stat-info-btn" data-stat-term="metaRegR2" aria-label="Statistical explanation for Meta-regression R2">ⓘ</button>
+            <span>EA Stratum (Subgroup)</span>
+            <button class="stat-info-btn" data-stat-term="knappHartung" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
           </div>
-          <div class="kpi-value" style="color: #38bdf8;">&beta; = +0.471</div>
-          <div class="kpi-sub">95% CI: [+0.062, +0.881] &bull; t(9) = +2.60</div>
-          <span class="kpi-badge badge-indigo">p = 0.0287 &bull; R&sup2; = 82.81%</span>
+          <div class="kpi-value" style="color: #38bdf8;">&minus;3.94 mg</div>
+          <div class="kpi-sub">95% KH CI: [&minus;19.77, +11.90] &bull; k = 3 &bull; I&sup2; = 77.15%</div>
+          <span class="kpi-badge badge-amber">p = 0.397 &bull; not significant</span>
         </div>
         <div class="kpi-card" style="border-top: 3px solid #a78bfa;">
           <div class="kpi-title">
-            <span>Multivariable Modality Adjustment</span>
+            <span>Modality Meta-Regression (only model fitted)</span>
+            <button class="stat-info-btn" data-stat-term="betaCoefficient" aria-label="Statistical explanation for beta coefficient">ⓘ</button>
           </div>
-          <div class="kpi-value" style="color: #a78bfa;">&beta;_EA = +1.489</div>
-          <div class="kpi-sub">p = 0.781 (Baseline demand retains p = 0.041)</div>
-          <span class="kpi-badge badge-emerald">Association Attenuated After Adjustment</span>
+          <div class="kpi-value" style="color: #a78bfa;">&beta; = &minus;1.79 mg</div>
+          <div class="kpi-sub">TEAS vs EA (reference EA) &bull; 95% CI: [&minus;20.92, +17.33]</div>
+          <span class="kpi-badge badge-amber">p = 0.807 &bull; underpowered (k = 6 &lt; 10)</span>
         </div>
-        <div class="kpi-card" style="border-top: 3px solid #10b981;">
+        <div class="kpi-card" style="border-top: 3px solid #f59e0b;">
           <div class="kpi-title">
-            <span>Knapp&ndash;Hartung Adjustment</span>
-            <button class="stat-info-btn" data-stat-term="knappHartung" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
+            <span>Covariates Not Modelled</span>
           </div>
-          <div class="kpi-value" style="color: #34d399;">df = 8</div>
-          <div class="kpi-sub">Model F(2, 8) = 4.01 &bull; Prob &gt; F = 0.0622</div>
-          <span class="kpi-badge badge-emerald">Conservative Error Control</span>
+          <div class="kpi-value" style="color: #fbbf24; font-size: 1.15rem; line-height: 1.25;">Not estimated</div>
+          <div class="kpi-sub">Baseline opioid demand, publication year, sex composition, dose&ndash;response</div>
+          <span class="kpi-badge badge-amber">Below Cochrane 10:1 threshold</span>
         </div>
       </div>
 
-      <!-- Bubble Plot Studio -->
+      <!-- Modality subgroup figure (v26 authoritative) + bubble-plot withdrawal notice -->
       <div class="dashboard-card" style="margin-bottom: 1.5rem;">
         <div class="card-header">
           <div>
-            <span class="badge badge-cyan">Interactive Stata Bubble Plot Studio</span>
-            <h2 style="margin-top: 0.25rem;">Meta-Regression Slopes &amp; Study Precision Weights</h2>
+            <span class="badge badge-cyan">v26 Authoritative Subgroup Figure</span>
+            <h2 style="margin-top: 0.25rem;">Primary 24-h Opioid Consumption by Modality (k = 6)</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Circle size represents the random-effects meta-analytic weight (1 / [v_i + &tau;&sup2;]) of each trial. The solid line represents the fitted meta-regression slope.
+              Random-effects REML with Knapp&ndash;Hartung adjustment, stratified by modality. Generated by
+              <code>06_FINAL_ANALYSIS_V26/02_STATA/09_subgroups_metareg.do</code>.
             </p>
-          </div>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="bubble-btn-group">
-            <button class="btn-preset active" id="btn-bubble-base" onclick="switchBubblePlot('base')">🔘 Baseline Opioid (k=11)</button>
-            <button class="btn-preset" id="btn-bubble-year" onclick="switchBubblePlot('year')">🔘 Publication Year (k=11)</button>
-            <button class="btn-preset" id="btn-bubble-sex" onclick="switchBubblePlot('sex')">🔘 Patient Sex (% Female) (k=11)</button>
-            <button class="btn-preset" id="btn-bubble-teas-base" onclick="switchBubblePlot('teas-base')">🔘 TEAS Stratum (k=8)</button>
-            <button class="btn-preset" id="btn-bubble-ea-base" onclick="switchBubblePlot('ea-base')">🔘 EA Stratum (k=3)</button>
           </div>
         </div>
 
         <div style="display: grid; grid-template-columns: minmax(320px, 1.8fr) minmax(280px, 1.2fr); gap: 1.5rem; align-items: start; margin-top: 1rem;">
           <div style="background: rgba(0,0,0,0.3); border-radius: var(--radius-md); padding: 1rem; border: 1px solid var(--border-subtle); text-align: center;">
-            <img id="bubble-plot-img" src="stata_meta_reg_baseline_mme.png" alt="Stata Meta-Regression Bubble Plot" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
-            <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem;" id="bubble-plot-caption">
-              StataNow 19.5 SE Random-effects meta-regression bubble plot (REML with Knapp&ndash;Hartung adjustment).
+            <img src="forest_subgroup_modality_primary.png" alt="Primary 24-h opioid consumption forest plot stratified by modality (TEAS k=3, EA k=3)" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+            <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem;">
+              StataNow 19.5 SE &bull; <code>meta summarize, random(reml) se(kh) subgroup(modality)</code>
             </div>
           </div>
 
-          <div id="bubble-plot-details" class="card-glass" style="padding: 1.25rem; font-size: 0.82rem; line-height: 1.6;">
-            <!-- Rendered dynamically by JS based on selection -->
+          <div class="card-glass" style="padding: 1.25rem; font-size: 0.82rem; line-height: 1.6;">
+            <div style="font-weight: 700; color: #fbbf24; margin-bottom: 0.5rem;">⚠️ Bubble-plot studio withdrawn</div>
+            <p style="color: var(--text-secondary); margin-bottom: 0.75rem;">
+              This panel previously offered five interactive meta-regression bubble plots
+              (baseline opioid demand, publication year, sex composition, and TEAS/EA strata)
+              fitted to an 11-trial pool.
+            </p>
+            <p style="color: var(--text-secondary); margin-bottom: 0.75rem;">
+              That pool is not the v26 primary analysis set. It included conditional,
+              proxy-endpoint and excluded records, and counted the overlapping
+              <strong>Yeh 2010 / Yeh 2011</strong> lumbar-spine reports as two independent
+              trials, which the v26 lock explicitly forbids. Its stated EA stratum
+              (Sim 2002, Coura 2011, El-Rakshy 2009) is also not the v26 EA stratum
+              (El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024).
+            </p>
+            <p style="color: var(--text-secondary); margin-bottom: 0;">
+              None of those models is reproduced by the locked v26 pipeline, so they have been
+              <strong>removed rather than restated</strong>. With k = 6 the only defensible
+              presentation is the stratified subgroup figure shown here, plus the single
+              underpowered modality meta-regression reported above.
+            </p>
           </div>
         </div>
       </div>
@@ -2444,11 +2460,11 @@
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem;">
               <span class="badge badge-indigo">Statistical &amp; Clinical Audit</span>
-              <span class="badge badge-emerald">k = 11 Primary Trials</span>
+              <span class="badge badge-amber">k = 6 Strict Primary Trials</span>
             </div>
-            <h2 style="margin-top: 0.25rem;" data-i18n="metaregStudio.tableTitle">Comprehensive Moderator &amp; Clinical Parameter Matrix (k = 11 Primary RCTs)</h2>
+            <h2 style="margin-top: 0.25rem;" data-i18n="metaregStudio.tableTitle">Comprehensive Moderator &amp; Clinical Parameter Matrix (k = 6 Strict Primary RCTs)</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Formal empirical and methodological audit of candidate moderators requested for exploration across the 11 analyzable primary trials.
+              Descriptive audit of candidate moderators across the six strict primary trials. No coefficient in this matrix is an inferential meta-regression result: with k = 6 the Cochrane 10:1 rule is not met, so this table documents what could be examined and why it was not modelled.
             </p>
           </div>
         </div>
@@ -2475,11 +2491,11 @@
                 </td>
                 <td>Continuous Clinical</td>
                 <td>Control Mean: 5.3 to 114.1 mg</td>
-                <td style="font-weight: 700; color: #34d399;">&minus;0.170 [&minus;0.304, &minus;0.036]</td>
-                <td><strong>t(9) = &minus;2.87, p = 0.0186</strong></td>
-                <td><span class="badge badge-emerald">49.08%</span></td>
-                <td><span class="badge badge-emerald">Primary Moderator</span></td>
-                <td style="font-size: 0.74rem; color: #cbd5e1;">Statistically significant univariable association. Sparing increases by 1.70 mg IV MME per 10 mg baseline demand (subject to ecological fallacy cautions).</td>
+                <td style="color: #94a3b8; font-style: italic;">Not estimated</td>
+                <td style="color: #94a3b8; font-style: italic;">Not estimated</td>
+                <td style="color: #94a3b8; font-style: italic;">&mdash;</td>
+                <td><span class="badge badge-amber">Not modelled (k = 6)</span></td>
+                <td style="font-size: 0.74rem; color: #cbd5e1;">Baseline demand varies widely across the strict primary trials, so it is a plausible source of heterogeneity. It is <strong>not</strong> modelled: k = 6 is below the Cochrane 10:1 threshold. A previously displayed slope (&beta; = &minus;0.170, p = 0.0186) came from the withdrawn 11-trial pool and is not reproduced by v26.</td>
               </tr>
               <tr style="background: rgba(56, 189, 248, 0.05);">
                 <td style="font-weight: 700; color: #38bdf8;">
@@ -2488,21 +2504,21 @@
                 </td>
                 <td>Continuous Temporal</td>
                 <td>Year: 1998 to 2026</td>
-                <td style="font-weight: 700; color: #38bdf8;">+0.471 [+0.062, +0.881]</td>
-                <td><strong>t(9) = +2.60, p = 0.0287</strong></td>
-                <td><span class="badge badge-indigo">82.81%</span></td>
-                <td><span class="badge badge-indigo">Secondary Moderator</span></td>
-                <td style="font-size: 0.74rem; color: #cbd5e1;">Later publication year was associated with smaller estimated effects (β = +0.471 per year, p = 0.0287). Possible explanations include changes over time in multimodal analgesia, perioperative practice, surgical case mix, comparator treatment, study methodology, or other secular trends. This analysis cannot determine the cause.</td>
+                <td style="color: #94a3b8; font-style: italic;">Not estimated</td>
+                <td style="color: #94a3b8; font-style: italic;">Not estimated</td>
+                <td style="color: #94a3b8; font-style: italic;">&mdash;</td>
+                <td><span class="badge badge-amber">Not modelled (k = 6)</span></td>
+                <td style="font-size: 0.74rem; color: #cbd5e1;">Not modelled in v26. A previously displayed secular trend (&beta; = +0.471 per year, p = 0.0287) came from the withdrawn 11-trial pool. Possible explanations for a genuine trend would include changes over time in multimodal analgesia, perioperative practice, surgical case mix, comparator treatment, study methodology, or other secular trends. This analysis cannot determine the cause.</td>
               </tr>
               <tr>
                 <td style="font-weight: 700; color: #a78bfa;">Modality (EA vs TEAS)</td>
                 <td>Binary Intervention</td>
-                <td>TEAS (k = 8) vs EA (k = 3)</td>
-                <td>&minus;5.98 mg (Univar) &bull; +1.49 mg (Multivar)</td>
-                <td>t(8) = +0.29, p = 0.781</td>
-                <td>38.79% (Model)</td>
-                <td><span class="badge badge-indigo">Multivariable (df=8)</span></td>
-                <td style="font-size: 0.74rem; color: #cbd5e1;">The apparent modality association was attenuated after adjustment for baseline surgical opioid demand (drops to p=0.781).</td>
+                <td>TEAS (k = 3) vs EA (k = 3)</td>
+                <td style="font-weight: 700; color: #a78bfa;">&minus;1.79 mg [&minus;20.92, +17.33]</td>
+                <td>p = 0.807 (REML + Knapp&ndash;Hartung)</td>
+                <td style="color: #94a3b8; font-style: italic;">&mdash;</td>
+                <td><span class="badge badge-amber">Univariable only &bull; underpowered</span></td>
+                <td style="font-size: 0.74rem; color: #cbd5e1;">The only meta-regression fitted in v26 (<code>09_subgroups_metareg.do</code>). No evidence of a modality difference; with k = 6 this is exploratory and cannot exclude a clinically relevant difference. No multivariable adjustment is reported.</td>
               </tr>
               <tr>
                 <td style="font-weight: 700;">Stimulation Timing</td>
@@ -2527,9 +2543,9 @@
               <tr style="opacity: 0.75;">
                 <td style="font-weight: 700;">Number of Sessions</td>
                 <td>Discrete Protocol</td>
-                <td>100% Single-Session (k=11/11)</td>
+                <td>100% Single-Session (k = 6/6)</td>
                 <td colspan="4" style="text-align: center; color: #f59e0b; font-style: italic;">Dropped by Stata due to zero variance (constant across trials)</td>
-                <td style="font-size: 0.74rem; color: #f59e0b;">All 11 trials applied 1 session; impossible to test dose-response via meta-regression.</td>
+                <td style="font-size: 0.74rem; color: #f59e0b;">All six strict primary trials applied a single session; the covariate has no variance, so dose&ndash;response cannot be tested.</td>
               </tr>
               <tr>
                 <td style="font-weight: 700;">
@@ -2538,9 +2554,9 @@
                 </td>
                 <td>Demographic (Aggregate)</td>
                 <td>Range: 22.1% to 100.0% female</td>
-                <td>&minus;0.013 [&minus;0.191, +0.165]</td>
-                <td>t(9) = &minus;0.16, p = 0.8746</td>
-                <td>0.00%</td>
+                <td style="color: #94a3b8; font-style: italic;">Not estimated</td>
+                <td style="color: #94a3b8; font-style: italic;">Not estimated</td>
+                <td style="color: #94a3b8; font-style: italic;">&mdash;</td>
                 <td><span class="badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">Ecological Fallacy</span></td>
                 <td style="font-size: 0.74rem; color: #94a3b8;">No evidence of an association between the study-level proportion of female participants and treatment effect was detected. This does not establish equivalent treatment effects between individual women and men.</td>
               </tr>
@@ -2588,59 +2604,31 @@
         </div>
       </div>
 
-      <!-- Interactive Expected Sparing Estimator (Simulation Matrix) -->
-      <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #10b981;">
+      <!-- Withdrawn: interactive multivariable effect-modifier simulator -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #f59e0b;">
         <div class="card-header">
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="badge badge-indigo">Exploratory Simulation</span>
-              <span class="badge badge-amber">Study-Level Illustration</span>
-              <span class="badge badge-emerald">StataNow 19.5 SE Multivariable Model</span>
+              <span class="badge badge-amber">Withdrawn in v26</span>
             </div>
-            <h2 style="margin-top: 0.25rem;">Interactive Meta-Regression Illustration / Exploratory Effect-Modifier Simulator</h2>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Illustrating study-level expected 24-hour opioid reduction based on baseline surgical opioid demand and intervention modality:
-              <code>MD = 0.0204 &minus; 0.1876 &times; (Baseline Demand) + 1.4895 &times; (EA)</code>.
+            <h2 style="margin-top: 0.25rem;">Interactive Effect-Modifier Simulator &mdash; Removed</h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.35rem; line-height: 1.6; max-width: 1000px;">
+              This panel previously let readers slide a baseline-opioid-demand value and a modality toggle
+              through the multivariable model
+              <code>MD = 0.0204 &minus; 0.1876 &times; (Baseline Demand) + 1.4895 &times; (EA)</code>,
+              returning a point estimate and a confidence interval.
             </p>
-
-            <!-- Research Illustration Disclaimers -->
-            <div style="margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.4rem;">
-              <div class="alert-box alert-info" style="background: rgba(56, 189, 248, 0.08); border-left: 4px solid #38bdf8; padding: 0.6rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #e2e8f0; line-height: 1.5;">
-                <strong>⚠️ Research Illustration Notice:</strong> Study-level research illustration — not validated for individual-patient prediction or clinical decision-making.
-              </div>
-              <div class="alert-box alert-warning" style="background: rgba(245, 158, 11, 0.08); border-left: 4px solid #f59e0b; padding: 0.6rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #e2e8f0; line-height: 1.5;">
-                <strong>🔬 Ecological Fallacy Warning:</strong> Study-level associations do not necessarily represent relationships between individual patients within those trials.
-              </div>
-              <div class="alert-box" style="background: rgba(129, 140, 248, 0.08); border-left: 4px solid #818cf8; padding: 0.6rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #e2e8f0; line-height: 1.5;">
-                <strong>📊 Meta-Regression R² Definition:</strong> Meta-regression R² estimates the proportion of between-study heterogeneity (&tau;&sup2;) accounted for by the moderator. It is not the percentage of individual patient variance explained.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
-          <div style="background: var(--bg-panel); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-            <label style="font-size: 0.8rem; font-weight: 700; color: #cbd5e1; display: block; margin-bottom: 0.5rem;">
-              Control-Group Baseline 24-h Opioid Consumption: <span id="pred-mme-val" style="color: #38bdf8; font-weight: 800; font-size: 1rem;">40</span> mg IV MME
-            </label>
-            <input type="range" id="pred-mme-slider" min="5" max="120" value="40" step="1" style="width: 100%; margin-bottom: 1rem;" oninput="updateMetaRegPrediction()">
-            
-            <label style="font-size: 0.8rem; font-weight: 700; color: #cbd5e1; display: block; margin-bottom: 0.5rem;">
-              Intervention Modality:
-            </label>
-            <div style="display: flex; gap: 0.75rem;">
-              <button type="button" class="btn-preset active" id="btn-pred-teas" onclick="setPredModality('TEAS')">TEAS (Surface)</button>
-              <button type="button" class="btn-preset" id="btn-pred-ea" onclick="setPredModality('EA')">EA (Needle)</button>
-            </div>
-          </div>
-
-          <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.3);">
-            <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: #34d399; margin-bottom: 0.35rem;">Model-Predicted Sparing Effect</div>
-            <div id="pred-result-md" style="font-size: 2rem; font-weight: 800; color: #34d399; margin-bottom: 0.25rem;">&minus;7.48 mg</div>
-            <div id="pred-result-ci" style="font-size: 0.8rem; color: #cbd5e1; margin-bottom: 0.5rem;">Estimated 95% CI: [&minus;10.22, &minus;4.75] mg IV MME</div>
-            <div id="pred-result-badge" class="badge badge-indigo" style="font-size: 0.75rem; padding: 0.3rem 0.6rem;">Sub-Threshold Sparing (&lt; 10 mg MCID)</div>
-            <p id="pred-result-desc" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.65rem; line-height: 1.5;">
-              In surgical procedures requiring 40 mg baseline IV morphine equivalents, TEAS is expected to produce an average reduction of 7.48 mg IV MME.
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.6; max-width: 1000px;">
+              That model was fitted to the withdrawn 11-trial pool, is not reproduced by the locked v26
+              pipeline, and could not be defended at k = 6: two covariates on six studies is far below the
+              Cochrane 10:1 threshold, and the interval it displayed was produced by an approximation rather
+              than by the model's covariance matrix. Presenting it as an interactive predictor invited exactly
+              the individual-patient reading that the accompanying ecological-fallacy warning disclaimed.
+            </p>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.6; max-width: 1000px;">
+              The authoritative v26 moderator evidence is the modality subgroup pair and the single
+              underpowered modality meta-regression reported at the top of this tab. No predictive
+              instrument is offered in its place.
             </p>
           </div>
         </div>
@@ -2651,9 +2639,9 @@
         <div class="card-header">
           <div>
             <span class="badge badge-indigo">StataNow 19.5 SE Live Terminal Output</span>
-            <h2 style="margin-top: 0.25rem;">Verbatim Execution Log: Meta-Regression &amp; Moderator Models</h2>
+            <h2 style="margin-top: 0.25rem;">Verbatim Execution Log: v26 Subgroup &amp; Meta-Regression Audit</h2>
           </div>
-          <a href="stata_meta_regression_execution.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; padding: 0.4rem 0.75rem; font-size: 0.75rem;">
+          <a href="06_FINAL_ANALYSIS_V26/02_STATA/logs/09_subgroups_metareg.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; padding: 0.4rem 0.75rem; font-size: 0.75rem;">
             <span>📥</span> Download Full Log (.log)
           </a>
         </div>
@@ -2662,7 +2650,7 @@
             <span class="stata-terminal-dot red"></span>
             <span class="stata-terminal-dot yellow"></span>
             <span class="stata-terminal-dot green"></span>
-            <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem;">stata_meta_regression_execution.log &bull; StataNow 19.5 SE</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 0.5rem;">06_FINAL_ANALYSIS_V26/02_STATA/logs/09_subgroups_metareg.log &bull; StataNow 19.5 SE</span>
           </div>
           <pre class="stata-terminal-body" id="stata-metareg-terminal-content">Loading Stata meta-regression execution stream...</pre>
         </div>
