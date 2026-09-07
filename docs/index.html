@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=ff18218daf78">
+  <link rel="stylesheet" href="styles.css?v=31e112fe4fa6">
 </head>
 <body>
 
@@ -1120,7 +1120,72 @@
 
     <!-- TAB: PRIMARY OUTCOME — Stata 19.5 Synthesis & Forest Plots -->
     <div id="tab-primary" class="tab-content">
-      
+
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <!-- PRIMARY OUTCOME CONTRIBUTION PATHWAY                            -->
+      <!-- Rendered by renderPrimaryPathway() from window.PRIMARY_PATHWAY, -->
+      <!-- which scripts/build_primary_pathway.py derives from the v26     -->
+      <!-- lock. No count below is written in this HTML.                   -->
+      <!-- ═══════════════════════════════════════════════════════════════ -->
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #34d399;">
+        <div class="card-header">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+              <span class="badge badge-emerald">Contribution Transparency</span>
+              <span class="badge badge-indigo" id="pathway-provenance-badge">Derived from the v26 lock</span>
+            </div>
+            <h2 style="font-size: 1.3rem; margin-top: 0.25rem;">Primary Outcome Contribution Pathway</h2>
+            <p style="font-size: 0.86rem; color: var(--text-secondary); margin-top: 0.3rem;" id="pathway-subtitle"></p>
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: flex-start;">
+            <button class="btn-preset" onclick="togglePathwayTable()" id="btn-pathway-table">📋 Study-level table</button>
+          </div>
+        </div>
+
+        <!-- headline message -->
+        <div id="pathway-headline" style="margin: 0.35rem 0 1.1rem; padding: 0.95rem 1.15rem; background: rgba(16,185,129,0.07); border-left: 4px solid #34d399; border-radius: var(--radius-sm); font-size: 0.85rem; line-height: 1.65; color: #e2e8f0;"></div>
+
+        <!-- flow -->
+        <div id="pathway-flow"></div>
+
+        <!-- three panels -->
+        <div id="pathway-panels" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1rem; margin-top: 1.25rem;"></div>
+
+        <!-- strict vs broader comparison -->
+        <div id="pathway-comparison" style="margin-top: 1.25rem;"></div>
+
+        <!-- estimand + what could change -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 1rem; margin-top: 1.25rem;">
+          <div id="pathway-estimand" class="card-glass" style="padding: 1.15rem; font-size: 0.82rem; line-height: 1.6;"></div>
+          <div id="pathway-whatcouldchange" class="card-glass" style="padding: 1.15rem; font-size: 0.82rem; line-height: 1.6;"></div>
+        </div>
+
+        <!-- maturity -->
+        <div id="pathway-maturity" style="margin-top: 1.25rem;"></div>
+
+        <!-- study-level table (collapsed by default) -->
+        <div id="pathway-table-wrap" hidden style="margin-top: 1.25rem;">
+          <div id="pathway-table-caption" style="font-size: 0.76rem; color: var(--text-secondary); margin-bottom: 0.6rem; line-height: 1.55;"></div>
+          <div style="overflow-x: auto;">
+            <table class="forest-table" style="font-size: 0.76rem;">
+              <thead>
+                <tr>
+                  <th>Study</th>
+                  <th>In systematic review</th>
+                  <th>Reports opioid outcome</th>
+                  <th>24-h candidate</th>
+                  <th>Strict primary</th>
+                  <th>Broader sensitivity</th>
+                  <th>Author contact relevant</th>
+                  <th>Reason / current status</th>
+                </tr>
+              </thead>
+              <tbody id="pathway-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
       <!-- Section 1: Formal Protocol Synthesis Standard Callout -->
       <div class="protocol-callout" style="margin-bottom: 1.5rem;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
@@ -1798,7 +1863,8 @@
           <div class="stata-plot-card">
             <div class="stata-plot-header">
               <div>
-                <span class="badge badge-indigo">Authoritative Primary Endpoint</span>
+                <span class="badge badge-emerald">STRICT PRIMARY</span>
+                <span style="font-size: 0.7rem; color: #6ee7b7;">directly compatible 24-h cumulative opioid outcomes</span>
                 <h4 style="font-size: 0.95rem; margin-top: 0.35rem; color: #f8fafc;">Primary 24-h Opioid Sparing (IV MME mg): Strict Direct Trials (k = 6)</h4>
               </div>
               <a href="forest_opioid24_primary_mme.png" target="_blank" class="btn-preset" style="font-size: 0.72rem; padding: 0.25rem 0.6rem; text-decoration: none;">🔍 View Full Res</a>
@@ -1817,7 +1883,8 @@
           <div class="stata-plot-card">
             <div class="stata-plot-header">
               <div>
-                <span class="badge badge-indigo">Scale-Independent Benchmark</span>
+                <span class="badge badge-emerald">STRICT PRIMARY</span>
+                <span style="font-size: 0.7rem; color: #6ee7b7;">same six trials, scale-free metric</span>
                 <h4 style="font-size: 0.95rem; margin-top: 0.35rem; color: #f8fafc;">Standardized Mean Difference (Hedges' g): Primary 24-h Opioid (k = 6)</h4>
               </div>
               <a href="forest_opioid24_primary_smd.png" target="_blank" class="btn-preset" style="font-size: 0.72rem; padding: 0.25rem 0.6rem; text-decoration: none;">🔍 View Full Res</a>
@@ -1832,6 +1899,30 @@
             </div>
           </div>
 
+          <!-- Broader sensitivity forest plot (10_broader24h_sensitivity.do) -->
+          <div class="stata-plot-card" style="border: 1px solid rgba(56,189,248,0.35);">
+            <div class="stata-plot-header">
+              <div>
+                <span class="badge badge-cyan">BROADER SENSITIVITY &mdash; NOT THE PRIMARY ANALYSIS</span>
+                <span style="font-size: 0.7rem; color: #7dd3fc;">adds conditional / derived / proxy 24-h outcomes</span>
+                <h4 style="margin-top: 0.3rem;">Broader 24-h Sensitivity (Hedges' g): strict + conditional trials (k = 9)</h4>
+              </div>
+              <a href="forest_opioid24_broader_smd.png" target="_blank" class="btn-preset" style="font-size: 0.72rem; padding: 0.25rem 0.6rem; text-decoration: none;">🔍 View Full Res</a>
+            </div>
+            <div class="stata-plot-img-wrap">
+              <a href="forest_opioid24_broader_smd.png" target="_blank">
+                <img src="forest_opioid24_broader_smd.png" alt="Broader 24-h sensitivity forest plot, standardized mean difference, k=9" class="stata-plot-img">
+              </a>
+            </div>
+            <div class="stata-plot-footer">
+              <p><strong>Sensitivity only.</strong> Adds Coura 2011, Sim 2002 and Zhang 2025 to the six strict trials on the scale-free
+              standardized metric: Hedges' g = <strong>&minus;0.88</strong> [95% CI: &minus;1.70 to &minus;0.06], p = 0.038, I&sup2; = 95.2%.
+              The point estimate is essentially unchanged from the strict model (g = &minus;0.89); the interval is narrower because there
+              are more studies, not because the effect is larger. The two Chen 2015 reports remain outside both pooled models
+              (Median/IQR, no derived mean/SD), so no k = 11 pooled result exists.
+              <strong>This is not the primary analysis</strong> &mdash; see the Primary Outcome Contribution Pathway above.</p>
+            </div>
+          </div>
           <!-- Forest Plot 3: Modality Subgroups (TEAS vs EA) -->
           <div class="stata-plot-card">
             <div class="stata-plot-header">
@@ -3376,10 +3467,11 @@
   </div>
 
   <!-- Scripts -->
-  <script src="data.js?v=ff18218daf78"></script>
-  <script src="translations.js?v=ff18218daf78"></script>
-  <script src="reader_assist.js?v=ff18218daf78"></script>
-  <script src="meta_engine.js?v=ff18218daf78"></script>
-  <script src="app.js?v=ff18218daf78"></script>
+  <script src="primary_pathway.js?v=31e112fe4fa6"></script>
+  <script src="data.js?v=31e112fe4fa6"></script>
+  <script src="translations.js?v=31e112fe4fa6"></script>
+  <script src="reader_assist.js?v=31e112fe4fa6"></script>
+  <script src="meta_engine.js?v=31e112fe4fa6"></script>
+  <script src="app.js?v=31e112fe4fa6"></script>
 </body>
 </html>

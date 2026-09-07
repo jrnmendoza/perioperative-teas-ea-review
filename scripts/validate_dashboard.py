@@ -124,6 +124,8 @@ def strip_withdrawal_prose(text: str) -> str:
         "previously offered", "previously let readers", "Not modelled in v26",
         "came from the withdrawn", "has been withdrawn", "Removed", "superseded",
         "Superseded",
+        # explicit statements that a result does NOT exist are not live claims
+        "no k = 11", "not estimable", "is NOT estimable", "no pooled result exists",
     )
     out = []
     for para in re.split(r"(?=<(?:li|p|div|td|h2|h3|h4)\b)", text):
@@ -488,8 +490,10 @@ def t_rob_result_specific():
 # ─────────────────────────────────────────────────────────────────────────────
 
 def t_no_withdrawn_metareg():
+    # k=11 is the legitimate size of the 24-h CANDIDATE POOL derived from the v26
+    # lock. What must never reappear is a k=11 pooled RESULT or moderator model.
     banned = {
-        "k = 11 / k=11 primary pool": r"k\s*=\s*11|k=11",
+        "k = 11 presented as a pooled result": r"k\s*=\s*11(?![^<]{0,80}(?:candidate|pool|not estimable|no pooled|does not|cannot))",
         "N = 945": r"\b945\b",
         "baseline-demand slope": r"0\.0186|49\.08|−0\.170|&minus;0\.170",
         "publication-year slope": r"0\.0287|82\.81|\+0\.471",
@@ -704,6 +708,187 @@ def t_paired_cohort_n():
           f"paired cohort sums to {got}, Stata primary analysis N is {expected}")
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# 10. Primary outcome contribution pathway
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _pathway():
+    src = (DASH / "primary_pathway.js").read_text(encoding="utf-8")
+    i = src.index("window.PRIMARY_PATHWAY = ")
+    return json.loads(src[i + len("window.PRIMARY_PATHWAY = "):].rstrip().rstrip(";"))
+
+
+def t_pathway_counts_derive():
+    """Counts must equal array lengths, not be asserted independently."""
+    P = _pathway()
+    c = P["counts"]
+    probs = []
+    if c["strict"] != len(P["primary_strict"]):
+        probs.append(f"counts.strict={c['strict']} but primary_strict has {len(P['primary_strict'])}")
+    if c["conditional"] != len(P["primary_conditional"]):
+        probs.append(f"counts.conditional={c['conditional']} but array has {len(P['primary_conditional'])}")
+    if c["author_contact_candidates"] != len(P["primary_author_contact_candidates"]):
+        probs.append("counts.author_contact_candidates disagrees with its array")
+    if c["candidate_pool"] != c["strict"] + c["conditional"]:
+        probs.append("candidate_pool != strict + conditional")
+    if not P.get("reconciles"):
+        probs.append("pathway does not reconcile to the included-study total")
+    total = c["reporting_relevant_24h_info"] + c["other_outcome_contributors"] + c["no_pooled_model"]
+    if total != c["included_rcts"]:
+        probs.append(f"buckets sum to {total}, expected {c['included_rcts']} included RCTs")
+    check("Pathway counts are derived from their arrays and reconcile to the review total",
+          not probs, "\n".join(probs))
+
+
+def t_pathway_categories_disjoint():
+    """A study cannot be strict and conditional, nor a candidate counted as strict."""
+    P = _pathway()
+    probs = []
+    groups = {
+        "strict": P["primary_strict"],
+        "conditional": P["primary_conditional"],
+        "candidate": P["primary_author_contact_candidates"],
+        "other": P["other_outcome_contributors"],
+        "none": P["no_pooled_model"],
+    }
+    seen = {}
+    for name, rows in groups.items():
+        for r in rows:
+            for sid in (r.get("study_ids") or ([r["study_id"]] if r.get("study_id") else [])):
+                if sid in seen:
+                    probs.append(f"{r['study_unit']} appears in both {seen[sid]} and {name}")
+                seen[sid] = name
+    # an author-contact candidate must never be silently pooled
+    strict_units = {r["study_unit"] for r in P["primary_strict"]}
+    for r in P["primary_author_contact_candidates"]:
+        if r["study_unit"] in strict_units:
+            probs.append(f"candidate {r['study_unit']} is also counted as strict")
+    check("Pathway categories are mutually exclusive; no candidate is silently counted as strict",
+          not probs, "\n".join(probs))
+
+
+def t_pathway_n_matches_denominators():
+    """Displayed strict/conditional N must equal the summed analysed denominators."""
+    P = _pathway()
+    c = P["counts"]
+    probs = []
+    for key, arr in (("strict_n", "primary_strict"), ("conditional_n", "primary_conditional")):
+        want = sum(r["n_i"] + r["n_c"] for r in P[arr])
+        if c[key] != want:
+            probs.append(f"counts.{key}={c[key]} but {arr} denominators sum to {want}")
+    rows = [x for x in read_csv(DATA / "opioid_24h_primary.csv") if x["inc_primary"] == "1"]
+    stata_n = sum(int(x["n_i"]) + int(x["n_c"]) for x in rows)
+    if c["strict_n"] != stata_n:
+        probs.append(f"strict N {c['strict_n']} != locked dataset N {stata_n}")
+    check("Pathway N values equal the summed analysed denominators", not probs, "\n".join(probs))
+
+
+def t_pathway_results_match_stata():
+    """Strict and broader pooled results must come from the Stata master table."""
+    P = _pathway()
+    probs = []
+    for label, aid in (("strict_md", "OP24_PRIM_COMB"),
+                       ("strict_smd", "OP24_STRICT_SMD"),
+                       ("broader_smd", "OP24_BROADER_SMD")):
+        got = P["results"].get(label)
+        if not got:
+            probs.append(f"{label} missing from the pathway")
+            continue
+        ref = BY_ID.get(aid)
+        if not ref:
+            probs.append(f"{aid} missing from master_reconciled_results_v26.csv")
+            continue
+        for fld, nd in (("estimate", 4), ("ci_low", 4), ("ci_high", 4), ("p_value", 5)):
+            a, b = got.get(fld), round(float(ref[fld]), nd) if ref[fld] else None
+            if a is None or b is None or abs(a - b) > 10 ** (-nd + 1):
+                probs.append(f"{label}.{fld}: pathway {a} vs Stata {b}")
+        if got["k"] != int(float(ref["k"])):
+            probs.append(f"{label}.k: pathway {got['k']} vs Stata {ref['k']}")
+    # the strict analysis must never be displaced by the broader one
+    if P["results"].get("broader_smd") and P["results"]["broader_smd"]["k"] <= P["results"]["strict_md"]["k"]:
+        probs.append("broader analysis is not larger than the strict analysis")
+    check("Pathway pooled results match the final Stata output exactly", not probs, "\n".join(probs))
+
+
+def t_pathway_no_fabricated_md_pool():
+    """No mean-difference pool may be claimed across the full candidate pool."""
+    P = _pathway()
+    est = P["md_pool_estimability"]
+    probs = []
+    if est["with_estimable_md"] >= est["candidate_pool_k"]:
+        probs.append("an MD is claimed for the whole candidate pool; the lock forbids the "
+                     "body-weight reconstruction that would require")
+    for r in MASTER:
+        if r["target"].startswith("Primary 24-h") and re.match(r"^MD\b", r["effect_measure"]):
+            if int(float(r["k"])) > P["counts"]["strict"]:
+                probs.append(f"{r['analysis_id']} reports an MD at k={r['k']} > strict k")
+    # the withdrawn k=11 MD must not reappear
+    if re.search(r"k\s*=\s*11[^<]{0,120}(MD|mean difference)", LIVE_UI, re.I):
+        probs.append("a k=11 mean difference is presented as a live result")
+    check("No mean-difference pool is fabricated across the full k=11 candidate pool",
+          not probs, "\n".join(probs))
+
+
+def t_pathway_contact_status_documented():
+    """Contact status must never be inferred; every candidate needs a source reason."""
+    P = _pathway()
+    allowed = {"NOT YET CONTACTED", "CONTACT PREPARED", "CONTACTED — AWAITING RESPONSE",
+               "RESPONSE RECEIVED — NO USABLE DATA", "RESPONSE RECEIVED — DATA UNDER REVIEW",
+               "RESPONSE RECEIVED — USABLE PRIMARY DATA", "RESOLVED WITHOUT AUTHOR CONTACT",
+               "NOT REQUIRED", "STATUS NOT DOCUMENTED"}
+    probs = []
+    for r in P["primary_author_contact_candidates"]:
+        ac = r.get("author_contact") or {}
+        if ac.get("status") not in allowed:
+            probs.append(f"{r['study_unit']}: unrecognised contact status {ac.get('status')!r}")
+        if not ac.get("status_basis"):
+            probs.append(f"{r['study_unit']}: contact status asserted with no stated basis")
+        if not (r.get("source_qc") or r.get("documented_issue")):
+            probs.append(f"{r['study_unit']}: listed as a candidate with no documented source reason")
+        # statuses implying contact happened need evidence the project does not hold
+        if ac.get("status", "").startswith(("CONTACTED", "RESPONSE RECEIVED")):
+            probs.append(f"{r['study_unit']}: claims {ac['status']} but the project records "
+                         f"no sent/response field anywhere")
+    check("Author-contact status is documented, never inferred; every candidate has a source reason",
+          not probs, "\n".join(probs))
+
+
+def t_pathway_wording():
+    """Non-contributing trials must not be described as excluded from the review."""
+    probs = []
+    for m in re.finditer(r"[^.]{0,160}excluded from the (?:review|systematic review)[^.]{0,80}\.", LIVE_UI, re.I):
+        seg = m.group(0)
+        if not re.search(r"\bnot excluded|never excluded|are not\b", seg, re.I):
+            probs.append("non-negated 'excluded from the review': " + seg.strip()[:130])
+    if re.search(r"\b57 (studies|trials) excluded\b", LIVE_UI, re.I):
+        probs.append("'57 studies excluded' framing present")
+    P = _pathway()
+    if "processed" in LIVE_UI and re.search(r"only \d+ of \d+ .{0,30}processed", LIVE_UI, re.I):
+        probs.append("implies only a subset of trials were processed")
+    check("Non-contributing trials are never called 'excluded from the review'",
+          not probs, "\n".join(probs))
+
+
+def t_pathway_is_dynamic():
+    """The flow must be generated, not written into the HTML."""
+    probs = []
+    if not (DASH / "primary_pathway.js").exists():
+        probs.append("primary_pathway.js missing")
+    if "renderPrimaryPathway" not in APP:
+        probs.append("renderPrimaryPathway() not defined")
+    if 'id="pathway-flow"' not in HTML:
+        probs.append("pathway flow container missing from the HTML")
+    # the flow numbers must not be hardcoded in the pathway markup
+    m = re.search(r'<!-- PRIMARY OUTCOME CONTRIBUTION PATHWAY(.*?)<!-- Section 1', HTML, re.S)
+    if m:
+        body = re.sub(r"<!--.*?-->", "", m.group(1), flags=re.S)
+        for lit in ("63", "k = 6", "k=6", "k = 11", "k=11", "N = 628", "N = 945"):
+            if lit in body:
+                probs.append(f"pathway markup hardcodes {lit!r}; it must come from PRIMARY_PATHWAY")
+    check("Contribution pathway is generated from data, with no hardcoded counts in the markup",
+          not probs, "\n".join(probs))
+
+
 def t_dashboard_docs_parity():
     a = {p.relative_to(DASH): p for p in DASH.rglob("*") if p.is_file()}
     b = {p.relative_to(DOCS): p for p in DOCS.rglob("*") if p.is_file()}
@@ -790,6 +975,11 @@ def main() -> int:
                                     t_dashboard_docs_parity]),
         ("Wording & i18n", [t_outcome_hierarchy, t_translations_do_not_contradict,
                             t_author_contacts_not_stale]),
+        ("Primary contribution pathway", [t_pathway_counts_derive, t_pathway_categories_disjoint,
+                                          t_pathway_n_matches_denominators, t_pathway_results_match_stata,
+                                          t_pathway_no_fabricated_md_pool,
+                                          t_pathway_contact_status_documented,
+                                          t_pathway_wording, t_pathway_is_dynamic]),
     ]
 
     for title, tests in sections:

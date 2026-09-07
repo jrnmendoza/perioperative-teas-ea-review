@@ -1,0 +1,532 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/10_broader24h_sensitivity.log
+  log type:  text
+ opened on:   7 Sep 2026, 11:07:59
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "10: BROADER 24-H OPIOID SENSITIVITY & ESTIMABILITY AUDIT"
+10: BROADER 24-H OPIOID SENSITIVITY & ESTIMABILITY AUDIT
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
+
+. 
+. * ------------------------------------------------------------------------------
+. * 1. CANDIDATE POOL COMPOSITION
+. * ------------------------------------------------------------------------------
+. gen byte strict      = (inc_primary == 1)
+
+. gen byte conditional = (inc_sens == 1 & inc_primary == 0)
+
+. gen byte broadpool   = (strict == 1 | conditional == 1)
+
+. gen int  n_total     = n_i + n_c
+
+. 
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. CANDIDATE POOL COMPOSITION"
+1. CANDIDATE POOL COMPOSITION
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. count if strict == 1
+  6
+
+. local k_strict = r(N)
+
+. summarize n_total if strict == 1, meanonly
+
+. local n_strict = r(sum)
+
+. 
+. count if conditional == 1
+  5
+
+. local k_cond = r(N)
+
+. summarize n_total if conditional == 1, meanonly
+
+. local n_cond = r(sum)
+
+. 
+. count if broadpool == 1
+  11
+
+. local k_pool = r(N)
+
+. summarize n_total if broadpool == 1, meanonly
+
+. local n_pool = r(sum)
+
+. 
+. di as txt "Strict primary contributors      : k = `k_strict', N = `n_strict'"
+Strict primary contributors      : k = 6, N = 628
+
+. di as txt "Conditional (broader assumptions): k = `k_cond', N = `n_cond'"
+Conditional (broader assumptions): k = 5, N = 317
+
+. di as txt "Combined candidate pool          : k = `k_pool', N = `n_pool'"
+Combined candidate pool          : k = 11, N = 945
+
+. 
+. di as txt _n "Conditional study units:"
+
+Conditional study units:
+
+. list study_unit unit data_type if conditional == 1, clean noobs
+
+                  study_unit               unit    data_type  
+                   Chen 2015     mg IV morphine   Median/IQR  
+    Chen 2015 (Hyperalgesia)   µg/kg sufentanil   Median/IQR  
+                  Coura 2011     µg/kg fentanyl      Mean/SD  
+                    Sim 2002     mg/kg morphine      Mean/SD  
+                  Zhang 2025      µg sufentanil      Mean/SD  
+
+. 
+. * ------------------------------------------------------------------------------
+. * 2. ESTIMABILITY AUDIT
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. ESTIMABILITY AUDIT ACROSS THE CANDIDATE POOL"
+2. ESTIMABILITY AUDIT ACROSS THE CANDIDATE POOL
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. 
+. count if broadpool == 1 & !missing(md_mme, se_mme)
+  7
+
+. local k_md = r(N)
+
+. count if broadpool == 1 & !missing(hedges_g, hedges_se)
+  9
+
+. local k_smd = r(N)
+
+. 
+. di as txt "Pool members with an MD in mg IV MME : `k_md' of `k_pool'"
+Pool members with an MD in mg IV MME : 7 of 11
+
+. di as txt "Pool members with Hedges' g          : `k_smd' of `k_pool'"
+Pool members with Hedges' g          : 9 of 11
+
+. 
+. di as txt _n "Members with NO estimable MD (weight-normalised or Median/IQR):"
+
+Members with NO estimable MD (weight-normalised or Median/IQR):
+
+. list study_unit unit data_type if broadpool == 1 & missing(md_mme), clean noobs
+
+                  study_unit               unit    data_type  
+                   Chen 2015     mg IV morphine   Median/IQR  
+    Chen 2015 (Hyperalgesia)   µg/kg sufentanil   Median/IQR  
+                  Coura 2011     µg/kg fentanyl      Mean/SD  
+                    Sim 2002     mg/kg morphine      Mean/SD  
+
+. di as txt _n "Members with NO estimable SMD (Median/IQR, no derived mean/SD):"
+
+Members with NO estimable SMD (Median/IQR, no derived mean/SD):
+
+. list study_unit unit data_type if broadpool == 1 & missing(hedges_g), clean noobs
+
+                  study_unit               unit    data_type  
+                   Chen 2015     mg IV morphine   Median/IQR  
+    Chen 2015 (Hyperalgesia)   µg/kg sufentanil   Median/IQR  
+
+. 
+. di as txt _n "CONCLUSION: a k=`k_pool' mean-difference pool is NOT estimable without"
+
+CONCLUSION: a k=11 mean-difference pool is NOT estimable without
+
+. di as txt "reconstructing absolute doses from group-mean body weights, which the"
+reconstructing absolute doses from group-mean body weights, which the
+
+. di as txt "v26 lock explicitly prohibits. No such model is fitted."
+v26 lock explicitly prohibits. No such model is fitted.
+
+. 
+. * ------------------------------------------------------------------------------
+. * 3. BROADER SMD SENSITIVITY ANALYSIS (scale-free; k=9)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. BROADER SMD SENSITIVITY (REML + Hartung-Knapp)"
+3. BROADER SMD SENSITIVITY (REML + Hartung-Knapp)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. 
+. gen byte broad_smd = (broadpool == 1 & !missing(hedges_g, hedges_se))
+
+. count if broad_smd == 1
+  9
+
+. local k_broadsmd = r(N)
+
+. summarize n_total if broad_smd == 1, meanonly
+
+. local n_broadsmd = r(sum)
+
+. di as txt "Broader SMD set: k = `k_broadsmd', N = `n_broadsmd'"
+Broader SMD set: k = 9, N = 803
+
+. list study_unit unit if broad_smd == 1, clean noobs
+
+                   study_unit               unit  
+                   Coura 2011     µg/kg fentanyl  
+                     Sim 2002     mg/kg morphine  
+                   Zhang 2025      µg sufentanil  
+                    Chen 1998   mg hydromorphone  
+                    Chen 2020      µg sufentanil  
+               El-Rakshy 2009     mg IV morphine  
+    He 2026 (hepatectomy/JIS)             mg MME  
+           Seevaunnamtum 2016        mg morphine  
+                    Yang 2024        mg morphine  
+
+. 
+. meta set hedges_g hedges_se if broad_smd == 1, studylabel(study_unit) ///
+>     eslabel("Standardized Mean Difference (Hedges' g)")
+(6 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 9
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Standardized Mean Difference (Hedges' g)
+          Variable: hedges_g
+
+         Precision
+         Std. err.: hedges_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Standardized Mean Difference (Hedges' g)
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      9
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  1.0283
+SE adjustment: Knapp–Hartung                                I2 (%) =   95.19
+                                                                H2 =   20.79
+
+               Effect size: Standardized Mean Difference (Hedges' g)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+               Coura 2011 |         -1.553      -2.519      -0.587      9.67
+                 Sim 2002 |         -0.526      -1.040      -0.011     11.20
+               Zhang 2025 |         -0.670      -1.088      -0.252     11.44
+                Chen 1998 |         -0.958      -1.543      -0.373     11.00
+                Chen 2020 |         -3.505      -4.203      -2.807     10.64
+           El-Rakshy 2009 |         -0.088      -0.493       0.317     11.47
+He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147     11.66
+       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202     11.22
+                Yang 2024 |         -0.062      -0.354       0.230     11.70
+--------------------------+-------------------------------------------------
+                    theta |         -0.880      -1.699      -0.060
+----------------------------------------------------------------------------
+Test of theta = 0: t(8) = -2.48                          Prob > |t| = 0.0383
+Test of homogeneity: Q = chi2(8) = 96.46                   Prob > Q = 0.0000
+
+. matrix res_broad = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+. 
+. meta forestplot, ///
+>     title("BROADER 24-h SENSITIVITY (SMD): strict + conditional trials", size(medium)) ///
+>     subtitle("Random-effects REML + Hartung-Knapp (k=`k_broadsmd')", size(small)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Standardized Mean Difference (Hedges' g)
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: study_unit
+
+. graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_opioid24_broader_smd.png", width(1800) repla
+> ce
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
+    > t_opioid24_broader_smd.png saved as PNG format
+
+. 
+. * Strict SMD on the identical metric, for a like-for-like comparison.
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "4. STRICT SMD REFERENCE (same metric, k=`k_strict')"
+4. STRICT SMD REFERENCE (same metric, k=6)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. meta set hedges_g hedges_se if strict == 1, studylabel(study_unit) ///
+>     eslabel("Standardized Mean Difference (Hedges' g)")
+(9 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study_unit
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Standardized Mean Difference (Hedges' g)
+          Variable: hedges_g
+
+         Precision
+         Std. err.: hedges_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Standardized Mean Difference (Hedges' g)
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: study_unit
+
+Meta-analysis summary                             Number of studies =      6
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  1.5975
+SE adjustment: Knapp–Hartung                                I2 (%) =   97.24
+                                                                H2 =   36.18
+
+               Effect size: Standardized Mean Difference (Hedges' g)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |         -0.958      -1.543      -0.373     16.39
+                Chen 2020 |         -3.505      -4.203      -2.807     16.03
+           El-Rakshy 2009 |         -0.088      -0.493       0.317     16.86
+He 2026 (hepatectomy/JIS) |         -0.164      -0.476       0.147     17.04
+       Seevaunnamtum 2016 |         -0.707      -1.212      -0.202     16.62
+                Yang 2024 |         -0.062      -0.354       0.230     17.07
+--------------------------+-------------------------------------------------
+                    theta |         -0.890      -2.259       0.479
+----------------------------------------------------------------------------
+Test of theta = 0: t(5) = -1.67                          Prob > |t| = 0.1556
+Test of homogeneity: Q = chi2(5) = 90.47                   Prob > Q = 0.0000
+
+. matrix res_strictsmd = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+. 
+. * ------------------------------------------------------------------------------
+. * 5. EXPORT
+. * ------------------------------------------------------------------------------
+. clear
+
+. set obs 2
+Number of observations (_N) was 0, now 2.
+
+. gen analysis_id      = ""
+(2 missing values generated)
+
+. gen analysis_type    = ""
+(2 missing values generated)
+
+. gen stratum          = ""
+(2 missing values generated)
+
+. gen k                = .
+(2 missing values generated)
+
+. gen n_participants   = .
+(2 missing values generated)
+
+. gen effect_measure   = ""
+(2 missing values generated)
+
+. gen estimate         = .
+(2 missing values generated)
+
+. gen ci_low           = .
+(2 missing values generated)
+
+. gen ci_high          = .
+(2 missing values generated)
+
+. gen p_value          = .
+(2 missing values generated)
+
+. gen tau2             = .
+(2 missing values generated)
+
+. gen i2               = .
+(2 missing values generated)
+
+. gen q_stat           = .
+(2 missing values generated)
+
+. gen model            = ""
+(2 missing values generated)
+
+. gen notes            = ""
+(2 missing values generated)
+
+. 
+. replace analysis_id    = "OP24_STRICT_SMD" in 1
+variable analysis_id was str1 now str15
+(1 real change made)
+
+. replace analysis_type  = "Strict primary (SMD reference)" in 1
+variable analysis_type was str1 now str30
+(1 real change made)
+
+. replace stratum        = "Strict primary 24-h opioid, Hedges g" in 1
+variable stratum was str1 now str36
+(1 real change made)
+
+. replace k              = res_strictsmd[1,5] in 1
+(1 real change made)
+
+. replace n_participants = `n_strict' in 1
+(1 real change made)
+
+. replace effect_measure = "Hedges g (SMD)" in 1
+variable effect_measure was str1 now str14
+(1 real change made)
+
+. replace estimate       = res_strictsmd[1,1] in 1
+(1 real change made)
+
+. replace ci_low         = res_strictsmd[1,2] in 1
+(1 real change made)
+
+. replace ci_high        = res_strictsmd[1,3] in 1
+(1 real change made)
+
+. replace p_value        = res_strictsmd[1,4] in 1
+(1 real change made)
+
+. replace tau2           = res_strictsmd[1,6] in 1
+(1 real change made)
+
+. replace i2             = res_strictsmd[1,7] in 1
+(1 real change made)
+
+. replace q_stat         = res_strictsmd[1,8] in 1
+(1 real change made)
+
+. replace model          = "REML + Hartung-Knapp" in 1
+variable model was str1 now str20
+(1 real change made)
+
+. replace notes          = "Strict set on the SMD metric; comparator for the broader SMD model" in 1
+variable notes was str1 now str66
+(1 real change made)
+
+. 
+. replace analysis_id    = "OP24_BROADER_SMD" in 2
+variable analysis_id was str15 now str16
+(1 real change made)
+
+. replace analysis_type  = "Broader sensitivity (SMD)" in 2
+(1 real change made)
+
+. replace stratum        = "Strict + conditional 24-h opioid, Hedges g" in 2
+variable stratum was str36 now str42
+(1 real change made)
+
+. replace k              = res_broad[1,5] in 2
+(1 real change made)
+
+. replace n_participants = `n_broadsmd' in 2
+(1 real change made)
+
+. replace effect_measure = "Hedges g (SMD)" in 2
+(1 real change made)
+
+. replace estimate       = res_broad[1,1] in 2
+(1 real change made)
+
+. replace ci_low         = res_broad[1,2] in 2
+(1 real change made)
+
+. replace ci_high        = res_broad[1,3] in 2
+(1 real change made)
+
+. replace p_value        = res_broad[1,4] in 2
+(1 real change made)
+
+. replace tau2           = res_broad[1,6] in 2
+(1 real change made)
+
+. replace i2             = res_broad[1,7] in 2
+(1 real change made)
+
+. replace q_stat         = res_broad[1,8] in 2
+(1 real change made)
+
+. replace model          = "REML + Hartung-Knapp" in 2
+(1 real change made)
+
+. replace notes          = "Adds Coura 2011, Sim 2002, Zhang 2025. Chen 2015 x2 remain unpoolable (M
+> edian/IQR). A k=11 MD pool is not estimable without prohibited body-weight reconstruction." in 2
+variable notes was str66 now str162
+(1 real change made)
+
+. 
+. save "06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.dta", replace
+(file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.dta not found)
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.dta saved
+
+. export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.csv", replace
+(file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.csv not found)
+file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.csv saved
+
+. list analysis_id k n_participants estimate ci_low ci_high p_value i2, clean noobs
+
+         analysis_id   k   n_part~s    estimate      ci_low     ci_high    p_value         i2  
+     OP24_STRICT_SMD   6        628   -.8898861   -2.258725    .4789527   .1555576   97.23626  
+    OP24_BROADER_SMD   9        803   -.8798046   -1.699115   -.0604942    .038334   95.18996  
+
+. 
+. di as txt _n "SUCCESS: broader 24-h sensitivity analysis complete."
+
+SUCCESS: broader 24-h sensitivity analysis complete.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
+> logs/10_broader24h_sensitivity.log
+  log type:  text
+ closed on:   7 Sep 2026, 11:08:00
+----------------------------------------------------------------------------------------------------

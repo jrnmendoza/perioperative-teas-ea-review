@@ -56,6 +56,10 @@ do "06_FINAL_ANALYSIS_V26/02_STATA/08_sensitivity.do"
 di as txt _n ">>> STEP 10: Running 09_subgroups_metareg.do ..."
 do "06_FINAL_ANALYSIS_V26/02_STATA/09_subgroups_metareg.do"
 
+* 11. Broader 24-h Sensitivity & Estimability Audit
+di as txt _n ">>> STEP 11: Running 10_broader24h_sensitivity.do ..."
+do "06_FINAL_ANALYSIS_V26/02_STATA/10_broader24h_sensitivity.do"
+
 di as txt _n "=================================================================="
 di as txt "MASTER VERIFICATION & ANALYSIS PIPELINE COMPLETED SUCCESSFULLY!"
 di as txt "All models executed under StataNow 19.5 SE."

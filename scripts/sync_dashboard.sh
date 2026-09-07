@@ -42,6 +42,7 @@ diff -rq "$SRC" "$DST" >/dev/null && echo "Parity verified: dashboard/ == docs/"
 #    whenever someone edits data.js but forgets to bump it.
 HASH="$(cat "$SRC/data.js" "$SRC/app.js" "$SRC/translations.js" \
              "$SRC/meta_engine.js" "$SRC/reader_assist.js" "$SRC/styles.css" \
+             "$SRC/primary_pathway.js" \
         | shasum -a 256 | cut -c1-12)"
 /usr/bin/sed -i '' -E "s/\?v=[A-Za-z0-9_]+/?v=${HASH}/g" "$SRC/index.html"
 echo "Cache buster set from content hash: ${HASH}"
