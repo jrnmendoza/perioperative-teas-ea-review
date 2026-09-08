@@ -30,6 +30,10 @@ def norm(v):
 def main() -> int:
     draft = {(norm(r["study"]), norm(r["outcome"]), norm(r["timepoint"])): r
              for r in read(HERE / "v34_rob2_draft_assessments.csv")}
+    # Keys of the 36 results this pipeline actually assessed (as opposed to the
+    # ones folded in below from an earlier adjudicated record) -- used to give
+    # the dashboard a result -> model membership map for filtering.
+    own_keys = set(draft)
 
     # Results that already carry an adjudicated result-specific judgement are
     # folded in at the same level, tagged by provenance. A model's GRADE
@@ -53,6 +57,7 @@ def main() -> int:
         + sorted(DATA.glob("v34_gi_first_defecation_*.csv"))
 
     models = defaultdict(list)
+    result_models = defaultdict(set)
     for ds in datasets:
         if ds.name == "v34_model_manifest.csv":
             continue
@@ -60,6 +65,8 @@ def main() -> int:
             mid = r.get("model") or ds.stem
             key = (norm(r.get("study")), norm(r.get("outcome")), norm(r.get("window")))
             models[mid].append((r.get("study", ""), draft.get(key)))
+            if key in own_keys:
+                result_models[key].add(mid)
 
     out = []
     for mid, contribs in sorted(models.items()):
@@ -96,6 +103,21 @@ def main() -> int:
         w = csv.DictWriter(f, fieldnames=list(out[0].keys()), lineterminator="\n")
         w.writeheader()
         w.writerows(out)
+
+    # Result -> contributing model(s), for dashboard filtering. Every one of
+    # the 36 assessed results must appear, even if (for a priority-1 row held
+    # out of every dataset for some other reason) it maps to zero models.
+    rm_rows = [dict(study=draft[key]["study"], outcome=draft[key]["outcome"],
+                    timepoint=draft[key]["timepoint"],
+                    models="; ".join(sorted(result_models.get(key, set()))))
+               for key in own_keys]
+    rmp = HERE / "v34_rob2_result_models.csv"
+    with rmp.open("w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["study", "outcome", "timepoint", "models"],
+                           lineterminator="\n")
+        w.writeheader()
+        w.writerows(rm_rows)
+    print(f"wrote {rmp.relative_to(ROOT)}")
 
     print(f"{'model':<38} {'k':>2} {'judged':>6} {'L':>3}{'S':>3}{'H':>3}  worst          signal")
     for r in out:

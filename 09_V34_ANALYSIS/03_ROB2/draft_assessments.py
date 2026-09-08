@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """
-Draft result-specific Cochrane RoB 2 assessments for the 36 priority-1 results.
+Result-specific Cochrane RoB 2 assessments for the 36 priority-1 results.
 
-STATUS OF THIS FILE. These are DRAFT judgements produced by reading each source
-PDF against the RoB 2 signalling questions. RoB 2 requires two independent human
-assessors reaching consensus, and this review reports those assessors' judgements
-under their names. Nothing here is written into the frozen v34 workbook, and every
-row carries status ROB2_RESULT_SPECIFIC_DRAFT_PENDING_ADJUDICATION until the
-review's assessors sign it off.
+PROVENANCE. Each judgement was produced by reading the mapped source PDF
+against the RoB 2 signalling questions; nothing here is copied from an earlier
+study-wide judgement. Standard Cochrane RoB 2 practice calls for two
+independent assessors reconciling any disagreement. On 2026-09-08 the review
+lead (John Ryan N. Mendoza) directed, in this repository's working session,
+that these source-evidence-derived judgements be adopted as the review's
+current result-specific RoB 2 assessment; that direction is recorded in
+ADOPTED_BY / ADOPTED_DATE below. No separately documented independent
+dual-assessor record was provided to this pipeline to verify against, so that
+should not be inferred from the ADOPTED status. Nothing here is written into
+the frozen v34 workbook.
 
 Each judgement is anchored to quoted text with a page locator in
 evidence.json, extracted by extract_evidence.py from the mapped source in
@@ -587,8 +592,17 @@ def main() -> int:
             rationale=" ".join(a["rationale"].split()),
             flags=a["flags"],
             source_pdf=pdf_map.get(r["study"], ""),
-            status="ROB2_RESULT_SPECIFIC_DRAFT_PENDING_ADJUDICATION",
-            assessors_required="two independent human assessors + consensus",
+            status="ROB2_RESULT_SPECIFIC_ADOPTED",
+            adopted_by="John Ryan N. Mendoza (review lead)",
+            adopted_date="2026-09-08",
+            provenance_note=(
+                "Adopted by the review lead's direction on 2026-09-08. Domain "
+                "judgements and rationale are the source-evidence extraction, "
+                "unchanged by adoption. Standard Cochrane RoB 2 practice calls "
+                "for two independent assessors reconciling disagreement; no "
+                "separately documented dual-assessor record was provided to "
+                "this pipeline."
+            ),
         ))
 
     if missing:

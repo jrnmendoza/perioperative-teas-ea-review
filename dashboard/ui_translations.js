@@ -519,32 +519,26 @@ Object.assign(window.UI_TRANSLATIONS_SV, {
   "groups held for shared-arm or comparator adjudication before any pooling":
     "grupper som avvaktar bedömning av delad arm eller kontrolltyp innan någon poolning",
 
-  "New and restratified v34 analyses carry result-specific risk-of-bias assessments that are still pending adjudication, so no GRADE certainty is presented for them. Draft judgements now exist for all 36 of the results inside a fitted model, but a draft is not an adjudicated judgement. Previous GRADE ratings describe the earlier syntheses and are not carried across to a materially changed model.":
-    "Nya och omstratifierade v34-analyser har resultatspecifika bias-bedömningar som ännu inte är slutbedömda, och därför redovisas ingen GRADE-tillförlitlighet för dem. Utkast till bedömningar finns nu för samtliga 36 resultat som ingår i en anpassad modell, men ett utkast är inte en slutbedömning. Tidigare GRADE-bedömningar beskriver de äldre syntesarna och överförs inte till en väsentligt förändrad modell."
 });
 
 // v34 adjudication-resolution strings.
 Object.assign(window.UI_TRANSLATIONS_SV, {
   "groups still held for comparator or shared-arm adjudication":
     "grupper som fortfarande avvaktar bedömning av kontrolltyp eller delad arm",
-  "result-specific risk-of-bias assessments outstanding inside a fitted model":
-    "resultatspecifika bias-bedömningar som återstår inom en anpassad modell",
-  "result-specific risk-of-bias assessments inside a fitted model — all drafted, none adjudicated":
-    "resultatspecifika bias-bedömningar inom en anpassad modell – samtliga i utkast, ingen slutbedömd",
+  "result-specific RoB 2 assessments inside a fitted model — adopted by the review lead":
+    "resultatspecifika RoB 2-bedömningar inom en anpassad modell – antagna av granskningsledaren",
   "Comparator and modality classification resolved":
     "Klassificering av kontrolltyp och modalitet är löst"
 });
 
-// Draft result-specific RoB 2 panel strings.
+// Result-specific RoB 2 panel strings (adopted status).
 Object.assign(window.UI_TRANSLATIONS_SV, {
-  "DRAFT — not adjudicated":
-    "UTKAST – ej slutbedömt",
-  "Show the 36 draft result-specific judgements with their supporting evidence":
-    "Visa de 36 resultatspecifika utkastbedömningarna med underliggande evidens",
-  "What each fitted model would inherit if these drafts were confirmed":
-    "Vad varje anpassad modell skulle ärva om dessa utkast bekräftades",
-  "Domains (draft)":
-    "Domäner (utkast)",
+  "Show the 36 result-specific judgements with their supporting evidence":
+    "Visa de 36 resultatspecifika bedömningarna med underliggande evidens",
+  "What each fitted model inherits from these results":
+    "Vad varje anpassad modell ärver från dessa resultat",
+  "Click a model row to filter the results above to that model.":
+    "Klicka på en modellrad för att filtrera resultaten ovan till den modellen.",
   "Low risk":
     "Låg risk",
   "High risk":
@@ -553,8 +547,20 @@ Object.assign(window.UI_TRANSLATIONS_SV, {
     "Underlag i källan",
   "GRADE risk-of-bias signal":
     "GRADE-signal för risk för bias",
-  "Result-specific RoB 2 is a judgement made by assessors, not a value derivable from the data, and Cochrane requires two independent assessors reaching consensus. No study-wide judgement was copied onto a different result. The rows below are the ones inside a fitted model, so they are what currently blocks a GRADE rating. Each now carries a DRAFT judgement read from the source article and anchored to quoted text; drafts are not adjudicated judgements and do not release the GRADE hold.":
-    "Resultatspecifik RoB 2 är en bedömning som görs av bedömare, inte ett värde som kan härledas ur data, och Cochrane kräver att två oberoende bedömare når konsensus. Ingen studieövergripande bedömning har överförts till ett annat resultat. Raderna nedan är de som ingår i en anpassad modell och är därför det som för närvarande blockerar en GRADE-bedömning. Var och en har nu en UTKASTBEDÖMNING som lästs fram ur källartikeln och är förankrad i citerad text; utkast är inte slutbedömningar och upphäver inte GRADE-spärren.",
-  "DRAFT ONLY. Each of these judgements was derived by reading the mapped source article against the RoB 2 signalling questions, and every domain is anchored to quoted text with a page locator in 09_V34_ANALYSIS/03_ROB2/evidence.json. They are judged per RESULT, not per study: D4 in particular turns on who measured that specific outcome and whether they were blinded. Cochrane RoB 2 requires two independent human assessors reaching consensus, so nothing here is written into the frozen v34 workbook and no GRADE certainty is released on their basis. The model rollup shows what each pooled estimate would inherit if the drafts were confirmed.":
-    "ENDAST UTKAST. Varje bedömning har härletts genom att läsa den kopplade källartikeln mot RoB 2:s signalfrågor, och varje domän är förankrad i citerad text med sidhänvisning i 09_V34_ANALYSIS/03_ROB2/evidence.json. De är bedömda per RESULTAT, inte per studie: särskilt D4 avgörs av vem som mätte just det utfallet och om denne var blindad. Cochrane RoB 2 kräver två oberoende mänskliga bedömare som når konsensus, och därför skrivs ingenting av detta in i den låsta v34-arbetsboken och ingen GRADE-tillförlitlighet frisläpps på denna grund. Modellsammanställningen visar vad varje poolad skattning skulle ärva om utkasten bekräftades."
+  "Overall: all":
+    "Sammantaget: alla",
+  "Outcome family: all":
+    "Utfallsfamilj: alla",
+  "Study: all":
+    "Studie: alla",
+  "Model/synthesis: all":
+    "Modell/syntes: alla",
+  "Reset":
+    "Återställ",
+  "Result-specific RoB 2 is a judgement made by assessors, not a value derivable from the data. No study-wide judgement was copied onto a different result. The rows below are the ones inside a fitted model. Each carries a source-evidence-derived judgement, anchored to quoted text, adopted by the review lead on 2026-09-08 as the review's current result-specific RoB 2 assessment for these results.":
+    "Resultatspecifik RoB 2 är en bedömning som görs av bedömare, inte ett värde som kan härledas ur data. Ingen studieövergripande bedömning har överförts till ett annat resultat. Raderna nedan är de som ingår i en anpassad modell. Var och en bygger på en källbaserad bedömning, förankrad i citerad text, som granskningsledaren antog 2026-09-08 som granskningens aktuella resultatspecifika RoB 2-bedömning för dessa resultat.",
+  "Each of these judgements was derived by reading the mapped source article against the RoB 2 signalling questions, and every domain is anchored to quoted text with a page locator in 09_V34_ANALYSIS/03_ROB2/evidence.json. They are judged per RESULT, not per study: D4 in particular turns on who measured that specific outcome and whether they were blinded. Adopted by the review lead on 2026-09-08 as the review's current result-specific RoB 2 assessment. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling any disagreement; no separately documented dual-assessor record was provided to this pipeline to verify against, so that should not be inferred from the adopted status. The model rollup shows the RoB 2 composition each pooled estimate inherits from these results.":
+    "Varje bedömning har härletts genom att läsa den kopplade källartikeln mot RoB 2:s signalfrågor, och varje domän är förankrad i citerad text med sidhänvisning i 09_V34_ANALYSIS/03_ROB2/evidence.json. De är bedömda per RESULTAT, inte per studie: särskilt D4 avgörs av vem som mätte just det utfallet och om denne var blindad. Antagen av granskningsledaren 2026-09-08 som granskningens aktuella resultatspecifika RoB 2-bedömning. Cochranes standardpraxis för RoB 2 kräver två oberoende bedömare som löser eventuella meningsskiljaktigheter; inget separat dokumenterat tvåbedömarunderlag har lämnats till detta arbetsflöde att kontrollera mot, vilket alltså inte ska tolkas in i den antagna statusen. Modellsammanställningen visar den RoB 2-sammansättning varje poolad skattning ärver från dessa resultat.",
+  "New and restratified v34 analyses now carry a result-specific risk-of-bias assessment for all 36 of the results inside a fitted model, adopted by the review lead on 2026-09-08 (see rob2_results). That removes the RoB-2-specific reason these analyses previously carried no GRADE certainty rating. It does NOT by itself constitute a completed GRADE rating: inconsistency, imprecision, indirectness and publication bias for these five new v34 models (GI recovery, pain, PONV) still need to be assessed against the fitted estimates before a certainty rating can be issued, and that assessment has not been done here. Previous GRADE ratings describe the earlier syntheses and are not carried across to a materially changed model.":
+    "Nya och omstratifierade v34-analyser har nu en resultatspecifik bias-bedömning för samtliga 36 resultat som ingår i en anpassad modell, antagen av granskningsledaren 2026-09-08 (se rob2_results). Det tar bort det specifika RoB 2-skälet till att dessa analyser tidigare saknade en GRADE-tillförlitlighet. Det utgör INTE i sig en fullständig GRADE-bedömning: samstämmighet (inconsistency), precision, direkthet och publikationsbias för dessa fem nya v34-modeller (GI-återhämtning, smärta, PONV) behöver fortfarande bedömas mot de anpassade skattningarna innan en tillförlitlighetsgrad kan anges, och den bedömningen är inte gjord här. Tidigare GRADE-bedömningar beskriver de äldre syntesarna och överförs inte till en väsentligt förändrad modell."
 });

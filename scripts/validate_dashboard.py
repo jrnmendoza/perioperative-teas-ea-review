@@ -1809,17 +1809,17 @@ def t_author_contacts_not_stale():
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-# ── draft result-specific RoB 2 ───────────────────────────────────────────
-def _rob2_drafts():
+# ── result-specific RoB 2 (adopted) ───────────────────────────────────────
+def _rob2_results():
     rows = read_csv(ROOT / "09_V34_ANALYSIS" / "03_ROB2" /
                     "v34_rob2_draft_assessments.csv")
     return rows
 
 
-def t_rob2_drafts_cover_the_worklist():
+def t_rob2_results_cover_the_worklist():
     """
-    Every priority-1 row -- the results inside a fitted model -- must have a
-    draft, and every draft must correspond to a real priority-1 row.
+    Every priority-1 row -- the results inside a fitted model -- must have an
+    assessment, and every assessment must correspond to a real priority-1 row.
 
     A partial set would leave some pooled estimates with an unstated
     risk-of-bias basis while the panel implies all of them are covered.
@@ -1827,71 +1827,101 @@ def t_rob2_drafts_cover_the_worklist():
     work = [r for r in read_csv(ROOT / "09_V34_ANALYSIS" / "v34_rob2_worklist.csv")
             if r["priority"].startswith("1")]
     want = {(r["study"], r["outcome"], r["timepoint"]) for r in work}
-    got = {(r["study"], r["outcome"], r["timepoint"]) for r in _rob2_drafts()}
+    got = {(r["study"], r["outcome"], r["timepoint"]) for r in _rob2_results()}
     probs = []
     for k in sorted(want - got):
-        probs.append(f"no draft for {k[0]} / {k[1]} @ {k[2]}")
+        probs.append(f"no assessment for {k[0]} / {k[1]} @ {k[2]}")
     for k in sorted(got - want):
-        probs.append(f"draft for a row that is not priority-1: {k[0]} / {k[1]} @ {k[2]}")
-    check("Draft RoB 2 judgements cover exactly the results inside a fitted model",
+        probs.append(f"assessment for a row that is not priority-1: {k[0]} / {k[1]} @ {k[2]}")
+    check("Result-specific RoB 2 judgements cover exactly the results inside a fitted model",
           not probs, "\n".join(probs))
 
 
-def t_rob2_drafts_are_labelled_draft():
+def t_rob2_results_carry_honest_provenance():
     """
-    A draft must never be presented as an adjudicated judgement.
+    An AI-derived judgement must never be presented as an independently
+    double-assessed one it wasn't, in either direction.
 
-    Cochrane RoB 2 is the review's central quality appraisal and is reported
-    under named assessors. If the dashboard showed these as settled, the review
-    would be claiming an appraisal that no assessor has made.
+    These 36 judgements were produced by reading the source articles, then
+    adopted by the review lead as the review's working assessment on
+    2026-09-08 -- that is what actually happened, and it is what must be
+    recorded. The check fails if the status/provenance fields are missing
+    (silently presenting them as if nobody is answerable for the status
+    change), AND fails if the dashboard claims something stronger that did
+    not happen -- an independent dual-assessor record this pipeline was never
+    given. Cochrane RoB 2 is the review's central quality appraisal; getting
+    its recorded provenance wrong in either direction misrepresents it.
     """
     probs = []
-    for r in _rob2_drafts():
-        if r["status"] != "ROB2_RESULT_SPECIFIC_DRAFT_PENDING_ADJUDICATION":
+    for r in _rob2_results():
+        if r["status"] != "ROB2_RESULT_SPECIFIC_ADOPTED":
             probs.append(f"{r['study']} / {r['outcome']}: status is {r['status']!r}")
+        if not r.get("adopted_by") or not r.get("adopted_date"):
+            probs.append(f"{r['study']} / {r['outcome']}: missing adopted_by/adopted_date")
     v34 = (ROOT / "dashboard" / "v34_data.js").read_text(encoding="utf-8")
-    if '"rob2_drafts"' in v34:
-        if "ROB2_RESULT_SPECIFIC_DRAFT_PENDING_ADJUDICATION" not in v34:
-            probs.append("v34_data.js carries drafts without the pending-adjudication status")
-        if "two independent human assessors" not in v34:
-            probs.append("v34_data.js drafts do not state that two assessors are required")
+    if '"rob2_results"' in v34:
+        # The results array holds 36 long rationales, so the relevant fields
+        # can be tens of KB past the "rob2_results" key -- search the whole
+        # file for these specific, unlikely-to-collide markers rather than a
+        # fixed-size slice.
+        if "ROB2_RESULT_SPECIFIC_ADOPTED" not in v34:
+            probs.append("v34_data.js rob2_results does not carry the adopted status")
+        if '"adopted_by"' not in v34 or '"adopted_date"' not in v34:
+            probs.append("v34_data.js rob2_results does not carry adopted_by/adopted_date")
+        if "dual-assessor record" not in v34:
+            probs.append("v34_data.js rob2_results note drops the no-separate-record disclosure")
     app = (ROOT / "dashboard" / "app.js").read_text(encoding="utf-8")
-    if "v34RobDraftsHtml" in app and "DRAFT — not adjudicated" not in app:
-        probs.append("the drafts panel does not carry a visible DRAFT label")
-    check("Draft RoB 2 judgements are labelled as drafts, not as adjudicated judgements",
+    if "v34RobResultsHtml" in app:
+        if "Adopted ${" not in app and "Adopted " not in app:
+            probs.append("the results panel does not visibly show who/when adopted this")
+        # Guard against a future edit re-introducing the unverified claim this
+        # session specifically declined to write.
+        if re.search(r"independently\s+(double|dual)[- ]assess", app, re.I):
+            probs.append("the results panel claims independent dual-assessment that "
+                         "this pipeline has no record of")
+    check("Result-specific RoB 2 judgements carry honest, checkable provenance "
+          "(adopted-by-review-lead, not a fabricated independent dual-assessment)",
           not probs, "\n".join(probs))
 
 
-def t_rob2_drafts_do_not_release_grade():
+def t_rob2_grade_note_distinguishes_domain_from_full_rating():
     """
-    Drafting the outstanding assessments must not release the GRADE hold.
+    Adopting the RoB 2 domain must not be presented as a completed GRADE rating.
 
-    The v34 handover is explicit that a materially changed synthesis does not
-    inherit an earlier GRADE rating, and an unadjudicated draft is not a basis
-    for issuing a new one.
+    RoB 2 is one of five GRADE domains. Removing its specific hold on these
+    five new v34 models does not, by itself, mean inconsistency, imprecision,
+    indirectness and publication bias have been assessed for them -- and this
+    pipeline has not assessed those. The certainty note must say so plainly
+    rather than implying GRADE is now finished for these models.
     """
     v34 = (ROOT / "dashboard" / "v34_data.js").read_text(encoding="utf-8")
     probs = []
     if '"certainty_note"' in v34:
-        note = v34.split('"certainty_note"', 1)[1][:800]
-        if "pending" not in note.lower():
-            probs.append("certainty_note no longer says the assessments are pending")
-        if "draft" not in note.lower():
-            probs.append("certainty_note does not distinguish a draft from an adjudicated judgement")
-    check("Draft RoB 2 judgements do not release the GRADE hold",
-          not probs, "\n".join(probs))
+        note = v34.split('"certainty_note"', 1)[1][:1200]
+        if "adopted" not in note.lower():
+            probs.append("certainty_note does not reflect that RoB 2 was adopted")
+        if not re.search(r"not[^.]{0,40}(a )?completed? GRADE|NOT[^.]{0,60}completed? grade",
+                         note, re.I):
+            probs.append("certainty_note does not state that this is not a completed GRADE rating")
+        missing_domains = [d for d in ("inconsistency", "imprecision", "indirectness",
+                                       "publication bias") if d not in note.lower()]
+        if missing_domains:
+            probs.append(f"certainty_note does not name the still-unassessed GRADE domains: "
+                         f"{missing_domains}")
+    check("The GRADE certainty note distinguishes 'RoB 2 domain adopted' from "
+          "'GRADE rating completed'", not probs, "\n".join(probs))
 
 
-def t_rob2_drafts_are_result_specific():
+def t_rob2_results_are_result_specific():
     """
     A study contributing several results must be judged per result, not once.
 
     The specific failure this guards against is a study-wide judgement copied
-    across that study's results: the v34 handover names it, and it would hide
-    exactly the differences -- who measured this outcome, and were they blinded
-    -- that make D4 result-specific.
+    across that study's results, which would hide exactly the differences --
+    who measured this outcome, and were they blinded -- that make D4
+    result-specific.
     """
-    rows = _rob2_drafts()
+    rows = _rob2_results()
     by_study = {}
     for r in rows:
         by_study.setdefault(r["study"], []).append(r)
@@ -1908,17 +1938,17 @@ def t_rob2_drafts_are_result_specific():
     varies = any(len({r["d4_measurement"] for r in rs}) > 1 for rs in multi.values())
     if not varies:
         probs.append("no study varies its D4 judgement across its own results")
-    check("Draft RoB 2 judgements are made per result, not copied study-wide",
+    check("Result-specific RoB 2 judgements are made per result, not copied study-wide",
           not probs, "\n".join(probs))
 
 
-def t_rob2_draft_overall_follows_algorithm():
+def t_rob2_overall_follows_algorithm():
     """
     Overall risk must follow the RoB 2 algorithm, not be assigned by impression.
     """
     rank = {"Low": 0, "Some concerns": 1, "High": 2}
     probs = []
-    for r in _rob2_drafts():
+    for r in _rob2_results():
         doms = [r["d1_randomisation"], r["d2_deviations"], r["d3_missing"],
                 r["d4_measurement"], r["d5_reporting"]]
         bad = [d for d in doms if d not in rank]
@@ -1929,15 +1959,16 @@ def t_rob2_draft_overall_follows_algorithm():
         if r["overall"] != want:
             probs.append(f"{r['study']} / {r['outcome']}: overall {r['overall']!r} "
                          f"but domains imply {want!r}")
-    check("Draft overall risk follows the RoB 2 algorithm from its own domains",
+    check("Overall RoB 2 risk follows the algorithm from its own domains",
           not probs, "\n".join(probs))
 
 
 def t_rob2_model_rollup_is_complete():
     """
     Every model must have a risk-of-bias basis for all of its contributing
-    results -- drafted here or already adjudicated. A rollup that silently
-    omits a contributor would understate what a pooled estimate inherits.
+    results -- assessed here or already adjudicated elsewhere. A rollup that
+    silently omits a contributor would understate what a pooled estimate
+    inherits.
     """
     rows = read_csv(ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_model_rollup.csv")
     probs = []
@@ -1953,6 +1984,38 @@ def t_rob2_model_rollup_is_complete():
                          f"but {r['results_total']} results were judged")
     check("Every fitted model has a risk-of-bias basis for all its contributing results",
           not probs, "\n".join(probs))
+
+
+def t_rob2_source_qc_flags_preserved():
+    """
+    Source-QC problems found while reading the PDFs (Huang 2025's conflicting
+    reported values, Xing 2022's inconsistent allocation description, Zheng
+    2025's uncertain flatus definition) are a different thing from the RoB 2
+    judgement and must stay visible regardless of RoB 2's status.
+
+    Adopting a RoB 2 judgement is not evidence the underlying source problem
+    is resolved, and this check exists so a future edit cannot make the
+    dashboard look cleaner by quietly dropping these flags.
+    """
+    expect = {
+        "Huang 2025": "inconsistency",
+        "Xing 2022": "allocation",
+        "Zheng 2025": "flatus",
+    }
+    probs = []
+    rows = _rob2_results()
+    for study, marker in expect.items():
+        matches = [r for r in rows if r["study"] == study and r.get("flags")]
+        if not matches:
+            probs.append(f"{study}: no source-QC flag found on any of its results")
+            continue
+        if not any(marker in r["flags"].lower() for r in matches):
+            probs.append(f"{study}: flag text lost the expected marker {marker!r}")
+    app = (ROOT / "dashboard" / "app.js").read_text(encoding="utf-8")
+    if "r.flags" not in app:
+        probs.append("the results panel no longer renders the flags field at all")
+    check("Known source-QC warnings (Huang 2025, Xing 2022, Zheng 2025) remain "
+          "visible and distinct from RoB 2 status", not probs, "\n".join(probs))
 
 
 def main() -> int:
@@ -1972,12 +2035,13 @@ def main() -> int:
                                    t_yu_wang_excluded, t_yeh_not_double_counted]),
         ("Estimand separation", [t_ponv_strata_separate, t_target_f_estimands_separate]),
         ("Risk of bias", [t_rob_pending_not_high, t_rob_result_specific]),
-        ("Draft result-specific RoB 2", [t_rob2_drafts_cover_the_worklist,
-                                         t_rob2_drafts_are_labelled_draft,
-                                         t_rob2_drafts_do_not_release_grade,
-                                         t_rob2_drafts_are_result_specific,
-                                         t_rob2_draft_overall_follows_algorithm,
-                                         t_rob2_model_rollup_is_complete]),
+        ("Result-specific RoB 2 (adopted)", [t_rob2_results_cover_the_worklist,
+                                             t_rob2_results_carry_honest_provenance,
+                                             t_rob2_grade_note_distinguishes_domain_from_full_rating,
+                                             t_rob2_results_are_result_specific,
+                                             t_rob2_overall_follows_algorithm,
+                                             t_rob2_model_rollup_is_complete,
+                                             t_rob2_source_qc_flags_preserved]),
         ("Withdrawn analyses", [t_no_withdrawn_metareg, t_small_study_effects]),
         ("GRADE", [t_grade_consistent]),
         ("Downloads & deployment", [t_downloads_resolve, t_downloads_are_current,

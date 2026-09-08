@@ -3286,7 +3286,7 @@ function renderV34() {
         <div class="v34-hold"><span class="v34-hold-n">${V.poolable_scan.shared_arm_holds}</span>
           <span>groups still held for comparator or shared-arm adjudication</span></div>
         <div class="v34-hold"><span class="v34-hold-n">${(V.rob2_worklist||{}).blocking_grade ?? '—'}</span>
-          <span>result-specific risk-of-bias assessments inside a fitted model — all drafted, none adjudicated</span></div>
+          <span>result-specific RoB 2 assessments inside a fitted model — adopted by the review lead</span></div>
       </div>
       ${V.comparator_resolution ? `
       <div style="margin-top:0.8rem;padding:0.6rem 0.75rem;background:rgba(52,211,153,0.06);
@@ -3308,14 +3308,14 @@ function renderV34() {
                   border-left:3px solid rgba(148,163,184,0.45);border-radius:var(--radius-sm);">
         <div style="font-weight:700;color:#cbd5e1;font-size:0.8rem;">
           Result-specific risk of bias — ${V.rob2_worklist.blocking_grade} assessments
-          inside fitted models, drafted and awaiting adjudication</div>
+          inside fitted models</div>
         <div style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
           ${pwEsc(V.rob2_worklist.note)}
         </div>
-        ${V.rob2_drafts && V.rob2_drafts.count ? v34RobDraftsHtml(V.rob2_drafts) : `
+        ${V.rob2_results && V.rob2_results.count ? v34RobResultsHtml(V.rob2_results) : `
         <details style="margin-top:0.4rem;">
           <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
-            Show the ${V.rob2_worklist.blocking_grade} results awaiting assessment</summary>
+            Show the ${V.rob2_worklist.blocking_grade} results</summary>
           <ul style="margin:0.4rem 0 0 1rem;font-size:0.75rem;color:var(--text-muted);line-height:1.65;">
             ${V.rob2_worklist.blocking_list.map(r =>
               `<li>${pwEsc(r.study)} — ${pwEsc(r.outcome)} @ ${pwEsc(r.timepoint)}</li>`).join('')}
@@ -3330,13 +3330,17 @@ function renderV34() {
 }
 
 
-// Draft result-specific RoB 2 judgements for the results inside a fitted model.
-// DRAFTS ONLY: read from the source article against the RoB 2 signalling
-// questions and anchored to quoted text, but not adjudicated. Cochrane RoB 2
-// requires two independent human assessors reaching consensus, so these are
-// shown as drafts, are not written into the frozen workbook, and do not release
-// the GRADE hold. Each is judged for its own RESULT — a study-wide judgement is
-// never displayed in place of a result-specific one.
+// Result-specific RoB 2 judgements for the results inside a fitted model.
+// Read from the source article against the RoB 2 signalling questions and
+// anchored to quoted text; not written into the frozen workbook. Adopted by
+// the review lead on 2026-09-08 as the review's current result-specific RoB 2
+// assessment (see adopted_by / adopted_date on the payload and on each row).
+// Standard Cochrane RoB 2 practice calls for two independent assessors
+// reconciling any disagreement -- no separately documented dual-assessor
+// record was provided to this pipeline, and the panel says so; that is not
+// the same as the assessment being incomplete or unadopted. Each result is
+// judged on its own — a study-wide judgement is never displayed in place of
+// a result-specific one.
 function v34RobTone(v){
   return v === 'High' ? '#fca5a5'
        : v === 'Some concerns' ? '#fcd34d'
@@ -3347,16 +3351,23 @@ function v34RobChip(label, v){
     border-radius:3px;background:rgba(255,255,255,0.05);font-size:0.66rem;
     color:${v34RobTone(v)};white-space:nowrap;">${label} ${pwEsc(v)}</span>`;
 }
-function v34RobDraftsHtml(D){
+function v34RobResultsFilterOptions(D, field){
+  return [...new Set((D.results||[]).map(r => r[field]).filter(Boolean))].sort();
+}
+function v34RobResultsHtml(D){
   const oc = D.overall_counts || {};
   const order = ['Low','Some concerns','High'];
   const summary = order.filter(k=>oc[k]).map(k=>
     `<span style="color:${v34RobTone(k)};font-weight:700;">${oc[k]} ${pwEsc(k)}</span>`).join(' · ');
+  const families = v34RobResultsFilterOptions(D, 'family');
+  const studies = v34RobResultsFilterOptions(D, 'study');
   const rows = (D.results||[]).map(r => `
-    <tr>
+    <tr data-rob-study="${pwEsc(r.study)}" data-rob-family="${pwEsc(r.family)}"
+        data-rob-overall="${pwEsc(r.overall)}" data-rob-models="${pwEsc(r.models||'')}">
       <td style="padding:0.3rem 0.4rem;vertical-align:top;">
         <div style="font-weight:600;color:var(--text-primary);">${pwEsc(r.study)}</div>
         <div style="color:var(--text-muted);font-size:0.7rem;">${pwEsc(r.outcome)} @ ${pwEsc(r.timepoint)}</div>
+        <div style="color:var(--text-muted);font-size:0.68rem;margin-top:0.1rem;">${pwEsc(r.intervention||'')} vs ${pwEsc(r.comparator||'')}</div>
       </td>
       <td style="padding:0.3rem 0.4rem;vertical-align:top;white-space:nowrap;">
         ${v34RobChip('D1',r.d1)}${v34RobChip('D2',r.d2)}${v34RobChip('D3',r.d3)}
@@ -3368,10 +3379,13 @@ function v34RobDraftsHtml(D){
                  font-size:0.7rem;line-height:1.55;">
         ${pwEsc(r.rationale)}
         ${r.flags ? `<div style="margin-top:0.2rem;color:#fcd34d;">⚑ ${pwEsc(r.flags)}</div>` : ''}
+        <div style="margin-top:0.2rem;color:var(--text-muted);">source: ${pwEsc(r.source_pdf||'')}</div>
       </td>
     </tr>`).join('');
   const roll = (D.model_rollup||[]).map(m => `
-    <tr>
+    <tr class="v34-rob-model-row" data-rob-model="${pwEsc(m.model_id)}"
+        style="cursor:pointer;" title="Click to filter the results below to this model"
+        onclick="v34FilterRobByModel('${pwEsc(m.model_id)}')">
       <td style="padding:0.25rem 0.4rem;"><code>${pwEsc(m.model_id)}</code></td>
       <td style="padding:0.25rem 0.4rem;text-align:right;">${m.k}</td>
       <td style="padding:0.25rem 0.4rem;text-align:right;color:#6ee7b7;">${m.low}</td>
@@ -3383,25 +3397,46 @@ function v34RobDraftsHtml(D){
       </td>
     </tr>`).join('');
   return `
-    <div style="margin-top:0.5rem;padding:0.5rem 0.6rem;background:rgba(250,204,21,0.06);
-                border-left:3px solid rgba(250,204,21,0.5);border-radius:var(--radius-sm);">
-      <div style="font-weight:700;color:#fcd34d;font-size:0.78rem;">
-        DRAFT — not adjudicated</div>
+    <div style="margin-top:0.5rem;padding:0.5rem 0.6rem;background:rgba(125,211,252,0.06);
+                border-left:3px solid rgba(125,211,252,0.5);border-radius:var(--radius-sm);">
+      <div style="font-weight:700;color:#7dd3fc;font-size:0.78rem;">
+        Adopted ${pwEsc(D.adopted_date || '')} by ${pwEsc(D.adopted_by || 'the review lead')}</div>
       <div style="font-size:0.74rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
         ${pwEsc(D.note)}
       </div>
       <div style="margin-top:0.35rem;font-size:0.76rem;color:var(--text-secondary);">
-        ${D.count} drafted: ${summary}
+        ${D.count} assessed: ${summary}
       </div>
     </div>
-    <details style="margin-top:0.4rem;">
+    <details id="v34-rob-results-details" style="margin-top:0.4rem;">
       <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
-        Show the ${D.count} draft result-specific judgements with their supporting evidence</summary>
-      <div style="overflow-x:auto;margin-top:0.4rem;">
-        <table style="width:100%;min-width:720px;border-collapse:collapse;font-size:0.74rem;">
+        Show the ${D.count} result-specific judgements with their supporting evidence</summary>
+      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;margin:0.5rem 0 0.4rem;">
+        <select id="v34rob-f-overall" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters()">
+          <option value="">Overall: all</option>
+          ${order.filter(k=>oc[k]).map(k=>`<option value="${pwEsc(k)}">${pwEsc(k)}</option>`).join('')}
+        </select>
+        <select id="v34rob-f-family" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters()">
+          <option value="">Outcome family: all</option>
+          ${families.map(f=>`<option value="${pwEsc(f)}">${pwEsc(f)}</option>`).join('')}
+        </select>
+        <select id="v34rob-f-study" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters()">
+          <option value="">Study: all</option>
+          ${studies.map(s=>`<option value="${pwEsc(s)}">${pwEsc(s)}</option>`).join('')}
+        </select>
+        <select id="v34rob-f-model" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters()">
+          <option value="">Model/synthesis: all</option>
+          ${(D.model_rollup||[]).map(m=>`<option value="${pwEsc(m.model_id)}">${pwEsc(m.model_id)}</option>`).join('')}
+        </select>
+        <button type="button" class="filter-select" style="font-size:0.72rem;cursor:pointer;"
+                onclick="v34ResetRobFilters()">Reset</button>
+        <span id="v34rob-filter-count" style="font-size:0.72rem;color:var(--text-muted);"></span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table id="v34-rob-results-table" style="width:100%;min-width:720px;border-collapse:collapse;font-size:0.74rem;">
           <thead><tr style="color:var(--text-muted);text-align:left;">
             <th style="padding:0.3rem 0.4rem;">Result</th>
-            <th style="padding:0.3rem 0.4rem;">Domains (draft)</th>
+            <th style="padding:0.3rem 0.4rem;">Domains</th>
             <th style="padding:0.3rem 0.4rem;">Overall</th>
             <th style="padding:0.3rem 0.4rem;">Basis in the source</th>
           </tr></thead>
@@ -3411,8 +3446,9 @@ function v34RobDraftsHtml(D){
     </details>
     <details style="margin-top:0.3rem;">
       <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
-        What each fitted model would inherit if these drafts were confirmed</summary>
-      <div style="overflow-x:auto;margin-top:0.4rem;">
+        What each fitted model inherits from these results</summary>
+      <p style="font-size:0.7rem;color:var(--text-muted);margin:0.3rem 0;">Click a model row to filter the results above to that model.</p>
+      <div style="overflow-x:auto;margin-top:0.2rem;">
         <table style="width:100%;min-width:620px;border-collapse:collapse;font-size:0.74rem;">
           <thead><tr style="color:var(--text-muted);text-align:left;">
             <th style="padding:0.25rem 0.4rem;">Model</th>
@@ -3427,6 +3463,53 @@ function v34RobDraftsHtml(D){
       </div>
     </details>`;
 }
-window.v34RobDraftsHtml = v34RobDraftsHtml;
+window.v34RobResultsHtml = v34RobResultsHtml;
+
+// Client-side filtering over the rendered result-specific RoB 2 rows. Filters
+// combine with AND; the models column holds a "; "-separated list, so a model
+// filter matches on substring against that list, not exact equality.
+function v34ApplyRobFilters(){
+  const table = document.getElementById('v34-rob-results-table');
+  if (!table) return;
+  const ov = (document.getElementById('v34rob-f-overall')||{}).value || '';
+  const fam = (document.getElementById('v34rob-f-family')||{}).value || '';
+  const st = (document.getElementById('v34rob-f-study')||{}).value || '';
+  const mo = (document.getElementById('v34rob-f-model')||{}).value || '';
+  let shown = 0, total = 0;
+  table.querySelectorAll('tbody tr').forEach(tr => {
+    total++;
+    const match =
+      (!ov || tr.dataset.robOverall === ov) &&
+      (!fam || tr.dataset.robFamily === fam) &&
+      (!st || tr.dataset.robStudy === st) &&
+      (!mo || (tr.dataset.robModels||'').split('; ').includes(mo));
+    tr.hidden = !match;
+    if (match) shown++;
+  });
+  const countEl = document.getElementById('v34rob-filter-count');
+  if (countEl) countEl.textContent = (ov||fam||st||mo) ? `showing ${shown} of ${total}` : '';
+}
+function v34ResetRobFilters(){
+  ['v34rob-f-overall','v34rob-f-family','v34rob-f-study','v34rob-f-model'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  v34ApplyRobFilters();
+}
+// Coordination: clicking a model in the rollup table opens the results
+// disclosure (if collapsed) and filters the results table to that model,
+// mirroring the outcome-selection coordination used elsewhere in the dashboard.
+function v34FilterRobByModel(modelId){
+  const details = document.getElementById('v34-rob-results-details');
+  if (details) details.open = true;
+  const sel = document.getElementById('v34rob-f-model');
+  if (sel) { sel.value = modelId; }
+  v34ApplyRobFilters();
+  const table = document.getElementById('v34-rob-results-table');
+  if (table) table.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+window.v34ApplyRobFilters = v34ApplyRobFilters;
+window.v34ResetRobFilters = v34ResetRobFilters;
+window.v34FilterRobByModel = v34FilterRobByModel;
 
 window.renderV34 = renderV34;
