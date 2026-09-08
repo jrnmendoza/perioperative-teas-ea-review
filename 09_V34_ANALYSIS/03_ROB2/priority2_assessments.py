@@ -2348,6 +2348,272 @@ for drug in ("Remifentanil consumption", "Sufentanil consumption"):
         "intraoperative consumption not among the named postoperative secondary outcomes")
 
 
+# ============================================================================
+# Xing 2022 (s40122-022-00429-2.pdf) -- trial design established in
+# draft_assessments.py: D1 Low; D2 Low ('The allocation was blinded for all
+# patients, surgeons, the leading anesthesiologist, physician in the
+# post-anesthesia care unit, and follow-up observers'); D3 Low (1 lost per
+# arm). QoR-15 is the stated primary outcome; these results were reported
+# under 'Other secondary outcomes' without being individually named.
+# ============================================================================
+_xing22_base2 = (
+    "D1 Low: 'computer-generated random numbers'; 'Randomization codes were "
+    "kept in a sealed envelope and relayed to an independent nurse'. D2 Low: "
+    "'The allocation was blinded for all patients, surgeons, the leading "
+    "anesthesiologist, physician in the post-anesthesia care unit, and "
+    "follow-up observers until the end of the study'; 'The TEAS stimulator "
+    "was obscured by an opaque cloth'. D3 Low: 1 participant lost per arm "
+    "(29/29 of 30/30). ")
+_xing22_unnamed = (
+    "D5 Some concerns: registered ChiCTR2100042119 with QoR-15 as the "
+    "primary outcome; this result is reported under 'Other secondary "
+    "outcomes ... shown in Table 3' without being individually named in a "
+    "pre-specified list.")
+_xing22_d4 = (
+    " D4 Low for THIS result: 'The researchers who conducted data "
+    "collection and performed the outcome assessment were blinded to group "
+    "allocation', and participants were blinded by the opaque-cloth "
+    "arrangement.")
+
+add("Xing 2022", "PONV incidence", "Postoperative", L, L, L, L, S,
+    _xing22_base2 + _xing22_unnamed + _xing22_d4)
+add("Xing 2022", "Rest pain VAS", "24 h", L, L, L, L, S,
+    _xing22_base2 + _xing22_unnamed + _xing22_d4)
+add("Xing 2022", "PCIA pump press count", "48-h / 2-day PCIA period", L, L, L, L, S,
+    _xing22_base2 + _xing22_unnamed + _xing22_d4)
+add("Xing 2022", "Exact cumulative postoperative sufentanil delivered", "0-24 h", L, L, L, L, S,
+    _xing22_base2 + _xing22_unnamed + _xing22_d4)
+
+# ============================================================================
+# Xiong 2021 (covidence_431_full_article.pdf) -- a PONV-focused trial. D1
+# Low: 'a computerized random number generator'; 'Group assignment was
+# exposed from a sealed envelope only by an acupuncturist'; 'The acupoint
+# stimulation instrument was covered with an opaque box'. D2 Low: 'The
+# patients were blinded to the group assignment'; 'The anesthetists were not
+# blind ... but they were not involved in the postoperative assessment. An
+# anesthetic resident who was not involved in the anesthesia routine and who
+# was blinded to the group assignments performed the follow-up and data
+# collection.' D3 Low: 5 of 67 screened excluded before randomisation
+# (documented reasons), 62/62 randomised and completed.
+# ============================================================================
+_xiong21_base = (
+    "D1 Low: 'the patients were randomly assigned to the TEAS or control "
+    "groups using a computerized random number generator'; 'Group "
+    "assignment was exposed from a sealed envelope only by an "
+    "acupuncturist'; 'The acupoint stimulation instrument was covered with "
+    "an opaque box'. D2 Low: 'The patients were blinded to the group "
+    "assignment'; the intraoperative anaesthetist was not blind but 'was "
+    "not involved in the postoperative assessment', which was instead "
+    "performed by 'An anesthetic resident who was not involved in the "
+    "anesthesia routine and who was blinded to the group assignments'. D3 "
+    "Low: 5 of 67 screened patients excluded before randomisation "
+    "(documented reasons); all 62 randomised (31/31) completed. ")
+_xiong21_d4 = (
+    " D4 Low for THIS result: postoperative follow-up and data collection "
+    "were performed by 'an anesthetic resident who was not involved in the "
+    "anesthesia routine and who was blinded to the group assignments', for "
+    "genuinely blinded participants.")
+
+add("Xiong 2021", "Clinically important PONV", "Within 48 h", L, L, L, L, L,
+    _xiong21_base +
+    "D5 Low: this trial's central focus is PONV prophylaxis; clinically "
+    "important PONV is the core comparison reported throughout the Results."
+    + _xiong21_d4)
+add("Xiong 2021", "Any rescue antiemetic medication", "Within 48 h", L, L, L, L, L,
+    _xiong21_base +
+    "D5 Low: rescue antiemetic use is a standard companion measure to this "
+    "trial's central PONV outcome." + _xiong21_d4)
+add("Xiong 2021", "Postoperative opioid consumption", "Postoperative window unclear", L, L, L, S, S,
+    _xiong21_base +
+    "D5 Some concerns: opioid consumption is not itself named among this "
+    "PONV-focused trial's stated outcomes; the timepoint is also unclear. "
+    "D4 Some concerns for THIS result: the window is not specified, so it "
+    "is unclear whether this reflects intraoperative dosing set by the "
+    "unblinded anaesthetist or purely postoperative dosing recorded by the "
+    "blinded resident.",
+    "result not among the pre-specified outcomes; assessment window unclear")
+add("Xiong 2021", "Exact cumulative postoperative opioid dose", "0-24 h", L, L, L, L, S,
+    _xiong21_base +
+    "D5 Some concerns: not itself named among this PONV-focused trial's "
+    "stated outcomes." + _xiong21_d4)
+
+# ============================================================================
+# Yao 2015 (039_yao_2015.pdf) -- comprehensively blinded. D1 Low: 'a table of
+# computer-generated random numbers'. D2 Low: 'The patients, attending "
+# anesthesiologist, surgeons, recovery ward nurses, data collectors, and the
+# person who performed the final statistical analysis were blinded to group
+# assignment' -- a genuine double-blind, placebo-controlled design. D3 Low:
+# 3 of 74 (4%) excluded, documented.
+# ============================================================================
+_yao15_base2 = (
+    "D1 Low: 'Patients were assigned to either the TEAS group or the "
+    "control group by a table of computer-generated random numbers'. D2 "
+    "Low: 'The patients, attending anesthesiologist, surgeons, recovery "
+    "ward nurses, data collectors, and the person who performed the final "
+    "statistical analysis were blinded to group assignment' in this "
+    "double-blind, placebo-controlled trial. D3 Low: 3 of 74 (4%) excluded, "
+    "71 analysed. ")
+_yao15_secondary2 = (
+    "D5 Low: explicitly named among the secondary outcomes -- 'postoperative "
+    "pain scores, the incidence of postoperative nausea and vomiting "
+    "(PONV), duration of postanesthesia care unit (PACU) stay, and "
+    "patient's satisfaction'.")
+_yao15_d4_2 = (
+    " D4 Low for THIS result: this trial achieved genuine participant "
+    "blinding alongside comprehensive staff blinding, so even a subjective, "
+    "self-reported component of this measure is not exposed to differential "
+    "awareness of allocation.")
+
+add("Yao 2015", "Postoperative nausea", "0-24 h postoperative", L, L, L, L, L,
+    _yao15_base2 + _yao15_secondary2 + _yao15_d4_2)
+add("Yao 2015", "Postoperative vomiting", "0-24 h postoperative", L, L, L, L, L,
+    _yao15_base2 + _yao15_secondary2 + _yao15_d4_2)
+add("Yao 2015", "Cumulative number of rescue analgesia administrations", "0-24 h postoperative",
+    L, L, L, L, S,
+    _yao15_base2 +
+    "D5 Some concerns: 'postoperative pain scores' is named generally; "
+    "rescue-analgesia administration counts are not itself the specific "
+    "reported metric." + _yao15_d4_2,
+    "specific rescue-count metric not itself named among the outcomes")
+add("Yao 2015", "Time to first rescue analgesia", "0-24 h postoperative", L, L, L, L, S,
+    _yao15_base2 +
+    "D5 Some concerns: identical reasoning to the rescue-count result -- "
+    "'postoperative pain scores' is named generally, not this specific "
+    "time-to-event metric." + _yao15_d4_2,
+    "specific rescue-timing metric not itself named among the outcomes")
+
+# ============================================================================
+# Zhang 2014 (043_zhang_2014.pdf) -- comprehensively blinded, including the
+# unusual step of blinding the anaesthetist. D1 Low: 'a table of randomly
+# generated numbers'; 'both the randomisation and allocation lists were
+# concealed from the anaesthetists who gave the general anaesthetic'. D2
+# Low: genuine sham -- 'placebo gel electrodes applied to the same
+# acupressure p[oints]'; 'Recovery room nursing personnel were blinded'.
+# D3 Low: 7 of 72 (9.7%) dropped out, documented reasons.
+# ============================================================================
+_zhang14_base2 = (
+    "D1 Low: 'a randomisation sequence based on a table of randomly "
+    "generated numbers'; 'both the randomisation and allocation lists were "
+    "concealed from the anaesthetists who gave the general anaesthetic to "
+    "study patients'. D2 Low: 'The patients were not informed of the "
+    "allocation, and blinding was assured for other persons involved in the "
+    "study by using placebo gel electrodes applied to the same acupressure "
+    "p[oints]'; 'Recovery room nursing personnel were blinded to patient "
+    "study groups'; the treating acupuncturist was not masked but 'none "
+    "participated in data acquisition and analysis'. D3 Low: 7 of 72 (9.7%) "
+    "dropped out (3 declined TEAS, remainder met exclusion criteria), "
+    "documented. ")
+_zhang14_secondary2 = (
+    "D5 Low: explicitly named among the secondary endpoints -- 'the "
+    "consumption of anaesthetics, the time to removal of the LMA, the time "
+    "to reorientation and postoperative side-effects (incidence of "
+    "respiratory dep[ression, nausea and vomiting])'.")
+_zhang14_d4_2 = (
+    " D4 Low for THIS result: recovery room nursing personnel were "
+    "blinded, and the patient supplying any subjective component was also "
+    "genuinely blinded via the placebo-gel-electrode sham.")
+
+add("Zhang 2014", "Remifentanil consumption rate", "Intraoperative", L, L, L, L, L,
+    _zhang14_base2 + _zhang14_secondary2 +
+    " D4 Low for THIS result: uniquely among this review's trials, 'both "
+    "the randomisation and allocation lists were concealed from the "
+    "anaesthetists who gave the general anaesthetic', so intraoperative "
+    "dosing was set under genuinely blinded conditions.")
+add("Zhang 2014", "Postoperative nausea", "Postoperative", L, L, L, L, L,
+    _zhang14_base2 + _zhang14_secondary2 + _zhang14_d4_2)
+add("Zhang 2014", "Postoperative vomiting", "Postoperative", L, L, L, L, L,
+    _zhang14_base2 + _zhang14_secondary2 + _zhang14_d4_2)
+add("Zhang 2014", "Exact cumulative postoperative opioid dose", "0-24 h", L, L, L, L, S,
+    _zhang14_base2 +
+    "D5 Some concerns: 'consumption of anaesthetics' names the "
+    "intraoperative measure; a specific postoperative opioid dose figure is "
+    "not separately named." + _zhang14_d4_2,
+    "result not itself among the named secondary endpoints")
+
+# ============================================================================
+# Zhang 2023 (covidence_308_full_article.pdf) -- a large, comprehensively
+# blinded trial. D1 Low: block randomisation, 'sequentially numbered,
+# sealed, opaque envelopes'. D2 Low: 'The participants, outcome assessors,
+# staff responsible for the postoperative care and statisticians were
+# blinded to the treatment allocation'. D3 Low: 110 of 1948 (5.6%) withdrew,
+# documented.
+# ============================================================================
+_zhang23_base = (
+    "D1 Low: 'randomly assigned to the TEAS or sham group in a 1:1 ratio "
+    "using block randomization'; 'The randomized numbers were enclosed in "
+    "sequentially numbered, sealed, opaque envelopes'. D2 Low: 'The "
+    "participants, outcome assessors, staff responsible for the "
+    "postoperative care and statisticians were blinded to the treatment "
+    "allocation'. D3 Low: 53 and 57 of the 975/973 randomised (5.6% "
+    "overall) withdrew, leaving 1,838 analysed. ")
+_zhang23_secondary = (
+    "D5 Low: explicitly named among the secondary outcomes -- 'postoperative "
+    "urinary retention (POUR), voiding difficulty, oliguria, nocturia, "
+    "postoperative pain, sleep quality, anxiety and depression, vomiting, "
+    "early ambulation, length of hospital stay'.")
+_zhang23_d4 = (
+    " D4 Low for THIS result: participants, outcome assessors and "
+    "postoperative-care staff were all blinded to allocation.")
+
+add("Zhang 2023", "Postoperative urinary retention", "Postoperative", L, L, L, L, L,
+    _zhang23_base + _zhang23_secondary + _zhang23_d4)
+add("Zhang 2023", "Delayed urinary recovery (>12 h without spontaneous void)", "Postoperative",
+    L, L, L, L, L,
+    _zhang23_base +
+    "D5 Low: 'The primary outcome was the recovery of spontaneous voiding "
+    "ability after surgery, evaluated by the time between the surgery end "
+    "point and the first spontaneous voiding time'; this is a threshold "
+    "applied to that same primary measure." + _zhang23_d4)
+add("Zhang 2023", "Postoperative IV morphine-equivalent consumption", "Within 48 h", L, L, L, L, L,
+    _zhang23_base + _zhang23_secondary +
+    " D4 Low for THIS result: 'postoperative pain' is a named secondary "
+    "outcome domain in this trial, assessed under the same comprehensive "
+    "blinding.")
+add("Zhang 2023", "Exact cumulative postoperative opioid dose", "0-24 h", L, L, L, L, S,
+    _zhang23_base +
+    "D5 Some concerns: 'postoperative pain' is named generally as a "
+    "secondary outcome, but this specific 0-24h exact-dose figure is a "
+    "narrower construct than the paper's own 48h morphine-equivalent "
+    "reporting." + _zhang23_d4,
+    "narrower timepoint/construct than the paper's own named pain-domain metric")
+
+# ============================================================================
+# Zhou 2025 (105119.pdf) -- trial design established in draft_assessments.py:
+# D1 Low; D2 Low ('Patients, anesthesiologists, surgeons, and data
+# collectors remained blinded to group allocation'; genuine sham); D3 Low
+# (3/100 lost). QoR-15 is the primary outcome; these results are named
+# secondary 'Recovery times'/pain/PONV measures.
+# ============================================================================
+_zhou25_base2 = (
+    "D1 Low: 'a computer-generated randomization sequence'; 'Allocation was "
+    "concealed using sequentially numbered, sealed, opaque envelopes'. D2 "
+    "Low: 'Patients, anesthesiologists, surgeons, and data collectors "
+    "remained blinded to group allocation'; a credible sham with a "
+    "standardized interaction protocol for the (necessarily unblinded) "
+    "acupuncturist. D3 Low: 3 of 100 (3%) did not complete the study, "
+    "documented reasons. ")
+_zhou25_named2 = (
+    "D5 Low: named among the secondary outcomes -- postoperative pain "
+    "(VAS), PONV incidence and rescue antiemetics, and 'Recovery times' "
+    "including recovery-related timings.")
+_zhou25_d4_2 = (
+    " D4 Low for THIS result: participants were blinded by a credible sham "
+    "and 'data collectors' recording this result were also blinded.")
+
+add("Zhou 2025", "Resting pain VAS", "POD1", L, L, L, L, L,
+    _zhou25_base2 + _zhou25_named2 + _zhou25_d4_2)
+add("Zhou 2025", "PONV incidence", "POD1", L, L, L, L, L,
+    _zhou25_base2 + _zhou25_named2 + _zhou25_d4_2)
+add("Zhou 2025", "Any rescue analgesia", "POD1-POD3", L, L, L, L, L,
+    _zhou25_base2 + _zhou25_named2 + _zhou25_d4_2)
+add("Zhou 2025", "Exact cumulative postoperative opioid dose", "0-24 h", L, L, L, L, S,
+    _zhou25_base2 +
+    "D5 Some concerns: rescue analgesia use is named generally; this "
+    "specific exact-dose figure is not itself the paper's own reported "
+    "metric." + _zhou25_d4_2,
+    "exact-dose figure not itself the paper's own named metric")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
