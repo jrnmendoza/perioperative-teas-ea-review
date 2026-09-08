@@ -1167,6 +1167,100 @@ add("Liang 2021", "Exact cumulative postoperative opioid consumption", "0-24 h",
     _liang21_base2 + _liang21_not_declared + _liang21_d4_blinded)
 
 
+# ============================================================================
+# Lu 2021 (covidence_414_full_article.pdf) -- a 3-arm trial (sham/single-
+# acupoint/combined-acupoint); most of these priority-2 rows compare the
+# single-acupoint arm (n=198) against sham (n=188), distinct from the
+# combined-acupoint-vs-sham comparison (n=190/188) already assessed in
+# priority-1. Trial-level D1/D2/D3/D5 facts apply to both comparisons alike.
+# D1 Low: web-based randomisation, stratified permuted blocks. D2: outcome
+# assessors blinded ('anesthesiologists, surgeons, and outcome assessors
+# were blinded to the interventions'), but 'The patients and investigators
+# who participated in the intervention were not masked'. D3 Low: worst-case
+# imputation for missing data, ITT.
+# ============================================================================
+_lu21_base2 = (
+    "D1 Low: randomisation via 'a secured web-based system that was "
+    "stratified according to permuted blocks'. D2 Some concerns: "
+    "'anesthesiologists, surgeons, and outcome assessors were blinded to "
+    "the interventions', but 'The patients and investigators who "
+    "participated in the intervention were not masked'. D3 Low: analysed in "
+    "the intention-to-treat population, with a documented worst-case "
+    "imputation approach for missing pain-status data. ")
+_lu21_secondary2 = (
+    "D5 Low: explicitly named among the secondary endpoints -- "
+    "'remifentanil consumption during general anesthesia, the time to the "
+    "first verbal response and the time to endotracheal extubation, "
+    "postoperative nausea and vomiting (PONV), respiratory depression, "
+    "numeric rating scale (NRS) scores, and demand for rescue analgesics, "
+    "patient satisfaction scores on analgesia by 24 h after surgery, and "
+    "the incidence of chronic pain at 3 months after surgery'.")
+
+add("Lu 2021", "Time to extubation", "Immediate postoperative recovery", L, S, L, L, L,
+    _lu21_base2 + _lu21_secondary2 +
+    " D4 Low for THIS result: an objective clinical milestone assessed by "
+    "blinded outcome assessors.")
+add("Lu 2021", "Time to first verbal response", "Immediate postoperative recovery", L, S, L, L, L,
+    _lu21_base2 + _lu21_secondary2 +
+    " D4 Low for THIS result: identical reasoning to time to extubation -- "
+    "an objective milestone assessed by blinded outcome assessors.")
+add("Lu 2021", "Any PONV", "24 h", L, S, L, L, L,
+    _lu21_base2 + _lu21_secondary2 +
+    " D4 Low for THIS result: PONV recorded by blinded outcome assessors.")
+add("Lu 2021", "Vomiting incidence", "0–24 h", L, S, L, L, L,
+    _lu21_base2 + _lu21_secondary2 +
+    " D4 Low for THIS result: vomiting is an objectively observable event "
+    "recorded by blinded outcome assessors.")
+add("Lu 2021", "Nausea incidence", "0–24 h", L, S, L, S, L,
+    _lu21_base2 + _lu21_secondary2 +
+    " D4 Some concerns for THIS result: nausea is an internal sensation "
+    "reported by the unblinded participant, even though the assessor "
+    "recording it is blinded.")
+add("Lu 2021", "PONV severity score", "0–24 h", L, S, L, S, L,
+    _lu21_base2 + _lu21_secondary2 +
+    " D4 Some concerns for THIS result: severity scoring likely draws on "
+    "the same subjective nausea component as the incidence result above.")
+for tp in ("24 h after surgery",):
+    add("Lu 2021", "NRS at cough", tp, L, S, L, S, L,
+        _lu21_base2 + _lu21_secondary2 +
+        " D4 Some concerns for THIS result: NRS pain is self-reported by "
+        "the unblinded participant.")
+    add("Lu 2021", "NRS at rest", tp, L, S, L, S, L,
+        _lu21_base2 + _lu21_secondary2 +
+        " D4 Some concerns for THIS result: identical reasoning to NRS at "
+        "cough -- self-reported by the unblinded participant.")
+add("Lu 2021", "Demand for rescue parecoxib", "0–24 h", L, S, L, S, L,
+    _lu21_base2 + _lu21_secondary2 +
+    " D4 Some concerns for THIS result: 'demand for rescue analgesics' is "
+    "triggered by the unblinded participant's own pain report.")
+add("Lu 2021", "Analgesia satisfaction score", "By 24 h after surgery", L, S, L, S, L,
+    _lu21_base2 + _lu21_secondary2 +
+    " D4 Some concerns for THIS result: satisfaction is a subjective rating "
+    "given by the unblinded participant.")
+add("Lu 2021", "Post-mastectomy chronic pain incidence", "3 months", L, S, L, S, L,
+    _lu21_base2 + _lu21_secondary2.replace("at 3 months", "at 3 months (a secondary timepoint; "
+                                          "6 months is the trial's primary endpoint)") +
+    " D4 Some concerns for THIS result: chronic pain incidence at 3 months "
+    "is based on the unblinded participant's own long-term symptom report.")
+for tp in ("3 months", "6 months"):
+    add("Lu 2021", "NRS among participants reporting chronic pain", tp, L, S, L, S, L,
+        _lu21_base2 +
+        "D5 Low: 'In case of pain at 3 months or 6 months after surgery, "
+        "the severity of chronic pain was assessed using the NRS'." +
+        " D4 Some concerns for THIS result: a self-reported pain severity "
+        "score, conditional on the participant's own report of having "
+        "chronic pain, from an unblinded participant.")
+add("Lu 2021", "Cumulative postoperative sufentanil PCA consumption", "0-24 h", L, S, L, S, S,
+    _lu21_base2 +
+    "D5 Some concerns: the trial's named endpoint is 'remifentanil "
+    "consumption during general anesthesia' (intraoperative); postoperative "
+    "sufentanil PCA consumption is not itself a named secondary endpoint. "
+    "D4 Some concerns for THIS result: PCA consumption combines an "
+    "unblinded participant's own demand behaviour with pump settings, and "
+    "no blinded-assessor statement covers this specific measure.",
+    "result not among the pre-specified secondary endpoints")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
