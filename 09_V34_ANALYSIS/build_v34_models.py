@@ -45,9 +45,33 @@ MODELS = [
 ]
 
 
+def resolutions() -> dict:
+    """Modality/comparator classifications resolved by resolve_comparators.py.
+    Applied here so the datasets use exactly the classification the scan and the
+    dashboard use, rather than each re-deriving it."""
+    p = ROOT / "09_V34_ANALYSIS" / "v34_comparator_resolution.csv"
+    if not p.exists():
+        return {}
+    with p.open(encoding="utf-8-sig") as f:
+        return {r["record_id"]: (r["modality_after"], r["comparator_after"])
+                for r in csv.DictReader(f) if r.get("resolved") == "YES"}
+
+
+RESOLVED = resolutions()
+
+
 def read(name: str) -> list[dict]:
     with (DATA / f"v34_native_{name}.csv").open(encoding="utf-8-sig") as f:
-        return list(csv.DictReader(f))
+        rows = list(csv.DictReader(f))
+    for r in rows:
+        fix = RESOLVED.get(r.get("record_id"))
+        if not fix:
+            continue
+        if "REVIEW_REQUIRED" in r["modality"]:
+            r["modality"] = fix[0]
+        if "REVIEW_REQUIRED" in r["comparator_type"]:
+            r["comparator_type"] = fix[1]
+    return rows
 
 
 def num(v):

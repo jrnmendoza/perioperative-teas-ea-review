@@ -82,16 +82,16 @@ window.V34_DATA = {
       "unit": "VAS 0–10",
       "measure": "MD",
       "phase": "NEW",
-      "k": 2,
-      "estimate": -1.506,
-      "ci_low": -3.0345,
-      "ci_high": 0.0225,
-      "p_value": 0.05348,
-      "tau2": 1.1833,
-      "i2": 97.24,
-      "estimator": "REML normal CI",
-      "studies": "Gu 2019; Wu 2025",
-      "rob2_pending": 1
+      "k": 3,
+      "estimate": -1.4488,
+      "ci_low": -3.477,
+      "ci_high": 0.5794,
+      "p_value": 0.09156,
+      "tau2": 0.6341,
+      "i2": 92.12,
+      "estimator": "REML + Hartung-Knapp",
+      "studies": "Gu 2019; Lee 2011; Wu 2025",
+      "rob2_pending": 2
     },
     {
       "model_id": "ponv_24h_TEAS_Sham",
@@ -615,11 +615,213 @@ window.V34_DATA = {
       "Gao 2021 — 30-day complications (Supplementary Table S4)"
     ]
   },
+  "comparator_resolution": {
+    "rows_resolved": 122,
+    "rows_unresolved": 0,
+    "by_comparator": {
+      "Usual care": 62,
+      "Active Electrical": 52,
+      "Sham": 8
+    },
+    "by_modality": {
+      "TEAS": 106,
+      "EA": 16
+    },
+    "note": "Modality and comparator classifications left as REVIEW_REQUIRED in the v34 native data, resolved by applying the review's documented classifier: inert-sham markers are tested before device names, real current at a control site is Active Electrical, and an arm with no device -- including a balanced co-intervention -- is usual care. Where the arm text did not decide it, the study's canonical modality from the review's own study list was used. This is classification, not a new scientific judgement."
+  },
+  "rob2_worklist": {
+    "pairs_needing_assessment": 529,
+    "blocking_grade": 36,
+    "not_currently_pooled": 493,
+    "blocking_list": [
+      {
+        "study": "Chen 2015",
+        "outcome": "PONV incidence",
+        "timepoint": "0-24 h"
+      },
+      {
+        "study": "Chen 2015 (Hyperalgesia)",
+        "outcome": "PONV incidence",
+        "timepoint": "0-24 h"
+      },
+      {
+        "study": "Gao 2021",
+        "outcome": "Time to first bowel sounds",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Gao 2021",
+        "outcome": "Time to first defecation",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Gao 2021",
+        "outcome": "Time to first flatus",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Gu 2019",
+        "outcome": "Time to first bowel sounds",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Gu 2019",
+        "outcome": "Time to first defecation",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Gu 2019",
+        "outcome": "VAS pain intensity",
+        "timepoint": "24 h"
+      },
+      {
+        "study": "Guo 2023",
+        "outcome": "Remifentanil consumption",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "He 2026 (hepatectomy/JIS)",
+        "outcome": "PONV incidence",
+        "timepoint": "0-24 h"
+      },
+      {
+        "study": "Huang 2025",
+        "outcome": "Time to first defecation",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Lee 2011",
+        "outcome": "VAS pain intensity",
+        "timepoint": "24 h"
+      },
+      {
+        "study": "Liang 2021",
+        "outcome": "Global QoR-40",
+        "timepoint": "24 h (T11)"
+      },
+      {
+        "study": "Liang 2021",
+        "outcome": "Remifentanil consumption",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Liang 2021",
+        "outcome": "Sufentanil consumption",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Lu 2021",
+        "outcome": "Total remifentanil",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Lu 2022",
+        "outcome": "Time to first defecation",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Lu 2022",
+        "outcome": "Time to first flatus",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Ng 2013",
+        "outcome": "Time to first bowel motion / defecation",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Ntritsou 2014",
+        "outcome": "Remifentanil consumption",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Pan 2023",
+        "outcome": "Intraoperative remifentanil",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Pan 2023",
+        "outcome": "Total QoR-40 score",
+        "timepoint": "24 h after operation"
+      },
+      {
+        "study": "Song 2020",
+        "outcome": "Total intraoperative sufentanil consumption",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Wang 2023",
+        "outcome": "Time to first flatus",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Wang 2024",
+        "outcome": "Total sufentanil",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Wu 2022",
+        "outcome": "Cumulative remifentanil",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Xing 2022",
+        "outcome": "Time to first flatus",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Xing 2022",
+        "outcome": "Total remifentanil consumption",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Yang 2020",
+        "outcome": "Time to first defecation",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Yang 2024",
+        "outcome": "Time to first defecation",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Yang 2024",
+        "outcome": "Time to first flatus",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Zheng 2025",
+        "outcome": "Time to first flatus",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Zheng 2025",
+        "outcome": "Total intraoperative remifentanil consumption",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Zhou 2025",
+        "outcome": "Time to first flatus",
+        "timepoint": "Postoperative"
+      },
+      {
+        "study": "Zhu 2022",
+        "outcome": "Intraoperative remifentanil",
+        "timepoint": "Intraoperative"
+      },
+      {
+        "study": "Zhu 2022",
+        "outcome": "Intraoperative sufentanil",
+        "timepoint": "Intraoperative"
+      }
+    ],
+    "note": "Result-specific RoB 2 is a judgement made by assessors, not a value derivable from the data, and Cochrane requires two independent assessors reaching consensus. No assessment was generated here and no study-wide judgement was copied onto a different result. The rows below are the ones inside a fitted model, so they are what currently blocks a GRADE rating."
+  },
   "poolable_scan": {
-    "groups_examined": 602,
+    "groups_examined": 606,
     "candidates": 7,
-    "shared_arm_holds": 112,
-    "single_study": 267
+    "shared_arm_holds": 0,
+    "single_study": 341
   },
   "certainty_note": "New and restratified v34 analyses carry result-specific risk-of-bias assessments that are still pending, so no GRADE certainty is presented for them. Previous GRADE ratings describe the earlier syntheses and are not carried across to a materially changed model."
 };

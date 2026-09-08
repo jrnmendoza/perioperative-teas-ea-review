@@ -1,0 +1,3 @@
+study,outcome,timepoint,matched_status,basis
+Wu 2016,Postoperative nausea/vomiting incidence,Postoperative period; exact window not reported,EXISTING_RESULT_SPECIFIC: Some concerns,exact study + outcome + timepoint match to an existing result-specific assessment
+Oztas 2019,Cumulative IV PCA tramadol HCl consumption,0-24 h,EXISTING_RESULT_SPECIFIC: High,exact study + outcome + timepoint match to an existing result-specific assessment

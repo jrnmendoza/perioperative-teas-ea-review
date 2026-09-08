@@ -522,3 +522,13 @@ Object.assign(window.UI_TRANSLATIONS_SV, {
   "New and restratified v34 analyses carry result-specific risk-of-bias assessments that are still pending, so no GRADE certainty is presented for them. Previous GRADE ratings describe the earlier syntheses and are not carried across to a materially changed model.":
     "Nya och omstratifierade v34-analyser har resultatspecifika bias-bedömningar som ännu inte är klara, och därför redovisas ingen GRADE-tillförlitlighet för dem. Tidigare GRADE-bedömningar beskriver de äldre syntesarna och överförs inte till en väsentligt förändrad modell."
 });
+
+// v34 adjudication-resolution strings.
+Object.assign(window.UI_TRANSLATIONS_SV, {
+  "groups still held for comparator or shared-arm adjudication":
+    "grupper som fortfarande avvaktar bedömning av kontrolltyp eller delad arm",
+  "result-specific risk-of-bias assessments outstanding inside a fitted model":
+    "resultatspecifika bias-bedömningar som återstår inom en anpassad modell",
+  "Comparator and modality classification resolved":
+    "Klassificering av kontrolltyp och modalitet är löst"
+});

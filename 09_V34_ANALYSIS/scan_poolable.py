@@ -60,14 +60,39 @@ def has_effect(r: dict) -> bool:
         return False
 
 
+def resolutions() -> dict:
+    """Modality/comparator classifications resolved by resolve_comparators.py,
+    keyed by record_id. Applying them here means the scan sees the same
+    classification the analysis will, rather than re-deriving it."""
+    p = OUT / "v34_comparator_resolution.csv"
+    if not p.exists():
+        return {}
+    out = {}
+    for r in read(p):
+        if r.get("resolved") == "YES":
+            out[r["record_id"]] = (r["modality_after"], r["comparator_after"])
+    return out
+
+
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
+    res = resolutions()
     rows_all = []
+    applied = 0
     for f in FAMILIES:
         fam = f.stem.replace("v34_native_", "")
         for r in read(f):
             r["_family_file"] = fam
+            fix = res.get(r.get("record_id"))
+            if fix:
+                if "REVIEW_REQUIRED" in r["modality"]:
+                    r["modality"] = fix[0]
+                if "REVIEW_REQUIRED" in r["comparator_type"]:
+                    r["comparator_type"] = fix[1]
+                applied += 1
             rows_all.append(r)
+    if applied:
+        print(f"applied {applied} resolved modality/comparator classifications\n")
     print(f"native rows scanned: {len(rows_all)} across {len(FAMILIES)} family files\n")
 
     # ── group on the full estimand key ────────────────────────────────────

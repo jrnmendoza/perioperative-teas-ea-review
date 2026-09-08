@@ -3284,8 +3284,43 @@ function renderV34() {
         <div class="v34-hold"><span class="v34-hold-n">${h.source_not_accessed_outcomes.length}</span>
           <span>outcomes recorded as SOURCE NOT ACCESSED, which is not the same as not reported</span></div>
         <div class="v34-hold"><span class="v34-hold-n">${V.poolable_scan.shared_arm_holds}</span>
-          <span>groups held for shared-arm or comparator adjudication before any pooling</span></div>
+          <span>groups still held for comparator or shared-arm adjudication</span></div>
+        <div class="v34-hold"><span class="v34-hold-n">${(V.rob2_worklist||{}).blocking_grade ?? '—'}</span>
+          <span>result-specific risk-of-bias assessments outstanding inside a fitted model</span></div>
       </div>
+      ${V.comparator_resolution ? `
+      <div style="margin-top:0.8rem;padding:0.6rem 0.75rem;background:rgba(52,211,153,0.06);
+                  border-left:3px solid rgba(52,211,153,0.45);border-radius:var(--radius-sm);">
+        <div style="font-weight:700;color:#6ee7b7;font-size:0.8rem;">
+          Comparator and modality classification resolved</div>
+        <div style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
+          ${V.comparator_resolution.rows_resolved} rows that the reconciliation left as
+          REVIEW_REQUIRED are now classified
+          (${Object.entries(V.comparator_resolution.by_comparator)
+              .map(([k2,v2])=>`${v2} ${pwEsc(k2)}`).join(', ')});
+          ${V.comparator_resolution.rows_unresolved} remain unresolved.
+          <span style="display:block;margin-top:0.25rem;color:var(--text-muted);">
+            ${pwEsc(V.comparator_resolution.note)}</span>
+        </div>
+      </div>` : ''}
+      ${V.rob2_worklist ? `
+      <div style="margin-top:0.6rem;padding:0.6rem 0.75rem;background:rgba(148,163,184,0.07);
+                  border-left:3px solid rgba(148,163,184,0.45);border-radius:var(--radius-sm);">
+        <div style="font-weight:700;color:#cbd5e1;font-size:0.8rem;">
+          Result-specific risk of bias — ${V.rob2_worklist.blocking_grade} assessments
+          outstanding inside fitted models</div>
+        <div style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
+          ${pwEsc(V.rob2_worklist.note)}
+        </div>
+        <details style="margin-top:0.4rem;">
+          <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
+            Show the ${V.rob2_worklist.blocking_grade} results awaiting assessment</summary>
+          <ul style="margin:0.4rem 0 0 1rem;font-size:0.75rem;color:var(--text-muted);line-height:1.65;">
+            ${V.rob2_worklist.blocking_list.map(r =>
+              `<li>${pwEsc(r.study)} — ${pwEsc(r.outcome)} @ ${pwEsc(r.timepoint)}</li>`).join('')}
+          </ul>
+        </details>
+      </div>` : ''}
       <p style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.55rem;">
         Unaccessed supplements: ${h.supplement_access_gaps.map(pwEsc).join(', ')}.
         ${h.source_not_accessed_outcomes.map(pwEsc).join('; ')}.

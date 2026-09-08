@@ -450,7 +450,34 @@ async function boot(browser, hash) {
     assert.ok(certainty.length && certainty.every(c => /pending|pågår/.test(c)),
       `v34 models must show certainty as pending, saw ${JSON.stringify(certainty.slice(0, 3))}`);
 
-    checks += 8;
+    // Adjudication state must be shown, and must be consistent with the files.
+    const adj = await page.evaluate(() => {
+      const V = window.V34_DATA;
+      return {
+        resolvedRows: V.comparator_resolution.rows_resolved,
+        unresolvedRows: V.comparator_resolution.rows_unresolved,
+        holds: V.poolable_scan.shared_arm_holds,
+        blocking: V.rob2_worklist.blocking_grade,
+        listed: (V.rob2_worklist.blocking_list || []).length,
+        panelHasRob: document.getElementById('v34-holds').innerHTML.includes('risk of bias'),
+      };
+    });
+    // Every classification the scan needed is resolved, so no group may still be
+    // held for comparator adjudication.
+    assert.equal(adj.unresolvedRows, 0,
+      `${adj.unresolvedRows} comparator/modality rows remain unresolved`);
+    assert.equal(adj.holds, 0,
+      `${adj.holds} groups still held for adjudication after resolution`);
+    assert.ok(adj.resolvedRows > 0, 'the comparator resolution should be recorded');
+    // RoB assessments are pending, not invented: the outstanding list must be
+    // non-empty and must be shown, so no model can look GRADE-ready.
+    assert.ok(adj.blocking > 0,
+      'outstanding result-specific RoB assessments must remain declared, not zeroed');
+    assert.equal(adj.listed, adj.blocking,
+      'every outstanding assessment must be listed, not just counted');
+    assert.ok(adj.panelHasRob, 'the RoB hold must be visible on the panel');
+
+    checks += 14;
     await page.close();
   }
 

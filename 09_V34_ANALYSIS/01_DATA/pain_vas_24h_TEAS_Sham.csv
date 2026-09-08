@@ -1,3 +1,4 @@
 model,study,record_id,comparison_id,outcome,window,unit,modality,comparator,statistic,analysis_population,rob2,source_location,measure,n_i,n_c,mean_i,sd_i,mean_c,sd_c,effect,se
 pain_vas_24h_TEAS_Sham,Wu 2025,V33-OD-0075,WU25_TEAS_vs_SHAM_VAS24,VAS pain intensity,24 h,VAS 0-10,TEAS,Sham,Mean/SD,,EXISTING_RESULT_SPECIFIC: High,Table 2 / primary 24-h VAS,MD,50,50,1.7,0.9,4.0,1.4,-2.3,0.235372
+pain_vas_24h_TEAS_Sham,Lee 2011,V33-OD-0187,LEE11_LOW_vs_SHAM_VAS24,VAS pain intensity,24 h,VAS 0-10,TEAS,Sham,Mean/SD,,ROB2_RESULT_SPECIFIC_PENDING,24-h VAS table,MD,10,12,1.21,1.31,2.54,0.86,-1.33,0.482953
 pain_vas_24h_TEAS_Sham,Gu 2019,V33-OD-0221,GU19_LTEAS_vs_CTEAS_VAS24,VAS pain intensity,24 h,VAS 0-10,TEAS,Sham,Mean/SD,,ROB2_RESULT_SPECIFIC_PENDING,Figure 3 / 24-h VAS,MD,58,59,1.98,0.39,2.72,0.73,-0.74,0.107957

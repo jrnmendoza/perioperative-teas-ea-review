@@ -38,6 +38,8 @@ CONFLICTS = RECON / "data" / "v34_source_conflicts.csv"
 MODELS = ROOT / "09_V34_ANALYSIS" / "03_RESULTS" / "v34_models.csv"
 MANIFEST = ROOT / "09_V34_ANALYSIS" / "01_DATA" / "v34_model_manifest.csv"
 SCAN = ROOT / "09_V34_ANALYSIS" / "v34_poolable_scan.csv"
+RESOLUTION = ROOT / "09_V34_ANALYSIS" / "v34_comparator_resolution.csv"
+WORKLIST = ROOT / "09_V34_ANALYSIS" / "v34_rob2_worklist.csv"
 OUT = ROOT / "dashboard" / "v34_data.js"
 
 V34_SHA256 = "985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3"
@@ -229,6 +231,38 @@ def main() -> int:
                 "Gao 2021 — total length of stay (Supplementary Table S4)",
                 "Gao 2021 — 30-day complications (Supplementary Table S4)"],
         },
+
+        "comparator_resolution": (lambda rs: {
+            "rows_resolved": sum(1 for r in rs if r["resolved"] == "YES"),
+            "rows_unresolved": sum(1 for r in rs if r["resolved"] != "YES"),
+            "by_comparator": dict(Counter(r["comparator_after"] for r in rs
+                                          if r["resolved"] == "YES").most_common()),
+            "by_modality": dict(Counter(r["modality_after"] for r in rs
+                                        if r["resolved"] == "YES").most_common()),
+            "note": ("Modality and comparator classifications left as REVIEW_REQUIRED in "
+                     "the v34 native data, resolved by applying the review's documented "
+                     "classifier: inert-sham markers are tested before device names, real "
+                     "current at a control site is Active Electrical, and an arm with no "
+                     "device -- including a balanced co-intervention -- is usual care. "
+                     "Where the arm text did not decide it, the study's canonical modality "
+                     "from the review's own study list was used. This is classification, "
+                     "not a new scientific judgement."),
+        })(read(RESOLUTION) if RESOLUTION.exists() else []),
+
+        "rob2_worklist": (lambda rs: {
+            "pairs_needing_assessment": len(rs),
+            "blocking_grade": sum(1 for r in rs if r["priority"].startswith("1")),
+            "not_currently_pooled": sum(1 for r in rs if r["priority"].startswith("2")),
+            "blocking_list": [
+                dict(study=r["study"], outcome=r["outcome"], timepoint=r["timepoint"])
+                for r in rs if r["priority"].startswith("1")],
+            "note": ("Result-specific RoB 2 is a judgement made by assessors, not a value "
+                     "derivable from the data, and Cochrane requires two independent "
+                     "assessors reaching consensus. No assessment was generated here and no "
+                     "study-wide judgement was copied onto a different result. The rows "
+                     "below are the ones inside a fitted model, so they are what currently "
+                     "blocks a GRADE rating."),
+        })(read(WORKLIST) if WORKLIST.exists() else []),
 
         "poolable_scan": {
             "groups_examined": len(scan),

@@ -83,12 +83,12 @@
    "statistic": "Mean/SD",
    "modality": "TEAS",
    "comparator": "Sham",
-   "rows": 2,
-   "include_rows": 2,
-   "usable_contrasts": 2,
-   "independent_studies": 2,
-   "studies": "Gu 2019; Wu 2025",
-   "verdict": "CANDIDATE - k=2 independent studies"
+   "rows": 3,
+   "include_rows": 3,
+   "usable_contrasts": 3,
+   "independent_studies": 3,
+   "studies": "Gu 2019; Lee 2011; Wu 2025",
+   "verdict": "CANDIDATE - k=3 independent studies"
   },
   {
    "family": "ponv",
@@ -144,13 +144,13 @@
    "unit": "participants with bradycardia",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "adverse_events_and_cognition",
@@ -249,13 +249,13 @@
    "unit": "participants with dizziness",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "adverse_events_and_cognition",
@@ -624,13 +624,13 @@
    "unit": "participants with respiratory depression",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "adverse_events_and_cognition",
@@ -999,13 +999,13 @@
    "unit": "mg butorphanol",
    "statistic": "Derived mean/SD (linear from press count)",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "analgesic_proxies_and_nonopioid_rescue",
@@ -1089,13 +1089,13 @@
    "unit": "pump presses",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "analgesic_proxies_and_nonopioid_rescue",
@@ -1223,14 +1223,14 @@
    "window": "0-24 h",
    "unit": "mg dexketoprofen",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "analgesic_proxies_and_nonopioid_rescue",
@@ -1238,14 +1238,14 @@
    "window": "0-24 h",
    "unit": "mg dexketoprofen",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "analgesic_proxies_and_nonopioid_rescue",
@@ -1253,14 +1253,14 @@
    "window": "24-48 h",
    "unit": "mg dexketoprofen",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "analgesic_proxies_and_nonopioid_rescue",
@@ -1268,14 +1268,14 @@
    "window": "24-48 h",
    "unit": "mg dexketoprofen",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "analgesic_proxies_and_nonopioid_rescue",
@@ -1419,13 +1419,13 @@
    "unit": "AIS points",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1434,13 +1434,13 @@
    "unit": "AIS points",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1449,13 +1449,13 @@
    "unit": "AIS points",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1479,13 +1479,13 @@
    "unit": "AIS points",
    "statistic": "Graph-only continuous data",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1764,13 +1764,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1779,13 +1779,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1794,13 +1794,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1869,13 +1869,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1884,13 +1884,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1899,13 +1899,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1914,13 +1914,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1929,13 +1929,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -1944,13 +1944,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -2003,14 +2003,14 @@
    "window": "Postoperative",
    "unit": "days",
    "statistic": "Graph-only mean\u00b1SE",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -2169,13 +2169,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -2184,13 +2184,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -2199,13 +2199,13 @@
    "unit": "%",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "functional_recovery_and_other",
@@ -2513,14 +2513,14 @@
    "window": "Postoperative",
    "unit": "participants",
    "statistic": "Events/total",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "gi_recovery",
@@ -2588,14 +2588,14 @@
    "window": "Postoperative",
    "unit": "hours",
    "statistic": "Graph-only mean\u00b1SE",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "gi_recovery",
@@ -2648,14 +2648,14 @@
    "window": "Postoperative",
    "unit": "hours",
    "statistic": "Graph-only mean\u00b1SE",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "gi_recovery",
@@ -2768,14 +2768,14 @@
    "window": "Postoperative",
    "unit": "days",
    "statistic": "Graph-only mean\u00b1SE",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "gi_recovery",
@@ -3114,13 +3114,13 @@
    "unit": "\u00b5g sufentanil",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "intraoperative_opioid",
@@ -3189,13 +3189,13 @@
    "unit": "\u00b5g sufentanil",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 2,
    "include_rows": 2,
    "usable_contrasts": 2,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "los",
@@ -3218,14 +3218,29 @@
    "window": "Postoperative hospitalization",
    "unit": "days",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
-   "rows": 2,
-   "include_rows": 2,
-   "usable_contrasts": 2,
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
+   "rows": 1,
+   "include_rows": 1,
+   "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wu 2016",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
+  },
+  {
+   "family": "los",
+   "outcome": "Hospital length of stay",
+   "window": "Postoperative hospitalization",
+   "unit": "days",
+   "statistic": "Mean/SD",
+   "modality": "TEAS",
+   "comparator": "Usual care",
+   "rows": 1,
+   "include_rows": 1,
+   "usable_contrasts": 1,
+   "independent_studies": 1,
+   "studies": "Wu 2016",
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "los",
@@ -3293,14 +3308,14 @@
    "window": "Postoperative",
    "unit": "days",
    "statistic": "Graph-only mean\u00b1SE",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "los",
@@ -3384,13 +3399,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Ma 2026",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "nausea",
@@ -3534,13 +3549,13 @@
    "unit": "participants with nausea",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Sham",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Szmit 2021",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "nausea",
@@ -3549,7 +3564,7 @@
    "unit": "participants with nausea",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "Sham",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
@@ -3593,14 +3608,14 @@
    "window": "0-24 h",
    "unit": "VAS 1-10",
    "statistic": "Qualitative / exact group values unavailable",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "nausea",
@@ -4659,13 +4674,13 @@
    "unit": "VAS 0-10",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -4674,13 +4689,13 @@
    "unit": "VAS 0-10",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -4689,13 +4704,13 @@
    "unit": "VAS 0-10",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -4704,13 +4719,13 @@
    "unit": "VAS 0-10",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -4764,13 +4779,13 @@
    "unit": "VAS 0\u201310",
    "statistic": "Other (describe)",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -4779,13 +4794,13 @@
    "unit": "VAS 0\u201310",
    "statistic": "Other (describe)",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -4794,13 +4809,13 @@
    "unit": "VAS 0\u201310",
    "statistic": "Other (describe)",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -4809,13 +4824,13 @@
    "unit": "VAS 0\u201310",
    "statistic": "Other (describe)",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -4824,13 +4839,13 @@
    "unit": "VAS 0\u201310",
    "statistic": "Other (describe)",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -4914,13 +4929,13 @@
    "unit": "NRS 0-10",
    "statistic": "Graph-only continuous data",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -5123,14 +5138,14 @@
    "window": "18 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5138,14 +5153,14 @@
    "window": "18 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5153,14 +5168,14 @@
    "window": "2 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5168,14 +5183,14 @@
    "window": "2 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5183,14 +5198,14 @@
    "window": "22 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5198,14 +5213,14 @@
    "window": "22 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5213,14 +5228,14 @@
    "window": "42 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5228,14 +5243,14 @@
    "window": "42 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5243,14 +5258,14 @@
    "window": "46 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5258,14 +5273,14 @@
    "window": "46 h after surgery / after intervention",
    "unit": "VAS (methods state 1\u201310; tables include 0)",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5454,13 +5469,13 @@
    "unit": "VAS 0\u201310",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Sham",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Szmit 2021",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "pain",
@@ -5469,7 +5484,7 @@
    "unit": "VAS 0\u201310",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "Sham",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
@@ -5540,32 +5555,17 @@
   {
    "family": "pain",
    "outcome": "VAS pain intensity",
-   "window": "24 h",
-   "unit": "VAS 0-10",
-   "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "Sham",
-   "rows": 1,
-   "include_rows": 1,
-   "usable_contrasts": 1,
-   "independent_studies": 1,
-   "studies": "Lee 2011",
-   "verdict": "HOLD - comparator type needs adjudication"
-  },
-  {
-   "family": "pain",
-   "outcome": "VAS pain intensity",
    "window": "24 h postoperatively",
    "unit": "VAS",
    "statistic": "Source-format ambiguous",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -5723,14 +5723,29 @@
    "window": "24 h postoperatively",
    "unit": "VAS 0-10",
    "statistic": "Graph-only continuous data",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
-   "rows": 2,
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
+   "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
+  },
+  {
+   "family": "pain",
+   "outcome": "VAS pain intensity at rest",
+   "window": "24 h postoperatively",
+   "unit": "VAS 0-10",
+   "statistic": "Graph-only continuous data",
+   "modality": "TEAS",
+   "comparator": "Usual care",
+   "rows": 1,
+   "include_rows": 0,
+   "usable_contrasts": 0,
+   "independent_studies": 0,
+   "studies": "",
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -5738,14 +5753,29 @@
    "window": "24 h postoperatively",
    "unit": "VAS 0-10",
    "statistic": "Graph-only continuous data",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
-   "rows": 2,
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
+   "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
+  },
+  {
+   "family": "pain",
+   "outcome": "VAS pain intensity during coughing",
+   "window": "24 h postoperatively",
+   "unit": "VAS 0-10",
+   "statistic": "Graph-only continuous data",
+   "modality": "TEAS",
+   "comparator": "Usual care",
+   "rows": 1,
+   "include_rows": 0,
+   "usable_contrasts": 0,
+   "independent_studies": 0,
+   "studies": "",
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -5798,14 +5828,14 @@
    "window": "Postoperative day 1",
    "unit": "VAS 0\u201310",
    "statistic": "Graph-only mean\u00b1SE",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -5813,14 +5843,14 @@
    "window": "Postoperative day 2",
    "unit": "VAS 0\u201310",
    "statistic": "Graph-only mean\u00b1SE",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -5828,14 +5858,14 @@
    "window": "Postoperative day 3",
    "unit": "VAS 0\u201310",
    "statistic": "Graph-only mean\u00b1SE",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "pain",
@@ -5919,13 +5949,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Xiong 2021",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -5934,13 +5964,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 2,
    "include_rows": 2,
    "usable_contrasts": 2,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -5994,13 +6024,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Xiong 2021",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6009,13 +6039,13 @@
    "unit": "participants with nausea/vomiting",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Song 2020",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6054,13 +6084,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6069,13 +6099,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6084,13 +6114,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6099,13 +6129,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6114,13 +6144,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6144,13 +6174,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 2,
    "include_rows": 2,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6159,13 +6189,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6189,13 +6219,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6204,13 +6234,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "ponv",
@@ -6503,14 +6533,29 @@
    "window": "Postoperative period; exact window not reported",
    "unit": "participants",
    "statistic": "Events/total",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
-   "rows": 2,
-   "include_rows": 2,
-   "usable_contrasts": 2,
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
+   "rows": 1,
+   "include_rows": 1,
+   "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wu 2016",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
+  },
+  {
+   "family": "ponv",
+   "outcome": "Postoperative nausea/vomiting incidence",
+   "window": "Postoperative period; exact window not reported",
+   "unit": "participants",
+   "statistic": "Events/total",
+   "modality": "TEAS",
+   "comparator": "Usual care",
+   "rows": 1,
+   "include_rows": 1,
+   "usable_contrasts": 1,
+   "independent_studies": 1,
+   "studies": "Wu 2016",
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6518,14 +6563,14 @@
    "window": "First 24 postoperative hours",
    "unit": "mg IV morphine",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Sham",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6533,14 +6578,14 @@
    "window": "First 24 postoperative hours",
    "unit": "mg IV morphine",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "Sham",
+   "modality": "TEAS",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6548,14 +6593,14 @@
    "window": "First 24 postoperative hours",
    "unit": "mg morphine; source explicitly calls PCA epidural",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Sham",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6563,14 +6608,14 @@
    "window": "First 24 postoperative hours",
    "unit": "mg morphine; source explicitly calls PCA epidural",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "Sham",
+   "modality": "TEAS",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6579,13 +6624,13 @@
    "unit": "\u00b5g sufentanil",
    "statistic": "Not reported",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6698,14 +6743,14 @@
    "window": "First 24 postoperative hours",
    "unit": "mg IV morphine",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
-   "rows": 1,
-   "include_rows": 1,
-   "usable_contrasts": 1,
+   "modality": "TEAS",
+   "comparator": "Sham",
+   "rows": 2,
+   "include_rows": 2,
+   "usable_contrasts": 2,
    "independent_studies": 1,
    "studies": "Lee 2011",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6713,14 +6758,14 @@
    "window": "First 24 postoperative hours",
    "unit": "mg IV morphine",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "Sham",
-   "rows": 2,
-   "include_rows": 2,
-   "usable_contrasts": 2,
+   "modality": "TEAS",
+   "comparator": "Usual care",
+   "rows": 1,
+   "include_rows": 1,
+   "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Lee 2011",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6729,13 +6774,13 @@
    "unit": "mg morphine",
    "statistic": "Mean/SD",
    "modality": "EA",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Sham",
    "rows": 2,
    "include_rows": 2,
    "usable_contrasts": 2,
    "independent_studies": 1,
    "studies": "Lin 2002",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6744,7 +6789,7 @@
    "unit": "mg morphine",
    "statistic": "Mean/SD",
    "modality": "EA",
-   "comparator": "Sham",
+   "comparator": "Usual care",
    "rows": 2,
    "include_rows": 2,
    "usable_contrasts": 2,
@@ -6773,14 +6818,14 @@
    "window": "0-24 h",
    "unit": "mg tramadol",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6788,14 +6833,14 @@
    "window": "0-24 h",
    "unit": "mg tramadol",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6803,14 +6848,14 @@
    "window": "24-48 h",
    "unit": "mg tramadol",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6818,14 +6863,14 @@
    "window": "24-48 h",
    "unit": "mg tramadol",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -6894,13 +6939,13 @@
    "unit": "mg/\u00b5g",
    "statistic": "Not reported",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7148,14 +7193,14 @@
    "window": "0\u201324 h",
    "unit": "opioid dose",
    "statistic": "Not reported",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7194,13 +7239,13 @@
    "unit": "mg morphine-equivalent/kg",
    "statistic": "Not reported",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7223,14 +7268,29 @@
    "window": "0-24 h",
    "unit": "mg tramadol (IV rescue)",
    "statistic": "Not reported",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
-   "rows": 2,
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
+   "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
+  },
+  {
+   "family": "postoperative_opioid_other_windows",
+   "outcome": "Exact cumulative postoperative opioid/tramadol consumption",
+   "window": "0-24 h",
+   "unit": "mg tramadol (IV rescue)",
+   "statistic": "Not reported",
+   "modality": "TEAS",
+   "comparator": "Usual care",
+   "rows": 1,
+   "include_rows": 0,
+   "usable_contrasts": 0,
+   "independent_studies": 0,
+   "studies": "",
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7238,14 +7298,14 @@
    "window": "0-24 h",
    "unit": "\u00b5g sufentanil",
    "statistic": "Not reported",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "EA",
    "comparator": "Sham",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7448,14 +7508,14 @@
    "window": "Study PCA period",
    "unit": "demands",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "EA",
    "comparator": "Sham",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Xie 2014",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7569,13 +7629,13 @@
    "unit": "mg/\u00b5g",
    "statistic": "Not reported",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7584,13 +7644,13 @@
    "unit": "mg morphine-equivalent/kg",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7644,13 +7704,13 @@
    "unit": "mg IV morphine",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Sham",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Szmit 2021",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7659,7 +7719,7 @@
    "unit": "mg IV morphine",
    "statistic": "Mean/SD",
    "modality": "TEAS",
-   "comparator": "Sham",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
@@ -7733,14 +7793,14 @@
    "window": "Study PCA period; exact fixed window unclear",
    "unit": "\u00b5g sufentanil",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "EA",
+   "comparator": "Sham",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -7748,14 +7808,14 @@
    "window": "Study PCA period; exact fixed window unclear",
    "unit": "\u00b5g sufentanil",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "Sham",
+   "modality": "EA",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "postoperative_opioid_other_windows",
@@ -8124,13 +8184,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Xiong 2021",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "rescue_antiemetic",
@@ -8273,14 +8333,14 @@
    "window": "0-24 h",
    "unit": "MME / combined opioid dose",
    "statistic": "Not calculable",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "rescue_opioid_frequency",
@@ -8333,14 +8393,14 @@
    "window": "0-24 h",
    "unit": "mg pethidine",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "rescue_opioid_frequency",
@@ -8348,14 +8408,14 @@
    "window": "0-24 h",
    "unit": "mg pethidine",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "rescue_opioid_frequency",
@@ -8363,14 +8423,14 @@
    "window": "24-48 h",
    "unit": "mg pethidine",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Active Electrical",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "rescue_opioid_frequency",
@@ -8378,14 +8438,14 @@
    "window": "24-48 h",
    "unit": "mg pethidine",
    "statistic": "Mean/SD",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Oztas 2019",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "rescue_opioid_frequency",
@@ -8393,14 +8453,14 @@
    "window": "Postoperative period; exact window not reported",
    "unit": "100 mg IV tramadol per rescue",
    "statistic": "Qualitative / exact quantities unavailable",
-   "modality": "MODALITY_REVIEW_REQUIRED",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "modality": "TEAS",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "rescue_opioid_use",
@@ -8679,13 +8739,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Ma 2026",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "vomiting",
@@ -8784,13 +8844,13 @@
    "unit": "participants",
    "statistic": "Events/total",
    "modality": "TEAS",
-   "comparator": "CONTROL_TYPE_REVIEW_REQUIRED",
+   "comparator": "Usual care",
    "rows": 1,
    "include_rows": 1,
    "usable_contrasts": 1,
    "independent_studies": 1,
    "studies": "Wang 2024",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 1 independent study"
   },
   {
    "family": "vomiting",
@@ -8933,14 +8993,14 @@
    "window": "0-24 h",
    "unit": "events/participants",
    "statistic": "Qualitative / exact group values unavailable",
-   "modality": "MODALITY_REVIEW_REQUIRED",
+   "modality": "TEAS",
    "comparator": "Usual care",
    "rows": 1,
    "include_rows": 0,
    "usable_contrasts": 0,
    "independent_studies": 0,
    "studies": "",
-   "verdict": "HOLD - comparator type needs adjudication"
+   "verdict": "NOT POOLED - only 0 independent study"
   },
   {
    "family": "vomiting",
