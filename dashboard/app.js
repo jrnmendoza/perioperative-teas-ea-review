@@ -402,6 +402,9 @@ function renderActiveTab() {
   if (typeof window.initStatIcons === 'function') {
     window.initStatIcons();
   }
+  if (typeof window.dashRefreshUsability === 'function') {
+    window.dashRefreshUsability();
+  }
 }
 
 function renderConversionsView() {
@@ -2453,6 +2456,25 @@ window.renderSearchStrategiesView = renderSearchStrategiesView;
 window.renderActiveSearchDb = renderActiveSearchDb;
 window.switchTab = switchTab;
 
+// ── state bridge for the usability layer (dashboard/findings.js) ───────────
+// The filter and selection state above is declared with `let`, so it is not
+// reachable on `window`. Rather than restructure app.js, expose the same
+// variables through accessors: findings.js reads and writes exactly these, so
+// there is one source of truth and no shadow copy that could drift.
+Object.defineProperties(window, {
+  activeTab:        {get: () => activeTab,        set: v => { activeTab = v; },        configurable: true},
+  currentOutcome:   {get: () => currentOutcome,   set: v => { currentOutcome = v; },   configurable: true},
+  currentSubgroup:  {get: () => currentSubgroup,  set: v => { currentSubgroup = v; },  configurable: true},
+  filterModality:   {get: () => filterModality,   set: v => { filterModality = v; },   configurable: true},
+  filterComparator: {get: () => filterComparator, set: v => { filterComparator = v; }, configurable: true},
+  filterSurgery:    {get: () => filterSurgery,    set: v => { filterSurgery = v; },    configurable: true},
+  filterRob:        {get: () => filterRob,        set: v => { filterRob = v; },        configurable: true},
+  filterSearch:     {get: () => filterSearch,     set: v => { filterSearch = v; },     configurable: true}
+});
+window.syncToolbarDropdowns = syncToolbarDropdowns;
+window.focusStudyId = null;
+window.focusAnalysisId = null;
+
 // ══════════════════════════════════════════════════════════════════
 // META-REGRESSION & MODERATOR STUDIO (Objective 3)
 // ══════════════════════════════════════════════════════════════════
@@ -2831,6 +2853,7 @@ function togglePathwayTable() {
   if (b) b.textContent = w.hidden ? '📋 Study-level table' : '📋 Hide study-level table';
 }
 
+window.STATA_MASTER_RESULTS = STATA_MASTER_RESULTS;
 window.renderPrimaryPathway = renderPrimaryPathway;
 window.togglePathwayTable = togglePathwayTable;
 

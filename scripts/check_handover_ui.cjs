@@ -33,8 +33,32 @@ const fs = require('node:fs');
   for (const id of ['v33-subtitle','v33-headline','v33-map','v33-results','v33-notpooled','pathway-subtitle','pathway-headline','pathway-flow','pathway-panels','pathway-comparison','pathway-estimand','pathway-whatcouldchange','pathway-maturity','pathway-table-body','t33-subtitle','t33-flow','t33-sets','t33-empty','t33-figures']) {
     assert.ok((await page.locator(`#${id}`).textContent()).trim(), `${id} empty`);
   }
-  const order = await page.evaluate(() => ['v33-map','pathway-flow','t33-flow'].map(id => document.getElementById(id).getBoundingClientRect().top));
-  assert.ok(order[0] < order[1] && order[1] < order[2]);
+  // Findings come first. The three contribution panels moved into collapsed
+  // <details>, so a pixel-top comparison no longer distinguishes them (all
+  // collapsed sections report the same offset). Assert DOCUMENT order instead,
+  // which is what "findings first" actually means, and assert that the key
+  // findings block precedes every contribution panel.
+  const domOrder = await page.evaluate(() => {
+    const ids = ['findings-hero','v33-map','pathway-flow','t33-flow'];
+    const nodes = ids.map(id => document.getElementById(id));
+    if (nodes.some(n => !n)) return null;
+    return ids.map((id, i) => ({
+      id,
+      before: i === 0 ? true
+        : !!(nodes[i - 1].compareDocumentPosition(nodes[i]) & Node.DOCUMENT_POSITION_FOLLOWING)
+    }));
+  });
+  assert.ok(domOrder, 'findings hero or a contribution panel is missing');
+  assert.ok(domOrder.every(x => x.before),
+    'expected document order: findings-hero, v33-map, pathway-flow, t33-flow; got ' + JSON.stringify(domOrder));
+  // The long methodological sections must be collapsed by default so the page
+  // opens on the findings rather than on ~60 screens of supporting material.
+  const collapsed = await page.evaluate(() => {
+    const d = [...document.querySelectorAll('#tab-primary details.section-details')];
+    return {total: d.length, open: d.filter(x => x.open).length};
+  });
+  assert.ok(collapsed.total >= 8, `expected the primary tab to use collapsible sections, saw ${collapsed.total}`);
+  assert.equal(collapsed.open, 0, 'primary tab sections should start collapsed');
   await page.screenshot({path:'tmp/handover/primary.png',fullPage:false});
   await page.evaluate(() => switchTab('secondary'));
   for (const id of await page.locator('#stata-secondary-select option').evaluateAll(els => els.map(e => e.value))) {

@@ -40,3 +40,4 @@ scratch_*.json
 _site/
 dashboard/v26/
 docs/
+node_modules/

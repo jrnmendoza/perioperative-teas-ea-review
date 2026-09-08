@@ -379,3 +379,104 @@ Object.assign(window.UI_TRANSLATIONS_SV, {
   '🔬 In this Review:': '🔬 I denna översikt:',
   '📖 Explore in Glossary': '📖 Öppna ordlista'
 });
+
+// Interface strings introduced by the findings-first usability layer
+// (dashboard/findings.js) and the simplified navigation labels. Reviewed
+// exact strings only; numbers, citations and source extracts are never
+// machine-translated.
+Object.assign(window.UI_TRANSLATIONS_SV, {
+  "🎯 Clinical Importance": "🎯 Klinisk betydelse",
+  "📈 Subgroup Analyses": "📈 Subgruppsanalyser",
+  "💾 Downloads": "💾 Nedladdningar",
+  "⏱️ Secondary Outcomes": "⏱️ Sekundära utfall",
+
+  "Does perioperative TEAS or EA reduce opioid use after surgery?":
+    "Minskar perioperativ TEAS eller EA opioidanvändningen efter kirurgi?",
+  "Outcome": "Utfall",
+  "Timepoint": "Tidpunkt",
+  "Unit": "Enhet",
+  "Model": "Modell",
+  "Cumulative postoperative opioid consumption": "Kumulativ postoperativ opioidkonsumtion",
+  "0–24 hours after surgery": "0–24 timmar efter kirurgi",
+  "mg intravenous morphine equivalents (IV MME)": "mg intravenösa morfinekvivalenter (IV MME)",
+  "Random effects, REML, Hartung–Knapp intervals":
+    "Slumpmässiga effekter, REML, Hartung–Knapp-intervall",
+  "TEAS and EA are reported separately because they are different interventions tested against different comparators. Pooling them would average two different questions.":
+    "TEAS och EA redovisas separat eftersom det är olika interventioner som prövats mot olika kontroller. Att slå samman dem skulle ge ett genomsnitt av två olika frågeställningar.",
+
+  "Primary finding": "Primärt resultat",
+  "Supporting analysis": "Kompletterande analys",
+  "TEAS vs inert sham": "TEAS mot inaktiv sham",
+  "EA vs usual care / no stimulation": "EA mot sedvanlig vård / ingen stimulering",
+  "TEAS and EA combined vs control": "TEAS och EA sammanslaget mot kontroll",
+  "trials": "studier",
+  "participants": "deltagare",
+
+  "Contributing studies (k = 4)": "Bidragande studier (k = 4)",
+  "Contributing studies (k = 3)": "Bidragande studier (k = 3)",
+  "Contributing studies (k = 7)": "Bidragande studier (k = 7)",
+  "Risk of bias for this result": "Risk för bias för detta resultat",
+  "GRADE for this analysis": "GRADE för denna analys",
+  "Download this analysis": "Ladda ner denna analys",
+
+  "Full contribution pathways, tier classification, sensitivity analyses, derivations and execution logs remain available in the sections below.":
+    "Fullständiga bidragsvägar, nivåklassificering, känslighetsanalyser, härledningar och körloggar finns kvar i avsnitten nedan.",
+  "Primary outcome by modality (TEAS and EA shown separately).":
+    "Primärt utfall per modalitet (TEAS och EA redovisas separat).",
+
+  "On this page": "På denna sida",
+  "Key findings": "Huvudresultat",
+  "Study contribution": "Studiernas bidrag",
+  "Contribution pathway": "Bidragsväg",
+  "Poolable evidence": "Poolbar evidens",
+  "Synthesis standard": "Syntesstandard",
+  "Detailed modality results": "Detaljerade resultat per modalitet",
+  "Sensitivity": "Känslighet",
+  "Forest plot gallery": "Galleri med forest plots",
+  "Derivations": "Härledningar",
+  "Execution log": "Körlogg",
+
+  "Active filters": "Aktiva filter",
+  "Reset filters": "Återställ filter",
+
+  "TEAS vs sham": "TEAS mot sham",
+  "EA vs usual care": "EA mot sedvanlig vård",
+  "Combined (supporting)": "Sammanslagen (kompletterande)",
+  "Certainty is adjudicated separately for each synthesis. TEAS and EA differ, so no single rating describes the primary outcome.":
+    "Tillförlitligheten bedöms separat för varje syntes. TEAS och EA skiljer sig åt, så ingen enskild gradering beskriver det primära utfallet.",
+
+  "How the included trials contribute — why 70 trials give 7 in the primary analysis":
+    "Hur de inkluderade studierna bidrar — varför 70 studier ger 7 i den primära analysen",
+  "Primary outcome contribution pathway — which trials carry 24-hour data":
+    "Bidragsväg för det primära utfallet — vilka studier som har 24-timmarsdata",
+  "Which 0–24 hour evidence can actually be pooled — tier classification":
+    "Vilken 0–24-timmarsevidens som faktiskt kan poolas — nivåklassificering",
+  "Other opioid timepoints: 48-hour analyses": "Övriga opioidtidpunkter: 48-timmarsanalyser",
+  "Other opioid timepoints: 72-hour analyses": "Övriga opioidtidpunkter: 72-timmarsanalyser",
+  "Leave-one-out influence and sensitivity analysis":
+    "Leave-one-out-påverkan och känslighetsanalys",
+  "All forest plots (12 figures)": "Alla forest plots (12 figurer)",
+  "Mathematical derivations and Stata weighting matrix":
+    "Matematiska härledningar och Statas viktningsmatris",
+  "Stata execution log": "Statas körlogg",
+
+  "Primary outcome: cumulative 0–24 h opioid sparing":
+    "Primärt utfall: kumulativ opioidbesparing 0–24 h",
+  "Cumulative 0–48 h opioid sparing": "Kumulativ opioidbesparing 0–48 h",
+  "Cumulative 0–72 h opioid sparing": "Kumulativ opioidbesparing 0–72 h"
+});
+
+// Findings-card fragments. Each translatable word is a separate text node in
+// the rendered markup so these exact entries can match.
+Object.assign(window.UI_TRANSLATIONS_SV, {
+  "trials": "studier",
+  "participants": "deltagare",
+  "certainty": "tillförlitlighet",
+  "The combined analysis": "Den sammanslagna analysen",
+  "used less opioid on average, but the confidence interval also includes no difference and an increase, so this does not demonstrate an opioid-sparing effect.":
+    "använde i genomsnitt mindre opioider, men konfidensintervallet omfattar även ingen skillnad och en ökning, vilket innebär att detta inte påvisar någon opioidbesparande effekt.",
+  "showed a confidence interval that excludes no difference.":
+    "visade ett konfidensintervall som utesluter ingen skillnad.",
+  "Combined (TEAS + EA) vs Sham (TEAS) / Usual Care (EA)":
+    "Sammanslaget (TEAS + EA) mot sham (TEAS) / sedvanlig vård (EA)"
+});
