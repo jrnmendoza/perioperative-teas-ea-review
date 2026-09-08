@@ -1550,6 +1550,77 @@ add("Oztas 2019", "Complete combined postoperative opioid exposure (tramadol + r
     "morphine-equivalent combination across two opioids is a review-derived construct")
 
 
+# ============================================================================
+# Tu 2024 (study_244_Tu_2023.pdf) -- comprehensively blinded craniotomy PONV
+# trial. D1 Low: 'a computer-generated random number list'; 'Allocation
+# concealment was achieved by enclosing the assignments in sealed, opaque,
+# sequentially numbered envelopes, which were opened only after confirming
+# eligibility'. D2 Low: 'All patients were unaware of the group to which
+# they were assigned'; 'each patient was told that a special acupoint
+# stimulation, which cannot be felt via human sensory perception, was used'
+# (deceptive sham for an imperceptible stimulation); 'Outcome assessors,
+# data collectors, and statisticians were also blinded'. D3 Low: 5 of 120
+# (4.2%) excluded under pre-specified withdrawal criteria (coma, cognitive
+# impairment, intracranial-hypertension-induced vomiting).
+# ============================================================================
+_tu24_base = (
+    "D1 Low: 'Patients were randomized to either the TEAS or sham TEAS "
+    "group using a computer-generated random number list'; 'Allocation "
+    "concealment was achieved by enclosing the assignments in sealed, "
+    "opaque, sequentially numbered envelopes, which were opened only after "
+    "confirming eligibility'. D2 Low: 'All patients were unaware of the "
+    "group to which they were assigned'; 'each patient was told that a "
+    "special acupoint stimulation, which cannot be felt via human sensory "
+    "perception, was used for the treatment' -- a deceptive sham designed "
+    "for an imperceptible stimulation; 'Outcome assessors, data collectors, "
+    "and statisticians were also blinded to the group allocation'. D3 Low: "
+    "5 of 120 (4.2%) excluded under pre-specified withdrawal criteria (3 "
+    "persistent coma, 1 cognitive impairment, 1 intracranial-hypertension-"
+    "induced vomiting). ")
+_tu24_described = (
+    "D5 Low: this measure is explicitly described as part of the trial's "
+    "planned data collection in the Methods.")
+_tu24_d4 = (
+    " D4 Low for THIS result: 'Another blinded observer (nurse) recorded "
+    "the postoperative data' for this trial's outcomes, so neither the "
+    "self-reported nor the observer-assessed component is exposed to "
+    "differential awareness of allocation.")
+
+for tp in ("0–2 h after craniotomy", "2–6 h after craniotomy", "6–24 h after craniotomy"):
+    add("Tu 2024", "Nausea severity score", tp, L, L, L, L, L,
+        _tu24_base +
+        "D5 Low: 'The observers evaluated the patients' degree of nausea "
+        "using the WHO's PONV fourth-class rating scale' -- an "
+        "observer-administered structured scale, explicitly part of the "
+        "planned measurement protocol." + _tu24_d4)
+    add("Tu 2024", "Use of metoclopramide 10 mg IM", tp, L, L, L, L, L,
+        _tu24_base +
+        "D5 Low: 'The total rescue antiemetic and analgesic dosages 0-24 h "
+        "after craniotomy were recorded'." + _tu24_d4)
+add("Tu 2024", "Vomiting incidence", "0–2 h after craniotomy", L, L, L, L, L,
+    _tu24_base +
+    "D5 Low: 'The incidence of vomiting within 24 h after craniotomy in the "
+    "two groups was the main outcome to be measured'; this is the 0-2h "
+    "sub-window of that same main outcome." + _tu24_d4)
+add("Tu 2024", "VAS pain intensity", "0–2 h after craniotomy", L, L, L, L, L,
+    _tu24_base +
+    "D5 Low: 'The pain score was measured using a standard VAS at 0-2, 2-6, "
+    "and 6-24 h after craniotomy'." + _tu24_d4)
+add("Tu 2024", "VAS pain intensity", "2–6 h after craniotomy", L, L, L, L, L,
+    _tu24_base + _tu24_described + _tu24_d4)
+add("Tu 2024", "VAS pain intensity", "6-24 h", L, L, L, L, L,
+    _tu24_base + _tu24_described + _tu24_d4)
+add("Tu 2024", "Any rescue tramadol use", "6–24 h", L, L, L, L, L,
+    _tu24_base + _tu24_described + _tu24_d4)
+add("Tu 2024", "Cumulative rescue tramadol consumption", "0-24 h", L, L, L, L, L,
+    _tu24_base + _tu24_described + _tu24_d4)
+add("Tu 2024", "TEAS-related adverse events", "0–24 h testing period", L, L, L, L, L,
+    _tu24_base +
+    "D5 Low: 'The reasons for withdrawal and TEAS adverse events, including "
+    "malignant arrhythmia, abnormal blood pressure fluctuations, fainting, "
+    "serious pain, and local infection, were recorded'." + _tu24_d4)
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
