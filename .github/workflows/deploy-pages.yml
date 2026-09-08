@@ -24,6 +24,10 @@ name: Deploy dashboard to GitHub Pages
       - "scripts/build_tiered_v33.py"
       - "scripts/build_primary_pathway.py"
       - "scripts/deploy_integrity_check.py"
+      - "scripts/verify_deployment.py"
+      - "scripts/validate_dashboard.py"
+      - "scripts/build_v33_dashboard_data.py"
+      - "TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch: {}
 
