@@ -1,0 +1,37 @@
+study,outcome,timepoint,models
+Xing 2022,Time to first flatus,Postoperative,gi_first_flatus_TEAS_Sham
+Song 2020,Total intraoperative sufentanil consumption,Intraoperative,v34_intraop_sufentanil; v34_intraop_sufentanil_TEAS_CONTROL_TYPE_REVIEW_REQUIRED
+Pan 2023,Intraoperative remifentanil,Intraoperative,v34_intraop_remifentanil; v34_intraop_remifentanil_TEAS_Usual_care
+Chen 2015 (Hyperalgesia),PONV incidence,0-24 h,ponv_24h_TEAS_Sham
+Gao 2021,Time to first defecation,Postoperative,v34_gi_first_defecation_TEAS_Sham
+Chen 2015,PONV incidence,0-24 h,ponv_24h_TEAS_Sham
+Liang 2021,Sufentanil consumption,Intraoperative,v34_intraop_sufentanil; v34_intraop_sufentanil_TEAS_Sham
+Lu 2022,Time to first defecation,Postoperative,v34_gi_first_defecation_TEAS_Sham
+Ntritsou 2014,Remifentanil consumption,Intraoperative,v34_intraop_remifentanil; v34_intraop_remifentanil_EA_Sham
+Gu 2019,Time to first defecation,Postoperative,v34_gi_first_defecation_TEAS_Sham
+Lu 2022,Time to first flatus,Postoperative,gi_first_flatus_TEAS_Sham
+Gu 2019,Time to first bowel sounds,Postoperative,gi_first_bowel_sounds_TEAS_Sham
+Yang 2024,Time to first defecation,Postoperative,v34_gi_first_defecation_EA_Usual_care
+Zhou 2025,Time to first flatus,Postoperative,gi_first_flatus_TEAS_Sham
+Gao 2021,Time to first bowel sounds,Postoperative,gi_first_bowel_sounds_TEAS_Sham
+Lu 2021,Total remifentanil,Intraoperative,v34_intraop_remifentanil; v34_intraop_remifentanil_TEAS_Sham
+Xing 2022,Total remifentanil consumption,Intraoperative,v34_intraop_remifentanil; v34_intraop_remifentanil_TEAS_Sham
+Liang 2021,Global QoR-40,24 h (T11),v34_qor40_24h; v34_qor40_24h_TEAS_Sham
+Pan 2023,Total QoR-40 score,24 h after operation,v34_qor40_24h; v34_qor40_24h_TEAS_Usual_care
+Gao 2021,Time to first flatus,Postoperative,gi_first_flatus_TEAS_Sham
+Zheng 2025,Total intraoperative remifentanil consumption,Intraoperative,v34_intraop_remifentanil; v34_intraop_remifentanil_TEAS_Sham
+Yang 2020,Time to first defecation,Postoperative,v34_gi_first_defecation_EA_Usual_care
+Guo 2023,Remifentanil consumption,Intraoperative,v34_intraop_remifentanil; v34_intraop_remifentanil_TEAS_Sham
+Wang 2024,Total sufentanil,Intraoperative,v34_intraop_sufentanil; v34_intraop_sufentanil_TEAS_CONTROL_TYPE_REVIEW_REQUIRED_MNVP_stratum; v34_intraop_sufentanil_TEAS_CONTROL_TYPE_REVIEW_REQUIRED_SNVP_stratum
+Liang 2021,Remifentanil consumption,Intraoperative,v34_intraop_remifentanil; v34_intraop_remifentanil_TEAS_Sham
+Wu 2022,Cumulative remifentanil,Intraoperative,v34_intraop_remifentanil; v34_intraop_remifentanil_TEAS_Sham
+Zhu 2022,Intraoperative remifentanil,Intraoperative,v34_intraop_remifentanil; v34_intraop_remifentanil_EA_Usual_care
+Yang 2024,Time to first flatus,Postoperative,gi_first_flatus_EA_Usual_care
+Wang 2023,Time to first flatus,Postoperative,gi_first_flatus_TEAS_Sham
+Gu 2019,VAS pain intensity,24 h,pain_vas_24h_TEAS_Sham
+Zheng 2025,Time to first flatus,Postoperative,gi_first_flatus_TEAS_Sham
+Zhu 2022,Intraoperative sufentanil,Intraoperative,v34_intraop_sufentanil; v34_intraop_sufentanil_EA_Usual_care
+Huang 2025,Time to first defecation,Postoperative,v34_gi_first_defecation_EA_Usual_care
+Ng 2013,Time to first bowel motion / defecation,Postoperative,v34_gi_first_defecation_EA_Sham
+Lee 2011,VAS pain intensity,24 h,pain_vas_24h_TEAS_Sham
+He 2026 (hepatectomy/JIS),PONV incidence,0-24 h,ponv_24h_TEAS_Sham
