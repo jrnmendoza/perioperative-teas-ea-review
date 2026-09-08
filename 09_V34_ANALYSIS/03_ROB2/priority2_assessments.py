@@ -1491,6 +1491,65 @@ add("Jiang 2026", "Exact cumulative postoperative opioid consumption", "0-24 h",
     "result not among the pre-specified endpoints")
 
 
+# ============================================================================
+# Oztas 2019 (covidence_505_full_article.pdf) -- the trial's own authors
+# state plainly that there was no blinding at all: 'Because the patients and
+# data collector were aware they were implementation electrical stimulation
+# or not, there was no blinding to the study.' D1 Some concerns: 'a
+# web-based randomization system with the help of a computer' and block
+# randomisation, but no allocation-concealment mechanism is described. D2
+# High: explicit absence of any blinding, for both participants and the data
+# collector. D3 Low: 1 patient excluded for non-protocol drug use.
+# ============================================================================
+_oztas19_base = (
+    "D1 Some concerns: 'randomization was performed with a web-based "
+    "randomization system with the help of a computer'; 'A block "
+    "randomization list was obtained for 3 groups', but no "
+    "allocation-concealment mechanism is described. D2 High: the trial's "
+    "own authors state 'Because the patients and data collector were aware "
+    "they were implementation electrical stimulation or not, there was no "
+    "blinding to the study' -- an explicit absence of blinding for both "
+    "participants and the person recording outcomes. D3 Low: 1 patient "
+    "excluded for non-protocol drug use. ")
+_oztas19_primary = (
+    "D5 Low: 'The primary outcome measures were the effects of TENS and "
+    "TAES on pain and analgesic drug consumption'.")
+_oztas19_secondary = (
+    "D5 Low: explicitly named among the secondary outcomes -- 'respiratory "
+    "functions, vital signs, nausea and vomiting status, dizziness, "
+    "antiemetic drug consumption, and saturation'.")
+_oztas19_d4 = (
+    " D4 High for THIS result: the same person recording this outcome (the "
+    "data collector) is explicitly stated to have known the treatment "
+    "allocation, with no blinded party anywhere in the outcome-measurement "
+    "chain for this trial.")
+
+for tp in ("2 h after surgery / after intervention", "18 h after surgery / after intervention",
+          "22 h after surgery / after intervention", "42 h after surgery / after intervention",
+          "46 h after surgery / after intervention"):
+    add("Oztas 2019", "Resting postoperative pain after stimulation", tp, S, H, L, H, L,
+        _oztas19_base + _oztas19_primary + _oztas19_d4)
+for tp in ("0-24 h", "24-48 h"):
+    add("Oztas 2019", "Rescue IM pethidine HCl consumption", tp, S, H, L, H, L,
+        _oztas19_base + _oztas19_primary + _oztas19_d4)
+    add("Oztas 2019", "Rescue IV dexketoprofen trometamol consumption", tp, S, H, L, H, L,
+        _oztas19_base + _oztas19_primary + _oztas19_d4)
+add("Oztas 2019", "Cumulative IV PCA tramadol HCl consumption", "24-48 h", S, H, L, H, L,
+    _oztas19_base + _oztas19_primary + _oztas19_d4)
+add("Oztas 2019", "Nausea severity", "0-24 h", S, H, L, H, L,
+    _oztas19_base + _oztas19_secondary + _oztas19_d4)
+add("Oztas 2019", "Vomiting occurrence", "0-24 h", S, H, L, H, L,
+    _oztas19_base + _oztas19_secondary + _oztas19_d4)
+add("Oztas 2019", "Complete combined postoperative opioid exposure (tramadol + rescue pethidine)",
+    "0-24 h", S, H, L, H, S,
+    _oztas19_base +
+    "D5 Some concerns: opioid/analgesic consumption generally is the named "
+    "primary outcome, but this specific combined morphine-equivalent "
+    "construct across two different opioids is the review's own synthesis, "
+    "not a single figure the paper itself reports." + _oztas19_d4,
+    "morphine-equivalent combination across two opioids is a review-derived construct")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
