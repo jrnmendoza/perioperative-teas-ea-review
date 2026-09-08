@@ -925,6 +925,144 @@ add("Long 2025", "Perioperative neurocognitive disorder (PND)", "POD7", S, S, L,
     "MMSE-administrator blinding not confirmed")
 
 
+# ============================================================================
+# Li 2021 (covidence_437_full_article.pdf) -- described as 'single-blinded'
+# but the described blinding is actually broad: 'observers responsible for
+# postoperative follow-up and participants were blinded to the grouping
+# information' and 'Postoperative data were collected by a blinded observer'
+# ('single' likely refers to the treating acupuncturist being the only
+# unblinded role). D1 Low: block randomisation, computer-generated numbers,
+# 'randomization schedule was kept in opaque sealed envelopes, which were
+# opened by an independent investigator who was not an assessor'. D3 Low:
+# documented drop-out criteria (protocol violation, serious adverse events,
+# withdrawal request).
+# ============================================================================
+_li21_base = (
+    "D1 Low: 'blocked randomization approach with a block length of four'; "
+    "'computer-generated random numbers were used to determine the "
+    "allocation of blocks'; 'The randomization schedule was kept in opaque "
+    "sealed envelopes, which were opened by an independent investigator who "
+    "was not an assessor in this study'. D2 Low: although termed "
+    "'single-blinded', the description covers more than one blinded role -- "
+    "'observers responsible for postoperative follow-up and participants "
+    "were blinded to the grouping information' and 'Postoperative data were "
+    "collected by a blinded observer' -- 'single' most plausibly refers to "
+    "the treating acupuncturist being the one unblinded role. D3 Low: "
+    "documented drop-out criteria (protocol violation, serious adverse "
+    "events, or withdrawal request). ")
+_li21_secondary = (
+    "D5 Low: explicitly named among the secondary outcomes -- 'the time to "
+    "first flatus and first ambulation, the level of perioperative plasma "
+    "SP, the occurrence rate of PGD, the postoperative pain scores, the "
+    "incidence of [PONV]'.")
+_li21_d4_blinded = (
+    " D4 Low for THIS result: both the participant and the observer "
+    "collecting postoperative data were blinded to allocation.")
+
+for tp in ("6 h post-OP", "12 h post-OP", "9 am on day 1", "3 pm on day 1",
+          "9 am on day 2", "3 pm on day 2"):
+    add("Li 2021", "PONV occurrence", tp, L, L, L, L, L,
+        _li21_base + _li21_secondary + _li21_d4_blinded)
+for tp in ("12 h post-OP", "9 am on day 1", "3 pm on day 1", "9 am on day 2", "3 pm on day 2"):
+    add("Li 2021", "Participants with postoperative VAS score ≥4", tp, L, L, L, L, L,
+        _li21_base + _li21_secondary + _li21_d4_blinded)
+add("Li 2021", "VAS ≥4", "6 h", L, L, L, L, L,
+    _li21_base + _li21_secondary + _li21_d4_blinded)
+add("Li 2021", "Time to first flatus", "Postoperative", L, L, L, L, L,
+    _li21_base + _li21_secondary + _li21_d4_blinded)
+add("Li 2021", "Postoperative gastrointestinal dysfunction: no bowel sounds >48 h", "Postoperative",
+    L, L, L, L, L,
+    _li21_base +
+    "D5 Low: the 'occurrence rate of PGD [postoperative gastrointestinal "
+    "dysfunction]' is explicitly named among the secondary outcomes." +
+    _li21_d4_blinded)
+add("Li 2021", "Cumulative postoperative sufentanil consumption", "0-24 h", L, L, L, L, S,
+    _li21_base +
+    "D5 Some concerns: intraoperative/postoperative opioid consumption is "
+    "not itself named among the stated primary (time to first bowel "
+    "motion) or secondary outcomes listed above." +
+    _li21_d4_blinded,
+    "result not among pre-specified outcomes")
+add("Li 2021", "Length of postoperative hospital stay", "From date of surgery to discharge",
+    L, L, L, S, S,
+    _li21_base +
+    "D5 Some concerns: hospital stay length is not itself named among the "
+    "stated secondary outcomes. D4 Some concerns for THIS result: hospital "
+    "discharge timing more often reflects the treating surgical team's "
+    "overall judgement than the specific postoperative-data observer's "
+    "blinded data collection, and the report does not confirm who made the "
+    "discharge decision or their blinding status.",
+    "result not among pre-specified outcomes; discharge-decision-maker's blinding not confirmed")
+
+
+# ============================================================================
+# Wang 2023 (s40122-023-00493-2.pdf) -- trial design established in
+# draft_assessments.py: D1 Low (two-step screening, computer-generated random
+# numbers, opaque sealed envelopes); D2 Low ('Patients, attending surgeons,
+# operating room nurses, data collectors and individuals who performed the
+# final statistical analysis were blinded to group assignment'); D3 Some
+# concerns (5 of 88 randomised excluded for protocol breach, completers-only
+# analysis, no ITT).
+# ============================================================================
+_wang23_base = (
+    "D1 Low: two-step screening with 'a table of computer-generated random "
+    "numbers'; 'Group assignments were sealed in sequentially numbered "
+    "opaque envelopes'. D2 Low: 'Patients, attending surgeons, operating "
+    "room nurses, data collectors and individuals who performed the final "
+    "statistical analysis were blinded to group assignment'. D3 Some "
+    "concerns: 5 of 88 randomised excluded post-randomisation 'because of a "
+    "protocol breach' and only the 83 completers were analysed, with no ITT "
+    "or sensitivity analysis reported. ")
+_wang23_primary_sleep = (
+    "D5 Low: postoperative sleep quality (PSQI/AIS) is the trial's stated "
+    "primary outcome.")
+_wang23_secondary = (
+    "D5 Low: the listed secondary outcomes are 'visual analog scale (VAS) "
+    "scores at 24 h, 48 h and 72 h after surgery, cumulative doses of "
+    "additional rescue analgesia, abdominal distension, dizziness, "
+    "postoperative nausea and vomiting (PONV)'.")
+_wang23_d4_blinded = (
+    " D4 Low for THIS result: participants, data collectors and the "
+    "statistician were all blinded to allocation.")
+
+for tp in ("POD1", "POD3"):
+    add("Wang 2023", "PSQI and AIS postoperative sleep quality", tp, L, L, S, L, L,
+        _wang23_base + _wang23_primary_sleep + _wang23_d4_blinded)
+for tp in ("24 h", "48 h", "72 h"):
+    add("Wang 2023", "Activity pain VAS", tp, L, L, S, L, L,
+        _wang23_base + _wang23_secondary + _wang23_d4_blinded)
+    add("Wang 2023", "Rest pain VAS", tp, L, L, S, L, L,
+        _wang23_base + _wang23_secondary + _wang23_d4_blinded)
+add("Wang 2023", "Cumulative number of additional rescue-analgesia doses", "0-72 h", L, L, S, L, L,
+    _wang23_base + _wang23_secondary + _wang23_d4_blinded)
+add("Wang 2023", "Abdominal distension", "Within 72 h after surgery", L, L, S, L, L,
+    _wang23_base + _wang23_secondary + _wang23_d4_blinded)
+add("Wang 2023", "Dizziness", "Within 72 h after surgery", L, L, S, L, L,
+    _wang23_base + _wang23_secondary + _wang23_d4_blinded)
+add("Wang 2023", "PONV incidence", "Within 72 h after surgery", L, L, S, L, L,
+    _wang23_base + _wang23_secondary + _wang23_d4_blinded)
+add("Wang 2023", "Exact cumulative postoperative opioid dose", "0-24 h", L, L, S, L, S,
+    _wang23_base +
+    "D5 Some concerns: this specific opioid-dose figure is not itself named "
+    "among the listed secondary outcomes ('cumulative doses of additional "
+    "rescue analgesia' is the closest named measure but is reported as a "
+    "count of doses, not this exact-mass figure)." + _wang23_d4_blinded,
+    "result not among pre-specified outcomes")
+add("Wang 2023", "Postoperative pulmonary complications", "Within 72 h after surgery", L, L, S, L, S,
+    _wang23_base +
+    "D5 Some concerns: not individually named among the listed secondary "
+    "outcomes." + _wang23_d4_blinded,
+    "result not among pre-specified outcomes")
+add("Wang 2023", "Postoperative hospitalization", "Postoperative hospitalization", L, L, S, S, S,
+    _wang23_base +
+    "D5 Some concerns: not individually named among the listed secondary "
+    "outcomes. D4 Some concerns for THIS result: hospital discharge timing "
+    "more often reflects the treating surgical team's overall judgement "
+    "than the specific data-collection process the report describes as "
+    "blinded.",
+    "result not among pre-specified outcomes; discharge-decision-maker's blinding not confirmed")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
