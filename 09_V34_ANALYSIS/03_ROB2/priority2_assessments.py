@@ -2118,6 +2118,236 @@ for outcome, tp in [
         _wu16_unmapped, "source PDF mapping unresolved; not assessed")
 
 
+# ============================================================================
+# Ng 2013 (covidence_1970_ng_2013.pdf) -- trial design established in
+# draft_assessments.py: D1 Some concerns ('a sealed NONOPAQUE envelope' --
+# the report states explicitly the concealment envelopes were not opaque);
+# D2 Low (EA vs sham acupuncture, both arms genuinely acupuncture-like;
+# outcome assessor blinded); D3 Low (no withdrawals). Time to defecation is
+# the sole pre-specified primary outcome; these results are named secondary
+# outcomes.
+# ============================================================================
+_ng13_base2 = (
+    "D1 Some concerns: 'A sealed nonopaque envelope ... was opened to "
+    "determine the limb of entry' -- the report states explicitly that the "
+    "concealment envelopes were not opaque. D2 Low: the compared arms are "
+    "EA vs sham acupuncture, both blinded, and 'the outcome assessor were "
+    "blinded to the treatment allocation'. D3 Low: 'There was no withdrawal "
+    "or dropout, and all recruited patients were available for analysis'. ")
+_ng13_secondary2 = (
+    "D5 Low: explicitly named among the secondary outcomes -- 'time of "
+    "first passing flatus, time that the patients tolerated a solid diet, "
+    "time to walk independently, duration of hospital stay, pain scores on "
+    "visual analogue scale'.")
+_ng13_d4 = (
+    " D4 Low for THIS result: the outcome assessor was blinded, and both "
+    "compared arms (EA and sham acupuncture) are equally blinded to the "
+    "participant.")
+
+add("Ng 2013", "Time to first flatus", "Postoperative", S, L, L, L, L,
+    _ng13_base2 + _ng13_secondary2 + _ng13_d4)
+add("Ng 2013", "VAS pain intensity", "POD1", S, L, L, L, L,
+    _ng13_base2 + _ng13_secondary2 + _ng13_d4)
+add("Ng 2013", "Cumulative pethidine consumption", "0-24 h", S, L, L, L, S,
+    _ng13_base2 +
+    "D5 Some concerns: 'postoperative analgesic requirement' is named "
+    "generally, but this exact cumulative pethidine mass is not the paper's "
+    "own specific reported figure." + _ng13_d4,
+    "exact analgesic-mass figure not itself the paper's own named metric")
+add("Ng 2013", "Number of postoperative pethidine injections", "Postoperative; exact window NR",
+    S, L, L, L, S,
+    _ng13_base2 +
+    "D5 Some concerns: 'postoperative analgesic requirement' is named "
+    "generally; this specific injection-count figure is not the paper's own "
+    "reported metric." + _ng13_d4,
+    "result not itself the paper's own named metric")
+
+# ============================================================================
+# Liu 2021 (getfile.php-2.pdf) -- a POCD-focused trial with only one
+# domain-specific blinding statement (MMSE assessors). D1 Some concerns:
+# 'randomization was performed using an online randomization tool', no
+# concealment mechanism described. D2 Some concerns: 'The trained
+# researchers who performed the MMSE score were blinded to the grouping' is
+# the only confirmed blinded role -- not stated for the outcomes here. D3
+# Low: n analysed (50/50) matches the 100 enrolled with no reported losses.
+# ============================================================================
+_liu21_base = (
+    "D1 Some concerns: 'The randomization was performed using an online "
+    "randomization tool', with no allocation-concealment mechanism "
+    "described. D2 Some concerns: the only specific blinding statement in "
+    "this report is 'The trained researchers who performed the MMSE score "
+    "were blinded to the grouping of patients' -- blinding for the "
+    "clinicians recording pain/opioid outcomes is not separately confirmed. "
+    "D3 Low: the analysed 50/50 matches the 100 enrolled patients, with no "
+    "reported losses. ")
+_liu21_unclear5 = (
+    "D5 Some concerns: this trial's registered focus is postoperative "
+    "cognitive dysfunction; pain and opioid-consumption measures are "
+    "reported without being clearly named as pre-specified outcomes "
+    "alongside POCD.")
+_liu21_d4 = (
+    " D4 Some concerns for THIS result: no blinded-assessor statement "
+    "specific to this measure is given (only MMSE administration is "
+    "confirmed blinded), and it is self-reported or clinician-set without a "
+    "stated safeguard.")
+
+add("Liu 2021", "VAS at rest", "24 h", S, S, L, S, S,
+    _liu21_base + _liu21_unclear5 + _liu21_d4)
+add("Liu 2021", "VAS with coughing", "24 h", S, S, L, S, S,
+    _liu21_base + _liu21_unclear5 + _liu21_d4)
+add("Liu 2021", "PCA pump compressions", "0-24 h", S, S, L, S, S,
+    _liu21_base + _liu21_unclear5 +
+    " D4 Some concerns for THIS result: a device-logged count, but the "
+    "report does not confirm blinding for whoever set up or monitored the "
+    "PCA regimen.")
+add("Liu 2021", "Cumulative postoperative sufentanil consumption", "0-24 h", S, S, L, S, S,
+    _liu21_base + _liu21_unclear5 + _liu21_d4)
+
+# ============================================================================
+# Liu 2026 (ESD) (covidence_69_full_article.pdf) -- comprehensively blinded.
+# D1 Low: 'computer-generated random numbers with a block size of 4, the
+# allocation was sealed in an opaque envelope'. D2 Low: 'Only the
+# anesthesiologist and acupuncturist who was in charge of TEAS stimulation
+# were aware of the grouping, the patients, surgeons, and physicians
+# responsible for follow-up were [blinded]'; 'A trained research assessor
+# who blinded to the group allocation performed the assessment of primary
+# and secondary outcomes'. D3 Low: 7 of 129 (5.4%) excluded, documented
+# reasons (3 bleeding, 4 withdrawal).
+# ============================================================================
+_liu26esd_base = (
+    "D1 Low: 'Randomization was performed using computer-generated random "
+    "numbers with a block size of 4, the allocation was sealed in an opaque "
+    "envelope'. D2 Low: 'Only the anesthesiologist and acupuncturist who "
+    "was in charge of TEAS stimulation were aware of the grouping, the "
+    "patients, surgeons, and physicians responsible for follow-up were' "
+    "blinded; 'A trained research assessor who blinded to the group "
+    "allocation performed the assessment of primary and secondary "
+    "outcomes'. D3 Low: 7 of 129 (5.4%) excluded, all with documented "
+    "reasons (3 for postoperative bleeding, 4 withdrawals). ")
+_liu26esd_secondary = (
+    "D5 Low: explicitly named among the secondary outcomes -- 'the area "
+    "under the curve (AUC) of Numeric Rating Scale (NRS) pain score from 1 "
+    "to 48 h, morphine consumption area under the curve'.")
+_liu26esd_d4 = (
+    " D4 Low for THIS result: assessed by 'a trained research assessor who "
+    "[was] blinded to the group allocation'.")
+
+add("Liu 2026 (ESD)", "NRS pain intensity", "24 h", L, L, L, L, L,
+    _liu26esd_base +
+    "D5 Low: 'The primary outcome was the incidence of moderate-to-severe "
+    "pain within 24 h', and NRS pain at 24h is a component of the "
+    "AUC-based secondary pain outcome." + _liu26esd_d4)
+add("Liu 2026 (ESD)", "Cumulative postoperative morphine consumption", "0-24 h", L, L, L, L, L,
+    _liu26esd_base + _liu26esd_secondary + _liu26esd_d4)
+add("Liu 2026 (ESD)", "Any rescue IV morphine use", "Through 48 h", L, L, L, L, L,
+    _liu26esd_base + _liu26esd_secondary + _liu26esd_d4)
+add("Liu 2026 (ESD)", "PONV incidence", "Postoperative follow-up", L, L, L, L, S,
+    _liu26esd_base +
+    "D5 Some concerns: the excerpted secondary-outcomes list centres on "
+    "pain and morphine AUC measures; PONV is not confirmed among them from "
+    "the available extract." + _liu26esd_d4,
+    "PONV pre-specification not confirmed in the extracted outcomes list")
+
+# ============================================================================
+# Ma 2026 (117210.pdf) -- authors explicitly state neither allocation
+# concealment nor participant blinding was feasible, but a dedicated blinded
+# assessor recorded every postoperative outcome. D1 Some concerns: 'This was
+# a partially randomized controlled trial' (PSQI<6 patients are
+# non-randomised controls; the TEAS-vs-sham contrast used here is the
+# randomised comparison). D2 Some concerns: 'Allocation concealment was not
+# feasible ... participant blinding was not feasible given the physical
+# nature of the intervention', though 'An outcome assessor blinded to group
+# allocation performed all data collection'. D3 Low: 1 lost from each arm,
+# documented.
+# ============================================================================
+_ma26_base = (
+    "D1 Some concerns: 'This was a partially randomized controlled trial' "
+    "-- patients with PSQI < 6 were assigned to a non-randomised reference "
+    "control group, though the TEAS-vs-sham contrast extracted here is the "
+    "genuinely randomised comparison. D2 Some concerns: the authors state "
+    "plainly that 'Allocation concealment was not feasible due to the "
+    "physical nature of the TEAS intervention' and 'participant blinding "
+    "was not feasible given the physical nature of the intervention', "
+    "though 'An outcome assessor blinded to group allocation performed all "
+    "data collection'. D3 Low: 1 patient lost from each arm, documented "
+    "('incomplete postoperative data'). ")
+_ma26_d4_subjective = (
+    " D4 Some concerns for THIS result: 'All postoperative assessments "
+    "(NRS pain scores, AIS sleep scores, PONV incidence) were conducted by "
+    "the same blinded assessor', but this measure has a subjective, "
+    "internal-sensation component that only the unblinded participant can "
+    "report in the first place.")
+
+add("Ma 2026", "Athens Insomnia Scale", "POD1", S, S, L, S, L,
+    _ma26_base +
+    "D5 Low: 'postoperative Athens Insomnia Scale (AIS) score as the "
+    "primary outcome'." + _ma26_d4_subjective)
+add("Ma 2026", "Nausea", "24 h", S, S, L, S, L,
+    _ma26_base +
+    "D5 Low: PONV incidence is named among the assessor's tracked "
+    "postoperative measures." + _ma26_d4_subjective)
+add("Ma 2026", "Vomiting", "24 h", S, S, L, L, L,
+    _ma26_base +
+    "D5 Low: PONV incidence is named among the assessor's tracked "
+    "postoperative measures. D4 Low for THIS result: unlike nausea, "
+    "vomiting is objectively observable and does not depend solely on the "
+    "unblinded participant's own account, and it was recorded by the same "
+    "blinded assessor.")
+add("Ma 2026", "Cumulative postoperative opioid consumption", "0-24 h", S, S, L, S, S,
+    _ma26_base +
+    "D5 Some concerns: not itself confirmed among the assessor's explicitly "
+    "named tracked measures (NRS pain, AIS, PONV)." + _ma26_d4_subjective,
+    "result not confirmed among the pre-specified tracked measures")
+
+# ============================================================================
+# Wu 2025 (103940.pdf) -- attempted comprehensive blinding with an honest
+# limitation acknowledged. D1 Low: 'a computer-generated list of random
+# numbers created by an independent third party'. D2 Some concerns: 'the
+# sham TEAS group received electrode patches affixed without electrical
+# stimulation to simulate the sensory experience', and 'All clinicians and
+# researchers collect[ing data were blinded]', but the authors state
+# plainly 'the sensation of electrical stimulation can bring about some
+# perceptual differences, and this difference may affect the [blinding]'.
+# D3 Low: ITT/full analysis set used for all outcomes.
+# ============================================================================
+_wu25_base = (
+    "D1 Low: 'Randomization was performed using a computer-generated list "
+    "of random numbers created by an independent third party'. D2 Some "
+    "concerns: 'the sham TEAS group received electrode patches affixed "
+    "without electrical stimulation to simulate the sensory experience "
+    "without actual electrical current', and 'All clinicians and "
+    "researchers collect[ing outcome data]' were blinded, but the authors "
+    "acknowledge 'the sensation of electrical stimulation can bring about "
+    "some perceptual differences, and this difference may affect the "
+    "[blinding]'. D3 Low: 'All outcomes were evaluated in the "
+    "intention-to-treat (ITT) population'. ")
+_wu25_named = (
+    "D5 Low: explicitly named among the secondary outcomes -- 'VAS scores "
+    "at 1 h and 12 h post-surgery, analgesic consumption, incidence of "
+    "moderate-to-severe pain (VAS score >4), incidence of postoperative "
+    "nausea and v[omiting]'.")
+_wu25_d4 = (
+    " D4 Some concerns for THIS result: a self-reported/participant-"
+    "influenced measure in a trial whose own authors note imperfect "
+    "sensory blinding.")
+
+add("Wu 2025", "Moderate-to-severe pain (VAS >4)", "Within 12 h", L, S, L, S, L,
+    _wu25_base + _wu25_named + _wu25_d4)
+add("Wu 2025", "Exact postoperative opioid/MME consumption", "0-24 h", L, S, L, S, L,
+    _wu25_base + _wu25_named + _wu25_d4)
+for drug in ("Remifentanil consumption", "Sufentanil consumption"):
+    add("Wu 2025", drug, "Intraoperative", L, S, L, L, S,
+        _wu25_base +
+        "D5 Some concerns: the named secondary outcomes are all "
+        "postoperative; intraoperative opioid consumption is not itself "
+        "among them. D4 Low for THIS result: 'A professionally trained "
+        "anesthesiologist administered the interventions according to a "
+        "serial number' and 'All clinicians and researchers collect[ing "
+        "data]' were blinded, so intraoperative dosing was set and recorded "
+        "under blinded conditions.",
+        "intraoperative consumption not among the named postoperative secondary outcomes")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
