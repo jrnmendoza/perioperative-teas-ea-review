@@ -35,6 +35,13 @@ NOTPOOLED = ROOT / "08_V33_MASTER" / "01_DATA" / "v33_not_pooled_register.csv"
 PRIMARY = ROOT / "06_FINAL_ANALYSIS_V26" / "03_RESULTS" / "results_opioid24_primary.csv"
 OPIOID_CSV = ROOT / "06_FINAL_ANALYSIS_V26" / "01_DATA" / "opioid_24h_primary.csv"
 OUT = ROOT / "dashboard" / "v33_data.js"
+FIGURES = {
+    'V33_RESCUE_OPIOID_RR_24H': 'forest_v33_rescue_opioid_rr.png',
+    'V33_INTRAOP_REMI_MD': 'forest_v33_intraop_remifentanil.png',
+    'V33_INTRAOP_SUF_MD': 'forest_v33_intraop_sufentanil.png',
+    'V33_QOR40_24H_MD': 'forest_v33_qor40_24h.png',
+    'V33_GI_DEFECATION_MD': 'forest_v33_gi_defecation.png',
+}
 
 # Display order and human labels for the contribution map.
 FAMILY_GROUPS = [
@@ -177,6 +184,7 @@ def main() -> int:
         "canonical_studies": len(studies),
         "outcome_rows": len(rows),
         "strict_primary_k": int(float(prim["OP24_PRIM_COMB"]["k"])) if "OP24_PRIM_COMB" in prim else None,
+        "result_rob2_coverage": read_csv(ROOT / '09_V34_INTAKE/result_rob2_coverage.csv'),
 
         "contribution_map": {
             "groups": [{"id": g, "label": l, "definition": d,
@@ -196,6 +204,7 @@ def main() -> int:
 
         "secondary": [
             dict(analysis_id=r["analysis_id"], outcome=r["outcome"],
+                 figure=('secondary/' + FIGURES[r['analysis_id']]) if r['analysis_id'] in FIGURES else None,
                  measure=r["measure"], model=r["model"], **fmt(r))
             for r in secondary
         ],
@@ -219,10 +228,12 @@ def main() -> int:
             {
                 "analysis_id": "V33_GI_DEFECATION_MD",
                 "level": "moderate",
-                "text": ("Robust to the new data but severely heterogeneous (I²=88.6%). Excluding "
-                         "the newly added Yang 2020 contrast gives −11.95 h (−21.52 to −2.38, "
-                         "p=0.022, k=7): the effect was already present and the addition did not "
-                         "create it."),
+                "text": ("Ng 2013 contributes only its sham-controlled contrast; the alternative "
+                         "no-acupuncture comparison shares the same EA participants and is not "
+                         "counted again. Removing the duplicate materially changes the estimate "
+                         "and estimated heterogeneity; it does not justify a certainty upgrade. Result-specific "
+                         "RoB 2 is pending for several bowel-function results; flatus or ileus "
+                         "assessments do not substitute for defecation assessments."),
             },
             {
                 "analysis_id": "V33_INTRAOP_REMI_MD",
@@ -230,7 +241,13 @@ def main() -> int:
                 "text": ("Intraoperative requirement is a different estimand from postoperative "
                          "consumption and says nothing about opioid sparing after surgery. Doses "
                          "are titrated intraoperatively by the anaesthetist, so this outcome is "
-                         "vulnerable to performance bias wherever blinding was imperfect."),
+                         "vulnerable to performance bias wherever blinding was imperfect. "
+                         "Wu 2025 is excluded because its intraoperative doses predate PACU randomization."),
+            },
+            {
+                "analysis_id": "V33_INTRAOP_SUF_MD",
+                "level": "moderate",
+                "text": "Wu 2025 is excluded: its intraoperative doses were measured before PACU randomization and intervention. These baseline covariates cannot estimate a treatment effect. Intraoperative and postoperative consumption remain separate estimands.",
             },
             {
                 "analysis_id": "V33_QOR40_24H_MD",

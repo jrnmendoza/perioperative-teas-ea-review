@@ -52,6 +52,7 @@ MASTER_XLSX = (
 CACHE_BUSTED_ASSETS = (
     "styles.css", "primary_pathway.js", "tiered_v33.js", "v33_data.js", "data.js",
     "translations.js", "reader_assist.js", "meta_engine.js", "app.js",
+    "author_inquiries.js", "search_strategies.js", "meta_outcomes.js",
 )
 CACHE_BUSTED_FETCH_PATHS = (
     "v26/02_STATA/logs/01_opioid24_primary.log",
@@ -162,6 +163,7 @@ def copy_site(out: Path) -> None:
     if v26_out.exists():
         shutil.rmtree(v26_out)
     shutil.copytree(V26, v26_out, ignore=shutil.ignore_patterns(".DS_Store", "*.bak"))
+    shutil.copytree(ROOT / '08_V33_MASTER/04_FIGURES', out / 'secondary', dirs_exist_ok=True)
 
     # The v33 tiered figures are referenced as v33/<file>.png by renderTieredV33(),
     # and the do-file, data and results are linked as downloadable provenance.
@@ -261,6 +263,8 @@ def main() -> int:
     ap.add_argument("--commit", default=None, help="override git commit (default: current HEAD)")
     args = ap.parse_args()
     out = Path(args.out)
+
+    run([sys.executable, "scripts/build_reference_data.py"])
 
     commit = git_commit(args.commit)
     meta = build_metadata(commit)

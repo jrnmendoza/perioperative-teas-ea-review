@@ -13,6 +13,320 @@ window.V33_DATA = {
   "canonical_studies": 70,
   "outcome_rows": 382,
   "strict_primary_k": 7,
+  "result_rob2_coverage": [
+    {
+      "analysis_set": "v33_rescue_opioid_binary_24h",
+      "study": "Tu 2024",
+      "comparison_id": "TU24_TEAS_vs_SHAM_TRAMADOL",
+      "result_assessed": "Binary rescue opioid use (0-24h/POD1)",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Vomiting incidence",
+      "overall": "",
+      "draft_result_id": "bff0cfe3142f94d1",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_rescue_opioid_binary_24h",
+      "study": "Liu 2026 (burn)",
+      "comparison_id": "LIU26BURN_TEAS_vs_SHAM_RESCUE",
+      "result_assessed": "Binary rescue opioid use (0-24h/POD1)",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Intraoperative remifentanil consumption",
+      "overall": "",
+      "draft_result_id": "44ac970e9c2f29bd",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_rescue_opioid_binary_24h",
+      "study": "Yu 2020",
+      "comparison_id": "YU20_TEAS_vs_CTRL_RESCUEOP24",
+      "result_assessed": "Binary rescue opioid use (0-24h/POD1)",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Global QoR-40",
+      "overall": "",
+      "draft_result_id": "c40e932759d696dd",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_remifentanil",
+      "study": "Zheng 2025",
+      "comparison_id": "ZHENG25_TEAS_vs_SHAM_REMI",
+      "result_assessed": "Intraoperative remifentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Any PONV",
+      "overall": "",
+      "draft_result_id": "92534778b853e52a",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_remifentanil",
+      "study": "Xing 2022",
+      "comparison_id": "XING22_NTG_vs_NG_REMI",
+      "result_assessed": "Intraoperative remifentanil",
+      "assessment_status": "EXISTING RESULT-SPECIFIC ASSESSMENT",
+      "existing_selected_result": "Total intraoperative remifentanil consumption",
+      "overall": "Some concerns",
+      "draft_result_id": "",
+      "adjudicated_by": "",
+      "required_action": ""
+    },
+    {
+      "analysis_set": "v33_intraop_remifentanil",
+      "study": "Wu 2022",
+      "comparison_id": "WU22_PTEAS_vs_CTRL_REMI",
+      "result_assessed": "Intraoperative remifentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "VAS pain intensity",
+      "overall": "",
+      "draft_result_id": "25c60ed29d7de87e",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_remifentanil",
+      "study": "Ntritsou 2014",
+      "comparison_id": "NTRI14_EA_vs_SHAM_REMI",
+      "result_assessed": "Intraoperative remifentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Total tramadol exposure",
+      "overall": "",
+      "draft_result_id": "cdda779f77902b2a",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_remifentanil",
+      "study": "Lu 2021",
+      "comparison_id": "LU21_COMB_vs_SHAM_REMI",
+      "result_assessed": "Intraoperative remifentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Post-mastectomy chronic pain incidence",
+      "overall": "",
+      "draft_result_id": "844fe231c413003f",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_remifentanil",
+      "study": "Guo 2023",
+      "comparison_id": "GUO23_TEAS_vs_SHAM_REMI",
+      "result_assessed": "Intraoperative remifentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Postoperative cognitive dysfunction",
+      "overall": "",
+      "draft_result_id": "121f0a8936bef7cb",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_remifentanil",
+      "study": "Zhu 2022",
+      "comparison_id": "ZHU22_COMB_vs_USUAL_INTRAOPREMI",
+      "result_assessed": "Intraoperative remifentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Postoperative vomiting",
+      "overall": "",
+      "draft_result_id": "bdfb58be8b0e6cc8",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_remifentanil",
+      "study": "Pan 2023",
+      "comparison_id": "PAN23_TEAS_vs_CTRL_INTRAOPREMI",
+      "result_assessed": "Intraoperative remifentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Time to first postoperative flatus",
+      "overall": "",
+      "draft_result_id": "81e6123cb491b9b8",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_sufentanil",
+      "study": "Wang 2024",
+      "comparison_id": "WANG24_SNVP_ODT_vs_OD_INTRAOPSUF",
+      "result_assessed": "Intraoperative sufentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "PONV incidence",
+      "overall": "",
+      "draft_result_id": "5d893e7957357dbc",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_sufentanil",
+      "study": "Wang 2024",
+      "comparison_id": "WANG24_MNVP_ODT_vs_OD_INTRAOPSUF",
+      "result_assessed": "Intraoperative sufentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "PONV incidence",
+      "overall": "",
+      "draft_result_id": "5d893e7957357dbc",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_sufentanil",
+      "study": "Liu 2015",
+      "comparison_id": "LIU15_TEAS_vs_SHAM_SUFINTRA",
+      "result_assessed": "Intraoperative sufentanil",
+      "assessment_status": "EXISTING RESULT-SPECIFIC ASSESSMENT",
+      "existing_selected_result": "Total intraoperative sufentanil consumption",
+      "overall": "Some concerns",
+      "draft_result_id": "",
+      "adjudicated_by": "",
+      "required_action": ""
+    },
+    {
+      "analysis_set": "v33_intraop_sufentanil",
+      "study": "Song 2020",
+      "comparison_id": "SONG20_TEAS_vs_SHAM_SUFINTRA",
+      "result_assessed": "Intraoperative sufentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "PCA pump press number",
+      "overall": "",
+      "draft_result_id": "819d7b9444309046",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_intraop_sufentanil",
+      "study": "Zhu 2022",
+      "comparison_id": "ZHU22_COMB_vs_USUAL_INTRAOPSUF",
+      "result_assessed": "Intraoperative sufentanil",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Postoperative vomiting",
+      "overall": "",
+      "draft_result_id": "6687eab2f95be2de",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_qor40_24h",
+      "study": "Yao 2015",
+      "comparison_id": "YAO15_TEAS_vs_CONTROL",
+      "result_assessed": "Global QoR-40 at ~24h",
+      "assessment_status": "EXISTING RESULT-SPECIFIC ASSESSMENT",
+      "existing_selected_result": "Global QoR-40",
+      "overall": "High",
+      "draft_result_id": "",
+      "adjudicated_by": "",
+      "required_action": ""
+    },
+    {
+      "analysis_set": "v33_qor40_24h",
+      "study": "Yu 2020",
+      "comparison_id": "YU20_TEAS_vs_CONTROL",
+      "result_assessed": "Global QoR-40 at ~24h",
+      "assessment_status": "EXISTING RESULT-SPECIFIC ASSESSMENT",
+      "existing_selected_result": "Global QoR-40",
+      "overall": "High",
+      "draft_result_id": "",
+      "adjudicated_by": "",
+      "required_action": ""
+    },
+    {
+      "analysis_set": "v33_qor40_24h",
+      "study": "Liang 2021",
+      "comparison_id": "LIANG21_TEAS_vs_CTRL_QOR40_24H",
+      "result_assessed": "Global QoR-40 at ~24h",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "CRBD incidence",
+      "overall": "",
+      "draft_result_id": "a835971958f96c3c",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_gi_first_defecation",
+      "study": "Yang 2024",
+      "comparison_id": "YANG24_EA_vs_UC_DEFEC",
+      "result_assessed": "Time to first defecation",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Morphine use via IV PCA",
+      "overall": "",
+      "draft_result_id": "f843e2e6a71599f2",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_gi_first_defecation",
+      "study": "Ng 2013",
+      "comparison_id": "NG13_EA_vs_SHAM_BOWEL",
+      "result_assessed": "Time to first defecation",
+      "assessment_status": "EXISTING RESULT-SPECIFIC ASSESSMENT",
+      "existing_selected_result": "Time to first bowel motion",
+      "overall": "Some concerns",
+      "draft_result_id": "",
+      "adjudicated_by": "",
+      "required_action": ""
+    },
+    {
+      "analysis_set": "v33_gi_first_defecation",
+      "study": "Lu 2022",
+      "comparison_id": "LU22_TEAS_vs_CTRL_DEFEC",
+      "result_assessed": "Time to first defecation",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Time to meet discharge criteria",
+      "overall": "",
+      "draft_result_id": "e64d2b0bca8458c0",
+      "adjudicated_by": "",
+      "required_action": "Adjudicate draft against sources"
+    },
+    {
+      "analysis_set": "v33_gi_first_defecation",
+      "study": "Huang 2025",
+      "comparison_id": "HUANG25_EA_vs_UC_DEFEC",
+      "result_assessed": "Time to first defecation",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Time to first flatus",
+      "overall": "",
+      "draft_result_id": "",
+      "adjudicated_by": "",
+      "required_action": "New result-specific assessment required"
+    },
+    {
+      "analysis_set": "v33_gi_first_defecation",
+      "study": "Gu 2019",
+      "comparison_id": "GU19_LTEAS_vs_CTEAS_DEFEC",
+      "result_assessed": "Time to first defecation",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Time to first flatus",
+      "overall": "",
+      "draft_result_id": "",
+      "adjudicated_by": "",
+      "required_action": "New result-specific assessment required"
+    },
+    {
+      "analysis_set": "v33_gi_first_defecation",
+      "study": "Gao 2021",
+      "comparison_id": "GAO21_TEAS_vs_SHAM_DEFEC",
+      "result_assessed": "Time to first defecation",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Postoperative paralytic ileus",
+      "overall": "",
+      "draft_result_id": "",
+      "adjudicated_by": "",
+      "required_action": "New result-specific assessment required"
+    },
+    {
+      "analysis_set": "v33_gi_first_defecation",
+      "study": "Yang 2020",
+      "comparison_id": "YANG20_EA_vs_UC_DEFECATION",
+      "result_assessed": "Time to first defecation",
+      "assessment_status": "PENDING",
+      "existing_selected_result": "Time to first postoperative flatus",
+      "overall": "",
+      "draft_result_id": "",
+      "adjudicated_by": "",
+      "required_action": "New result-specific assessment required"
+    }
+  ],
   "contribution_map": {
     "groups": [
       {
@@ -802,6 +1116,7 @@ window.V33_DATA = {
     {
       "analysis_id": "V33_RESCUE_OPIOID_RR_24H",
       "outcome": "Binary rescue opioid use, 0-24 h/POD1",
+      "figure": "secondary/forest_v33_rescue_opioid_rr.png",
       "measure": "Risk ratio",
       "model": "REML + Hartung-Knapp",
       "k": 3.0,
@@ -815,45 +1130,49 @@ window.V33_DATA = {
     {
       "analysis_id": "V33_INTRAOP_REMI_MD",
       "outcome": "Intraoperative remifentanil",
+      "figure": "secondary/forest_v33_intraop_remifentanil.png",
       "measure": "MD (ug)",
       "model": "REML + Hartung-Knapp",
-      "k": 9.0,
-      "estimate": -104.4153488345436,
-      "ci_low": -158.5477302258938,
-      "ci_high": -50.28296744319328,
-      "p_value": 0.0021449228538168,
-      "tau2": 2061.423450304245,
-      "i2": 52.6029518747458
+      "k": 8.0,
+      "estimate": -116.7635851347925,
+      "ci_low": -177.3163528465471,
+      "ci_high": -56.21081742303782,
+      "p_value": 0.0026058650079483,
+      "tau2": 2652.144953493925,
+      "i2": 57.46302013239292
     },
     {
       "analysis_id": "V33_INTRAOP_REMI_SMD",
       "outcome": "Intraoperative remifentanil",
+      "figure": null,
       "measure": "Hedges g",
       "model": "REML + Hartung-Knapp",
-      "k": 9.0,
-      "estimate": -0.4856536657820866,
-      "ci_low": -0.8355517036100668,
-      "ci_high": -0.1357556279541064,
-      "p_value": 0.0125990505939633,
-      "tau2": 0.1489417961823781,
-      "i2": 81.58561726334138
+      "k": 8.0,
+      "estimate": -0.5261933094995964,
+      "ci_low": -0.9213729477018457,
+      "ci_high": -0.1310136712973471,
+      "p_value": 0.0161844120457169,
+      "tau2": 0.1659047441133704,
+      "i2": 83.31686932959641
     },
     {
       "analysis_id": "V33_INTRAOP_SUF_MD",
       "outcome": "Intraoperative sufentanil",
+      "figure": "secondary/forest_v33_intraop_sufentanil.png",
       "measure": "MD (ug)",
       "model": "REML + Hartung-Knapp",
-      "k": 6.0,
-      "estimate": -0.1139999801003263,
-      "ci_low": -1.935307606873889,
-      "ci_high": 1.707307646673237,
-      "p_value": 0.8784720332157816,
-      "tau2": 0.2737063886365303,
-      "i2": 26.7547036294689
+      "k": 5.0,
+      "estimate": -0.1185847431304059,
+      "ci_low": -2.432214402365839,
+      "ci_high": 2.195044916105028,
+      "p_value": 0.8937181992897592,
+      "tau2": 0.3319335442780787,
+      "i2": 34.60240746540787
     },
     {
       "analysis_id": "V33_QOR40_24H_MD",
       "outcome": "Global QoR-40 at ~24 h",
+      "figure": "secondary/forest_v33_qor40_24h.png",
       "measure": "MD (points)",
       "model": "REML + Hartung-Knapp",
       "k": 3.0,
@@ -867,18 +1186,33 @@ window.V33_DATA = {
     {
       "analysis_id": "V33_GI_DEFECATION_MD",
       "outcome": "Time to first defecation",
+      "figure": "secondary/forest_v33_gi_defecation.png",
       "measure": "MD (hours)",
       "model": "REML + Hartung-Knapp",
-      "k": 8.0,
-      "estimate": -10.31466296322132,
-      "ci_low": -18.45448754652791,
-      "ci_high": -2.174838379914727,
-      "p_value": 0.0200434952860491,
-      "tau2": 54.07790488315739,
-      "i2": 88.6064989733423
+      "k": 7.0,
+      "estimate": -4.804720237806922,
+      "ci_low": -7.627734640992897,
+      "ci_high": -1.981705834620947,
+      "p_value": 0.0059139988350883,
+      "tau2": 3.33463593708e-09,
+      "i2": 5.49858595292e-08
     }
   ],
   "not_pooled": [
+    {
+      "study": "Ng 2013",
+      "outcome": "First bowel motion: EA vs no acupuncture",
+      "window": "Time to event",
+      "stat": "Alternative contrast with a shared EA arm",
+      "reason": "The sham-controlled contrast is selected for this model to preserve the blinded comparison and count each participant once. covidence_1970_ng_2013.pdf, Methods and Tables 3-4."
+    },
+    {
+      "study": "Wu 2025",
+      "outcome": "Intraoperative remifentanil and sufentanil",
+      "window": "Intraoperative, before randomization",
+      "stat": "Baseline covariates in Table 1; original values retained in frozen v33 master",
+      "reason": "103940.pdf pp. 3018-3019: randomization and TEAS began on PACU arrival. Intraoperative doses cannot estimate the effect of a later intervention."
+    },
     {
       "study": "Yao 2015",
       "outcome": "Cumulative rescue administrations",
@@ -966,12 +1300,17 @@ window.V33_DATA = {
     {
       "analysis_id": "V33_GI_DEFECATION_MD",
       "level": "moderate",
-      "text": "Robust to the new data but severely heterogeneous (I²=88.6%). Excluding the newly added Yang 2020 contrast gives −11.95 h (−21.52 to −2.38, p=0.022, k=7): the effect was already present and the addition did not create it."
+      "text": "Ng 2013 contributes only its sham-controlled contrast; the alternative no-acupuncture comparison shares the same EA participants and is not counted again. Removing the duplicate materially changes the estimate and estimated heterogeneity; it does not justify a certainty upgrade. Result-specific RoB 2 is pending for several bowel-function results; flatus or ileus assessments do not substitute for defecation assessments."
     },
     {
       "analysis_id": "V33_INTRAOP_REMI_MD",
       "level": "moderate",
-      "text": "Intraoperative requirement is a different estimand from postoperative consumption and says nothing about opioid sparing after surgery. Doses are titrated intraoperatively by the anaesthetist, so this outcome is vulnerable to performance bias wherever blinding was imperfect."
+      "text": "Intraoperative requirement is a different estimand from postoperative consumption and says nothing about opioid sparing after surgery. Doses are titrated intraoperatively by the anaesthetist, so this outcome is vulnerable to performance bias wherever blinding was imperfect. Wu 2025 is excluded because its intraoperative doses predate PACU randomization."
+    },
+    {
+      "analysis_id": "V33_INTRAOP_SUF_MD",
+      "level": "moderate",
+      "text": "Wu 2025 is excluded: its intraoperative doses were measured before PACU randomization and intervention. These baseline covariates cannot estimate a treatment effect. Intraoperative and postoperative consumption remain separate estimands."
     },
     {
       "analysis_id": "V33_QOR40_24H_MD",

@@ -186,6 +186,13 @@ function initNavigation() {
 
 // Global Filters Toolbar
 function initGlobalFilters() {
+  const availableOutcomes = new Set(window.META_OUTCOMES || []);
+  document.querySelectorAll('#meta-outcome-select option').forEach(option => {
+    if (!availableOutcomes.has(option.value)) option.remove();
+  });
+  document.querySelectorAll('#meta-outcome-select optgroup').forEach(group => {
+    if (!group.children.length) group.remove();
+  });
   const modSelect = document.getElementById('filter-modality');
   const compSelect = document.getElementById('filter-comparator');
   const surgSelect = document.getElementById('filter-surgery');
@@ -340,7 +347,7 @@ function renderActiveTab() {
   else if (activeTab === 'secondary') renderMetaLab();
   else if (activeTab === 'mcid') renderMCIDStudio();
   else if (activeTab === 'metareg') renderMetaRegStudio();
-  else if (activeTab === 'primary') { renderPrimaryPathway(); renderTieredV33(); renderV33(); renderSensitivitySandbox(); }
+  else if (activeTab === 'primary') { renderV33(); renderPrimaryPathway(); renderTieredV33(); renderSensitivitySandbox(); }
   else if (activeTab === 'limitations') renderInquiriesView();
   else if (activeTab === 'extraction') renderConversionsView();
   else if (activeTab === 'evidence') renderDirectionOfEvidence();
@@ -449,7 +456,7 @@ function renderActiveSearchDb() {
   const linesCount = document.getElementById('search-strategy-lines-count');
   if (linesCount) {
     const lines = db.strategy_text.split('\n').length;
-    linesCount.innerText = `${lines} lines • Executed exactly as displayed`;
+    linesCount.innerText = `${lines} lines • ${db.status}`;
   }
 
   // Copy button
@@ -683,16 +690,7 @@ function renderKPIs() {
     studyCountEl.innerText = `${filtered.length} Studies`;
   }
 
-  const studySubEl = document.getElementById('kpi-study-sub');
-  if (studySubEl) {
-    studySubEl.innerText = `of ${window.STUDIES_DATA.length} total trials in database`;
-  }
-
   const totalN = filtered.reduce((acc, s) => acc + (s.population ? s.population.total_n : 0), 0);
-  const patientCountEl = document.getElementById('kpi-patient-count');
-  if (patientCountEl) {
-    patientCountEl.innerText = totalN.toLocaleString();
-  }
 
   const patientSubEl = document.getElementById('kpi-patient-sub');
   if (patientSubEl) {
@@ -703,9 +701,6 @@ function renderKPIs() {
   const effectSubEl = document.getElementById('kpi-pooled-sub');
   const effectBadgeEl = document.getElementById('kpi-pooled-badge');
   const effectTitleEl = document.getElementById('kpi-effect-title');
-  const i2ValEl = document.getElementById('kpi-i2');
-  const i2SubEl = document.getElementById('kpi-i2-sub');
-  const i2BadgeEl = document.getElementById('kpi-i2-badge');
 
   // Locked Protocol v32: Modality-specific estimates and strict direct primary (k=7, N=676)
   if (filterModality === 'all') {
@@ -1042,8 +1037,29 @@ function renderRoB2Matrix() {
   }
 }
 
+function renderStataSecondary() {
+  const select = document.getElementById('stata-secondary-select');
+  const panel = document.getElementById('stata-secondary-result');
+  const results = window.V33_DATA?.secondary || [];
+  if (!select || !panel || !results.length) return;
+  if (!select.children.length) {
+    select.innerHTML = results.map(r => `<option value="${pwEsc(r.analysis_id)}">${pwEsc(r.outcome)} — ${pwEsc(r.measure)}</option>`).join('');
+    select.onchange = renderStataSecondary;
+  }
+  const r = results.find(r => r.analysis_id === select.value) || results[0];
+  const caveats = (window.V33_DATA.caveats || []).filter(c => c.analysis_id === r.analysis_id);
+  panel.innerHTML = `<p><strong>${pwEsc(r.outcome)}</strong>: ${pwEsc(r.measure)} ${r.estimate.toFixed(3)}
+    (95% CI ${r.ci_low.toFixed(3)} to ${r.ci_high.toFixed(3)}), k=${r.k}, p=${r.p_value.toPrecision(3)}.
+    ${pwEsc(r.model)}; StataNow 19.5.</p>
+    <p>Result-specific RoB 2 adjudication pending. No GRADE rating is assigned here.
+    This saved analysis uses its documented analysis set; the interactive filters below do not alter it.</p>
+    ${caveats.map(c => `<p>${pwEsc(c.text)}</p>`).join('')}
+    ${r.figure ? `<img src="${pwEsc(r.figure)}" alt="Stata forest plot: ${pwEsc(r.outcome)}" style="width:100%;height:auto;margin-top:1rem;">` : ''}`;
+}
+
 // 5. Real-Time Dynamic Meta-Analysis Lab & Forest Plot (Objectives 1, 2, 3, 5, 6)
 function renderMetaLab() {
+  renderStataSecondary();
   const filtered = getFilteredStudies(true);
   const isBinary = ['ponv_24h', 'rescue_analgesia'].includes(currentOutcome);
   const tbody = document.getElementById('forest-table-body');
@@ -1065,10 +1081,9 @@ function renderMetaLab() {
       <tr>
         <td colspan="8" style="text-align: center; padding: 3.5rem 1.5rem; color: var(--text-muted);">
           <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">📊</div>
-          <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.4rem;">No Published RCTs Report Quantitative Data for This Endpoint</div>
+          <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-bottom: 0.4rem;">No matching data in this interactive view</div>
           <div style="font-size: 0.85rem; color: var(--text-secondary); max-width: 580px; margin: 0 auto; line-height: 1.6;">
-            Among the 63 included trials (${filterModality === 'all' ? 'TEAS & EA' : filterModality}), none tabulated extractable continuous or binary summary metrics for <em>${outcomeLabel}</em>.<br>
-            See the <a href="javascript:void(0)" onclick="switchTab('limitations')" style="color: #818cf8; font-weight: 600; text-decoration: underline;">📬 Author Clarification Roster</a> tab for the recorded disposition of every clarification sought. No author reply is outstanding as a blocker.
+            No study matches the current filters for <em>${outcomeLabel}</em> in this interactive dataset. This does not establish that the outcome was unreported. Check the source-verified Stata secondary analyses above and the contribution map.
           </div>
         </td>
       </tr>
@@ -1902,6 +1917,15 @@ function renderInquiriesView() {
 
   const inqs = window.AUTHOR_INQUIRIES || [];
 
+  for (const [id, label, priority] of [
+    ['btn-priority-all', 'All inquiries', null],
+    ['btn-priority-critical', 'Critical: 24h opioid', 'CRITICAL'],
+    ['btn-priority-important', 'Important: secondary', 'IMPORTANT'],
+  ]) {
+    const button = document.getElementById(id);
+    if (button) button.textContent = `${label} (${priority ? inqs.filter(r => r.priority === priority).length : inqs.length})`;
+  }
+
   // Filter inquiries based on selectedInquiryPriority and inquirySearchQuery
   const filtered = inqs.filter(inq => {
     if (selectedInquiryPriority === 'CRITICAL' && inq.priority !== 'CRITICAL') return false;
@@ -2685,7 +2709,7 @@ function renderPrimaryPathway() {
 
   const sub = document.getElementById('pathway-subtitle');
   if (sub) sub.innerHTML =
-    `Why ${c.included_rcts} included RCTs become ${c.strict} studies in the strict 24-hour opioid meta-analysis.`;
+    `Which trials carry relevant 24-hour information, and what limits their use.`;
 
   const prov = document.getElementById('pathway-provenance-badge');
   if (prov) prov.textContent = 'Derived from ' + P.data_source.replace('.xlsx', '');
@@ -2693,8 +2717,7 @@ function renderPrimaryPathway() {
   // ── headline ─────────────────────────────────────────────────────────────
   const head = document.getElementById('pathway-headline');
   if (head) head.innerHTML =
-    `<strong>All ${c.included_rcts} randomised trials were included and fully processed in this systematic review.</strong>
-     ${c.reporting_relevant_24h_info} of them report information potentially relevant to the 24-hour opioid outcome.
+    `<strong>${c.reporting_relevant_24h_info} trials</strong> report information potentially relevant to the 24-hour opioid outcome.
      ${c.strict} provide data directly compatible with the prespecified primary estimand and form the strict analysis.
      ${c.conditional} more carry relevant 24-hour information but need a broader assumption, so they are held to sensitivity analysis.
      ${c.author_contact_candidates} further trials could become strict contributors if targeted author clarification resolves a specific reporting gap.
@@ -3190,8 +3213,7 @@ function renderV33() {
       `<strong>${V.canonical_studies} randomised trials are included in this review.
        ${prim.n_studies} contribute to the primary 0–24 hour opioid meta-analysis.</strong>
        That gap is a reporting problem, not an exclusion: the other
-       ${V.canonical_studies - prim.n_studies} trials were fully screened, extracted and
-       risk-of-bias assessed, and most contribute to other outcome families — they simply do not
+       ${V.canonical_studies - prim.n_studies} trials were screened and extracted, and most contribute to other outcome families. Each trial has a RoB 2 assessment on file, but additional results need their own assessments. These trials do not
        report a cumulative 0–24 hour opioid dose in a form that can be pooled.
        ${graphOnly.length ? `${graphOnly.length} trial${graphOnly.length > 1 ? 's' : ''}
        (${graphOnly.map(pwEsc).join(', ')}) report every outcome only as a graph or not at all,
@@ -3239,6 +3261,7 @@ function renderV33() {
       <p style="font-size:0.74rem;color:var(--text-muted);margin-top:0.6rem;line-height:1.6;">
         Random-effects REML with Hartung–Knapp intervals, fitted in StataNow 19.5 by
         <code>08_V33_MASTER/02_STATA/20_v33_secondary.do</code>. These are secondary analyses and
+        result-specific RoB 2 adjudication remains pending; no GRADE rating is assigned here. They
         are kept deliberately separate: binary rescue opioid <em>use</em> is never pooled with
         opioid <em>dose</em>, intraoperative requirement is never pooled with postoperative
         consumption, and PCA presses are never pooled with drug consumption.

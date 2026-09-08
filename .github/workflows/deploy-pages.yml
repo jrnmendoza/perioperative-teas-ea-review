@@ -21,6 +21,12 @@ name: Deploy dashboard to GitHub Pages
       # change confined to the tiered analysis must rebuild the site too.
       - "07_TIERED_V33/**"
       - "scripts/build_site.py"
+      - "scripts/build_reference_data.py"
+      - "scripts/check_handover.py"
+      - "scripts/check_handover_ui.cjs"
+      - "09_V34_INTAKE/**"
+      - "01_search_strategy/**"
+      - "08_V33_MASTER/**"
       - "scripts/build_tiered_v33.py"
       - "scripts/build_primary_pathway.py"
       - "scripts/deploy_integrity_check.py"
@@ -60,6 +66,9 @@ jobs:
 
       - name: Deployment integrity check
         run: python3 scripts/deploy_integrity_check.py --site _site
+
+      - name: Handover regression and mutation checks
+        run: python3 scripts/check_handover.py --mutation-test
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
