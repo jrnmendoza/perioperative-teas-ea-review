@@ -2759,6 +2759,230 @@ for outcome, tp in [
         _ao21_unmapped, "source PDF mapping unresolved; not assessed")
 
 
+# ============================================================================
+# Chen 2015 (Hyperalgesia) (040_chen_2015_hyperalgesia_lund.pdf) -- trial
+# design established in draft_assessments.py: D1 Low; D2 Low ('All study
+# personnel including the patients, investigator, attending anesthetist,
+# surgeons, recovery ward nurses, and the person who performed the
+# statistical analysis were blinded'); D3 Low (1/60 protocol breach).
+# Rescue analgesia count is a named secondary outcome; the derived-dose
+# figure is the review's own construct from that count.
+# ============================================================================
+_chen15h_base2 = (
+    "D1 Low: computer-generated allocation list, sealed envelopes. D2 Low: "
+    "'All study personnel including the patients, investigator, attending "
+    "anesthetist, surgeons, recovery ward nurses, and the person who "
+    "performed the statistical analysis were blinded to group assignments'. "
+    "D3 Low: 1 of 60 excluded for protocol breach. ")
+add("Chen 2015 (Hyperalgesia)", "PONV incidence", "0-24 h",
+    L, L, L, L, S,
+    _chen15h_base2 +
+    "D5 Some concerns: not confirmed among the extracted named outcomes "
+    "(the confirmed secondary outcome is rescue-analgesia count, not PONV). "
+    "D4 Low for THIS result: PONV is an objectively observable clinical "
+    "event under this trial's comprehensive blinding, not dependent on "
+    "patient self-report alone.",
+    "PONV not confirmed among the extracted named outcomes")
+add("Chen 2015 (Hyperalgesia)", "Cumulative number of rescue sufentanil PCIA boluses", "0-24 h",
+    L, L, L, L, L,
+    _chen15h_base2 +
+    "D5 Low: 'cumulative number of rescue analgesia' is a named secondary "
+    "outcome. D4 Low for THIS result: PCIA bolus count is a device-logged "
+    "record under this trial's comprehensive blinding.")
+add("Chen 2015 (Hyperalgesia)", "Derived cumulative sufentanil dose from fixed 0.05 µg/kg bolus", "0-24 h",
+    L, L, L, L, S,
+    _chen15h_base2 +
+    "D5 Some concerns: the underlying bolus count is a named secondary "
+    "outcome, but this specific mass-dose figure is calculated by the "
+    "review (bolus count x a fixed per-kg dose) rather than reported "
+    "directly by the paper. D4 Low for THIS result: the underlying bolus "
+    "count feeding this calculation is a device-logged record under "
+    "comprehensive blinding.",
+    "mass-dose value is a review-derived calculation, not the paper's own reported figure")
+
+# ============================================================================
+# Grech 2016 (030_grech_2016_lund.pdf) -- a small pilot trial with an
+# unusual blinding argument. D1 Some concerns: 'randomized in two groups',
+# no sequence-generation or concealment method described. D2: 'All patients
+# were under general anesthesia during the EA and the blood collection, and
+# thus they were blinded to the treatment to avoid any placebo effect' -- a
+# genuinely strong argument for the INTRAOPERATIVE component specifically
+# (patients are unconscious), but the paper gives no separate statement
+# about blinding for postoperative assessment after patients wake. D3 Low:
+# no losses apparent (n=11/9 matches the stated group sizes).
+# ============================================================================
+_grech16_base = (
+    "D1 Some concerns: patients were 'randomized in two groups', with no "
+    "sequence-generation or allocation-concealment method described. D2 "
+    "Some concerns for THIS (postoperative) result: 'All patients were "
+    "under general anesthesia during the EA and the blood collection, and "
+    "thus they were blinded to the treatment' -- a genuinely strong "
+    "argument for the intraoperative component specifically, since an "
+    "anaesthetised patient cannot perceive the intervention, but the report "
+    "gives no separate statement about participant or assessor blinding for "
+    "postoperative assessment after the patient wakes. D3 Low: no losses "
+    "apparent; the analysed groups (11/9) match the stated enrolment. ")
+_grech16_d4 = (
+    " D4 Some concerns for THIS result: unlike the intraoperative "
+    "component, this postoperative measure has no stated blinding mechanism "
+    "of its own.")
+
+add("Grech 2016", "Postoperative VAS pain", "PACU and POD1-3", S, S, L, S, S,
+    _grech16_base +
+    "D5 Some concerns: this is a pilot study with no formal primary/"
+    "secondary outcome declaration found in the extracted text." +
+    _grech16_d4,
+    "pilot study with no formal outcome declaration found")
+add("Grech 2016", "Exact cumulative 24-h postoperative morphine-equivalent consumption", "0-24 h", S, S, L, S, S,
+    _grech16_base +
+    "D5 Some concerns: identical reasoning -- no formal outcome declaration "
+    "found, and this specific morphine-equivalent conversion is likely a "
+    "review-derived figure." + _grech16_d4,
+    "pilot study with no formal outcome declaration found; possible review-derived conversion")
+
+# ============================================================================
+# Huang 2017 (covidence_666_full_article.pdf) -- comprehensively blinded. D1
+# Some concerns: allocation sequence described only as 'according to
+# enrollment sequence', without a clearly stated random-sequence-generation
+# method in the extracted text. D2 Low: 'All participants were unaware of
+# group allocation'; 'The data were collected by another investigator
+# unaware of the group allocation'. D3 Low: all 80 patients completed the
+# trial (a separate 6-patient loss applies only to a different, SF-12
+# quality-of-life measure).
+# ============================================================================
+_huang17_base = (
+    "D1 Some concerns: participants were assigned 'according to enrollment "
+    "sequence', without a clearly described random-sequence-generation "
+    "method in the extracted text. D2 Low: 'All participants were unaware "
+    "of group allocation'; 'A single investigator was responsible for "
+    "application of both types of intervention' while 'The data were "
+    "collected by another investigator unaware of the group allocation'. D3 "
+    "Low: 'All 80 patients completed the trial' (a separate loss of 6 "
+    "applies only to an SF-12 quality-of-life sub-measure, not this "
+    "result). ")
+_huang17_d4 = (
+    " D4 Low for THIS result: recorded by 'another investigator unaware of "
+    "the group allocation', for a participant who was also blinded.")
+
+add("Huang 2017", "Exact cumulative postoperative sufentanil consumption", "0-24 h", S, L, L, L, S,
+    _huang17_base +
+    "D5 Some concerns: the paper discusses 'postoperative analgesic "
+    "dosages' comparatively, but this exact 0-24h sufentanil mass is not "
+    "confirmed as the paper's own precisely reported figure." + _huang17_d4,
+    "exact-mass figure not confirmed as the paper's own precisely reported metric")
+add("Huang 2017", "Published postoperative sufentanil aggregate", "Observation window unclear",
+    S, L, L, L, S,
+    _huang17_base +
+    "D5 Some concerns: identical reasoning, with the added ambiguity that "
+    "the observation window for this aggregate is not clearly stated." +
+    _huang17_d4,
+    "observation window unclear")
+
+# ============================================================================
+# Huang 2024 (covidence_245_full_article.pdf) -- single-blind (participant/
+# acupuncturist aware) with blinded assessors. D1 Some concerns: 'Random
+# numbers were generated using ... SPSS', but no allocation-concealment
+# mechanism is described. D2 Some concerns: single-blind by design --
+# patients and the treating acupuncturist necessarily aware -- but 'All
+# other researchers, such as assessors and statistical analysts, remained
+# blind to group allocation' ('blinding success rate was 75%' where tested).
+# D3 Low: 108 of 114 (95%) completed, 6 dropouts documented.
+# ============================================================================
+_huang24_base = (
+    "D1 Some concerns: 'Random numbers were generated using ... SPSS', with "
+    "no allocation-concealment mechanism described. D2 Some concerns: a "
+    "single-blind design -- the patient and treating acupuncturist are "
+    "necessarily aware of which side is treated -- but 'All other "
+    "researchers, such as assessors and statistical analysts, remained "
+    "blind to group allocation' (measured blinding success rate 75%). D3 "
+    "Low: 108 of 114 (95%) completed; 6 dropouts (2/1/3 across the three "
+    "arms), documented. ")
+_huang24_unnamed = (
+    "D5 Some concerns: the trial's two pre-specified primary outcomes are "
+    "walking/moving pain VAS and (a second measure), with HSS-knee and HAMA "
+    "as the named secondary outcomes at POD3/POD10; this PCA/opioid measure "
+    "is not itself among them.")
+_huang24_d4 = (
+    " D4 Some concerns for THIS result: PCA additional-dose/release can be "
+    "triggered in part by the (unblinded) participant's own demand "
+    "behaviour, even though the assessor analysing the data was blinded.")
+
+add("Huang 2024", "Additional PCA dose/release",
+    "POD2; 24 h after first EA session, not necessarily 24 h after surgery", S, S, L, S, S,
+    _huang24_base + _huang24_unnamed + _huang24_d4,
+    "result not among the pre-specified primary/secondary outcomes")
+add("Huang 2024", "Exact cumulative postoperative opioid dose", "0-24 h", S, S, L, S, S,
+    _huang24_base + _huang24_unnamed + _huang24_d4,
+    "result not among the pre-specified primary/secondary outcomes")
+
+# ============================================================================
+# Jin 2023 (009_jin_2023.pdf) -- comprehensively blinded except the treating
+# acupuncturist. D1 Some concerns: 'randomized ... with a 1:1 [ratio]', no
+# sequence-generation/concealment method confirmed in the extracted text. D2
+# Low: 'Participants, outcome assessors, data analysts, and statisticians
+# were blinded to treatment allocation, and acupuncturists were not'; the
+# sham device had 'power indicator lights covered and the battery
+# compartment sealed to assist in blinding'. D3 Low: 16 of 174 (9.2%)
+# dropped out, documented reasons.
+# ============================================================================
+_jin23_base = (
+    "D1 Some concerns: 'randomized to receive ... with a 1:1 [allocation "
+    "ratio]', with no sequence-generation or concealment method confirmed "
+    "in the extracted text. D2 Low: 'Participants, outcome assessors, data "
+    "analysts, and statisticians were blinded to treatment allocation, and "
+    "acupuncturists were not'; the device had 'power indicator lights "
+    "covered and the battery compartment sealed to assist in blinding'. D3 "
+    "Low: 16 of 174 (9.2%) dropped out, with documented reasons. ")
+_jin23_d4 = (
+    " D4 Low for THIS result: recorded under comprehensive blinding of "
+    "participants, outcome assessors, data analysts and statisticians.")
+
+add("Jin 2023", "Published 'fentanyl consumption' / PCIA solution volume", "24 h", S, L, L, L, S,
+    _jin23_base +
+    "D5 Some concerns: 'fentanyl consumption at 48 hours after surgery' is "
+    "the paper's named secondary outcome; this 24h extraction is a "
+    "different timepoint from what is explicitly reported." + _jin23_d4,
+    "extracted timepoint (24h) differs from the paper's own named 48h fentanyl-consumption outcome")
+add("Jin 2023", "Exact cumulative fentanyl mass / MME", "0-24 h", S, L, L, L, S,
+    _jin23_base +
+    "D5 Some concerns: identical timepoint mismatch as above -- the named "
+    "outcome is fentanyl consumption at 48h, not this 0-24h figure." +
+    _jin23_d4,
+    "extracted timepoint (0-24h) differs from the paper's own named 48h fentanyl-consumption outcome")
+
+# ============================================================================
+# Li 2022 (getfile.php.pdf) -- comprehensively blinded, patients included.
+# D1 Low: 'Randomization was performed at a 1:1 ratio using a computer-
+# generated list'; assignment via 'a sealed envelope'. D2 Low: 'All study
+# personnel, including patients, the anesthetist, the investigator, the
+# surgeons, and the recovery ward nurses who collected the data, were
+# blinded to the group assignments'. D3 Low: 1 of 80 (1.25%) dropped out
+# (declined the procedure).
+# ============================================================================
+_li22_base = (
+    "D1 Low: 'Randomization was performed at a 1:1 ratio using a computer-"
+    "generated list'; patients 'assigned at random ... using a sealed "
+    "envelope'. D2 Low: 'All study personnel, including patients, the "
+    "anesthetist, the investigator, the surgeons, and the recovery ward "
+    "nurses who collected the data, were blinded to the group assignments'. "
+    "D3 Low: 1 of 80 (1.25%) dropped out (declined the procedure). ")
+_li22_d4 = (
+    " D4 Low for THIS result: recorded under comprehensive blinding, "
+    "patients included.")
+
+add("Li 2022", "Mechanical pain threshold around surgical incision", "24 h", L, L, L, L, L,
+    _li22_base +
+    "D5 Low: 'the primary outcome measure was the mechanical pain threshold "
+    "surrounding the skin incision', assessed by 'a professional "
+    "investigator blinded to the group division' using a quantitative "
+    "sensory testing device." + _li22_d4)
+add("Li 2022", "Exact cumulative postoperative opioid consumption", "0-24 h", L, L, L, L, S,
+    _li22_base +
+    "D5 Some concerns: not confirmed among the extracted primary-outcome "
+    "text (mechanical pain threshold)." + _li22_d4,
+    "result not confirmed among the extracted pre-specified outcomes")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
