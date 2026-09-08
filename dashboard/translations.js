@@ -67,11 +67,11 @@ const TRANSLATIONS = {
       primarySub: "Supporting Combined Synthesis: −9.91 mg [−20.08, +0.27] (p=0.0545, k=7)",
       primaryBadge: "PRIMARY: TEAS & EA Modality-Specific • Combined = Supporting",
       smdTitle: "Standardized Effect Size",
-      smdValue: "Hedges' g = −0.89",
+      smdValue: "Hedges' g = −0.97",
       smdSub: "95% CI [−2.09, +0.15] • p = 0.079 • Supporting SMD (k=7)",
       smdBadge: "StataNow 19.5 BE Validated",
       gradeTitle: "GRADE Certainty",
-      gradeValue: "⊕⊕⊕◯ Moderate",
+      gradeValue: "⊕⊕◯◯ Low",
       gradeSub: "Primary 24-h opioid outcome: downgraded 2 levels (inconsistency I² = 98.8%; imprecision, 95% KH CI crosses zero)",
       gradeBadge: "12 Outcomes in GRADE SoF"
     },
@@ -124,7 +124,7 @@ const TRANSLATIONS = {
     },
     metaregStudio: {
       title: "StataNow 19.5 BE Meta-Regression & Moderator Studio",
-      subtitle: "Knapp–Hartung random-effects subgroup analysis across the 6 strict primary trials. One univariable meta-regression (modality) is reported and is underpowered; no multivariable model is fitted.",
+      subtitle: "Knapp–Hartung random-effects subgroup analysis across the 7 strict primary trials. One univariable meta-regression (modality) is reported and is underpowered; no multivariable model is fitted.",
       ruleOf10Badge: "Cochrane Rule of 10 Not Met",
       ruleOf10Text: "With k = 7 strict primary trials the analysis does not meet the Cochrane 10:1 minimum study-count rule of thumb (\u00a710.11.4), even for a single predictor. Only one univariable meta-regression (modality) is reported, and it is exploratory and underpowered. No multivariable model is fitted, and Egger-type small-study-effect testing is not performed because k < 10.",
       btnWithdrawn: "Bubble-plot studio withdrawn in v26",
@@ -253,17 +253,17 @@ const TRANSLATIONS = {
     kpi: {
       includedRcts: "Inkluderade RCT:er",
       includedRctsSub: "Se studieutforskaren för aktuella patienttotaler",
-      includedRctsBadge: "See Study Explorer for modality breakdown",
+      includedRctsBadge: "Se studieöversikten för fördelning per modalitet",
       primaryTitle: "Primärt utfall: 24-h opioidbesparing",
       primaryValue: "TEAS: −14,00 mg • EA: −3,94 mg",
       primarySub: "Kompletterande kombinerad syntes: −9,91 mg [−20,08; +0,27] (p=0,0545, k=7)",
       primaryBadge: "PRIMÄR: TEAS & EA modalitetsspecifik • Kombinerad = kompletterande",
       smdTitle: "Standardiserad effektstorlek",
-      smdValue: "Hedges' g = −0,89",
+      smdValue: "Hedges' g = −0,97",
       smdSub: "95 % KI [−2,09; +0,15] • p = 0,079 • Stödjande SMD (k=7)",
       smdBadge: "Validerad i StataNow 19.5 BE",
       gradeTitle: "GRADE – tillförlitlighet",
-      gradeValue: "⊕⊕⊕◯ Måttlig",
+      gradeValue: "⊕⊕◯◯ Låg",
       gradeSub: "Primärt 24-timmars opioidutfall: nedgraderat 2 nivåer (inkonsistens I² = 98,8 %; imprecision, 95 % KH-KI korsar noll)",
       gradeBadge: "12 utfall i GRADE SoF"
     },
@@ -316,7 +316,7 @@ const TRANSLATIONS = {
     },
     metaregStudio: {
       title: "StataNow 19.5 BE Metaregression och moderatorstudio",
-      subtitle: "Knapp–Hartung subgruppsanalys med slumpeffekter över de 6 strikta primärstudierna. En univariabel metaregression (modalitet) rapporteras och är underdimensionerad; ingen multivariabel modell anpassas.",
+      subtitle: "Knapp–Hartung subgruppsanalys med slumpeffekter över de 7 strikta primärstudierna. En univariabel metaregression (modalitet) rapporteras och är underdimensionerad; ingen multivariabel modell anpassas.",
       ruleOf10Badge: "Cochranes tumregel (Rule of 10) ej uppfylld",
       ruleOf10Text: "Med k = 7 strikta primärstudier uppfyller analysen inte Cochranes minimiregel om 10:1 (\u00a710.11.4), inte ens för en enda prediktor. Endast en univariabel metaregression (modalitet) rapporteras, och den är explorativ och underdimensionerad. Ingen multivariabel modell anpassas, och Egger-test för småstudieeffekter utförs inte eftersom k < 10.",
       btnWithdrawn: "Bubbeldiagramstudion borttagen i v26",
@@ -490,7 +490,7 @@ const STAT_GLOSSARY = {
       term: "Hedges' g (Standardized Mean Difference)",
       category: "Effect Measures",
       shortDef: "The difference between group means divided by the pooled standard deviation, adjusted with a small-sample correction factor.",
-      context: "Used when trials measure clinical constructs using different scales. In our primary pool, Hedges' g = −0.89 represents a moderate-to-large standardized reduction (95% CI [−2.26, +0.48], p = 0.156). However, natural units (mg IV MME) remain more directly clinically interpretable.",
+      context: "Used when trials measure clinical constructs using different scales. The supporting seven-trial analysis gives Hedges' g = −0.97 (95% CI [−2.09, +0.15], p = 0.079). The interval includes no effect. This standardized value is not a dose in mg IV MME.",
       jumpTab: "primary"
     },
     riskRatio: {
@@ -553,7 +553,7 @@ const STAT_GLOSSARY = {
       term: "Intervention Modality (TEAS vs EA)",
       category: "Intervention Parameters",
       shortDef: "The technical delivery method: non-invasive transcutaneous electrical acupoint stimulation (TEAS) using surface pads vs invasive electroacupuncture (EA) using filiform needles.",
-      context: "In this review, 49 trials examined TEAS (high clinical ward feasibility) and 14 trials evaluated EA (invasive needle stimulation, predominantly intraoperative).",
+      context: "TEAS uses surface electrodes; EA uses needles with electrical stimulation. The Study Explorer shows the current number of trials for each modality.",
       jumpTab: "explorer"
     },
     comparator: {
@@ -716,7 +716,7 @@ const STAT_GLOSSARY = {
       term: "Hedges' g (Standardiserad medelskillnad)",
       category: "Effektmått",
       shortDef: "Skillnaden mellan gruppmedelvärden dividerad med den poolade standardavvikelsen, justerad med en korrektionsfaktor för små urval.",
-      context: "Används när studier mäter samma begrepp med olika mätskalor. Standardiserade effektstorlekar beskriver skillnader i standardavvikelseenheter och ska inte tolkas som likvärdiga med den absoluta kliniska storleken i mg IV MME. Den standardiserade analysen gav g = −0,89 (95 % KI [−2,26; +0,48], p = 0,156), där konfidensintervallet omfattar noll.",
+      context: "Används när studier mäter samma begrepp med olika mätskalor. Standardiserade effektstorlekar beskriver skillnader i standardavvikelseenheter och ska inte tolkas som likvärdiga med den absoluta kliniska storleken i mg IV MME. Den standardiserade analysen gav g = −0,97 (95 % KI [−2,09; +0,15], p = 0,079), där konfidensintervallet omfattar noll.",
       jumpTab: "primary"
     },
     riskRatio: {
@@ -779,7 +779,7 @@ const STAT_GLOSSARY = {
       term: "Interventionsmodalitet (TEAS vs EA)",
       category: "Interventionsparametrar",
       shortDef: "Den tekniska metoden: icke-invasiv transkutan elektrisk akupunkturstimulering (TEAS) med hudplattor kontra invasiv elektroakupunktur (EA) med filiforma nålar.",
-      context: "I denna översikt utvärderade 49 studier TEAS (hög klinisk användbarhet på vårdavdelning) och 14 studier EA (invasiv nålstimulering, främst under narkos).",
+      context: "TEAS använder ytelektroder; EA använder nålar med elektrisk stimulering. Studieöversikten visar aktuellt antal studier för varje modalitet.",
       jumpTab: "explorer"
     },
     comparator: {

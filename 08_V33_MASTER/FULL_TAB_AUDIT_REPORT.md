@@ -1,3 +1,11 @@
+## Swedish interface and overview interpretation follow-up
+
+Added short English/Swedish explanations under the standardized effect size and GRADE cards. Both cards now state their fixed analysis scope. The supporting SMD remains g = −0.97, 95% CI [−2.09, +0.15], p = 0.079; GRADE remains low. Corrected stale unused translation values and the stale SMD glossary confidence interval. No source data or inferential model changed.
+
+The earlier language engine only updated explicitly marked elements at toggle time. Dynamic renderers then inserted English labels. Added reviewed exact interface translations and reversible DOM localization after redraws, covering navigation and headings across 14 tabs, surgery categories, outcome selectors, tables, placeholders, status messages and selected narrative explanations. Option values, download paths, source datasets, code and Stata logs remain unchanged. This is **partial Swedish coverage**, not a complete translation of all long narrative sections or source records; the Swedish header now says so.
+
+Validation: `scripts/check_language_ui.cjs` covers all 14 tab headings, SV/EN round trips, persisted language, filter selection preservation, dynamic labels, overview values, explanatory text, glossary popover changes, unchanged source data and download targets. Full existing scientific validation and navigation guards remain required.
+
 # Dashboard tab audit — 2026-09-08
 
 ## Follow-up: filter placement and surgical characteristics

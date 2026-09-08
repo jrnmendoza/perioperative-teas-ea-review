@@ -102,38 +102,11 @@
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
 
-    // Update all text nodes with data-i18n attribute
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const translated = t(key);
-      if (translated) {
-        el.textContent = translated;
-      }
-    });
-
-    // Update all HTML nodes with data-i18n-html
-    document.querySelectorAll('[data-i18n-html]').forEach(el => {
-      const key = el.getAttribute('data-i18n-html');
-      const translated = t(key);
-      if (translated) {
-        el.innerHTML = translated;
-      }
-    });
-
-    // Update titles / tooltips
-    document.querySelectorAll('[data-i18n-title]').forEach(el => {
-      const key = el.getAttribute('data-i18n-title');
-      const translated = t(key);
-      if (translated) {
-        el.setAttribute('title', translated);
-      }
-    });
-
     // Update status text on toggle
     applyExplainStatsClasses();
 
     // Re-render glossary if tab is open
-    if (window.activeTab === 'glossary') {
+    if (document.getElementById('tab-glossary')?.classList.contains('active')) {
       renderGlossaryTab();
     }
 
@@ -142,7 +115,98 @@
       window.renderActiveTab();
     }
 
+    if (activePopover) showStatPopover(activePopover.termKey, activePopover.triggerEl);
+    localizeDocument();
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+  }
+
+  // Remember original DOM text, rather than translating a translation. This also
+  // lets language changes restore English exactly and leaves select values alone.
+  const sourceText = new WeakMap();
+  const sourceAttributes = new WeakMap();
+  let translationObserver;
+  const normalize = value => value.replace(/\s+/g, ' ').trim();
+  const skipTranslation = 'script,style,code,pre,[translate="no"],.katex,.MathJax';
+
+  function exactDictionary() {
+    const result = new Map();
+    function visit(en, sv) {
+      for (const [key, value] of Object.entries(en || {})) {
+        if (typeof value === 'string' && typeof sv?.[key] === 'string') result.set(normalize(value), sv[key]);
+        else if (value && typeof value === 'object') visit(value, sv?.[key]);
+      }
+    }
+    visit(window.TRANSLATIONS?.en, window.TRANSLATIONS?.sv);
+    for (const [en, sv] of Object.entries(window.UI_TRANSLATIONS_SV || {})) result.set(normalize(en), sv);
+    return result;
+  }
+
+  function translateText(value, dictionary) {
+    const key = normalize(value);
+    const exact = dictionary.get(key);
+    if (exact) return value.replace(value.trim(), exact);
+    // Complete dynamic UI templates; never replace fragments inside source prose.
+    const templates = [
+      [/^(\d+) Studies$/, n => `${n} studier`],
+      [/^([\d, ]+) randomized surgical patients$/, n => `${n} randomiserade kirurgiska patienter`],
+      [/^Surgical Specialties Distribution \((\d+) Trials\)$/, n => `Fördelning av kirurgiska specialiteter (${n} studier)`],
+      [/^(\d+) studies$/, n => `${n} studier`],
+      [/^Surgical specialties \((\d+) studies\)$/, n => `Kirurgiska specialiteter (${n} studier)`],
+      [/^(\d+) studies \(([\d.]+)%\)$/, (n, pct) => `${n} studier (${pct}%)`],
+      [/^Study-Level Overview: (\d+) Studies$/, n => `Översikt på studienivå: ${n} studier`],
+      [/^Assessed for Outcome: (\d+)$/, n => `Bedömda för utfallet: ${n}`],
+      [/^Pending or not assessed: (\d+)$/, n => `Väntar på eller saknar bedömning: ${n}`],
+      [/^(\d+) patients$/, n => `${n} patienter`],
+      [/^Assessed: (.+)$/, text => `Bedömt: ${dictionary.get(text) || text}`],
+      [/^(.+): (\d+)$/, (label, n) => dictionary.has(label) ? `${dictionary.get(label)}: ${n}` : `${label}: ${n}`],
+    ];
+    for (const [pattern, format] of templates) {
+      const match = key.match(pattern);
+      if (match) return value.replace(value.trim(), format(...match.slice(1)));
+    }
+    return value;
+  }
+
+  function localizeDocument() {
+    translationObserver?.disconnect();
+    try {
+      // Run after renderers, so newly-created labels are translated too.
+      for (const [attribute, target] of [['data-i18n', 'textContent'], ['data-i18n-html', 'innerHTML'], ['data-i18n-title', 'title']]) {
+        document.querySelectorAll(`[${attribute}]`).forEach(el => {
+          const translated = t(el.getAttribute(attribute));
+          if (translated && el[target] !== translated) el[target] = translated;
+        });
+      }
+      const dictionary = exactDictionary();
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let node;
+      while ((node = walker.nextNode())) {
+        const parent = node.parentElement;
+        if (!parent || parent.closest(skipTranslation + ',[data-i18n],[data-i18n-html]')) continue;
+        let record = sourceText.get(node);
+        if (!record || node.data !== record.rendered) record = {original: node.data};
+        const next = currentLang === 'sv' ? translateText(record.original, dictionary) : record.original;
+        if (node.data !== next) node.data = next;
+        record.rendered = next;
+        sourceText.set(node, record);
+      }
+      document.querySelectorAll('[placeholder],[title],[aria-label]').forEach(el => {
+        if (el.closest(skipTranslation)) return;
+        const records = sourceAttributes.get(el) || {};
+        for (const attribute of ['placeholder', 'title', 'aria-label']) {
+          if (!el.hasAttribute(attribute) || (attribute === 'title' && el.hasAttribute('data-i18n-title'))) continue;
+          const value = el.getAttribute(attribute);
+          let record = records[attribute];
+          if (!record || value !== record.rendered) record = {original: value};
+          const next = currentLang === 'sv' ? translateText(record.original, dictionary) : record.original;
+          if (value !== next) el.setAttribute(attribute, next);
+          records[attribute] = {...record, rendered: next};
+        }
+        sourceAttributes.set(el, records);
+      });
+    } finally {
+      translationObserver?.observe(document.body, {subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:['placeholder','title','aria-label']});
+    }
   }
 
   function toggleExplainStatistics() {
@@ -219,6 +283,9 @@
     catEl.textContent = entry.category || 'Statistics';
     defEl.textContent = entry.shortDef;
     ctxEl.textContent = entry.context;
+
+    learnBtn.textContent = currentLang === 'sv' ? '📖 Öppna ordlista' : '📖 Explore in Glossary';
+    container.querySelector('.stat-popover-context-title').textContent = currentLang === 'sv' ? '🔬 I denna översikt:' : '🔬 In this Review:';
 
     learnBtn.onclick = () => {
       hideStatPopover();
@@ -460,6 +527,7 @@
   // 6. EXPORT GLOBALS
   // ══════════════════════════════════════════════════════════════════
   window.t = t;
+  window.localizeDocument = localizeDocument;
   window.setLanguage = setLanguage;
   window.getCurrentLanguage = () => currentLang;
   window.toggleExplainStatistics = toggleExplainStatistics;
@@ -475,6 +543,8 @@
     initFromStorage();
     initStatIcons();
     setLanguage(currentLang);
+    translationObserver = new MutationObserver(localizeDocument);
+    translationObserver.observe(document.body, {subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:['placeholder','title','aria-label']});
   });
 
 })();

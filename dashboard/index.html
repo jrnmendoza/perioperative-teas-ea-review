@@ -76,6 +76,8 @@
         <button class="btn-lang" data-lang="sv" onclick="setLanguage('sv')" aria-label="Byt till svenska">SV</button>
       </div>
 
+      <p class="swedish-coverage-note">Vissa fördjupningar, källtexter och figurer är fortfarande på engelska.</p>
+
       <!-- Explain Statistics Switch (ON / OFF) -->
       <div class="explain-stats-group">
         <label class="explain-stats-label" for="toggle-explain-stats">
@@ -183,24 +185,28 @@
         </div>
       </div>
 
-      <div class="kpi-card">
+      <div class="kpi-card" id="kpi-smd-card">
         <div class="kpi-title">
           <span data-i18n="kpi.smdTitle">Standardized Supporting Analysis</span>
           <button class="stat-info-btn" data-stat-term="hedgesG" aria-label="Statistical explanation for Hedges g">ⓘ</button>
         </div>
-        <div class="kpi-value" style="color: #818cf8; font-size: 1.4rem; line-height: 1.25;">Hedges' g = −0.97</div>
-        <div class="kpi-sub">95% CI [−2.09, +0.15] • p = 0.079 • Supporting SMD Analysis (k=7)</div>
-        <span class="kpi-badge badge-indigo">StataNow 19.5 BE Validated</span>
+        <div class="kpi-value" style="color: #818cf8; font-size: 1.4rem; line-height: 1.25;" data-i18n="kpi.smdValue">Hedges' g = −0.97</div>
+        <div class="kpi-sub" data-i18n="kpi.smdSub">95% CI [−2.09, +0.15] • p = 0.079 • Supporting SMD Analysis (k=7)</div>
+        <span class="kpi-badge badge-indigo" data-i18n="kpi.smdBadge">StataNow 19.5 BE Validated</span>
+        <p class="stat-plain-language kpi-interpretation" data-i18n="kpi.smdPlain">In plain language: The average result favours lower opioid use with TEAS/EA, but the uncertainty includes no difference and a small increase. This standardized value is not a dose in milligrams.</p>
+        <p class="kpi-sub" data-i18n="kpi.fixedScope">Prespecified analysis of 7 trials; study filters do not recalculate this result.</p>
       </div>
 
-      <div class="kpi-card">
+      <div class="kpi-card" id="kpi-grade-card">
         <div class="kpi-title">
           <span data-i18n="kpi.gradeTitle">GRADE Certainty</span>
           <button class="stat-info-btn" data-stat-term="grade" aria-label="Statistical explanation for GRADE">ⓘ</button>
         </div>
-        <div class="kpi-value" style="color: #fbbf24; font-size: 1.15rem; line-height: 1.25;">⊕⊕◯◯ Low</div>
+        <div class="kpi-value" style="color: #fbbf24; font-size: 1.15rem; line-height: 1.25;" data-i18n="kpi.gradeValue">⊕⊕◯◯ Low</div>
         <div class="kpi-sub" data-i18n="kpi.gradeSub">Primary 24-h opioid outcome: downgraded 2 levels (inconsistency I² = 98.8%; imprecision, 95% KH CI crosses zero)</div>
         <span class="kpi-badge badge-amber" data-i18n="kpi.gradeBadge">12 Outcomes in GRADE SoF</span>
+        <p class="stat-plain-language kpi-interpretation" data-i18n="kpi.gradePlain">In plain language: Our confidence in the estimated opioid reduction is limited. The true effect could be substantially different because results vary between studies and the estimate is imprecise.</p>
+        <p class="kpi-sub" data-i18n="kpi.gradeScope">Certainty for the prespecified primary outcome; study filters do not reassess GRADE.</p>
       </div>
     </section>
 
@@ -3606,6 +3612,7 @@
   <script src="study_characteristics.js"></script>
   <script src="data.js?v=0c009811ebef"></script>
   <script src="translations.js?v=0c009811ebef"></script>
+  <script src="ui_translations.js"></script>
   <script src="reader_assist.js?v=0c009811ebef"></script>
   <script src="meta_engine.js?v=0c009811ebef"></script>
   <script src="app.js?v=0c009811ebef"></script>

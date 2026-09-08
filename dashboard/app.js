@@ -382,7 +382,7 @@ function renderActiveTab() {
   const scope = document.getElementById('filter-scope');
   if (scope) {
     scope.style.display=showFilters?'':'none';
-    scope.textContent='Filters apply to Overview, Study Explorer and the RoB matrix. Study Explorer search remains active until cleared or All Studies is selected. Other tabs use their own analysis sets.';
+    scope.textContent='Filters update study counts and distributions in Overview, Study Explorer and the RoB matrix. Search remains active until cleared or All Studies is selected. Saved effect estimates and GRADE are not recalculated. Other tabs use their own analysis sets.';
   }
   if (activeTab === 'intro') renderOverview();
   else if (activeTab === 'prisma') renderPrismaView();

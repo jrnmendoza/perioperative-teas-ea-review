@@ -2127,3 +2127,10 @@ body {
   50% { box-shadow: 0 0 25px 5px rgba(99, 102, 241, 0.5); }
   100% { box-shadow: none; }
 }
+
+/* Keep the brief headline interpretations readable independently of tooltip preferences. */
+.kpi-interpretation { font-size: .8rem; line-height: 1.5; margin: .65rem 0 0; }
+.explain-stats-off .kpi-interpretation { display: block !important; }
+
+.swedish-coverage-note { max-width: 230px; font-size: .7rem; line-height: 1.4; color: var(--text-muted); margin: .2rem 0; }
+html:not([lang="sv"]) .swedish-coverage-note { display: none; }
