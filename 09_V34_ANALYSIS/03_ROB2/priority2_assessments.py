@@ -590,6 +590,201 @@ add("Zhu 2022", "Overall QoR-15", "AMBIGUOUS", S, S, L, S, S,
     "assessment timepoint for QoR-15 is not stated (AMBIGUOUS)")
 
 
+# ============================================================================
+# Lu 2022 (getfile.php-3.pdf) -- trial design established in
+# draft_assessments.py: D1 Low (computer-generated allocation, sealed
+# envelopes not opened until allocation); D2 Some concerns ('For logistic
+# reasons, blinding the patients was hard to perform', but 'Investigators
+# involved in the follow-up were blinded to the group allocation'); D3 Low (6
+# of 100 excluded post-randomisation, documented reasons). Every result in
+# this study's priority-2 set is explicitly named in one comprehensive
+# secondary-outcomes sentence.
+# ============================================================================
+_lu22_base2 = (
+    "D1 Low: 'randomly assigned to the TEAS or Control group in a ratio of "
+    "1:1 using a computer-generated random allocation sequence'; 'The "
+    "randomization code for each patient was put in sealed envelope and not "
+    "opened until allocation'. D2 Some concerns: 'For logistic reasons, "
+    "blinding the patients was hard to perform', but 'Investigators involved "
+    "in the follow-up were blinded to the group allocation'. D3 Low: 6 of "
+    "100 (6%) excluded post-randomisation with documented reasons (5 "
+    "conversions to open surgery, 1 refusal). ")
+_lu22_secondary2 = (
+    "D5 Low: explicitly named in the trial's secondary-outcomes sentence -- "
+    "'time to flatus, time to first defecation, and time to first oral "
+    "intake; pain intensity assessed by visual analogue scale (VAS), "
+    "attempts and deliveries of patient-controlled analgesia (PCA), "
+    "postoperative nausea and vomiting (PONV), quality of sleeping (QoS) "
+    "and quality of recovery (QoR) evaluated at 24h, 48h and 72h after "
+    "surgery'.")
+
+add("Lu 2022", "Exact cumulative PCA opioid consumption", "0-24 h", L, S, L, L, L,
+    _lu22_base2 + _lu22_secondary2 +
+    " D4 Low for THIS result: cumulative PCA consumption is read from the "
+    "device log, an objective record of the (unblinded) participant's own "
+    "button presses, not a clinician's judgement call.")
+for tp in ("48 h after surgery", "72 h after surgery"):
+    add("Lu 2022", "PCA attempts", tp, L, S, L, L, L,
+        _lu22_base2 + _lu22_secondary2 +
+        " D4 Low for THIS result: PCA attempts are counted directly from "
+        "the device log.")
+    add("Lu 2022", "Successful PCA deliveries", tp, L, S, L, L, L,
+        _lu22_base2 + _lu22_secondary2 +
+        " D4 Low for THIS result: identical reasoning to PCA attempts -- an "
+        "objective device count.")
+add("Lu 2022", "PCA attempts", "24 h", L, S, L, L, L,
+    _lu22_base2 + _lu22_secondary2 +
+    " D4 Low for THIS result: PCA attempts are counted directly from the "
+    "device log.")
+add("Lu 2022", "Successful PCA deliveries", "24 h", L, S, L, L, L,
+    _lu22_base2 + _lu22_secondary2 +
+    " D4 Low for THIS result: identical reasoning to PCA attempts -- an "
+    "objective device count.")
+add("Lu 2022", "PONV incidence", "24 h after surgery", L, S, L, S, L,
+    _lu22_base2 + _lu22_secondary2 +
+    " D4 Some concerns for THIS result: PONV in this trial is reported as a "
+    "single combined incidence rather than split into nausea and vomiting; "
+    "because a positive case can be driven purely by the subjective nausea "
+    "component, and participants were not blinded, this combined measure "
+    "is treated cautiously rather than assumed objective.",
+    "PONV reported as one combined measure rather than split nausea/vomiting")
+add("Lu 2022", "QoR-15 score", "24 h after surgery", L, S, L, S, L,
+    _lu22_base2 + _lu22_secondary2 +
+    " D4 Some concerns for THIS result: QoR-15 is a self-completed "
+    "questionnaire, and participants were not blinded.")
+add("Lu 2022", "VAS at cough", "24 h after surgery", L, S, L, S, L,
+    _lu22_base2 + _lu22_secondary2 +
+    " D4 Some concerns for THIS result: VAS is self-reported by the "
+    "unblinded participant.")
+add("Lu 2022", "VAS at rest", "24 h after surgery", L, S, L, S, L,
+    _lu22_base2 + _lu22_secondary2 +
+    " D4 Some concerns for THIS result: identical reasoning to VAS at "
+    "cough -- self-reported by the unblinded participant.")
+
+for tp in ("48 h after surgery", "72 h after surgery"):
+    add("Lu 2022", "PONV incidence", tp, L, S, L, S, L,
+        _lu22_base2 + _lu22_secondary2 +
+        " D4 Some concerns for THIS result: PONV in this trial is reported "
+        "as a single combined incidence rather than split into nausea and "
+        "vomiting; because a positive case can be driven purely by the "
+        "subjective nausea component, and participants were not blinded, "
+        "this combined measure is treated cautiously rather than assumed "
+        "objective.",
+        "PONV reported as one combined measure rather than split nausea/vomiting")
+    add("Lu 2022", "QoR-15 score", tp, L, S, L, S, L,
+        _lu22_base2 + _lu22_secondary2 +
+        " D4 Some concerns for THIS result: QoR-15 is a self-completed "
+        "questionnaire, and participants were not blinded.")
+    add("Lu 2022", "VAS at cough", tp, L, S, L, S, L,
+        _lu22_base2 + _lu22_secondary2 +
+        " D4 Some concerns for THIS result: VAS is self-reported by the "
+        "unblinded participant.")
+    add("Lu 2022", "VAS at rest", tp, L, S, L, S, L,
+        _lu22_base2 + _lu22_secondary2 +
+        " D4 Some concerns for THIS result: identical reasoning to VAS at "
+        "cough -- self-reported by the unblinded participant.")
+add("Lu 2022", "Time to first oral intake of water", "Postoperative", L, S, L, S, L,
+    _lu22_base2 + _lu22_secondary2 +
+    " D4 Some concerns for THIS result: the trial's own authors identify "
+    "this as a limitation -- 'the time to resume oral intake can be "
+    "influenced by the patient's perception and the clinician' -- which is "
+    "exactly the D4 concern this domain is meant to capture.",
+    "authors themselves flag this endpoint as influenced by patient perception")
+
+
+# ============================================================================
+# Sun 2017 (sun2017-2.pdf) -- a genuinely well-blinded 4-arm trial. D1 Low:
+# 'a SPSS-generated random number table was used to allocate the patients';
+# 'The TEAS operators were informed the group allocation ... by a sealed
+# opaque envelope and they were the only individuals aware of the treatment
+# allocation, while patients, anesthes[iologist evaluators were blinded]'.
+# D2 Low: 'randomized, patient and anesthesiologist evaluator blinded ...
+# sham TEAS-controlled design'; 'Patients' blinding was achieved by using
+# electrodes and being stimulated with the minimal current that the patient
+# could feel' -- a genuine active-sensation sham, not a silent no-current
+# control. D3 Low: 19 of 380 (5%) withdrawn with fully documented reasons
+# (8 lost to follow-up, 6 change of surgery, 2 prolonged surgery, 3
+# intraoperative complications).
+# ============================================================================
+_sun17_base = (
+    "D1 Low: 'a SPSS-generated random number table was used to allocate the "
+    "patients into 1 of the 4 groups in a 1:1:1:1 ratio'; 'The TEAS "
+    "operators were informed the group allocation of the patient by a "
+    "sealed opaque envelope and they were the only individuals aware of the "
+    "treatment allocation'. D2 Low: 'randomized, patient and "
+    "anesthesiologist evaluator blinded, controlled clinical trial'; "
+    "'Patients' blinding was achieved by using electrodes and being "
+    "stimulated with the minimal current that the patient could feel in the "
+    "same therapeutic setting' -- a genuine active-sensation sham rather "
+    "than a silent no-current control. D3 Low: 19 of 380 (5%) withdrawn, "
+    "all with documented reasons (8 lost to follow-up, 6 change of surgery, "
+    "2 prolonged surgery time, 3 intraoperative complications). ")
+_sun17_primary = (
+    "D5 Low: 'The primary outcomes were resting and activity pain intensity "
+    "evaluated by VAS at 1, 6, 24, and 48 hours after surgery.'")
+_sun17_secondary = (
+    "D5 Low: explicitly named among the secondary outcomes -- 'intraoperative "
+    "propofol and opioid consumption, incidence of postoperative nausea and "
+    "vomiting, supplementary analgesic and antiemetic requirements within 48 "
+    "hours, extubation time, length of stay in PACU, time of the first "
+    "postoperative flatus and defecation, and patient satisfaction'.")
+_sun17_d4_blinded = (
+    " D4 Low for THIS result: both the participant and the anaesthesiologist "
+    "evaluator were successfully blinded in this trial, so neither the "
+    "self-reported nor the clinician-assessed component of this outcome is "
+    "exposed to differential awareness of allocation.")
+
+for tp in ("1 h", "6 h", "24 h", "48 h"):
+    if tp != "24 h":
+        add("Sun 2017", "Activity-evoked VAS during coughing", tp, L, L, L, L, L,
+            _sun17_base + _sun17_primary + _sun17_d4_blinded)
+    add("Sun 2017", "Resting VAS", tp, L, L, L, L, L,
+        _sun17_base + _sun17_primary + _sun17_d4_blinded)
+add("Sun 2017", "Nausea", "Within 48 h after surgery", L, L, L, L, L,
+    _sun17_base + _sun17_secondary + _sun17_d4_blinded)
+add("Sun 2017", "Vomiting", "Within 48 h after surgery", L, L, L, L, L,
+    _sun17_base + _sun17_secondary + _sun17_d4_blinded)
+add("Sun 2017", "Additional antiemetic requirement", "Within 48 h after surgery", L, L, L, L, L,
+    _sun17_base + _sun17_secondary + _sun17_d4_blinded)
+add("Sun 2017", "Supplemental flurbiprofen axetil requirement", "Within 48 h", L, L, L, L, L,
+    _sun17_base + _sun17_secondary + _sun17_d4_blinded)
+add("Sun 2017", "Postoperative opioid consumption", "0-24 h", L, L, L, L, L,
+    _sun17_base + _sun17_secondary + _sun17_d4_blinded)
+add("Sun 2017", "Author-defined intraoperative morphine-equivalent exposure", "Intraoperative",
+    L, L, L, L, S,
+    _sun17_base +
+    "D5 Some concerns: 'intraoperative propofol and opioid consumption' is "
+    "the named secondary outcome, but this specific morphine-equivalent "
+    "conversion is the review's own construct rather than a number the "
+    "paper itself reports, so it is not literally the pre-specified "
+    "outcome even though it is derived from one that is." +
+    _sun17_d4_blinded,
+    "morphine-equivalent value is a review-derived conversion, not the paper's own reported metric")
+add("Sun 2017", "Extubation time", "Postoperative", L, L, L, L, L,
+    _sun17_base + _sun17_secondary + _sun17_d4_blinded)
+add("Sun 2017", "Length of stay in PACU", "Postoperative", L, L, L, L, L,
+    _sun17_base + _sun17_secondary + _sun17_d4_blinded)
+add("Sun 2017", "Time to first postoperative defecation", "Postoperative", L, L, L, L, L,
+    _sun17_base + _sun17_secondary + _sun17_d4_blinded)
+add("Sun 2017", "Time to first postoperative flatus", "Postoperative", L, L, L, L, L,
+    _sun17_base + _sun17_secondary + _sun17_d4_blinded)
+add("Sun 2017", "Patient satisfaction — extremely satisfied",
+    "Postoperative assessment; exact clock time not separately stated", L, L, L, L, L,
+    _sun17_base + _sun17_secondary +
+    " D4 Low for THIS result: 'Patient satisfaction was evaluated with a "
+    "5-point scale', self-reported but by a genuinely blinded participant.")
+add("Sun 2017", "TEAS-related side effects", "0–48 h postoperative", L, L, L, S, S,
+    _sun17_base +
+    "D5 Some concerns: device-related side effects are mentioned narratively "
+    "('No side effect related to ...') but are not individually itemised "
+    "among the trial's named primary or secondary outcomes. D4 Some "
+    "concerns for THIS result: the report does not describe how or by whom "
+    "TEAS-related side effects were ascertained, so the measurement process "
+    "for this specific safety outcome is unclear despite the trial's "
+    "otherwise strong blinding.",
+    "TEAS-related side effects not individually named as a pre-specified outcome; ascertainment method unclear")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
