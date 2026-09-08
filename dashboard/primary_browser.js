@@ -82,7 +82,20 @@ window.PRIMARY_BROWSER = {
     "ci_low": -10.622953,
     "ci_upp": -4.7770457,
     "unit": "mg IV MME",
-    "comparison_id": "SZMIT21_TEAS_vs_SHAM_MORPH24"
+    "comparison_id": "SZMIT21_TEAS_vs_SHAM_MORPH24",
+    "rob2": {
+      "status": "Assessed",
+      "outcome_name": "Total IV PCA morphine dose",
+      "timepoint": "0–24 h postoperative",
+      "d1": "Low",
+      "d2": "Low",
+      "d3": "Low",
+      "d4": "Low",
+      "d5": "Some concerns",
+      "overall": "Some concerns",
+      "rationale": "De novo source-grounded RoB 2. Independent blinded statistician generated block randomization; allocation table was managed by an independent researcher; participants were blinded with an identical sham device/no current; all randomized patients were analyzed. PCA morphine is an objective drug-delivery endpoint, but study personnel could not be blinded and the supplied article does not provide the full prespecified statistical-analysis plan, leaving some concern for selective reporting.",
+      "assessment_file": "v33 Corrected_RoB2, row 70; Postoperative TEAS vs no-current sham TEAS"
+    }
   },
   "Yang 2024": {
     "arm1_n": 90.0,

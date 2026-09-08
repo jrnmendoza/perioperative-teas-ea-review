@@ -1860,9 +1860,6 @@
         </div>
       </div>
 
-        </div>
-      </div>
-
       <!-- Section 2D: ROBUSTNESS — StataNow 19.5 BE Leave-One-Out Sensitivity Analysis -->
       <div class="dashboard-card" style="margin-bottom: 1.5rem; border-top: 3px solid #6366f1;">
         <div class="card-header">
@@ -1874,14 +1871,14 @@
             </div>
             <h2 style="margin-top: 0.25rem;">Section 2D: Leave-One-Out Influence &amp; Sensitivity Analysis</h2>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem;">
-              Iteratively omits each trial to evaluate whether overall statistical significance, effect direction, or heterogeneity depends on any single outlier or study artifact. Executed directly via StataNow 19.5 BE <code>meta summarize, leaveoneout</code> on the locked 6-trial primary dataset.
+              Iteratively omits each trial to evaluate whether overall statistical significance, effect direction, or heterogeneity depends on any single outlier or study artifact. Executed directly via StataNow 19.5 BE <code>meta summarize, leaveoneout</code> on the locked seven-trial primary dataset.
             </p>
             <div style="display: flex; gap: 0.5rem; margin-top: 0.6rem; flex-wrap: wrap; align-items: center;">
               <button class="btn-preset active" id="btn-loo-primary" onclick="switchLooMode('primary')" style="background: var(--accent-primary); color: #fff; border: none; padding: 0.35rem 0.75rem; border-radius: 4px; font-weight: 600; cursor: pointer;">Primary 24-h Opioid Analysis (k = 7)</button>
               <a href="v26/04_FIGURES/loo_opioid24_primary.png" target="_blank" class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; padding: 0.35rem 0.65rem; font-size: 0.75rem; font-weight: 600;">🖼️ View Stata LOO Forest Plot</a>
             </div>
             <div style="margin-top: 0.4rem; font-size: 0.73rem; color: #94a3b8; font-style: italic;">
-              Note: All 6 strict direct trials (3 TEAS, 3 EA) are iteratively omitted. In all 6 iterations, the Knapp–Hartung 95% confidence interval crosses zero (p = 0.159 to 0.311).
+              Each of the seven strict primary trials is omitted once. See the current interval and influence results below.
             </div>
           </div>
         </div>
@@ -2588,6 +2585,7 @@
 
     <!-- TAB: META-REGRESSION & MODERATOR STUDIO (Objective 3) -->
     <div id="tab-metareg" class="tab-content">
+      <div class="protocol-callout" id="metareg-availability"><h2>Multivariable meta-regression is not available</h2><p>There are too few strict primary studies for a reliable multivariable model. This tab contains the saved modality comparison and exploratory single-moderator analysis. No interactive prediction tool is available.</p></div>
       
       <!-- Protocol Header Callout -->
       <div class="protocol-callout" style="margin-bottom: 1.5rem; border-left: 4px solid #06b6d4;">
@@ -2929,6 +2927,7 @@
 
     <!-- TAB: LIMITATIONS & NEXT STEPS (Author Inquiries & Outreach) -->
     <div id="tab-limitations" class="tab-content">
+      <div class="protocol-callout"><h2>Limitations and author clarification records</h2><p>Review the catalogued requests for missing or unclear study data and their recorded dispositions. The hypothetical sensitivity tool explores changes to existing primary results; it does not represent author responses.</p></div>
       
       <!-- Section 1: Collaborative Outreach Strategy Architecture -->
       <div class="dashboard-card" style="margin-bottom: 1.5rem; background: linear-gradient(180deg, rgba(22, 31, 48, 0.9) 0%, rgba(11, 15, 25, 0.95) 100%); border: 1px solid rgba(99, 102, 241, 0.3);">

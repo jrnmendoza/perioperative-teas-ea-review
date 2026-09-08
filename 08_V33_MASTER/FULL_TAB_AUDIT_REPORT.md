@@ -1,5 +1,15 @@
 # Dashboard tab audit — 2026-09-08
 
+## Follow-up: navigation and RoB correction
+
+The user's Chrome review exposed a gap in the initial audit: populated panel content did not prove correct visible page structure. Two excess closing tags ended the Primary panel early, leaving five large results cards visible on every tab. Later panels were pushed below those cards. The HTML containment is repaired. Navigation now returns to the top, the overview KPI block appears only on Overview, and panel switching no longer fades through a blank view.
+
+`scripts/check_navigation_ui.cjs` clicks the actual navigation controls for all 14 tabs after scrolling to the page bottom. It checks exactly one visible panel, panel position in the viewport, top-of-page reset, and card ownership. Both browser and CI structural guards reject a deliberately escaped-card mutation. GRADE, Limitations, Glossary and Downloads are tested as visible destinations, not merely nonempty DOM nodes.
+
+Meta-regression now begins with an explicit statement that multivariable meta-regression and an interactive prediction tool are unavailable, followed by the existing saved modality analyses. Limitations now begins with an explanation of its clarification roster and hypothetical sensitivity tool.
+
+Szmit 2021's source assessment is present in the v33 workbook, `Corrected_RoB2` row 70: total IV PCA morphine, postoperative 0–24 h, TEAS versus no-current sham. Domains 1–4 are Low, Domain 5 and overall are Some concerns. The browser's missing result-specific mapping is generated from that exact row; no new assessment was invented. All seven strict primary trials now have a mapped result-specific judgment. Other absent mappings no longer claim that the outcome was unmeasured: unavailable assessment and unavailable outcome data are different things. The workbooks remain unchanged.
+
 Scope: all 14 dashboard tabs, their intended content, source-backed displays, navigation, filters, generated tables, plots, calculators, clipboard actions and downloads. This is a dashboard audit against the preserved review records, not a new PDF extraction or scientific adjudication. The frozen v32/v33 workbooks and saved Stata analyses were not edited.
 
 ## Tab-by-tab result

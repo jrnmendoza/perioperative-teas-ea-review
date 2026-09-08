@@ -276,7 +276,6 @@ body {
 /* Tab Panels */
 .tab-content {
   display: none;
-  animation: fadeIn 0.3s ease;
 }
 
 .tab-content.active {

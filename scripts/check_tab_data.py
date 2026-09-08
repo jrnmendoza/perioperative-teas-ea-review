@@ -56,3 +56,28 @@ assert not target_checks(changed)[0], 'Wrong PONV window escaped'
 changed=copy.deepcopy(targets);changed['opioid_48h']['An 2014']['arm1_n']=30
 assert not target_checks(changed)[1], 'Invented denominator escaped'
 print('PASS: 6 locked browser-data checks; 6 isolated mutations rejected.')
+
+# Guard panel ownership as well as populated data. A card outside a tab remains
+# visible everywhere and pushes later panels below the fold.
+from html.parser import HTMLParser
+class PanelParser(HTMLParser):
+    def __init__(self): super().__init__(); self.stack=[]; self.valid=True
+    def handle_starttag(self,tag,attrs):
+        if tag!='div': return
+        attrs=dict(attrs)
+        if 'dashboard-card' in attrs.get('class','').split():
+            self.valid &= any(x.startswith('tab-') for x in self.stack)
+        self.stack.append(attrs.get('id',''))
+    def handle_endtag(self,tag):
+        if tag=='div':
+            if self.stack: self.stack.pop()
+            else: self.valid=False
+def valid_panels(html):
+    p=PanelParser();p.feed(html);return p.valid and not p.stack
+html=(ROOT/'dashboard/index.html').read_text()
+assert valid_panels(html)
+assert not valid_panels(html.replace('<!-- Section 2D: ROBUSTNESS','</div><!-- Section 2D: ROBUSTNESS'))
+szmit=data['Szmit 2021']['rob2']
+assert [szmit[f'd{i}'] for i in range(1,6)]+[szmit['overall']]==['Low','Low','Low','Low','Some concerns','Some concerns']
+assert szmit['status']=='Assessed' and '0–24' in szmit['timepoint'] and 'row 70' in szmit['assessment_file']
+print('PASS: tab ownership guard rejects escaped-card mutation; Szmit primary RoB matches the inspected v33 source row.')

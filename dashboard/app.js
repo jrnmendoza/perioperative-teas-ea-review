@@ -28,6 +28,13 @@ function boot() {
   for (const s of window.STUDIES_DATA) {
     s.primary_record = s.outcomes.opioid_24h;
     s.outcomes.opioid_24h = window.PRIMARY_BROWSER[s.key] ? {...s.primary_record, ...window.PRIMARY_BROWSER[s.key]} : null;
+    const primaryRob=window.PRIMARY_BROWSER[s.key]?.rob2;
+    if (primaryRob) {
+      s.rob2_outcomes ||= {assessed_list:[]};
+      s.rob2_outcomes.opioid_24h=primaryRob;
+      s.rob2_outcomes.assessed_list ||= [];
+      s.rob2_outcomes.assessed_list.push(primaryRob);
+    }
     for (const [key,records] of Object.entries(window.BROWSER_TARGETS)) s.outcomes[key]=records[s.key] || null;
   }
   initObjectivesBar();
@@ -165,6 +172,13 @@ function switchTab(tabId) {
   if (target) target.classList.add('active');
   renderKPIs();
   renderActiveTab();
+  // Each navigation opens one panel at its beginning, not at the old scroll depth.
+  document.querySelector('.kpi-grid').style.display=tabId==='intro'?'':'none';
+  if (target) {
+    target.setAttribute('tabindex','-1');
+    target.focus({preventScroll:true});
+  }
+  window.scrollTo({top:0,left:0,behavior:'instant'});
 }
 
 function syncToolbarDropdowns() {
@@ -872,7 +886,7 @@ function resultRob(s, outcomeKey) {
     timepoint: '',
     rationale: pending
       ? 'RoB 2 assessment pending for this result'
-      : 'Outcome not measured or reported in this trial (domain judgments not imputed)'
+      : 'No result-specific assessment is available in this dashboard. This does not establish that the outcome was unmeasured; domain judgments are not imputed.'
   };
 }
 
@@ -996,7 +1010,7 @@ function renderRoB2Matrix() {
       case 'some':    return `<span class="rob-dot rob-some" title="Some concerns">?</span>`;
       case 'high':    return `<span class="rob-dot rob-high" title="High risk of bias">−</span>`;
       case 'pending': return `<span class="rob-dot" style="background: rgba(129,140,248,0.2); color: #c7d2fe; border: 1px solid rgba(129,140,248,0.5);" title="RoB 2 assessment pending for this result">⏳</span>`;
-      default:        return `<span class="rob-dot" style="background: rgba(255,255,255,0.08); color: var(--text-muted); border: 1px dashed rgba(255,255,255,0.2);" title="Not assessed: outcome not measured or reported in this trial (domain judgments not imputed)">⋯</span>`;
+      default:        return `<span class="rob-dot" style="background: rgba(255,255,255,0.08); color: var(--text-muted); border: 1px dashed rgba(255,255,255,0.2);" title="No result-specific assessment available; outcome absence is not established">⋯</span>`;
     }
   };
 
