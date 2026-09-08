@@ -3312,7 +3312,7 @@ function renderV34() {
         <div style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
           ${pwEsc(V.rob2_worklist.note)}
         </div>
-        ${V.rob2_results && V.rob2_results.count ? v34RobResultsHtml(V.rob2_results) : `
+        ${V.rob2_results && V.rob2_results.count ? v34RobResultsHtml(V.rob2_results, 'v34rob') : `
         <details style="margin-top:0.4rem;">
           <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
             Show the ${V.rob2_worklist.blocking_grade} results</summary>
@@ -3321,6 +3321,22 @@ function renderV34() {
               `<li>${pwEsc(r.study)} — ${pwEsc(r.outcome)} @ ${pwEsc(r.timepoint)}</li>`).join('')}
           </ul>
         </details>`}
+      </div>` : ''}
+      ${V.rob2_priority2 && V.rob2_priority2.count ? `
+      <div style="margin-top:0.6rem;padding:0.6rem 0.75rem;background:rgba(148,163,184,0.07);
+                  border-left:3px solid rgba(148,163,184,0.3);border-radius:var(--radius-sm);">
+        <div style="font-weight:700;color:#cbd5e1;font-size:0.8rem;">
+          Result-specific risk of bias — ${V.rob2_priority2.count} results not currently pooled</div>
+        <div style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
+          Results reported by a single trial, held for a source conflict, or otherwise outside
+          every fitted model above, assessed to the same result-specific standard so the review's
+          risk-of-bias register is complete rather than stopping at what is currently pooled.
+          ${V.rob2_priority2.unresolved_count ? `
+          <span style="color:#fdba74;">${V.rob2_priority2.unresolved_count} of these could not be
+          matched to a source PDF with confidence and are marked UNRESOLVED rather than assessed
+          against a possibly-wrong article</span> — filter "Overall: UNRESOLVED" below to see them.` : ''}
+        </div>
+        ${v34RobResultsHtml(V.rob2_priority2, 'v34rob2')}
       </div>` : ''}
       ${V.grade_new_models && V.grade_new_models.count ? v34GradeNewModelsHtml(V.grade_new_models) : ''}
       <p style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.55rem;">
@@ -3345,7 +3361,8 @@ function renderV34() {
 function v34RobTone(v){
   return v === 'High' ? '#fca5a5'
        : v === 'Some concerns' ? '#fcd34d'
-       : v === 'Low' ? '#6ee7b7' : 'var(--text-muted)';
+       : v === 'Low' ? '#6ee7b7'
+       : v === 'UNRESOLVED' ? '#fdba74' : 'var(--text-muted)';
 }
 function v34RobChip(label, v){
   return `<span style="display:inline-block;padding:0.05rem 0.32rem;margin:0 0.2rem 0.2rem 0;
@@ -3355,9 +3372,10 @@ function v34RobChip(label, v){
 function v34RobResultsFilterOptions(D, field){
   return [...new Set((D.results||[]).map(r => r[field]).filter(Boolean))].sort();
 }
-function v34RobResultsHtml(D){
+function v34RobResultsHtml(D, idPrefix){
+  idPrefix = idPrefix || 'v34rob';
   const oc = D.overall_counts || {};
-  const order = ['Low','Some concerns','High'];
+  const order = ['Low','Some concerns','High','UNRESOLVED'];
   const summary = order.filter(k=>oc[k]).map(k=>
     `<span style="color:${v34RobTone(k)};font-weight:700;">${oc[k]} ${pwEsc(k)}</span>`).join(' · ');
   const families = v34RobResultsFilterOptions(D, 'family');
@@ -3384,9 +3402,9 @@ function v34RobResultsHtml(D){
       </td>
     </tr>`).join('');
   const roll = (D.model_rollup||[]).map(m => `
-    <tr class="v34-rob-model-row" data-rob-model="${pwEsc(m.model_id)}"
+    <tr class="${idPrefix}-model-row" data-rob-model="${pwEsc(m.model_id)}"
         style="cursor:pointer;" title="Click to filter the results below to this model"
-        onclick="v34FilterRobByModel('${pwEsc(m.model_id)}')">
+        onclick="v34FilterRobByModel('${pwEsc(m.model_id)}','${idPrefix}')">
       <td style="padding:0.25rem 0.4rem;"><code>${pwEsc(m.model_id)}</code></td>
       <td style="padding:0.25rem 0.4rem;text-align:right;">${m.k}</td>
       <td style="padding:0.25rem 0.4rem;text-align:right;color:#6ee7b7;">${m.low}</td>
@@ -3409,32 +3427,32 @@ function v34RobResultsHtml(D){
         ${D.count} assessed: ${summary}
       </div>
     </div>
-    <details id="v34-rob-results-details" style="margin-top:0.4rem;">
+    <details id="${idPrefix}-results-details" style="margin-top:0.4rem;">
       <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
         Show the ${D.count} result-specific judgements with their supporting evidence</summary>
       <div style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;margin:0.5rem 0 0.4rem;">
-        <select id="v34rob-f-overall" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters()">
+        <select id="${idPrefix}-f-overall" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters('${idPrefix}')">
           <option value="">Overall: all</option>
           ${order.filter(k=>oc[k]).map(k=>`<option value="${pwEsc(k)}">${pwEsc(k)}</option>`).join('')}
         </select>
-        <select id="v34rob-f-family" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters()">
+        <select id="${idPrefix}-f-family" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters('${idPrefix}')">
           <option value="">Outcome family: all</option>
           ${families.map(f=>`<option value="${pwEsc(f)}">${pwEsc(f)}</option>`).join('')}
         </select>
-        <select id="v34rob-f-study" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters()">
+        <select id="${idPrefix}-f-study" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters('${idPrefix}')">
           <option value="">Study: all</option>
           ${studies.map(s=>`<option value="${pwEsc(s)}">${pwEsc(s)}</option>`).join('')}
         </select>
-        <select id="v34rob-f-model" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters()">
+        <select id="${idPrefix}-f-model" class="filter-select" style="font-size:0.72rem;" onchange="v34ApplyRobFilters('${idPrefix}')">
           <option value="">Model/synthesis: all</option>
           ${(D.model_rollup||[]).map(m=>`<option value="${pwEsc(m.model_id)}">${pwEsc(m.model_id)}</option>`).join('')}
         </select>
         <button type="button" class="filter-select" style="font-size:0.72rem;cursor:pointer;"
-                onclick="v34ResetRobFilters()">Reset</button>
-        <span id="v34rob-filter-count" style="font-size:0.72rem;color:var(--text-muted);"></span>
+                onclick="v34ResetRobFilters('${idPrefix}')">Reset</button>
+        <span id="${idPrefix}-filter-count" style="font-size:0.72rem;color:var(--text-muted);"></span>
       </div>
       <div style="overflow-x:auto;">
-        <table id="v34-rob-results-table" style="width:100%;min-width:720px;border-collapse:collapse;font-size:0.74rem;">
+        <table id="${idPrefix}-results-table" style="width:100%;min-width:720px;border-collapse:collapse;font-size:0.74rem;">
           <thead><tr style="color:var(--text-muted);text-align:left;">
             <th style="padding:0.3rem 0.4rem;">Result</th>
             <th style="padding:0.3rem 0.4rem;">Domains</th>
@@ -3445,6 +3463,7 @@ function v34RobResultsHtml(D){
         </table>
       </div>
     </details>
+    ${(D.model_rollup||[]).length ? `
     <details style="margin-top:0.3rem;">
       <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
         What each fitted model inherits from these results</summary>
@@ -3462,20 +3481,24 @@ function v34RobResultsHtml(D){
           <tbody>${roll}</tbody>
         </table>
       </div>
-    </details>`;
+    </details>` : ''}`;
 }
 window.v34RobResultsHtml = v34RobResultsHtml;
 
 // Client-side filtering over the rendered result-specific RoB 2 rows. Filters
 // combine with AND; the models column holds a "; "-separated list, so a model
 // filter matches on substring against that list, not exact equality.
-function v34ApplyRobFilters(){
-  const table = document.getElementById('v34-rob-results-table');
+// idPrefix distinguishes the priority-1 (in-a-fitted-model, default 'v34rob')
+// and priority-2 (not-currently-pooled, 'v34rob2') panels, which render two
+// independent copies of this same table/filter structure on one page.
+function v34ApplyRobFilters(idPrefix){
+  idPrefix = idPrefix || 'v34rob';
+  const table = document.getElementById(idPrefix + '-results-table');
   if (!table) return;
-  const ov = (document.getElementById('v34rob-f-overall')||{}).value || '';
-  const fam = (document.getElementById('v34rob-f-family')||{}).value || '';
-  const st = (document.getElementById('v34rob-f-study')||{}).value || '';
-  const mo = (document.getElementById('v34rob-f-model')||{}).value || '';
+  const ov = (document.getElementById(idPrefix + '-f-overall')||{}).value || '';
+  const fam = (document.getElementById(idPrefix + '-f-family')||{}).value || '';
+  const st = (document.getElementById(idPrefix + '-f-study')||{}).value || '';
+  const mo = (document.getElementById(idPrefix + '-f-model')||{}).value || '';
   let shown = 0, total = 0;
   table.querySelectorAll('tbody tr').forEach(tr => {
     total++;
@@ -3487,26 +3510,28 @@ function v34ApplyRobFilters(){
     tr.hidden = !match;
     if (match) shown++;
   });
-  const countEl = document.getElementById('v34rob-filter-count');
+  const countEl = document.getElementById(idPrefix + '-filter-count');
   if (countEl) countEl.textContent = (ov||fam||st||mo) ? `showing ${shown} of ${total}` : '';
 }
-function v34ResetRobFilters(){
-  ['v34rob-f-overall','v34rob-f-family','v34rob-f-study','v34rob-f-model'].forEach(id => {
-    const el = document.getElementById(id);
+function v34ResetRobFilters(idPrefix){
+  idPrefix = idPrefix || 'v34rob';
+  ['-f-overall','-f-family','-f-study','-f-model'].forEach(suffix => {
+    const el = document.getElementById(idPrefix + suffix);
     if (el) el.value = '';
   });
-  v34ApplyRobFilters();
+  v34ApplyRobFilters(idPrefix);
 }
 // Coordination: clicking a model in the rollup table opens the results
 // disclosure (if collapsed) and filters the results table to that model,
 // mirroring the outcome-selection coordination used elsewhere in the dashboard.
-function v34FilterRobByModel(modelId){
-  const details = document.getElementById('v34-rob-results-details');
+function v34FilterRobByModel(modelId, idPrefix){
+  idPrefix = idPrefix || 'v34rob';
+  const details = document.getElementById(idPrefix + '-results-details');
   if (details) details.open = true;
-  const sel = document.getElementById('v34rob-f-model');
+  const sel = document.getElementById(idPrefix + '-f-model');
   if (sel) { sel.value = modelId; }
-  v34ApplyRobFilters();
-  const table = document.getElementById('v34-rob-results-table');
+  v34ApplyRobFilters(idPrefix);
+  const table = document.getElementById(idPrefix + '-results-table');
   if (table) table.scrollIntoView({behavior: 'smooth', block: 'nearest'});
 }
 window.v34ApplyRobFilters = v34ApplyRobFilters;

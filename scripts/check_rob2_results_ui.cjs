@@ -140,7 +140,7 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
     if (!sel) return null;
     sel.value = 'High';
     window.v34ApplyRobFilters();
-    const table = document.getElementById('v34-rob-results-table');
+    const table = document.getElementById('v34rob-results-table');
     const visible = [...table.querySelectorAll('tbody tr')].filter(r => !r.hidden);
     const ok = visible.length > 0 && visible.every(r => r.dataset.robOverall === 'High');
     sel.value = ''; window.v34ApplyRobFilters();
@@ -157,17 +157,17 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
   //    assertion below is actually exercising the click, not a state left over
   //    from step 1 having already opened it)
   const modelClick = await page.evaluate(() => {
-    const details = document.getElementById('v34-rob-results-details');
+    const details = document.getElementById('v34rob-results-details');
     if (details) details.open = false;
-    const modelRow = document.querySelector('.v34-rob-model-row');
+    const modelRow = document.querySelector('.v34rob-model-row');
     if (!modelRow) return null;
     const modelId = modelRow.dataset.robModel;
     modelRow.click();
-    const table = document.getElementById('v34-rob-results-table');
+    const table = document.getElementById('v34rob-results-table');
     const visible = [...table.querySelectorAll('tbody tr')].filter(r => !r.hidden);
     const ok = visible.length > 0 &&
       visible.every(r => (r.dataset.robModels || '').split('; ').includes(modelId));
-    const detailsOpen = document.getElementById('v34-rob-results-details')?.open === true;
+    const detailsOpen = document.getElementById('v34rob-results-details')?.open === true;
     window.v34ResetRobFilters();
     return {modelId, count: visible.length, ok, detailsOpen};
   });
@@ -181,7 +181,7 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
     document.getElementById('v34rob-f-overall').value = 'Low';
     window.v34ApplyRobFilters();
     window.v34ResetRobFilters();
-    const table = document.getElementById('v34-rob-results-table');
+    const table = document.getElementById('v34rob-results-table');
     return [...table.querySelectorAll('tbody tr')].every(r => !r.hidden);
   });
   assert.ok(resetWorks, 'Reset did not clear an active filter');

@@ -43,6 +43,7 @@ WORKLIST = ROOT / "09_V34_ANALYSIS" / "v34_rob2_worklist.csv"
 ROB2_DRAFTS = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_draft_assessments.csv"
 ROB2_ROLLUP = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_model_rollup.csv"
 ROB2_RESULT_MODELS = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_result_models.csv"
+ROB2_PRIORITY2 = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_priority2_assessments.csv"
 NEW_MODEL_GRADE = ROOT / "09_V34_ANALYSIS" / "04_GRADE" / "v34_new_model_grade.csv"
 OUT = ROOT / "dashboard" / "v34_data.js"
 
@@ -312,6 +313,42 @@ def main() -> int:
            read(ROB2_ROLLUP) if ROB2_ROLLUP.exists() else [],
            {(r["study"], r["outcome"], r["timepoint"]): r["models"]
             for r in (read(ROB2_RESULT_MODELS) if ROB2_RESULT_MODELS.exists() else [])}),
+
+        "rob2_priority2": (lambda ds: {
+            "count": len(ds),
+            "assessed_count": sum(1 for r in ds if r["status"] == "ROB2_RESULT_SPECIFIC_ADOPTED"),
+            "unresolved_count": sum(1 for r in ds if r["status"] == "ROB2_SOURCE_MAPPING_UNRESOLVED"),
+            "overall_counts": dict(Counter(r["overall"] for r in ds).most_common()),
+            "domain_counts": {
+                d: dict(Counter(r[d] for r in ds).most_common())
+                for d in ("d1_randomisation", "d2_deviations", "d3_missing",
+                          "d4_measurement", "d5_reporting")},
+            "results": [
+                dict(study=r["study"], outcome=r["outcome"], timepoint=r["timepoint"],
+                     family=r["outcome_family"],
+                     intervention=r["intervention"], comparator=r["comparator"],
+                     d1=r["d1_randomisation"], d2=r["d2_deviations"], d3=r["d3_missing"],
+                     d4=r["d4_measurement"], d5=r["d5_reporting"],
+                     overall=r["overall"], rationale=r["rationale"], flags=r["flags"],
+                     source_pdf=r["source_pdf"], status=r["status"],
+                     adopted_by=r["adopted_by"], adopted_date=r["adopted_date"],
+                     provenance_note=r["provenance_note"])
+                for r in ds],
+            "model_rollup": [],
+            "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
+            "adopted_by": "John Ryan N. Mendoza (review lead)",
+            "adopted_date": "2026-09-08",
+            "note": ("These are the results NOT currently inside any fitted model -- outcomes "
+                     "reported by a single trial, held for a source conflict, or otherwise not "
+                     "yet pooled -- assessed for completeness of the review's result-specific "
+                     "RoB 2 register, not because a synthesis depends on them today. Judged per "
+                     "RESULT against the mapped source article, same method and standard as the "
+                     "36 results above. Adopted by the review lead on 2026-09-08. Where a "
+                     "result's source PDF could not be confidently matched to the study (Wu "
+                     "2016, Ao 2021), it is marked ROB2_SOURCE_MAPPING_UNRESOLVED rather than "
+                     "assessed against a possibly-wrong article, and its domains show as "
+                     "UNRESOLVED, not Low."),
+        })(read(ROB2_PRIORITY2) if ROB2_PRIORITY2.exists() else []),
 
         "poolable_scan": {
             "groups_examined": len(scan),
