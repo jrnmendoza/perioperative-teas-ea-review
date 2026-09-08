@@ -1808,6 +1808,153 @@ def t_author_contacts_not_stale():
 
 # ─────────────────────────────────────────────────────────────────────────────
 
+
+# ── draft result-specific RoB 2 ───────────────────────────────────────────
+def _rob2_drafts():
+    rows = read_csv(ROOT / "09_V34_ANALYSIS" / "03_ROB2" /
+                    "v34_rob2_draft_assessments.csv")
+    return rows
+
+
+def t_rob2_drafts_cover_the_worklist():
+    """
+    Every priority-1 row -- the results inside a fitted model -- must have a
+    draft, and every draft must correspond to a real priority-1 row.
+
+    A partial set would leave some pooled estimates with an unstated
+    risk-of-bias basis while the panel implies all of them are covered.
+    """
+    work = [r for r in read_csv(ROOT / "09_V34_ANALYSIS" / "v34_rob2_worklist.csv")
+            if r["priority"].startswith("1")]
+    want = {(r["study"], r["outcome"], r["timepoint"]) for r in work}
+    got = {(r["study"], r["outcome"], r["timepoint"]) for r in _rob2_drafts()}
+    probs = []
+    for k in sorted(want - got):
+        probs.append(f"no draft for {k[0]} / {k[1]} @ {k[2]}")
+    for k in sorted(got - want):
+        probs.append(f"draft for a row that is not priority-1: {k[0]} / {k[1]} @ {k[2]}")
+    check("Draft RoB 2 judgements cover exactly the results inside a fitted model",
+          not probs, "\n".join(probs))
+
+
+def t_rob2_drafts_are_labelled_draft():
+    """
+    A draft must never be presented as an adjudicated judgement.
+
+    Cochrane RoB 2 is the review's central quality appraisal and is reported
+    under named assessors. If the dashboard showed these as settled, the review
+    would be claiming an appraisal that no assessor has made.
+    """
+    probs = []
+    for r in _rob2_drafts():
+        if r["status"] != "ROB2_RESULT_SPECIFIC_DRAFT_PENDING_ADJUDICATION":
+            probs.append(f"{r['study']} / {r['outcome']}: status is {r['status']!r}")
+    v34 = (ROOT / "dashboard" / "v34_data.js").read_text(encoding="utf-8")
+    if '"rob2_drafts"' in v34:
+        if "ROB2_RESULT_SPECIFIC_DRAFT_PENDING_ADJUDICATION" not in v34:
+            probs.append("v34_data.js carries drafts without the pending-adjudication status")
+        if "two independent human assessors" not in v34:
+            probs.append("v34_data.js drafts do not state that two assessors are required")
+    app = (ROOT / "dashboard" / "app.js").read_text(encoding="utf-8")
+    if "v34RobDraftsHtml" in app and "DRAFT — not adjudicated" not in app:
+        probs.append("the drafts panel does not carry a visible DRAFT label")
+    check("Draft RoB 2 judgements are labelled as drafts, not as adjudicated judgements",
+          not probs, "\n".join(probs))
+
+
+def t_rob2_drafts_do_not_release_grade():
+    """
+    Drafting the outstanding assessments must not release the GRADE hold.
+
+    The v34 handover is explicit that a materially changed synthesis does not
+    inherit an earlier GRADE rating, and an unadjudicated draft is not a basis
+    for issuing a new one.
+    """
+    v34 = (ROOT / "dashboard" / "v34_data.js").read_text(encoding="utf-8")
+    probs = []
+    if '"certainty_note"' in v34:
+        note = v34.split('"certainty_note"', 1)[1][:800]
+        if "pending" not in note.lower():
+            probs.append("certainty_note no longer says the assessments are pending")
+        if "draft" not in note.lower():
+            probs.append("certainty_note does not distinguish a draft from an adjudicated judgement")
+    check("Draft RoB 2 judgements do not release the GRADE hold",
+          not probs, "\n".join(probs))
+
+
+def t_rob2_drafts_are_result_specific():
+    """
+    A study contributing several results must be judged per result, not once.
+
+    The specific failure this guards against is a study-wide judgement copied
+    across that study's results: the v34 handover names it, and it would hide
+    exactly the differences -- who measured this outcome, and were they blinded
+    -- that make D4 result-specific.
+    """
+    rows = _rob2_drafts()
+    by_study = {}
+    for r in rows:
+        by_study.setdefault(r["study"], []).append(r)
+    probs = []
+    multi = {k: v for k, v in by_study.items() if len(v) > 1}
+    if not multi:
+        probs.append("no multi-result study found; the check would be vacuous")
+    for study, rs in sorted(multi.items()):
+        # Differing outcomes must not all share one identical rationale string.
+        if len({r["rationale"] for r in rs}) == 1 and len({r["outcome"] for r in rs}) > 1:
+            probs.append(f"{study}: {len(rs)} different results share one identical rationale")
+    # At least one study must actually differ across its results, otherwise the
+    # per-result judgement is indistinguishable from a study-wide one.
+    varies = any(len({r["d4_measurement"] for r in rs}) > 1 for rs in multi.values())
+    if not varies:
+        probs.append("no study varies its D4 judgement across its own results")
+    check("Draft RoB 2 judgements are made per result, not copied study-wide",
+          not probs, "\n".join(probs))
+
+
+def t_rob2_draft_overall_follows_algorithm():
+    """
+    Overall risk must follow the RoB 2 algorithm, not be assigned by impression.
+    """
+    rank = {"Low": 0, "Some concerns": 1, "High": 2}
+    probs = []
+    for r in _rob2_drafts():
+        doms = [r["d1_randomisation"], r["d2_deviations"], r["d3_missing"],
+                r["d4_measurement"], r["d5_reporting"]]
+        bad = [d for d in doms if d not in rank]
+        if bad:
+            probs.append(f"{r['study']} / {r['outcome']}: unrecognised domain value {bad}")
+            continue
+        want = "High" if "High" in doms else ("Some concerns" if "Some concerns" in doms else "Low")
+        if r["overall"] != want:
+            probs.append(f"{r['study']} / {r['outcome']}: overall {r['overall']!r} "
+                         f"but domains imply {want!r}")
+    check("Draft overall risk follows the RoB 2 algorithm from its own domains",
+          not probs, "\n".join(probs))
+
+
+def t_rob2_model_rollup_is_complete():
+    """
+    Every model must have a risk-of-bias basis for all of its contributing
+    results -- drafted here or already adjudicated. A rollup that silently
+    omits a contributor would understate what a pooled estimate inherits.
+    """
+    rows = read_csv(ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_model_rollup.csv")
+    probs = []
+    if not rows:
+        probs.append("model rollup is empty")
+    for r in rows:
+        if int(r["results_unjudged"]) != 0:
+            probs.append(f"{r['model_id']}: {r['results_unjudged']} contributing "
+                         "result(s) with no risk-of-bias basis")
+        tot = int(r["low"]) + int(r["some_concerns"]) + int(r["high"])
+        if tot != int(r["results_total"]):
+            probs.append(f"{r['model_id']}: domain counts sum to {tot}, "
+                         f"but {r['results_total']} results were judged")
+    check("Every fitted model has a risk-of-bias basis for all its contributing results",
+          not probs, "\n".join(probs))
+
+
 def main() -> int:
     print("=" * 78)
     print(f"{BOLD}  DASHBOARD <-> v26 LOCK CONSISTENCY VALIDATOR{RESET}")
@@ -1825,6 +1972,12 @@ def main() -> int:
                                    t_yu_wang_excluded, t_yeh_not_double_counted]),
         ("Estimand separation", [t_ponv_strata_separate, t_target_f_estimands_separate]),
         ("Risk of bias", [t_rob_pending_not_high, t_rob_result_specific]),
+        ("Draft result-specific RoB 2", [t_rob2_drafts_cover_the_worklist,
+                                         t_rob2_drafts_are_labelled_draft,
+                                         t_rob2_drafts_do_not_release_grade,
+                                         t_rob2_drafts_are_result_specific,
+                                         t_rob2_draft_overall_follows_algorithm,
+                                         t_rob2_model_rollup_is_complete]),
         ("Withdrawn analyses", [t_no_withdrawn_metareg, t_small_study_effects]),
         ("GRADE", [t_grade_consistent]),
         ("Downloads & deployment", [t_downloads_resolve, t_downloads_are_current,

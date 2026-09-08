@@ -1,0 +1,26 @@
+model_id,k_studies,results_drafted,results_adjudicated_existing,results_unjudged,results_total,low,some_concerns,high,worst_result,grade_rob_signal,high_risk_studies
+gi_first_bowel_sounds_TEAS_Sham,2,2,0,0,2,0,2,0,Some concerns,"no serious limitation, but no result at Low risk",-
+gi_first_flatus_EA_Usual_care,2,1,1,0,2,0,0,2,High,serious limitation likely (>=1 result at High risk),Huang 2025; Yang 2024
+gi_first_flatus_TEAS_Sham,7,6,1,0,7,1,6,0,Some concerns,mixed; assessor judgement required,-
+pain_vas_24h_TEAS_Sham,3,2,1,0,3,0,1,2,High,serious limitation likely (>=1 result at High risk),Lee 2011; Wu 2025
+ponv_24h_TEAS_Sham,3,3,0,0,3,2,1,0,Some concerns,mixed; assessor judgement required,-
+v34_gi_first_defecation_EA_Sham,1,1,0,0,1,0,1,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_gi_first_defecation_EA_Usual_care,3,3,0,0,3,0,1,2,High,serious limitation likely (>=1 result at High risk),Huang 2025; Yang 2024
+v34_gi_first_defecation_TEAS_Sham,3,3,0,0,3,0,3,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_intraop_remifentanil,9,9,0,0,9,1,6,2,High,serious limitation likely (>=1 result at High risk),Ntritsou 2014; Zheng 2025
+v34_intraop_remifentanil_EA_Sham,1,1,0,0,1,0,0,1,High,serious limitation likely (>=1 result at High risk),Ntritsou 2014
+v34_intraop_remifentanil_EA_Usual_care,1,1,0,0,1,0,1,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_intraop_remifentanil_TEAS_Sham,6,6,0,0,6,1,4,1,High,serious limitation likely (>=1 result at High risk),Zheng 2025
+v34_intraop_remifentanil_TEAS_Usual_care,1,1,0,0,1,0,1,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_intraop_sufentanil,5,5,1,0,6,0,6,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_intraop_sufentanil_EA_Usual_care,1,1,0,0,1,0,1,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_intraop_sufentanil_TEAS_CONTROL_TYPE_REVIEW_REQUIRED,1,1,0,0,1,0,1,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_intraop_sufentanil_TEAS_CONTROL_TYPE_REVIEW_REQUIRED_MNVP_stratum,1,1,0,0,1,0,1,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_intraop_sufentanil_TEAS_CONTROL_TYPE_REVIEW_REQUIRED_SNVP_stratum,1,1,0,0,1,0,1,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_intraop_sufentanil_TEAS_Sham,2,1,1,0,2,0,2,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_primary_24h_mme_ALL_AUDIT,7,0,7,0,7,0,6,1,High,serious limitation likely (>=1 result at High risk),El-Rakshy 2009
+v34_primary_24h_mme_EA_Usual_care,3,0,3,0,3,0,2,1,High,serious limitation likely (>=1 result at High risk),El-Rakshy 2009
+v34_primary_24h_mme_TEAS_Sham,4,0,4,0,4,0,4,0,Some concerns,"no serious limitation, but no result at Low risk",-
+v34_qor40_24h,3,2,1,0,3,1,1,1,High,serious limitation likely (>=1 result at High risk),Yao 2015
+v34_qor40_24h_TEAS_Sham,2,1,1,0,2,1,0,1,High,serious limitation likely (>=1 result at High risk),Yao 2015
+v34_qor40_24h_TEAS_Usual_care,1,1,0,0,1,0,1,0,Some concerns,"no serious limitation, but no result at Low risk",-

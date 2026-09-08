@@ -3286,7 +3286,7 @@ function renderV34() {
         <div class="v34-hold"><span class="v34-hold-n">${V.poolable_scan.shared_arm_holds}</span>
           <span>groups still held for comparator or shared-arm adjudication</span></div>
         <div class="v34-hold"><span class="v34-hold-n">${(V.rob2_worklist||{}).blocking_grade ?? '—'}</span>
-          <span>result-specific risk-of-bias assessments outstanding inside a fitted model</span></div>
+          <span>result-specific risk-of-bias assessments inside a fitted model — all drafted, none adjudicated</span></div>
       </div>
       ${V.comparator_resolution ? `
       <div style="margin-top:0.8rem;padding:0.6rem 0.75rem;background:rgba(52,211,153,0.06);
@@ -3308,10 +3308,11 @@ function renderV34() {
                   border-left:3px solid rgba(148,163,184,0.45);border-radius:var(--radius-sm);">
         <div style="font-weight:700;color:#cbd5e1;font-size:0.8rem;">
           Result-specific risk of bias — ${V.rob2_worklist.blocking_grade} assessments
-          outstanding inside fitted models</div>
+          inside fitted models, drafted and awaiting adjudication</div>
         <div style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
           ${pwEsc(V.rob2_worklist.note)}
         </div>
+        ${V.rob2_drafts && V.rob2_drafts.count ? v34RobDraftsHtml(V.rob2_drafts) : `
         <details style="margin-top:0.4rem;">
           <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
             Show the ${V.rob2_worklist.blocking_grade} results awaiting assessment</summary>
@@ -3319,7 +3320,7 @@ function renderV34() {
             ${V.rob2_worklist.blocking_list.map(r =>
               `<li>${pwEsc(r.study)} — ${pwEsc(r.outcome)} @ ${pwEsc(r.timepoint)}</li>`).join('')}
           </ul>
-        </details>
+        </details>`}
       </div>` : ''}
       <p style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.55rem;">
         Unaccessed supplements: ${h.supplement_access_gaps.map(pwEsc).join(', ')}.
@@ -3327,5 +3328,105 @@ function renderV34() {
       </p>`;
   }
 }
+
+
+// Draft result-specific RoB 2 judgements for the results inside a fitted model.
+// DRAFTS ONLY: read from the source article against the RoB 2 signalling
+// questions and anchored to quoted text, but not adjudicated. Cochrane RoB 2
+// requires two independent human assessors reaching consensus, so these are
+// shown as drafts, are not written into the frozen workbook, and do not release
+// the GRADE hold. Each is judged for its own RESULT — a study-wide judgement is
+// never displayed in place of a result-specific one.
+function v34RobTone(v){
+  return v === 'High' ? '#fca5a5'
+       : v === 'Some concerns' ? '#fcd34d'
+       : v === 'Low' ? '#6ee7b7' : 'var(--text-muted)';
+}
+function v34RobChip(label, v){
+  return `<span style="display:inline-block;padding:0.05rem 0.32rem;margin:0 0.2rem 0.2rem 0;
+    border-radius:3px;background:rgba(255,255,255,0.05);font-size:0.66rem;
+    color:${v34RobTone(v)};white-space:nowrap;">${label} ${pwEsc(v)}</span>`;
+}
+function v34RobDraftsHtml(D){
+  const oc = D.overall_counts || {};
+  const order = ['Low','Some concerns','High'];
+  const summary = order.filter(k=>oc[k]).map(k=>
+    `<span style="color:${v34RobTone(k)};font-weight:700;">${oc[k]} ${pwEsc(k)}</span>`).join(' · ');
+  const rows = (D.results||[]).map(r => `
+    <tr>
+      <td style="padding:0.3rem 0.4rem;vertical-align:top;">
+        <div style="font-weight:600;color:var(--text-primary);">${pwEsc(r.study)}</div>
+        <div style="color:var(--text-muted);font-size:0.7rem;">${pwEsc(r.outcome)} @ ${pwEsc(r.timepoint)}</div>
+      </td>
+      <td style="padding:0.3rem 0.4rem;vertical-align:top;white-space:nowrap;">
+        ${v34RobChip('D1',r.d1)}${v34RobChip('D2',r.d2)}${v34RobChip('D3',r.d3)}
+        ${v34RobChip('D4',r.d4)}${v34RobChip('D5',r.d5)}
+      </td>
+      <td style="padding:0.3rem 0.4rem;vertical-align:top;white-space:nowrap;
+                 color:${v34RobTone(r.overall)};font-weight:700;">${pwEsc(r.overall)}</td>
+      <td style="padding:0.3rem 0.4rem;vertical-align:top;color:var(--text-secondary);
+                 font-size:0.7rem;line-height:1.55;">
+        ${pwEsc(r.rationale)}
+        ${r.flags ? `<div style="margin-top:0.2rem;color:#fcd34d;">⚑ ${pwEsc(r.flags)}</div>` : ''}
+      </td>
+    </tr>`).join('');
+  const roll = (D.model_rollup||[]).map(m => `
+    <tr>
+      <td style="padding:0.25rem 0.4rem;"><code>${pwEsc(m.model_id)}</code></td>
+      <td style="padding:0.25rem 0.4rem;text-align:right;">${m.k}</td>
+      <td style="padding:0.25rem 0.4rem;text-align:right;color:#6ee7b7;">${m.low}</td>
+      <td style="padding:0.25rem 0.4rem;text-align:right;color:#fcd34d;">${m.some}</td>
+      <td style="padding:0.25rem 0.4rem;text-align:right;color:#fca5a5;">${m.high}</td>
+      <td style="padding:0.25rem 0.4rem;color:var(--text-secondary);font-size:0.7rem;">
+        ${pwEsc(m.signal)}${m.high_risk_studies && m.high_risk_studies !== '-'
+          ? `<div style="color:var(--text-muted);">via ${pwEsc(m.high_risk_studies)}</div>` : ''}
+      </td>
+    </tr>`).join('');
+  return `
+    <div style="margin-top:0.5rem;padding:0.5rem 0.6rem;background:rgba(250,204,21,0.06);
+                border-left:3px solid rgba(250,204,21,0.5);border-radius:var(--radius-sm);">
+      <div style="font-weight:700;color:#fcd34d;font-size:0.78rem;">
+        DRAFT — not adjudicated</div>
+      <div style="font-size:0.74rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
+        ${pwEsc(D.note)}
+      </div>
+      <div style="margin-top:0.35rem;font-size:0.76rem;color:var(--text-secondary);">
+        ${D.count} drafted: ${summary}
+      </div>
+    </div>
+    <details style="margin-top:0.4rem;">
+      <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
+        Show the ${D.count} draft result-specific judgements with their supporting evidence</summary>
+      <div style="overflow-x:auto;margin-top:0.4rem;">
+        <table style="width:100%;min-width:720px;border-collapse:collapse;font-size:0.74rem;">
+          <thead><tr style="color:var(--text-muted);text-align:left;">
+            <th style="padding:0.3rem 0.4rem;">Result</th>
+            <th style="padding:0.3rem 0.4rem;">Domains (draft)</th>
+            <th style="padding:0.3rem 0.4rem;">Overall</th>
+            <th style="padding:0.3rem 0.4rem;">Basis in the source</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </details>
+    <details style="margin-top:0.3rem;">
+      <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
+        What each fitted model would inherit if these drafts were confirmed</summary>
+      <div style="overflow-x:auto;margin-top:0.4rem;">
+        <table style="width:100%;min-width:620px;border-collapse:collapse;font-size:0.74rem;">
+          <thead><tr style="color:var(--text-muted);text-align:left;">
+            <th style="padding:0.25rem 0.4rem;">Model</th>
+            <th style="padding:0.25rem 0.4rem;text-align:right;">k</th>
+            <th style="padding:0.25rem 0.4rem;text-align:right;">Low risk</th>
+            <th style="padding:0.25rem 0.4rem;text-align:right;">Some concerns</th>
+            <th style="padding:0.25rem 0.4rem;text-align:right;">High risk</th>
+            <th style="padding:0.25rem 0.4rem;">GRADE risk-of-bias signal</th>
+          </tr></thead>
+          <tbody>${roll}</tbody>
+        </table>
+      </div>
+    </details>`;
+}
+window.v34RobDraftsHtml = v34RobDraftsHtml;
 
 window.renderV34 = renderV34;

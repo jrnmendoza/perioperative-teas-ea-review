@@ -40,6 +40,8 @@ MANIFEST = ROOT / "09_V34_ANALYSIS" / "01_DATA" / "v34_model_manifest.csv"
 SCAN = ROOT / "09_V34_ANALYSIS" / "v34_poolable_scan.csv"
 RESOLUTION = ROOT / "09_V34_ANALYSIS" / "v34_comparator_resolution.csv"
 WORKLIST = ROOT / "09_V34_ANALYSIS" / "v34_rob2_worklist.csv"
+ROB2_DRAFTS = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_draft_assessments.csv"
+ROB2_ROLLUP = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_model_rollup.csv"
 OUT = ROOT / "dashboard" / "v34_data.js"
 
 V34_SHA256 = "985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3"
@@ -258,11 +260,49 @@ def main() -> int:
                 for r in rs if r["priority"].startswith("1")],
             "note": ("Result-specific RoB 2 is a judgement made by assessors, not a value "
                      "derivable from the data, and Cochrane requires two independent "
-                     "assessors reaching consensus. No assessment was generated here and no "
-                     "study-wide judgement was copied onto a different result. The rows "
-                     "below are the ones inside a fitted model, so they are what currently "
-                     "blocks a GRADE rating."),
+                     "assessors reaching consensus. No study-wide judgement was copied onto "
+                     "a different result. The rows below are the ones inside a fitted model, "
+                     "so they are what currently blocks a GRADE rating. Each now carries a "
+                     "DRAFT judgement read from the source article and anchored to quoted "
+                     "text; drafts are not adjudicated judgements and do not release the "
+                     "GRADE hold."),
         })(read(WORKLIST) if WORKLIST.exists() else []),
+
+        "rob2_drafts": (lambda ds, rl: {
+            "count": len(ds),
+            "overall_counts": dict(Counter(r["overall"] for r in ds).most_common()),
+            "domain_counts": {
+                d: dict(Counter(r[d] for r in ds).most_common())
+                for d in ("d1_randomisation", "d2_deviations", "d3_missing",
+                          "d4_measurement", "d5_reporting")},
+            "results": [
+                dict(study=r["study"], outcome=r["outcome"], timepoint=r["timepoint"],
+                     family=r["outcome_family"],
+                     d1=r["d1_randomisation"], d2=r["d2_deviations"], d3=r["d3_missing"],
+                     d4=r["d4_measurement"], d5=r["d5_reporting"],
+                     overall=r["overall"], rationale=r["rationale"], flags=r["flags"],
+                     source_pdf=r["source_pdf"])
+                for r in ds],
+            "model_rollup": [
+                dict(model_id=r["model_id"], k=int(r["k_studies"]),
+                     judged=int(r["results_total"]),
+                     low=int(r["low"]), some=int(r["some_concerns"]), high=int(r["high"]),
+                     worst=r["worst_result"], signal=r["grade_rob_signal"],
+                     high_risk_studies=r["high_risk_studies"])
+                for r in rl],
+            "status": "ROB2_RESULT_SPECIFIC_DRAFT_PENDING_ADJUDICATION",
+            "note": ("DRAFT ONLY. Each of these judgements was derived by reading the mapped "
+                     "source article against the RoB 2 signalling questions, and every domain "
+                     "is anchored to quoted text with a page locator in "
+                     "09_V34_ANALYSIS/03_ROB2/evidence.json. They are judged per RESULT, not "
+                     "per study: D4 in particular turns on who measured that specific outcome "
+                     "and whether they were blinded. Cochrane RoB 2 requires two independent "
+                     "human assessors reaching consensus, so nothing here is written into the "
+                     "frozen v34 workbook and no GRADE certainty is released on their basis. "
+                     "The model rollup shows what each pooled estimate would inherit if the "
+                     "drafts were confirmed."),
+        })(read(ROB2_DRAFTS) if ROB2_DRAFTS.exists() else [],
+           read(ROB2_ROLLUP) if ROB2_ROLLUP.exists() else []),
 
         "poolable_scan": {
             "groups_examined": len(scan),
@@ -273,8 +313,9 @@ def main() -> int:
 
         "certainty_note": (
             "New and restratified v34 analyses carry result-specific risk-of-bias "
-            "assessments that are still pending, so no GRADE certainty is presented for "
-            "them. Previous GRADE ratings describe the earlier syntheses and are not "
+            "assessments that are still pending adjudication, so no GRADE certainty is "
+            "presented for them. Draft judgements now exist for all 36 of the results "
+            "inside a fitted model, but a draft is not an adjudicated judgement. Previous GRADE ratings describe the earlier syntheses and are not "
             "carried across to a materially changed model."),
     }
 
