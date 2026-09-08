@@ -3322,6 +3322,7 @@ function renderV34() {
           </ul>
         </details>`}
       </div>` : ''}
+      ${V.grade_new_models && V.grade_new_models.count ? v34GradeNewModelsHtml(V.grade_new_models) : ''}
       <p style="font-size:0.76rem;color:var(--text-secondary);line-height:1.6;margin-top:0.55rem;">
         Unaccessed supplements: ${h.supplement_access_gaps.map(pwEsc).join(', ')}.
         ${h.source_not_accessed_outcomes.map(pwEsc).join('; ')}.
@@ -3511,5 +3512,67 @@ function v34FilterRobByModel(modelId){
 window.v34ApplyRobFilters = v34ApplyRobFilters;
 window.v34ResetRobFilters = v34ResetRobFilters;
 window.v34FilterRobByModel = v34FilterRobByModel;
+
+// GRADE certainty for the five new v34 models. Computed by an explicit,
+// stated rule applied identically to all five (see
+// 09_V34_ANALYSIS/04_GRADE/compute_new_model_grade.py), NOT an independent
+// GRADE panel's consensus judgement -- GRADE certainty, like RoB 2, is an
+// assessor judgement that Cochrane/GRADE guidance bounds with bands and
+// principles rather than a formula. Adopted by the review lead, same status
+// already applied to the RoB 2 domain these ratings build on.
+function v34GradeTone(g){
+  return g === 'High' ? '#6ee7b7' : g === 'Moderate' ? '#7dd3fc'
+       : g === 'Low' ? '#fcd34d' : g === 'Very Low' ? '#fca5a5' : 'var(--text-muted)';
+}
+function v34GradeNewModelsHtml(G){
+  const rows = (G.ratings||[]).map(r => {
+    const domainChips = (r.domains||[]).map(d => {
+      const tone = d.downgrade === 0 ? '#6ee7b7' : d.downgrade === -1 ? '#fcd34d' : '#fca5a5';
+      return `<span title="${pwEsc(d.reason)}" style="display:inline-block;padding:0.05rem 0.32rem;
+        margin:0 0.2rem 0.2rem 0;border-radius:3px;background:rgba(255,255,255,0.05);
+        font-size:0.66rem;color:${tone};white-space:nowrap;cursor:help;">${pwEsc(d.name)} ${d.downgrade}</span>`;
+    }).join('');
+    return `
+    <tr>
+      <td style="padding:0.3rem 0.4rem;vertical-align:top;">
+        <div style="font-weight:600;color:var(--text-primary);">${pwEsc(r.outcome)}</div>
+        <div style="color:var(--text-muted);font-size:0.7rem;">${pwEsc(r.window)} · ${pwEsc(r.modality)} vs ${pwEsc(r.comparator)}</div>
+        <div style="color:var(--text-muted);font-size:0.68rem;"><code>${pwEsc(r.model_id)}</code></div>
+      </td>
+      <td style="padding:0.3rem 0.4rem;vertical-align:top;white-space:nowrap;">
+        ${r.measure === 'logRR' ? 'logRR' : 'MD'} ${r.estimate} [${r.ci_low}, ${r.ci_high}]<br>
+        <span style="color:var(--text-muted);font-size:0.7rem;">k=${r.k}, N=${r.n}, I²=${r.i2}%, p=${pwEsc(String(r.p_value)).slice(0,6)}</span>
+      </td>
+      <td style="padding:0.3rem 0.4rem;vertical-align:top;white-space:nowrap;">${domainChips}</td>
+      <td style="padding:0.3rem 0.4rem;vertical-align:top;white-space:nowrap;
+                 color:${v34GradeTone(r.grade)};font-weight:700;">${pwEsc(r.grade)}</td>
+    </tr>`;
+  }).join('');
+  return `
+    <div style="margin-top:0.6rem;padding:0.5rem 0.6rem;background:rgba(125,211,252,0.06);
+                border-left:3px solid rgba(125,211,252,0.5);border-radius:var(--radius-sm);">
+      <div style="font-weight:700;color:#7dd3fc;font-size:0.78rem;">
+        GRADE certainty for the five new v34 models — adopted ${pwEsc(G.adopted_date||'')} by ${pwEsc(G.adopted_by||'the review lead')}</div>
+      <div style="font-size:0.74rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
+        ${pwEsc(G.note)}
+      </div>
+    </div>
+    <details style="margin-top:0.4rem;">
+      <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
+        Show the GRADE rating and per-domain downgrades for these ${G.count} models</summary>
+      <div style="overflow-x:auto;margin-top:0.4rem;">
+        <table style="width:100%;min-width:760px;border-collapse:collapse;font-size:0.74rem;">
+          <thead><tr style="color:var(--text-muted);text-align:left;">
+            <th style="padding:0.3rem 0.4rem;">Model</th>
+            <th style="padding:0.3rem 0.4rem;">Estimate</th>
+            <th style="padding:0.3rem 0.4rem;">Domains (hover for reason)</th>
+            <th style="padding:0.3rem 0.4rem;">GRADE</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </details>`;
+}
+window.v34GradeNewModelsHtml = v34GradeNewModelsHtml;
 
 window.renderV34 = renderV34;

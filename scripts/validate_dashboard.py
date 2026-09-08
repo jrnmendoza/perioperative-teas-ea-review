@@ -1884,32 +1884,137 @@ def t_rob2_results_carry_honest_provenance():
           not probs, "\n".join(probs))
 
 
-def t_rob2_grade_note_distinguishes_domain_from_full_rating():
-    """
-    Adopting the RoB 2 domain must not be presented as a completed GRADE rating.
+def _grade_new_models():
+    return read_csv(ROOT / "09_V34_ANALYSIS" / "04_GRADE" / "v34_new_model_grade.csv")
 
-    RoB 2 is one of five GRADE domains. Removing its specific hold on these
-    five new v34 models does not, by itself, mean inconsistency, imprecision,
-    indirectness and publication bias have been assessed for them -- and this
-    pipeline has not assessed those. The certainty note must say so plainly
-    rather than implying GRADE is now finished for these models.
+
+def t_certainty_note_reflects_computed_grade():
+    """
+    The certainty note must accurately describe what has actually been done:
+    RoB 2 adopted, and a GRADE rating for the five new models now computed
+    and adopted too -- but computed by an explicit rule, not by an
+    independent GRADE panel, and the note must say so rather than reading as
+    if a panel signed off.
     """
     v34 = (ROOT / "dashboard" / "v34_data.js").read_text(encoding="utf-8")
     probs = []
     if '"certainty_note"' in v34:
-        note = v34.split('"certainty_note"', 1)[1][:1200]
+        note = v34.split('"certainty_note"', 1)[1][:1500]
         if "adopted" not in note.lower():
             probs.append("certainty_note does not reflect that RoB 2 was adopted")
-        if not re.search(r"not[^.]{0,40}(a )?completed? GRADE|NOT[^.]{0,60}completed? grade",
-                         note, re.I):
-            probs.append("certainty_note does not state that this is not a completed GRADE rating")
-        missing_domains = [d for d in ("inconsistency", "imprecision", "indirectness",
-                                       "publication bias") if d not in note.lower()]
-        if missing_domains:
-            probs.append(f"certainty_note does not name the still-unassessed GRADE domains: "
-                         f"{missing_domains}")
-    check("The GRADE certainty note distinguishes 'RoB 2 domain adopted' from "
-          "'GRADE rating completed'", not probs, "\n".join(probs))
+        if "grade_new_models" not in note:
+            probs.append("certainty_note does not point to the grade_new_models payload")
+        if not re.search(r"not an independent GRADE panel|rule-based", note, re.I):
+            probs.append("certainty_note does not disclose the GRADE rating is rule-based, "
+                         "not an independent panel's judgement")
+    check("The certainty note accurately describes the computed, adopted GRADE rating "
+          "without claiming panel consensus", not probs, "\n".join(probs))
+
+
+def t_grade_new_models_complete_and_valid():
+    """
+    All five new v34 models must have a GRADE rating, and it must be one of
+    the four valid GRADE levels.
+    """
+    rows = _grade_new_models()
+    probs = []
+    want = {"gi_first_flatus_TEAS_Sham", "gi_first_flatus_EA_Usual_care",
+            "gi_first_bowel_sounds_TEAS_Sham", "pain_vas_24h_TEAS_Sham",
+            "ponv_24h_TEAS_Sham"}
+    got = {r["model_id"] for r in rows}
+    if got != want:
+        probs.append(f"model set mismatch: missing {want - got}, extra {got - want}")
+    for r in rows:
+        if r["grade"] not in ("High", "Moderate", "Low", "Very Low"):
+            probs.append(f"{r['model_id']}: invalid GRADE level {r['grade']!r}")
+        if r["status"] != "GRADE_RULE_BASED_ADOPTED":
+            probs.append(f"{r['model_id']}: status is {r['status']!r}, not GRADE_RULE_BASED_ADOPTED")
+        if not r.get("adopted_by") or not r.get("adopted_date"):
+            probs.append(f"{r['model_id']}: missing adopted_by/adopted_date")
+    check("All five new v34 models have a valid, adopted GRADE rating",
+          not probs, "\n".join(probs))
+
+
+def t_grade_new_models_rule_recomputes():
+    """
+    Independently recompute each domain's downgrade from the underlying I2,
+    CI, k and RoB 2 composition, using the exact bands stated in
+    09_V34_ANALYSIS/04_GRADE/compute_new_model_grade.py's docstring, and
+    confirm the stored downgrade and final GRADE level match.
+
+    This is the GRADE analogue of t_rob2_overall_follows_algorithm: a rating
+    assigned by impression rather than by the stated rule would pass a
+    superficial "is it a valid GRADE level" check but not this one.
+    """
+    models = {r["model_id"]: r for r in read_csv(
+        ROOT / "09_V34_ANALYSIS" / "03_RESULTS" / "v34_models.csv") if r["phase"] == "NEW"}
+    rollup = {r["model_id"]: r for r in read_csv(
+        ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_model_rollup.csv")}
+    levels = ["Very Low", "Low", "Moderate", "High"]
+    probs = []
+    for r in _grade_new_models():
+        mid = r["model_id"]
+        m, roll = models.get(mid), rollup.get(mid)
+        if not m or not roll:
+            probs.append(f"{mid}: missing source model or rollup row to recompute against")
+            continue
+        k = int(m["k"])
+        i2 = float(m["i2"])
+        ci_low, ci_high = float(m["ci_low"]), float(m["ci_high"])
+        low, some, high = int(roll["low"]), int(roll["some_concerns"]), int(roll["high"])
+
+        want_rob = 0 if high == 0 else (-2 if high / (low + some + high) >= 0.5 else -1)
+        want_inc = 0 if i2 < 50 else -1
+        crosses = ci_low <= 0 <= ci_high
+        if not crosses and k >= 3:
+            want_imp = 0
+        elif not crosses and k == 2:
+            want_imp = -1
+        elif crosses and k >= 3:
+            want_imp = -1
+        else:
+            want_imp = -2
+
+        got_rob, got_inc, got_imp = (int(r["rob_downgrade"]), int(r["inconsistency_downgrade"]),
+                                     int(r["imprecision_downgrade"]))
+        if got_rob != want_rob:
+            probs.append(f"{mid}: RoB downgrade stored {got_rob}, rule implies {want_rob}")
+        if got_inc != want_inc:
+            probs.append(f"{mid}: inconsistency downgrade stored {got_inc}, rule implies {want_inc}")
+        if got_imp != want_imp:
+            probs.append(f"{mid}: imprecision downgrade stored {got_imp}, rule implies {want_imp}")
+        if int(r["indirectness_downgrade"]) != 0 or int(r["publication_bias_downgrade"]) != 0:
+            probs.append(f"{mid}: indirectness/publication-bias downgrade is nonzero, but the "
+                         "stated rule never downgrades either domain for these models")
+
+        raw = want_rob + want_inc + want_imp
+        want_grade = levels[max(0, min(3, 3 + raw))]
+        if r["grade"] != want_grade:
+            probs.append(f"{mid}: stored grade {r['grade']!r} but domains imply {want_grade!r}")
+
+    check("Each new model's GRADE downgrades and final level match the stated rule, "
+          "independently recomputed from I2/CI/k/RoB2", not probs, "\n".join(probs))
+
+
+def t_grade_new_models_do_not_overclaim_panel_review():
+    """
+    The dashboard must never present this rule-based GRADE computation as an
+    independent GRADE panel's consensus judgement -- the same guard already
+    applied to the RoB 2 domain, extended to its GRADE consequence.
+    """
+    app = (ROOT / "dashboard" / "app.js").read_text(encoding="utf-8")
+    probs = []
+    if "v34GradeNewModelsHtml" in app:
+        if re.search(r"GRADE panel (has |had )?(reviewed|assessed|approved)", app, re.I):
+            probs.append("the GRADE panel claims an independent panel review that did not happen")
+        if "adopted" not in app.split("v34GradeNewModelsHtml")[0][-3000:] and \
+           "Adopted ${" not in app:
+            probs.append("the GRADE panel does not visibly show who/when adopted the rating")
+    v34 = (ROOT / "dashboard" / "v34_data.js").read_text(encoding="utf-8")
+    if '"grade_new_models"' in v34 and "not an independent GRADE panel" not in v34:
+        probs.append("v34_data.js grade_new_models note drops the not-a-panel-judgement disclosure")
+    check("The GRADE panel for the five new models does not overclaim independent panel review",
+          not probs, "\n".join(probs))
 
 
 def t_rob2_results_are_result_specific():
@@ -2037,11 +2142,15 @@ def main() -> int:
         ("Risk of bias", [t_rob_pending_not_high, t_rob_result_specific]),
         ("Result-specific RoB 2 (adopted)", [t_rob2_results_cover_the_worklist,
                                              t_rob2_results_carry_honest_provenance,
-                                             t_rob2_grade_note_distinguishes_domain_from_full_rating,
+                                             t_certainty_note_reflects_computed_grade,
                                              t_rob2_results_are_result_specific,
                                              t_rob2_overall_follows_algorithm,
                                              t_rob2_model_rollup_is_complete,
                                              t_rob2_source_qc_flags_preserved]),
+        ("GRADE for the five new v34 models (rule-based, adopted)",
+         [t_grade_new_models_complete_and_valid,
+          t_grade_new_models_rule_recomputes,
+          t_grade_new_models_do_not_overclaim_panel_review]),
         ("Withdrawn analyses", [t_no_withdrawn_metareg, t_small_study_effects]),
         ("GRADE", [t_grade_consistent]),
         ("Downloads & deployment", [t_downloads_resolve, t_downloads_are_current,

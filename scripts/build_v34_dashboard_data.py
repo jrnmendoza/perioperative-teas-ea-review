@@ -43,6 +43,7 @@ WORKLIST = ROOT / "09_V34_ANALYSIS" / "v34_rob2_worklist.csv"
 ROB2_DRAFTS = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_draft_assessments.csv"
 ROB2_ROLLUP = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_model_rollup.csv"
 ROB2_RESULT_MODELS = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_result_models.csv"
+NEW_MODEL_GRADE = ROOT / "09_V34_ANALYSIS" / "04_GRADE" / "v34_new_model_grade.csv"
 OUT = ROOT / "dashboard" / "v34_data.js"
 
 V34_SHA256 = "985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3"
@@ -319,15 +320,62 @@ def main() -> int:
             "single_study": sum(1 for r in scan if "only 1 independent" in r["verdict"]),
         },
 
+        "grade_new_models": (lambda gs: {
+            "count": len(gs),
+            "status": "GRADE_RULE_BASED_ADOPTED",
+            "adopted_by": "John Ryan N. Mendoza (review lead)",
+            "adopted_date": "2026-09-08",
+            "ratings": [
+                dict(model_id=g["model_id"], outcome=g["outcome"], window=g["window"],
+                     modality=g["modality"], comparator=g["comparator"], measure=g["measure"],
+                     k=int(g["k"]), n=int(g["n"]), estimate=float(g["estimate"]),
+                     ci_low=float(g["ci_low"]), ci_high=float(g["ci_high"]),
+                     p_value=g["p_value"], i2=float(g["i2"]), grade=g["grade"],
+                     domains=[
+                         dict(name="Risk of bias", downgrade=int(g["rob_downgrade"]),
+                              reason=g["rob_reason"]),
+                         dict(name="Inconsistency", downgrade=int(g["inconsistency_downgrade"]),
+                              reason=g["inconsistency_reason"]),
+                         dict(name="Imprecision", downgrade=int(g["imprecision_downgrade"]),
+                              reason=g["imprecision_reason"]),
+                         dict(name="Indirectness", downgrade=int(g["indirectness_downgrade"]),
+                              reason=g["indirectness_reason"]),
+                         dict(name="Publication bias", downgrade=int(g["publication_bias_downgrade"]),
+                              reason=g["publication_bias_reason"]),
+                     ],
+                     raw_downgrade_total=int(g["raw_downgrade_total"]),
+                     adopted_by=g["adopted_by"], adopted_date=g["adopted_date"])
+                for g in gs],
+            "note": ("GRADE certainty for these five new v34 models, computed by applying an "
+                     "EXPLICIT, STATED rule per domain -- documented in "
+                     "09_V34_ANALYSIS/04_GRADE/compute_new_model_grade.py -- identically to "
+                     "all five, so each downgrade can be checked and disputed individually. "
+                     "This is not an independent GRADE panel's consensus judgement: GRADE "
+                     "certainty, like RoB 2, is an assessor judgement, and Cochrane/GRADE "
+                     "guidance sets bands and principles rather than a formula. Adopted by "
+                     "the review lead on 2026-09-08 as the review's current GRADE rating for "
+                     "these five models, the same adopted (not independently panel-reviewed) "
+                     "status already applied to their RoB 2 domain. Indirectness and "
+                     "publication bias were not downgraded for any of the five: indirectness "
+                     "because each model is already stratified by modality and comparator, "
+                     "though surgical-population variation across contributing trials is "
+                     "flagged as a judgement call rather than resolved; publication bias "
+                     "because none of the five reaches k=10, the threshold this review has "
+                     "already adopted elsewhere for interpretable small-study-effect testing, "
+                     "and absence of a test is not evidence of absence of bias."),
+        })(read(NEW_MODEL_GRADE) if NEW_MODEL_GRADE.exists() else []),
+
         "certainty_note": (
             "New and restratified v34 analyses now carry a result-specific risk-of-bias "
             "assessment for all 36 of the results inside a fitted model, adopted by the "
-            "review lead on 2026-09-08 (see rob2_results). That removes the RoB-2-specific "
-            "reason these analyses previously carried no GRADE certainty rating. It does "
-            "NOT by itself constitute a completed GRADE rating: inconsistency, imprecision, "
-            "indirectness and publication bias for these five new v34 models (GI recovery, "
-            "pain, PONV) still need to be assessed against the fitted estimates before a "
-            "certainty rating can be issued, and that assessment has not been done here. "
+            "review lead on 2026-09-08 (see rob2_results). A GRADE certainty rating for the "
+            "five new v34 models (GI recovery, pain, PONV) has now also been computed, "
+            "domain by domain, and adopted by the review lead on the same date (see "
+            "grade_new_models) -- ratings range from Moderate (gi_first_flatus_TEAS_Sham, "
+            "gi_first_bowel_sounds_TEAS_Sham) through Low (ponv_24h_TEAS_Sham) to Very Low "
+            "(gi_first_flatus_EA_Usual_care, pain_vas_24h_TEAS_Sham). This is a rule-based "
+            "computation applied identically across all five models, not an independent "
+            "GRADE panel's consensus judgement, and the grade_new_models note says so. "
             "Previous GRADE ratings describe the earlier syntheses and are not carried "
             "across to a materially changed model."),
     }

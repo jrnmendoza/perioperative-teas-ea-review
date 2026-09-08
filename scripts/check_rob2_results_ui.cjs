@@ -1,11 +1,14 @@
-// Regression checks for the result-specific RoB 2 panel (adopted status).
+// Regression checks for the result-specific RoB 2 panel (adopted status) and
+// the rule-based GRADE panel for the five new v34 models it feeds.
 //
 // Scope: that the 36 result-specific judgements reach the page intact, that
 // each is visibly attributed to who adopted it and when, that the panel never
 // claims an independent dual-assessor record this pipeline was never given,
-// and that the result-level filtering (outcome family, study, overall,
+// that the result-level filtering (outcome family, study, overall,
 // model/synthesis) actually filters what is rendered and coordinates with the
-// model rollup table.
+// model rollup table, and that the five GRADE ratings built on top of that
+// RoB 2 domain are shown as a rule-based computation the review lead adopted
+// -- never as an independent GRADE panel's consensus judgement.
 //
 // These are presentation and provenance assertions. They never assert a
 // domain judgement -- only that what the data file holds, including its
@@ -69,16 +72,56 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
   assert.ok(!/independently\s+(double|dual)[- ]assess/i.test(text),
     'the panel claims an independent dual-assessment that was never provided to this pipeline');
 
-  // 4. the certainty note separates "RoB 2 adopted" from "GRADE complete"
+  // 4. the certainty note reflects the computed, adopted GRADE rating without
+  //    claiming an independent panel signed off on it
   const cert = await page.evaluate(() => (window.V34_DATA || {}).certainty_note || '');
   assert.ok(/adopted/i.test(cert),
     'the certainty note does not reflect the adopted RoB 2 status');
-  assert.ok(/not[^.]{0,40}(a )?completed? GRADE|NOT[^.]{0,60}completed? grade/i.test(cert),
-    'the certainty note does not say GRADE itself remains incomplete');
-  for (const domain of ['inconsistency', 'imprecision', 'indirectness', 'publication bias']) {
-    assert.ok(cert.toLowerCase().includes(domain),
-      `the certainty note drops the still-unassessed domain "${domain}"`);
+  assert.ok(/grade_new_models/.test(cert),
+    'the certainty note does not point to the grade_new_models payload');
+  assert.ok(/rule-based/i.test(cert),
+    'the certainty note does not disclose the GRADE rating is rule-based');
+
+  // 4b. the GRADE panel for the five new models: present, complete, honestly labelled
+  const G = await page.evaluate(() => (window.V34_DATA || {}).grade_new_models || null);
+  assert.ok(G, 'v34 data carries no grade_new_models payload');
+  assert.strictEqual(G.count, 5, `expected 5 GRADE ratings, data holds ${G.count}`);
+  assert.strictEqual(G.status, 'GRADE_RULE_BASED_ADOPTED', `payload status is ${G.status}`);
+  assert.ok(G.adopted_by && G.adopted_date, 'GRADE payload missing adopted_by/adopted_date');
+  assert.ok(/not an independent GRADE panel/i.test(G.note),
+    'the GRADE note does not disclose it is not an independent panel judgement');
+  for (const domain of ['indirectness', 'publication bias']) {
+    assert.ok(G.note.toLowerCase().includes(domain),
+      `the GRADE note drops its reasoning for the "${domain}" domain`);
   }
+
+  const gradeOpen = await page.evaluate(() => {
+    const ds = [...document.querySelectorAll('#tab-primary details')];
+    const d = ds.find(x => /GRADE rating and per-domain downgrades/i.test(
+      x.querySelector('summary')?.textContent || ''));
+    if (!d) return null;
+    d.open = true;
+    const rows = [...d.querySelectorAll('tbody tr')];
+    return {
+      rows: rows.length,
+      grades: rows.map(r => r.children[3].textContent.trim()),
+      allFiveDomains: rows.every(r => (r.children[2].textContent.match(
+        /Risk of bias|Inconsistency|Imprecision|Indirectness|Publication bias/g) || []).length === 5),
+    };
+  });
+  assert.ok(gradeOpen, 'the GRADE ratings disclosure is not present');
+  assert.strictEqual(gradeOpen.rows, 5, `${gradeOpen.rows} GRADE rows rendered, expected 5`);
+  assert.ok(gradeOpen.allFiveDomains, 'a rendered GRADE row is missing one of the five domains');
+  const wantGrades = G.ratings.map(r => r.grade);
+  assert.deepStrictEqual(gradeOpen.grades, wantGrades,
+    'the rendered GRADE levels do not match the data file row for row');
+
+  const gradeText = await page.evaluate(() => document.getElementById('tab-primary').innerText);
+  assert.ok(!/GRADE panel (has |had )?(reviewed|assessed|approved)|(reviewed|assessed|approved)[^.]{0,40}GRADE panel/i.test(gradeText),
+    'the GRADE panel claims an independent panel reviewed/approved these ratings');
+  assert.ok(/not an independent GRADE panel/i.test(gradeText),
+    'the rendered GRADE panel drops the not-a-panel-judgement disclosure text (checked in the ' +
+    'DOM, not just the data payload, so a template that stops rendering the note is caught)');
 
   // 5. the model rollup reaches the DOM and is complete
   const rollDetails = await page.evaluate(() => {
@@ -165,6 +208,8 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
     'the Swedish view drops the translated no-separate-dual-assessor-record disclosure');
   assert.ok(!/oberoende dubbelbedömning (har|är) (gjord|genomförd)/i.test(sv),
     'the Swedish view claims an independent dual assessment that was not provided');
+  assert.ok(/inte en oberoende GRADE-panels konsensusbedömning/i.test(sv),
+    'the Swedish view drops the translated not-a-GRADE-panel disclosure');
 
   // 11. translation must not have altered any judgement
   const svOveralls = await page.evaluate(() => {
@@ -187,5 +232,6 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
   console.log(`PASS: ${D.count} result-specific RoB 2 judgements rendered with all five ` +
     `domains, overall column matches the data row for row, ${D.model_rollup.length} model ` +
     `rollup rows, honest adoption provenance shown, filtering and model-click coordination ` +
-    `work, GRADE-vs-RoB2 distinction and source-QC flags intact in English and Swedish.`);
+    `work; ${G.count} rule-based GRADE ratings render correctly and disclose they are not an ` +
+    `independent panel judgement; source-QC flags intact in English and Swedish.`);
 })().catch(e => { console.error('FAIL:', e.message); process.exit(1); });
