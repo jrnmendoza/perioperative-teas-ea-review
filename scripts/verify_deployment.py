@@ -45,6 +45,24 @@ def fetch(url: str, timeout: int = 20):
         return resp.status, body, headers
 
 
+
+def commit_matches(reported: str | None, wanted: str) -> bool:
+    """True when the deployed commit is the one asked for.
+
+    build-meta.json records the full 40-character SHA while --commit is usually
+    given as the short SHA that git and the build badge print, so a plain string
+    comparison fails a correct deployment. Match on prefix, in whichever
+    direction is longer, and require at least 7 characters so a stray short
+    string cannot pass.
+    """
+    if not reported or not wanted:
+        return False
+    a, b = reported.strip().lower(), wanted.strip().lower()
+    if min(len(a), len(b)) < 7:
+        return False
+    return a.startswith(b) or b.startswith(a)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--commit", required=True, help="commit SHA that was just deployed")
@@ -67,7 +85,7 @@ def main() -> int:
             status, body, headers = fetch(meta_url)
             if status == 200:
                 meta = json.loads(body)
-                if meta.get("git_commit") == args.commit:
+                if commit_matches(meta.get("git_commit"), args.commit):
                     print(f"  build-meta.json reports git_commit={meta.get('git_commit')} -- matches")
                     break
                 print(f"  build-meta.json reports git_commit={meta.get('git_commit')} "
@@ -79,7 +97,7 @@ def main() -> int:
         if attempt < args.retries:
             time.sleep(args.retry_delay)
 
-    if meta is None or meta.get("git_commit") != args.commit:
+    if meta is None or not commit_matches(meta.get("git_commit"), args.commit):
         failures.append(
             f"build-meta.json never reported git_commit={args.commit} after "
             f"{args.retries} attempts (got {meta.get('git_commit') if meta else None!r})"
