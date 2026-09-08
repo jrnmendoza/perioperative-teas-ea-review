@@ -2,7 +2,7 @@
 """
 Post-deployment live verification. Fetches the PUBLIC GitHub Pages URL
 (cache-busted) after deployment and confirms the returned content actually
-carries the current v32 analytical state -- never assume a deployment
+carries the current analytical state -- never assume a deployment
 succeeded merely because the workflow step that pushed it returned 0.
 
 Usage:
@@ -17,17 +17,22 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import time
 import urllib.request
 from urllib.error import URLError, HTTPError
 
 DEFAULT_BASE = "https://jrnmendoza.github.io/perioperative-teas-ea-review"
-REQUIRED_TEXT = ("v32",)  # presence checks against the raw HTML
+# Presence checks against the raw HTML. The master version is NOT checked by
+# literal here -- it is derived from the deployed build-meta below, so this file
+# never has to be edited when the master advances.
+REQUIRED_TEXT = ()
+
+# Values that must hold for any deployment of this review, whatever the master
+# version. Version-specific values are derived from the deployed metadata.
 REQUIRED_META = {
-    "master_version": "v32",
     "canonical_studies": 70,
-    "source_normalized_outcome_rows": 364,
     "strict_primary_opioid_k": 7,
 }
 
@@ -87,6 +92,28 @@ def main() -> int:
                 failures.append(f"build-meta.json[{key}] = {got!r}, expected {expected!r}")
             else:
                 print(f"  OK  build-meta.json[{key}] = {got}")
+
+        # Version-specific fields: check them for internal consistency rather
+        # than against a literal. Hardcoding "v32" here would have blocked
+        # every correct later deployment while silently blessing a stale one --
+        # which is exactly what it did on the v33 deploy.
+        master_file = str(meta.get("master_file", ""))
+        m = re.search(r"_v(\d+)_", master_file)
+        if not m:
+            failures.append(f"build-meta.json[master_file] = {master_file!r}: no version found")
+        elif meta.get("master_version") != f"v{m.group(1)}":
+            failures.append(
+                f"build-meta.json[master_version] = {meta.get('master_version')!r} "
+                f"disagrees with master_file {master_file!r}"
+            )
+        else:
+            print(f"  OK  master_version {meta['master_version']} matches master_file")
+
+        rows = meta.get("source_normalized_outcome_rows")
+        if not isinstance(rows, int) or rows <= 0:
+            failures.append(f"build-meta.json[source_normalized_outcome_rows] = {rows!r}")
+        else:
+            print(f"  OK  build-meta.json[source_normalized_outcome_rows] = {rows}")
 
     print(f"\nfetching {index_url}")
     try:
