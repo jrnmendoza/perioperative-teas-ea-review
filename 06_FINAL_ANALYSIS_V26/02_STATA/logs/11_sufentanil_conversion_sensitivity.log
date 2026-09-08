@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/11_sufentanil_conversion_sensitivity.log
   log type:  text
- opened on:   7 Sep 2026, 20:38:24
+ opened on:   8 Sep 2026, 08:07:43
 
 . 
 . di as txt "=================================================================="
@@ -579,5 +579,5 @@ NATIVE units and are therefore invariant to every factor in this loop.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/11_sufentanil_conversion_sensitivity.log
   log type:  text
- closed on:   7 Sep 2026, 20:38:24
+ closed on:   8 Sep 2026, 08:07:43
 ----------------------------------------------------------------------------------------------------

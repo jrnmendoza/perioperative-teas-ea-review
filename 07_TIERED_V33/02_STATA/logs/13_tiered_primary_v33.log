@@ -1,0 +1,1671 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/07_TIERED_V33/02_STATA/logs/13_
+> tiered_primary_v33.log
+  log type:  text
+ opened on:   8 Sep 2026, 08:07:43
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "13: TIERED PRIMARY OUTCOME -- 0-24 h CUMULATIVE OPIOID (mg IV MME)"
+13: TIERED PRIMARY OUTCOME -- 0-24 h CUMULATIVE OPIOID (mg IV MME)
+
+. di as txt "Model: Random-effects REML + Hartung-Knapp (se(kh)), predinterval"
+Model: Random-effects REML + Hartung-Knapp (se(kh)), predinterval
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. di as txt _n "Stata version / flavor used for these results:"
+
+Stata version / flavor used for these results:
+
+. di as txt "  c(stata_version) = " c(stata_version)
+  c(stata_version) = 19.5
+
+. di as txt "  c(version)       = " c(version)
+  c(version)       = 19.5
+
+. di as txt "  c(edition)       = " c(edition)
+  c(edition)       = BE
+
+. di as txt "  c(flavor)        = " c(flavor)
+  c(flavor)        = IC
+
+. 
+. import delimited "07_TIERED_V33/01_DATA/tiered_primary_v33.csv", clear varnames(1) case(preserve)
+(encoding automatically selected: ISO-8859-1)
+(28 vars, 8 obs)
+
+. describe
+
+Contains data
+ Observations:             8                  
+    Variables:            28                  
+----------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+----------------------------------------------------------------------------------------------------
+study           str25   %25s                  
+year            int     %8.0g                 
+comparison_id   str28   %28s                  
+modality        str4    %9s                   
+comparator      str10   %10s                  
+tier            str1    %9s                   
+n_i             byte    %8.0g                 
+n_c             byte    %8.0g                 
+mean_i_src      float   %9.0g                 
+sd_i_src        float   %9.0g                 
+mean_c_src      float   %9.0g                 
+sd_c_src        float   %9.0g                 
+unit_src        str16   %16s                  
+mme_factor      byte    %8.0g                 
+mean_i_mme      float   %9.0g                 
+sd_i_mme        float   %9.0g                 
+mean_c_mme      float   %9.0g                 
+sd_c_mme        float   %9.0g                 
+md_mme          float   %9.0g                 
+se_mme          float   %9.0g                 
+hedges_g        float   %9.0g                 
+hedges_se       float   %9.0g                 
+in_S0           byte    %8.0g                 
+in_S0_teas_sham byte    %8.0g                 
+in_S0_ea_usual  byte    %8.0g                 
+multiarm_alt    byte    %8.0g                 
+multiarm_note   str97   %97s                  
+source_locator  str54   %54s                  
+----------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. list study modality comparator n_i n_c mean_i_mme sd_i_mme mean_c_mme sd_c_mme ///
+>      md_mme se_mme in_S0 multiarm_alt, clean noobs
+
+                        study   modality   comparator   n_i   n_c   mean_i~e   sd_i_mme   mean_c~e  
+>  sd_c_mme   md_mme     se_mme   in_S0   multia~t  
+                    Chen 1998       TEAS         Sham    25    25       32.5       17.5       53.5  
+>        25      -21   6.103278       1          0  
+                    Chen 2020       TEAS         Sham    40    40      72.43       4.78     100.62  
+>      10.2   -28.19    1.78107       1          0  
+    He 2026 (hepatectomy/JIS)       TEAS         Sham    80    79         20        2.5       20.6  
+>       4.5      -.6     .57832       1          0  
+                   Szmit 2021       TEAS         Sham    24    24        7.5        3.8       15.2  
+>      6.24     -7.7   1.491331       1          0  
+               El-Rakshy 2009         EA   Usual Care    42    53       35.3         18       36.9  
+>        18     -1.6   3.718534       1          0  
+           Seevaunnamtum 2016         EA   Usual Care    32    32      21.38      14.38      33.94  
+>     20.24   -12.56   4.389056       1          0  
+                    Yang 2024         EA   Usual Care    90    90       43.7        4.7         44  
+>       4.9      -.3    .715697       1          0  
+    Szmit 2021 (PCA-only arm)       TEAS   Usual Care    24    23        7.5        3.8       15.5  
+>       6.1       -8   1.489796       0          1  
+
+. 
+. * ------------------------------------------------------------------------------
+. * 0. INTEGRITY GATES -- fail loudly rather than pooling something prohibited
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "0. INTEGRITY GATES"
+0. INTEGRITY GATES
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. 
+. * (a) No multi-arm alternative contrast may enter S0.
+. count if in_S0 == 1 & multiarm_alt == 1
+  0
+
+. if r(N) > 0 {
+.     di as error "GATE FAIL: a correlated multi-arm alternative contrast is flagged in_S0."
+.     exit 459
+. }
+
+. 
+. * (b) Every S0 row must carry a complete MD and SE.
+. count if in_S0 == 1 & missing(md_mme, se_mme)
+  0
+
+. if r(N) > 0 {
+.     di as error "GATE FAIL: an S0 row has a missing MD or SE."
+.     exit 459
+. }
+
+. 
+. * (c) S0 strata must be mutually exclusive and exhaustive.
+. count if in_S0 == 1 & (in_S0_teas_sham + in_S0_ea_usual) != 1
+  0
+
+. if r(N) > 0 {
+.     di as error "GATE FAIL: an S0 row is in zero or both strata."
+.     exit 459
+. }
+
+. 
+. * (d) Reproduce each MD and SE from the arm-level MME values.
+. gen double md_check = mean_i_mme - mean_c_mme
+
+. gen double se_check = sqrt(sd_i_mme^2/n_i + sd_c_mme^2/n_c)
+
+. count if abs(md_check - md_mme) > 1e-4 | abs(se_check - se_mme) > 1e-4
+  0
+
+. if r(N) > 0 {
+.     di as error "GATE FAIL: MD/SE do not reproduce from arm-level means and SDs."
+.     list study md_mme md_check se_mme se_check, clean noobs
+.     exit 459
+. }
+
+. di as txt "All integrity gates passed."
+All integrity gates passed.
+
+. 
+. * ==============================================================================
+. * S0 -- PRIMARY: TEAS vs INERT SHAM
+. * ==============================================================================
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "S0 PRIMARY: TEAS vs inert sham"
+S0 PRIMARY: TEAS vs inert sham
+
+. di as txt "  Outcome  : cumulative 0-24 h postoperative opioid consumption"
+  Outcome  : cumulative 0-24 h postoperative opioid consumption
+
+. di as txt "  Window   : 0-24 h post-operation"
+  Window   : 0-24 h post-operation
+
+. di as txt "  Unit     : mg intravenous morphine milligram equivalents (IV MME)"
+  Unit     : mg intravenous morphine milligram equivalents (IV MME)
+
+. di as txt "  Estimator: random-effects REML"
+  Estimator: random-effects REML
+
+. di as txt "  CI method: Hartung-Knapp (Knapp-Hartung), t reference distribution"
+  CI method: Hartung-Knapp (Knapp-Hartung), t reference distribution
+
+. di as txt "=================================================================="
+==================================================================
+
+. count if in_S0_teas_sham == 1
+  4
+
+. local k_teas = r(N)
+
+. list study n_i n_c md_mme se_mme if in_S0_teas_sham == 1, clean noobs
+
+                        study   n_i   n_c   md_mme     se_mme  
+                    Chen 1998    25    25      -21   6.103278  
+                    Chen 2020    40    40   -28.19    1.78107  
+    He 2026 (hepatectomy/JIS)    80    79      -.6     .57832  
+                   Szmit 2021    24    24     -7.7   1.491331  
+
+. 
+. meta set md_mme se_mme if in_S0_teas_sham == 1, studylabel(study) ///
+>     eslabel("Mean difference (mg IV MME)")
+(4 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      4
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 156.8823
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.59
+                                                                H2 =   70.96
+
+               Effect size: Mean difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     21.42
+                Chen 2020 |        -28.190     -31.681     -24.699     25.98
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.45
+               Szmit 2021 |         -7.700     -10.623      -4.777     26.14
+--------------------------+-------------------------------------------------
+                    theta |        -13.995     -34.181       6.190
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-74.403,46.413]
+
+Test of theta = 0: t(3) = -2.21                          Prob > |t| = 0.1145
+Test of homogeneity: Q = chi2(3) = 232.89                  Prob > Q = 0.0000
+
+. matrix S0_teas = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. local pi_lb_teas = r(pi_lb)
+
+. local pi_ub_teas = r(pi_ub)
+
+. 
+. di as txt _n "Study weights (REML, random-effects):"
+
+Study weights (REML, random-effects):
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      4
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 156.8823
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.59
+                                                                H2 =   70.96
+
+               Effect size: Mean difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     21.42
+                Chen 2020 |        -28.190     -31.681     -24.699     25.98
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.45
+               Szmit 2021 |         -7.700     -10.623      -4.777     26.14
+--------------------------+-------------------------------------------------
+                    theta |        -13.995     -34.181       6.190
+----------------------------------------------------------------------------
+Test of theta = 0: t(3) = -2.21                          Prob > |t| = 0.1145
+Test of homogeneity: Q = chi2(3) = 232.89                  Prob > Q = 0.0000
+
+. 
+. meta forestplot, ///
+>     title("A. Primary: TEAS vs inert sham, 0-24 h opioid", size(medium)) ///
+>     subtitle("Mean difference in mg IV MME; random-effects REML + Hartung-Knapp (k=`k_teas')", siz
+> e(vsmall)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+. graph export "07_TIERED_V33/04_FIGURES/forestA_S0_teas_sham_24h_mme.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/07_TIERED_V33/04_FIGURES/forestA_S0_te
+    > as_sham_24h_mme.png saved as PNG format
+
+. 
+. * Leave-one-out for the primary model
+. di as txt _n "S0 PRIMARY leave-one-out (REML + Hartung-Knapp):"
+
+S0 PRIMARY leave-one-out (REML + Hartung-Knapp):
+
+. meta summarize, random(reml) se(kh) leaveoneout
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Leave-one-out meta-analysis summary           Number of studies =      4
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+                     theta: Overall Mean difference (mg IV MME)
+------------------------------------------------------------------------
+            Omitted study |       theta    [95% conf. interval]  p-value
+--------------------------+---------------------------------------------
+                Chen 1998 |     -12.103     -47.666      23.460    0.281
+                Chen 2020 |      -8.409     -32.665      15.847    0.274
+He 2026 (hepatectomy/JIS) |     -18.766     -45.577       8.046    0.095
+               Szmit 2021 |     -16.313     -52.646      20.020    0.193
+--------------------------+---------------------------------------------
+                    theta |     -13.995     -34.181       6.190    0.114
+------------------------------------------------------------------------
+
+. 
+. * ==============================================================================
+. * S0 -- SUPPORTIVE: EA vs USUAL CARE
+. * ==============================================================================
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "S0 SUPPORTIVE: EA vs usual care / no-stimulation control"
+S0 SUPPORTIVE: EA vs usual care / no-stimulation control
+
+. di as txt "  Same outcome, window, unit, estimator and CI method as above."
+  Same outcome, window, unit, estimator and CI method as above.
+
+. di as txt "  Reported SEPARATELY: a different comparator answers a different question."
+  Reported SEPARATELY: a different comparator answers a different question.
+
+. di as txt "=================================================================="
+==================================================================
+
+. count if in_S0_ea_usual == 1
+  3
+
+. local k_ea = r(N)
+
+. list study n_i n_c md_mme se_mme if in_S0_ea_usual == 1, clean noobs
+
+                 study   n_i   n_c   md_mme     se_mme  
+        El-Rakshy 2009    42    53     -1.6   3.718534  
+    Seevaunnamtum 2016    32    32   -12.56   4.389056  
+             Yang 2024    90    90      -.3    .715697  
+
+. 
+. meta set md_mme se_mme if in_S0_ea_usual == 1, studylabel(study) ///
+>     eslabel("Mean difference (mg IV MME)")
+(5 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                      Number of studies =      3
+Random-effects model                       Heterogeneity:
+Method: REML                                           tau2 = 28.4713
+SE adjustment: Knapp–Hartung                         I2 (%) =   77.15
+                                                         H2 =    4.38
+
+        Effect size: Mean difference (mg IV MME)
+---------------------------------------------------------------------
+             Study |    Effect size    [95% conf. interval]  % weight
+-------------------+-------------------------------------------------
+    El-Rakshy 2009 |         -1.600      -8.888       5.688     29.89
+Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     26.49
+         Yang 2024 |         -0.300      -1.703       1.103     43.62
+-------------------+-------------------------------------------------
+             theta |         -3.936     -19.773      11.902
+---------------------------------------------------------------------
+95% prediction interval for theta: [-86.301,78.429]
+
+Test of theta = 0: t(2) = -1.07                   Prob > |t| = 0.3969
+Test of homogeneity: Q = chi2(2) = 7.67             Prob > Q = 0.0216
+
+. matrix S0_ea = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. local pi_lb_ea = r(pi_lb)
+
+. local pi_ub_ea = r(pi_ub)
+
+. 
+. meta forestplot, ///
+>     title("B. Supportive: EA vs usual care, 0-24 h opioid", size(medium)) ///
+>     subtitle("Mean difference in mg IV MME; random-effects REML + Hartung-Knapp (k=`k_ea')", size(
+> vsmall)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+. graph export "07_TIERED_V33/04_FIGURES/forestB_S0_ea_usualcare_24h_mme.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/07_TIERED_V33/04_FIGURES/forestB_S0_ea
+    > _usualcare_24h_mme.png saved as PNG format
+
+. 
+. di as txt _n "S0 SUPPORTIVE leave-one-out (REML + Hartung-Knapp):"
+
+S0 SUPPORTIVE leave-one-out (REML + Hartung-Knapp):
+
+. meta summarize, random(reml) se(kh) leaveoneout
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Leave-one-out meta-analysis summary    Number of studies =      3
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+              theta: Overall Mean difference (mg IV MME)
+-----------------------------------------------------------------
+     Omitted study |       theta    [95% conf. interval]  p-value
+-------------------+---------------------------------------------
+    El-Rakshy 2009 |      -5.665     -82.946      71.615    0.523
+Seevaunnamtum 2016 |      -0.346      -3.412       2.719    0.387
+         Yang 2024 |      -6.832     -76.391      62.727    0.430
+-------------------+---------------------------------------------
+             theta |      -3.936     -19.773      11.902    0.397
+-----------------------------------------------------------------
+
+. 
+. * ==============================================================================
+. * EMPTY CELL: sham-controlled EA
+. * ==============================================================================
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "EMPTY CELL: EA vs inert sham"
+EMPTY CELL: EA vs inert sham
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. count if modality == "EA" & comparator == "Sham" & !missing(md_mme)
+  0
+
+. di as txt "Sham-controlled EA trials reporting an analysable 0-24 h cumulative"
+Sham-controlled EA trials reporting an analysable 0-24 h cumulative
+
+. di as txt "opioid mean/SD in absolute dose units: k = " r(N)
+opioid mean/SD in absolute dose units: k = 0
+
+. di as txt "No sham-controlled EA estimate is available for this outcome."
+No sham-controlled EA estimate is available for this outcome.
+
+. di as txt "The EA result above is therefore NOT sham-controlled and cannot be"
+The EA result above is therefore NOT sham-controlled and cannot be
+
+. di as txt "read as a specific-acupoint effect."
+read as a specific-acupoint effect.
+
+. 
+. * ==============================================================================
+. * S1 -- Tier A + Tier B
+. * ==============================================================================
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "S1: Tier A + Tier B (deterministically derived mean/SD)"
+S1: Tier A + Tier B (deterministically derived mean/SD)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. di as txt "No trial supplies a deterministic mean/SD derivation that is not"
+No trial supplies a deterministic mean/SD derivation that is not
+
+. di as txt "already Tier A. Chen 2015's rescue-bolus derivation is exact, but the"
+already Tier A. Chen 2015's rescue-bolus derivation is exact, but the
+
+. di as txt "reported quantities are medians and IQRs, so it lands in Tier C, not"
+reported quantities are medians and IQRs, so it lands in Tier C, not
+
+. di as txt "Tier B. S1 is therefore identical to S0 -- no separate model is fitted."
+Tier B. S1 is therefore identical to S0 -- no separate model is fitted.
+
+. 
+. * ==============================================================================
+. * S2 -- Tier C PARALLEL SYNTHESIS (medians; NOT pooled with S0)
+. * ==============================================================================
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "S2: Tier C parallel synthesis -- median/IQR evidence"
+S2: Tier C parallel synthesis -- median/IQR evidence
+
+. di as txt "=================================================================="
+==================================================================
+
+. preserve
+
+. import delimited "07_TIERED_V33/01_DATA/tiered_tierC_parallel_v33.csv", clear varnames(1) case(pre
+> serve)
+(encoding automatically selected: ISO-8859-1)
+(26 vars, 2 obs)
+
+. list study modality comparator n_i n_c median_i_mme q1_i_mme q3_i_mme ///
+>      median_c_mme q1_c_mme q3_c_mme median_difference_mme reported_p, clean noobs
+
+        study   modality   compar~r   n_i   n_c   me~i_mme   q1_i_mme   q3_i_mme   me~c_mme   q1_c_m
+> me   q3_c_mme   me~e_mme   report~p  
+     Gao 2022       TEAS       Sham   827   828         33          0         50         30         
+>  0         60          3       .197  
+    Chen 2015       TEAS       Sham    41    42          2          2          6          7         
+>  4         14         -5       .004  
+
+. di as txt _n "These are NOT pooled and NOT converted to mean/SD:"
+
+These are NOT pooled and NOT converted to mean/SD:
+
+. list study not_pooled_reason, clean noobs
+
+        study                                                                                       
+>                                                                                                   
+> not_pooled_reason  
+     Gao 2022                                                                         25th percentil
+> e is exactly 0.0 in BOTH arms: zero-inflated, strongly non-normal. Wan/Luo mean-SD recovery is not
+>  defensible here.  
+    Chen 2015   Tier B derivation: rescue count x fixed 2 mg IV morphine. Multiplication by a positi
+> ve constant is order-preserving, so quantiles transform exactly. Rescue morphine was the only post
+> operative opioid.  
+
+. restore
+
+. 
+. * ==============================================================================
+. * S3 -- Tier D (digitized)
+. * ==============================================================================
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "S3: Tier A + Tier D (graph-digitized)"
+S3: Tier A + Tier D (graph-digitized)
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. di as txt "One candidate (Gu 2019, Figure 4) was digitized under a pre-specified"
+One candidate (Gu 2019, Figure 4) was digitized under a pre-specified
+
+. di as txt "validation protocol. Axis calibration was exact (max residual 0.0000)"
+validation protocol. Axis calibration was exact (max residual 0.0000)
+
+. di as txt "and the low-frequency TEAS arm reproduced the in-text values to within"
+and the low-frequency TEAS arm reproduced the in-text values to within
+
+. di as txt "4.2%, but the control arm was systematically overestimated by up to"
+4.2%, but the control arm was systematically overestimated by up to
+
+. di as txt "16.0%, indicating a figure-versus-text inconsistency in the source."
+16.0%, indicating a figure-versus-text inconsistency in the source.
+
+. di as txt "The digitization therefore FAILED its validation check and Gu 2019 is"
+The digitization therefore FAILED its validation check and Gu 2019 is
+
+. di as txt "not admissible. S3 is empty and identical to S0; no model is fitted."
+not admissible. S3 is empty and identical to S0; no model is fitted.
+
+. di as txt "See 07_TIERED_V33/03_DIGITIZATION/gu2019_digitization_QC.md."
+See 07_TIERED_V33/03_DIGITIZATION/gu2019_digitization_QC.md.
+
+. 
+. * ==============================================================================
+. * COMPARATOR SENSITIVITY -- Szmit 2021 alternative arm
+. * ==============================================================================
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "SENSITIVITY C1: TEAS primary using Szmit 2021's PCA-only (usual-care)"
+SENSITIVITY C1: TEAS primary using Szmit 2021's PCA-only (usual-care)
+
+. di as txt "arm in place of its sham arm. The two contrasts are correlated and are"
+arm in place of its sham arm. The two contrasts are correlated and are
+
+. di as txt "NEVER pooled together; this swaps one for the other."
+NEVER pooled together; this swaps one for the other.
+
+. di as txt "=================================================================="
+==================================================================
+
+. preserve
+
+. drop if study == "Szmit 2021"
+(1 observation deleted)
+
+. replace in_S0_teas_sham = 1 if study == "Szmit 2021 (PCA-only arm)"
+(1 real change made)
+
+. count if in_S0_teas_sham == 1
+  4
+
+. local k_c1 = r(N)
+
+. list study comparator md_mme se_mme if in_S0_teas_sham == 1, clean noobs
+
+                        study   comparator   md_mme     se_mme  
+                    Chen 1998         Sham      -21   6.103278  
+                    Chen 2020         Sham   -28.19    1.78107  
+    He 2026 (hepatectomy/JIS)         Sham      -.6     .57832  
+    Szmit 2021 (PCA-only arm)   Usual Care       -8   1.489796  
+
+. meta set md_mme se_mme if in_S0_teas_sham == 1, studylabel(study) ///
+>     eslabel("Mean difference (mg IV MME)")
+(3 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      4
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 155.6773
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.58
+                                                                H2 =   70.49
+
+               Effect size: Mean difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     21.40
+                Chen 2020 |        -28.190     -31.681     -24.699     25.99
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.46
+Szmit 2021 (PCA-only arm) |         -8.000     -10.920      -5.080     26.15
+--------------------------+-------------------------------------------------
+                    theta |        -14.071     -34.177       6.035
+----------------------------------------------------------------------------
+95% prediction interval for theta: [-74.246,46.103]
+
+Test of theta = 0: t(3) = -2.23                          Prob > |t| = 0.1123
+Test of homogeneity: Q = chi2(3) = 233.97                  Prob > Q = 0.0000
+
+. matrix SENS_C1 = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. restore
+
+. 
+. * ------------------------------------------------------------------------------
+. * SENSITIVITY C2: estimator / CI-method grid on the primary model
+. * ------------------------------------------------------------------------------
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "SENSITIVITY C2: estimator and CI-method grid, S0 primary (TEAS vs sham)"
+SENSITIVITY C2: estimator and CI-method grid, S0 primary (TEAS vs sham)
+
+. di as txt "=================================================================="
+==================================================================
+
+. meta set md_mme se_mme if in_S0_teas_sham == 1, studylabel(study) ///
+>     eslabel("Mean difference (mg IV MME)")
+(4 missing values generated)
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean difference (mg IV MME)
+          Variable: md_mme
+
+         Precision
+         Std. err.: se_mme
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. 
+. di as txt _n "REML + Hartung-Knapp (pre-specified primary):"
+
+REML + Hartung-Knapp (pre-specified primary):
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      4
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 156.8823
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.59
+                                                                H2 =   70.96
+
+               Effect size: Mean difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     21.42
+                Chen 2020 |        -28.190     -31.681     -24.699     25.98
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.45
+               Szmit 2021 |         -7.700     -10.623      -4.777     26.14
+--------------------------+-------------------------------------------------
+                    theta |        -13.995     -34.181       6.190
+----------------------------------------------------------------------------
+Test of theta = 0: t(3) = -2.21                          Prob > |t| = 0.1145
+Test of homogeneity: Q = chi2(3) = 232.89                  Prob > Q = 0.0000
+
+. matrix G_reml_kh = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. di as txt _n "REML + Wald:"
+
+REML + Wald:
+
+. meta summarize, random(reml)
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      4
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 156.8823
+                                                            I2 (%) =   98.59
+                                                                H2 =   70.96
+
+               Effect size: Mean difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     21.42
+                Chen 2020 |        -28.190     -31.681     -24.699     25.98
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.45
+               Szmit 2021 |         -7.700     -10.623      -4.777     26.14
+--------------------------+-------------------------------------------------
+                    theta |        -13.995     -26.635      -1.356
+----------------------------------------------------------------------------
+Test of theta = 0: z = -2.17                             Prob > |z| = 0.0300
+Test of homogeneity: Q = chi2(3) = 232.89                  Prob > Q = 0.0000
+
+. matrix G_reml_wald = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. di as txt _n "DerSimonian-Laird + Hartung-Knapp:"
+
+DerSimonian-Laird + Hartung-Knapp:
+
+. meta summarize, random(dlaird) se(kh)
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      4
+Random-effects model                              Heterogeneity:
+Method: DerSimonian–Laird                                     tau2 = 171.8522
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.71
+                                                                H2 =   77.63
+
+               Effect size: Mean difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     21.69
+                Chen 2020 |        -28.190     -31.681     -24.699     25.91
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.34
+               Szmit 2021 |         -7.700     -10.623      -4.777     26.05
+--------------------------+-------------------------------------------------
+                    theta |        -14.024     -34.189       6.141
+----------------------------------------------------------------------------
+Test of theta = 0: t(3) = -2.21                          Prob > |t| = 0.1137
+Test of homogeneity: Q = chi2(3) = 232.89                  Prob > Q = 0.0000
+
+. matrix G_dl_kh = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. di as txt _n "DerSimonian-Laird + Wald:"
+
+DerSimonian-Laird + Wald:
+
+. meta summarize, random(dlaird)
+
+  Effect-size label: Mean difference (mg IV MME)
+        Effect size: md_mme
+          Std. err.: se_mme
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      4
+Random-effects model                              Heterogeneity:
+Method: DerSimonian–Laird                                     tau2 = 171.8522
+                                                            I2 (%) =   98.71
+                                                                H2 =   77.63
+
+               Effect size: Mean difference (mg IV MME)
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     21.69
+                Chen 2020 |        -28.190     -31.681     -24.699     25.91
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.34
+               Szmit 2021 |         -7.700     -10.623      -4.777     26.05
+--------------------------+-------------------------------------------------
+                    theta |        -14.024     -27.224      -0.825
+----------------------------------------------------------------------------
+Test of theta = 0: z = -2.08                             Prob > |z| = 0.0373
+Test of homogeneity: Q = chi2(3) = 232.89                  Prob > Q = 0.0000
+
+. matrix G_dl_wald = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
+
+. 
+. * ==============================================================================
+. * EXPORT
+. * ==============================================================================
+. clear
+
+. set obs 8
+Number of observations (_N) was 0, now 8.
+
+. gen analysis_id    = ""
+(8 missing values generated)
+
+. gen analysis_set   = ""
+(8 missing values generated)
+
+. gen modality       = ""
+(8 missing values generated)
+
+. gen comparator     = ""
+(8 missing values generated)
+
+. gen outcome        = ""
+(8 missing values generated)
+
+. gen window         = ""
+(8 missing values generated)
+
+. gen unit           = ""
+(8 missing values generated)
+
+. gen k              = .
+(8 missing values generated)
+
+. gen effect_measure = ""
+(8 missing values generated)
+
+. gen estimate       = .
+(8 missing values generated)
+
+. gen ci_low         = .
+(8 missing values generated)
+
+. gen ci_high        = .
+(8 missing values generated)
+
+. gen p_value        = .
+(8 missing values generated)
+
+. gen tau2           = .
+(8 missing values generated)
+
+. gen i2             = .
+(8 missing values generated)
+
+. gen q_stat         = .
+(8 missing values generated)
+
+. gen p_q            = .
+(8 missing values generated)
+
+. gen pi_low         = .
+(8 missing values generated)
+
+. gen pi_high        = .
+(8 missing values generated)
+
+. gen estimator      = ""
+(8 missing values generated)
+
+. gen ci_method      = ""
+(8 missing values generated)
+
+. gen notes          = ""
+(8 missing values generated)
+
+. 
+. replace analysis_id    = "V33_S0_TEAS_SHAM" in 1
+variable analysis_id was str1 now str16
+(1 real change made)
+
+. replace analysis_set   = "S0 (Tier A only)" in 1
+variable analysis_set was str1 now str16
+(1 real change made)
+
+. replace modality       = "TEAS" in 1
+variable modality was str1 now str4
+(1 real change made)
+
+. replace comparator     = "Inert sham" in 1
+variable comparator was str1 now str10
+(1 real change made)
+
+. replace outcome        = "Cumulative postoperative opioid consumption" in 1
+variable outcome was str1 now str43
+(1 real change made)
+
+. replace window         = "0-24 h" in 1
+variable window was str1 now str6
+(1 real change made)
+
+. replace unit           = "mg IV MME" in 1
+variable unit was str1 now str9
+(1 real change made)
+
+. replace k              = S0_teas[1,5] in 1
+(1 real change made)
+
+. replace effect_measure = "Mean difference" in 1
+variable effect_measure was str1 now str15
+(1 real change made)
+
+. replace estimate       = S0_teas[1,1] in 1
+(1 real change made)
+
+. replace ci_low         = S0_teas[1,2] in 1
+(1 real change made)
+
+. replace ci_high        = S0_teas[1,3] in 1
+(1 real change made)
+
+. replace p_value        = S0_teas[1,4] in 1
+(1 real change made)
+
+. replace tau2           = S0_teas[1,6] in 1
+(1 real change made)
+
+. replace i2             = S0_teas[1,7] in 1
+(1 real change made)
+
+. replace q_stat         = S0_teas[1,8] in 1
+(1 real change made)
+
+. replace p_q            = S0_teas[1,9] in 1
+(1 real change made)
+
+. replace pi_low         = `pi_lb_teas' in 1
+(1 real change made)
+
+. replace pi_high        = `pi_ub_teas' in 1
+(1 real change made)
+
+. replace estimator      = "REML" in 1
+variable estimator was str1 now str4
+(1 real change made)
+
+. replace ci_method      = "Hartung-Knapp" in 1
+variable ci_method was str1 now str13
+(1 real change made)
+
+. replace notes          = "PRIMARY analysis. Tier A only; single comparator stratum." in 1
+variable notes was str1 now str57
+(1 real change made)
+
+. 
+. replace analysis_id    = "V33_S0_EA_USUAL" in 2
+(1 real change made)
+
+. replace analysis_set   = "S0 (Tier A only)" in 2
+(1 real change made)
+
+. replace modality       = "EA" in 2
+(1 real change made)
+
+. replace comparator     = "Usual care / no stimulation" in 2
+variable comparator was str10 now str27
+(1 real change made)
+
+. replace outcome        = "Cumulative postoperative opioid consumption" in 2
+(1 real change made)
+
+. replace window         = "0-24 h" in 2
+(1 real change made)
+
+. replace unit           = "mg IV MME" in 2
+(1 real change made)
+
+. replace k              = S0_ea[1,5] in 2
+(1 real change made)
+
+. replace effect_measure = "Mean difference" in 2
+(1 real change made)
+
+. replace estimate       = S0_ea[1,1] in 2
+(1 real change made)
+
+. replace ci_low         = S0_ea[1,2] in 2
+(1 real change made)
+
+. replace ci_high        = S0_ea[1,3] in 2
+(1 real change made)
+
+. replace p_value        = S0_ea[1,4] in 2
+(1 real change made)
+
+. replace tau2           = S0_ea[1,6] in 2
+(1 real change made)
+
+. replace i2             = S0_ea[1,7] in 2
+(1 real change made)
+
+. replace q_stat         = S0_ea[1,8] in 2
+(1 real change made)
+
+. replace p_q            = S0_ea[1,9] in 2
+(1 real change made)
+
+. replace pi_low         = `pi_lb_ea' in 2
+(1 real change made)
+
+. replace pi_high        = `pi_ub_ea' in 2
+(1 real change made)
+
+. replace estimator      = "REML" in 2
+(1 real change made)
+
+. replace ci_method      = "Hartung-Knapp" in 2
+(1 real change made)
+
+. replace notes          = "SUPPORTIVE. Not sham-controlled; no sham-controlled EA trial reports thi
+> s outcome." in 2
+variable notes was str57 now str82
+(1 real change made)
+
+. 
+. replace analysis_id    = "V33_S1_TEAS_SHAM" in 3
+(1 real change made)
+
+. replace analysis_set   = "S1 (Tier A + Tier B)" in 3
+variable analysis_set was str16 now str20
+(1 real change made)
+
+. replace modality       = "TEAS" in 3
+(1 real change made)
+
+. replace comparator     = "Inert sham" in 3
+(1 real change made)
+
+. replace outcome        = "Cumulative postoperative opioid consumption" in 3
+(1 real change made)
+
+. replace window         = "0-24 h" in 3
+(1 real change made)
+
+. replace unit           = "mg IV MME" in 3
+(1 real change made)
+
+. replace k              = S0_teas[1,5] in 3
+(1 real change made)
+
+. replace effect_measure = "Mean difference" in 3
+(1 real change made)
+
+. replace estimate       = S0_teas[1,1] in 3
+(1 real change made)
+
+. replace ci_low         = S0_teas[1,2] in 3
+(1 real change made)
+
+. replace ci_high        = S0_teas[1,3] in 3
+(1 real change made)
+
+. replace p_value        = S0_teas[1,4] in 3
+(1 real change made)
+
+. replace tau2           = S0_teas[1,6] in 3
+(1 real change made)
+
+. replace i2             = S0_teas[1,7] in 3
+(1 real change made)
+
+. replace estimator      = "REML" in 3
+(1 real change made)
+
+. replace ci_method      = "Hartung-Knapp" in 3
+(1 real change made)
+
+. replace notes          = "Identical to S0: no pure Tier B case exists. Chen 2015's exact derivatio
+> n yields medians, so it is Tier C." in 3
+variable notes was str82 now str106
+(1 real change made)
+
+. 
+. replace analysis_id    = "V33_S2_PARALLEL" in 4
+(1 real change made)
+
+. replace analysis_set   = "S2 (Tier C parallel synthesis)" in 4
+variable analysis_set was str20 now str30
+(1 real change made)
+
+. replace modality       = "TEAS" in 4
+(1 real change made)
+
+. replace comparator     = "Sham / usual care" in 4
+(1 real change made)
+
+. replace outcome        = "Cumulative postoperative opioid consumption" in 4
+(1 real change made)
+
+. replace window         = "0-24 h" in 4
+(1 real change made)
+
+. replace unit           = "mg IV MME (medians)" in 4
+variable unit was str9 now str19
+(1 real change made)
+
+. replace k              = 2 in 4
+(1 real change made)
+
+. replace effect_measure = "Median difference (not pooled)" in 4
+variable effect_measure was str15 now str30
+(1 real change made)
+
+. replace estimator      = "None (narrative parallel synthesis)" in 4
+variable estimator was str4 now str35
+(1 real change made)
+
+. replace ci_method      = "None" in 4
+(1 real change made)
+
+. replace notes          = "Gao 2022 and Chen 2015 report medians/IQRs. Gao 2022 is zero-inflated (Q
+> 1=0 in both arms), so Wan/Luo recovery is indefensible. Presented as medians alongside S0, never p
+> ooled with it." in 4
+variable notes was str106 now str184
+(1 real change made)
+
+. 
+. replace analysis_id    = "V33_S3_TEAS_SHAM" in 5
+(1 real change made)
+
+. replace analysis_set   = "S3 (Tier A + Tier D)" in 5
+(1 real change made)
+
+. replace modality       = "TEAS" in 5
+(1 real change made)
+
+. replace comparator     = "Inert sham" in 5
+(1 real change made)
+
+. replace outcome        = "Cumulative postoperative opioid consumption" in 5
+(1 real change made)
+
+. replace window         = "0-24 h" in 5
+(1 real change made)
+
+. replace unit           = "mg IV MME" in 5
+(1 real change made)
+
+. replace k              = S0_teas[1,5] in 5
+(1 real change made)
+
+. replace effect_measure = "Mean difference" in 5
+(1 real change made)
+
+. replace estimate       = S0_teas[1,1] in 5
+(1 real change made)
+
+. replace ci_low         = S0_teas[1,2] in 5
+(1 real change made)
+
+. replace ci_high        = S0_teas[1,3] in 5
+(1 real change made)
+
+. replace p_value        = S0_teas[1,4] in 5
+(1 real change made)
+
+. replace tau2           = S0_teas[1,6] in 5
+(1 real change made)
+
+. replace i2             = S0_teas[1,7] in 5
+(1 real change made)
+
+. replace estimator      = "REML" in 5
+(1 real change made)
+
+. replace ci_method      = "Hartung-Knapp" in 5
+(1 real change made)
+
+. replace notes          = "Identical to S0: the sole digitization candidate (Gu 2019) failed its pr
+> e-specified validation-against-text check (control arm error up to 16.0%)." in 5
+(1 real change made)
+
+. 
+. replace analysis_id    = "V33_SENS_C1_SZMIT_ALT" in 6
+variable analysis_id was str16 now str21
+(1 real change made)
+
+. replace analysis_set   = "Comparator sensitivity" in 6
+(1 real change made)
+
+. replace modality       = "TEAS" in 6
+(1 real change made)
+
+. replace comparator     = "Sham, with Szmit 2021 usual-care arm substituted" in 6
+variable comparator was str27 now str48
+(1 real change made)
+
+. replace outcome        = "Cumulative postoperative opioid consumption" in 6
+(1 real change made)
+
+. replace window         = "0-24 h" in 6
+(1 real change made)
+
+. replace unit           = "mg IV MME" in 6
+(1 real change made)
+
+. replace k              = SENS_C1[1,5] in 6
+(1 real change made)
+
+. replace effect_measure = "Mean difference" in 6
+(1 real change made)
+
+. replace estimate       = SENS_C1[1,1] in 6
+(1 real change made)
+
+. replace ci_low         = SENS_C1[1,2] in 6
+(1 real change made)
+
+. replace ci_high        = SENS_C1[1,3] in 6
+(1 real change made)
+
+. replace p_value        = SENS_C1[1,4] in 6
+(1 real change made)
+
+. replace tau2           = SENS_C1[1,6] in 6
+(1 real change made)
+
+. replace i2             = SENS_C1[1,7] in 6
+(1 real change made)
+
+. replace estimator      = "REML" in 6
+(1 real change made)
+
+. replace ci_method      = "Hartung-Knapp" in 6
+(1 real change made)
+
+. replace notes          = "Swap, not addition: Szmit 2021 contributes exactly one contrast." in 6
+(1 real change made)
+
+. 
+. replace analysis_id    = "V33_SENS_C2_REML_WALD" in 7
+(1 real change made)
+
+. replace analysis_set   = "Estimator/CI sensitivity" in 7
+(1 real change made)
+
+. replace modality       = "TEAS" in 7
+(1 real change made)
+
+. replace comparator     = "Inert sham" in 7
+(1 real change made)
+
+. replace outcome        = "Cumulative postoperative opioid consumption" in 7
+(1 real change made)
+
+. replace window         = "0-24 h" in 7
+(1 real change made)
+
+. replace unit           = "mg IV MME" in 7
+(1 real change made)
+
+. replace k              = G_reml_wald[1,5] in 7
+(1 real change made)
+
+. replace effect_measure = "Mean difference" in 7
+(1 real change made)
+
+. replace estimate       = G_reml_wald[1,1] in 7
+(1 real change made)
+
+. replace ci_low         = G_reml_wald[1,2] in 7
+(1 real change made)
+
+. replace ci_high        = G_reml_wald[1,3] in 7
+(1 real change made)
+
+. replace p_value        = G_reml_wald[1,4] in 7
+(1 real change made)
+
+. replace tau2           = G_reml_wald[1,6] in 7
+(1 real change made)
+
+. replace i2             = G_reml_wald[1,7] in 7
+(1 real change made)
+
+. replace estimator      = "REML" in 7
+(1 real change made)
+
+. replace ci_method      = "Wald (z)" in 7
+(1 real change made)
+
+. replace notes          = "Shown for comparison only. Wald intervals are anticonservative at k=4; t
+> he pre-specified primary remains Hartung-Knapp." in 7
+(1 real change made)
+
+. 
+. replace analysis_id    = "V33_SENS_C2_DL_KH" in 8
+(1 real change made)
+
+. replace analysis_set   = "Estimator/CI sensitivity" in 8
+(1 real change made)
+
+. replace modality       = "TEAS" in 8
+(1 real change made)
+
+. replace comparator     = "Inert sham" in 8
+(1 real change made)
+
+. replace outcome        = "Cumulative postoperative opioid consumption" in 8
+(1 real change made)
+
+. replace window         = "0-24 h" in 8
+(1 real change made)
+
+. replace unit           = "mg IV MME" in 8
+(1 real change made)
+
+. replace k              = G_dl_kh[1,5] in 8
+(1 real change made)
+
+. replace effect_measure = "Mean difference" in 8
+(1 real change made)
+
+. replace estimate       = G_dl_kh[1,1] in 8
+(1 real change made)
+
+. replace ci_low         = G_dl_kh[1,2] in 8
+(1 real change made)
+
+. replace ci_high        = G_dl_kh[1,3] in 8
+(1 real change made)
+
+. replace p_value        = G_dl_kh[1,4] in 8
+(1 real change made)
+
+. replace tau2           = G_dl_kh[1,6] in 8
+(1 real change made)
+
+. replace i2             = G_dl_kh[1,7] in 8
+(1 real change made)
+
+. replace estimator      = "DerSimonian-Laird" in 8
+(1 real change made)
+
+. replace ci_method      = "Hartung-Knapp" in 8
+(1 real change made)
+
+. replace notes          = "Shown for comparison only." in 8
+(1 real change made)
+
+. 
+. save "07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33.dta", replace
+file 07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33.dta saved
+
+. export delimited "07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33.csv", replace
+file 07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33.csv saved
+
+. list analysis_id k estimate ci_low ci_high p_value i2, clean noobs
+
+              analysis_id   k    estimate      ci_low    ci_high    p_value         i2  
+         V33_S0_TEAS_SHAM   4   -13.99527   -34.18084   6.190291   .1144761   98.59068  
+          V33_S0_EA_USUAL   3   -3.935834   -19.77322   11.90156   .3968947   77.15261  
+         V33_S1_TEAS_SHAM   4   -13.99527   -34.18084   6.190291   .1144761   98.59068  
+          V33_S2_PARALLEL   2           .           .          .          .          .  
+         V33_S3_TEAS_SHAM   4   -13.99527   -34.18084   6.190291   .1144761   98.59068  
+    V33_SENS_C1_SZMIT_ALT   4   -14.07111   -34.17717   6.034948   .1122867   98.58129  
+    V33_SENS_C2_REML_WALD   4   -13.99527   -26.63501   -1.35554   .0299948   98.59068  
+        V33_SENS_C2_DL_KH   4   -14.02437   -34.18925   6.140512   .1137464   98.71186  
+
+. 
+. * ==============================================================================
+. * FIGURE C -- tier sensitivity (analysis sets S0/S1/S2/S3)
+. * FIGURE D -- comparator sensitivity
+. *
+. * These are summary plots over ANALYSIS MODELS, not over studies. Each row is a
+. * separately fitted pooled estimate with its own Hartung-Knapp t interval on
+. * k-1 df. `meta forestplot' cannot draw them: it treats each row as a study and
+. * redraws the interval as estimate +/- 1.96*SE on a z scale, which for k=4
+. * silently narrows a t(3) interval by roughly a factor of 1.6 -- enough to
+. * redraw this non-significant primary result as significant. These panels are
+. * therefore drawn directly from the fitted ci_low / ci_high bounds, so nothing
+. * is recomputed and no interval is misrepresented. No overall diamond and no
+. * pooled significance test is shown, because pooling separately fitted models
+. * of the same trials would be meaningless.
+. * ==============================================================================
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "FIGURES C and D: summary plots over analysis models"
+FIGURES C and D: summary plots over analysis models
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. 
+. capture program drop v33summaryplot
+
+. program define v33summaryplot
+  1.     syntax , OUTfile(string) TItle(string) ///
+>              [NOTEA(string) NOTEB(string) NOTEC(string)]
+  2. 
+.     * Row labels, drawn top-to-bottom in the order the caller numbered them.
+.     quietly count
+  3.     local nrows = r(N)
+  4.     local ylabs ""
+  5.     forvalues i = 1/`nrows' {
+  6.         local r  = row[`i']
+  7.         local lb = panel[`i']
+  8.         local ylabs `"`ylabs' `r' "`lb'""'
+  9.     }
+ 10. 
+.     * Annotate each row with the exact fitted estimate and interval, so the
+.     * numbers a reader takes away are the fitted ones, not read off the axis.
+.     quietly gen str48 v33lbl = string(estimate, "%6.2f") + " (" + ///
+>         string(ci_low, "%6.2f") + " to " + string(ci_high, "%6.2f") + ")"
+ 11.     quietly replace v33lbl = subinstr(v33lbl, "  ", "", .)
+ 12. 
+.     quietly summarize ci_low
+ 13.     local xlo = r(min)
+ 14.     quietly summarize ci_high
+ 15.     local xhi = r(max)
+ 16.     local span = `xhi' - `xlo'
+ 17.     local xtxt = `xhi' + 0.18 * `span'
+ 18.     quietly gen double v33txtx = `xtxt'
+ 19. 
+.     twoway ///
+>         (rspike ci_low ci_high row, horizontal lcolor(navy) lwidth(medthick)) ///
+>         (scatter row estimate, msymbol(square) msize(medium) mcolor(navy)) ///
+>         (scatter row v33txtx, msymbol(none) mlabel(v33lbl) ///
+>              mlabposition(0) mlabsize(small) mlabcolor(black)) ///
+>         , ///
+>         xline(0, lcolor(gs8) lpattern(dash)) ///
+>         ylabel(`ylabs', angle(horizontal) labsize(small) noticks nogrid) ///
+>         yscale(reverse range(0.6 `=`nrows' + 0.4')) ///
+>         ytitle("") ///
+>         xtitle("Pooled mean difference (mg IV MME) with 95% Hartung-Knapp CI", size(small)) ///
+>         xlabel(, labsize(small)) ///
+>         xscale(range(`=`xlo' - 0.05 * `span'' `=`xhi' + 0.52 * `span'')) ///
+>         title("`title'", size(medsmall) justification(left) position(11)) ///
+>         note(`"`notea'"' `"`noteb'"' `"`notec'"', size(vsmall) span) ///
+>         legend(off) graphregion(color(white) margin(l+2 r+2)) ///
+>         plotregion(margin(l+2 r+2)) xsize(9) ysize(2.9)
+ 20.     graph export "`outfile'", width(2200) replace
+ 21.     quietly drop v33lbl v33txtx
+ 22. end
+
+. 
+. * --- C: tier sensitivity -------------------------------------------------
+. preserve
+
+. keep if inlist(analysis_id, "V33_S0_TEAS_SHAM", "V33_S1_TEAS_SHAM", "V33_S3_TEAS_SHAM")
+(5 observations deleted)
+
+. gen str64 panel = ""
+(3 missing values generated)
+
+. gen byte row = .
+(3 missing values generated)
+
+. replace panel = "S0  Tier A only (k=4)"          if analysis_id == "V33_S0_TEAS_SHAM"
+(1 real change made)
+
+. replace row   = 1                                if analysis_id == "V33_S0_TEAS_SHAM"
+(1 real change made)
+
+. replace panel = "S1  + Tier B derived (k=4)"     if analysis_id == "V33_S1_TEAS_SHAM"
+(1 real change made)
+
+. replace row   = 2                                if analysis_id == "V33_S1_TEAS_SHAM"
+(1 real change made)
+
+. replace panel = "S3  + Tier D digitized (k=4)"   if analysis_id == "V33_S3_TEAS_SHAM"
+(1 real change made)
+
+. replace row   = 3                                if analysis_id == "V33_S3_TEAS_SHAM"
+(1 real change made)
+
+. list panel k estimate ci_low ci_high p_value, clean noobs
+
+                           panel   k    estimate      ci_low    ci_high    p_value  
+           S0  Tier A only (k=4)   4   -13.99527   -34.18084   6.190291   .1144761  
+      S1  + Tier B derived (k=4)   4   -13.99527   -34.18084   6.190291   .1144761  
+    S3  + Tier D digitized (k=4)   4   -13.99527   -34.18084   6.190291   .1144761  
+
+. v33summaryplot, ///
+>     outfile("07_TIERED_V33/04_FIGURES/forestC_tier_sensitivity.png") ///
+>     title("C. Tier sensitivity: TEAS vs inert sham, cumulative 0-24 h opioid") ///
+>     notea("Each row is a separately fitted random-effects REML model with a Hartung-Knapp t interv
+> al; rows are not pooled with one another.") ///
+>     noteb("S1 and S3 add no trial: no pure Tier B case exists, and the sole Tier D candidate (Gu 2
+> 019) failed its digitization validation check.") ///
+>     notec("Tier C evidence (Gao 2022, Chen 2015) is median/IQR and is reported as a parallel synth
+> esis, never converted to mean/SD or pooled here.")
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/07_TIERED_V33/04_FIGURES/forestC_tier_
+    > sensitivity.png saved as PNG format
+
+. restore
+
+. 
+. * --- D: comparator sensitivity -------------------------------------------
+. preserve
+
+. keep if inlist(analysis_id, "V33_S0_TEAS_SHAM", "V33_SENS_C1_SZMIT_ALT", "V33_S0_EA_USUAL")
+(5 observations deleted)
+
+. gen str64 panel = ""
+(3 missing values generated)
+
+. gen byte row = .
+(3 missing values generated)
+
+. replace panel = "TEAS vs inert sham (k=4)"                 if analysis_id == "V33_S0_TEAS_SHAM"
+(1 real change made)
+
+. replace row   = 1                                          if analysis_id == "V33_S0_TEAS_SHAM"
+(1 real change made)
+
+. replace panel = "TEAS vs sham, Szmit usual-care arm (k=4)" if analysis_id == "V33_SENS_C1_SZMIT_AL
+> T"
+(1 real change made)
+
+. replace row   = 2                                          if analysis_id == "V33_SENS_C1_SZMIT_AL
+> T"
+(1 real change made)
+
+. replace panel = "EA vs usual care (k=3)"                   if analysis_id == "V33_S0_EA_USUAL"
+(1 real change made)
+
+. replace row   = 3                                          if analysis_id == "V33_S0_EA_USUAL"
+(1 real change made)
+
+. list panel k estimate ci_low ci_high p_value, clean noobs
+
+                                       panel   k    estimate      ci_low    ci_high    p_value  
+                    TEAS vs inert sham (k=4)   4   -13.99527   -34.18084   6.190291   .1144761  
+                      EA vs usual care (k=3)   3   -3.935834   -19.77322   11.90156   .3968947  
+    TEAS vs sham, Szmit usual-care arm (k=4)   4   -14.07111   -34.17717   6.034948   .1122867  
+
+. v33summaryplot, ///
+>     outfile("07_TIERED_V33/04_FIGURES/forestD_comparator_sensitivity.png") ///
+>     title("D. Comparator sensitivity: cumulative 0-24 h opioid") ///
+>     notea("Each row is a separately fitted random-effects REML model with a Hartung-Knapp t interv
+> al; rows are not pooled with one another.") ///
+>     noteb("Szmit 2021 contributes exactly one contrast: its usual-care arm is swapped in for its s
+> ham arm, never added alongside it.") ///
+>     notec("No sham-controlled EA trial reports this outcome (k=0), so the EA row is not sham-contr
+> olled and is not a specific-acupoint estimate.")
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/07_TIERED_V33/04_FIGURES/forestD_compa
+    > rator_sensitivity.png saved as PNG format
+
+. restore
+
+. 
+. di as txt _n "SUCCESS: tiered primary-outcome analysis complete."
+
+SUCCESS: tiered primary-outcome analysis complete.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/07_TIERED_V33/02_STATA/logs/13_
+> tiered_primary_v33.log
+  log type:  text
+ closed on:   8 Sep 2026, 08:07:45
+----------------------------------------------------------------------------------------------------

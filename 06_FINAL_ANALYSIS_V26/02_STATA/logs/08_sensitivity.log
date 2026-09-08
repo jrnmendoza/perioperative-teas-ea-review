@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/08_sensitivity.log
   log type:  text
- opened on:   7 Sep 2026, 20:38:21
+ opened on:   8 Sep 2026, 08:07:41
 
 . 
 . di as txt "=================================================================="
@@ -784,5 +784,5 @@ SUCCESS: Sensitivity analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/08_sensitivity.log
   log type:  text
- closed on:   7 Sep 2026, 20:38:22
+ closed on:   8 Sep 2026, 08:07:41
 ----------------------------------------------------------------------------------------------------

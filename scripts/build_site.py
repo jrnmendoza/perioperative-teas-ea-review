@@ -42,6 +42,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DASH = ROOT / "dashboard"
 V26 = ROOT / "06_FINAL_ANALYSIS_V26"
+V33 = ROOT / "07_TIERED_V33"
 RESULTS = V26 / "03_RESULTS"
 MASTER_XLSX = (
     ROOT / "TEAS EA Verification"
@@ -49,8 +50,8 @@ MASTER_XLSX = (
 )
 
 CACHE_BUSTED_ASSETS = (
-    "styles.css", "primary_pathway.js", "data.js", "translations.js",
-    "reader_assist.js", "meta_engine.js", "app.js",
+    "styles.css", "primary_pathway.js", "tiered_v33.js", "data.js",
+    "translations.js", "reader_assist.js", "meta_engine.js", "app.js",
 )
 CACHE_BUSTED_FETCH_PATHS = (
     "v26/02_STATA/logs/01_opioid24_primary.log",
@@ -149,6 +150,25 @@ def copy_site(out: Path) -> None:
     if v26_out.exists():
         shutil.rmtree(v26_out)
     shutil.copytree(V26, v26_out, ignore=shutil.ignore_patterns(".DS_Store", "*.bak"))
+
+    # The v33 tiered figures are referenced as v33/<file>.png by renderTieredV33(),
+    # and the do-file, data and results are linked as downloadable provenance.
+    # Mirrored from 07_TIERED_V33/ here rather than committed into dashboard/,
+    # so the deployed artifact can never inherit a stale hand-copied figure --
+    # the same drift class already fixed once for the v26 forest plots below.
+    v33_out = out / "v33"
+    if v33_out.exists():
+        shutil.rmtree(v33_out)
+    v33_out.mkdir(parents=True)
+    for png in sorted((V33 / "04_FIGURES").glob("*.png")):
+        shutil.copyfile(png, v33_out / png.name)
+    for sub in ("01_DATA", "02_STATA", "05_RESULTS", "03_DIGITIZATION"):
+        src = V33 / sub
+        if src.exists():
+            shutil.copytree(src, v33_out / sub,
+                            ignore=shutil.ignore_patterns(".DS_Store", "*.bak"))
+    for doc in sorted(V33.glob("*.md")) + sorted(V33.glob("*.csv")) + sorted(V33.glob("*.xlsx")):
+        shutil.copyfile(doc, v33_out / doc.name)
 
     # dashboard/*.png (root-level forest/LOO figures the page embeds directly,
     # e.g. <img src="forest_opioid24_primary_mme.png">) is a committed

@@ -284,7 +284,17 @@ def result(aid: str):
 
 strict_n = sum(r["n_total"] for r in strict)
 cond_n = sum(r["n_total"] for r in conditional)
-broad_smd_units = [r for r in strict + conditional if r["hedges_g"] is not None]
+# v33: Zhang 2025 reports postoperative day 1, not an explicit 0-24 h clock
+# window. Treating POD1 as 0-24 h is a prohibited assumption (Tier E), and the
+# SMD changes the metric, not the estimand -- so a scale-free analysis does not
+# rescue it. It is excluded from the broader SMD set here, matching
+# 06_FINAL_ANALYSIS_V26/02_STATA/10_broader24h_sensitivity.do.
+TIER_E_WINDOW_MISMATCH = {"Zhang 2025"}
+
+broad_smd_units = [
+    r for r in strict + conditional
+    if r["hedges_g"] is not None and r["study_unit"] not in TIER_E_WINDOW_MISMATCH
+]
 unpoolable = [r for r in strict + conditional if r["hedges_g"] is None]
 
 # ── reconciliation: every included RCT lands in exactly one bucket ──────────
@@ -299,8 +309,8 @@ payload_reconciles = True
 
 payload = {
     "generated_by": "scripts/build_primary_pathway.py",
-    "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx",
-    "statistical_source": "StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26",
+    "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx",
+    "statistical_source": "StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26 + 07_TIERED_V33",
     "prospero": "CRD420251090635",
 
     "review_included_rcts": len(STUDIES),

@@ -99,9 +99,57 @@ gen modality = ""
 replace modality = "TEAS" if strpos(intervention, "TEAS") > 0 | strpos(intervention, "TENS") > 0
 replace modality = "EA"   if strpos(intervention, "EA") > 0 & modality == ""
 
+* ------------------------------------------------------------------------------
+* COMPARATOR CLASSIFICATION (corrected 2026-09-08, v33 tiered audit)
+*
+* The previous rule matched "Sham"/"Placebo"/"No-current" CASE-SENSITIVELY, which
+* silently misfiled four rows whose source text uses lower-case "sham":
+*     Chen 2015                "Electrodes/device with no stimulation"  -> was Usual Care
+*     Chen 2015 (Hyperalgesia) "Electrodes/no-current sham"             -> was Usual Care
+*     Zhang 2025               "Sub-sensory sham"                       -> was Usual Care
+*     Yeh (lumbar-spine family) "Electrical sham/nonacupoint AES"       -> was Usual Care
+* None of these has inc_primary==1, so no published estimate was affected, but the
+* error would corrupt any comparator-stratified analysis.
+*
+* Three categories are now distinguished, because they are not interchangeable:
+*   Sham              inert control: device applied, no current delivered
+*   Active electrical real current delivered at a control site (non-acupoint /
+*                     non-meridian / incision-periphery TENS). NOT an inert sham.
+*   Usual Care        no device at all
+*
+* Order matters. Inert-sham markers are tested BEFORE device names: Chen 1998's
+* control is "Sham ST36 TENS (0 mA)", i.e. a TENS device at ZERO current, which is
+* an inert sham. Matching the device name "TENS" first would misfile a genuine
+* sham-controlled trial as an active electrical comparator.
+* ------------------------------------------------------------------------------
+gen comparator_lc = lower(comparator)
 gen comparator_type = ""
-replace comparator_type = "Sham" if strpos(comparator, "Sham") > 0 | strpos(comparator, "Placebo") > 0 | strpos(comparator, "No-current") > 0
+
+* 1. Inert sham (tested first)
+replace comparator_type = "Sham" if ///
+      strpos(comparator_lc, "0 ma") > 0            ///
+    | strpos(comparator_lc, "zero-current") > 0    ///
+    | strpos(comparator_lc, "zero current") > 0    ///
+    | strpos(comparator_lc, "no-current") > 0      ///
+    | strpos(comparator_lc, "no current") > 0      ///
+    | strpos(comparator_lc, "no stimulation") > 0  ///
+    | strpos(comparator_lc, "nonpenetrating") > 0  ///
+    | strpos(comparator_lc, "sub-sensory sham") > 0 ///
+    | strpos(comparator_lc, "placebo") > 0
+
+* 2. Active electrical control (real current at a control site)
+replace comparator_type = "Active Electrical" if comparator_type == "" & ( ///
+      strpos(comparator_lc, "nonacupoint") > 0     ///
+    | strpos(comparator_lc, "non-acupoint") > 0    ///
+    | strpos(comparator_lc, "nonmeridian") > 0     ///
+    | strpos(comparator_lc, "incision-periphery tens") > 0 )
+
+* 3. Remaining explicit sham wording
+replace comparator_type = "Sham" if comparator_type == "" & strpos(comparator_lc, "sham") > 0
+
+* 4. Everything else is usual care / no device
 replace comparator_type = "Usual Care / Control" if comparator_type == ""
+drop comparator_lc
 
 * Study label for plots
 gen study_label = study_unit

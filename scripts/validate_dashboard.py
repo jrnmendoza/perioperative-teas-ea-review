@@ -947,6 +947,250 @@ def t_pathway_is_dynamic():
           not probs, "\n".join(probs))
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# v33 tiered primary-outcome analysis
+# ─────────────────────────────────────────────────────────────────────────────
+
+V33 = ROOT / "07_TIERED_V33"
+
+
+def _tiered_v33_payload() -> dict:
+    """Parse window.TIERED_V33 out of tiered_v33.js without a JS engine."""
+    src = (DASH / "tiered_v33.js").read_text(encoding="utf-8")
+    start = src.index("window.TIERED_V33 = ") + len("window.TIERED_V33 = ")
+    end = src.rindex(";")
+    return json.loads(src[start:end])
+
+
+def t_v33_matches_stata():
+    """
+    Every pooled number on the v33 panel must equal what Stata actually fitted.
+
+    This is the check that would catch a hand-edit to tiered_v33.js, or a stale
+    generated file left behind after 13_tiered_primary_v33.do was re-run.
+    """
+    probs = []
+    res_path = V33 / "05_RESULTS" / "TIERED_ANALYSIS_RESULTS_v33.csv"
+    if not res_path.exists():
+        check("v33 panel numbers match the Stata tiered results", False,
+              f"{res_path} missing; run 13_tiered_primary_v33.do")
+        return
+    stata = {r["analysis_id"]: r for r in read_csv(res_path)}
+    payload = _tiered_v33_payload()
+
+    for key, row in payload["analysis_sets"].items():
+        aid = row["analysis_id"]
+        src = stata.get(aid)
+        if src is None:
+            probs.append(f"{key}: analysis_id {aid} not in the Stata results")
+            continue
+        for field, dp in (("estimate", 3), ("ci_low", 3), ("ci_high", 3),
+                          ("p_value", 4), ("i2", 2)):
+            want = src[field].strip()
+            got = row[field]
+            if want == "":
+                if got is not None:
+                    probs.append(f"{aid}.{field}: panel shows {got} but Stata reports nothing")
+                continue
+            if got is None or abs(float(want) - got) > 10 ** -dp:
+                probs.append(f"{aid}.{field}: panel {got} != Stata {want}")
+        if src["k"] and row["k"] != int(float(src["k"])):
+            probs.append(f"{aid}.k: panel {row['k']} != Stata {src['k']}")
+
+    check("v33 panel numbers match the Stata tiered results", not probs, "\n".join(probs))
+
+
+def t_v33_strata_not_combined():
+    """
+    The two S0 strata must never be presented as one pooled primary estimate,
+    and the sham-controlled EA cell must be reported as genuinely empty rather
+    than quietly filled by the usual-care result.
+    """
+    probs = []
+    payload = _tiered_v33_payload()
+    S = payload["analysis_sets"]
+    strata = payload["strata"]
+
+    teas = {s["study"] for s in strata["teas_sham"]}
+    ea = {s["study"] for s in strata["ea_usual"]}
+    if teas & ea:
+        probs.append(f"a study appears in both S0 strata: {sorted(teas & ea)}")
+    if any(s["comparator"] != "Sham" for s in strata["teas_sham"]):
+        probs.append("the sham-controlled stratum contains a non-sham comparator")
+    if any(s["comparator"] == "Sham" for s in strata["ea_usual"]):
+        probs.append("the usual-care stratum contains a sham comparator")
+    if strata["ea_sham_k"] != 0:
+        probs.append("ea_sham_k is no longer 0; the empty-cell statement must be revisited")
+    if S["S0_teas_sham"]["k"] + S["S0_ea_usual"]["k"] == S["S0_teas_sham"]["k"]:
+        probs.append("the supportive stratum is empty; the panel would be misleading")
+
+    # a multi-arm trial must contribute exactly one contrast to the primary
+    alt = {s["study"] for s in strata["multiarm_alternatives"]}
+    for a in alt:
+        stem = a.split("(")[0].strip()
+        if stem in teas or stem in ea:
+            pass  # its sibling contrast is the one that counts -- correct
+        else:
+            probs.append(f"multi-arm alternative {a!r} has no sibling contrast in S0")
+    if alt & (teas | ea):
+        probs.append(f"a correlated alternative contrast entered S0: {sorted(alt & (teas | ea))}")
+
+    check("v33 comparator strata stay separate and multi-arm trials contribute one contrast",
+          not probs, "\n".join(probs))
+
+
+def t_v33_panel_is_dynamic():
+    """The v33 panel must be rendered from data, never typed into the markup."""
+    probs = []
+    if not (DASH / "tiered_v33.js").exists():
+        probs.append("tiered_v33.js missing")
+    if "renderTieredV33" not in APP:
+        probs.append("renderTieredV33() not defined")
+    if 'src="tiered_v33.js' not in HTML:
+        probs.append("tiered_v33.js is not loaded by index.html")
+    for cid in ("t33-flow", "t33-sets", "t33-empty", "t33-figures", "t33-subtitle"):
+        if f'id="{cid}"' not in HTML:
+            probs.append(f"container #{cid} missing from the HTML")
+    m = re.search(r"<!-- v33 TIERED PRIMARY-OUTCOME DERIVABILITY(.*?)<!-- Section 1", HTML, re.S)
+    if m:
+        body = re.sub(r"<!--.*?-->", "", m.group(1), flags=re.S)
+        for lit in ("k = 4", "k=4", "k = 3", "k=3", "−14.00", "-14.00", "−3.94", "-3.94"):
+            if lit in body:
+                probs.append(f"v33 markup hardcodes {lit!r}; it must come from TIERED_V33")
+    else:
+        probs.append("could not locate the v33 panel markup")
+
+    # Every figure the panel links must exist in the v33 figure package, and
+    # build_site.py must be the thing that mirrors it -- dashboard/ holds no
+    # hand-copied v33 image that could go stale.
+    try:
+        payload = _tiered_v33_payload()
+    except Exception as exc:
+        probs.append(f"could not parse tiered_v33.js: {exc}")
+    else:
+        for fig in payload["figures"]:
+            if not (V33 / "04_FIGURES" / fig["file"]).exists():
+                probs.append(f"figure {fig['file']} missing from 07_TIERED_V33/04_FIGURES")
+            if (DASH / fig["file"]).exists():
+                probs.append(f"{fig['file']} is hand-copied into dashboard/; it must be mirrored at build time")
+        if 'v33_out = out / "v33"' not in (ROOT / "scripts" / "build_site.py").read_text(encoding="utf-8"):
+            probs.append("build_site.py does not mirror 07_TIERED_V33 into the deployed artifact")
+
+    check("v33 derivability panel is generated from data, with no hardcoded results",
+          not probs, "\n".join(probs))
+
+
+def t_v33_zhang_withdrawn_everywhere():
+    """
+    Zhang 2025 was withdrawn from every 0-24 h analysis because it reports POD1,
+    not an explicit 0-24 h window. The broader SMD must be k=9, and no live
+    dashboard claim may still describe the k=10 model as the current result.
+    """
+    probs = []
+    broad = BY_ID.get("OP24_BROADER_SMD")
+    if broad is None:
+        probs.append("OP24_BROADER_SMD missing from the master aggregate")
+    elif int(float(broad["k"])) != 9:
+        probs.append(f"OP24_BROADER_SMD k={broad['k']}, expected 9 after the Zhang 2025 withdrawal")
+
+    pathway_js = (DASH / "primary_pathway.js").read_text(encoding="utf-8")
+    m = re.search(r'"broader_smd_k":\s*(\d+)', pathway_js)
+    if not m:
+        probs.append("broader_smd_k not found in primary_pathway.js")
+    elif int(m.group(1)) != 9:
+        probs.append(f"primary_pathway.js broader_smd_k={m.group(1)}, expected 9")
+
+    # The superseded k=10 model may be named, but only as superseded.
+    for mm in re.finditer(r"[^.]*\bAdds Coura 2011[^.]*\.", HTML):
+        if "Zhang 2025" in mm.group(0):
+            probs.append("the broader-SMD description still lists Zhang 2025 as a contributor")
+
+    # Zhang 2025's derivation card must carry a withdrawal label.
+    card = re.search(r"Derivation 3: Zhang 2025(.*?)<!-- Derivation 4", HTML, re.S)
+    if not card:
+        probs.append("could not locate the Zhang 2025 derivation card")
+    elif "WITHDRAWN IN v33" not in card.group(1):
+        probs.append("the Zhang 2025 derivation card is not labelled as withdrawn")
+
+    check("Zhang 2025 is withdrawn from every 0-24 h analysis and labelled as such",
+          not probs, "\n".join(probs))
+
+
+def t_v33_legacy_reconstructions_labelled():
+    """
+    The reader-facing body-weight reconstructions must be labelled legacy and
+    excluded, and the pipeline must actually leave their MME fields empty -- the
+    label and the data have to agree.
+    """
+    probs = []
+    cards = {}
+    for name, marker in (("Sim 2002", "Derivation 1: Sim 2002"),
+                         ("Coura 2011", "Derivation 2: Coura 2011")):
+        m = re.search(re.escape(marker) + r"(.*?)<!-- Derivation", HTML, re.S)
+        if not m:
+            probs.append(f"could not locate the {name} derivation card")
+            continue
+        cards[name] = m.group(1)
+        if "LEGACY RECONSTRUCTION" not in m.group(1):
+            probs.append(f"the {name} card is not labelled a legacy reconstruction")
+
+    rows = {r["study_unit"]: r for r in read_csv(DATA / "opioid_24h_primary.csv")}
+    for name in ("Sim 2002", "Coura 2011"):
+        r = rows.get(name)
+        if r is None:
+            probs.append(f"{name} missing from opioid_24h_primary.csv")
+            continue
+        if r["mean_i_mme"].strip() or r["mean_c_mme"].strip():
+            probs.append(f"{name} carries an absolute MME value; the reconstruction is live in the data")
+        if not r["hedges_g"].strip():
+            probs.append(f"{name} has no Hedges' g, so it cannot enter the SMD sensitivity as described")
+
+    # The 70 kg reference weight is the invented quantity. Wherever it appears
+    # as a live formula it must sit inside a block that names it an assumption,
+    # so a reader cannot take it for something Coura 2011 reported.
+    plain = HTML.replace("&nbsp;", " ")
+    for mm in re.finditer(r"70 kg", plain):
+        window = plain[max(0, mm.start() - 2500): mm.end() + 2500]
+        if "assumed" not in window.lower():
+            probs.append("a 70 kg figure appears with no nearby statement that it is assumed")
+            break
+
+    check("Body-weight reconstructions are labelled legacy and are absent from the locked data",
+          not probs, "\n".join(probs))
+
+
+def t_stratum_denominators():
+    """
+    Every per-stratum N quoted on the dashboard must be the sum of that
+    stratum's own analysed arms.
+
+    The combined N (676) was checked already, but the TEAS and EA stratum
+    denominators were not: the dashboard carried N = 342 and N = 334, which sum
+    correctly to 676 while both being individually wrong (337 and 339). A
+    reconciling total is not evidence that its parts reconcile.
+    """
+    probs = []
+    rows = [r for r in read_csv(DATA / "opioid_24h_primary.csv") if r["inc_primary"] == "1"]
+    want = {}
+    for mod in ("TEAS", "EA"):
+        arms = [r for r in rows if r["modality"] == mod]
+        want[mod] = sum(int(r["n_i"]) + int(r["n_c"]) for r in arms)
+
+    ui = HTML + "\n" + APP + "\n" + TRANS
+    for mod, n in want.items():
+        # Any "N = <number>" appearing within 160 characters after a "k = <k>"
+        # that names this stratum must be this stratum's own denominator.
+        k = len([r for r in rows if r["modality"] == mod])
+        for m in re.finditer(rf"{mod}[^.\n]{{0,80}}?k\s*=\s*{k}[^.\n]{{0,90}}?N\s*=\s*([\d,]+)", ui):
+            got = int(m.group(1).replace(",", ""))
+            if got != n:
+                probs.append(f"{mod} stratum quoted as N = {got}; the analysed arms sum to {n}")
+    # de-duplicate: one message per stratum is enough
+    probs = sorted(set(probs))
+    check("Per-stratum denominators equal the summed arms of that stratum",
+          not probs, "\n".join(probs))
+
+
 def t_stata_edition_claim():
     """
     The engine named on the dashboard must be the engine the logs record.
@@ -1439,7 +1683,8 @@ def main() -> int:
         ("GRADE", [t_grade_consistent]),
         ("Downloads & deployment", [t_downloads_resolve, t_downloads_are_current,
                                     t_forest_matches_table,
-                                    t_population_denominators, t_paired_cohort_n]),
+                                    t_population_denominators, t_paired_cohort_n,
+                                    t_stratum_denominators]),
         ("Wording & i18n", [t_outcome_hierarchy, t_translations_do_not_contradict,
                             t_author_contacts_not_stale]),
         ("Primary contribution pathway", [t_pathway_counts_derive, t_pathway_categories_disjoint,
@@ -1457,6 +1702,10 @@ def main() -> int:
                                        t_primary_weighting_matrix_matches_stata,
                                        t_no_pre_correction_sufentanil_values,
                                        t_locale_pooled_numbers_agree]),
+        ("v33 tiered primary outcome", [t_v33_matches_stata, t_v33_strata_not_combined,
+                                        t_v33_panel_is_dynamic,
+                                        t_v33_zhang_withdrawn_everywhere,
+                                        t_v33_legacy_reconstructions_labelled]),
     ]
 
     for title, tests in sections:

@@ -41,8 +41,20 @@
 * WHAT IS ESTIMABLE
 *   A standardized mean difference is scale-free, so weight-normalised endpoints
 *   pool legitimately with absolute-dose endpoints. Hedges' g is available in the
-*   locked data for the 6 strict trials plus Coura 2011, Sim 2002 and Zhang 2025,
-*   giving a defensible BROADER SMD sensitivity analysis at k=9.
+*   locked data for the strict trials plus Coura 2011, Sim 2002 and Zhang 2025.
+*
+* v33 CHANGE: ZHANG 2025 IS REMOVED FROM THE BROADER SMD SET (k=10 -> k=9)
+*   Zhang 2025 reports opioid consumption for postoperative day 1, not for an
+*   explicit 0-24 h clock window measured from the end of surgery. Treating POD1
+*   as 0-24 h is one of the assumptions the v33 tiered protocol prohibits
+*   outright, so the trial is Tier E (assumption-requiring) and cannot enter any
+*   analysis of this estimand -- including a scale-free one, because the SMD
+*   changes the metric, not the estimand.
+*
+*   This removal is made on estimand grounds and was decided before the k=9
+*   model was fitted. The k=10 model is retained below as a transparency row so
+*   readers can see exactly what the exclusion does; it is NOT an alternative
+*   headline result.
 *
 *   The two Chen 2015 reports remain outside both pooled models: they are
 *   Median/IQR and the locked data derives no mean/SD or g for them. They are
@@ -124,18 +136,40 @@ di as txt _n "------------------------------------------------------------------
 di as txt "3. BROADER SMD SENSITIVITY (REML + Hartung-Knapp)"
 di as txt "------------------------------------------------------------------"
 
-gen byte broad_smd = (broadpool == 1 & !missing(hedges_g, hedges_se))
+gen byte smd_available = (broadpool == 1 & !missing(hedges_g, hedges_se))
+
+* Tier E exclusion: POD1 is not an explicit 0-24 h clock window.
+gen byte tierE_window = (study_unit == "Zhang 2025")
+gen byte broad_smd    = (smd_available == 1 & tierE_window == 0)
+
+count if smd_available == 1
+local k_withzhang = r(N)
 count if broad_smd == 1
 local k_broadsmd = r(N)
 summarize n_total if broad_smd == 1, meanonly
 local n_broadsmd = r(sum)
-di as txt "Broader SMD set: k = `k_broadsmd', N = `n_broadsmd'"
+di as txt "SMD-estimable pool               : k = `k_withzhang'"
+di as txt "Less Tier E window mismatch      : Zhang 2025 (POD1, not 0-24 h)"
+di as txt "Broader SMD set (v33)            : k = `k_broadsmd', N = `n_broadsmd'"
 list study_unit unit if broad_smd == 1, clean noobs
 
 meta set hedges_g hedges_se if broad_smd == 1, studylabel(study_unit) ///
     eslabel("Standardized Mean Difference (Hedges' g)")
 meta summarize, random(reml) se(kh)
 matrix res_broad = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+* Transparency row: the superseded k=10 model that included Zhang 2025.
+di as txt _n "------------------------------------------------------------------"
+di as txt "3b. SUPERSEDED k=`k_withzhang' MODEL (Zhang 2025 included) -- transparency only"
+di as txt "------------------------------------------------------------------"
+meta set hedges_g hedges_se if smd_available == 1, studylabel(study_unit) ///
+    eslabel("Standardized Mean Difference (Hedges' g)")
+meta summarize, random(reml) se(kh)
+matrix res_broad_z = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+* Restore the v33 broader set as the active meta setting.
+meta set hedges_g hedges_se if broad_smd == 1, studylabel(study_unit) ///
+    eslabel("Standardized Mean Difference (Hedges' g)")
 
 meta forestplot, ///
     title("BROADER 24-h SENSITIVITY (SMD): strict + conditional trials", size(medium)) ///
@@ -156,7 +190,7 @@ matrix res_strictsmd = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2)
 * 5. EXPORT
 * ------------------------------------------------------------------------------
 clear
-set obs 2
+set obs 3
 gen analysis_id      = ""
 gen analysis_type    = ""
 gen stratum          = ""
@@ -203,7 +237,22 @@ replace tau2           = res_broad[1,6] in 2
 replace i2             = res_broad[1,7] in 2
 replace q_stat         = res_broad[1,8] in 2
 replace model          = "REML + Hartung-Knapp" in 2
-replace notes          = "Adds Coura 2011, Sim 2002, Zhang 2025. Chen 2015 x2 remain unpoolable (Median/IQR). A k=11 MD pool is not estimable without prohibited body-weight reconstruction." in 2
+replace notes          = "Adds Coura 2011 and Sim 2002. Zhang 2025 excluded (POD1, not an explicit 0-24 h window). Chen 2015 x2 remain unpoolable (Median/IQR). A k=11 MD pool is not estimable without prohibited body-weight reconstruction." in 2
+
+replace analysis_id    = "OP24_BROADER_SMD_WITH_ZHANG" in 3
+replace analysis_type  = "Superseded (transparency only)" in 3
+replace stratum        = "Broader SMD set with Zhang 2025 retained" in 3
+replace k              = res_broad_z[1,5] in 3
+replace effect_measure = "Hedges g (SMD)" in 3
+replace estimate       = res_broad_z[1,1] in 3
+replace ci_low         = res_broad_z[1,2] in 3
+replace ci_high        = res_broad_z[1,3] in 3
+replace p_value        = res_broad_z[1,4] in 3
+replace tau2           = res_broad_z[1,6] in 3
+replace i2             = res_broad_z[1,7] in 3
+replace q_stat         = res_broad_z[1,8] in 3
+replace model          = "REML + Hartung-Knapp" in 3
+replace notes          = "SUPERSEDED by v33. Retained so the effect of the Zhang 2025 exclusion is visible. Zhang 2025 reports POD1, not an explicit 0-24 h clock window; treating POD1 as 0-24 h is a prohibited assumption. Not a headline result." in 3
 
 save "06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.dta", replace
 export delimited "06_FINAL_ANALYSIS_V26/03_RESULTS/results_broader24h_sensitivity.csv", replace

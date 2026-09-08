@@ -6,13 +6,13 @@
 // updated, re-running this script moves the study between categories and the
 // dashboard counts follow automatically.
 //
-// Source workbook : TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx
-// Statistics      : StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26
+// Source workbook : TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx
+// Statistics      : StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26 + 07_TIERED_V33
 // PROSPERO        : CRD420251090635
 window.PRIMARY_PATHWAY = {
   "generated_by": "scripts/build_primary_pathway.py",
-  "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx",
-  "statistical_source": "StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26",
+  "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx",
+  "statistical_source": "StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26 + 07_TIERED_V33",
   "prospero": "CRD420251090635",
   "review_included_rcts": 70,
   "candidate_rows": 16,
@@ -957,8 +957,8 @@ window.PRIMARY_PATHWAY = {
     "author_contact_candidates": 4,
     "other_outcome_contributors": 30,
     "no_pooled_model": 23,
-    "broader_smd_k": 10,
-    "broader_smd_n": 851
+    "broader_smd_k": 9,
+    "broader_smd_n": 758
   },
   "results": {
     "strict_md": {
@@ -989,14 +989,14 @@ window.PRIMARY_PATHWAY = {
     },
     "broader_smd": {
       "analysis_id": "OP24_BROADER_SMD",
-      "k": 10,
+      "k": 9,
       "effect_measure": "Hedges g (SMD)",
-      "estimate": -0.9344,
-      "ci_low": -1.6653,
-      "ci_high": -0.2035,
-      "p_value": 0.01783,
-      "tau2": 0.9408,
-      "i2": 94.5,
+      "estimate": -0.9691,
+      "ci_low": -1.8011,
+      "ci_high": -0.1371,
+      "p_value": 0.02767,
+      "tau2": 1.0701,
+      "i2": 94.99,
       "model": "REML + Hartung-Knapp",
       "stratum": "Strict + conditional 24-h opioid, Hedges g"
     }
@@ -1005,7 +1005,7 @@ window.PRIMARY_PATHWAY = {
     "candidate_pool_k": 12,
     "candidate_pool_n": 993,
     "with_estimable_md": 8,
-    "with_estimable_smd": 10,
+    "with_estimable_smd": 9,
     "unpoolable_units": [
       "Chen 2015",
       "Chen 2015 (Hyperalgesia)"

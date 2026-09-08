@@ -4,7 +4,7 @@
     {
       "name": "teas-dashboard",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8817"],
+      "runtimeArgs": ["-m", "http.server", "8817", "--directory", "_site"],
       "port": 8817
     }
   ]

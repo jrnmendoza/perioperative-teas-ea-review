@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/06_flatus.log
   log type:  text
- opened on:   7 Sep 2026, 20:38:19
+ opened on:   8 Sep 2026, 08:07:39
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.dta
  Observations:             6                  
-    Variables:            60                  7 Sep 2026 20:38
+    Variables:            60                  8 Sep 2026 08:07
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -767,5 +767,5 @@ SUCCESS: Target E analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/06_flatus.log
   log type:  text
- closed on:   7 Sep 2026, 20:38:20
+ closed on:   8 Sep 2026, 08:07:39
 ----------------------------------------------------------------------------------------------------

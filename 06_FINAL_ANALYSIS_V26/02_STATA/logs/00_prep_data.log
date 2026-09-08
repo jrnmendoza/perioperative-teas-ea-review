@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/00_prep_data.log
   log type:  text
- opened on:   7 Sep 2026, 20:38:14
+ opened on:   8 Sep 2026, 08:07:34
 
 . 
 . di as txt "=================================================================="
@@ -137,17 +137,71 @@ variable modality was str1 now str4
 (6 real changes made)
 
 . 
+. * ------------------------------------------------------------------------------
+. * COMPARATOR CLASSIFICATION (corrected 2026-09-08, v33 tiered audit)
+. *
+. * The previous rule matched "Sham"/"Placebo"/"No-current" CASE-SENSITIVELY, which
+. * silently misfiled four rows whose source text uses lower-case "sham":
+. *     Chen 2015                "Electrodes/device with no stimulation"  -> was Usual Care
+. *     Chen 2015 (Hyperalgesia) "Electrodes/no-current sham"             -> was Usual Care
+. *     Zhang 2025               "Sub-sensory sham"                       -> was Usual Care
+. *     Yeh (lumbar-spine family) "Electrical sham/nonacupoint AES"       -> was Usual Care
+. * None of these has inc_primary==1, so no published estimate was affected, but the
+. * error would corrupt any comparator-stratified analysis.
+. *
+. * Three categories are now distinguished, because they are not interchangeable:
+. *   Sham              inert control: device applied, no current delivered
+. *   Active electrical real current delivered at a control site (non-acupoint /
+. *                     non-meridian / incision-periphery TENS). NOT an inert sham.
+. *   Usual Care        no device at all
+. *
+. * Order matters. Inert-sham markers are tested BEFORE device names: Chen 1998's
+. * control is "Sham ST36 TENS (0 mA)", i.e. a TENS device at ZERO current, which is
+. * an inert sham. Matching the device name "TENS" first would misfile a genuine
+. * sham-controlled trial as an active electrical comparator.
+. * ------------------------------------------------------------------------------
+. gen comparator_lc = lower(comparator)
+
 . gen comparator_type = ""
 (16 missing values generated)
 
-. replace comparator_type = "Sham" if strpos(comparator, "Sham") > 0 | strpos(comparator, "Placebo")
->  > 0 | strpos(comparator, "No-current") > 0
+. 
+. * 1. Inert sham (tested first)
+. replace comparator_type = "Sham" if ///
+>       strpos(comparator_lc, "0 ma") > 0            ///
+>     | strpos(comparator_lc, "zero-current") > 0    ///
+>     | strpos(comparator_lc, "zero current") > 0    ///
+>     | strpos(comparator_lc, "no-current") > 0      ///
+>     | strpos(comparator_lc, "no current") > 0      ///
+>     | strpos(comparator_lc, "no stimulation") > 0  ///
+>     | strpos(comparator_lc, "nonpenetrating") > 0  ///
+>     | strpos(comparator_lc, "sub-sensory sham") > 0 ///
+>     | strpos(comparator_lc, "placebo") > 0
 variable comparator_type was str1 now str4
-(8 real changes made)
+(9 real changes made)
 
+. 
+. * 2. Active electrical control (real current at a control site)
+. replace comparator_type = "Active Electrical" if comparator_type == "" & ( ///
+>       strpos(comparator_lc, "nonacupoint") > 0     ///
+>     | strpos(comparator_lc, "non-acupoint") > 0    ///
+>     | strpos(comparator_lc, "nonmeridian") > 0     ///
+>     | strpos(comparator_lc, "incision-periphery tens") > 0 )
+variable comparator_type was str4 now str17
+(1 real change made)
+
+. 
+. * 3. Remaining explicit sham wording
+. replace comparator_type = "Sham" if comparator_type == "" & strpos(comparator_lc, "sham") > 0
+(2 real changes made)
+
+. 
+. * 4. Everything else is usual care / no device
 . replace comparator_type = "Usual Care / Control" if comparator_type == ""
-variable comparator_type was str4 now str20
-(8 real changes made)
+variable comparator_type was str17 now str20
+(4 real changes made)
+
+. drop comparator_lc
 
 . 
 . * Study label for plots
@@ -192,8 +246,8 @@ Saved 01_DATA/opioid_24h_primary.dta (N = 16)
 . tempfile af_rob
 
 . save `af_rob', replace
-(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_57264.000001 not found)
-file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_57264.000001 saved as .dta format
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_73751.000001 not found)
+file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_73751.000001 saved as .dta format
 
 . 
 . * ------------------------------------------------------------------------------
@@ -578,5 +632,5 @@ SUCCESS: All analysis datasets cleanly prepared and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/00_prep_data.log
   log type:  text
- closed on:   7 Sep 2026, 20:38:15
+ closed on:   8 Sep 2026, 08:07:34
 ----------------------------------------------------------------------------------------------------
