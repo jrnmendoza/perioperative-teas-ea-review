@@ -1,5 +1,13 @@
 # Dashboard tab audit — 2026-09-08
 
+## Follow-up: filter placement and surgical characteristics
+
+The study toolbar now appears only on Overview, Study Explorer and the RoB matrix. It is hidden on PRISMA, GRADE, Results, Methods, Limitations and More. Its selections are retained when returning to the study views but do not restrict other tabs. Results keep their own outcome/subgroup controls. The regression suite now tests this isolation, rather than the previous cross-tab filtering behavior.
+
+The surgery investigation found that all 70 browser records had defaulted to “Other General Surgery,” with generic procedure descriptions for most earlier studies. `scripts/build_study_characteristics.py` restores 61 descriptions from preserved reconciled extraction documents, two from preserved Chen 2015 source text files, and retains the explicit descriptions/caveats for seven post-lock additions. Wu 2016 lacks a specific procedure in the available characteristics record and is labelled “Not documented.” Eleven display categories now feed the Overview distribution, Study Explorer summary, procedure column, drawer and surgery selector. Every generated record retains its source excerpt and location. The frozen masters and Stata results were not changed; these are descriptive display groupings, not new Stata covariates.
+
+RoB filters now include High, Pending and No Assessment Available. Browser checks exercise three result contexts against all six risk selections, including empty states. Changing the target outcome refreshes the matching matrix and counts. Tests also verify surgery-filtered study rows, restored filter state on return, and absence of hidden surgery filters on Results. CI verifies source excerpts and rejects a mutation collapsing every specialty to the old generic category.
+
 ## Follow-up: navigation and RoB correction
 
 The user's Chrome review exposed a gap in the initial audit: populated panel content did not prove correct visible page structure. Two excess closing tags ended the Primary panel early, leaving five large results cards visible on every tab. Later panels were pushed below those cards. The HTML containment is repaired. Navigation now returns to the top, the overview KPI block appears only on Overview, and panel switching no longer fades through a blank view.

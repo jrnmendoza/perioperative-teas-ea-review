@@ -22,14 +22,19 @@ const fs=require('node:fs');
  const sorts=await page.locator('#meta-sort-select option').evaluateAll(es=>es.map(e=>e.value));
  let combinations=0;
  for(const modality of ['all','TEAS','EA']){
+  await page.evaluate(()=>switchTab('explorer'));
   await page.selectOption('#filter-modality',modality);
+  await page.evaluate(()=>switchTab('secondary'));
   for(const outcome of outcomes){
    await page.selectOption('#meta-outcome-select',outcome);
    const expected=await page.evaluate(()=>{
     const s=getFilteredStudies(false), binary=['ponv_24h','rescue_analgesia'].includes(currentOutcome);
     return (binary?MetaEngine.runBinaryMeta(s,currentOutcome):MetaEngine.runContinuousMeta(s,currentOutcome)).k;
    });
-   if(outcome==='opioid_24h')assert.equal(expected,{all:7,TEAS:4,EA:3}[modality]);
+   if(outcome==='opioid_24h'){
+     assert.equal(expected,7,'Hidden study filters must not restrict Results');
+     assert.equal(await page.evaluate(m=>MetaEngine.runContinuousMeta(STUDIES_DATA.filter(s=>m==='all'||s.modality===m),'opioid_24h').k,modality),{all:7,TEAS:4,EA:3}[modality]);
+   }
    if(modality==='all')assert.equal(expected,{opioid_24h:7,opioid_48h:3,opioid_72h:1,pain_rest_24h:2,ponv_24h:2,flatus_time:6,intraop_opioid:7,rescue_analgesia:4}[outcome]);
    for(const subgroup of subgroups){
     await page.selectOption('#meta-subgroup-select',subgroup);
@@ -52,8 +57,11 @@ const fs=require('node:fs');
  }
  await page.locator('#study-search-input').fill('THIS_STUDY_DOES_NOT_EXIST');
  await page.evaluate(()=>switchTab('secondary'));
- assert.match(await page.locator('#forest-table-body').innerText(),/No matching data/);
+ await page.selectOption('#meta-outcome-select','opioid_24h');
+ assert.equal(await page.locator('#forest-table-body .study-checkbox').count(),7,'Study search must not hide results');
  await page.evaluate(()=>switchTab('limitations'));
+ assert.doesNotMatch(await page.locator('#sim-baseline-md').innerText(),/No matching primary data/);
+ await page.evaluate(()=>{includedStudyIds=new Set();updateSimulationComparison();});
  assert.match(await page.locator('#sim-baseline-md').innerText(),/No matching primary data/);
  await page.evaluate(()=>{applyPreset('all');switchTab('rob2');});
  assert.equal(await page.locator('#secondary-rob-coverage tbody tr').count(),26);

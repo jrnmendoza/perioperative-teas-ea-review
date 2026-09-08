@@ -130,6 +130,9 @@
           <option value="all" data-i18n="controls.allRob">All Risk of Bias Judgments</option>
           <option value="Low" data-i18n="controls.lowRobOnly">Low Risk of Bias Only</option>
           <option value="Some concerns" data-i18n="controls.someConcerns">Some Concerns</option>
+          <option value="High">High Risk of Bias</option>
+          <option value="Pending">Assessment Pending</option>
+          <option value="Not assessed">No Assessment Available</option>
         </select>
       </div>
     </div>
@@ -783,6 +786,7 @@
 
     <!-- TAB 2: STUDY EXPLORER -->
     <div id="tab-explorer" class="tab-content">
+      <div class="dashboard-card" id="explorer-surgery-summary" style="padding:1.25rem;margin-bottom:1rem;"></div>
       <div class="dashboard-card">
         <div class="card-header">
           <h2>Study Characteristics & STRICTA Parameters Explorer</h2>
@@ -3599,6 +3603,7 @@
   <script src="meta_outcomes.js"></script>
   <script src="primary_browser.js"></script>
   <script src="browser_targets.js"></script>
+  <script src="study_characteristics.js"></script>
   <script src="data.js?v=0c009811ebef"></script>
   <script src="translations.js?v=0c009811ebef"></script>
   <script src="reader_assist.js?v=0c009811ebef"></script>

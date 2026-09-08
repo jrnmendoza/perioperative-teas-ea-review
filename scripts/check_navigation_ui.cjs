@@ -30,6 +30,7 @@ const fs=require('node:fs');
      assert.deepEqual(state.visible,['tab-'+tab]);assert.equal(state.scroll,0);
      assert.ok(state.top<900,`${tab} begins below viewport: ${state.top}`);
      assert.ok(state.heading,`${tab} needs visible content`);assert.equal(state.stray,0);
+     assert.equal(await page.locator('.control-toolbar').isVisible(),['intro','explorer','rob2'].includes(tab),`Toolbar scope for ${tab}`);
    }
  }
  await page.locator('[data-nav-group="evidence"]').click();
@@ -44,6 +45,30 @@ const fs=require('node:fs');
  const primary=await page.evaluate(()=>STUDIES_DATA.filter(s=>s.outcomes.opioid_24h).map(s=>({name:s.key,state:resultRob(s,'opioid_24h').state})));
  assert.equal(primary.length,7);assert.ok(primary.every(s=>!['pending','not-assessed'].includes(s.state)));
  assert.doesNotMatch(await page.locator('#rob2-table-body').innerText(),/Outcome not measured/);
+ for(const outcome of ['opioid_24h','opioid_48h','summary']){
+  await page.selectOption('#rob2-outcome-filter',outcome);
+  for(const risk of ['Low','Some concerns','High','Pending','Not assessed','all']){
+    await page.selectOption('#filter-rob',risk);
+    const expected=await page.evaluate(({outcome,risk})=>STUDIES_DATA.filter(s=>risk==='all'||resultRob(s,outcome).state===robState(risk)).length,{outcome,risk});
+    assert.equal(await page.locator('#rob2-table-body tr td:first-child a').count(),expected,`${outcome}/${risk}`);
+    if(!expected)assert.match(await page.locator('#rob2-table-body').innerText(),/No studies match/);
+  }
+ }
+ await page.locator('[data-nav-group="studies"]').click();
+ assert.equal(await page.locator('#explorer-surgery-summary').isVisible(),true);
+ assert.match(await page.locator('#explorer-surgery-summary').innerText(),/70 studies/);
+ const specialty=await page.evaluate(()=>STUDIES_DATA.find(s=>s.surgery_category!=='Other General Surgery').surgery_category);
+ await page.selectOption('#filter-surgery',specialty);
+ const count=await page.evaluate(c=>STUDIES_DATA.filter(s=>s.surgery_category===c).length,specialty);
+ assert.equal(await page.locator('#explorer-table-body tr').count(),count);
+ assert.match(await page.locator('#explorer-surgery-summary').innerText(),new RegExp(`${count} studies`));
+ assert.ok((await page.locator('#explorer-table-body tr td:nth-child(4) small').first().innerText()).length>0);
+ await page.locator('[data-nav-group="results"]').click();
+ await page.locator('[data-tab="secondary"]').click();
+ assert.equal(await page.locator('#forest-table-body .study-checkbox').count(),7,'Surgery filter must not leak into Results');
+ await page.locator('[data-nav-group="studies"]').click();
+ assert.equal(await page.locator('#filter-surgery').inputValue(),specialty,'Study filters must be retained on return');
+ await page.locator('[data-preset="all"]').click();
  await page.locator('[data-nav-group="results"]').click();
  await page.locator('[data-tab="metareg"]').click();
  assert.equal(await page.locator('#metareg-availability').isVisible(),true);

@@ -5,6 +5,7 @@ import csv
 import re
 import math
 import openpyxl
+from build_study_characteristics import build as surgical_characteristics
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -111,6 +112,7 @@ def main():
                         if isinstance(value, dict) and any(isinstance(value.get(k), (int, float))
                                                           for k in ('mean_diff', 'rr'))})
     payloads = {
+        'study_characteristics': ('STUDY_CHARACTERISTICS', surgical_characteristics()),
         'browser_targets': ('BROWSER_TARGETS', browser_targets(studies)),
         'author_inquiries': ('AUTHOR_INQUIRIES', json.loads((ROOT / 'dashboard/author_inquiries.json').read_text())),
         'search_strategies': ('SEARCH_STRATEGIES', search_data()),

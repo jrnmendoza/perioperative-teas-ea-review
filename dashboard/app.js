@@ -15,6 +15,7 @@ let filterYearMin = 1993;
 let filterYearMax = 2026;
 let filterSearch = '';
 let currentSort = 'effect_asc';
+const STUDY_FILTER_TABS = ['intro','explorer','rob2'];
 
 // Simulation overrides state: { [studyId]: { mean_diff, se, status } }
 let simOverrides = {};
@@ -26,6 +27,9 @@ let activeConvTab = 'equi';
 function boot() {
   // The interactive primary view must use the exact locked set and values.
   for (const s of window.STUDIES_DATA) {
+    const characteristics=window.STUDY_CHARACTERISTICS[s.key];
+    s.surgery_category=characteristics.surgery_category;
+    s.surgery_procedure=characteristics.surgery_procedure;
     s.primary_record = s.outcomes.opioid_24h;
     s.outcomes.opioid_24h = window.PRIMARY_BROWSER[s.key] ? {...s.primary_record, ...window.PRIMARY_BROWSER[s.key]} : null;
     const primaryRob=window.PRIMARY_BROWSER[s.key]?.rob2;
@@ -217,6 +221,9 @@ function initGlobalFilters() {
   const modSelect = document.getElementById('filter-modality');
   const compSelect = document.getElementById('filter-comparator');
   const surgSelect = document.getElementById('filter-surgery');
+  if (surgSelect) {
+    surgSelect.innerHTML='<option value="all">All Surgical Specialties</option>'+[...new Set(window.STUDIES_DATA.map(s=>s.surgery_category))].sort().map(c=>`<option value="${pwEsc(c)}">${pwEsc(c)}</option>`).join('');
+  }
   const robSelect = document.getElementById('filter-rob');
 
   if (modSelect) modSelect.addEventListener('change', (e) => { filterModality = e.target.value; renderAllViews(); });
@@ -334,6 +341,7 @@ function initSensitivityControls() {
 function getFilteredStudies(applyOverrides = true) {
   return window.STUDIES_DATA.filter(s => {
     if (!includedStudyIds.has(s.id)) return false;
+    if (!STUDY_FILTER_TABS.includes(activeTab)) return true;
     if (filterModality !== 'all' && s.modality !== filterModality) return false;
     if (filterComparator !== 'all' && s.comparator_short !== filterComparator) return false;
     if (filterSurgery !== 'all' && s.surgery_category !== filterSurgery) return false;
@@ -369,10 +377,13 @@ function renderAllViews() {
 }
 
 function renderActiveTab() {
+  const showFilters=STUDY_FILTER_TABS.includes(activeTab);
+  document.querySelector('.control-toolbar').style.display=showFilters?'':'none';
   const scope = document.getElementById('filter-scope');
-  if (scope) scope.textContent = ['intro','explorer','rob2','secondary','mcid','export'].includes(activeTab)
-    ? 'Filters apply to study-based views and CSV exports. Saved Stata results and figures remain fixed. Study Explorer search remains active until cleared or All Studies is selected.'
-    : (activeTab==='limitations' ? 'The inquiry roster is a fixed record. Global filters apply only to the hypothetical simulator on this tab.' : 'This tab shows the saved review record; global study filters do not refit its results or alter its source documents.');
+  if (scope) {
+    scope.style.display=showFilters?'':'none';
+    scope.textContent='Filters apply to Overview, Study Explorer and the RoB matrix. Study Explorer search remains active until cleared or All Studies is selected. Other tabs use their own analysis sets.';
+  }
   if (activeTab === 'intro') renderOverview();
   else if (activeTab === 'prisma') renderPrismaView();
   else if (activeTab === 'search') renderSearchStrategiesView();
@@ -936,6 +947,14 @@ function inquiryDisposition(s) {
 // 3. Study Explorer Table
 function renderStudyExplorer() {
   const filtered = getFilteredStudies(false);
+  const summary=document.getElementById('explorer-surgery-summary');
+  if (summary) {
+    const counts={};
+    filtered.forEach(s=>{const category=s.surgery_category || 'Not recorded';counts[category]=(counts[category]||0)+1;});
+    summary.innerHTML=`<h3>Surgical specialties (${filtered.length} studies)</h3><div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.6rem;">`+
+      Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([name,n])=>`<span class="badge badge-indigo">${pwEsc(name)}: ${n}</span>`).join('')+
+      (filtered.length?'':'<p>No studies match the current filters.</p>')+'</div>';
+  }
   const tbody = document.getElementById('explorer-table-body');
   if (!tbody) return;
 
@@ -960,7 +979,7 @@ function renderStudyExplorer() {
         </td>
         <td><span style="background: rgba(99,102,241,0.15); color: #818cf8; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600; font-size: 0.75rem;">${s.modality}</span></td>
         <td>${s.comparator_short}</td>
-        <td>${s.surgery_category}</td>
+        <td>${s.surgery_category}<br><small style="color:var(--text-muted)">${pwEsc(s.surgery_procedure || 'Procedure not recorded')}</small></td>
         <td>${s.stricta.acupoints}</td>
         <td>${s.stricta.frequency_category}</td>
         <td><strong>${s.population.total_n}</strong> (${s.population.arm1_n} / ${s.population.arm2_n})</td>
@@ -987,6 +1006,7 @@ function renderStudyExplorer() {
 
 // 4. RoB 2 Matrix (Result-Specific and Summary View)
 function renderRoB2Matrix() {
+  renderKPIs();
   const coveragePanel=document.getElementById('secondary-rob-coverage');
   if (coveragePanel) {
     const rows=window.V33_DATA.result_rob2_coverage;
@@ -1076,6 +1096,7 @@ function renderStataSecondary() {
 
 // 5. Real-Time Dynamic Meta-Analysis Lab & Forest Plot (Objectives 1, 2, 3, 5, 6)
 function renderMetaLab() {
+  const metaModality=STUDY_FILTER_TABS.includes(activeTab)?filterModality:'all';
   renderStataSecondary();
   const filtered = getFilteredStudies(false);
   const isBinary = ['ponv_24h', 'rescue_analgesia'].includes(currentOutcome);
@@ -1115,7 +1136,7 @@ function renderMetaLab() {
   // Grouping function for Subgroups (Objectives 1, 3, 5)
   // Protocol Synthesis Rule: When all modalities are selected, strictly stratify into separate strata
   let groupingFn = null;
-  if (currentSubgroup === 'stratum' || (currentSubgroup === 'none' && filterModality === 'all')) {
+  if (currentSubgroup === 'stratum' || (currentSubgroup === 'none' && metaModality === 'all')) {
     groupingFn = s => s.stratum;
   } else if (currentSubgroup === 'timing') {
     groupingFn = s => s.stricta.timing_category;
@@ -1136,7 +1157,7 @@ function renderMetaLab() {
     };
   }
 
-  if (groupingFn && filterModality === 'all' && !['none','stratum'].includes(currentSubgroup)) {
+  if (groupingFn && metaModality === 'all' && !['none','stratum'].includes(currentSubgroup)) {
     const selectedGrouping = groupingFn;
     groupingFn = s => `${s.stratum} — ${selectedGrouping(s) || 'Unreported'}`;
   }
@@ -1213,7 +1234,7 @@ function renderMetaLab() {
 
   let html = '';
 
-  const shouldStratify = groupingFn && (currentSubgroup !== 'none' || filterModality === 'all');
+  const shouldStratify = groupingFn && (currentSubgroup !== 'none' || metaModality === 'all');
 
   if (!shouldStratify) {
     let sortedStats = [...overallMeta.studyStats];
@@ -1295,7 +1316,7 @@ function renderMetaLab() {
 
   // Overall Diamond (Suppressed when All Modalities selected per Protocol Synthesis Rule)
   if (overallMeta.k > 0) {
-    if (filterModality === 'all') {
+    if (metaModality === 'all') {
       html += `
         <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 700; border-top: 2px solid var(--accent-primary);">
           <td colspan="8" style="padding: 0.85rem 1.25rem; color: #c7d2fe; font-size: 0.8rem;">
@@ -1329,7 +1350,7 @@ function renderMetaLab() {
 
       html += `
         <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-primary);">
-          <td colspan="3" style="font-size: 0.85rem; color: #fff;">${filterModality} ${overallMeta.k===1?"SINGLE STUDY":"STRATUM POOLED EFFECT (Random-Effects, DL)"}:</td>
+          <td colspan="3" style="font-size: 0.85rem; color: #fff;">${metaModality} ${overallMeta.k===1?"SINGLE STUDY":"STRATUM POOLED EFFECT (Random-Effects, DL)"}:</td>
           <td colspan="2" style="font-size: 0.78rem; color: var(--text-secondary);">k = ${overallMeta.k} trials | N = ${overallMeta.total_n.toLocaleString()} patients</td>
           <td style="font-size: 0.95rem; color: #34d399;">${ovEffText}</td>
           <td style="color: var(--text-accent);">100%</td>

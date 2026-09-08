@@ -55,6 +55,7 @@ CACHE_BUSTED_ASSETS = (
     "author_inquiries.js", "search_strategies.js", "meta_outcomes.js",
     "primary_browser.js",
     "browser_targets.js",
+    "study_characteristics.js",
 )
 CACHE_BUSTED_FETCH_PATHS = (
     "v26/02_STATA/logs/01_opioid24_primary.log",

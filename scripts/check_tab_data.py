@@ -81,3 +81,21 @@ szmit=data['Szmit 2021']['rob2']
 assert [szmit[f'd{i}'] for i in range(1,6)]+[szmit['overall']]==['Low','Low','Low','Low','Some concerns','Some concerns']
 assert szmit['status']=='Assessed' and '0–24' in szmit['timepoint'] and 'row 70' in szmit['assessment_file']
 print('PASS: tab ownership guard rejects escaped-card mutation; Szmit primary RoB matches the inspected v33 source row.')
+
+characteristics=json.JSONDecoder().raw_decode((ROOT/'dashboard/study_characteristics.js').read_text().split('window.STUDY_CHARACTERISTICS = ',1)[1])[0]
+def valid_characteristics(records):
+    return (len(records)==70 and len({r['surgery_category'] for r in records.values()})==11
+            and records['Chen 1998']['surgery_category']=='Gynecologic & Breast'
+            and records['Chen 2020']['surgery_category']=='Thoracic & Cardiac'
+            and records['An 2014']['surgery_category']=='Neurosurgery'
+            and records['Liang 2021']['surgery_category']=='Urologic'
+            and records['Wu 2016']['surgery_category']=='Not documented')
+assert valid_characteristics(characteristics)
+for r in characteristics.values():
+    source=(ROOT/r['source_file']).read_text()
+    assert r['source_excerpt'] in source,r['source_file']
+    if r['source_line']:assert source.splitlines()[r['source_line']-1]==r['source_excerpt']
+changed=copy.deepcopy(characteristics)
+for r in changed.values():r['surgery_category']='Other General Surgery'
+assert not valid_characteristics(changed),'Collapsed surgical categories escaped'
+print('PASS: 70 surgical records trace to preserved sources; collapsed-category mutation rejected.')
