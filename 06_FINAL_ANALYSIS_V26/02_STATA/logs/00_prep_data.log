@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/00_prep_data.log
   log type:  text
- opened on:   8 Sep 2026, 08:07:34
+ opened on:   8 Sep 2026, 08:50:23
 
 . 
 . di as txt "=================================================================="
@@ -12,15 +12,15 @@
 . di as txt "00: PREPARING CLEAN ANALYSIS DATASETS FROM AUTHORITATIVE V32 WORKBOOK"
 00: PREPARING CLEAN ANALYSIS DATASETS FROM AUTHORITATIVE V32 WORKBOOK
 
-. di as txt "Source: TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
-Source: TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx
+. di as txt "Source: TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
+Source: TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx
 
 . di as txt "=================================================================="
 ==================================================================
 
 . 
 . local master_xlsx "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TE
-> AS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
+> AS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
 
 . 
 . * ------------------------------------------------------------------------------
@@ -246,8 +246,8 @@ Saved 01_DATA/opioid_24h_primary.dta (N = 16)
 . tempfile af_rob
 
 . save `af_rob', replace
-(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_73751.000001 not found)
-file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_73751.000001 saved as .dta format
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_78861.000001 not found)
+file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_78861.000001 saved as .dta format
 
 . 
 . * ------------------------------------------------------------------------------
@@ -632,5 +632,5 @@ SUCCESS: All analysis datasets cleanly prepared and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/00_prep_data.log
   log type:  text
- closed on:   8 Sep 2026, 08:07:34
+ closed on:   8 Sep 2026, 08:50:23
 ----------------------------------------------------------------------------------------------------

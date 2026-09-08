@@ -1,0 +1,4 @@
+study,comparison_id,outcome,window,drug,intervention,comparator,n_i,n_c,events_i,events_c,zero_cell,lnrr,se_lnrr
+Tu 2024,TU24_TEAS_vs_SHAM_TRAMADOL,Any rescue tramadol use,Within 24 h,tramadol,Postoperative TEAS,Sham/no current,57,58,3,6,0,-0.675755,0.682067
+Liu 2026 (burn),LIU26BURN_TEAS_vs_SHAM_RESCUE,Any rescue dezocine use,Through POD1,dezocine,Pre-induction TEAS,Placebo/sham TEAS,43,43,3,8,0,-0.980829,0.641733
+Yu 2020,YU20_TEAS_vs_CTRL_RESCUEOP24,Participants requiring rescue sufentanil,0-24 h postoperative,rescue,Preoperative TEAS,Control/no current (electrodes applied),30,30,13,24,0,-0.613104,0.227866

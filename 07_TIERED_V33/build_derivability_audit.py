@@ -27,7 +27,7 @@ from pathlib import Path
 import openpyxl
 
 ROOT = Path(__file__).resolve().parent.parent
-V32 = ROOT / "TEAS EA Verification" / "TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
+V32 = ROOT / "TEAS EA Verification" / "TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
 OUT = ROOT / "07_TIERED_V33"
 
 # Sourced IV MME conversion factors already verified in this project

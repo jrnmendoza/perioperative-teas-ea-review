@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/07_targetF.log
   log type:  text
- opened on:   8 Sep 2026, 08:07:39
+ opened on:   8 Sep 2026, 08:50:28
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Stratified Analyses: Intraoperative Titrated, Postop Delivered, Rescue Opioid
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_F_exploratory.dta
  Observations:            82                  
-    Variables:            49                  8 Sep 2026 08:07
+    Variables:            49                  8 Sep 2026 08:50
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -986,5 +986,5 @@ SUCCESS: Target F analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/07_targetF.log
   log type:  text
- closed on:   8 Sep 2026, 08:07:40
+ closed on:   8 Sep 2026, 08:50:29
 ----------------------------------------------------------------------------------------------------

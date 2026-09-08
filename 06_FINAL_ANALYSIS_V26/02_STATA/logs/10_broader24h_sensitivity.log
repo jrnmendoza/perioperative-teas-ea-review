@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/10_broader24h_sensitivity.log
   log type:  text
- opened on:   8 Sep 2026, 08:07:42
+ opened on:   8 Sep 2026, 08:50:31
 
 . 
 . di as txt "=================================================================="
@@ -697,5 +697,5 @@ SUCCESS: broader 24-h sensitivity analysis complete.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/10_broader24h_sensitivity.log
   log type:  text
- closed on:   8 Sep 2026, 08:07:43
+ closed on:   8 Sep 2026, 08:50:32
 ----------------------------------------------------------------------------------------------------

@@ -488,6 +488,24 @@ def main() -> int:
         counts[disp] = counts.get(disp, 0) + 1
         sr.append([i, study, fam, res, tp, readiness, cls, disp, basis])
 
+    # ---- Summary sheet: refresh the derived counts -------------------------
+    # The Summary sheet is inherited from v32 and still reports 364 outcome
+    # rows. Left alone it would be a stale figure inside the authoritative
+    # workbook, and build_site.py reads it. Recompute it from the sheet itself.
+    from openpyxl.cell.cell import MergedCell
+    for row in wb["Summary"].iter_rows():
+        label = row[0].value
+        if not label or "source-normalized outcome rows" not in str(label).lower():
+            continue
+        if isinstance(row[1], MergedCell):
+            print("Summary outcome-row cell is merged; left as-is "
+                  "(build_site.py derives the count from Outcome_Data directly)")
+            break
+        old_val = row[1].value
+        row[1].value = after
+        print(f"Summary 'Source-normalized outcome rows': {old_val} -> {after}")
+        break
+
     # ---- README / Summary version stamps -----------------------------------
     rm = wb["README"]
     rm.append([])

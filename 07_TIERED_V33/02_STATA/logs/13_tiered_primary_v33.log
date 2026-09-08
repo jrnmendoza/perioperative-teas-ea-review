@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/07_TIERED_V33/02_STATA/logs/13_
 > tiered_primary_v33.log
   log type:  text
- opened on:   8 Sep 2026, 08:07:43
+ opened on:   8 Sep 2026, 08:50:32
 
 . 
 . di as txt "=================================================================="
@@ -1667,5 +1667,5 @@ SUCCESS: tiered primary-outcome analysis complete.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/07_TIERED_V33/02_STATA/logs/13_
 > tiered_primary_v33.log
   log type:  text
- closed on:   8 Sep 2026, 08:07:45
+ closed on:   8 Sep 2026, 08:50:34
 ----------------------------------------------------------------------------------------------------

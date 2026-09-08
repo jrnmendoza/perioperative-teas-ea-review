@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/12_primary_loo_diagnostics.log
   log type:  text
- opened on:   8 Sep 2026, 08:07:43
+ opened on:   8 Sep 2026, 08:50:32
 
 . 
 . di as txt "=================================================================="
@@ -92,7 +92,7 @@ Full-model theta = -9.9070
 
 . postfile `results' str40 study double(remaining_k remaining_n pooled_md se_kh ///
 >     wald_lo wald_hi wald_p kh_lo kh_hi kh_p tau2 i2 dfbetas) using `out', replace
-(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_73751.000001 not found)
+(file /var/folders/7q/vsx8qt9d0mlfyhgbdt1b27dw0000gn/T//S_78861.000001 not found)
 
 . 
 . foreach s of local studies {
@@ -343,5 +343,5 @@ Saved 03_RESULTS/results_primary_loo_diagnostics.csv
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/12_primary_loo_diagnostics.log
   log type:  text
- closed on:   8 Sep 2026, 08:07:43
+ closed on:   8 Sep 2026, 08:50:32
 ----------------------------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 * ==============================================================================
 * 00_prep_data.do: Prepare and Export Clean Analysis Datasets from v32 Lock
 * Systematic Review: Perioperative TEAS and EA for Opioid Sparing
-* Source: TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx
+* Source: TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx
 * Authoritative Engine: StataNow 19.5 BE
 *
 * MIGRATED 2026-09-07 from v26 to v32 (v32 = v31 base + Zhang 2018 append; v31
@@ -24,10 +24,10 @@ log using "06_FINAL_ANALYSIS_V26/02_STATA/logs/00_prep_data.log", replace
 
 di as txt "=================================================================="
 di as txt "00: PREPARING CLEAN ANALYSIS DATASETS FROM AUTHORITATIVE V32 WORKBOOK"
-di as txt "Source: TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
+di as txt "Source: TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
 di as txt "=================================================================="
 
-local master_xlsx "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
+local master_xlsx "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
 
 * ------------------------------------------------------------------------------
 * PART 1: PRIMARY 24-H OPIOID CONSUMPTION

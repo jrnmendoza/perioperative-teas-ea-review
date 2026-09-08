@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/09_subgroups_metareg.log
   log type:  text
- opened on:   8 Sep 2026, 08:07:41
+ opened on:   8 Sep 2026, 08:50:30
 
 . 
 . di as txt "=================================================================="
@@ -503,5 +503,5 @@ SUCCESS: Subgroup and meta-regression analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/09_subgroups_metareg.log
   log type:  text
- closed on:   8 Sep 2026, 08:07:42
+ closed on:   8 Sep 2026, 08:50:31
 ----------------------------------------------------------------------------------------------------

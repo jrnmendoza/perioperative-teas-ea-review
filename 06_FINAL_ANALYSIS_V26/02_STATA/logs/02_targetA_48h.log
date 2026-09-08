@@ -3,7 +3,7 @@
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/02_targetA_48h.log
   log type:  text
- opened on:   8 Sep 2026, 08:07:36
+ opened on:   8 Sep 2026, 08:50:25
 
 . 
 . di as txt "=================================================================="
@@ -25,7 +25,7 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_A_48h.dta
  Observations:             5                  
-    Variables:            57                  8 Sep 2026 08:07
+    Variables:            57                  8 Sep 2026 08:50
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -548,5 +548,5 @@ SUCCESS: Target A analyses completed and exported.
        log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
 > logs/02_targetA_48h.log
   log type:  text
- closed on:   8 Sep 2026, 08:07:36
+ closed on:   8 Sep 2026, 08:50:25
 ----------------------------------------------------------------------------------------------------

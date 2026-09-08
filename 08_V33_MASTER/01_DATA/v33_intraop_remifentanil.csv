@@ -1,0 +1,10 @@
+study,comparison_id,intervention,comparator,unit_src,scale_factor,unit_analysis,multiarm,n_i,n_c,mean_i,sd_i,mean_c,sd_c,md,se,hedges_g,hedges_se
+Zheng 2025,ZHENG25_TEAS_vs_SHAM_REMI,Perioperative TEAS,Sham/no current,µg remifentanil,1.0,ug remifentanil,No,42,43,233.1,29.6,289.5,37.9,-56.4,7.366535,-1.641193,0.250818
+Xing 2022,XING22_NTG_vs_NG_REMI,TEAS + active TAPB,Sham TEAS + active TAPB,µg remifentanil,1.0,ug remifentanil,Yes,29,29,1182.61,253.61,1415.41,295.67,-232.8,72.335135,-0.833811,0.273786
+Wu 2022,WU22_PTEAS_vs_CTRL_REMI,Perioperative pTEAS,No-current control,µg remifentanil,1.0,ug remifentanil,No,44,40,1383.0,494.0,1637.0,630.0,-254.0,124.373521,-0.447177,0.221173
+Wu 2025,WU25_TEAS_vs_SHAM_INTRAOPREMI,PACU TEAS,Sham/no current,µg remifentanil,1.0,ug remifentanil,No,50,50,489.4,226.0,533.8,263.6,-44.4,49.104167,-0.179453,0.200402
+Ntritsou 2014,NTRI14_EA_vs_SHAM_REMI,Perioperative EA + tramadol/ketamine,Sham + tramadol/ketamine,µg remifentanil,1.0,ug remifentanil,No,35,35,1003.6,522.7,1041.9,631.9,-38.3,138.616934,-0.065317,0.239109
+Lu 2021,LU21_COMB_vs_SHAM_REMI,Combined PC6+CV17 TEAS,Sham/no current,mg remifentanil,1000.0,ug remifentanil,Yes,190,188,1200.0,500.0,1400.0,700.0,-200.0,62.62725,-0.328425,0.103561
+Guo 2023,GUO23_TEAS_vs_SHAM_REMI,Perioperative TEAS,Sham/no-current TEAS,mg remifentanil,1000.0,ug remifentanil,No,55,55,870.0,300.0,1010.0,390.0,-140.0,66.346199,-0.399588,0.192586
+Zhu 2022,ZHU22_COMB_vs_USUAL_INTRAOPREMI,EA day before + 30 min before,Usual care alone,mg remifentanil,1000.0,ug remifentanil,Yes - shared usual-care comparator (n=101) across three active arms,100,101,500.0,250.0,570.0,260.0,-70.0,35.976477,-0.273394,0.141728
+Pan 2023,PAN23_TEAS_vs_CTRL_INTRAOPREMI,TEAS,Control/usual care,ug remifentanil,1.0,ug remifentanil,No,52,53,740.1,276.9,854.0,287.5,-113.9,55.08216,-0.400525,0.197136
