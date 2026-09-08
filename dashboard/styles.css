@@ -1229,8 +1229,7 @@ body {
   font-weight: 700;
   font-size: 0.82rem;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
+  display: table-row;
 }
 
 .subgroup-forest-diamond {

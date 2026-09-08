@@ -24,6 +24,8 @@ name: Deploy dashboard to GitHub Pages
       - "scripts/build_reference_data.py"
       - "scripts/check_handover.py"
       - "scripts/check_handover_ui.cjs"
+      - "scripts/check_tab_data.py"
+      - "scripts/check_tabs_ui.cjs"
       - "09_V34_INTAKE/**"
       - "01_search_strategy/**"
       - "08_V33_MASTER/**"
@@ -69,6 +71,9 @@ jobs:
 
       - name: Handover regression and mutation checks
         run: python3 scripts/check_handover.py --mutation-test
+
+      - name: Locked browser data and mutation checks
+        run: python3 scripts/check_tab_data.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

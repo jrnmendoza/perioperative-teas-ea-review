@@ -1,6 +1,6 @@
 /**
- * Exact Inverse-Variance Random-Effects Meta-Analysis Engine
- * Conforms to Cochrane Handbook / Stata 19.5 meta & R metafor algorithms.
+ * Exploratory Inverse-Variance Random-Effects Meta-Analysis Engine
+ * Uses DerSimonian–Laird tau-squared with approximate inference; not the authoritative Stata REML pipeline.
  */
 
 var MetaEngine = {
@@ -42,7 +42,7 @@ var MetaEngine = {
 
   // Continuous random-effects pooling (Mean Difference)
   runContinuousMeta: function(studies, outcomeKey = 'opioid_24h') {
-    const validStudies = studies.filter(s => s.outcomes && s.outcomes[outcomeKey] && typeof s.outcomes[outcomeKey].mean_diff === 'number' && !isNaN(s.outcomes[outcomeKey].mean_diff));
+    const validStudies = studies.filter(s => { const o=s.outcomes?.[outcomeKey]; return o && Number.isFinite(o.mean_diff) && Number.isFinite(o.se) && o.se>0 && o.arm1_n>0 && o.arm2_n>0; });
 
     const k = validStudies.length;
     if (k === 0) {
@@ -58,7 +58,7 @@ var MetaEngine = {
         i2: 0,
         q: 0,
         p_q: 1,
-        studies: []
+        studyStats: [], studies: []
       };
     }
 
@@ -66,10 +66,10 @@ var MetaEngine = {
     const studyStats = validStudies.map(s => {
       const out = s.outcomes[outcomeKey];
       const yi = out.mean_diff;
-      const se = out.se > 0 ? out.se : 0.5;
+      const se = out.se;
       const vi = se * se;
       const wi_fe = 1 / vi;
-      totalN += (out.arm1_n || 30) + (out.arm2_n || 30);
+      totalN += out.arm1_n + out.arm2_n;
       return {
         study: s,
         yi,
@@ -150,7 +150,7 @@ var MetaEngine = {
 
   // Binary random-effects pooling (Risk Ratio)
   runBinaryMeta: function(studies, outcomeKey = 'ponv_24h') {
-    const valid = studies.filter(s => s.outcomes && s.outcomes[outcomeKey] && typeof s.outcomes[outcomeKey].rr === 'number' && !isNaN(s.outcomes[outcomeKey].rr));
+    const valid = studies.filter(s => { const o=s.outcomes?.[outcomeKey]; return o && o.rr>0 && o.ci_low>0 && o.ci_upp>o.ci_low && (o.arm1_total ?? o.arm1_n)>0 && (o.arm2_total ?? o.arm2_n)>0; });
     const k = valid.length;
     if (k === 0) {
       return { k: 0, total_n: 0, pooled_rr: 1.0, ci_low: 1.0, ci_upp: 1.0, i2: 0, q: 0, p_q: 1.0, studyStats: [] };
@@ -159,14 +159,16 @@ var MetaEngine = {
     let totalN = 0;
     const studyStats = valid.map(s => {
       const oc = s.outcomes[outcomeKey];
-      const n1 = oc.arm1_total || oc.arm1_n || 30;
-      const n2 = oc.arm2_total || oc.arm2_n || 30;
+      const n1 = oc.arm1_total ?? oc.arm1_n;
+      const n2 = oc.arm2_total ?? oc.arm2_n;
       totalN += n1 + n2;
       const log_rr = Math.log(Math.max(0.01, oc.rr));
-      const se_log = Math.max(0.05, (Math.log(oc.ci_upp || oc.rr * 1.5) - Math.log(oc.ci_low || oc.rr * 0.7)) / 3.92);
+      const se_log = (Math.log(oc.ci_upp) - Math.log(oc.ci_low)) / 3.92;
       const wi = 1 / Math.pow(se_log, 2);
       return {
         id: s.id,
+        study: s,
+        se: se_log,
         key: s.key,
         author: s.author,
         year: s.year,

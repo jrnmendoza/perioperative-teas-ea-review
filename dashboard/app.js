@@ -24,6 +24,12 @@ let inquirySearchQuery = '';
 let activeConvTab = 'equi';
 
 function boot() {
+  // The interactive primary view must use the exact locked set and values.
+  for (const s of window.STUDIES_DATA) {
+    s.primary_record = s.outcomes.opioid_24h;
+    s.outcomes.opioid_24h = window.PRIMARY_BROWSER[s.key] ? {...s.primary_record, ...window.PRIMARY_BROWSER[s.key]} : null;
+    for (const [key,records] of Object.entries(window.BROWSER_TARGETS)) s.outcomes[key]=records[s.key] || null;
+  }
   initObjectivesBar();
   initNavigation();
   initGlobalFilters();
@@ -157,6 +163,7 @@ function switchTab(tabId) {
   });
   const target = document.getElementById(`tab-${tabId}`);
   if (target) target.classList.add('active');
+  renderKPIs();
   renderActiveTab();
 }
 
@@ -221,6 +228,8 @@ function applyPreset(preset) {
     filterSurgery = 'all';
     filterRob = 'all';
     filterMinN = 20;
+    filterYearMin = 1993;
+    filterYearMax = 2026;
     includedStudyIds = new Set(window.STUDIES_DATA.map(s => s.id));
   } else if (preset === 'low_rob') {
     filterRob = 'Low';
@@ -235,6 +244,12 @@ function applyPreset(preset) {
   if (document.getElementById('filter-modality')) document.getElementById('filter-modality').value = filterModality;
   if (document.getElementById('filter-comparator')) document.getElementById('filter-comparator').value = filterComparator;
   if (document.getElementById('filter-rob')) document.getElementById('filter-rob').value = filterRob;
+  if (document.getElementById('filter-surgery')) document.getElementById('filter-surgery').value = filterSurgery;
+  if (preset === 'all') {
+    filterSearch = '';
+    const search = document.getElementById('study-search-input');
+    if (search) search.value = '';
+  }
   if (document.getElementById('slider-min-n')) document.getElementById('slider-min-n').value = filterMinN;
   if (document.getElementById('val-min-n')) document.getElementById('val-min-n').innerText = `${filterMinN} patients`;
 
@@ -264,7 +279,7 @@ function initSensitivityControls() {
   if (outcomeSelect) {
     outcomeSelect.addEventListener('change', (e) => {
       currentOutcome = e.target.value;
-      renderMetaLab();
+      renderAllViews();
     });
   }
 
@@ -288,7 +303,7 @@ function initSensitivityControls() {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       filterSearch = e.target.value.toLowerCase();
-      renderStudyExplorer();
+      renderAllViews();
     });
   }
 
@@ -296,7 +311,7 @@ function initSensitivityControls() {
   if (explorerRobSelect) {
     explorerRobSelect.addEventListener('change', (e) => {
       explorerRobOutcome = e.target.value;
-      renderStudyExplorer();
+      renderAllViews();
     });
   }
 }
@@ -311,7 +326,8 @@ function getFilteredStudies(applyOverrides = true) {
     if (filterRob !== 'all') {
       // Filter on the result-specific judgment for the active context, not on a
       // single global study-level label.
-      const st = resultRob(s, (activeTab === 'explorer') ? explorerRobOutcome : 'summary').state;
+      const resultKey=activeTab==='explorer'?explorerRobOutcome:activeTab==='rob2'?document.getElementById('rob2-outcome-filter').value:activeTab==='secondary'?currentOutcome:'summary';
+      const st = resultRob(s, resultKey).state;
       const want = robState(filterRob);
       if (st !== want) return false;
     }
@@ -339,6 +355,10 @@ function renderAllViews() {
 }
 
 function renderActiveTab() {
+  const scope = document.getElementById('filter-scope');
+  if (scope) scope.textContent = ['intro','explorer','rob2','secondary','mcid','export'].includes(activeTab)
+    ? 'Filters apply to study-based views and CSV exports. Saved Stata results and figures remain fixed. Study Explorer search remains active until cleared or All Studies is selected.'
+    : (activeTab==='limitations' ? 'The inquiry roster is a fixed record. Global filters apply only to the hypothetical simulator on this tab.' : 'This tab shows the saved review record; global study filters do not refit its results or alter its source documents.');
   if (activeTab === 'intro') renderOverview();
   else if (activeTab === 'prisma') renderPrismaView();
   else if (activeTab === 'search') renderSearchStrategiesView();
@@ -348,7 +368,7 @@ function renderActiveTab() {
   else if (activeTab === 'mcid') renderMCIDStudio();
   else if (activeTab === 'metareg') renderMetaRegStudio();
   else if (activeTab === 'primary') { renderV33(); renderPrimaryPathway(); renderTieredV33(); renderSensitivitySandbox(); }
-  else if (activeTab === 'limitations') renderInquiriesView();
+  else if (activeTab === 'limitations') { renderInquiriesView(); updateSimulationComparison(); }
   else if (activeTab === 'extraction') renderConversionsView();
   else if (activeTab === 'evidence') renderDirectionOfEvidence();
   else if (activeTab === 'glossary' && typeof window.renderGlossaryTab === 'function') window.renderGlossaryTab();
@@ -490,7 +510,7 @@ function renderMCIDStudio() {
   const container = document.getElementById('mcid-plot-container');
   if (!container) return;
 
-  const studies = getFilteredStudies(true);
+  const studies = getFilteredStudies(false);
   const validStudies = studies.filter(s => s.mcid && s.mcid.is_paired === true && typeof s.mcid.opioid_md === 'number' && !isNaN(s.mcid.opioid_md) && typeof s.mcid.pain_md === 'number' && !isNaN(s.mcid.pain_md));
 
   let thresholdVal = 10.0;
@@ -512,31 +532,25 @@ function renderMCIDStudio() {
     threshLabel = '≥ 5 mg MME';
   }
 
-  let q1 = 0, q2 = 0, q3 = 0, q4 = 0;
-  validStudies.forEach(s => {
-    const op = s.mcid.opioid_md;
-    const pn = s.mcid.pain_md;
-    const isSparing = op < 0;
-    const painOk = pn <= marginVal;
-
-    if (isRelative) {
-      const arm2 = s.outcomes && s.outcomes.opioid_24h && s.outcomes.opioid_24h.arm2_mean;
-      const relPct = (arm2 && arm2 > 0) ? ((Math.abs(op) / arm2) * 100) : (Math.abs(op) >= 8.0 ? 30.0 : 0);
-      if (relPct >= 30.0 && painOk) q1++;
-      else if (relPct >= 15.0 && painOk) q2++;
-      else if (isSparing && painOk) q3++;
-      else q4++;
-    } else {
-      if (op <= -thresholdVal && painOk) {
-        q1++;
-      } else if (op <= -5.0 && op > -thresholdVal && painOk) {
-        q2++;
-      } else if (op < 0 && op > -5.0 && painOk) {
-        q3++;
-      } else {
-        q4++;
-      }
-    }
+  const groups = [[],[],[],[]];
+  const plottedOpioid = study => isRelative ? 100*study.mcid.opioid_md/study.outcomes.opioid_24h.arm2_mean : study.mcid.opioid_md;
+  const primaryCut = isRelative ? 30 : thresholdVal;
+  const lowerCut = isRelative ? 15 : 5;
+  validStudies.forEach(study => {
+    const op=plottedOpioid(study), painOk=study.mcid.pain_md<=marginVal;
+    const group=!painOk || op>=0 ? 3 : op<=-primaryCut ? 0 : op<=-lowerCut ? 1 : 2;
+    groups[group].push(study);
+  });
+  const [q1,q2,q3,q4]=groups.map(g=>g.length);
+  const unitLabel=isRelative?'%':'mg IV MME';
+  const labels=[`Sparing ≥ ${primaryCut} ${unitLabel}, pain difference ≤ +${marginVal}`,
+    `Sparing ${lowerCut}–<${primaryCut} ${unitLabel}, pain difference ≤ +${marginVal}`,
+    `Sparing >0–<${lowerCut} ${unitLabel}, pain difference ≤ +${marginVal}`,
+    `No opioid reduction or pain difference > +${marginVal}`];
+  groups.forEach((g,i)=>{
+    const card=document.querySelector(`.quadrant-card.q${i+1}`);
+    card.querySelector('.quadrant-title span').textContent=labels[i];
+    card.querySelector('.quadrant-desc').textContent=(g.length?g.map(s=>s.key).join(', '):'No matching trials.')+' Classification uses study-level point estimates; it does not establish pain non-inferiority.';
   });
 
   const total = Math.max(1, validStudies.length);
@@ -570,39 +584,29 @@ function renderMCIDStudio() {
 
   // Update badge labels in KPI cards
   const q1Badge = document.getElementById('badge-q1-kpi');
-  if (q1Badge) q1Badge.innerText = `Opioid Sparing ${threshLabel} + Pain Relief`;
+  if (q1Badge) q1Badge.innerText = labels[0];
 
-  const q2Badge = document.getElementById('badge-q2-kpi');
-  if (q2Badge) {
-    if (isRelative) q2Badge.innerText = 'Sparing 15–30% + Pain Relief';
-    else if (thresholdVal > 5) q2Badge.innerText = `Sparing 5–${thresholdVal} mg + Pain Relief`;
-    else q2Badge.innerText = `Sparing 5 mg + Pain Relief`;
-  }
-
-  const q3Badge = document.getElementById('badge-q3-kpi');
-  if (q3Badge) q3Badge.innerText = isRelative ? 'Sparing < 15% + Pain Relief' : 'Sparing < 5 mg + Pain Relief';
-
-  const q4Badge = document.getElementById('badge-q4-kpi');
-  if (q4Badge) q4Badge.innerText = `Pain > +${marginVal} or No Sparing`;
+  ['badge-q2-kpi','badge-q3-kpi','badge-q4-kpi'].forEach((id,i)=>{ const el=document.getElementById(id); if(el) el.textContent=labels[i+1]; });
 
   // Subtitle update
   const totalN = validStudies.reduce((acc, s) => acc + ((s.population && s.population.total_n) ? s.population.total_n : 0), 0);
   const subtitleEl = document.getElementById('mcid-subtitle-text');
   if (subtitleEl) {
-    subtitleEl.innerHTML = `Active PROSPERO Criterion: <strong>${threshLabel} Opioid Sparing</strong> with Pain Non-Inferiority Margin <strong>≤ +${marginVal} VAS</strong> (Upper 95% CI examined). Paired Continuous Cohort: <strong>k = ${validStudies.length} trials (N = ${totalN.toLocaleString()} analysed)</strong>.`;
+    subtitleEl.innerHTML = `Selected exploratory threshold: <strong>${threshLabel} Opioid Sparing</strong> with Pain Non-Inferiority Margin <strong>≤ +${marginVal} VAS</strong> (Point estimates only; non-inferiority is not established). Paired Continuous Cohort: <strong>k = ${validStudies.length} trials (N = ${totalN.toLocaleString()} analysed)</strong>.`;
   }
 
   const width = container.clientWidth || 700;
   const height = 480;
   const pad = { top: 40, right: 40, bottom: 50, left: 60 };
 
-  const minX = -25, maxX = 5;
-  const minY = -10.0, maxY = 3.0;
+  const minX = Math.min(-25, ...validStudies.map(plottedOpioid)) - 5, maxX = 5;
+  const minY = Math.min(-1, ...validStudies.map(s=>s.mcid.pain_md)) - 0.5;
+  const maxY = Math.max(marginVal + 0.5, ...validStudies.map(s=>s.mcid.pain_md)) + 0.5;
 
   const scaleX = (val) => pad.left + ((val - minX) / (maxX - minX)) * (width - pad.left - pad.right);
   const scaleY = (val) => pad.top + ((maxY - val) / (maxY - minY)) * (height - pad.top - pad.bottom);
 
-  const plotThreshVal = isRelative ? 8.0 : thresholdVal;
+  const plotThreshVal = primaryCut;
   const xMcid = scaleX(-plotThreshVal);
   const xZero = scaleX(0.0);
   const yZero = scaleY(0.0);
@@ -616,31 +620,30 @@ function renderMCIDStudio() {
       <rect x="${pad.left}" y="${pad.top}" width="${Math.max(0, xMcid - pad.left)}" height="${yMargin - pad.top}" fill="rgba(245, 158, 11, 0.06)" />
       <rect x="${xZero}" y="${pad.top}" width="${width - pad.right - xZero}" height="${height - pad.top - pad.bottom}" fill="rgba(239, 68, 68, 0.06)" />
 
-      <!-- Quadrant Labels -->
-      <text x="${pad.left + 15}" y="${height - pad.bottom - 20}" fill="#34d399" font-size="12" font-weight="700">Q1: OPTIMAL SYNERGISTIC (${threshLabel} + Pain Relief)</text>
-      <text x="${xMcid + 10}" y="${height - pad.bottom - 20}" fill="#38bdf8" font-size="11" font-weight="700">Q2: SUB-THRESHOLD ANALGESIA</text>
-      <text x="${pad.left + 15}" y="${pad.top + 25}" fill="#f59e0b" font-size="11" font-weight="700">Q3: PAIN COMPROMISED (> +${marginVal} VAS)</text>
-      <text x="${xZero + 15}" y="${pad.top + 25}" fill="#f87171" font-size="11" font-weight="700">Q4: INEFFECTIVE</text>
-
       <!-- Axes Guidelines -->
       <line x1="${pad.left}" y1="${yZero}" x2="${width - pad.right}" y2="${yZero}" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" />
       <line x1="${xZero}" y1="${pad.top}" x2="${xZero}" y2="${height - pad.bottom}" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" />
 
       <!-- MCID Threshold Line -->
       <line x1="${xMcid}" y1="${pad.top}" x2="${xMcid}" y2="${height - pad.bottom}" stroke="#10b981" stroke-width="2" stroke-dasharray="5,4" />
-      <text x="${xMcid}" y="${pad.top - 10}" fill="#10b981" font-size="11" font-weight="700" text-anchor="middle">PROSPERO Threshold (−${plotThreshVal} mg)</text>
+      <text x="${xMcid}" y="${pad.top - 10}" fill="#10b981" font-size="11" font-weight="700" text-anchor="middle">Selected threshold (−${plotThreshVal} ${unitLabel})</text>
 
       <!-- Non-inferiority Pain Line -->
       <line x1="${pad.left}" y1="${yMargin}" x2="${width - pad.right}" y2="${yMargin}" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,4" />
       <text x="${width - pad.right - 10}" y="${yMargin - 6}" fill="#f59e0b" font-size="10" text-anchor="end">Pain Non-Inferiority (+${marginVal} VAS)</text>
 
       <!-- Axis Labels -->
-      <text x="${width / 2}" y="${height - 15}" fill="var(--text-secondary)" font-size="12" font-weight="700" text-anchor="middle">24-h Cumulative Opioid Sparing [MD, mg IV MME] (Favors Intervention ← | → Favors Control)</text>
+      <text x="${width / 2}" y="${height - 15}" fill="var(--text-secondary)" font-size="12" font-weight="700" text-anchor="middle">24-h Opioid Difference [${unitLabel}] (Favors Intervention ← | → Favors Control)</text>
       <text x="-${height / 2}" y="20" fill="var(--text-secondary)" font-size="12" font-weight="700" text-anchor="middle" transform="rotate(-90)">24-h Pain Intensity Difference [MD, VAS 0–10]</text>
   `;
 
-  validStudies.forEach(s => {
-    const cx = scaleX(s.mcid.opioid_md);
+  for (let tick=0; tick<=4; tick++) {
+    const x=minX+(maxX-minX)*tick/4, y=minY+(maxY-minY)*tick/4;
+    svg += `<text x="${scaleX(x)}" y="${height-pad.bottom+16}" fill="#94a3b8" font-size="9" text-anchor="middle">${x.toFixed(1)}</text><text x="${pad.left-8}" y="${scaleY(y)+3}" fill="#94a3b8" font-size="9" text-anchor="end">${y.toFixed(1)}</text>`;
+  }
+
+  validStudies.forEach((s,index) => {
+    const cx = scaleX(plottedOpioid(s));
     const painVal = typeof s.mcid.pain_md === 'number' ? s.mcid.pain_md : 0.0;
     const cy = scaleY(painVal);
     const color = s.modality === 'TEAS' ? '#38bdf8' : '#a78bfa';
@@ -651,7 +654,7 @@ function renderMCIDStudio() {
         <circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.5">
           <title>${s.key} (${s.modality} vs ${s.comparator_short})\nOpioid MD: ${s.mcid.opioid_md} mg MME\nPain MD: ${painVal.toFixed(2)} VAS\nSurgery: ${s.surgery_category}</title>
         </circle>
-        <text x="${cx}" y="${cy - r - 3}" fill="#e2e8f0" font-size="9" text-anchor="middle" font-weight="600">${s.author} '${String(s.year).slice(2)}</text>
+        <text x="${cx}" y="${cy - r - 3 - (index%2)*14}" fill="#e2e8f0" font-size="9" text-anchor="middle" font-weight="600">${s.author} '${String(s.year).slice(2)}</text>
       </g>
     `;
   });
@@ -662,16 +665,9 @@ function renderMCIDStudio() {
   const copyReportBtn = document.getElementById('btn-export-mcid-report');
   if (copyReportBtn) {
     copyReportBtn.onclick = () => {
-      const summary = `PAIRED OPIOID + PAIN ANALYSIS (k = ${validStudies.length} trials, N = ${totalN.toLocaleString()}):
-Review: Perioperative TEAS & EA Systematic Review (Lund University, Mendoza et al.)
-- Prespecified Opioid Clinical Threshold: ${threshLabel} reduction (0–24h IV MME).
-- Prespecified Pain Non-Inferiority Boundary: ≤ +${marginVal} on 0–10 VAS scale (upper 95% CI).
-- Analyzed Paired Reporting Trials: ${validStudies.length} RCTs (N = ${totalN.toLocaleString()}).
-- Quadrant 1 (Optimal Synergistic: Sparing ${threshLabel} + Pain Relief): ${q1} trials (${((q1/total)*100).toFixed(1)}%).
-- Quadrant 2 (Sub-Threshold Opioid Sparing + Pain Relief): ${q2} trials (${((q2/total)*100).toFixed(1)}%).
-- Quadrant 3 (Opioid Sparing with Pain Compromise > +${marginVal} VAS): ${q3} trials (${((q3/total)*100).toFixed(1)}%).
-- Quadrant 4 (Ineffective / Null): ${q4} trials (${((q4/total)*100).toFixed(1)}%).
-Conclusion: Among trials with paired analyzable opioid and pain outcomes, no study-level point estimate exceeded the prespecified pain-worsening margin (+${marginVal} VAS). This study-level analysis does not establish zero risk of pain worsening at the individual-patient level. ${(((q1+q2)/total)*100).toFixed(1)}% of paired trials showed point estimates favouring both opioid sparing and pain reduction.`;
+      const summary = `Exploratory paired opioid–pain view: k=${validStudies.length}, N=${totalN}.\nSelected threshold: ${primaryCut} ${unitLabel}; pain point-estimate margin: +${marginVal}.\n`+
+        labels.map((label,i)=>`${label}: ${groups[i].length}; ${groups[i].map(s=>s.key).join(', ') || 'none'}`).join('\n')+
+        '\nThese point-estimate classifications do not establish non-inferiority or individual-patient safety.';
       navigator.clipboard.writeText(summary).then(() => {
         const orig = copyReportBtn.innerText;
         copyReportBtn.innerText = '✅ Paired Report Copied!';
@@ -683,7 +679,7 @@ Conclusion: Among trials with paired analyzable opioid and pain outcomes, no stu
 
 // 1. KPI Cards
 function renderKPIs() {
-  const filtered = getFilteredStudies(true);
+  const filtered = getFilteredStudies(false);
 
   const studyCountEl = document.getElementById('kpi-study-count');
   if (studyCountEl) {
@@ -763,6 +759,8 @@ function renderOverview() {
 
   const surgContainer = document.getElementById('overview-surgery-bars');
   if (surgContainer) {
+    const heading=surgContainer.closest('.dashboard-card')?.querySelector('h2');
+    if (heading) heading.textContent=`Surgical Specialties Distribution (${filtered.length} Trials)`;
     surgContainer.innerHTML = Object.entries(surgCounts)
       .sort((a, b) => b[1] - a[1])
       .map(([cat, cnt]) => {
@@ -778,7 +776,7 @@ function renderOverview() {
             </div>
           </div>
         `;
-      }).join('');
+      }).join('') || '<p>No studies match the current filters.</p>';
   }
 
   const teasCount = filtered.filter(s => s.modality === 'TEAS').length;
@@ -923,7 +921,7 @@ function inquiryDisposition(s) {
 
 // 3. Study Explorer Table
 function renderStudyExplorer() {
-  const filtered = getFilteredStudies(true);
+  const filtered = getFilteredStudies(false);
   const tbody = document.getElementById('explorer-table-body');
   if (!tbody) return;
 
@@ -956,7 +954,7 @@ function renderStudyExplorer() {
         <td><button class="btn-preset" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;" onclick="event.stopPropagation(); openStudyDrawer('${s.id}')">Details</button></td>
       </tr>
     `;
-  }).join('');
+  }).join('') || '<tr><td colspan="9">No studies match the current filters.</td></tr>';
 
   const ctxEl = document.getElementById('explorer-rob-context');
   if (ctxEl) {
@@ -975,6 +973,11 @@ function renderStudyExplorer() {
 
 // 4. RoB 2 Matrix (Result-Specific and Summary View)
 function renderRoB2Matrix() {
+  const coveragePanel=document.getElementById('secondary-rob-coverage');
+  if (coveragePanel) {
+    const rows=window.V33_DATA.result_rob2_coverage;
+    coveragePanel.innerHTML='<h3>Current Secondary Result Coverage</h3><p>Pending judgments are not borrowed from another outcome. Drafts remain unadjudicated. This register covers the saved secondary analysis sets and is not altered by the study filters.</p><div style="overflow-x:auto"><table class="forest-table"><thead><tr><th>Study / contrast</th><th>Result</th><th>Status</th></tr></thead><tbody>'+rows.map(r=>`<tr><td>${pwEsc(r.study)}<br><small>${pwEsc(r.comparison_id)}</small></td><td>${pwEsc(r.result_assessed)}</td><td>${pwEsc(r.assessment_status)}${r.overall?' — '+pwEsc(r.overall):''}</td></tr>`).join('')+'</tbody></table></div>';
+  }
   const filtered = getFilteredStudies(false);
   const tbody = document.getElementById('rob2-table-body');
   if (!tbody) return;
@@ -1026,13 +1029,13 @@ function renderRoB2Matrix() {
         <td style="font-size: 0.75rem; color: var(--text-secondary); max-width: 380px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${rationale}</td>
       </tr>
     `;
-  }).join('');
+  }).join('') || '<tr><td colspan="8">No studies match the current filters.</td></tr>';
 
   if (statusBadge) {
     if (activeOutcome === 'summary') {
-      statusBadge.innerHTML = `<span class="badge badge-indigo">Study-Level Overview: ${window.STUDIES_DATA.length} Studies</span>`;
+      statusBadge.innerHTML = `<span class="badge badge-indigo">Study-Level Overview: ${filtered.length} Studies</span>`;
     } else {
-      statusBadge.innerHTML = `<span class="badge badge-emerald">Assessed for Outcome: ${assessedCount}</span> <span class="badge badge-indigo" style="margin-left: 6px;">Outcome Not Reported: ${unmeasuredCount}</span>`;
+      statusBadge.innerHTML = `<span class="badge badge-emerald">Assessed for Outcome: ${assessedCount}</span> <span class="badge badge-indigo" style="margin-left: 6px;">Pending or not assessed: ${unmeasuredCount}</span>`;
     }
   }
 }
@@ -1060,7 +1063,7 @@ function renderStataSecondary() {
 // 5. Real-Time Dynamic Meta-Analysis Lab & Forest Plot (Objectives 1, 2, 3, 5, 6)
 function renderMetaLab() {
   renderStataSecondary();
-  const filtered = getFilteredStudies(true);
+  const filtered = getFilteredStudies(false);
   const isBinary = ['ponv_24h', 'rescue_analgesia'].includes(currentOutcome);
   const tbody = document.getElementById('forest-table-body');
   if (!tbody) return;
@@ -1068,8 +1071,8 @@ function renderMetaLab() {
   const validStudies = filtered.filter(s => {
     if (!s.outcomes || !s.outcomes[currentOutcome]) return false;
     const oc = s.outcomes[currentOutcome];
-    if (isBinary) return typeof oc.rr === 'number' && !isNaN(oc.rr);
-    return typeof oc.mean_diff === 'number' && !isNaN(oc.mean_diff);
+    if (isBinary) return oc.rr>0 && oc.ci_low>0 && oc.ci_upp>oc.ci_low && (oc.arm1_total ?? oc.arm1_n)>0 && (oc.arm2_total ?? oc.arm2_n)>0;
+    return Number.isFinite(oc.mean_diff) && Number.isFinite(oc.se) && oc.se>0 && oc.arm1_n>0 && oc.arm2_n>0;
   });
 
   if (validStudies.length === 0) {
@@ -1119,6 +1122,11 @@ function renderMetaLab() {
     };
   }
 
+  if (groupingFn && filterModality === 'all' && !['none','stratum'].includes(currentSubgroup)) {
+    const selectedGrouping = groupingFn;
+    groupingFn = s => `${s.stratum} — ${selectedGrouping(s) || 'Unreported'}`;
+  }
+
   // Set up X axis scale
   let minVal = -30, maxVal = 10;
   if (!isBinary && overallMeta.studyStats && overallMeta.studyStats.length > 0) {
@@ -1133,23 +1141,23 @@ function renderMetaLab() {
 
   function renderStudyRow(s, st, isSub = false) {
     const isChecked = includedStudyIds.has(s.id);
-    const isOverridden = !!simOverrides[s.id];
+    const isOverridden = false; // Hypothetical changes are confined to the inquiry simulator.
     const oc = s.outcomes[currentOutcome];
     if (!oc) return '';
 
     let colInt = '', colCtrl = '', colEffect = '', xMid = zeroX, xLow = zeroX, xUpp = zeroX, weightPct = st ? st.weight_pct : 0;
     if (isBinary) {
-      const n1 = oc.arm1_total || oc.arm1_n || 30;
-      const n2 = oc.arm2_total || oc.arm2_n || 30;
-      colInt = `${oc.arm1_events || 0} / ${n1} (${(((oc.arm1_events||0)/n1)*100).toFixed(1)}%)`;
-      colCtrl = `${oc.arm2_events || 0} / ${n2} (${(((oc.arm2_events||0)/n2)*100).toFixed(1)}%)`;
+      const n1 = oc.arm1_total ?? oc.arm1_n;
+      const n2 = oc.arm2_total ?? oc.arm2_n;
+      colInt = Number.isFinite(oc.arm1_events) ? `${oc.arm1_events} / ${n1} (${(oc.arm1_events/n1*100).toFixed(1)}%)` : `Events unavailable (n=${n1})`;
+      colCtrl = Number.isFinite(oc.arm2_events) ? `${oc.arm2_events} / ${n2} (${(oc.arm2_events/n2*100).toFixed(1)}%)` : `Events unavailable (n=${n2})`;
       colEffect = `RR ${oc.rr.toFixed(2)} [${oc.ci_low.toFixed(2)}, ${oc.ci_upp.toFixed(2)}]`;
       xMid = toX(Math.log(Math.max(0.01, oc.rr)));
       xLow = toX(Math.log(Math.max(0.01, oc.ci_low)));
       xUpp = toX(Math.log(Math.max(0.01, oc.ci_upp)));
     } else {
-      colInt = `${oc.arm1_mean !== undefined ? oc.arm1_mean.toFixed(1) : '-'} ± ${oc.arm1_sd !== undefined ? oc.arm1_sd.toFixed(1) : '-'} (n=${oc.arm1_n || 30})`;
-      colCtrl = `${oc.arm2_mean !== undefined ? oc.arm2_mean.toFixed(1) : '-'} ± ${oc.arm2_sd !== undefined ? oc.arm2_sd.toFixed(1) : '-'} (n=${oc.arm2_n || 30})`;
+      colInt = `${Number.isFinite(oc.arm1_mean) ? oc.arm1_mean.toFixed(1) : '—'} ± ${Number.isFinite(oc.arm1_sd) ? oc.arm1_sd.toFixed(1) : '—'} (n=${oc.arm1_n ?? '—'})`;
+      colCtrl = `${Number.isFinite(oc.arm2_mean) ? oc.arm2_mean.toFixed(1) : '—'} ± ${Number.isFinite(oc.arm2_sd) ? oc.arm2_sd.toFixed(1) : '—'} (n=${oc.arm2_n ?? '—'})`;
       const ciL = st ? st.yi - 1.96 * st.se : oc.ci_low;
       const ciU = st ? st.yi + 1.96 * st.se : oc.ci_upp;
       const effVal = st ? st.yi : oc.mean_diff;
@@ -1219,8 +1227,15 @@ function renderMetaLab() {
         </tr>
       `;
 
-      subMeta.studyStats.forEach(st => {
-        const fullStudy = validStudies.find(s => s.id === st.id);
+      subMeta.studyStats.sort((a,b) => {
+        const sa=a.study || validStudies.find(s=>s.id===a.id), sb=b.study || validStudies.find(s=>s.id===b.id);
+        if(currentSort==='effect_desc') return b.yi-a.yi;
+        if(currentSort==='weight_desc') return b.weight_pct-a.weight_pct;
+        if(currentSort==='year_desc') return sb.year-sa.year;
+        if(currentSort==='name_asc') return sa.author.localeCompare(sb.author);
+        return a.yi-b.yi;
+      }).forEach(st => {
+        const fullStudy = st.study || validStudies.find(s => s.id === st.id);
         if (fullStudy) html += renderStudyRow(fullStudy, st, true);
       });
 
@@ -1240,7 +1255,7 @@ function renderMetaLab() {
 
       html += `
         <tr class="subgroup-forest-diamond">
-          <td colspan="3" style="font-size: 0.76rem; color: #818cf8; text-transform: uppercase;">Subgroup Pooled (${grp}):</td>
+          <td colspan="3" style="font-size: 0.76rem; color: #818cf8; text-transform: uppercase;">${subMeta.k===1?"Single study":"Subgroup Pooled"} (${grp}):</td>
           <td colspan="2" style="font-size: 0.75rem; color: var(--text-secondary);">k = ${subMeta.k} | N = ${subMeta.total_n.toLocaleString()}</td>
           <td style="font-weight: 700; color: #34d399; font-size: 0.8rem;">${subEffText}</td>
           <td style="color: var(--text-muted); font-size: 0.72rem;">Sub-total</td>
@@ -1274,9 +1289,9 @@ function renderMetaLab() {
               <div>
                 <strong style="color: #fff;">🔒 Protocol Synthesis Standard:</strong>
                 TEAS and electroacupuncture (EA) will not be combined in a grand pooled estimate.
-                Subgroup diamonds above represent independent REML + Hartung–Knapp modality strata.
+                Subgroup diamonds above represent independent DerSimonian–Laird modality strata.
               </div>
-              <span class="badge badge-indigo">Stata 19.5 Validated</span>
+              <span class="badge badge-indigo">Exploratory browser calculation</span>
             </div>
           </td>
         </tr>
@@ -1300,7 +1315,7 @@ function renderMetaLab() {
 
       html += `
         <tr style="background: rgba(99, 102, 241, 0.12); font-weight: 800; border-top: 2px solid var(--accent-primary);">
-          <td colspan="3" style="font-size: 0.85rem; color: #fff;">${filterModality} STRATUM POOLED EFFECT (Random-Effects, REML):</td>
+          <td colspan="3" style="font-size: 0.85rem; color: #fff;">${filterModality} ${overallMeta.k===1?"SINGLE STUDY":"STRATUM POOLED EFFECT (Random-Effects, DL)"}:</td>
           <td colspan="2" style="font-size: 0.78rem; color: var(--text-secondary);">k = ${overallMeta.k} trials | N = ${overallMeta.total_n.toLocaleString()} patients</td>
           <td style="font-size: 0.95rem; color: #34d399;">${ovEffText}</td>
           <td style="color: var(--text-accent);">100%</td>
@@ -1341,7 +1356,7 @@ let isStataConsoleExpanded = false;
 
 function renderSensitivitySandbox() {
   loadStataTerminalLog();
-  renderLeaveOneOutTable();
+  switchLooMode('primary');
 }
 
 const PRIMARY_LOO_DATA = [
@@ -1377,24 +1392,10 @@ function switchLooMode(mode) {
   if (metaEl) metaEl.innerText = 'Primary 24-h Opioid Synthesis • k = 7 Strict Trials (N = 676)';
   if (footEl) footEl.innerText = 'Baseline complete primary synthesis (k=7, N=676): Pooled MD = −9.907 mg IV MME [95% KH CI: −20.079 to +0.265], p = 0.0545, τ² = 113.911, I² = 98.57%. All models estimated via REML.';
   if (calloutGrid) {
-    calloutGrid.innerHTML = `
-      <div style="background: rgba(99, 102, 241, 0.08); border-left: 3px solid #6366f1; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
-        <strong style="color: #a5b4fc;">1. Directional Stability:</strong>
-        <div>Pooled MD remains consistently negative (opioid-sparing) across all 7 study omissions, ranging from <strong>−5.831 mg</strong> (omitting Chen 2020) to <strong>−11.665 mg</strong> (omitting Yang 2024).</div>
-      </div>
-      <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid #f59e0b; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
-        <strong style="color: #fbbf24;">2. Hartung–Knapp Sensitivity:</strong>
-        <div>Across all 7 iterations (100%), the Hartung–Knapp 95% confidence interval crosses zero (p = 0.050 to 0.116), confirming that statistical non-significance under Hartung–Knapp is completely robust to single-trial exclusion.</div>
-      </div>
-      <div style="background: rgba(6, 182, 212, 0.08); border-left: 3px solid #06b6d4; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
-        <strong style="color: #67e8f9;">3. Variance Drivers (Chen 1998 &amp; Seevaunnamtum 2016):</strong>
-        <div>Chen 1998 (MD −21.0 mg) and Seevaunnamtum 2016 (MD −12.56 mg) account for the greatest between-study heterogeneity: omitting either materially reduces between-trial variance (see the leave-one-out table for the resulting pooled estimates; per-omission τ² is not reported by Stata’s leave-one-out summaryce).</div>
-      </div>
-      <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.76rem; color: #cbd5e1; line-height: 1.5;">
-        <strong style="color: #34d399;">4. Clinical Benchmark Consistency:</strong>
-        <div>Across all 7 iterations, neither the pooled point estimate nor the CI bound reached the prespecified primary 10 mg IV MME benchmark (point estimates range from −5.83 to −11.67 mg).</div>
-      </div>
-    `;
+    const rows=PRIMARY_LOO_DATA;
+    const crossing=rows.filter(r=>r.kh_ci_low<=0 && r.kh_ci_upp>=0).length;
+    const benchmark=rows.filter(r=>r.pooled_md<=-10).length;
+    calloutGrid.innerHTML=`<p>${crossing} of ${rows.length} Hartung–Knapp intervals include zero. Omitting Yang 2024 gives p=0.0498; crossing p=0.05 does not change the review conclusion.</p><p>${benchmark} omission-model point estimates reach a 10 mg reduction. A point estimate reaching a benchmark is not proof of a clinically important effect.</p>`;
   }
   renderLeaveOneOutTable();
 }
@@ -1413,8 +1414,8 @@ function renderLeaveOneOutTable() {
     const khBadge = row.kh_sig 
       ? '<span class="badge badge-emerald" style="font-size: 0.68rem; padding: 2px 6px;">Sig (p &lt; 0.05)</span>' 
       : '<span class="badge badge-amber" style="font-size: 0.68rem; padding: 2px 6px;">p = ' + row.kh_p_val.toFixed(4) + '</span>';
-    const isSpecial = row.omitted_canonical_name.includes('Chen 1998') || row.omitted_canonical_name.includes('Seevaunnamtum');
-    const badgeLabel = 'Variance Driver';
+    const isSpecial = Math.abs(row.dfbetas) > 1;
+    const badgeLabel = '|DFBETAS| > 1';
     const rowStyle = isSpecial ? 'background: rgba(99, 102, 241, 0.08); font-weight: 600;' : '';
 
     return `
@@ -1454,128 +1455,7 @@ function loadStataTerminalLog() {
       cachedStataLog = text;
       el.innerText = text;
     })
-    .catch(() => {
-      el.innerText = `----------------------------------------------------------------------------------------------------
-      name:  <unnamed>
-       log:  06_FINAL_ANALYSIS_V26/02_STATA/logs/01_opioid24_primary.log
-  log type:  text
- opened on:   5 Sep 2026, 19:52:52
-
-. * 1. LOAD AUTHORITATIVE LOCKED v32 PRIMARY OPIOID DATASET (7 STRICT DIRECT TRIALS)
-. use "06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.dta", clear
-. keep if inc_primary == 1
-(7 observations loaded)
-
-. * 2. PRIMARY OUTCOME SYNTHESIS: CONTINUOUS 24-H OPIOID CONSUMPTION (IV MME mg)
-. meta set md_mme se_mme, studylabel(study_unit) eslabel("Mean Difference (mg IV MME)")
-  Model: Random effects | Method: REML | SE adjustment: Knapp–Hartung
-
-==================================================================
-PRIMARY SYNTHESIS 1: STRICT DIRECT REPORTED TRIALS (k = 7, N = 676)
-Random-Effects REML + Hartung-Knapp (Knapp–Hartung) Adjustment
-==================================================================
-
-. meta summarize if inc_primary == 1, random(reml) se(kh) predinterval
-Meta-analysis summary                             Number of studies =      7
-Random-effects model                              Heterogeneity:
-Method: REML                                                  tau2 = 113.9105
-SE adjustment: Knapp–Hartung                                I2 (%) =   98.57
-                                                                H2 =   69.89
-----------------------------------------------------------------------------
-                    Study |    Effect size    [95% conf. interval]  % weight
---------------------------+-------------------------------------------------
-                Chen 1998 |        -21.000     -32.962      -9.038     11.69
-                Chen 2020 |        -28.190     -31.681     -24.699     15.09
-           El-Rakshy 2009 |         -1.600      -8.888       5.688     13.83
-                  He 2026 |         -0.600      -1.733       0.533     15.47
-       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.27
-               Szmit 2021 |         -7.700     -10.623      -4.777     15.21
-                Yang 2024 |         -0.300      -1.703       1.103     15.44
---------------------------+-------------------------------------------------
-                    theta |         -9.907     -20.079       0.265
-----------------------------------------------------------------------------
-95% prediction interval for theta: [-39.350, 19.536]
-Test of theta = 0: t(6) = -2.38                          Prob > |t| = 0.0545
-Test of homogeneity: Q = chi2(6) = 254.61                 Prob > Q = 0.0000
-
-==================================================================
-PRIMARY SYNTHESIS 1B: ESTIMATOR SENSITIVITY — DerSimonian-Laird Model
-==================================================================
-. meta summarize, random(dl) se(kh)
-Meta-analysis summary                             Number of studies =      7
-Method: DerSimonian–Laird                                     tau2 = 68.5143
-SE adjustment: Knapp–Hartung                                I2 (%) =   97.64
-----------------------------------------------------------------------------
-                    theta |         -9.726     -19.933       0.481
-----------------------------------------------------------------------------
-Test of theta = 0: t(6) = -2.33                          Prob > |t| = 0.0585
-Unadjusted Wald Normal 95% CI: [-16.256, -3.196], z = -2.92, p = 0.0035
-(Demonstrates artificial significance generated by unadjusted DL model)
-
-==================================================================
-MODALITY SUBGROUPS (REML + Hartung-Knapp)
-==================================================================
-1. TEAS vs Sham (k = 4: Chen 1998, Chen 2020, He 2026, Szmit 2021; N = 337):
-   theta = -13.995 mg IV MME [95% CI: -34.181, 6.190] | t(3) = -2.21, p = 0.1145
-   tau2 = 156.8823 | I2 (%) = 98.59%
-
-2. EA vs Control / Usual Care (k = 3: El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024; N = 339):
-   theta = -3.936 mg IV MME [95% CI: -19.773, 11.902] | t(2) = -1.13, p = 0.3969
-   tau2 = 28.4714 | I2 (%) = 77.15%
-
-3. Meta-Regression Test for Modality Difference (TEAS vs EA):
-   Coefficient = -9.324 mg IV MME [95% CI: -30.443, 11.795] | t(5) = -1.13, p = 0.3079
-
-==================================================================
-SENSITIVITY ANALYSES: PRIMARY 24-H OPIOID
-==================================================================
-1. Exclude High Risk of Bias Study (El-Rakshy 2009) [k = 6, N = 620]:
-   theta = -11.273 mg IV MME [95% CI: -23.182, 0.636] | t(5) = -2.42, p = 0.0591
-   tau2 = 123.5992 | I2 (%) = 98.87%
-
-2. Standardized Effect Size: Hedges' g SMD (k = 7, N = 676):
-   Hedges' g = -0.967 [95% CI: -2.086, 0.153] | t(6) = -1.94, p = 0.0790
-   tau2 = 1.3660 | I2 (%) = 96.50%
-
-==================================================================
-TARGETS A–F SUMMARY SYNTHESES (STATA 19.5 BE - REML + KH)
-==================================================================
-Target A (0–48 h Opioid Sparing, mg IV MME):
-   Strict k = 3 RCTs (Chen 2020, Zhang 2023, An 2014; N = 1,999)
-   theta = -10.268 [95% CI: -34.835, 14.299] | t(2) = -1.80, p = 0.2139
-   Mandatory sensitivity excl. An 2014 (k = 2): MD = -2.433 [-8.700, 3.834], p = 0.1273
-
-Target B (0–72 h Opioid Consumption, mg IV Morphine):
-   Strict exact 72h: k = 1 (Yang 2024 alone: MD = -0.500 [-4.078, 3.078], p = 0.784)
-   Broader model incl. Wong 2006 (k = 2): MD = -1.471 [-34.423, 31.482], p = 0.6716
-
-Target C (Pain Intensity at Rest ~24h, VAS 0–10):
-   Strict at rest ~24h: k = 2 RCTs (Xing 2022, Liu 2021; N = 158; both High RoB)
-   theta = -0.177 [95% CI: -0.683, 0.330] | t(1) = -1.63, p = 0.1413
-   tau2 = 0.0000 | I2 = 0.00%
-
-Target D (Postoperative Nausea & Vomiting, Stratified Risk Ratios):
-   Stratum 1: Composite PONV 0–24h (k = 2): RR = 0.560 [95% CI: 0.139, 2.257], p = 0.1191
-   Stratum 2: Composite PONV 0–48h (k = 2): RR = 0.523 [95% CI: 0.216, 1.267], p = 0.0682
-   Stratum 3: Nausea 0–24h (k = 3, adds Szmit 2021): RR = 0.603 [95% CI: 0.303, 1.203], p = 0.0877
-   Stratum 5: Vomiting 0–24h (k = 2): RR = 0.575 [95% CI: 0.025, 13.370], p = 0.2682
-
-Target E (Time to First Postoperative Flatus, Hours):
-   k = 6 RCTs (Zhou 2025, Yang 2020, Yang 2024, Xing 2022, Lu 2022, Ng 2013; N = 571)
-   theta = -2.004 hours [95% CI: -3.142, -0.866] | t(5) = -4.56, p = 0.0062
-   tau2 = 0.0000 | I2 = 0.00% | SMD Hedges' g = -0.456, p = 0.0002
-
-Target F (Exploratory Outcomes):
-   Intraoperative remifentanil mass: k = 7 RCTs | MD = -114.21 µg [-213.72, -14.70], p = 0.0308
-   Postoperative rescue opioid: k = 4 strict RCTs | Risk Ratio = 0.505 [0.340, 0.750], p = 0.0119
-
-==================================================================
-STATA AUDITED SYNTHESIS EXECUTION COMPLETED SUCCESSFULLY
-==================================================================
-. log close
-  closed on: 5 Sep 2026, 19:53:02 (Exit Code 0)
-----------------------------------------------------------------------------------------------------`;
-    });
+    .catch(() => { el.textContent='Execution log could not be loaded. Use the downloadable log link or retry when connectivity is restored.'; });
 }
 
 function copyStataConsoleLog() {
@@ -1610,9 +1490,9 @@ function initInquirySimulator() {
   const select = document.getElementById('sim-study-select');
   if (!select) return;
 
-  const inqStudies = window.STUDIES_DATA.filter(s => s.author_inquiry && s.author_inquiry.has_inquiry);
+  const inqStudies = window.STUDIES_DATA.filter(s => s.outcomes.opioid_24h && Number.isFinite(s.outcomes.opioid_24h.se));
   select.innerHTML = inqStudies.map(s => `
-    <option value="${s.id}">${s.key} — ${s.author_inquiry.corresponding_author}</option>
+    <option value="${s.id}">${s.key}</option>
   `).join('');
 
   loadStudyIntoSimulator();
@@ -1633,14 +1513,7 @@ function loadStudyIntoSimulator() {
   if (valSpan) valSpan.innerText = `${currentVal < 0 ? '−' : '+'}${Math.abs(currentVal).toFixed(1)} mg MME`;
 
   const info = document.getElementById('sim-study-info');
-  if (info && s.author_inquiry) {
-    info.innerHTML = `
-      <p><strong>Target Needed:</strong> ${s.author_inquiry.target_data}</p>
-      <p><strong>Author &amp; Email:</strong> ${s.author_inquiry.corresponding_author} (<code>${s.author_inquiry.email}</code>)</p>
-      <p><strong>Institution:</strong> ${s.author_inquiry.institution}</p>
-      <p><strong>Baseline Extraction:</strong> ${s.author_inquiry.current_assumed_value}</p>
-    `;
-  }
+  if (info) info.textContent = `${s.key}: hypothetical changes to the existing primary result. Observed standard error ${s.outcomes.opioid_24h.se.toFixed(3)} is retained. No missing author data or variance is invented. Changes stay in this simulator.`;
 
   updateSimulationComparison();
 }
@@ -1650,27 +1523,27 @@ function updateSimStudyMD(val) {
   const valSpan = document.getElementById('sim-md-val');
   if (valSpan) valSpan.innerText = `${numVal < 0 ? '−' : '+'}${Math.abs(numVal).toFixed(1)} mg MME`;
 
-  simOverrides[activeSimStudyId] = { mean_diff: numVal, se: 0.8 };
+  simOverrides[activeSimStudyId] = { mean_diff: numVal };
   updateSimulationComparison();
   renderKPIs();
 }
 
 function applySimScenario(scenario) {
-  const inqStudies = window.STUDIES_DATA.filter(s => s.author_inquiry && s.author_inquiry.has_inquiry);
+  const inqStudies = window.STUDIES_DATA.filter(s => s.outcomes.opioid_24h && Number.isFinite(s.outcomes.opioid_24h.se));
   
   if (scenario === 'baseline') {
     simOverrides = {};
   } else if (scenario === 'optimistic') {
     inqStudies.forEach(s => {
-      simOverrides[s.id] = { mean_diff: -12.7, se: 0.8 };
+      simOverrides[s.id] = { mean_diff: -10 };
     });
   } else if (scenario === 'conservative') {
     inqStudies.forEach(s => {
-      simOverrides[s.id] = { mean_diff: -3.5, se: 0.8 };
+      simOverrides[s.id] = { mean_diff: -5 };
     });
   } else if (scenario === 'worst') {
     inqStudies.forEach(s => {
-      simOverrides[s.id] = { mean_diff: 0.0, se: 1.0 };
+      simOverrides[s.id] = { mean_diff: 0 };
     });
   }
 
@@ -1689,6 +1562,12 @@ function updateSimulationComparison() {
   const simStudies = getFilteredStudies(true);
   const simMeta = MetaEngine.runContinuousMeta(simStudies, 'opioid_24h');
 
+  if (!baseMeta.k) {
+    ['sim-baseline-md','sim-post-md'].forEach(id => document.getElementById(id).textContent='No matching primary data');
+    ['sim-baseline-ci','sim-post-ci','sim-delta-badge'].forEach(id => document.getElementById(id).textContent='');
+    return;
+  }
+
   // Update Baseline
   const baseMdElem = document.getElementById('sim-baseline-md');
   const baseCiElem = document.getElementById('sim-baseline-ci');
@@ -1703,10 +1582,10 @@ function updateSimulationComparison() {
   if (postCiElem) postCiElem.innerText = `95% CI [${simMeta.ci_low.toFixed(2)}, ${simMeta.ci_upp.toFixed(2)}] • I² = ${simMeta.i2.toFixed(1)}%`;
 
   if (deltaBadge) {
-    const isExceedingExploratory = Math.abs(simMeta.pooled_md) >= 5.0;
+    const isExceedingExploratory = simMeta.pooled_md <= -5.0;
     if (isExceedingExploratory) {
       deltaBadge.className = 'delta-badge badge-emerald';
-      deltaBadge.innerText = `Robust: Exceeds exploratory threshold (≥ 5 mg MME) by ${(Math.abs(simMeta.pooled_md) - 5.0).toFixed(1)} mg`;
+      deltaBadge.innerText = `Hypothetical point estimate exceeds exploratory threshold (≥ 5 mg MME) by ${(Math.abs(simMeta.pooled_md) - 5.0).toFixed(1)} mg`;
     } else {
       deltaBadge.className = 'delta-badge badge-amber';
       deltaBadge.innerText = `Below exploratory threshold (5 mg)`;
@@ -1811,7 +1690,12 @@ function runLiveEquiCalc() {
   const explElem = document.getElementById('calc-equi-expl');
   if (!drugSelect || !doseInput || !resElem) return;
 
-  const dose = parseFloat(doseInput.value) || 0;
+  const dose = Number(doseInput.value);
+  if (!doseInput.value.trim() || !Number.isFinite(dose) || dose < 0) {
+    resElem.textContent='Enter a non-negative dose.';
+    if (explElem) explElem.textContent='No conversion calculated.';
+    return;
+  }
   const drug = drugSelect.value;
   let factor = 1.0;
   let unit = 'mg';
@@ -1868,7 +1752,7 @@ function runLiveEquiCalc() {
   const mme = (dose * factor).toFixed(2);
   resElem.innerText = `${mme} mg IV MME`;
   if (explElem) {
-    explElem.innerText = `${dose} ${unit} ${drugName} × ${factor} = ${mme} mg IV Morphine Milligram Equivalents`;
+    explElem.innerText = `${dose} ${unit} ${drugName} × ${factor} = ${mme} mg IV Morphine Milligram Equivalents. Research conversion only; does not update extracted data.${['sufentanil_mcg','hydromorphone_mg'].includes(drug) ? ' This factor remains unresolved pending independent verification.' : ''}`;
   }
 }
 
@@ -1881,27 +1765,13 @@ function runLiveStatCalc() {
   const explElem = document.getElementById('calc-stat-expl');
   if (!nInput || !q1Input || !mInput || !q3Input || !resElem) return;
 
-  const n = parseInt(nInput.value) || 50;
-  const q1 = parseFloat(q1Input.value) || 0;
-  const m = parseFloat(mInput.value) || 0;
-  const q3 = parseFloat(q3Input.value) || 0;
-
-  // Wan et al. 2014: Mean ~ (q1 + m + q3) / 3
-  const wanMean = (q1 + m + q3) / 3;
-
-  // Luo et al. 2018 optimal weighting
-  const w1 = 0.5 - (0.7 / n);
-  const w2 = 1.4 / n;
-  const luoMean = (w1 * q1) + (w2 * m) + (w1 * q3);
-
-  // Shi et al. / Cochrane approximation: SD ~ (q3 - q1) / 1.35
-  const iqr = q3 - q1;
-  const sd = iqr > 0 ? (iqr / 1.35) : 0;
-
-  resElem.innerText = `${wanMean.toFixed(2)} ± ${sd.toFixed(2)}`;
-  if (explElem) {
-    explElem.innerHTML = `Wan (2014) Mean: <strong>${wanMean.toFixed(2)}</strong> | Luo (2018) Optimal Mean: <strong>${luoMean.toFixed(2)}</strong> | SD: <strong>${sd.toFixed(2)}</strong> (IQR/1.35)`;
+  const n=Number(nInput.value), q1=Number(q1Input.value), m=Number(mInput.value), q3=Number(q3Input.value);
+  if (![nInput,q1Input,mInput,q3Input].every(x=>x.value.trim()) || !Number.isInteger(n) || n<2 || ![q1,m,q3].every(Number.isFinite) || q1>m || m>q3) {
+    resElem.textContent='Enter N ≥ 2 and ordered Q1 ≤ median ≤ Q3.';
+    explElem.textContent='No value calculated from invalid or missing inputs.'; return;
   }
+  resElem.textContent=`Median ${m} (IQR ${q1}–${q3}), N=${n}`;
+  explElem.textContent='Preserved as reported. This review does not convert median/IQR to mean/SD for pooling.';
 }
 
 function filterInquirySearch(val) {
@@ -2290,102 +2160,42 @@ function renderDirectionOfEvidence() {
 
 // 9. Export Hub
 function renderExportHub() {
-  const filtered = getFilteredStudies(true);
-  const stataBox = document.getElementById('stata-code-snippet');
-  const rBox = document.getElementById('r-code-snippet');
-
-  if (stataBox) {
-    stataBox.innerText = `* Stata 19.5 Replication Script for Perioperative TEAS & EA Review
-* Generated dynamically from Interactive Dashboard (${filtered.length} studies)
-
-clear all
-import delimited "perioperative_teas_ea_dataset.csv", clear
-
-* Primary 24-h Opioid Consumption Meta-Analysis
-meta esize arm1_n arm1_mean arm1_sd arm2_n arm2_mean arm2_sd, esize(hedgesg) studylabel(study_key)
-meta summarize, random(reml)
-meta forestplot, subgroup(modality) crop(-30 10) title("24-Hour Opioid Consumption")
-meta funnelplot, contour(1 5 10)
-meta bias, egger
-
-* Objective 6: 24-h PCA Pump Demands & Presses Meta-Analysis
-meta esize pca_arm1_n pca_arm1_mean pca_arm1_sd pca_arm2_n pca_arm2_mean pca_arm2_sd, esize(mdiff) studylabel(study_key)
-meta summarize, random(reml)
-meta forestplot, title("24-Hour PCA Pump Demands / Presses")
-
-* Objective 6: Postoperative Rescue Analgesia Requirements (Risk Ratio)
-meta esize rescue_arm1_events rescue_arm1_n rescue_arm2_events rescue_arm2_n, esize(lnrr) studylabel(study_key)
-meta summarize, random(reml)
-meta forestplot, title("Rescue Analgesia Requirements (Risk Ratio)")
-
-* Objective 6: Intraoperative Remifentanil Requirements (µg)
-meta esize remi_arm1_n remi_arm1_mean remi_arm1_sd remi_arm2_n remi_arm2_mean remi_arm2_sd, esize(mdiff) studylabel(study_key)
-meta summarize, random(reml)
-meta forestplot, title("Intraoperative Remifentanil Sparing (µg)")
-`;
-  }
-
-  if (rBox) {
-    rBox.innerText = `# R metafor Replication Script for Perioperative TEAS & EA Review
-library(metafor)
-
-dat <- read.csv("perioperative_teas_ea_dataset.csv")
-
-# Primary 24-h Opioid Sparing
-res <- rma(measure="MD", m1i=arm1_mean, sd1i=arm1_sd, n1i=arm1_n,
-           m2i=arm2_mean, sd2i=arm2_sd, n2i=arm2_n,
-           data=dat, method="REML", test="knapp-hartung")
-summary(res)
-forest(res, slab=dat$study_key)
-
-# Objective 6: 24-h PCA Pump Demands
-res_pca <- rma(measure="MD", m1i=pca_arm1_mean, sd1i=pca_arm1_sd, n1i=pca_arm1_n,
-               m2i=pca_arm2_mean, sd2i=pca_arm2_sd, n2i=pca_arm2_n,
-               data=dat, method="REML", test="knapp-hartung")
-forest(res_pca, slab=dat$study_key, xlab="PCA Pump Demands MD")
-
-# Objective 6: Rescue Analgesia (Risk Ratio)
-res_rescue <- rma(measure="RR", ai=rescue_arm1_events, n1i=rescue_arm1_n,
-                  ci=rescue_arm2_events, n2i=rescue_arm2_n,
-                  data=dat, method="REML")
-forest(res_rescue, slab=dat$study_key, xlab="Rescue Analgesia Risk Ratio")
-
-# Objective 6: Intraoperative Remifentanil
-res_remi <- rma(measure="MD", m1i=remi_arm1_mean, sd1i=remi_arm1_sd, n1i=remi_arm1_n,
-                m2i=remi_arm2_mean, sd2i=remi_arm2_sd, n2i=remi_arm2_n,
-                data=dat, method="REML", test="knapp-hartung")
-forest(res_remi, slab=dat$study_key, xlab="Intraoperative Remifentanil MD (µg)")
-`;
-  }
+  document.getElementById('stata-code-snippet').textContent = `* Authoritative replication: run from the repository root.
+do "06_FINAL_ANALYSIS_V26/02_STATA/00_master.do"
+* Current supplementary secondary analyses:
+do "08_V33_MASTER/02_STATA/20_v33_secondary.do"
+* The filtered browser CSV is for inspection, not a substitute for the locked input datasets.`;
+  document.getElementById('r-code-snippet').textContent = `# Inspect the downloaded Stata results in R; this does not refit the models.
+results <- read.csv("master_reconciled_results_v26.csv")
+print(results)
+# Reproduce inferential results using the Stata pipeline above.`;
 }
 
 // Export Filtered CSV
 function exportDatasetCSV() {
-  const filtered = getFilteredStudies(true);
-  // RoB 2 is result-specific: export the judgment for the outcome being exported,
-  // and keep the study-level overview in a separate, explicitly named column.
-  let csv = "study_id,study_key,author,year,country,modality,comparator,surgery_category,total_n,arm1_n,arm1_mean,arm1_sd,arm2_n,arm2_mean,arm2_sd,mean_diff,exported_outcome,rob2_result_specific,rob2_study_level_overview,author_inquiry_disposition\n";
-  filtered.forEach(s => {
-    const out = s.outcomes[currentOutcome] || { arm1_n: 30, arm1_mean: 0, arm1_sd: 0, arm2_n: 30, arm2_mean: 0, arm2_sd: 0, mean_diff: 0 };
-    const inqStatus = s.author_inquiry && s.author_inquiry.has_inquiry ? s.author_inquiry.status : 'Complete';
+  const filtered = getFilteredStudies(false);
+  const fields = ['study_id','study_key','author','year','country','modality','comparator','surgery_category','total_n',
+    'arm1_n','arm1_mean','arm1_sd','arm1_events','arm2_n','arm2_mean','arm2_sd','arm2_events','mean_diff','rr','se','ci_low','ci_upp','unit',
+    'comparison_id','source_dataset','source_note','exported_outcome','data_status','rob2_result_specific','rob2_study_level_overview','author_inquiry_disposition'];
+  const rows = filtered.map(s => {
+    const out = s.outcomes[currentOutcome] || {};
     const rr = resultRob(s, currentOutcome);
-    const rrLabel = (rr.state === 'not-assessed') ? 'Not assessed'
-      : (rr.state === 'pending') ? 'Pending'
-      : (rr.overall || 'Not assessed');
-    csv += `"${s.id}","${s.key}","${s.author}",${s.year},"${s.country}","${s.modality}","${s.comparator_short}","${s.surgery_category}",${s.population.total_n},${out.arm1_n},${out.arm1_mean},${out.arm1_sd},${out.arm2_n},${out.arm2_mean},${out.arm2_sd},${out.mean_diff},"${currentOutcome}","${rrLabel}","${s.rob2.overall}","${inqStatus}"\n`;
+    return {study_id:s.id,study_key:s.key,author:s.author,year:s.year,country:s.country,
+      modality:s.modality,comparator:s.comparator_short,surgery_category:s.surgery_category,total_n:s.population.total_n,
+      ...out,arm1_n:out.arm1_total ?? out.arm1_n,arm2_n:out.arm2_total ?? out.arm2_n,exported_outcome:currentOutcome,
+      data_status:Number.isFinite(out.mean_diff)||Number.isFinite(out.rr)?'Available':'Not available in this dataset',
+      rob2_result_specific:rr.overall || (rr.state==='pending'?'Pending':'Not assessed'),
+      rob2_study_level_overview:s.rob2?.overall,
+      author_inquiry_disposition:inquiryDisposition(s)?.label || 'No inquiry recorded'};
   });
-
-  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.setAttribute('href', url);
-  link.setAttribute('download', `perioperative_teas_ea_filtered_${filtered.length}_studies.csv`);
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  const cell = value => '"'+String(value ?? '').replaceAll('"','""')+'"';
+  const csv = [fields.join(','), ...rows.map(row=>fields.map(key=>cell(row[key])).join(','))].join('\n')+'\n';
+  const url = URL.createObjectURL(new Blob([csv], {type:'text/csv;charset=utf-8;'}));
+  const link = document.createElement('a'); link.href=url;
+  link.download=`perioperative_teas_ea_${currentOutcome}_${filtered.length}_studies.csv`;
+  link.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 
-// Study Drawer Details Modal
 function openStudyDrawer(id) {
   const s = window.STUDIES_DATA.find(st => st.id === id);
   if (!s) return;
@@ -2396,10 +2206,10 @@ function openStudyDrawer(id) {
 
   const inqHtml = s.author_inquiry && s.author_inquiry.has_inquiry ? `
     <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 1rem; border-radius: 4px; font-size: 0.8rem; line-height: 1.6; margin-bottom: 1.5rem;">
-      <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: #fbbf24; margin-bottom: 0.3rem;">Author Data Clarification Inquiry Active</h4>
+      <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: #fbbf24; margin-bottom: 0.3rem;">Recorded Author Clarification Request</h4>
       <p><strong>Target Requested:</strong> ${s.author_inquiry.target_data}</p>
       <p><strong>Corresponding Author:</strong> ${s.author_inquiry.corresponding_author} (<code>${s.author_inquiry.email}</code>)</p>
-      <p><strong>Current Assumed Value:</strong> ${s.author_inquiry.current_assumed_value}</p>
+      <p><strong>Historical inquiry entry (not an extracted value):</strong> ${s.author_inquiry.current_assumed_value}</p>
     </div>
   ` : '';
 
@@ -2428,7 +2238,7 @@ function openStudyDrawer(id) {
           <p><strong>Frequency:</strong> ${s.stricta.frequency_raw}</p>
           <p><strong>Intensity:</strong> ${s.stricta.intensity}</p>
           <p><strong>Timing:</strong> ${s.stricta.timing_raw}</p>
-          <p><strong>Duration:</strong> ${s.stricta.duration}</p>
+          <p><strong>Duration:</strong> ${s.stricta.duration_raw || "Not recorded"}</p>
           <p><strong>Stimulator/Electrode:</strong> ${s.stricta.needle_depth}</p>
         </div>
       </div>
@@ -2479,11 +2289,11 @@ function openStudyDrawer(id) {
                 <span>D3: <strong>${a.d3}</strong></span>
                 <span>D4: <strong>${a.d4}</strong></span>
                 <span>D5: <strong>${a.d5}</strong></span>
-                <span style="color: var(--text-muted); font-style: italic; margin-left: auto;">${a.assessment_file}</span>
+                <span style="color: var(--text-muted); font-style: italic; margin-left: auto;">${a.assessment_file || a.rationale || "Source reference not recorded"}</span>
               </div>
             </div>
           `).join('')}
-          <div style="font-size: 0.68rem; color: var(--text-muted); font-style: italic; margin-top: 0.3rem;">* Other review outcomes not reported or measured in this trial (no domain judgments imputed).</div>
+          <div style="font-size: 0.68rem; color: var(--text-muted); font-style: italic; margin-top: 0.3rem;">* Other results may be unassessed or absent from this browser dataset; see the current secondary coverage register. No domain judgments are imputed.</div>
         </div>
       ` : '<div style="font-size: 0.72rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem;">Trial assessed using consensus study-level signaling resolution.</div>'}
     </div>
@@ -2502,6 +2312,8 @@ function openStudyDrawer(id) {
     outcomesHtml += `<p><strong>💊 Primary (0–24h Opioid Consumption):</strong> <span style="color: #34d399; font-weight: 700;">MD ${op.mean_diff < 0 ? '−' : '+'}${Math.abs(op.mean_diff)} mg IV MME</span> (95% CI: [${op.ci_low}, ${op.ci_upp}], SE: ${op.se})${nativeDetail}${derDetail}</p>`;
   } else if (s.outcomes && s.outcomes.opioid_24h) {
     outcomesHtml += `<p><strong>💊 Primary (0–24h Opioid Consumption):</strong> <span style="color: #f59e0b; font-weight: 600;">${s.outcomes.opioid_24h.status}</span> — ${s.outcomes.opioid_24h.note || 'No continuous 24h opioid mean/SD tabulated.'}</p>`;
+  } else {
+    outcomesHtml += '<p><strong>Primary 0–24h analysis:</strong> This study does not contribute to the locked seven-study primary set. Consult the contribution map for its result-level disposition.</p>';
   }
 
   if (s.outcomes && s.outcomes.opioid_48h && typeof s.outcomes.opioid_48h.mean_diff === 'number') {
@@ -2522,12 +2334,12 @@ function openStudyDrawer(id) {
 
   if (s.outcomes && s.outcomes.pain_rest_24h && typeof s.outcomes.pain_rest_24h.mean_diff === 'number') {
     const pn = s.outcomes.pain_rest_24h;
-    outcomesHtml += `<p><strong>🩹 24-h Pain Intensity at Rest:</strong> <span style="color: #38bdf8; font-weight: 700;">MD ${pn.mean_diff < 0 ? '−' : '+'}${Math.abs(pn.mean_diff)} VAS</span> (95% CI: [${pn.ci_low}, ${pn.ci_upp}]) • ${pn.arm1_mean} ± ${pn.arm1_sd} vs ${pn.arm2_mean} ± ${pn.arm2_sd}</p>`;
+    outcomesHtml += `<p><strong>🩹 24-h Pain Intensity at Rest:</strong> <span style="color: #38bdf8; font-weight: 700;">MD ${pn.mean_diff < 0 ? '−' : '+'}${Math.abs(pn.mean_diff)} VAS</span> (95% CI: [${pn.ci_low ?? "Not recorded"}, ${pn.ci_upp ?? "Not recorded"}]) • ${pn.arm1_mean ?? "Not recorded"} ± ${pn.arm1_sd ?? "Not recorded"} vs ${pn.arm2_mean ?? "Not recorded"} ± ${pn.arm2_sd ?? "Not recorded"}</p>`;
   }
 
   if (s.outcomes && s.outcomes.pca_presses_24h && typeof s.outcomes.pca_presses_24h.mean_diff === 'number') {
     const pc = s.outcomes.pca_presses_24h;
-    outcomesHtml += `<p><strong>🔘 PCA Demands / Presses (24h):</strong> <span style="color: #34d399; font-weight: 700;">MD ${pc.mean_diff < 0 ? '−' : '+'}${Math.abs(pc.mean_diff)} ${pc.unit || 'presses'}</span> (95% CI: [${pc.ci_low}, ${pc.ci_upp}], P=${pc.p_val}) • ${pc.arm1_mean} ± ${pc.arm1_sd} vs ${pc.arm2_mean} ± ${pc.arm2_sd} (${pc.metric_name})</p>`;
+    outcomesHtml += `<p><strong>🔘 PCA Demands / Presses (24h):</strong> <span style="color: #34d399; font-weight: 700;">MD ${pc.mean_diff < 0 ? '−' : '+'}${Math.abs(pc.mean_diff)} ${pc.unit || 'presses'}</span> (95% CI: [${pc.ci_low ?? "Not recorded"}, ${pc.ci_upp ?? "Not recorded"}], P=${pc.p_val ?? "Not recorded"}) • ${pc.arm1_mean ?? "Not recorded"} ± ${pc.arm1_sd ?? "Not recorded"} vs ${pc.arm2_mean ?? "Not recorded"} ± ${pc.arm2_sd ?? "Not recorded"} (${pc.metric_name ?? "Not recorded"})</p>`;
   } else if (s.outcomes && s.outcomes.pca_presses_24h && s.outcomes.pca_presses_24h.status && s.outcomes.pca_presses_24h.status !== 'Unreported in Source Paper') {
     const pc = s.outcomes.pca_presses_24h;
     outcomesHtml += `<p><strong>🔘 PCA Demands / Presses:</strong> <span style="color: #38bdf8; font-weight: 600;">${pc.metric_name || pc.status}</span> — ${pc.note || ''}</p>`;
@@ -2535,33 +2347,33 @@ function openStudyDrawer(id) {
 
   if (s.outcomes && s.outcomes.rescue_analgesia && typeof s.outcomes.rescue_analgesia.rr === 'number') {
     const ra = s.outcomes.rescue_analgesia;
-    outcomesHtml += `<p><strong>🆘 Supplemental / Rescue Analgesia:</strong> <span style="color: #34d399; font-weight: 700;">RR ${ra.rr}</span> (95% CI: [${ra.ci_low}, ${ra.ci_upp}], P=${ra.p_val}) • ${ra.arm1_events}/${ra.arm1_n} vs ${ra.arm2_events}/${ra.arm2_n} (${ra.definition}) — <em>${ra.note || ''}</em></p>`;
+    outcomesHtml += `<p><strong>🆘 Supplemental / Rescue Analgesia:</strong> <span style="color: #34d399; font-weight: 700;">RR ${ra.rr ?? "Not recorded"}</span> (95% CI: [${ra.ci_low ?? "Not recorded"}, ${ra.ci_upp ?? "Not recorded"}], P=${ra.p_val ?? "Not recorded"}) • ${ra.arm1_events ?? "Not recorded"}/${ra.arm1_total ?? ra.arm1_n ?? "Not recorded"} vs ${ra.arm2_events ?? "Not recorded"}/${ra.arm2_total ?? ra.arm2_n ?? "Not recorded"} (${ra.definition ?? "Not recorded"}) — <em>${ra.note || ''}</em></p>`;
   } else if (s.outcomes && s.outcomes.rescue_analgesia && s.outcomes.rescue_analgesia.status && s.outcomes.rescue_analgesia.status !== 'Unreported in Source Paper') {
     const ra = s.outcomes.rescue_analgesia;
-    outcomesHtml += `<p><strong>🆘 Supplemental / Rescue Analgesia:</strong> <span style="color: #f59e0b; font-weight: 600;">${ra.status}</span> — ${ra.note || ''}</p>`;
+    outcomesHtml += `<p><strong>🆘 Supplemental / Rescue Analgesia:</strong> <span style="color: #f59e0b; font-weight: 600;">${ra.status ?? "Not recorded"}</span> — ${ra.note || ''}</p>`;
   }
 
   if (s.outcomes && s.outcomes.intraop_opioid && typeof s.outcomes.intraop_opioid.mean_diff === 'number') {
     const io = s.outcomes.intraop_opioid;
-    outcomesHtml += `<p><strong>💉 Intraoperative Opioid Requirements:</strong> <span style="color: #38bdf8; font-weight: 700;">MD ${io.mean_diff < 0 ? '−' : '+'}${Math.abs(io.mean_diff)} ${io.unit} ${io.drug}</span> (95% CI: [${io.ci_low}, ${io.ci_upp}], P=${io.p_val}) • ${io.arm1_mean} ± ${io.arm1_sd} vs ${io.arm2_mean} ± ${io.arm2_sd} — <em>${io.note || ''}</em></p>`;
+    outcomesHtml += `<p><strong>💉 Intraoperative Opioid Requirements:</strong> <span style="color: #38bdf8; font-weight: 700;">MD ${io.mean_diff < 0 ? '−' : '+'}${Math.abs(io.mean_diff)} ${io.unit ?? "Not recorded"} ${io.drug ?? "Not recorded"}</span> (95% CI: [${io.ci_low ?? "Not recorded"}, ${io.ci_upp ?? "Not recorded"}], P=${io.p_val ?? "Not recorded"}) • ${io.arm1_mean ?? "Not recorded"} ± ${io.arm1_sd ?? "Not recorded"} vs ${io.arm2_mean ?? "Not recorded"} ± ${io.arm2_sd ?? "Not recorded"} — <em>${io.note || ''}</em></p>`;
   } else if (s.outcomes && s.outcomes.intraop_opioid && s.outcomes.intraop_opioid.status && s.outcomes.intraop_opioid.status !== 'Unreported in Source Paper') {
     const io = s.outcomes.intraop_opioid;
-    outcomesHtml += `<p><strong>💉 Intraoperative Opioid Requirements:</strong> <span style="color: #38bdf8; font-weight: 600;">${io.status}</span> — ${io.note || ''}</p>`;
+    outcomesHtml += `<p><strong>💉 Intraoperative Opioid Requirements:</strong> <span style="color: #38bdf8; font-weight: 600;">${io.status ?? "Not recorded"}</span> — ${io.note || ''}</p>`;
   }
 
   if (s.outcomes && s.outcomes.ponv_24h && typeof s.outcomes.ponv_24h.rr === 'number') {
     const po = s.outcomes.ponv_24h;
-    outcomesHtml += `<p><strong>🤢 Postoperative Nausea &amp; Vomiting (0–24h):</strong> <span style="color: #a78bfa; font-weight: 700;">RR ${po.rr}</span> (95% CI: [${po.ci_low}, ${po.ci_upp}]) • ${po.arm1_events}/${po.arm1_n} vs ${po.arm2_events}/${po.arm2_n}</p>`;
+    outcomesHtml += `<p><strong>🤢 Postoperative Nausea &amp; Vomiting (0–24h):</strong> <span style="color: #a78bfa; font-weight: 700;">RR ${po.rr ?? "Not recorded"}</span> (95% CI: [${po.ci_low ?? "Not recorded"}, ${po.ci_upp ?? "Not recorded"}]) • ${po.arm1_events ?? "Not recorded"}/${po.arm1_total ?? po.arm1_n ?? "Not recorded"} vs ${po.arm2_events ?? "Not recorded"}/${po.arm2_total ?? po.arm2_n ?? "Not recorded"}</p>`;
   }
 
   if (s.outcomes && s.outcomes.flatus_time && typeof s.outcomes.flatus_time.mean_diff === 'number') {
     const fl = s.outcomes.flatus_time;
-    outcomesHtml += `<p><strong>⏱️ Time to First Flatus (GI Recovery):</strong> <span style="color: #34d399; font-weight: 700;">MD ${fl.mean_diff < 0 ? '−' : '+'}${Math.abs(fl.mean_diff)} hours</span> (95% CI: [${fl.ci_low}, ${fl.ci_upp}]) • ${fl.arm1_mean} ± ${fl.arm1_sd} vs ${fl.arm2_mean} ± ${fl.arm2_sd} h</p>`;
+    outcomesHtml += `<p><strong>⏱️ Time to First Flatus (GI Recovery):</strong> <span style="color: #34d399; font-weight: 700;">MD ${fl.mean_diff < 0 ? '−' : '+'}${Math.abs(fl.mean_diff)} hours</span> (95% CI: [${fl.ci_low ?? "Not recorded"}, ${fl.ci_upp ?? "Not recorded"}]) • ${fl.arm1_mean ?? "Not recorded"} ± ${fl.arm1_sd ?? "Not recorded"} vs ${fl.arm2_mean ?? "Not recorded"} ± ${fl.arm2_sd ?? "Not recorded"} h</p>`;
   }
 
   if (s.outcomes && s.outcomes.hospital_stay && typeof s.outcomes.hospital_stay.mean_diff === 'number') {
     const hs = s.outcomes.hospital_stay;
-    outcomesHtml += `<p><strong>🏥 Length of Hospital Stay:</strong> MD ${hs.mean_diff < 0 ? '−' : '+'}${Math.abs(hs.mean_diff)} days • ${hs.arm1_mean} ± ${hs.arm1_sd} vs ${hs.arm2_mean} ± ${hs.arm2_sd} d</p>`;
+    outcomesHtml += `<p><strong>🏥 Length of Hospital Stay:</strong> MD ${hs.mean_diff < 0 ? '−' : '+'}${Math.abs(hs.mean_diff)} days • ${hs.arm1_mean ?? "Not recorded"} ± ${hs.arm1_sd ?? "Not recorded"} vs ${hs.arm2_mean ?? "Not recorded"} ± ${hs.arm2_sd ?? "Not recorded"} d</p>`;
   }
 
   if (s.audit && s.audit.classification) {
@@ -2639,18 +2451,7 @@ function loadMetaRegTerminalLog() {
       cachedMetaRegLog = text;
       el.innerText = text;
     })
-    .catch(() => {
-      el.innerText = `StataNow 19.5 BE - 09_subgroups_metareg.do (v32 locked pipeline)
--------------------------------------------------------------------------------
-Subgroup: TEAS  k=4  MD = -13.9953 mg IV MME  [-34.1808, +6.1903]  p = 0.1145
-Subgroup: EA    k=3  MD = -3.9358 mg IV MME  [-19.7732, +11.9016]  p = 0.3969
-Meta-regression (modality, reference EA): beta = -9.3242 [-30.4431, +11.7946], p = 0.3079
-AUDIT: k=7 < 10. Meta-regression is underpowered; stratified subgroup presentation
-with Hartung-Knapp adjustment is authoritative. No multivariable model fitted.
-Egger-type small-study-effect testing not performed (k < 10).
--------------------------------------------------------------------------------
-(Live log could not be fetched; the values above are from results_subgroups_metareg.csv.)`;
-    });
+    .catch(() => { el.textContent='Execution log could not be loaded. Use the downloadable log link or retry when connectivity is restored.'; });
 }
 
 function renderMetaRegStudio() {

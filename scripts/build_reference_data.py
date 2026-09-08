@@ -1,10 +1,57 @@
 #!/usr/bin/env python3
 """Generate browser reference data from preserved search and outreach sources."""
 import json
+import csv
 import re
+import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def browser_targets(studies):
+    """Mirror established Stata target selections, preserving estimand boundaries."""
+    def canonical(name):
+        return re.sub(r'^#\d+\s*-\s*', '', name).strip()
+    names={canonical(s['key']):s['key'] for s in studies}
+    specs=[('opioid_48h','A_48h'),('opioid_72h','B_72h'),('pain_rest_24h','C_pain24h'),
+           ('ponv_24h','D_ponv'),('flatus_time','E_flatus'),('intraop_opioid','F_exploratory'),('rescue_analgesia','F_exploratory')]
+    targets={}
+    for key,file in specs:
+        result={}
+        path=ROOT/f'06_FINAL_ANALYSIS_V26/01_DATA/target_{file}.csv'
+        for r in csv.DictReader(path.open()):
+            if key=='intraop_opioid':
+                if r['target']!='F-intra' or r['unit'] not in ('µg remifentanil','mg remifentanil') or not r['mean_i']: continue
+            elif r['include_strict']!='1': continue
+            if key=='ponv_24h' and r['endpoint_stratum']!='D_PONV_0-24h': continue
+            if key=='rescue_analgesia' and (r['target']!='F-rescue-opioid' or r['unit']!='participants' or not r['events_i']): continue
+            name=names[canonical(r['study'])]
+            if name in result: raise ValueError(f'Duplicate browser contrast: {key}/{name}')
+            o={'arm1_n':float(r['n_i']),'arm2_n':float(r['n_c']), 'unit':r['unit'],
+               'comparison_id':r['comparison_id'],'source_dataset':str(path.relative_to(ROOT)),
+               'source_note':r['source_qc'], 'result_rob':r['result_rob']}
+            if key in ('ponv_24h','rescue_analgesia'):
+                a,c=float(r['events_i']),float(r['events_c'])
+                o.update(arm1_events=a,arm2_events=c)
+                rr=(a/o['arm1_n'])/(c/o['arm2_n'])
+                se=math.sqrt(1/a-1/o['arm1_n']+1/c-1/o['arm2_n'])
+                o.update(rr=rr,se=se,ci_low=math.exp(math.log(rr)-1.96*se),ci_upp=math.exp(math.log(rr)+1.96*se))
+            else:
+                suffix='_mme' if key=='opioid_48h' else '_hours' if key=='flatus_time' else ''
+                factor=1000 if key=='intraop_opioid' and r['unit']=='mg remifentanil' else 1
+                for arm,letter in ((1,'i'),(2,'c')):
+                    for stat in ('mean','sd'): o[f'arm{arm}_{stat}']=float(r[f'{stat}_{letter}{suffix}'])*factor
+                mdcol='md'+suffix; secol='se'+suffix
+                md=float(r[mdcol]) if r.get(mdcol) else o['arm1_mean']-o['arm2_mean']
+                se=float(r[secol]) if r.get(secol) else math.sqrt(o['arm1_sd']**2/o['arm1_n']+o['arm2_sd']**2/o['arm2_n'])
+                o.update(mean_diff=md,se=se,ci_low=md-1.96*se,ci_upp=md+1.96*se)
+                if key in ('opioid_48h','opioid_72h'): o['unit']='mg IV MME'
+                if key=='intraop_opioid': o['unit']='µg remifentanil'
+            result[name]=o
+        targets[key]=result
+    assert {k:len(v) for k,v in targets.items()}==dict(opioid_48h=3,opioid_72h=1,pain_rest_24h=2,ponv_24h=2,flatus_time=6,intraop_opioid=7,rescue_analgesia=4)
+    return targets
 
 
 def search_data():
@@ -55,9 +102,20 @@ def main():
                         if isinstance(value, dict) and any(isinstance(value.get(k), (int, float))
                                                           for k in ('mean_diff', 'rr'))})
     payloads = {
+        'browser_targets': ('BROWSER_TARGETS', browser_targets(studies)),
         'author_inquiries': ('AUTHOR_INQUIRIES', json.loads((ROOT / 'dashboard/author_inquiries.json').read_text())),
         'search_strategies': ('SEARCH_STRATEGIES', search_data()),
         'meta_outcomes': ('META_OUTCOMES', available),
+        'primary_browser': ('PRIMARY_BROWSER', {
+            r['study_unit']: {
+                **{target: float(r[source]) for target, source in {
+                    'arm1_n':'n_i','arm2_n':'n_c','arm1_mean':'mean_i_mme',
+                    'arm1_sd':'sd_i_mme','arm2_mean':'mean_c_mme','arm2_sd':'sd_c_mme',
+                    'mean_diff':'md_mme','se':'se_mme','ci_low':'ci_low_mme','ci_upp':'ci_upp_mme'}.items()},
+                'unit':'mg IV MME', 'comparison_id':r['comparison_id']
+            } for r in csv.DictReader((ROOT / '06_FINAL_ANALYSIS_V26/01_DATA/opioid_24h_primary.csv').open())
+            if r['inc_primary']=='1'
+        }),
     }
     for filename, (variable, payload) in payloads.items():
         (ROOT / f'dashboard/{filename}.js').write_text(

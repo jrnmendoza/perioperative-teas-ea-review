@@ -53,6 +53,8 @@ CACHE_BUSTED_ASSETS = (
     "styles.css", "primary_pathway.js", "tiered_v33.js", "v33_data.js", "data.js",
     "translations.js", "reader_assist.js", "meta_engine.js", "app.js",
     "author_inquiries.js", "search_strategies.js", "meta_outcomes.js",
+    "primary_browser.js",
+    "browser_targets.js",
 )
 CACHE_BUSTED_FETCH_PATHS = (
     "v26/02_STATA/logs/01_opioid24_primary.log",
