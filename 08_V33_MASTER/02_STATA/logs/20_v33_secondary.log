@@ -1,0 +1,892 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/08_V33_MASTER/02_STATA/logs/20_
+> v33_secondary.log
+  log type:  text
+ opened on:   8 Sep 2026, 10:17:45
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "20: v33 SECONDARY ANALYSES"
+20: v33 SECONDARY ANALYSES
+
+. di as txt "Engine : StataNow `c(stata_version)'  edition=`c(edition)'  flavor=`c(flavor)'"
+Engine : StataNow 19.5  edition=BE  flavor=IC
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. tempname RES
+
+. postfile `RES' str40 analysis_id str60 outcome str28 measure double(k estimate ///
+>     ci_low ci_high p_value tau2 i2 q_stat pi_low pi_high) str24 model ///
+>     using "08_V33_MASTER/03_RESULTS/results_v33_secondary.dta", replace
+
+. 
+. * ------------------------------------------------------------------------------
+. * 1. BINARY RESCUE OPIOID USE, 0-24 h / POD1  (risk ratio)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "1. BINARY RESCUE OPIOID USE (0-24 h / POD1) -- log risk ratio"
+1. BINARY RESCUE OPIOID USE (0-24 h / POD1) -- log risk ratio
+
+. di as txt "   Opioid rescue only. NSAID rescue is a different estimand."
+   Opioid rescue only. NSAID rescue is a different estimand.
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. import delimited "08_V33_MASTER/01_DATA/v33_rescue_opioid_binary_24h.csv", ///
+>     clear varnames(1) case(preserve) encoding("utf-8")
+(14 vars, 3 obs)
+
+. list study intervention comparator events_i n_i events_c n_c zero_cell, clean noobs
+
+              study         intervention                                comparator   events_i   n_i 
+>   events_c   n_c   zero_c~l  
+            Tu 2024   Postoperative TEAS                           Sham/no current          3    57 
+>          6    58          0  
+    Liu 2026 (burn)   Pre-induction TEAS                         Placebo/sham TEAS          3    43 
+>          8    43          0  
+            Yu 2020    Preoperative TEAS   Control/no current (electrodes applied)         13    30 
+>         24    30          0  
+
+. count
+  3
+
+. local k1 = r(N)
+
+. 
+. meta set lnrr se_lnrr, studylabel(study) eslabel("Log risk ratio")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Log risk ratio
+          Variable: lnrr
+
+         Precision
+         Std. err.: se_lnrr
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh) eform(Risk ratio)
+
+  Effect-size label: Log risk ratio
+        Effect size: lnrr
+          Std. err.: se_lnrr
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
+                                                        H2 =    1.00
+
+--------------------------------------------------------------------
+            Study |     Risk ratio    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+          Tu 2024 |          0.509       0.134       1.937      9.02
+  Liu 2026 (burn) |          0.375       0.107       1.319     10.19
+          Yu 2020 |          0.542       0.347       0.847     80.80
+------------------+-------------------------------------------------
+       exp(theta) |          0.519       0.370       0.727
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = -8.38                  Prob > |t| = 0.0140
+Test of homogeneity: Q = chi2(2) = 0.29            Prob > Q = 0.8639
+
+. matrix R1 = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+. post `RES' ("V33_RESCUE_OPIOID_RR_24H") ("Binary rescue opioid use, 0-24 h/POD1") ///
+>     ("Risk ratio") (R1[1,5]) (exp(R1[1,1])) (exp(R1[1,2])) (exp(R1[1,3])) ///
+>     (R1[1,4]) (R1[1,6]) (R1[1,7]) (R1[1,8]) (.) (.) ("REML + Hartung-Knapp")
+
+. 
+. meta forestplot, eform(Risk ratio) ///
+>     title("Binary rescue opioid use, 0-24 h / POD1", size(medium)) ///
+>     subtitle("Random-effects REML + Hartung-Knapp (k=`k1')", size(vsmall)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Log risk ratio
+        Effect size: lnrr
+          Std. err.: se_lnrr
+        Study label: study
+
+. graph export "08_V33_MASTER/04_FIGURES/forest_v33_rescue_opioid_rr.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/08_V33_MASTER/04_FIGURES/forest_v33_re
+    > scue_opioid_rr.png saved as PNG format
+
+. 
+. di as txt _n "Leave-one-out:"
+
+Leave-one-out:
+
+. meta summarize, random(reml) se(kh) leaveoneout eform(Risk ratio)
+
+  Effect-size label: Log risk ratio
+        Effect size: lnrr
+          Std. err.: se_lnrr
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      3
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+----------------------------------------------------------------
+    Omitted study |  Risk ratio    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+          Tu 2024 |       0.520       0.119       2.268    0.112
+  Liu 2026 (burn) |       0.538       0.424       0.684    0.019
+          Yu 2020 |       0.433       0.063       2.995    0.114
+------------------+---------------------------------------------
+       exp(theta) |       0.519       0.370       0.727    0.014
+----------------------------------------------------------------
+
+. 
+. * ------------------------------------------------------------------------------
+. * 2. INTRAOPERATIVE REMIFENTANIL (ug)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "2. INTRAOPERATIVE REMIFENTANIL -- mean difference, ug"
+2. INTRAOPERATIVE REMIFENTANIL -- mean difference, ug
+
+. di as txt "   mg rescaled to ug by an exact factor of 1000. No MME conversion."
+   mg rescaled to ug by an exact factor of 1000. No MME conversion.
+
+. di as txt "   Rate metrics (ug/kg/min) excluded as a different estimand."
+   Rate metrics (ug/kg/min) excluded as a different estimand.
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. import delimited "08_V33_MASTER/01_DATA/v33_intraop_remifentanil.csv", ///
+>     clear varnames(1) case(preserve) encoding("utf-8")
+(18 vars, 8 obs)
+
+. list study unit_src scale_factor n_i n_c md se, clean noobs
+
+            study          unit_src   scale_~r   n_i   n_c       md         se  
+       Zheng 2025   µg remifentanil          1    42    43    -56.4   7.366535  
+        Xing 2022   µg remifentanil          1    29    29   -232.8   72.33514  
+          Wu 2022   µg remifentanil          1    44    40     -254   124.3735  
+    Ntritsou 2014   µg remifentanil          1    35    35    -38.3   138.6169  
+          Lu 2021   mg remifentanil       1000   190   188     -200   62.62725  
+         Guo 2023   mg remifentanil       1000    55    55     -140    66.3462  
+         Zhu 2022   mg remifentanil       1000   100   101      -70   35.97648  
+         Pan 2023   ug remifentanil          1    52    53   -113.9   55.08216  
+
+. count
+  8
+
+. local k2 = r(N)
+
+. 
+. meta set md se, studylabel(study) eslabel("Mean difference (ug remifentanil)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 8
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean difference (ug remifentanil)
+          Variable: md
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Mean difference (ug remifentanil)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      8
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  2.7e+03
+SE adjustment: Knapp–Hartung                        I2 (%) =   57.46
+                                                        H2 =    2.35
+
+       Effect size: Mean difference (ug remifentanil)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zheng 2025 |        -56.400     -70.838     -41.962     27.98
+        Xing 2022 |       -232.800    -374.574     -91.026      9.61
+          Wu 2022 |       -254.000    -497.768     -10.232      4.18
+    Ntritsou 2014 |        -38.300    -309.984     233.384      3.46
+          Lu 2021 |       -200.000    -322.747     -77.253     11.52
+         Guo 2023 |       -140.000    -270.036      -9.964     10.74
+         Zhu 2022 |        -70.000    -140.513       0.513     19.19
+         Pan 2023 |       -113.900    -221.859      -5.941     13.32
+------------------+-------------------------------------------------
+            theta |       -116.764    -177.316     -56.211
+--------------------------------------------------------------------
+95% prediction interval for theta: [-257.496,23.969]
+
+Test of theta = 0: t(7) = -4.56                  Prob > |t| = 0.0026
+Test of homogeneity: Q = chi2(7) = 15.73           Prob > Q = 0.0277
+
+. matrix R2 = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+. local pil2 = r(pi_lb)
+
+. local piu2 = r(pi_ub)
+
+. post `RES' ("V33_INTRAOP_REMI_MD") ("Intraoperative remifentanil") ("MD (ug)") ///
+>     (R2[1,5]) (R2[1,1]) (R2[1,2]) (R2[1,3]) (R2[1,4]) (R2[1,6]) (R2[1,7]) ///
+>     (R2[1,8]) (`pil2') (`piu2') ("REML + Hartung-Knapp")
+
+. 
+. meta forestplot, ///
+>     title("Intraoperative remifentanil requirement", size(medium)) ///
+>     subtitle("Mean difference in ug; random-effects REML + Hartung-Knapp (k=`k2')", size(vsmall)) 
+> ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean difference (ug remifentanil)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+. graph export "08_V33_MASTER/04_FIGURES/forest_v33_intraop_remifentanil.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/08_V33_MASTER/04_FIGURES/forest_v33_in
+    > traop_remifentanil.png saved as PNG format
+
+. 
+. di as txt _n "Leave-one-out:"
+
+Leave-one-out:
+
+. meta summarize, random(reml) se(kh) leaveoneout
+
+  Effect-size label: Mean difference (ug remifentanil)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      8
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+             theta: Overall Mean difference (ug remifentanil)
+----------------------------------------------------------------
+    Omitted study |       theta    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+       Zheng 2025 |    -137.117    -202.685     -71.549    0.002
+        Xing 2022 |     -97.705    -153.771     -41.638    0.005
+          Wu 2022 |    -109.401    -171.663     -47.139    0.005
+    Ntritsou 2014 |    -121.358    -188.919     -53.796    0.005
+          Lu 2021 |    -100.909    -162.932     -38.887    0.007
+         Guo 2023 |    -116.522    -188.603     -44.441    0.007
+         Zhu 2022 |    -131.983    -203.312     -60.655    0.004
+         Pan 2023 |    -121.743    -195.735     -47.751    0.007
+------------------+---------------------------------------------
+            theta |    -116.764    -177.316     -56.211    0.003
+----------------------------------------------------------------
+
+. 
+. di as txt _n "SMD (scale-free) cross-check:"
+
+SMD (scale-free) cross-check:
+
+. meta set hedges_g hedges_se, studylabel(study) eslabel("Hedges g")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 8
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Hedges g
+          Variable: hedges_g
+
+         Precision
+         Std. err.: hedges_se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Hedges g
+        Effect size: hedges_g
+          Std. err.: hedges_se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      8
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.1659
+SE adjustment: Knapp–Hartung                        I2 (%) =   83.32
+                                                        H2 =    5.99
+
+--------------------------------------------------------------------
+            Study |       Hedges g    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zheng 2025 |         -1.641      -2.133      -1.150     11.35
+        Xing 2022 |         -0.834      -1.370      -0.297     10.78
+          Wu 2022 |         -0.447      -0.881      -0.014     12.09
+    Ntritsou 2014 |         -0.065      -0.534       0.403     11.64
+          Lu 2021 |         -0.328      -0.531      -0.125     14.70
+         Guo 2023 |         -0.400      -0.777      -0.022     12.79
+         Zhu 2022 |         -0.273      -0.551       0.004     13.96
+         Pan 2023 |         -0.401      -0.787      -0.014     12.68
+------------------+-------------------------------------------------
+            theta |         -0.526      -0.921      -0.131
+--------------------------------------------------------------------
+Test of theta = 0: t(7) = -3.15                  Prob > |t| = 0.0162
+Test of homogeneity: Q = chi2(7) = 30.06           Prob > Q = 0.0001
+
+. matrix R2s = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+. post `RES' ("V33_INTRAOP_REMI_SMD") ("Intraoperative remifentanil") ("Hedges g") ///
+>     (R2s[1,5]) (R2s[1,1]) (R2s[1,2]) (R2s[1,3]) (R2s[1,4]) (R2s[1,6]) (R2s[1,7]) ///
+>     (R2s[1,8]) (.) (.) ("REML + Hartung-Knapp")
+
+. 
+. * ------------------------------------------------------------------------------
+. * 3. INTRAOPERATIVE SUFENTANIL (ug)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "3. INTRAOPERATIVE SUFENTANIL -- mean difference, ug"
+3. INTRAOPERATIVE SUFENTANIL -- mean difference, ug
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. import delimited "08_V33_MASTER/01_DATA/v33_intraop_sufentanil.csv", ///
+>     clear varnames(1) case(preserve) encoding("utf-8")
+(18 vars, 5 obs)
+
+. list study intervention n_i n_c mean_i mean_c md se, clean noobs
+
+        study                                                                                       
+>        intervention   n_i   n_c   mean_i   mean_c      md         se  
+    Wang 2024                                                                      SNVP: ondansetron
+> +dexamethasone+TEAS    33    35     21.2     21.9     -.7    .764057  
+    Wang 2024                                                                      MNVP: ondansetron
+> +dexamethasone+TEAS    35    35       21     20.9      .1    .777726  
+     Liu 2015                    Multipoint intraoperative TEAS (2/100 Hz; 30 min pre-induction thro
+> ugh end of surgery)    44    44     95.6    117.7   -22.1   6.594936  
+    Song 2020   Perioperative TEAS: PC6/HT7 preoperatively; PC6/HT7/ST36/LI4 postoperatively (2/10 H
+> z; 30-min sessions)    42    43    18.54    19.09    -.55    .543587  
+     Zhu 2022                                                                             EA day bef
+> ore + 30 min before   100   101       39     37.8     1.2    .704957  
+
+. count
+  5
+
+. local k3 = r(N)
+
+. 
+. meta set md se, studylabel(study) eslabel("Mean difference (ug sufentanil)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 5
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean difference (ug sufentanil)
+          Variable: md
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Mean difference (ug sufentanil)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      5
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.3319
+SE adjustment: Knapp–Hartung                        I2 (%) =   34.60
+                                                        H2 =    1.53
+
+       Effect size: Mean difference (ug sufentanil)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Wang 2024 |         -0.700      -2.198       0.798     21.92
+        Wang 2024 |          0.100      -1.424       1.624     21.42
+         Liu 2015 |        -22.100     -35.026      -9.174      0.46
+        Song 2020 |         -0.550      -1.615       0.515     31.99
+         Zhu 2022 |          1.200      -0.182       2.582     24.21
+------------------+-------------------------------------------------
+            theta |         -0.119      -2.432       2.195
+--------------------------------------------------------------------
+95% prediction interval for theta: [-3.343, 3.105]
+
+Test of theta = 0: t(4) = -0.14                  Prob > |t| = 0.8937
+Test of homogeneity: Q = chi2(4) = 15.90           Prob > Q = 0.0032
+
+. matrix R3 = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+. local pil3 = r(pi_lb)
+
+. local piu3 = r(pi_ub)
+
+. post `RES' ("V33_INTRAOP_SUF_MD") ("Intraoperative sufentanil") ("MD (ug)") ///
+>     (R3[1,5]) (R3[1,1]) (R3[1,2]) (R3[1,3]) (R3[1,4]) (R3[1,6]) (R3[1,7]) ///
+>     (R3[1,8]) (`pil3') (`piu3') ("REML + Hartung-Knapp")
+
+. 
+. meta forestplot, ///
+>     title("Intraoperative sufentanil requirement", size(medium)) ///
+>     subtitle("Mean difference in ug; random-effects REML + Hartung-Knapp (k=`k3')", size(vsmall)) 
+> ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean difference (ug sufentanil)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+. graph export "08_V33_MASTER/04_FIGURES/forest_v33_intraop_sufentanil.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/08_V33_MASTER/04_FIGURES/forest_v33_in
+    > traop_sufentanil.png saved as PNG format
+
+. 
+. di as txt _n "Leave-one-out:"
+
+Leave-one-out:
+
+. meta summarize, random(reml) se(kh) leaveoneout
+
+  Effect-size label: Mean difference (ug sufentanil)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      5
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+             theta: Overall Mean difference (ug sufentanil)
+----------------------------------------------------------------
+    Omitted study |       theta    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+        Wang 2024 |      -3.403     -18.634      11.829    0.528
+        Wang 2024 |      -3.562     -18.529      11.404    0.504
+         Liu 2015 |      -0.020      -1.391       1.350    0.965
+        Song 2020 |      -3.443     -18.647      11.762    0.523
+         Zhu 2022 |      -3.705     -18.079      10.669    0.472
+------------------+---------------------------------------------
+            theta |      -0.119      -2.432       2.195    0.894
+----------------------------------------------------------------
+
+. 
+. * ------------------------------------------------------------------------------
+. * 4. GLOBAL QoR-40 AT ~24 h
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "4. GLOBAL QoR-40 AT ~24 h -- mean difference, QoR-40 points"
+4. GLOBAL QoR-40 AT ~24 h -- mean difference, QoR-40 points
+
+. di as txt "   QoR-15 is a different instrument and is not pooled here."
+   QoR-15 is a different instrument and is not pooled here.
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. import delimited "08_V33_MASTER/01_DATA/v33_qor40_24h.csv", ///
+>     clear varnames(1) case(preserve) encoding("utf-8")
+(15 vars, 3 obs)
+
+. list study window n_i n_c mean_i sd_i mean_c sd_c md se, clean noobs
+
+         study                        window   n_i   n_c   mean_i   sd_i   mean_c   sd_c     md     
+>     se  
+      Yao 2015          24 h postoperatively    35    36    176.5   10.2    164.8   14.7   11.7   2.
+> 995842  
+       Yu 2020   Postoperative day 1 (~24 h)    30    30   175.33   9.66   166.07   8.44   9.26   2.
+> 342002  
+    Liang 2021                    24 h (T11)    35    35    191.7    4.4    189.1    4.3    2.6   1.
+> 039918  
+
+. count
+  3
+
+. local k4 = r(N)
+
+. 
+. meta set md se, studylabel(study) eslabel("Mean difference (QoR-40 points)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean difference (QoR-40 points)
+          Variable: md
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh)
+
+  Effect-size label: Mean difference (QoR-40 points)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 19.6716
+SE adjustment: Knapp–Hartung                        I2 (%) =   82.50
+                                                        H2 =    5.71
+
+       Effect size: Mean difference (QoR-40 points)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+         Yao 2015 |         11.700       5.828      17.572     28.42
+          Yu 2020 |          9.260       4.670      13.850     32.36
+       Liang 2021 |          2.600       0.562       4.638     39.22
+------------------+-------------------------------------------------
+            theta |          7.341      -4.601      19.283
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = 2.64                   Prob > |t| = 0.1181
+Test of homogeneity: Q = chi2(2) = 13.24           Prob > Q = 0.0013
+
+. matrix R4 = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+. post `RES' ("V33_QOR40_24H_MD") ("Global QoR-40 at ~24 h") ("MD (points)") ///
+>     (R4[1,5]) (R4[1,1]) (R4[1,2]) (R4[1,3]) (R4[1,4]) (R4[1,6]) (R4[1,7]) ///
+>     (R4[1,8]) (.) (.) ("REML + Hartung-Knapp")
+
+. 
+. meta forestplot, ///
+>     title("Global QoR-40 at ~24 h", size(medium)) ///
+>     subtitle("Mean difference in QoR-40 points; REML + Hartung-Knapp (k=`k4')", size(vsmall)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean difference (QoR-40 points)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+. graph export "08_V33_MASTER/04_FIGURES/forest_v33_qor40_24h.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/08_V33_MASTER/04_FIGURES/forest_v33_qo
+    > r40_24h.png saved as PNG format
+
+. 
+. di as txt _n "Leave-one-out:"
+
+Leave-one-out:
+
+. meta summarize, random(reml) se(kh) leaveoneout
+
+  Effect-size label: Mean difference (QoR-40 points)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      3
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+             theta: Overall Mean difference (QoR-40 points)
+----------------------------------------------------------------
+    Omitted study |       theta    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+         Yao 2015 |       5.599     -36.503      47.702    0.340
+          Yu 2020 |       6.716     -50.834      64.266    0.378
+       Liang 2021 |      10.186      -4.858      25.229    0.074
+------------------+---------------------------------------------
+            theta |       7.341      -4.601      19.283    0.118
+----------------------------------------------------------------
+
+. 
+. * ------------------------------------------------------------------------------
+. * 5. TIME TO FIRST DEFECATION (h)
+. * ------------------------------------------------------------------------------
+. di as txt _n "------------------------------------------------------------------"
+
+------------------------------------------------------------------
+
+. di as txt "5. TIME TO FIRST DEFECATION -- mean difference, hours"
+5. TIME TO FIRST DEFECATION -- mean difference, hours
+
+. di as txt "------------------------------------------------------------------"
+------------------------------------------------------------------
+
+. import delimited "08_V33_MASTER/01_DATA/v33_gi_first_defecation.csv", ///
+>     clear varnames(1) case(preserve) encoding("utf-8")
+(15 vars, 7 obs)
+
+. list study n_i n_c mean_i sd_i mean_c sd_c md se, clean noobs
+
+         study   n_i   n_c   mean_i    sd_i   mean_c    sd_c      md         se  
+     Yang 2024    90    90     75.9     7.9     79.7     8.1    -3.8   1.192663  
+       Ng 2013    55    55     85.9    36.1    107.5    46.2   -21.6   7.905867  
+       Lu 2022    47    47       42      25     55.4    29.7   -13.4   5.662662  
+    Huang 2025    43    45       46       8     51.3     9.4    -5.3   1.857936  
+       Gu 2019    58    59    71.48   20.62    77.27   22.67   -5.79   4.005175  
+      Gao 2021   303   307    106.7    65.6    121.5    65.6   -14.8   5.312247  
+     Yang 2020    29    28     53.9       6     57.5     7.2    -3.6   1.758638  
+
+. count
+  7
+
+. local k5 = r(N)
+
+. 
+. meta set md se, studylabel(study) eslabel("Mean difference (hours)")
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean difference (hours)
+          Variable: md
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+. meta summarize, random(reml) se(kh) predinterval
+
+  Effect-size label: Mean difference (hours)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      7
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
+                                                        H2 =    1.00
+
+       Effect size: Mean difference (hours)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Yang 2024 |         -3.800      -6.138      -1.462     48.12
+          Ng 2013 |        -21.600     -37.095      -6.105      1.10
+          Lu 2022 |        -13.400     -24.499      -2.301      2.13
+       Huang 2025 |         -5.300      -8.941      -1.659     19.83
+          Gu 2019 |         -5.790     -13.640       2.060      4.27
+         Gao 2021 |        -14.800     -25.212      -4.388      2.43
+        Yang 2020 |         -3.600      -7.047      -0.153     22.13
+------------------+-------------------------------------------------
+            theta |         -4.805      -7.628      -1.982
+--------------------------------------------------------------------
+95% prediction interval for theta: [-7.770,-1.839]
+
+Test of theta = 0: t(6) = -4.16                  Prob > |t| = 0.0059
+Test of homogeneity: Q = chi2(6) = 11.67           Prob > Q = 0.0698
+
+. matrix R5 = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q))
+
+. local pil5 = r(pi_lb)
+
+. local piu5 = r(pi_ub)
+
+. post `RES' ("V33_GI_DEFECATION_MD") ("Time to first defecation") ("MD (hours)") ///
+>     (R5[1,5]) (R5[1,1]) (R5[1,2]) (R5[1,3]) (R5[1,4]) (R5[1,6]) (R5[1,7]) ///
+>     (R5[1,8]) (`pil5') (`piu5') ("REML + Hartung-Knapp")
+
+. 
+. meta forestplot, ///
+>     title("Time to first postoperative defecation", size(medium)) ///
+>     subtitle("Mean difference in hours; REML + Hartung-Knapp (k=`k5')", size(vsmall)) ///
+>     nullrefline nonotes
+
+  Effect-size label: Mean difference (hours)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+. graph export "08_V33_MASTER/04_FIGURES/forest_v33_gi_defecation.png", width(1800) replace
+file
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/08_V33_MASTER/04_FIGURES/forest_v33_gi
+    > _defecation.png saved as PNG format
+
+. 
+. di as txt _n "Leave-one-out:"
+
+Leave-one-out:
+
+. meta summarize, random(reml) se(kh) leaveoneout
+
+  Effect-size label: Mean difference (hours)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      7
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+             theta: Overall Mean difference (hours)
+----------------------------------------------------------------
+    Omitted study |       theta    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+        Yang 2024 |      -7.813     -13.891      -1.734    0.021
+          Ng 2013 |      -4.619      -7.168      -2.070    0.006
+          Lu 2022 |      -4.617      -7.551      -1.683    0.010
+       Huang 2025 |      -7.660     -14.170      -1.149    0.029
+          Gu 2019 |      -6.864     -12.768      -0.959    0.031
+         Gao 2021 |      -4.556      -7.286      -1.826    0.008
+        Yang 2020 |      -7.764     -13.765      -1.763    0.021
+------------------+---------------------------------------------
+            theta |      -4.805      -7.628      -1.982    0.006
+----------------------------------------------------------------
+
+. 
+. di as txt _n "Sensitivity: exclude the newly added Yang 2020 contrast"
+
+Sensitivity: exclude the newly added Yang 2020 contrast
+
+. meta summarize if study != "Yang 2020", random(reml) se(kh)
+
+  Effect-size label: Mean difference (hours)
+        Effect size: md
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      6
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 13.6794
+SE adjustment: Knapp–Hartung                        I2 (%) =   63.06
+                                                        H2 =    2.71
+
+       Effect size: Mean difference (hours)
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Yang 2024 |         -3.800      -6.138      -1.462     30.50
+          Ng 2013 |        -21.600     -37.095      -6.105      6.05
+          Lu 2022 |        -13.400     -24.499      -2.301     10.07
+       Huang 2025 |         -5.300      -8.941      -1.659     26.89
+          Gu 2019 |         -5.790     -13.640       2.060     15.50
+         Gao 2021 |        -14.800     -25.212      -4.388     10.99
+------------------+-------------------------------------------------
+            theta |         -7.764     -13.765      -1.763
+--------------------------------------------------------------------
+Test of theta = 0: t(5) = -3.33                  Prob > |t| = 0.0209
+Test of homogeneity: Q = chi2(5) = 11.07           Prob > Q = 0.0501
+
+. 
+. * ------------------------------------------------------------------------------
+. * 6. EXPORT
+. * ------------------------------------------------------------------------------
+. postclose `RES'
+
+. use "08_V33_MASTER/03_RESULTS/results_v33_secondary.dta", clear
+
+. gen master = "TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
+
+. order analysis_id outcome measure k estimate ci_low ci_high p_value tau2 i2 q_stat
+
+. export delimited "08_V33_MASTER/03_RESULTS/results_v33_secondary.csv", replace
+file 08_V33_MASTER/03_RESULTS/results_v33_secondary.csv saved
+
+. save "08_V33_MASTER/03_RESULTS/results_v33_secondary.dta", replace
+file 08_V33_MASTER/03_RESULTS/results_v33_secondary.dta saved
+
+. list analysis_id k estimate ci_low ci_high p_value i2, clean noobs
+
+                 analysis_id   k     estimate       ci_low      ci_high     p_value          i2  
+    V33_RESCUE_OPIOID_RR_24H   3    .51881229    .37037896    .72673187   .01395002   .00006323  
+         V33_INTRAOP_REMI_MD   8   -116.76359   -177.31635   -56.210817   .00260587    57.46302  
+        V33_INTRAOP_REMI_SMD   8   -.52619331   -.92137295   -.13101367   .01618441   83.316869  
+          V33_INTRAOP_SUF_MD   5   -.11858474   -2.4322144    2.1950449    .8937182   34.602407  
+            V33_QOR40_24H_MD   3     7.340984   -4.6013387    19.283307   .11814936   82.496763  
+        V33_GI_DEFECATION_MD   7   -4.8047202   -7.6277346   -1.9817058     .005914   5.499e-08  
+
+. 
+. di as txt _n "SUCCESS: v33 secondary analyses complete."
+
+SUCCESS: v33 secondary analyses complete.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/08_V33_MASTER/02_STATA/logs/20_
+> v33_secondary.log
+  log type:  text
+ closed on:   8 Sep 2026, 10:17:47
+----------------------------------------------------------------------------------------------------

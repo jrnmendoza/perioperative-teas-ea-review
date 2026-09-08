@@ -1,5 +1,4 @@
 study,comparison_id,intervention,comparator,unit_src,scale_factor,unit_analysis,multiarm,n_i,n_c,mean_i,sd_i,mean_c,sd_c,md,se,hedges_g,hedges_se
-Wu 2025,WU25_TEAS_vs_SHAM_INTRAOPSUF,PACU TEAS,Sham/no current,µg sufentanil,1.0,ug sufentanil,No,50,50,24.2,9.5,24.3,10.9,-0.1,2.044798,-0.009706,0.200001
 Wang 2024,WANG24_SNVP_ODT_vs_OD_INTRAOPSUF,SNVP: ondansetron+dexamethasone+TEAS,SNVP: ondansetron+dexamethasone,µg sufentanil,1.0,ug sufentanil,No,33,35,21.2,3.1,21.9,3.2,-0.7,0.764057,-0.219554,0.24337
 Wang 2024,WANG24_MNVP_ODT_vs_OD_INTRAOPSUF,MNVP: ondansetron+dexamethasone+TEAS,MNVP: ondansetron+dexamethasone,µg sufentanil,1.0,ug sufentanil,No,35,35,21.0,3.4,20.9,3.1,0.1,0.777726,0.030396,0.23906
 Liu 2015,LIU15_TEAS_vs_SHAM_SUFINTRA,Multipoint intraoperative TEAS (2/100 Hz; 30 min pre-induction through end of surgery),No-current sham TEAS with identical electrode placement/device setup,µg sufentanil,1.0,ug sufentanil,No,44,44,95.6,21.76,117.7,37.95,-22.1,6.594936,-0.708199,0.219782

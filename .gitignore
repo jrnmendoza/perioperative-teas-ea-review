@@ -4,6 +4,7 @@
 .vscode/
 
 # Temporary and Cache
+__pycache__/
 tmp/
 *.log
 stata.log
@@ -21,6 +22,8 @@ validate_with_stata.log
 # Same for the v33 tiered-analysis execution logs.
 !07_TIERED_V33/02_STATA/logs/
 !07_TIERED_V33/02_STATA/logs/*.log
+!08_V33_MASTER/02_STATA/logs/
+!08_V33_MASTER/02_STATA/logs/*.log
 
 # Large binary files & intermediate scraping batches
 retrieved_pdfs/

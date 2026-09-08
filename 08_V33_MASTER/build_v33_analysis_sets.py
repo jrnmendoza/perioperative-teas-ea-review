@@ -98,7 +98,7 @@ def write(name, rows, cols):
     OUT.mkdir(parents=True, exist_ok=True)
     p = OUT / f"{name}.csv"
     with p.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         for r in rows:
             w.writerow(r)
@@ -151,6 +151,11 @@ def main() -> int:
         out = []
         for r in D:
             if r["Outcome family"] != "Intraoperative opioid":
+                continue
+            # Wu 2025, 103940.pdf pp. 3018-3019: randomized only on arrival
+            # in PACU. Table 1 intraoperative doses predate randomization and
+            # intervention; they are baseline covariates, not treatment effects.
+            if r["Canonical study"] == "Wu 2025":
                 continue
             res = str(r["Outcome/result"]).lower()
             unit = str(r["Unit/scale"] or "").lower()
@@ -229,6 +234,11 @@ def main() -> int:
             continue
         if "hour" not in str(r["Unit/scale"] or "").lower():
             continue
+        # Ng 2013 has a shared EA arm. Use the sham-controlled contrast
+        # (the blinded comparison) once; retain the usual-care contrast only
+        # in the workbook and the not-pooled register.
+        if r['Canonical study'] == 'Ng 2013' and r['Comparison ID'] != 'NG13_EA_vs_SHAM_BOWEL':
+            continue
         c = cont(r)
         if not c:
             continue
@@ -246,6 +256,13 @@ def main() -> int:
     # with the reason. Published so the exclusions are visible, not implicit.
     # ---------------------------------------------------------------------
     notpooled = [
+        dict(study='Ng 2013', outcome='First bowel motion: EA vs no acupuncture',
+             window='Time to event', stat='Alternative contrast with a shared EA arm',
+             reason='The sham-controlled contrast is selected for this model to preserve the blinded comparison and count each participant once. covidence_1970_ng_2013.pdf, Methods and Tables 3-4.'),
+        dict(study='Wu 2025', outcome='Intraoperative remifentanil and sufentanil',
+             window='Intraoperative, before randomization',
+             stat='Baseline covariates in Table 1; original values retained in frozen v33 master',
+             reason='103940.pdf pp. 3018-3019: randomization and TEAS began on PACU arrival. Intraoperative doses cannot estimate the effect of a later intervention.'),
         dict(study="Yao 2015", outcome="Cumulative rescue administrations", window="0-24 h",
              stat="Median (IQR) 1 (1-3) vs 3.5 (2-7.8), P=0.004",
              reason="Rescue COUNT, not dose. Multiplying a median count by 0.05 ug/kg and a "
