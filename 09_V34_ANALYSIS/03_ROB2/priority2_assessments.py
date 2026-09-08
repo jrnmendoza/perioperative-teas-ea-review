@@ -1671,6 +1671,132 @@ add("Wang 2024", "Postoperative opioid consumption", "0-24 h", L, S, S, S, S,
     "result not among the pre-specified outcomes")
 
 
+# ============================================================================
+# Gao 2021 (covidence_400_full_article.pdf) -- trial design established in
+# draft_assessments.py: D1 Low (block randomisation, central randomisation
+# administrator); D2 Some concerns ('patients could not be blinded to the
+# treatment due to the nature of the intervention, because they can sense
+# the acupoint stimuli'; data collectors, anaesthetists and surgeons
+# blinded); D3 Low (documented pre-randomisation exclusions). Primary
+# outcome is POI incidence (no flatus >72h); secondary outcomes explicitly
+# name flatus/defecation/bowel-sound/diet recovery times and the incidence
+# of abdominal pain, distension, nausea and vomiting.
+# ============================================================================
+_gao21_base = (
+    "D1 Low: 'SPSS software was used for block randomization'; 'the central "
+    "randomization administrator opened the sealed envelope and made the "
+    "group allocation'. D2 Some concerns: 'patients could not be blinded to "
+    "the treatment due to the nature of the intervention, because they can "
+    "sense the acupoint stimuli in the TEAS group compared to no treatment "
+    "in the sham group'; 'researchers who collected data and "
+    "anesthesiologists and surgeons who cared for patients, were blinded'. "
+    "D3 Low: exclusions were documented and occurred during pre-"
+    "randomisation screening. ")
+_gao21_named = (
+    "D5 Low: explicitly named among the secondary outcomes -- 'various POI "
+    "symptoms, including the time to first postoperative flatus, "
+    "defecation, bowel sound recovery, normal diet recovery, and the "
+    "incidence of abdominal pain, distention, nausea, and vomiting'.")
+
+add("Gao 2021", "Postoperative paralytic ileus: no flatus >72 h", "Postoperative", L, S, L, S, L,
+    _gao21_base +
+    "D5 Low: 'The primary outcome was the incidence of POI, defined as no "
+    "flatus for >72 hours'." +
+    " D4 Some concerns for THIS result: this incidence is a threshold "
+    "applied to the same self-reported flatus timing already assessed as "
+    "Some concerns for D4 in this trial's priority-1 result -- participants "
+    "were not blinded and the underlying event still depends on their own "
+    "report.")
+for symptom, obj in [("Abdominal pain score", False), ("Distention score", False),
+                     ("Nausea score", False)]:
+    add("Gao 2021", symptom, "Postoperative 72 h", L, S, L, S, L,
+        _gao21_base + _gao21_named +
+        " D4 Some concerns for THIS result: this is a patient-reported "
+        "symptom severity score, and participants were not blinded.")
+add("Gao 2021", "Number of vomiting episodes", "Postoperative 72 h", L, S, L, L, L,
+    _gao21_base + _gao21_named +
+    " D4 Low for THIS result: unlike the other POI symptom scores, vomiting "
+    "episodes are objectively observable events, not dependent on the "
+    "unblinded participant's own account of an internal sensation.")
+add("Gao 2021", "Time to resume normal diet", "Postoperative", L, S, L, S, L,
+    _gao21_base + _gao21_named +
+    " D4 Some concerns for THIS result: as with the other GI-recovery "
+    "timings in this review, tolerating a normal diet depends in part on "
+    "the unblinded participant's own report of readiness.")
+add("Gao 2021", "Exact cumulative postoperative opioid consumption", "0-24 h", L, S, L, S, S,
+    _gao21_base +
+    "D5 Some concerns: not itself named among the trial's stated primary or "
+    "secondary outcomes. D4 Some concerns for THIS result: opioid "
+    "administration decisions can be influenced by unblinded participants' "
+    "own pain reports.",
+    "result not among the pre-specified outcomes")
+add("Gao 2021", "Total hospital length of stay", "Total admission", L, S, L, S, S,
+    _gao21_base +
+    "D5 Some concerns: not itself named among the trial's stated outcomes. "
+    "D4 Some concerns for THIS result: hospital discharge timing more often "
+    "reflects a treating clinician's overall judgement than a fixed "
+    "criterion.",
+    "result not among the pre-specified outcomes")
+add("Gao 2021", "30-day postoperative complications", "0–30 days", L, S, L, S, S,
+    _gao21_base +
+    "D5 Some concerns: not itself named among the trial's stated outcomes "
+    "(which focus on POI-specific symptoms during the index admission). D4 "
+    "Some concerns for THIS result: the report does not confirm blinded "
+    "ascertainment of complications over this extended follow-up window.",
+    "result not among the pre-specified outcomes")
+
+# ============================================================================
+# Zhang 2018 (Needleless Transcutaneous Electrical Acustimulation ... Post-
+# Operative Recovery-2.pdf) -- a brief-report-style trial with sparse
+# methodological detail. D1 Some concerns: 'randomized to TEA (n=21) and
+# sham-TEA (n=21)', with no sequence-generation or concealment method
+# described. D2 Some concerns: a sham comparator exists, but the only
+# confirmed blinding statement covers laboratory assays ('All blood assays
+# were performed blindly by a professional company'), not the clinical
+# outcome assessors. D3 Low: 42 randomised, 42 analysed (21/21), no losses
+# reported.
+# ============================================================================
+_zhang18_base = (
+    "D1 Some concerns: 'Forty-two patients ... were randomized to TEA (n = "
+    "21) and sham-TEA (n = 21))', with no sequence-generation or "
+    "allocation-concealment method described. D2 Some concerns: a "
+    "sham-TEA comparator was used, but the only confirmed blinding "
+    "statement in this report covers laboratory biomarker assays ('All "
+    "blood assays were performed blindly by a professional company'), not "
+    "the personnel recording the clinical outcomes below. D3 Low: 42 "
+    "randomised, 42 analysed, with no losses reported. ")
+_zhang18_reported = (
+    "D5 Low: reported as one of the trial's own central measured findings "
+    "in the Results ('TEA improved major postoperative symptoms ... "
+    "including a reduction in time to defecation ..., time to first "
+    "flatus ..., TEA reduced time to ambulation ..., time to resuming "
+    "diet ... and length of postoperative hospital stay ...').")
+_zhang18_d4 = (
+    " D4 Some concerns for THIS result: no outcome-assessor blinding "
+    "statement is given for this clinical measure, and the underlying "
+    "event/measurement often depends in part on the participant, whose own "
+    "blinding status is also not confirmed by any specific mechanism "
+    "description.")
+
+for milestone in ("Time to first flatus", "Time to ambulation", "Time to resume diet",
+                  "Postoperative hospital length of stay",
+                  "Prolonged postoperative ileus / time to first defecation >96 h"):
+    add("Zhang 2018", milestone, "Postoperative", S, S, L, S, L,
+        _zhang18_base + _zhang18_reported + _zhang18_d4)
+for tp in ("Postoperative day 1", "Postoperative day 2", "Postoperative day 3"):
+    add("Zhang 2018", "VAS pain score", tp, S, S, L, S, S,
+        _zhang18_base +
+        "D5 Some concerns: this report describes overall postoperative "
+        "symptom improvement but does not itemise VAS pain by postoperative "
+        "day as a specifically pre-planned measurement." + _zhang18_d4,
+        "day-by-day VAS breakdown not explicitly described as planned")
+add("Zhang 2018", "Exact cumulative postoperative opioid consumption", "0–24 h", S, S, L, S, S,
+    _zhang18_base +
+    "D5 Some concerns: not itself named among this report's central "
+    "described measures." + _zhang18_d4,
+    "result not among the paper's own described central measures")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
