@@ -1063,6 +1063,110 @@ add("Wang 2023", "Postoperative hospitalization", "Postoperative hospitalization
     "result not among pre-specified outcomes; discharge-decision-maker's blinding not confirmed")
 
 
+# ============================================================================
+# Gu 2019 (covidence_1471_full_article.pdf) -- trial design established in
+# draft_assessments.py: D1 Some concerns (randomised via a computer-generated
+# random numbers table, but no allocation-concealment mechanism described);
+# D2 Low ('All patients were unaware of the group allocations'; the
+# interventionist and the data-collecting investigator were separate roles,
+# the latter blind to allocation); D3 Low (117/120 completed, CONSORT
+# documented). No trial registration or protocol is reported and the primary
+# outcome is never explicitly named, so D5 is Some concerns throughout.
+# ============================================================================
+_gu19_base2 = (
+    "D1 Some concerns: 'randomized according to a computer-generated random "
+    "numbers table', with no allocation-concealment mechanism described. "
+    "D2 Low: 'All patients were unaware of the group allocations'; 'A single "
+    "investigator was responsible for applying the type of intervention' "
+    "while 'Another investigator collected the data and was blind to the "
+    "group allocation'. D3 Low: 117 of 120 (97.5%) completed the trial, per "
+    "the CONSORT flow diagram. D5 Some concerns: no trial registration or "
+    "protocol is reported, and the paper never explicitly names a primary "
+    "outcome, so pre-specification of this result cannot be verified "
+    "against an external record. ")
+
+for tp in ("4 h", "8 h", "16 h", "36 h"):
+    add("Gu 2019", "VAS pain intensity", tp, S, L, L, L, S,
+        _gu19_base2 +
+        "D4 Low for THIS result: VAS is self-reported, but participants "
+        "were blinded to allocation and the score was collected by the "
+        "blinded data-collecting investigator at a fixed timepoint.")
+    add("Gu 2019", "Cumulative multimodal PCIA solution consumed", tp, S, L, L, L, S,
+        _gu19_base2 +
+        "D4 Low for THIS result: PCIA solution volume is read from the "
+        "pump/device record, an objective measure not dependent on the "
+        "blinded data collector's judgement.")
+add("Gu 2019", "Cumulative multimodal PCIA solution volume", "0-24 h", S, L, L, L, S,
+    _gu19_base2 +
+    "D4 Low for THIS result: identical reasoning to the timepoint-specific "
+    "PCIA solution results -- an objective device record.")
+add("Gu 2019", "Any postoperative nausea and/or vomiting (PONV)",
+    "Postoperative follow-up; exact window not stated", S, L, L, L, S,
+    _gu19_base2 +
+    "D4 Low for THIS result: PONV was recorded by the same blinded "
+    "data-collecting investigator responsible for the trial's other "
+    "postoperative measures.")
+for grade in ("Very satisfied", "Satisfied", "Moderately satisfied", "Not satisfied"):
+    add("Gu 2019", grade, "36 h postoperatively", S, L, L, L, S,
+        _gu19_base2 +
+        "D4 Low for THIS result: 'A blinded anesthesiologist recorded the "
+        "satisfaction of the patient for the anesthetic technique according "
+        "to four degrees with questionnaires ... at 36 h postoperatively' -- "
+        "explicitly a blinded assessor.")
+
+
+# ============================================================================
+# Liang 2021 (014_liang_2021.pdf) -- trial design established in
+# draft_assessments.py: D1 Low (independent statistician, sealed envelopes);
+# D2 Low ('An anesthesiologist (LDD), who was not aware of the allocation,
+# performed general anesthesia and all intraoperative data recording, and
+# another investigator (WL), in charge of all postoperative assessments, was
+# also blinded to the group identity'); D3 Low (5 of 75 lost, mostly blood-
+# sample loss unrelated to the clinical outcomes here). The trial's own
+# declared Outcomes section names only catheter-related bladder discomfort
+# (primary) and intraoperative vital signs (secondary) -- MMSE, PONV, pain
+# events, analgesia requirement and QoR-40 appear in the results (Table 4)
+# without being part of that formal declaration, except QoR-40, whose
+# assessment timepoints are separately specified in the Methods.
+# ============================================================================
+_liang21_base2 = (
+    "D1 Low: 'the independent statistician created identical sealed "
+    "envelopes before surgery'. D2 Low: 'An anesthesiologist (LDD), who was "
+    "not aware of the allocation, performed general anesthesia and all "
+    "intraoperative data recording, and another investigator (WL), in "
+    "charge of all postoperative assessments, was also blinded to the group "
+    "identity'. D3 Low: 5 of 75 (6.7%) lost, mostly to blood-sample loss "
+    "unrelated to this result. ")
+_liang21_not_declared = (
+    "D5 Some concerns: the trial's declared Outcomes section names only "
+    "catheter-related bladder discomfort (primary) and intraoperative vital "
+    "signs (secondary); this result is reported in the results tables "
+    "without being part of that formal declaration.")
+_liang21_d4_blinded = (
+    " D4 Low for THIS result: recorded by investigator WL, who was 'in "
+    "charge of all postoperative assessments' and 'blinded to the group "
+    "identity'.")
+
+for tp in ("PACU discharge (T9)", "24 h (T11)", "48 h (T12)"):
+    add("Liang 2021", "MMSE score", tp, L, L, L, L, S,
+        _liang21_base2 + _liang21_not_declared + _liang21_d4_blinded)
+for tp in ("End of surgery (T5)", "PACU discharge (T9)", "24 h (T11)", "48 h (T12)"):
+    add("Liang 2021", "PONV occurrence", tp, L, L, L, L, S,
+        _liang21_base2 + _liang21_not_declared + _liang21_d4_blinded)
+    add("Liang 2021", "Pain event as reported (threshold/definition not stated)", tp, L, L, L, L, S,
+        _liang21_base2 + _liang21_not_declared + _liang21_d4_blinded)
+add("Liang 2021", "Postoperative analgesia requirement (metric undefined)",
+    "Early postoperative period - exact window not stated", L, L, L, L, S,
+    _liang21_base2 + _liang21_not_declared + _liang21_d4_blinded)
+add("Liang 2021", "Global QoR-40", "48 h (T12)", L, L, L, L, L,
+    _liang21_base2 +
+    "D5 Low: QoR-40 assessment timepoints (T0, T11, T12) are specified in "
+    "the trial's Methods section 2.7, even though QoR-40 is not named in "
+    "the formal Outcomes declaration." + _liang21_d4_blinded)
+add("Liang 2021", "Exact cumulative postoperative opioid consumption", "0-24 h", L, L, L, L, S,
+    _liang21_base2 + _liang21_not_declared + _liang21_d4_blinded)
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
