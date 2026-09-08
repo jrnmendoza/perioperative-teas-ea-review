@@ -2270,7 +2270,8 @@ details[open] > .section-summary::before { content: '▾ '; }
    pushing the whole page sideways, and long generated prose wraps rather than
    forcing a minimum width. Content is unchanged -- only its containment. */
 @media (max-width: 760px) {
-  .tab-content table {
+  .tab-content table,
+  footer table {
     display: block;
     max-width: 100%;
     overflow-x: auto;
@@ -2278,9 +2279,25 @@ details[open] > .section-summary::before { content: '▾ '; }
   }
   .tab-content p,
   .tab-content li,
-  .tab-content dd { overflow-wrap: anywhere; }
+  .tab-content dd,
+  footer p,
+  footer li,
+  footer div { overflow-wrap: anywhere; }
   .tab-content img { max-width: 100%; height: auto; }
   #findings-hero .finding-effect { overflow-wrap: anywhere; }
+
+  /* Inline <code> carries long unbreakable file paths (the provenance footer
+     alone held a 407px one). Wrapping changes where the line breaks, never the
+     characters, so the path stays quotable. Block <pre> is deliberately NOT
+     wrapped: search syntax and Stata logs depend on their line structure, so
+     those scroll inside their own box instead. */
+  code { overflow-wrap: anywhere; word-break: break-word; }
+  pre {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+  pre code { overflow-wrap: normal; word-break: normal; }
 }
 
 /* The collapsible wrappers must not let their contents establish a width wider
@@ -2290,4 +2307,109 @@ details[open] > .section-summary::before { content: '▾ '; }
 @media (max-width: 760px) {
   .section-details > .dashboard-card,
   .section-details > .protocol-callout { overflow-x: auto; }
+}
+
+/* ── Overflow containment ─────────────────────────────────────────────────
+   Horizontal page overflow had three structural causes, fixed generally rather
+   than card by card:
+
+   1. Flex and grid children default to min-width:auto, so a long header, badge
+      row or table refuses to shrink below its content and pushes the whole page
+      sideways instead of shrinking or scrolling.
+   2. Several layouts use inline grid templates with fixed pixel tracks
+      (e.g. "320px 280px" = 600px), which cannot fit a narrow screen.
+   3. Long unbreakable strings -- chiefly file paths in inline <code> -- set a
+      minimum width no container could satisfy.
+
+   Containment applies at every width, because a card whose content genuinely
+   exceeds its box should scroll inside itself on a laptop too. Only the
+   single-column collapse is width-specific, since that is a layout decision
+   rather than a containment one.
+   ─────────────────────────────────────────────────────────────────────── */
+
+/* Nothing may establish a width its parent cannot accommodate. */
+.tab-content .dashboard-card,
+.tab-content .protocol-callout,
+.section-details,
+.section-details > * { max-width: 100%; min-width: 0; }
+
+/* Content wider than its card scrolls inside that card, never the page. */
+.tab-content .dashboard-card,
+.tab-content .protocol-callout { overflow-x: auto; }
+
+/* Flex and grid children must be allowed to shrink. */
+.card-header,
+.tab-content [style*="display: flex"],
+.tab-content [style*="display:flex"] { flex-wrap: wrap; }
+
+.card-header > *,
+.tab-content [style*="display: flex"] > *,
+.tab-content [style*="display:flex"] > *,
+.tab-content [style*="display: grid"] > *,
+.tab-content [style*="display:grid"] > * { min-width: 0; }
+
+/* Long file paths in inline <code> wrap. This changes where a line breaks,
+   never the characters, so a path stays quotable. Block <pre> is deliberately
+   left unwrapped -- search syntax and Stata logs depend on line structure, so
+   those scroll inside their own box instead. */
+code { overflow-wrap: anywhere; word-break: break-word; }
+pre { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+pre code { overflow-wrap: normal; word-break: normal; }
+
+.tab-content img, footer img { max-width: 100%; height: auto; }
+
+/* Tables keep their columns and scroll horizontally inside their own box. */
+.tab-content table, footer table { max-width: 100%; }
+
+@media (max-width: 900px) {
+  .tab-content table,
+  footer table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Below this width no two-column layout fits, so every grid inside a panel
+     collapses to one column. Content and order are unchanged. */
+  .tab-content [style*="grid-template-columns"],
+  footer [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+
+  .tab-content p,
+  .tab-content li,
+  .tab-content dd,
+  footer p, footer li, footer div { overflow-wrap: anywhere; }
+
+  #findings-hero .finding-effect { overflow-wrap: anywhere; }
+
+  /* Each filter group holds a label beside a select whose intrinsic width comes
+     from its longest option. Together they exceed the screen, so the group
+     wraps and the control takes the full row. */
+  .control-toolbar { max-width: 100%; overflow-x: hidden; }
+  .control-toolbar > *,
+  .control-toolbar .filter-group { min-width: 0; max-width: 100%; flex: 1 1 100%; }
+  .control-toolbar .filter-group { flex-wrap: wrap; }
+  .control-toolbar .filter-select,
+  .control-toolbar select,
+  .control-toolbar input[type="range"],
+  .control-toolbar input[type="search"],
+  .control-toolbar input[type="text"] {
+    flex: 1 1 100%; min-width: 0; max-width: 100%; width: 100%;
+  }
+
+  .filter-chips { margin-left: 1rem; margin-right: 1rem; }
+  .section-menu { position: static; }
+  .finding-grid { grid-template-columns: 1fr; }
+
+  /* Grids defined in CSS classes rather than inline styles are not reached by
+     the attribute selector above, so the named ones collapse here too. */
+  .comparison-grid { grid-template-columns: 1fr; gap: 0.9rem; }
+  .comparison-grid > * { min-width: 0; }
+
+  /* The terminal box clips with overflow:hidden to keep its rounded corners.
+     At narrow widths that hid the log rather than letting it scroll, so the
+     box scrolls horizontally instead. The log text is unchanged: line
+     structure matters here, so it is scrolled, never wrapped. */
+  .stata-terminal-container { overflow-x: auto; }
 }

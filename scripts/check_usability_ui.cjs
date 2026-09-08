@@ -292,8 +292,82 @@ async function boot(browser, hash) {
     await page.close();
   }
 
+  // ── 10. No horizontal page overflow at any supported width ───────────────
+  // The page must never scroll sideways. Content that genuinely exceeds its box
+  // scrolls inside that box; it never moves the document. Checked on every tab,
+  // and on the primary tab with every collapsible section expanded, because a
+  // single collapsed section can hide a wide table.
+  {
+    const WIDTHS = [320, 375, 768, 1024, 1440];
+    const TABS = ['intro', 'explorer', 'prisma', 'primary', 'secondary', 'mcid', 'metareg',
+                  'evidence', 'rob2', 'limitations', 'search', 'extraction', 'glossary', 'export'];
+    for (const width of WIDTHS) {
+      const page = await browser.newPage({viewport: {width, height: 900}});
+      await page.goto(SITE);
+      await page.waitForFunction(() => typeof window.switchTab === 'function');
+      await page.waitForTimeout(500);
+      for (const tab of TABS) {
+        await page.evaluate(t => switchTab(t), tab);
+        await page.waitForTimeout(160);
+        const over = await page.evaluate(() => {
+          const d = document.documentElement;
+          return d.scrollWidth - d.clientWidth;
+        });
+        assert.ok(over <= 1, `horizontal overflow of ${over}px on "${tab}" at ${width}px`);
+      }
+      await page.evaluate(() => {
+        switchTab('primary');
+        document.querySelectorAll('#tab-primary details').forEach(d => (d.open = true));
+      });
+      await page.waitForTimeout(450);
+      const expanded = await page.evaluate(() => {
+        const d = document.documentElement;
+        return d.scrollWidth - d.clientWidth;
+      });
+      assert.ok(expanded <= 1,
+        `horizontal overflow of ${expanded}px on primary with all sections expanded at ${width}px`);
+      await page.close();
+      checks += 1;
+    }
+  }
+
+  // ── 11. Containment must not clip content ────────────────────────────────
+  // Making things fit is only correct if nothing becomes unreachable. Any box
+  // that hides its own overflow must not be hiding content -- except where an
+  // ellipsis marks a deliberate truncation.
+  {
+    const page = await browser.newPage({viewport: {width: 375, height: 812}});
+    await page.goto(SITE);
+    await page.waitForFunction(() => typeof window.switchTab === 'function');
+    await page.waitForTimeout(500);
+    for (const tab of ['primary', 'rob2', 'secondary', 'limitations', 'extraction']) {
+      await page.evaluate(t => switchTab(t), tab);
+      await page.waitForTimeout(200);
+      const bad = await page.evaluate(() => [...document.querySelectorAll('.tab-content.active *')]
+        .filter(e => {
+          const cs = getComputedStyle(e);
+          if (cs.textOverflow === 'ellipsis') return false;
+          return cs.overflowX === 'hidden' && e.scrollWidth > e.clientWidth + 2;
+        })
+        .map(e => e.tagName + '.' + String(e.className || '').split(' ')[0]));
+      assert.deepEqual(bad, [], `content clipped without a scrollbar on "${tab}": ${bad.join(', ')}`);
+    }
+    // And the visible text must be the same at narrow and wide widths.
+    const narrow = await page.evaluate(() => {
+      switchTab('primary');
+      return document.querySelector('.tab-content.active').innerText.replace(/\s+/g, ' ').trim().length;
+    });
+    await page.setViewportSize({width: 1440, height: 900});
+    await page.waitForTimeout(400);
+    const wide = await page.evaluate(() =>
+      document.querySelector('.tab-content.active').innerText.replace(/\s+/g, ' ').trim().length);
+    assert.equal(narrow, wide, 'narrow and wide viewports must show the same content');
+    checks += 2;
+    await page.close();
+  }
+
   await browser.close();
   console.log(`PASS: ${checks} usability regression checks — findings first, per-synthesis GRADE, ` +
     `evidence links with context, URL restore, Back/Forward, filter scope, section menu, ` +
-    `coordinated outcome selection, bilingual findings.`);
+    `coordinated outcome selection, bilingual findings, no overflow at 320-1440px.`);
 })().catch(e => { console.error(e); process.exit(1); });
