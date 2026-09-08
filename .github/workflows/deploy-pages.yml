@@ -17,7 +17,12 @@ name: Deploy dashboard to GitHub Pages
     paths:
       - "dashboard/**"
       - "06_FINAL_ANALYSIS_V26/**"
+      # build_site.py mirrors 07_TIERED_V33 into the artifact as v33/, so a
+      # change confined to the tiered analysis must rebuild the site too.
+      - "07_TIERED_V33/**"
       - "scripts/build_site.py"
+      - "scripts/build_tiered_v33.py"
+      - "scripts/build_primary_pathway.py"
       - "scripts/deploy_integrity_check.py"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch: {}
