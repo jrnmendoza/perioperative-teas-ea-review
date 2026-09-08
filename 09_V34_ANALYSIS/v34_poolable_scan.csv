@@ -1,0 +1,603 @@
+family,outcome,window,unit,statistic,modality,comparator,rows,include_rows,usable_contrasts,independent_studies,verdict,studies
+gi_recovery,Time to first bowel sounds,Postoperative,hours,Mean/SD,TEAS,Sham,2,2,2,2,CANDIDATE - k=2 independent studies,Gao 2021; Gu 2019
+gi_recovery,Time to first defecation,Postoperative,hours,Mean/SD,EA,Usual care,3,3,3,3,CANDIDATE - k=3 independent studies,Huang 2025; Yang 2020; Yang 2024
+gi_recovery,Time to first defecation,Postoperative,hours,Mean/SD,TEAS,Sham,3,3,3,3,CANDIDATE - k=3 independent studies,Gao 2021; Gu 2019; Lu 2022
+gi_recovery,Time to first flatus,Postoperative,hours,Mean/SD,EA,Usual care,2,2,2,2,CANDIDATE - k=2 independent studies,Huang 2025; Yang 2024
+gi_recovery,Time to first flatus,Postoperative,hours,Mean/SD,TEAS,Sham,7,7,7,7,CANDIDATE - k=7 independent studies,Gao 2021; Gu 2019; Lu 2022; Wang 2023; Xing 2022; Zheng 2025; Zhou 2025
+pain,VAS pain intensity,24 h,VAS 0-10,Mean/SD,TEAS,Sham,2,2,2,2,CANDIDATE - k=2 independent studies,Gu 2019; Wu 2025
+ponv,PONV incidence,0-24 h,participants,Events/total,TEAS,Sham,3,3,3,3,CANDIDATE - k=3 independent studies,Chen 2015; Chen 2015 (Hyperalgesia); He 2026 (hepatectomy/JIS)
+adverse_events_and_cognition,30-day postoperative complications,0–30 days,,Source not accessed,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,Any postoperative complication/adverse event,Study follow-up,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Jiang 2026
+adverse_events_and_cognition,Bradycardia,0-24 h,participants with bradycardia,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+adverse_events_and_cognition,CRBD incidence,24 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+adverse_events_and_cognition,CRBD incidence,48 h,participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,CRBD incidence,End of surgery,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+adverse_events_and_cognition,CRBD incidence,PACU discharge,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+adverse_events_and_cognition,Delayed urinary recovery (>12 h without spontaneous void),Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhang 2023
+adverse_events_and_cognition,Delirious agitation,Postoperative,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+adverse_events_and_cognition,Dizziness,0-24 h,participants with dizziness,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+adverse_events_and_cognition,Dizziness,Within 72 h after surgery,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wang 2023
+adverse_events_and_cognition,Dizziness and headache,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+adverse_events_and_cognition,Drowsiness,Postoperative,participants,Events/total,TEAS,Sham,1,1,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,Fever,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+adverse_events_and_cognition,Headache and vertigo,Postoperative,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+adverse_events_and_cognition,Hydroderma,Study follow-up,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Jiang 2026
+adverse_events_and_cognition,Hypoxemia,Postoperative,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+adverse_events_and_cognition,MMSE score,24 h (T11),MMSE 0–30,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+adverse_events_and_cognition,MMSE score,48 h (T12),MMSE 0–30,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+adverse_events_and_cognition,MMSE score,PACU discharge (T9),MMSE 0–30,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+adverse_events_and_cognition,MMSE score,Postoperative day 1 (~24 h),MMSE 0–30,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yu 2020
+adverse_events_and_cognition,MMSE score,Postoperative day 2 (~48 h),MMSE 0–30,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yu 2020
+adverse_events_and_cognition,New-onset supraventricular tachycardia (SVT),First 24 h,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2025
+adverse_events_and_cognition,Perioperative neurocognitive disorder (PND),POD1,Active: 7 cases (25.0%); Control: 14 cases (56.0%),Published event count + percentage; denominator inconsistent,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,Perioperative neurocognitive disorder (PND),POD3,Active: 4 cases (14.3%); Control: 12 cases (48.0%),Published event count + percentage; denominator inconsistent,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,Perioperative neurocognitive disorder (PND),POD7,participants,Published event count + percentage; denominator inconsistent,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,Postoperative cognitive decline (MMSE Z-score ≤ -2),POD1,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2021
+adverse_events_and_cognition,Postoperative cognitive dysfunction (MoCA decline ≥1 SD),POD1,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Guo 2023
+adverse_events_and_cognition,Postoperative cognitive dysfunction (MoCA decline ≥1 SD),POD30,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Guo 2023
+adverse_events_and_cognition,Postoperative cognitive dysfunction (MoCA decline ≥1 SD),POD7,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Guo 2023
+adverse_events_and_cognition,Postoperative hypertension,Postoperative,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+adverse_events_and_cognition,Postoperative hypotension,Postoperative,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+adverse_events_and_cognition,Postoperative pulmonary complications,Within 72 h after surgery,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wang 2023
+adverse_events_and_cognition,Postoperative urinary retention,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhang 2023
+adverse_events_and_cognition,Respiratory depression,0-24 h,participants with respiratory depression,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,0,0,HOLD - comparator type needs adjudication,
+adverse_events_and_cognition,Rubefaction,Study follow-up,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Jiang 2026
+adverse_events_and_cognition,Serious adverse events or fatalities,Study follow-up,participants,Events/total,EA,Usual care,1,1,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,Severe adverse events,Study follow-up,participants,Events/total,TEAS,Sham,1,1,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,Subcutaneous hematoma,Study follow-up,participants,Events/total,TEAS,Sham,1,1,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,TEAS-related adverse events,0–24 h testing period,participants,Events/total,TEAS,Sham,1,1,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,TEAS-related side effects,0–48 h postoperative,participants,Events/total,TEAS,Sham,3,3,0,0,NOT POOLED - only 0 independent study,
+adverse_events_and_cognition,Tachycardia/bradycardia,Postoperative,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+adverse_events_and_cognition,Time to first spontaneous void,Postoperative,hours,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Any rescue analgesia,POD1-POD3,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhou 2025
+analgesic_proxies_and_nonopioid_rescue,Any rescue analgesia demand,POD1 / postoperative period reported in Table 4,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhang 2025
+analgesic_proxies_and_nonopioid_rescue,Any rescue flurbiprofen use,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Hou 2023
+analgesic_proxies_and_nonopioid_rescue,Cumulative PCA solution consumption,48 h,mL PCA solution,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Ao 2021
+analgesic_proxies_and_nonopioid_rescue,Cumulative analgesic pump compressions,48 h,pump compressions,Median/IQR,EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Cumulative multimodal PCIA solution consumed,16 h,mL of multimodal PCIA solution,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Cumulative multimodal PCIA solution consumed,36 h,mL multimodal PCIA solution,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gu 2019
+analgesic_proxies_and_nonopioid_rescue,Cumulative multimodal PCIA solution consumed,4 h,mL multimodal PCIA solution,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gu 2019
+analgesic_proxies_and_nonopioid_rescue,Cumulative multimodal PCIA solution consumed,8 h,mL multimodal PCIA solution,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gu 2019
+analgesic_proxies_and_nonopioid_rescue,Cumulative multimodal PCIA solution volume,0-24 h,mL multimodal PCIA solution,Graph-only continuous data,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Cumulative number of additional rescue-analgesia doses,0-72 h,rescue doses,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wang 2023
+analgesic_proxies_and_nonopioid_rescue,Cumulative number of rescue analgesia administrations,0-24 h postoperative,administrations,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Cumulative number of rescue sufentanil PCIA boluses,0-24 h,boluses,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Demand for rescue parecoxib,0–24 h,participants,Events/total,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+analgesic_proxies_and_nonopioid_rescue,Effective PCIA button presses,Postoperative; exact pump duration not stated,effective PCIA presses,Mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Emergency rescue analgesia events,Postoperative; exact window not stated,events,Other (describe),TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Nominal butorphanol PCA bolus component derived from reported pump presses,0-24 h,mg butorphanol,Derived mean/SD (linear from press count),TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+analgesic_proxies_and_nonopioid_rescue,PCA attempts,24 h,attempts,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,He 2026 (hepatectomy/JIS)
+analgesic_proxies_and_nonopioid_rescue,PCA attempts,24 h,attempts,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,PCA attempts,48 h after surgery,PCA attempts,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,PCA attempts,72 h after surgery,PCA attempts,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,PCA pump compressions,0-24 h,presses,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2021
+analgesic_proxies_and_nonopioid_rescue,PCA pump press number,0-24 h,pump presses,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+analgesic_proxies_and_nonopioid_rescue,PCIA compression count,48 h,presses,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+analgesic_proxies_and_nonopioid_rescue,PCIA pump press count,48-h / 2-day PCIA period,presses,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Xing 2022
+analgesic_proxies_and_nonopioid_rescue,PCIA solution consumption,48 h,mL of weight-based sufentanil solution,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+analgesic_proxies_and_nonopioid_rescue,Participants given rescue medication,Postoperative; exact window not stated,participants,Events/total,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Participants requiring postoperative analgesics,0–48 h after surgery,participants,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+analgesic_proxies_and_nonopioid_rescue,Participants using analgesic drugs,Within 24 h after operation,participants,Events/total,TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Postoperative analgesia requirement (metric undefined),Early postoperative period - exact window not stated,UNRESOLVED - source does not define the metric,Reported as value (dispersion); statistic type ambiguous,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Published 'fentanyl consumption' / PCIA solution volume,24 h,mL PCIA solution,Mean/SD,EA,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Jin 2023
+analgesic_proxies_and_nonopioid_rescue,Rescue IV dexketoprofen trometamol consumption,0-24 h,mg dexketoprofen,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+analgesic_proxies_and_nonopioid_rescue,Rescue IV dexketoprofen trometamol consumption,0-24 h,mg dexketoprofen,Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+analgesic_proxies_and_nonopioid_rescue,Rescue IV dexketoprofen trometamol consumption,24-48 h,mg dexketoprofen,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+analgesic_proxies_and_nonopioid_rescue,Rescue IV dexketoprofen trometamol consumption,24-48 h,mg dexketoprofen,Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+analgesic_proxies_and_nonopioid_rescue,Successful PCA deliveries,24 h,deliveries,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Successful PCA deliveries,48 h after surgery,PCA deliveries,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Successful PCA deliveries,72 h after surgery,PCA deliveries,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Supplemental flurbiprofen axetil requirement,Within 48 h,11.0% intervention vs 23.3% SSS,Published percentage,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Supplemental flurbiprofen axetil requirement,Within 48 h,15.4% intervention vs 23.3% SSS,Published percentage,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Supplemental flurbiprofen axetil requirement,Within 48 h,7.9% intervention vs 23.3% SSS,Published percentage,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Total PCIA button presses,Postoperative; exact pump duration NR,presses,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+analgesic_proxies_and_nonopioid_rescue,Total rescue analgesia,First 24 h,tramadol 50 mg IV then morphine 2 mg IV as needed,Qualitative / exact quantities unavailable,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+analgesic_proxies_and_nonopioid_rescue,Use of additional analgesic,Postoperative,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Huang 2025
+functional_recovery_and_other,AIS score,First night before surgery after preoperative stimulation,AIS points,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,AIS score,First postoperative night,AIS points,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,AIS score,Third postoperative night,AIS points,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Analgesia satisfaction score,By 24 h after surgery,satisfaction score; scale range not stated in retrieved table text,Mean/SD,TEAS,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,Athens Insomnia Scale,POD1,AIS points,Graph-only continuous data,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+functional_recovery_and_other,Extubation time,Immediate postoperative recovery,minutes,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+functional_recovery_and_other,Extubation time,Immediate postoperative recovery,minutes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+functional_recovery_and_other,Extubation time,Postoperative,minutes,Mean/SD,TEAS,Sham,3,3,3,1,NOT POOLED - only 1 independent study,Sun 2017
+functional_recovery_and_other,Eye-opening time,Immediate postoperative recovery,minutes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+functional_recovery_and_other,First postoperative implantation activity time,Postoperative,minutes,Median/IQR,TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,Hospital cost,Hospitalization,Chinese yuan,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,Length of stay in PACU,Postoperative,minutes,Mean/SD,TEAS,Sham,3,3,3,1,NOT POOLED - only 1 independent study,Sun 2017
+functional_recovery_and_other,Moderately satisfied,36 h postoperatively,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gu 2019
+functional_recovery_and_other,Not satisfied,36 h postoperatively,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gu 2019
+functional_recovery_and_other,PACU Aldrete score,PACU,Aldrete points,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+functional_recovery_and_other,PACU analgesic requirement in women-only subgroup,PACU,mg morphine-equivalent,Graph-only morphine-equivalent outcome,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,PACU retention time,PACU,minutes,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+functional_recovery_and_other,PACU stay time,Postoperative,minutes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+functional_recovery_and_other,PSQI and AIS postoperative sleep quality,POD1,PSQI/AIS points,Graph-only continuous data,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,PSQI and AIS postoperative sleep quality,POD3,PSQI and AIS scores,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,PSQI score,24 h,PSQI points,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+functional_recovery_and_other,PSQI score,48 h,PSQI points,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+functional_recovery_and_other,Patient satisfaction — extremely satisfied,Postoperative assessment; exact clock time not separately stated,percent,Published percentage (95% CI),TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,REM sleep,First night before surgery after preoperative stimulation,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,REM sleep,First postoperative night,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,REM sleep,Third postoperative night,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Recovery-room stay,Recovery-room discharge,minutes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhang 2014
+functional_recovery_and_other,Recovery-room stay >30 min,Immediate postoperative recovery,percent,Published percentage,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,Removing the catheter time,Postoperative,minutes,Median/IQR,TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,Satisfied,36 h postoperatively,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gu 2019
+functional_recovery_and_other,Sleep efficiency,First night before surgery after preoperative stimulation,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Sleep efficiency,First postoperative night,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Sleep efficiency,Third postoperative night,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Stable sleep,First night before surgery after preoperative stimulation,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Stable sleep,First postoperative night,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Stable sleep,Third postoperative night,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Time of conscious,PACU/recovery,minutes,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+functional_recovery_and_other,Time of extubation,PACU/recovery,minutes,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+functional_recovery_and_other,Time of respiratory recovery,PACU/recovery,minutes,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+functional_recovery_and_other,Time to ambulation,Postoperative,days,Graph-only mean±SE,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+functional_recovery_and_other,Time to discharge from operating room,Immediate postoperative recovery,minutes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+functional_recovery_and_other,Time to extubation,Immediate postoperative recovery,minutes,Mean/SD,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+functional_recovery_and_other,Time to first verbal response,Immediate postoperative recovery,minutes,Mean/SD,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+functional_recovery_and_other,Time to meet discharge criteria,Postoperative,days,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Lu 2022
+functional_recovery_and_other,Time to out-of-bed activity,Postoperative,hours,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+functional_recovery_and_other,Time to reorientation,Immediate postoperative recovery,minutes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+functional_recovery_and_other,Time to spontaneous movement,Immediate postoperative recovery,minutes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+functional_recovery_and_other,Time to spontaneous respiration after anesthesia,Immediate postoperative recovery,minutes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+functional_recovery_and_other,Total intraoperative propofol consumption,Intraoperative,mg propofol,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+functional_recovery_and_other,Total sleep time measured by ambulatory sleep recorder,First postoperative night,minutes,Median/IQR,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,Unstable sleep,First night before surgery after preoperative stimulation,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Unstable sleep,First postoperative night,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Unstable sleep,Third postoperative night,%,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+functional_recovery_and_other,Utilization of remedial drugs in PACU,PACU,participants,Events/total,TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+functional_recovery_and_other,Very satisfied,36 h postoperatively,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gu 2019
+functional_recovery_and_other,Wake-up time,Postoperative,minutes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+gi_recovery,Abdominal distension,Within 72 h after surgery,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wang 2023
+gi_recovery,Abdominal distension incidence,Postoperative; assessment window not separately stated,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+gi_recovery,Abdominal distension severity grade 0,Postoperative; assessment window not separately stated,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+gi_recovery,Abdominal distension severity grade 1,Postoperative; assessment window not separately stated,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+gi_recovery,Abdominal distension severity grade 2,Postoperative; assessment window not separately stated,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+gi_recovery,Abdominal distension severity grade 3,Postoperative; assessment window not separately stated,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+gi_recovery,Abdominal distension severity grade 4,Postoperative; assessment window not separately stated,participants,Events/total,EA,Usual care,1,1,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,Abdominal distention incidence,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Jiang 2026
+gi_recovery,Bowel obstruction,Postoperative,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Huang 2025
+gi_recovery,Distention score,Postoperative 72 h,Score; scale not defined in main article,Mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,First postoperative water intake time,Postoperative,minutes,Median/IQR,TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,First solid food tolerance time,Postoperative,minutes,Median/IQR,TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,I-FEED score,24 h,I-FEED score,Median/range,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,I-FEED score,48 h,I-FEED score,Median/range,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,I-FEED score,72 h,I-FEED score,Median/range,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,Postoperative gastrointestinal dysfunction: no bowel sounds >48 h,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+gi_recovery,Postoperative paralytic ileus: no flatus >72 h,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gao 2021
+gi_recovery,Prolonged postoperative ileus / time to first defecation >96 h,Postoperative,participants,Events/total,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+gi_recovery,Time to first borborygmus,Postoperative,hours,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+gi_recovery,Time to first bowel motion / defecation,Postoperative,hours,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Ng 2013
+gi_recovery,Time to first bowel motion / defecation,Postoperative,hours,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Ng 2013
+gi_recovery,Time to first bowel motion by auscultation,Postoperative,hours,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,Time to first defecation,Postoperative,hours,Graph-only mean±SE,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+gi_recovery,Time to first defecation,Postoperative,hours,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,Time to first flatus,Modified-ITT-type analysis among intervention recipients,hours,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,Time to first flatus,Postoperative,days,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Ng 2013
+gi_recovery,Time to first flatus,Postoperative,hours,Graph-only mean±SE,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+gi_recovery,Time to first flatus,Postoperative,hours,Median/IQR,TEAS,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,Time to first oral intake of water,Postoperative,hours,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Lu 2022
+gi_recovery,Time to first postoperative defecation,Postoperative,hours,Mean/SD,TEAS,Sham,3,3,3,1,NOT POOLED - only 1 independent study,Sun 2017
+gi_recovery,Time to first postoperative flatus,From surgery to first flatus,hours,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+gi_recovery,Time to first postoperative flatus,Postoperative,hours,Mean/SD,TEAS,Sham,3,3,3,1,NOT POOLED - only 1 independent study,Sun 2017
+gi_recovery,Time to first postoperative flatus,Postoperative recovery endpoint,minutes,Median/IQR,TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+gi_recovery,Time to passage of first flatus,From end of surgery to first flatus,hours,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+gi_recovery,Time to resume diet,Postoperative,days,Graph-only mean±SE,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+gi_recovery,Time to resume normal diet,Postoperative,hours,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gao 2021
+intraoperative_opioid,Alfentanil requirement rate,Intraoperative,µg/kg/min,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Sim 2002
+intraoperative_opioid,Alfentanil requirement rate,Intraoperative,μg/kg/min,Mean/SD,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+intraoperative_opioid,Author-defined intraoperative morphine-equivalent exposure,Intraoperative,mg/kg morphine-equivalent,Study-defined converted metric,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+intraoperative_opioid,Author-defined intraoperative morphine-equivalent exposure,Intraoperative,mg/kg; author-defined conversion metric,Mean/SD,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+intraoperative_opioid,Cumulative remifentanil,Intraoperative,µg remifentanil,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wu 2022
+intraoperative_opioid,Intraoperative remifentanil,Intraoperative,mg remifentanil,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+intraoperative_opioid,Intraoperative remifentanil,Intraoperative,ug remifentanil,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+intraoperative_opioid,Intraoperative remifentanil dose,Intraoperative,µg remifentanil,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+intraoperative_opioid,Intraoperative sufentanil,Intraoperative,ug sufentanil,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+intraoperative_opioid,Intraoperative sufentanil dose,Intraoperative,µg sufentanil,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+intraoperative_opioid,Remifentanil consumption,Intraoperative,mg remifentanil,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Guo 2023
+intraoperative_opioid,Remifentanil consumption,Intraoperative,mg remifentanil,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+intraoperative_opioid,Remifentanil consumption,Intraoperative,µg remifentanil,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Ntritsou 2014
+intraoperative_opioid,Remifentanil consumption,Intraoperative,µg remifentanil,Mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+intraoperative_opioid,Remifentanil consumption,Intraoperative,µg remifentanil,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+intraoperative_opioid,Remifentanil consumption,Intraoperative,μg,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+intraoperative_opioid,Remifentanil consumption rate,Intraoperative,µg/kg/min,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhang 2014
+intraoperative_opioid,Remifentanil dose index,Intraoperative,µg/min/kg,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wu 2022
+intraoperative_opioid,Sufentanil consumption,Intraoperative,µg sufentanil,Mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+intraoperative_opioid,Sufentanil consumption,Intraoperative,μg,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+intraoperative_opioid,Total intraoperative remifentanil consumption,Intraoperative,µg remifentanil,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+intraoperative_opioid,Total intraoperative sufentanil consumption,Intraoperative,µg sufentanil,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+intraoperative_opioid,Total intraoperative sufentanil consumption,Intraoperative,µg sufentanil,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+intraoperative_opioid,Total opioid as remifentanil-equivalent rate,Intraoperative,µg/kg/min remifentanil-equivalent,Mean/SD,TEAS,Sham,3,3,3,1,NOT POOLED - only 1 independent study,Huang 2017
+intraoperative_opioid,Total remifentanil,Intraoperative,mg remifentanil,Mean/SD,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+intraoperative_opioid,Total remifentanil consumption,Intraoperative,µg remifentanil,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Xing 2022
+intraoperative_opioid,Total sufentanil,Intraoperative,µg sufentanil,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,2,2,2,1,HOLD - comparator type needs adjudication,Wang 2024
+los,Hospital length of stay,Postoperative hospitalization,days,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Huang 2025
+los,Hospital length of stay,Postoperative hospitalization,days,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,2,2,2,1,HOLD - comparator type needs adjudication,Wu 2016
+los,Hospital stay,Postoperative hospitalization,days,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+los,Hospital stay,Postoperative hospitalization,days,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+los,Hospital stay duration,Postoperative hospitalization,days,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+los,Length of postoperative hospital stay,From date of surgery to discharge,days,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+los,Postoperative hospital length of stay,Postoperative,days,Graph-only mean±SE,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+los,Postoperative hospital stay,Postoperative hospitalization,days,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+los,Postoperative hospitalization,Postoperative hospitalization,days,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wang 2023
+los,Postoperative hospitalization time,Postoperative hospitalization,days,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+los,Total hospital length of stay,Total admission,,Source not accessed,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Cumulative postoperative nausea,0-48 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Luo 2026
+nausea,Nausea,24 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Ma 2026
+nausea,Nausea,Within 48 h after surgery,percent,Published percentage (95% CI),TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea incidence,0–2 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+nausea,Nausea incidence,0–24 h,participants,Events/total,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+nausea,Nausea incidence,0–24 h after surgery,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+nausea,Nausea incidence,24–48 h after surgery,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+nausea,Nausea incidence,2–4 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+nausea,Nausea incidence,48–72 h after surgery,participants,Events/total,EA,Usual care,1,1,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea incidence,4–6 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+nausea,Nausea incidence,6–24 h,participants,Events/total,TEAS,Sham,1,1,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea incidence,Postoperative observation period; PCA/TEAS discontinued at 24 h,participants with nausea,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Szmit 2021
+nausea,Nausea incidence,Postoperative observation period; PCA/TEAS discontinued at 24 h,participants with nausea,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Szmit 2021
+nausea,Nausea incidence,Within 24 h after operation,participants,Other (describe),TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea score,Postoperative 72 h,Score; scale not defined in main article,Mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea severity,0-24 h,VAS 1-10,Qualitative / exact group values unavailable,MODALITY_REVIEW_REQUIRED,Usual care,1,0,0,0,HOLD - comparator type needs adjudication,
+nausea,Nausea severity score,0–2 h after craniotomy,"WHO PONV 4-class nausea rating, 0–3",Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea severity score,0–24 h after surgery,4-point rating scale 0-3,Median/IQR,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea severity score,0–6 h after surgery,4-point Likert-type severity scale 0-3,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+nausea,Nausea severity score,24–48 h after surgery,4-point Likert-type severity scale 0-3,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+nausea,Nausea severity score,24–48 h after surgery,4-point rating scale 0-3,Median/IQR,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea severity score,2–6 h after craniotomy,"WHO PONV 4-class nausea rating, 0–3",Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea severity score,48–72 h after surgery,4-point rating scale 0-3,Other (describe),EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea severity score,6–24 h after craniotomy,"WHO PONV 4-class nausea rating, 0–3",Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+nausea,Nausea severity score,6–24 h after surgery,4-point Likert-type severity scale 0-3,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+nausea,Persistent nausea (>5 min),0-24 h,participants with persistent nausea,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gao 2022
+nausea,Postoperative nausea,0-24 h postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yao 2015
+nausea,Postoperative nausea,6-24 h postoperatively,participants with nausea,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+nausea,Postoperative nausea,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhang 2014
+nausea,Postoperative nausea incidence,0–6 h after surgery,participants,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+nausea,Postoperative nausea incidence,24–48 h after surgery,participants,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+nausea,Postoperative nausea incidence,48–72 h after surgery,participants,Events/total,EA,Usual care,3,3,0,0,NOT POOLED - only 0 independent study,
+nausea,Postoperative nausea incidence,Postoperative day 1,participants with nausea,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+nausea,Postoperative nausea incidence,Postoperative day 2,participants with nausea,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+nausea,Postoperative nausea incidence,Postoperative day 3,participants with nausea,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+pain,24 h postoperative pain VAS score,0-24 h / 24 h assessment,VAS 0-10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gao 2022
+pain,Abdominal pain score,Postoperative 72 h,Score; scale not defined in main article,Mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Activity pain VAS,24 h,VAS 0-10,Graph-only mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Activity pain VAS,48 h,VAS 0-10,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Activity pain VAS,72 h,VAS 0-10,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Activity-evoked VAS,24 h,VAS 0-10,Median/IQR,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+pain,Activity-evoked VAS during coughing,1 h,VAS 0–10,Graph only,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+pain,Activity-evoked VAS during coughing,48 h,VAS 0–10,Graph only,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+pain,Activity-evoked VAS during coughing,6 h,VAS 0–10,Graph only,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+pain,Average postoperative pain,POD1-POD5 average,pain score,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Zhou 2021
+pain,Dynamic pain VAS,0–24 h after surgery,VAS 0-10,Median/IQR,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Dynamic pain VAS,24–48 h after surgery,VAS 0-10,Median/IQR,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Dynamic pain VAS,48–72 h after surgery,VAS 0-10,Median/IQR,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Mean resting VAS over first 24 h,0–24 h mean across 6-hourly assessments,VAS 0–10,Mean/SD,EA,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Sim 2002
+pain,Mechanical pain threshold around surgical incision,24 h,mechanical threshold,Source-reported direction; exact value not promoted,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Moderate-to-severe movement-evoked pain (VAS >4),24 h,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,He 2026 (breast/WJCO)
+pain,Moderate-to-severe pain (NRS ≥4),Within 24 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2026 (ESD)
+pain,Moderate-to-severe pain (VAS >4),Within 12 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wu 2025
+pain,Moderate-to-severe visceral pain,POD1,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhang 2025
+pain,Movement VAS,24 h,VAS,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,He 2026 (breast/WJCO)
+pain,NRS among participants reporting chronic pain,3 months,NRS 0–10,Mean/SD,TEAS,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+pain,NRS among participants reporting chronic pain,6 months,NRS 0–10,Mean/SD,TEAS,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+pain,NRS at cough,24 h after surgery,NRS 0–10,Median/IQR,TEAS,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+pain,NRS at rest,24 h after surgery,NRS 0–10,Median/IQR,TEAS,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+pain,NRS in the mobile state,1 h after operation,NRS 0-10,Other (describe),TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,NRS in the mobile state,24 h after operation,NRS 0-10,Other (describe),TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,NRS pain intensity,24 h,NRS 0-10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2026 (ESD)
+pain,NRS pain intensity,POD1,NRS,Graph-only continuous data,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,NRS pain score,24 h,NRS 0–10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+pain,NRS pain score,48 h,NRS 0–10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+pain,NRS pain score,6 h,NRS 0–10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+pain,NRS pain score,"AMBIGUOUS — single summary; Methods planned 6 h, 24 h and 48 h",NRS 0-10,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,PACU highest NRS score,PACU,NRS 0-10,Other (describe),TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Pain event as reported (threshold/definition not stated),24 h (T11),participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Pain event as reported (threshold/definition not stated),48 h (T12),participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Pain event as reported (threshold/definition not stated),End of surgery (T5),participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Pain event as reported (threshold/definition not stated),PACU discharge (T9),participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Pain on movement (NRS),0–6 h,NRS 0-10,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+pain,Pain on movement (NRS),24–48 h,NRS 0-10,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+pain,Pain on movement (NRS),48–72 h,NRS 0-10,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+pain,Pain on movement (NRS),6–24 h,NRS 0-10,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+pain,Participants with postoperative VAS score ≥4,12 h post-OP,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+pain,Participants with postoperative VAS score ≥4,3 pm on day 1,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+pain,Participants with postoperative VAS score ≥4,3 pm on day 2,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+pain,Participants with postoperative VAS score ≥4,9 am on day 1,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+pain,Participants with postoperative VAS score ≥4,9 am on day 2,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+pain,Post-mastectomy chronic pain incidence,3 months,participants,Events/total,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+pain,Post-mastectomy chronic pain incidence,6 months,participants,Events/total,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+pain,Postoperative NRS pain,24 h,NRS 0-10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Luo 2026
+pain,Postoperative NRS pain,24 h,NRS 0-10,Median/IQR,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Postoperative VAS pain,PACU and POD1-3,VAS 0-10,Graph-only continuous data,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Postoperative VAS pain score,2 h after surgery,VAS 0-10,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+pain,Postoperative VAS pain score,24 h after surgery,VAS 0-10,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+pain,Postoperative VAS pain score,4 h after surgery,VAS 0-10,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+pain,Postoperative VAS pain score,6 h after surgery,VAS 0-10,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+pain,Postoperative VAS pain score,Postoperative day 1,VAS 0-10,Graph-only continuous data,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Postoperative VAS pain score,Postoperative day 2,VAS 0-10,Graph-only continuous data,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Postoperative VAS pain score,Postoperative day 3,VAS 0-10,Graph-only continuous data,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Postoperative pain VAS,12 h,VAS 0–10,Other (describe),TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,Postoperative pain VAS,2 h,VAS 0–10,Other (describe),TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,Postoperative pain VAS,24 h,VAS 0–10,Other (describe),TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,Postoperative pain VAS,36 h,VAS 0–10,Other (describe),TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,Postoperative pain VAS,6 h,VAS 0–10,Other (describe),TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,Rest pain VAS,24 h,VAS 0-10,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Rest pain VAS,24 h,VAS 0-10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Xing 2022
+pain,Rest pain VAS,48 h,VAS 0-10,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Rest pain VAS,72 h,VAS 0-10,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting F-VAS pain,24 h,F-VAS 0-100 mm,Graph-only continuous data,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting NRS pain,24 h,NRS 0-10,Graph-only continuous data,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,Resting VAS,1 h,VAS 0–10,Graph only,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting VAS,12 h,VAS 0–10,Other (describe),EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting VAS,18 h,VAS 0–10,Other (describe),EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting VAS,24 h,VAS,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,He 2026 (breast/WJCO)
+pain,Resting VAS,24 h,VAS 0–10,Graph only,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting VAS,24 h,VAS 0–10,Other (describe),EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting VAS,48 h,VAS 0–10,Graph only,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting VAS,6 h,VAS 0–10,Graph only,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting VAS,6 h,VAS 0–10,Other (describe),EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting pain,Postoperative,NRS 0-10,Other (describe),TEAS,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting pain VAS,POD1,VAS 0-10,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting pain VAS,POD1 (~24 h),VAS 0-10,Mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting pain VAS,POD2 (~48 h),VAS 0-10,Mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Resting postoperative pain after stimulation,18 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Resting postoperative pain after stimulation,18 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Resting postoperative pain after stimulation,2 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Resting postoperative pain after stimulation,2 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Resting postoperative pain after stimulation,22 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Resting postoperative pain after stimulation,22 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Resting postoperative pain after stimulation,42 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Resting postoperative pain after stimulation,42 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Resting postoperative pain after stimulation,46 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Resting postoperative pain after stimulation,46 h after surgery / after intervention,VAS (methods state 1–10; tables include 0),Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+pain,Static pain VAS,0–24 h after surgery,VAS 0-10,Median/IQR,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Static pain VAS,24–48 h after surgery,VAS 0-10,Median/IQR,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Static pain VAS,48–72 h after surgery,VAS 0-10,Median/IQR,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,Stomach pain and distension,Postoperative,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+pain,VAS at cough,24 h after surgery,VAS 0-10,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS at cough,48 h after surgery,VAS 0-10,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS at cough,72 h after surgery,VAS 0-10,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS at rest,24 h,VAS,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2021
+pain,VAS at rest,24 h after surgery,VAS 0-10,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS at rest,48 h after surgery,VAS 0-10,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS at rest,72 h after surgery,VAS 0-10,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS during walking/knee movement,POD1,VAS 0-100,Mean/SD,EA,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Huang 2024
+pain,VAS pain at discharge,At discharge; exact postoperative clock time not reported,VAS 0–10,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Szmit 2021
+pain,VAS pain at discharge,At discharge; exact postoperative clock time not reported,VAS 0–10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Szmit 2021
+pain,VAS pain intensity,0–2 h after craniotomy,VAS 0–10,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain intensity,16 h,VAS 0-10,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain intensity,24 h,VAS 0-10,Graph-only continuous data,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain intensity,24 h,VAS 0-10,Mean/SD,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain intensity,24 h,VAS 0-10,Mean/SD,MODALITY_REVIEW_REQUIRED,Sham,1,1,1,1,HOLD - comparator type needs adjudication,Lee 2011
+pain,VAS pain intensity,24 h postoperatively,VAS,Source-format ambiguous,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,VAS pain intensity,24 h postoperatively,VAS 0-10,Graph-digitized mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain intensity,24 h postoperatively,VAS 0-10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Chen 2020
+pain,VAS pain intensity,2–6 h after craniotomy,VAS 0–10,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain intensity,36 h,VAS 0-10,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain intensity,4 h,VAS 0-10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gu 2019
+pain,VAS pain intensity,48 h,VAS 0–10,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+pain,VAS pain intensity,6-24 h,VAS 0-10,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain intensity,8 h,VAS 0-10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gu 2019
+pain,VAS pain intensity,POD1,VAS 0-10,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Ng 2013
+pain,VAS pain intensity,POD1,VAS 0-10,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wu 2022
+pain,VAS pain intensity at rest,24 h postoperatively,VAS 0-10,Graph-only continuous data,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,2,0,0,0,HOLD - comparator type needs adjudication,
+pain,VAS pain intensity during coughing,24 h postoperatively,VAS 0-10,Graph-only continuous data,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,2,0,0,0,HOLD - comparator type needs adjudication,
+pain,VAS pain score,24 h,VAS 0-10,Median/range,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain score,48 h,VAS 0-10,Median/range,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain score,72 h,VAS 0-10,Median/range,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+pain,VAS pain score,Postoperative day 1,VAS 0–10,Graph-only mean±SE,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,VAS pain score,Postoperative day 2,VAS 0–10,Graph-only mean±SE,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,VAS pain score,Postoperative day 3,VAS 0–10,Graph-only mean±SE,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+pain,VAS with coughing,24 h,VAS,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2021
+pain,VAS ≥4,6 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+pain,VAS-P pain,"D2 = one day after surgery, not exact clock-time 24 h",VAS 0-100 mm,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+ponv,Any PONV,24 h,participants,Events/total,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+ponv,Any PONV,Within 24 h postoperatively,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+ponv,Any PONV,Within 48 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Xiong 2021
+ponv,Any PONV over reported follow-up,0-36 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,2,2,2,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,Any nausea and/or vomiting,0–24 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yu 2020
+ponv,Any postoperative nausea and/or retching and/or vomiting,0-24 h,participants with PONV,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gao 2022
+ponv,Any postoperative nausea and/or vomiting (PONV),Postoperative follow-up; exact window not stated,participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+ponv,Clinically important PONV,Within 48 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Xiong 2021
+ponv,Nausea and vomiting adverse event,0-24 h,participants with nausea/vomiting,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Song 2020
+ponv,Nausea-vomiting,Through POD1 / approximately 24 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2026 (burn)
+ponv,PONV,0–24 h,percent,Published percentage,EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+ponv,PONV incidence,0-2 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,PONV incidence,0–2 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,PONV incidence,12-24 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,PONV incidence,12–24 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,PONV incidence,2-6 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,PONV incidence,24 h after surgery,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Lu 2022
+ponv,PONV incidence,24–36 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,2,2,1,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,PONV incidence,2–6 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,PONV incidence,48 h after surgery,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Lu 2022
+ponv,PONV incidence,6-12 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,PONV incidence,6–12 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Wang 2024
+ponv,PONV incidence,72 h after surgery,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Lu 2022
+ponv,PONV incidence,POD1,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhou 2025
+ponv,PONV incidence,Postoperative,participants,Events/total,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Long 2025
+ponv,PONV incidence,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Xing 2022
+ponv,PONV incidence,Postoperative / reported review window,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Hou 2023
+ponv,PONV incidence,Postoperative follow-up,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2026 (ESD)
+ponv,PONV incidence,Within 24 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Jiang 2026
+ponv,PONV incidence,Within 72 h after surgery,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wang 2023
+ponv,PONV occurrence,12 h post-OP,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+ponv,PONV occurrence,24 h (T11),participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+ponv,PONV occurrence,3 pm on day 1,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+ponv,PONV occurrence,3 pm on day 2,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+ponv,PONV occurrence,48 h (T12),participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+ponv,PONV occurrence,6 h post-OP,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+ponv,PONV occurrence,9 am on day 1,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+ponv,PONV occurrence,9 am on day 2,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Li 2021
+ponv,PONV occurrence,End of surgery (T5),participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+ponv,PONV occurrence,PACU discharge (T9),participants,Events/total,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+ponv,PONV severity score,0–24 h,PONV severity score; scale definition not repeated in Table 3,Mean/SD,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+ponv,Postoperative nausea/vomiting incidence,Postoperative period; exact window not reported,participants,Events/total,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,2,2,2,1,HOLD - comparator type needs adjudication,Wu 2016
+postoperative_opioid_other_windows,24-h IV morphine PCA dose,First 24 postoperative hours,mg IV morphine,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,24-h IV morphine PCA dose,First 24 postoperative hours,mg IV morphine,Mean/SD,MODALITY_REVIEW_REQUIRED,Sham,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,24-h morphine PCA dose,First 24 postoperative hours,mg morphine; source explicitly calls PCA epidural,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,24-h morphine PCA dose,First 24 postoperative hours,mg morphine; source explicitly calls PCA epidural,Mean/SD,MODALITY_REVIEW_REQUIRED,Sham,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Actual cumulative postoperative sufentanil consumption,0-24 h,µg sufentanil,Not reported,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Actual postoperative sufentanil consumption,0-24 h,µg sufentanil,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Actual total postoperative sufentanil consumption,0-24 h,µg sufentanil,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Additional PCA dose/release,"POD2; 24 h after first EA session, not necessarily 24 h after surgery",source unit not reported,Median/IQR,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Any postoperative opioid use,Postoperative window not clearly defined as 0-24 h,participants,Events/total,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Zhou 2021
+postoperative_opioid_other_windows,Complete 24-h opioid/MME exposure,0-24 h,MME,Not calculable,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Complete postoperative opioid/MME exposure,0-24 h,sufentanil + butorphanol PCIA; rescue dezocine,Not calculable,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Cumulative IV PCA hydromorphone,First 24 h postoperatively,mg hydromorphone,Mean/SD,TEAS,Sham,3,3,3,1,NOT POOLED - only 1 independent study,Chen 1998
+postoperative_opioid_other_windows,Cumulative IV PCA morphine delivered,First 24 postoperative hours,mg IV morphine,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Lee 2011
+postoperative_opioid_other_windows,Cumulative IV PCA morphine delivered,First 24 postoperative hours,mg IV morphine,Mean/SD,MODALITY_REVIEW_REQUIRED,Sham,2,2,2,1,HOLD - comparator type needs adjudication,Lee 2011
+postoperative_opioid_other_windows,Cumulative IV PCA morphine delivered during postoperative test period,Postoperative hour 1 through next 23 h (published as 24-h test-period value),mg morphine,Mean/SD,EA,CONTROL_TYPE_REVIEW_REQUIRED,2,2,2,1,HOLD - comparator type needs adjudication,Lin 2002
+postoperative_opioid_other_windows,Cumulative IV PCA morphine delivered during postoperative test period,Postoperative hour 1 through next 23 h (published as 24-h test-period value),mg morphine,Mean/SD,EA,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lin 2002
+postoperative_opioid_other_windows,Cumulative IV PCA morphine requirement,First 24 h postoperatively,mg morphine,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Seevaunnamtum 2016
+postoperative_opioid_other_windows,Cumulative IV PCA tramadol HCl consumption,0-24 h,mg tramadol,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+postoperative_opioid_other_windows,Cumulative IV PCA tramadol HCl consumption,0-24 h,mg tramadol,Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+postoperative_opioid_other_windows,Cumulative IV PCA tramadol HCl consumption,24-48 h,mg tramadol,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+postoperative_opioid_other_windows,Cumulative IV PCA tramadol HCl consumption,24-48 h,mg tramadol,Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+postoperative_opioid_other_windows,Cumulative fentanyl,First 24 h postoperatively,µg/kg fentanyl,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Coura 2011
+postoperative_opioid_other_windows,Cumulative pethidine consumption,0-24 h,mg pethidine,Not reported,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Cumulative postoperative IV PCA morphine,0-24 h,mg/kg morphine,Mean/SD,EA,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Sim 2002
+postoperative_opioid_other_windows,Cumulative postoperative morphine consumption,0-24 h,mg IV morphine,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Cumulative postoperative opioid consumption,0-24 h,mg/µg,Not reported,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Cumulative postoperative oxycodone consumption,0-24 h,mg oxycodone,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Cumulative postoperative sufentanil,Exact 0-24 h,µg sufentanil,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Cumulative postoperative sufentanil PCA consumption,0-24 h,µg sufentanil,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Cumulative postoperative sufentanil consumption,0-24 h,published formulation 0.15 µg/kg in 100 mL,Not calculable,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Cumulative postoperative sufentanil consumption,0-24 h,published pump formulation says 250 mg sufentanil/250 mL,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Cumulative postoperative sufentanil delivered by analgesic pump,0-24 h,µg sufentanil,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Cumulative sufentanil,24 h postoperatively,µg sufentanil,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Chen 2020
+postoperative_opioid_other_windows,Derived cumulative sufentanil dose from fixed 0.05 µg/kg bolus,0-24 h,µg/kg sufentanil,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Drowsiness,0–24 h,percent,Published percentage,EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative 24-h postoperative morphine-equivalent consumption,0-24 h,mg morphine-equivalent,Not reported,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative PCA opioid consumption,0-24 h,mg/µg,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative fentanyl mass / MME,0-24 h,µg fentanyl / MME,Not calculable,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative fentanyl,0-24 h,mg/µg fentanyl,Not reported,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative opioid consumption,0-24 h,mg/µg,Not reported,EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative opioid consumption,0-24 h,mg/µg,Not reported,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative opioid consumption,0-24 h,mg/µg,Not reported,TEAS,Sham,4,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative opioid consumption,0–24 h,opioid dose,Not reported,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Exact cumulative postoperative opioid dose,0-24 h,MME,Not calculable,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative opioid dose,0-24 h,mg IV morphine-equivalent,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative opioid dose,0-24 h,mg morphine-equivalent/kg,Not reported,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Exact cumulative postoperative opioid dose,0-24 h,mg/µg,Not reported,TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative opioid/tramadol consumption,0-24 h,mg tramadol (IV rescue),Not reported,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,2,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Exact cumulative postoperative sufentanil,0-24 h,µg sufentanil,Not reported,MODALITY_REVIEW_REQUIRED,Sham,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Exact cumulative postoperative sufentanil PCIA consumption,0-24 h,µg sufentanil,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative sufentanil consumption,0-24 h,µg sufentanil,Not reported,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative sufentanil consumption,0-24 h,µg/kg sufentanil,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative sufentanil delivered,0-24 h,µg sufentanil,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact cumulative postoperative sufentanil mass,0-24 h,µg sufentanil,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact postoperative opioid/MME consumption,0-24 h,MME,Not calculable,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Exact total opioid exposure,0-24 h,mg MME,Not reported,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,IV PCA morphine consumption,Day 0,mg IV morphine,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wong 2006
+postoperative_opioid_other_windows,IV PCA morphine consumption,Day 1,mg IV morphine,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wong 2006
+postoperative_opioid_other_windows,IV PCA morphine consumption,Day 2,mg IV morphine,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wong 2006
+postoperative_opioid_other_windows,IV PCA morphine consumption,First 3 postoperative days total,mg IV morphine,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Wong 2006
+postoperative_opioid_other_windows,Morphine use via IV PCA,First 24 h / POD1,mg morphine,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2024
+postoperative_opioid_other_windows,Number of postoperative pethidine injections,Postoperative; exact window NR,number of injections,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Ng 2013
+postoperative_opioid_other_windows,Patient-controlled analgesia demand count,Study PCA period,demands,Mean/SD,MODALITY_REVIEW_REQUIRED,Sham,1,1,1,1,HOLD - comparator type needs adjudication,Xie 2014
+postoperative_opioid_other_windows,Postoperative IV PCA morphine,6-12 h,mg/kg morphine,Median/IQR width as printed,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Postoperative IV PCA morphine in interval,0–6 h,mg/kg,Graph only,EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Postoperative IV PCA morphine in interval,12–18 h,mg/kg,Graph only,EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Postoperative IV PCA morphine in interval,18–24 h,mg/kg,Graph only,EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Postoperative IV PCA morphine in interval,6–12 h,mg/kg,Median/IQR width as printed,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Postoperative IV morphine-equivalent consumption,Within 48 h,mg IV morphine-equivalent,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Postoperative opioid consumption,0-24 h,mg/µg,Not applicable / not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Postoperative opioid consumption,0-24 h,mg/µg,Not reported,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Postoperative opioid consumption,Postoperative window unclear,mg morphine-equivalent/kg,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Pruritus,0–24 h,percent,Published percentage,EA,Sham,2,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Published 'sufentanil equivalents' metric,Perioperative,published as mg; definition/unit unresolved,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Luo 2026
+postoperative_opioid_other_windows,Published postoperative sufentanil aggregate,Observation window unclear,µg/kg sufentanil,Mean/SD,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+postoperative_opioid_other_windows,Total IV PCA morphine dose,0–24 h postoperative,mg IV morphine,Mean/SD,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Szmit 2021
+postoperative_opioid_other_windows,Total IV PCA morphine dose,0–24 h postoperative,mg IV morphine,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Szmit 2021
+postoperative_opioid_other_windows,Total IV morphine analgesia,First 24 h,mg IV morphine,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,El-Rakshy 2009
+postoperative_opioid_other_windows,Total IV morphine analgesia,First 4 h,mg IV morphine,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,El-Rakshy 2009
+postoperative_opioid_other_windows,Total postoperative fentanyl PCIA dose,Through reported 48-h PCIA period,mg fentanyl,Mean/SD,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,An 2014
+postoperative_opioid_other_windows,Total postoperative opioid consumption in morphine equivalents,0-24 h,mg MME,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,He 2026 (hepatectomy/JIS)
+postoperative_opioid_other_windows,Total postoperative/perioperative sufentanil,Study PCA period; exact fixed window unclear,µg sufentanil,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Total postoperative/perioperative sufentanil,Study PCA period; exact fixed window unclear,µg sufentanil,Mean/SD,MODALITY_REVIEW_REQUIRED,Sham,1,0,0,0,HOLD - comparator type needs adjudication,
+postoperative_opioid_other_windows,Total sufentanil consumption,POD1; approximately 24 h but exact clock window not explicit,µg sufentanil,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhang 2025
+postoperative_opioid_other_windows,Total tramadol exposure,Perioperative / first 24 h most consistent with protocol; table does not restate window,mg tramadol,Mean/SD,EA,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Ntritsou 2014
+qor15,Global QoR-15,POD1,QoR-15 points,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhou 2025
+qor15,Overall QoR-15,AMBIGUOUS,QoR-15 points,Mean/SD,EA,Usual care,3,0,0,0,NOT POOLED - only 0 independent study,
+qor15,QoR-15 score,24 h after surgery,QoR-15 points,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+qor15,QoR-15 score,48 h after surgery,QoR-15 points,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+qor15,QoR-15 score,72 h after surgery,QoR-15 points,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+qor40,Emotional state,24 h after operation,QoR-40 points,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+qor40,Global QoR-40,24 h,QoR-40 points,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+qor40,Global QoR-40,24 h,QoR-40 points,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+qor40,Global QoR-40,24 h (T11),QoR-40 points,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+qor40,Global QoR-40,24 h postoperatively,QoR-40 points,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yao 2015
+qor40,Global QoR-40,48 h,QoR-40 points,Mean; SD not numerically reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+qor40,Global QoR-40,48 h (T12),QoR-40 points,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liang 2021
+qor40,Global QoR-40,6 h,QoR-40 points,Graph only,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+qor40,Global QoR-40,Postoperative day 1 (~24 h),QoR-40 points,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yu 2020
+qor40,Global QoR-40,Postoperative day 2 (~48 h),QoR-40 points,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yu 2020
+qor40,Pain subscale,24 h after operation,QoR-40 points,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+qor40,Physical comfort,24 h after operation,QoR-40 points,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+qor40,Physical independence,24 h after operation,QoR-40 points,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+qor40,Psychological support,24 h after operation,QoR-40 points,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+qor40,QoR-40 total score,Day of discharge,QoR-40 points,Median/range,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+qor40,Total QoR-40 score,24 h after operation,QoR-40 points,Mean/SD,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+rescue_antiemetic,Additional antiemetic requirement,Within 48 h after surgery,percent,Published percentage (95% CI),TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+rescue_antiemetic,Any rescue antiemetic medication,Within 48 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Xiong 2021
+rescue_antiemetic,Complete response: no vomiting and no rescue antiemetic,0-48 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Luo 2026
+rescue_antiemetic,Participants requiring metoclopramide rescue antiemetic,0–6 h after surgery,participants,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+rescue_antiemetic,Participants requiring metoclopramide rescue antiemetic,24–48 h after surgery,participants,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+rescue_antiemetic,Participants requiring metoclopramide rescue antiemetic,6–24 h after surgery,participants,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+rescue_antiemetic,Participants requiring tropisetron rescue,0–24 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yu 2020
+rescue_antiemetic,Participants using antiemetic drugs,Within 24 h after operation,participants,Events/total,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+rescue_antiemetic,Use of metoclopramide 10 mg IM,0–2 h after craniotomy,participants,Events/total,TEAS,Sham,1,1,0,0,NOT POOLED - only 0 independent study,
+rescue_antiemetic,Use of metoclopramide 10 mg IM,2–6 h after craniotomy,participants,Events/total,TEAS,Sham,1,1,0,0,NOT POOLED - only 0 independent study,
+rescue_antiemetic,Use of metoclopramide 10 mg IM,6–24 h after craniotomy,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Tu 2024
+rescue_opioid_frequency,Complete combined postoperative opioid exposure (tramadol + rescue pethidine),0-24 h,MME / combined opioid dose,Not calculable,MODALITY_REVIEW_REQUIRED,Usual care,1,0,0,0,HOLD - comparator type needs adjudication,
+rescue_opioid_frequency,Cumulative rescue IV morphine dose derived from fixed 2-mg rescue administrations,0-24 h,mg IV morphine,Median/IQR,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+rescue_opioid_frequency,Cumulative rescue morphine consumption,0-24 h,mg IV morphine,Not reported,EA,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+rescue_opioid_frequency,Cumulative rescue tramadol consumption,0-24 h,mg tramadol,Not reported,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+rescue_opioid_frequency,Rescue IM pethidine HCl consumption,0-24 h,mg pethidine,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+rescue_opioid_frequency,Rescue IM pethidine HCl consumption,0-24 h,mg pethidine,Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+rescue_opioid_frequency,Rescue IM pethidine HCl consumption,24-48 h,mg pethidine,Mean/SD,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+rescue_opioid_frequency,Rescue IM pethidine HCl consumption,24-48 h,mg pethidine,Mean/SD,MODALITY_REVIEW_REQUIRED,Usual care,1,1,1,1,HOLD - comparator type needs adjudication,Oztas 2019
+rescue_opioid_frequency,Rescue IV tramadol requirement,Postoperative period; exact window not reported,100 mg IV tramadol per rescue,Qualitative / exact quantities unavailable,MODALITY_REVIEW_REQUIRED,CONTROL_TYPE_REVIEW_REQUIRED,1,0,0,0,HOLD - comparator type needs adjudication,
+rescue_opioid_use,Any rescue IV morphine use,Through 48 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2026 (ESD)
+rescue_opioid_use,Any rescue dezocine use,Through POD1,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2026 (burn)
+rescue_opioid_use,Any rescue tramadol use,6–24 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Tu 2024
+rescue_opioid_use,Participants requiring rescue sufentanil,0-24 h postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yu 2020
+time_to_first_rescue,Time to first rescue analgesia,0-24 h postoperative,minutes,Median/range,TEAS,Sham,1,0,0,0,NOT POOLED - only 0 independent study,
+vomiting,Cumulative postoperative vomiting,0-48 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Luo 2026
+vomiting,Number of vomiting episodes,Postoperative 72 h,episodes,Mean/SD,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gao 2021
+vomiting,Postoperative vomiting,0-24 h postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Yao 2015
+vomiting,Postoperative vomiting,6-24 h postoperatively,participants with vomiting,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+vomiting,Postoperative vomiting,Postoperative,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zhang 2014
+vomiting,Postoperative vomiting,Within 72 h,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2024
+vomiting,Postoperative vomiting incidence,0-24 h,participants with vomiting,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Gao 2022
+vomiting,Postoperative vomiting incidence,0–6 h after surgery,participants,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+vomiting,Postoperative vomiting incidence,24–48 h after surgery,participants,Events/total,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+vomiting,Postoperative vomiting incidence,48–72 h after surgery,participants,Events/total,EA,Usual care,3,3,0,0,NOT POOLED - only 0 independent study,
+vomiting,Postoperative vomiting incidence,Postoperative day 1,participants with vomiting,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+vomiting,Postoperative vomiting incidence,Postoperative day 2,participants with vomiting,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+vomiting,Postoperative vomiting incidence,Postoperative day 3,participants with vomiting,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Liu 2015
+vomiting,Vomiting,24 h,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Ma 2026
+vomiting,Vomiting,Postoperative,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Huang 2025
+vomiting,Vomiting,Within 48 h after surgery,percent,Published percentage (95% CI),TEAS,Sham,3,0,0,0,NOT POOLED - only 0 independent study,
+vomiting,Vomiting incidence,0–2 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+vomiting,Vomiting incidence,0–2 h after craniotomy,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Tu 2024
+vomiting,Vomiting incidence,0–24 h,participants,Events/total,TEAS,Sham,2,2,2,1,NOT POOLED - only 1 independent study,Lu 2021
+vomiting,Vomiting incidence,0–24 h after surgery,participants,Events/total,EA,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Yang 2020
+vomiting,Vomiting incidence,0–6 h combined,participants,Events/total,TEAS,CONTROL_TYPE_REVIEW_REQUIRED,1,1,1,1,HOLD - comparator type needs adjudication,Wang 2024
+vomiting,Vomiting incidence,1 h after operation,participants,Events/total,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+vomiting,Vomiting incidence,2-6 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Tu 2024
+vomiting,Vomiting incidence,24–48 h after surgery,participants,Events/total,EA,Usual care,1,1,0,0,NOT POOLED - only 0 independent study,
+vomiting,Vomiting incidence,2–4 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+vomiting,Vomiting incidence,48–72 h after surgery,participants,Events/total,EA,Usual care,1,1,0,0,NOT POOLED - only 0 independent study,
+vomiting,Vomiting incidence,4–6 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+vomiting,Vomiting incidence,6-24 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Tu 2024
+vomiting,Vomiting incidence,6–24 h,participants,Events/total,TEAS,Sham,1,1,1,1,NOT POOLED - only 1 independent study,Zheng 2025
+vomiting,Vomiting incidence,Within 24 h after operation,participants,Events/total,TEAS,Usual care,1,1,1,1,NOT POOLED - only 1 independent study,Pan 2023
+vomiting,Vomiting occurrence,0-24 h,events/participants,Qualitative / exact group values unavailable,MODALITY_REVIEW_REQUIRED,Usual care,1,0,0,0,HOLD - comparator type needs adjudication,
+vomiting,Vomiting severity score,0–24 h after surgery,4-point rating scale 0-3,Median/IQR,EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+vomiting,Vomiting severity score,0–6 h after surgery,4-point Likert-type severity scale 0-3,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+vomiting,Vomiting severity score,24–48 h after surgery,4-point Likert-type severity scale 0-3,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022
+vomiting,Vomiting severity score,24–48 h after surgery,4-point rating scale 0-3,Other (describe),EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+vomiting,Vomiting severity score,48–72 h after surgery,4-point rating scale 0-3,Other (describe),EA,Usual care,1,0,0,0,NOT POOLED - only 0 independent study,
+vomiting,Vomiting severity score,6–24 h after surgery,4-point Likert-type severity scale 0-3,Mean/SD,EA,Usual care,3,3,3,1,NOT POOLED - only 1 independent study,Zhu 2022

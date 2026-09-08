@@ -1,17 +1,17 @@
 // v33 DASHBOARD DATA LAYER — generated file, do not hand-edit.
 // Regenerate with:  python3 scripts/build_v33_dashboard_data.py
 //
-// Master : TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx
-// Studies: 70   Outcome rows: 382
+// Master : TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx
+// Studies: 70   Outcome rows: 757
 // Strict primary opioid k: 7
 //
 // Every number is read from the v33 workbook or from a Stata result file.
 // None is copied from previous HTML or JS.
 window.V33_DATA = {
   "generated_by": "scripts/build_v33_dashboard_data.py",
-  "master": "TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx",
+  "master": "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx",
   "canonical_studies": 70,
-  "outcome_rows": 382,
+  "outcome_rows": 757,
   "strict_primary_k": 7,
   "result_rob2_coverage": [
     {
@@ -339,19 +339,19 @@ window.V33_DATA = {
         "id": "other_postop_opioid",
         "label": "Other postoperative opioid",
         "definition": "Reports postoperative opioid consumption at another window, in another unit, or in a form that cannot enter the strict model.",
-        "n_studies": 30
+        "n_studies": 29
       },
       {
         "id": "intraoperative_opioid",
         "label": "Intraoperative opioid",
         "definition": "Reports intraoperative opioid requirement. A different estimand from postoperative consumption; never pooled with it.",
-        "n_studies": 18
+        "n_studies": 20
       },
       {
         "id": "rescue_opioid",
         "label": "Rescue analgesia / opioid",
         "definition": "Reports rescue opioid use, rescue administration counts, or time to first rescue.",
-        "n_studies": 11
+        "n_studies": 15
       },
       {
         "id": "opioid_demand",
@@ -363,37 +363,37 @@ window.V33_DATA = {
         "id": "pain",
         "label": "Pain",
         "definition": "Reports a postoperative pain score.",
-        "n_studies": 28
+        "n_studies": 37
       },
       {
         "id": "ponv",
         "label": "PONV / nausea / vomiting",
         "definition": "Reports postoperative nausea or vomiting.",
-        "n_studies": 26
+        "n_studies": 36
       },
       {
         "id": "qor",
         "label": "Quality of recovery",
         "definition": "Reports QoR-40 or QoR-15.",
-        "n_studies": 5
+        "n_studies": 10
       },
       {
         "id": "gi_recovery",
         "label": "GI recovery",
         "definition": "Reports flatus, defecation, bowel sounds, diet or ileus.",
-        "n_studies": 14
+        "n_studies": 17
       },
       {
         "id": "los_recovery",
         "label": "LOS / recovery",
         "definition": "Reports length of stay or another recovery endpoint.",
-        "n_studies": 5
+        "n_studies": 11
       },
       {
         "id": "other_narrative",
         "label": "Other / narrative only",
         "definition": "Carries outcome information that no current pooled model uses.",
-        "n_studies": 8
+        "n_studies": 21
       }
     ],
     "per_study": [
@@ -473,9 +473,12 @@ window.V33_DATA = {
       {
         "study": "Gao 2021",
         "families": [
-          "gi_recovery"
+          "gi_recovery",
+          "other_narrative",
+          "pain",
+          "ponv"
         ],
-        "n_families": 1,
+        "n_families": 4,
         "in_primary": false
       },
       {
@@ -501,10 +504,11 @@ window.V33_DATA = {
         "study": "Gu 2019",
         "families": [
           "gi_recovery",
-          "other_postop_opioid",
-          "pain"
+          "other_narrative",
+          "pain",
+          "ponv"
         ],
-        "n_families": 3,
+        "n_families": 4,
         "in_primary": false
       },
       {
@@ -566,9 +570,14 @@ window.V33_DATA = {
       {
         "study": "Huang 2025",
         "families": [
-          "gi_recovery"
+          "gi_recovery",
+          "other_narrative",
+          "pain",
+          "ponv",
+          "qor",
+          "rescue_opioid"
         ],
-        "n_families": 1,
+        "n_families": 6,
         "in_primary": false
       },
       {
@@ -576,9 +585,11 @@ window.V33_DATA = {
         "families": [
           "gi_recovery",
           "intraoperative_opioid",
+          "other_narrative",
+          "pain",
           "ponv"
         ],
-        "n_families": 3,
+        "n_families": 5,
         "in_primary": false
       },
       {
@@ -603,9 +614,11 @@ window.V33_DATA = {
         "study": "Li 2021",
         "families": [
           "gi_recovery",
-          "pain"
+          "other_narrative",
+          "pain",
+          "ponv"
         ],
-        "n_families": 2,
+        "n_families": 4,
         "in_primary": false
       },
       {
@@ -619,11 +632,13 @@ window.V33_DATA = {
       {
         "study": "Liang 2021",
         "families": [
+          "intraoperative_opioid",
           "other_narrative",
-          "qor",
-          "rescue_opioid"
+          "pain",
+          "ponv",
+          "qor"
         ],
-        "n_families": 3,
+        "n_families": 5,
         "in_primary": false
       },
       {
@@ -685,22 +700,26 @@ window.V33_DATA = {
       {
         "study": "Long 2025",
         "families": [
+          "los_recovery",
           "opioid_demand",
           "other_narrative",
           "pain",
           "ponv"
         ],
-        "n_families": 4,
+        "n_families": 5,
         "in_primary": false
       },
       {
         "study": "Lu 2021",
         "families": [
           "intraoperative_opioid",
+          "los_recovery",
+          "other_narrative",
           "pain",
-          "ponv"
+          "ponv",
+          "rescue_opioid"
         ],
-        "n_families": 3,
+        "n_families": 6,
         "in_primary": false
       },
       {
@@ -708,9 +727,12 @@ window.V33_DATA = {
         "families": [
           "gi_recovery",
           "los_recovery",
-          "opioid_demand"
+          "opioid_demand",
+          "pain",
+          "ponv",
+          "qor"
         ],
-        "n_families": 3,
+        "n_families": 6,
         "in_primary": false
       },
       {
@@ -764,9 +786,14 @@ window.V33_DATA = {
         "study": "Pan 2023",
         "families": [
           "gi_recovery",
-          "intraoperative_opioid"
+          "intraoperative_opioid",
+          "los_recovery",
+          "other_narrative",
+          "ponv",
+          "qor",
+          "rescue_opioid"
         ],
-        "n_families": 2,
+        "n_families": 7,
         "in_primary": false
       },
       {
@@ -782,9 +809,10 @@ window.V33_DATA = {
         "study": "Sim 2002",
         "families": [
           "intraoperative_opioid",
-          "other_postop_opioid"
+          "other_postop_opioid",
+          "pain"
         ],
-        "n_families": 2,
+        "n_families": 3,
         "in_primary": false
       },
       {
@@ -803,9 +831,13 @@ window.V33_DATA = {
       {
         "study": "Sun 2017",
         "families": [
+          "gi_recovery",
+          "intraoperative_opioid",
+          "los_recovery",
+          "other_narrative",
           "pain"
         ],
-        "n_families": 1,
+        "n_families": 5,
         "in_primary": false
       },
       {
@@ -822,20 +854,23 @@ window.V33_DATA = {
       {
         "study": "Tu 2024",
         "families": [
+          "other_narrative",
           "pain",
           "ponv",
           "rescue_opioid"
         ],
-        "n_families": 3,
+        "n_families": 4,
         "in_primary": false
       },
       {
         "study": "Wang 2023",
         "families": [
           "gi_recovery",
+          "other_narrative",
+          "ponv",
           "rescue_opioid"
         ],
-        "n_families": 2,
+        "n_families": 4,
         "in_primary": false
       },
       {
@@ -915,9 +950,14 @@ window.V33_DATA = {
       {
         "study": "Yang 2020",
         "families": [
-          "gi_recovery"
+          "gi_recovery",
+          "los_recovery",
+          "other_narrative",
+          "pain",
+          "ponv",
+          "rescue_opioid"
         ],
-        "n_families": 1,
+        "n_families": 6,
         "in_primary": false
       },
       {
@@ -960,11 +1000,13 @@ window.V33_DATA = {
       {
         "study": "Yu 2020",
         "families": [
+          "other_narrative",
           "pain",
+          "ponv",
           "qor",
           "rescue_opioid"
         ],
-        "n_families": 3,
+        "n_families": 5,
         "in_primary": false
       },
       {
@@ -1015,11 +1057,16 @@ window.V33_DATA = {
       {
         "study": "Zheng 2025",
         "families": [
+          "gi_recovery",
           "intraoperative_opioid",
+          "los_recovery",
           "opioid_demand",
-          "ponv"
+          "other_narrative",
+          "pain",
+          "ponv",
+          "qor"
         ],
-        "n_families": 3,
+        "n_families": 8,
         "in_primary": false
       },
       {
@@ -1046,10 +1093,14 @@ window.V33_DATA = {
       {
         "study": "Zhu 2022",
         "families": [
+          "gi_recovery",
           "intraoperative_opioid",
-          "ponv"
+          "pain",
+          "ponv",
+          "qor",
+          "rescue_opioid"
         ],
-        "n_families": 2,
+        "n_families": 6,
         "in_primary": false
       }
     ],
@@ -1119,6 +1170,8 @@ window.V33_DATA = {
       "figure": "secondary/forest_v33_rescue_opioid_rr.png",
       "measure": "Risk ratio",
       "model": "REML + Hartung-Knapp",
+      "v34_status": "withdrawn",
+      "v34_note": "Withdrawn. The three trials did not share one time window (Tu 2024 6-24 h, Liu 2026 burn through POD1, Yu 2020 exact 0-24 h), so the pooled value described no single estimand. The exact 0-24 h set is k = 1 and is not meta-analysed.",
       "k": 3.0,
       "estimate": 0.5188122902699271,
       "ci_low": 0.3703789571689463,
@@ -1133,6 +1186,8 @@ window.V33_DATA = {
       "figure": "secondary/forest_v33_intraop_remifentanil.png",
       "measure": "MD (ug)",
       "model": "REML + Hartung-Knapp",
+      "v34_status": "superseded",
+      "v34_note": "Superseded: pooled across modality and comparator. Replaced by TEAS vs sham (k = 6).",
       "k": 8.0,
       "estimate": -116.7635851347925,
       "ci_low": -177.3163528465471,
@@ -1147,6 +1202,8 @@ window.V33_DATA = {
       "figure": null,
       "measure": "Hedges g",
       "model": "REML + Hartung-Knapp",
+      "v34_status": "superseded",
+      "v34_note": "Superseded with the mean-difference model it accompanied.",
       "k": 8.0,
       "estimate": -0.5261933094995964,
       "ci_low": -0.9213729477018457,
@@ -1161,6 +1218,8 @@ window.V33_DATA = {
       "figure": "secondary/forest_v33_intraop_sufentanil.png",
       "measure": "MD (ug)",
       "model": "REML + Hartung-Knapp",
+      "v34_status": "superseded",
+      "v34_note": "Superseded: pooled across modality and comparator, and counted Wang 2024's two risk strata as separate trials. Replaced by TEAS vs sham (k = 2).",
       "k": 5.0,
       "estimate": -0.1185847431304059,
       "ci_low": -2.432214402365839,
@@ -1175,6 +1234,8 @@ window.V33_DATA = {
       "figure": "secondary/forest_v33_qor40_24h.png",
       "measure": "MD (points)",
       "model": "REML + Hartung-Knapp",
+      "v34_status": "withdrawn",
+      "v34_note": "Withdrawn. The set mixed Yu 2020's POD1 assessment with exact 24-hour assessments and pooled across comparator strata. Replaced by TEAS vs sham at exactly 24 h (k = 2).",
       "k": 3.0,
       "estimate": 7.340984043233228,
       "ci_low": -4.601338739466667,
@@ -1189,6 +1250,8 @@ window.V33_DATA = {
       "figure": "secondary/forest_v33_gi_defecation.png",
       "measure": "MD (hours)",
       "model": "REML + Hartung-Knapp",
+      "v34_status": "superseded",
+      "v34_note": "Superseded: pooled across modality and comparator. Replaced by TEAS vs sham (k = 3) and EA vs usual care (k = 3).",
       "k": 7.0,
       "estimate": -4.804720237806922,
       "ci_low": -7.627734640992897,

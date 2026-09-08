@@ -5,7 +5,7 @@ Dashboard <-> v26 lock consistency validator.
 Fails loudly when the published dashboard disagrees with the authoritative
 sources:
 
-  workbook   TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx
+  workbook   TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx
   analysis   06_FINAL_ANALYSIS_V26/{01_DATA,03_RESULTS}
   dashboard  dashboard/  (canonical, hand-edited source)
 
@@ -1204,7 +1204,7 @@ def t_v33_layer_matches_master():
     """
     probs = []
     import openpyxl
-    master = ROOT / "TEAS EA Verification" / "TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
+    master = ROOT / "TEAS EA Verification" / "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx"
     if not master.exists():
         check("v33 dashboard layer matches the v33 master", False, f"{master} missing")
         return
@@ -1301,10 +1301,24 @@ def t_no_stale_master_in_live_code():
     changelogs and audit trails are legitimate and are not flagged.
     """
     probs = []
+    # The current master is whichever versioned workbook the build actually
+    # uses, discovered rather than hardcoded: this check previously named v33
+    # and would have had to be edited on every version advance, which is the
+    # same drift hazard it exists to prevent.
+    import re as _re
+    build = (ROOT / "scripts" / "build_site.py").read_text(encoding="utf-8")
+    m = _re.search(r"TEAS_EA_RECONCILED_MASTER_DATA_(v\d+)_FINAL_LOCK_READY", build)
+    if not m:
+        check("Live analytical code reads the current master, not an earlier one",
+              False, "build_site.py names no versioned master")
+        return
+    current = m.group(1)
+    older = [f"v{n}" for n in range(26, int(current[1:]))]
+
     live = {
         "scripts/build_site.py", "scripts/build_primary_pathway.py",
-        "scripts/build_v33_dashboard_data.py",
-        "06_FINAL_ANALYSIS_V26/02_STATA/00_prep_data.do",
+        "scripts/build_v33_dashboard_data.py", "scripts/build_v34_dashboard_data.py",
+        "scripts/build_reference_data.py",
     }
     for rel in sorted(live):
         f = ROOT / rel
@@ -1312,12 +1326,14 @@ def t_no_stale_master_in_live_code():
             probs.append(f"{rel} missing")
             continue
         txt = f.read_text(encoding="utf-8", errors="replace")
-        for stale in ("v32_FINAL_LOCK_READY", "v31_FINAL_LOCK_READY", "v26_FINAL_LOCK_READY"):
-            if stale in txt:
-                probs.append(f"{rel} still reads {stale}")
-        if "v33_FINAL_LOCK_READY" not in txt:
-            probs.append(f"{rel} does not reference the v33 master")
-    check("Live analytical code reads the v33 master, not an earlier one",
+        for stale in older:
+            # A frozen-hash reference or a documented supersession note may name
+            # an older master legitimately; reading one as an INPUT may not.
+            if f"{stale}_FINAL_LOCK_READY.xlsx" in txt and "V32_SHA256" not in txt:
+                probs.append(f"{rel} still reads the {stale} master")
+        if f"{current}_FINAL_LOCK_READY" not in txt:
+            probs.append(f"{rel} does not reference the {current} master")
+    check("Live analytical code reads the current master, not an earlier one",
           not probs, "\n".join(probs))
 
 

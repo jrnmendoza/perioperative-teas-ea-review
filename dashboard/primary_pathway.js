@@ -6,12 +6,12 @@
 // updated, re-running this script moves the study between categories and the
 // dashboard counts follow automatically.
 //
-// Source workbook : TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx
+// Source workbook : TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx
 // Statistics      : StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26 + 07_TIERED_V33
 // PROSPERO        : CRD420251090635
 window.PRIMARY_PATHWAY = {
   "generated_by": "scripts/build_primary_pathway.py",
-  "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx",
+  "data_source": "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx",
   "statistical_source": "StataNow 19.5 BE — 06_FINAL_ANALYSIS_V26 + 07_TIERED_V33",
   "prospero": "CRD420251090635",
   "review_included_rcts": 70,

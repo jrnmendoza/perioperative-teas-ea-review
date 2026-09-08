@@ -1,0 +1,3 @@
+model,study,record_id,comparison_id,outcome,window,unit,modality,comparator,statistic,analysis_population,rob2,source_location,measure,n_i,n_c,mean_i,sd_i,mean_c,sd_c,effect,se
+gi_first_bowel_sounds_TEAS_Sham,Gu 2019,V33-OD-0222,GU19_LTEAS_vs_CTEAS_BOWEL,Time to first bowel sounds,Postoperative,hours,TEAS,Sham,Mean/SD,,ROB2_RESULT_SPECIFIC_PENDING,GI recovery table,MD,58,59,19.69,7.61,26.58,7.43,-6.89,1.390741
+gi_first_bowel_sounds_TEAS_Sham,Gao 2021,AUDIT-0173,V34_B2_023,Time to first bowel sounds,Postoperative,hours,TEAS,Sham,Mean/SD,Intention-to-treat; all randomized patients,ROB2_RESULT_SPECIFIC_PENDING,p. 1623; Table III,MD,303,307,41.4,22.6,46.0,24.1,-4.6,1.891445

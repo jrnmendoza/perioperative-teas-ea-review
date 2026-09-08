@@ -29,7 +29,7 @@ import openpyxl
 
 ROOT = Path(__file__).resolve().parent.parent
 V33 = (ROOT / "TEAS EA Verification"
-       / "TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx")
+       / "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx")
 SEC = ROOT / "08_V33_MASTER" / "03_RESULTS" / "results_v33_secondary.csv"
 NOTPOOLED = ROOT / "08_V33_MASTER" / "01_DATA" / "v33_not_pooled_register.csv"
 PRIMARY = ROOT / "06_FINAL_ANALYSIS_V26" / "03_RESULTS" / "results_opioid24_primary.csv"
@@ -89,6 +89,38 @@ FAMILY_MAP = {
     "Catheter-related bladder discomfort": "other_narrative",
     "Other adverse events": "other_narrative",
     "Cardiac rhythm": "other_narrative",
+}
+
+
+# What became of each v33 secondary model in v34. Nothing here is a new
+# scientific claim: it records the disposition the v34 reconciliation made.
+V33_SECONDARY_STATUS = {
+    "V33_RESCUE_OPIOID_RR_24H": dict(
+        status="withdrawn",
+        note="Withdrawn. The three trials did not share one time window (Tu 2024 "
+             "6-24 h, Liu 2026 burn through POD1, Yu 2020 exact 0-24 h), so the "
+             "pooled value described no single estimand. The exact 0-24 h set is "
+             "k = 1 and is not meta-analysed."),
+    "V33_QOR40_24H_MD": dict(
+        status="withdrawn",
+        note="Withdrawn. The set mixed Yu 2020's POD1 assessment with exact 24-hour "
+             "assessments and pooled across comparator strata. Replaced by TEAS vs "
+             "sham at exactly 24 h (k = 2)."),
+    "V33_INTRAOP_REMI_MD": dict(
+        status="superseded",
+        note="Superseded: pooled across modality and comparator. Replaced by TEAS vs "
+             "sham (k = 6)."),
+    "V33_INTRAOP_REMI_SMD": dict(
+        status="superseded",
+        note="Superseded with the mean-difference model it accompanied."),
+    "V33_INTRAOP_SUF_MD": dict(
+        status="superseded",
+        note="Superseded: pooled across modality and comparator, and counted Wang "
+             "2024's two risk strata as separate trials. Replaced by TEAS vs sham (k = 2)."),
+    "V33_GI_DEFECATION_MD": dict(
+        status="superseded",
+        note="Superseded: pooled across modality and comparator. Replaced by TEAS vs "
+             "sham (k = 3) and EA vs usual care (k = 3)."),
 }
 
 
@@ -202,10 +234,18 @@ def main() -> int:
             for aid, r in prim.items()
         },
 
+        # Every v33 secondary model has been either withdrawn or superseded by a
+        # stratified v34 model. They are annotated here rather than deleted, so a
+        # reader who remembers the old number can see what replaced it and why --
+        # but they must never render as current evidence.
         "secondary": [
             dict(analysis_id=r["analysis_id"], outcome=r["outcome"],
                  figure=('secondary/' + FIGURES[r['analysis_id']]) if r['analysis_id'] in FIGURES else None,
-                 measure=r["measure"], model=r["model"], **fmt(r))
+                 measure=r["measure"], model=r["model"],
+                 v34_status=V33_SECONDARY_STATUS.get(r["analysis_id"], {}).get("status", "superseded"),
+                 v34_note=V33_SECONDARY_STATUS.get(r["analysis_id"], {}).get(
+                     "note", "Superseded by the v34 analysis set."),
+                 **fmt(r))
             for r in secondary
         ],
 

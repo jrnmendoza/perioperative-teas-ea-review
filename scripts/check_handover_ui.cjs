@@ -58,7 +58,19 @@ const fs = require('node:fs');
     return {total: d.length, open: d.filter(x => x.open).length};
   });
   assert.ok(collapsed.total >= 8, `expected the primary tab to use collapsible sections, saw ${collapsed.total}`);
-  assert.equal(collapsed.open, 0, 'primary tab sections should start collapsed');
+  // The current-analyses section opens by design: it is the evidence a reader
+  // came for. Everything that made the page long -- contribution pathways,
+  // derivations, the plot gallery, the execution log -- must still start
+  // collapsed, so the page opens on findings rather than on supporting material.
+  const openSections = await page.evaluate(() =>
+    [...document.querySelectorAll('#tab-primary details.section-details')]
+      .filter(d => d.open).map(d => d.getAttribute('data-section')));
+  assert.deepEqual(openSections, ['v34 analyses'],
+    `only the current-analyses section should start open; saw ${JSON.stringify(openSections)}`);
+  const pageScreens = await page.evaluate(() =>
+    document.getElementById('tab-primary').scrollHeight / 900);
+  assert.ok(pageScreens < 20,
+    `primary tab should still open short; measured ${pageScreens.toFixed(1)} screens`);
   await page.screenshot({path:'tmp/handover/primary.png',fullPage:false});
   await page.evaluate(() => switchTab('secondary'));
   for (const id of await page.locator('#stata-secondary-select option').evaluateAll(els => els.map(e => e.value))) {

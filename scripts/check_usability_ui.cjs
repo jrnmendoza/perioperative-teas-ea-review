@@ -366,8 +366,97 @@ async function boot(browser, hash) {
     await page.close();
   }
 
+  // ── 12. v34 analysis set ─────────────────────────────────────────────────
+  // The dashboard must show the v34 models, each stratified, and must not
+  // present a withdrawn or superseded model as current evidence.
+  {
+    const fs = require('fs');
+    const path2 = require('path');
+    const root = path2.resolve(__dirname, '..');
+    const stata = fs.readFileSync(
+      path2.join(root, '09_V34_ANALYSIS/03_RESULTS/v34_models.csv'), 'utf8')
+      .trim().split('\n');
+    const head = stata[0].split(',');
+    const byId = {};
+    for (const line of stata.slice(1)) {
+      const c = line.split(',');
+      const row = Object.fromEntries(head.map((h, i) => [h, c[i]]));
+      byId[row.model_id] = row;
+    }
+
+    const {page} = await boot(browser);
+    await page.evaluate(() => switchTab('primary'));
+    await page.waitForTimeout(600);
+
+    const shown = await page.evaluate(() => {
+      const V = window.V34_DATA;
+      return {
+        master: V.master, studies: V.canonical_studies, rows: V.outcome_rows,
+        k: V.strict_primary_k,
+        models: V.models.map(m => ({id: m.model_id, k: m.k, est: m.estimate,
+                                    lo: m.ci_low, hi: m.ci_high, label: m.label})),
+        withdrawn: V.withdrawn.map(w => w.analysis_id),
+        rendered: document.querySelectorAll('#v34-models tbody tr').length,
+      };
+    });
+
+    assert.ok(/v34/.test(shown.master), `dashboard should read the v34 master: ${shown.master}`);
+    assert.equal(shown.studies, 70, 'canonical study count must stay 70');
+    assert.equal(shown.rows, 757, 'v34 outcome-row count must be 757');
+    assert.equal(shown.k, 7, 'strict primary k must stay 7');
+    assert.ok(shown.rendered >= 13, `expected the v34 models to render; saw ${shown.rendered}`);
+
+    // Every displayed estimate must equal the Stata value it claims to be.
+    for (const m of shown.models) {
+      const src = byId[m.id];
+      assert.ok(src, `${m.id} is displayed but absent from the Stata results`);
+      assert.equal(Number(m.k), Number(src.k), `${m.id}: k mismatch`);
+      for (const [disp, col] of [[m.est, 'estimate'], [m.lo, 'ci_low'], [m.hi, 'ci_high']]) {
+        assert.ok(Math.abs(Number(disp) - Number(src[col])) < 5e-4,
+          `${m.id}.${col}: dashboard ${disp} != Stata ${src[col]}`);
+      }
+      // Every model names its stratum. The one permitted cross-stratum model is
+      // the historical combined audit synthesis, which the protocol keeps
+      // separate from the strata and which must say so in its own label.
+      const isCombinedAudit = /combined audit/i.test(m.label);
+      if (isCombinedAudit) {
+        assert.ok(/ALL_AUDIT/.test(m.id),
+          `only the combined audit may be cross-stratum: ${m.label}`);
+      } else {
+        assert.ok(/TEAS|EA/.test(m.label) && /sham|usual care/i.test(m.label),
+          `${m.id} label must name one modality and one comparator: ${m.label}`);
+      }
+    }
+
+    // The withdrawn mixed-window rescue model must not appear as a live result.
+    assert.ok(shown.withdrawn.includes('V33_RESCUE_OPIOID_RR_24H'),
+      'the mixed-window rescue model must be registered as withdrawn');
+    const retired = await page.evaluate(() => {
+      const rows = [...document.querySelectorAll('.v33-retired')];
+      return {
+        count: rows.length,
+        allStruck: rows.every(r => r.querySelector('s')),
+        anyUnlabelled: rows.some(r => !r.querySelector('.v34-badge')),
+      };
+    });
+    assert.ok(retired.count >= 6, 'retired v33 secondary rows should still be listed');
+    assert.ok(retired.allStruck, 'retired rows must be struck through, not shown as current');
+    assert.ok(!retired.anyUnlabelled, 'every retired row needs a withdrawn/superseded badge');
+
+    // No GRADE certainty may be attached to a v34 model.
+    const certainty = await page.evaluate(() =>
+      [...document.querySelectorAll('#v34-models tbody tr td:last-child')]
+        .map(td => td.innerText.trim().toLowerCase()));
+    assert.ok(certainty.length && certainty.every(c => /pending|pågår/.test(c)),
+      `v34 models must show certainty as pending, saw ${JSON.stringify(certainty.slice(0, 3))}`);
+
+    checks += 8;
+    await page.close();
+  }
+
   await browser.close();
   console.log(`PASS: ${checks} usability regression checks — findings first, per-synthesis GRADE, ` +
     `evidence links with context, URL restore, Back/Forward, filter scope, section menu, ` +
-    `coordinated outcome selection, bilingual findings, no overflow at 320-1440px.`);
+    `coordinated outcome selection, bilingual findings, no overflow at 320-1440px, ` +
+    `v34 model integrity.`);
 })().catch(e => { console.error(e); process.exit(1); });

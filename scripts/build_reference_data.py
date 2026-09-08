@@ -100,7 +100,7 @@ def search_data():
 def main():
     data = (ROOT / 'dashboard/data.js').read_text().split('window.STUDIES_DATA = ', 1)[1]
     studies = json.JSONDecoder().raw_decode(data)[0]
-    workbook=ROOT/'TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx'
+    workbook=ROOT/'TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx'
     wb=openpyxl.load_workbook(workbook,read_only=True,data_only=True)
     iterator=wb['Corrected_RoB2'].iter_rows(values_only=True)
     headers=next(iterator)

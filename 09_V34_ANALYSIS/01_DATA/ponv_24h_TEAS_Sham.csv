@@ -1,0 +1,4 @@
+model,study,record_id,comparison_id,outcome,window,unit,modality,comparator,statistic,analysis_population,rob2,source_location,measure,n_i,n_c,events_i,events_c,zero_cell,effect,se
+ponv_24h_TEAS_Sham,He 2026 (hepatectomy/JIS),V33-OD-0215,HEJIS26_TEAS_vs_CTRL_PONV24,PONV incidence,0-24 h,participants,TEAS,Sham,Events/total,,ROB2_RESULT_SPECIFIC_PENDING,Primary PONV outcome / mITT,logRR,80,79,19,21,0,-0.112662,0.27403
+ponv_24h_TEAS_Sham,Chen 2015,V33-OD-0257,CHEN15Q_TEAS_vs_CTRL_PONV24,PONV incidence,0-24 h,participants,TEAS,Sham,Events/total,,ROB2_RESULT_SPECIFIC_PENDING,Table 3 / PONV,logRR,41,42,10,26,0,-0.931414,0.300436
+ponv_24h_TEAS_Sham,Chen 2015 (Hyperalgesia),V33-OD-0261,CHEN15H_TEAS_vs_SHAM_PONV24,PONV incidence,0-24 h,participants,TEAS,Sham,Events/total,,ROB2_RESULT_SPECIFIC_PENDING,Table 2 / PONV,logRR,29,30,5,13,0,-0.92161,0.457282

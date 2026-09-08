@@ -480,3 +480,45 @@ Object.assign(window.UI_TRANSLATIONS_SV, {
   "Combined (TEAS + EA) vs Sham (TEAS) / Usual Care (EA)":
     "Sammanslaget (TEAS + EA) mot sham (TEAS) / sedvanlig vård (EA)"
 });
+
+// v34 analysis-set interface strings. Reviewed exact strings only; study names,
+// numbers, units and source quotations are never machine-translated.
+Object.assign(window.UI_TRANSLATIONS_SV, {
+  "📊 Current Analyses": "📊 Aktuella analyser",
+  "v34 analysis set": "v34-analysuppsättning",
+  "Stratified by modality and comparator": "Stratifierad efter modalitet och kontroll",
+  "Current analyses (v34) — models, withdrawals and source holds":
+    "Aktuella analyser (v34) – modeller, tillbakadragna analyser och källreservationer",
+  "v34 analyses": "v34-analyser",
+
+  "Analysis": "Analys",
+  "Measure": "Effektmått",
+  "Estimate (95% CI)": "Skattning (95 % KI)",
+  "Model": "Modell",
+  "Certainty": "Tillförlitlighet",
+  "new in v34": "ny i v34",
+  "reassessment pending": "ombedömning pågår",
+  "withdrawn": "tillbakadragen",
+  "superseded": "ersatt",
+  "not estimable": "kan ej skattas",
+
+  "Withdrawn — no longer current evidence": "Tillbakadragna – inte längre aktuell evidens",
+  "Superseded by stratified models": "Ersatta av stratifierade modeller",
+  "Source holds carried forward": "Kvarstående källreservationer",
+  "Why:": "Varför:",
+  "Now:": "Nu:",
+  "Retired v33 secondary analyses — superseded by the current v34 set":
+    "Utgångna sekundäranalyser från v33 – ersatta av den aktuella v34-uppsättningen",
+
+  "source conflict or correction records, kept visible rather than resolved silently":
+    "poster med källkonflikt eller korrigering, som hålls synliga i stället för att tyst lösas",
+  "studies with unaccessed supplements or protocols":
+    "studier med supplement eller protokoll som inte kunnat läsas",
+  "outcomes recorded as SOURCE NOT ACCESSED, which is not the same as not reported":
+    "utfall registrerade som SOURCE NOT ACCESSED, vilket inte är detsamma som ej rapporterat",
+  "groups held for shared-arm or comparator adjudication before any pooling":
+    "grupper som avvaktar bedömning av delad arm eller kontrolltyp innan någon poolning",
+
+  "New and restratified v34 analyses carry result-specific risk-of-bias assessments that are still pending, so no GRADE certainty is presented for them. Previous GRADE ratings describe the earlier syntheses and are not carried across to a materially changed model.":
+    "Nya och omstratifierade v34-analyser har resultatspecifika bias-bedömningar som ännu inte är klara, och därför redovisas ingen GRADE-tillförlitlighet för dem. Tidigare GRADE-bedömningar beskriver de äldre syntesarna och överförs inte till en väsentligt förändrad modell."
+});

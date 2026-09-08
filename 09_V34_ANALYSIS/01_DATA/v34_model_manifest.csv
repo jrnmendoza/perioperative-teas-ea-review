@@ -1,0 +1,6 @@
+model_id,measure,k,contrasts,outcome,window,modality,comparator,unit,estimator,rob2_pending,studies,dataset
+gi_first_flatus_TEAS_Sham,MD,7,7,Time to first flatus,Postoperative,TEAS,Sham,hours,REML + Hartung-Knapp,6,Gao 2021; Gu 2019; Lu 2022; Wang 2023; Xing 2022; Zheng 2025; Zhou 2025,gi_first_flatus_TEAS_Sham.csv
+gi_first_flatus_EA_Usual_care,MD,2,2,Time to first flatus,Postoperative,EA,Usual care,hours,REML normal CI,1,Huang 2025; Yang 2024,gi_first_flatus_EA_Usual_care.csv
+gi_first_bowel_sounds_TEAS_Sham,MD,2,2,Time to first bowel sounds,Postoperative,TEAS,Sham,hours,REML normal CI,2,Gao 2021; Gu 2019,gi_first_bowel_sounds_TEAS_Sham.csv
+pain_vas_24h_TEAS_Sham,MD,2,2,VAS pain intensity,24 h,TEAS,Sham,VAS 0-10,REML normal CI,1,Gu 2019; Wu 2025,pain_vas_24h_TEAS_Sham.csv
+ponv_24h_TEAS_Sham,logRR,3,3,PONV incidence,0-24 h,TEAS,Sham,participants,REML + Hartung-Knapp,3,Chen 2015; Chen 2015 (Hyperalgesia); He 2026 (hepatectomy/JIS),ponv_24h_TEAS_Sham.csv

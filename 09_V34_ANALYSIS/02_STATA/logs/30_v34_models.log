@@ -1,0 +1,1116 @@
+----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/09_V34_ANALYSIS/02_STATA/logs/3
+> 0_v34_models.log
+  log type:  text
+ opened on:   8 Sep 2026, 13:58:55
+
+. 
+. di as txt "=================================================================="
+==================================================================
+
+. di as txt "30: v34 ANALYSIS SET"
+30: v34 ANALYSIS SET
+
+. di as txt "Engine : StataNow `c(stata_version)'  edition=`c(edition)'  flavor=`c(flavor)'"
+Engine : StataNow 19.5  edition=BE  flavor=IC
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. tempname R
+
+. postfile `R' str48 model_id str10 measure double(k estimate ci_low ci_high ///
+>     p_value tau2 i2) str24 estimator str16 phase ///
+>     using "09_V34_ANALYSIS/03_RESULTS/v34_models.dta", replace
+
+. 
+. * ------------------------------------------------------------------------------
+. * Helper: fit one model from a prepared CSV and post the result.
+. *   k >= 3 -> Hartung-Knapp; k = 2 -> normal CI.
+. * ------------------------------------------------------------------------------
+. capture program drop fitmodel
+
+. program define fitmodel
+  1.     args path mid measure eslabel
+  2.     preserve
+  3.     import delimited "`path'", clear varnames(1) case(preserve) encoding("utf-8")
+  4.     quietly count
+  5.     local k = r(N)
+  6.     di as txt _n "------------------------------------------------------------------"
+  7.     di as txt "`mid'   (k = `k', measure = `measure')"
+  8.     di as txt "------------------------------------------------------------------"
+  9.     list study n_i n_c effect se, clean noobs
+ 10. 
+.     if `k' < 2 {
+ 11.         di as error "k < 2: no pooled estimate produced."
+ 12.         restore
+ 13.         exit
+ 14.     }
+ 15. 
+.     meta set effect se, studylabel(study) eslabel("`eslabel'")
+ 16.     if `k' >= 3 {
+ 17.         meta summarize, random(reml) se(kh)
+ 18.         local est "REML + Hartung-Knapp"
+ 19.     }
+ 20.     else {
+ 21.         meta summarize, random(reml)
+ 22.         local est "REML normal CI"
+ 23.     }
+ 24.     matrix M = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2))
+ 25.     global M_est  = M[1,1]
+ 26.     global M_lo   = M[1,2]
+ 27.     global M_hi   = M[1,3]
+ 28.     global M_p    = M[1,4]
+ 29.     global M_k    = M[1,5]
+ 30.     global M_tau2 = M[1,6]
+ 31.     global M_i2   = M[1,7]
+ 32.     global M_model "`est'"
+ 33. 
+.     if `k' >= 3 {
+ 34.         di as txt _n "Leave-one-out:"
+ 35.         meta summarize, random(reml) se(kh) leaveoneout
+ 36.     }
+ 37.     restore
+ 38. end
+
+. 
+. * ==============================================================================
+. * PART A -- five additional protocol-supported models
+. * ==============================================================================
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "PART A: additional models supported by the expanded v34 data"
+PART A: additional models supported by the expanded v34 data
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. foreach spec in ///
+>     "gi_first_flatus_TEAS_Sham MD Mean_difference_hours" ///
+>     "gi_first_flatus_EA_Usual_care MD Mean_difference_hours" ///
+>     "gi_first_bowel_sounds_TEAS_Sham MD Mean_difference_hours" ///
+>     "pain_vas_24h_TEAS_Sham MD Mean_difference_VAS" ///
+>     "ponv_24h_TEAS_Sham logRR Log_risk_ratio" {
+  2. 
+.     local mid    : word 1 of `spec'
+  3.     local meas   : word 2 of `spec'
+  4.     local lab    : word 3 of `spec'
+  5.     fitmodel "09_V34_ANALYSIS/01_DATA/`mid'.csv" "`mid'" "`meas'" "`lab'"
+  6.     post `R' ("`mid'") ("`meas'") ($M_k) ($M_est) ($M_lo) ($M_hi) ($M_p) ///
+>              ($M_tau2) ($M_i2) ("$M_model") ("NEW")
+  7. }
+(22 vars, 7 obs)
+
+------------------------------------------------------------------
+gi_first_flatus_TEAS_Sham   (k = 7, measure = MD)
+------------------------------------------------------------------
+
+         study   n_i   n_c   effect         se  
+     Zhou 2025    48    49    -1.78    .709649  
+     Xing 2022    29    29    -4.26   1.726864  
+     Wang 2023    40    43    -6.13   3.922953  
+       Lu 2022    47    47     -7.9   4.134185  
+       Gu 2019    58    59    -6.98   1.882749  
+      Gao 2021   303   307    -12.9   2.730282  
+    Zheng 2025    42    43     -7.4    .773978  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_hours
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_hours
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      7
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  9.0944
+SE adjustment: Knapp–Hartung                        I2 (%) =   81.96
+                                                        H2 =    5.54
+
+       Effect size: Mean_difference_hours
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Zhou 2025 |         -1.780      -3.171      -0.389     20.48
+        Xing 2022 |         -4.260      -7.645      -0.875     16.28
+        Wang 2023 |         -6.130     -13.819       1.559      8.03
+          Lu 2022 |         -7.900     -16.003       0.203      7.51
+          Gu 2019 |         -6.980     -10.670      -3.290     15.55
+         Gao 2021 |        -12.900     -18.251      -7.549     11.88
+       Zheng 2025 |         -7.400      -8.917      -5.883     20.28
+------------------+-------------------------------------------------
+            theta |         -6.261      -9.505      -3.017
+--------------------------------------------------------------------
+Test of theta = 0: t(6) = -4.72                  Prob > |t| = 0.0032
+Test of homogeneity: Q = chi2(6) = 40.31           Prob > Q = 0.0000
+
+Leave-one-out:
+
+  Effect-size label: Mean_difference_hours
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      7
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+             theta: Overall Mean_difference_hours
+----------------------------------------------------------------
+    Omitted study |       theta    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+        Zhou 2025 |      -7.219      -9.862      -4.576    0.001
+        Xing 2022 |      -6.727     -10.647      -2.806    0.007
+        Wang 2023 |      -6.326     -10.231      -2.421    0.009
+          Lu 2022 |      -6.161     -10.012      -2.310    0.009
+          Gu 2019 |      -6.219     -10.272      -2.165    0.011
+         Gao 2021 |      -5.265      -7.951      -2.578    0.004
+       Zheng 2025 |      -6.084     -10.193      -1.974    0.013
+------------------+---------------------------------------------
+            theta |      -6.261      -9.505      -3.017    0.003
+----------------------------------------------------------------
+(22 vars, 2 obs)
+
+------------------------------------------------------------------
+gi_first_flatus_EA_Usual_care   (k = 2, measure = MD)
+------------------------------------------------------------------
+
+         study   n_i   n_c   effect         se  
+     Yang 2024    90    90     -1.6    .515644  
+    Huang 2025    43    45     -5.8   1.758956  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_hours
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_hours
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  7.1401
+                                                    I2 (%) =   80.95
+                                                        H2 =    5.25
+
+       Effect size: Mean_difference_hours
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Yang 2024 |         -1.600      -2.611      -0.589     58.02
+       Huang 2025 |         -5.800      -9.247      -2.353     41.98
+------------------+-------------------------------------------------
+            theta |         -3.363      -7.426       0.699
+--------------------------------------------------------------------
+Test of theta = 0: z = -1.62                     Prob > |z| = 0.1047
+Test of homogeneity: Q = chi2(1) = 5.25            Prob > Q = 0.0219
+(22 vars, 2 obs)
+
+------------------------------------------------------------------
+gi_first_bowel_sounds_TEAS_Sham   (k = 2, measure = MD)
+------------------------------------------------------------------
+
+       study   n_i   n_c   effect         se  
+     Gu 2019    58    59    -6.89   1.390741  
+    Gao 2021   303   307     -4.6   1.891445  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_hours
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_hours
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+                                                    I2 (%) =    0.00
+                                                        H2 =    1.00
+
+       Effect size: Mean_difference_hours
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+          Gu 2019 |         -6.890      -9.616      -4.164     64.91
+         Gao 2021 |         -4.600      -8.307      -0.893     35.09
+------------------+-------------------------------------------------
+            theta |         -6.086      -8.282      -3.890
+--------------------------------------------------------------------
+Test of theta = 0: z = -5.43                     Prob > |z| = 0.0000
+Test of homogeneity: Q = chi2(1) = 0.95            Prob > Q = 0.3294
+(22 vars, 2 obs)
+
+------------------------------------------------------------------
+pain_vas_24h_TEAS_Sham   (k = 2, measure = MD)
+------------------------------------------------------------------
+
+      study   n_i   n_c   effect        se  
+    Wu 2025    50    50     -2.3   .235372  
+    Gu 2019    58    59     -.74   .107957  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_VAS
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_VAS
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  1.1833
+                                                    I2 (%) =   97.24
+                                                        H2 =   36.29
+
+       Effect size: Mean_difference_VAS
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+          Wu 2025 |         -2.300      -2.761      -1.839     49.10
+          Gu 2019 |         -0.740      -0.952      -0.528     50.90
+------------------+-------------------------------------------------
+            theta |         -1.506      -3.035       0.023
+--------------------------------------------------------------------
+Test of theta = 0: z = -1.93                     Prob > |z| = 0.0535
+Test of homogeneity: Q = chi2(1) = 36.29           Prob > Q = 0.0000
+(21 vars, 3 obs)
+
+------------------------------------------------------------------
+ponv_24h_TEAS_Sham   (k = 3, measure = logRR)
+------------------------------------------------------------------
+
+                        study   n_i   n_c     effect        se  
+    He 2026 (hepatectomy/JIS)    80    79   -.112662    .27403  
+                    Chen 2015    41    42   -.931414   .300436  
+     Chen 2015 (Hyperalgesia)    29    30    -.92161   .457282  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Log_risk_ratio
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Log_risk_ratio
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      3
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 =  0.1491
+SE adjustment: Knapp–Hartung                                I2 (%) =   57.44
+                                                                H2 =    2.35
+
+----------------------------------------------------------------------------
+                    Study | Log_risk_ratio    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+He 2026 (hepatectomy/JIS) |         -0.113      -0.650       0.424     39.03
+                Chen 2015 |         -0.931      -1.520      -0.343     36.55
+ Chen 2015 (Hyperalgesia) |         -0.922      -1.818      -0.025     24.42
+--------------------------+-------------------------------------------------
+                    theta |         -0.610      -1.819       0.600
+----------------------------------------------------------------------------
+Test of theta = 0: t(2) = -2.17                          Prob > |t| = 0.1624
+Test of homogeneity: Q = chi2(2) = 4.82                    Prob > Q = 0.0899
+
+Leave-one-out:
+
+  Effect-size label: Log_risk_ratio
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary           Number of studies =      3
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+                     theta: Overall Log_risk_ratio
+------------------------------------------------------------------------
+            Omitted study |       theta    [95% conf. interval]  p-value
+--------------------------+---------------------------------------------
+He 2026 (hepatectomy/JIS) |      -0.928      -0.986      -0.871    0.003
+                Chen 2015 |      -0.434      -5.465       4.596    0.471
+ Chen 2015 (Hyperalgesia) |      -0.513      -5.713       4.688    0.429
+--------------------------+---------------------------------------------
+                    theta |      -0.610      -1.819       0.600    0.162
+------------------------------------------------------------------------
+
+. 
+. * ==============================================================================
+. * PART B -- independent reproduction of the eight reconciliation models
+. * Reproduced from the reconciliation's own prepared datasets so the numbers on
+. * the dashboard are ones this pipeline has fitted, not ones it has copied.
+. * ==============================================================================
+. di as txt _n "=================================================================="
+
+==================================================================
+
+. di as txt "PART B: independent reproduction of the v34 reconciliation models"
+PART B: independent reproduction of the v34 reconciliation models
+
+. di as txt "=================================================================="
+==================================================================
+
+. 
+. local RD "TEAS EA Verification/v34_reconciliation/data"
+
+. 
+. foreach spec in ///
+>     "v34_intraop_remifentanil_TEAS_Sham MD Mean_difference_ug" ///
+>     "v34_intraop_sufentanil_TEAS_Sham MD Mean_difference_ug" ///
+>     "v34_qor40_24h_TEAS_Sham MD Mean_difference_points" ///
+>     "v34_gi_first_defecation_TEAS_Sham MD Mean_difference_hours" ///
+>     "v34_gi_first_defecation_EA_Usual_care MD Mean_difference_hours" ///
+>     "v34_primary_24h_mme_TEAS_Sham MD Mean_difference_mgMME" ///
+>     "v34_primary_24h_mme_EA_Usual_care MD Mean_difference_mgMME" ///
+>     "v34_primary_24h_mme_ALL_AUDIT MD Mean_difference_mgMME" {
+  2. 
+.     local mid    : word 1 of `spec'
+  3.     local meas   : word 2 of `spec'
+  4.     local lab    : word 3 of `spec'
+  5.     fitmodel "`RD'/`mid'.csv" "`mid'" "`meas'" "`lab'"
+  6.     post `R' ("`mid'") ("`meas'") ($M_k) ($M_est) ($M_lo) ($M_hi) ($M_p) ///
+>              ($M_tau2) ($M_i2) ("$M_model") ("REPRODUCED")
+  7. }
+(35 vars, 6 obs)
+
+------------------------------------------------------------------
+v34_intraop_remifentanil_TEAS_Sham   (k = 6, measure = MD)
+------------------------------------------------------------------
+
+         study   n_i   n_c   effect         se  
+    Zheng 2025    42    43    -56.4   7.366535  
+     Xing 2022    29    29   -232.8   72.33514  
+       Wu 2022    44    40     -254   124.3735  
+       Lu 2021   190   188     -200   62.62725  
+      Guo 2023    55    55     -140    66.3462  
+    Liang 2021    35    35     56.8   43.78592  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 6
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_ug
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_ug
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      6
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  1.1e+04
+SE adjustment: Knapp–Hartung                        I2 (%) =   83.86
+                                                        H2 =    6.20
+
+       Effect size: Mean_difference_ug
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+       Zheng 2025 |        -56.400     -70.838     -41.962     22.78
+        Xing 2022 |       -232.800    -374.574     -91.026     15.40
+          Wu 2022 |       -254.000    -497.768     -10.232      9.39
+          Lu 2021 |       -200.000    -322.747     -77.253     16.77
+         Guo 2023 |       -140.000    -270.036      -9.964     16.24
+       Liang 2021 |         56.800     -29.019     142.619     19.43
+------------------+-------------------------------------------------
+            theta |       -117.777    -242.506       6.951
+--------------------------------------------------------------------
+Test of theta = 0: t(5) = -2.43                  Prob > |t| = 0.0596
+Test of homogeneity: Q = chi2(5) = 21.91           Prob > Q = 0.0005
+
+Leave-one-out:
+
+  Effect-size label: Mean_difference_ug
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      6
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+             theta: Overall Mean_difference_ug
+----------------------------------------------------------------
+    Omitted study |       theta    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+       Zheng 2025 |    -138.555    -300.565      23.455    0.076
+        Xing 2022 |     -95.769    -241.374      49.836    0.142
+          Wu 2022 |    -103.698    -248.438      41.041    0.118
+          Lu 2021 |    -102.345    -257.977      53.287    0.142
+         Guo 2023 |    -117.217    -281.844      47.409    0.119
+       Liang 2021 |    -149.895    -254.714     -45.075    0.017
+------------------+---------------------------------------------
+            theta |    -117.777    -242.506       6.951    0.060
+----------------------------------------------------------------
+(35 vars, 2 obs)
+
+------------------------------------------------------------------
+v34_intraop_sufentanil_TEAS_Sham   (k = 2, measure = MD)
+------------------------------------------------------------------
+
+         study   n_i   n_c   effect         se  
+      Liu 2015    44    44    -22.1   6.594936  
+    Liang 2021    35    35      1.4    .717535  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_ug
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_ug
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 254.1210
+                                                    I2 (%) =   92.03
+                                                        H2 =   12.55
+
+       Effect size: Mean_difference_ug
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+         Liu 2015 |        -22.100     -35.026      -9.174     46.11
+       Liang 2021 |          1.400      -0.006       2.806     53.89
+------------------+-------------------------------------------------
+            theta |         -9.436     -32.395      13.524
+--------------------------------------------------------------------
+Test of theta = 0: z = -0.81                     Prob > |z| = 0.4205
+Test of homogeneity: Q = chi2(1) = 12.55           Prob > Q = 0.0004
+(35 vars, 2 obs)
+
+------------------------------------------------------------------
+v34_qor40_24h_TEAS_Sham   (k = 2, measure = MD)
+------------------------------------------------------------------
+
+         study   n_i   n_c   effect         se  
+      Yao 2015    35    36     11.7   2.995842  
+    Liang 2021    35    35      2.6   1.039918  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 2
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_points
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_points
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      2
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 = 36.3767
+                                                    I2 (%) =   87.86
+                                                        H2 =    8.23
+
+       Effect size: Mean_difference_points
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+         Yao 2015 |         11.700       5.828      17.572     45.23
+       Liang 2021 |          2.600       0.562       4.638     54.77
+------------------+-------------------------------------------------
+            theta |          6.716      -2.161      15.594
+--------------------------------------------------------------------
+Test of theta = 0: z = 1.48                      Prob > |z| = 0.1381
+Test of homogeneity: Q = chi2(1) = 8.23            Prob > Q = 0.0041
+(35 vars, 3 obs)
+
+------------------------------------------------------------------
+v34_gi_first_defecation_TEAS_Sham   (k = 3, measure = MD)
+------------------------------------------------------------------
+
+       study   n_i   n_c   effect         se  
+     Lu 2022    47    47    -13.4   5.662662  
+     Gu 2019    58    59    -5.79   4.005175  
+    Gao 2021   303   307    -14.8   5.312247  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_hours
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_hours
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  6.4464
+SE adjustment: Knapp–Hartung                        I2 (%) =   20.81
+                                                        H2 =    1.26
+
+       Effect size: Mean_difference_hours
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+          Lu 2022 |        -13.400     -24.499      -2.301     26.15
+          Gu 2019 |         -5.790     -13.640       2.060     44.79
+         Gao 2021 |        -14.800     -25.212      -4.388     29.06
+------------------+-------------------------------------------------
+            theta |        -10.398     -23.125       2.328
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = -3.52                  Prob > |t| = 0.0723
+Test of homogeneity: Q = chi2(2) = 2.28            Prob > Q = 0.3198
+
+Leave-one-out:
+
+  Effect-size label: Mean_difference_hours
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      3
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+             theta: Overall Mean_difference_hours
+----------------------------------------------------------------
+    Omitted study |       theta    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+          Lu 2022 |      -9.619     -66.213      46.974    0.276
+          Gu 2019 |     -14.145     -23.021      -5.268    0.031
+         Gao 2021 |      -8.542     -55.002      37.917    0.257
+------------------+---------------------------------------------
+            theta |     -10.398     -23.125       2.328    0.072
+----------------------------------------------------------------
+(35 vars, 3 obs)
+
+------------------------------------------------------------------
+v34_gi_first_defecation_EA_Usual_care   (k = 3, measure = MD)
+------------------------------------------------------------------
+
+         study   n_i   n_c   effect         se  
+     Yang 2024    90    90     -3.8   1.192663  
+    Huang 2025    43    45     -5.3   1.857936  
+     Yang 2020    29    28     -3.6   1.758638  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_hours
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_hours
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                     Number of studies =      3
+Random-effects model                      Heterogeneity:
+Method: REML                                          tau2 =  0.0000
+SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
+                                                        H2 =    1.00
+
+       Effect size: Mean_difference_hours
+--------------------------------------------------------------------
+            Study |    Effect size    [95% conf. interval]  % weight
+------------------+-------------------------------------------------
+        Yang 2024 |         -3.800      -6.138      -1.462     53.42
+       Huang 2025 |         -5.300      -8.941      -1.659     22.01
+        Yang 2020 |         -3.600      -7.047      -0.153     24.57
+------------------+-------------------------------------------------
+            theta |         -4.081      -6.067      -2.095
+--------------------------------------------------------------------
+Test of theta = 0: t(2) = -8.84                  Prob > |t| = 0.0126
+Test of homogeneity: Q = chi2(2) = 0.56            Prob > Q = 0.7555
+
+Leave-one-out:
+
+  Effect-size label: Mean_difference_hours
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary   Number of studies =      3
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+             theta: Overall Mean_difference_hours
+----------------------------------------------------------------
+    Omitted study |       theta    [95% conf. interval]  p-value
+------------------+---------------------------------------------
+        Yang 2024 |      -4.403     -15.187       6.381    0.121
+       Huang 2025 |      -3.737      -4.917      -2.557    0.016
+        Yang 2020 |      -4.238     -12.902       4.427    0.102
+------------------+---------------------------------------------
+            theta |      -4.081      -6.067      -2.095    0.013
+----------------------------------------------------------------
+(38 vars, 4 obs)
+
+------------------------------------------------------------------
+v34_primary_24h_mme_TEAS_Sham   (k = 4, measure = MD)
+------------------------------------------------------------------
+
+                        study   n_i   n_c   effect         se  
+                    Chen 1998    25    25      -21   6.103278  
+                    Chen 2020    40    40   -28.19    1.78107  
+    He 2026 (hepatectomy/JIS)    80    79      -.6     .57832  
+                   Szmit 2021    24    24     -7.7   1.491331  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 4
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_mgMME
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_mgMME
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      4
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 156.8823
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.59
+                                                                H2 =   70.96
+
+               Effect size: Mean_difference_mgMME
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+                Chen 1998 |        -21.000     -32.962      -9.038     21.42
+                Chen 2020 |        -28.190     -31.681     -24.699     25.98
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     26.45
+               Szmit 2021 |         -7.700     -10.623      -4.777     26.14
+--------------------------+-------------------------------------------------
+                    theta |        -13.995     -34.181       6.190
+----------------------------------------------------------------------------
+Test of theta = 0: t(3) = -2.21                          Prob > |t| = 0.1145
+Test of homogeneity: Q = chi2(3) = 232.89                  Prob > Q = 0.0000
+
+Leave-one-out:
+
+  Effect-size label: Mean_difference_mgMME
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary           Number of studies =      4
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+                     theta: Overall Mean_difference_mgMME
+------------------------------------------------------------------------
+            Omitted study |       theta    [95% conf. interval]  p-value
+--------------------------+---------------------------------------------
+                Chen 1998 |     -12.103     -47.666      23.460    0.281
+                Chen 2020 |      -8.409     -32.665      15.847    0.274
+He 2026 (hepatectomy/JIS) |     -18.766     -45.577       8.046    0.095
+               Szmit 2021 |     -16.313     -52.646      20.020    0.193
+--------------------------+---------------------------------------------
+                    theta |     -13.995     -34.181       6.190    0.114
+------------------------------------------------------------------------
+(38 vars, 3 obs)
+
+------------------------------------------------------------------
+v34_primary_24h_mme_EA_Usual_care   (k = 3, measure = MD)
+------------------------------------------------------------------
+
+                 study   n_i   n_c   effect         se  
+    Seevaunnamtum 2016    32    32   -12.56   4.389056  
+             Yang 2024    90    90      -.3    .715697  
+        El-Rakshy 2009    42    53     -1.6   3.718534  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 3
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_mgMME
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_mgMME
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                      Number of studies =      3
+Random-effects model                       Heterogeneity:
+Method: REML                                           tau2 = 28.4713
+SE adjustment: Knapp–Hartung                         I2 (%) =   77.15
+                                                         H2 =    4.38
+
+        Effect size: Mean_difference_mgMME
+---------------------------------------------------------------------
+             Study |    Effect size    [95% conf. interval]  % weight
+-------------------+-------------------------------------------------
+Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     26.49
+         Yang 2024 |         -0.300      -1.703       1.103     43.62
+    El-Rakshy 2009 |         -1.600      -8.888       5.688     29.89
+-------------------+-------------------------------------------------
+             theta |         -3.936     -19.773      11.902
+---------------------------------------------------------------------
+Test of theta = 0: t(2) = -1.07                   Prob > |t| = 0.3969
+Test of homogeneity: Q = chi2(2) = 7.67             Prob > Q = 0.0216
+
+Leave-one-out:
+
+  Effect-size label: Mean_difference_mgMME
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary    Number of studies =      3
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+              theta: Overall Mean_difference_mgMME
+-----------------------------------------------------------------
+     Omitted study |       theta    [95% conf. interval]  p-value
+-------------------+---------------------------------------------
+Seevaunnamtum 2016 |      -0.346      -3.412       2.719    0.387
+         Yang 2024 |      -6.832     -76.391      62.727    0.430
+    El-Rakshy 2009 |      -5.665     -82.946      71.615    0.523
+-------------------+---------------------------------------------
+             theta |      -3.936     -19.773      11.902    0.397
+-----------------------------------------------------------------
+(38 vars, 7 obs)
+
+------------------------------------------------------------------
+v34_primary_24h_mme_ALL_AUDIT   (k = 7, measure = MD)
+------------------------------------------------------------------
+
+                        study   n_i   n_c   effect         se  
+           Seevaunnamtum 2016    32    32   -12.56   4.389056  
+                    Chen 1998    25    25      -21   6.103278  
+                    Chen 2020    40    40   -28.19    1.78107  
+                    Yang 2024    90    90      -.3    .715697  
+    He 2026 (hepatectomy/JIS)    80    79      -.6     .57832  
+               El-Rakshy 2009    42    53     -1.6   3.718534  
+                   Szmit 2021    24    24     -7.7   1.491331  
+
+Meta-analysis setting information
+
+ Study information
+    No. of studies: 7
+       Study label: study
+        Study size: N/A
+
+       Effect size
+              Type: <generic>
+             Label: Mean_difference_mgMME
+          Variable: effect
+
+         Precision
+         Std. err.: se
+                CI: [_meta_cil, _meta_ciu]
+          CI level: 95%
+
+  Model and method
+             Model: Random effects
+            Method: REML
+
+  Effect-size label: Mean_difference_mgMME
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Meta-analysis summary                             Number of studies =      7
+Random-effects model                              Heterogeneity:
+Method: REML                                                  tau2 = 113.9105
+SE adjustment: Knapp–Hartung                                I2 (%) =   98.57
+                                                                H2 =   69.89
+
+               Effect size: Mean_difference_mgMME
+----------------------------------------------------------------------------
+                    Study |    Effect size    [95% conf. interval]  % weight
+--------------------------+-------------------------------------------------
+       Seevaunnamtum 2016 |        -12.560     -21.162      -3.958     13.27
+                Chen 1998 |        -21.000     -32.962      -9.038     11.69
+                Chen 2020 |        -28.190     -31.681     -24.699     15.09
+                Yang 2024 |         -0.300      -1.703       1.103     15.44
+He 2026 (hepatectomy/JIS) |         -0.600      -1.733       0.533     15.47
+           El-Rakshy 2009 |         -1.600      -8.888       5.688     13.83
+               Szmit 2021 |         -7.700     -10.623      -4.777     15.21
+--------------------------+-------------------------------------------------
+                    theta |         -9.907     -20.079       0.265
+----------------------------------------------------------------------------
+Test of theta = 0: t(6) = -2.38                          Prob > |t| = 0.0545
+Test of homogeneity: Q = chi2(6) = 254.61                  Prob > Q = 0.0000
+
+Leave-one-out:
+
+  Effect-size label: Mean_difference_mgMME
+        Effect size: effect
+          Std. err.: se
+        Study label: study
+
+Leave-one-out meta-analysis summary           Number of studies =      7
+Random-effects model
+Method: REML 
+SE adjustment: Knapp–Hartung
+
+                     theta: Overall Mean_difference_mgMME
+------------------------------------------------------------------------
+            Omitted study |       theta    [95% conf. interval]  p-value
+--------------------------+---------------------------------------------
+       Seevaunnamtum 2016 |      -9.551     -22.057       2.955    0.107
+                Chen 1998 |      -8.439     -19.875       2.997    0.116
+                Chen 2020 |      -5.831     -13.571       1.910    0.111
+                Yang 2024 |     -11.665     -23.313      -0.018    0.050
+He 2026 (hepatectomy/JIS) |     -11.616     -23.331       0.099    0.051
+           El-Rakshy 2009 |     -11.273     -23.182       0.636    0.059
+               Szmit 2021 |     -10.363     -22.997       2.271    0.089
+--------------------------+---------------------------------------------
+                    theta |      -9.907     -20.079       0.265    0.055
+------------------------------------------------------------------------
+
+. 
+. * ==============================================================================
+. * EXPORT
+. * ==============================================================================
+. postclose `R'
+
+. use "09_V34_ANALYSIS/03_RESULTS/v34_models.dta", clear
+
+. gen master = "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx"
+
+. order model_id phase measure k estimate ci_low ci_high p_value tau2 i2 estimator
+
+. export delimited "09_V34_ANALYSIS/03_RESULTS/v34_models.csv", replace
+file 09_V34_ANALYSIS/03_RESULTS/v34_models.csv saved
+
+. save "09_V34_ANALYSIS/03_RESULTS/v34_models.dta", replace
+file 09_V34_ANALYSIS/03_RESULTS/v34_models.dta saved
+
+. list model_id k estimate ci_low ci_high p_value, clean noobs
+
+                                 model_id   k     estimate       ci_low      ci_high     p_value  
+                gi_first_flatus_TEAS_Sham   7   -6.2614771   -9.5054914   -3.0174628   .00324813  
+            gi_first_flatus_EA_Usual_care   2    -3.363329   -7.4260147    .69935671   .10468074  
+          gi_first_bowel_sounds_TEAS_Sham   2   -6.0863988   -8.2824595   -3.8903382   5.571e-08  
+                   pain_vas_24h_TEAS_Sham   2   -1.5059791   -3.0345039    .02254578   .05347632  
+                       ponv_24h_TEAS_Sham   3   -.60950059   -1.8188522    .59985107   .16238581  
+       v34_intraop_remifentanil_TEAS_Sham   6   -117.77713   -242.50558    6.9513288   .05957723  
+         v34_intraop_sufentanil_TEAS_Sham   2   -9.4355678   -32.395299    13.524163   .42054855  
+                  v34_qor40_24h_TEAS_Sham   2    6.7162834    -2.160945    15.593512   .13811201  
+        v34_gi_first_defecation_TEAS_Sham   3   -10.398205   -23.124871     2.328462   .07225645  
+    v34_gi_first_defecation_EA_Usual_care   3   -4.0810508   -6.0670866    -2.095015   .01255221  
+            v34_primary_24h_mme_TEAS_Sham   4   -13.995275   -34.180841    6.1902913   .11447614  
+        v34_primary_24h_mme_EA_Usual_care   3   -3.9358341   -19.773224    11.901556    .3968947  
+            v34_primary_24h_mme_ALL_AUDIT   7   -9.9070025   -20.079361     .2653565   .05453838  
+
+. 
+. di as txt _n "SUCCESS: v34 analysis set complete."
+
+SUCCESS: v34 analysis set complete.
+
+. log close
+      name:  <unnamed>
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/09_V34_ANALYSIS/02_STATA/logs/3
+> 0_v34_models.log
+  log type:  text
+ closed on:   8 Sep 2026, 13:58:56
+----------------------------------------------------------------------------------------------------

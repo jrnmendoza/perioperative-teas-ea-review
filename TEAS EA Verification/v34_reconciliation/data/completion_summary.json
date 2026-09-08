@@ -1,0 +1,40 @@
+{
+  "outcome_before": 382,
+  "outcome_after": 757,
+  "net_added": 375,
+  "existing_updated": 25,
+  "allocation_rows_corrected": 11,
+  "graph_added": 38,
+  "nr_added": 16,
+  "source_not_accessed_rows": 2,
+  "source_not_accessed_studies": 7,
+  "conflicts_total": 27,
+  "conflicts_unresolved": 24,
+  "conflict_studies": [
+    "Gu 2019",
+    "Huang 2025",
+    "Jiang 2026",
+    "Liang 2021",
+    "Long 2025",
+    "Lu 2021",
+    "Lu 2022",
+    "Pan 2023",
+    "Tu 2024",
+    "Yu 2020",
+    "Zheng 2025",
+    "Zhu 2022"
+  ],
+  "new_numeric_candidates": 215,
+  "new_selected_contrasts": 3,
+  "new_studies_overall": 0,
+  "primary_k": 7,
+  "primary_estimate": -9.907002486039646,
+  "qa_passes": 33,
+  "xlsx": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx",
+  "files": [
+    "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx",
+    "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_v33_to_v34_RECONCILIATION_LOG.csv",
+    "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_v34_QC_REPORT.md",
+    "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_v34_ANALYSIS_CHANGE_SUMMARY.md"
+  ]
+}

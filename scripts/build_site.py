@@ -46,11 +46,11 @@ V33 = ROOT / "07_TIERED_V33"
 RESULTS = V26 / "03_RESULTS"
 MASTER_XLSX = (
     ROOT / "TEAS EA Verification"
-    / "TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
+    / "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx"
 )
 
 CACHE_BUSTED_ASSETS = (
-    "styles.css", "primary_pathway.js", "tiered_v33.js", "v33_data.js", "data.js",
+    "styles.css", "primary_pathway.js", "tiered_v33.js", "v33_data.js", "v34_data.js", "data.js",
     "translations.js", "ui_translations.js", "reader_assist.js", "meta_engine.js", "app.js", "findings.js",
     "author_inquiries.js", "search_strategies.js", "meta_outcomes.js",
     "primary_browser.js",
@@ -148,7 +148,7 @@ def source_normalized_outcome_rows() -> int:
 
 def build_metadata(commit: str) -> dict:
     return {
-        "master_version": "v33",
+        "master_version": "v34",
         "master_file": MASTER_XLSX.name,
         "canonical_studies": canonical_studies_count(),
         "source_normalized_outcome_rows": source_normalized_outcome_rows(),

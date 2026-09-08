@@ -1,0 +1,275 @@
+#!/usr/bin/env python3
+"""
+Generate dashboard/v34_data.js -- the v34 analytical layer.
+
+Everything here is derived from the v34 reconciled master, the v34 native
+outcome families, and the Stata results this project fitted in
+09_V34_ANALYSIS/02_STATA/30_v34_models.do. No estimate is copied from a
+previous dashboard file, and none is retyped by hand.
+
+Three things this file exists to carry:
+
+  1. The v34 model set, stratified by modality AND comparator. The earlier
+     secondary analyses pooled across strata, which the review's own protocol
+     forbids; those are superseded here rather than edited in place.
+  2. An explicit WITHDRAWN register. The mixed-window rescue-opioid model must
+     not survive as current evidence, and a withdrawal that is invisible to the
+     reader is not a withdrawal.
+  3. The source holds -- unresolved conflicts, unaccessed supplements,
+     graph-only rows and pending result-specific RoB -- so the dashboard can
+     show why an outcome that exists in the data is still not pooled.
+"""
+
+from __future__ import annotations
+
+import csv
+import hashlib
+import json
+import sys
+from collections import Counter
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+VER = ROOT / "TEAS EA Verification"
+V34_XLSX = VER / "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx"
+RECON = VER / "v34_reconciliation"
+OUTCOME = RECON / "data" / "v34_outcome_data.csv"
+CONFLICTS = RECON / "data" / "v34_source_conflicts.csv"
+MODELS = ROOT / "09_V34_ANALYSIS" / "03_RESULTS" / "v34_models.csv"
+MANIFEST = ROOT / "09_V34_ANALYSIS" / "01_DATA" / "v34_model_manifest.csv"
+SCAN = ROOT / "09_V34_ANALYSIS" / "v34_poolable_scan.csv"
+OUT = ROOT / "dashboard" / "v34_data.js"
+
+V34_SHA256 = "985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3"
+
+# Human labels for the models, and the RoB outcome key each belongs to.
+MODEL_META = {
+    "v34_primary_24h_mme_TEAS_Sham": dict(
+        label="Primary 0–24 h opioid — TEAS vs sham", unit="mg IV MME",
+        role="primary", rob="opioid_24h"),
+    "v34_primary_24h_mme_EA_Usual_care": dict(
+        label="Primary 0–24 h opioid — EA vs usual care", unit="mg IV MME",
+        role="primary", rob="opioid_24h"),
+    "v34_primary_24h_mme_ALL_AUDIT": dict(
+        label="Primary 0–24 h opioid — combined audit synthesis", unit="mg IV MME",
+        role="supporting", rob="opioid_24h"),
+    "v34_intraop_remifentanil_TEAS_Sham": dict(
+        label="Intraoperative remifentanil — TEAS vs sham", unit="µg",
+        role="secondary", rob="intraop_remi"),
+    "v34_intraop_sufentanil_TEAS_Sham": dict(
+        label="Intraoperative sufentanil — TEAS vs sham", unit="µg",
+        role="secondary", rob="intraop_remi"),
+    "v34_qor40_24h_TEAS_Sham": dict(
+        label="Global QoR-40 at 24 h — TEAS vs sham", unit="QoR-40 points",
+        role="secondary", rob="qor_24h"),
+    "v34_gi_first_defecation_TEAS_Sham": dict(
+        label="Time to first defecation — TEAS vs sham", unit="hours",
+        role="secondary", rob="flatus_time"),
+    "v34_gi_first_defecation_EA_Usual_care": dict(
+        label="Time to first defecation — EA vs usual care", unit="hours",
+        role="secondary", rob="flatus_time"),
+    "gi_first_flatus_TEAS_Sham": dict(
+        label="Time to first flatus — TEAS vs sham", unit="hours",
+        role="secondary", rob="flatus_time"),
+    "gi_first_flatus_EA_Usual_care": dict(
+        label="Time to first flatus — EA vs usual care", unit="hours",
+        role="secondary", rob="flatus_time"),
+    "gi_first_bowel_sounds_TEAS_Sham": dict(
+        label="Time to first bowel sounds — TEAS vs sham", unit="hours",
+        role="secondary", rob="flatus_time"),
+    "pain_vas_24h_TEAS_Sham": dict(
+        label="Pain VAS at 24 h — TEAS vs sham", unit="VAS 0–10",
+        role="secondary", rob="pain_rest_24h"),
+    "ponv_24h_TEAS_Sham": dict(
+        label="PONV incidence 0–24 h — TEAS vs sham", unit="risk ratio",
+        role="secondary", rob="ponv_24h"),
+}
+
+# Analyses withdrawn by the v34 reconciliation, with the reason a reader needs.
+WITHDRAWN = [
+    dict(
+        analysis_id="V33_RESCUE_OPIOID_RR_24H",
+        label="Binary rescue opioid use, 0–24 h / POD1",
+        previous="k = 3, RR 0.519 (95% CI 0.370 to 0.727), p = 0.014",
+        reason=(
+            "Withdrawn as an exact-window model: the three trials did not share one "
+            "time window. Tu 2024 measured 6–24 h, Liu 2026 (burn) through POD1, and "
+            "only Yu 2020 reported exact 0–24 h incidence. Pooling them described no "
+            "single estimand."),
+        now=("The exact 0–24 h set contains one trial (Yu 2020) and is not "
+             "meta-analysed. The other two results remain available in their own "
+             "windows."),
+        affects="A secondary rescue endpoint. The strict primary opioid-dose model (k = 7) is unaffected."),
+    dict(
+        analysis_id="V33_QOR40_24H_MD",
+        label="Global QoR-40 at ~24 h (previous mixed-window set)",
+        previous="k = 3, MD +7.34 points (95% CI −4.60 to +19.28), p = 0.118",
+        reason=("The previous set mixed Yu 2020's POD1 assessment with exact 24-hour "
+                "assessments, and pooled across comparator strata."),
+        now=("The exact 24-hour TEAS-vs-sham set is Yao 2015 and Liang 2021 (k = 2). "
+             "Yu 2020's POD1 result is kept separately, and Pan 2023's usual-care "
+             "result is a separate k = 1."),
+        affects="Secondary quality-of-recovery endpoint."),
+]
+
+# Secondary models that were previously reported pooled across strata.
+SUPERSEDED = [
+    dict(old="V33_INTRAOP_REMI_MD", old_desc="k = 8, MD −116.76 µg, pooled across modality and comparator",
+         new="v34_intraop_remifentanil_TEAS_Sham",
+         reason="Restratified to TEAS vs sham. EA and usual-care contrasts are reported separately and single-study strata are not pooled."),
+    dict(old="V33_INTRAOP_SUF_MD", old_desc="k = 5, MD −0.12 µg, pooled across modality and comparator",
+         new="v34_intraop_sufentanil_TEAS_Sham",
+         reason="Restratified to TEAS vs sham. Wang 2024's SNVP and MNVP are strata within one trial and are never counted as two independent RCTs."),
+    dict(old="V33_GI_DEFECATION_MD", old_desc="k = 7, MD −4.80 h, pooled across modality and comparator",
+         new="v34_gi_first_defecation_TEAS_Sham",
+         reason="Split into TEAS vs sham (k = 3) and EA vs usual care (k = 3). Ng 2013's EA-vs-sham contrast is a separate k = 1."),
+]
+
+
+def read(p: Path) -> list[dict]:
+    with p.open(encoding="utf-8-sig") as f:
+        return list(csv.DictReader(f))
+
+
+def num(v, nd=None):
+    try:
+        f = float(v)
+    except (TypeError, ValueError):
+        return None
+    return round(f, nd) if nd is not None else f
+
+
+def sha256(p: Path) -> str:
+    h = hashlib.sha256()
+    with p.open("rb") as f:
+        for c in iter(lambda: f.read(1 << 20), b""):
+            h.update(c)
+    return h.hexdigest()
+
+
+def main() -> int:
+    got = sha256(V34_XLSX)
+    if got != V34_SHA256:
+        raise SystemExit(f"ABORT: v34 master hash mismatch\n  expected {V34_SHA256}\n  found    {got}")
+
+    outcome = read(OUTCOME)
+    conflicts = read(CONFLICTS)
+    models = read(MODELS)
+    manifest = {m["model_id"]: m for m in read(MANIFEST)}
+    scan = read(SCAN) if SCAN.exists() else []
+
+    studies = sorted({r["Canonical study"] for r in outcome if r.get("Canonical study")})
+    elig = Counter((r.get("V34 eligibility") or "").strip() for r in outcome)
+    robstat = Counter((r.get("V34 RoB2 status") or "").strip() for r in outcome)
+
+    def model_row(r):
+        mid = r["model_id"]
+        meta = MODEL_META.get(mid, {})
+        man = manifest.get(mid, {})
+        est, lo, hi = num(r["estimate"], 4), num(r["ci_low"], 4), num(r["ci_high"], 4)
+        row = dict(
+            model_id=mid, label=meta.get("label", mid), role=meta.get("role", "secondary"),
+            rob_key=meta.get("rob", ""), unit=meta.get("unit", man.get("unit", "")),
+            measure=r["measure"], phase=r["phase"],
+            k=int(float(r["k"])), estimate=est, ci_low=lo, ci_high=hi,
+            p_value=num(r["p_value"], 5), tau2=num(r["tau2"], 4), i2=num(r["i2"], 2),
+            estimator=r["estimator"],
+            studies=man.get("studies", ""),
+            rob2_pending=int(man["rob2_pending"]) if man.get("rob2_pending") else None,
+        )
+        # A log risk ratio is exponentiated for display; the model stays on the
+        # log scale, and both are carried so nothing is re-derived in the page.
+        if r["measure"] == "logRR" and None not in (est, lo, hi):
+            import math
+            row["rr"] = round(math.exp(est), 4)
+            row["rr_low"] = round(math.exp(lo), 4)
+            row["rr_high"] = round(math.exp(hi), 4)
+        return row
+
+    model_rows = [model_row(r) for r in models]
+    new_models = [m for m in model_rows if m["phase"] == "NEW"]
+    reproduced = [m for m in model_rows if m["phase"] == "REPRODUCED"]
+
+    payload = {
+        "generated_by": "scripts/build_v34_dashboard_data.py",
+        "master": V34_XLSX.name,
+        "master_sha256": V34_SHA256,
+        "master_version": "v34",
+        "canonical_studies": len(studies),
+        "outcome_rows": len(outcome),
+        "strict_primary_k": next(
+            (m["k"] for m in model_rows if m["model_id"] == "v34_primary_24h_mme_ALL_AUDIT"), None),
+
+        "models": model_rows,
+        "new_model_count": len(new_models),
+        "reproduced_model_count": len(reproduced),
+
+        "withdrawn": WITHDRAWN,
+        "superseded": SUPERSEDED,
+
+        "eligibility_counts": dict(elig.most_common()),
+        "rob2_status_counts": dict(robstat.most_common()),
+
+        "source_holds": {
+            "unresolved_conflicts": sum(
+                1 for c in conflicts
+                if "unresolved" in (c.get("resolution_status", "") or c.get("current_structured_choice", "")).lower()
+                or not (c.get("resolution_status") or "").strip()),
+            "conflict_records": len(conflicts),
+            "conflicts": [
+                dict(study=c.get("study", ""), outcome=c.get("outcome", ""),
+                     timepoint=c.get("timepoint", ""),
+                     value_a=c.get("value_A", ""), location_a=c.get("source_location_A", ""),
+                     value_b=c.get("value_B", ""), location_b=c.get("source_location_B", ""),
+                     choice=c.get("current_structured_choice", ""))
+                for c in conflicts],
+            "supplement_access_gaps": ["Zhu 2022", "Lu 2022", "Gao 2021", "Jiang 2026",
+                                       "Tu 2024", "Lu 2021", "Zheng 2025"],
+            "source_not_accessed_outcomes": [
+                "Gao 2021 — total length of stay (Supplementary Table S4)",
+                "Gao 2021 — 30-day complications (Supplementary Table S4)"],
+        },
+
+        "poolable_scan": {
+            "groups_examined": len(scan),
+            "candidates": sum(1 for r in scan if r["verdict"].startswith("CANDIDATE")),
+            "shared_arm_holds": sum(1 for r in scan if r["verdict"].startswith("HOLD")),
+            "single_study": sum(1 for r in scan if "only 1 independent" in r["verdict"]),
+        },
+
+        "certainty_note": (
+            "New and restratified v34 analyses carry result-specific risk-of-bias "
+            "assessments that are still pending, so no GRADE certainty is presented for "
+            "them. Previous GRADE ratings describe the earlier syntheses and are not "
+            "carried across to a materially changed model."),
+    }
+
+    header = f"""// v34 ANALYTICAL LAYER — generated file, do not hand-edit.
+// Regenerate with:  python3 scripts/build_v34_dashboard_data.py
+//
+// Master : {payload['master']}
+// SHA-256: {V34_SHA256}
+// Studies: {payload['canonical_studies']}   Outcome rows: {payload['outcome_rows']}
+// Models : {len(new_models)} new + {len(reproduced)} independently reproduced
+//
+// Every estimate is read from 09_V34_ANALYSIS/03_RESULTS/v34_models.csv, fitted
+// by StataNow 19.5. None is copied from an earlier dashboard file.
+window.V34_DATA = """
+
+    OUT.write_text(header + json.dumps(payload, indent=2, ensure_ascii=False) + ";\n",
+                   encoding="utf-8")
+
+    print(f"wrote {OUT.relative_to(ROOT)}")
+    print(f"  master ............... {payload['master']}")
+    print(f"  canonical studies .... {payload['canonical_studies']}")
+    print(f"  outcome rows ......... {payload['outcome_rows']}")
+    print(f"  strict primary k ..... {payload['strict_primary_k']}")
+    print(f"  models ............... {len(new_models)} new + {len(reproduced)} reproduced")
+    print(f"  withdrawn ............ {len(WITHDRAWN)}")
+    print(f"  superseded ........... {len(SUPERSEDED)}")
+    print(f"  conflict records ..... {payload['source_holds']['conflict_records']}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

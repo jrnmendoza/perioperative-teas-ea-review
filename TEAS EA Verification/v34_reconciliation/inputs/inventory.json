@@ -1,0 +1,382 @@
+{
+  "v33": {
+    "path": "/Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx",
+    "sha256": "64ef683c58a1faa2bf408f415d03d96dd6622abf8ded24a72f43db9c47a82a2a",
+    "sheets": {
+      "README": {
+        "rows": 29,
+        "columns": 8,
+        "formulas": 0,
+        "merges": [
+          "A1:H1"
+        ],
+        "tables": []
+      },
+      "Study_Master": {
+        "rows": 71,
+        "columns": 22,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "StudyMasterTable",
+            "ref": "A1:U65"
+          }
+        ]
+      },
+      "Corrected_RoB2": {
+        "rows": 71,
+        "columns": 16,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "CorrectedRoBTable",
+            "ref": "A1:P7"
+          }
+        ]
+      },
+      "Audit_Issues": {
+        "rows": 18,
+        "columns": 6,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "AuditIssuesTable",
+            "ref": "A1:F12"
+          }
+        ]
+      },
+      "AG_Candidate_Data": {
+        "rows": 71,
+        "columns": 6,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "AGCandidateTable",
+            "ref": "A1:F65"
+          }
+        ]
+      },
+      "Summary": {
+        "rows": 19,
+        "columns": 8,
+        "formulas": 0,
+        "merges": [
+          "A18:H18",
+          "A15:H15",
+          "A16:H16",
+          "A19:H19",
+          "A13:H13",
+          "A1:H1",
+          "A17:H17"
+        ],
+        "tables": []
+      },
+      "Outcome_Data": {
+        "rows": 383,
+        "columns": 38,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "OutcomeDataTable",
+            "ref": "A1:AL35"
+          }
+        ]
+      },
+      "Analysis_Readiness": {
+        "rows": 365,
+        "columns": 52,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Analysis_Summary": {
+        "rows": 18,
+        "columns": 9,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Opioid_24h_Candidates": {
+        "rows": 94,
+        "columns": 21,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Set_Opioid_24h": {
+        "rows": 30,
+        "columns": 38,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Set_Pain_24h": {
+        "rows": 49,
+        "columns": 38,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Set_PONV": {
+        "rows": 52,
+        "columns": 38,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Set_QoR": {
+        "rows": 5,
+        "columns": 38,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Set_GI_Recovery": {
+        "rows": 31,
+        "columns": 38,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Study_Level_Synthesis": {
+        "rows": 9,
+        "columns": 7,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Opioid_Primary_StudyLevel": {
+        "rows": 23,
+        "columns": 21,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "Opioid_Primary_Summary": {
+        "rows": 7,
+        "columns": 2,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "AF_Result_Lock": {
+        "rows": 109,
+        "columns": 28,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "AFResultLockV21",
+            "ref": "A1:AB109"
+          }
+        ]
+      },
+      "AF_Unresolved": {
+        "rows": 35,
+        "columns": 10,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "AFUnresolvedV21",
+            "ref": "A1:F35"
+          }
+        ]
+      },
+      "Outcome_Data_AF_LOCK": {
+        "rows": 401,
+        "columns": 48,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "OutcomeDataAFLockV22",
+            "ref": "A1:AV309"
+          }
+        ]
+      },
+      "AF_Lock_Summary": {
+        "rows": 38,
+        "columns": 18,
+        "formulas": 0,
+        "merges": [
+          "A1:C1"
+        ],
+        "tables": []
+      },
+      "AF_Normalization_Log": {
+        "rows": 38,
+        "columns": 8,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "AFNormalizationLogV22",
+            "ref": "A1:H32"
+          }
+        ]
+      },
+      "AF_P1_Disposition": {
+        "rows": 20,
+        "columns": 12,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "AFP1DispositionV23",
+            "ref": "A1:L20"
+          }
+        ]
+      },
+      "Stata_AF_Long": {
+        "rows": 109,
+        "columns": 41,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "StataAFLongV25",
+            "ref": "A1:AO109"
+          }
+        ]
+      },
+      "Stata_Opioid24_Primary": {
+        "rows": 17,
+        "columns": 32,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "StataOpioid24V24",
+            "ref": "A1:AF16"
+          }
+        ]
+      },
+      "Stata_Manifest": {
+        "rows": 35,
+        "columns": 10,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "StataManifestV24",
+            "ref": "A1:J21"
+          }
+        ]
+      },
+      "AF_Priority_QA": {
+        "rows": 109,
+        "columns": 10,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "AFPriorityQAV25",
+            "ref": "A1:J109"
+          }
+        ]
+      },
+      "Scope_Exclusion_Audit": {
+        "rows": 2,
+        "columns": 6,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "v33_Change_Log": {
+        "rows": 25,
+        "columns": 9,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "v33_Supplement_Reconciliation": {
+        "rows": 41,
+        "columns": 9,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      }
+    },
+    "named_ranges": []
+  },
+  "audit": {
+    "path": "/Users/ryan/Downloads/TEAS_EA_v33_CONSOLIDATED_SOURCE_PDF_GAPFILL_AUDIT.xlsx",
+    "sha256": "dd1ee3542121c30fb5de6e520a05fbb2c61e1f9ba9d1d7b8c7477c620b3b879a",
+    "sheets": {
+      "README": {
+        "rows": 22,
+        "columns": 2,
+        "formulas": 0,
+        "merges": [],
+        "tables": []
+      },
+      "All_Gapfill": {
+        "rows": 375,
+        "columns": 27,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "ConsolidatedGapfill",
+            "ref": "A1:AA375"
+          }
+        ]
+      },
+      "Source_Verification": {
+        "rows": 20,
+        "columns": 9,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "ConsolidatedSources",
+            "ref": "A1:I20"
+          }
+        ]
+      },
+      "Reconciliation_Status": {
+        "rows": 289,
+        "columns": 10,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "ConsolidatedReconciliation",
+            "ref": "A1:J289"
+          }
+        ]
+      },
+      "Critical_QC": {
+        "rows": 17,
+        "columns": 5,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "CriticalQCTable",
+            "ref": "A1:E17"
+          }
+        ]
+      },
+      "Study_Summary": {
+        "rows": 20,
+        "columns": 6,
+        "formulas": 0,
+        "merges": [],
+        "tables": [
+          {
+            "name": "StudySummaryTable",
+            "ref": "A1:F20"
+          }
+        ]
+      }
+    },
+    "named_ranges": []
+  }
+}

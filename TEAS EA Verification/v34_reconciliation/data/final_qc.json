@@ -1,0 +1,173 @@
+{
+  "checks": [
+    {
+      "check": "Duplicate check",
+      "status": "PASS",
+      "evidence": "No new exact normalized composite duplicates; Li 2021 6-hour alias rejected independently. Full reviewed matching register retained."
+    },
+    {
+      "check": "Outcome-row reconciliation",
+      "status": "PASS",
+      "evidence": "382 + 374 - 1 duplicate + 2 supplement-dependent endpoints = 757"
+    },
+    {
+      "check": "Canonical IDs",
+      "status": "PASS",
+      "evidence": "70 canonical studies/reports; no original study disappeared; original comparison IDs retained."
+    },
+    {
+      "check": "Analysis_Readiness row agreement",
+      "status": "PASS",
+      "evidence": "757 records in each; exact record ID links."
+    },
+    {
+      "check": "Strict primary k",
+      "status": "PASS",
+      "evidence": "7 across all primary sheets; summary computed; TEAS 4 / EA 3; N=676."
+    },
+    {
+      "check": "Strict primary estimate unchanged",
+      "status": "PASS",
+      "evidence": "Stata matched source rerun identical for combined audit and both protocol strata."
+    },
+    {
+      "check": "Liang randomized/analyzed N",
+      "status": "PASS",
+      "evidence": "4 CRBD rows; randomized 37/38, analyzed 35/35."
+    },
+    {
+      "check": "Gu no invented opioid mass",
+      "status": "PASS",
+      "evidence": "24-h graph-only multimodal PCIA volume; no mass conversion."
+    },
+    {
+      "check": "Graph-only numeric protection",
+      "status": "PASS",
+      "evidence": "38 new graph-only rows, no invented means/SDs."
+    },
+    {
+      "check": "Percentage protection",
+      "status": "PASS",
+      "evidence": "19 percentage-only rows; no reconstructed events."
+    },
+    {
+      "check": "Median/range protection",
+      "status": "PASS",
+      "evidence": "20 source ranges mapped to min/max, never Q1/Q3 or means."
+    },
+    {
+      "check": "Source-not-accessed distinction",
+      "status": "PASS",
+      "evidence": "7 study-level supplement/protocol access gaps; 2 explicit Gao outcome rows. No replacement with NOT REPORTED."
+    },
+    {
+      "check": "Source-conflict preservation",
+      "status": "PASS",
+      "evidence": "27 visible conflict/correction records, including all 11 required studies; raw source notes and quotations retained."
+    },
+    {
+      "check": "New result-specific RoB",
+      "status": "PASS",
+      "evidence": "No newly eligible outcome inherits study-wide Low/Some concerns/High."
+    },
+    {
+      "check": "Formula check (source/staging)",
+      "status": "PASS",
+      "evidence": "Inputs have no formulas/named ranges. No error-value cells introduced; exported XLSX is separately validated."
+    },
+    {
+      "check": "Stata consistency",
+      "status": "PASS",
+      "evidence": "15 successful Stata model runs, native values rebuilt from current source; every selected model has independent study units."
+    },
+    {
+      "check": "Exported workbook cell round-trip",
+      "status": "PASS",
+      "evidence": "0 substantive cell differences; empty strings and Excel blanks considered equivalent. All unchanged sheets checked against frozen v33."
+    },
+    {
+      "check": "Exported formula/error check",
+      "status": "PASS",
+      "evidence": "0 error cells; 0 formulas; summaries regenerated as typed values, matching the source architecture."
+    },
+    {
+      "check": "Frozen v33 hash",
+      "status": "PASS",
+      "evidence": "64ef683c58a1faa2bf408f415d03d96dd6622abf8ded24a72f43db9c47a82a2a"
+    },
+    {
+      "check": "Original sheet preservation",
+      "status": "PASS",
+      "evidence": "All 31 original sheet names retained; 48 total sheets."
+    },
+    {
+      "check": "History snapshot V33_Outcome_Data_AF_LOCK",
+      "status": "PASS",
+      "evidence": "Every original value preserved in explicit history snapshot."
+    },
+    {
+      "check": "History snapshot V33_Stata_AF_Long",
+      "status": "PASS",
+      "evidence": "Every original value preserved in explicit history snapshot."
+    },
+    {
+      "check": "Readiness identities/values",
+      "status": "PASS",
+      "evidence": "757 exact Outcome_Data-linked rows."
+    },
+    {
+      "check": "Set/readiness consistency",
+      "status": "PASS",
+      "evidence": "0 discrepancies across all five Set_* sheets."
+    },
+    {
+      "check": "Active AF/Stata values",
+      "status": "PASS",
+      "evidence": "0 numeric/endpoint discrepancies in regenerated Stata_AF_Long."
+    },
+    {
+      "check": "Workbook/CSV Stata consistency",
+      "status": "PASS",
+      "evidence": "AF long, primary native, selected secondary and full Outcome_Data exports all agree: [True, True, True, True]"
+    },
+    {
+      "check": "Existing-cell change-log coverage",
+      "status": "PASS",
+      "evidence": "0 unlogged changes; 2184 CSV/workbook log entries."
+    },
+    {
+      "check": "Change-log workbook/CSV consistency",
+      "status": "PASS",
+      "evidence": "Exact matching row count, headers and values."
+    },
+    {
+      "check": "Audit disposition completeness",
+      "status": "PASS",
+      "evidence": "Every audit row 2–375 has one disposition and target result ID."
+    },
+    {
+      "check": "Liang all-record allocation consistency",
+      "status": "PASS",
+      "evidence": "All original and new Liang records use randomized 37/38, including the unavailable-opioid row; analyzed 35/35 retained."
+    },
+    {
+      "check": "Printed mean with missing SD preserved",
+      "status": "PASS",
+      "evidence": "Zheng QoR-40 48h mean 184 vs181 retained; exact SD blank, HOLD."
+    },
+    {
+      "check": "New source-range and IQR bounds",
+      "status": "PASS",
+      "evidence": "No range inversion or median-to-mean conversion."
+    },
+    {
+      "check": "Numeric cell typing",
+      "status": "PASS",
+      "evidence": "Summary counts are numeric Excel cells, not formatted strings."
+    }
+  ],
+  "differences": [],
+  "unlogged": [],
+  "af_discrepancies": [],
+  "xlsx_sha256": "985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3"
+}

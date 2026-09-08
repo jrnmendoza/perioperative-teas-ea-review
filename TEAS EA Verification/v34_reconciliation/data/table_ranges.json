@@ -1,0 +1,192 @@
+[
+  {
+    "sheet": "Outcome_Data",
+    "table": "OutcomeDataTable",
+    "range": "A1:BI758"
+  },
+  {
+    "sheet": "Analysis_Readiness",
+    "table": "V34_Analysis_Readiness",
+    "range": "A1:BW758"
+  },
+  {
+    "sheet": "Set_Opioid_24h",
+    "table": "V34_Set_Opioid_24h",
+    "range": "A1:AQ8"
+  },
+  {
+    "sheet": "Set_Pain_24h",
+    "table": "V34_Set_Pain_24h",
+    "range": "A1:AQ78"
+  },
+  {
+    "sheet": "Set_PONV",
+    "table": "V34_Set_PONV",
+    "range": "A1:AQ177"
+  },
+  {
+    "sheet": "Set_QoR",
+    "table": "V34_Set_QoR",
+    "range": "A1:AQ24"
+  },
+  {
+    "sheet": "Set_GI_Recovery",
+    "table": "V34_Set_GI_Recovery",
+    "range": "A1:AQ61"
+  },
+  {
+    "sheet": "Opioid_24h_Candidates",
+    "table": "V34_Opioid_24h_Candidates",
+    "range": "A1:U203"
+  },
+  {
+    "sheet": "Stata_Opioid24_Primary",
+    "table": "StataOpioid24V24",
+    "range": "A1:AG8"
+  },
+  {
+    "sheet": "Opioid_Primary_StudyLevel",
+    "table": "V34_Opioid_Primary_StudyLevel",
+    "range": "A1:U8"
+  },
+  {
+    "sheet": "V33_Outcome_Data_AF_LOCK",
+    "table": "V34_V33_Outcome_Data_AF_LOCK",
+    "range": "A1:AV401"
+  },
+  {
+    "sheet": "V33_Stata_AF_Long",
+    "table": "V34_V33_Stata_AF_Long",
+    "range": "A1:AO109"
+  },
+  {
+    "sheet": "Outcome_Data_AF_LOCK",
+    "table": "OutcomeDataAFLockV22",
+    "range": "A1:BS794"
+  },
+  {
+    "sheet": "Stata_AF_Long",
+    "table": "StataAFLongV25",
+    "range": "A1:AP484"
+  },
+  {
+    "sheet": "Study_Master",
+    "table": "StudyMasterTable",
+    "range": "A1:V71"
+  },
+  {
+    "sheet": "Study_Level_Synthesis",
+    "table": "V34_Study_Level_Synthesis",
+    "range": "A1:G51"
+  },
+  {
+    "sheet": "V34_Source_PDF_Audit",
+    "table": "V34_V34_Source_PDF_Audit",
+    "range": "A1:K20"
+  },
+  {
+    "sheet": "V34_Source_Conflicts",
+    "table": "V34_V34_Source_Conflicts",
+    "range": "A1:L28"
+  },
+  {
+    "sheet": "V34_Audit_Dispositions",
+    "table": "V34_V34_Audit_Dispositions",
+    "range": "A1:AG375"
+  },
+  {
+    "sheet": "V34_Reconciliation_Status",
+    "table": "V34_V34_Reconciliation_Status",
+    "range": "A1:J289"
+  },
+  {
+    "sheet": "V34_Composite_Matching",
+    "table": "V34_V34_Composite_Matching",
+    "range": "A1:G375"
+  },
+  {
+    "sheet": "V34_Result_RoB2",
+    "table": "V34_V34_Result_RoB2",
+    "range": "A1:G758"
+  },
+  {
+    "sheet": "V34_Primary_MME",
+    "table": "V34_V34_Primary_MME",
+    "range": "A1:AL8"
+  },
+  {
+    "sheet": "V34_Secondary_Ready",
+    "table": "V34_V34_Secondary_Ready",
+    "range": "A1:AI27"
+  },
+  {
+    "sheet": "V34_Not_Pooled",
+    "table": "V34_V34_Not_Pooled",
+    "range": "A1:AJ725"
+  },
+  {
+    "sheet": "V34_Stata_Manifest",
+    "table": "V34_V34_Stata_Manifest",
+    "range": "A1:J35"
+  },
+  {
+    "sheet": "Stata_Manifest",
+    "table": "StataManifestV24",
+    "range": "A1:J35"
+  },
+  {
+    "sheet": "V34_Model_Results",
+    "table": "V34_V34_Model_Results",
+    "range": "A1:K16"
+  },
+  {
+    "sheet": "Audit_Issues",
+    "table": "AuditIssuesTable",
+    "range": "A1:F45"
+  },
+  {
+    "sheet": "AF_Normalization_Log",
+    "table": "AFNormalizationLogV22",
+    "range": "A1:H63"
+  },
+  {
+    "sheet": "AF_Unresolved",
+    "table": "AFUnresolvedV21",
+    "range": "A1:J59"
+  },
+  {
+    "sheet": "AF_Priority_QA",
+    "table": "AFPriorityQAV25",
+    "range": "A1:J109"
+  },
+  {
+    "sheet": "V34_Sheet_Review",
+    "table": "V34_V34_Sheet_Review",
+    "range": "A1:E32"
+  },
+  {
+    "sheet": "V34_QC",
+    "table": "V34_V34_QC",
+    "range": "A1:C17"
+  },
+  {
+    "sheet": "V33_to_V34_Change_Log",
+    "table": "V34_V33_to_V34_Change_Log",
+    "range": "A1:U2185"
+  },
+  {
+    "sheet": "V34_Study_Summary",
+    "table": "V34_V34_Study_Summary",
+    "range": "A1:M20"
+  },
+  {
+    "sheet": "Corrected_RoB2",
+    "table": "CorrectedRoBTable",
+    "range": "A1:P71"
+  },
+  {
+    "sheet": "AG_Candidate_Data",
+    "table": "AGCandidateTable",
+    "range": "A1:F71"
+  }
+]
