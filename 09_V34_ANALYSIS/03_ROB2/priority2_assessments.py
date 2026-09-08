@@ -2983,6 +2983,406 @@ add("Li 2022", "Exact cumulative postoperative opioid consumption", "0-24 h", L,
     "result not confirmed among the extracted pre-specified outcomes")
 
 
+# ============================================================================
+# Ntritsou 2014 (covidence_729_full_article.pdf) -- participant- and
+# observer-blinded. D1 Low: 'The randomisation was concealed by the director
+# of the anaesthesiology department'. D2 Low: 'a sham-controlled
+# participant- and observer-blinded trial'; the intraoperative application
+# occurs under anaesthesia and the postoperative application 'just after
+# awakening from anaesthesia' under a credible sham. D3 Low: 70 of 75
+# (93.3%) completed (3 control, 2 EA excluded).
+# ============================================================================
+_ntritsou14_base = (
+    "D1 Low: 'The randomisation was concealed by the director of the "
+    "anaesthesiology department', who was not otherwise involved in the "
+    "trial. D2 Low: 'a sham-controlled participant- and observer-blinded "
+    "trial'; patients were anaesthetised for the initial EA application and "
+    "the second (postoperative) application was given under a sham "
+    "protocol 'just after awakening from anaesthesia'. D3 Low: 70 of 75 "
+    "(93.3%) completed the study (3 control, 2 EA group excluded). ")
+_ntritsou14_d4 = (
+    " D4 Low for THIS result: recorded by the blinded observer for a "
+    "participant blinded via a credible sham protocol.")
+
+add("Ntritsou 2014", "Complete 24-h opioid/MME exposure", "0-24 h", L, L, L, L, S,
+    _ntritsou14_base +
+    "D5 Some concerns: the extracted text confirms a power analysis for "
+    "'each pain scale at 6 h following surgery' but does not confirm this "
+    "24h opioid/MME exposure figure as a named pre-specified outcome." +
+    _ntritsou14_d4,
+    "opioid/MME exposure not confirmed among the extracted named outcomes")
+add("Ntritsou 2014", "Total rescue analgesia", "First 24 h", L, L, L, L, S,
+    _ntritsou14_base +
+    "D5 Some concerns: identical reasoning -- rescue analgesia total is not "
+    "confirmed as a named pre-specified outcome in the extracted text." +
+    _ntritsou14_d4,
+    "rescue analgesia total not confirmed among the extracted named outcomes")
+
+# ============================================================================
+# Szmit 2021 (pdf-3.pdf) -- single-blinded (participant), objective PCA
+# outcomes. D1 Low: 'An independent, blinded statistician generated the
+# block randomization scheme'. D2 Low for THIS purpose: 'The participants
+# were blinded to the type of treatment'; sham device with an identical
+# flashing 'in use' light. D3 Some concerns: no completion/attrition
+# figures were found in the extracted text to confirm how many of the 71
+# randomised patients were analysed.
+# ============================================================================
+_szmit21_base = (
+    "D1 Low: 'An independent, blinded statistician generated the block "
+    "randomization scheme'. D2 Low: 'The participants were blinded to the "
+    "type of treatment'; the sham group received 'the same devices as TEAS "
+    "with the \"in use\" light flashing in the usual manner'. D3 Some "
+    "concerns: the extracted text gives the enrolled total (71 across three "
+    "arms) but no completion or attrition figures confirming how many were "
+    "analysed. ")
+_szmit21_d4 = (
+    " D4 Low for THIS result: a device-logged PCA/VAS-at-discharge measure "
+    "recorded under a genuinely blinded participant and sham device.")
+
+add("Szmit 2021", "Nausea incidence", "Postoperative observation period; PCA/TEAS discontinued at 24 h",
+    L, L, S, L, S,
+    _szmit21_base +
+    "D5 Some concerns: the confirmed primary outcome is 'Total morphine "
+    "dose received ... using PCA' and the named secondary outcomes are PCA "
+    "demand/bolus counts; nausea incidence is not among them in the "
+    "extracted text." + _szmit21_d4,
+    "nausea not confirmed among the extracted named outcomes")
+add("Szmit 2021", "VAS pain at discharge", "At discharge; exact postoperative clock time not reported",
+    L, L, S, L, S,
+    _szmit21_base +
+    "D5 Some concerns: identical reasoning -- the confirmed primary/"
+    "secondary outcomes are PCA morphine dose and demand counts, not a "
+    "discharge-timepoint VAS score." + _szmit21_d4,
+    "discharge VAS not confirmed among the extracted named outcomes")
+
+# ============================================================================
+# Wu 2022 (s12871-022-01875-3.pdf) -- comprehensively blinded. D1 Some
+# concerns: 'prospective, randomized, double-blind study' with no
+# allocation-concealment mechanism confirmed in the extracted text. D2 Low:
+# 'All researchers involved in this study were blinded to these groupings';
+# the device was kept 'out of sight of blinded researchers'. D3 Some
+# concerns: 84 of 90 (93.3%) completed, but unevenly across arms (40/45
+# Control vs 44/45 pTEAS) with no reasons given in the extracted text.
+# ============================================================================
+_wu22_base = (
+    "D1 Some concerns: described as a 'prospective, randomized, "
+    "double-blind study', but no allocation-concealment mechanism (e.g. "
+    "sealed envelopes) is confirmed in the extracted text. D2 Low: 'All "
+    "researchers involved in this study were blinded to these groupings'; "
+    "the device was placed so it was 'out of sight of blinded researchers'. "
+    "D3 Some concerns: 84 of 90 (93.3%) completed, unevenly across arms (40 "
+    "of 45 Control vs 44 of 45 pTEAS), with no reasons for the imbalance "
+    "given in the extracted text. ")
+_wu22_d4 = (
+    " D4 Low for THIS result: recorded under a design in which 'all "
+    "researchers involved ... were blinded to these groupings'.")
+
+add("Wu 2022", "Exact cumulative postoperative opioid consumption", "0-24 h", S, L, S, L, S,
+    _wu22_base +
+    "D5 Some concerns: the confirmed primary outcomes are VAS pain and "
+    "remifentanil consumption, with antiemetic consumption as a named "
+    "secondary outcome; a 0-24h postoperative (non-remifentanil) opioid "
+    "total is not itself confirmed among them." + _wu22_d4,
+    "postoperative (non-remifentanil) opioid total not confirmed among the extracted named outcomes")
+add("Wu 2022", "Remifentanil dose index", "Intraoperative", S, L, S, L, L,
+    _wu22_base +
+    "D5 Low: 'Primary outcome (i) The consumption of remifentanil' is "
+    "explicitly named as one of the three primary outcomes." + _wu22_d4)
+
+# ============================================================================
+# Xie 2014 (covidence_701_full_article.pdf) -- intraoperative EA under
+# general anaesthesia with blinded data handling. D1 Some concerns:
+# 'computer generated randomization number', no concealment mechanism (e.g.
+# sealed envelope) confirmed in the extracted text. D2 Low: patients are
+# under general anaesthesia throughout needle placement/stimulation
+# (intraoperative-only intervention), and 'The persons who collected the
+# data and performed the data analysis were blinded from the group and
+# patients assignment'. D3 Some concerns: no completion/attrition figures
+# were found in the extracted text beyond the stated exclusion criteria.
+# ============================================================================
+_xie14_base = (
+    "D1 Some concerns: allocation used a 'computer generated randomization "
+    "number', with no concealment mechanism (e.g. sealed envelope) "
+    "confirmed in the extracted text. D2 Low: the EA/sham intervention was "
+    "delivered entirely intraoperatively while patients were under general "
+    "anaesthesia (radical esophagectomy), and 'The persons who collected "
+    "the data and performed the data analysis were blinded from the group "
+    "and patients assignment'. D3 Some concerns: the extracted text states "
+    "exclusion criteria but no completion/attrition figures confirming how "
+    "many of the 60 randomised patients were analysed. ")
+_xie14_d4 = (
+    " D4 Low for THIS result: an anaesthetised participant cannot influence "
+    "this measure, and it was recorded/analysed by blinded personnel.")
+
+add("Xie 2014", "Exact cumulative postoperative sufentanil", "0-24 h", S, L, S, L, L,
+    _xie14_base +
+    "D5 Low: 'The primary outcome was the effect of EA on postoperative "
+    "pain score and the difference of opioids doses used among different "
+    "groups' -- this directly matches a cumulative opioid-dose result." +
+    _xie14_d4)
+add("Xie 2014", "Patient-controlled analgesia demand count", "Study PCA period", S, L, S, L, S,
+    _xie14_base +
+    "D5 Some concerns: the named primary outcome is opioid dose, not the "
+    "PCA demand-button count specifically." + _xie14_d4,
+    "demand-count metric not confirmed among the extracted named outcomes")
+
+# ============================================================================
+# Zhang 2025 (109551.pdf) -- comprehensively blinded, D1/D2/D3 established
+# in draft_assessments.py style reasoning applied fresh here. D1 Low:
+# Stata-generated 1:1 sequence in sealed opaque envelopes. D2 Low:
+# 'Anesthesiologists, outcome assessors, and patients were blinded to the
+# group allocation'; separate personnel for intervention vs. assessment.
+# D3 Low: 39 of 54 (72%) analysed per stated exclusions (9 TEAS + 6 control,
+# reasons documented) against the pre-specified inflated target.
+# ============================================================================
+_zhang25_base = (
+    "D1 Low: 'Randomization was performed using Stata 15.0 software to "
+    "generate random sequences in a 1:1 ratio'; 'The random allocation "
+    "sequences were placed in sealed opaque envelopes'. D2 Low: "
+    "'Anesthesiologists, outcome assessors, and patients were blinded to "
+    "the group allocation'; 'the TEAS intervention and outcome assessments "
+    "were conducted by separate personnel at distinct time points'. D3 Low: "
+    "'We excluded nine TEAS group ... and six control group patients', with "
+    "reasons documented (surgical protocol modifications, consent "
+    "withdrawals) against a target inflated for an anticipated 20% dropout. ")
+_zhang25_d4 = (
+    " D4 Low for THIS result: recorded under comprehensive blinding of "
+    "patients, anaesthesiologists and outcome assessors.")
+
+add("Zhang 2025", "Any rescue analgesia demand", "POD1 / postoperative period reported in Table 4",
+    L, L, L, L, L,
+    _zhang25_base +
+    "D5 Low: 'Secondary outcomes comprised ... rescue analgesia demands on "
+    "POD 1' is explicitly named." + _zhang25_d4)
+add("Zhang 2025", "Moderate-to-severe visceral pain", "POD1", L, L, L, L, S,
+    _zhang25_base +
+    "D5 Some concerns: the primary outcome is 'the maximum pain score for "
+    "different types of acute postoperative pains (visceral, LBP, and "
+    "incisional pain)' on POD 0-2, but this specific 'moderate-to-severe' "
+    "dichotomised threshold is a review-derived categorisation of that "
+    "score rather than the paper's own reported metric." + _zhang25_d4,
+    "moderate-to-severe threshold is a review-derived categorisation of the paper's continuous pain score")
+
+# ============================================================================
+# Zhou 2021 (getfile.php-5.pdf) -- explicitly unblinded ('This was an
+# unblinded randomized controlled trial'). D1 Some concerns: SPSS-generated
+# random number table, but allocation was performed by a named individual
+# with no separate concealment mechanism described. D2 High: open-label,
+# no blinding attempted for any party. D3 Some concerns: withdrawal
+# criterion given (Clavien-Dindo grade >2) but no confirmed completion
+# count found in the extracted text.
+# ============================================================================
+_zhou21_base = (
+    "D1 Some concerns: 'We randomized patients according to the order of "
+    "the random number table generated by SPSS 21.0', with allocation "
+    "performed by a single named research team member and no independent "
+    "concealment mechanism described. D2 High: 'This was an unblinded "
+    "randomized controlled trial' -- no blinding of participants, "
+    "clinicians, or assessors was attempted. D3 Some concerns: patients "
+    "with Clavien-Dindo grade >2 'met the withdrawal criteria and were not "
+    "included in the analysis', but no confirmed final completion count was "
+    "found in the extracted text. ")
+_zhou21_d4 = (
+    " D4 High for THIS result: recorded in an open-label trial with no "
+    "blinding of the participant, treating clinicians, or outcome assessors "
+    "at any stage.")
+
+add("Zhou 2021", "Any postoperative opioid use", "Postoperative window not clearly defined as 0-24 h",
+    S, H, S, H, L,
+    _zhou21_base +
+    "D5 Low: 'The primary outcomes were pain score and consumption of "
+    "analgesics.'" + _zhou21_d4)
+add("Zhou 2021", "Average postoperative pain", "POD1-POD5 average", S, H, S, H, L,
+    _zhou21_base +
+    "D5 Low: identical reasoning -- pain score is explicitly named as a "
+    "primary outcome." + _zhou21_d4)
+
+# ============================================================================
+# An 2014 (covidence_698_full_article.pdf) -- double-blinded. D1/D2/D3
+# established fresh. D1 Some concerns: 'computer-generated randomized "
+# number table', no concealment mechanism (sealed envelope) confirmed in
+# the extracted text. D2 Low: 'All the subjects involved were blinded ...
+# and the doctor who observed the postoperative pain and other outcomes
+# was also blinded'. D3 Low: 81 of 88 (92%) completed, with documented
+# reasons for all 7 exclusions.
+# ============================================================================
+add("An 2014", "Exact cumulative postoperative fentanyl", "0-24 h", S, L, L, L, S,
+    "D1 Some concerns: 'randomly allocated into 2 groups using a "
+    "computer-generated randomized number table', with no concealment "
+    "mechanism (e.g. sealed envelope) confirmed in the extracted text. D2 "
+    "Low: 'All the subjects involved were blinded regarding the study, and "
+    "the doctor who observed the postoperative pain and other outcomes was "
+    "also blinded to the study'. D3 Low: 81 of 88 (92%) completed; the 7 "
+    "exclusions are individually accounted for (2 reoperated, 2 remained "
+    "unconscious, 3 had incomplete information). D5 Some concerns: the "
+    "extracted text names 'dizziness, PONV and appetite as secondary "
+    "outcome measures' but does not confirm PCIA fentanyl consumption "
+    "itself as a named pre-specified outcome, despite it being central to "
+    "the study's stated aim. D4 Low for THIS result: a device-logged PCIA "
+    "measure recorded by the blinded observing doctor for a blinded "
+    "participant.",
+    "fentanyl consumption not confirmed as a named pre-specified outcome despite being central to the study's aim")
+
+# ============================================================================
+# Chen 2015 (thyroidectomy) -- D1/D2/D3/registration reused from the
+# established priority-1 PONV judgement (draft_assessments.py): 'assigned "
+# ... by a table of computer-generated random numbers', 1:1, 'sealed in "
+# sequentially numbered opaque envelopes'; 'The patients, attending "
+# anesthesiologist, surgeons and data collector were blinded to group
+# assignment'; 1 of 84 excluded for protocol breach; registered
+# NCT02333747.
+# ============================================================================
+add("Chen 2015", "Cumulative rescue IV morphine dose derived from fixed 2-mg rescue administrations", "0-24 h",
+    L, L, L, L, S,
+    "D1 Low: 'assigned ... by a table of computer-generated random "
+    "numbers', 1:1, 'sealed in sequentially numbered opaque envelopes'. D2 "
+    "Low: 'The patients, attending anesthesiologist, surgeons and data "
+    "collector were blinded to group assignment'; placebo-controlled with a "
+    "no-stimulation device. D3 Low: 1 of 84 excluded for protocol breach "
+    "(1.2%), 83 analysed. D5 Some concerns: registered NCT02333747 with "
+    "PONV named as the pre-specified secondary outcome; this derived "
+    "morphine-dose figure (calculated from a fixed 2-mg-per-rescue "
+    "assumption) is not itself the paper's own named outcome or reported "
+    "figure. D4 Low for THIS result: rescue administrations are a "
+    "blinded-data-collector record for a blinded participant; the "
+    "conversion itself introduces no additional measurement-blinding risk.",
+    "underlying morphine-dose figure is a review-derived calculation, not a named pre-specified outcome")
+
+# ============================================================================
+# He 2026 (hepatectomy/JIS) -- D1/D2/D3/registration reused from the
+# established priority-1 PONV judgement (draft_assessments.py): secure
+# web-based randomization, permuted blocks; genuine double-blinding with
+# opaque stimulator box and 'patients, anesthesiologists, outcome
+# assessors, and ward staff remained unaware of treatment assignments'; 2
+# of 161 excluded; registered NCT05396716.
+# ============================================================================
+add("He 2026 (hepatectomy/JIS)", "PCA attempts", "24 h", L, L, L, L, S,
+    "D1 Low: allocation 1:1 'through a secure web-based randomization "
+    "system'; sequence 'generated using permuted blocks, stratified by "
+    "treatment center'; assignment revealed by 'an independent investigator "
+    "(uninvolved in anesthesia administration or outcome assessment)'. D2 "
+    "Low: 'The patients, anesthesiologists, outcome assessors, and ward "
+    "staff remained unaware of treatment assignments'; the stimulator was "
+    "'placed inside an opaque box'. D3 Low: 2 of 161 excluded (one "
+    "cancelled surgery, one withdrew consent); a per-protocol sensitivity "
+    "analysis agreed with the mITT result. D5 Some concerns: registered "
+    "NCT05396716 with POCD (MoCA) as the pre-specified primary outcome and "
+    "MMSE, NRS pain/sleep, EORTC-QLQ-C30 and chronic pain as the listed "
+    "secondary outcomes; PCA attempts are not among them, matching this "
+    "study's own precedent finding for intraoperative remifentanil. D4 Low "
+    "for THIS result: a device-logged measure recorded under comprehensive "
+    "blinding of patients, anaesthesiologists, and ward staff.",
+    "result not among pre-specified outcomes, consistent with this study's own remifentanil precedent")
+
+# ============================================================================
+# Chen 2020 (Thoracic Cancer, TEAS + GA) -- comprehensively blinded. D1 Low:
+# 'The allocation code was generated by an independent statistician'
+# (computer-based randomization). D2 Low: 'None of the anesthesiologists,
+# surgeons, physicians in the postanesthesia care unit, or patients were
+# aware of the allocation'. D3 Some concerns: no completion/attrition
+# figures were found in the extracted text confirming how many of the 80
+# enrolled patients were analysed.
+# ============================================================================
+add("Chen 2020", "VAS pain intensity", "24 h postoperatively", L, L, S, L, L,
+    "D1 Low: 'Computer-based sample randomization was simultaneously "
+    "performed at the enrolment of each patient'; 'The allocation code was "
+    "generated by an independent statistician'. D2 Low: 'None of the "
+    "anesthesiologists, surgeons, physicians in the postanesthesia care "
+    "unit, or patients were aware of the allocation'. D3 Some concerns: the "
+    "extracted text states the enrolled total (80, inflated from a "
+    "calculated 74 'to account for potential loss to follow-up') but no "
+    "confirmed final completion count was found. D5 Low: 'The primary "
+    "endpoint was postoperative visual analogue scale (VAS) scores at six, "
+    "24, and 48 hours after surgery' -- an exact match for this result. D4 "
+    "Low for THIS result: recorded under comprehensive blinding of "
+    "patients, anaesthesiologists, surgeons and PACU physicians.",
+    "")
+
+# ============================================================================
+# Lin 2002 (covidence_951_lin_2002.pdf) -- participant-blinded via a
+# genuine sham. D1 Some concerns: 'a computer-generated randomization',
+# with no concealment mechanism confirmed in the extracted text. D2 Low:
+# 'Subjects and electrical equipment were placed such that subjects were
+# unable to see any specifics regarding the type of current administered,
+# and technicians maintained a normal persona to ensure that patients
+# remained unaware of their grouping category'. D3 Low: 'All enrolled
+# patients completed the study period with no withdrawals'.
+# ============================================================================
+add("Lin 2002", "Cumulative IV PCA morphine delivered during postoperative test period",
+    "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+    S, L, L, L, S,
+    "D1 Some concerns: patients 'randomly divided into four groups of 25 "
+    "each by a computer-generated randomization', with no concealment "
+    "mechanism (e.g. sealed envelope) confirmed in the extracted text. D2 "
+    "Low: 'Subjects and electrical equipment were placed such that subjects "
+    "were unable to see any specifics regarding the type of current "
+    "administered, and technicians maintained a normal persona to ensure "
+    "that patients remained unaware of their grouping category'. D3 Low: "
+    "'All enrolled patients completed the study period with no "
+    "withdrawals'. D5 Some concerns: the extracted text confirms a sample-"
+    "size/power calculation for detecting an inter-group difference but "
+    "does not itself name PCA morphine consumption as a pre-specified "
+    "primary/secondary outcome. D4 Low for THIS result: a device-logged PCA "
+    "record for a participant blinded via a genuine sham, handled by "
+    "technicians instructed to conceal group assignment.",
+    "PCA morphine consumption not confirmed as a named pre-specified outcome in the extracted text")
+
+# ============================================================================
+# Yang 2024 -- D1/D3/registration reused from the established priority-1
+# defecation/flatus judgements (draft_assessments.py). D2 Some concerns:
+# open-label against usual care (acupuncturist and patient aware) but
+# 'anesthetists, assessors, the data collector as well as statisticians
+# were blinded'. Unlike the self-reported flatus/defecation timing, this
+# result (vomiting) is an objectively observable clinical event.
+# ============================================================================
+add("Yang 2024", "Postoperative vomiting", "Within 72 h", L, S, L, L, S,
+    "D1 Low: 'Patients were randomly assigned to either usual care (UC) or "
+    "EA group by computer-generated codes and sequentially numbered, opaque "
+    "envelopes'. D2 Some concerns: open-label against usual care -- 'the "
+    "acupuncturist and patients were aware of the treatment allocation' -- "
+    "though 'anesthetists, assessors, the data collector as well as "
+    "statisticians were blinded'. D3 Low: ITT with 90 per group; 3 "
+    "documented withdrawals. D5 Some concerns: the registered (ChiCTR"
+    "1900024840) co-primary outcomes are time to first flatus and "
+    "defecation; vomiting is not confirmed among the named outcomes in the "
+    "extracted text. D4 Low for THIS result: unlike the self-reported "
+    "flatus/defecation timing, vomiting is an objectively observable "
+    "clinical event recorded by the blinded data collector, not dependent "
+    "on the unblinded participant's own subjective account.",
+    "vomiting not confirmed among the registered co-primary outcomes")
+
+# ============================================================================
+# Zhan 2020 (covidence_1389_full_article.pdf) -- single-blind (participant
+# necessarily unblinded to TAP-block-only vs. TAP+TEAS vs. usual care) with
+# a blinded assessor and treating anaesthetist. D1 Low: computer-generated
+# random numbers table with allocation revealed to treating anaesthetists
+# only via 'an independent research assistant'. D2 Some concerns: 'single
+# blind' design in which the assessor and treating anaesthetists (but not
+# the participant, who can necessarily tell whether TEAS electrodes are
+# active) were blinded. D3 Low: 'Finally 90 patients completed the study';
+# 'After randomization, all patients completed the study protocol'.
+# ============================================================================
+add("Zhan 2020", "Actual cumulative postoperative sufentanil consumption", "0-24 h", L, S, L, L, S,
+    "D1 Low: 'Each enrolled patient was randomized according to a "
+    "computer-generated random numbers table, and then an independent "
+    "research assistant informed different treating anesthetists based on "
+    "results'. D2 Some concerns: 'a single blind randomized control trial' "
+    "in which 'The assessor, treating anesthetists and statistical analysis "
+    "were blinded from group allocation', but the participant -- who can "
+    "necessarily tell whether active TEAS electrodes are attached versus a "
+    "TAP block or usual care alone -- is not stated to be blinded. D3 Low: "
+    "'Finally 90 patients completed the study'; 'After randomization, all "
+    "patients completed the study protocol'. D5 Some concerns: 'The primary "
+    "outcome was the Visual Analogue Scale ... at 2, 24 and 48 h' with "
+    "'postoperative adverse reactions ... and hemodynamic effect' as named "
+    "secondary outcomes; sufentanil consumption is not itself confirmed "
+    "among them in the extracted text. D4 Low for THIS result: a "
+    "device-logged PCIA measure recorded/analysed by a blinded assessor and "
+    "blinded treating anaesthetist, so the unblinded participant's own "
+    "awareness does not directly bias its recording.",
+    "sufentanil consumption not confirmed among the extracted named outcomes")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
