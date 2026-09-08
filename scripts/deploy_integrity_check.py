@@ -2,7 +2,7 @@
 """
 Pre-deployment integrity gate. Runs after scripts/build_site.py, before the
 build output is uploaded as a Pages artifact. Exits non-zero (aborting
-deployment) if the built site does not carry the current v32 analytical
+deployment) if the built site does not carry the current analytical
 state, or if it still carries specific superseded claims.
 
 Historical/changelog prose that explicitly discusses a withdrawn or
@@ -55,10 +55,28 @@ def main() -> int:
     meta = json.loads(meta_path.read_text(encoding="utf-8"))
 
     print("Checking build-meta.json against required values...")
+
+    # Derive the expected outcome-row count and master version from the
+    # workbook the build actually used, rather than restating them here. A
+    # hardcoded expectation is the same drift hazard as a hardcoded value: this
+    # check previously asserted v32/364 and would have blocked every correct
+    # v33 deployment while silently blessing a stale one.
+    import re as _re
+    import openpyxl as _op
+    master_file = meta.get("master_file", "")
+    m = _re.search(r"_v(\d+)_", master_file)
+    expected_version = f"v{m.group(1)}" if m else None
+    master_path = ROOT / "TEAS EA Verification" / master_file
+    if not master_path.exists():
+        fail(f"build-meta names a master that does not exist: {master_file}", failures)
+        expected_rows = None
+    else:
+        expected_rows = _op.load_workbook(master_path, data_only=True)["Outcome_Data"].max_row - 1
+
     required = {
-        "master_version": "v32",
+        "master_version": expected_version,
         "canonical_studies": 70,
-        "source_normalized_outcome_rows": 364,
+        "source_normalized_outcome_rows": expected_rows,
         "strict_primary_opioid_k": 7,
     }
     for key, expected in required.items():

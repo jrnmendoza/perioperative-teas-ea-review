@@ -5,7 +5,7 @@ Dashboard <-> v26 lock consistency validator.
 Fails loudly when the published dashboard disagrees with the authoritative
 sources:
 
-  workbook   TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx
+  workbook   TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx
   analysis   06_FINAL_ANALYSIS_V26/{01_DATA,03_RESULTS}
   dashboard  dashboard/  (canonical, hand-edited source)
 
@@ -1191,6 +1191,136 @@ def t_stratum_denominators():
           not probs, "\n".join(probs))
 
 
+def _v33_payload() -> dict:
+    src = (DASH / "v33_data.js").read_text(encoding="utf-8")
+    start = src.index("window.V33_DATA = ") + len("window.V33_DATA = ")
+    return json.loads(src[start:src.rindex(";")])
+
+
+def t_v33_layer_matches_master():
+    """
+    The generated v33 layer must agree with the v33 workbook and the Stata
+    results it claims to be derived from.
+    """
+    probs = []
+    import openpyxl
+    master = ROOT / "TEAS EA Verification" / "TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
+    if not master.exists():
+        check("v33 dashboard layer matches the v33 master", False, f"{master} missing")
+        return
+    p = _v33_payload()
+    wb = openpyxl.load_workbook(master, data_only=True)
+    if p["master"] != master.name:
+        probs.append(f"layer names master {p['master']!r}")
+    n_rows = wb["Outcome_Data"].max_row - 1
+    if p["outcome_rows"] != n_rows:
+        probs.append(f"outcome_rows {p['outcome_rows']} != {n_rows} in the workbook")
+    n_studies = wb["Study_Master"].max_row - 1
+    if p["canonical_studies"] != n_studies:
+        probs.append(f"canonical_studies {p['canonical_studies']} != {n_studies}")
+    if p["canonical_studies"] != 70:
+        probs.append(f"canonical_studies is {p['canonical_studies']}, expected 70")
+
+    sec_path = ROOT / "08_V33_MASTER" / "03_RESULTS" / "results_v33_secondary.csv"
+    if sec_path.exists():
+        stata = {r["analysis_id"]: r for r in read_csv(sec_path)}
+        for r in p["secondary"]:
+            src = stata.get(r["analysis_id"])
+            if not src:
+                probs.append(f"{r['analysis_id']} not in the Stata results")
+                continue
+            for f in ("estimate", "ci_low", "ci_high", "p_value"):
+                if r[f] is None or abs(float(src[f]) - r[f]) > 1e-6:
+                    probs.append(f"{r['analysis_id']}.{f}: layer {r[f]} != Stata {src[f]}")
+    check("v33 dashboard layer matches the v33 master and Stata results",
+          not probs, "\n".join(probs))
+
+
+def t_v33_contribution_map_reconciles():
+    """
+    The contribution map's primary-family count must equal the locked strict
+    primary k. A name-prefix bug once made this 8 against a locked 7.
+    """
+    probs = []
+    p = _v33_payload()
+    groups = {g["id"]: g for g in p["contribution_map"]["groups"]}
+    per = p["contribution_map"]["per_study"]
+
+    if len(per) != 70:
+        probs.append(f"map covers {len(per)} studies, expected 70")
+
+    strict_k = p["strict_primary_k"]
+    prim = groups["primary_opioid_24h"]["n_studies"]
+    if prim != strict_k:
+        probs.append(f"primary family has {prim} studies but strict primary k is {strict_k}")
+
+    flagged = sum(1 for x in per if x["in_primary"])
+    if flagged != prim:
+        probs.append(f"{flagged} studies flagged in_primary but the group count says {prim}")
+
+    for g in p["contribution_map"]["groups"]:
+        counted = sum(1 for x in per if g["id"] in x["families"])
+        if counted != g["n_studies"]:
+            probs.append(f"{g['id']}: header says {g['n_studies']}, rows give {counted}")
+
+    orphan = [x["study"] for x in per if not x["families"]]
+    if orphan:
+        probs.append(f"studies mapped to no family at all: {orphan}")
+
+    check("v33 contribution map reconciles with the locked primary k",
+          not probs, "\n".join(probs))
+
+
+def t_v33_map_panel_is_dynamic():
+    """The v33 map and results must be rendered, never typed into the markup."""
+    probs = []
+    if not (DASH / "v33_data.js").exists():
+        probs.append("v33_data.js missing")
+    if "renderV33" not in APP:
+        probs.append("renderV33() not defined")
+    if 'src="v33_data.js' not in HTML:
+        probs.append("v33_data.js is not loaded by index.html")
+    for cid in ("v33-map", "v33-results", "v33-headline", "v33-notpooled", "v33-subtitle"):
+        if f'id="{cid}"' not in HTML:
+            probs.append(f"container #{cid} missing")
+    m = re.search(r"<!-- v33 STUDY CONTRIBUTION MAP(.*?)<!-- v33 TIERED", HTML, re.S)
+    if m:
+        body = re.sub(r"<!--.*?-->", "", m.group(1), flags=re.S)
+        for lit in ("70 ", " 7 studies", "382", "0.519", "104.4"):
+            if lit in body:
+                probs.append(f"v33 map markup hardcodes {lit!r}")
+    else:
+        probs.append("could not locate the v33 map markup")
+    check("v33 contribution map is generated from data, with no hardcoded counts",
+          not probs, "\n".join(probs))
+
+
+def t_no_stale_master_in_live_code():
+    """
+    Live analytical code must read the v33 master. Historical mentions in
+    changelogs and audit trails are legitimate and are not flagged.
+    """
+    probs = []
+    live = {
+        "scripts/build_site.py", "scripts/build_primary_pathway.py",
+        "scripts/build_v33_dashboard_data.py",
+        "06_FINAL_ANALYSIS_V26/02_STATA/00_prep_data.do",
+    }
+    for rel in sorted(live):
+        f = ROOT / rel
+        if not f.exists():
+            probs.append(f"{rel} missing")
+            continue
+        txt = f.read_text(encoding="utf-8", errors="replace")
+        for stale in ("v32_FINAL_LOCK_READY", "v31_FINAL_LOCK_READY", "v26_FINAL_LOCK_READY"):
+            if stale in txt:
+                probs.append(f"{rel} still reads {stale}")
+        if "v33_FINAL_LOCK_READY" not in txt:
+            probs.append(f"{rel} does not reference the v33 master")
+    check("Live analytical code reads the v33 master, not an earlier one",
+          not probs, "\n".join(probs))
+
+
 def t_stata_edition_claim():
     """
     The engine named on the dashboard must be the engine the logs record.
@@ -1702,6 +1832,10 @@ def main() -> int:
                                        t_primary_weighting_matrix_matches_stata,
                                        t_no_pre_correction_sufentanil_values,
                                        t_locale_pooled_numbers_agree]),
+        ("v33 evidence base", [t_v33_layer_matches_master,
+                               t_v33_contribution_map_reconciles,
+                               t_v33_map_panel_is_dynamic,
+                               t_no_stale_master_in_live_code]),
         ("v33 tiered primary outcome", [t_v33_matches_stata, t_v33_strata_not_combined,
                                         t_v33_panel_is_dynamic,
                                         t_v33_zhang_withdrawn_everywhere,

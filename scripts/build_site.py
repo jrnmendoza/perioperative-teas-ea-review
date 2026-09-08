@@ -46,11 +46,11 @@ V33 = ROOT / "07_TIERED_V33"
 RESULTS = V26 / "03_RESULTS"
 MASTER_XLSX = (
     ROOT / "TEAS EA Verification"
-    / "TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx"
+    / "TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx"
 )
 
 CACHE_BUSTED_ASSETS = (
-    "styles.css", "primary_pathway.js", "tiered_v33.js", "data.js",
+    "styles.css", "primary_pathway.js", "tiered_v33.js", "v33_data.js", "data.js",
     "translations.js", "reader_assist.js", "meta_engine.js", "app.js",
 )
 CACHE_BUSTED_FETCH_PATHS = (
@@ -123,16 +123,28 @@ def source_normalized_outcome_rows() -> int:
     if not MASTER_XLSX.exists():
         raise RuntimeError(f"master workbook not found at {MASTER_XLSX}")
     wb = openpyxl.load_workbook(MASTER_XLSX, data_only=True)
-    ws = wb["Summary"]
-    for row in ws.iter_rows(values_only=True):
+
+    # Count the Outcome_Data rows directly rather than trusting the Summary
+    # sheet's stored figure. The stored figure is written by hand and was found
+    # carrying v32's 364 inside the v33 workbook while Outcome_Data held 382 --
+    # exactly the hardcoded-count drift this build is supposed to eliminate.
+    actual = wb["Outcome_Data"].max_row - 1
+
+    for row in wb["Summary"].iter_rows(values_only=True):
         if row and row[0] == "Source-normalized outcome rows":
-            return int(row[1])
-    raise RuntimeError("'Source-normalized outcome rows' not found in Summary sheet")
+            stated = row[1]
+            if stated is not None and int(stated) != actual:
+                raise RuntimeError(
+                    f"master workbook is internally inconsistent: Summary sheet says "
+                    f"{stated} source-normalized outcome rows, Outcome_Data has {actual}"
+                )
+            break
+    return actual
 
 
 def build_metadata(commit: str) -> dict:
     return {
-        "master_version": "v32",
+        "master_version": "v33",
         "master_file": MASTER_XLSX.name,
         "canonical_studies": canonical_studies_count(),
         "source_normalized_outcome_rows": source_normalized_outcome_rows(),
