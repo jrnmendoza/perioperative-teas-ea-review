@@ -45,7 +45,13 @@ def sentences(text):
 def main():
     mapping = json.loads((HERE / "pdf_map.json").read_text())
     only = sys.argv[1:] or list(mapping)
-    out = {}
+    # Merge into whatever evidence.json already holds rather than replacing it:
+    # passing specific study names on the command line (the normal way to add
+    # newly-mapped studies without re-extracting everyone) previously wrote out
+    # a file containing ONLY those studies, silently discarding every other
+    # study's evidence already on disk.
+    out_path = HERE / "evidence.json"
+    out = json.loads(out_path.read_text()) if out_path.exists() else {}
     for study in only:
         pdf = mapping.get(study)
         if not pdf:
@@ -68,7 +74,7 @@ def main():
                         seen.add(key)
                         found[dom].append({"p": pno, "quote": s[:CTX]})
         out[study] = {"pdf": pdf, "pages": len(pages), "evidence": found}
-    (HERE / "evidence.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
+    out_path.write_text(json.dumps(out, indent=1, ensure_ascii=False))
     for s, v in out.items():
         n = sum(len(x) for x in v["evidence"].values())
         print(f"{s:<28} {v['pdf']:<40} {v['pages']:>3}pp  {n:>3} quotes  " +
