@@ -1261,6 +1261,79 @@ add("Lu 2021", "Cumulative postoperative sufentanil PCA consumption", "0-24 h", 
     "result not among the pre-specified secondary endpoints")
 
 
+# ============================================================================
+# Sim 2002 (covidence_952_full_article.pdf) -- an older (pre-CONSORT-outcome-
+# declaration) trial with no explicit primary/secondary outcome labelling,
+# but with prospectively described data collection in the Methods. D1 Some
+# concerns: 'randomised by the use of a table of random numbers', no
+# concealment mechanism described. D2 Some concerns: 'the acupuncturist and
+# the anaesthetists involved in this study were aware of the group
+# assignment', though 'Patients in Group I and II were blinded to the types
+# of acupuncture administered' and 'An independent observer blinded to the
+# group assignments carried out the postoperative assessment'. D3 Low: all
+# 90 randomised (30 per group) appear retained, no losses reported.
+# ============================================================================
+_sim02_base = (
+    "D1 Some concerns: 'The patients were randomised by the use of a table "
+    "of random numbers', with no allocation-concealment mechanism "
+    "described. D2 Some concerns: 'the acupuncturist and the anaesthetists "
+    "involved in this study were aware of the group assignment', but "
+    "'Patients in Group I and II were blinded to the types of acupuncture "
+    "administered' and 'An independent observer blinded to the group "
+    "assignments carried out the postoperative assessment in this study'. "
+    "D3 Low: no losses to follow-up or exclusions are reported; all 90 "
+    "randomised patients (30 per group) appear in the results. ")
+_sim02_methods_described = (
+    "D5 Low: this is a pre-2004 trial with no formal primary/secondary "
+    "outcome declaration, but the measure is prospectively described in the "
+    "Methods as part of the planned data collection, not introduced only in "
+    "the Results.")
+_sim02_d4_blinded = (
+    " D4 Low for THIS result: postoperative data in this trial were "
+    "collected by 'An independent observer blinded to the group "
+    "assignments'.")
+
+for tp in ("6 h", "12 h", "18 h", "24 h"):
+    add("Sim 2002", "Resting VAS", tp, S, S, L, S, L,
+        _sim02_methods_described.replace("D5 Low", "D5 Low") + " " + _sim02_base +
+        "D4 Some concerns for THIS result: VAS is self-reported by "
+        "participants; Group I/II patients were blinded to acupuncture type, "
+        "but the report does not confirm blinding held for every arm "
+        "contributing to this specific comparison.")
+add("Sim 2002", "Mean resting VAS over first 24 h", "0–24 h mean across 6-hourly assessments",
+    S, S, L, S, L,
+    _sim02_methods_described + " " + _sim02_base +
+    "D4 Some concerns for THIS result: a composite of the same "
+    "participant-reported VAS assessments as the individual timepoints "
+    "above, carrying the same limitation.")
+add("Sim 2002", "Postoperative IV PCA morphine", "6-12 h", S, S, L, L, L,
+    _sim02_methods_described + " " + _sim02_base + _sim02_d4_blinded)
+for tp in ("0–6 h", "6–12 h", "12–18 h", "18–24 h"):
+    add("Sim 2002", "Postoperative IV PCA morphine in interval", tp, S, S, L, L, L,
+        _sim02_methods_described + " " + _sim02_base +
+        " D4 Low for THIS result: PCA morphine consumption is an objective "
+        "device record, collected as part of the blinded independent "
+        "observer's postoperative assessment.")
+add("Sim 2002", "PONV", "0–24 h", S, S, L, L, L,
+    _sim02_methods_described + " " + _sim02_base +
+    " D4 Low for THIS result: 'Side effects such as nausea, vomiting, "
+    "pruritus, and drowsiness over the first twenty-four hours were also "
+    "noted' by the same blinded independent observer.")
+add("Sim 2002", "Pruritus", "0–24 h", S, S, L, L, L,
+    _sim02_methods_described + " " + _sim02_base + _sim02_d4_blinded)
+add("Sim 2002", "Drowsiness", "0–24 h", S, S, L, L, L,
+    _sim02_methods_described + " " + _sim02_base + _sim02_d4_blinded)
+add("Sim 2002", "Alfentanil requirement rate", "Intraoperative", S, S, L, H, L,
+    _sim02_methods_described.replace("Low:", "Low: a 'Protocol for "
+        "Alfentanil Administration' is described in the Methods;") + " " +
+    _sim02_base +
+    "D4 High for THIS result: intraoperative alfentanil is titrated by the "
+    "anaesthetist, who is explicitly stated to have been 'aware of the "
+    "group assignment' -- the person controlling this dose was not "
+    "blinded.",
+    "unblinded anaesthetist is the outcome recorder for this intraoperative result")
+
+
 def main() -> int:
     with WORKLIST.open(encoding="utf-8-sig") as f:
         rows = [r for r in csv.DictReader(f) if r["priority"].startswith("2")]
