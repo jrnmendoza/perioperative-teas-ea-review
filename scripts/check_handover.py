@@ -81,7 +81,14 @@ def main():
             'removed orphan KPI targets': lambda x: x.__setitem__('app',x['app']+"getElementById('kpi-i2')"),
             'panel sequence': lambda x: x.__setitem__('html',x['html'].replace('id="v33-map"','id="temp"').replace('id="pathway-flow"','id="v33-map"').replace('id="temp"','id="pathway-flow"')),
             'draft isolation': lambda x: x['drafts'][0].__setitem__('adjudicated_by','Invented sign-off'),
-            'result coverage': lambda x: x['coverage'][0].__setitem__('overall','Low'),
+            # Force a row into PENDING with a non-empty overall to violate the
+            # "no PENDING row carries an overall" invariant directly, rather than
+            # relying on row[0] happening to already be PENDING -- as of the v34
+            # priority-1/2 reconciliation every row in the coverage register is
+            # resolved, so a mutation that only edits 'overall' on an
+            # already-resolved row would be a no-op if the value is unchanged.
+            'result coverage': lambda x: (x['coverage'][0].__setitem__('assessment_status', 'PENDING'),
+                                           x['coverage'][0].__setitem__('overall', 'Low')),
             'Wu baseline exclusion': replace_study,
             'Ng shared arm once': lambda x: x['sets']['v33_gi_first_defecation'][1].__setitem__('study','Changed trial'),
             'Stata sample counts': lambda x: x['results'][0].__setitem__('k','99'),

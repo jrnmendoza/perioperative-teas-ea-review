@@ -1013,7 +1013,28 @@ function renderRoB2Matrix() {
   const coveragePanel=document.getElementById('secondary-rob-coverage');
   if (coveragePanel) {
     const rows=window.V33_DATA.result_rob2_coverage;
-    coveragePanel.innerHTML='<h3>Current Secondary Result Coverage</h3><p>Pending judgments are not borrowed from another outcome. Drafts remain unadjudicated. This register covers the saved secondary analysis sets and is not altered by the study filters.</p><div style="overflow-x:auto"><table class="forest-table"><thead><tr><th>Study / contrast</th><th>Result</th><th>Status</th></tr></thead><tbody>'+rows.map(r=>`<tr><td>${pwEsc(r.study)}<br><small>${pwEsc(r.comparison_id)}</small></td><td>${pwEsc(r.result_assessed)}</td><td>${pwEsc(r.assessment_status)}${r.overall?' — '+pwEsc(r.overall):''}</td></tr>`).join('')+'</tbody></table></div>';
+    const pending = rows.filter(r => r.assessment_status === 'PENDING').length;
+    coveragePanel.innerHTML='<h3>Secondary Result Coverage — v33 legacy analysis sets (historical)</h3>'
+      +'<p style="color:#fdba74;">The five analysis sets below (<code>v33_rescue_opioid_binary_24h</code>, '
+      +'<code>v33_intraop_remifentanil</code>, <code>v33_intraop_sufentanil</code>, <code>v33_qor40_24h</code>, '
+      +'<code>v33_gi_first_defecation</code>) pooled across modality and comparator strata and have since been '
+      +'either <strong>withdrawn</strong> (mixed incompatible time windows or comparator strata) or '
+      +'<strong>superseded</strong> by the properly modality/comparator-stratified v34 models — see the RESULTS '
+      +'tab for both. They are retained here only as a historical RoB 2 coverage audit trail for the review\'s '
+      +'own record, not as current pooled evidence.</p>'
+      +'<p>The review\'s current result-specific RoB 2 register — every result inside a fitted v34 model, plus '
+      +'every result not currently pooled — is judged per result (not per study) and lives on the RESULTS tab. '
+      +(pending
+        ? `<strong style="color:#fca5a5;">${pending} row(s) below are still PENDING</strong>: no matching `
+          +'result-specific judgement has been identified for them yet. Pending judgments are never borrowed '
+          +'from another outcome, and drafts remain unadjudicated until a match is confirmed.'
+        : 'Every row below has since been matched to a result-specific judgement from that v34 register '
+          +'(marked "(v34)" below) or already carried one from an earlier per-study assessment; none are '
+          +'pending.')
+      +' This register is not altered by the study filters.</p>'
+      +'<div style="overflow-x:auto"><table class="forest-table"><thead><tr><th>Study / contrast</th><th>Result</th><th>Status</th></tr></thead><tbody>'
+      +rows.map(r=>`<tr><td>${pwEsc(r.study)}<br><small>${pwEsc(r.comparison_id)}</small></td><td>${pwEsc(r.result_assessed)}</td><td>${pwEsc(r.assessment_status)}${r.overall?' — '+pwEsc(r.overall):''}${r.existing_selected_result?`<br><small style="color:var(--text-muted);">matched: ${pwEsc(r.existing_selected_result)}</small>`:''}</td></tr>`).join('')
+      +'</tbody></table></div>';
   }
   const filtered = getFilteredStudies(false);
   const tbody = document.getElementById('rob2-table-body');
