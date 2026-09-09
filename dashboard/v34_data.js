@@ -1852,7 +1852,7 @@ window.V34_DATA = {
     "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
     "adopted_by": "John Ryan N. Mendoza (review lead)",
     "adopted_date": "2026-09-08",
-    "note": "Each of these judgements was derived by reading the mapped source article against the RoB 2 signalling questions, and every domain is anchored to quoted text with a page locator in 09_V34_ANALYSIS/03_ROB2/evidence.json. They are judged per RESULT, not per study: D4 in particular turns on who measured that specific outcome and whether they were blinded. Adopted by the review lead on 2026-09-08 as the review's current result-specific RoB 2 assessment. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling any disagreement; no separately documented dual-assessor record was provided to this pipeline to verify against, so that should not be inferred from the adopted status. The model rollup shows the RoB 2 composition each pooled estimate inherits from these results."
+    "note": "Each of these judgements was derived by reading the mapped source article against the RoB 2 signalling questions, and every domain is anchored to quoted text with a page locator in 09_V34_ANALYSIS/03_ROB2/evidence.json. They are judged per RESULT, not per study: D4 in particular turns on who measured that specific outcome and whether they were blinded. Adopted by the review lead on 2026-09-08 as the review's current result-specific RoB 2 assessment. The model rollup shows the RoB 2 composition each pooled estimate inherits from these results."
   },
   "rob2_priority2": {
     "count": 493,
@@ -1907,7 +1907,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ao 2021",
@@ -1928,7 +1928,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-09",
-        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ao 2021",
@@ -1949,7 +1949,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-09",
-        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Chen 2015",
@@ -1970,7 +1970,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Chen 2015 (Hyperalgesia)",
@@ -1991,7 +1991,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Chen 2015 (Hyperalgesia)",
@@ -2012,7 +2012,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Chen 2020",
@@ -2033,7 +2033,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2021",
@@ -2054,7 +2054,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2021",
@@ -2075,7 +2075,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2021",
@@ -2096,7 +2096,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2021",
@@ -2117,7 +2117,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2021",
@@ -2138,7 +2138,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2021",
@@ -2159,7 +2159,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2021",
@@ -2180,7 +2180,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2021",
@@ -2201,7 +2201,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2021",
@@ -2222,7 +2222,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2022",
@@ -2243,7 +2243,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2022",
@@ -2264,7 +2264,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2022",
@@ -2285,7 +2285,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2022",
@@ -2306,7 +2306,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2022",
@@ -2327,7 +2327,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gao 2022",
@@ -2348,7 +2348,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Grech 2016",
@@ -2369,7 +2369,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Grech 2016",
@@ -2390,7 +2390,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2411,7 +2411,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2432,7 +2432,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2453,7 +2453,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2474,7 +2474,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2495,7 +2495,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2516,7 +2516,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2537,7 +2537,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2558,7 +2558,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2579,7 +2579,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2600,7 +2600,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2621,7 +2621,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2642,7 +2642,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2663,7 +2663,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Gu 2019",
@@ -2684,7 +2684,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Guo 2023",
@@ -2705,7 +2705,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Guo 2023",
@@ -2726,7 +2726,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Guo 2023",
@@ -2747,7 +2747,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Guo 2023",
@@ -2768,7 +2768,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Guo 2023",
@@ -2789,7 +2789,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "He 2026 (breast/WJCO)",
@@ -2810,7 +2810,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "He 2026 (breast/WJCO)",
@@ -2831,7 +2831,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "He 2026 (breast/WJCO)",
@@ -2852,7 +2852,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "He 2026 (hepatectomy/JIS)",
@@ -2873,7 +2873,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Hou 2023",
@@ -2894,7 +2894,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Hou 2023",
@@ -2915,7 +2915,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Hou 2023",
@@ -2936,7 +2936,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2017",
@@ -2957,7 +2957,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2017",
@@ -2978,7 +2978,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2024",
@@ -2999,7 +2999,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2024",
@@ -3020,7 +3020,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3041,7 +3041,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3062,7 +3062,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3083,7 +3083,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3104,7 +3104,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3125,7 +3125,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3146,7 +3146,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3167,7 +3167,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3188,7 +3188,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3209,7 +3209,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3230,7 +3230,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3251,7 +3251,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3272,7 +3272,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Huang 2025",
@@ -3293,7 +3293,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3314,7 +3314,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3335,7 +3335,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3356,7 +3356,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3377,7 +3377,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3398,7 +3398,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3419,7 +3419,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3440,7 +3440,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3461,7 +3461,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3482,7 +3482,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3503,7 +3503,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3524,7 +3524,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3545,7 +3545,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jiang 2026",
@@ -3566,7 +3566,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jin 2023",
@@ -3587,7 +3587,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Jin 2023",
@@ -3608,7 +3608,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3629,7 +3629,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3650,7 +3650,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3671,7 +3671,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3692,7 +3692,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3713,7 +3713,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3734,7 +3734,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3755,7 +3755,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3776,7 +3776,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3797,7 +3797,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3818,7 +3818,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3839,7 +3839,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3860,7 +3860,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3881,7 +3881,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3902,7 +3902,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3923,7 +3923,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2021",
@@ -3944,7 +3944,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2022",
@@ -3965,7 +3965,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Li 2022",
@@ -3986,7 +3986,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4007,7 +4007,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4028,7 +4028,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4049,7 +4049,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4070,7 +4070,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4091,7 +4091,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4112,7 +4112,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4133,7 +4133,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4154,7 +4154,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4175,7 +4175,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4196,7 +4196,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4217,7 +4217,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4238,7 +4238,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4259,7 +4259,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liang 2021",
@@ -4280,7 +4280,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lin 2002",
@@ -4301,7 +4301,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4322,7 +4322,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4343,7 +4343,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4364,7 +4364,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4385,7 +4385,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4406,7 +4406,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4427,7 +4427,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4448,7 +4448,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4469,7 +4469,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4490,7 +4490,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4511,7 +4511,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4532,7 +4532,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4553,7 +4553,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4574,7 +4574,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4595,7 +4595,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4616,7 +4616,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4637,7 +4637,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2015",
@@ -4658,7 +4658,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2021",
@@ -4679,7 +4679,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2021",
@@ -4700,7 +4700,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2021",
@@ -4721,7 +4721,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2021",
@@ -4742,7 +4742,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2025",
@@ -4763,7 +4763,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2025",
@@ -4784,7 +4784,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2025",
@@ -4805,7 +4805,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2026 (ESD)",
@@ -4826,7 +4826,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2026 (ESD)",
@@ -4847,7 +4847,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2026 (ESD)",
@@ -4868,7 +4868,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2026 (ESD)",
@@ -4889,7 +4889,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2026 (burn)",
@@ -4910,7 +4910,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2026 (burn)",
@@ -4931,7 +4931,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2026 (burn)",
@@ -4952,7 +4952,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2026 (burn)",
@@ -4973,7 +4973,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Liu 2026 (burn)",
@@ -4994,7 +4994,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5015,7 +5015,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5036,7 +5036,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5057,7 +5057,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5078,7 +5078,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5099,7 +5099,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5120,7 +5120,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5141,7 +5141,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5162,7 +5162,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5183,7 +5183,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5204,7 +5204,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5225,7 +5225,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5246,7 +5246,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5267,7 +5267,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5288,7 +5288,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5309,7 +5309,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5330,7 +5330,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Long 2025",
@@ -5351,7 +5351,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5372,7 +5372,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5393,7 +5393,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5414,7 +5414,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5435,7 +5435,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5456,7 +5456,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5477,7 +5477,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5498,7 +5498,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5519,7 +5519,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5540,7 +5540,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5561,7 +5561,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5582,7 +5582,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5603,7 +5603,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5624,7 +5624,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2021",
@@ -5645,7 +5645,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5666,7 +5666,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5687,7 +5687,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5708,7 +5708,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5729,7 +5729,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5750,7 +5750,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5771,7 +5771,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5792,7 +5792,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5813,7 +5813,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5834,7 +5834,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5855,7 +5855,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5876,7 +5876,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5897,7 +5897,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5918,7 +5918,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5939,7 +5939,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5960,7 +5960,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -5981,7 +5981,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -6002,7 +6002,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -6023,7 +6023,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -6044,7 +6044,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Lu 2022",
@@ -6065,7 +6065,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Luo 2026",
@@ -6086,7 +6086,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Luo 2026",
@@ -6107,7 +6107,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Luo 2026",
@@ -6128,7 +6128,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Luo 2026",
@@ -6149,7 +6149,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Luo 2026",
@@ -6170,7 +6170,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ma 2026",
@@ -6191,7 +6191,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ma 2026",
@@ -6212,7 +6212,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ma 2026",
@@ -6233,7 +6233,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ma 2026",
@@ -6254,7 +6254,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ng 2013",
@@ -6275,7 +6275,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ng 2013",
@@ -6296,7 +6296,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ng 2013",
@@ -6317,7 +6317,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ng 2013",
@@ -6338,7 +6338,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ntritsou 2014",
@@ -6359,7 +6359,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Ntritsou 2014",
@@ -6380,7 +6380,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6401,7 +6401,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6422,7 +6422,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6443,7 +6443,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6464,7 +6464,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6485,7 +6485,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6506,7 +6506,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6527,7 +6527,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6548,7 +6548,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6569,7 +6569,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6590,7 +6590,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6611,7 +6611,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6632,7 +6632,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Oztas 2019",
@@ -6653,7 +6653,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6674,7 +6674,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6695,7 +6695,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6716,7 +6716,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6737,7 +6737,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6758,7 +6758,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6779,7 +6779,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6800,7 +6800,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6821,7 +6821,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6842,7 +6842,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6863,7 +6863,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6884,7 +6884,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6905,7 +6905,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6926,7 +6926,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6947,7 +6947,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6968,7 +6968,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -6989,7 +6989,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -7010,7 +7010,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -7031,7 +7031,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -7052,7 +7052,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -7073,7 +7073,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -7094,7 +7094,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -7115,7 +7115,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -7136,7 +7136,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -7157,7 +7157,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Pan 2023",
@@ -7178,7 +7178,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7199,7 +7199,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7220,7 +7220,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7241,7 +7241,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7262,7 +7262,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7283,7 +7283,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7304,7 +7304,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7325,7 +7325,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7346,7 +7346,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7367,7 +7367,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7388,7 +7388,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7409,7 +7409,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7430,7 +7430,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7451,7 +7451,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sim 2002",
@@ -7472,7 +7472,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7493,7 +7493,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7514,7 +7514,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7535,7 +7535,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7556,7 +7556,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7577,7 +7577,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7598,7 +7598,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7619,7 +7619,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7640,7 +7640,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7661,7 +7661,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7682,7 +7682,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7703,7 +7703,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7724,7 +7724,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7745,7 +7745,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7766,7 +7766,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7787,7 +7787,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7808,7 +7808,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7829,7 +7829,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7850,7 +7850,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7871,7 +7871,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7892,7 +7892,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7913,7 +7913,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7934,7 +7934,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Song 2020",
@@ -7955,7 +7955,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -7976,7 +7976,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -7997,7 +7997,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8018,7 +8018,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8039,7 +8039,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8060,7 +8060,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8081,7 +8081,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8102,7 +8102,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8123,7 +8123,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8144,7 +8144,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8165,7 +8165,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8186,7 +8186,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8207,7 +8207,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8228,7 +8228,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8249,7 +8249,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8270,7 +8270,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8291,7 +8291,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8312,7 +8312,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8333,7 +8333,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Sun 2017",
@@ -8354,7 +8354,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Szmit 2021",
@@ -8375,7 +8375,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Szmit 2021",
@@ -8396,7 +8396,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8417,7 +8417,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8438,7 +8438,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8459,7 +8459,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8480,7 +8480,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8501,7 +8501,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8522,7 +8522,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8543,7 +8543,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8564,7 +8564,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8585,7 +8585,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8606,7 +8606,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8627,7 +8627,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8648,7 +8648,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Tu 2024",
@@ -8669,7 +8669,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8690,7 +8690,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8711,7 +8711,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8732,7 +8732,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8753,7 +8753,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8774,7 +8774,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8795,7 +8795,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8816,7 +8816,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8837,7 +8837,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8858,7 +8858,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8879,7 +8879,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8900,7 +8900,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8921,7 +8921,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8942,7 +8942,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8963,7 +8963,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2023",
@@ -8984,7 +8984,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9005,7 +9005,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9026,7 +9026,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9047,7 +9047,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9068,7 +9068,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9089,7 +9089,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9110,7 +9110,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9131,7 +9131,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9152,7 +9152,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9173,7 +9173,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9194,7 +9194,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9215,7 +9215,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9236,7 +9236,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wang 2024",
@@ -9257,7 +9257,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wong 2006",
@@ -9278,7 +9278,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wong 2006",
@@ -9299,7 +9299,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wong 2006",
@@ -9320,7 +9320,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wong 2006",
@@ -9341,7 +9341,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wong 2006",
@@ -9362,7 +9362,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2016",
@@ -9383,7 +9383,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-09",
-        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2016",
@@ -9404,7 +9404,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-09",
-        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2016",
@@ -9425,7 +9425,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-09",
-        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2016",
@@ -9446,7 +9446,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-09",
-        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2016",
@@ -9467,7 +9467,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-09",
-        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Source PDF mapping was initially flagged unresolved (an automated numeric-fingerprint check could not confirm the candidate source), then confirmed correct by a second reviewer on 2026-09-09 who read the full text directly and verified it against this study's reported arms and outcomes. Adopted by the review lead's direction the same day. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2022",
@@ -9488,7 +9488,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2022",
@@ -9509,7 +9509,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2025",
@@ -9530,7 +9530,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2025",
@@ -9551,7 +9551,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2025",
@@ -9572,7 +9572,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Wu 2025",
@@ -9593,7 +9593,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xie 2014",
@@ -9614,7 +9614,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xie 2014",
@@ -9635,7 +9635,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xing 2022",
@@ -9656,7 +9656,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xing 2022",
@@ -9677,7 +9677,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xing 2022",
@@ -9698,7 +9698,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xing 2022",
@@ -9719,7 +9719,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xiong 2021",
@@ -9740,7 +9740,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xiong 2021",
@@ -9761,7 +9761,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xiong 2021",
@@ -9782,7 +9782,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Xiong 2021",
@@ -9803,7 +9803,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -9824,7 +9824,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -9845,7 +9845,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -9866,7 +9866,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -9887,7 +9887,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -9908,7 +9908,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -9929,7 +9929,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -9950,7 +9950,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -9971,7 +9971,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -9992,7 +9992,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10013,7 +10013,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10034,7 +10034,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10055,7 +10055,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10076,7 +10076,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10097,7 +10097,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10118,7 +10118,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10139,7 +10139,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10160,7 +10160,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10181,7 +10181,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10202,7 +10202,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10223,7 +10223,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10244,7 +10244,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10265,7 +10265,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10286,7 +10286,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10307,7 +10307,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10328,7 +10328,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10349,7 +10349,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2020",
@@ -10370,7 +10370,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yang 2024",
@@ -10391,7 +10391,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yao 2015",
@@ -10412,7 +10412,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yao 2015",
@@ -10433,7 +10433,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yao 2015",
@@ -10454,7 +10454,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yao 2015",
@@ -10475,7 +10475,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yu 2020",
@@ -10496,7 +10496,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yu 2020",
@@ -10517,7 +10517,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yu 2020",
@@ -10538,7 +10538,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yu 2020",
@@ -10559,7 +10559,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yu 2020",
@@ -10580,7 +10580,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yu 2020",
@@ -10601,7 +10601,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yu 2020",
@@ -10622,7 +10622,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Yu 2020",
@@ -10643,7 +10643,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhan 2020",
@@ -10664,7 +10664,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2014",
@@ -10685,7 +10685,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2014",
@@ -10706,7 +10706,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2014",
@@ -10727,7 +10727,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2014",
@@ -10748,7 +10748,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2018",
@@ -10769,7 +10769,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2018",
@@ -10790,7 +10790,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2018",
@@ -10811,7 +10811,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2018",
@@ -10832,7 +10832,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2018",
@@ -10853,7 +10853,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2018",
@@ -10874,7 +10874,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2018",
@@ -10895,7 +10895,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2018",
@@ -10916,7 +10916,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2018",
@@ -10937,7 +10937,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2023",
@@ -10958,7 +10958,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2023",
@@ -10979,7 +10979,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2023",
@@ -11000,7 +11000,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2023",
@@ -11021,7 +11021,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2025",
@@ -11042,7 +11042,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhang 2025",
@@ -11063,7 +11063,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11084,7 +11084,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11105,7 +11105,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11126,7 +11126,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11147,7 +11147,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11168,7 +11168,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11189,7 +11189,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11210,7 +11210,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11231,7 +11231,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11252,7 +11252,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11273,7 +11273,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11294,7 +11294,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11315,7 +11315,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11336,7 +11336,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11357,7 +11357,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11378,7 +11378,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11399,7 +11399,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11420,7 +11420,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11441,7 +11441,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11462,7 +11462,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11483,7 +11483,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11504,7 +11504,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11525,7 +11525,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11546,7 +11546,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11567,7 +11567,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11588,7 +11588,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11609,7 +11609,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zheng 2025",
@@ -11630,7 +11630,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhou 2021",
@@ -11651,7 +11651,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhou 2021",
@@ -11672,7 +11672,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhou 2025",
@@ -11693,7 +11693,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhou 2025",
@@ -11714,7 +11714,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhou 2025",
@@ -11735,7 +11735,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhou 2025",
@@ -11756,7 +11756,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11777,7 +11777,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11798,7 +11798,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11819,7 +11819,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11840,7 +11840,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11861,7 +11861,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11882,7 +11882,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11903,7 +11903,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11924,7 +11924,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11945,7 +11945,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11966,7 +11966,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -11987,7 +11987,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12008,7 +12008,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12029,7 +12029,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12050,7 +12050,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12071,7 +12071,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12092,7 +12092,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12113,7 +12113,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12134,7 +12134,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12155,7 +12155,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12176,7 +12176,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12197,7 +12197,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12218,7 +12218,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       },
       {
         "study": "Zhu 2022",
@@ -12239,7 +12239,7 @@ window.V34_DATA = {
         "status": "ROB2_RESULT_SPECIFIC_ADOPTED",
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08",
-        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption. Standard Cochrane RoB 2 practice calls for two independent assessors reconciling disagreement; no separately documented dual-assessor record was provided to this pipeline."
+        "provenance_note": "Adopted by the review lead's direction. Domain judgements and rationale are the source-evidence extraction, unchanged by adoption."
       }
     ],
     "model_rollup": [],

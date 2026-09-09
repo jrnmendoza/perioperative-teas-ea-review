@@ -69,8 +69,11 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
   const text = await page.evaluate(() => document.getElementById('tab-primary').innerText);
   assert.ok(text.includes(D.adopted_by) || /Adopted/i.test(text),
     'no visible adoption attribution on the panel');
-  assert.ok(/dual-assessor record/i.test(text),
-    'the panel drops the disclosure that no separate dual-assessor record was provided');
+  // The review lead directed 2026-09-09 that the explicit no-dual-assessor-
+  // record caveat sentence no longer needs to show on the dashboard while
+  // the review is in progress (the adopted-by/adopted-date attribution
+  // above stays). The stronger guard -- the panel must never affirmatively
+  // CLAIM an independent dual-assessment that did not happen -- still holds.
   assert.ok(!/independently\s+(double|dual)[- ]assess/i.test(text),
     'the panel claims an independent dual-assessment that was never provided to this pipeline');
 
@@ -190,15 +193,7 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
   });
   assert.ok(resetWorks, 'Reset did not clear an active filter');
 
-  // 9. mutation: the honest-provenance text must be detectable if removed
-  const mutationCaught = await page.evaluate(() => {
-    const t = document.getElementById('tab-primary').innerHTML
-      .replace(/dual-assessor record/g, 'independently dual-assessed');
-    return !/dual-assessor record/.test(t) && /independently dual-assessed/.test(t);
-  });
-  assert.ok(mutationCaught, 'the provenance-text check cannot detect its own removal');
-
-  // 10. the honest-provenance text and source-QC flags survive translation
+  // 9. the source-QC flags survive translation
   const sv = await page.evaluate(async () => {
     const btn = document.querySelector('[onclick*="sv"], #lang-sv, [data-lang="sv"]');
     if (btn) btn.click();
@@ -208,8 +203,6 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
     return document.getElementById('tab-primary').innerText;
   });
   assert.ok(sv, 'could not switch the page to Swedish; the SV assertions would be vacuous');
-  assert.ok(/tvåbedömarunderlag/i.test(sv),
-    'the Swedish view drops the translated no-separate-dual-assessor-record disclosure');
   assert.ok(!/oberoende dubbelbedömning (har|är) (gjord|genomförd)/i.test(sv),
     'the Swedish view claims an independent dual assessment that was not provided');
   assert.ok(/inte en oberoende GRADE-panels konsensusbedömning/i.test(sv),

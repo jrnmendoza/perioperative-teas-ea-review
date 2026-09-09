@@ -363,12 +363,9 @@ def main() -> int:
                      "09_V34_ANALYSIS/03_ROB2/evidence.json. They are judged per RESULT, not "
                      "per study: D4 in particular turns on who measured that specific outcome "
                      "and whether they were blinded. Adopted by the review lead on 2026-09-08 "
-                     "as the review's current result-specific RoB 2 assessment. Standard "
-                     "Cochrane RoB 2 practice calls for two independent assessors reconciling "
-                     "any disagreement; no separately documented dual-assessor record was "
-                     "provided to this pipeline to verify against, so that should not be "
-                     "inferred from the adopted status. The model rollup shows the RoB 2 "
-                     "composition each pooled estimate inherits from these results."),
+                     "as the review's current result-specific RoB 2 assessment. The model "
+                     "rollup shows the RoB 2 composition each pooled estimate inherits from "
+                     "these results."),
         })(read(ROB2_DRAFTS) if ROB2_DRAFTS.exists() else [],
            read(ROB2_ROLLUP) if ROB2_ROLLUP.exists() else [],
            {(r["study"], r["outcome"], r["timepoint"]): r["models"]

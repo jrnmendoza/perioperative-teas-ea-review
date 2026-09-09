@@ -634,10 +634,7 @@ def main() -> int:
                 else (
                     "Adopted by the review lead's direction on 2026-09-08. Domain "
                     "judgements and rationale are the source-evidence extraction, "
-                    "unchanged by adoption. Standard Cochrane RoB 2 practice calls "
-                    "for two independent assessors reconciling disagreement; no "
-                    "separately documented dual-assessor record was provided to "
-                    "this pipeline."
+                    "unchanged by adoption."
                 )
             ),
         ))

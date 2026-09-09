@@ -3551,15 +3551,10 @@ def main() -> int:
                 "verified it against this study's reported arms and outcomes. "
                 "Adopted by the review lead's direction the same day. Domain "
                 "judgements and rationale are the source-evidence extraction, "
-                "unchanged by adoption. Standard Cochrane RoB 2 practice calls "
-                "for two independent assessors reconciling disagreement; no "
-                "separately documented dual-assessor record was provided to "
-                "this pipeline." if r["study"] in ("Wu 2016", "Ao 2021") else
+                "unchanged by adoption." if r["study"] in ("Wu 2016", "Ao 2021") else
                 "Adopted by the review lead's direction. Domain judgements and "
                 "rationale are the source-evidence extraction, unchanged by "
-                "adoption. Standard Cochrane RoB 2 practice calls for two "
-                "independent assessors reconciling disagreement; no separately "
-                "documented dual-assessor record was provided to this pipeline."
+                "adoption."
             ),
         ))
 

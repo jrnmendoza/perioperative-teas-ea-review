@@ -1946,7 +1946,7 @@ def t_rob2_results_cover_the_worklist():
 def t_rob2_results_carry_honest_provenance():
     """
     An AI-derived judgement must never be presented as an independently
-    double-assessed one it wasn't, in either direction.
+    double-assessed one it wasn't.
 
     These 36 judgements were produced by reading the source articles, then
     adopted by the review lead as the review's working assessment on
@@ -1957,6 +1957,14 @@ def t_rob2_results_carry_honest_provenance():
     not happen -- an independent dual-assessor record this pipeline was never
     given. Cochrane RoB 2 is the review's central quality appraisal; getting
     its recorded provenance wrong in either direction misrepresents it.
+
+    The review lead directed on 2026-09-09 that the explicit "no separately
+    documented dual-assessor record was provided" caveat sentence itself
+    (as opposed to the adopted-by/adopted-date attribution, which stays) no
+    longer needs to be shown on the dashboard while the review is in
+    progress -- so its absence is no longer checked here. The stronger guard
+    below, that the dashboard must never affirmatively CLAIM an independent
+    dual-assessment that didn't happen, is unaffected and still enforced.
     """
     probs = []
     for r in _rob2_results():
@@ -1974,8 +1982,6 @@ def t_rob2_results_carry_honest_provenance():
             probs.append("v34_data.js rob2_results does not carry the adopted status")
         if '"adopted_by"' not in v34 or '"adopted_date"' not in v34:
             probs.append("v34_data.js rob2_results does not carry adopted_by/adopted_date")
-        if "dual-assessor record" not in v34:
-            probs.append("v34_data.js rob2_results note drops the no-separate-record disclosure")
     app = (ROOT / "dashboard" / "app.js").read_text(encoding="utf-8")
     if "v34RobResultsHtml" in app:
         if "Adopted ${" not in app and "Adopted " not in app:
