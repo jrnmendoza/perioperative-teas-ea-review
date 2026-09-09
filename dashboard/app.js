@@ -3419,6 +3419,36 @@ function v34RobChip(label, v){
 function v34RobResultsFilterOptions(D, field){
   return [...new Set((D.results||[]).map(r => r[field]).filter(Boolean))].sort();
 }
+// Aggregate D1-D5 + Overall distribution as a stacked bar per domain, with
+// the denominator stated explicitly (D.count, the exact rows the bars are
+// computed over -- never the full study count, since these are per-RESULT
+// judgements and one study can contribute several results).
+function v34RobDomainBarsHtml(D){
+  const dc = D.domain_counts || {};
+  const domains = [['d1_randomisation','D1 Randomisation'],['d2_deviations','D2 Deviations'],
+    ['d3_missing','D3 Missing data'],['d4_measurement','D4 Measurement'],['d5_reporting','D5 Reporting']];
+  const order = ['Low','Some concerns','High','UNRESOLVED'];
+  const total = D.count || Object.values(dc.d1_randomisation||{}).reduce((a,b)=>a+b,0);
+  if (!total) return '';
+  const rows = domains.map(([key,label]) => {
+    const counts = dc[key] || {};
+    const segs = order.filter(k=>counts[k]).map(k => {
+      const pct = (counts[k]/total*100).toFixed(1);
+      return `<div style="width:${pct}%;background:${v34RobTone(k)};height:100%;" title="${pwEsc(label)}: ${counts[k]} ${pwEsc(k)} (${pct}%)"></div>`;
+    }).join('');
+    return `
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-top:0.3rem;">
+        <span style="font-size:0.68rem;color:var(--text-muted);width:130px;flex-shrink:0;">${pwEsc(label)}</span>
+        <div style="flex:1;height:0.8rem;border-radius:3px;overflow:hidden;display:flex;background:rgba(255,255,255,0.05);">${segs}</div>
+      </div>`;
+  }).join('');
+  return `
+    <div style="margin-top:0.5rem;">
+      <div style="font-size:0.7rem;color:var(--text-muted);">Domain distribution across all ${total} judged results (denominator = rows judged, not study count):</div>
+      ${rows}
+    </div>`;
+}
+
 function v34RobResultsHtml(D, idPrefix){
   idPrefix = idPrefix || 'v34rob';
   const oc = D.overall_counts || {};
@@ -3473,6 +3503,7 @@ function v34RobResultsHtml(D, idPrefix){
       <div style="margin-top:0.35rem;font-size:0.76rem;color:var(--text-secondary);">
         ${D.count} assessed: ${summary}
       </div>
+      ${v34RobDomainBarsHtml(D)}
     </div>
     <details id="${idPrefix}-results-details" style="margin-top:0.4rem;">
       <summary style="cursor:pointer;font-size:0.76rem;color:#7dd3fc;">
