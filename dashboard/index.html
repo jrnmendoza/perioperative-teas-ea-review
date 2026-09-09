@@ -586,6 +586,9 @@
             </div>
 
             <div class="prisma-connector-down">↓</div>
+            <div style="max-width: 640px; margin: -0.4rem auto 0.6rem; padding: 0.55rem 0.8rem; background: rgba(245, 158, 11, 0.08); border-left: 3px solid #f59e0b; border-radius: var(--radius-sm); font-size: 0.72rem; color: #fde68a; line-height: 1.5;">
+              <strong>Unreconciled gap, flagged not corrected:</strong> 5,100 identified &minus; 2,160 removed before screening = 2,940, but 2,928 is the screened count transcribed directly from the source PRISMA record for this stage. The 12-record gap is not itemised in the supplied document and has not been independently resolved; both figures are shown as given rather than one being silently adjusted to match the other.
+            </div>
 
             <!-- Stage 2: Screening -->
             <div class="prisma-stage-row">
@@ -704,9 +707,10 @@
                         • RoB 2 complete for all 70 studies (verified 2026-09-07)<br>
                         • 19/19 P1 issues dispositioned (0 blockers)
                       </div>
-                      <div style="background: rgba(239, 68, 68, 0.08); padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(239, 68, 68, 0.25);">
-                        <strong style="color: #fca5a5;">Under reconciliation:</strong><br>
-                        Modality split, comparator split, and total randomized-patient count &mdash; not addressed by the 2026-09-07 PRISMA update; see the Study Explorer tab for the live per-study figures this dashboard actually computes from.
+                      <div style="background: rgba(16, 185, 129, 0.08); padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.25);" id="prisma-population-reconciliation">
+                        <strong style="color: #6ee7b7;">Modality, comparator and patient totals (reconciled):</strong><br>
+                        <span id="prisma-population-summary">70 studies &bull; 10,678 total randomized patients &bull; 48 TEAS / 22 EA &bull; 58 sham-controlled / 12 usual-care-controlled.</span>
+                        <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.35rem;">Computed live from the Study Explorer's own per-study modality, comparator and population fields (the same 70-study dataset everywhere else on this dashboard), not restated from the PRISMA docx, which does not itself give patient totals.</div>
                       </div>
                     </div>
                   </div>

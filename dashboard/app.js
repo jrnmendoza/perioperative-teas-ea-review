@@ -414,7 +414,32 @@ function renderConversionsView() {
 }
 
 // PRISMA 2020 Flow View
+// Modality/comparator/population totals for the PRISMA "Included" card,
+// computed live from the same STUDIES_DATA the Study Explorer renders from
+// -- never hardcoded, so a future study addition/removal cannot leave this
+// card stale the way the old hardcoded "5,089 patients / 49 TEAS + 14 EA"
+// figures did (see 06_FINAL_ANALYSIS_V26/06_AUDIT/dashboard_v26_reconciliation.md #26.3).
+function prismaPopulationSummary() {
+  const studies = window.STUDIES_DATA || [];
+  const n = studies.length;
+  const totalPatients = studies.reduce((sum, s) => sum + ((s.population && s.population.total_n) || 0), 0);
+  const teas = studies.filter(s => s.modality === 'TEAS').length;
+  const ea = studies.filter(s => s.modality === 'EA').length;
+  const sham = studies.filter(s => s.comparator_short === 'Sham').length;
+  const usualCare = studies.filter(s => s.comparator_short === 'Usual Care').length;
+  const other = n - teas - ea;
+  const otherComparator = n - sham - usualCare;
+  return {
+    n, totalPatients, teas, ea, sham, usualCare,
+    text: `${n} studies • ${totalPatients.toLocaleString()} total randomized patients • ${teas} TEAS / ${ea} EA${other ? ` / ${other} other` : ''} • ${sham} sham-controlled / ${usualCare} usual-care-controlled${otherComparator ? ` / ${otherComparator} other` : ''}.`,
+  };
+}
+
 function renderPrismaView() {
+  const summaryEl = document.getElementById('prisma-population-summary');
+  const pop = prismaPopulationSummary();
+  if (summaryEl && window.STUDIES_DATA) summaryEl.textContent = pop.text;
+
   const btnCopy = document.getElementById('btn-export-prisma-summary');
   if (btnCopy) {
     btnCopy.onclick = () => {
@@ -423,7 +448,8 @@ function renderPrismaView() {
 - Removed before screening: 2,160 records (1,651 Covidence auto-duplicates + 1 manual duplicate + 508 automation ineligible).
 - Screening: 2,928 title/abstract records screened; 2,704 irrelevant records excluded.
 - Eligibility: 224 reports sought; 14 not retrieved; 210 assessed; 141 excluded with reasons (Wrong outcomes: 117; Wrong setting: 9; Wrong intervention: 9; Wrong comparator: 3; Wrong population: 2; Wrong design: 1).
-- Included: 70 randomized controlled trials (69 via database search + 1 via citation searching). RoB 2 complete for all 70. Modality/comparator split and total patient N are under reconciliation and not restated here.`;
+- Included: 70 randomized controlled trials (69 via database search + 1 via citation searching). RoB 2 complete for all 70. ${pop.text}
+NOTE: 5,100 identified minus 2,160 removed before screening implies 2,940 should reach screening, but 2,928 is the number transcribed from the source PRISMA record for that stage (a 12-record gap not itemised in the supplied document) -- flagged, not silently corrected.`;
       navigator.clipboard.writeText(summaryText).then(() => {
         const orig = btnCopy.innerText;
         btnCopy.innerText = '✅ Summary Copied!';
