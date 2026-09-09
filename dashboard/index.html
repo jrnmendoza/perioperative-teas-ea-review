@@ -11,6 +11,8 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Top Header Navigation -->
   <header class="header-container">
     <div class="brand-wrapper">
@@ -151,7 +153,7 @@
   <!-- Main Container -->
   <div id="filter-chips" class="filter-chips" role="status" aria-live="polite" hidden></div>
   <p id="filter-scope" style="margin:0.6rem 2rem;color:#94a3b8;font-size:0.8rem;"></p>
-  <main class="main-container">
+  <main class="main-container" id="main-content">
 
     <!-- KPI Summary Row: Research Findings Focus -->
     <section class="kpi-grid">
@@ -1059,7 +1061,7 @@
             <h2>Exploratory Paired Opioid&ndash;Pain Analysis (Objective 4 Studio)</h2>
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(99, 102, 241, 0.12); border: 1px solid rgba(99, 102, 241, 0.35); padding: 0.35rem 0.75rem; border-radius: 4px; margin-top: 0.35rem;">
               <strong style="color: #a5b4fc; font-size: 0.82rem;">Independent paired study populations: k = 6 of 7 strict primary trials (N = 628 analysed)</strong>
-              <span class="stat-info-btn" title="This dataset includes trials with valid analyzable values for both the primary opioid and pain axes from the locked v32 synthesis. Szmit 2021 (the 7th strict primary trial) is not included: its only pain result is at hospital discharge with the exact postoperative time unreported, so it is not a clean ~24h pairing. Not a prespecified confirmatory analysis." style="cursor: help;">ⓘ</span>
+              <span class="stat-info-btn" role="button" tabindex="0" title="This dataset includes trials with valid analyzable values for both the primary opioid and pain axes from the locked primary synthesis. Szmit 2021 (the 7th strict primary trial) is not included: its only pain result is at hospital discharge with the exact postoperative time unreported, so it is not a clean ~24h pairing. Not a prespecified confirmatory analysis." aria-label="Why 6 of 7 strict primary trials: This dataset includes trials with valid analyzable values for both the primary opioid and pain axes from the locked primary synthesis. Szmit 2021 (the 7th strict primary trial) is not included: its only pain result is at hospital discharge with the exact postoperative time unreported, so it is not a clean ~24h pairing. Not a prespecified confirmatory analysis." style="cursor: help;">ⓘ</span>
             </div>
             <p id="mcid-subtitle-text" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.35rem;">
               Evaluating whether 0–24h Opioid Reduction achieves prespecified clinical-importance benchmarks (Primary: ≥ 10 mg IV MME) without clinically important worsening of postoperative pain (≤ +1.0 VAS margin; upper 95% CI examined).
@@ -1418,7 +1420,7 @@
           <div>
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
               <span class="badge badge-emerald">PRIMARY OPIOID OUTCOME</span>
-              <span class="badge badge-indigo">Reconciled Master v32 Lock</span>
+              <span class="badge badge-indigo">Reconciled &amp; Locked Master Dataset</span>
               <span class="badge badge-emerald" data-i18n="primarySection.badgeStata">VERIFIED IN STATANOW 19.5 BE</span>
               <span style="font-size: 0.75rem; color: var(--text-muted);">Strict Clean Trials: k = 7 RCTs • N = 676 Patients</span>
             </div>
@@ -1462,7 +1464,7 @@
               <div class="stat-q-card">
                 <div class="stat-q-label q-stat">
                   <span data-i18n="cardStructure.statisticalEvidence">1. Statistical Evidence</span>
-                  <button class="stat-info-btn" data-stat-term="pValue">ⓘ</button>
+                  <button class="stat-info-btn" data-stat-term="pValue" aria-label="Statistical explanation for p-value">ⓘ</button>
                 </div>
                 <div class="stat-q-value" style="color: #cbd5e1;">t(3) = −2.21, p = 0.1145</div>
                 <div class="stat-q-sub">95% Knapp–Hartung CI: [−34.18, +6.19] mg</div>
@@ -1471,7 +1473,7 @@
               <div class="stat-q-card">
                 <div class="stat-q-label q-mag">
                   <span data-i18n="cardStructure.effectMagnitude">2. Effect Magnitude</span>
-                  <button class="stat-info-btn" data-stat-term="ivMme">ⓘ</button>
+                  <button class="stat-info-btn" data-stat-term="ivMme" aria-label="Statistical explanation for IV morphine milligram equivalents">ⓘ</button>
                 </div>
                 <div class="stat-q-value" style="color: #818cf8;">MD = −14.00 mg IV MME</div>
                 <div class="stat-q-sub">REML + Knapp–Hartung (k = 4)</div>
@@ -1480,7 +1482,7 @@
               <div class="stat-q-card">
                 <div class="stat-q-label q-clin">
                   <span data-i18n="cardStructure.clinicalImportance">3. Clinical Importance</span>
-                  <button class="stat-info-btn" data-stat-term="clinicalThreshold">ⓘ</button>
+                  <button class="stat-info-btn" data-stat-term="clinicalThreshold" aria-label="Statistical explanation for Clinical Importance Threshold">ⓘ</button>
                 </div>
                 <div class="stat-q-value" style="color: #f59e0b;">Surgical Case-Mix Dependent</div>
                 <div class="stat-q-sub">Substantial sparing in thoracotomy (Chen 1998: −21 mg); crosses zero under KH.</div>
@@ -1489,7 +1491,7 @@
               <div class="stat-q-card">
                 <div class="stat-q-label q-cons">
                   <span data-i18n="cardStructure.consistency">4. Consistency</span>
-                  <button class="stat-info-btn" data-stat-term="iSquared">ⓘ</button>
+                  <button class="stat-info-btn" data-stat-term="iSquared" aria-label="Statistical explanation for I-squared heterogeneity">ⓘ</button>
                 </div>
                 <div class="stat-q-value" style="color: #a78bfa;">I² = 98.59%</div>
                 <div class="stat-q-sub">τ² = 156.88 • Q = 232.89 (p &lt; 0.0001)</div>
@@ -1531,7 +1533,7 @@
               <div class="stat-q-card">
                 <div class="stat-q-label q-stat">
                   <span data-i18n="cardStructure.statisticalEvidence">1. Statistical Evidence</span>
-                  <button class="stat-info-btn" data-stat-term="pValue">ⓘ</button>
+                  <button class="stat-info-btn" data-stat-term="pValue" aria-label="Statistical explanation for p-value">ⓘ</button>
                 </div>
                 <div class="stat-q-value" style="color: #cbd5e1;">t(2) = −1.19, p = 0.3969</div>
                 <div class="stat-q-sub">95% Knapp–Hartung CI: [−19.77, +11.90] mg</div>
@@ -1540,7 +1542,7 @@
               <div class="stat-q-card">
                 <div class="stat-q-label q-mag">
                   <span data-i18n="cardStructure.effectMagnitude">2. Effect Magnitude</span>
-                  <button class="stat-info-btn" data-stat-term="ivMme">ⓘ</button>
+                  <button class="stat-info-btn" data-stat-term="ivMme" aria-label="Statistical explanation for IV morphine milligram equivalents">ⓘ</button>
                 </div>
                 <div class="stat-q-value" style="color: #38bdf8;">MD = −3.94 mg IV MME</div>
                 <div class="stat-q-sub">REML + Knapp–Hartung (k = 3)</div>
@@ -1549,7 +1551,7 @@
               <div class="stat-q-card">
                 <div class="stat-q-label q-clin">
                   <span data-i18n="cardStructure.clinicalImportance">3. Clinical Importance</span>
-                  <button class="stat-info-btn" data-stat-term="clinicalThreshold">ⓘ</button>
+                  <button class="stat-info-btn" data-stat-term="clinicalThreshold" aria-label="Statistical explanation for Clinical Importance Threshold">ⓘ</button>
                 </div>
                 <div class="stat-q-value" style="color: #f59e0b;">Below 10 mg Threshold</div>
                 <div class="stat-q-sub">Point estimate below 10 mg benchmark; CI crosses zero.</div>
@@ -1558,7 +1560,7 @@
               <div class="stat-q-card">
                 <div class="stat-q-label q-cons">
                   <span data-i18n="cardStructure.consistency">4. Consistency</span>
-                  <button class="stat-info-btn" data-stat-term="iSquared">ⓘ</button>
+                  <button class="stat-info-btn" data-stat-term="iSquared" aria-label="Statistical explanation for I-squared heterogeneity">ⓘ</button>
                 </div>
                 <div class="stat-q-value" style="color: #a78bfa;">I² = 77.15%</div>
                 <div class="stat-q-sub">τ² = 28.47 • Q = 7.67 (p = 0.0216)</div>
@@ -1623,7 +1625,7 @@
               <div class="stat-q-card">
                 <div class="stat-q-label q-mag">
                   <span data-i18n="cardStructure.effectMagnitude">2. Effect Magnitude</span>
-                  <button class="stat-info-btn" data-stat-term="ivMme">ⓘ</button>
+                  <button class="stat-info-btn" data-stat-term="ivMme" aria-label="Statistical explanation for IV morphine milligram equivalents">ⓘ</button>
                 </div>
                 <div class="stat-q-value" style="color: #34d399;">MD = −9.91 mg IV MME</div>
                 <div class="stat-q-sub">Standardized: Hedges' g = −0.97 [−2.09, +0.15]</div>
@@ -2873,7 +2875,7 @@
                 <td style="color: #94a3b8; font-style: italic;">Not estimated</td>
                 <td style="color: #94a3b8; font-style: italic;">&mdash;</td>
                 <td><span class="badge badge-amber">Not modelled (k = 7)</span></td>
-                <td style="font-size: 0.74rem; color: #cbd5e1;">Not modelled in v32. A previously displayed secular trend (&beta; = +0.471 per year, p = 0.0287) came from the withdrawn 11-trial pool. Possible explanations for a genuine trend would include changes over time in multimodal analgesia, perioperative practice, surgical case mix, comparator treatment, study methodology, or other secular trends. This analysis cannot determine the cause.</td>
+                <td style="font-size: 0.74rem; color: #cbd5e1;">Not modelled in the locked primary analysis. A previously displayed secular trend (&beta; = +0.471 per year, p = 0.0287) came from the withdrawn 11-trial pool. Possible explanations for a genuine trend would include changes over time in multimodal analgesia, perioperative practice, surgical case mix, comparator treatment, study methodology, or other secular trends. This analysis cannot determine the cause.</td>
               </tr>
               <tr>
                 <td style="font-weight: 700; color: #a78bfa;">Modality (EA vs TEAS)</td>
@@ -2883,7 +2885,7 @@
                 <td>p = 0.308 (REML + Knapp&ndash;Hartung)</td>
                 <td style="color: #94a3b8; font-style: italic;">&mdash;</td>
                 <td><span class="badge badge-amber">Univariable only &bull; underpowered</span></td>
-                <td style="font-size: 0.74rem; color: #cbd5e1;">The only meta-regression fitted in v32 (<code>09_subgroups_metareg.do</code>). No evidence of a modality difference; with k = 7 this is exploratory and cannot exclude a clinically relevant difference. No multivariable adjustment is reported.</td>
+                <td style="font-size: 0.74rem; color: #cbd5e1;">The only meta-regression fitted in the locked primary analysis (<code>09_subgroups_metareg.do</code>). No evidence of a modality difference; with k = 7 this is exploratory and cannot exclude a clinically relevant difference. No multivariable adjustment is reported.</td>
               </tr>
               <tr>
                 <td style="font-weight: 700;">Stimulation Timing</td>
@@ -2978,14 +2980,14 @@
               returning a point estimate and a confidence interval.
             </p>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.6; max-width: 1000px;">
-              That model was fitted to the withdrawn 11-trial pool, is not reproduced by the locked v32
+              That model was fitted to the withdrawn 11-trial pool, is not reproduced by the locked primary
               pipeline, and could not be defended at k = 7: two covariates on seven studies is far below the
               Cochrane 10:1 threshold, and the interval it displayed was produced by an approximation rather
               than by the model's covariance matrix. Presenting it as an interactive predictor invited exactly
               the individual-patient reading that the accompanying ecological-fallacy warning disclaimed.
             </p>
             <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.6; max-width: 1000px;">
-              The authoritative v32 moderator evidence is the modality subgroup pair and the single
+              The authoritative moderator evidence is the modality subgroup pair and the single
               underpowered modality meta-regression reported at the top of this tab. No predictive
               instrument is offered in its place.
             </p>

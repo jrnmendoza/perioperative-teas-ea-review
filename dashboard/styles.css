@@ -69,6 +69,25 @@ body {
     radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
 }
 
+/* Skip link (WCAG 2.4.1): hidden until keyboard-focused, then jumps above the
+   header/nav so keyboard and screen-reader users don't have to tab through
+   the full header, six nav buttons and subnav pills on every page load. */
+.skip-link {
+  position: absolute;
+  top: -999px;
+  left: 0;
+  z-index: 1000;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent-primary, #4f46e5);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 6px 0;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 /* Header & Navigation */
 .header-container {
   background: rgba(11, 15, 25, 0.85);
