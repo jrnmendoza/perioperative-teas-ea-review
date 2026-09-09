@@ -357,6 +357,35 @@ def t_hero_summary_cards_match_detail():
           not probs, "\n".join(probs))
 
 
+def t_primary_stratum_comparators_not_swapped():
+    """
+    The strict primary TEAS stratum is entirely sham-controlled; the strict
+    primary EA stratum is entirely usual-care/open-label controlled (audited
+    and confirmed correct earlier in this review). A reviewer's easiest way
+    to catch a comparator mix-up is inside each stratum's own card: the TEAS
+    card should never describe ITS OWN comparator as usual care, and the EA
+    card should never describe ITS OWN comparator as sham. This does not ban
+    the words elsewhere on the page -- e.g. Wong 2006 genuinely is a
+    sham-controlled EA trial reported outside the strict primary set, and
+    that mention is correct -- only inside these two specific cards.
+    """
+    probs = []
+    teas_start = HTML.find("Primary Stratum 1: TEAS vs Sham")
+    ea_start = HTML.find("Primary Stratum 2: EA vs")
+    combined_start = HTML.find("Supporting Combined Synthesis (k=7, N=676)", ea_start)
+    if teas_start == -1 or ea_start == -1 or combined_start == -1 or not (teas_start < ea_start < combined_start):
+        probs.append("could not locate all three primary stratum card boundaries to scope this check")
+    else:
+        teas_card = HTML[teas_start:ea_start]
+        ea_card = HTML[ea_start:combined_start]
+        if re.search(r"usual care", teas_card, re.I):
+            probs.append("TEAS stratum card describes its own comparator as usual care")
+        if re.search(r"\bsham\b", ea_card, re.I):
+            probs.append("EA stratum card describes its own comparator as sham")
+    check("Primary TEAS/EA stratum cards never describe their own comparator as the other stratum's",
+          not probs, "\n".join(probs))
+
+
 def t_target_b_not_pooled():
     r = BY_ID["TB_STRICT_EXACT"]
     ok = int(r["k"]) == 1 and "Not pooled" in r["model"]
@@ -2211,7 +2240,8 @@ def main() -> int:
         ("Provenance & identifiers", [t_prospero, t_no_v20_source_label, t_provenance_block,
                                      t_stata_edition_claim]),
         ("Pooled results vs Stata", [t_primary_matches_stata, t_displayed_k_and_n,
-                                     t_hero_summary_cards_match_detail, t_target_b_not_pooled]),
+                                     t_hero_summary_cards_match_detail,
+                                     t_primary_stratum_comparators_not_swapped, t_target_b_not_pooled]),
         ("Study-set composition", [t_target_a_membership, t_no_old_five_study_48h,
                                    t_target_b_membership, t_pain_at_rest_only,
                                    t_yu_wang_excluded, t_yeh_not_double_counted]),
