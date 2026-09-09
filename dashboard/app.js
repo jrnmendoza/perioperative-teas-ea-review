@@ -2205,11 +2205,26 @@ function renderDirectionOfEvidence() {
   const resultsList = Object.values(STATA_MASTER_RESULTS);
 
   tbody.innerHTML = resultsList.map(item => {
+    // The interpretation overlay is keyed by analysis id. The three primary
+    // opioid rows carry their interpretation under the v34 model id that
+    // reproduces them, so look there too rather than leaving those rows
+    // without the manuscript layer that does exist for them.
+    const ilId = {'AN-01-TEAS': 'v34_primary_24h_mme_TEAS_Sham',
+                  'AN-01-EA': 'v34_primary_24h_mme_EA_Usual_care',
+                  'AN-01-COMB': 'v34_primary_24h_mme_ALL_AUDIT'}[item.id] || item.id;
+    const rec = ilRecord(ilId);
     return `
-      <tr>
-        <td style="font-weight: 700; color: var(--text-primary);">${item.name}</td>
+      <tr data-analysis-id="${pwEsc(item.id)}">
+        <td style="font-weight: 700; color: var(--text-primary);">${item.name}
+          ${rec ? ilStatusChip(rec) : ''}
+          ${rec ? `<div><button type="button" class="il-discuss-btn"
+             data-il-for="${pwEsc(ilId)}" onclick="ilToggleRow('${pwEsc(ilId)}-sof')"
+             style="margin-top:0.3rem;background:none;border:none;padding:0;cursor:pointer;
+                    color:#c7d2fe;font-size:0.72rem;text-decoration:underline;">
+             Discuss this result →</button></div>` : ''}
+        </td>
         <td style="font-size: 0.75rem; color: var(--text-secondary);">${item.controlRisk}</td>
-        <td style="font-weight: 700; color: #34d399;">${item.mdText} <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: normal;">(${item.pVal})</span></td>
+        <td style="font-weight: 700; color: #34d399;"${rec ? ` title="${pwEsc(rec.context)}"` : ''}>${item.mdText} <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: normal;">(${item.pVal})</span></td>
         <td><strong>${item.n.toLocaleString()}</strong> (${item.k} RCTs)</td>
         <td>
           <span class="${item.badgeClass}">${item.grade}</span>
@@ -2220,6 +2235,11 @@ function renderDirectionOfEvidence() {
           <div style="margin-top: 3px; color: #fbbf24; font-size: 0.68rem; font-style: italic;">[${item.robStatus}]</div>
         </td>
       </tr>
+      ${rec ? `<tr id="il-row-${pwEsc(ilId)}-sof" class="il-detail-row" ${ilLensOn() ? '' : 'hidden'}>
+        <td colspan="6" style="background:rgba(15,23,42,0.5);padding:0.8rem 1rem;">
+          ${ilPanelHtml(rec)}
+        </td>
+      </tr>` : ''}
     `;
   }).join('');
 

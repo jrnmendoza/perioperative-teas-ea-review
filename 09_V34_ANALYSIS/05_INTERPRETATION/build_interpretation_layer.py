@@ -140,6 +140,7 @@ TIER_A_CSV = ROOT / "07_TIERED_V33" / "01_DATA" / "tiered_primary_v33.csv"
 TIER_C_CSV = ROOT / "07_TIERED_V33" / "01_DATA" / "tiered_tierC_parallel_v33.csv"
 TIER_RESULTS = ROOT / "07_TIERED_V33" / "05_RESULTS" / "TIERED_ANALYSIS_RESULTS_v33.csv"
 AUDIT_CSV = ROOT / "07_TIERED_V33" / "PRIMARY_OUTCOME_DERIVABILITY_AUDIT_v33.csv"
+V26_RESULTS = ROOT / "06_FINAL_ANALYSIS_V26" / "03_RESULTS" / "master_reconciled_results_v26.csv"
 APP_JS = ROOT / "dashboard" / "app.js"
 DATADIRS = [
     ROOT / "09_V34_ANALYSIS" / "01_DATA",
@@ -152,6 +153,53 @@ LEDGER = HERE / "interpretation_bindings.json"
 # (opioid dose, hours to GI recovery, VAS, PONV log risk ratio) is
 # lower-is-better, so a negative estimate favours the intervention.
 HIGHER_IS_BETTER = {"v34_qor40_24h_TEAS_Sham"}
+
+# The review's other GRADE-rated analyses: the Summary-of-Findings entries in
+# dashboard/app.js (Targets A-F and the supporting SMD). Each maps to its
+# authoritative numeric row in 06_FINAL_ANALYSIS_V26/03_RESULTS/
+# master_reconciled_results_v26.csv.
+#
+# The mapping is VERIFIED, not assumed: verify_legacy_mapping() re-reads the
+# point estimate and k that the dashboard actually displays and refuses to
+# build a record if they disagree with the CSV row. Binding manuscript
+# language to the wrong analysis is the one failure that would be invisible
+# in the output and catastrophic in a submission.
+#
+# Deliberately NOT given records: the pure sensitivity permutations
+# (TA_EXCL_*, TE_FLATUS_EXCL_*, the SENS_* estimator grid, TF_RESCUE_
+# OPIOID_ALL, ...). A sensitivity variant is part of its parent analysis's
+# story, not a separate finding to write up, and generating a manuscript
+# paragraph for each one would bury the analyses that matter. They still do
+# real work here: they feed the estimator-dependence rule below.
+LEGACY_ANALYSES = {
+    "AN-01-SMD": dict(csv_id="OP24_PRIM_SMD",
+                      label="Supporting primary — 0–24 h opioid consumption (standardized)",
+                      unit="Hedges' g", comparator="Sham (TEAS) / usual care (EA)"),
+    "AN-02-TARGET-A": dict(csv_id="TA_STRICT",
+                           label="Target A — cumulative 0–48 h opioid",
+                           unit="mg IV MME", comparator="Sham / usual care"),
+    "AN-03-TARGET-B": dict(csv_id="TB_STRICT_EXACT",
+                           label="Target B — cumulative 0–72 h opioid",
+                           unit="mg IV morphine", comparator="Usual care"),
+    "AN-04-TARGET-C": dict(csv_id="TC_REST_PAIN24",
+                           label="Target C — postoperative pain at rest, 24 h",
+                           unit="VAS 0–10", comparator="Sham"),
+    "AN-05-TARGET-D-24": dict(csv_id="TD_PONV_0_24H",
+                              label="Target D — PONV 0–24 h",
+                              unit="risk ratio", comparator="Sham / usual care"),
+    "AN-06-TARGET-D-48": dict(csv_id="TD_PONV_0_48H",
+                              label="Target D — PONV 0–48 h",
+                              unit="risk ratio", comparator="Sham / usual care"),
+    "AN-07-TARGET-E": dict(csv_id="TE_FLATUS_MD_REML_KH",
+                           label="Target E — time to first flatus",
+                           unit="hours", comparator="Sham / usual care"),
+    "AN-08-TARGET-F-REMI": dict(csv_id="TF_INTRA_REMI_UG",
+                                label="Target F — intraoperative remifentanil",
+                                unit="µg", comparator="Sham / usual care"),
+    "AN-09-TARGET-F-RESCUE": dict(csv_id="TF_RESCUE_OPIOID_STRICT",
+                                  label="Target F — rescue opioid requirement",
+                                  unit="risk ratio", comparator="Sham / usual care"),
+}
 
 # Contributing studies for the three primary opioid models are defined by the
 # S0 stratum flags in the tiered dataset, not by the v34 manifest.
@@ -255,18 +303,72 @@ def total_n(model_id: str):
     return None
 
 
-def legacy_grades() -> dict:
-    """Parse the three primary models' adopted GRADE from app.js's
+def legacy_entries() -> dict:
+    """Parse the adopted Summary-of-Findings entries out of app.js's
     STATA_MASTER_RESULTS rather than restating them here, so the dashboard
-    stays the single source for those ratings."""
+    stays the single source for those ratings and displayed values."""
     src = APP_JS.read_text(encoding="utf-8")
+    start = src.index("const STATA_MASTER_RESULTS = {")
+    blk = src[start:src.index("\n};", start)]
     out = {}
-    for aid in ("AN-01-TEAS", "AN-01-EA", "AN-01-COMB"):
-        m = re.search(rf'"{aid}":\s*\{{.*?grade:\s*"([^"]+)"', src, re.S)
-        if not m:
-            raise SystemExit(f"could not parse a GRADE level for {aid} out of dashboard/app.js")
-        out[aid] = m.group(1)
+    for m in re.finditer(r'"(AN-[^"]+)":\s*\{(.*?)\n  \}', blk, re.S):
+        aid, body = m.group(1), m.group(2)
+
+        def field(name):
+            mm = re.search(rf'\b{name}:\s*("(?:[^"\\]|\\.)*"|[-\d.]+)', body)
+            if not mm:
+                return None
+            v = mm.group(1)
+            return v[1:-1] if v.startswith('"') else v
+
+        out[aid] = {
+            "grade": field("grade"), "k": field("k"), "n": field("n"),
+            "mdText": field("mdText") or "", "robStatus": field("robStatus") or "",
+            "name": field("name") or aid,
+        }
+    if not out:
+        raise SystemExit("could not parse STATA_MASTER_RESULTS out of dashboard/app.js")
     return out
+
+
+def rob_counts_from_status(text: str, k: int) -> tuple[int, int, int]:
+    """Recover a Low/Some/High composition from a legacy robStatus string.
+
+    These entries predate the per-result RoB 2 register and record their
+    composition as prose ("6 Some concerns, 1 High RoB"). Only the presence
+    and count of High-risk contributions actually drives a rule here, so that
+    is what is extracted; anything not identifiable as High is left in the
+    'some concerns' bucket rather than being guessed into 'low', which would
+    overstate the evidence.
+    """
+    t = (text or "").lower()
+    m = re.search(r"(\d+)\s*high", t)
+    if m:
+        high = int(m.group(1))
+    elif "high rob across all" in t or "high risk across all" in t:
+        high = k
+    elif "high" in t:
+        high = 1  # named without a count: at least one
+    else:
+        high = 0
+    return 0, max(0, k - high), min(high, k)
+
+
+def verify_legacy_mapping(aid: str, entry: dict, row: dict) -> None:
+    """Refuse to bind an interpretation to a CSV row unless the row is the
+    analysis the dashboard is actually showing under that id."""
+    disp_k = int(float(entry["k"])) if entry.get("k") else None
+    csv_k = int(float(row["k"])) if row.get("k") else None
+    if disp_k is not None and csv_k is not None and disp_k != csv_k:
+        raise SystemExit(f"{aid}: dashboard shows k={disp_k}, {row['analysis_id']} has k={csv_k}")
+    nums = re.findall(r"-?\d+\.\d+", (entry.get("mdText") or "").replace("−", "-"))
+    if not nums:
+        return
+    shown = float(nums[0])
+    actual = float(row["estimate"])
+    if abs(shown - actual) > max(0.02, abs(actual) * 0.01):
+        raise SystemExit(f"{aid}: dashboard shows {shown}, {row['analysis_id']} has {actual} -- "
+                         "refusing to attach manuscript language to a different analysis")
 
 
 def fmt(v, dp=2):
@@ -274,6 +376,22 @@ def fmt(v, dp=2):
         return "—"
     s = f"{abs(v):.{dp}f}"
     return ("−" if v < 0 else "") + s
+
+
+def sentence_case(phrase: str) -> str:
+    """Lowercase a phrase for use mid-sentence WITHOUT destroying acronyms.
+
+    A plain .lower() turns "PONV 0-24 h" into "ponv 0-24 h" and "QoR-40" into
+    "qor-40". These strings end up inside draft manuscript sentences, so the
+    casing has to survive."""
+    words = phrase.split()
+    out = []
+    for i, w in enumerate(words):
+        stripped = re.sub(r"[^A-Za-z]", "", w)
+        is_acronym = len(stripped) > 1 and stripped.isupper()
+        mixed_caps = sum(c.isupper() for c in stripped) > 1
+        out.append(w if (is_acronym or mixed_caps) else (w.lower() if i == 0 else w))
+    return " ".join(out)
 
 
 def het_band(i2: float) -> str:
@@ -288,28 +406,48 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
                  tier_c_studies, flags_by_study, audit_totals):
     k = int(float(m["k"]))
     est, lo, hi = fnum(m["estimate"]), fnum(m["ci_low"]), fnum(m["ci_high"])
-    i2 = fnum(m["i2"], 0.0)
-    p = fnum(m["p_value"])
-    estimator = m["estimator"]
-    measure = m["measure"]
-    n = total_n(mid)
-    low = int(roll["low"]) if roll else 0
-    some = int(roll["some_concerns"]) if roll else 0
-    high = int(roll["high"]) if roll else 0
+    # i2 is genuinely absent for a single-study "analysis" (Target B is one
+    # trial, not pooled). None means undefined, which is different from 0.
+    i2 = fnum(m.get("i2"), None)
+    p = fnum(m.get("p_value"))
+    estimator = m.get("estimator", "")
+    measure = m.get("measure", "MD")
+    n = m.get("n") or total_n(mid)
+    low = int(roll["low"]) if roll else int(m.get("rob_low", 0) or 0)
+    some = int(roll["some_concerns"]) if roll else int(m.get("rob_some", 0) or 0)
+    high = int(roll["high"]) if roll else int(m.get("rob_high", 0) or 0)
     high_studies = [s for s in (roll.get("high_risk_studies", "") or "").split("; ")
                     if s and s != "-"] if roll else []
 
-    crosses = lo is not None and hi is not None and lo <= 0 <= hi
+    # A ratio measure is null at 1, not 0. Getting this wrong would invert the
+    # single most consequential sentence this layer writes: PONV 0-24 h is
+    # RR 0.56 [0.14, 2.26], which plainly includes no effect, but tested
+    # against 0 it would read as excluding the null and be written up as a
+    # significant reduction.
+    # ...and a ratio reported on the LOG scale is null at 0 again. "logRR"
+    # contains "RR", so a naive substring test silently sends log-scale
+    # results back through the ratio branch and inverts them the other way:
+    # PONV 0-24 h is logRR -0.61 [-1.82, +0.60], which includes 0 and so
+    # includes no effect, but tested against 1 it reads as excluding the null.
+    # Both directions of this mistake write "significantly reduces" onto a
+    # null result, so the log scale is checked first and explicitly.
+    on_log_scale = measure.lower().startswith("log")
+    is_ratio = (not on_log_scale) and re.search(r"\b(RR|OR|Risk Ratio|Odds Ratio)\b", measure)
+    null_value = 1.0 if is_ratio else 0.0
+    crosses = lo is not None and hi is not None and lo <= null_value <= hi
     higher_better = mid in HIGHER_IS_BETTER
-    favours_intervention = (est > 0) if higher_better else (est < 0)
-    band = het_band(i2)
+    favours_intervention = (est > null_value) if higher_better else (est < null_value)
+    band = het_band(i2) if i2 is not None else None
     usual_care = "usual care" in (comparator or "").lower()
 
     unit_txt = unit or ""
-    mag = f"{fmt(abs(est))} {unit_txt}".strip()
     if measure == "logRR":
         import math
         mag = f"a risk ratio of {math.exp(est):.2f}"
+    elif is_ratio:
+        mag = f"a risk ratio of {est:.2f}"
+    else:
+        mag = f"{fmt(abs(est))} {unit_txt}".strip()
 
     # A readable sentence subject and outcome phrase. The model label reads
     # fine as a column heading but not as the subject of a sentence
@@ -317,20 +455,35 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
     # a manuscript-language layer that produces ungrammatical draft text is
     # not usable for the thing it exists for.
     subject = "TEAS" if "TEAS" in label else "EA" if "EA" in label else "The intervention"
-    outcome_phrase = re.split(r"\s+—\s+", label)[0].strip()
+    parts = [x.strip() for x in re.split(r"\s+—\s+", label)]
+    # v34 labels lead with the outcome ("Time to first flatus — TEAS vs sham");
+    # the legacy Summary-of-Findings labels lead with the target number
+    # ("Target D — PONV 0-24 h"), where the informative half is the second one.
+    outcome_phrase = (parts[1] if len(parts) > 1 and re.match(r"^(Target|Supporting)\b", parts[0])
+                      else parts[0])
     outcome_phrase = re.sub(r"^Primary\s+", "", outcome_phrase)
     if outcome_phrase.lower().endswith("opioid"):
         outcome_phrase += " consumption"
 
     # ---- Layer 2: what the result actually means -------------------------
     direction = ("favours " + ("the intervention" if favours_intervention else "the comparator"))
-    context = (
-        f"The pooled estimate corresponds to approximately {mag} "
-        f"{'higher' if (est > 0 and higher_better) or (est > 0 and not higher_better) else 'lower'} "
-        f"in the intervention arm than the comparator, across {k} contributing "
-        f"{'trial' if k == 1 else 'trials'}"
-        + (f" (N = {n})." if n else ".")
-    )
+    if is_ratio:
+        context = (
+            f"The pooled estimate is {mag} in the intervention arm relative to the comparator "
+            f"({'a lower' if est < 1 else 'a higher'} event rate), across {k} contributing "
+            f"{'trial' if k == 1 else 'trials'}"
+            + (f" (N = {n})." if n else ".")
+        )
+    else:
+        context = (
+            f"The pooled estimate corresponds to approximately {mag} "
+            f"{'higher' if est > 0 else 'lower'} "
+            f"in the intervention arm than the comparator, across {k} contributing "
+            f"{'trial' if k == 1 else 'trials'}"
+            + (f" (N = {n})." if n else ".")
+        )
+    if k == 1:
+        context = context.replace("The pooled estimate", "The single-trial estimate")
     if crosses:
         context += (
             f" The 95% confidence interval runs from {fmt(lo)} to {fmt(hi)} and includes no "
@@ -343,7 +496,9 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
             f"the direction of effect is consistent across the interval, though its size "
             f"remains uncertain."
         )
-    context += f" Between-study heterogeneity is {band} (I² = {i2:.1f}%)."
+    context += (f" Between-study heterogeneity is {band} (I² = {i2:.1f}%)." if i2 is not None
+                else " Between-study heterogeneity is undefined: this is a single trial, "
+                     "not a pooled estimate.")
     if k <= 4:
         context += (
             f" With only {k} contributing {'trial' if k == 1 else 'trials'}, both the interval "
@@ -357,25 +512,37 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
     )
 
     # ---- Layer 3a: results-safe / discussion-safe / do-not-say -----------
+    # Name the effect measure the analysis actually used. Reporting a risk
+    # ratio as a "mean difference" in a Results-safe sentence is the kind of
+    # error that survives into a submitted manuscript.
+    measure_name = ("log risk ratio" if on_log_scale else
+                    "risk ratio" if is_ratio else
+                    "standardized mean difference" if "Hedges" in measure or "SMD" in measure else
+                    "mean difference")
+    contrast_txt = (f"{subject} vs {(comparator or '').lower()}"
+                    if subject != "The intervention" else (comparator or "pooled"))
     results_safe = (
         f"{k} {'trial' if k == 1 else 'trials'} contributed to the {outcome_phrase} "
-        f"({subject} vs {(comparator or '').lower() or 'comparator'}) synthesis"
+        f"({contrast_txt}) synthesis"
         + (f" (N = {n})" if n else "")
-        + f". The pooled {'log risk ratio' if measure == 'logRR' else 'mean difference'} was "
+        + f". The {'pooled ' if k > 1 else 'single-trial '}{measure_name} was "
         f"{fmt(est)}"
-        + (f" {unit_txt}" if unit_txt and measure != "logRR" else "")
+        + (f" {unit_txt}" if unit_txt and not is_ratio and not on_log_scale else "")
         + f" (95% CI {fmt(lo)} to {fmt(hi)}"
         + (f"; p = {p:.3f}" if p is not None else "")
-        + f"; I² = {i2:.1f}%; {estimator})."
+        + (f"; I² = {i2:.1f}%" if i2 is not None else "")
+        + f"; {estimator})."
     )
 
     qualifiers = []
     if crosses:
         qualifiers.append("the confidence interval includes no difference")
-    if i2 >= 75:
+    if i2 is not None and i2 >= 75:
         qualifiers.append(f"between-study heterogeneity was considerable (I² = {i2:.1f}%)")
-    elif i2 >= 50:
+    elif i2 is not None and i2 >= 50:
         qualifiers.append(f"between-study heterogeneity was substantial (I² = {i2:.1f}%)")
+    if k == 1:
+        qualifiers.append("this is a single trial, not a pooled estimate")
     if k <= 4:
         qualifiers.append(f"only {k} trials contributed")
     if grade in ("Low", "Very Low"):
@@ -399,7 +566,7 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
     do_not_say = []
     if crosses:
         do_not_say.append({
-            "text": f"“{subject} significantly reduces {outcome_phrase.lower()}.”",
+            "text": f"“{subject} significantly reduces {sentence_case(outcome_phrase)}.”",
             "why": "The 95% confidence interval includes no difference; there is no "
                    "statistically significant effect to report.",
         })
@@ -409,7 +576,7 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
             "why": f"Certainty of evidence for this analysis is {grade.lower()}; the wording "
                    "should not imply more than the certainty rating supports.",
         })
-    if i2 >= 75:
+    if i2 is not None and i2 >= 75:
         do_not_say.append({
             "text": "“Findings were consistent across trials.”",
             "why": f"I² = {i2:.1f}% indicates considerable heterogeneity between the "
@@ -427,7 +594,7 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
     ]
     amber_qual = ("the confidence interval includes no difference"
                   if crosses else
-                  (f"heterogeneity was {band} (I² = {i2:.1f}%)" if i2 >= 50 else
+                  (f"heterogeneity was {band} (I² = {i2:.1f}%)" if (i2 is not None and i2 >= 50) else
                    f"certainty is {grade.lower()}" if grade in ("Low", "Very Low") else None))
     if amber_qual:
         claims.append({
@@ -438,7 +605,7 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
     if crosses or grade in ("Low", "Very Low"):
         claims.append({
             "level": "unsupported",
-            "claim": f"{subject} definitively changes {outcome_phrase.lower()}.",
+            "claim": f"{subject} definitively changes {sentence_case(outcome_phrase)}.",
             "basis": ("The interval includes no difference." if crosses
                       else f"Certainty is {grade.lower()}.")
             + " A definitive claim is not available from this analysis.",
@@ -454,7 +621,7 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
         ask(f"Why did only {k} trials contribute, when the review includes 70 RCTs?",
             f"k = {k}",
             "Derivability audit and evidence flow (v33 tiered panel)")
-    if i2 >= 75:
+    if i2 is not None and i2 >= 75:
         ask(f"What explains the considerable heterogeneity (I² = {i2:.1f}%)?",
             f"I² = {i2:.1f}% ≥ 75%",
             "Heterogeneity and moderator analyses; study characteristics")
@@ -543,7 +710,7 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
         "k": k, "estimate": round(est, 4) if est is not None else None,
         "ci_low": round(lo, 4) if lo is not None else None,
         "ci_high": round(hi, 4) if hi is not None else None,
-        "i2": round(i2, 2), "grade": grade,
+        "i2": round(i2, 2) if i2 is not None else None, "grade": grade,
         "rob_low": low, "rob_some": some, "rob_high": high,
         "estimator": estimator,
     }
@@ -583,7 +750,7 @@ def main() -> int:
     tier_c = read(TIER_C_CSV)
     tier_results = {r["analysis_id"]: r for r in read(TIER_RESULTS)}
     audit = read(AUDIT_CSV)
-    leg = legacy_grades()
+    leg = legacy_entries()
 
     flags_by_study = {}
     for r in read(P1_ROB2_CSV):
@@ -636,7 +803,7 @@ def main() -> int:
 
         if mid in PRIMARY_MODELS:
             flag, legacy_id = PRIMARY_MODELS[mid]
-            grade = leg[legacy_id]
+            grade = leg[legacy_id]["grade"]
             if flag:
                 studies = [r["study"] for r in tier_a if r.get(flag) == "1"]
             else:
@@ -664,6 +831,35 @@ def main() -> int:
         records.append(build_record(
             mid, m, roll, grade, studies, unit, label, comparator,
             sens_flip_by_model.get(mid), tier_c_studies, flags_by_study, audit_totals))
+
+    # ---- the review's other GRADE-rated analyses (Targets A-F, SMD) -------
+    v26 = {r["analysis_id"]: r for r in read(V26_RESULTS)}
+    for aid, meta in LEGACY_ANALYSES.items():
+        entry = leg.get(aid)
+        if not entry:
+            raise SystemExit(f"{aid} is in LEGACY_ANALYSES but not in STATA_MASTER_RESULTS")
+        row = v26.get(meta["csv_id"])
+        if not row:
+            raise SystemExit(f"{aid}: {meta['csv_id']} not found in {V26_RESULTS.name}")
+        verify_legacy_mapping(aid, entry, row)
+
+        k = int(float(row["k"]))
+        rl, rs, rh = rob_counts_from_status(entry["robStatus"], k)
+        ev = {
+            "k": row["k"], "estimate": row["estimate"],
+            "ci_low": row["ci_low"], "ci_high": row["ci_high"],
+            "i2": row["i2"], "p_value": row["p_value"],
+            "estimator": row["model"], "measure": row["effect_measure"],
+            "n": int(float(entry["n"])) if entry.get("n") else None,
+            "rob_low": rl, "rob_some": rs, "rob_high": rh,
+        }
+        # No per-result RoB 2 register or contributing-study list exists for
+        # these legacy analyses, so the study-scoped rules (source-QC,
+        # author contact) are given nothing rather than a guess: an absent
+        # flag is honest, an invented one is not.
+        records.append(build_record(
+            aid, ev, None, entry["grade"], [], meta["unit"], meta["label"],
+            meta["comparator"], None, [], flags_by_study, audit_totals))
 
     # ---- staleness: compare against the committed review ledger -----------
     # The baseline is the fingerprint each interpretation was last REVIEWED

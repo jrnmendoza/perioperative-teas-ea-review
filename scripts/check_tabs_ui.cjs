@@ -112,7 +112,7 @@ const fs=require('node:fs');
  assert.match(await page.locator('#calc-stat-res').innerText(),/ordered/);
  await page.evaluate(()=>switchTab('evidence'));
  await page.locator('#btn-export-grade-sof').click();
- assert.equal(await page.evaluate(()=>copiedText.split('\n').filter(x=>x.startsWith('•')).length),await page.locator('#grade-sof-table-body tr').count());
+ assert.equal(await page.evaluate(()=>copiedText.split('\n').filter(x=>x.startsWith('•')).length),await page.locator('#grade-sof-table-body tr[data-analysis-id]').count());
  await page.evaluate(()=>switchTab('prisma'));
  await page.locator('#btn-export-prisma-summary').click();
  assert.match(await page.evaluate(()=>copiedText),/70 randomized/);

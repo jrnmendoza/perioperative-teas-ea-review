@@ -2315,14 +2315,29 @@ def t_interpretation_bound_to_current_evidence():
     L = _interpretation_layer()
     if not L:
         return
+    # Records come from two authoritative sources: the v34 model results, and
+    # the v26 Summary-of-Findings rows behind the Target A-F analyses. The
+    # id -> v26 row mapping is imported from the generator rather than
+    # restated, so the two cannot disagree about which row an interpretation
+    # belongs to.
     models = {r["model_id"]: r for r in read_csv(
         ROOT / "09_V34_ANALYSIS" / "03_RESULTS" / "v34_models.csv")}
+    sys.path.insert(0, str(ROOT / "09_V34_ANALYSIS" / "05_INTERPRETATION"))
+    from build_interpretation_layer import LEGACY_ANALYSES  # noqa: E402
+    v26 = {r["analysis_id"]: r for r in read_csv(
+        ROOT / "06_FINAL_ANALYSIS_V26" / "03_RESULTS" / "master_reconciled_results_v26.csv")}
+    for aid, meta in LEGACY_ANALYSES.items():
+        row = v26.get(meta["csv_id"])
+        if row:
+            models[aid] = row
+
     probs = []
     for rec in L.get("records", []):
         mid = rec["analysis_id"]
         m = models.get(mid)
         if not m:
-            probs.append(f"{mid}: interpretation exists for a model not in v34_models.csv")
+            probs.append(f"{mid}: interpretation exists for an analysis found in neither "
+                         "v34_models.csv nor master_reconciled_results_v26.csv")
             continue
         b = rec["bound_evidence"]
         live = {
@@ -2330,7 +2345,7 @@ def t_interpretation_bound_to_current_evidence():
             "estimate": round(float(m["estimate"]), 4),
             "ci_low": round(float(m["ci_low"]), 4),
             "ci_high": round(float(m["ci_high"]), 4),
-            "i2": round(float(m["i2"]), 2),
+            "i2": round(float(m["i2"]), 2) if (m.get("i2") or "").strip() else None,
         }
         drift = {key: (b.get(key), live[key]) for key in live if b.get(key) != live[key]}
         if drift and not rec.get("stale"):

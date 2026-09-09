@@ -208,6 +208,150 @@
         "rob_high": 1,
         "estimator": "REML + Hartung-Knapp"
       }
+    },
+    "AN-01-SMD": {
+      "fingerprint": "2e07946a6aec1f4d",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 7,
+        "estimate": -0.9667,
+        "ci_low": -2.0862,
+        "ci_high": 0.1527,
+        "i2": 96.5,
+        "grade": "Low",
+        "rob_low": 0,
+        "rob_some": 6,
+        "rob_high": 1,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "AN-02-TARGET-A": {
+      "fingerprint": "ae17846d7b5c448b",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 3,
+        "estimate": -10.2678,
+        "ci_low": -34.8347,
+        "ci_high": 14.299,
+        "i2": 97.07,
+        "grade": "Low",
+        "rob_low": 0,
+        "rob_some": 3,
+        "rob_high": 0,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "AN-03-TARGET-B": {
+      "fingerprint": "c4983e3132d6336c",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 1,
+        "estimate": -0.5,
+        "ci_low": -4.078,
+        "ci_high": 3.078,
+        "i2": null,
+        "grade": "Very Low",
+        "rob_low": 0,
+        "rob_some": 1,
+        "rob_high": 0,
+        "estimator": "Single study (Not pooled)"
+      }
+    },
+    "AN-04-TARGET-C": {
+      "fingerprint": "a56f8db01188b280",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 2,
+        "estimate": -0.1765,
+        "ci_low": -0.6828,
+        "ci_high": 0.3298,
+        "i2": 0.0,
+        "grade": "Low",
+        "rob_low": 0,
+        "rob_some": 0,
+        "rob_high": 2,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "AN-05-TARGET-D-24": {
+      "fingerprint": "1a9a71c481016350",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 2,
+        "estimate": 0.5604,
+        "ci_low": 0.1391,
+        "ci_high": 2.2572,
+        "i2": 0.0,
+        "grade": "Low",
+        "rob_low": 0,
+        "rob_some": 2,
+        "rob_high": 0,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "AN-06-TARGET-D-48": {
+      "fingerprint": "94d2f9f52649da96",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 2,
+        "estimate": 0.5234,
+        "ci_low": 0.2162,
+        "ci_high": 1.2673,
+        "i2": 0.0,
+        "grade": "Low",
+        "rob_low": 0,
+        "rob_some": 1,
+        "rob_high": 1,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "AN-07-TARGET-E": {
+      "fingerprint": "e2a5032ddcd0fddb",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 6,
+        "estimate": -2.0039,
+        "ci_low": -3.1419,
+        "ci_high": -0.8659,
+        "i2": 0.0,
+        "grade": "Moderate",
+        "rob_low": 0,
+        "rob_some": 5,
+        "rob_high": 1,
+        "estimator": "MD Hours (REML + KH)"
+      }
+    },
+    "AN-08-TARGET-F-REMI": {
+      "fingerprint": "120743d9feb95c19",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 7,
+        "estimate": -114.21,
+        "ci_low": -213.7164,
+        "ci_high": -14.7036,
+        "i2": 80.69,
+        "grade": "Moderate",
+        "rob_low": 0,
+        "rob_some": 7,
+        "rob_high": 0,
+        "estimator": "MD \u00b5g, REML + Hartung-Knapp"
+      }
+    },
+    "AN-09-TARGET-F-RESCUE": {
+      "fingerprint": "abaadc72fb110918",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 4,
+        "estimate": 0.5047,
+        "ci_low": 0.3395,
+        "ci_high": 0.7503,
+        "i2": 0.0,
+        "grade": "Moderate",
+        "rob_low": 0,
+        "rob_some": 3,
+        "rob_high": 1,
+        "estimator": "RR, REML + Hartung-Knapp"
+      }
     }
   }
 }
