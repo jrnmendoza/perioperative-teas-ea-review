@@ -2951,7 +2951,9 @@ function renderTieredV33() {
       B: 'no case — nothing is deterministically derivable that is not already Tier A',
       C: `${T.parallel_synthesis.length} studies — reported in their own units, never converted`,
       D: '1 candidate attempted, 0 admitted — the digitization failed validation',
-      E: 'not admissible at any tier'
+      E: 'not admissible for the absolute-MME primary — 4 native mean/SD contrasts (5 with ' +
+         'one median/IQR-approximated sensitivity addition) are admissible on a separate, ' +
+         'scale-free SMD exploratory synthesis instead (see below)'
     };
     flow.innerHTML = T.tier_definitions.map(d => {
       const s = T33_TIER_STYLE[d.tier];
@@ -3024,6 +3026,98 @@ function renderTieredV33() {
              <span style="color:var(--text-muted);">— ${pwEsc(S.sens_reml_wald.notes)}</span></div>
             <div style="margin-top:0.35rem;"><strong>DerSimonian–Laird + Hartung–Knapp.</strong> ${t33Effect(S.sens_dl_kh)}</div>`)
     ].join('');
+  }
+
+  // ── Tier E exploratory scale-free SMD synthesis ─────────────────────────
+  const tiere = document.getElementById('t33-tiere');
+  if (tiere && T.tier_e_smd) {
+    const E = T.tier_e_smd.analysis_sets;
+    const smdEffect = r => {
+      if (r == null || r.estimate == null) return '<span style="color:var(--text-muted);">not pooled</span>';
+      const ciLabel = r.k === 1 ? '95% CI (normal approx.)' : '95% Hartung–Knapp CI';
+      return `<strong>g = ${pwSigned(r.estimate, 3)}</strong> [${pwSigned(r.ci_low, 3)}, ${pwSigned(r.ci_high, 3)}]
+              (${ciLabel})` +
+             (r.p_value == null ? '' : `, ${pwP(r.p_value)}`) +
+             (r.i2 == null ? '' : `, I² = ${r.i2.toFixed(1)}%`);
+    };
+    const contrastList = arr => arr.map(c => {
+      const label = c.sensitivity_only
+        ? `${pwEsc(c.study)} <span style="color:#fbbf24;">(sensitivity-only, median/IQR approximated)</span>`
+        : pwEsc(c.study);
+      return `<div style="margin-bottom:0.3rem;">
+        <strong>${label}</strong> (n = ${c.n_i} vs ${c.n_c}; ${pwEsc(c.unit_src)}): g = ${pwSigned(c.hedges_g, 3)}
+        ${c.combine_note ? `<div style="color:var(--text-muted);font-size:0.73rem;">${pwEsc(c.combine_note)}</div>` : ''}
+      </div>`;
+    }).join('');
+
+    tiere.innerHTML = `
+      <h4 style="font-size:0.9rem;color:#fda4af;margin:0 0 0.4rem;">
+        Tier E — exploratory scale-free SMD synthesis (not the absolute-MME estimand)
+      </h4>
+      <p style="font-size:0.78rem;color:var(--text-secondary);line-height:1.6;margin-bottom:0.7rem;">
+        ${pwEsc(T.tier_e_smd.summary)}
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1rem;">
+        <div class="card-glass" style="padding:1rem;">
+          <span class="kpi-badge" style="background:rgba(244,63,94,0.18);color:#fda4af;">EXPLORATORY</span>
+          <h4 style="margin:0.4rem 0 0.45rem;font-size:0.92rem;color:#f8fafc;">
+            EA vs sham/placebo, scale-free SMD (k = ${E.ea_sham.k})
+          </h4>
+          <div style="font-size:0.79rem;color:var(--text-secondary);line-height:1.6;">
+            ${smdEffect(E.ea_sham)}<br>
+            <span style="color:var(--text-muted);">${pwEsc(E.ea_sham.notes)}</span>
+          </div>
+        </div>
+        <div class="card-glass" style="padding:1rem;">
+          <span class="kpi-badge" style="background:rgba(244,63,94,0.18);color:#fda4af;">EXPLORATORY</span>
+          <h4 style="margin:0.4rem 0 0.45rem;font-size:0.92rem;color:#f8fafc;">
+            EA/TEAS vs sham, scale-free SMD (k = ${E.teas_sham_main.k}, single study)
+          </h4>
+          <div style="font-size:0.79rem;color:var(--text-secondary);line-height:1.6;">
+            ${smdEffect(E.teas_sham_main)}<br>
+            <span style="color:var(--text-muted);">${pwEsc(E.teas_sham_main.notes)}</span>
+          </div>
+        </div>
+        <div class="card-glass" style="padding:1rem;">
+          <span class="kpi-badge" style="background:rgba(245,158,11,0.18);color:#fbbf24;">SENSITIVITY</span>
+          <h4 style="margin:0.4rem 0 0.45rem;font-size:0.92rem;color:#f8fafc;">
+            + Chen 2015 (Hyperalgesia), median/IQR-approximated (k = ${E.teas_sham_sensitivity.k})
+          </h4>
+          <div style="font-size:0.79rem;color:var(--text-secondary);line-height:1.6;">
+            ${smdEffect(E.teas_sham_sensitivity)}<br>
+            <span style="color:var(--text-muted);">${pwEsc(E.teas_sham_sensitivity.notes)}</span>
+          </div>
+        </div>
+        <div class="card-glass" style="padding:1rem;">
+          <span class="kpi-badge" style="background:rgba(244,63,94,0.18);color:#fda4af;">EXPLORATORY</span>
+          <h4 style="margin:0.4rem 0 0.45rem;font-size:0.92rem;color:#f8fafc;">
+            TEAS vs usual care, scale-free SMD (k = ${E.teas_usual.k}, single study)
+          </h4>
+          <div style="font-size:0.79rem;color:var(--text-secondary);line-height:1.6;">
+            ${smdEffect(E.teas_usual)}<br>
+            <span style="color:var(--text-muted);">${pwEsc(E.teas_usual.notes)}</span>
+          </div>
+        </div>
+      </div>
+      <details style="margin-top:0.8rem;">
+        <summary style="cursor:pointer;font-size:0.82rem;color:var(--text-secondary);">
+          Show the ${T.tier_e_smd.contrasts.length} underlying contrasts and combining/approximation notes
+        </summary>
+        <div style="margin-top:0.6rem;font-size:0.78rem;">${contrastList(T.tier_e_smd.contrasts)}</div>
+      </details>
+      <details style="margin-top:0.6rem;">
+        <summary style="cursor:pointer;font-size:0.82rem;color:var(--text-secondary);">
+          Show ${T.tier_e_smd.excluded.length} Tier E rows excluded even from this SMD synthesis
+        </summary>
+        <div style="margin-top:0.6rem;">
+          ${T.tier_e_smd.excluded.map(x => `
+            <div style="padding:0.5rem 0.65rem;background:rgba(244,63,94,0.06);border-left:3px solid rgba(244,63,94,0.4);
+                        border-radius:var(--radius-sm);margin-bottom:0.35rem;">
+              <strong style="font-size:0.79rem;color:#f8fafc;">${pwEsc(x.study)}</strong>
+              <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.1rem;">${pwEsc(x.reason)}</div>
+            </div>`).join('')}
+        </div>
+      </details>`;
   }
 
   // ── empty cells and withdrawals ──────────────────────────────────────────

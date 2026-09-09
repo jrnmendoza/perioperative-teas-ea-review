@@ -7,7 +7,9 @@ authoritative files and nothing is retyped:
 
   07_TIERED_V33/01_DATA/tiered_primary_v33.csv        Tier A contrasts + strata
   07_TIERED_V33/01_DATA/tiered_tierC_parallel_v33.csv Tier C median/IQR evidence
-  07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33.csv  Stata pooled results
+  07_TIERED_V33/01_DATA/tiered_tierE_smd_v33.csv      Tier E scale-free SMD contrasts
+  07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33.csv  Stata pooled results (S0-S3, sens_*)
+  07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33_tierE.csv  Stata pooled results (Tier E SMD)
   07_TIERED_V33/PRIMARY_OUTCOME_DERIVABILITY_AUDIT_v33.csv  full 93-row audit
 
 The tier *definitions* are stated here because they are the classification rule,
@@ -37,9 +39,14 @@ TIER_DEFS = [
     dict(tier="D", label="Recoverable only by digitization",
          rule="Present only in a figure. Admissible only if a pre-specified "
               "digitization passes validation against values stated in the text."),
-    dict(tier="E", label="Requires a prohibited assumption",
-         rule="Would need an assumed body weight, PCA presses treated as delivered doses, "
-              "POD1 treated as 0–24 h, or an invented covariance. Not admissible at any tier."),
+    dict(tier="E", label="Requires a prohibited assumption for absolute dose",
+         rule="Would need an assumed body weight, an assumed solution concentration, PCA "
+              "presses treated as delivered doses, POD1 treated as 0–24 h, or an invented "
+              "covariance to reach an absolute IV MME value — not admissible for the "
+              "absolute-MME estimand at any tier. A subset with a native mean/SD (no such "
+              "assumption needed for the WITHIN-STUDY standardized effect) is admissible on "
+              "a separate, scale-free SMD (Hedges' g) exploratory synthesis instead — see "
+              "the Tier E panel below. This is a different, weaker claim than the primary."),
 ]
 
 
@@ -59,7 +66,10 @@ def num(v, nd=None):
 def main() -> int:
     tier_a = read(V33 / "01_DATA" / "tiered_primary_v33.csv")
     tier_c = read(V33 / "01_DATA" / "tiered_tierC_parallel_v33.csv")
+    tier_e = read(V33 / "01_DATA" / "tiered_tierE_smd_v33.csv")
     results = {r["analysis_id"]: r for r in read(V33 / "05_RESULTS" / "TIERED_ANALYSIS_RESULTS_v33.csv")}
+    results.update({r["analysis_id"]: r
+                     for r in read(V33 / "05_RESULTS" / "TIERED_ANALYSIS_RESULTS_v33_tierE.csv")})
 
     audit_path = V33 / "PRIMARY_OUTCOME_DERIVABILITY_AUDIT_v33.csv"
     audit = read(audit_path) if audit_path.exists() else []
@@ -106,6 +116,27 @@ def main() -> int:
             "multiarm_note": r["multiarm_note"],
             "source_locator": r["source_locator"],
         }
+
+    def tier_e_contrast(r: dict) -> dict:
+        return {
+            "study": r["study"],
+            "year": int(r["year"]),
+            "modality": r["modality"],
+            "comparator": r["comparator"],
+            "stratum": r["stratum"],
+            "n_i": num(r["n_i"], 1),
+            "n_c": int(float(r["n_c"])),
+            "unit_src": r["unit_src"],
+            "hedges_g": num(r["hedges_g"], 3),
+            "hedges_se": num(r["hedges_se"], 3),
+            "sensitivity_only": r["sensitivity_only"] == "1",
+            "combine_note": r["combine_note"],
+            "multiarm_note": r["multiarm_note"],
+            "caveat": r["caveat"],
+            "source_locator": r["source_locator"],
+        }
+
+    tier_e_contrasts = [tier_e_contrast(r) for r in tier_e]
 
     teas_sham = [contrast(r) for r in tier_a if r["in_S0_teas_sham"] == "1"]
     ea_usual = [contrast(r) for r in tier_a if r["in_S0_ea_usual"] == "1"]
@@ -157,6 +188,43 @@ def main() -> int:
             "sens_dl_kh": result("V33_SENS_C2_DL_KH"),
         },
 
+        "tier_e_smd": {
+            "status": "EXPLORATORY",
+            "summary": "Tier E holds results that report the exact 0-24 h cumulative opioid "
+                       "estimand as a mean/SD, but in a unit with no sourced absolute-IV-MME "
+                       "conversion (a weight-normalized dose, or a volume proxy with an "
+                       "unreported concentration). That blocks the ABSOLUTE-MME primary above, "
+                       "not a WITHIN-STUDY standardized effect: a Hedges' g divides the "
+                       "between-arm difference by the pooled SD, so the unit cancels. This is a "
+                       "different, weaker claim (a relative standardized effect, not mg spared) "
+                       "and is never pooled with, added to, or substituted for the S0-S3 "
+                       "absolute-MME estimates above.",
+            "contrasts": tier_e_contrasts,
+            "excluded": [
+                {"study": "Zhang 2025", "reason": "Window mismatch: reports postoperative day "
+                 "1, not an explicit 0-24 h clock window. The SMD metric does not fix a wrong "
+                 "time window."},
+                {"study": "Ntritsou 2014", "reason": "Wrong estimand: reported total tramadol "
+                 "includes protocol-mandated background dosing, not only demand-driven "
+                 "postoperative consumption."},
+                {"study": "Oztas 2019 (combined opioid dose)", "reason": "Combined tramadol + "
+                 "pethidine total; the combined variance is not recoverable without an "
+                 "unknown within-person covariance."},
+                {"study": "Oztas 2019 (TEAS vs TENS arm)", "reason": "Comparator eligibility "
+                 "unresolved (audit status: 'Check') -- excluded pending a decision, not "
+                 "assumed eligible or ineligible."},
+                {"study": "Song 2020", "reason": "Assumption-dependent derivation: PCA pump "
+                 "presses are recorded, not delivered doses, and presses != deliveries is an "
+                 "unverifiable assumption regardless of metric."},
+            ],
+            "analysis_sets": {
+                "ea_sham": result("V33_TIERE_EA_SHAM_SMD"),
+                "teas_sham_main": result("V33_TIERE_TEAS_SHAM_SMD_MAIN"),
+                "teas_sham_sensitivity": result("V33_TIERE_TEAS_SHAM_SMD_SENS"),
+                "teas_usual": result("V33_TIERE_TEAS_USUAL_SMD"),
+            },
+        },
+
         "figures": [
             {"file": "forestA_S0_teas_sham_24h_mme.png",
              "caption": "A. Primary — TEAS vs inert sham, cumulative 0–24 h opioid (mg IV MME)"},
@@ -166,6 +234,12 @@ def main() -> int:
              "caption": "C. Tier sensitivity — analysis sets S0, S1, S3"},
             {"file": "forestD_comparator_sensitivity.png",
              "caption": "D. Comparator sensitivity — sham vs usual-care strata"},
+            {"file": "forestE_ea_sham_smd.png",
+             "caption": "E. EXPLORATORY — Tier E scale-free SMD, EA vs sham/placebo "
+                        "(Hedges' g, k=2). Not the absolute-MME estimand."},
+            {"file": "forestF_teas_sham_smd_sensitivity.png",
+             "caption": "F. EXPLORATORY SENSITIVITY — Tier E scale-free SMD, EA/TEAS vs sham "
+                        "(Hedges' g, k=2), adding a median/IQR-approximated study."},
         ],
 
         "empty_cells": [
@@ -222,6 +296,9 @@ window.TIERED_V33 = """
     print(f"  EA vs sham ............... k=0")
     print(f"  Tier C parallel .......... k={len(parallel)}")
     print(f"  multi-arm alternatives ... {len(multiarm_alt)}")
+    print(f"  Tier E SMD contrasts ..... {len(tier_e_contrasts)} "
+          f"({sum(1 for c in tier_e_contrasts if not c['sensitivity_only'])} main + "
+          f"{sum(1 for c in tier_e_contrasts if c['sensitivity_only'])} sensitivity-only)")
     return 0
 
 

@@ -1335,16 +1335,21 @@
         <!-- analysis sets S0-S3 + sensitivity -->
         <div id="t33-sets" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; margin-top: 1.25rem;"></div>
 
+        <!-- Tier E exploratory scale-free SMD synthesis -->
+        <div id="t33-tiere" style="margin-top: 1.35rem;"></div>
+
         <!-- empty cells + withdrawals -->
         <div id="t33-empty" style="margin-top: 1.35rem;"></div>
 
-        <!-- figures A-D -->
+        <!-- figures A-D, E-F -->
         <div id="t33-figures" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 1rem; margin-top: 1.35rem;"></div>
 
         <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.6;">
           Every estimate on this panel was fitted in StataNow 19.5 by
-          <code>07_TIERED_V33/02_STATA/13_tiered_primary_v33.do</code> and read from
-          <code>07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33.csv</code>. A sensitivity analysis crossing
+          <code>07_TIERED_V33/02_STATA/13_tiered_primary_v33.do</code> (S0–S3, sensitivity) or
+          <code>07_TIERED_V33/02_STATA/14_tiered_tierE_smd_v33.do</code> (Tier E scale-free SMD) and read from
+          <code>07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33.csv</code> and
+          <code>07_TIERED_V33/05_RESULTS/TIERED_ANALYSIS_RESULTS_v33_tierE.csv</code>. A sensitivity analysis crossing
           <em>p</em> = 0.05 does not change a conclusion here: these analyses exist to test robustness and completeness,
           not to find significance.
         </p>

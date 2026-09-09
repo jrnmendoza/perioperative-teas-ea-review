@@ -41,8 +41,8 @@ window.TIERED_V33 = {
     },
     {
       "tier": "E",
-      "label": "Requires a prohibited assumption",
-      "rule": "Would need an assumed body weight, PCA presses treated as delivered doses, POD1 treated as 0–24 h, or an invented covariance. Not admissible at any tier."
+      "label": "Requires a prohibited assumption for absolute dose",
+      "rule": "Would need an assumed body weight, an assumed solution concentration, PCA presses treated as delivered doses, POD1 treated as 0–24 h, or an invented covariance to reach an absolute IV MME value — not admissible for the absolute-MME estimand at any tier. A subset with a native mean/SD (no such assumption needed for the WITHIN-STUDY standardized effect) is admissible on a separate, scale-free SMD (Hedges' g) exploratory synthesis instead — see the Tier E panel below. This is a different, weaker claim than the primary."
     }
   ],
   "strata": {
@@ -380,6 +380,209 @@ window.TIERED_V33 = {
       "notes": "Shown for comparison only."
     }
   },
+  "tier_e_smd": {
+    "status": "EXPLORATORY",
+    "summary": "Tier E holds results that report the exact 0-24 h cumulative opioid estimand as a mean/SD, but in a unit with no sourced absolute-IV-MME conversion (a weight-normalized dose, or a volume proxy with an unreported concentration). That blocks the ABSOLUTE-MME primary above, not a WITHIN-STUDY standardized effect: a Hedges' g divides the between-arm difference by the pooled SD, so the unit cancels. This is a different, weaker claim (a relative standardized effect, not mg spared) and is never pooled with, added to, or substituted for the S0-S3 absolute-MME estimates above.",
+    "contrasts": [
+      {
+        "study": "Coura 2011",
+        "year": 2011,
+        "modality": "EA",
+        "comparator": "Sham/placebo",
+        "stratum": "ea_sham",
+        "n_i": 13.0,
+        "n_c": 9,
+        "unit_src": "ug/kg fentanyl",
+        "hedges_g": -1.553,
+        "hedges_se": 0.493,
+        "sensitivity_only": false,
+        "combine_note": "",
+        "multiarm_note": "",
+        "caveat": "Supplementary morphine/fentanyl was permitted per-protocol, so reported fentanyl is not complete opioid exposure; weight-normalized (no sourced absolute-MME factor) -- admissible on SMD only.",
+        "source_locator": "covidence_819_full_article.pdf: Table 2, 13.1+/-2.2 vs 16.3+/-1.6 ug/kg"
+      },
+      {
+        "study": "Sim 2002 (preop + postop EA combined)",
+        "year": 2002,
+        "modality": "EA",
+        "comparator": "Placebo EA",
+        "stratum": "ea_sham",
+        "n_i": 60.0,
+        "n_c": 30,
+        "unit_src": "mg/kg morphine",
+        "hedges_g": -0.444,
+        "hedges_se": 0.226,
+        "sensitivity_only": false,
+        "combine_note": "Combined via Cochrane Handbook 6.5.2.10 from preop-EA (n=30, 0.52+/-0.19) and postop-EA (n=30, 0.58+/-0.27), both vs the same placebo arm (n=30, 0.68+/-0.38).",
+        "multiarm_note": "Two correlated active arms sharing one placebo control; combined into one contrast per Cochrane Handbook 6.5.2.10, never pooled as two independent studies.",
+        "caveat": "Weight-normalized (mg/kg); absolute-dose reconstruction via an assumed body weight is prohibited -- admissible on SMD only.",
+        "source_locator": "v32 Opioid_24h_Candidates (mg/kg morphine, 0-24 h); PDF not re-verified this pass"
+      },
+      {
+        "study": "Jin 2023 (2Hz + 20/100Hz combined)",
+        "year": 2023,
+        "modality": "EA",
+        "comparator": "Sham nonpenetrating EA/no current",
+        "stratum": "teas_sham",
+        "n_i": 106.0,
+        "n_c": 52,
+        "unit_src": "mL PCIA solution (proxy)",
+        "hedges_g": -0.912,
+        "hedges_se": 0.177,
+        "sensitivity_only": false,
+        "combine_note": "Combined via Cochrane Handbook 6.5.2.10 from the 2Hz arm (n=53, 39.31+/-15.58) and the 20/100Hz arm (n=53, 45.72+/-16.92), both vs the same sham arm (n=52, 56.54+/-12.5).",
+        "multiarm_note": "Two correlated frequency arms sharing one sham arm; combined into one contrast per Cochrane Handbook 6.5.2.10.",
+        "caveat": "No sourced solution concentration, so absolute fentanyl mass is not recoverable; the unknown concentration is a common constant for both arms and cancels in a standardized effect -- admissible on SMD only. Modality is labelled EA in the audit (electroacupuncture); this row is placed in the 'teas_sham' stratum here as the only sham-controlled EA-family SMD candidate outside the ea_sham (placebo) stratum built from Sim 2002/Coura 2011 -- see the generator's stratum notes.",
+        "source_locator": "v32 Opioid_24h_Candidates; concentration absent from main article per v32 QC"
+      },
+      {
+        "study": "Oztas 2019",
+        "year": 2019,
+        "modality": "TEAS",
+        "comparator": "Usual care",
+        "stratum": "teas_usual",
+        "n_i": 15.0,
+        "n_c": 16,
+        "unit_src": "mg tramadol",
+        "hedges_g": -1.168,
+        "hedges_se": 0.389,
+        "sensitivity_only": false,
+        "combine_note": "",
+        "multiarm_note": "",
+        "caveat": "Tramadol alone is not complete opioid exposure (rescue pethidine was also given, reported separately and not combinable -- see the excluded OZT19_TAES_vs_CTRL_TOTALOP24 row); no sourced tramadol:morphine IV MME factor exists in this review's reference tables -- admissible on SMD only. Overall RoB 2 for this study is High. Only comparison in this review's TEAS-vs-usual-care stratum: k=1, cannot be pooled.",
+        "source_locator": "covidence_505_full_article.pdf: Tramadol HCl (0-24 h) 228.40+/-87.89 (TEAS) vs 357.81+/-123.70 (control) mg"
+      },
+      {
+        "study": "Chen 2015 (Hyperalgesia)",
+        "year": 2015,
+        "modality": "TEAS",
+        "comparator": "Electrodes/no-current sham",
+        "stratum": "teas_sham",
+        "n_i": 29.0,
+        "n_c": 30,
+        "unit_src": "ug/kg sufentanil (median/IQR, Cochrane 6.5.2.5-approximated to mean/SD)",
+        "hedges_g": -2.664,
+        "hedges_se": 0.358,
+        "sensitivity_only": true,
+        "combine_note": "Approximated from published median (IQR): intervention 0.15 (0.1-0.2), comparator 0.35 (0.3-0.4), via mean~=median and SD~=IQR/1.35 (Cochrane Handbook 6.5.2.5, assumes approximate symmetry). NOT the same case as Gao 2022 (Tier C): that distribution's 25th percentile is exactly 0 in both arms (zero-inflated), which this review has already ruled makes the same approximation indefensible; Chen 2015 (Hyperalgesia)'s IQR bounds are both strictly positive.",
+        "multiarm_note": "",
+        "caveat": "SENSITIVITY ONLY: median/IQR approximated to mean/SD, not a native mean/SD value like every other row in this file. Reported alongside, never silently merged into, the main Tier E SMD estimate.",
+        "source_locator": "040_chen_2015_hyperalgesia_lund.pdf: T5 = 24 h after surgery"
+      }
+    ],
+    "excluded": [
+      {
+        "study": "Zhang 2025",
+        "reason": "Window mismatch: reports postoperative day 1, not an explicit 0-24 h clock window. The SMD metric does not fix a wrong time window."
+      },
+      {
+        "study": "Ntritsou 2014",
+        "reason": "Wrong estimand: reported total tramadol includes protocol-mandated background dosing, not only demand-driven postoperative consumption."
+      },
+      {
+        "study": "Oztas 2019 (combined opioid dose)",
+        "reason": "Combined tramadol + pethidine total; the combined variance is not recoverable without an unknown within-person covariance."
+      },
+      {
+        "study": "Oztas 2019 (TEAS vs TENS arm)",
+        "reason": "Comparator eligibility unresolved (audit status: 'Check') -- excluded pending a decision, not assumed eligible or ineligible."
+      },
+      {
+        "study": "Song 2020",
+        "reason": "Assumption-dependent derivation: PCA pump presses are recorded, not delivered doses, and presses != deliveries is an unverifiable assumption regardless of metric."
+      }
+    ],
+    "analysis_sets": {
+      "ea_sham": {
+        "analysis_id": "V33_TIERE_EA_SHAM_SMD",
+        "analysis_set": "Tier E exploratory SMD",
+        "modality": "EA",
+        "comparator": "Sham/placebo",
+        "outcome": "Cumulative postoperative opioid consumption (standardized, Hedges' g)",
+        "window": "0-24 h",
+        "unit": "Hedges' g (SMD, dimensionless)",
+        "k": 2,
+        "effect_measure": "Standardized mean difference (Hedges' g)",
+        "estimate": -0.912,
+        "ci_low": -7.871,
+        "ci_high": 6.046,
+        "p_value": 0.3442,
+        "tau2": 0.468,
+        "i2": 76.09,
+        "pi_low": null,
+        "pi_high": null,
+        "estimator": "REML",
+        "ci_method": "Hartung-Knapp",
+        "notes": "EXPLORATORY. Coura 2011 + Sim 2002 (two correlated EA-timing arms combined per Cochrane Handbook 6.5.2.10). Weight-normalized native units (ug/kg, mg/kg); not convertible to absolute IV MME. Not a substitute for the missing sham-controlled EA absolute-MME estimate (k=0 in the S0 primary)."
+      },
+      "teas_sham_main": {
+        "analysis_id": "V33_TIERE_TEAS_SHAM_SMD_MAIN",
+        "analysis_set": "Tier E exploratory SMD",
+        "modality": "EA",
+        "comparator": "Sham nonpenetrating EA/no current",
+        "outcome": "Cumulative postoperative opioid consumption (standardized, Hedges' g)",
+        "window": "0-24 h",
+        "unit": "Hedges' g (SMD, dimensionless)",
+        "k": 1,
+        "effect_measure": "Standardized mean difference (Hedges' g)",
+        "estimate": -0.912,
+        "ci_low": -1.258,
+        "ci_high": -0.565,
+        "p_value": null,
+        "tau2": null,
+        "i2": null,
+        "pi_low": null,
+        "pi_high": null,
+        "estimator": "Single study (no pooling)",
+        "ci_method": "Normal approximation (g +/- 1.96 x SE)",
+        "notes": "EXPLORATORY, k=1 (Jin 2023, two correlated frequency arms combined per Cochrane Handbook 6.5.2.10). Volume (mL PCIA solution) proxy for fentanyl mass; concentration unreported, so the unit cancels in SMD but is not convertible to absolute dose. Cannot be meta-analysed with k=1; CI is a normal approximation, not Hartung-Knapp."
+      },
+      "teas_sham_sensitivity": {
+        "analysis_id": "V33_TIERE_TEAS_SHAM_SMD_SENS",
+        "analysis_set": "Tier E exploratory SMD sensitivity",
+        "modality": "EA/TEAS",
+        "comparator": "Sham",
+        "outcome": "Cumulative postoperative opioid consumption (standardized, Hedges' g)",
+        "window": "0-24 h",
+        "unit": "Hedges' g (SMD, dimensionless)",
+        "k": 2,
+        "effect_measure": "Standardized mean difference (Hedges' g)",
+        "estimate": -1.76,
+        "ci_low": -12.89,
+        "ci_high": 9.369,
+        "p_value": 0.2939,
+        "tau2": 1.456,
+        "i2": 94.82,
+        "pi_low": null,
+        "pi_high": null,
+        "estimator": "REML",
+        "ci_method": "Hartung-Knapp",
+        "notes": "SENSITIVITY, not the main Tier E estimate. Adds Chen 2015 (Hyperalgesia) to Jin 2023 (combined). Chen 2015 (Hyperalgesia) is median/IQR approximated to mean/SD (Cochrane Handbook 6.5.2.5); this is a materially weaker evidentiary basis than every other row in this file, which are all native mean/SD. Reported as a named addition, never merged silently into V33_TIERE_TEAS_SHAM_SMD_MAIN."
+      },
+      "teas_usual": {
+        "analysis_id": "V33_TIERE_TEAS_USUAL_SMD",
+        "analysis_set": "Tier E exploratory SMD",
+        "modality": "TEAS",
+        "comparator": "Usual care",
+        "outcome": "Cumulative postoperative opioid consumption (standardized, Hedges' g)",
+        "window": "0-24 h",
+        "unit": "Hedges' g (SMD, dimensionless)",
+        "k": 1,
+        "effect_measure": "Standardized mean difference (Hedges' g)",
+        "estimate": -1.168,
+        "ci_low": -1.93,
+        "ci_high": -0.406,
+        "p_value": null,
+        "tau2": null,
+        "i2": null,
+        "pi_low": null,
+        "pi_high": null,
+        "estimator": "Single study (no pooling)",
+        "ci_method": "Normal approximation (g +/- 1.96 x SE)",
+        "notes": "EXPLORATORY, k=1 (Oztas 2019). Native mg tramadol; no sourced tramadol:morphine IV MME factor, and tramadol alone is not complete opioid exposure (rescue pethidine reported separately). Overall RoB 2 High. Cannot be meta-analysed with k=1; CI is a normal approximation, not Hartung-Knapp."
+      }
+    }
+  },
   "figures": [
     {
       "file": "forestA_S0_teas_sham_24h_mme.png",
@@ -396,6 +599,14 @@ window.TIERED_V33 = {
     {
       "file": "forestD_comparator_sensitivity.png",
       "caption": "D. Comparator sensitivity — sham vs usual-care strata"
+    },
+    {
+      "file": "forestE_ea_sham_smd.png",
+      "caption": "E. EXPLORATORY — Tier E scale-free SMD, EA vs sham/placebo (Hedges' g, k=2). Not the absolute-MME estimand."
+    },
+    {
+      "file": "forestF_teas_sham_smd_sensitivity.png",
+      "caption": "F. EXPLORATORY SENSITIVITY — Tier E scale-free SMD, EA/TEAS vs sham (Hedges' g, k=2), adding a median/IQR-approximated study."
     }
   ],
   "empty_cells": [
