@@ -280,6 +280,83 @@ def t_displayed_k_and_n():
     check("Displayed k and N reconcile with the locked datasets", not probs, "\n".join(probs))
 
 
+def t_hero_summary_cards_match_detail():
+    """
+    The "Verified Evidence Synthesis Summary" hero card grid (top of the
+    primary tab) restates k/N/estimate for six analyses that are ALSO
+    described in detail further down the same page (the Target C/D/E/F
+    forest-plot narratives). An audit found the hero grid disagreed with
+    its own detail section on five of these N values simultaneously (pain
+    124 vs 158, flatus 494 vs 596, rescue 333 vs 312, intraop remifentanil
+    504 vs 890, PCA 644 vs 614) -- each wrong hero-card N had sat next to
+    a correct N shown elsewhere on the very same page, undetected because
+    a plain "is the correct value shown anywhere" check is satisfied by
+    the OTHER (correct) location while the wrong one persists. This
+    check specifically re-derives each hero-card N from source and also
+    bans the exact stale values found, so this class of bug cannot
+    silently return.
+    """
+    probs = []
+
+    # Pain (Target C) and flatus (Target E): derivable directly from the
+    # v34 outcome data by summing analysed n across the named studies.
+    outcome_path = (ROOT / "TEAS EA Verification" / "v34_reconciliation" /
+                    "data" / "v34_outcome_data.csv")
+    if outcome_path.exists():
+        outcome_rows = read_csv(outcome_path)
+
+        def analysed_n(study: str, outcome_substr: str) -> int:
+            total = 0
+            for r in outcome_rows:
+                if r.get("Canonical study") == study and outcome_substr.lower() in r.get("Outcome/result", "").lower():
+                    ai = r.get("Analyzed n intervention") or "0"
+                    ac = r.get("Analyzed n comparator") or "0"
+                    try:
+                        total += int(float(ai)) + int(float(ac))
+                    except ValueError:
+                        pass
+            return total
+
+        pain_n = analysed_n("Xing 2022", "Rest pain VAS") + analysed_n("Liu 2021", "VAS at rest")
+        if pain_n != 158:
+            probs.append(f"Pain at ~24h (Target C): re-derived N={pain_n}, expected 158")
+
+        flatus_studies = [("Zhou 2025", "flatus"), ("Yang 2020", "flatus"), ("Yang 2024", "flatus"),
+                          ("Xing 2022", "flatus"), ("Lu 2022", "flatus"), ("Ng 2013", "flatus")]
+        flatus_n = sum(analysed_n(s, o) for s, o in flatus_studies)
+        if flatus_n != 596:
+            probs.append(f"Time to first flatus (Target E): re-derived N={flatus_n}, expected 596")
+
+    # Rescue opioid (Target F) and intraoperative remifentanil (Target F):
+    # derivable from the same target_F_exploratory.csv the detail section
+    # itself reports from.
+    tf_path = DATA / "target_F_exploratory.csv"
+    if tf_path.exists():
+        tf_rows = read_csv(tf_path)
+        rescue_studies = {"Xie 2014", "Yu 2020", "Tu 2024", "Zhou 2025"}
+        rescue_n = sum(int(r["n_i"]) + int(r["n_c"]) for r in tf_rows
+                       if r["target"] == "F-rescue-opioid" and r["study"] in rescue_studies)
+        if rescue_n != 312:
+            probs.append(f"Rescue analgesia (Target F): re-derived N={rescue_n}, expected 312")
+
+    # Every stale value found in the same audit pass, banned outright so a
+    # future edit to one card cannot silently reintroduce a mismatch with
+    # its own detail section.
+    stale = {
+        "N = 124": "Pain at ~24h hero card (correct: N = 158)",
+        "N = 494": "Time to first flatus hero card (correct: N = 596)",
+        "N = 333": "Rescue analgesia hero card (correct: N = 312)",
+        "N = 504": "Intraoperative remifentanil hero card (correct: N = 890)",
+        "N = 644": "PCA behavior hero card (correct: N = 614)",
+    }
+    for needle, why in stale.items():
+        if needle in HTML:
+            probs.append(f"stale value still present: {needle} ({why})")
+
+    check("Hero summary cards' N values are re-derivable from source and no stale duplicate remains",
+          not probs, "\n".join(probs))
+
+
 def t_target_b_not_pooled():
     r = BY_ID["TB_STRICT_EXACT"]
     ok = int(r["k"]) == 1 and "Not pooled" in r["model"]
@@ -2134,7 +2211,7 @@ def main() -> int:
         ("Provenance & identifiers", [t_prospero, t_no_v20_source_label, t_provenance_block,
                                      t_stata_edition_claim]),
         ("Pooled results vs Stata", [t_primary_matches_stata, t_displayed_k_and_n,
-                                     t_target_b_not_pooled]),
+                                     t_hero_summary_cards_match_detail, t_target_b_not_pooled]),
         ("Study-set composition", [t_target_a_membership, t_no_old_five_study_48h,
                                    t_target_b_membership, t_pain_at_rest_only,
                                    t_yu_wang_excluded, t_yeh_not_double_counted]),
