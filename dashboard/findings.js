@@ -300,6 +300,63 @@
     bindEvidenceLinks(host);
   }
 
+  // ── overview teaser ───────────────────────────────────────────────────────
+  // Audit finding: the Overview tab (the default landing tab) led with
+  // Background/Rationale/PICOS/protocol history and answered none of "how many
+  // RCTs, what is the primary outcome, what did TEAS/EA show, how certain is
+  // the evidence, why only 7 of 70" until a reader clicked through to Results.
+  // This reuses the same findingCard()/PRIMARY_CARDS the Results tab's
+  // findings-hero uses -- deliberately NOT hand-written -- so the Overview
+  // tab cannot independently drift from the saved Stata estimate the way
+  // several hand-typed summary cards elsewhere on this dashboard did.
+  // Deliberately its own markup rather than reusing findingCard()'s output:
+  // that helper stamps class="finding-card" with data-analysis-id, which the
+  // Results-tab findings-hero is uniquely selected by in the Playwright usability
+  // suite (an unscoped `.finding-card[data-analysis-id="..."]` locator). Two
+  // copies of that exact selector on one page (this teaser plus the hero) would
+  // make that locator ambiguous. Same authoritative data, non-colliding markup.
+  function teaserCard(card) {
+    const a = analysis(card.id);
+    if (!a) return '';
+    const sym = GRADE_SYMBOL[a.grade] || '';
+    return `
+      <article class="finding-card" data-teaser-analysis-id="${esc(card.id)}">
+        <div class="finding-head">
+          <span class="finding-role">Primary finding</span>
+          <span class="finding-modality">${esc(a.modality || 'TEAS and EA combined')} vs ${esc(card.comparatorLabel || a.comparator || 'control')}</span>
+        </div>
+        <div class="finding-effect">${esc(a.mdText)}</div>
+        <div class="finding-meta">
+          <span>${esc(a.pVal)}</span>
+          <span><span>${esc(a.k)}</span> <span>trials</span></span>
+          <span><span>${esc(a.n)}</span> <span>participants</span></span>
+          <span class="finding-grade ${esc(a.badgeClass || '')}"><span aria-hidden="true">${sym}</span> <span class="grade-word">${esc(a.grade)}</span> <span>certainty</span></span>
+        </div>
+      </article>`;
+  }
+
+  function renderFindingsTeaser() {
+    const host = document.getElementById('findings-teaser');
+    if (!host || !window.STATA_MASTER_RESULTS) return;
+    const teas = analysis('AN-01-TEAS');
+    const ea = analysis('AN-01-EA');
+    if (!teas || !ea) return;
+
+    host.innerHTML = `
+      <div class="finding-question">
+        <h3 class="finding-q-title" data-i18n="findingsTeaser.title">Key findings at a glance</h3>
+        <p class="finding-q-note" data-i18n="findingsTeaser.note">70 randomized trials are included in this review; 7 contribute to the strict primary synthesis of 0-24 h postoperative opioid consumption (the largest sham/usual-care-controlled set with directly extractable, non-imputed data for that exact window; see the Primary Outcome Contribution Pathway on the Results tab for why the other 63 do not). TEAS and EA are reported separately below because they are different interventions tested against different comparators.</p>
+      </div>
+      <div class="finding-grid">${PRIMARY_CARDS.map(teaserCard).join('')}</div>
+      <p class="finding-more"><a href="#" data-teaser-jump="primary" data-i18n="findingsTeaser.more">See the full primary-outcome analysis, all secondary outcomes, RoB 2, and GRADE certainty on the Results tab &rarr;</a></p>`;
+    const jump = host.querySelector('[data-teaser-jump]');
+    if (jump) jump.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (typeof window.switchTab === 'function') window.switchTab('primary');
+    });
+    if (typeof window.localizeDocument === 'function') window.localizeDocument();
+  }
+
   // ── overview GRADE card ───────────────────────────────────────────────────
   // The overview previously stated a single "Low" rating for the primary
   // outcome. The adjudicated assessments are modality-specific and differ, so
@@ -512,6 +569,7 @@
   function refresh() {
     renderGradeKpi();
     if (window.activeTab === 'primary') renderFindingsHero();
+    if (window.activeTab === 'intro') renderFindingsTeaser();
     if (window.activeTab === 'secondary') {
       initSecondaryCoordination();
       const saved = document.getElementById('stata-secondary-select');

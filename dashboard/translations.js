@@ -175,6 +175,11 @@ const TRANSLATIONS = {
       modalityMultivar: "The apparent raw difference between EA and TEAS (unadjusted difference −9.32 mg, p = 0.308) was not statistically significant. Meta-regression between modalities is underpowered (k = 7 < 10) and demonstrates no statistically detectable difference in opioid sparing between transcutaneous electrodes and needle electroacupuncture.",
       primaryOpioid: "Across the 7 strict primary trials (N = 676), the combined synthesis of perioperative electrical acupoint stimulation showed an estimated 24-hour postoperative opioid reduction of 9.91 mg IV morphine equivalents (95% KH CI [−20.08, +0.27] mg, p = 0.0545, tau2 = 113.91, I2 = 98.57%; 95% PI [−39.35, +19.54]). Modality-specific analyses: TEAS vs sham (k = 4, N = 337) showed MD = −14.00 mg (95% KH CI [−34.18, +6.19], p = 0.1145), and EA vs control (k = 3, N = 339) showed MD = −3.94 mg (95% KH CI [−19.77, +11.90], p = 0.397). Because the Knapp–Hartung confidence intervals include zero across all strata, evidence does not demonstrate a statistically significant 24-hour opioid-sparing effect."
     },
+    findingsTeaser: {
+      title: "Key findings at a glance",
+      note: "70 randomized trials are included in this review; 7 contribute to the strict primary synthesis of 0-24 h postoperative opioid consumption (the largest sham/usual-care-controlled set with directly extractable, non-imputed data for that exact window; see the Primary Outcome Contribution Pathway on the Results tab for why the other 63 do not). TEAS and EA are reported separately below because they are different interventions tested against different comparators.",
+      more: "See the full primary-outcome analysis, all secondary outcomes, RoB 2, and GRADE certainty on the Results tab →"
+    },
     stats: {
       meanDifference: "Mean Difference",
       confidenceInterval: "Confidence Interval",
@@ -366,6 +371,11 @@ const TRANSLATIONS = {
       opioid48h: "Vid 48 timmar postoperativt (Target A strikt: k = 3 studier, N = 1 999) var den kumulativa opioidminskningen i genomsnitt 10,27 mg IV MME (95 % KH KI [−34,83; +14,30], p = 0,2139; REML + Knapp–Hartung, tau2 = 94,56, I2 = 97,07 %). Uteslutande av An 2014 ger MD = −12,40 mg (p = 0,405), medan bredare inklusion av Xie 2014 ger MD = −12,30 mg (p = 0,073).",
       modalityMultivar: "Den observerade råa skillnaden mellan EA och TEAS (ojusterad skillnad −9,32 mg, p = 0,308) var inte statistiskt signifikant. Metaregression mellan modaliteter saknar statistisk styrka (k = 7 < 10) och visar ingen statistiskt påvisbar skillnad i opioidbesparing mellan transkutana elektroder och nålelektroakupunktur.",
       primaryOpioid: "Över de 7 strikta primära studierna (N = 676) visade den kombinerade syntesen av perioperativ elektrisk akupunkturstimulering en estimerad 24-timmars postoperativ opioidminskning på 9,91 mg IV morfinekvivalenter (95 % KH KI [−20,08; +0,27] mg, p = 0,0545, tau2 = 113,91, I2 = 98,57 %; 95 % PI [−39,35; +19,54]). Modalitetsspecifika analyser: TEAS mot sham (k = 4, N = 337) visade MD = −14,00 mg (95 % KH KI [−34,18; +6,19], p = 0,1145), och EA mot kontroll (k = 3, N = 339) visade MD = −3,94 mg (95 % KH KI [−19,77; +11,90], p = 0,397). Eftersom Knapp–Hartung-konfidensintervallen omfattar noll över samtliga strata påvisar evidensen ingen statistiskt signifikant 24-timmars opioidbesparing."
+    },
+    findingsTeaser: {
+      title: "Huvudresultat i korthet",
+      note: "70 randomiserade studier ingår i denna översikt; 7 bidrar till den strikta primära syntesen av kumulativ opioidkonsumtion 0–24 timmar postoperativt (den största sham-/sedvanlig vård-kontrollerade uppsättningen med direkt utvinningsbara, icke-imputerade data för just det tidsfönstret; se flödet för det primära utfallets bidragande studier på fliken Resultat för varför de övriga 63 inte gör det). TEAS och EA redovisas separat nedan eftersom de är olika interventioner testade mot olika jämförelsegrupper.",
+      more: "Se den fullständiga primärutfallsanalysen, samtliga sekundära utfall, RoB 2 och GRADE-tillförlitlighet på fliken Resultat →"
     },
     stats: {
       meanDifference: "Medelskillnad",

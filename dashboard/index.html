@@ -215,7 +215,18 @@
     <!-- SECTION I: INTRODUCTION                                       -->
     <!-- ═══════════════════════════════════════════════════════════════ -->
     <div id="tab-intro" class="tab-content active">
-      
+
+      <!-- ============================================================== -->
+      <!-- FINDINGS AT A GLANCE (Overview teaser)                          -->
+      <!-- Rendered by renderFindingsTeaser() in dashboard/findings.js,    -->
+      <!-- reusing the same STATA_MASTER_RESULTS cards as the Results tab's-->
+      <!-- findings-hero. Kept dynamic (not hand-written) so it cannot     -->
+      <!-- drift from the authoritative Stata estimate the way several     -->
+      <!-- hand-typed summary cards elsewhere on this dashboard were found -->
+      <!-- to have drifted from their own detail sections.                 -->
+      <!-- ============================================================== -->
+      <div id="findings-teaser" data-section="Key findings at a glance"></div>
+
       <!-- Clinical Background & Research Rationale -->
       <div class="protocol-callout" style="margin-bottom: 1.5rem; background: linear-gradient(90deg, rgba(99, 102, 241, 0.15) 0%, rgba(16, 185, 129, 0.1) 100%); border-left: 4px solid #10b981;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
