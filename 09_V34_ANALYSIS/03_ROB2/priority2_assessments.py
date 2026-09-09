@@ -2089,33 +2089,94 @@ add("Wong 2006", "Exact total opioid exposure", "0-24 h", S, L, L, L, L,
 
 
 # ============================================================================
-# Wu 2016 -- UNRESOLVED SOURCE MAPPING. The candidate PDF found by numeric
-# fingerprinting (a 2016 Experimental and Therapeutic Medicine paper on TAES
-# and immune function after thoracotomy, n=27) does not match this study's
-# outcome content (pain/opioid consumption, not immune markers), and no
-# author name could be confirmed. Per this pipeline's stated rule --
-# "If the correct article cannot be identified confidently: flag the
-# source-mapping problem rather than assessing the wrong PDF" -- these 5
-# results are recorded as an explicit hold, not assessed against a possibly
-# wrong source.
+# Wu 2016 -- SOURCE MAPPING RESOLVED 2026-09-09. A second reviewer confirmed
+# the candidate the numeric fingerprint had rejected (an Experimental and
+# Therapeutic Medicine paper foregrounding immune-function/T-lymphocyte
+# outcomes, abstract-stated n=27) IS the correct source: the abstract's n=27
+# describes an immune-analysis subset, while the full Methods report a
+# 90-patient, three-arm RCT (thoracotomy-only / thoracotomy+sham TAES /
+# thoracotomy+true TAES) that also reports the postoperative analgesic
+# outcomes used in this review. Citation: Wu H, Wang K, Li G, Meng D, Han J,
+# Wang G, Li Y. Effects of transcutaneous acupoint electrical stimulation on
+# the imbalance of Th1, Th2, Th17 and Treg cells following thoracotomy of
+# patients with lung cancer. Exp Ther Med. 2016;11(2):495-502.
+# doi:10.3892/etm.2015.2913, PMC4734236. No local PDF on file; quotes below
+# extracted directly from the PMC full text 2026-09-09.
+#
+# D1 (trial-level): "The subjects were randomized equally into i)
+# thoracotomy; ii) thoracotomy and sham TAES; and iii) thoracotomy and TAES
+# groups, using a computer-generated random list with coded sealed
+# envelopes." No further detail on the concealment mechanism beyond
+# "coded", so Low is a reasonable but not maximally-detailed read.
+#
+# D3 (trial-level): "a total of 90 patients ... were evaluated"; "Of the 90
+# patients, nine were excluded: Three due to serious postoperative
+# complications (two in group 2, and one in group 3), and six due to
+# incomplete data collection (three in group 1, one in group 2 and two in
+# group 3). Thus, a total of 81 patients were included in the data
+# analysis." Losses are small (3 of 30 per arm) and reasons are given for
+# every excluded patient -- Low.
+#
+# D5 (trial-level): no trial registration or pre-specified primary/secondary
+# outcome list found in the extracted text -- Some concerns for every
+# result, since the paper's own stated outcome priority cannot be verified
+# against an external record.
+#
+# D2/D4 differ by which comparator a given result uses (this study
+# contributes results against BOTH the active sham and the untreated
+# control): "Group 2 received identical electrical stimulation to group 3;
+# however, TAES was performed at sham points, which are located 4.0 cm
+# obliquely superior and lateral to the LI4, PC6, SI3 or SJ6 acupoints, and
+# are not in the meridian" -- a credible active sham for the TAES-vs-sham
+# comparisons. Group 1 (thoracotomy only) received no device and no
+# stimulation at all, so the TAES-vs-untreated-control comparison is
+# open-label. No statement anywhere in the extracted text says who recorded
+# VAS, tramadol use, or length of stay, or whether that person was blinded.
 # ============================================================================
-_wu16_unmapped = (
-    "SOURCE MAPPING UNRESOLVED: numeric fingerprinting's closest candidate "
-    "PDF describes a different outcome domain (postoperative immune "
-    "function/T-lymphocyte subsets after thoracotomy) than this study's "
-    "recorded outcomes (pain and opioid consumption), and no author name "
-    "match could be confirmed. Assessing D1-D5 against an unverified source "
-    "would risk describing the wrong trial. This result is held pending "
-    "either a corrected source match or author contact -- not scored.")
-for outcome, tp in [
-    ("Exact cumulative postoperative opioid/tramadol consumption", "0-24 h"),
-    ("Hospital length of stay", "Postoperative hospitalization"),
-    ("Rescue IV tramadol requirement", "Postoperative period; exact window not reported"),
-    ("VAS pain intensity at rest", "24 h postoperatively"),
-    ("VAS pain intensity during coughing", "24 h postoperatively"),
-]:
-    add("Wu 2016", outcome, tp, "UNRESOLVED", "UNRESOLVED", "UNRESOLVED", "UNRESOLVED", "UNRESOLVED",
-        _wu16_unmapped, "source PDF mapping unresolved; not assessed")
+_wu16_base = (
+    "D1 Low: 'randomized equally ... using a computer-generated random "
+    "list with coded sealed envelopes' (concealment mechanism not detailed "
+    "beyond 'coded'). D3 Low: 81 of 90 analysed; every one of the 9 "
+    "exclusions has a stated reason (3 complications, 6 incomplete data), "
+    "spread 3/30 across each arm. D5 Some concerns: no trial registration "
+    "or pre-specified outcome list found in the extracted text. ")
+_wu16_sham_d2 = (
+    "D2 Low: compared against the active sham arm, where sham TAES used "
+    "'identical electrical stimulation' at points '4.0 cm obliquely "
+    "superior and lateral to' the true acupoints and 'not in the "
+    "meridian' -- a credible disguise. ")
+_wu16_sham_d4 = (
+    "D4 Low for THIS result: no assessor-blinding statement was found, but "
+    "the participant supplying this result was blinded via a credible "
+    "active sham, so their own awareness of allocation does not bias it.")
+_wu16_control_d2 = (
+    "D2 Some concerns: compared against the untreated thoracotomy-only "
+    "arm, which received no device and no stimulation -- an open-label "
+    "comparison for this result. ")
+_wu16_control_d4 = (
+    "D4 Some concerns for THIS result: the untreated control arm is "
+    "unblinded, and this is a rescue-medication demand that can be "
+    "influenced by the participant's and staff's knowledge of allocation; "
+    "no assessor-blinding statement was found either way.")
+
+add("Wu 2016", "Exact cumulative postoperative opioid/tramadol consumption", "0-24 h",
+    "Low", "Low", "Low", "Low", "Some concerns",
+    _wu16_base + _wu16_sham_d2 + _wu16_sham_d4)
+add("Wu 2016", "VAS pain intensity at rest", "24 h postoperatively",
+    "Low", "Low", "Low", "Low", "Some concerns",
+    _wu16_base + _wu16_sham_d2 + _wu16_sham_d4)
+add("Wu 2016", "VAS pain intensity during coughing", "24 h postoperatively",
+    "Low", "Low", "Low", "Low", "Some concerns",
+    _wu16_base + _wu16_sham_d2 + _wu16_sham_d4)
+add("Wu 2016", "Hospital length of stay", "Postoperative hospitalization",
+    "Low", "Low", "Low", "Some concerns", "Some concerns",
+    _wu16_base + _wu16_sham_d2 +
+    "D4 Some concerns for THIS result: discharge timing often reflects "
+    "clinician judgement rather than a fixed objective criterion, and no "
+    "statement confirms the discharging clinician's blinding.")
+add("Wu 2016", "Rescue IV tramadol requirement", "Postoperative period; exact window not reported",
+    "Low", "Some concerns", "Low", "Some concerns", "Some concerns",
+    _wu16_base + _wu16_control_d2 + _wu16_control_d4)
 
 
 # ============================================================================
@@ -2737,26 +2798,82 @@ add("Liu 2025", "Exact cumulative postoperative opioid consumption", "0-24 h", L
     "result not confirmed among the extracted pre-specified outcomes")
 
 # ============================================================================
-# Ao 2021 -- UNRESOLVED SOURCE MAPPING. The closest numeric-fingerprint
-# candidate (a 2021 Experimental and Therapeutic Medicine paper on TEAS,
-# immune function and radical mastectomy) reports 65 enrolled patients,
-# while this study's recorded randomised n is 35/35 (70 total) -- a sample-
-# size mismatch -- and no author name could be confirmed. Held rather than
-# assessed against a possibly wrong source, per this pipeline's rule.
+# Ao 2021 -- SOURCE MAPPING RESOLVED 2026-09-09. A second reviewer confirmed
+# the candidate the numeric fingerprint had rejected IS the correct source:
+# the "65 enrolled patients" the fingerprint compared against this study's
+# 70-RANDOMISED figure is actually this trial's own 65-ANALYSED figure (70
+# randomised, 5 post-randomisation exclusions) -- a randomised-vs-analysed
+# mismatch in the automated check, not a wrong-trial mismatch. Citation: Ao
+# L, Shi J, Bai Y, Zhang S, Gan J. Effects of transcutaneous electrical
+# acupoint stimulation on perioperative immune function and postoperative
+# analgesia in patients undergoing radical mastectomy: a randomized
+# controlled trial. Exp Ther Med. 2021;21(3):184. doi:10.3892/etm.2021.9615,
+# PMC7812592, ChiCTR1800017768. No local PDF on file; quotes below extracted
+# directly from the PMC full text 2026-09-09.
+#
+# D1: "randomly allocated to the TEAS group or the sham TEAS group using
+# sequentially-numbered sealed envelopes and a random number generator";
+# "The envelopes were prepared and distributed by an assistant who was not
+# involved in the present study" -- Low.
+#
+# D2: genuine attempt at a credible sham ("Participants in the sham TEAS
+# group underwent electrode attachment on the target acupoints without
+# electronic stimulation"; care delivered by "an experienced acupuncturist,
+# who was independent of the present study"; a separate "blinded
+# anesthesiologist provided anesthesia implementation" and a second,
+# likewise blinded anesthesiologist "conducted the anesthesia follow-ups")
+# -- but the paper candidly concedes it did not work: "blinding of TEAS
+# treatment was not possible as patients eventually knew whether they were
+# receiving electrical stimulation." Some concerns for every result: an
+# intended blinding scheme that the trial's own text reports failing is a
+# genuine deviation from the intended blind, even though intraoperative
+# anaesthesia care itself stayed blinded.
+#
+# D3: "A total of 70 patients were enrolled and randomly allocated" and
+# "available data from 65 participants ... were included in the analysis"
+# -- 5 of 70 (7.1%) lost post-randomisation, each with a stated reason ("one
+# patient in the TEAS group and two patients in the sham TEAS group were
+# excluded as they refused to receive TEAS after surgery. ... two patients
+# in TEAS group had not completed all time point stimulations") -- Low.
 # ============================================================================
-_ao21_unmapped = (
-    "SOURCE MAPPING UNRESOLVED: the closest numeric-fingerprint candidate "
-    "PDF reports 65 enrolled patients, but this study's recorded randomised "
-    "sample size is 35/35 (70 total) -- a sample-size mismatch -- and no "
-    "author name match could be confirmed. Assessing D1-D5 against an "
-    "unverified source would risk describing the wrong trial. Held pending "
-    "a corrected source match or author contact -- not scored.")
-for outcome, tp in [
-    ("Cumulative postoperative sufentanil", "Exact 0-24 h"),
-    ("VAS pain intensity", "24 h postoperatively"),
-]:
-    add("Ao 2021", outcome, tp, "UNRESOLVED", "UNRESOLVED", "UNRESOLVED", "UNRESOLVED", "UNRESOLVED",
-        _ao21_unmapped, "source PDF mapping unresolved; not assessed")
+_ao21_base = (
+    "D1 Low: 'randomly allocated ... using sequentially-numbered sealed "
+    "envelopes and a random number generator'; envelopes 'prepared and "
+    "distributed by an assistant who was not involved in the present "
+    "study'. D2 Some concerns: a credible sham was attempted (identical "
+    "electrode placement, independent acupuncturist, blinded "
+    "anaesthesiologists for intraoperative care), but the paper concedes "
+    "'blinding of TEAS treatment was not possible as patients eventually "
+    "knew whether they were receiving electrical stimulation' -- a genuine "
+    "deviation from the intended blind. D3 Low: 65 of 70 (92.9%) analysed; "
+    "the 5 post-randomisation exclusions are each individually accounted "
+    "for (3 refused post-operative TEAS/sham, 2 incomplete stimulation "
+    "schedule). ")
+
+add("Ao 2021", "VAS pain intensity", "24 h postoperatively",
+    "Low", "Some concerns", "Low", "Some concerns", "Low",
+    _ao21_base +
+    "D5 Low: registered ChiCTR1800017768 before enrolment; 'The primary "
+    "outcomes included visual analogue scale (VAS) scores at 4 h (T1), 12 h "
+    "(T2), 24 h (T3) and 48 h (T4) post-operation' -- VAS is explicitly the "
+    "pre-specified primary outcome. D4 Some concerns for THIS result: VAS "
+    "is self-reported by a participant the trial's own text says was not "
+    "successfully blinded; no statement confirms who recorded it or "
+    "whether that person was blinded.")
+add("Ao 2021", "Cumulative postoperative sufentanil", "Exact 0-24 h",
+    "Low", "Some concerns", "Low", "Some concerns", "Some concerns",
+    _ao21_base +
+    "D5 Some concerns: the paper's named secondary outcome is 'the "
+    "cumulative TIME of rescue analgesia within 48 h post-surgery', not "
+    "the cumulative sufentanil dose/PCA solution volume reviewed here -- a "
+    "different construct (time-to-event vs cumulative dose), so this exact "
+    "result is not confirmed as a named pre-specified outcome. D4 Some "
+    "concerns for THIS result: PCA/sufentanil consumption is driven in "
+    "part by the participant's own demand behaviour, and that participant "
+    "is the same one the trial reports as not successfully blinded; no "
+    "statement confirms who analysed or recorded the consumption data or "
+    "whether that person was blinded.",
+    "reviewed outcome (cumulative dose) does not exactly match the paper's named secondary outcome (cumulative time to rescue)")
 
 
 # ============================================================================
@@ -3416,11 +3533,28 @@ def main() -> int:
             status=("ROB2_SOURCE_MAPPING_UNRESOLVED" if is_unresolved
                    else "ROB2_RESULT_SPECIFIC_ADOPTED"),
             adopted_by="" if is_unresolved else "John Ryan N. Mendoza (review lead)",
-            adopted_date="" if is_unresolved else "2026-09-08",
+            # Wu 2016 and Ao 2021 were originally source-mapping-unresolved and
+            # were only confirmed and adopted a day later, once a second
+            # reviewer verified the source PDF -- their own adopted_date, not
+            # the 2026-09-08 date the other 486 rows share, is the honest one.
+            adopted_date=("" if is_unresolved
+                          else "2026-09-09" if r["study"] in ("Wu 2016", "Ao 2021")
+                          else "2026-09-08"),
             provenance_note=(
                 "Not assessed: the source PDF for this study could not be "
                 "confidently identified, so no RoB 2 judgement is recorded "
                 "rather than risk describing the wrong trial." if is_unresolved else
+                "Source PDF mapping was initially flagged unresolved (an "
+                "automated numeric-fingerprint check could not confirm the "
+                "candidate source), then confirmed correct by a second "
+                "reviewer on 2026-09-09 who read the full text directly and "
+                "verified it against this study's reported arms and outcomes. "
+                "Adopted by the review lead's direction the same day. Domain "
+                "judgements and rationale are the source-evidence extraction, "
+                "unchanged by adoption. Standard Cochrane RoB 2 practice calls "
+                "for two independent assessors reconciling disagreement; no "
+                "separately documented dual-assessor record was provided to "
+                "this pipeline." if r["study"] in ("Wu 2016", "Ao 2021") else
                 "Adopted by the review lead's direction. Domain judgements and "
                 "rationale are the source-evidence extraction, unchanged by "
                 "adoption. Standard Cochrane RoB 2 practice calls for two "

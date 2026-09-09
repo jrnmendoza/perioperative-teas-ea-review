@@ -343,11 +343,13 @@ def main() -> int:
                      "yet pooled -- assessed for completeness of the review's result-specific "
                      "RoB 2 register, not because a synthesis depends on them today. Judged per "
                      "RESULT against the mapped source article, same method and standard as the "
-                     "36 results above. Adopted by the review lead on 2026-09-08. Where a "
-                     "result's source PDF could not be confidently matched to the study (Wu "
-                     "2016, Ao 2021), it is marked ROB2_SOURCE_MAPPING_UNRESOLVED rather than "
-                     "assessed against a possibly-wrong article, and its domains show as "
-                     "UNRESOLVED, not Low."),
+                     "36 results above. Adopted by the review lead on 2026-09-08. Two studies "
+                     "(Wu 2016, Ao 2021; 7 results) were initially held as "
+                     "ROB2_SOURCE_MAPPING_UNRESOLVED because an automated numeric-fingerprint "
+                     "check could not confirm their source PDF; a second reviewer confirmed both "
+                     "sources correct on 2026-09-09 by reading the full text directly, and those "
+                     "7 results were assessed and adopted that day -- see each row's own "
+                     "adopted_date and provenance_note. None remain unresolved."),
         })(read(ROB2_PRIORITY2) if ROB2_PRIORITY2.exists() else []),
 
         "poolable_scan": {

@@ -56,6 +56,13 @@ def main():
         pdf = mapping.get(study)
         if not pdf:
             continue
+        if not (PDFS / pdf).exists():
+            # A few studies (e.g. Wu 2016, Ao 2021) were confirmed against an
+            # external full text with no local PDF on file; pdf_map.json
+            # records that citation as a non-file string for the dashboard's
+            # source_pdf display. Skip rather than crash a bulk re-run.
+            print(f"skip {study}: mapped value is not a local file: {pdf[:80]}")
+            continue
         doc = pymupdf.open(PDFS / pdf)
         pages = [(i + 1, p.get_text()) for i, p in enumerate(doc)]
         doc.close()
