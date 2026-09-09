@@ -159,6 +159,10 @@
       [/^(\d+) patients$/, n => `${n} patienter`],
       [/^Assessed: (.+)$/, text => `Bedömt: ${dictionary.get(text) || text}`],
       [/^(.+): (\d+)$/, (label, n) => dictionary.has(label) ? `${dictionary.get(label)}: ${n}` : `${label}: ${n}`],
+      [/^Show the GRADE rating and per-domain downgrades for these (\d+) models$/,
+        n => `Visa GRADE-graden och nedgraderingarna per domän för dessa ${n} modeller`],
+      [/^GRADE certainty for these (\d+) v34 models — adopted (.+) by (.+)$/,
+        (n, date, author) => `GRADE-tillförlitlighet för dessa ${n} v34-modeller — antagen ${date} av ${author}`],
     ];
     for (const [pattern, format] of templates) {
       const match = key.match(pattern);

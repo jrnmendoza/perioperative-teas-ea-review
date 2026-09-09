@@ -47,6 +47,8 @@ ROB2_PRIORITY2 = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_priority2_asse
 NEW_MODEL_GRADE = ROOT / "09_V34_ANALYSIS" / "04_GRADE" / "v34_new_model_grade.csv"
 OUT = ROOT / "dashboard" / "v34_data.js"
 
+GRADE_LEVELS = ["Very Low", "Low", "Moderate", "High"]
+
 V34_SHA256 = "985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3"
 
 # Human labels for the models, and the RoB outcome key each belongs to.
@@ -154,6 +156,61 @@ def sha256(p: Path) -> str:
     return h.hexdigest()
 
 
+def build_grade_new_models(gs: list[dict]) -> dict:
+    ratings = [
+        dict(model_id=g["model_id"], outcome=g["outcome"], window=g["window"],
+             modality=g["modality"], comparator=g["comparator"], measure=g["measure"],
+             k=int(g["k"]), n=int(g["n"]), estimate=float(g["estimate"]),
+             ci_low=float(g["ci_low"]), ci_high=float(g["ci_high"]),
+             p_value=g["p_value"], i2=float(g["i2"]), grade=g["grade"],
+             domains=[
+                 dict(name="Risk of bias", downgrade=int(g["rob_downgrade"]), reason=g["rob_reason"]),
+                 dict(name="Inconsistency", downgrade=int(g["inconsistency_downgrade"]),
+                      reason=g["inconsistency_reason"]),
+                 dict(name="Imprecision", downgrade=int(g["imprecision_downgrade"]),
+                      reason=g["imprecision_reason"]),
+                 dict(name="Indirectness", downgrade=int(g["indirectness_downgrade"]),
+                      reason=g["indirectness_reason"]),
+                 dict(name="Publication bias", downgrade=int(g["publication_bias_downgrade"]),
+                      reason=g["publication_bias_reason"]),
+             ],
+             raw_downgrade_total=int(g["raw_downgrade_total"]),
+             adopted_by=g["adopted_by"], adopted_date=g["adopted_date"])
+        for g in gs
+    ]
+    dates = sorted({g["adopted_date"] for g in gs})
+    grade_counts = sorted(Counter(g["grade"] for g in gs).items(),
+                          key=lambda kv: GRADE_LEVELS.index(kv[0]))
+    note = (
+        f"GRADE certainty for these {len(gs)} v34 models, computed by applying an "
+        "EXPLICIT, STATED rule per domain -- documented in "
+        "09_V34_ANALYSIS/04_GRADE/compute_new_model_grade.py -- identically to "
+        f"all {len(gs)}, so each downgrade can be checked and disputed individually. "
+        "This is not an independent GRADE panel's consensus judgement: GRADE "
+        "certainty, like RoB 2, is an assessor judgement, and Cochrane/GRADE "
+        "guidance sets bands and principles rather than a formula. "
+        f"Adopted by the review lead ({' and '.join(dates)}) as the review's current "
+        "GRADE rating for these models -- the later date applies the identical rule "
+        "to models whose RoB 2 rollup was confirmed complete after the first pass, "
+        "not a methodology change -- the same adopted (not independently "
+        f"panel-reviewed) status already applied to their RoB 2 domain. Ratings: "
+        f"{', '.join(f'{n} {g}' for g, n in grade_counts)}. Indirectness and "
+        f"publication bias were not downgraded for any of the {len(gs)}: "
+        "indirectness because each model is already stratified by modality and "
+        "comparator, though surgical-population variation across contributing "
+        "trials is flagged as a judgement call rather than resolved; publication "
+        "bias because none reaches k=10, the threshold this review has already "
+        "adopted elsewhere for interpretable small-study-effect testing, and "
+        "absence of a test is not evidence of absence of bias."
+    )
+    return dict(
+        count=len(gs), status="GRADE_RULE_BASED_ADOPTED",
+        adopted_by="John Ryan N. Mendoza (review lead)",
+        adopted_date=" and ".join(dates),
+        ratings=ratings, note=note,
+    )
+
+
 def main() -> int:
     got = sha256(V34_XLSX)
     if got != V34_SHA256:
@@ -196,6 +253,9 @@ def main() -> int:
     model_rows = [model_row(r) for r in models]
     new_models = [m for m in model_rows if m["phase"] == "NEW"]
     reproduced = [m for m in model_rows if m["phase"] == "REPRODUCED"]
+
+    grade_new_models_payload = build_grade_new_models(
+        read(NEW_MODEL_GRADE) if NEW_MODEL_GRADE.exists() else [])
 
     payload = {
         "generated_by": "scripts/build_v34_dashboard_data.py",
@@ -359,64 +419,26 @@ def main() -> int:
             "single_study": sum(1 for r in scan if "only 1 independent" in r["verdict"]),
         },
 
-        "grade_new_models": (lambda gs: {
-            "count": len(gs),
-            "status": "GRADE_RULE_BASED_ADOPTED",
-            "adopted_by": "John Ryan N. Mendoza (review lead)",
-            "adopted_date": "2026-09-08",
-            "ratings": [
-                dict(model_id=g["model_id"], outcome=g["outcome"], window=g["window"],
-                     modality=g["modality"], comparator=g["comparator"], measure=g["measure"],
-                     k=int(g["k"]), n=int(g["n"]), estimate=float(g["estimate"]),
-                     ci_low=float(g["ci_low"]), ci_high=float(g["ci_high"]),
-                     p_value=g["p_value"], i2=float(g["i2"]), grade=g["grade"],
-                     domains=[
-                         dict(name="Risk of bias", downgrade=int(g["rob_downgrade"]),
-                              reason=g["rob_reason"]),
-                         dict(name="Inconsistency", downgrade=int(g["inconsistency_downgrade"]),
-                              reason=g["inconsistency_reason"]),
-                         dict(name="Imprecision", downgrade=int(g["imprecision_downgrade"]),
-                              reason=g["imprecision_reason"]),
-                         dict(name="Indirectness", downgrade=int(g["indirectness_downgrade"]),
-                              reason=g["indirectness_reason"]),
-                         dict(name="Publication bias", downgrade=int(g["publication_bias_downgrade"]),
-                              reason=g["publication_bias_reason"]),
-                     ],
-                     raw_downgrade_total=int(g["raw_downgrade_total"]),
-                     adopted_by=g["adopted_by"], adopted_date=g["adopted_date"])
-                for g in gs],
-            "note": ("GRADE certainty for these five new v34 models, computed by applying an "
-                     "EXPLICIT, STATED rule per domain -- documented in "
-                     "09_V34_ANALYSIS/04_GRADE/compute_new_model_grade.py -- identically to "
-                     "all five, so each downgrade can be checked and disputed individually. "
-                     "This is not an independent GRADE panel's consensus judgement: GRADE "
-                     "certainty, like RoB 2, is an assessor judgement, and Cochrane/GRADE "
-                     "guidance sets bands and principles rather than a formula. Adopted by "
-                     "the review lead on 2026-09-08 as the review's current GRADE rating for "
-                     "these five models, the same adopted (not independently panel-reviewed) "
-                     "status already applied to their RoB 2 domain. Indirectness and "
-                     "publication bias were not downgraded for any of the five: indirectness "
-                     "because each model is already stratified by modality and comparator, "
-                     "though surgical-population variation across contributing trials is "
-                     "flagged as a judgement call rather than resolved; publication bias "
-                     "because none of the five reaches k=10, the threshold this review has "
-                     "already adopted elsewhere for interpretable small-study-effect testing, "
-                     "and absence of a test is not evidence of absence of bias."),
-        })(read(NEW_MODEL_GRADE) if NEW_MODEL_GRADE.exists() else []),
+        "grade_new_models": grade_new_models_payload,
 
         "certainty_note": (
             "New and restratified v34 analyses now carry a result-specific risk-of-bias "
             "assessment for all 36 of the results inside a fitted model, adopted by the "
-            "review lead on 2026-09-08 (see rob2_results). A GRADE certainty rating for the "
-            "five new v34 models (GI recovery, pain, PONV) has now also been computed, "
-            "domain by domain, and adopted by the review lead on the same date (see "
-            "grade_new_models) -- ratings range from Moderate (gi_first_flatus_TEAS_Sham, "
-            "gi_first_bowel_sounds_TEAS_Sham) through Low (ponv_24h_TEAS_Sham) to Very Low "
-            "(gi_first_flatus_EA_Usual_care, pain_vas_24h_TEAS_Sham). This is a rule-based "
-            "computation applied identically across all five models, not an independent "
-            "GRADE panel's consensus judgement, and the grade_new_models note says so. "
-            "Previous GRADE ratings describe the earlier syntheses and are not carried "
-            "across to a materially changed model."),
+            "review lead on 2026-09-08 (see rob2_results). A GRADE certainty rating for "
+            f"{grade_new_models_payload['count']} v34 models has now also been computed, "
+            "domain by domain, and adopted by the review lead (see grade_new_models) -- "
+            "ratings: " +
+            ", ".join(f"{n} {g}" for g, n in sorted(
+                Counter(r["grade"] for r in grade_new_models_payload["ratings"]).items(),
+                key=lambda kv: GRADE_LEVELS.index(kv[0]))) +
+            ". This is a rule-based computation applied identically across every model in "
+            "grade_new_models, not an independent GRADE panel's consensus judgement, and "
+            "its own note says so. A model not listed in grade_new_models and not a "
+            "verified byte-for-byte reproduction of an already-graded GRADE Summary-of-"
+            "Findings analysis (see the dashboard's v34 model table) has contributing "
+            "results still unjudged and genuinely awaits reassessment. Previous GRADE "
+            "ratings describe the earlier syntheses and are not carried across to a "
+            "materially changed model."),
     }
 
     header = f"""// v34 ANALYTICAL LAYER — generated file, do not hand-edit.

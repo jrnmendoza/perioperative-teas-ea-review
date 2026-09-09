@@ -1,19 +1,40 @@
 #!/usr/bin/env python3
 """
-Compute a GRADE certainty rating for the five NEW v34 models (GI recovery,
+Compute a GRADE certainty rating for every v34 model listed in
+09_V34_ANALYSIS/01_DATA/v34_model_manifest.csv -- the models whose
+contributing results now carry a complete result-specific RoB 2 assessment
+(v34_rob2_model_rollup.csv: results_unjudged == 0), regardless of whether the
+model itself is phase NEW or REPRODUCED in v34_models.csv.
+
+The manifest originally held only the five NEW v34 models (GI recovery,
 pain, PONV) that had no GRADE rating because their RoB 2 domain was pending.
+On 2026-09-09, five more models -- three REPRODUCED (QoR-40, intraoperative
+remifentanil, intraoperative sufentanil) and two REPRODUCED time-to-
+defecation models -- were confirmed to ALSO have complete result-specific
+RoB 2 data (every contributing result already judged, either in this
+pipeline's own priority-1 draft assessments or via an existing adjudicated
+record folded in by 09_V34_ANALYSIS/03_ROB2/model_rollup.py) and were added
+to the manifest. Their dashboard "reassessment pending" badge was stale: the
+underlying reassessment was not actually pending, it just had never been
+run through this script. REPRODUCED-phase membership in v34_models.csv was
+never itself the eligibility test for this script -- the manifest, gated on
+RoB 2 completeness, always was; it happened to hold only NEW-phase models at
+first because those were the only ones checked for completeness at the time.
 
 PROVENANCE. GRADE certainty rating is an assessor judgement, the same way
 RoB 2 is: Cochrane/GRADE guidance sets bands and principles, not a formula,
 and different assessors can reasonably land on different downgrades for
 inconsistency or imprecision. What follows is an EXPLICIT, STATED rule
-applied mechanically and identically to all five models, so any GRADE-
-literate reader can check each step and disagree with a specific one. It is
-not a GRADE panel's consensus judgement, and this script says so everywhere
-its output is surfaced. On 2026-09-08 the review lead directed this
-computed rating be adopted as the review's current GRADE assessment for
-these five models, the same status this review already applied to the RoB 2
-domain in the previous step -- adopted, not independently panel-reviewed.
+applied mechanically and identically to every model in the manifest, so any
+GRADE-literate reader can check each step and disagree with a specific one.
+It is not a GRADE panel's consensus judgement, and this script says so
+everywhere its output is surfaced. On 2026-09-08 the review lead directed
+this computed rating be adopted as the review's current GRADE assessment for
+the first five models, the same status this review already applied to the
+RoB 2 domain in the previous step -- adopted, not independently
+panel-reviewed; the five added 2026-09-09 are adopted on that date under the
+same standing direction, since they are the identical rule applied to
+newly-confirmed-complete RoB 2 data, not a new methodological decision.
 
 THE RULE, per domain, applied identically to every model:
 
@@ -72,9 +93,22 @@ HERE = Path(__file__).resolve().parent
 MODELS_CSV = ROOT / "09_V34_ANALYSIS" / "03_RESULTS" / "v34_models.csv"
 ROLLUP_CSV = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_model_rollup.csv"
 MANIFEST_CSV = ROOT / "09_V34_ANALYSIS" / "01_DATA" / "v34_model_manifest.csv"
-DATADIR = ROOT / "09_V34_ANALYSIS" / "01_DATA"
+DATADIRS = [
+    ROOT / "09_V34_ANALYSIS" / "01_DATA",
+    ROOT / "TEAS EA Verification" / "v34_reconciliation" / "data",
+]
 
 GRADE_LEVELS = ["Very Low", "Low", "Moderate", "High"]
+
+# model_id -> the date this rule was applied to it. The rule itself and how
+# it is applied are unchanged between the two dates (see module docstring);
+# this records when each model's RoB 2 data was confirmed complete and this
+# script was run against it, not a change in method.
+ADOPTED_2026_09_08 = {
+    "gi_first_flatus_TEAS_Sham", "gi_first_flatus_EA_Usual_care",
+    "gi_first_bowel_sounds_TEAS_Sham", "pain_vas_24h_TEAS_Sham",
+    "ponv_24h_TEAS_Sham",
+}
 
 
 def read(p: Path) -> list[dict]:
@@ -83,8 +117,12 @@ def read(p: Path) -> list[dict]:
 
 
 def total_n(model_id: str) -> int:
-    rows = read(DATADIR / f"{model_id}.csv")
-    return sum(int(r["n_i"]) + int(r["n_c"]) for r in rows)
+    for d in DATADIRS:
+        p = d / f"{model_id}.csv"
+        if p.exists():
+            rows = read(p)
+            return sum(int(float(r["n_i"])) + int(float(r["n_c"])) for r in rows)
+    raise SystemExit(f"no per-study dataset found for {model_id} in {DATADIRS}")
 
 
 def rob_downgrade(low: int, some: int, high: int) -> tuple[int, str]:
@@ -119,13 +157,26 @@ def imprecision_downgrade(ci_low: float, ci_high: float, k: int, null: float) ->
 
 
 def main() -> int:
-    models = {r["model_id"]: r for r in read(MODELS_CSV) if r["phase"] == "NEW"}
-    rollup = {r["model_id"]: r for r in read(ROLLUP_CSV)}
+    all_models = {r["model_id"]: r for r in read(MODELS_CSV)}
     manifest = {r["model_id"]: r for r in read(MANIFEST_CSV)} if MANIFEST_CSV.exists() else {}
+    # Eligibility is the manifest, not phase: every model_id an operator has
+    # curated into v34_model_manifest.csv after confirming its RoB 2 rollup
+    # has zero unjudged results. A model_id manifested but missing from
+    # v34_models.csv (a typo, or a model since renamed) fails loudly rather
+    # than being silently skipped.
+    models = {}
+    for mid in manifest:
+        if mid not in all_models:
+            raise SystemExit(f"manifest lists {mid}, not found in {MODELS_CSV}")
+        models[mid] = all_models[mid]
+    rollup = {r["model_id"]: r for r in read(ROLLUP_CSV)}
 
     out = []
     for mid, m in sorted(models.items()):
         roll = rollup[mid]
+        if int(roll["results_unjudged"]) != 0:
+            raise SystemExit(f"{mid}: {roll['results_unjudged']} contributing results still "
+                             "unjudged -- not eligible for this rule-based GRADE computation")
         low, some, high = int(roll["low"]), int(roll["some_concerns"]), int(roll["high"])
         k = int(m["k"])
         i2 = float(m["i2"])
@@ -163,7 +214,7 @@ def main() -> int:
             raw_downgrade_total=raw_total, grade=grade,
             status="GRADE_RULE_BASED_ADOPTED",
             adopted_by="John Ryan N. Mendoza (review lead)",
-            adopted_date="2026-09-08",
+            adopted_date="2026-09-08" if mid in ADOPTED_2026_09_08 else "2026-09-09",
         ))
 
     p = HERE / "v34_new_model_grade.csv"

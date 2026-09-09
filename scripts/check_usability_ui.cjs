@@ -491,10 +491,18 @@ async function boot(browser, hash) {
         `${modelId}: shows "${shownGrade}" but its verified source now grades "${expected}"`);
     }
 
-    // At least one model must still show "pending": a table where nothing was
-    // ever unrated would mean this check no longer exercises the fallback path.
-    const anyPending = certRows.some(({text}) => /pending|pågår/i.test(text));
-    assert.ok(anyPending, 'expected at least one v34 model to still show "reassessment pending"');
+    // As of 2026-09-09 every v34 model has a genuine rating (3 verified
+    // reproductions + 10 rule-based, once the last five REPRODUCED models'
+    // RoB 2 rollup was also confirmed complete -- see
+    // compute_new_model_grade.py's docstring). Nothing is left to exercise the
+    // "reassessment pending" fallback with; the isPending/isProvenanced
+    // assertion above still covers it the moment a new, not-yet-assessed
+    // model is manifested. Assert the current, fully-rated state explicitly
+    // rather than silently dropping the check, so a regression that makes a
+    // row fall through ungraded is still caught.
+    const noneStillPending = certRows.every(({text}) => !/pending|pågår/i.test(text));
+    assert.ok(noneStillPending,
+      'expected every v34 model to now carry a genuine rating; found one still "reassessment pending"');
 
     // Adjudication state must be shown, and must be consistent with the files.
     const adj = await page.evaluate(() => {

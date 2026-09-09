@@ -3788,7 +3788,7 @@ function v34GradeNewModelsHtml(G){
     <div style="margin-top:0.6rem;padding:0.5rem 0.6rem;background:rgba(125,211,252,0.06);
                 border-left:3px solid rgba(125,211,252,0.5);border-radius:var(--radius-sm);">
       <div style="font-weight:700;color:#7dd3fc;font-size:0.78rem;">
-        GRADE certainty for the five new v34 models — adopted ${pwEsc(G.adopted_date||'')} by ${pwEsc(G.adopted_by||'the review lead')}</div>
+        GRADE certainty for these ${G.count} v34 models — adopted ${pwEsc(G.adopted_date||'')} by ${pwEsc(G.adopted_by||'the review lead')}</div>
       <div style="font-size:0.74rem;color:var(--text-secondary);line-height:1.6;margin-top:0.2rem;">
         ${pwEsc(G.note)}
       </div>

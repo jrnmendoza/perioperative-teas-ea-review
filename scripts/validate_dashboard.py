@@ -2019,14 +2019,17 @@ def t_certainty_note_reflects_computed_grade():
 
 def t_grade_new_models_complete_and_valid():
     """
-    All five new v34 models must have a GRADE rating, and it must be one of
-    the four valid GRADE levels.
+    Every model_id curated into v34_model_manifest.csv (the operator-confirmed
+    list of models whose RoB 2 rollup has zero unjudged results -- originally
+    five NEW v34 models, extended 2026-09-09 to five more REPRODUCED models
+    once their rollup was also confirmed complete) must have a GRADE rating,
+    and it must be one of the four valid GRADE levels. The expected set is
+    read from the manifest, not hardcoded, so growing it needs no test edit.
     """
     rows = _grade_new_models()
     probs = []
-    want = {"gi_first_flatus_TEAS_Sham", "gi_first_flatus_EA_Usual_care",
-            "gi_first_bowel_sounds_TEAS_Sham", "pain_vas_24h_TEAS_Sham",
-            "ponv_24h_TEAS_Sham"}
+    want = {r["model_id"] for r in read_csv(
+        ROOT / "09_V34_ANALYSIS" / "01_DATA" / "v34_model_manifest.csv")}
     got = {r["model_id"] for r in rows}
     if got != want:
         probs.append(f"model set mismatch: missing {want - got}, extra {got - want}")
@@ -2037,7 +2040,7 @@ def t_grade_new_models_complete_and_valid():
             probs.append(f"{r['model_id']}: status is {r['status']!r}, not GRADE_RULE_BASED_ADOPTED")
         if not r.get("adopted_by") or not r.get("adopted_date"):
             probs.append(f"{r['model_id']}: missing adopted_by/adopted_date")
-    check("All five new v34 models have a valid, adopted GRADE rating",
+    check("Every manifested v34 model has a valid, adopted GRADE rating",
           not probs, "\n".join(probs))
 
 
@@ -2052,8 +2055,12 @@ def t_grade_new_models_rule_recomputes():
     assigned by impression rather than by the stated rule would pass a
     superficial "is it a valid GRADE level" check but not this one.
     """
+    # Not filtered by phase: eligibility for this rule is the manifest (RoB 2
+    # rollup confirmed complete), and by 2026-09-09 that includes five
+    # REPRODUCED models alongside the original five NEW ones -- see
+    # compute_new_model_grade.py's docstring.
     models = {r["model_id"]: r for r in read_csv(
-        ROOT / "09_V34_ANALYSIS" / "03_RESULTS" / "v34_models.csv") if r["phase"] == "NEW"}
+        ROOT / "09_V34_ANALYSIS" / "03_RESULTS" / "v34_models.csv")}
     rollup = {r["model_id"]: r for r in read_csv(
         ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_model_rollup.csv")}
     levels = ["Very Low", "Low", "Moderate", "High"]

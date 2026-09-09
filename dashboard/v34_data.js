@@ -131,8 +131,8 @@ window.V34_DATA = {
       "tau2": 10748.9226,
       "i2": 83.86,
       "estimator": "REML + Hartung-Knapp",
-      "studies": "",
-      "rob2_pending": null
+      "studies": "Zheng 2025; Xing 2022; Wu 2022; Lu 2021; Guo 2023; Liang 2021",
+      "rob2_pending": 0
     },
     {
       "model_id": "v34_intraop_sufentanil_TEAS_Sham",
@@ -150,8 +150,8 @@ window.V34_DATA = {
       "tau2": 254.121,
       "i2": 92.03,
       "estimator": "REML normal CI",
-      "studies": "",
-      "rob2_pending": null
+      "studies": "Liu 2015; Liang 2021",
+      "rob2_pending": 0
     },
     {
       "model_id": "v34_qor40_24h_TEAS_Sham",
@@ -169,8 +169,8 @@ window.V34_DATA = {
       "tau2": 36.3767,
       "i2": 87.86,
       "estimator": "REML normal CI",
-      "studies": "",
-      "rob2_pending": null
+      "studies": "Yao 2015; Liang 2021",
+      "rob2_pending": 0
     },
     {
       "model_id": "v34_gi_first_defecation_TEAS_Sham",
@@ -188,8 +188,8 @@ window.V34_DATA = {
       "tau2": 6.4464,
       "i2": 20.81,
       "estimator": "REML + Hartung-Knapp",
-      "studies": "",
-      "rob2_pending": null
+      "studies": "Lu 2022; Gu 2019; Gao 2021",
+      "rob2_pending": 0
     },
     {
       "model_id": "v34_gi_first_defecation_EA_Usual_care",
@@ -207,8 +207,8 @@ window.V34_DATA = {
       "tau2": 0.0,
       "i2": 0.0,
       "estimator": "REML + Hartung-Knapp",
-      "studies": "",
-      "rob2_pending": null
+      "studies": "Yang 2024; Huang 2025; Yang 2020",
+      "rob2_pending": 0
     },
     {
       "model_id": "v34_primary_24h_mme_TEAS_Sham",
@@ -12255,10 +12255,10 @@ window.V34_DATA = {
     "single_study": 341
   },
   "grade_new_models": {
-    "count": 5,
+    "count": 10,
     "status": "GRADE_RULE_BASED_ADOPTED",
     "adopted_by": "John Ryan N. Mendoza (review lead)",
-    "adopted_date": "2026-09-08",
+    "adopted_date": "2026-09-08 and 2026-09-09",
     "ratings": [
       {
         "model_id": "gi_first_bowel_sounds_TEAS_Sham",
@@ -12489,9 +12489,239 @@ window.V34_DATA = {
         "raw_downgrade_total": -2,
         "adopted_by": "John Ryan N. Mendoza (review lead)",
         "adopted_date": "2026-09-08"
+      },
+      {
+        "model_id": "v34_gi_first_defecation_EA_Usual_care",
+        "outcome": "Time to first defecation",
+        "window": "Postoperative",
+        "modality": "EA",
+        "comparator": "Usual care",
+        "measure": "MD",
+        "k": 3,
+        "n": 325,
+        "estimate": -4.0811,
+        "ci_low": -6.0671,
+        "ci_high": -2.095,
+        "p_value": ".0125522070421815",
+        "i2": 0.0,
+        "grade": "Low",
+        "domains": [
+          {
+            "name": "Risk of bias",
+            "downgrade": -2,
+            "reason": "-2 (very serious): 2 of 3 contributing results (a majority) are High risk of bias"
+          },
+          {
+            "name": "Inconsistency",
+            "downgrade": 0,
+            "reason": "no downgrade: I2 = 0.0%"
+          },
+          {
+            "name": "Imprecision",
+            "downgrade": 0,
+            "reason": "no downgrade: 95% CI [-6.07, -2.10] excludes the null, k=3"
+          },
+          {
+            "name": "Indirectness",
+            "downgrade": 0,
+            "reason": "no downgrade: direct comparison within this stratified model; surgical-population variation across contributing trials was judged not to threaten applicability, a judgement call rather than a numeric fact"
+          },
+          {
+            "name": "Publication bias",
+            "downgrade": 0,
+            "reason": "not assessed: k=3 is below the review's own k=10 threshold for interpretable small-study-effect testing; absence of a test is not evidence of absence of bias"
+          }
+        ],
+        "raw_downgrade_total": -2,
+        "adopted_by": "John Ryan N. Mendoza (review lead)",
+        "adopted_date": "2026-09-09"
+      },
+      {
+        "model_id": "v34_gi_first_defecation_TEAS_Sham",
+        "outcome": "Time to first defecation",
+        "window": "Postoperative",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "measure": "MD",
+        "k": 3,
+        "n": 821,
+        "estimate": -10.3982,
+        "ci_low": -23.1249,
+        "ci_high": 2.3285,
+        "p_value": ".0722564538049564",
+        "i2": 20.8,
+        "grade": "Moderate",
+        "domains": [
+          {
+            "name": "Risk of bias",
+            "downgrade": 0,
+            "reason": "no downgrade: 0 of 3 contributing results at High risk of bias"
+          },
+          {
+            "name": "Inconsistency",
+            "downgrade": 0,
+            "reason": "no downgrade: I2 = 20.8%"
+          },
+          {
+            "name": "Imprecision",
+            "downgrade": -1,
+            "reason": "-1 (serious): 95% CI [-23.12, 2.33] crosses the null, k=3"
+          },
+          {
+            "name": "Indirectness",
+            "downgrade": 0,
+            "reason": "no downgrade: direct comparison within this stratified model; surgical-population variation across contributing trials was judged not to threaten applicability, a judgement call rather than a numeric fact"
+          },
+          {
+            "name": "Publication bias",
+            "downgrade": 0,
+            "reason": "not assessed: k=3 is below the review's own k=10 threshold for interpretable small-study-effect testing; absence of a test is not evidence of absence of bias"
+          }
+        ],
+        "raw_downgrade_total": -1,
+        "adopted_by": "John Ryan N. Mendoza (review lead)",
+        "adopted_date": "2026-09-09"
+      },
+      {
+        "model_id": "v34_intraop_remifentanil_TEAS_Sham",
+        "outcome": "Intraoperative remifentanil",
+        "window": "Intraoperative",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "measure": "MD",
+        "k": 6,
+        "n": 785,
+        "estimate": -117.7771,
+        "ci_low": -242.5056,
+        "ci_high": 6.9513,
+        "p_value": ".0595772273874773",
+        "i2": 83.9,
+        "grade": "Very Low",
+        "domains": [
+          {
+            "name": "Risk of bias",
+            "downgrade": -1,
+            "reason": "-1 (serious): 1 of 6 contributing results are High risk of bias"
+          },
+          {
+            "name": "Inconsistency",
+            "downgrade": -1,
+            "reason": "-1 (serious): I2 = 83.9%, at or above the 50% substantial-heterogeneity band"
+          },
+          {
+            "name": "Imprecision",
+            "downgrade": -1,
+            "reason": "-1 (serious): 95% CI [-242.51, 6.95] crosses the null, k=6"
+          },
+          {
+            "name": "Indirectness",
+            "downgrade": 0,
+            "reason": "no downgrade: direct comparison within this stratified model; surgical-population variation across contributing trials was judged not to threaten applicability, a judgement call rather than a numeric fact"
+          },
+          {
+            "name": "Publication bias",
+            "downgrade": 0,
+            "reason": "not assessed: k=6 is below the review's own k=10 threshold for interpretable small-study-effect testing; absence of a test is not evidence of absence of bias"
+          }
+        ],
+        "raw_downgrade_total": -3,
+        "adopted_by": "John Ryan N. Mendoza (review lead)",
+        "adopted_date": "2026-09-09"
+      },
+      {
+        "model_id": "v34_intraop_sufentanil_TEAS_Sham",
+        "outcome": "Intraoperative sufentanil",
+        "window": "Intraoperative",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "measure": "MD",
+        "k": 2,
+        "n": 158,
+        "estimate": -9.4356,
+        "ci_low": -32.3953,
+        "ci_high": 13.5242,
+        "p_value": ".4205485479522038",
+        "i2": 92.0,
+        "grade": "Very Low",
+        "domains": [
+          {
+            "name": "Risk of bias",
+            "downgrade": 0,
+            "reason": "no downgrade: 0 of 2 contributing results at High risk of bias"
+          },
+          {
+            "name": "Inconsistency",
+            "downgrade": -1,
+            "reason": "-1 (serious): I2 = 92.0%, at or above the 50% substantial-heterogeneity band (I2 at k=2 is statistically unstable; treat this as indicative, not precise)"
+          },
+          {
+            "name": "Imprecision",
+            "downgrade": -2,
+            "reason": "-2 (very serious): 95% CI [-32.40, 13.52] crosses the null and only k=2 studies inform it"
+          },
+          {
+            "name": "Indirectness",
+            "downgrade": 0,
+            "reason": "no downgrade: direct comparison within this stratified model; surgical-population variation across contributing trials was judged not to threaten applicability, a judgement call rather than a numeric fact"
+          },
+          {
+            "name": "Publication bias",
+            "downgrade": 0,
+            "reason": "not assessed: k=2 is below the review's own k=10 threshold for interpretable small-study-effect testing; absence of a test is not evidence of absence of bias"
+          }
+        ],
+        "raw_downgrade_total": -3,
+        "adopted_by": "John Ryan N. Mendoza (review lead)",
+        "adopted_date": "2026-09-09"
+      },
+      {
+        "model_id": "v34_qor40_24h_TEAS_Sham",
+        "outcome": "Global QoR-40",
+        "window": "24 h",
+        "modality": "TEAS",
+        "comparator": "Sham",
+        "measure": "MD",
+        "k": 2,
+        "n": 141,
+        "estimate": 6.7163,
+        "ci_low": -2.1609,
+        "ci_high": 15.5935,
+        "p_value": ".138112008061293",
+        "i2": 87.9,
+        "grade": "Very Low",
+        "domains": [
+          {
+            "name": "Risk of bias",
+            "downgrade": -2,
+            "reason": "-2 (very serious): 1 of 2 contributing results (a majority) are High risk of bias"
+          },
+          {
+            "name": "Inconsistency",
+            "downgrade": -1,
+            "reason": "-1 (serious): I2 = 87.9%, at or above the 50% substantial-heterogeneity band (I2 at k=2 is statistically unstable; treat this as indicative, not precise)"
+          },
+          {
+            "name": "Imprecision",
+            "downgrade": -2,
+            "reason": "-2 (very serious): 95% CI [-2.16, 15.59] crosses the null and only k=2 studies inform it"
+          },
+          {
+            "name": "Indirectness",
+            "downgrade": 0,
+            "reason": "no downgrade: direct comparison within this stratified model; surgical-population variation across contributing trials was judged not to threaten applicability, a judgement call rather than a numeric fact"
+          },
+          {
+            "name": "Publication bias",
+            "downgrade": 0,
+            "reason": "not assessed: k=2 is below the review's own k=10 threshold for interpretable small-study-effect testing; absence of a test is not evidence of absence of bias"
+          }
+        ],
+        "raw_downgrade_total": -5,
+        "adopted_by": "John Ryan N. Mendoza (review lead)",
+        "adopted_date": "2026-09-09"
       }
     ],
-    "note": "GRADE certainty for these five new v34 models, computed by applying an EXPLICIT, STATED rule per domain -- documented in 09_V34_ANALYSIS/04_GRADE/compute_new_model_grade.py -- identically to all five, so each downgrade can be checked and disputed individually. This is not an independent GRADE panel's consensus judgement: GRADE certainty, like RoB 2, is an assessor judgement, and Cochrane/GRADE guidance sets bands and principles rather than a formula. Adopted by the review lead on 2026-09-08 as the review's current GRADE rating for these five models, the same adopted (not independently panel-reviewed) status already applied to their RoB 2 domain. Indirectness and publication bias were not downgraded for any of the five: indirectness because each model is already stratified by modality and comparator, though surgical-population variation across contributing trials is flagged as a judgement call rather than resolved; publication bias because none of the five reaches k=10, the threshold this review has already adopted elsewhere for interpretable small-study-effect testing, and absence of a test is not evidence of absence of bias."
+    "note": "GRADE certainty for these 10 v34 models, computed by applying an EXPLICIT, STATED rule per domain -- documented in 09_V34_ANALYSIS/04_GRADE/compute_new_model_grade.py -- identically to all 10, so each downgrade can be checked and disputed individually. This is not an independent GRADE panel's consensus judgement: GRADE certainty, like RoB 2, is an assessor judgement, and Cochrane/GRADE guidance sets bands and principles rather than a formula. Adopted by the review lead (2026-09-08 and 2026-09-09) as the review's current GRADE rating for these models -- the later date applies the identical rule to models whose RoB 2 rollup was confirmed complete after the first pass, not a methodology change -- the same adopted (not independently panel-reviewed) status already applied to their RoB 2 domain. Ratings: 5 Very Low, 2 Low, 3 Moderate. Indirectness and publication bias were not downgraded for any of the 10: indirectness because each model is already stratified by modality and comparator, though surgical-population variation across contributing trials is flagged as a judgement call rather than resolved; publication bias because none reaches k=10, the threshold this review has already adopted elsewhere for interpretable small-study-effect testing, and absence of a test is not evidence of absence of bias."
   },
-  "certainty_note": "New and restratified v34 analyses now carry a result-specific risk-of-bias assessment for all 36 of the results inside a fitted model, adopted by the review lead on 2026-09-08 (see rob2_results). A GRADE certainty rating for the five new v34 models (GI recovery, pain, PONV) has now also been computed, domain by domain, and adopted by the review lead on the same date (see grade_new_models) -- ratings range from Moderate (gi_first_flatus_TEAS_Sham, gi_first_bowel_sounds_TEAS_Sham) through Low (ponv_24h_TEAS_Sham) to Very Low (gi_first_flatus_EA_Usual_care, pain_vas_24h_TEAS_Sham). This is a rule-based computation applied identically across all five models, not an independent GRADE panel's consensus judgement, and the grade_new_models note says so. Previous GRADE ratings describe the earlier syntheses and are not carried across to a materially changed model."
+  "certainty_note": "New and restratified v34 analyses now carry a result-specific risk-of-bias assessment for all 36 of the results inside a fitted model, adopted by the review lead on 2026-09-08 (see rob2_results). A GRADE certainty rating for 10 v34 models has now also been computed, domain by domain, and adopted by the review lead (see grade_new_models) -- ratings: 5 Very Low, 2 Low, 3 Moderate. This is a rule-based computation applied identically across every model in grade_new_models, not an independent GRADE panel's consensus judgement, and its own note says so. A model not listed in grade_new_models and not a verified byte-for-byte reproduction of an already-graded GRADE Summary-of-Findings analysis (see the dashboard's v34 model table) has contributing results still unjudged and genuinely awaits reassessment. Previous GRADE ratings describe the earlier syntheses and are not carried across to a materially changed model."
 };

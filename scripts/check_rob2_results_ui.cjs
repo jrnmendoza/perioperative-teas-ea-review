@@ -1,14 +1,16 @@
 // Regression checks for the result-specific RoB 2 panel (adopted status) and
-// the rule-based GRADE panel for the five new v34 models it feeds.
+// the rule-based GRADE panel for the v34 models it feeds (originally five
+// NEW models; extended to ten once five REPRODUCED models' RoB 2 rollup was
+// also confirmed complete -- see compute_new_model_grade.py's docstring).
 //
 // Scope: that the 36 result-specific judgements reach the page intact, that
 // each is visibly attributed to who adopted it and when, that the panel never
 // claims an independent dual-assessor record this pipeline was never given,
 // that the result-level filtering (outcome family, study, overall,
 // model/synthesis) actually filters what is rendered and coordinates with the
-// model rollup table, and that the five GRADE ratings built on top of that
-// RoB 2 domain are shown as a rule-based computation the review lead adopted
-// -- never as an independent GRADE panel's consensus judgement.
+// model rollup table, and that the GRADE ratings built on top of that RoB 2
+// domain are shown as a rule-based computation the review lead adopted --
+// never as an independent GRADE panel's consensus judgement.
 //
 // These are presentation and provenance assertions. They never assert a
 // domain judgement -- only that what the data file holds, including its
@@ -82,10 +84,11 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
   assert.ok(/rule-based/i.test(cert),
     'the certainty note does not disclose the GRADE rating is rule-based');
 
-  // 4b. the GRADE panel for the five new models: present, complete, honestly labelled
+  // 4b. the GRADE panel for the rule-based models: present, complete, honestly labelled
   const G = await page.evaluate(() => (window.V34_DATA || {}).grade_new_models || null);
   assert.ok(G, 'v34 data carries no grade_new_models payload');
-  assert.strictEqual(G.count, 5, `expected 5 GRADE ratings, data holds ${G.count}`);
+  assert.ok(G.count >= 10, `expected at least 10 GRADE ratings, data holds ${G.count}`);
+  assert.strictEqual(G.ratings.length, G.count, `ratings array length != count`);
   assert.strictEqual(G.status, 'GRADE_RULE_BASED_ADOPTED', `payload status is ${G.status}`);
   assert.ok(G.adopted_by && G.adopted_date, 'GRADE payload missing adopted_by/adopted_date');
   assert.ok(/not an independent GRADE panel/i.test(G.note),
@@ -110,7 +113,8 @@ const SITE = 'file://' + path.resolve(__dirname, '..', '_site', 'index.html');
     };
   });
   assert.ok(gradeOpen, 'the GRADE ratings disclosure is not present');
-  assert.strictEqual(gradeOpen.rows, 5, `${gradeOpen.rows} GRADE rows rendered, expected 5`);
+  assert.strictEqual(gradeOpen.rows, G.count,
+    `${gradeOpen.rows} GRADE rows rendered, data holds ${G.count}`);
   assert.ok(gradeOpen.allFiveDomains, 'a rendered GRADE row is missing one of the five domains');
   const wantGrades = G.ratings.map(r => r.grade);
   assert.deepStrictEqual(gradeOpen.grades, wantGrades,

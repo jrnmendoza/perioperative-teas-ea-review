@@ -4,3 +4,8 @@ gi_first_flatus_EA_Usual_care,MD,2,2,Time to first flatus,Postoperative,EA,Usual
 gi_first_bowel_sounds_TEAS_Sham,MD,2,2,Time to first bowel sounds,Postoperative,TEAS,Sham,hours,REML normal CI,2,Gao 2021; Gu 2019,gi_first_bowel_sounds_TEAS_Sham.csv
 pain_vas_24h_TEAS_Sham,MD,3,3,VAS pain intensity,24 h,TEAS,Sham,VAS 0-10,REML + Hartung-Knapp,2,Gu 2019; Lee 2011; Wu 2025,pain_vas_24h_TEAS_Sham.csv
 ponv_24h_TEAS_Sham,logRR,3,3,PONV incidence,0-24 h,TEAS,Sham,participants,REML + Hartung-Knapp,3,Chen 2015; Chen 2015 (Hyperalgesia); He 2026 (hepatectomy/JIS),ponv_24h_TEAS_Sham.csv
+v34_qor40_24h_TEAS_Sham,MD,2,2,Global QoR-40,24 h,TEAS,Sham,QoR-40 points,REML normal CI,0,Yao 2015; Liang 2021,v34_qor40_24h_TEAS_Sham.csv
+v34_intraop_remifentanil_TEAS_Sham,MD,6,6,Intraoperative remifentanil,Intraoperative,TEAS,Sham,ug,REML + Hartung-Knapp,0,Zheng 2025; Xing 2022; Wu 2022; Lu 2021; Guo 2023; Liang 2021,v34_intraop_remifentanil_TEAS_Sham.csv
+v34_intraop_sufentanil_TEAS_Sham,MD,2,2,Intraoperative sufentanil,Intraoperative,TEAS,Sham,ug,REML normal CI,0,Liu 2015; Liang 2021,v34_intraop_sufentanil_TEAS_Sham.csv
+v34_gi_first_defecation_TEAS_Sham,MD,3,3,Time to first defecation,Postoperative,TEAS,Sham,hours,REML + Hartung-Knapp,0,Lu 2022; Gu 2019; Gao 2021,v34_gi_first_defecation_TEAS_Sham.csv
+v34_gi_first_defecation_EA_Usual_care,MD,3,3,Time to first defecation,Postoperative,EA,Usual care,hours,REML + Hartung-Knapp,0,Yang 2024; Huang 2025; Yang 2020,v34_gi_first_defecation_EA_Usual_care.csv
