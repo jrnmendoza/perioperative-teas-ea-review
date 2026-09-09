@@ -2022,8 +2022,8 @@ const STATA_MASTER_RESULTS = {
     controlRisk: "Mean baseline: 33.94 to 44.00 mg IV MME",
     grade: "Very Low",
     badgeClass: "grade-badge-verylow",
-    downgrade: "Downgraded 3 levels: -1 for inconsistency (I² = 77.2%, τ² = 28.47) and -2 for very serious imprecision (k=3, highly imprecise 95% KH CI crossing zero: −19.77 to +11.90 mg). (El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024).",
-    robStatus: "High RoB (El-Rakshy 2009); Some concerns (Seevaunnamtum 2016, Yang 2024)"
+    downgrade: "Downgraded 4 levels: -1 for risk of bias (serious; High RoB present in a minority of contributing trials, 1 of 3 -- El-Rakshy 2009), -1 for inconsistency (I² = 77.2%, τ² = 28.47), and -2 for very serious imprecision (k=3, highly imprecise 95% KH CI crossing zero: −19.77 to +11.90 mg). Nominal downgrade floors at Very Low (GRADE has no lower rating), so this correction does not change the label, but the review's own reasoning had previously omitted an explicit risk-of-bias line despite already describing El-Rakshy 2009 as High RoB below. (El-Rakshy 2009, Seevaunnamtum 2016, Yang 2024).",
+    robStatus: "High RoB (El-Rakshy 2009, confirmed 2026-09-09 by independent re-read of the primary source: the publication's intervention-group denominators are irreconcilable across its flow diagram, Results text, Table 1, abstract, and Table 3, so the completeness of the 24-h morphine outcome data cannot be reliably established -- RoB 2 Domain 3, High); Some concerns (Seevaunnamtum 2016, Yang 2024)"
   },
   "AN-01-COMB": {
     id: "AN-01-COMB",
