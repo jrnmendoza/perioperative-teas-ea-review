@@ -1375,6 +1375,9 @@
             <a href="v26/02_STATA/logs/02_targetA_48h.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📋</span> Target A 0–48 h Log
             </a>
+            <a href="v26/03_RESULTS/results_targetA_48h.csv" download class="btn-preset" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); color: #a7f3d0; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
+              <span>📈</span> Target A 0–48 h Results, incl. Sensitivity (CSV)
+            </a>
             <a href="v26/02_STATA/logs/01_opioid24_primary.log" download class="btn-preset" style="background: rgba(255,255,255,0.06); color: #c7d2fe; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.45rem 0.8rem; font-size: 0.75rem;">
               <span>📋</span> Primary 24-h Log
             </a>
@@ -3635,13 +3638,13 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem 1.75rem;">
         <div>
           <div style="font-weight: 700; color: #f8fafc;">Data source</div>
-          <div><code>TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx</code></div>
-          <div style="font-size: 0.72rem; color: var(--text-muted);">Result-level inclusion and RoB 2 govern via <code>AF_Result_Lock</code>. Historical lock: <code>TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx</code>; current master is v33.</div>
+          <div><code>TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx</code></div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">Current master is <strong>v34</strong> (70 canonical studies, 757 normalised outcome rows; SHA-256 verified on every dashboard build). The primary 24-h opioid analysis, PRISMA flow and study-level RoB 2 overview are unchanged from <code>TEAS_EA_RECONCILED_MASTER_DATA_v26_FINAL_LOCK_READY.xlsx</code> (locked 2026-09-06) and reproduce byte-identical; v34 restratifies the secondary/exploratory outcomes by modality and comparator and adds the result-specific RoB 2 and GRADE work below.</div>
         </div>
         <div>
           <div style="font-weight: 700; color: #f8fafc;">Statistical source</div>
-          <div>Stata-verified final analysis &mdash; StataNow 19.5 BE</div>
-          <div style="font-size: 0.72rem; color: var(--text-muted);">Reproduced from <code>06_FINAL_ANALYSIS_V26/02_STATA/00_master.do</code>; all 20 exported result tables verified byte-identical on re-run.</div>
+          <div>Stata-verified &mdash; StataNow 19.5 BE</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">Primary 24-h opioid, Targets A&ndash;F and PRISMA: <code>06_FINAL_ANALYSIS_V26/02_STATA/00_master.do</code> (20 exported result tables verified byte-identical on re-run). v34 modality/comparator-stratified secondary models: <code>09_V34_ANALYSIS/02_STATA/30_v34_models.do</code>.</div>
         </div>
         <div>
           <div style="font-weight: 700; color: #f8fafc;">Review registration</div>
@@ -3650,15 +3653,15 @@
         </div>
         <div>
           <div style="font-weight: 700; color: #f8fafc;">Analysis version</div>
-          <div><strong>v26</strong> &mdash; reconciliation-complete / final-lock-ready</div>
-          <div style="font-size: 0.72rem; color: var(--text-muted);">Locked 2026-09-06. Earlier exploratory analyses may differ because the eligible evidence architecture was subsequently refined.</div>
+          <div><strong>v34</strong> &mdash; modality/comparator-stratified, result-specific RoB 2 complete</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted);">529 result-specific RoB 2 judgements adopted 2026-09-08 (36 inside a fitted model, 493 not currently pooled; 7 flagged source-mapping-unresolved rather than assessed against a possibly-wrong article). GRADE certainty computed and adopted for the 5 new v34 models the same date.</div>
         </div>
       </div>
       <div style="margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle); font-size: 0.73rem; color: var(--text-muted);">
-        Pooled estimates, <em>k</em>, <em>N</em>, forest plots, GRADE certainty and result-specific RoB 2 on this dashboard derive from the v26 lock and the final Stata run above.
-        Analyses that the v26 pipeline does not reproduce are shown as withdrawn or not pooled rather than restated from earlier releases.
+        Pooled estimates, <em>k</em>, <em>N</em>, forest plots, GRADE certainty and result-specific RoB 2 on this dashboard derive from the v34 master and the Stata runs above.
+        Analyses that the current pipeline does not reproduce are shown as withdrawn or superseded rather than restated from earlier releases.
         Superseded pre-v26 artifacts are retained under <code>99_audit/superseded_dashboard_artifacts/</code>.
-        Two opioid-conversion factors (sufentanil; hydromorphone) remain unresolved pending independent pharmacological verification &mdash; see <code>06_FINAL_ANALYSIS_V26/06_AUDIT/opioid_conversion_audit.csv</code>.
+        Both opioid-conversion factors flagged in earlier releases (sufentanil 1000:1; hydromorphone 5:1) were <strong>resolved 2026-09-07</strong> against published equianalgesic tables &mdash; see <code>06_FINAL_ANALYSIS_V26/06_AUDIT/opioid_conversion_audit.csv</code> (status: RESOLVED / VERIFIED for both).
       </div>
     </footer>
 
