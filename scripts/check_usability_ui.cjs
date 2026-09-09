@@ -396,7 +396,7 @@ async function boot(browser, hash) {
         models: V.models.map(m => ({id: m.model_id, k: m.k, est: m.estimate,
                                     lo: m.ci_low, hi: m.ci_high, label: m.label})),
         withdrawn: V.withdrawn.map(w => w.analysis_id),
-        rendered: document.querySelectorAll('#v34-models tbody tr').length,
+        rendered: document.querySelectorAll('#v34-models tbody tr[data-analysis-id]').length,
       };
     });
 
@@ -451,7 +451,7 @@ async function boot(browser, hash) {
     // already-graded GRADE Summary-of-Findings analysis) or "rule-based, not
     // panel-reviewed" (one of the five new v34 models' computed GRADE rating).
     const certRows = await page.evaluate(() =>
-      [...document.querySelectorAll('#v34-models tbody tr')].map(tr => ({
+      [...document.querySelectorAll('#v34-models tbody tr[data-analysis-id]')].map(tr => ({
         id: tr.dataset.analysisId,
         text: tr.querySelector('td:last-child').innerText.trim(),
       })));

@@ -1,0 +1,213 @@
+{
+  "note": "Fingerprint of the evidence each interpretation was last reviewed against. Updated only by build_interpretation_layer.py --accept, which is a person confirming they have re-read the wording against the current numbers. Re-running the generator alone does not clear a stale flag.",
+  "bindings": {
+    "gi_first_flatus_TEAS_Sham": {
+      "fingerprint": "615e59cd685f8467",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 7,
+        "estimate": -6.2615,
+        "ci_low": -9.5055,
+        "ci_high": -3.0175,
+        "i2": 81.96,
+        "grade": "Moderate",
+        "rob_low": 1,
+        "rob_some": 6,
+        "rob_high": 0,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "gi_first_flatus_EA_Usual_care": {
+      "fingerprint": "07b0227755e73a96",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 2,
+        "estimate": -3.3633,
+        "ci_low": -7.426,
+        "ci_high": 0.6994,
+        "i2": 80.95,
+        "grade": "Very Low",
+        "rob_low": 0,
+        "rob_some": 0,
+        "rob_high": 2,
+        "estimator": "REML normal CI"
+      }
+    },
+    "gi_first_bowel_sounds_TEAS_Sham": {
+      "fingerprint": "376f873e055d2671",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 2,
+        "estimate": -6.0864,
+        "ci_low": -8.2825,
+        "ci_high": -3.8903,
+        "i2": 0.0,
+        "grade": "Moderate",
+        "rob_low": 0,
+        "rob_some": 2,
+        "rob_high": 0,
+        "estimator": "REML normal CI"
+      }
+    },
+    "pain_vas_24h_TEAS_Sham": {
+      "fingerprint": "d9c26b2d472911c9",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 3,
+        "estimate": -1.4488,
+        "ci_low": -3.477,
+        "ci_high": 0.5794,
+        "i2": 92.12,
+        "grade": "Very Low",
+        "rob_low": 0,
+        "rob_some": 1,
+        "rob_high": 2,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "ponv_24h_TEAS_Sham": {
+      "fingerprint": "0f06b1ffa3d78ecb",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 3,
+        "estimate": -0.6095,
+        "ci_low": -1.8189,
+        "ci_high": 0.5999,
+        "i2": 57.44,
+        "grade": "Low",
+        "rob_low": 2,
+        "rob_some": 1,
+        "rob_high": 0,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "v34_intraop_remifentanil_TEAS_Sham": {
+      "fingerprint": "520cad80b2232dd0",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 6,
+        "estimate": -117.7771,
+        "ci_low": -242.5056,
+        "ci_high": 6.9513,
+        "i2": 83.86,
+        "grade": "Very Low",
+        "rob_low": 1,
+        "rob_some": 4,
+        "rob_high": 1,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "v34_intraop_sufentanil_TEAS_Sham": {
+      "fingerprint": "bd1e9620f7f1cc35",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 2,
+        "estimate": -9.4356,
+        "ci_low": -32.3953,
+        "ci_high": 13.5242,
+        "i2": 92.03,
+        "grade": "Very Low",
+        "rob_low": 0,
+        "rob_some": 2,
+        "rob_high": 0,
+        "estimator": "REML normal CI"
+      }
+    },
+    "v34_qor40_24h_TEAS_Sham": {
+      "fingerprint": "f9a98220431ef97b",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 2,
+        "estimate": 6.7163,
+        "ci_low": -2.1609,
+        "ci_high": 15.5935,
+        "i2": 87.86,
+        "grade": "Very Low",
+        "rob_low": 1,
+        "rob_some": 0,
+        "rob_high": 1,
+        "estimator": "REML normal CI"
+      }
+    },
+    "v34_gi_first_defecation_TEAS_Sham": {
+      "fingerprint": "be29495400127504",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 3,
+        "estimate": -10.3982,
+        "ci_low": -23.1249,
+        "ci_high": 2.3285,
+        "i2": 20.81,
+        "grade": "Moderate",
+        "rob_low": 0,
+        "rob_some": 3,
+        "rob_high": 0,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "v34_gi_first_defecation_EA_Usual_care": {
+      "fingerprint": "d5048b485049184c",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 3,
+        "estimate": -4.0811,
+        "ci_low": -6.0671,
+        "ci_high": -2.095,
+        "i2": 0.0,
+        "grade": "Low",
+        "rob_low": 0,
+        "rob_some": 1,
+        "rob_high": 2,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "v34_primary_24h_mme_TEAS_Sham": {
+      "fingerprint": "5da10996b0c2dada",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 4,
+        "estimate": -13.9953,
+        "ci_low": -34.1808,
+        "ci_high": 6.1903,
+        "i2": 98.59,
+        "grade": "Low",
+        "rob_low": 0,
+        "rob_some": 4,
+        "rob_high": 0,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "v34_primary_24h_mme_EA_Usual_care": {
+      "fingerprint": "1b0e01c9951a1ca7",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 3,
+        "estimate": -3.9358,
+        "ci_low": -19.7732,
+        "ci_high": 11.9016,
+        "i2": 77.15,
+        "grade": "Very Low",
+        "rob_low": 0,
+        "rob_some": 2,
+        "rob_high": 1,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    },
+    "v34_primary_24h_mme_ALL_AUDIT": {
+      "fingerprint": "e29adcca0c1431f7",
+      "reviewed_on": "2026-09-09",
+      "bound_evidence": {
+        "k": 7,
+        "estimate": -9.907,
+        "ci_low": -20.0794,
+        "ci_high": 0.2654,
+        "i2": 98.57,
+        "grade": "Low",
+        "rob_low": 0,
+        "rob_some": 6,
+        "rob_high": 1,
+        "estimator": "REML + Hartung-Knapp"
+      }
+    }
+  }
+}

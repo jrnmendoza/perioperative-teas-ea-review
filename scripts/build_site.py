@@ -50,7 +50,8 @@ MASTER_XLSX = (
 )
 
 CACHE_BUSTED_ASSETS = (
-    "styles.css", "primary_pathway.js", "tiered_v33.js", "v33_data.js", "v34_data.js", "data.js",
+    "styles.css", "primary_pathway.js", "tiered_v33.js", "v33_data.js", "v34_data.js",
+    "interpretation_layer.js", "data.js",
     "translations.js", "ui_translations.js", "reader_assist.js", "meta_engine.js", "app.js", "findings.js",
     "author_inquiries.js", "search_strategies.js", "meta_outcomes.js",
     "primary_browser.js",

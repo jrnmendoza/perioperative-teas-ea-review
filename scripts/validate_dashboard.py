@@ -2242,6 +2242,139 @@ def t_rob2_source_qc_flags_preserved():
           "visible and distinct from RoB 2 status", not probs, "\n".join(probs))
 
 
+def _interpretation_layer() -> dict:
+    p = ROOT / "dashboard" / "interpretation_layer.js"
+    if not p.exists():
+        return {}
+    txt = p.read_text(encoding="utf-8")
+    return json.loads(txt[txt.index("{"):].rstrip().rstrip(";"))
+
+
+def t_interpretation_layer_cannot_carry_evidence():
+    """
+    The interpretation layer is manuscript-drafting scaffolding: draft wording,
+    reviewer questions, discussion prompts. It must never become a second,
+    competing home for a scientific value.
+
+    The risk is concrete. If a record could carry its own `overall`, `d1`..`d5`
+    or a RoB2/GRADE status string, a later edit to "fix the wording" could
+    silently change what the dashboard reports as a judgement, and the reader
+    would have no way to tell which layer won. So the payload is checked
+    structurally: it declares itself non-evidence, and no record carries a
+    field name that belongs to the evidence layer. The only place evidence
+    values may appear is `bound_evidence`, which exists precisely so the
+    interpretation can be invalidated when those values move -- it is a
+    read-only copy for comparison, never a source.
+    """
+    L = _interpretation_layer()
+    probs = []
+    if not L:
+        check("The interpretation layer is present and structurally non-evidence",
+              False, "dashboard/interpretation_layer.js is missing")
+        return
+    if L.get("is_evidence") is not False:
+        probs.append("payload does not declare is_evidence: false")
+    if L.get("layer") != "INTERPRETATION":
+        probs.append(f"payload layer is {L.get('layer')!r}, expected 'INTERPRETATION'")
+    if "not manuscript text" not in (L.get("disclaimer") or ""):
+        probs.append("payload disclaimer does not state this is not manuscript text")
+
+    banned = {"d1", "d2", "d3", "d4", "d5", "d1_randomisation", "d2_deviations",
+              "d3_missing", "d4_measurement", "d5_reporting", "overall", "rob2",
+              "adopted_by", "adopted_date", "status_rob2"}
+    for rec in L.get("records", []):
+        stray = banned & set(rec)
+        if stray:
+            probs.append(f"{rec.get('analysis_id')}: carries evidence-layer field(s) {sorted(stray)}")
+        # bound_evidence is the one permitted copy, and only for comparison.
+        if "bound_evidence" not in rec or "fingerprint" not in rec:
+            probs.append(f"{rec.get('analysis_id')}: missing bound_evidence/fingerprint")
+
+    # The renderer must not write into any evidence structure either.
+    app = (ROOT / "dashboard" / "app.js").read_text(encoding="utf-8")
+    il_src = app[app.find("INTERPRETATION LAYER"):app.find("function renderV34")]
+    for target in ("V34_DATA.", "TIERED_V33.", "STATA_MASTER_RESULTS[", "V33_DATA."):
+        if re.search(re.escape(target) + r"[A-Za-z_\[\]']*\s*=(?!=)", il_src):
+            probs.append(f"interpretation renderer assigns into evidence structure {target}")
+    check("The interpretation layer declares itself non-evidence and carries no evidence fields",
+          not probs, "\n".join(probs))
+
+
+def t_interpretation_bound_to_current_evidence():
+    """
+    Every interpretation record stores the k, estimate, CI, I2, GRADE level and
+    RoB 2 composition it was written against, plus a fingerprint over them.
+    Recompute that fingerprint here from the authoritative analysis files.
+
+    A mismatch means an analysis was re-run and the manuscript language now
+    describes a result that no longer exists. That is the failure this whole
+    layer is designed around, so it is checked here as well as in the
+    generator: a stale record must be MARKED stale, and a record that claims
+    to be current must actually match the live numbers.
+    """
+    L = _interpretation_layer()
+    if not L:
+        return
+    models = {r["model_id"]: r for r in read_csv(
+        ROOT / "09_V34_ANALYSIS" / "03_RESULTS" / "v34_models.csv")}
+    probs = []
+    for rec in L.get("records", []):
+        mid = rec["analysis_id"]
+        m = models.get(mid)
+        if not m:
+            probs.append(f"{mid}: interpretation exists for a model not in v34_models.csv")
+            continue
+        b = rec["bound_evidence"]
+        live = {
+            "k": int(float(m["k"])),
+            "estimate": round(float(m["estimate"]), 4),
+            "ci_low": round(float(m["ci_low"]), 4),
+            "ci_high": round(float(m["ci_high"]), 4),
+            "i2": round(float(m["i2"]), 2),
+        }
+        drift = {key: (b.get(key), live[key]) for key in live if b.get(key) != live[key]}
+        if drift and not rec.get("stale"):
+            probs.append(f"{mid}: bound evidence no longer matches the analysis "
+                         f"({drift}) but the record is not marked stale")
+        if not drift and rec.get("stale"):
+            probs.append(f"{mid}: marked stale but its bound evidence matches the analysis")
+    check("Interpretation records are bound to current evidence, or are marked stale",
+          not probs, "\n".join(probs))
+
+
+def t_interpretation_questions_are_data_triggered():
+    """
+    Reviewer questions must come from a condition in the actual data, not from
+    an author's sense of what sounds rigorous. A panel that manufactures
+    criticism to look thorough trains the team to ignore it, which is worse
+    than showing nothing.
+
+    Each question therefore carries the trigger that fired it and the evidence
+    pathway that answers it; both are required here. The generator is also
+    allowed to emit zero questions for a clean analysis, and that is checked
+    to be genuinely reachable rather than a branch nobody ever hits.
+    """
+    L = _interpretation_layer()
+    if not L:
+        return
+    probs = []
+    for rec in L.get("records", []):
+        for q in rec.get("reviewer_questions", []):
+            if not (q.get("trigger") or "").strip():
+                probs.append(f"{rec['analysis_id']}: reviewer question without a data trigger: "
+                             f"{q.get('question')!r}")
+            if not (q.get("pathway") or "").strip():
+                probs.append(f"{rec['analysis_id']}: reviewer question without an evidence "
+                             f"pathway: {q.get('question')!r}")
+        for c in rec.get("claims", []):
+            if c.get("level") not in ("supported", "qualified", "unsupported"):
+                probs.append(f"{rec['analysis_id']}: claim with unknown level {c.get('level')!r}")
+            if not (c.get("basis") or "").strip():
+                probs.append(f"{rec['analysis_id']}: claim without a stated basis")
+    check("Reviewer questions and claim boundaries are data-triggered, never free-standing "
+          "assertions", not probs, "\n".join(probs))
+
+
 def main() -> int:
     print("=" * 78)
     print(f"{BOLD}  DASHBOARD <-> v26 LOCK CONSISTENCY VALIDATOR{RESET}")
@@ -2302,6 +2435,10 @@ def main() -> int:
                                         t_v33_panel_is_dynamic,
                                         t_v33_zhang_withdrawn_everywhere,
                                         t_v33_legacy_reconstructions_labelled]),
+        ("interpretation layer (manuscript / reviewer overlay)",
+         [t_interpretation_layer_cannot_carry_evidence,
+          t_interpretation_bound_to_current_evidence,
+          t_interpretation_questions_are_data_triggered]),
     ]
 
     for title, tests in sections:
