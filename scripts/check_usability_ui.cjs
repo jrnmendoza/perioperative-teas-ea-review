@@ -443,12 +443,58 @@ async function boot(browser, hash) {
     assert.ok(retired.allStruck, 'retired rows must be struck through, not shown as current');
     assert.ok(!retired.anyUnlabelled, 'every retired row needs a withdrawn/superseded badge');
 
-    // No GRADE certainty may be attached to a v34 model.
-    const certainty = await page.evaluate(() =>
-      [...document.querySelectorAll('#v34-models tbody tr td:last-child')]
-        .map(td => td.innerText.trim().toLowerCase()));
-    assert.ok(certainty.length && certainty.every(c => /pending|pågår/.test(c)),
-      `v34 models must show certainty as pending, saw ${JSON.stringify(certainty.slice(0, 3))}`);
+    // A v34 model's certainty cell must be EITHER "reassessment pending", OR a
+    // real GRADE level shown with an explicit provenance disclosure -- never a
+    // bare, unqualified rating a reader could mistake for an independent panel
+    // judgement. Two provenance stories are allowed: "verified reproduction of
+    // <id>" (the model's estimate/CI/k is a byte-for-byte match to an
+    // already-graded GRADE Summary-of-Findings analysis) or "rule-based, not
+    // panel-reviewed" (one of the five new v34 models' computed GRADE rating).
+    const certRows = await page.evaluate(() =>
+      [...document.querySelectorAll('#v34-models tbody tr')].map(tr => ({
+        id: tr.dataset.analysisId,
+        text: tr.querySelector('td:last-child').innerText.trim(),
+      })));
+    const GRADE_LEVELS = /^(high|moderate|low|very low)$/i;
+    for (const {id, text} of certRows) {
+      const lines = text.split('\n').map(s => s.trim());
+      const isPending = /pending|pågår/i.test(lines[0]);
+      const isProvenanced = GRADE_LEVELS.test(lines[0]) && lines[1] &&
+        (/^verified reproduction of /i.test(lines[1]) || /^rule-based, not panel-reviewed$/i.test(lines[1]));
+      assert.ok(isPending || isProvenanced,
+        `${id}: certainty cell is neither "pending" nor a provenanced GRADE rating: ${JSON.stringify(text)}`);
+    }
+
+    // Regression check: the three model_ids this pipeline has verified as
+    // exact numeric reproductions of an already-graded primary analysis must
+    // keep showing THAT analysis's current grade, not a stale hardcoded one --
+    // so a future correction to the source grade (e.g. a RoB 2 re-adjudication)
+    // is automatically reflected here, and this test catches it if it isn't.
+    const reproMap = {
+      v34_primary_24h_mme_TEAS_Sham: 'AN-01-TEAS',
+      v34_primary_24h_mme_EA_Usual_care: 'AN-01-EA',
+      v34_primary_24h_mme_ALL_AUDIT: 'AN-01-COMB',
+    };
+    const reproCheck = await page.evaluate((reproMap) => {
+      const out = {};
+      for (const [modelId, srcId] of Object.entries(reproMap)) {
+        const tr = document.querySelector(`#v34-models tr[data-analysis-id="${modelId}"]`);
+        const cell = tr ? tr.querySelector('td:last-child').innerText.trim() : null;
+        const src = window.STATA_MASTER_RESULTS[srcId];
+        out[modelId] = {shown: cell ? cell.split('\n')[0].trim() : null, expected: src ? src.grade : null};
+      }
+      return out;
+    }, reproMap);
+    for (const [modelId, {shown: shownGrade, expected}] of Object.entries(reproCheck)) {
+      assert.ok(expected, `${modelId}: reproduction source grade missing from STATA_MASTER_RESULTS`);
+      assert.equal(shownGrade, expected,
+        `${modelId}: shows "${shownGrade}" but its verified source now grades "${expected}"`);
+    }
+
+    // At least one model must still show "pending": a table where nothing was
+    // ever unrated would mean this check no longer exercises the fallback path.
+    const anyPending = certRows.some(({text}) => /pending|pågår/i.test(text));
+    assert.ok(anyPending, 'expected at least one v34 model to still show "reassessment pending"');
 
     // Adjudication state must be shown, and must be consistent with the files.
     const adj = await page.evaluate(() => {

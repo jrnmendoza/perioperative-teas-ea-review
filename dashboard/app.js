@@ -3330,6 +3330,45 @@ function v34Effect(m) {
   return `<strong>${v34Fmt(m.estimate)}</strong> [${v34Fmt(m.ci_low)}, ${v34Fmt(m.ci_high)}] ${pwEsc(m.unit || '')}`;
 }
 
+// Model IDs in V34_DATA.models whose estimate/CI/k are a byte-for-byte
+// reproduction of an existing, already-graded GRADE Summary-of-Findings
+// analysis (verified by exact numeric match, not by rob_key/label
+// similarity alone -- most REPRODUCED models do NOT have such a match and
+// correctly still show "reassessment pending"). Reusing that rating here
+// is safe ONLY because the numbers confirm it is the same fitted model,
+// re-derived from the v34 reconciled dataset as a consistency check.
+const V34_VERIFIED_REPRODUCTION_OF = {
+  "v34_primary_24h_mme_TEAS_Sham": "AN-01-TEAS",
+  "v34_primary_24h_mme_EA_Usual_care": "AN-01-EA",
+  "v34_primary_24h_mme_ALL_AUDIT": "AN-01-COMB",
+};
+
+function v34GradeBadgeClass(grade) {
+  const g = (grade || '').toLowerCase();
+  if (g === 'high') return 'grade-badge-high';
+  if (g === 'moderate') return 'grade-badge-mod';
+  if (g === 'low') return 'grade-badge-low';
+  if (g === 'very low') return 'grade-badge-verylow';
+  return 'v34-badge v34-pending';
+}
+
+function v34CertaintyCell(m, V) {
+  const reproOf = V34_VERIFIED_REPRODUCTION_OF[m.model_id];
+  if (reproOf && window.STATA_MASTER_RESULTS && window.STATA_MASTER_RESULTS[reproOf]) {
+    const src = window.STATA_MASTER_RESULTS[reproOf];
+    return `<span class="${v34GradeBadgeClass(src.grade)}">${pwEsc(src.grade)}</span>
+            <div style="font-size:0.68rem;color:var(--text-muted);margin-top:0.2rem;">
+              verified reproduction of ${pwEsc(reproOf)}</div>`;
+  }
+  const g = V.grade_new_models && V.grade_new_models.ratings.find(r => r.model_id === m.model_id);
+  if (g) {
+    return `<span class="${v34GradeBadgeClass(g.grade)}">${pwEsc(g.grade)}</span>
+            <div style="font-size:0.68rem;color:var(--text-muted);margin-top:0.2rem;">
+              rule-based, not panel-reviewed</div>`;
+  }
+  return '<span class="v34-badge v34-pending">reassessment pending</span>';
+}
+
 function renderV34() {
   const V = window.V34_DATA;
   if (!V || !document.getElementById('v34-models')) return;
@@ -3367,7 +3406,7 @@ function renderV34() {
               <td>${m.p_value == null ? '—' : (m.p_value < 0.001 ? '&lt;0.001' : m.p_value.toFixed(3))}</td>
               <td>${m.i2 == null ? '—' : m.i2.toFixed(1) + '%'}</td>
               <td style="font-size:0.72rem;color:var(--text-muted);">${pwEsc(m.estimator)}</td>
-              <td><span class="v34-badge v34-pending">reassessment pending</span></td>
+              <td>${v34CertaintyCell(m, V)}</td>
             </tr>`).join('')}
           </tbody>
         </table>
