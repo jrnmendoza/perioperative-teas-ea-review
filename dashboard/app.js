@@ -1074,15 +1074,74 @@ function renderRoB2Matrix() {
   let assessedCount = 0;
   let unmeasuredCount = 0;
 
-  // Five distinct states. robState() never maps an unknown/absent value to High.
-  const dot = (val) => {
-    switch (robState(val)) {
-      case 'low':     return `<span class="rob-dot rob-low" title="Low risk of bias">+</span>`;
-      case 'some':    return `<span class="rob-dot rob-some" title="Some concerns">?</span>`;
-      case 'high':    return `<span class="rob-dot rob-high" title="High risk of bias">−</span>`;
-      case 'pending': return `<span class="rob-dot" style="background: rgba(129,140,248,0.2); color: #c7d2fe; border: 1px solid rgba(129,140,248,0.5);" title="RoB 2 assessment pending for this result">⏳</span>`;
-      default:        return `<span class="rob-dot" style="background: rgba(255,255,255,0.08); color: var(--text-muted); border: 1px dashed rgba(255,255,255,0.2);" title="No result-specific assessment available; outcome absence is not established">⋯</span>`;
+  // Standard Cochrane RoB 2 domain names, for the interactive popover content
+  // only -- the table header keeps its existing short "D1: Randomization" style.
+  const ROB_DOMAIN_FULL = [
+    'Bias arising from the randomization process',
+    'Bias due to deviations from intended interventions',
+    'Bias due to missing outcome data',
+    'Bias in measurement of the outcome',
+    'Bias in selection of the reported result',
+  ];
+
+  // Every domain cell becomes interactive (hover/click/keyboard/tap) by
+  // registering a one-off entry into the SAME glossary popover system every
+  // other ⓘ icon on this dashboard already uses (window.STAT_GLOSSARY +
+  // initStatIcons()), rather than building a second tooltip mechanism. The
+  // content shown is the actual result-specific judgement and rationale this
+  // review recorded -- there is no per-domain free-text rationale in the
+  // source register (only a single rationale per result, plus five domain
+  // judgements), so every domain cell for one result correctly shows the SAME
+  // real rationale rather than five invented domain-specific explanations.
+  // Clear this renderer's own synthetic glossary entries before rebuilding --
+  // renderRoB2Matrix() re-runs on every filter change in a long-lived page, and
+  // without this the "rob-*" keys would accumulate forever across a session.
+  for (const lang of ['en', 'sv']) {
+    const dict = window.STAT_GLOSSARY[lang];
+    if (!dict) continue;
+    for (const key of Object.keys(dict)) if (key.startsWith('rob-')) delete dict[key];
+  }
+  let robPopoverSeq = 0;
+  const dot = (val, domainIdx, s, rr) => {
+    const state = robState(val);
+    const glyph = { low: '+', some: '?', high: '−', pending: '⏳' }[state] || '⋯';
+    const cls = { low: 'rob-dot rob-low', some: 'rob-dot rob-some', high: 'rob-dot rob-high' }[state] || 'rob-dot';
+    const style = state === 'pending'
+      ? 'background: rgba(129,140,248,0.2); color: #c7d2fe; border: 1px solid rgba(129,140,248,0.5);'
+      : (state === 'low' || state === 'some' || state === 'high') ? ''
+      : 'background: rgba(255,255,255,0.08); color: var(--text-muted); border: 1px dashed rgba(255,255,255,0.2);';
+    const fallbackTitle = {
+      low: 'Low risk of bias', some: 'Some concerns', high: 'High risk of bias',
+      pending: 'RoB 2 assessment pending for this result',
+    }[state] || 'No result-specific assessment available; outcome absence is not established';
+
+    // A domain judgement with no result-specific rationale to show (pending /
+    // not-assessed / study-level-only rows) stays a plain hover-title dot --
+    // an interactive popover promising detail it cannot deliver would be
+    // worse than the plain title it replaces.
+    if (!rr.isStudyLevel && (rr.state === 'not-assessed' || rr.state === 'pending')) {
+      return `<span class="${cls}" style="${style}" title="${pwEsc(fallbackTitle)}">${glyph}</span>`;
     }
+
+    const domainLabel = domainIdx === 'overall' ? 'Overall judgement' : `D${domainIdx + 1}: ${ROB_DOMAIN_FULL[domainIdx]}`;
+    const termKey = `rob-${s.id}-${activeOutcome}-${domainIdx}-${robPopoverSeq++}`;
+    const judgementText = { low: 'Low risk of bias', some: 'Some concerns', high: 'High risk of bias' }[state] || String(val || 'Not reported');
+    const resultLabel = rr.isStudyLevel ? 'Study-level overview' : `${rr.outcome_name}${rr.timepoint ? ` (${rr.timepoint})` : ''}`;
+
+    // STAT_GLOSSARY entries are rendered via .textContent in showStatPopover
+    // (reader_assist.js), not innerHTML -- these fields must stay UNescaped.
+    // pwEsc() here would double-escape and show literal "&amp;" etc. on screen.
+    for (const lang of ['en', 'sv']) {
+      if (!window.STAT_GLOSSARY[lang]) window.STAT_GLOSSARY[lang] = {};
+      window.STAT_GLOSSARY[lang][termKey] = {
+        term: `${domainLabel} — ${s.key}`,
+        category: 'Risk of Bias 2.0 (result-specific)',
+        shortDef: `${resultLabel}: judged ${judgementText}.`,
+        context: `${rr.rationale || 'No rationale recorded.'} Overall RoB 2 for this result: ${rr.overall || 'Not reported'}.`,
+        jumpTab: 'rob2', studyId: s.id,
+      };
+    }
+    return `<span class="${cls}" style="${style}cursor:pointer;" data-stat-term="${termKey}" title="${pwEsc(domainLabel)}: ${pwEsc(judgementText)} (tap for detail)">${glyph}</span>`;
   };
 
   tbody.innerHTML = filtered.map((s, idx) => {
@@ -1105,16 +1164,18 @@ function renderRoB2Matrix() {
     return `
       <tr>
         <td style="font-weight: 600;"><a href="javascript:void(0)" onclick="openStudyDrawer('${s.id}')" style="color: var(--text-primary); text-decoration: none;">${idx + 1}. ${s.key}</a></td>
-        <td>${dot(d1)}</td>
-        <td>${dot(d2)}</td>
-        <td>${dot(d3)}</td>
-        <td>${dot(d4)}</td>
-        <td>${dot(d5)}</td>
-        <td>${dot(overall)}</td>
+        <td>${dot(d1, 0, s, rr)}</td>
+        <td>${dot(d2, 1, s, rr)}</td>
+        <td>${dot(d3, 2, s, rr)}</td>
+        <td>${dot(d4, 3, s, rr)}</td>
+        <td>${dot(d5, 4, s, rr)}</td>
+        <td>${dot(overall, 'overall', s, rr)}</td>
         <td style="font-size: 0.75rem; color: var(--text-secondary); max-width: 380px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${rationale}</td>
       </tr>
     `;
   }).join('') || '<tr><td colspan="8">No studies match the current filters.</td></tr>';
+
+  if (typeof window.initStatIcons === 'function') window.initStatIcons();
 
   if (statusBadge) {
     if (activeOutcome === 'summary') {
@@ -2285,11 +2346,48 @@ function renderComputedNotReported() {
 }
 window.renderComputedNotReported = renderComputedNotReported;
 
+// Row-specific "Why was this downgraded?" popover for a GRADE Summary of
+// Findings row. Reuses the same synthetic-glossary-entry technique as the
+// RoB 2 matrix (window.STAT_GLOSSARY + the existing ⓘ popover system) rather
+// than a new tooltip mechanism. The always-visible downgrade text in the row
+// itself is UNCHANGED -- this adds a structured, focused, keyboard/mobile
+// accessible second way to reach the same real content, it does not replace
+// or hide it.
+function gradeDowngradeButton(item) {
+  const termKey = `grade-${item.id}`;
+  const levels = { High: 4, Moderate: 3, Low: 2, 'Very Low': 1 }[item.grade];
+  const startLevel = 4; // Randomized evidence starts at High per GRADE.
+  const downgradedBy = levels != null ? startLevel - levels : null;
+  for (const lang of ['en', 'sv']) {
+    if (!window.STAT_GLOSSARY[lang]) window.STAT_GLOSSARY[lang] = {};
+    window.STAT_GLOSSARY[lang][termKey] = {
+      term: `GRADE Certainty — ${item.name}`,
+      category: 'GRADE Summary of Findings',
+      // Not .innerHTML -- see the identical note in renderRoB2Matrix(); these
+      // fields must stay unescaped.
+      shortDef: `${item.grade} certainty` +
+        (downgradedBy != null ? ` (started at High; downgraded ${downgradedBy} level${downgradedBy === 1 ? '' : 's'}).` : '.'),
+      context: `${item.downgrade} Result-specific risk of bias across contributing trials: ${item.robStatus}.`,
+      jumpTab: 'evidence', studyId: null,
+    };
+  }
+  return `<button class="stat-info-btn" data-stat-term="${termKey}" aria-label="Why was ${item.name} rated ${item.grade}?">ⓘ</button>`;
+}
+
 function renderDirectionOfEvidence() {
   const tbody = document.getElementById('grade-sof-table-body');
   if (!tbody) return;
 
   const resultsList = Object.values(STATA_MASTER_RESULTS);
+
+  // Clear this renderer's own synthetic glossary entries before rebuilding,
+  // same reasoning as renderRoB2Matrix(): this function re-runs on filter
+  // changes, and without this "grade-*" keys would accumulate all session.
+  for (const lang of ['en', 'sv']) {
+    const dict = window.STAT_GLOSSARY[lang];
+    if (!dict) continue;
+    for (const key of Object.keys(dict)) if (key.startsWith('grade-')) delete dict[key];
+  }
 
   tbody.innerHTML = resultsList.map(item => {
     // The interpretation overlay is keyed by analysis id. The three primary
@@ -2316,7 +2414,7 @@ function renderDirectionOfEvidence() {
         <td><strong>${item.n.toLocaleString()}</strong> (${item.k} RCTs)</td>
         <td>
           <span class="${item.badgeClass}">${item.grade}</span>
-          <button class="stat-info-btn" data-stat-term="gradeCertainty" aria-label="GRADE ${item.grade} Certainty Explanation">ⓘ</button>
+          ${gradeDowngradeButton(item)}
         </td>
         <td style="font-size: 0.72rem; color: var(--text-muted); line-height: 1.4;">
           ${item.downgrade}

@@ -288,23 +288,42 @@
     defEl.textContent = entry.shortDef;
     ctxEl.textContent = entry.context;
 
-    learnBtn.textContent = currentLang === 'sv' ? '📖 Öppna ordlista' : '📖 Explore in Glossary';
-    container.querySelector('.stat-popover-context-title').textContent = currentLang === 'sv' ? '🔬 I denna översikt:' : '🔬 In this Review:';
-
-    learnBtn.onclick = () => {
-      hideStatPopover();
-      if (typeof window.switchTab === 'function') {
-        window.switchTab('glossary');
-        setTimeout(() => {
-          const targetCard = document.getElementById(`glossary-card-${termKey}`);
-          if (targetCard) {
-            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            targetCard.classList.add('glossary-highlight');
-            setTimeout(() => targetCard.classList.remove('glossary-highlight'), 2000);
-          }
-        }, 150);
-      }
-    };
+    // Synthetic "rob-*" / "grade-*" popover-only keys (RoB 2 matrix, GRADE
+    // table) never appear as glossary cards -- renderGlossaryTab() filters
+    // them out deliberately (see that function). "Explore in Glossary" would
+    // switch tabs and find nothing, which is worse than not offering it.
+    const isEphemeralKey = /^(rob|grade)-/.test(termKey);
+    if (entry.studyId) {
+      // Registered for a specific study result: link to that study's
+      // evidence, not to a glossary term.
+      learnBtn.textContent = currentLang === 'sv' ? '📖 Visa studiens underlag →' : '📖 View study evidence →';
+      learnBtn.onclick = () => {
+        hideStatPopover();
+        if (typeof window.openStudyDrawer === 'function') window.openStudyDrawer(entry.studyId);
+      };
+    } else if (isEphemeralKey) {
+      // No study to link to and no glossary card exists (e.g. a GRADE row's
+      // downgrade breakdown, which names several trials, not one). The
+      // popover's own content is the full answer here; just close it.
+      learnBtn.textContent = currentLang === 'sv' ? 'Stäng' : 'Close';
+      learnBtn.onclick = () => hideStatPopover();
+    } else {
+      learnBtn.textContent = currentLang === 'sv' ? '📖 Öppna ordlista' : '📖 Explore in Glossary';
+      learnBtn.onclick = () => {
+        hideStatPopover();
+        if (typeof window.switchTab === 'function') {
+          window.switchTab('glossary');
+          setTimeout(() => {
+            const targetCard = document.getElementById(`glossary-card-${termKey}`);
+            if (targetCard) {
+              targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              targetCard.classList.add('glossary-highlight');
+              setTimeout(() => targetCard.classList.remove('glossary-highlight'), 2000);
+            }
+          }, 150);
+        }
+      };
+    }
 
     container.className = 'stat-popover-visible';
     activePopover = { termKey, triggerEl };
@@ -421,8 +440,18 @@
     const container = document.getElementById('tab-glossary');
     if (!container) return;
 
-    const glossary = window.STAT_GLOSSARY && (window.STAT_GLOSSARY[currentLang] || window.STAT_GLOSSARY['en']);
-    if (!glossary) return;
+    const fullGlossary = window.STAT_GLOSSARY && (window.STAT_GLOSSARY[currentLang] || window.STAT_GLOSSARY['en']);
+    if (!fullGlossary) return;
+    // "rob-*" and "grade-*" keys are synthetic, popover-only entries the RoB 2
+    // matrix and GRADE table register one per cell/row so their ⓘ icons can
+    // reuse this same popover system (see renderRoB2Matrix() and
+    // gradeDowngradeButton() in app.js). They are looked up directly by
+    // termKey and must NOT appear as browsable cards here -- up to hundreds of
+    // them can exist at once, one per visible result, and the Glossary tab is
+    // for genuine reusable concepts (MD, CI, I², REML...), not a duplicate of
+    // every individual result's own row.
+    const glossary = Object.fromEntries(
+      Object.entries(fullGlossary).filter(([key]) => !/^(rob|grade)-/.test(key)));
 
     const isSv = currentLang === 'sv';
     const titleText = isSv ? 'Metodologisk och statistisk ordlista' : 'Methodological & Statistical Concept Glossary';

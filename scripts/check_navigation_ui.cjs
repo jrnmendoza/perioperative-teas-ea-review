@@ -41,7 +41,11 @@ const fs=require('node:fs');
  await page.selectOption('#rob2-outcome-filter','opioid_24h');
  const szmit=page.locator('#rob2-table-body tr').filter({hasText:'Szmit 2021'});
  assert.match(await szmit.innerText(),/Assessed:/);
- assert.equal(await szmit.locator('td').nth(6).locator('span').getAttribute('title'),'Some concerns');
+ // Title text was enriched from a bare judgement ("Some concerns") to
+ // "Overall judgement: Some concerns (tap for detail)" so RoB 2 cells with a
+ // real result-specific rationale become interactive (click/hover/keyboard) --
+ // this now checks the judgement is present, not the exact legacy string.
+ assert.match(await szmit.locator('td').nth(6).locator('span').getAttribute('title'),/Some concerns/);
  const primary=await page.evaluate(()=>STUDIES_DATA.filter(s=>s.outcomes.opioid_24h).map(s=>({name:s.key,state:resultRob(s,'opioid_24h').state})));
  assert.equal(primary.length,7);assert.ok(primary.every(s=>!['pending','not-assessed'].includes(s.state)));
  assert.doesNotMatch(await page.locator('#rob2-table-body').innerText(),/Outcome not measured/);
