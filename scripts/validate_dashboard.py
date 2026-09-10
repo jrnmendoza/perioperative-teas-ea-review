@@ -2890,6 +2890,54 @@ def t_post_lock_errata_still_applied():
           not probs, "\n".join(probs))
 
 
+def t_forest_context_matches_stata_log():
+    """
+    The per-study forest-plot context table must still match the Stata log it
+    claims to be derived from.
+
+    build_forest_context.py already refuses to WRITE a mismatched file (wrong
+    study set, weights not summing to ~100%); this independently re-derives
+    the same numbers from the log at validation time and compares them to
+    what shipped, so a hand-edit of the generated file -- or a stale file left
+    behind after the log changed -- is caught here too, not only at generation
+    time.
+    """
+    path = DASH / "forest_context.js"
+    if not path.exists():
+        check("Forest-plot context matches the Stata log", False,
+              "dashboard/forest_context.js missing -- run build_forest_context.py")
+        return
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import build_forest_context as bfc
+
+    src = path.read_text(encoding="utf-8")
+    shipped = json.loads(src[src.index("window.FOREST_CONTEXT = ") +
+                            len("window.FOREST_CONTEXT = "):src.rindex(";")])
+    probs = []
+    live = bfc.build()
+    if len(shipped.get("figures", [])) != len(live["figures"]):
+        probs.append(f"{len(shipped.get('figures', []))} figures shipped, "
+                     f"{len(live['figures'])} re-derived")
+    for s_fig, l_fig in zip(shipped.get("figures", []), live["figures"]):
+        if s_fig.get("figure") != l_fig["figure"]:
+            probs.append(f"figure mismatch: {s_fig.get('figure')!r} vs {l_fig['figure']!r}")
+            continue
+        s_rows = {r["study"]: r for r in s_fig.get("rows", [])}
+        l_rows = {r["study"]: r for r in l_fig["rows"]}
+        if set(s_rows) != set(l_rows):
+            probs.append(f"{l_fig['figure']}: study set differs from the log")
+        for study, l_row in l_rows.items():
+            s_row = s_rows.get(study)
+            if not s_row:
+                continue
+            for field in ("estimate", "ci_low", "ci_high", "weight_pct"):
+                if abs(float(s_row.get(field, 0)) - float(l_row[field])) > 1e-6:
+                    probs.append(f"{l_fig['figure']} {study}.{field}: shipped "
+                                 f"{s_row.get(field)}, log says {l_row[field]}")
+    check("Forest-plot context matches the Stata log it is derived from",
+          not probs, "\n".join(probs))
+
+
 def t_static_kpi_fallback_matches_rendered_content():
     """
     The headline KPI card's static HTML must say the same thing as the JS that
@@ -3044,7 +3092,8 @@ def main() -> int:
                                 t_prisma_screening_arithmetic_reconciles,
                                 t_prior_evidence_dispositions_match_the_analysis]),
         ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
-        ("static/dynamic content sync", [t_static_kpi_fallback_matches_rendered_content]),
+        ("static/dynamic content sync", [t_static_kpi_fallback_matches_rendered_content,
+                                        t_forest_context_matches_stata_log]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,

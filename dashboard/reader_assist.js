@@ -442,16 +442,17 @@
 
     const fullGlossary = window.STAT_GLOSSARY && (window.STAT_GLOSSARY[currentLang] || window.STAT_GLOSSARY['en']);
     if (!fullGlossary) return;
-    // "rob-*" and "grade-*" keys are synthetic, popover-only entries the RoB 2
-    // matrix and GRADE table register one per cell/row so their ⓘ icons can
-    // reuse this same popover system (see renderRoB2Matrix() and
-    // gradeDowngradeButton() in app.js). They are looked up directly by
+    // "rob-*", "grade-*" and "forest-*" keys are synthetic, popover-only
+    // entries the RoB 2 matrix, GRADE table and forest-plot context table
+    // register one per cell/row so their ⓘ icons can reuse this same popover
+    // system (see renderRoB2Matrix(), gradeDowngradeButton() and
+    // renderForestContext() in app.js). They are looked up directly by
     // termKey and must NOT appear as browsable cards here -- up to hundreds of
     // them can exist at once, one per visible result, and the Glossary tab is
     // for genuine reusable concepts (MD, CI, I², REML...), not a duplicate of
     // every individual result's own row.
     const glossary = Object.fromEntries(
-      Object.entries(fullGlossary).filter(([key]) => !/^(rob|grade)-/.test(key)));
+      Object.entries(fullGlossary).filter(([key]) => !/^(rob|grade|forest)-/.test(key)));
 
     const isSv = currentLang === 'sv';
     const titleText = isSv ? 'Metodologisk och statistisk ordlista' : 'Methodological & Statistical Concept Glossary';

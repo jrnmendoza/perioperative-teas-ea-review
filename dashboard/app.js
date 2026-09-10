@@ -392,7 +392,7 @@ function renderActiveTab() {
   else if (activeTab === 'secondary') renderMetaLab();
   else if (activeTab === 'mcid') renderMCIDStudio();
   else if (activeTab === 'metareg') renderMetaRegStudio();
-  else if (activeTab === 'primary') { ilRenderLensToggle(); renderV34(); renderV33(); renderPrimaryPathway(); renderTieredV33(); renderSensitivitySandbox(); ilRenderEvidenceMap(); renderPriorEvidence(); }
+  else if (activeTab === 'primary') { ilRenderLensToggle(); renderV34(); renderV33(); renderPrimaryPathway(); renderTieredV33(); renderSensitivitySandbox(); ilRenderEvidenceMap(); renderPriorEvidence(); renderForestContext(); }
   else if (activeTab === 'limitations') { renderLimitations(); renderInquiriesView(); updateSimulationComparison(); }
   else if (activeTab === 'extraction') renderConversionsView();
   else if (activeTab === 'evidence') renderDirectionOfEvidence();
@@ -3931,6 +3931,102 @@ function priorEvidenceMarkdown() {
   L.push(`_Source: ${P.source_document}, dated ${P.audit_date}; dispositions re-derived from the locked dataset and Stata output._`);
   return L.join('\n');
 }
+
+// ---------------------------------------------------------------------------
+// Per-study forest-plot context (brief Phase 25).
+//
+// The forest plot image itself is an untouched, static Stata PNG -- see the
+// comment above #forest-context-opioid24_primary in index.html for why this
+// is a companion table rather than an attempt to make the raster image
+// itself interactive. Per-study effect/CI/weight come from
+// window.FOREST_CONTEXT (scripts/build_forest_context.py, parsed from the
+// Stata log and guarded against a mismatched study set or weight sum).
+// Modality, comparator and RoB are joined client-side from STUDIES_DATA /
+// resultRob() -- the SAME data every other view on this dashboard already
+// uses for those fields, not a second copy of them.
+function renderForestContext() {
+  const host = document.getElementById('forest-context-opioid24_primary');
+  if (!host) return;
+  const FC = window.FOREST_CONTEXT;
+  const fig = FC && (FC.figures || []).find(f => f.figure === 'forest_opioid24_primary_mme.png');
+  if (!fig || !window.STUDIES_DATA) { host.innerHTML = ''; return; }
+
+  const byKey = new Map(window.STUDIES_DATA.map(s => [s.key, s]));
+  for (const lang of ['en', 'sv']) {
+    const dict = window.STAT_GLOSSARY[lang];
+    if (dict) for (const key of Object.keys(dict)) if (key.startsWith('forest-')) delete dict[key];
+  }
+
+  const rows = fig.rows.map(r => {
+    const s = byKey.get(r.study);
+    if (!s) return { ...r, missing: true };
+    const rr = resultRob(s, 'opioid_24h');
+    const oc = s.outcomes && s.outcomes.opioid_24h;
+    return { ...r, s, modality: s.modality, comparator: s.comparator_short, rob: rr, oc };
+  });
+
+  const cell = html => `<td style="padding:0.4rem 0.5rem;vertical-align:top;
+                          border-bottom:1px solid rgba(255,255,255,0.05);">${html}</td>`;
+
+  host.innerHTML = `
+    <details style="margin-top:0.4rem;">
+      <summary style="cursor:pointer;font-size:0.78rem;color:#7dd3fc;font-weight:600;">
+        📊 Per-study data behind this plot (${rows.length} trials) — effect, CI, pooling weight
+      </summary>
+      <div style="overflow-x:auto;margin-top:0.5rem;">
+        <table style="width:100%;min-width:760px;border-collapse:collapse;font-size:0.73rem;">
+          <thead><tr style="color:var(--text-muted);text-align:left;">
+            <th style="padding:0.35rem 0.5rem;">Study</th>
+            <th style="padding:0.35rem 0.5rem;">Modality / comparator</th>
+            <th style="padding:0.35rem 0.5rem;">n (arm1 / arm2)</th>
+            <th style="padding:0.35rem 0.5rem;">Effect (95% CI)</th>
+            <th style="padding:0.35rem 0.5rem;">Weight</th>
+            <th style="padding:0.35rem 0.5rem;">RoB 2 (this result)</th>
+          </tr></thead>
+          <tbody>
+          ${rows.map(r => {
+            if (r.missing) {
+              return `<tr>${cell(pwEsc(r.study))}${cell('<span style="color:var(--text-muted);">not matched to current study data</span>')}${cell('—')}${cell(`${pwSigned(r.estimate,2)} [${pwSigned(r.ci_low,2)}, ${pwSigned(r.ci_high,2)}]`)}${cell(r.weight_pct.toFixed(2)+'%')}${cell('—')}</tr>`;
+            }
+            const termKey = `forest-${r.s.id}`;
+            const judgement = { low: 'Low risk of bias', some: 'Some concerns', high: 'High risk of bias' }[r.rob.state] || String(r.rob.overall || 'Not assessed');
+            for (const lang of ['en', 'sv']) {
+              if (!window.STAT_GLOSSARY[lang]) window.STAT_GLOSSARY[lang] = {};
+              window.STAT_GLOSSARY[lang][termKey] = {
+                term: `${r.study} — contribution to the primary combined synthesis`,
+                category: 'Forest plot (per-study data)',
+                shortDef: `${r.modality} vs ${r.comparator}. Contributed ${r.weight_pct.toFixed(2)}% of the pooled weight.`,
+                context: `Effect: ${r.estimate} mg IV MME (95% CI ${r.ci_low} to ${r.ci_high}).`
+                  + (r.oc ? ` Arm 1: n=${r.oc.arm1_n}, ${r.oc.arm1_mean} ± ${r.oc.arm1_sd} ${r.oc.unit}. Arm 2: n=${r.oc.arm2_n}, ${r.oc.arm2_mean} ± ${r.oc.arm2_sd} ${r.oc.unit}.` : '')
+                  + ` RoB 2 for this result: ${judgement}. ${r.rob.rationale || ''}`,
+                jumpTab: 'rob2', studyId: r.s.id,
+              };
+            }
+            const robBadge = robBadgeHtml(r.rob.state, judgement);
+            return `<tr>
+              ${cell(`<button type="button" class="stat-info-btn" data-stat-term="${termKey}"
+                       style="all:unset;cursor:pointer;font-weight:700;color:#f8fafc;"
+                       aria-label="Details for ${pwEsc(r.study)}">${pwEsc(r.study)} ⓘ</button>`)}
+              ${cell(`${pwEsc(r.modality)} vs ${pwEsc(r.comparator)}`)}
+              ${cell(r.oc ? `${r.oc.arm1_n} / ${r.oc.arm2_n}` : '—')}
+              ${cell(`${pwSigned(r.estimate,2)} <span style="color:var(--text-muted);">[${pwSigned(r.ci_low,2)}, ${pwSigned(r.ci_high,2)}]</span>`)}
+              ${cell(r.weight_pct.toFixed(2) + '%')}
+              ${cell(robBadge)}
+            </tr>`;
+          }).join('')}
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.71rem;color:var(--text-muted);margin-top:0.4rem;line-height:1.5;">
+        Effect, 95% CI and pooling weight are parsed directly from the Stata log that produced the
+        image above (<code>${pwEsc(fig.source)}</code>), not recomputed. Rows are listed alphabetically;
+        this table does not assert they appear in that same order within the image itself.
+      </p>
+    </details>`;
+
+  if (typeof window.initStatIcons === 'function') window.initStatIcons();
+}
+window.renderForestContext = renderForestContext;
 
 function renderPriorEvidence() {
   const host = document.getElementById('prior-evidence');

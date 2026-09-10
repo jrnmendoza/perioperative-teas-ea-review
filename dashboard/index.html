@@ -2136,6 +2136,17 @@
             <div class="stata-plot-footer">
               <p><strong>StataNow 19.5 BE Primary Synthesis:</strong> k = 7 RCTs (N = 676: Chen 1998, Chen 2020, El-Rakshy 2009, He 2026, Seevaunnamtum 2016, Szmit 2021, Yang 2024). Pooled REML MD = <strong>−9.91 mg IV MME</strong> [95% CI: −20.08 to +0.27], t(6) = −2.38, <strong>p = 0.0545</strong> (not statistically significant). Heterogeneity: τ² = 113.91, I² = 98.57%, Q = 254.61 (p &lt; 0.0001). 95% Prediction Interval: [−39.35, +19.54] mg. TEAS stratum (k=4): MD = −14.00 mg [−34.18, +6.19], p = 0.1145; EA stratum (k=3): MD = −3.94 mg [−19.77, +11.90], p = 0.3969. DerSimonian–Laird model: MD = −9.73 mg [KH 95% CI: −19.93 to +0.48, p = 0.0585; unadjusted Wald: −16.26 to −3.20, p = 0.0035, demonstrating artificial significance under unadjusted DL]. Sensitivity excluding High RoB (El-Rakshy 2009, k=6): MD = −11.27 mg [−23.18, +0.64], p = 0.0591.</p>
             </div>
+            <!--
+              Per-study interactive context for this forest plot. The plot
+              itself stays a static Stata-generated PNG (a raster image has no
+              DOM for hover targets, and reimplementing it as SVG would mean
+              re-deriving Stata's own layout by hand -- see
+              scripts/build_forest_context.py's module docstring). This table
+              carries the same per-study effect/CI/weight numbers a reader
+              would want from hovering a point, populated by
+              renderForestContext() in app.js.
+            -->
+            <div id="forest-context-opioid24_primary" style="margin-top:0.6rem;"></div>
           </div>
 
           <!-- Forest Plot 2: Primary Outcome (Hedges' g SMD) -->
@@ -3783,6 +3794,7 @@
   <script src="limitations.js?v=0c009811ebef"></script>
   <script src="prisma_checklist.js?v=0c009811ebef"></script>
   <script src="stratum_purity.js?v=0c009811ebef"></script>
+  <script src="forest_context.js?v=0c009811ebef"></script>
   <script src="author_inquiries.js"></script>
   <script src="search_strategies.js"></script>
   <script src="meta_outcomes.js"></script>
