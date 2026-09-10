@@ -93,6 +93,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "615e59cd685f8467",
       "stale": false,
+      "includes_null": false,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -226,6 +227,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "07b0227755e73a96",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -296,6 +298,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "376f873e055d2671",
       "stale": false,
+      "includes_null": false,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -414,6 +417,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "d9c26b2d472911c9",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -503,6 +507,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "0f06b1ffa3d78ecb",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -616,6 +621,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "520cad80b2232dd0",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -734,6 +740,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "bd1e9620f7f1cc35",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -857,6 +864,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "f9a98220431ef97b",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -942,6 +950,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "be29495400127504",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -1042,6 +1051,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "d5048b485049184c",
       "stale": false,
+      "includes_null": false,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -1165,6 +1175,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "5da10996b0c2dada",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -1313,6 +1324,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "1b0e01c9951a1ca7",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -1441,6 +1453,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "e29adcca0c1431f7",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -1554,6 +1567,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "2e07946a6aec1f4d",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -1667,6 +1681,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "ae17846d7b5c448b",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -1771,6 +1786,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "c4983e3132d6336c",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -1870,6 +1886,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "a56f8db01188b280",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -1969,6 +1986,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "1a9a71c481016350",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -2078,6 +2096,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "94d2f9f52649da96",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -2153,6 +2172,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "e2a5032ddcd0fddb",
       "stale": false,
+      "includes_null": false,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -2238,6 +2258,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "120743d9feb95c19",
       "stale": false,
+      "includes_null": false,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -2318,6 +2339,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "abaadc72fb110918",
       "stale": false,
+      "includes_null": false,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -2444,6 +2466,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "3e4b0904de5eeb57",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -2527,6 +2550,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "df49a4a8f0986b8d",
       "stale": false,
+      "includes_null": false,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -2653,6 +2677,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "b8dda5ef138b51d9",
       "stale": false,
+      "includes_null": true,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"
@@ -2746,6 +2771,7 @@ window.INTERPRETATION_LAYER = {
       },
       "fingerprint": "fae9bbe30d110e70",
       "stale": false,
+      "includes_null": false,
       "stale_detail": "",
       "review_state": "reviewed",
       "reviewed_on": "2026-09-10"

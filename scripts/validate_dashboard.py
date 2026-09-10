@@ -2425,6 +2425,83 @@ def t_interpretation_questions_are_data_triggered():
           "never free-standing assertions", not probs, "\n".join(probs))
 
 
+def t_limitations_are_evidenced_and_current():
+    """
+    Every limitation must carry evidence and a place to check it, and its
+    counts must match the live analyses.
+
+    A Limitations section is the easiest place in a manuscript to write
+    something plausible and unfounded, and the hardest place for a reader to
+    check it. So the builder derives each entry from a live file, and this
+    re-derives the headline counts independently and compares -- a limitation
+    that silently stops matching the analyses is worse than none, because it
+    reads as diligence.
+
+    It also holds one deliberate omission. Independent dual RoB 2 assessment is
+    in progress at the review lead's direction, and the dashboard's earlier
+    dual-assessor language was removed for that reason. This section must not
+    assert it as a settled limitation while that work is underway, and must not
+    quietly forget it either -- it belongs in `deferred`.
+    """
+    path = DASH / "limitations.js"
+    if not path.exists():
+        check("Limitations are evidenced and current", False,
+              "dashboard/limitations.js missing -- run build_limitations.py")
+        return
+    src = path.read_text(encoding="utf-8")
+    L = json.loads(src[src.index("window.LIMITATIONS = ") +
+                       len("window.LIMITATIONS = "):src.rindex(";")])
+    records = _interpretation_layer().get("records", [])
+    graded = [r for r in records if r["status"] != "exploratory"]
+
+    probs = []
+    if not L.get("limitations"):
+        probs.append("no limitations were assembled at all")
+    for item in L.get("limitations", []):
+        for field in ("domain", "title", "detail", "evidence", "where"):
+            if not (item.get(field) or "").strip():
+                probs.append(f"{item.get('title', '?')!r}: missing {field}")
+
+    # Independently re-derive the three counts that appear in titles.
+    n = len(graded)
+    expect = {
+        "heterogeneity": sum(1 for r in graded
+                             if r["bound_evidence"].get("i2") is not None
+                             and float(r["bound_evidence"]["i2"]) >= 75.0),
+        "sparse": sum(1 for r in graded if int(r["bound_evidence"]["k"]) <= 3),
+        "imprecision": sum(1 for r in graded if r.get("includes_null")),
+        "rob": sum(1 for r in graded if int(r["bound_evidence"].get("rob_high", 0) or 0) > 0),
+    }
+    # Compared numerically per rule, not by scanning titles for the figure.
+    # String-matching across all titles passes when a DIFFERENT limitation
+    # happens to contain the same number -- observed: a heterogeneity count
+    # falsified to 4 went undetected because another title contained "12 ".
+    metrics = {m["key"]: m for m in
+               (item.get("metric") for item in L.get("limitations", [])) if m}
+    for key, want in expect.items():
+        m = metrics.get(key)
+        if want and not m:
+            probs.append(f"no limitation carries a {key} metric; expected {want} of {n}")
+        elif m and (m.get("count") != want or m.get("of") != n):
+            probs.append(f"{key}: limitation says {m.get('count')} of {m.get('of')}, "
+                         f"re-derived {want} of {n}")
+    if L.get("reported_analyses") != n:
+        probs.append(f"limitations claim {L.get('reported_analyses')} reported analyses, "
+                     f"the layer has {n}")
+
+    # The assessor-process omission must be deferred, not asserted and not lost.
+    deferred_titles = " ".join(d.get("title", "") + d.get("why", "")
+                               for d in L.get("deferred", []))
+    if "assessor" not in deferred_titles.lower():
+        probs.append("the risk-of-bias assessor process is not recorded as deferred")
+    asserted = " ".join(i["title"] + i["detail"] for i in L.get("limitations", [])).lower()
+    if "dual" in asserted or "single assessor" in asserted or "single-assessor" in asserted:
+        probs.append("a limitation asserts the assessor process while dual assessment is "
+                     "still in progress")
+    check("Limitations are evidenced, current, and defer the in-progress assessor question",
+          not probs, "\n".join(probs))
+
+
 def t_exploratory_analyses_carry_their_guardrails():
     """
     The Tier E exploratory synthesis must carry its overclaim guardrails, and
@@ -2862,7 +2939,8 @@ def main() -> int:
           t_interpretation_bound_to_current_evidence,
           t_interpretation_questions_are_data_triggered,
           t_every_analysis_has_discussion_prompts,
-          t_exploratory_analyses_carry_their_guardrails]),
+          t_exploratory_analyses_carry_their_guardrails,
+          t_limitations_are_evidenced_and_current]),
     ]
 
     for title, tests in sections:

@@ -3067,7 +3067,19 @@
     <!-- TAB: LIMITATIONS & NEXT STEPS (Author Inquiries & Outreach) -->
     <div id="tab-limitations" class="tab-content">
       <div class="protocol-callout"><h2>Limitations and author clarification records</h2><p>Review the catalogued requests for missing or unclear study data and their recorded dispositions. The hypothetical sensitivity tool explores changes to existing primary results; it does not represent author responses.</p></div>
-      
+
+      <div class="dashboard-card" style="margin-bottom: 1.5rem; border: 1px solid rgba(245, 158, 11, 0.32);">
+        <div class="card-header" style="flex-direction: column; align-items: flex-start; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="badge badge-indigo">Manuscript material</span>
+            <span class="badge badge-purple">Derived, not asserted</span>
+          </div>
+          <h2 style="margin-top: 0.3rem; font-size: 1.2rem;">⚠️ Limitations of this review</h2>
+          <p style="font-size: 0.86rem; color: var(--text-secondary); margin-top: 0.3rem;" id="limitations-subtitle"></p>
+        </div>
+        <div id="limitations-panel" style="margin-top: 0.7rem;"></div>
+      </div>
+
       <!-- Section 1: Collaborative Outreach Strategy Architecture -->
       <div class="dashboard-card" style="margin-bottom: 1.5rem; background: linear-gradient(180deg, rgba(22, 31, 48, 0.9) 0%, rgba(11, 15, 25, 0.95) 100%); border: 1px solid rgba(99, 102, 241, 0.3);">
         <div class="card-header">
@@ -3746,6 +3758,7 @@
   <script src="interpretation_layer.js?v=0c009811ebef"></script>
   <script src="computed_not_reported.js?v=0c009811ebef"></script>
   <script src="prior_evidence.js?v=0c009811ebef"></script>
+  <script src="limitations.js?v=0c009811ebef"></script>
   <script src="author_inquiries.js"></script>
   <script src="search_strategies.js"></script>
   <script src="meta_outcomes.js"></script>

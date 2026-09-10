@@ -393,7 +393,7 @@ function renderActiveTab() {
   else if (activeTab === 'mcid') renderMCIDStudio();
   else if (activeTab === 'metareg') renderMetaRegStudio();
   else if (activeTab === 'primary') { ilRenderLensToggle(); renderV34(); renderV33(); renderPrimaryPathway(); renderTieredV33(); renderSensitivitySandbox(); ilRenderEvidenceMap(); renderPriorEvidence(); }
-  else if (activeTab === 'limitations') { renderInquiriesView(); updateSimulationComparison(); }
+  else if (activeTab === 'limitations') { renderLimitations(); renderInquiriesView(); updateSimulationComparison(); }
   else if (activeTab === 'extraction') renderConversionsView();
   else if (activeTab === 'evidence') renderDirectionOfEvidence();
   else if (activeTab === 'glossary' && typeof window.renderGlossaryTab === 'function') window.renderGlossaryTab();
@@ -3903,6 +3903,98 @@ function priorEvidenceCopy(btn) {
 
 window.renderPriorEvidence = renderPriorEvidence;
 window.priorEvidenceCopy = priorEvidenceCopy;
+
+// ---------------------------------------------------------------------------
+// Limitations, assembled from the review's own outputs by
+// scripts/build_limitations.py. Every entry carries the figures that justify
+// it and where to check them; the builder omits a category it cannot evidence
+// rather than padding the section.
+// ---------------------------------------------------------------------------
+function limitationsMarkdown() {
+  const L = window.LIMITATIONS;
+  if (!L) return '';
+  const out = ['# Limitations', '', `> ${L.disclaimer}`, ''];
+  let domain = null;
+  L.limitations.forEach(l => {
+    if (l.domain !== domain) { domain = l.domain; out.push(`## ${domain}`, ''); }
+    out.push(`### ${l.title}`);
+    out.push(l.detail);
+    out.push('');
+    out.push(`- **Evidence:** ${l.evidence}`);
+    out.push(`- **Where to check:** ${l.where}`);
+    if (l.affects && l.affects.length) {
+      out.push(`- **Analyses affected:** ${l.affects.length}`);
+    }
+    out.push('');
+  });
+  if (L.deferred && L.deferred.length) {
+    out.push('## Deliberately not recorded here yet', '');
+    L.deferred.forEach(d => out.push(`- **${d.title}.** ${d.why}`));
+    out.push('');
+  }
+  return out.join('\n');
+}
+
+function renderLimitations() {
+  const host = document.getElementById('limitations-panel');
+  if (!host) return;
+  const L = window.LIMITATIONS;
+  if (!L) { host.innerHTML = ''; return; }
+
+  const sub = document.getElementById('limitations-subtitle');
+  if (sub) sub.textContent = L.disclaimer;
+
+  let domain = null;
+  const body = L.limitations.map(l => {
+    const head = l.domain !== domain
+      ? `<div style="margin:0.9rem 0 0.35rem;font-size:0.78rem;font-weight:700;
+                     color:#fbbf24;text-transform:uppercase;letter-spacing:0.04em;">
+           ${pwEsc(l.domain)}</div>` : '';
+    domain = l.domain;
+    return head + `
+      <div style="padding:0.6rem 0.75rem;margin-bottom:0.5rem;background:rgba(148,163,184,0.06);
+                  border-left:3px solid rgba(245,158,11,0.45);border-radius:var(--radius-sm);">
+        <div style="font-weight:700;color:#f8fafc;font-size:0.84rem;">${pwEsc(l.title)}</div>
+        <div style="font-size:0.79rem;line-height:1.65;margin-top:0.25rem;">${pwEsc(l.detail)}</div>
+        <div style="font-size:0.74rem;color:var(--text-secondary);margin-top:0.35rem;">
+          <strong style="color:#cbd5e1;">Evidence:</strong> ${pwEsc(l.evidence)}
+        </div>
+        <div style="font-size:0.73rem;color:var(--text-muted);margin-top:0.2rem;">
+          Check in — ${pwEsc(l.where)}${l.affects && l.affects.length
+            ? ` · ${l.affects.length} analys${l.affects.length === 1 ? 'is' : 'es'} affected` : ''}
+        </div>
+      </div>`;
+  }).join('');
+
+  const deferred = (L.deferred || []).map(d => `
+    <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.3rem;">
+      <strong style="color:#cbd5e1;">${pwEsc(d.title)}</strong> — ${pwEsc(d.why)}
+    </div>`).join('');
+
+  host.innerHTML = body + (deferred ? `
+    <div style="margin-top:0.9rem;padding-top:0.6rem;border-top:1px solid rgba(148,163,184,0.2);">
+      <div style="font-size:0.78rem;font-weight:700;color:#cbd5e1;margin-bottom:0.35rem;">
+        Deliberately not recorded here yet</div>
+      ${deferred}
+    </div>` : '') + `
+    <div style="display:flex;gap:0.8rem;align-items:flex-start;flex-wrap:wrap;margin-top:0.8rem;">
+      <p style="flex:1;min-width:20rem;font-size:0.73rem;color:var(--text-muted);margin:0;line-height:1.6;">
+        Assembled from ${L.reported_analyses} reported analyses and this review's audit files on
+        every build, so a limitation cannot be left behind when the analyses change. A category
+        that finds nothing is omitted rather than padded.
+      </p>
+      <button type="button" class="btn-copy-strategy" style="flex:none;"
+              onclick="limitationsCopy(this)"
+              title="Copy the limitations as Markdown for the manuscript">
+        📋 Copy limitations
+      </button>
+    </div>`;
+}
+
+function limitationsCopy(btn) { ilCopy(limitationsMarkdown() + '\n', btn, '✅ Copied'); }
+
+window.renderLimitations = renderLimitations;
+window.limitationsCopy = limitationsCopy;
 
 // Delegated toggle for the per-row "Discuss this result" disclosure.
 function ilToggleRow(analysisId) {

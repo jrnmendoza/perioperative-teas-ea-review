@@ -950,6 +950,13 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
         "bound_evidence": bound,
         "fingerprint": fp,
         "stale": False,
+        # Whether the interval includes no effect, already resolved above with
+        # the ratio and log-scale handling that makes this genuinely hard to
+        # get right. Exposed as a plain field so downstream consumers (the
+        # limitations builder) do not each re-derive it and re-introduce the
+        # null-value bug. Deliberately NOT inside bound_evidence: that dict is
+        # the fingerprint input, and adding to it would mark every record stale.
+        "includes_null": bool(crosses),
         "stale_detail": "",
         "review_state": "new",
         "reviewed_on": "",
