@@ -1128,6 +1128,41 @@ function renderRoB2Matrix() {
     const judgementText = { low: 'Low risk of bias', some: 'Some concerns', high: 'High risk of bias' }[state] || String(val || 'Not reported');
     const resultLabel = rr.isStudyLevel ? 'Study-level overview' : `${rr.outcome_name}${rr.timepoint ? ` (${rr.timepoint})` : ''}`;
 
+    // Domain-specific, source-quoted rationale + source PDF, where
+    // build_rob2_source_links.py could link this exact cell to one specific
+    // row in the review's RoB 2 registers without guessing (see that script's
+    // module docstring for why this is roughly 39% of assessed results, not
+    // all of them, and why the other 61% fall back to the general rationale
+    // below rather than a fabricated per-domain quote).
+    const linkKey = `${s.id}::${activeOutcome}`;
+    const link = (window.ROB2_SOURCE_LINKS && window.ROB2_SOURCE_LINKS.links[linkKey]) || null;
+    const domainQuote = link && domainIdx !== 'overall' ? link.domains[String(domainIdx + 1)] : null;
+
+    let contextText;
+    if (domainQuote) {
+      // #stat-popover-context-text has no white-space: pre-wrap rule, so a
+      // literal "\n" here would silently collapse to a single space rather
+      // than a visible line break -- kept as one flowing sentence instead.
+      contextText = `${domainQuote} Source: ${link.source_pdf || 'not recorded'}`
+        + (link.matched_outcome !== rr.outcome_name
+           ? ` (matched via the review's RoB 2 register under "${link.matched_outcome}", `
+             + `${link.matched_timepoint} -- the same result this dashboard groups under `
+             + `"${rr.outcome_name}${rr.timepoint ? `, ${rr.timepoint}` : ''}")`
+           : '')
+        + '. No page number is recorded in the source register; search the PDF for the quoted phrase above.'
+        + (link.flags ? ` Flag: ${link.flags}` : '');
+    } else if (link) {
+      // Linked at the result level but this cell is "overall", which has no
+      // single domain quote -- point to the domain cells instead of showing
+      // nothing.
+      contextText = `${rr.rationale || 'No rationale recorded.'} Overall RoB 2 for this result: ${rr.overall || 'Not reported'}. `
+        + 'Hover an individual domain (D1-D5) on this row for its specific source-quoted rationale.';
+    } else {
+      contextText = `${rr.rationale || 'No rationale recorded.'} Overall RoB 2 for this result: ${rr.overall || 'Not reported'}. `
+        + 'A specific source quote for this result is not yet linked in the dashboard’s RoB 2 cross-reference '
+        + '(see the review’s RoB 2 registers directly for the full assessment).';
+    }
+
     // STAT_GLOSSARY entries are rendered via .textContent in showStatPopover
     // (reader_assist.js), not innerHTML -- these fields must stay UNescaped.
     // pwEsc() here would double-escape and show literal "&amp;" etc. on screen.
@@ -1137,11 +1172,12 @@ function renderRoB2Matrix() {
         term: `${domainLabel} — ${s.key}`,
         category: 'Risk of Bias 2.0 (result-specific)',
         shortDef: `${resultLabel}: judged ${judgementText}.`,
-        context: `${rr.rationale || 'No rationale recorded.'} Overall RoB 2 for this result: ${rr.overall || 'Not reported'}.`,
+        context: contextText,
         jumpTab: 'rob2', studyId: s.id,
       };
     }
-    return `<span class="${cls}" style="${style}cursor:pointer;" data-stat-term="${termKey}" title="${pwEsc(domainLabel)}: ${pwEsc(judgementText)} (tap for detail)">${glyph}</span>`;
+    const titleSuffix = domainQuote ? ' — source quote available' : '';
+    return `<span class="${cls}" style="${style}cursor:pointer;" data-stat-term="${termKey}" title="${pwEsc(domainLabel)}: ${pwEsc(judgementText)} (tap for detail${pwEsc(titleSuffix)})">${glyph}</span>`;
   };
 
   tbody.innerHTML = filtered.map((s, idx) => {

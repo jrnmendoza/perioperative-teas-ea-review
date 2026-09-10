@@ -2986,6 +2986,65 @@ def t_target_af_sof_rows_match_v26_source():
           not probs, "\n".join(probs))
 
 
+def t_rob2_source_links_match_registers():
+    """
+    Every RoB 2 matrix cell claiming a specific, source-quoted rationale must
+    still be backed by a real row in the RoB 2 registers -- and the coverage
+    figure it reports must be honest.
+
+    Independently re-derives scripts/build_rob2_source_links.py's join (same
+    conservative keyword/timepoint rule, matching only when it resolves to
+    exactly one candidate) and compares every linked domain quote against the
+    source. A quote that no longer matches its claimed source row -- or a
+    link this run cannot independently reproduce -- would mean the dashboard
+    is showing a "specific source quote" that is not actually traceable,
+    which is the one thing this feature exists to avoid.
+    """
+    path = DASH / "rob2_source_links.js"
+    if not path.exists():
+        check("RoB 2 source-quote links match the review's RoB 2 registers", False,
+              "dashboard/rob2_source_links.js missing -- run build_rob2_source_links.py")
+        return
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import build_rob2_source_links as bsl
+
+    src = path.read_text(encoding="utf-8")
+    shipped = json.loads(src[src.index("window.ROB2_SOURCE_LINKS = ") +
+                             len("window.ROB2_SOURCE_LINKS = "):src.rindex(";")])
+    live = bsl.build()
+
+    probs = []
+    if shipped.get("total_assessed_results") != live["total_assessed_results"]:
+        probs.append(f"total_assessed_results: shipped {shipped.get('total_assessed_results')}, "
+                     f"re-derived {live['total_assessed_results']}")
+    if set(shipped.get("links", {})) != set(live["links"]):
+        missing = set(live["links"]) - set(shipped.get("links", {}))
+        extra = set(shipped.get("links", {})) - set(live["links"])
+        if missing:
+            probs.append(f"{len(missing)} link(s) re-derive but are not shipped, "
+                         f"e.g. {sorted(missing)[:3]}")
+        if extra:
+            probs.append(f"{len(extra)} shipped link(s) no longer re-derive, "
+                         f"e.g. {sorted(extra)[:3]}")
+    for key, live_link in live["links"].items():
+        shipped_link = shipped.get("links", {}).get(key)
+        if not shipped_link:
+            continue
+        # JSON object keys are always strings, so the shipped file's domains
+        # dict round-trips as {"1": ...}; the freshly-built Python dict still
+        # has int keys ({1: ...}). Normalize both to strings before comparing
+        # -- an earlier version compared them directly and always disagreed,
+        # regardless of whether the content actually matched.
+        live_domains = {str(k): v for k, v in live_link["domains"].items()}
+        if shipped_link.get("domains") != live_domains:
+            probs.append(f"{key}: shipped domain quotes differ from the re-derived source")
+        if shipped_link.get("source_pdf") != live_link["source_pdf"]:
+            probs.append(f"{key}: shipped source_pdf {shipped_link.get('source_pdf')!r} != "
+                         f"re-derived {live_link['source_pdf']!r}")
+    check("RoB 2 source-quote links match the review's RoB 2 registers",
+          not probs, "\n".join(probs))
+
+
 def t_forest_context_matches_stata_log():
     """
     The per-study forest-plot context table must still match the Stata log it
@@ -3190,7 +3249,8 @@ def main() -> int:
         ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
         ("static/dynamic content sync", [t_static_kpi_fallback_matches_rendered_content,
                                         t_forest_context_matches_stata_log,
-                                        t_target_af_sof_rows_match_v26_source]),
+                                        t_target_af_sof_rows_match_v26_source,
+                                        t_rob2_source_links_match_registers]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,
