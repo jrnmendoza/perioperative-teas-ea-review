@@ -139,6 +139,8 @@ P1_ROB2_CSV = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_draft_assessments
 TIER_A_CSV = ROOT / "07_TIERED_V33" / "01_DATA" / "tiered_primary_v33.csv"
 TIER_C_CSV = ROOT / "07_TIERED_V33" / "01_DATA" / "tiered_tierC_parallel_v33.csv"
 TIER_RESULTS = ROOT / "07_TIERED_V33" / "05_RESULTS" / "TIERED_ANALYSIS_RESULTS_v33.csv"
+TIER_E_RESULTS = (ROOT / "07_TIERED_V33" / "05_RESULTS" /
+                  "TIERED_ANALYSIS_RESULTS_v33_tierE.csv")
 AUDIT_CSV = ROOT / "07_TIERED_V33" / "PRIMARY_OUTCOME_DERIVABILITY_AUDIT_v33.csv"
 V26_RESULTS = ROOT / "06_FINAL_ANALYSIS_V26" / "03_RESULTS" / "master_reconciled_results_v26.csv"
 APP_JS = ROOT / "dashboard" / "app.js"
@@ -171,6 +173,53 @@ HIGHER_IS_BETTER = {"v34_qor40_24h_TEAS_Sham"}
 # story, not a separate finding to write up, and generating a manuscript
 # paragraph for each one would bury the analyses that matter. They still do
 # real work here: they feed the estimator-dependence rule below.
+# The Tier E scale-free SMD synthesis. Published on the dashboard as a clearly
+# labelled exploratory secondary result, and until now the only published
+# analysis in this review with no Results-safe wording, no claim boundaries and
+# no "do not say" list -- which made it the one place an overclaim could be
+# written with nothing to catch it. It is also the analysis most exposed to
+# overclaim, because it exists to fill the gap where the review has no
+# sham-controlled EA estimate in absolute morphine equivalents.
+#
+# The per-row `exploratory` dict switches on the specific guardrails each row
+# needs; none of them is applied to a row whose condition does not hold.
+TIER_E_ANALYSES = {
+    "V33_TIERE_EA_SHAM_SMD": dict(
+        label="Tier E exploratory SMD — EA vs sham/placebo, 0–24 h opioid",
+        unit="Hedges' g", comparator="Sham / placebo EA",
+        exploratory=dict(
+            unrated=True, scale_free=True,
+            outcome_phrase="0–24 h opioid consumption on a standardized scale",
+            substitute_for="missing sham-controlled EA estimate in absolute morphine equivalents",
+            status_reason=("Exploratory scale-free synthesis; no GRADE certainty adopted. "
+                           "Reported because the absolute-MME estimate for this comparison "
+                           "does not exist in the included trials (k = 0)."))),
+    "V33_TIERE_TEAS_SHAM_SMD_MAIN": dict(
+        label="Tier E exploratory SMD — EA/TEAS vs sham, 0–24 h opioid (single study)",
+        unit="Hedges' g", comparator="Sham non-penetrating EA / no current",
+        exploratory=dict(
+            unrated=True, scale_free=True, single_study_ci=True,
+            outcome_phrase="0–24 h opioid consumption on a standardized scale",
+            status_reason=("Exploratory, k = 1: nothing was pooled and the interval is a "
+                           "normal approximation rather than Hartung-Knapp."))),
+    "V33_TIERE_TEAS_SHAM_SMD_SENS": dict(
+        label="Tier E exploratory SMD — sensitivity adding Chen 2015 (Hyperalgesia)",
+        unit="Hedges' g", comparator="Sham",
+        exploratory=dict(
+            unrated=True, scale_free=True, approximated_from_median=True,
+            outcome_phrase="0–24 h opioid consumption on a standardized scale",
+            status_reason=("Named sensitivity addition, not the main Tier E estimate. One "
+                           "contributing value is median/IQR approximated to mean/SD."))),
+    "V33_TIERE_TEAS_USUAL_SMD": dict(
+        label="Tier E exploratory SMD — TEAS vs usual care, 0–24 h opioid (single study)",
+        unit="Hedges' g", comparator="Usual care",
+        exploratory=dict(
+            unrated=True, scale_free=True, single_study_ci=True,
+            outcome_phrase="0–24 h opioid consumption on a standardized scale",
+            status_reason=("Exploratory, k = 1, and the contributing trial's overall RoB 2 is "
+                           "High. Nothing was pooled; the interval is a normal approximation."))),
+}
+
 LEGACY_ANALYSES = {
     "AN-01-SMD": dict(csv_id="OP24_PRIM_SMD",
                       label="Supporting primary — 0–24 h opioid consumption (standardized)",
@@ -408,7 +457,7 @@ def het_band(i2: float) -> str:
 
 
 def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_flip,
-                 tier_c_studies, flags_by_study, audit_totals):
+                 tier_c_studies, flags_by_study, audit_totals, exploratory=None):
     k = int(float(m["k"]))
     est, lo, hi = fnum(m["estimate"]), fnum(m["ci_low"]), fnum(m["ci_high"])
     # i2 is genuinely absent for a single-study "analysis" (Target B is one
@@ -469,6 +518,12 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
     outcome_phrase = re.sub(r"^Primary\s+", "", outcome_phrase)
     if outcome_phrase.lower().endswith("opioid"):
         outcome_phrase += " consumption"
+    # Tier E labels lead with the analysis name, not the outcome, so the
+    # heuristic above yields "EA significantly reduces tier E exploratory SMD".
+    # Those rows state the outcome explicitly rather than being reverse-engineered
+    # from a label the parser was never designed for.
+    if exploratory and exploratory.get("outcome_phrase"):
+        outcome_phrase = exploratory["outcome_phrase"]
 
     # ---- Layer 2: what the result actually means -------------------------
     direction = ("favours " + ("the intervention" if favours_intervention else "the comparator"))
@@ -524,7 +579,9 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
                     "risk ratio" if is_ratio else
                     "standardized mean difference" if "Hedges" in measure or "SMD" in measure else
                     "mean difference")
-    contrast_txt = (f"{subject} vs {(comparator or '').lower()}"
+    # sentence_case, not .lower(): a raw lowercase turns "Sham / placebo EA"
+    # into "placebo ea" inside a draft Results sentence.
+    contrast_txt = (f"{subject} vs {sentence_case(comparator or '')}"
                     if subject != "The intervention" else (comparator or "pooled"))
     results_safe = (
         f"{k} {'trial' if k == 1 else 'trials'} contributed to the {outcome_phrase} "
@@ -588,6 +645,50 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
                    "contributing trials.",
         })
 
+    # An exploratory analysis carries failure modes the rules above cannot see
+    # from an estimate and an interval, and it is the analysis most exposed to
+    # overclaim precisely because it exists to fill a gap where the review has
+    # no answer. Each guardrail below is attached only when the condition that
+    # justifies it is present on this specific row.
+    if exploratory:
+        if exploratory.get("unrated"):
+            do_not_say.append({
+                "text": "“The certainty of this evidence is low / moderate / high.”",
+                "why": "No GRADE certainty has been adopted for this analysis. It is "
+                       "exploratory and is not part of the Summary of Findings; quoting any "
+                       "certainty rating for it would invent one.",
+            })
+        if exploratory.get("scale_free"):
+            do_not_say.append({
+                "text": "“The intervention reduced opioid consumption by about X mg.”",
+                "why": "A standardized mean difference is dimensionless. These trials were "
+                       "pooled precisely because their units are not convertible to absolute "
+                       "morphine equivalents, so no milligram figure can be recovered from g.",
+            })
+        if exploratory.get("substitute_for"):
+            do_not_say.append({
+                "text": f"“This provides the {exploratory['substitute_for']}.”",
+                "why": "It does not. This synthesis exists because that estimate is not "
+                       "available from the included trials; a scale-free effect answers a "
+                       "different question and is not a stand-in for the absolute one.",
+            })
+        if exploratory.get("single_study_ci"):
+            do_not_say.append({
+                "text": "“The pooled estimate was …”",
+                "why": "This is a single study; nothing was pooled. Its interval is a normal "
+                       "approximation, not a Hartung-Knapp interval, so it is not comparable "
+                       "to the pooled intervals elsewhere in this review and is narrower than "
+                       "a meta-analytic interval on the same evidence would be.",
+            })
+        if exploratory.get("approximated_from_median"):
+            do_not_say.append({
+                "text": "“This sensitivity estimate confirms the main result.”",
+                "why": "It is built on a median/IQR-to-mean/SD approximation (Cochrane "
+                       "Handbook 6.5.2.5), a materially weaker basis than the native mean/SD "
+                       "values used everywhere else in this synthesis. It is reported as a "
+                       "named addition, never as confirmation.",
+            })
+
     # ---- Layer 3b: claim boundaries --------------------------------------
     claims = [
         {"level": "supported",
@@ -602,10 +703,18 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
                   (f"heterogeneity was {band} (I² = {i2:.1f}%)" if (i2 is not None and i2 >= 50) else
                    f"certainty is {grade.lower()}" if grade in ("Low", "Very Low") else None))
     if amber_qual:
+        # On a dimensionless scale the interval is not the only obstacle:
+        # clinical meaningfulness has no anchor at all. This review's MCID
+        # thresholds are in mg IV MME and do not transfer to Hedges' g, so
+        # that has to be said wherever the claim is offered.
+        scale_caveat = (" and that clinical meaningfulness cannot be judged on a "
+                        "dimensionless scale — this review's MCID thresholds are in "
+                        "mg IV MME and do not apply to a standardized effect"
+                        if (exploratory or {}).get("scale_free") else "")
         claims.append({
             "level": "qualified",
             "claim": "The magnitude may be clinically meaningful.",
-            "basis": f"Must be stated with the qualification that {amber_qual}.",
+            "basis": f"Must be stated with the qualification that {amber_qual}{scale_caveat}.",
         })
     if crosses or grade in ("Low", "Very Low"):
         claims.append({
@@ -615,6 +724,23 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
                       else f"Certainty is {grade.lower()}.")
             + " A definitive claim is not available from this analysis.",
         })
+    if exploratory:
+        claims.append({
+            "level": "unsupported",
+            "claim": "This analysis carries a certainty rating.",
+            "basis": ("Exploratory: no GRADE certainty was adopted, and it is not part of the "
+                      "Summary of Findings. It is reported to show what the available data can "
+                      "and cannot support, not as a graded finding."),
+        })
+        if exploratory.get("scale_free"):
+            claims.append({
+                "level": "qualified",
+                "claim": "The direction and relative size of the effect can be described.",
+                "basis": ("Only on a standardized scale. The contributing trials report "
+                          "weight-normalized or proxy units that do not convert to absolute "
+                          "morphine equivalents, which is why a standardized effect was used "
+                          "at all."),
+            })
 
     # ---- Layer 3c: reviewer questions, each with its trigger and pathway --
     rq = []
@@ -752,7 +878,14 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
                      if "source-qc" in (flags_by_study.get(s, "") or "").lower()
                      and "resolved" not in (flags_by_study.get(s, "") or "").lower()]
     author_open = [s for s, _ in open_author_issues(mid, studies)]
-    if roll and int(roll.get("results_unjudged", 0) or 0) > 0:
+    if exploratory:
+        # Outranks every flag below. Whatever else is true of a contributing
+        # study, the first thing a reader needs to know about this row is that
+        # it is not a graded finding.
+        status = "exploratory"
+        status_reason = exploratory.get(
+            "status_reason", "Exploratory analysis; no GRADE certainty adopted.")
+    elif roll and int(roll.get("results_unjudged", 0) or 0) > 0:
         status = "under-review"
         status_reason = (f"{roll['results_unjudged']} contributing result(s) do not yet carry a "
                          "result-specific RoB 2 judgement.")
@@ -942,6 +1075,27 @@ def main() -> int:
         records.append(build_record(
             aid, ev, None, entry["grade"], [], meta["unit"], meta["label"],
             meta["comparator"], None, [], flags_by_study, audit_totals))
+
+    # ---- Tier E: the exploratory scale-free SMD synthesis ------------------
+    tier_e = {r["analysis_id"]: r for r in read(TIER_E_RESULTS)}
+    for aid, meta in TIER_E_ANALYSES.items():
+        row = tier_e.get(aid)
+        if not row:
+            raise SystemExit(f"{aid} is in TIER_E_ANALYSES but not in {TIER_E_RESULTS.name}")
+        ev = {
+            "k": row["k"], "estimate": row["estimate"],
+            "ci_low": row["ci_low"], "ci_high": row["ci_high"],
+            "i2": row.get("i2") or None, "p_value": row.get("p_value") or None,
+            "estimator": row["estimator"], "measure": "SMD",
+            # No result-specific RoB 2 rollup exists for these rows. Zeroes are
+            # honest here only because the record never claims a RoB
+            # composition -- an invented one would be worse than none.
+            "rob_low": 0, "rob_some": 0, "rob_high": 0,
+        }
+        records.append(build_record(
+            aid, ev, None, "Not rated", [], meta["unit"], meta["label"],
+            meta["comparator"], None, [], flags_by_study, audit_totals,
+            exploratory=meta["exploratory"]))
 
     # ---- staleness: compare against the committed review ledger -----------
     # The baseline is the fingerprint each interpretation was last REVIEWED

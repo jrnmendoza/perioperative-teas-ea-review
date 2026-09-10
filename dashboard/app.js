@@ -3142,6 +3142,21 @@ function renderTieredV33() {
              (r.p_value == null ? '' : `, ${pwP(r.p_value)}`) +
              (r.i2 == null ? '' : `, I² = ${r.i2.toFixed(1)}%`);
     };
+    // Interpretation panel for a Tier E row. These are the analyses most
+    // exposed to overclaim -- exploratory, ungraded, scale-free -- so the
+    // guardrails belong next to the numbers, not only in the evidence map.
+    const ilBlock = r => {
+      const rec = (r && r.analysis_id && typeof ilRecord === 'function')
+        ? ilRecord(r.analysis_id) : null;
+      if (!rec) return '';
+      return `<div id="il-row-${pwEsc(rec.analysis_id)}-tiere"
+                   ${ilLensOn() ? '' : 'hidden'}
+                   style="margin-top:0.7rem;border-top:1px solid rgba(148,163,184,0.22);
+                          padding-top:0.6rem;">
+        <div style="margin-bottom:0.4rem;">${ilStatusChip(rec)}</div>
+        ${ilPanelHtml(rec)}
+      </div>`;
+    };
     const contrastList = arr => arr.map(c => {
       const label = c.sensitivity_only
         ? `${pwEsc(c.study)} <span style="color:#fbbf24;">(sensitivity-only, median/IQR approximated)</span>`
@@ -3169,6 +3184,7 @@ function renderTieredV33() {
             ${smdEffect(E.ea_sham)}<br>
             <span style="color:var(--text-muted);">${pwEsc(E.ea_sham.notes)}</span>
           </div>
+          ${ilBlock(E.ea_sham)}
         </div>
         <div class="card-glass" style="padding:1rem;">
           <span class="kpi-badge" style="background:rgba(244,63,94,0.18);color:#fda4af;">EXPLORATORY</span>
@@ -3179,6 +3195,7 @@ function renderTieredV33() {
             ${smdEffect(E.teas_sham_main)}<br>
             <span style="color:var(--text-muted);">${pwEsc(E.teas_sham_main.notes)}</span>
           </div>
+          ${ilBlock(E.teas_sham_main)}
         </div>
         <div class="card-glass" style="padding:1rem;">
           <span class="kpi-badge" style="background:rgba(245,158,11,0.18);color:#fbbf24;">SENSITIVITY</span>
@@ -3189,6 +3206,7 @@ function renderTieredV33() {
             ${smdEffect(E.teas_sham_sensitivity)}<br>
             <span style="color:var(--text-muted);">${pwEsc(E.teas_sham_sensitivity.notes)}</span>
           </div>
+          ${ilBlock(E.teas_sham_sensitivity)}
         </div>
         <div class="card-glass" style="padding:1rem;">
           <span class="kpi-badge" style="background:rgba(244,63,94,0.18);color:#fda4af;">EXPLORATORY</span>
@@ -3199,6 +3217,7 @@ function renderTieredV33() {
             ${smdEffect(E.teas_usual)}<br>
             <span style="color:var(--text-muted);">${pwEsc(E.teas_usual.notes)}</span>
           </div>
+          ${ilBlock(E.teas_usual)}
         </div>
       </div>
       <details style="margin-top:0.8rem;">
@@ -3456,6 +3475,8 @@ const IL_STATUS_STYLE = {
     hint: 'No open source-QC flag, unjudged result or estimator dependence on this analysis’s own inputs. Not the same as “locked”.'},
   'under-review': {label: 'Under review', bg: 'rgba(56,189,248,0.15)', fg: '#7dd3fc',
     hint: 'A contributing result is still being assessed.'},
+  'exploratory': {label: 'Exploratory — not graded', bg: 'rgba(167,139,250,0.16)', fg: '#c4b5fd',
+    hint: 'Reported to show what the available data can and cannot support. No GRADE certainty was adopted and it is not part of the Summary of Findings.'},
   'sensitivity-dependent': {label: 'Sensitivity-dependent', bg: 'rgba(245,158,11,0.15)', fg: '#fbbf24',
     hint: 'The reading changes depending on an analytical choice.'},
   'source-qc-required': {label: 'Source QC required', bg: 'rgba(244,63,94,0.15)', fg: '#fda4af',
@@ -3487,6 +3508,10 @@ function ilSetLens(on) {
   try { localStorage.setItem('teas-manuscript-lens', on ? '1' : '0'); } catch (e) {}
   ilRenderLensToggle();
   if (typeof renderV34 === 'function') renderV34();
+  // The Tier E cards carry their own interpretation panels, so the tiered
+  // section has to re-render with the lens too -- otherwise the exploratory
+  // analysis is the one place the lens silently does nothing.
+  if (typeof renderTieredV33 === 'function') renderTieredV33();
   ilRenderEvidenceMap();
 }
 

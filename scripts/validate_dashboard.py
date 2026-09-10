@@ -2330,14 +2330,26 @@ def t_interpretation_bound_to_current_evidence():
         row = v26.get(meta["csv_id"])
         if row:
             models[aid] = row
+    # Third source: the Tier E exploratory scale-free SMD synthesis, whose
+    # results live in their own file. Bound the same way as everything else --
+    # an exploratory analysis is exactly where an unchecked binding would do
+    # the most damage, because it has no GRADE rating to anchor it.
+    tier_e = {r["analysis_id"]: r for r in read_csv(
+        ROOT / "07_TIERED_V33" / "05_RESULTS" / "TIERED_ANALYSIS_RESULTS_v33_tierE.csv")}
+    from build_interpretation_layer import TIER_E_ANALYSES  # noqa: E402
+    for aid in TIER_E_ANALYSES:
+        row = tier_e.get(aid)
+        if row:
+            models[aid] = row
 
     probs = []
     for rec in L.get("records", []):
         mid = rec["analysis_id"]
         m = models.get(mid)
         if not m:
-            probs.append(f"{mid}: interpretation exists for an analysis found in neither "
-                         "v34_models.csv nor master_reconciled_results_v26.csv")
+            probs.append(f"{mid}: interpretation exists for an analysis found in none of "
+                         "v34_models.csv, master_reconciled_results_v26.csv or "
+                         "TIERED_ANALYSIS_RESULTS_v33_tierE.csv")
             continue
         b = rec["bound_evidence"]
         live = {
@@ -2411,6 +2423,50 @@ def t_interpretation_questions_are_data_triggered():
                              f"question: {p.get('prompt')!r}")
     check("Reviewer questions, claim boundaries and discussion prompts are data-triggered, "
           "never free-standing assertions", not probs, "\n".join(probs))
+
+
+def t_exploratory_analyses_carry_their_guardrails():
+    """
+    The Tier E exploratory synthesis must carry its overclaim guardrails, and
+    must never present itself as graded.
+
+    It is the analysis most exposed to overclaim in the whole review: it is
+    published as a secondary result, it exists precisely because the review has
+    no sham-controlled EA estimate in absolute morphine equivalents, and it is
+    reported on a dimensionless scale. Until this record existed it was also the
+    only published analysis with no Results-safe wording and no "do not say"
+    list, so there was nothing to catch a milligram figure being read off a
+    Hedges' g.
+    """
+    L = _interpretation_layer()
+    if not L:
+        return
+    sys.path.insert(0, str(ROOT / "09_V34_ANALYSIS" / "05_INTERPRETATION"))
+    from build_interpretation_layer import TIER_E_ANALYSES  # noqa: E402
+
+    by_id = {r["analysis_id"]: r for r in L.get("records", [])}
+    probs = []
+    for aid, meta in TIER_E_ANALYSES.items():
+        rec = by_id.get(aid)
+        if not rec:
+            probs.append(f"{aid}: published Tier E analysis has no interpretation record")
+            continue
+        if rec.get("status") != "exploratory":
+            probs.append(f"{aid}: status is {rec.get('status')!r}, expected 'exploratory'")
+        if rec.get("bound_evidence", {}).get("grade") in (
+                "Low", "Moderate", "High", "Very Low"):
+            probs.append(f"{aid}: carries a GRADE certainty; none was adopted for Tier E")
+        dns = " ".join(d.get("text", "") + d.get("why", "") for d in rec.get("do_not_say", []))
+        if "certainty" not in dns.lower():
+            probs.append(f"{aid}: no 'do not say' guarding against quoting a certainty rating")
+        if meta["exploratory"].get("scale_free") and "dimensionless" not in dns.lower():
+            probs.append(f"{aid}: scale-free, but nothing warns against reading an absolute "
+                         f"dose off a standardized effect")
+        if meta["exploratory"].get("single_study_ci"):
+            if "pooled" not in dns.lower():
+                probs.append(f"{aid}: k = 1, but nothing warns against calling it pooled")
+    check("Exploratory Tier E analyses carry their overclaim guardrails and are never "
+          "presented as graded", not probs, "\n".join(probs))
 
 
 def t_every_analysis_has_discussion_prompts():
@@ -2805,7 +2861,8 @@ def main() -> int:
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,
           t_interpretation_questions_are_data_triggered,
-          t_every_analysis_has_discussion_prompts]),
+          t_every_analysis_has_discussion_prompts,
+          t_exploratory_analyses_carry_their_guardrails]),
     ]
 
     for title, tests in sections:

@@ -3,7 +3,7 @@
   "bindings": {
     "gi_first_flatus_TEAS_Sham": {
       "fingerprint": "615e59cd685f8467",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 7,
         "estimate": -6.2615,
@@ -19,7 +19,7 @@
     },
     "gi_first_flatus_EA_Usual_care": {
       "fingerprint": "07b0227755e73a96",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 2,
         "estimate": -3.3633,
@@ -35,7 +35,7 @@
     },
     "gi_first_bowel_sounds_TEAS_Sham": {
       "fingerprint": "376f873e055d2671",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 2,
         "estimate": -6.0864,
@@ -51,7 +51,7 @@
     },
     "pain_vas_24h_TEAS_Sham": {
       "fingerprint": "d9c26b2d472911c9",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 3,
         "estimate": -1.4488,
@@ -67,7 +67,7 @@
     },
     "ponv_24h_TEAS_Sham": {
       "fingerprint": "0f06b1ffa3d78ecb",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 3,
         "estimate": -0.6095,
@@ -83,7 +83,7 @@
     },
     "v34_intraop_remifentanil_TEAS_Sham": {
       "fingerprint": "520cad80b2232dd0",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 6,
         "estimate": -117.7771,
@@ -99,7 +99,7 @@
     },
     "v34_intraop_sufentanil_TEAS_Sham": {
       "fingerprint": "bd1e9620f7f1cc35",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 2,
         "estimate": -9.4356,
@@ -115,7 +115,7 @@
     },
     "v34_qor40_24h_TEAS_Sham": {
       "fingerprint": "f9a98220431ef97b",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 2,
         "estimate": 6.7163,
@@ -131,7 +131,7 @@
     },
     "v34_gi_first_defecation_TEAS_Sham": {
       "fingerprint": "be29495400127504",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 3,
         "estimate": -10.3982,
@@ -147,7 +147,7 @@
     },
     "v34_gi_first_defecation_EA_Usual_care": {
       "fingerprint": "d5048b485049184c",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 3,
         "estimate": -4.0811,
@@ -163,7 +163,7 @@
     },
     "v34_primary_24h_mme_TEAS_Sham": {
       "fingerprint": "5da10996b0c2dada",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 4,
         "estimate": -13.9953,
@@ -179,7 +179,7 @@
     },
     "v34_primary_24h_mme_EA_Usual_care": {
       "fingerprint": "1b0e01c9951a1ca7",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 3,
         "estimate": -3.9358,
@@ -195,7 +195,7 @@
     },
     "v34_primary_24h_mme_ALL_AUDIT": {
       "fingerprint": "e29adcca0c1431f7",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 7,
         "estimate": -9.907,
@@ -211,7 +211,7 @@
     },
     "AN-01-SMD": {
       "fingerprint": "2e07946a6aec1f4d",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 7,
         "estimate": -0.9667,
@@ -227,7 +227,7 @@
     },
     "AN-02-TARGET-A": {
       "fingerprint": "ae17846d7b5c448b",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 3,
         "estimate": -10.2678,
@@ -243,7 +243,7 @@
     },
     "AN-03-TARGET-B": {
       "fingerprint": "c4983e3132d6336c",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 1,
         "estimate": -0.5,
@@ -259,7 +259,7 @@
     },
     "AN-04-TARGET-C": {
       "fingerprint": "a56f8db01188b280",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 2,
         "estimate": -0.1765,
@@ -275,7 +275,7 @@
     },
     "AN-05-TARGET-D-24": {
       "fingerprint": "1a9a71c481016350",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 2,
         "estimate": 0.5604,
@@ -291,7 +291,7 @@
     },
     "AN-06-TARGET-D-48": {
       "fingerprint": "94d2f9f52649da96",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 2,
         "estimate": 0.5234,
@@ -307,7 +307,7 @@
     },
     "AN-07-TARGET-E": {
       "fingerprint": "e2a5032ddcd0fddb",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 6,
         "estimate": -2.0039,
@@ -323,7 +323,7 @@
     },
     "AN-08-TARGET-F-REMI": {
       "fingerprint": "120743d9feb95c19",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 7,
         "estimate": -114.21,
@@ -339,7 +339,7 @@
     },
     "AN-09-TARGET-F-RESCUE": {
       "fingerprint": "abaadc72fb110918",
-      "reviewed_on": "2026-09-09",
+      "reviewed_on": "2026-09-10",
       "bound_evidence": {
         "k": 4,
         "estimate": 0.5047,
@@ -351,6 +351,70 @@
         "rob_some": 3,
         "rob_high": 1,
         "estimator": "RR, REML + Hartung-Knapp"
+      }
+    },
+    "V33_TIERE_EA_SHAM_SMD": {
+      "fingerprint": "3e4b0904de5eeb57",
+      "reviewed_on": "2026-09-10",
+      "bound_evidence": {
+        "k": 2,
+        "estimate": -0.9124,
+        "ci_low": -7.8711,
+        "ci_high": 6.0463,
+        "i2": 76.09,
+        "grade": "Not rated",
+        "rob_low": 0,
+        "rob_some": 0,
+        "rob_high": 0,
+        "estimator": "REML"
+      }
+    },
+    "V33_TIERE_TEAS_SHAM_SMD_MAIN": {
+      "fingerprint": "df49a4a8f0986b8d",
+      "reviewed_on": "2026-09-10",
+      "bound_evidence": {
+        "k": 1,
+        "estimate": -0.9116,
+        "ci_low": -1.2584,
+        "ci_high": -0.5649,
+        "i2": null,
+        "grade": "Not rated",
+        "rob_low": 0,
+        "rob_some": 0,
+        "rob_high": 0,
+        "estimator": "Single study (no pooling)"
+      }
+    },
+    "V33_TIERE_TEAS_SHAM_SMD_SENS": {
+      "fingerprint": "b8dda5ef138b51d9",
+      "reviewed_on": "2026-09-10",
+      "bound_evidence": {
+        "k": 2,
+        "estimate": -1.7604,
+        "ci_low": -12.8898,
+        "ci_high": 9.369,
+        "i2": 94.82,
+        "grade": "Not rated",
+        "rob_low": 0,
+        "rob_some": 0,
+        "rob_high": 0,
+        "estimator": "REML"
+      }
+    },
+    "V33_TIERE_TEAS_USUAL_SMD": {
+      "fingerprint": "fae9bbe30d110e70",
+      "reviewed_on": "2026-09-10",
+      "bound_evidence": {
+        "k": 1,
+        "estimate": -1.168,
+        "ci_low": -1.93,
+        "ci_high": -0.4059,
+        "i2": null,
+        "grade": "Not rated",
+        "rob_low": 0,
+        "rob_some": 0,
+        "rob_high": 0,
+        "estimator": "Single study (no pooling)"
       }
     }
   }
