@@ -1865,10 +1865,16 @@ def t_xie2014_yang2020_secondary_outcomes_corrected():
                      f"(source PDF Table 3: time to first flatus)")
 
     tu = (by_key.get("Tu 2024", {}).get("outcomes") or {}).get("rescue_analgesia") or {}
-    if (tu.get("arm1_events"), tu.get("arm1_total"), tu.get("arm2_events"), tu.get("arm2_total")) != (3, 57, 6, 58):
+    # The analysed denominator is lock-owned and lives in arm1_n/arm2_n. arm1_total
+    # was the stale RANDOMISED n (77/76) and was removed in the 2026-09-10
+    # remediation, so read the analysed field first and fall back only for
+    # records the sync has not reached.
+    tu_n1 = tu.get("arm1_n", tu.get("arm1_total"))
+    tu_n2 = tu.get("arm2_n", tu.get("arm2_total"))
+    if (tu.get("arm1_events"), tu_n1, tu.get("arm2_events"), tu_n2) != (3, 57, 6, 58):
         probs.append(f"Tu 2024 outcomes.rescue_analgesia is "
-                     f"{tu.get('arm1_events')}/{tu.get('arm1_total')} vs "
-                     f"{tu.get('arm2_events')}/{tu.get('arm2_total')}, expected 3/57 vs 6/58 "
+                     f"{tu.get('arm1_events')}/{tu_n1} vs "
+                     f"{tu.get('arm2_events')}/{tu_n2}, expected 3/57 vs 6/58 "
                      f"(source PDF Table 4: tramadol rescue within 6-24h)")
 
     wu = (by_key.get("Wu 2022", {}).get("outcomes") or {}).get("intraop_opioid") or {}
@@ -3091,6 +3097,364 @@ def t_target_af_sof_rows_match_v26_source():
           not probs, "\n".join(probs))
 
 
+# Placeholder arm-level tuples that were live in dashboard/data.js before the
+# 2026-09-10 remediation and describe no published result. Banning them by exact
+# value is cheap and catches a revert that a lock comparison alone might miss if
+# the lock itself were ever edited to match. Keyed by (bucket, study).
+SUPERSEDED_OUTCOME_ARMS = {
+    ("intraop_opioid", "Guo 2023"):   (620.0, 140.0, 30, 710.0, 160.0, 30),
+    ("intraop_opioid", "Liang 2021"): (533.0, 125.0, 30, 582.0, 140.0, 30),
+    ("intraop_opioid", "Pan 2023"):   (890.0, 210.0, 32, 960.0, 230.0, 32),
+    ("intraop_opioid", "Wu 2022"):    (1100.0, 240.0, 30, 1380.0, 280.0, 30),
+    ("intraop_opioid", "Lu 2021"):    (1580.0, 390.0, 190, 1720.0, 410.0, 188),
+    ("intraop_opioid", "Xing 2022"):  (1330.0, 310.0, 29, 1620.0, 380.0, 29),
+    ("intraop_opioid", "Zheng 2025"): (750.0, 180.0, 42, 820.0, 190.0, 43),
+    ("flatus_time", "Yang 2024"):     (83.0, 12.0, 90, 85.0, 12.0, 90),
+    ("flatus_time", "Yang 2020"):     (67.45, 10.42, 29, 73.55, 12.18, 28),
+    ("flatus_time", "Xing 2022"):     (48.86, 11.45, 29, 51.07, 12.24, 29),
+    ("flatus_time", "Lu 2022"):       (38.8, 8.2, 47, 46.2, 8.9, 47),
+    ("flatus_time", "Ng 2013"):       (31.92, 8.64, 6, 32.16, 8.88, 6),
+}
+SUPERSEDED_OUTCOME_EVENTS = {
+    ("rescue_analgesia", "Xie 2014"): (4, 10),
+    ("rescue_analgesia", "Yu 2020"):  (5, 11),
+    ("rescue_analgesia", "Tu 2024"):  (9, 17),
+}
+
+# The unit every pooled bucket must be expressed in once the lock's own
+# conversions have been applied. A record carrying the raw statistic's unit
+# (Ng 2013's flatus is reported in days but pooled in hours) is a unit-mixing
+# bug, which is what this pins down.
+OUTCOME_UNITS = {
+    "opioid_24h": "mg IV MME",
+    "opioid_48h": "mg IV MME",
+    "opioid_72h": "mg IV MME",
+    "intraop_opioid": "µg remifentanil",
+    "flatus_time": "hours",
+    "ponv_24h": "participants",
+    "rescue_analgesia": "participants",
+}
+
+
+def _dashboard_outcome_records():
+    """Every arm-bearing outcome record in data.js, as (bucket, study, record)."""
+    for s in STUDIES:
+        for bucket, rec in (s.get("outcomes") or {}).items():
+            if isinstance(rec, dict):
+                yield bucket, s.get("key"), rec
+
+
+def t_dashboard_outcomes_are_generated_from_the_lock():
+    """
+    STRUCTURAL. The 2026-09-10 incident: dashboard/data.js was a hand-maintained
+    second copy of numbers the locked datasets already held, and 15 of its
+    arm-bearing cells had drifted into placeholder values matching no source and
+    no lock. dashboard/app.js overwrites s.outcomes[key] from the GENERATED
+    window.BROWSER_TARGETS at boot, so those numbers never reached a forest plot
+    -- but they sat in the committed register and would have gone live the
+    moment that overwrite was relaxed.
+
+    scripts/sync_dashboard_outcomes.py now derives those records from the same
+    lock browser_targets.js is built from. This asserts the sync is current, so
+    a hand edit to data.js fails the build instead of shipping. It is the check
+    that makes "data.js is generated, not authored" true rather than aspirational.
+    """
+    import io
+    import contextlib
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import sync_dashboard_outcomes as sync_mod
+
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = sync_mod.sync(check_only=True)
+    check("dashboard/data.js outcome records are generated from the lock, not authored",
+          rc == 0, buf.getvalue().strip())
+
+
+def t_outcome_effects_recompute_from_their_arms():
+    """
+    DERIVED. meta_engine.js consumes the stored mean_diff/se (and rr/ci for
+    binary outcomes) verbatim -- it never recomputes them from the arms. A record
+    whose scalars disagree with its own arms therefore pools a number that
+    describes nothing. Recompute every one of them.
+
+    Direction is checked the same way: `favors` must follow the sign of the
+    observed effect. Liang 2021 shipped as favors="Intervention" on a mean_diff
+    of -49 when its true effect is +56.8 -- a false opioid-sparing signal that a
+    value-only comparison would not have caught.
+    """
+    import math
+    probs = []
+    checked = 0
+    for bucket, key, rec in _dashboard_outcome_records():
+        has_cont = all(k in rec for k in
+                       ("arm1_mean", "arm1_sd", "arm1_n", "arm2_mean", "arm2_sd", "arm2_n"))
+        has_bin = all(k in rec for k in ("arm1_events", "arm2_events", "arm1_n", "arm2_n"))
+
+        if has_cont:
+            checked += 1
+            m1, s1, n1 = float(rec["arm1_mean"]), float(rec["arm1_sd"]), float(rec["arm1_n"])
+            m2, s2, n2 = float(rec["arm2_mean"]), float(rec["arm2_sd"]), float(rec["arm2_n"])
+            if min(n1, n2) <= 0 or min(s1, s2) < 0:
+                probs.append(f"{key}/{bucket}: non-positive n or negative SD")
+                continue
+            md = m1 - m2
+            se = math.sqrt(s1 ** 2 / n1 + s2 ** 2 / n2)
+            if abs(float(rec.get("mean_diff", md)) - md) > 0.01:
+                probs.append(f"{key}/{bucket}: mean_diff {rec['mean_diff']} != {md:.4f} from arms")
+            if abs(float(rec.get("se", se)) - se) > 0.01:
+                probs.append(f"{key}/{bucket}: se {rec['se']} != {se:.4f} from arms")
+            for bound, want in (("ci_low", md - 1.96 * se), ("ci_upp", md + 1.96 * se)):
+                if bound in rec and abs(float(rec[bound]) - want) > 0.01:
+                    probs.append(f"{key}/{bucket}: {bound} {rec[bound]} != {want:.4f}")
+            expect = "Intervention" if md < 0 else "Control"
+            if "favors" in rec and rec["favors"] != expect:
+                probs.append(f"{key}/{bucket}: favors '{rec['favors']}' contradicts mean_diff "
+                             f"{md:.2f} (expected '{expect}')")
+
+        elif has_bin:
+            checked += 1
+            e1, n1 = float(rec["arm1_events"]), float(rec["arm1_n"])
+            e2, n2 = float(rec["arm2_events"]), float(rec["arm2_n"])
+            # A denominator smaller than its event count is impossible; this is
+            # what a randomised-vs-analysed n mix-up looks like numerically.
+            for label, e, n in (("arm1", e1, n1), ("arm2", e2, n2)):
+                if n <= 0:
+                    probs.append(f"{key}/{bucket}: {label} denominator is {n}")
+                elif e > n:
+                    probs.append(f"{key}/{bucket}: {label} events {e} exceed denominator {n}")
+            if min(e1, e2) <= 0 or min(n1, n2) <= 0:
+                continue
+            rr = (e1 / n1) / (e2 / n2)
+            se = math.sqrt(1 / e1 - 1 / n1 + 1 / e2 - 1 / n2)
+            if abs(float(rec.get("rr", rr)) - rr) > 0.001:
+                probs.append(f"{key}/{bucket}: rr {rec['rr']} != {rr:.4f} from events")
+            if abs(float(rec.get("se", se)) - se) > 0.001:
+                probs.append(f"{key}/{bucket}: se {rec['se']} != {se:.4f} from events")
+            expect = "Intervention" if rr < 1 else "Control"
+            if "favors" in rec and rec["favors"] != expect:
+                probs.append(f"{key}/{bucket}: favors '{rec['favors']}' contradicts rr {rr:.3f}")
+
+    check(f"Every dashboard outcome effect recomputes from its own arms ({checked} records)",
+          not probs, "\n".join(probs))
+
+
+def t_no_superseded_placeholder_outcomes():
+    """
+    ABSENCE. The 15 placeholder tuples the 2026-09-10 incident removed. Each is
+    a plausible-looking value that describes no published result, which is
+    exactly why they survived review for as long as they did. Ban them by value
+    so a revert cannot reintroduce one quietly.
+    """
+    probs = []
+    for bucket, key, rec in _dashboard_outcome_records():
+        banned = SUPERSEDED_OUTCOME_ARMS.get((bucket, key))
+        if banned and all(k in rec for k in ("arm1_mean", "arm1_sd", "arm1_n",
+                                             "arm2_mean", "arm2_sd", "arm2_n")):
+            got = tuple(float(rec[k]) for k in
+                        ("arm1_mean", "arm1_sd", "arm1_n", "arm2_mean", "arm2_sd", "arm2_n"))
+            if all(abs(a - b) <= 0.001 for a, b in zip(got, banned)):
+                probs.append(f"{key}/{bucket}: superseded placeholder arms are live again {got}")
+        banned_e = SUPERSEDED_OUTCOME_EVENTS.get((bucket, key))
+        if banned_e and all(k in rec for k in ("arm1_events", "arm2_events")):
+            got_e = (float(rec["arm1_events"]), float(rec["arm2_events"]))
+            if all(abs(a - b) <= 0.001 for a, b in zip(got_e, banned_e)):
+                probs.append(f"{key}/{bucket}: superseded placeholder events are live again {got_e}")
+    check(f"No superseded placeholder outcome values survive "
+          f"({len(SUPERSEDED_OUTCOME_ARMS) + len(SUPERSEDED_OUTCOME_EVENTS)} banned)",
+          not probs, "\n".join(probs))
+
+
+def t_outcome_units_are_not_mixed():
+    """
+    STRUCTURAL. Ng 2013 reports time to first flatus in DAYS and is pooled in
+    HOURS; the lock row keeps the raw unit, so the generated record used to be
+    labelled "days" while carrying hour values. Nothing would have caught a
+    genuine days/hours mix-up in the pooled mean. Pin each bucket to the one
+    unit its pooled estimate is expressed in, and require any record whose raw
+    statistic differs to say so in `converted_from`.
+    """
+    probs = []
+    for bucket, key, rec in _dashboard_outcome_records():
+        want = OUTCOME_UNITS.get(bucket)
+        if not want or "unit" not in rec:
+            continue
+        if not any(k in rec for k in ("arm1_mean", "arm1_events")):
+            continue  # narrative/status-only record
+        if rec["unit"] != want:
+            # A record that says in its own note that it is outside the pooled
+            # set may legitimately carry the raw published unit -- that is the
+            # honest label. What must never happen is a raw statistic wearing
+            # the pooled unit, which is the case this catches.
+            if "not in the locked" not in str(rec.get("note", "")).lower():
+                probs.append(f"{key}/{bucket}: unit '{rec['unit']}' is not the pooled unit "
+                             f"'{want}' and the record does not declare itself out of pool")
+        if "converted_from" in rec and want not in ("participants",):
+            if not re.search(r"[x×]\s*\d", str(rec["converted_from"])):
+                probs.append(f"{key}/{bucket}: converted_from does not state the conversion factor")
+    check("Pooled outcome records all carry their analysis unit, and declare any conversion",
+          not probs, "\n".join(probs))
+
+
+def t_legacy_compilers_carry_no_placeholders():
+    """
+    ABSENCE + STRUCTURAL. dashboard/compile_dashboard_data.py and its byte-identical
+    twin 06_FINAL_ANALYSIS_V26/build_v26_dataset.py still hold hardcoded outcome
+    dicts. They are not on the build path any more -- data.js is generated by
+    scripts/sync_dashboard_outcomes.py -- but they held all 12 placeholder values
+    after data.js had been corrected, so running either would have regenerated the
+    2026-09-10 contamination wholesale.
+
+    Ban the placeholder literals in both files, and assert the two stay identical
+    so a fix can never land in one and not the other.
+    """
+    probs = []
+    paths = [ROOT / "dashboard/compile_dashboard_data.py",
+             ROOT / "06_FINAL_ANALYSIS_V26/build_v26_dataset.py"]
+    texts = []
+    for path in paths:
+        if not path.exists():
+            probs.append(f"{path.name} is missing")
+            texts.append("")
+            continue
+        texts.append(path.read_text(encoding="utf-8"))
+
+    # One distinctive literal per superseded record, as it appeared in these files.
+    banned = {
+        '"arm1_mean": 31.92': "Ng 2013 flatus placeholder",
+        '"arm1_mean": 67.45': "Yang 2020 flatus placeholder",
+        '"arm1_mean": 83.0, "arm1_sd": 12.0': "Yang 2024 flatus placeholder",
+        '"arm1_mean": 48.86': "Xing 2022 flatus placeholder",
+        '"arm1_mean": 38.8, "arm1_sd": 8.2': "Lu 2022 flatus placeholder",
+        '"arm1_mean": 1100.0': "Wu 2022 intraop placeholder",
+        '"arm1_mean": 1580.0': "Lu 2021 intraop placeholder",
+        '"arm1_mean": 1330.0': "Xing 2022 intraop placeholder",
+        '"arm1_mean": 750.0, "arm1_sd": 180.0': "Zheng 2025 intraop placeholder",
+        '"arm1_mean": 620.0': "Guo 2023 intraop placeholder",
+        '"arm1_mean": 533.0': "Liang 2021 intraop placeholder",
+        '"arm1_mean": 890.0, "arm1_sd": 210.0': "Pan 2023 intraop placeholder",
+        '"arm1_events": 4, "arm1_total": 20': "Xie 2014 rescue placeholder",
+        '"arm1_events": 5, "arm1_total": 30': "Yu 2020 rescue placeholder",
+        '"arm1_events": 9, "arm1_total": 77': "Tu 2024 rescue placeholder",
+        "1.33 ± 0.36": "Ng 2013 fabricated day->hour provenance",
+    }
+    # The same fabricated narrative must not survive in the register either.
+    # sync_dashboard_outcomes.py preserves `note` fields verbatim, so a rebase or
+    # revert can carry it back in even when every number is correct.
+    fabricated = "Originally reported in days (1.33 ± 0.36 vs 1.34 ± 0.37 days)"
+    if fabricated in DATA_JS:
+        probs.append("dashboard/data.js: Ng 2013's fabricated day->hour provenance is asserted "
+                     "again (1.33/1.34 days, n=6/6 -- these appear nowhere in the source). The "
+                     "corrective note may QUOTE those figures as superseded; it may not state "
+                     "them as the source's own.")
+    for path, text in zip(paths, texts):
+        for literal, why in banned.items():
+            if literal in text:
+                probs.append(f"{path.name}: {why} is still hardcoded ({literal})")
+
+    if all(texts) and texts[0] != texts[1]:
+        probs.append("compile_dashboard_data.py and build_v26_dataset.py have diverged; "
+                     "they must stay byte-identical")
+
+    check(f"Legacy dataset compilers carry no superseded placeholder values "
+          f"({len(banned)} banned, 2 files)",
+          not probs, "\n".join(probs))
+
+
+# Workbooks that are kept as the review's audit trail but must NOT feed any live
+# analysis. Deleting them would destroy provenance for a registered review; the
+# risk they actually carry is that a script quietly starts reading one. That is
+# what this pins down. Keep in step with "TEAS EA Verification/README.md".
+ARCHIVAL_WORKBOOKS = {
+    "TEAS_EA_RECONCILED_MASTER_DATA_v20_PRIMARY_OPIOID_SET.xlsx": "v20",
+    "TEAS_EA_RECONCILED_MASTER_DATA_v32_FINAL_LOCK_READY.xlsx": "v32",
+    "TEAS_EA_v32_SUPPLEMENTARY_MISSED_OUTCOMES_FOR_CLAUDE_CODE.xlsx": "v32 supplement",
+}
+MASTER_WORKBOOK = "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx"
+
+
+def t_archival_workbooks_feed_no_live_code():
+    """
+    STRUCTURAL. Five superseded master workbooks sit beside the current one. The
+    review team's instinct is to delete them so nothing gets mixed up; the right
+    answer is the opposite -- they are the audit trail for PROSPERO
+    CRD420251090635, and two of them are still read by live code, so deleting is
+    both destructive and build-breaking.
+
+    What actually needs preventing is a script quietly reading a superseded
+    workbook. This asserts that the workbooks marked archival in
+    "TEAS EA Verification/README.md" are referenced by NO live analytical code,
+    that the master still is, and that the README's own table has not drifted
+    from what the code does.
+    """
+    verif = ROOT / "TEAS EA Verification"
+    readme = verif / "README.md"
+    probs = []
+
+    if not readme.exists():
+        check("Archival master workbooks feed no live analytical code", False,
+              "TEAS EA Verification/README.md is missing -- it is what names the master")
+        return
+
+    # Live analytical code: the build path and the dashboard's own scripts.
+    live = sorted(
+        list((ROOT / "scripts").glob("*.py"))
+        + list((ROOT / "dashboard").glob("*.py"))
+        + list((ROOT / ".github/workflows").glob("*.yml"))
+    )
+    for path in live:
+        if path.name in ("validate_dashboard.py",):
+            continue  # this file names them in order to ban them
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        for wb, label in ARCHIVAL_WORKBOOKS.items():
+            if wb in text:
+                probs.append(f"{path.relative_to(ROOT)} reads the archival {label} workbook "
+                             f"({wb}); the master is {MASTER_WORKBOOK}")
+
+    if not (verif / MASTER_WORKBOOK).exists():
+        probs.append(f"the master workbook {MASTER_WORKBOOK} is missing")
+
+    build_site = (ROOT / "scripts/build_site.py").read_text(encoding="utf-8")
+    if MASTER_WORKBOOK not in build_site:
+        probs.append("scripts/build_site.py no longer names the master workbook")
+
+    # The README's table is the human-readable half of this contract; if a
+    # workbook exists on disk but the README does not mention it, the table has
+    # drifted and the next person cannot tell which file is authoritative.
+    readme_text = readme.read_text(encoding="utf-8")
+    for wb in verif.glob("*.xlsx"):
+        stem = wb.name.replace("TEAS_EA_RECONCILED_MASTER_DATA_", "").replace(".xlsx", "")
+        if wb.name not in readme_text and stem not in readme_text:
+            probs.append(f"{wb.name} is on disk but not listed in "
+                         f"TEAS EA Verification/README.md")
+
+    check(f"Archival master workbooks feed no live analytical code "
+          f"({len(ARCHIVAL_WORKBOOKS)} archival, master = v34)",
+          not probs, "\n".join(probs))
+
+
+def t_quarantine_registry_is_honest():
+    """
+    STRUCTURAL. dashboard/outcome_quarantine.js withholds an outcome from being
+    read as verified. It is only useful if it cannot drift in either direction:
+    an outcome must not stay quarantined once its records are verified (which
+    would understate the evidence), and must name only real, live outcomes.
+    """
+    src = (DASH / "outcome_quarantine.js").read_text(encoding="utf-8")
+    body = src.split("window.OUTCOME_QUARANTINE = ", 1)[1].rsplit(";", 1)[0]
+    entries = re.findall(r"^\s{2}(\w+):\s*\{", body, re.M)
+    live = set(json.loads((DASH / "meta_outcomes.js").read_text(encoding="utf-8")
+                          .split("window.META_OUTCOMES = ", 1)[1].rsplit(";", 1)[0]))
+    probs = [f"quarantined outcome '{e}' is not a live Meta Lab outcome"
+             for e in entries if e not in live]
+    for e in entries:
+        block = body[body.index(f"{e}: {{"):]
+        if "reason" not in block[:block.index("}")]:
+            probs.append(f"quarantined outcome '{e}' carries no reason")
+    check(f"Outcome quarantine registry is honest ({len(entries)} quarantined)",
+          not probs, "\n".join(probs))
+
+
 def t_rob2_source_links_match_registers():
     """
     Every RoB 2 matrix cell claiming a specific, source-quoted rationale must
@@ -3367,6 +3731,14 @@ def main() -> int:
                                         t_forest_context_matches_stata_log,
                                         t_target_af_sof_rows_match_v26_source,
                                         t_rob2_source_links_match_registers]),
+        ("outcome register integrity (incident 2026-09-10)",
+         [t_dashboard_outcomes_are_generated_from_the_lock,
+          t_outcome_effects_recompute_from_their_arms,
+          t_no_superseded_placeholder_outcomes,
+          t_outcome_units_are_not_mixed,
+          t_legacy_compilers_carry_no_placeholders,
+          t_archival_workbooks_feed_no_live_code,
+          t_quarantine_registry_is_honest]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,

@@ -1247,9 +1247,32 @@ function renderStataSecondary() {
 }
 
 // 5. Real-Time Dynamic Meta-Analysis Lab & Forest Plot (Objectives 1, 2, 3, 5, 6)
+// Data-integrity incident 2026-09-10: an outcome listed in
+// window.OUTCOME_QUARANTINE still contains study records that have not been
+// verified against the source publication. Its pooled estimate is still shown
+// -- withholding it silently would be its own kind of misreporting -- but it is
+// labelled so it cannot be read as a verified result.
+function renderQuarantineNotice() {
+  const host = document.getElementById('meta-quarantine-notice');
+  if (!host) return;
+  const q = (window.OUTCOME_QUARANTINE || {})[currentOutcome];
+  if (!q) { host.hidden = true; host.innerHTML = ''; return; }
+  const studies = (q.studies || []).join(', ');
+  host.hidden = false;
+  host.innerHTML = `
+    <div class="quarantine-notice" role="note">
+      <span class="quarantine-notice-label">Pending verification</span>
+      <div class="quarantine-notice-body">
+        <p>${q.reason}</p>
+        ${q.detail ? `<p class="quarantine-notice-detail">${q.detail}${studies ? ` Awaiting source check: ${studies}.` : ''}</p>` : ''}
+      </div>
+    </div>`;
+}
+
 function renderMetaLab() {
   const metaModality=STUDY_FILTER_TABS.includes(activeTab)?filterModality:'all';
   renderStataSecondary();
+  renderQuarantineNotice();
   const filtered = getFilteredStudies(false);
   const isBinary = ['ponv_24h', 'rescue_analgesia'].includes(currentOutcome);
   const tbody = document.getElementById('forest-table-body');

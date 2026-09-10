@@ -269,6 +269,18 @@ def main() -> int:
     out = Path(args.out)
 
     run([sys.executable, "scripts/build_reference_data.py"])
+    # The dashboard's outcome register is generated from the lock, not authored.
+    # Refuse to build a site whose data.js has been hand-edited away from it --
+    # that drift is what the 2026-09-10 placeholder incident was.
+    sync = subprocess.run([sys.executable, "scripts/sync_dashboard_outcomes.py", "--check"],
+                          cwd=ROOT, capture_output=True, text=True)
+    if sync.returncode != 0:
+        print(sync.stdout.strip() or sync.stderr.strip(), file=sys.stderr)
+        print("\nBUILD REFUSED: dashboard/data.js no longer matches the locked datasets.\n"
+              "Run  python3 scripts/sync_dashboard_outcomes.py  to regenerate it, or fix the\n"
+              "lock if the lock is what changed. Do not hand-edit the outcome records.",
+              file=sys.stderr)
+        return 1
 
     commit = git_commit(args.commit)
     meta = build_metadata(commit)
