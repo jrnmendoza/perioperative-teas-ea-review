@@ -17,11 +17,19 @@ from the source PDF, and 0/75 of the client-side rationale strings do.
 
 Both registers are already loaded client-side in full, as
 window.V34_DATA.rob2_results.results (36 rows) and
-window.V34_DATA.rob2_priority2.results (493 rows) -- this script does not
-duplicate them. What it adds is the missing LINK between a matrix cell (keyed
-by the dashboard's own outcome "bucket", e.g. opioid_24h) and the specific row
-in those 529 that the cell is actually about, plus the per-domain split of
-that row's rationale text.
+window.V34_DATA.rob2_priority2.results (493 rows) -- generated from the same
+two CSVs this script reads (scripts/build_v34_dashboard_data.py). This script
+reads the CSVs directly rather than that client-side copy, though: the copy
+drops analysed_n_i/analysed_n_c/randomised_n_i/randomised_n_c on the way into
+v34_data.js, and _match_by_denominator() below needs those fields -- an
+earlier version of this script, built against the client-side copy, could
+only ever disambiguate by wording, and that is what forced the elaborate
+lexical tiebreak this file also contains.
+
+What this script adds is the missing LINK between a matrix cell (keyed by the
+dashboard's own outcome "bucket", e.g. opioid_24h) and the specific row in
+those 529 that the cell is actually about, plus the per-domain split of that
+row's rationale text.
 
 WHY THE JOIN IS DETERMINISTIC KEYWORD/TIMEPOINT MATCHING, NOT FUZZY TEXT
 SIMILARITY
@@ -54,17 +62,51 @@ excluded from tiebreak scoring, and only because a concrete false match
 additions tried during development (total, dose, amount, requirement, level)
 were reverted after "total" produced the mirror-image bug on Zheng 2025.
 
-Verified: 34 of 75 assessed results resolve this way (up from an initial 29
+BEFORE THE LEXICAL TIEBREAK: HARD NUMBERS, WHERE THEY EXIST
+_match_by_denominator() tries two numeric checks ahead of any wording, using
+fields the client-side copy above does not carry:
+
+  1. Does a candidate's recorded analysed_n_i/analysed_n_c exactly match the
+     denominator the dashboard's OWN stored value for this bucket already
+     implies (arm1_n/arm2_n, or an arm1_total/arm2_total derived from an
+     events/total pair)? If so, that candidate is not inferred to be the
+     source of that figure, it is read directly off both sides.
+  2. Failing that, is exactly one candidate's analysed_n recorded at all (its
+     siblings blank)? A row with no analysed n was not what produced a
+     dashboard figure that has one.
+
+Both found by manually tracing Jin 2023's opioid_24h bucket: dashboard value
+(n=53, n=52); one candidate's analysed_n is exactly (53, 52); the sibling
+candidate's analysed_n is blank. Same mechanism separately resolved Lu 2021's
+ponv_24h bucket, where one candidate's denominator (190, 188) exactly matches
+the dashboard's own stored total and the other candidate's (198, 188) does
+not.
+
+A separate family-label bleed-through was found and fixed the same way as the
+ponv_24h fix above: pca_behavior matched on "family + outcome" combined text,
+and two genuinely different Long 2025 rows ("PCIA compression count", "PCIA
+solution consumption") both share the family label "Opioid demand" and so
+both matched via that label regardless of what they actually measure. Fixed
+by requiring pca_behavior's keywords to hit outcome text specifically, same
+as ponv_24h/ponv_48h already did.
+
+Verified: 37 of 75 assessed results resolve this way (up from an initial 29
 using keyword+timepoint alone), confirmed to ADD to that set with zero
-removals or changes to any of the original 29 -- diffed explicitly against
-the prior version rather than assumed. Several remaining multi-candidate
-cases (e.g. Tu 2024's rescue_analgesia, Lu 2021's ponv_24h, Wu 2022's
-intraop_remi) stay unresolved because their only lexical distinguishing
-signal is a word ("incidence" vs "consumption", "count" vs "index") that is
-too easily generic elsewhere to trust as a rule -- this is a genuine limit of
-a lexical heuristic, not a bug left unfixed, and resolving them properly would
-mean reading the source PDFs directly, the same standard this review applies
-to every other judgement in it, rather than adding another regex.
+removals or changes across every intermediate version -- diffed explicitly
+against the prior committed version at each step, not assumed. Several
+remaining multi-candidate cases stay unresolved because NEITHER hard evidence
+nor wording settles them: Tu 2024's rescue_analgesia candidates share an
+identical analysed_n that does not even match the dashboard's own stored
+total (77, 76) for that bucket -- the dashboard figure appears to come from a
+different denominator than either extracted row records, which this script
+will not paper over with a guess. Wu 2022's intraop_remi and Chen 2015
+(Hyperalgesia)'s opioid_24h candidates have IDENTICAL analysed_n on both
+sides (same patients, different derived measures), so the numeric check
+cannot separate them either. This is a genuine limit of what the data
+available to this script can prove, not a bug left unfixed -- resolving them
+properly means reading the source PDFs directly, the same standard this
+review applies to every other judgement in it, rather than adding another
+regex.
 
 WHAT THIS DOES NOT DO
 Invent a page number. Neither register carries one (checked: 0 of 529 rows
@@ -79,6 +121,7 @@ Exit:   0 on success, 1 if the expected data files are missing.
 """
 from __future__ import annotations
 
+import csv
 import json
 import re
 import sys
@@ -118,7 +161,14 @@ BUCKET_RULES = {
     "flatus_time": (["flatus"], None, False),
     "rescue_analgesia": (["rescue"], None, False),
     "intraop_remi": (["remifentanil", "alfentanil"], None, False),
-    "pca_behavior": (["pca", "press", "demand", "bolus"], None, False),
+    # outcome_only=True: many PCA-related rows share the family label
+    # "Opioid demand" regardless of what they actually measure, so "demand"
+    # matching via family+outcome combined text let two genuinely different
+    # Long 2025 rows ("PCIA compression count" and "PCIA solution
+    # consumption") both pass -- found the same way as the ponv_24h family
+    # bleed-through above, by checking why a case that should have resolved
+    # via a unique keyword hit did not.
+    "pca_behavior": (["pca", "press", "demand", "bolus"], None, True),
     "qor_24h": (["qor", "quality of recovery"], ["24"], False),
 }
 ALL_WINDOWS = ("24", "48", "72")
@@ -241,7 +291,8 @@ def _tiebreak(oc_outcome_name: str, candidates: list[dict]) -> tuple[dict | None
     return None, ""
 
 
-def find_link(bucket: str, candidates: list[dict], oc_outcome_name: str = "") -> tuple[dict | None, str]:
+def find_link(bucket: str, candidates: list[dict], oc_outcome_name: str = "",
+              dash_denominator: tuple[int, int] | None = None) -> tuple[dict | None, str]:
     rule = BUCKET_RULES.get(bucket)
     if not rule or not candidates:
         return None, ""
@@ -265,15 +316,104 @@ def find_link(bucket: str, candidates: list[dict], oc_outcome_name: str = "") ->
     if len(hits) == 1:
         return hits[0], "keyword_timepoint_unique"
     if len(hits) > 1:
+        # Hard numbers before wording: does a candidate's recorded analysed-n
+        # match the dashboard's own stored denominator for this bucket, or is
+        # exactly one candidate the only one with any analysed-n recorded at
+        # all? Both are facts read off the data, not an inference from which
+        # words happen to appear in a label -- tried first, and only falling
+        # through to the text-based tiebreak (word choice, therefore weaker
+        # evidence) when neither settles it.
+        match, method = _match_by_denominator(hits, dash_denominator)
+        if match:
+            return match, method
         return _tiebreak(oc_outcome_name, hits)
     return None, ""
 
 
+PRIORITY1_CSV = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_draft_assessments.csv"
+PRIORITY2_CSV = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_priority2_assessments.csv"
+
+
 def load_v34_rob2_rows() -> list[dict]:
-    src = (DASH / "v34_data.js").read_text(encoding="utf-8")
-    d = json.loads(src[src.index("window.V34_DATA = ") +
-                       len("window.V34_DATA = "):src.rindex(";")])
-    return d["rob2_results"]["results"] + d["rob2_priority2"]["results"]
+    """
+    Read the two RoB 2 registers directly, not via window.V34_DATA in
+    v34_data.js.
+
+    v34_data.js's embedded rob2_results/rob2_priority2 JSON is a build-time
+    COPY of these two CSVs (see scripts/build_v34_dashboard_data.py), and that
+    copy drops analysed_n_i/analysed_n_c/randomised_n_i/randomised_n_c --
+    fields this script needs for _match_by_denominator() below and did not
+    have access to in an earlier version, which is why that version could
+    only ever disambiguate by wording. Reading the CSVs directly is also
+    simply reading the actual source rather than a lossy derived copy of it.
+    """
+    rows = []
+    for path in (PRIORITY1_CSV, PRIORITY2_CSV):
+        with path.open(encoding="utf-8-sig") as f:
+            for row in csv.DictReader(f):
+                row["family"] = row.get("outcome_family", "")  # CSV column name differs
+                rows.append(row)
+    return rows
+
+
+def _as_int(v) -> int | None:
+    try:
+        return int(float(v))
+    except (TypeError, ValueError):
+        return None
+
+
+def _dashboard_denominator(dash_outcome_value: dict) -> tuple[int, int] | None:
+    """
+    The (arm1, arm2) denominator the dashboard's own stored value for this
+    bucket implies, from whichever fields it actually populated -- an
+    explicit n, or a total implied by an events/total pair. None if the
+    dashboard carries no value for this bucket at all (most buckets, most
+    studies: the RoB 2 assessment can exist without a pooled/displayed value).
+    """
+    if not dash_outcome_value:
+        return None
+    n1 = _as_int(dash_outcome_value.get("arm1_n"))
+    n2 = _as_int(dash_outcome_value.get("arm2_n"))
+    if n1 is not None and n2 is not None:
+        return (n1, n2)
+    t1 = _as_int(dash_outcome_value.get("arm1_total"))
+    t2 = _as_int(dash_outcome_value.get("arm2_total"))
+    if t1 is not None and t2 is not None:
+        return (t1, t2)
+    return None
+
+
+def _match_by_denominator(candidates: list[dict], want: tuple[int, int] | None) -> tuple[dict | None, str]:
+    """
+    Disambiguate using each candidate's analysed_n_i/analysed_n_c against hard
+    numbers, in order of how much they can prove:
+
+    1. If the dashboard has a stored value for this bucket (`want` is not
+       None), a candidate whose analysed_n EXACTLY matches it is the row that
+       value actually came from -- not inferred, read directly off both sides.
+    2. Failing that, if exactly one candidate has analysed_n recorded at all
+       (its siblings are blank, meaning no result-level n was extracted for
+       them), that is still real evidence: a row with no n is not what
+       produced a dashboard figure that has one.
+
+    Both found while manually tracing Jin 2023's opioid_24h bucket: its
+    dashboard value is (n=53, n=52), one candidate row has that as its
+    analysed_n exactly, and the OTHER candidate's analysed_n is blank -- both
+    checks independently point to the same answer.
+    """
+    parsed = [( _as_int(c.get("analysed_n_i")), _as_int(c.get("analysed_n_c")), c) for c in candidates]
+
+    if want is not None:
+        exact = [c for n1, n2, c in parsed if (n1, n2) == want]
+        if len(exact) == 1:
+            return exact[0], "denominator_exact_match"
+
+    with_n = [c for n1, n2, c in parsed if n1 is not None and n2 is not None]
+    if len(with_n) == 1:
+        return with_n[0], "denominator_unique_recorded"
+
+    return None, ""
 
 
 def load_studies() -> list[dict]:
@@ -316,8 +456,10 @@ def build() -> dict:
             if not isinstance(oc, dict) or oc.get("status") != "Assessed":
                 continue
             total_assessed += 1
+            dash_value = (st.get("outcomes") or {}).get(bucket)
             match, method = find_link(bucket, by_study.get(st["key"], []),
-                                      oc.get("outcome_name") or "")
+                                      oc.get("outcome_name") or "",
+                                      _dashboard_denominator(dash_value))
             if not match:
                 continue
             links[f"{st['id']}::{bucket}"] = {

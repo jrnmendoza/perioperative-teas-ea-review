@@ -4,8 +4,8 @@ window.ROB2_SOURCE_LINKS = {
   "generated_by": "scripts/build_rob2_source_links.py",
   "disclaimer": "Links each RoB 2 matrix cell to the specific per-domain, source-quoted rationale and source PDF it has in the review's RoB 2 registers, where that link can be established without guessing (an explicit keyword/timepoint rule matching exactly one candidate result for that study). Coverage is partial by construction: a cell with no entry here has no ambiguity-free match, not a missing quote -- see the dashboard's own note on those cells. No page number is given because none exists in the source registers; the source PDF filename is the exact locator available.",
   "total_assessed_results": 75,
-  "linked_count": 34,
-  "coverage": 0.4533,
+  "linked_count": 37,
+  "coverage": 0.4933,
   "links": {
     "1879897477::pca_behavior": {
       "study": "Lin 2002",
@@ -228,6 +228,23 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879896580::ponv_24h": {
+      "study": "Lu 2021",
+      "matched_outcome": "Any PONV",
+      "matched_timepoint": "24 h",
+      "match_method": "denominator_exact_match",
+      "domains": {
+        "1": "randomisation via 'a secured web-based system that was stratified according to permuted blocks'",
+        "2": "'anesthesiologists, surgeons, and outcome assessors were blinded to the interventions', but 'The patients and investigators who participated in the intervention were not masked'",
+        "3": "analysed in the intention-to-treat population, with a documented worst-case imputation approach for missing pain-status data",
+        "5": "explicitly named among the secondary endpoints -- 'remifentanil consumption during general anesthesia, the time to the first verbal response and the time to endotracheal extubation, postoperative nausea and vomiting (PONV), respiratory depression, numeric rating scale (NRS) scores, and demand for rescue analgesics, patient satisfaction scores on analgesia by 24 h after surgery, and the incidence of chronic pain at 3 months after surgery'",
+        "4": "PONV recorded by blinded outcome assessors"
+      },
+      "flags": "",
+      "source_pdf": "covidence_414_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
     "1879896580::intraop_remi": {
       "study": "Lu 2021",
       "matched_outcome": "Total remifentanil",
@@ -364,6 +381,23 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879896440::opioid_24h": {
+      "study": "Jin 2023",
+      "matched_outcome": "Published 'fentanyl consumption' / PCIA solution volume",
+      "matched_timepoint": "24 h",
+      "match_method": "denominator_exact_match",
+      "domains": {
+        "1": "'randomized to receive ... with a 1:1 [allocation ratio]', with no sequence-generation or concealment method confirmed in the extracted text",
+        "2": "'Participants, outcome assessors, data analysts, and statisticians were blinded to treatment allocation, and acupuncturists were not'; the device had 'power indicator lights covered and the battery compartment sealed to assist in blinding'",
+        "3": "16 of 174 (9.2%) dropped out, with documented reasons",
+        "5": "'fentanyl consumption at 48 hours after surgery' is the paper's named secondary outcome; this 24h extraction is a different timepoint from what is explicitly reported",
+        "4": "recorded under comprehensive blinding of participants, outcome assessors, data analysts and statisticians"
+      },
+      "flags": "extracted timepoint (24h) differs from the paper's own named 48h fentanyl-consumption outcome",
+      "source_pdf": "009_jin_2023.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
     "1879896396::intraop_remi": {
       "study": "Pan 2023",
       "matched_outcome": "Intraoperative remifentanil",
@@ -429,6 +463,23 @@ window.ROB2_SOURCE_LINKS = {
       },
       "flags": "",
       "source_pdf": "covidence_1930_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
+    "1879896090::pca_behavior": {
+      "study": "Long 2025",
+      "matched_outcome": "PCIA compression count",
+      "matched_timepoint": "48 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'randomly assigned to Group C (n=26) and Group A (n=27) using a random number table', with no allocation-concealment mechanism described",
+        "2": "described as a 'double-masked'/'double-blind' trial, but the comparator is a 'non-stimulated control group' with no sham intervention described, and the report never states which personnel (participants, assessors, or both) were actually blinded or by what mechanism -- unlike other trials in this review that describe a concrete active-sham or name specific blinded roles",
+        "3": "7 of 60 (11.7%) did not complete follow-up (2 withdrew consent, 1 cancelled surgery, 4 lost to follow-up), with reasons documented",
+        "5": "recorded among the trial's stated outcome measures -- 'Adverse cardiovascular events, extubation duration, recovery room stay, analgesia pump use, analgesia pump use, postoperative adverse responses, and hospitalization length were recorded', with complications further detailed as 'Postoperative nausea and vomiting (PONV), abdominal discomfort, diarrhea, and other digestive disturbances ... The cardiovascular system included postoperative [hypertension, hypotension, tachycardia/bradycardia]'",
+        "4": "the report gives no blinding detail for any specific outcome -- no stated blinded assessor, and the underlying participant/personnel blinding claim itself is not methodologically supported for this no-sham comparator"
+      },
+      "flags": "",
+      "source_pdf": "1-s2.0-S0020138325005200.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },

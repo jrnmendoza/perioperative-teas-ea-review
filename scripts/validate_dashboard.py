@@ -3041,6 +3041,16 @@ def t_rob2_source_links_match_registers():
         if shipped_link.get("source_pdf") != live_link["source_pdf"]:
             probs.append(f"{key}: shipped source_pdf {shipped_link.get('source_pdf')!r} != "
                          f"re-derived {live_link['source_pdf']!r}")
+        # matched_outcome/matched_timepoint identify WHICH register row the
+        # domains/source_pdf above were pulled from -- checking only the
+        # pulled content and not this would miss the record being corrupted
+        # to point at the wrong row while (coincidentally) still shipping
+        # correct-looking domain text. Found by mutation-testing this check
+        # against exactly that: an earlier version passed clean.
+        for field in ("matched_outcome", "matched_timepoint"):
+            if shipped_link.get(field) != live_link[field]:
+                probs.append(f"{key}: shipped {field} {shipped_link.get(field)!r} != "
+                             f"re-derived {live_link[field]!r}")
     check("RoB 2 source-quote links match the review's RoB 2 registers",
           not probs, "\n".join(probs))
 
