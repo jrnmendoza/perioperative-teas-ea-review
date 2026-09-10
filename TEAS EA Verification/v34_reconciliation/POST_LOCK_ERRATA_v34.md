@@ -204,3 +204,36 @@ This is recorded rather than silently worked around. Resolving it properly means
 either correcting the v33 source as well, or adding an explicit post-lock
 correction step to `reconcile.py` that applies this register. That decision
 belongs with the review lead.
+
+### Guarded, 2026-09-10 — the decision is still open, the risk is not
+
+The decision above is unchanged and still the review lead's. What changed is
+that a re-run can no longer quietly undo the corrections while that decision is
+pending.
+
+The applied entries are now also declared machine-readably in
+`data/post_lock_errata.json`, and two independent guards read it:
+
+1. **`reconcile.py` refuses to write.** Before writing any output it checks its
+   own reconstructed `Outcome_Data` against the register. Running it today
+   aborts with exit status 1, naming all three reverted fields, and writes
+   nothing — confirming empirically that a plain re-run *would* have reverted
+   this re-lock.
+2. **`validate_dashboard.py` checks the artefacts on disk**
+   (`t_post_lock_errata_still_applied`). This catches the case the first guard
+   cannot: a regeneration of the workbook *and* the CSV together. Both defects
+   originate upstream, so a clean rebuild reproduces them consistently in both
+   places, every mirror check still passes, and only an assertion about the
+   corrections themselves notices. Both guards are mutation-tested against
+   exactly these scenarios.
+
+Neither guard applies a correction or decides anything. They fail loudly instead
+of choosing on the review lead's behalf.
+
+Two unrelated reproducibility defects in `reconcile.py` were fixed at the same
+time. It read the consolidated source-PDF audit from `/Users/ryan/Downloads/`,
+an unversioned path that does not exist on any other machine, even though the
+script itself had preserved a git-tracked copy in `inputs/`; it now reads the
+tracked copy. And that input carried no integrity check, so a different file at
+that path would have been reconciled without complaint — its SHA-256 is now
+asserted the same way the v33 workbook's already was.

@@ -13,7 +13,18 @@ import openpyxl
 BASE=Path(__file__).resolve().parents[1]
 ROOT=BASE.parent.parent
 V33=BASE.parent/'TEAS_EA_RECONCILED_MASTER_DATA_v33_FINAL_LOCK_READY.xlsx'
-AUDIT=Path('/Users/ryan/Downloads/TEAS_EA_v33_CONSOLIDATED_SOURCE_PDF_GAPFILL_AUDIT.xlsx')
+# The consolidated source-PDF audit. The copy inside inputs/ is git-tracked and
+# is what this script preserved on its original run, so it -- not a file in
+# somebody's Downloads folder -- is the reproducible input. The original
+# out-of-repo location is kept only as a fallback for the machine it was
+# authored on; either way the SHA is asserted below against inputs/inventory.json.
+AUDIT_NAME='TEAS_EA_v33_CONSOLIDATED_SOURCE_PDF_GAPFILL_AUDIT.xlsx'
+AUDIT=BASE/'inputs'/AUDIT_NAME
+if not AUDIT.exists():
+    AUDIT=Path.home()/'Downloads'/AUDIT_NAME
+if not AUDIT.exists():
+    raise SystemExit(f'consolidated source-PDF audit not found: expected '
+                     f'{BASE/"inputs"/AUDIT_NAME}')
 def extract(path):
     w=openpyxl.load_workbook(path,data_only=False)
     return {s.title:[list(r) for r in s.iter_rows(values_only=True)] for s in w}, {
@@ -22,8 +33,14 @@ def extract(path):
         'named_ranges':list(w.defined_names)}
 v,vi=extract(V33); a,ai=extract(AUDIT)
 assert vi['sha256']=='64ef683c58a1faa2bf408f415d03d96dd6622abf8ded24a72f43db9c47a82a2a'
+# The audit input was previously read from an unversioned path with no integrity
+# check, so a different file in that location would have been reconciled without
+# complaint. Pin it the same way the v33 workbook is pinned.
+assert ai['sha256']=='dd1ee3542121c30fb5de6e520a05fbb2c61e1f9ba9d1d7b8c7477c620b3b879a', \
+    f'consolidated audit SHA-256 is {ai["sha256"]}, not the reconciled input'
 json.dump({'v33':vi,'audit':ai},open(BASE/'inputs/inventory.json','w'),ensure_ascii=False,indent=2)
-shutil.copy2(AUDIT,BASE/'inputs'/AUDIT.name)
+if AUDIT.resolve()!=(BASE/'inputs'/AUDIT.name).resolve():
+    shutil.copy2(AUDIT,BASE/'inputs'/AUDIT.name)
 def records(data): return [dict(zip(data[0],r)) for r in data[1:] if any(x is not None for x in r)]
 def norm(x):
     s=str(x or '').lower().replace('–','-').replace('—','-').replace('µ','u').replace('μ','u')
@@ -415,6 +432,55 @@ updates['V34_Audit_Dispositions']=matrix(audit_full)
 updates['V34_Reconciliation_Status']=a['Reconciliation_Status']
 updates['V34_Composite_Matching']=matrix(comparisons)
 updates['V34_Result_RoB2']=matrix([{'record_id':r['V34 record ID'],'study':r['Canonical study'],'comparison_id':r['Comparison ID'],'outcome':r['Outcome/result'],'window':r['Timepoint/window'],'eligibility':r['V34 eligibility'],'result_specific_rob2':r['V34 RoB2 status']} for r in outcomes])
+def assert_post_lock_errata_survive(rows):
+    """
+    Refuse to overwrite source-verified post-lock corrections.
+
+    This script derives Outcome_Data from the frozen v33 workbook. Two results
+    were corrected AFTER v34 was locked, against the Yang 2024 source PDF, and
+    both defects originate upstream in that v33 source -- so a plain re-run
+    regenerates the dataset without them and silently reverts verified work.
+    The corrections are declared in data/post_lock_errata.json.
+
+    Whether to fix v33 itself or to fold this register into this script as a
+    correction stage is a decision for the review lead (POST_LOCK_ERRATA_v34.md,
+    "Known upstream caveat"). Until that decision is made, this refuses to write
+    rather than choosing on the lead's behalf -- nothing is written, so the
+    corrected outputs on disk stay intact.
+    """
+    reg = json.loads((BASE/'data/post_lock_errata.json').read_text(encoding='utf-8'))
+    by_id = {}
+    for r in rows:
+        by_id.setdefault(str(r.get('Comparison ID') or ''), r)
+    missing = []
+    for e in reg['applied']:
+        cid = e['comparison_id']
+        row = by_id.get(cid)
+        if e['kind'] == 'row_must_exist' and row is None:
+            missing.append(f"erratum {e['erratum']}: {cid} is absent -- {e['summary']}")
+            continue
+        if row is None:
+            missing.append(f"erratum {e['erratum']}: {cid} is absent entirely")
+            continue
+        for field, want in e['fields'].items():
+            got = '' if row.get(field) is None else str(row.get(field)).strip()
+            if got != str(want):
+                missing.append(
+                    f"erratum {e['erratum']}: {cid}.{field} is {got!r}, "
+                    f"the verified value is {str(want)!r} ({e['source']})")
+    if missing:
+        raise SystemExit(
+            "\nREFUSING TO WRITE: this run would revert source-verified post-lock "
+            "corrections.\n\n  " + "\n  ".join(missing) +
+            "\n\nNothing was written; the corrected files on disk are untouched.\n"
+            "See " + reg['register'] + ".\n"
+            "Resolving this needs a decision from the review lead -- either correct\n"
+            "the v33 source so these no longer originate upstream, or add an explicit\n"
+            "post-lock correction stage to this script that applies the register.\n")
+
+
+assert_post_lock_errata_survive(outcomes)
+
 writecsv(BASE/'data/v34_audit_dispositions.csv',audit_full)
 writecsv(BASE/'data/v34_outcome_data.csv',outcomes,OH+EXTRA)
 writecsv(BASE/'data/v34_composite_matching.csv',comparisons)

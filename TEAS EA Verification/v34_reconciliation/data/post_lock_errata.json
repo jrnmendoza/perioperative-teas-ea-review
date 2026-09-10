@@ -1,0 +1,49 @@
+{
+  "note": [
+    "Machine-readable form of the APPLIED entries in POST_LOCK_ERRATA_v34.md.",
+    "That document remains the authoritative record -- it carries the source",
+    "quotations, the verification trail and the open items. This file exists so",
+    "that code can check the corrections are still present without parsing prose.",
+    "",
+    "Both entries originate upstream in the v33 workbook, which reconcile.py",
+    "reads. Re-running reconcile.py against the unmodified v33 source would",
+    "regenerate v34_outcome_data.csv without them. reconcile.py therefore checks",
+    "its output against this file and refuses to write rather than silently",
+    "reverting a source-verified correction."
+  ],
+  "register": "TEAS EA Verification/v34_reconciliation/POST_LOCK_ERRATA_v34.md",
+  "applied_date": "2026-09-10",
+  "locked_workbook_sha256": "b1bfcfb59b28f88102a443cc350b98c46eb73743e3c951fce125813cfcdff66d",
+  "superseded_workbook_sha256": [
+    "985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3",
+    "0079f7f3e4d474f7d513b199acaed6f963925f2596b774944aefad3c9a3a152f"
+  ],
+  "applied": [
+    {
+      "erratum": 1,
+      "kind": "row_must_exist",
+      "comparison_id": "YANG24_EA_vs_UC_NAUSEA24",
+      "summary": "Yang 2024 postoperative nausea 0-24 h -- consumed by TD_NAUSEA_0_24H but absent from the extraction dataset",
+      "source": "covidence_1930_full_article.pdf, Table 3 \"0-24 h after surgery\"",
+      "fields": {
+        "Canonical study": "Yang 2024",
+        "Outcome/result": "Postoperative nausea",
+        "Timepoint/window": "0-24 h after surgery",
+        "Events intervention": "24",
+        "Events comparator": "40",
+        "V34 time class": "0-24h"
+      }
+    },
+    {
+      "erratum": 2,
+      "kind": "fields_must_equal",
+      "comparison_id": "YANG24_EA_vs_UC_VOMIT",
+      "summary": "Yang 2024 postoperative vomiting -- stored counts and P are Table 3's 0-24 h interval; only the window label was wrong",
+      "source": "covidence_1930_full_article.pdf, Table 3 and Results text",
+      "fields": {
+        "Timepoint/window": "0-24 h after surgery",
+        "V34 time class": "0-24h"
+      }
+    }
+  ]
+}

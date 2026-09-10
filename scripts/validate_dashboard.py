@@ -2453,6 +2453,48 @@ def t_v34_csv_mirrors_locked_workbook():
           not probs, "\n".join(probs))
 
 
+def t_post_lock_errata_still_applied():
+    """
+    The source-verified post-lock corrections must still be in the dataset.
+
+    t_v34_csv_mirrors_locked_workbook catches the two artefacts drifting apart.
+    It does not catch them being reverted *together*, which is exactly what a
+    re-run of reconcile.py followed by a workbook rebuild would do: both defects
+    originate upstream in the v33 workbook, so a clean regeneration reproduces
+    them consistently in both places and every mirror check still passes.
+
+    reconcile.py now refuses to write in that situation. This is the same
+    invariant asserted from the other end, against what is actually on disk, so
+    a correction cannot be lost by any route -- including one that bypasses
+    reconcile.py entirely.
+    """
+    reg_path = (ROOT / "TEAS EA Verification" / "v34_reconciliation" /
+                "data" / "post_lock_errata.json")
+    csv_path = (ROOT / "TEAS EA Verification" / "v34_reconciliation" /
+                "data" / "v34_outcome_data.csv")
+    if not (reg_path.exists() and csv_path.exists()):
+        check("Source-verified post-lock errata are still applied", False,
+              "errata register or outcome CSV missing")
+        return
+
+    reg = json.loads(reg_path.read_text(encoding="utf-8"))
+    rows = {r.get("Comparison ID"): r for r in read_csv(csv_path)}
+    probs = []
+    for e in reg["applied"]:
+        row = rows.get(e["comparison_id"])
+        if row is None:
+            probs.append(f"erratum {e['erratum']}: {e['comparison_id']} is absent "
+                         f"-- {e['summary']}")
+            continue
+        for field, want in e["fields"].items():
+            got = (row.get(field) or "").strip()
+            if got != str(want):
+                probs.append(f"erratum {e['erratum']}: {e['comparison_id']}.{field} "
+                             f"is {got!r}, verified value is {str(want)!r}")
+    check("Source-verified post-lock errata are still applied",
+          not probs, "\n".join(probs))
+
+
 def t_computed_not_reported_is_complete_and_unrated():
     """
     The computed-but-not-reported panel exists so that an analysis the review
@@ -2561,7 +2603,8 @@ def main() -> int:
                                         t_v33_panel_is_dynamic,
                                         t_v33_zhang_withdrawn_everywhere,
                                         t_v33_legacy_reconstructions_labelled]),
-        ("v34 lock integrity", [t_v34_csv_mirrors_locked_workbook]),
+        ("v34 lock integrity", [t_v34_csv_mirrors_locked_workbook,
+                                t_post_lock_errata_still_applied]),
         ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
