@@ -251,9 +251,14 @@ def open_author_issues(model_id: str, studies: list[str]) -> list[tuple[str, str
             if study in studies and endpoint == scope]
 
 # Team discussion prompts that are specific to one analysis rather than
-# derivable from its numbers. Deliberately phrased as open questions for the
-# team, never as findings. They carry the same fingerprint as everything else
-# in their record, so they go stale with it.
+# derivable from its numbers -- they name particular studies, or a tension in
+# this review's own protocol, and no rule could produce them. Rule-derived
+# prompts are generated per analysis in build_record() and these are merged in
+# ahead of them, tagged source="curated" so the two are never confused.
+#
+# Deliberately phrased as open questions for the team, never as findings. They
+# carry the same fingerprint as everything else in their record, so they go
+# stale with it.
 CURATED_PROMPTS = {
     "v34_primary_24h_mme_TEAS_Sham": [
         "Is the point estimate clinically meaningful in the surgical populations these "
@@ -662,6 +667,83 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
             f"{s}: {issue}",
             "RoB 2 assessment for that study; source-QC flags")
 
+    # ---- Layer 3d: team discussion prompts --------------------------------
+    # Distinct in purpose from the reviewer questions above. Those are
+    # defensive -- what a peer reviewer will challenge. These are authorial:
+    # decisions the team has to make before writing, where the evidence does
+    # not settle the choice. They are questions, never findings, and each one
+    # states the condition that raised it so a reader can see it was not
+    # invented. CURATED_PROMPTS still carries the genuinely study-specific
+    # ones, which no rule could derive.
+    dp = []
+
+    def prompt(text, trigger):
+        dp.append({"prompt": text, "trigger": trigger, "source": "rule"})
+
+    for text in CURATED_PROMPTS.get(mid, []):
+        dp.append({"prompt": text, "source": "curated",
+                   "trigger": "Specific to this analysis; not derivable from its numbers."})
+
+    # Triggers must quote the result on the scale it is REPORTED on. A logRR
+    # analysis stores -0.61 [-1.82, 0.60]; printing that next to the unit
+    # "risk ratio" produces a negative risk ratio, which cannot exist. The
+    # prose elsewhere in this record already exponentiates for the same reason.
+    if on_log_scale and est is not None:
+        import math
+        shown = (f"risk ratio {math.exp(est):.2f} "
+                 f"(95% CI {math.exp(lo):.2f} to {math.exp(hi):.2f})"
+                 if lo is not None and hi is not None else f"risk ratio {math.exp(est):.2f}")
+    else:
+        shown = f"{fmt(est)} (95% CI {fmt(lo)} to {fmt(hi)})"
+
+    if crosses and favours_intervention:
+        prompt(f"The point estimate favours {'the intervention' if subject == 'The intervention' else subject} "
+               f"but the interval includes no difference. Do we frame this as a possible effect "
+               f"that needs better-powered trials, or as evidence of absence? Those two readings "
+               f"give different abstract conclusions.",
+               f"{shown} favours the intervention and includes no effect")
+    if not crosses and grade in ("Moderate", "High"):
+        prompt(f"This is one of the firmer results in the review. How prominently should it sit "
+               f"relative to the primary outcome, which is less certain?",
+               f"Interval excludes the null and certainty is {grade.lower()}")
+    if band == "considerable":
+        prompt("With heterogeneity this large, is a single pooled number the most honest headline "
+               "for this outcome, or should the prediction interval or the spread across trials "
+               "lead instead?",
+               f"I² = {i2:.1f}% (considerable)")
+    if k == 1:
+        # There is nothing to pool. Asking whether pooling communicates more
+        # than describing the trial individually is incoherent here -- and
+        # calling a single trial a synthesis is the specific overclaim this
+        # layer exists to prevent.
+        prompt("This is a single trial, not a synthesis. Should it be presented in the "
+               "Summary of Findings alongside pooled results at all, or reported separately as "
+               "a single study so it is not read as meta-analytic evidence?",
+               "k = 1; no pooling was performed")
+    elif k <= 3:
+        prompt(f"With only {k} contributing trials, does pooling communicate more than "
+               f"describing them individually?",
+               f"k = {k}")
+    if grade == "Very Low":
+        prompt("Certainty is very low. Does this belong in the abstract at all, or only in the "
+               "full Results where its limitations travel with it?",
+               "GRADE certainty is Very Low")
+    if usual_care:
+        prompt("The comparator is usual care, not sham. Should this be reported in the same "
+               "breath as the sham-controlled evidence, or kept separate throughout so the two "
+               "questions are not blurred?",
+               f"Comparator is {comparator}")
+    if high:
+        prompt("Should the leave-one-out result appear next to this estimate in the manuscript, "
+               "or is the supplement enough?",
+               f"{high} contributing {'result' if high == 1 else 'results'} at high risk of bias"
+               + (f" ({', '.join(high_studies)})" if high_studies else ""))
+    if "intraop" in mid:
+        prompt("Intraoperative opioid use is a process measure the anaesthetist controls, not a "
+               "patient-reported outcome. How do we keep a reader from taking it as evidence of "
+               "patient benefit?",
+               "Analysis endpoint is intraoperative opioid administration")
+
     # ---- Status (section 10) ---------------------------------------------
     status = "stable"
     status_reason = "No open source-QC flag, unjudged result or estimator dependence on " \
@@ -728,7 +810,7 @@ def build_record(mid, m, roll, grade, studies, unit, label, comparator, sens_fli
         "do_not_say": do_not_say,
         "claims": claims,
         "reviewer_questions": rq,
-        "discussion_prompts": CURATED_PROMPTS.get(mid, []),
+        "discussion_prompts": dp,
         "why_k": why_k,
         "status": status,
         "status_reason": status_reason,

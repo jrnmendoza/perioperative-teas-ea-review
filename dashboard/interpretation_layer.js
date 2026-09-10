@@ -60,7 +60,18 @@ window.INTERPRETATION_LAYER = {
           "pathway": "RoB 2 assessment for that study; source-QC flags"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "This is one of the firmer results in the review. How prominently should it sit relative to the primary outcome, which is less certain?",
+          "trigger": "Interval excludes the null and certainty is moderate",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 82.0% (considerable)",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 7 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -162,7 +173,38 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Estimator/CI-method sensitivity analyses"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours EA but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−3.36 (95% CI −7.43 to 0.70) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 81.0% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 2 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 2",
+          "source": "rule"
+        },
+        {
+          "prompt": "Certainty is very low. Does this belong in the abstract at all, or only in the full Results where its limitations travel with it?",
+          "trigger": "GRADE certainty is Very Low",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Usual care",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "2 contributing results at high risk of bias (Huang 2025, Yang 2024)",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 2 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -221,7 +263,18 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Estimator/CI-method sensitivity analyses"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "This is one of the firmer results in the review. How prominently should it sit relative to the primary outcome, which is less certain?",
+          "trigger": "Interval excludes the null and certainty is moderate",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 2 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 2",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 2 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -313,7 +366,33 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Result-specific RoB 2 panel and model rollup"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours TEAS but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−1.45 (95% CI −3.48 to 0.58) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 92.1% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 3 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 3",
+          "source": "rule"
+        },
+        {
+          "prompt": "Certainty is very low. Does this belong in the abstract at all, or only in the full Results where its limitations travel with it?",
+          "trigger": "GRADE certainty is Very Low",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "2 contributing results at high risk of bias (Lee 2011, Wu 2025)",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 3 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -391,7 +470,18 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Clinical Importance / MCID studio"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours TEAS but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "risk ratio 0.54 (95% CI 0.16 to 1.82) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 3 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 3",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 3 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -478,7 +568,33 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Result-specific RoB 2 panel and model rollup"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours TEAS but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−117.78 (95% CI −242.51 to 6.95) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 83.9% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "Certainty is very low. Does this belong in the abstract at all, or only in the full Results where its limitations travel with it?",
+          "trigger": "GRADE certainty is Very Low",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "1 contributing result at high risk of bias (Zheng 2025)",
+          "source": "rule"
+        },
+        {
+          "prompt": "Intraoperative opioid use is a process measure the anaesthetist controls, not a patient-reported outcome. How do we keep a reader from taking it as evidence of patient benefit?",
+          "trigger": "Analysis endpoint is intraoperative opioid administration",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 6 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -570,7 +686,33 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Estimator/CI-method sensitivity analyses"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours TEAS but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−9.44 (95% CI −32.40 to 13.52) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 92.0% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 2 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 2",
+          "source": "rule"
+        },
+        {
+          "prompt": "Certainty is very low. Does this belong in the abstract at all, or only in the full Results where its limitations travel with it?",
+          "trigger": "GRADE certainty is Very Low",
+          "source": "rule"
+        },
+        {
+          "prompt": "Intraoperative opioid use is a process measure the anaesthetist controls, not a patient-reported outcome. How do we keep a reader from taking it as evidence of patient benefit?",
+          "trigger": "Analysis endpoint is intraoperative opioid administration",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 2 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -667,7 +809,33 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Estimator/CI-method sensitivity analyses"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours TEAS but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "6.72 (95% CI −2.16 to 15.59) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 87.9% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 2 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 2",
+          "source": "rule"
+        },
+        {
+          "prompt": "Certainty is very low. Does this belong in the abstract at all, or only in the full Results where its limitations travel with it?",
+          "trigger": "GRADE certainty is Very Low",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "1 contributing result at high risk of bias (Yao 2015)",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 2 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -741,7 +909,18 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Clinical Importance / MCID studio"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours TEAS but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−10.40 (95% CI −23.12 to 2.33) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 3 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 3",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 3 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -821,7 +1000,26 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "discussion_prompts": [
-        "This is one of the few intervals here that excludes the null. Does the GI recovery signal deserve more prominence than the opioid result, despite fewer trials?"
+        {
+          "prompt": "This is one of the few intervals here that excludes the null. Does the GI recovery signal deserve more prominence than the opioid result, despite fewer trials?",
+          "source": "curated",
+          "trigger": "Specific to this analysis; not derivable from its numbers."
+        },
+        {
+          "prompt": "With only 3 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 3",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Usual care",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "2 contributing results at high risk of bias (Huang 2025, Yang 2024)",
+          "source": "rule"
+        }
       ],
       "why_k": {
         "headline": "70 RCTs included → k = 3 in this analysis",
@@ -920,9 +1118,31 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "discussion_prompts": [
-        "Is the point estimate clinically meaningful in the surgical populations these four trials actually studied, or is it within the range a reader would call unimportant?",
-        "Should the considerable heterogeneity be reported primarily in Results, or carried into Discussion as the main limit on what we can claim?",
-        "Should Gao 2022 be presented immediately after this estimate, given its size and that it reports this exact endpoint in a distribution we did not pool?"
+        {
+          "prompt": "Is the point estimate clinically meaningful in the surgical populations these four trials actually studied, or is it within the range a reader would call unimportant?",
+          "source": "curated",
+          "trigger": "Specific to this analysis; not derivable from its numbers."
+        },
+        {
+          "prompt": "Should the considerable heterogeneity be reported primarily in Results, or carried into Discussion as the main limit on what we can claim?",
+          "source": "curated",
+          "trigger": "Specific to this analysis; not derivable from its numbers."
+        },
+        {
+          "prompt": "Should Gao 2022 be presented immediately after this estimate, given its size and that it reports this exact endpoint in a distribution we did not pool?",
+          "source": "curated",
+          "trigger": "Specific to this analysis; not derivable from its numbers."
+        },
+        {
+          "prompt": "The point estimate favours TEAS but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−14.00 (95% CI −34.18 to 6.19) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 98.6% (considerable)",
+          "source": "rule"
+        }
       ],
       "why_k": {
         "headline": "70 RCTs included → k = 4 in this analysis",
@@ -1031,8 +1251,46 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "discussion_prompts": [
-        "How should we explain to a reader that the EA evidence answers a different question from the TEAS evidence -- usual care, not sham -- without it reading as a hedge?",
-        "Given no sham-controlled EA trial reports this outcome in absolute dose units, is the scale-free Tier E SMD synthesis worth showing in the manuscript, or does it invite more confusion than it resolves?"
+        {
+          "prompt": "How should we explain to a reader that the EA evidence answers a different question from the TEAS evidence -- usual care, not sham -- without it reading as a hedge?",
+          "source": "curated",
+          "trigger": "Specific to this analysis; not derivable from its numbers."
+        },
+        {
+          "prompt": "Given no sham-controlled EA trial reports this outcome in absolute dose units, is the scale-free Tier E SMD synthesis worth showing in the manuscript, or does it invite more confusion than it resolves?",
+          "source": "curated",
+          "trigger": "Specific to this analysis; not derivable from its numbers."
+        },
+        {
+          "prompt": "The point estimate favours EA but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−3.94 (95% CI −19.77 to 11.90) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 77.2% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 3 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 3",
+          "source": "rule"
+        },
+        {
+          "prompt": "Certainty is very low. Does this belong in the abstract at all, or only in the full Results where its limitations travel with it?",
+          "trigger": "GRADE certainty is Very Low",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Usual care",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "1 contributing result at high risk of bias (El-Rakshy 2009)",
+          "source": "rule"
+        }
       ],
       "why_k": {
         "headline": "70 RCTs included → k = 3 in this analysis",
@@ -1136,7 +1394,31 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "discussion_prompts": [
-        "The protocol keeps TEAS and EA separate for primary inference. Does presenting a combined estimate at all risk it being quoted as the headline result?"
+        {
+          "prompt": "The protocol keeps TEAS and EA separate for primary inference. Does presenting a combined estimate at all risk it being quoted as the headline result?",
+          "source": "curated",
+          "trigger": "Specific to this analysis; not derivable from its numbers."
+        },
+        {
+          "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−9.91 (95% CI −20.08 to 0.27) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 98.6% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Sham (TEAS) / usual care (EA)",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "1 contributing result at high risk of bias (El-Rakshy 2009)",
+          "source": "rule"
+        }
       ],
       "why_k": {
         "headline": "70 RCTs included → k = 7 in this analysis",
@@ -1229,7 +1511,28 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Comparator hierarchy note; RoB 2 domain D2"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−0.97 (95% CI −2.09 to 0.15) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 96.5% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Sham (TEAS) / usual care (EA)",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "1 contributing result at high risk of bias",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 7 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -1321,7 +1624,28 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Comparator hierarchy note; RoB 2 domain D2"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−10.27 (95% CI −34.83 to 14.30) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 97.1% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 3 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 3",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Sham / usual care",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 3 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -1404,7 +1728,28 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Comparator hierarchy note; RoB 2 domain D2"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−0.50 (95% CI −4.08 to 3.08) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "This is a single trial, not a synthesis. Should it be presented in the Summary of Findings alongside pooled results at all, or reported separately as a single study so it is not read as meta-analytic evidence?",
+          "trigger": "k = 1; no pooling was performed",
+          "source": "rule"
+        },
+        {
+          "prompt": "Certainty is very low. Does this belong in the abstract at all, or only in the full Results where its limitations travel with it?",
+          "trigger": "GRADE certainty is Very Low",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Usual care",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 1 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -1487,7 +1832,23 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Result-specific RoB 2 panel and model rollup"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "−0.18 (95% CI −0.68 to 0.33) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 2 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 2",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "2 contributing results at high risk of bias",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 2 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -1570,7 +1931,23 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Comparator hierarchy note; RoB 2 domain D2"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "0.56 (95% CI 0.14 to 2.26) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 2 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 2",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Sham / usual care",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 2 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -1658,7 +2035,28 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Comparator hierarchy note; RoB 2 domain D2"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "The point estimate favours the intervention but the interval includes no difference. Do we frame this as a possible effect that needs better-powered trials, or as evidence of absence? Those two readings give different abstract conclusions.",
+          "trigger": "0.52 (95% CI 0.22 to 1.27) favours the intervention and includes no effect",
+          "source": "rule"
+        },
+        {
+          "prompt": "With only 2 contributing trials, does pooling communicate more than describing them individually?",
+          "trigger": "k = 2",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Sham / usual care",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "1 contributing result at high risk of bias",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 2 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -1717,7 +2115,23 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Comparator hierarchy note; RoB 2 domain D2"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "This is one of the firmer results in the review. How prominently should it sit relative to the primary outcome, which is less certain?",
+          "trigger": "Interval excludes the null and certainty is moderate",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Sham / usual care",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "1 contributing result at high risk of bias",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 6 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -1786,7 +2200,23 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Comparator hierarchy note; RoB 2 domain D2"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "This is one of the firmer results in the review. How prominently should it sit relative to the primary outcome, which is less certain?",
+          "trigger": "Interval excludes the null and certainty is moderate",
+          "source": "rule"
+        },
+        {
+          "prompt": "With heterogeneity this large, is a single pooled number the most honest headline for this outcome, or should the prediction interval or the spread across trials lead instead?",
+          "trigger": "I² = 80.7% (considerable)",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Sham / usual care",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 7 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
@@ -1850,7 +2280,23 @@ window.INTERPRETATION_LAYER = {
           "pathway": "Comparator hierarchy note; RoB 2 domain D2"
         }
       ],
-      "discussion_prompts": [],
+      "discussion_prompts": [
+        {
+          "prompt": "This is one of the firmer results in the review. How prominently should it sit relative to the primary outcome, which is less certain?",
+          "trigger": "Interval excludes the null and certainty is moderate",
+          "source": "rule"
+        },
+        {
+          "prompt": "The comparator is usual care, not sham. Should this be reported in the same breath as the sham-controlled evidence, or kept separate throughout so the two questions are not blurred?",
+          "trigger": "Comparator is Sham / usual care",
+          "source": "rule"
+        },
+        {
+          "prompt": "Should the leave-one-out result appear next to this estimate in the manuscript, or is the supplement enough?",
+          "trigger": "1 contributing result at high risk of bias",
+          "source": "rule"
+        }
+      ],
       "why_k": {
         "headline": "70 RCTs included → k = 4 in this analysis",
         "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",

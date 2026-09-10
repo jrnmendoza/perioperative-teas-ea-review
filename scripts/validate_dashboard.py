@@ -2386,8 +2386,64 @@ def t_interpretation_questions_are_data_triggered():
                 probs.append(f"{rec['analysis_id']}: claim with unknown level {c.get('level')!r}")
             if not (c.get("basis") or "").strip():
                 probs.append(f"{rec['analysis_id']}: claim without a stated basis")
-    check("Reviewer questions and claim boundaries are data-triggered, never free-standing "
-          "assertions", not probs, "\n".join(probs))
+        # Discussion prompts are brainstorming, which is exactly why they need
+        # the same discipline: a prompt that cannot say what raised it is an
+        # opinion wearing the layer's authority. Rule-derived prompts must also
+        # be distinguishable from ones a human wrote.
+        for p in rec.get("discussion_prompts", []):
+            if not isinstance(p, dict):
+                probs.append(f"{rec['analysis_id']}: discussion prompt is not a structured "
+                             f"record: {p!r}")
+                continue
+            if not (p.get("prompt") or "").strip():
+                probs.append(f"{rec['analysis_id']}: empty discussion prompt")
+            if not (p.get("trigger") or "").strip():
+                probs.append(f"{rec['analysis_id']}: discussion prompt without a stated "
+                             f"trigger: {p.get('prompt')!r}")
+            if p.get("source") not in ("rule", "curated"):
+                probs.append(f"{rec['analysis_id']}: discussion prompt with unknown source "
+                             f"{p.get('source')!r}")
+            # A prompt is a question for the team, never a statement of finding.
+            # Containing a question, not ending on one: several legitimately ask
+            # two and then add a clause explaining why the choice matters.
+            if "?" not in (p.get("prompt") or ""):
+                probs.append(f"{rec['analysis_id']}: discussion prompt is not phrased as a "
+                             f"question: {p.get('prompt')!r}")
+    check("Reviewer questions, claim boundaries and discussion prompts are data-triggered, "
+          "never free-standing assertions", not probs, "\n".join(probs))
+
+
+def t_every_analysis_has_discussion_prompts():
+    """
+    Every analysis must carry at least one discussion prompt.
+
+    The feature shipped with hand-written prompts for 4 of 22 analyses, so 18
+    rendered an empty section -- a heading promising team discussion questions
+    with nothing under it. Rule-derived prompts now cover the rest. This holds
+    that coverage, and separately holds the k = 1 case, where an earlier
+    version asked whether "pooling" communicated more than reporting the trials
+    individually on an analysis that pools nothing.
+    """
+    L = _interpretation_layer()
+    if not L:
+        return
+    probs = []
+    for rec in L.get("records", []):
+        prompts = rec.get("discussion_prompts", [])
+        if not prompts:
+            probs.append(f"{rec['analysis_id']}: no discussion prompts")
+        if int(rec.get("bound_evidence", {}).get("k", 0)) == 1:
+            # Structural, not keyword-matching. The correct single-trial prompt
+            # legitimately mentions pooled results -- to ask whether this trial
+            # should sit beside them -- so scanning for the word "pooled" flags
+            # the right wording as well as the wrong. What must hold is that the
+            # k = 1 branch fired at all, rather than the k <= 3 pooling branch.
+            triggers = [(p.get("trigger") or "") for p in prompts if isinstance(p, dict)]
+            if not any("no pooling was performed" in t for t in triggers):
+                probs.append(f"{rec['analysis_id']}: k = 1 but no prompt states that nothing "
+                             f"was pooled; triggers were {triggers!r}")
+    check("Every analysis carries at least one discussion prompt, and single-trial analyses "
+          "are not described as pooled", not probs, "\n".join(probs))
 
 
 def t_v34_csv_mirrors_locked_workbook():
@@ -2748,7 +2804,8 @@ def main() -> int:
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,
-          t_interpretation_questions_are_data_triggered]),
+          t_interpretation_questions_are_data_triggered,
+          t_every_analysis_has_discussion_prompts]),
     ]
 
     for title, tests in sections:

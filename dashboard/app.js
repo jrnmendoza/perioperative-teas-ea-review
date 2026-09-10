@@ -3545,8 +3545,14 @@ function ilPanelHtml(rec) {
     <div style="margin-top:0.7rem;">
       <div style="font-weight:700;color:#c7d2fe;font-size:0.78rem;">Questions for manuscript discussion</div>
       <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.25rem;">
-        Brainstorming prompts for the team — not findings.</div>
-      ${rec.discussion_prompts.map(p => `<div style="margin-bottom:0.25rem;">• ${pwEsc(p)}</div>`).join('')}
+        Brainstorming prompts for the team — not findings. Each states what raised it.</div>
+      ${rec.discussion_prompts.map(p => `
+        <div style="margin-bottom:0.4rem;">
+          <div>• ${pwEsc(p.prompt)}</div>
+          <div style="color:var(--text-muted);font-size:0.72rem;margin-left:0.8rem;">
+            ${p.source === 'curated' ? 'raised by the review team — ' : 'raised because — '}${pwEsc(p.trigger)}
+          </div>
+        </div>`).join('')}
     </div>` : '';
 
   const whyK = rec.why_k ? `
@@ -3673,7 +3679,10 @@ function ilRecordMarkdown(rec) {
     L.push('');
     L.push('### Questions for manuscript discussion');
     L.push('_Brainstorming prompts for the team — not findings._');
-    rec.discussion_prompts.forEach(p => L.push(`- ${p}`));
+    rec.discussion_prompts.forEach(p => {
+      L.push(`- ${p.prompt}`);
+      L.push(`  - ${p.source === 'curated' ? 'Raised by the review team' : 'Raised because'}: ${p.trigger}`);
+    });
   }
   if (rec.why_k) {
     L.push('');
