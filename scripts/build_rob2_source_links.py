@@ -11,13 +11,15 @@ assessed results, either empty, a short one-line stub, or a general adoption
 note. It is NEVER the rich, per-domain, source-quoted text that actually
 exists for the same results in the review's own RoB 2 registers
 (09_V34_ANALYSIS/03_ROB2/v34_rob2_draft_assessments.csv, 36 rows, and
-v34_rob2_priority2_assessments.csv, 493 rows) -- confirmed: 529/529 of those
-rows contain at least 3 distinct domain markers with embedded verbatim quotes
-from the source PDF, and 0/75 of the client-side rationale strings do.
+v34_rob2_priority2_assessments.csv, 515 rows -- 493 plus 22 added while
+closing this script's own remaining coverage gaps, see "EXTENDING THE
+REGISTER ITSELF" below) -- confirmed: 551/551 of those rows contain at least
+3 distinct domain markers with embedded verbatim quotes from the source PDF,
+and 0/75 of the client-side rationale strings do.
 
 Both registers are already loaded client-side in full, as
 window.V34_DATA.rob2_results.results (36 rows) and
-window.V34_DATA.rob2_priority2.results (493 rows) -- generated from the same
+window.V34_DATA.rob2_priority2.results (515 rows) -- generated from the same
 two CSVs this script reads (scripts/build_v34_dashboard_data.py). This script
 reads the CSVs directly rather than that client-side copy, though: the copy
 drops analysed_n_i/analysed_n_c/randomised_n_i/randomised_n_c on the way into
@@ -28,7 +30,7 @@ lexical tiebreak this file also contains.
 
 What this script adds is the missing LINK between a matrix cell (keyed by the
 dashboard's own outcome "bucket", e.g. opioid_24h) and the specific row in
-those 529 that the cell is actually about, plus the per-domain split of that
+those 551 that the cell is actually about, plus the per-domain split of that
 row's rationale text.
 
 WHY THE JOIN IS DETERMINISTIC KEYWORD/TIMEPOINT MATCHING, NOT FUZZY TEXT
@@ -90,28 +92,53 @@ both matched via that label regardless of what they actually measure. Fixed
 by requiring pca_behavior's keywords to hit outcome text specifically, same
 as ponv_24h/ponv_48h already did.
 
-Verified: 43 of 74 assessed results resolve this way (up from an initial 29
-using keyword+timepoint alone, then 34, then 37 using hard denominators),
-confirmed to ADD to the prior set with zero removals or changes at every
-step -- diffed explicitly against the prior committed version each time, not
-assumed. Several remaining multi-candidate cases stay unresolved because
-NEITHER hard evidence nor wording settles them: Tu 2024's rescue_analgesia
-candidates share an identical analysed_n that does not even match the
-dashboard's own stored total (77, 76) for that bucket, and the source PDF's
-own Table 1 confirms the paper's actual analysed n is (57, 58) -- the
-dashboard figure was checked against the primary source directly and does
-not match either candidate, a discrepancy worth the review lead's attention
-rather than a linking problem this script can paper over. Wu 2022's
-intraop_remi candidates were checked against their source PDF too: the paper
-separately reports both a raw cumulative remifentanil total (1637 vs 1383
-µg) AND a weight/time-normalised "index" (0.114 vs 0.084 µg/min/kg) as two
-genuinely distinct results, so the ambiguity is real, not a data gap. Lu
-2022's pca_behavior candidates remain a genuine 6-way tie (2 metrics x 3
-timepoints) even after excluding a same-bucket consumption-family row (see
-find_link()'s pca_behavior-specific filter) -- the dashboard's own
-outcome_name for that cell ("PCA attempts/deliveries") and timepoint
-("24/48/72 h") both name multiple candidates at once, meaning the dashboard
-itself has not picked a single one either.
+Verified: 65 of 74 assessed results resolve this way (up from an initial 29
+using keyword+timepoint alone, then 34, 37, 43 as harder evidence and register
+fixes were added, then 65 once the register itself was extended -- see
+"EXTENDING THE REGISTER ITSELF" below), confirmed to ADD to the prior set
+with zero removals or changes at every step -- diffed explicitly against the
+prior committed version each time, not assumed. Nine remaining cases stay
+unresolved because NEITHER hard evidence, wording, NOR a genuine new register
+row settles them, checked individually rather than left by default:
+
+- Yeh 2010 and Yeh 2011 (both pca_behavior) are the SAME trial published
+  twice (same authors, same 3-arm design, the sham arm's own figures
+  byte-for-byte identical between the two papers -- 21.6+/-13.1 mg in both).
+  The dashboard's own rob2_outcomes rationale for both already says "HOLD ...
+  potential overlap ... do not count independently" -- adding independent
+  RoB 2 data for both would risk legitimising a double-count the review has
+  already paused on. This is a unit-of-analysis decision for the review
+  team, not a linking gap this script resolves.
+- Tu 2024's rescue_analgesia candidates share an identical analysed_n that
+  does not match the dashboard's own stored total (77, 76); the source PDF's
+  own Table 1 confirms the paper's actual analysed n is (57, 58) for BOTH
+  candidates -- checked against the primary source directly, and it matches
+  neither. A discrepancy worth the review lead's attention, not a linking
+  problem this script can paper over.
+- Xie 2014's rescue_analgesia (dezocine) and Yang 2020's flatus_time both
+  have genuine source-PDF data for the named outcome, but the actual Table
+  values (Xie 2014: EAS 5% [1/20] vs Sham 30% [6/20], from Table 2; Yang
+  2020: 20.8+/-4.6 h vs 24.1+/-6.2 h, from Table 3) do not match the
+  dashboard's own stored figures for either cell (4/20 vs 10/20; 67.45+/-10.42
+  vs 73.55+/-12.18) -- neither a unit conversion nor an arm-relabelling
+  explains the gap. Flagged for the review lead rather than forced.
+- Wu 2022's intraop_remi candidates were checked against their source PDF:
+  the paper separately reports both a raw cumulative remifentanil total
+  (1637 vs 1383 µg) AND a weight/time-normalised "index" (0.114 vs 0.084
+  µg/min/kg) as two genuinely distinct results, so the ambiguity is real,
+  not a data gap.
+- Lu 2022's pca_behavior candidates remain a genuine 6-way tie (2 metrics x
+  3 timepoints) even after excluding a same-bucket consumption-family row
+  (see find_link()'s pca_behavior-specific filter) -- the dashboard's own
+  outcome_name for that cell ("PCA attempts/deliveries") and timepoint
+  ("24/48/72 h") both name multiple candidates at once, meaning the
+  dashboard itself has not picked a single one either.
+- Zheng 2025's pca_behavior candidates ("Effective PCIA button presses" vs
+  "Total PCIA button presses") are a genuine tie the dashboard's own
+  outcome_name already reflects by naming both ("Total/effective PCIA use").
+- Yang 2024's intraop_remi has no genuine gap in the register to fill: the
+  source PDF was read directly and reports NO intraoperative opioid figure
+  at all, only postoperative PCA morphine.
 
 THE FOUR ADDITIONAL MECHANISMS THAT RAISED 37 -> 43
 - _rows_for_study() normalises a "#<id> - " key prefix ("#105119 - Zhou
@@ -137,8 +164,57 @@ THE FOUR ADDITIONAL MECHANISMS THAT RAISED 37 -> 43
   previous version of this docstring said full resolution would require,
   applied to exactly the cases where the cheaper mechanisms ran out.
 
+EXTENDING THE REGISTER ITSELF (43 -> 65)
+Everything above links a matrix cell to a row the register ALREADY has. The
+remaining gap after 43 was audited cell by cell instead of stopping there:
+for every still-unlinked cell, checked whether its study has zero rows in
+the register at all (a real, structural "never assessed" gap -- Chen 1998,
+Coura 2011, El-Rakshy 2009, Seevaunnamtum 2016, Yeh 2010, Yeh 2011 have
+none), or whether the study HAS rows but not the specific outcome/timepoint
+the cell needs (a gap in what was extracted, not in what the paper reports).
+
+22 of those were the second kind, genuinely closeable: the source PDF (or,
+where none exists locally, a verified per-study evidence.md extraction with
+page-cited quotes -- see 09_V34_ANALYSIS/../covidence_batch_*/studies/) was
+read directly, a new row was drafted in the same D1-D5/rationale format as
+every existing row, and it was appended to v34_rob2_priority2_assessments.csv
+(493 -> 515 rows). Each new row's numeric data was cross-checked against the
+dashboard's own already-stored pooled figure where one exists (e.g. Zhang
+2025's "Total sufentanil consumption 50.53+/-4.46 vs 53.79+/-5.14" matches
+the dashboard's stored value exactly; Coura 2011, Chen 2020's three results,
+Yang 2024's four results, Zheng 2025's composite PONV, and Jin 2023's pump
+compressions all matched the same way) -- this is direct primary-source
+confirmation, not an assumption that the new row belongs to that cell.
+
+One serious finding while doing this: a separate, pre-existing set of files
+("Gemini Pro + Flash 3.8 Extraction/RoB2_*.md", mirrored into 07_risk_of_bias/
+and TEAS EA Verification/Gemini Pro + Flash 3.8 Extraction/) makes claims
+that do not match their own cited source PDFs -- e.g. its Chen 1998 file
+names the drug as morphine and cites "sealed envelopes" for allocation
+concealment, but the actual PDF's drug is hydromorphone and the word
+"envelope" does not appear anywhere in it. That directory was NOT used as a
+source for any row added here; every new row was drafted from either a
+verified, page-cited evidence.md extraction or the source PDF text directly,
+the same standard as the rest of this script.
+
+Two small rule extensions were needed to let the new rows auto-link the same
+way existing ones do (both scoped and justified individually, not broadened
+speculatively): pca_behavior's keyword list gained "attempt" (Chen 2020's new
+row is worded "PCIA pump attempts", and "pcia" does not contain the substring
+"pca"), and opioid_24h's timepoint list gained "pod 1" alongside "24"
+(Zhang 2025's new row is timepointed "POD 1" -- the paper's own Table 4
+header -- consistent with how the review already treats "POD1" as ~24h
+elsewhere in this same register, e.g. Yu 2020's pain_rest_24h row is
+annotated "POD1 (~24 h)"). Both checked against the full register for false
+positives before being added; neither changed any existing link.
+
+Two further discrepancies were found this same way and are NOT filled in --
+see the two bullet points above (Xie 2014 rescue_analgesia, Yang 2020
+flatus_time) for what the actual PDF tables say versus what the dashboard
+has stored.
+
 WHAT THIS DOES NOT DO
-Invent a page number. Neither register carries one (checked: 0 of 529 rows
+Invent a page number. Neither register carries one (checked: 0 of 551 rows
 mention a page reference), so only the source PDF filename is given as the
 locator, not a specific page -- a reader with access to that PDF can search
 it for the quoted phrase, which is exact and copied from the source, but this
@@ -174,8 +250,15 @@ OUT = DASH / "rob2_source_links.js"
 # reviewing every 2+-candidate case this pass turned up, not by inspection of
 # the rule alone.
 BUCKET_RULES = {
+    # "pod 1" alongside "24": Zhang 2025's register row for this bucket is
+    # timepointed "POD 1" (the paper's own Table 4 header), never spelling
+    # out "24" -- consistent with how the review already treats "POD1" as
+    # ~24h elsewhere (e.g. Yu 2020's pain_rest_24h row is annotated "POD1
+    # (~24 h)" in this same register). Checked: no OTHER opioid-consumption
+    # row in the register uses "POD1"/"POD 1" as its timepoint, so this
+    # cannot pull in a wrong candidate for any other study.
     "opioid_24h": (["opioid", "morphine", "fentanyl", "sufentanil", "tramadol",
-                    "mme", "pcia", "pca dose"], ["24"], False),
+                    "mme", "pcia", "pca dose"], ["24", "pod 1"], False),
     "opioid_48h": (["opioid", "morphine", "fentanyl", "sufentanil", "tramadol",
                     "mme", "pcia"], ["48"], False),
     # "first 3 postoperative days" alongside "72": Wong 2006's register row for
@@ -204,7 +287,15 @@ BUCKET_RULES = {
     # consumption") both pass -- found the same way as the ponv_24h family
     # bleed-through above, by checking why a case that should have resolved
     # via a unique keyword hit did not.
-    "pca_behavior": (["pca", "press", "demand", "bolus"], None, True),
+    # "attempt" added alongside bare "pca": Chen 2020's press-count row is
+    # worded "Total and effective PCIA pump attempts" -- "pcia" does not
+    # contain the substring "pca", so the bare keyword alone missed it.
+    # Checked every other "attempt"-containing row in the register first
+    # (He 2026, Lu 2022 x3): all are already "Opioid demand"-family PCA
+    # rows that either already matched via "pca" or are already part of
+    # Lu 2022's established, still-unresolved multi-way tie, so this adds
+    # no new false positives.
+    "pca_behavior": (["pca", "press", "demand", "bolus", "attempt"], None, True),
     "qor_24h": (["qor", "quality of recovery"], ["24"], False),
 }
 ALL_WINDOWS = ("24", "48", "72")

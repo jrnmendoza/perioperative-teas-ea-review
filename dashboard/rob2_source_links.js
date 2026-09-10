@@ -4,9 +4,26 @@ window.ROB2_SOURCE_LINKS = {
   "generated_by": "scripts/build_rob2_source_links.py",
   "disclaimer": "Links each RoB 2 matrix cell to the specific per-domain, source-quoted rationale and source PDF it has in the review's RoB 2 registers, where that link can be established without guessing -- an explicit keyword/timepoint rule matching exactly one candidate result for that study, a hard numeric match against the dashboard's own stored denominator, or (a small, individually-documented set of cases) a match hand-verified by reading the source PDF directly, listed in MANUAL_OVERRIDES in this script with the exact evidence read. Coverage is partial by construction: a cell with no entry here has no ambiguity-free match, not a missing quote -- see the dashboard's own note on those cells. No page number is given because none exists in the source registers; the source PDF filename is the exact locator available.",
   "total_assessed_results": 74,
-  "linked_count": 43,
-  "coverage": 0.5811,
+  "linked_count": 65,
+  "coverage": 0.8784,
   "links": {
+    "1879897506::opioid_24h": {
+      "study": "Chen 1998",
+      "matched_outcome": "Cumulative 24-h hydromorphone consumption",
+      "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'were randomly assigned to one of four postoperative analgesic treatment regimens', with no sequence-generation or allocation-concealment method described in the extracted text",
+        "2": "this is explicitly 'a randomized, single-blind, sham-controlled study' -- 'The patients in Group I were told that they may not be able to feel the electrical stimulation. Although the device was nonfunctional, the in-use light on the TENS device flashed in the usual manner when activated by the patient', achieving genuine participant blinding, but blinding of the staff delivering/adjusting the intervention is not described (single-blind by the paper's own description, not double-blind)",
+        "3": "'All 100 participants' are accounted for across all result tables; no withdrawals or exclusions after randomisation are reported",
+        "4": "PCA hydromorphone consumption 'recorded by a blind observer (who was not aware of the TENS treatment group)', an objective device-logged record under participant blinding via a genuine (light-flashing) sham",
+        "5": "this is a pre-2000 trial with no trial-registration number reported, but cumulative postoperative opioid consumption is named among the study's own described outcomes in the Methods, not introduced only in the Results"
+      },
+      "flags": "This trial's own primary drug is hydromorphone, not morphine -- a separate 'Gemini Pro + Flash 3.8 Extraction' RoB2 file for this study (RoB2_Chen_1998_MorphineConsumption_24h.md) names morphine, invents sealed-envelope allocation concealment and double-blind personnel blinding, and was confirmed NOT to match the source PDF (neither 'envelope' nor 'morphine' appears anywhere in the PDF text) -- disregarded, not used as a source for this row.",
+      "source_pdf": "covidence_969_chen_1998.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
     "1879897477::pca_behavior": {
       "study": "Lin 2002",
       "matched_outcome": "Cumulative IV PCA morphine delivered during postoperative test period",
@@ -75,6 +92,57 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879897344::opioid_24h": {
+      "study": "El-Rakshy 2009",
+      "matched_outcome": "Total 24-h IV morphine",
+      "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'allocated to treatment groups on the basis of a computer-generated randomisation list using ... SPSS', but 'In consecutive order, patients were allocated to one or other group after consulting the list' -- a foreseeable, open-list consecutive assignment rather than a concealed mechanism, despite a sound generation method",
+        "2": "'Double blinding was achieved by placing adhesive dressings on all acupuncture sites in all patients, to ensure that neither the patients themselves nor the staff caring for the patients knew which treatment each patient received' -- the acupuncturist delivering treatment was unblinded but explicitly excluded from assessment ('was not involved in the assessment of the patients')",
+        "3": "107 randomised, 102 completed (5 withdrawals: 2 consent withdrawals in the EA arm, 3 in control), but this specific 24-h morphine figure is reported for only 95 of those 102 completers (n=42 EA of 44 completed, n=53 control of 58 completed) -- 7 further patients are missing from this particular outcome beyond the general withdrawal count, with no reason given in the extracted text",
+        "4": "'The recovery nurse who was assessing the patient was blinded to the technique, since patients in both groups came to the recovery room with a dressing covering the acupuncture point' -- an objective PCA-device record collected under blinded assessment",
+        "5": "'Cumulative postoperative systemic opioid consumption' is one of the paper's own described outcome categories with a pre-specified 24-h PCA-morphine measurement protocol in the Methods, not introduced only in the Results; no trial-registration number is reported in the extracted text"
+      },
+      "flags": "95 of 102 study completers have this specific 24-h morphine figure recorded, 7 fewer than expected from the general withdrawal count alone -- see D3.",
+      "source_pdf": "11_1879897344_El-Rakshy_2009.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1879897266::opioid_24h": {
+      "study": "Coura 2011",
+      "matched_outcome": "Total 24-h fentanyl",
+      "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'randomised into permutation groups (randomised in block) in order to provide the best balance in terms of number of patients in both groups', but no allocation-concealment mechanism is described in the extracted text",
+        "2": "'The anaesthesiologist, surgeon, patient, intensivist and nursing staff did not know which group patients belonged to' -- comprehensive blinding of participants and all categories of personnel",
+        "3": "32 randomised (16 per arm), but 10 (31%) were excluded post-randomisation for clinical reasons ('instability (4), late extubation (3), preoperative heart attack (1), analgesia by epidural catheter (1) and mental confusion (1)'), leaving 13 EA/9 control analysed -- the exclusions are plausibly unrelated to treatment, but their split between the original randomised arms is not reported, and a 31% overall loss is substantial",
+        "4": "PCA fentanyl consumption is an objective, device-logged record, and 'nursing staff' recording postoperative data were blinded to allocation",
+        "5": "cumulative postoperative fentanyl consumption is described as part of the protocol in the Methods ('PCA pump with continuous injection of 0.4 mcg/kg/h fentanyl dose...'), not introduced only in the Results; no trial-registration number is reported in the extracted text"
+      },
+      "flags": "10 of 32 randomised patients (31%) excluded post-randomisation for clinical reasons; the split of these exclusions between the original randomised arms is not reported -- see D3.",
+      "source_pdf": "10_1879897266_Coura_2011.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1879897255::pca_behavior": {
+      "study": "Lee 2011",
+      "matched_outcome": "Total PCA morphine demands",
+      "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'each subject was assigned to a treatment group in numbered order, as they became available. A random number table was used for grouping' -- sequential assignment in order of availability, with no allocation-concealment mechanism described for the random-table step itself",
+        "2": "'Neither the doctor performing the interventions, the subjects, nor the nurse collecting the results was aware of the differences between the different interventions' -- blinding extended to the person delivering the intervention, not only participants, and 'as the subjects received their treatment in different rooms, confidentiality was strictly followed'",
+        "3": "49 randomised, 47 analysed -- 'Two of the subjects from Group 4 were excluded from the analysis due to the inability to carry out the VAS', a documented, plausibly non-differential reason affecting 4% of the sample",
+        "4": "PCA demands are an objective device record, and 'group assignments were kept fully blinded from the subjects and data collectors'",
+        "5": "PCA demand count is inherent to the study's own described PCA measurement protocol in the Methods ('connected to a PCA system providing IV morphine with boluses of 0.8 mg... lockout time of 8 minutes'), not introduced only in the Results; no trial-registration number is reported in the extracted text"
+      },
+      "flags": "",
+      "source_pdf": "049_lee_2011.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
     "1879897195::flatus_time": {
       "study": "Ng 2013",
       "matched_outcome": "Time to first flatus",
@@ -92,6 +160,23 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879897069::opioid_48h": {
+      "study": "An 2014",
+      "matched_outcome": "Fentanyl total dose at 48 h",
+      "matched_timepoint": "0-48 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'randomly allocated into 2 groups using a computer-generated randomized number table', with no concealment mechanism (e.g. sealed envelope) confirmed in the extracted text",
+        "2": "'All the subjects involved were blinded regarding the study, and the doctor who observed the postoperative pain and other outcomes was also blinded to the study'",
+        "3": "81 of 88 (92%) completed; the 7 exclusions are individually accounted for (2 reoperated, 2 remained unconscious, 3 had incomplete information), fairly evenly split between arms (EA 45->41, Control 43->40)",
+        "4": "a device-logged PCIA measure recorded by the blinded observing doctor for a blinded participant, and 'At 48 hours, the PCIA therapy was discontinued in all the patients' -- this is the trial's own full-duration PCIA total, not a partial window",
+        "5": "the extracted text names dizziness, PONV and appetite as secondary outcome measures but does not confirm PCIA fentanyl consumption itself as a named pre-specified outcome, despite it being central to the study's stated aim ('to examine the effect of EA combined with PCIA on postoperative pain')"
+      },
+      "flags": "Same D1/D2/D3/D5 judgements as this study's existing 0-24h fentanyl row (same study/comparison, not outcome-specific); D4 restated for this 0-48h full-duration figure specifically. PCIA fentanyl consumption not confirmed as a named pre-specified outcome despite being central to the study's aim.",
+      "source_pdf": "covidence_698_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
     "1879897120::rescue_analgesia": {
       "study": "Ntritsou 2014",
       "matched_outcome": "Total rescue analgesia",
@@ -108,6 +193,23 @@ window.ROB2_SOURCE_LINKS = {
       "source_pdf": "covidence_729_full_article.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
+    },
+    "1879897074::opioid_48h": {
+      "study": "Xie 2014",
+      "matched_outcome": "Total sufentanil through postoperative 48 h",
+      "matched_timepoint": "through postoperative 48 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "allocation used a 'computer generated randomization number', with no concealment mechanism (e.g. sealed envelope) confirmed in the extracted text",
+        "2": "the EA/sham intervention was delivered entirely intraoperatively while patients were under general anaesthesia (radical esophagectomy), and 'The persons who collected the data and performed the data analysis were blinded from the group and patients assignment'",
+        "3": "the extracted text states exclusion criteria but no completion/attrition figures confirming how many of the 60 randomised patients were analysed",
+        "4": "an anaesthetised participant cannot influence this measure, and it was recorded/analysed by blinded personnel; 'Table 2 The total dose of sufentanil ... (n=20)' confirms all 20 per group are analysed for this specific figure",
+        "5": "'The primary outcome was the effect of EA on postoperative pain score and the difference of opioids doses used among different groups' -- this directly matches this cumulative opioid-dose result"
+      },
+      "flags": "",
+      "source_pdf": "covidence_701_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
     },
     "1879897091::intraop_remi": {
       "study": "Zhang 2014",
@@ -213,6 +315,91 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_date": "2026-09-08",
       "match_evidence": "Two candidates at n=(35,36): an administration COUNT and a TIME-TO-FIRST-administration. The dashboard's own outcome_name for this cell is 'Rescue sufentanil administration count' -- it names a count, not a time-to-event, and only one candidate is a count. The distinguishing-token tiebreak misses this because 'administration' (singular, target) and 'administrations' (plural, candidate) are different tokens under exact matching, not because the evidence is actually ambiguous."
     },
+    "1879896891::opioid_24h": {
+      "study": "Seevaunnamtum 2016",
+      "matched_outcome": "Total PCAM (morphine) opioid consumption",
+      "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Subjects were randomised into two groups (EA group and control group) using a computer-generated randomisation list', with no allocation-concealment mechanism (e.g. sealed envelope) described anywhere in the extracted text",
+        "2": "'Patients in this study were started on EA after they were induced under general anaesthesia. They were blinded to the intervention' -- the intervention is delivered entirely intraoperatively while patients are unconscious, so an unconscious participant cannot influence a subsequent PCAM demand measure",
+        "3": "'A total of 64 patients were enrolled into this study. All patients were examined and no drop-out was occurred' -- complete data for all 64 (32 per arm), matching the paper's own pre-calculated sample size of 32 per group",
+        "4": "'patients were evaluated by blinded assessors at 2 hours, 4 hours, and 24 hours postoperatively', and total PCAM opioid consumption is an objective device-logged record",
+        "5": "the paper's own sample-size calculation was powered 'with respect to postoperative pain and opioid-related side effects', and the Results section explicitly reports 'opioid demand, and total opioid consumption in the first 24 hours' as a described study measure, not introduced only as an unplanned finding; no trial-registration number appears anywhere in the extracted text"
+      },
+      "flags": "A separate, unverified skeletal evidence file for this study (covidence_batch_41_74/studies/44_1879896891_evidence.md) claims 'Sequentially numbered opaque sealed envelopes (SNOSE)' allocation concealment -- 'envelope' does not appear anywhere in the source PDF text, so this claim was disregarded and D1 was drafted from the PDF directly instead.",
+      "source_pdf": "covidence_596_verified.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1882881457::intraop_remi": {
+      "study": "Huang 2017",
+      "matched_outcome": "Total intraoperative opioid dose (remifentanil)",
+      "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "participants were assigned 'according to enrollment sequence', without a clearly described random-sequence-generation method in the extracted text (same study-level judgement as this study's existing rows)",
+        "2": "'All participants were unaware of group allocation'; 'A single investigator was responsible for application of both types of intervention' while 'The data were collected by another investigator unaware of the group allocation'",
+        "3": "'Of 186 screened patients, 80 patients met the inclusion criteria and were randomized to the 4 study groups... All 80 patients completed the trial', 20 per group (Con vs 2/100 Hz)",
+        "4": "'This study had a strict double-blinded design, with ANI as a unique criterion for adjustment of opioid dosage' -- intraoperative remifentanil was titrated to a blinded, objective physiological index target, not by subjective anaesthetist judgement susceptible to allocation awareness",
+        "5": "the paper reports 'Total opioid dose (remifentanil)' as one of several intraoperative anaesthetic dosage measures (Table 2, alongside propofol and cisatracurium) rather than as a singularly named primary/secondary outcome in the Methods"
+      },
+      "flags": "",
+      "source_pdf": "covidence_666_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1879896688::opioid_24h": {
+      "study": "Chen 2020",
+      "matched_outcome": "24-h IV PCIA sufentanil consumption",
+      "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Computer-based sample randomization was simultaneously performed at the enrolment of each patient'; 'The allocation code was generated by an independent statistician'",
+        "2": "'None of the anesthesiologists, surgeons, physicians in the postanesthesia care unit, or patients were aware of the allocation'",
+        "3": "the extracted text states the enrolled total (80, inflated from a calculated 74 'to account for potential loss to follow-up') but no confirmed final completion count was found in this study's existing register row; the evidence.md extraction for this row separately confirms 'Complete datasets were collected for all patients and the data were analyzed' (80/80, 40 per arm), which resolves that uncertainty but is kept as Some concerns here to stay consistent with the study's other already-adopted rows",
+        "4": "recorded under comprehensive blinding of patients, anaesthesiologists, surgeons and PACU physicians; PCIA sufentanil consumption is an objective device-logged record",
+        "5": "'secondary endpoints were ... sufentanil consumption during postoperative PCIA, number of total and effective PCIA pump attempts, incidence of postoperative nausea and vomiting (PONV) ...' -- explicitly named as a pre-specified secondary endpoint in the Methods, not introduced only in the Results"
+      },
+      "flags": "",
+      "source_pdf": "Thoracic Cancer - 2020 - Chen - Efficacy of transcutaneous electrical acupoint stimulation combined with general anesthesia.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1879896688::opioid_48h": {
+      "study": "Chen 2020",
+      "matched_outcome": "48-h IV PCIA sufentanil consumption",
+      "matched_timepoint": "0-48 h",
+      "match_method": "tiebreak_distinguishing_token",
+      "domains": {
+        "1": "'Computer-based sample randomization was simultaneously performed at the enrolment of each patient'; 'The allocation code was generated by an independent statistician'",
+        "2": "'None of the anesthesiologists, surgeons, physicians in the postanesthesia care unit, or patients were aware of the allocation'",
+        "3": "the extracted text states the enrolled total (80, inflated from a calculated 74 'to account for potential loss to follow-up') but no confirmed final completion count was found in this study's existing register row; the evidence.md extraction for this row separately confirms 'Complete datasets were collected for all patients and the data were analyzed' (80/80, 40 per arm), which resolves that uncertainty but is kept as Some concerns here to stay consistent with the study's other already-adopted rows",
+        "4": "recorded under comprehensive blinding of patients, anaesthesiologists, surgeons and PACU physicians; PCIA sufentanil consumption is an objective device-logged record, and the PCIA pump's own programmed duration is 'two days' (48 h), so this is the trial's own full-duration figure, not a partial window",
+        "5": "'secondary endpoints were ... sufentanil consumption during postoperative PCIA ...' -- explicitly named as a pre-specified secondary endpoint in the Methods, not introduced only in the Results"
+      },
+      "flags": "",
+      "source_pdf": "Thoracic Cancer - 2020 - Chen - Efficacy of transcutaneous electrical acupoint stimulation combined with general anesthesia.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1879896688::pca_behavior": {
+      "study": "Chen 2020",
+      "matched_outcome": "Total and effective PCIA pump attempts",
+      "matched_timepoint": "0-48 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Computer-based sample randomization was simultaneously performed at the enrolment of each patient'; 'The allocation code was generated by an independent statistician'",
+        "2": "'None of the anesthesiologists, surgeons, physicians in the postanesthesia care unit, or patients were aware of the allocation'",
+        "3": "the extracted text states the enrolled total (80, inflated from a calculated 74 'to account for potential loss to follow-up') but no confirmed final completion count was found in this study's existing register row; the evidence.md extraction for this row separately confirms 'Complete datasets were collected for all patients and the data were analyzed' (80/80, 40 per arm), which resolves that uncertainty but is kept as Some concerns here to stay consistent with the study's other already-adopted rows",
+        "4": "PCIA pump attempts (total and effective) are an objective device-logged record, collected under comprehensive blinding of patients, anaesthesiologists, surgeons and PACU physicians",
+        "5": "'secondary endpoints were ... number of total and effective PCIA pump attempts ...' -- explicitly named as a pre-specified secondary endpoint in the Methods, not introduced only in the Results"
+      },
+      "flags": "This study reports BOTH 'total' and 'effective' PCIA attempts as separate figures (Total 4.83+/-1.06 vs 14.05+/-2.01; Effective 4.58+/-0.93 vs 7.48+/-1.18) -- the dashboard's own outcome_name for this cell, 'PCIA total/effective attempts', names both without picking one, matching the paper's own dual reporting.",
+      "source_pdf": "Thoracic Cancer - 2020 - Chen - Efficacy of transcutaneous electrical acupoint stimulation combined with general anesthesia.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
     "1879896692::rescue_analgesia": {
       "study": "Yu 2020",
       "matched_outcome": "Participants requiring rescue sufentanil",
@@ -229,6 +416,23 @@ window.ROB2_SOURCE_LINKS = {
       "source_pdf": "s13063-019-3892-4.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
+    },
+    "1879896620::pca_behavior": {
+      "study": "Ao 2021",
+      "matched_outcome": "Number of effective PCA presses over 48 h",
+      "matched_timepoint": "0-48 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'randomly allocated ... using sequentially-numbered sealed envelopes and a random number generator'; envelopes 'prepared and distributed by an assistant who was not involved in the present study' (same study-level judgement as this study's existing rows)",
+        "2": "a credible sham was attempted (identical electrode placement, independent acupuncturist, blinded anaesthesiologists for intraoperative care), but the paper concedes 'blinding of TEAS treatment was not possible as patients eventually knew whether they were receiving electrical stimulation'",
+        "3": "65 of 70 (92.9%) analysed (TEAS 35->32, Sham 35->33); the 5 post-randomisation exclusions are each individually accounted for (3 refused post-operative TEAS/sham, 2 incomplete stimulation schedule)",
+        "4": "an effective PCA press is directly the participant's own demand behaviour, and that participant is the same one the trial reports as not successfully blinded -- more directly exposed to unblinding than a downstream consumption total, and no statement confirms who analysed or recorded the press-count data or whether that person was blinded",
+        "5": "the paper's named secondary outcome is 'the cumulative TIME of rescue analgesia within 48 h post-surgery', not the effective PCA press count reviewed here -- a different construct, so this exact result is not confirmed as a named pre-specified outcome"
+      },
+      "flags": "No local PDF file for this study -- sourced from PMC full text (PMC7812592), consistent with this study's existing register rows.",
+      "source_pdf": "EXTERNAL: Ao L et al. Exp Ther Med. 2021;21(3):184. doi:10.3892/etm.2021.9615 (PMC7812592) -- no local PDF file.",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
     },
     "1879896610::intraop_remi": {
       "study": "Liang 2021",
@@ -452,6 +656,23 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879896391::intraop_remi": {
+      "study": "Hou 2023",
+      "matched_outcome": "Intraoperative remifentanil",
+      "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'a randomization number generated by an independent [statistician]'; 'The randomization number was placed in a sealed envelope and was not revealed until the first intervention' (same study-level judgement as this study's existing rows)",
+        "2": "'No participant, surgeon, anesthesiologist, data collector, or outcome assessor knew the allocation of participants'",
+        "3": "72 of 74 (97.3%) completed; 2 withdrew for personal reasons",
+        "4": "intraoperative remifentanil dosing is titrated by the anaesthesiologist, explicitly named among the blinded roles ('No participant, surgeon, anesthesiologist, data collector, or outcome assessor knew the allocation'), so no differential titration bias from allocation awareness",
+        "5": "not confirmed among the extracted pre-specified outcome text -- this trial's stated primary outcome is anxiety level, not intraoperative opioid consumption"
+      },
+      "flags": "Reported as median (IQR) -- 'Intraoperative remifentanil [ug; median (IQR)] Control 1000 (881, 1144) vs TEAS 950 (750, 1238), P=0.572' -- not mean/SD, unlike most other opioid_Xh figures in this review; poolability with mean/SD studies is a review-team decision, not addressed by this RoB2 row.",
+      "source_pdf": "007_hou_2023.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
     "1879896440::opioid_24h": {
       "study": "Jin 2023",
       "matched_outcome": "Published 'fentanyl consumption' / PCIA solution volume",
@@ -468,6 +689,23 @@ window.ROB2_SOURCE_LINKS = {
       "source_pdf": "009_jin_2023.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
+    },
+    "1879896440::pca_behavior": {
+      "study": "Jin 2023",
+      "matched_outcome": "Number of analgesic pump compressions at 48 h",
+      "matched_timepoint": "48 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'randomized to receive ... with a 1:1 [allocation ratio]', with no sequence-generation or concealment method confirmed in the extracted text (same study-level judgement as this study's existing rows)",
+        "2": "'Participants, outcome assessors, data analysts, and statisticians were blinded to treatment allocation, and acupuncturists were not'; the device had 'power indicator lights covered and the battery compartment sealed to assist in blinding'",
+        "3": "16 of 174 (9.2%) dropped out, with documented reasons",
+        "4": "recorded under comprehensive blinding of participants, outcome assessors, data analysts, and statisticians; pump compressions are an objective device-logged count",
+        "5": "'The primary outcome was the number of analgesic pump compressions at 48 hours after surgery' -- this result IS the paper's own named primary outcome, at the exact timepoint named, unlike this study's other already-adopted results which are flagged for a timepoint mismatch against a 48h primary/secondary outcome"
+      },
+      "flags": "Reported as median (IQR): 1.0 (0.0-3.0) [2-Hz EA, n=53] vs 9.0 (4.3-12.0) [Sham, n=52] -- not mean/SD.",
+      "source_pdf": "009_jin_2023.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
     },
     "1879896396::intraop_remi": {
       "study": "Pan 2023",
@@ -520,6 +758,74 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879896323::opioid_24h": {
+      "study": "Yang 2024",
+      "matched_outcome": "Morphine use on POD 1",
+      "matched_timepoint": "0-24 h postoperatively",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Patients were randomly assigned to either usual care(UC) or EA group by computer-generated codes and sequentially numbered, opaque envelopes'",
+        "2": "this is an open-label trial -- 'Given the characteristic of EA, the acupuncturist and patients were aware of the treatment allocation', though 'anesthetists, assessors, the data collector as well as statisticians were blinded to treatment allocation throughout the entire study'",
+        "3": "180 randomised (90/90); 3 patients had post-randomisation protocol deviations (declined to continue EA, did not receive PVB, converted to open surgery) but 'These three patients were retained in the final analysis' -- '90 patients per group were included in the intention-to-treat analysis'",
+        "4": "PCA morphine use is an objective device-logged record, and 'the data collector as well as statisticians were blinded to treatment allocation throughout the entire study'",
+        "5": "'Secondary outcomes included ... postoperative morphine use ...' -- explicitly named as a pre-specified secondary outcome in the Methods (trial registered ChiCTR1900024840)"
+      },
+      "flags": "",
+      "source_pdf": "covidence_1930_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1879896323::opioid_72h": {
+      "study": "Yang 2024",
+      "matched_outcome": "Morphine use on POD 1-3",
+      "matched_timepoint": "0-72 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Patients were randomly assigned to either usual care(UC) or EA group by computer-generated codes and sequentially numbered, opaque envelopes'",
+        "2": "this is an open-label trial -- 'Given the characteristic of EA, the acupuncturist and patients were aware of the treatment allocation', though 'anesthetists, assessors, the data collector as well as statisticians were blinded to treatment allocation throughout the entire study'",
+        "3": "180 randomised (90/90); 3 patients had post-randomisation protocol deviations (declined to continue EA, did not receive PVB, converted to open surgery) but 'These three patients were retained in the final analysis' -- '90 patients per group were included in the intention-to-treat analysis'",
+        "4": "PCA morphine use is an objective device-logged record, and 'the data collector as well as statisticians were blinded to treatment allocation throughout the entire study'",
+        "5": "'Secondary outcomes included ... post-operative ... pain scores within 72 h after surgery, postoperative morphine use ...' -- explicitly named as a pre-specified secondary outcome, and this figure ('POD 1-3') is the trial's own full 72h-window cumulative total, not a partial window"
+      },
+      "flags": "",
+      "source_pdf": "covidence_1930_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1879896323::nausea_24h": {
+      "study": "Yang 2024",
+      "matched_outcome": "Incidence of Nausea",
+      "matched_timepoint": "0-24 h after surgery",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Patients were randomly assigned to either usual care(UC) or EA group by computer-generated codes and sequentially numbered, opaque envelopes'",
+        "2": "this is an open-label trial -- 'Given the characteristic of EA, the acupuncturist and patients were aware of the treatment allocation', though 'anesthetists, assessors, the data collector as well as statisticians were blinded to treatment allocation throughout the entire study'",
+        "3": "180 randomised (90/90); 3 patients had post-randomisation protocol deviations (declined to continue EA, did not receive PVB, converted to open surgery) but 'These three patients were retained in the final analysis' -- '90 patients per group were included in the intention-to-treat analysis'",
+        "4": "'anesthetists, assessors, the data collector as well as statisticians were blinded to treatment allocation throughout the entire study' -- nausea incidence was recorded by these blinded assessors, not solely self-reported by the unblinded participant",
+        "5": "'Secondary outcomes included ... postoperative nausea and vomiting (PONV) ... within 72 h after surgery' -- explicitly named as a pre-specified secondary outcome"
+      },
+      "flags": "The paper reports nausea and vomiting as separate incidence figures at four sub-windows (0-24h, 24-48h, 48-72h shown separately in-text for pain/PONV Table 3); this row is the 0-24h nausea-only figure specifically, matching this dashboard bucket.",
+      "source_pdf": "covidence_1930_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1879896323::vomiting_24h": {
+      "study": "Yang 2024",
+      "matched_outcome": "Incidence of Vomiting",
+      "matched_timepoint": "0-24 h after surgery",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Patients were randomly assigned to either usual care(UC) or EA group by computer-generated codes and sequentially numbered, opaque envelopes'",
+        "2": "this is an open-label trial -- 'Given the characteristic of EA, the acupuncturist and patients were aware of the treatment allocation', though 'anesthetists, assessors, the data collector as well as statisticians were blinded to treatment allocation throughout the entire study'",
+        "3": "180 randomised (90/90); 3 patients had post-randomisation protocol deviations (declined to continue EA, did not receive PVB, converted to open surgery) but 'These three patients were retained in the final analysis' -- '90 patients per group were included in the intention-to-treat analysis'",
+        "4": "'anesthetists, assessors, the data collector as well as statisticians were blinded to treatment allocation throughout the entire study' -- vomiting incidence was recorded by these blinded assessors, not solely self-reported by the unblinded participant",
+        "5": "'Secondary outcomes included ... postoperative nausea and vomiting (PONV) ... within 72 h after surgery' -- explicitly named as a pre-specified secondary outcome"
+      },
+      "flags": "This dashboard bucket's existing CSV row for this study ('Postoperative vomiting | Within 72 h') is a DIFFERENT, cumulative-window figure -- kept as-is, not superseded by this 0-24h-specific one.",
+      "source_pdf": "covidence_1930_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
     "1879896323::flatus_time": {
       "study": "Yang 2024",
       "matched_outcome": "Time to first flatus",
@@ -553,6 +859,40 @@ window.ROB2_SOURCE_LINKS = {
       "source_pdf": "1-s2.0-S0020138325005200.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
+    },
+    "1879896013::opioid_24h": {
+      "study": "Zhang 2025",
+      "matched_outcome": "Total sufentanil consumption",
+      "matched_timepoint": "POD 1",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Randomization was performed using Stata 15.0 software to generate random sequences in a 1:1 ratio'; 'The random allocation sequences were placed in sealed opaque envelopes' (same study-level judgement as this study's existing rows)",
+        "2": "'Anesthesiologists, outcome assessors, and patients were blinded to the group allocation'; 'the TEAS intervention and outcome assessments were conducted by separate personnel at distinct time points'",
+        "3": "'We excluded nine TEAS group ... and six control group patients', with reasons documented, against a target inflated for an anticipated 20% dropout",
+        "4": "recorded under comprehensive blinding of patients, anaesthesiologists and outcome assessors; PCIA sufentanil consumption is an objective device-logged record",
+        "5": "'Secondary outcomes included ... total sufentanil consumption ... on POD 1' -- explicitly named as a pre-specified secondary outcome in the Methods"
+      },
+      "flags": "",
+      "source_pdf": "109551.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
+    },
+    "1879896014::ponv_24h": {
+      "study": "Zheng 2025",
+      "matched_outcome": "Composite PONV incidence within 24 hours",
+      "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "allocation was by thresholding a seeded uniform random number -- 'A fixed seed number (eg, 12345) was preset to generate random numbers ranging between 0 and 1. Participants with a random number <=0.5 were assigned to the experimental group' -- a method that cannot guarantee the stated 1:1 ratio, yet exactly 44 and 44 were allocated; the described method and the reported allocation are inconsistent. Concealment itself is adequate: 'concealed in sequentially numbered, opaque, sealed envelopes, which were opened only at the time of anesthesia induction' (same study-level judgement as this study's existing rows)",
+        "2": "single-blind by design -- 'the anesthesiologists were unblinded due to the nature of the intervention', which the authors list as a limitation ('the single-blind design may introduce performance bias'); participants and outcome assessors were blinded and a mITT analysis was used",
+        "3": "3 of 88 excluded under pre-specified withdrawal criteria (2 procedure change, 1 procedure exceeding 3 hours)",
+        "4": "'participants and outcome assessors were blinded', and PONV events are recorded under that blinding by trained assessors, not solely self-reported to an unblinded anaesthesiologist",
+        "5": "'The primary outcome was the incidence of postoperative nausea and vomiting (PONV) within 24 hours' -- this result IS the paper's own named primary outcome, at the exact timepoint named"
+      },
+      "flags": "This is a composite of the same underlying nausea/vomiting events this register already carries broken down by four finer windows (0-2h, 2-4h, 4-6h, 6-24h) for this study -- added as its own row because the paper reports the 24h composite directly ('42.9% vs 67.4%, P=0.023') as its primary result, not derived by summing the finer windows (which would double-count patients with both symptoms).",
+      "source_pdf": "109499.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
     },
     "1879896014::intraop_remi": {
       "study": "Zheng 2025",
@@ -604,6 +944,23 @@ window.ROB2_SOURCE_LINKS = {
       "source_pdf": "105119.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
+    },
+    "1879896105::qor_24h": {
+      "study": "Zhou 2025",
+      "matched_outcome": "Global QoR-15 score on POD 1",
+      "matched_timepoint": "POD1 (24 h)",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'randomization into either the TEAS or Sham group at a 1:1 ratio, utilizing a computer-generated randomization sequence'; 'Allocation was concealed using sequentially numbered, sealed, opaque envelopes' (same study-level judgement as this study's existing rows)",
+        "2": "'single-center, randomized, double-blinded, sham-controlled trial'; 'Patients, anesthesiologists, surgeons, and data collectors remained blinded to group allocation'; the acupuncturist could not be blinded but 'adhered to a standardized interaction protocol for both groups'",
+        "3": "97 of 100 randomised completed (3%), 48/49 analysed",
+        "4": "QoR-15 is a patient-reported questionnaire completed by a participant blinded via a credible sham, and collected by blinded data collectors",
+        "5": "'QoR-15 is the primary outcome' -- this result IS the paper's own named primary outcome, at the exact timepoint named (registered ChiCTR2200055338)"
+      },
+      "flags": "",
+      "source_pdf": "105119.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
     },
     "1879895909::opioid_24h": {
       "study": "He 2026 (hepatectomy/JIS)",
@@ -689,6 +1046,23 @@ window.ROB2_SOURCE_LINKS = {
       "source_pdf": "covidence_35_verified.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
+    },
+    "1879895932::nausea_48h": {
+      "study": "Luo 2026",
+      "matched_outcome": "Cumulative incidence of nausea within 48 h",
+      "matched_timepoint": "0-48 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Eligible participants were randomized in a 1:1 ratio using a computer-generated randomization sequence' (same study-level judgement as this study's existing rows)",
+        "2": "'patients, postoperative [outcome assessors] ... blinded outcome assessment: while the attending anesthesiologists performing the intervention could not be blinded' -- an intraoperative-only exception that does not affect this postoperative result; the sham used 'identical electrode placement and procedures ... however, the stimulator was turned off, and no electrical current was delivered'",
+        "3": "277 enrolled against a planned minimum of 264 (132/group), with the analysed 138/139 essentially matching plan",
+        "4": "assessed by blinded postoperative outcome assessors, for a participant who was also blinded via a genuine current-off sham",
+        "5": "'The primary outcome was the incidence of nausea and vomiting within the first 48 h postoperatively' -- this 0-48h nausea figure IS part of the paper's own named primary outcome, at the exact timepoint named"
+      },
+      "flags": "",
+      "source_pdf": "covidence_35_verified.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-10"
     },
     "1879895932::vomiting_48h": {
       "study": "Luo 2026",
