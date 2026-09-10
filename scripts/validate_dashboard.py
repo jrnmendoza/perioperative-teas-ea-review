@@ -2453,6 +2453,49 @@ def t_v34_csv_mirrors_locked_workbook():
           not probs, "\n".join(probs))
 
 
+def t_prisma_identification_split_is_derived():
+    """
+    The PRISMA identification split must match the review's own screening
+    records, and the citation-searched trial must be named.
+
+    The dashboard asserted "69 via database search + 1 via citation searching"
+    without saying which trial arrived by which route, so a reader could not
+    check it and neither could this pipeline. It is now re-derived by matching
+    Study_Master against the Covidence exports
+    (scripts/derive_study_provenance.py). This check re-runs that derivation and
+    holds the rendered text to it, so the two cannot drift apart.
+    """
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "derive_study_provenance", ROOT / "scripts" / "derive_study_provenance.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    got = mod.derive()
+
+    n_db = len(got["database_search"])
+    n_cite = len(got["citation_searching"])
+    cited = [c["study"] for c in got["citation_searching"]]
+    app = (DASH / "app.js").read_text(encoding="utf-8")
+
+    probs = []
+    if got["total"] != 70:
+        probs.append(f"derived {got['total']} canonical studies, expected 70")
+    if (n_db, n_cite) != (69, 1):
+        probs.append(f"derived split is {n_db} + {n_cite}, the dashboard states 69 + 1")
+    if f"{n_db} via database search + {n_cite} via citation searching" not in app:
+        probs.append("the rendered PRISMA summary does not state the derived split")
+    for study in cited:
+        if f"citation-searched trial is {study}" not in app:
+            probs.append(f"the citation-searched trial ({study}) is not named on the dashboard")
+    # The reinstated trials change how the exclusion count reads, so they must
+    # be disclosed rather than left implicit in a net figure.
+    for r in got["reinstated_after_exclusion"]:
+        if r["study"] not in app:
+            probs.append(f"reinstated-after-exclusion trial {r['study']} is not disclosed")
+    check("PRISMA identification split is derived from the screening records, and "
+          "the citation-searched trial is named", not probs, "\n".join(probs))
+
+
 def t_post_lock_errata_still_applied():
     """
     The source-verified post-lock corrections must still be in the dataset.
@@ -2604,7 +2647,8 @@ def main() -> int:
                                         t_v33_zhang_withdrawn_everywhere,
                                         t_v33_legacy_reconstructions_labelled]),
         ("v34 lock integrity", [t_v34_csv_mirrors_locked_workbook,
-                                t_post_lock_errata_still_applied]),
+                                t_post_lock_errata_still_applied,
+                                t_prisma_identification_split_is_derived]),
         ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
