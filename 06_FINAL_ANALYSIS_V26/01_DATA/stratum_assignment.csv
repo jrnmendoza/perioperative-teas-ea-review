@@ -1,0 +1,12 @@
+analysis_id,endpoint_stratum,study,modality,comparator_class
+AN-02-TARGET-A,A_0-48h_cumulative_opioid,Chen 2020,TEAS,Sham
+AN-02-TARGET-A,A_0-48h_cumulative_opioid,Zhang 2023,TEAS,Sham
+AN-02-TARGET-A,A_0-48h_cumulative_opioid,An 2014,EA,Usual care
+AN-06-TARGET-D-48,D_PONV_0-48h,Xiong 2021,TEAS,UNCLASSIFIED (Dexamethasone + tropisetron)
+AN-06-TARGET-D-48,D_PONV_0-48h,Xing 2022,TEAS,Sham
+AN-07-TARGET-E,E_time_to_first_flatus,Zhou 2025,TEAS,Sham
+AN-07-TARGET-E,E_time_to_first_flatus,Yang 2020,EA,Usual care
+AN-07-TARGET-E,E_time_to_first_flatus,Yang 2024,EA,Usual care
+AN-07-TARGET-E,E_time_to_first_flatus,Xing 2022,TEAS,Sham
+AN-07-TARGET-E,E_time_to_first_flatus,Lu 2022,TEAS,Usual care
+AN-07-TARGET-E,E_time_to_first_flatus,Ng 2013,EA,Sham
