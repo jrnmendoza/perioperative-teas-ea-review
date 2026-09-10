@@ -232,12 +232,17 @@ def main() -> int:
     print("\nREMAINING STEPS (not done by this script, deliberately):")
     print(f"  1. set V34_SHA256 = \"{new}\" in scripts/build_v34_dashboard_data.py")
     print(f"  2. re-export {CSV.relative_to(ROOT)} from the workbook's Outcome_Data sheet")
-    print("  3. update the 757 -> 758 assertion in scripts/check_usability_ui.cjs")
+    print("  3. update the one hardcoded row count: scripts/check_usability_ui.cjs:405")
+    print("     (757 -> 758). build_site.py and deploy_integrity_check.py both count")
+    print("     Outcome_Data directly and need no edit; the workbook's Summary sheet")
+    print("     figure is updated by this script.")
     print("  4. re-run: build_v34_dashboard_data.py, 03_ROB2/model_rollup.py,")
     print("             04_GRADE/compute_new_model_grade.py,")
     print("             05_INTERPRETATION/build_interpretation_layer.py")
     print("  5. re-run validate_dashboard.py, check_tab_data.py, check_handover.py,")
     print("             build_site.py, deploy_integrity_check.py and the Playwright suites")
+    print("  NOTE: the new Yang 2024 nausea row carries ROB2_RESULT_SPECIFIC_PENDING, so")
+    print("        model_rollup.py will report one unjudged result for any model it feeds.")
     if not apply:
         print("\n(dry run: the locked workbook was NOT modified)")
     return 0

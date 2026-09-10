@@ -2390,6 +2390,54 @@ def t_interpretation_questions_are_data_triggered():
           "assertions", not probs, "\n".join(probs))
 
 
+def t_computed_not_reported_is_complete_and_unrated():
+    """
+    The computed-but-not-reported panel exists so that an analysis the review
+    fitted and did not carry forward is visible with its reason, instead of
+    existing only inside a results CSV where a reader cannot find it.
+
+    Two things must hold. Every analysis in the v26 results file must be
+    accounted for -- reported, duplicate, sensitivity variant, or listed here
+    with a reason -- so the panel cannot quietly omit an awkward one. And no
+    row here may carry a GRADE certainty, because none was adopted for these;
+    attaching one would be the unplanned outcome addition the panel exists to
+    make visible rather than commit.
+    """
+    p = ROOT / "dashboard" / "computed_not_reported.js"
+    if not p.exists():
+        check("Computed-but-not-reported analyses are listed with their reasons",
+              False, "dashboard/computed_not_reported.js is missing")
+        return
+    txt = p.read_text(encoding="utf-8")
+    C = json.loads(txt[txt.index("{"):].rstrip().rstrip(";"))
+    probs = []
+
+    v26 = read_csv(ROOT / "06_FINAL_ANALYSIS_V26" / "03_RESULTS"
+                   / "master_reconciled_results_v26.csv")
+    accounted = C["reported"] + C["duplicate"] + C["sensitivity"] + C["not_reported"]
+    if accounted != len(v26):
+        probs.append(f"{accounted} analyses classified but the results file holds {len(v26)}")
+    if C["total_analyses"] != len(v26):
+        probs.append(f"payload says {C['total_analyses']} analyses, file holds {len(v26)}")
+
+    banned = {"grade", "certainty", "grade_level"}
+    for r in C["rows"]:
+        if not (r.get("why") or "").strip():
+            probs.append(f"{r.get('analysis_id')}: listed without a reason")
+        if not (r.get("detail") or "").strip():
+            probs.append(f"{r.get('analysis_id')}: reason has no explanation")
+        stray = banned & set(r)
+        if stray:
+            probs.append(f"{r.get('analysis_id')}: carries a certainty field {sorted(stray)} "
+                         "though none was adopted for it")
+        # A ratio is null at 1; carrying the null per row is what stops the
+        # renderer testing a risk ratio against zero.
+        if r.get("null_value") not in (0.0, 1.0):
+            probs.append(f"{r.get('analysis_id')}: null_value {r.get('null_value')!r}")
+    check("Computed-but-not-reported analyses are listed with their reasons, and carry no "
+          "certainty rating", not probs, "\n".join(probs))
+
+
 def main() -> int:
     print("=" * 78)
     print(f"{BOLD}  DASHBOARD <-> v26 LOCK CONSISTENCY VALIDATOR{RESET}")
@@ -2450,6 +2498,7 @@ def main() -> int:
                                         t_v33_panel_is_dynamic,
                                         t_v33_zhang_withdrawn_everywhere,
                                         t_v33_legacy_reconstructions_labelled]),
+        ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,
