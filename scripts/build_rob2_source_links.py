@@ -92,14 +92,16 @@ both matched via that label regardless of what they actually measure. Fixed
 by requiring pca_behavior's keywords to hit outcome text specifically, same
 as ponv_24h/ponv_48h already did.
 
-Verified: 65 of 74 assessed results resolve this way (up from an initial 29
-using keyword+timepoint alone, then 34, 37, 43 as harder evidence and register
-fixes were added, then 65 once the register itself was extended -- see
-"EXTENDING THE REGISTER ITSELF" below), confirmed to ADD to the prior set
-with zero removals or changes at every step -- diffed explicitly against the
-prior committed version each time, not assumed. Nine remaining cases stay
-unresolved because NEITHER hard evidence, wording, NOR a genuine new register
-row settles them, checked individually rather than left by default:
+Verified: 69 of 74 assessed results resolve this way (up from an initial 29
+using keyword+timepoint alone, then 34, 37, 43, 65 as harder evidence,
+register fixes and register extension were added -- see "EXTENDING THE
+REGISTER ITSELF" below -- then 69 once four dashboard-side data errors
+were corrected, see "THE DASHBOARD HAD ITS OWN BUGS" below), confirmed to
+ADD to the prior set with zero removals or changes at every step -- diffed
+explicitly against the prior committed version each time, not assumed. Five
+remaining cases stay unresolved because NEITHER hard evidence, wording, NOR
+a genuine new register row or data fix settles them, checked individually
+rather than left by default:
 
 - Yeh 2010 and Yeh 2011 (both pca_behavior) are the SAME trial published
   twice (same authors, same 3-arm design, the sham arm's own figures
@@ -109,24 +111,6 @@ row settles them, checked individually rather than left by default:
   RoB 2 data for both would risk legitimising a double-count the review has
   already paused on. This is a unit-of-analysis decision for the review
   team, not a linking gap this script resolves.
-- Tu 2024's rescue_analgesia candidates share an identical analysed_n that
-  does not match the dashboard's own stored total (77, 76); the source PDF's
-  own Table 1 confirms the paper's actual analysed n is (57, 58) for BOTH
-  candidates -- checked against the primary source directly, and it matches
-  neither. A discrepancy worth the review lead's attention, not a linking
-  problem this script can paper over.
-- Xie 2014's rescue_analgesia (dezocine) and Yang 2020's flatus_time both
-  have genuine source-PDF data for the named outcome, but the actual Table
-  values (Xie 2014: EAS 5% [1/20] vs Sham 30% [6/20], from Table 2; Yang
-  2020: 20.8+/-4.6 h vs 24.1+/-6.2 h, from Table 3) do not match the
-  dashboard's own stored figures for either cell (4/20 vs 10/20; 67.45+/-10.42
-  vs 73.55+/-12.18) -- neither a unit conversion nor an arm-relabelling
-  explains the gap. Flagged for the review lead rather than forced.
-- Wu 2022's intraop_remi candidates were checked against their source PDF:
-  the paper separately reports both a raw cumulative remifentanil total
-  (1637 vs 1383 µg) AND a weight/time-normalised "index" (0.114 vs 0.084
-  µg/min/kg) as two genuinely distinct results, so the ambiguity is real,
-  not a data gap.
 - Lu 2022's pca_behavior candidates remain a genuine 6-way tie (2 metrics x
   3 timepoints) even after excluding a same-bucket consumption-family row
   (see find_link()'s pca_behavior-specific filter) -- the dashboard's own
@@ -139,6 +123,14 @@ row settles them, checked individually rather than left by default:
 - Yang 2024's intraop_remi has no genuine gap in the register to fill: the
   source PDF was read directly and reports NO intraoperative opioid figure
   at all, only postoperative PCA morphine.
+
+Tu 2024's rescue_analgesia, Xie 2014's rescue_analgesia, Yang 2020's
+flatus_time and Wu 2022's intraop_remi were ALSO in this unresolved list at
+one point, for the same reason: their candidates' hard denominators/values
+didn't match what the dashboard had stored, because what the dashboard had
+stored was itself wrong. See "THE DASHBOARD HAD ITS OWN BUGS" -- once the
+underlying data errors were corrected (not by this script; upstream, in
+dashboard/data.js and its generators), all four resolved cleanly.
 
 THE FOUR ADDITIONAL MECHANISMS THAT RAISED 37 -> 43
 - _rows_for_study() normalises a "#<id> - " key prefix ("#105119 - Zhou
@@ -208,10 +200,59 @@ elsewhere in this same register, e.g. Yu 2020's pain_rest_24h row is
 annotated "POD1 (~24 h)"). Both checked against the full register for false
 positives before being added; neither changed any existing link.
 
-Two further discrepancies were found this same way and are NOT filled in --
-see the two bullet points above (Xie 2014 rescue_analgesia, Yang 2020
-flatus_time) for what the actual PDF tables say versus what the dashboard
-has stored.
+THE DASHBOARD HAD ITS OWN BUGS (65 -> 69)
+Four remaining "unresolved" cells turned out not to be linking problems at
+all: the denominator (or, for Yang 2020, the whole mean/SD pair) this script
+was matching CSV candidates against came from the dashboard's own STUDIES_DATA
+outcomes object, and that object was wrong -- for all four, it did not match
+the source PDF, AND directly contradicted that same study's own
+audit.corrections narrative field elsewhere in the SAME STUDIES_DATA record,
+which already had the true figures:
+
+- Xie 2014 rescue_analgesia: stored 4/20 vs 10/20; source Table 2 and the
+  study's own audit.corrections note both say 1/20 (EAS) vs 6/20 (Sham).
+- Yang 2020 flatus_time: stored 67.45+/-10.42 vs 73.55+/-12.18 (roughly 3x
+  too large); source Table 3 and the audit.corrections note both say
+  20.8+/-4.6 h (EA) vs 24.1+/-6.2 h (Usual care).
+- Tu 2024 rescue_analgesia: stored 9/77 vs 17/76, a denominator this trial
+  never reports anywhere; source Table 4 and the audit.corrections note both
+  say 3/57 (TEAS) vs 6/58 (Sham) -- 57/58 is this trial's own analysed n
+  (Table 1).
+- Wu 2022 intraop_remi (outcomes.intraop_opioid): stored 1100+/-240 vs
+  1380+/-280 (n=30/30); source Table 2 and the audit.corrections note both
+  say 1383+/-494 vs 1637+/-630 ug (n=44/40) for cumulative remifentanil.
+
+Each was corrected at its actual source (dashboard/data.js AND the two
+Python scripts that generate it, dashboard/compile_dashboard_data.py and
+06_FINAL_ANALYSIS_V26/build_v26_dataset.py -- not in this file, which only
+reads STUDIES_DATA, never writes it) and guarded by a dedicated validator
+check, t_xie2014_yang2020_secondary_outcomes_corrected() in
+scripts/validate_dashboard.py, mutation-tested the same way as everything
+else in this pipeline.
+
+IMPORTANT CAVEAT, checked directly rather than assumed: none of these four
+numbers were ever shown to a user. app.js's init code
+(`s.outcomes[key]=records[s.key]`) overwrites exactly these buckets
+(flatus_time, rescue_analgesia, intraop_opioid) on every page load, from
+06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv and
+target_F_exploratory.csv -- a separate, SOURCE-VERIFIED pipeline that
+already had the correct numbers for all four cells before this fix existed.
+What was wrong was STUDIES_DATA's own baked literal, which this script (and
+only this script, among the pipeline's consumers) reads directly rather
+than through that runtime merge -- so the bug was invisible on the live site
+but was actively blocking these four RoB 2 links from ever resolving here.
+
+Fixing the denominator alone was not always enough. Xie 2014 and Yang 2020
+each had exactly one keyword+timepoint candidate, so correcting their
+denominator let those resolve immediately. Tu 2024 and Wu 2022 each still
+had two tied candidates even after the fix (Tu 2024's two rows share an
+identical analysed_n regardless of which denominator is used; Wu 2022's two
+rows are the same patients' cumulative dose vs. a differently-scaled
+derived index), so both needed a MANUAL_OVERRIDES entry on top of the data
+fix -- Tu 2024 settled by data TYPE (the corrected cell is dichotomous,
+only one candidate could have produced an events/total figure), Wu 2022
+settled by the corrected cell's actual VALUE matching one candidate's
+reported figure exactly and not being on the same scale as the other.
 
 WHAT THIS DOES NOT DO
 Invent a page number. Neither register carries one (checked: 0 of 551 rows
@@ -519,6 +560,40 @@ MANUAL_OVERRIDES: dict[tuple[str, str], tuple[str, str]] = {
         "group, and 13 patients in the G group within 48 h after surgery' -- "
         "the paper's own text states the window is 48 h.",
     ),
+    ("Tu 2024", "rescue_analgesia"): (
+        "Any rescue tramadol use",
+        "Both candidates ('Any rescue tramadol use', 'Cumulative rescue "
+        "tramadol consumption') carry the same analysed_n (57, 58), which "
+        "used to disambiguate against the dashboard's own stored "
+        "denominator until that denominator was itself corrected on "
+        "2026-09-10 (it had wrongly stored 77/76 -- a figure this trial "
+        "never reports anywhere -- despite this study's own "
+        "audit.corrections note already recording the true 57/58, 3/6 "
+        "tramadol-rescue figures). With the fix, both candidates now match "
+        "the denominator equally, and the lexical tiebreak finds no "
+        "distinguishing token ('incidence' is stopworded, and 'rescue "
+        "tramadol' is shared by both). Settled instead by data TYPE: the "
+        "corrected dashboard cell is dichotomous (events/total, RR), and "
+        "only 'Any rescue tramadol use' -- a yes/no incidence measure -- "
+        "is dichotomous in nature; 'Cumulative rescue tramadol "
+        "consumption' is a continuous dose amount and could never have "
+        "produced an events/total figure.",
+    ),
+    ("Wu 2022", "intraop_remi"): (
+        "Cumulative remifentanil",
+        "Both candidates ('Cumulative remifentanil', 'Remifentanil dose "
+        "index') carry the identical analysed_n (44, 40) -- same patients, "
+        "two different derived measures -- so a denominator match alone "
+        "can never separate them, before or after the 2026-09-10 fix to "
+        "this study's outcomes.intraop_opioid cell (previously 1100/1380, "
+        "n=30/30, a figure that matched neither candidate and contradicted "
+        "this study's own audit.corrections note). What the fix does "
+        "provide is the actual VALUE: the corrected cell now reads "
+        "1383+/-494 vs 1637+/-630 ug, which is 'Cumulative remifentanil's' "
+        "own reported figure exactly (source PDF Table 2: 'Consumption of "
+        "remifentanil(ug) 1637(630) 1383(494)') and is not even on the "
+        "same scale as 'Remifentanil dose index' (0.114/0.084 ug/min/kg).",
+    ),
 }
 
 
@@ -688,6 +763,23 @@ def _is_real_judgement(oc: dict) -> bool:
                for d in ("d1", "d2", "d3", "d4", "d5", "overall"))
 
 
+# The rob2_outcomes bucket name and the outcomes-object key it corresponds
+# to are the same string for every bucket except these two -- found by
+# reading app.js's per-study display code (dashboard/app.js), which reads
+# s.outcomes.intraop_opioid and s.outcomes.pca_presses_24h, not
+# s.outcomes.intraop_remi / s.outcomes.pca_behavior. Without this map,
+# _dashboard_denominator() below always looked up a key that is never
+# populated for these two buckets, silently losing the one piece of
+# evidence (Wu 2022's now-corrected intraoperative remifentanil figure)
+# that could otherwise settle its own genuine tie. pca_presses_24h is never
+# populated for any study today (checked), so that half of the map is
+# currently inert but kept for correctness.
+OUTCOMES_KEY_FOR_BUCKET = {
+    "intraop_remi": "intraop_opioid",
+    "pca_behavior": "pca_presses_24h",
+}
+
+
 def build() -> dict:
     v34_rows = load_v34_rob2_rows()
     studies = load_studies()
@@ -706,7 +798,8 @@ def build() -> dict:
                 continue
             total_assessed += 1
             candidates = _rows_for_study(by_study, st["key"])
-            dash_value = (st.get("outcomes") or {}).get(bucket)
+            outcomes_key = OUTCOMES_KEY_FOR_BUCKET.get(bucket, bucket)
+            dash_value = (st.get("outcomes") or {}).get(outcomes_key)
             match, method = find_link(bucket, candidates, oc.get("outcome_name") or "",
                                       _dashboard_denominator(dash_value))
             evidence_note = ""

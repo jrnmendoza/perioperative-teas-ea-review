@@ -1804,6 +1804,111 @@ def t_no_pre_correction_sufentanil_values():
           not probs, "\n".join(probs))
 
 
+def t_xie2014_yang2020_secondary_outcomes_corrected():
+    """
+    PRESENCE + ABSENCE. Four secondary-outcome cells in STUDIES_DATA's own
+    baked literal held numbers that did not match their own source PDF and
+    directly contradicted that same study's own audit.corrections note,
+    which already recorded the true figures (corrected 2026-09-10):
+
+      - Xie 2014 rescue_analgesia: source Table 2 reports dezocine rescue
+        1/20 (EAS) vs 6/20 (Sham); the cell held 4/20 vs 10/20.
+      - Yang 2020 flatus_time: source Table 3 reports 20.8+/-4.6 h (EA) vs
+        24.1+/-6.2 h (Usual care); the cell held 67.45+/-10.42 vs
+        73.55+/-12.18 (roughly 3x too large).
+      - Tu 2024 rescue_analgesia: source Table 4 / Results text reports
+        tramadol rescue 3/57 (TEAS) vs 6/58 (Sham) -- the trial's own
+        analysed n, matching Table 1 -- but the cell held 9/77 vs 17/76,
+        a denominator this trial never reports anywhere.
+      - Wu 2022 intraop_opioid: source Table 2 reports "Consumption of
+        remifentanil(ug) 1637(630) [Control] 1383(494) [pTEAS]"; the cell
+        held 1100/240 vs 1380/280 (n=30/30, a figure this trial never
+        reports for either its raw consumption or its normalised index).
+
+    IMPORTANT: none of the four ever reached the live, user-facing Meta Lab
+    forest plot. app.js:42 (`for (const [key,records] of
+    Object.entries(window.BROWSER_TARGETS)) s.outcomes[key]=records[s.key]`)
+    overwrites exactly these buckets (flatus_time, rescue_analgesia,
+    intraop_opioid) at runtime, on every page load, from
+    06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv and
+    target_F_exploratory.csv -- both SOURCE-VERIFIED and already correct for
+    all four cells, confirmed by reading them directly. What this check
+    guards is STUDIES_DATA's own baked literal: dead at runtime today, but
+    read directly (not through app.js's merge) by
+    scripts/build_rob2_source_links.py's denominator matching, which is what
+    let this fix resolve four more RoB 2 register links. A latent
+    inconsistency that misleads anyone reading data.js as ground truth, or
+    that would silently resurface if app.js's merge is ever changed or
+    removed -- worth guarding even though it is not live today.
+
+    Checked in STUDIES_DATA (the artifact build_rob2_source_links.py reads)
+    AND in the two Python generator scripts that produced it
+    (dashboard/compile_dashboard_data.py,
+    06_FINAL_ANALYSIS_V26/build_v26_dataset.py) -- all four hardcode these
+    cells by canonical-name branch, so a rebuild without this guard would
+    silently regenerate the wrong values, the same failure mode the v34
+    post-lock-errata guards exist to catch on the other pipeline.
+    """
+    probs = []
+    by_key = {s["key"]: s for s in STUDIES}
+
+    xie = (by_key.get("Xie 2014", {}).get("outcomes") or {}).get("rescue_analgesia") or {}
+    if (xie.get("arm1_events"), xie.get("arm2_events")) != (1, 6):
+        probs.append(f"Xie 2014 outcomes.rescue_analgesia events are "
+                     f"{xie.get('arm1_events')}/{xie.get('arm2_events')}, expected 1/6 "
+                     f"(source PDF Table 2: dezocine rescue 1/20 EAS vs 6/20 Sham)")
+
+    yang = (by_key.get("Yang 2020", {}).get("outcomes") or {}).get("flatus_time") or {}
+    if yang.get("arm1_mean") != 20.8 or yang.get("arm2_mean") != 24.1:
+        probs.append(f"Yang 2020 outcomes.flatus_time means are "
+                     f"{yang.get('arm1_mean')}/{yang.get('arm2_mean')}, expected 20.8/24.1 "
+                     f"(source PDF Table 3: time to first flatus)")
+
+    tu = (by_key.get("Tu 2024", {}).get("outcomes") or {}).get("rescue_analgesia") or {}
+    if (tu.get("arm1_events"), tu.get("arm1_total"), tu.get("arm2_events"), tu.get("arm2_total")) != (3, 57, 6, 58):
+        probs.append(f"Tu 2024 outcomes.rescue_analgesia is "
+                     f"{tu.get('arm1_events')}/{tu.get('arm1_total')} vs "
+                     f"{tu.get('arm2_events')}/{tu.get('arm2_total')}, expected 3/57 vs 6/58 "
+                     f"(source PDF Table 4: tramadol rescue within 6-24h)")
+
+    wu = (by_key.get("Wu 2022", {}).get("outcomes") or {}).get("intraop_opioid") or {}
+    if wu.get("arm1_mean") != 1383.0 or wu.get("arm2_mean") != 1637.0:
+        probs.append(f"Wu 2022 outcomes.intraop_opioid means are "
+                     f"{wu.get('arm1_mean')}/{wu.get('arm2_mean')}, expected 1383.0/1637.0 "
+                     f"(source PDF Table 2: intraoperative remifentanil consumption)")
+
+    for path in (DASH / "compile_dashboard_data.py",
+                 ROOT / "06_FINAL_ANALYSIS_V26" / "build_v26_dataset.py"):
+        text = path.read_text(encoding="utf-8")
+        if '"arm1_events": 4, "arm1_total": 20, "arm2_events": 10' in text:
+            probs.append(f"{path.relative_to(ROOT)}: still hardcodes Xie 2014's "
+                         f"pre-correction rescue_analgesia events (4/10)")
+        if '"arm1_events": 1, "arm1_total": 20, "arm2_events": 6' not in text:
+            probs.append(f"{path.relative_to(ROOT)}: does not hardcode Xie 2014's "
+                         f"corrected rescue_analgesia events (1/6)")
+        if '"arm1_mean": 67.45, "arm1_sd": 10.42' in text:
+            probs.append(f"{path.relative_to(ROOT)}: still hardcodes Yang 2020's "
+                         f"pre-correction flatus_time means (67.45/73.55)")
+        if '"arm1_mean": 20.8, "arm1_sd": 4.6, "arm1_n": 29' not in text:
+            probs.append(f"{path.relative_to(ROOT)}: does not hardcode Yang 2020's "
+                         f"corrected flatus_time means (20.8/24.1)")
+        if '"arm1_events": 9, "arm1_total": 77, "arm2_events": 17, "arm2_total": 76' in text:
+            probs.append(f"{path.relative_to(ROOT)}: still hardcodes Tu 2024's "
+                         f"pre-correction rescue_analgesia denominator (9/77 vs 17/76)")
+        if '"arm1_events": 3, "arm1_total": 57, "arm2_events": 6, "arm2_total": 58' not in text:
+            probs.append(f"{path.relative_to(ROOT)}: does not hardcode Tu 2024's "
+                         f"corrected rescue_analgesia figures (3/57 vs 6/58)")
+        if '"arm1_mean": 1100.0, "arm1_sd": 240.0, "arm1_n": 30' in text:
+            probs.append(f"{path.relative_to(ROOT)}: still hardcodes Wu 2022's "
+                         f"pre-correction intraop_opioid means (1100/1380, n=30/30)")
+        if '"arm1_mean": 1383.0, "arm1_sd": 494.0, "arm1_n": 44' not in text:
+            probs.append(f"{path.relative_to(ROOT)}: does not hardcode Wu 2022's "
+                         f"corrected intraop_opioid means (1383/1637, n=44/40)")
+
+    check("Xie 2014, Yang 2020, Tu 2024 and Wu 2022 secondary-outcome cells match their source PDFs",
+          not probs, "\n".join(probs))
+
+
 def t_locale_pooled_numbers_agree():
     """
     STRUCTURAL. Swedish strings are a second, independent copy of every headline
@@ -3242,6 +3347,7 @@ def main() -> int:
                                        t_i18n_textcontent_no_html_entities, t_v26_logs_git_tracked,
                                        t_primary_weighting_matrix_matches_stata,
                                        t_no_pre_correction_sufentanil_values,
+                                       t_xie2014_yang2020_secondary_outcomes_corrected,
                                        t_locale_pooled_numbers_agree]),
         ("v33 evidence base", [t_v33_layer_matches_master,
                                t_v33_contribution_map_reconciles,

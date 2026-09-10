@@ -630,11 +630,17 @@ def run():
                 "ci_low": -3.17, "ci_upp": -0.39, "favors": "Intervention"
             }
         elif "Yang 2020" in canonical_name:
+            # Corrected 2026-09-10: source PDF Table 3 reports "Time to first flatus":
+            # EA 20.8+/-4.6 vs Usual care 24.1+/-6.2 hours, P=0.026 -- the means/SDs used
+            # here (67.45+/-10.42 vs 73.55+/-12.18, ~3x too large) never matched the source
+            # and directly contradicted this study's own audit.corrections note, which
+            # already recorded the true figures.
             flatus_data = {
-                "arm1_mean": 67.45, "arm1_sd": 10.42, "arm1_n": 29,
-                "arm2_mean": 73.55, "arm2_sd": 12.18, "arm2_n": 28,
-                "unit": "hours", "mean_diff": -6.10, "se": 3.003,
-                "ci_low": -11.99, "ci_upp": -0.21, "favors": "Intervention"
+                "arm1_mean": 20.8, "arm1_sd": 4.6, "arm1_n": 29,
+                "arm2_mean": 24.1, "arm2_sd": 6.2, "arm2_n": 28,
+                "unit": "hours", "mean_diff": -3.30, "se": 1.450,
+                "ci_low": -6.14, "ci_upp": -0.46, "favors": "Intervention",
+                "note": "Time to first flatus (Table 3): EA 20.8+/-4.6 vs Usual care 24.1+/-6.2 hours, P=0.026. Corrected 2026-09-10: this cell previously stored 67.45+/-10.42 vs 73.55+/-12.18 (roughly 3x too large), which does not match the source PDF and directly contradicted this study's own audit.corrections note, which already documented the true 20.8/24.1-hour figures."
             }
         elif "Yang 2024" in canonical_name:
             flatus_data = {
@@ -670,7 +676,15 @@ def run():
         # 7. Target F: Intraoperative Remifentanil Requirement (Titrated µg)
         intra_data = None
         if "Wu 2022" in canonical_name:
-            intra_data = {"arm1_mean": 1100.0, "arm1_sd": 240.0, "arm1_n": 30, "arm2_mean": 1380.0, "arm2_sd": 280.0, "arm2_n": 30, "unit": "µg remifentanil", "mean_diff": -280.0, "se": 67.33, "favors": "Intervention"}
+            # Corrected 2026-09-10: source PDF Table 2 reports "Consumption of
+            # remifentanil(ug) 1637(630) [Control] 1383(494) [pTEAS], P=0.042" -- the
+            # values used here (1100/240 vs 1380/280, n=30/30) matched neither this
+            # figure nor this trial's other reported intraoperative measure (the
+            # normalised "Index of remifentanil Consumption", 0.114/0.090 vs
+            # 0.084/0.018 ug/min/kg) and directly contradicted this study's own
+            # audit.corrections note, which already recorded the true figures.
+            intra_data = {"arm1_mean": 1383.0, "arm1_sd": 494.0, "arm1_n": 44, "arm2_mean": 1637.0, "arm2_sd": 630.0, "arm2_n": 40, "unit": "µg remifentanil", "mean_diff": -254.0, "se": 124.37, "ci_low": -497.77, "ci_upp": -10.23, "favors": "Intervention",
+                         "note": "Intraoperative remifentanil consumption (Table 2): pTEAS 1383+/-494 vs Control 1637+/-630 ug, P=0.042. Corrected 2026-09-10: see comment above."}
         elif "Xing 2022" in canonical_name:
             intra_data = {"arm1_mean": 1330.0, "arm1_sd": 310.0, "arm1_n": 29, "arm2_mean": 1620.0, "arm2_sd": 380.0, "arm2_n": 29, "unit": "µg remifentanil", "mean_diff": -290.0, "se": 91.07, "favors": "Intervention"}
         elif "Lu 2021" in canonical_name:
@@ -687,11 +701,29 @@ def run():
         # 8. Target F: Rescue Opioid Requirement (Strict Binary)
         rescue_data = None
         if "Xie 2014" in canonical_name:
-            rescue_data = {"arm1_events": 4, "arm1_total": 20, "arm2_events": 10, "arm2_total": 20, "rr": 0.40, "ci_low": 0.15, "ci_upp": 1.05, "favors": "Intervention"}
+            # Corrected 2026-09-10: source PDF Table 2 reports "Rate of breakthrough pain
+            # rescue with dezocine": EAS 1/20 (5%) vs Sham 6/20 (30%) vs Control 7/20 (35%),
+            # P<0.05 -- the events used here (4/20 vs 10/20) never matched the source and
+            # directly contradicted this study's own audit.corrections note, which already
+            # recorded the true figures. RR/CI recomputed with this dataset's own
+            # Haldane-Anscombe continuity-correction convention (verified against Szmit
+            # 2021's zero-event ponv_24h cell, which reproduces exactly: rr=0.111,
+            # ci=[0.006,1.955]).
+            rescue_data = {"arm1_events": 1, "arm1_total": 20, "arm2_events": 6, "arm2_total": 20, "rr": 0.23, "ci_low": 0.04, "ci_upp": 1.22, "favors": "Intervention",
+                           "note": "Rate of breakthrough pain rescue with IV dezocine (Table 2): EAS 1/20 (5%) vs Sham 6/20 (30%) vs Control 7/20 (35%), P<0.05. Corrected 2026-09-10: this cell previously stored 4/20 vs 10/20 (RR 0.40 [0.15,1.05]), which does not match the source PDF and directly contradicted this study's own audit.corrections note, which already documented the true 1/20 vs 6/20 figures. RR/CI recomputed with the review's standard Haldane-Anscombe continuity correction (verified against Szmit 2021's zero-event case)."}
         elif "Yu 2020" in canonical_name:
             rescue_data = {"arm1_events": 5, "arm1_total": 30, "arm2_events": 11, "arm2_total": 30, "rr": 0.45, "ci_low": 0.18, "ci_upp": 1.15, "favors": "Intervention"}
         elif "Tu 2024" in canonical_name or "Tu 2023" in canonical_name:
-            rescue_data = {"arm1_events": 9, "arm1_total": 77, "arm2_events": 17, "arm2_total": 76, "rr": 0.52, "ci_low": 0.25, "ci_upp": 1.09, "favors": "Intervention"}
+            # Corrected 2026-09-10: source PDF Table 4 / Results text reports "At 6-24 h
+            # following craniotomy, three patients in the TEAS group and six patients in
+            # the sham TEAS group received tramadol" (n=57/58, this trial's own analysed
+            # n, not 77/76) -- the events/denominators used here (9/77 vs 17/76) never
+            # matched the source and directly contradicted this study's own
+            # audit.corrections note, which already recorded the true figures. RR/CI
+            # recomputed with this dataset's own Haldane-Anscombe continuity-correction
+            # convention.
+            rescue_data = {"arm1_events": 3, "arm1_total": 57, "arm2_events": 6, "arm2_total": 58, "rr": 0.55, "ci_low": 0.16, "ci_upp": 1.91, "favors": "Intervention",
+                           "note": "Use of tramadol within 6-24 h (Table 4): TEAS 3/57 (5.3%) vs Sham TEAS 6/58 (10.3%), P=0.315. Corrected 2026-09-10: this cell previously stored 9/77 vs 17/76, which does not match the source PDF (Table 1's own analysed n is 57/58, not 77/76) and directly contradicted this study's own audit.corrections note, which already documented the true 3/57 vs 6/58 figures. RR/CI recomputed with the review's standard Haldane-Anscombe continuity correction."}
         elif s_id_str == '1879896105': # Zhou 2025
             rescue_data = {"arm1_events": 6, "arm1_total": 48, "arm2_events": 13, "arm2_total": 49, "rr": 0.47, "ci_low": 0.20, "ci_upp": 1.13, "favors": "Intervention"}
 
