@@ -118,6 +118,27 @@ def cell(ref: str, val, numeric=False) -> str:
     return f'<x:c r="{ref}" t="{t}"><x:v>{esc(val)}</x:v></x:c>'
 
 
+def set_cell_value(row_xml: str, ref: str, old: str, new: str) -> str:
+    """
+    Replace one cell's value, matching the cell by reference rather than by a
+    literal XML string, and preserving whatever attributes it carries.
+
+    An earlier version of this script substituted literal XML fragments. That
+    silently did nothing for BI55, whose element is
+    <x:c r="BI55" s="102" t="str"> -- the style attribute was absent from the
+    literal. Worse, the single guard covered both substitutions at once, so the
+    successful G55 edit masked the failed one and verify() did not look at the
+    field. Each substitution is now asserted on its own.
+    """
+    pat = re.compile(rf'(<x:c r="{ref}"[^>]*>)<x:v>{re.escape(old)}</x:v>(</x:c>)')
+    fixed, n = pat.subn(rf'\g<1><x:v>{esc(new)}</x:v>\g<2>', row_xml)
+    if n != 1:
+        raise SystemExit(
+            f"expected exactly one {ref} cell holding {old!r}, found {n} -- "
+            "refusing to edit blindly (already corrected, or layout changed)")
+    return fixed
+
+
 def patch(out_path: Path) -> None:
     zin = zipfile.ZipFile(MASTER)
     od = zin.read(OUTCOME_SHEET).decode("utf-8")
@@ -130,14 +151,8 @@ def patch(out_path: Path) -> None:
     row55 = m.group(0)
     if "YANG24_EA_vs_UC_VOMIT" not in row55:
         raise SystemExit("row 55 is not the Yang 2024 vomiting row -- refusing to edit blindly")
-    fixed = row55.replace(
-        '<x:c r="G55" t="str"><x:v>Within 72 h</x:v></x:c>',
-        '<x:c r="G55" t="str"><x:v>0-24 h after surgery</x:v></x:c>'
-    ).replace(
-        '<x:c r="BI55" t="str"><x:v>within 72h</x:v></x:c>',
-        '<x:c r="BI55" t="str"><x:v>0-24h</x:v></x:c>')
-    if fixed == row55:
-        raise SystemExit("window cells not found on row 55 -- already corrected?")
+    fixed = set_cell_value(row55, "G55", "Within 72 h", "0-24 h after surgery")
+    fixed = set_cell_value(fixed, "BI55", "within 72h", "0-24h")
     od = od[:m.start()] + fixed + od[m.end():]
 
     # -- erratum 1: append the missing nausea row -----------------------------
@@ -192,15 +207,20 @@ def verify(out_path: Path) -> None:
     row = dict(zip(hdr, [c.value for c in od[NEW_ROW]]))
     checks = {"Canonical study": "Yang 2024", "Outcome/result": "Postoperative nausea",
               "Timepoint/window": "0-24 h after surgery", "Events intervention": 24,
-              "Events comparator": 40}
+              "Events comparator": 40, "V34 time class": "0-24h"}
     for k, want in checks.items():
         if row.get(k) != want:
             raise SystemExit(f"new row {k}={row.get(k)!r}, expected {want!r}")
+    # Both halves of erratum 2, not just the human-readable one. The machine-
+    # readable time class is the field downstream window filters actually read,
+    # and it is the one an earlier version of this script failed to change.
     vom = dict(zip(hdr, [c.value for c in od[55]]))
-    if vom.get("Timepoint/window") != "0-24 h after surgery":
-        raise SystemExit("vomiting window was not corrected")
+    for k, want in (("Timepoint/window", "0-24 h after surgery"),
+                    ("V34 time class", "0-24h")):
+        if vom.get(k) != want:
+            raise SystemExit(f"vomiting row {k}={vom.get(k)!r}, expected {want!r}")
     print("  verified: 141 parts byte-identical, charts intact, 48 sheets, 758 rows,")
-    print("            nausea row present, vomiting window corrected")
+    print("            nausea row present, vomiting window + time class corrected")
 
 
 def main() -> int:

@@ -104,7 +104,11 @@ Studies with unresolved conflict/definition records for author clarification: Gu
 
 - Frozen v33 SHA-256: `64ef683c58a1faa2bf408f415d03d96dd6622abf8ded24a72f43db9c47a82a2a`.
 - Audit SHA-256: `dd1ee3542121c30fb5de6e520a05fbb2c61e1f9ba9d1d7b8c7477c620b3b879a`.
-- v34 SHA-256: `985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3`.
+- v34 SHA-256 **at the time of this report**: `985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3`.
+  Superseded on 2026-09-10 by `b1bfcfb59b28f88102a443cc350b98c46eb73743e3c951fce125813cfcdff66d`
+  after the source-verified post-lock errata in `v34_reconciliation/POST_LOCK_ERRATA_v34.md`
+  (758 outcome rows). The figure above is left as the historical record of what
+  this report certified, not corrected in place.
 - Original formulas: 0; named ranges: 0. Exported formula errors: 0. No formula-derived result was replaced with an assumed value.
 - AF_Result_Lock and AF_P1_Disposition remain historical adjudications. V33_Outcome_Data_AF_LOCK and V33_Stata_AF_Long preserve original values; corrected active layers and regenerated exports carry v34 changes.
 - Native Excel table/filter ranges were expanded to full current extents, including previously truncated master/RoB tables. Existing sheets were retained; summary body merges were removed where they would hide current counts.

@@ -2390,6 +2390,69 @@ def t_interpretation_questions_are_data_triggered():
           "assertions", not probs, "\n".join(probs))
 
 
+def t_v34_csv_mirrors_locked_workbook():
+    """
+    v34_outcome_data.csv must still be a faithful mirror of the locked
+    workbook's Outcome_Data sheet, cell for cell.
+
+    POST_LOCK_ERRATA_v34.md states the invariant -- the workbook, this CSV and
+    the dashboard's row count are one set, and changing any one alone produces
+    a silent divergence -- but nothing enforced it. During the 2026-09-10
+    re-lock the two did diverge: a literal-XML substitution in the errata
+    patcher failed to match `<x:c r="BI55" s="102" t="str">` because the style
+    attribute was absent from the literal, so the workbook kept
+    `V34 time class` = "within 72h" on a row whose `Timepoint/window` had been
+    corrected to "0-24 h after surgery". The patcher's own verify() passed,
+    because it looked only at the field that had changed. The contradiction was
+    visible only by comparing the two artefacts against each other.
+
+    Numeric rendering is normalised before comparison: the CSV was written with
+    whole numbers as "103" and openpyxl reads the same stored value back as
+    103.0. That difference is cosmetic and is not what this check is for.
+    """
+    import openpyxl
+    master = (ROOT / "TEAS EA Verification" /
+              "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx")
+    csv_path = (ROOT / "TEAS EA Verification" / "v34_reconciliation" /
+                "data" / "v34_outcome_data.csv")
+    if not (master.exists() and csv_path.exists()):
+        check("v34 outcome CSV mirrors the locked workbook", False,
+              "workbook or CSV missing")
+        return
+
+    def norm(v) -> str:
+        if v is None:
+            return ""
+        s = str(v).strip()
+        try:
+            f = float(s)
+        except (TypeError, ValueError):
+            return s
+        return str(int(f)) if f == int(f) else repr(round(f, 10))
+
+    rows_x = [list(r) for r in
+              openpyxl.load_workbook(master, read_only=True, data_only=True)
+              ["Outcome_Data"].iter_rows(values_only=True)]
+    header_x, data_x = [str(c) for c in rows_x[0]], rows_x[1:]
+    rows_c = read_csv(csv_path)
+
+    probs = []
+    if len(rows_c) != len(data_x):
+        probs.append(f"CSV has {len(rows_c)} rows, workbook has {len(data_x)}")
+    else:
+        for i, (cr, xr) in enumerate(zip(rows_c, data_x), start=2):
+            for j, name in enumerate(header_x):
+                if norm(cr.get(name)) != norm(xr[j]):
+                    probs.append(f"line {i} {name}: CSV {cr.get(name)!r} vs "
+                                 f"workbook {xr[j]!r}")
+                    if len(probs) >= 10:
+                        break
+            if len(probs) >= 10:
+                break
+    check("v34 outcome CSV mirrors the locked workbook cell for cell",
+          not probs, "\n".join(probs))
+
+
 def t_computed_not_reported_is_complete_and_unrated():
     """
     The computed-but-not-reported panel exists so that an analysis the review
@@ -2498,6 +2561,7 @@ def main() -> int:
                                         t_v33_panel_is_dynamic,
                                         t_v33_zhang_withdrawn_everywhere,
                                         t_v33_legacy_reconstructions_labelled]),
+        ("v34 lock integrity", [t_v34_csv_mirrors_locked_workbook]),
         ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,

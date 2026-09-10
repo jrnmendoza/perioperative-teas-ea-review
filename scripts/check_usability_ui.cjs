@@ -402,7 +402,7 @@ async function boot(browser, hash) {
 
     assert.ok(/v34/.test(shown.master), `dashboard should read the v34 master: ${shown.master}`);
     assert.equal(shown.studies, 70, 'canonical study count must stay 70');
-    assert.equal(shown.rows, 757, 'v34 outcome-row count must be 757');
+    assert.equal(shown.rows, 758, 'v34 outcome-row count must be 758');
     assert.equal(shown.k, 7, 'strict primary k must stay 7');
     assert.ok(shown.rendered >= 13, `expected the v34 models to render; saw ${shown.rendered}`);
 

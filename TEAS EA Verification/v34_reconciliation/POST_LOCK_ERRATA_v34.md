@@ -15,9 +15,60 @@ recorded here first and applied as a set.
 
 | # | Study | Issue | Status |
 |---|---|---|---|
-| 1 | Yang 2024 | Nausea 0–24 h result used by an analysis but absent from the dataset | **Applied — pending re-lock approval** |
-| 2 | Yang 2024 | Vomiting 0–24 h result mislabelled "Within 72 h" | **Applied — pending re-lock approval** |
+| 1 | Yang 2024 | Nausea 0–24 h result used by an analysis but absent from the dataset | **Applied and re-locked 2026-09-10** |
+| 2 | Yang 2024 | Vomiting 0–24 h result mislabelled "Within 72 h" | **Applied and re-locked 2026-09-10** |
 | 3 | Szmit 2021 | Nausea window is 24-h-bounded but not explicitly 0–24 h | **Open — no data change; classification note** |
+| 4 | — | Stratum label incomplete in a v26 results file | **Open — no data change** |
+
+## Re-lock record — 2026-09-10
+
+Errata 1 and 2 were applied to the master workbook and mirrored into
+`v34_reconciliation/data/v34_outcome_data.csv`. Errata 3 and 4 are unchanged and
+remain open: neither is a data correction, and neither gated this re-lock.
+
+| | before | after |
+|---|---|---|
+| workbook SHA-256 | `985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3` | `b1bfcfb59b28f88102a443cc350b98c46eb73743e3c951fce125813cfcdff66d` |
+| `Outcome_Data` rows | 757 | 758 |
+
+The pre-errata workbook is preserved in git history at commit `5aa94f2`, which
+is the authoritative copy:
+
+```bash
+git show 5aa94f2:"TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx" > pre_errata.xlsx
+```
+
+The patcher also writes a working copy next to the master as
+`TEAS_EA_RECONCILED_MASTER_DATA_v34_PRE_ERRATA_BACKUP.xlsx`. That copy is left
+untracked on purpose: committing a 2.1 MB byte-duplicate of a file git already
+stores would bloat the repository without adding recoverability.
+
+**No published estimate changed.** The 10 GRADE-rated v34 models, the RoB 2
+rollup and all 22 interpretation records were regenerated and are identical;
+the interpretation layer's staleness check reported 0 stale records. That is the
+expected result — `TD_NAUSEA_0_24H` is a v26 analysis, not one of the manifested
+v34 models, and it had already been computed from these values. What changed is
+that the dataset now *contains* the result the analysis consumed.
+
+### A defect found during the re-lock, and what it means for erratum 2
+
+The first application of `apply_post_lock_errata.py` corrected only **half** of
+erratum 2. The script substituted literal XML fragments, and the cell holding the
+machine-readable time class is `<x:c r="BI55" s="102" t="str">` — the style
+attribute was missing from the literal, so that substitution matched nothing. A
+single guard covered both substitutions, so the successful `G55` edit satisfied
+it, and `verify()` checked only the human-readable `Timepoint/window` field. The
+workbook would have gone out with `Timepoint/window` = "0-24 h after surgery"
+and `V34 time class` = "within 72h" — internally contradictory, and wrong in
+precisely the field a window filter reads.
+
+This was caught by comparing the patched workbook against the CSV rather than
+trusting the script's own "verified" line. The script now matches cells by
+reference with the attributes preserved, asserts each substitution independently,
+and verifies both fields. The corrected workbook hashes to `b1bfcfb5…`; the
+incomplete one hashed to `0079f7f3…`, which is the value printed in this
+register's earlier dry-run notes and in any working copy taken before
+2026-09-10 — **that hash should not be trusted or restored.**
 
 ---
 

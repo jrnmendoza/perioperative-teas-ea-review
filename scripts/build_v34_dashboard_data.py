@@ -49,7 +49,11 @@ OUT = ROOT / "dashboard" / "v34_data.js"
 
 GRADE_LEVELS = ["Very Low", "Low", "Moderate", "High"]
 
-V34_SHA256 = "985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3"
+# Re-locked 2026-09-10 after the source-verified post-lock errata in
+# "TEAS EA Verification/v34_reconciliation/POST_LOCK_ERRATA_v34.md" (Yang 2024
+# nausea 0-24 h added, vomiting window relabelled). Previous lock:
+# 985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3
+V34_SHA256 = "b1bfcfb59b28f88102a443cc350b98c46eb73743e3c951fce125813cfcdff66d"
 
 # Human labels for the models, and the RoB outcome key each belongs to.
 MODEL_META = {

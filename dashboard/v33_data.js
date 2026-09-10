@@ -2,7 +2,7 @@
 // Regenerate with:  python3 scripts/build_v33_dashboard_data.py
 //
 // Master : TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx
-// Studies: 70   Outcome rows: 757
+// Studies: 70   Outcome rows: 758
 // Strict primary opioid k: 7
 //
 // Every number is read from the v33 workbook or from a Stata result file.
@@ -11,7 +11,7 @@ window.V33_DATA = {
   "generated_by": "scripts/build_v33_dashboard_data.py",
   "master": "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx",
   "canonical_studies": 70,
-  "outcome_rows": 757,
+  "outcome_rows": 758,
   "strict_primary_k": 7,
   "result_rob2_coverage": [
     {

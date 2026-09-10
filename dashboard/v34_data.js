@@ -2,8 +2,8 @@
 // Regenerate with:  python3 scripts/build_v34_dashboard_data.py
 //
 // Master : TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx
-// SHA-256: 985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3
-// Studies: 70   Outcome rows: 757
+// SHA-256: b1bfcfb59b28f88102a443cc350b98c46eb73743e3c951fce125813cfcdff66d
+// Studies: 70   Outcome rows: 758
 // Models : 5 new + 8 independently reproduced
 //
 // Every estimate is read from 09_V34_ANALYSIS/03_RESULTS/v34_models.csv, fitted
@@ -11,10 +11,10 @@
 window.V34_DATA = {
   "generated_by": "scripts/build_v34_dashboard_data.py",
   "master": "TEAS_EA_RECONCILED_MASTER_DATA_v34_FINAL_LOCK_READY.xlsx",
-  "master_sha256": "985dc26a943cf30e1bbdac552a5eb69a6fb2d73fd252d0bc194abbdb8538d6f3",
+  "master_sha256": "b1bfcfb59b28f88102a443cc350b98c46eb73743e3c951fce125813cfcdff66d",
   "master_version": "v34",
   "canonical_studies": 70,
-  "outcome_rows": 757,
+  "outcome_rows": 758,
   "strict_primary_k": 7,
   "models": [
     {
@@ -309,7 +309,7 @@ window.V34_DATA = {
     }
   ],
   "eligibility_counts": {
-    "INCLUDE": 464,
+    "INCLUDE": 465,
     "NARRATIVE ONLY": 99,
     "GRAPH ONLY": 63,
     "HOLD": 62,
@@ -320,7 +320,7 @@ window.V34_DATA = {
     "SOURCE NOT ACCESSED": 2
   },
   "rob2_status_counts": {
-    "ROB2_RESULT_SPECIFIC_PENDING": 668,
+    "ROB2_RESULT_SPECIFIC_PENDING": 669,
     "EXISTING_RESULT_SPECIFIC: Some concerns": 45,
     "EXISTING_RESULT_SPECIFIC: High": 37,
     "EXISTING_LOCKED_PRIMARY: Some concerns": 6,

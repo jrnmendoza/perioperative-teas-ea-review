@@ -110,7 +110,10 @@ def main() -> int:
     rm_rows = [dict(study=draft[key]["study"], outcome=draft[key]["outcome"],
                     timepoint=draft[key]["timepoint"],
                     models="; ".join(sorted(result_models.get(key, set()))))
-               for key in own_keys]
+               # sorted, not raw set order: Python randomises string hashing per
+               # process, so iterating own_keys directly reshuffled all 36 rows
+               # on every run and made this generated file diff against itself.
+               for key in sorted(own_keys)]
     rmp = HERE / "v34_rob2_result_models.csv"
     with rmp.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["study", "outcome", "timepoint", "models"],

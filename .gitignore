@@ -41,3 +41,9 @@ _site/
 dashboard/v26/
 docs/
 node_modules/
+
+# Working copy the post-lock errata patcher writes next to the master. The
+# authoritative pre-errata workbook is in git history (see
+# TEAS EA Verification/v34_reconciliation/POST_LOCK_ERRATA_v34.md).
+TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v34_PRE_ERRATA_BACKUP.xlsx
+TEAS EA Verification/TEAS_EA_RECONCILED_MASTER_DATA_v34_CORRECTED_CANDIDATE.xlsx
