@@ -2491,6 +2491,64 @@ def t_prisma_identification_split_is_derived():
           "the citation-searched trial is named", not probs, "\n".join(probs))
 
 
+def t_prior_evidence_dispositions_match_the_analysis():
+    """
+    The prior-evidence comparison must agree with the analysis it describes.
+
+    This panel exists so the Discussion can say why this review's 0-24 h opioid
+    estimate differs from Tan 2024's, trial by trial. Its danger is staleness:
+    the source audit document already went out of date on exactly this point --
+    it recorded 1 of Tan's six trials in our strict primary, then the review
+    acted on its own finding and reinstated Szmit 2021, making it 2. A panel
+    transcribed from the document would still say 1.
+
+    So every disposition is re-derived at build time, and this check re-derives
+    them again independently and compares. It also requires the superseded
+    tally to be disclosed rather than quietly overwritten.
+    """
+    import importlib.util
+    payload_path = DASH / "prior_evidence.js"
+    if not payload_path.exists():
+        check("Prior-evidence comparison matches the analysis", False,
+              "dashboard/prior_evidence.js missing -- run build_prior_evidence_comparison.py")
+        return
+
+    src = payload_path.read_text(encoding="utf-8")
+    payload = json.loads(src[src.index("window.PRIOR_EVIDENCE = ") +
+                             len("window.PRIOR_EVIDENCE = "):src.rindex(";")])
+
+    spec = importlib.util.spec_from_file_location(
+        "build_prior_evidence", ROOT / "scripts" / "build_prior_evidence_comparison.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+
+    probs = []
+    primary = mod.strict_primary_studies()
+    canon = mod.canonical_studies()
+
+    if payload["our_primary"] != primary:
+        probs.append(f"panel lists primary {payload['our_primary']}, "
+                     f"the Stata log fits {primary}")
+    for t in payload["trials"]:
+        want, _ = mod.disposition(t["study"], canon, primary)
+        if t["status"] != want:
+            probs.append(f"{t['study']}: panel says {t['status']}, live data says {want}")
+    if len(payload["trials"]) != 6:
+        probs.append(f"panel shows {len(payload['trials'])} trials, the prior review pooled 6")
+    if sum(payload["counts"].values()) != 6:
+        probs.append(f"counts sum to {sum(payload['counts'].values())}, expected 6")
+
+    # If the audit's own tally no longer holds, the panel has to say so.
+    audit_text = (ROOT / "TAN_2024_COVIDENCE_RECONCILIATION_AUDIT.md").read_text(encoding="utf-8")
+    m = re.search(r"Included in our strict primary 24-h analysis:\*\*\s*\*\*(\d+)\s*/\s*6", audit_text)
+    if m and int(m.group(1)) != payload["counts"]["in-primary"] and not payload.get("superseded_note"):
+        probs.append(f"the audit says {m.group(1)}/6 in the primary and the analysis says "
+                     f"{payload['counts']['in-primary']}/6, but the panel does not disclose it")
+
+    check("Prior-evidence comparison matches the analysis it describes",
+          not probs, "\n".join(probs))
+
+
 def t_prisma_screening_arithmetic_reconciles():
     """
     The PRISMA screening arithmetic must reconcile, in the units the source
@@ -2684,7 +2742,8 @@ def main() -> int:
         ("v34 lock integrity", [t_v34_csv_mirrors_locked_workbook,
                                 t_post_lock_errata_still_applied,
                                 t_prisma_identification_split_is_derived,
-                                t_prisma_screening_arithmetic_reconciles]),
+                                t_prisma_screening_arithmetic_reconciles,
+                                t_prior_evidence_dispositions_match_the_analysis]),
         ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
