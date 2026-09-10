@@ -6,7 +6,7 @@ rationale it actually has -- and to the source PDF that quote comes from.
 WHY THIS EXISTS
 The RoB 2 matrix's interactive popovers (renderRoB2Matrix() in app.js) read
 their rationale from STUDIES_DATA[i].rob2_outcomes[outcomeKey].rationale --
-which for the current dataset is, for every single one of the 75 currently
+which for the current dataset is, for every single one of the 74 currently
 assessed results, either empty, a short one-line stub, or a general adoption
 note. It is NEVER the rich, per-domain, source-quoted text that actually
 exists for the same results in the review's own RoB 2 registers
@@ -90,23 +90,52 @@ both matched via that label regardless of what they actually measure. Fixed
 by requiring pca_behavior's keywords to hit outcome text specifically, same
 as ponv_24h/ponv_48h already did.
 
-Verified: 37 of 75 assessed results resolve this way (up from an initial 29
-using keyword+timepoint alone), confirmed to ADD to that set with zero
-removals or changes across every intermediate version -- diffed explicitly
-against the prior committed version at each step, not assumed. Several
-remaining multi-candidate cases stay unresolved because NEITHER hard evidence
-nor wording settles them: Tu 2024's rescue_analgesia candidates share an
-identical analysed_n that does not even match the dashboard's own stored
-total (77, 76) for that bucket -- the dashboard figure appears to come from a
-different denominator than either extracted row records, which this script
-will not paper over with a guess. Wu 2022's intraop_remi and Chen 2015
-(Hyperalgesia)'s opioid_24h candidates have IDENTICAL analysed_n on both
-sides (same patients, different derived measures), so the numeric check
-cannot separate them either. This is a genuine limit of what the data
-available to this script can prove, not a bug left unfixed -- resolving them
-properly means reading the source PDFs directly, the same standard this
-review applies to every other judgement in it, rather than adding another
-regex.
+Verified: 43 of 74 assessed results resolve this way (up from an initial 29
+using keyword+timepoint alone, then 34, then 37 using hard denominators),
+confirmed to ADD to the prior set with zero removals or changes at every
+step -- diffed explicitly against the prior committed version each time, not
+assumed. Several remaining multi-candidate cases stay unresolved because
+NEITHER hard evidence nor wording settles them: Tu 2024's rescue_analgesia
+candidates share an identical analysed_n that does not even match the
+dashboard's own stored total (77, 76) for that bucket, and the source PDF's
+own Table 1 confirms the paper's actual analysed n is (57, 58) -- the
+dashboard figure was checked against the primary source directly and does
+not match either candidate, a discrepancy worth the review lead's attention
+rather than a linking problem this script can paper over. Wu 2022's
+intraop_remi candidates were checked against their source PDF too: the paper
+separately reports both a raw cumulative remifentanil total (1637 vs 1383
+µg) AND a weight/time-normalised "index" (0.114 vs 0.084 µg/min/kg) as two
+genuinely distinct results, so the ambiguity is real, not a data gap. Lu
+2022's pca_behavior candidates remain a genuine 6-way tie (2 metrics x 3
+timepoints) even after excluding a same-bucket consumption-family row (see
+find_link()'s pca_behavior-specific filter) -- the dashboard's own
+outcome_name for that cell ("PCA attempts/deliveries") and timepoint
+("24/48/72 h") both name multiple candidates at once, meaning the dashboard
+itself has not picked a single one either.
+
+THE FOUR ADDITIONAL MECHANISMS THAT RAISED 37 -> 43
+- _rows_for_study() normalises a "#<id> - " key prefix ("#105119 - Zhou
+  2025") that the CSV registers never carry, found by auditing every study
+  key against every CSV study name for an exact-match failure rather than
+  assuming a zero-candidate result meant "never assessed": it was a naming
+  mismatch, not a missing assessment, and fixing it alone resolved 2 cells.
+- _is_real_judgement() excludes the one "Assessed" cell (Xie 2014's
+  opioid_72h) whose d1-d5/overall are all "--" -- an eligibility/
+  reclassification bookkeeping note, not an RoB 2 judgement, so it
+  structurally has no domain rationale to link to. This changes the
+  denominator (75 -> 74), not the numerator.
+- opioid_72h's timepoint list gained "first 3 postoperative days" alongside
+  "72": Wong 2006's own register row spells its 72h window that way, never
+  as a digit, and the dashboard's own outcome_name for the same cell already
+  says "first 3 postoperative days (~72 h)" -- the same window, the paper's
+  own phrasing, not a new rule invented to fit.
+- MANUAL_OVERRIDES holds three cases the automated rule cannot settle on
+  keyword/timepoint/denominator evidence alone, each resolved by reading
+  either the CSV row's own rationale text or the source PDF directly (see
+  the dict's own docstring for what was read and why each settles the
+  case) -- this is the "read the source PDFs directly" standard the
+  previous version of this docstring said full resolution would require,
+  applied to exactly the cases where the cheaper mechanisms ran out.
 
 WHAT THIS DOES NOT DO
 Invent a page number. Neither register carries one (checked: 0 of 529 rows
@@ -149,8 +178,15 @@ BUCKET_RULES = {
                     "mme", "pcia", "pca dose"], ["24"], False),
     "opioid_48h": (["opioid", "morphine", "fentanyl", "sufentanil", "tramadol",
                     "mme", "pcia"], ["48"], False),
+    # "first 3 postoperative days" alongside "72": Wong 2006's register row for
+    # this exact bucket is timepointed "First 3 postoperative days total", never
+    # spelling out "72" -- the dashboard's own outcome_name for the same cell
+    # says "first 3 postoperative days (~72 h)", so this is the same window
+    # under the paper's own phrasing, not a guess. Checked: no OTHER Wong 2006
+    # row (its per-day breakdowns) contains this phrase, so it cannot pull in
+    # a wrong candidate.
     "opioid_72h": (["opioid", "morphine", "fentanyl", "sufentanil", "tramadol",
-                    "mme", "pcia"], ["72"], False),
+                    "mme", "pcia"], ["72", "first 3 postoperative days"], False),
     "pain_rest_24h": (["pain", "vas", "nrs"], ["24"], False),
     "ponv_24h": (["ponv", "nausea.*vomit", "composite", "any ponv"], ["24"], True),
     "ponv_48h": (["ponv", "nausea.*vomit", "composite", "any ponv"], ["48"], True),
@@ -313,6 +349,20 @@ def find_link(bucket: str, candidates: list[dict], oc_outcome_name: str = "",
             if any(w in tp for w in other):
                 continue
         hits.append(row)
+    if bucket == "pca_behavior" and len(hits) > 1:
+        # "pca" alone (kept as a keyword for cases like Lin 2002, whose only
+        # register row is a plain PCA-morphine-delivered figure with no
+        # "press"/"demand"/"bolus" wording at all) also pulls in genuine
+        # consumption-family rows once a study has more than one PCA-labelled
+        # result -- e.g. Lu 2022's "Exact cumulative PCA opioid consumption"
+        # alongside its actual demand/behaviour rows. When at least one hit is
+        # explicitly family "Opioid demand" (this bucket's real subject),
+        # drop the non-demand siblings rather than let a same-bucket
+        # consumption figure compete with them -- that family split is read
+        # directly off the data, not inferred from wording.
+        demand_hits = [h for h in hits if (h.get("family") or "") == "Opioid demand"]
+        if demand_hits and len(demand_hits) < len(hits):
+            hits = demand_hits
     if len(hits) == 1:
         return hits[0], "keyword_timepoint_unique"
     if len(hits) > 1:
@@ -328,6 +378,73 @@ def find_link(bucket: str, candidates: list[dict], oc_outcome_name: str = "",
             return match, method
         return _tiebreak(oc_outcome_name, hits)
     return None, ""
+
+
+# Cases the automated rule (keyword+timepoint, then hard denominators, then
+# distinguishing-token wording) cannot settle because the evidence that
+# settles them isn't in either of those places -- it's either in the CSV
+# row's OWN rationale text (already a verbatim extraction from the source
+# PDF, just not literally matching this bucket's keyword/timepoint pattern)
+# or requires reading the source PDF directly, the standard this review
+# applies everywhere else. Each entry names exactly what was read and why it
+# settles the case -- this is not a lexical heuristic, it is a short list of
+# individually-verified answers, and every one is checked against the
+# candidate list at build time (KeyError if the named outcome text no longer
+# exists among that study's rows, so a future register edit cannot silently
+# leave a stale override in place).
+MANUAL_OVERRIDES: dict[tuple[str, str], tuple[str, str]] = {
+    ("Chen 2015 (Hyperalgesia)", "opioid_24h"): (
+        "Derived cumulative sufentanil dose from fixed 0.05 µg/kg bolus",
+        "Two candidates share n=(29,30): a raw PCIA-bolus COUNT (the paper's "
+        "own named secondary outcome per its D5 text) and a dose figure "
+        "DERIVED from that count (bolus count × fixed per-bolus dose), whose "
+        "own D5/flags text says so explicitly ('review-derived calculation, "
+        "not the paper's own reported figure'). The bucket is a dose/mass "
+        "measure ('Cumulative 24-h Opioid Consumption'), and the sibling "
+        "study Chen 2015 (non-Hyperalgesia) resolves its own opioid_24h cell "
+        "the same way -- to a dose derived from a fixed per-administration "
+        "amount, not the raw administration count -- so this follows the "
+        "review's own established convention for this exact situation "
+        "rather than guessing between the two.",
+    ),
+    ("Yao 2015", "rescue_analgesia"): (
+        "Cumulative number of rescue analgesia administrations",
+        "Two candidates at n=(35,36): an administration COUNT and a TIME-TO-"
+        "FIRST-administration. The dashboard's own outcome_name for this "
+        "cell is 'Rescue sufentanil administration count' -- it names a "
+        "count, not a time-to-event, and only one candidate is a count. The "
+        "distinguishing-token tiebreak misses this because 'administration' "
+        "(singular, target) and 'administrations' (plural, candidate) are "
+        "different tokens under exact matching, not because the evidence is "
+        "actually ambiguous.",
+    ),
+    ("Xing 2022", "ponv_48h"): (
+        "PONV incidence",
+        "The only PONV row for this study carries timepoint 'Postoperative' "
+        "with no hour figure, so the keyword+timepoint rule cannot place it "
+        "in ponv_24h vs ponv_48h. Read the source PDF directly "
+        "(s40122-022-00429-2.pdf) to settle it: 'The frequency of PONV was "
+        "reported by 5 patients in the NTG group, 11 patients in the NG "
+        "group, and 13 patients in the G group within 48 h after surgery' -- "
+        "the paper's own text states the window is 48 h.",
+    ),
+}
+
+
+def _apply_manual_override(study_key: str, bucket: str, candidates: list[dict]
+                            ) -> tuple[dict | None, str]:
+    entry = MANUAL_OVERRIDES.get((study_key, bucket))
+    if not entry:
+        return None, ""
+    outcome_text, _evidence = entry
+    for row in candidates:
+        if row.get("outcome") == outcome_text:
+            return row, "manual_source_verified"
+    raise KeyError(
+        f"MANUAL_OVERRIDES[{study_key!r}, {bucket!r}] names outcome "
+        f"{outcome_text!r}, which no longer appears among {study_key}'s "
+        f"register rows -- the register changed since this override was "
+        f"written; update or remove it.")
 
 
 PRIORITY1_CSV = ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_draft_assessments.csv"
@@ -441,6 +558,45 @@ def load_studies() -> list[dict]:
     raise RuntimeError("could not parse window.STUDIES_DATA out of data.js")
 
 
+_STUDY_PREFIX_RE = re.compile(r"^#\d+\s*-\s*")
+
+
+def _rows_for_study(by_study: dict[str, list[dict]], study_key: str) -> list[dict]:
+    """
+    Look up a study's register rows by the dashboard's own key, falling back
+    to stripping a leading "#<id> - " marker (e.g. "#105119 - Zhou 2025") if
+    the direct lookup finds nothing.
+
+    Found by checking every zero-candidate case for a naming mismatch rather
+    than assuming "no rows" meant "never assessed": data.js carries this one
+    study under a Covidence-id-prefixed key while both CSV registers use its
+    plain "Zhou 2025" -- not a missing assessment, a name that never matched.
+    Confirmed via an exact-match audit of every study key against every CSV
+    study name: this prefix is the only mismatch pattern that exists.
+    """
+    rows = by_study.get(study_key)
+    if rows:
+        return rows
+    stripped = _STUDY_PREFIX_RE.sub("", study_key)
+    if stripped != study_key:
+        return by_study.get(stripped, [])
+    return []
+
+
+def _is_real_judgement(oc: dict) -> bool:
+    """
+    False for a cell whose status is "Assessed" but every domain field is the
+    placeholder "--" -- an eligibility/reclassification bookkeeping note, not
+    an actual RoB 2 judgement, so it structurally has no domain rationale to
+    link to. Found while accounting for why one cell (Xie 2014's opioid_72h,
+    outcome_name "Eligibility audit", rationale "EXCLUDE / reclassify A") had
+    zero keyword candidates: it does not describe a result at all. Checked:
+    it is the only such cell among the 75 "Assessed" entries.
+    """
+    return any((oc.get(d) or "").strip() not in ("", "—", "-")
+               for d in ("d1", "d2", "d3", "d4", "d5", "overall"))
+
+
 def build() -> dict:
     v34_rows = load_v34_rob2_rows()
     studies = load_studies()
@@ -455,11 +611,18 @@ def build() -> dict:
         for bucket, oc in (st.get("rob2_outcomes") or {}).items():
             if not isinstance(oc, dict) or oc.get("status") != "Assessed":
                 continue
+            if not _is_real_judgement(oc):
+                continue
             total_assessed += 1
+            candidates = _rows_for_study(by_study, st["key"])
             dash_value = (st.get("outcomes") or {}).get(bucket)
-            match, method = find_link(bucket, by_study.get(st["key"], []),
-                                      oc.get("outcome_name") or "",
+            match, method = find_link(bucket, candidates, oc.get("outcome_name") or "",
                                       _dashboard_denominator(dash_value))
+            evidence_note = ""
+            if not match:
+                match, method = _apply_manual_override(st["key"], bucket, candidates)
+                if match:
+                    evidence_note = MANUAL_OVERRIDES[(st["key"], bucket)][1]
             if not match:
                 continue
             links[f"{st['id']}::{bucket}"] = {
@@ -472,6 +635,7 @@ def build() -> dict:
                 "source_pdf": match.get("source_pdf") or "",
                 "adopted_by": match.get("adopted_by") or "",
                 "adopted_date": match.get("adopted_date") or "",
+                **({"match_evidence": evidence_note} if evidence_note else {}),
             }
 
     if total_assessed == 0:
@@ -483,12 +647,15 @@ def build() -> dict:
         "disclaimer": (
             "Links each RoB 2 matrix cell to the specific per-domain, source-quoted "
             "rationale and source PDF it has in the review's RoB 2 registers, where that "
-            "link can be established without guessing (an explicit keyword/timepoint rule "
-            "matching exactly one candidate result for that study). Coverage is partial by "
-            "construction: a cell with no entry here has no ambiguity-free match, not a "
-            "missing quote -- see the dashboard's own note on those cells. No page number is "
-            "given because none exists in the source registers; the source PDF filename is "
-            "the exact locator available."),
+            "link can be established without guessing -- an explicit keyword/timepoint rule "
+            "matching exactly one candidate result for that study, a hard numeric match "
+            "against the dashboard's own stored denominator, or (a small, individually-"
+            "documented set of cases) a match hand-verified by reading the source PDF "
+            "directly, listed in MANUAL_OVERRIDES in this script with the exact evidence "
+            "read. Coverage is partial by construction: a cell with no entry here has no "
+            "ambiguity-free match, not a missing quote -- see the dashboard's own note on "
+            "those cells. No page number is given because none exists in the source "
+            "registers; the source PDF filename is the exact locator available."),
         "total_assessed_results": total_assessed,
         "linked_count": len(links),
         "coverage": round(coverage, 4),

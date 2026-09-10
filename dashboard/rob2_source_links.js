@@ -2,10 +2,10 @@
 // Partial by construction -- see disclaimer field. Keyed "studyId::bucket".
 window.ROB2_SOURCE_LINKS = {
   "generated_by": "scripts/build_rob2_source_links.py",
-  "disclaimer": "Links each RoB 2 matrix cell to the specific per-domain, source-quoted rationale and source PDF it has in the review's RoB 2 registers, where that link can be established without guessing (an explicit keyword/timepoint rule matching exactly one candidate result for that study). Coverage is partial by construction: a cell with no entry here has no ambiguity-free match, not a missing quote -- see the dashboard's own note on those cells. No page number is given because none exists in the source registers; the source PDF filename is the exact locator available.",
-  "total_assessed_results": 75,
-  "linked_count": 37,
-  "coverage": 0.4933,
+  "disclaimer": "Links each RoB 2 matrix cell to the specific per-domain, source-quoted rationale and source PDF it has in the review's RoB 2 registers, where that link can be established without guessing -- an explicit keyword/timepoint rule matching exactly one candidate result for that study, a hard numeric match against the dashboard's own stored denominator, or (a small, individually-documented set of cases) a match hand-verified by reading the source PDF directly, listed in MANUAL_OVERRIDES in this script with the exact evidence read. Coverage is partial by construction: a cell with no entry here has no ambiguity-free match, not a missing quote -- see the dashboard's own note on those cells. No page number is given because none exists in the source registers; the source PDF filename is the exact locator available.",
+  "total_assessed_results": 74,
+  "linked_count": 43,
+  "coverage": 0.5811,
   "links": {
     "1879897477::pca_behavior": {
       "study": "Lin 2002",
@@ -55,6 +55,23 @@ window.ROB2_SOURCE_LINKS = {
       },
       "flags": "unblinded anaesthetist is the outcome recorder for this intraoperative result",
       "source_pdf": "covidence_952_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
+    "1879897414::opioid_72h": {
+      "study": "Wong 2006",
+      "matched_outcome": "IV PCA morphine consumption",
+      "matched_timepoint": "First 3 postoperative days total",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "patients were 'randomized', but no sequence-generation or allocation-concealment method is described",
+        "2": "'Both the patients and all surgeons in charge of postoperative patient care were blinded to the nature of the acupuncture'; the sham used 'a blunt-tip needle ... pressed to the same acupoints ... mimicking the pinprick sensation without actual skin piercing ... fixed with an opaque fixator to blind'",
+        "3": "2 of 27 (7.4%) excluded post-randomisation for complications unrelated to acupuncture, documented",
+        "5": "'The average visual analog scale pain scores and the cumulative PCA morphine usage were the primary outcome measures.'",
+        "4": "both the participant and the surgeons responsible for postoperative care were blinded to allocation"
+      },
+      "flags": "",
+      "source_pdf": "covidence_912_wong_2006.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
@@ -143,6 +160,24 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879897029::opioid_24h": {
+      "study": "Chen 2015 (Hyperalgesia)",
+      "matched_outcome": "Derived cumulative sufentanil dose from fixed 0.05 µg/kg bolus",
+      "matched_timepoint": "0-24 h",
+      "match_method": "manual_source_verified",
+      "domains": {
+        "1": "computer-generated allocation list, sealed envelopes",
+        "2": "'All study personnel including the patients, investigator, attending anesthetist, surgeons, recovery ward nurses, and the person who performed the statistical analysis were blinded to group assignments'",
+        "3": "1 of 60 excluded for protocol breach",
+        "5": "the underlying bolus count is a named secondary outcome, but this specific mass-dose figure is calculated by the review (bolus count x a fixed per-kg dose) rather than reported directly by the paper",
+        "4": "the underlying bolus count feeding this calculation is a device-logged record under comprehensive blinding"
+      },
+      "flags": "mass-dose value is a review-derived calculation, not the paper's own reported figure",
+      "source_pdf": "040_chen_2015_hyperalgesia_lund.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08",
+      "match_evidence": "Two candidates share n=(29,30): a raw PCIA-bolus COUNT (the paper's own named secondary outcome per its D5 text) and a dose figure DERIVED from that count (bolus count × fixed per-bolus dose), whose own D5/flags text says so explicitly ('review-derived calculation, not the paper's own reported figure'). The bucket is a dose/mass measure ('Cumulative 24-h Opioid Consumption'), and the sibling study Chen 2015 (non-Hyperalgesia) resolves its own opioid_24h cell the same way -- to a dose derived from a fixed per-administration amount, not the raw administration count -- so this follows the review's own established convention for this exact situation rather than guessing between the two."
+    },
     "1879897029::rescue_analgesia": {
       "study": "Chen 2015 (Hyperalgesia)",
       "matched_outcome": "Cumulative number of rescue sufentanil PCIA boluses",
@@ -159,6 +194,24 @@ window.ROB2_SOURCE_LINKS = {
       "source_pdf": "040_chen_2015_hyperalgesia_lund.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
+    },
+    "1879897026::rescue_analgesia": {
+      "study": "Yao 2015",
+      "matched_outcome": "Cumulative number of rescue analgesia administrations",
+      "matched_timepoint": "0-24 h postoperative",
+      "match_method": "manual_source_verified",
+      "domains": {
+        "1": "'Patients were assigned to either the TEAS group or the control group by a table of computer-generated random numbers'",
+        "2": "'The patients, attending anesthesiologist, surgeons, recovery ward nurses, data collectors, and the person who performed the final statistical analysis were blinded to group assignment' in this double-blind, placebo-controlled trial",
+        "3": "3 of 74 (4%) excluded, 71 analysed",
+        "5": "'postoperative pain scores' is named generally; rescue-analgesia administration counts are not itself the specific reported metric",
+        "4": "this trial achieved genuine participant blinding alongside comprehensive staff blinding, so even a subjective, self-reported component of this measure is not exposed to differential awareness of allocation"
+      },
+      "flags": "specific rescue-count metric not itself named among the outcomes",
+      "source_pdf": "039_yao_2015.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08",
+      "match_evidence": "Two candidates at n=(35,36): an administration COUNT and a TIME-TO-FIRST-administration. The dashboard's own outcome_name for this cell is 'Rescue sufentanil administration count' -- it names a count, not a time-to-event, and only one candidate is a count. The distinguishing-token tiebreak misses this because 'administration' (singular, target) and 'administrations' (plural, candidate) are different tokens under exact matching, not because the evidence is actually ambiguous."
     },
     "1879896692::rescue_analgesia": {
       "study": "Yu 2020",
@@ -330,6 +383,24 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879896460::ponv_48h": {
+      "study": "Xing 2022",
+      "matched_outcome": "PONV incidence",
+      "matched_timepoint": "Postoperative",
+      "match_method": "manual_source_verified",
+      "domains": {
+        "1": "'computer-generated random numbers'; 'Randomization codes were kept in a sealed envelope and relayed to an independent nurse'",
+        "2": "'The allocation was blinded for all patients, surgeons, the leading anesthesiologist, physician in the post-anesthesia care unit, and follow-up observers until the end of the study'; 'The TEAS stimulator was obscured by an opaque cloth'",
+        "3": "1 participant lost per arm (29/29 of 30/30)",
+        "5": "registered ChiCTR2100042119 with QoR-15 as the primary outcome; this result is reported under 'Other secondary outcomes ... shown in Table 3' without being individually named in a pre-specified list",
+        "4": "'The researchers who conducted data collection and performed the outcome assessment were blinded to group allocation', and participants were blinded by the opaque-cloth arrangement"
+      },
+      "flags": "",
+      "source_pdf": "s40122-022-00429-2.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08",
+      "match_evidence": "The only PONV row for this study carries timepoint 'Postoperative' with no hour figure, so the keyword+timepoint rule cannot place it in ponv_24h vs ponv_48h. Read the source PDF directly (s40122-022-00429-2.pdf) to settle it: 'The frequency of PONV was reported by 5 patients in the NTG group, 11 patients in the NG group, and 13 patients in the G group within 48 h after surgery' -- the paper's own text states the window is 48 h."
+    },
     "1879896460::flatus_time": {
       "study": "Xing 2022",
       "matched_outcome": "Time to first flatus",
@@ -499,6 +570,40 @@ window.ROB2_SOURCE_LINKS = {
       "source_pdf": "109499.pdf",
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-09"
+    },
+    "1879896105::flatus_time": {
+      "study": "Zhou 2025",
+      "matched_outcome": "Time to first flatus",
+      "matched_timepoint": "Postoperative",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'randomization into either the TEAS or Sham group at a 1:1 ratio, utilizing a computer-generated randomization sequence'; 'Allocation was concealed using sequentially numbered, sealed, opaque envelopes'",
+        "2": "'single-center, randomized, double-blinded, sham-controlled trial'; 'Patients, anesthesiologists, surgeons, and data collectors remained blinded to group allocation'; the acupuncturist could not be blinded but 'adhered to a standardized interaction protocol for both groups', with 'scripted explanations, identical application of electrodes and device operation, and neutral responses to inquiries'",
+        "3": "97 of 100 randomised completed (3%), 48/49 analysed",
+        "4": "participants were blinded by a credible sham and 'time to first flatus' was collected by blinded data collectors as one of the pre-defined recovery times",
+        "5": "registered ChiCTR2200055338 on 7 January 2022; QoR-15 is the primary outcome and time to first flatus is explicitly listed under the secondary 'Recovery times'"
+      },
+      "flags": "",
+      "source_pdf": "105119.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
+    "1879896105::rescue_analgesia": {
+      "study": "Zhou 2025",
+      "matched_outcome": "Any rescue analgesia",
+      "matched_timepoint": "POD1-POD3",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'a computer-generated randomization sequence'; 'Allocation was concealed using sequentially numbered, sealed, opaque envelopes'",
+        "2": "'Patients, anesthesiologists, surgeons, and data collectors remained blinded to group allocation'; a credible sham with a standardized interaction protocol for the (necessarily unblinded) acupuncturist",
+        "3": "3 of 100 (3%) did not complete the study, documented reasons",
+        "5": "named among the secondary outcomes -- postoperative pain (VAS), PONV incidence and rescue antiemetics, and 'Recovery times' including recovery-related timings",
+        "4": "participants were blinded by a credible sham and 'data collectors' recording this result were also blinded"
+      },
+      "flags": "",
+      "source_pdf": "105119.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
     },
     "1879895909::opioid_24h": {
       "study": "He 2026 (hepatectomy/JIS)",
