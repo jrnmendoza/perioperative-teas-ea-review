@@ -169,22 +169,29 @@
 
       <div class="kpi-card" id="kpi-effect-card">
         <div class="kpi-title" id="kpi-effect-title">
-          <span data-i18n="kpi.primaryTitle">Primary 24-h Opioid Sparing (Modality-Specific)</span>
+          <span data-i18n="kpi.primaryTitle">Primary Efficacy Analysis &bull; Supportive EA Evidence</span>
           <button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>
         </div>
         <div class="kpi-value" id="kpi-pooled-md" style="color: #34d399; font-size: 1.15rem; line-height: 1.35;">
-          TEAS: −14.00 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−34.18, +6.19]</span><br>
-          EA: −3.94 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−19.77, +11.90]</span>
+          TEAS vs sham (primary): −14.00 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−34.18, +6.19]</span><br>
+          EA vs usual care (supportive): −3.94 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−19.77, +11.90]</span>
         </div>
         <div class="kpi-sub" id="kpi-pooled-sub" style="margin-top: 0.25rem;">
-          Supporting Combined Synthesis (k=7, N=676): MD = −9.91 mg [−20.08, +0.27], p = 0.055
+          Cross-modality combined synthesis (contextual only, k=7, N=676): MD = −9.91 mg [−20.08, +0.27], p = 0.055
         </div>
+        <!--
+          Static fallback content, shown until renderKPIs() runs for the active
+          tab (it does not fire for every tab on initial load, so this is not
+          purely a pre-render placeholder -- see
+          DASHBOARD_SCIENTIFIC_AUDIT_CHANGELOG.md item 1 for why keeping this in
+          sync with renderKPIs()'s dynamic text matters here specifically).
+        -->
         <span class="kpi-badge badge-emerald" id="kpi-pooled-badge">
-          <span data-i18n="kpi.primaryBadge">PRIMARY: TEAS &amp; EA Modality-Specific &bull; Combined = Supporting</span>
+          <span data-i18n="kpi.primaryBadge">PRIMARY: TEAS vs sham &bull; EA vs usual care is supportive, not a sham-controlled primary &bull; Combined = contextual only</span>
           <button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>
         </span>
         <div class="stat-plain-language" style="margin-top: 0.5rem; font-size: 0.72rem; padding: 0.35rem 0.6rem; border-left-width: 2px;">
-          <strong>Plain Language:</strong> TEAS and EA were evaluated separately as the primary modality-specific analyses: TEAS showed −14.00 mg IV MME (k=4, p=0.114); EA showed −3.94 mg (k=3, p=0.397). A combined strict-evidence synthesis pooling both modalities is shown as a supporting contextual analysis: −9.91 mg IV MME (k=7, p=0.0545).
+          <strong>Plain Language:</strong> TEAS vs sham is the review's primary efficacy analysis: −14.00 mg IV MME (k=4, p=0.114). EA vs usual care is supportive evidence, not a sham-controlled primary comparison -- no sham-controlled EA trial reports this outcome in absolute morphine equivalents: −3.94 mg (k=3, p=0.397). A cross-modality combined synthesis pooling both is shown only as contextual background, not as an inferential result: −9.91 mg IV MME (k=7, p=0.0545).
         </div>
       </div>
 

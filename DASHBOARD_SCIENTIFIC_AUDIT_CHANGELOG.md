@@ -87,7 +87,47 @@ full P0 checklist including items verified-clean with no change made.
 
 ---
 
-### 3. `check_language_ui.cjs` assertion updated to match intentionally changed source text
+### 3. Static HTML fallback for the headline KPI card was silently out of sync with the JS
+
+- **Section:** Primary tab headline KPI card (`#kpi-effect-title`,
+  `#kpi-pooled-badge`, `#kpi-pooled-sub`, the "Plain Language" paragraph).
+- **Found:** After item 1 above was deployed and all local/CI checks passed,
+  live verification against the deployed page (not just the shipped file)
+  showed the OLD "PRIMARY: TEAS & EA Modality-Specific" text still rendering.
+  `renderKPIs()` is not called for every tab on initial page load, so
+  `index.html`'s static markup for these elements is not pre-render
+  placeholder text — it is the actual content shown for whichever tab loads
+  before `renderKPIs()` first fires. It had been identical to the JS-computed
+  text by coincidence before this pass; item 1's edit broke that coincidence
+  without touching the static copy, which nothing had ever needed to do
+  before.
+- **Old:** Static badge/title/sub/paragraph text unchanged from before item 1
+  (the pre-correction "PRIMARY: TEAS & EA Modality-Specific" wording).
+- **New:** Static text in `index.html` rewritten to match `renderKPIs()`'s
+  corrected all-modality output exactly. The two keyed i18n entries this
+  markup references (`translations.js` `kpi.primaryTitle` / `kpi.primaryBadge`,
+  EN and SV) were also out of sync with both the old AND new text and are
+  now corrected, so the Swedish locale translates the current English text
+  rather than falling back to English or translating stale wording.
+- **Reason:** A reader on whichever tab loads before `renderKPIs()` runs must
+  not see the mislabelling that item 1 was meant to fix.
+- **Diagnosis method:** Static source-reading and the shipped-file `curl`
+  both showed correct content; only live browser verification (calling
+  `renderKPIs()` directly in a live page context, then comparing to the
+  untouched page-load state) revealed the static/dynamic divergence.
+- **Regression guard added:** `t_static_kpi_fallback_matches_rendered_content`
+  in `scripts/validate_dashboard.py` (86 checks) extracts the badge text
+  `renderKPIs()` computes for `filterModality === 'all'` and asserts it
+  appears verbatim in `index.html`. Mutation-tested: reverting the static
+  text to the old wording is caught and named.
+- **Statistical result changed:** No.
+- **QC status:** Verified. 86/86 checks (was 85; +1 new guard); 7/7 Playwright
+  suites; live-page verification after redeploy confirms the static fallback
+  now shows the corrected text with zero JS calls required.
+
+---
+
+### 4. `check_language_ui.cjs` assertion updated to match intentionally changed source text
 
 - **File:** `scripts/check_language_ui.cjs`.
 - **Old:** `assert.match(..., /TEAS.*opioidbesparing/i)` — tied to the retired

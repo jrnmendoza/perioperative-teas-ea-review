@@ -2890,6 +2890,46 @@ def t_post_lock_errata_still_applied():
           not probs, "\n".join(probs))
 
 
+def t_static_kpi_fallback_matches_rendered_content():
+    """
+    The headline KPI card's static HTML must say the same thing as the JS that
+    (sometimes) overwrites it.
+
+    Found the hard way: renderKPIs() was edited to correctly distinguish the
+    TEAS-primary / EA-supportive hierarchy, all local and CI checks passed,
+    and the deployed page still showed the old "PRIMARY: TEAS & EA
+    Modality-Specific" text. renderKPIs() is not called for every tab on
+    initial page load, so index.html's static fallback markup for
+    #kpi-effect-title and #kpi-pooled-badge is not a pre-render placeholder --
+    it is live content for whichever tab loads before renderKPIs() first
+    fires, and it silently diverged from the JS the moment the two stopped
+    being identical strings by coincidence.
+
+    Pins the static text to a fragment of what renderKPIs() actually sets for
+    filterModality === 'all', so the two cannot drift apart again without this
+    failing.
+    """
+    app = (DASH / "app.js").read_text(encoding="utf-8")
+    html = (DASH / "index.html").read_text(encoding="utf-8")
+
+    m = re.search(
+        r"filterModality === 'all'.*?effectBadgeEl\.innerHTML = '<span[^>]*>([^<]+)</span>",
+        app, re.S)
+    probs = []
+    if not m:
+        probs.append("could not find the filterModality === 'all' badge text in app.js")
+    else:
+        badge_text = m.group(1)
+        if badge_text not in html:
+            probs.append(
+                "index.html's static #kpi-pooled-badge fallback does not match "
+                f"renderKPIs()'s all-modality text: {badge_text!r} not found in index.html "
+                "-- the static fallback is live content for tabs where renderKPIs() has not "
+                "yet run, not dead pre-render markup, and must be kept in sync by hand")
+    check("Static KPI card fallback text matches what renderKPIs() computes for the "
+          "all-modality view", not probs, "\n".join(probs))
+
+
 def t_computed_not_reported_is_complete_and_unrated():
     """
     The computed-but-not-reported panel exists so that an analysis the review
@@ -3004,6 +3044,7 @@ def main() -> int:
                                 t_prisma_screening_arithmetic_reconciles,
                                 t_prior_evidence_dispositions_match_the_analysis]),
         ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
+        ("static/dynamic content sync", [t_static_kpi_fallback_matches_rendered_content]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,
