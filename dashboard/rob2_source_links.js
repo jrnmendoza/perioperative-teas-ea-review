@@ -4,13 +4,14 @@ window.ROB2_SOURCE_LINKS = {
   "generated_by": "scripts/build_rob2_source_links.py",
   "disclaimer": "Links each RoB 2 matrix cell to the specific per-domain, source-quoted rationale and source PDF it has in the review's RoB 2 registers, where that link can be established without guessing (an explicit keyword/timepoint rule matching exactly one candidate result for that study). Coverage is partial by construction: a cell with no entry here has no ambiguity-free match, not a missing quote -- see the dashboard's own note on those cells. No page number is given because none exists in the source registers; the source PDF filename is the exact locator available.",
   "total_assessed_results": 75,
-  "linked_count": 29,
-  "coverage": 0.3867,
+  "linked_count": 34,
+  "coverage": 0.4533,
   "links": {
     "1879897477::pca_behavior": {
       "study": "Lin 2002",
       "matched_outcome": "Cumulative IV PCA morphine delivered during postoperative test period",
       "matched_timepoint": "Postoperative hour 1 through next 23 h (published as 24-h test-period value)",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "patients 'randomly divided into four groups of 25 each by a computer-generated randomization', with no concealment mechanism (e.g. sealed envelope) confirmed in the extracted text",
         "2": "'Subjects and electrical equipment were placed such that subjects were unable to see any specifics regarding the type of current administered, and technicians maintained a normal persona to ensure that patients remained unaware of their grouping category'",
@@ -23,10 +24,45 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879897479::opioid_24h": {
+      "study": "Sim 2002",
+      "matched_outcome": "Postoperative IV PCA morphine in interval",
+      "matched_timepoint": "18–24 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "5": "this is a pre-2004 trial with no formal primary/secondary outcome declaration, but the measure is prospectively described in the Methods as part of the planned data collection, not introduced only in the Results",
+        "1": "'The patients were randomised by the use of a table of random numbers', with no allocation-concealment mechanism described",
+        "2": "'the acupuncturist and the anaesthetists involved in this study were aware of the group assignment', but 'Patients in Group I and II were blinded to the types of acupuncture administered' and 'An independent observer blinded to the group assignments carried out the postoperative assessment in this study'",
+        "3": "no losses to follow-up or exclusions are reported; all 90 randomised patients (30 per group) appear in the results",
+        "4": "PCA morphine consumption is an objective device record, collected as part of the blinded independent observer's postoperative assessment"
+      },
+      "flags": "",
+      "source_pdf": "covidence_952_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
+    "1879897479::intraop_remi": {
+      "study": "Sim 2002",
+      "matched_outcome": "Alfentanil requirement rate",
+      "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "5": "a 'Protocol for Alfentanil Administration' is described in the Methods; this is a pre-2004 trial with no formal primary/secondary outcome declaration, but the measure is prospectively described in the Methods as part of the planned data collection, not introduced only in the Results",
+        "1": "'The patients were randomised by the use of a table of random numbers', with no allocation-concealment mechanism described",
+        "2": "'the acupuncturist and the anaesthetists involved in this study were aware of the group assignment', but 'Patients in Group I and II were blinded to the types of acupuncture administered' and 'An independent observer blinded to the group assignments carried out the postoperative assessment in this study'",
+        "3": "no losses to follow-up or exclusions are reported; all 90 randomised patients (30 per group) appear in the results",
+        "4": "intraoperative alfentanil is titrated by the anaesthetist, who is explicitly stated to have been 'aware of the group assignment' -- the person controlling this dose was not blinded"
+      },
+      "flags": "unblinded anaesthetist is the outcome recorder for this intraoperative result",
+      "source_pdf": "covidence_952_full_article.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
     "1879897195::flatus_time": {
       "study": "Ng 2013",
       "matched_outcome": "Time to first flatus",
       "matched_timepoint": "Postoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'A sealed nonopaque envelope ... was opened to determine the limb of entry' -- the report states explicitly that the concealment envelopes were not opaque",
         "2": "the compared arms are EA vs sham acupuncture, both blinded, and 'the outcome assessor were blinded to the treatment allocation'",
@@ -43,6 +79,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Ntritsou 2014",
       "matched_outcome": "Total rescue analgesia",
       "matched_timepoint": "First 24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'The randomisation was concealed by the director of the anaesthesiology department', who was not otherwise involved in the trial",
         "2": "'a sham-controlled participant- and observer-blinded trial'; patients were anaesthetised for the initial EA application and the second (postoperative) application was given under a sham protocol 'just after awakening from anaesthesia'",
@@ -59,6 +96,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Zhang 2014",
       "matched_outcome": "Remifentanil consumption rate",
       "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'a randomisation sequence based on a table of randomly generated numbers'; 'both the randomisation and allocation lists were concealed from the anaesthetists who gave the general anaesthetic to study patients'",
         "2": "'The patients were not informed of the allocation, and blinding was assured for other persons involved in the study by using placebo gel electrodes applied to the same acupressure p[oints]'; 'Recovery room nursing personnel were blinded to patient study groups'; the treating acupuncturist was not masked but 'none participated in data acquisition and analysis'",
@@ -75,6 +113,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Chen 2015",
       "matched_outcome": "Cumulative rescue IV morphine dose derived from fixed 2-mg rescue administrations",
       "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'assigned ... by a table of computer-generated random numbers', 1:1, 'sealed in sequentially numbered opaque envelopes'",
         "2": "'The patients, attending anesthesiologist, surgeons and data collector were blinded to group assignment'; placebo-controlled with a no-stimulation device",
@@ -91,6 +130,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Chen 2015",
       "matched_outcome": "Cumulative rescue IV morphine dose derived from fixed 2-mg rescue administrations",
       "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'assigned ... by a table of computer-generated random numbers', 1:1, 'sealed in sequentially numbered opaque envelopes'",
         "2": "'The patients, attending anesthesiologist, surgeons and data collector were blinded to group assignment'; placebo-controlled with a no-stimulation device",
@@ -107,6 +147,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Chen 2015 (Hyperalgesia)",
       "matched_outcome": "Cumulative number of rescue sufentanil PCIA boluses",
       "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "computer-generated allocation list, sealed envelopes",
         "2": "'All study personnel including the patients, investigator, attending anesthetist, surgeons, recovery ward nurses, and the person who performed the statistical analysis were blinded to group assignments'",
@@ -119,10 +160,28 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879896692::rescue_analgesia": {
+      "study": "Yu 2020",
+      "matched_outcome": "Participants requiring rescue sufentanil",
+      "matched_timepoint": "0-24 h postoperative",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'random numbers generated by a computer'; 'Only the acupuncturist was informed by the nurse of the randomization allocation'",
+        "2": "'Blinding of the patients was ensured by using gel electrodes in the same therapeutic setting, which has previously been proved to be a successful strategy'; 'None of the anesthesiologists, surgeons, physicians in the post-anesthesia care unit (PACU), or participants were aware of the allocation'",
+        "3": "all 60 randomised patients (30/30) appear in the analysis",
+        "5": "explicitly named among the secondary endpoint -- 'anesthesia-related side effects, including pain scores, the incidence of nausea and vomiting and use of postoperative pain medications and antiemetics'",
+        "4": "'BN, who was blinded to grouping, conducted the data collection and administered the questionnaires' for this trial's outcomes"
+      },
+      "flags": "",
+      "source_pdf": "s13063-019-3892-4.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
     "1879896610::intraop_remi": {
       "study": "Liang 2021",
       "matched_outcome": "Remifentanil consumption",
       "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'randomly distributed into two groups, with the help of a computer-generated table of random numbers by an independent statistician'; that statistician 'created identical sealed envelopes before surgery'",
         "2": "'An anesthesiologist (LDD), who was not aware of the allocation, performed general anesthesia and all intraoperative data recording, and another investigator (WL), in charge of all postoperative assessments, was also blinded to the group identity'",
@@ -135,10 +194,28 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879896597::pain_rest_24h": {
+      "study": "Liu 2021",
+      "matched_outcome": "VAS at rest",
+      "matched_timepoint": "24 h",
+      "match_method": "tiebreak_distinguishing_token",
+      "domains": {
+        "1": "'The randomization was performed using an online randomization tool', with no allocation-concealment mechanism described",
+        "2": "the only specific blinding statement in this report is 'The trained researchers who performed the MMSE score were blinded to the grouping of patients' -- blinding for the clinicians recording pain/opioid outcomes is not separately confirmed",
+        "3": "the analysed 50/50 matches the 100 enrolled patients, with no reported losses",
+        "5": "this trial's registered focus is postoperative cognitive dysfunction; pain and opioid-consumption measures are reported without being clearly named as pre-specified outcomes alongside POCD",
+        "4": "no blinded-assessor statement specific to this measure is given (only MMSE administration is confirmed blinded), and it is self-reported or clinician-set without a stated safeguard"
+      },
+      "flags": "",
+      "source_pdf": "getfile.php-2.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
     "1879896597::pca_behavior": {
       "study": "Liu 2021",
       "matched_outcome": "PCA pump compressions",
       "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'The randomization was performed using an online randomization tool', with no allocation-concealment mechanism described",
         "2": "the only specific blinding statement in this report is 'The trained researchers who performed the MMSE score were blinded to the grouping of patients' -- blinding for the clinicians recording pain/opioid outcomes is not separately confirmed",
@@ -155,6 +232,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Lu 2021",
       "matched_outcome": "Total remifentanil",
       "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "randomised 1:1:1 'using a secured web-based system that was stratified according to permuted blocks' across six centres; baseline characteristics did not differ",
         "2": "'We performed all the analyses in an intention-to-treat population'; although 'The patients and investigators who participated in the intervention were not masked', 'The stimulator was placed in an opaque box to blind the surgical team and anesthesiologist', and protocol adherence was audited by an independent observer",
@@ -171,6 +249,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Xiong 2021",
       "matched_outcome": "Clinically important PONV",
       "matched_timepoint": "Within 48 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'the patients were randomly assigned to the TEAS or control groups using a computerized random number generator'; 'Group assignment was exposed from a sealed envelope only by an acupuncturist'; 'The acupoint stimulation instrument was covered with an opaque box'",
         "2": "'The patients were blinded to the group assignment'; the intraoperative anaesthetist was not blind but 'was not involved in the postoperative assessment', which was instead performed by 'An anesthetic resident who was not involved in the anesthesia routine and who was blinded to the group assignments'",
@@ -187,6 +266,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Zhou 2021",
       "matched_outcome": "Any postoperative opioid use",
       "matched_timepoint": "Postoperative window not clearly defined as 0-24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'We randomized patients according to the order of the random number table generated by SPSS 21.0', with allocation performed by a single named research team member and no independent concealment mechanism described",
         "2": "'This was an unblinded randomized controlled trial' -- no blinding of participants, clinicians, or assessors was attempted",
@@ -203,6 +283,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Lu 2022",
       "matched_outcome": "Time to first flatus",
       "matched_timepoint": "Postoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'randomly assigned ... in a ratio of 1:1 using a computer-generated random allocation sequence'; 'The randomization code for each patient was put in sealed envelope and not opened until allocation'; multicentre",
         "2": "participants were not blinded — 'For logistic reasons, blinding the patients was hard to perform' and 'The patient may tell the investigator who did the follow-up that he/she felt a stimuli'; the mITT population excludes 6 randomised patients, one of them 'due to rejection to TEAS', which is an exclusion related to a deviation from the intended intervention",
@@ -219,6 +300,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Xing 2022",
       "matched_outcome": "Rest pain VAS",
       "matched_timepoint": "24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'computer-generated random numbers'; 'Randomization codes were kept in a sealed envelope and relayed to an independent nurse'",
         "2": "'The allocation was blinded for all patients, surgeons, the leading anesthesiologist, physician in the post-anesthesia care unit, and follow-up observers until the end of the study'; 'The TEAS stimulator was obscured by an opaque cloth'",
@@ -235,6 +317,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Xing 2022",
       "matched_outcome": "Time to first flatus",
       "matched_timepoint": "Postoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'We randomized patients ... using computer-generated random numbers'; 'Randomization codes were kept in a sealed envelope and relayed to an independent nurse'",
         "2": "'The allocation was blinded for all patients, surgeons, the leading anesthesiologist, physician in the post-anesthesia care unit, and follow-up observers until the end of the study', and 'The TEAS stimulator was obscured by an opaque cloth throughout the experiment'; the comparator is sham TEAS with the same TAP block",
@@ -251,6 +334,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Xing 2022",
       "matched_outcome": "Total remifentanil consumption",
       "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'We randomized patients ... using computer-generated random numbers'; 'Randomization codes were kept in a sealed envelope and relayed to an independent nurse'",
         "2": "'The allocation was blinded for all patients, surgeons, the leading anesthesiologist, physician in the post-anesthesia care unit, and follow-up observers until the end of the study', and 'The TEAS stimulator was obscured by an opaque cloth throughout the experiment'; the comparator is sham TEAS with the same TAP block",
@@ -267,6 +351,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Guo 2023",
       "matched_outcome": "Remifentanil consumption",
       "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'A randomization sequence was generated by ... SPSS 25.0 ... and the allocation code was performed by an independent technician'; baseline well matched (Table 1)",
         "2": "'The patients, anesthesiologists, surgeons, and observers were blinded to group assignment'; 'a standardized anesthetic protocol was elaborated and performed throughout the surgery'",
@@ -283,6 +368,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Pan 2023",
       "matched_outcome": "Intraoperative remifentanil",
       "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'Patients were assigned to TEAS group (Group T) and control group (Group C) using random number tables', with no allocation-concealment mechanism described",
         "2": "described as a 'double-blind randomized control-group clinical trial', but the comparator is a control group and the report does not describe a sham device, so successful participant blinding is not established",
@@ -299,6 +385,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Wang 2023",
       "matched_outcome": "Time to first flatus",
       "matched_timepoint": "Postoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'Patients were assigned to either the TEAS group or the Sham group by a table of computer-generated random numbers'; 'Group assignments were sealed in sequentially numbered opaque envelopes'; two-step screening with randomisation at final enrolment",
         "2": "'Patients, attending surgeons, operating room nurses, data collectors and individuals who performed the final statistical analysis were blinded to group assignment'; multicentre double-blind with a no-current sham",
@@ -315,6 +402,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Zhang 2023",
       "matched_outcome": "Postoperative IV morphine-equivalent consumption",
       "matched_timepoint": "Within 48 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'randomly assigned to the TEAS or sham group in a 1:1 ratio using block randomization'; 'The randomized numbers were enclosed in sequentially numbered, sealed, opaque envelopes'",
         "2": "'The participants, outcome assessors, staff responsible for the postoperative care and statisticians were blinded to the treatment allocation'",
@@ -331,6 +419,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Yang 2024",
       "matched_outcome": "Time to first flatus",
       "matched_timepoint": "Postoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'Patients were randomly assigned to either usual care (UC) or EA group by computer-generated codes and sequentially numbered, opaque envelopes'",
         "2": "open-label against usual care — 'Given the characteristic of EA, the acupuncturist and patients were aware of the treatment allocation' — though 'anesthetists, assessors, the data collector as well as statisticians were blinded' and 'We conducted our analyses using the intention-to-treat principles'",
@@ -347,6 +436,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Zheng 2025",
       "matched_outcome": "Total intraoperative remifentanil consumption",
       "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "allocation was by thresholding a seeded uniform random number — 'A fixed seed number (eg, 12345) was preset to generate random numbers ranging between 0 and 1. Participants with a random number <=0.5 were assigned to the experimental group' — a method that cannot guarantee the stated 1:1 ratio, yet exactly 44 and 44 were allocated; the described method and the reported allocation are inconsistent. Concealment itself is adequate: 'concealed in sequentially numbered, opaque, sealed envelopes, which were opened only at the time of anesthesia induction'",
         "2": "single-blind by design — 'the anesthesiologists were unblinded due to the nature of the intervention', which the authors list as a limitation ('the single-blind design may introduce performance bias'); participants and outcome assessors were blinded and a mITT analysis was used",
@@ -363,6 +453,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "He 2026 (hepatectomy/JIS)",
       "matched_outcome": "PCA attempts",
       "matched_timepoint": "24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "allocation 1:1 'through a secure web-based randomization system'; sequence 'generated using permuted blocks, stratified by treatment center'; assignment revealed by 'an independent investigator (uninvolved in anesthesia administration or outcome assessment)'",
         "2": "'The patients, anesthesiologists, outcome assessors, and ward staff remained unaware of treatment assignments'; the stimulator was 'placed inside an opaque box'",
@@ -379,6 +470,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "He 2026 (hepatectomy/JIS)",
       "matched_outcome": "PCA attempts",
       "matched_timepoint": "24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "allocation 1:1 'through a secure web-based randomization system'; sequence 'generated using permuted blocks, stratified by treatment center'; assignment revealed by 'an independent investigator (uninvolved in anesthesia administration or outcome assessment)'",
         "2": "'The patients, anesthesiologists, outcome assessors, and ward staff remained unaware of treatment assignments'; the stimulator was 'placed inside an opaque box'",
@@ -395,6 +487,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Liu 2026 (burn)",
       "matched_outcome": "Any rescue dezocine use",
       "matched_timepoint": "Through POD1",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "allocation via 'a computer-generated [sequence]'; 'Allocations were concealed in sequentially numbered, opaque, sealed envelopes prepared by independent study monitors'",
         "2": "'All other individuals involved in the study (patients, surgeons, anesthesiologists, data collectors, data analysts) were blinded to the randomization and the stimulation'",
@@ -411,6 +504,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Liu 2026 (burn)",
       "matched_outcome": "Remifentanil consumption",
       "matched_timepoint": "Intraoperative",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "allocation via 'a computer-generated [sequence]'; 'Allocations were concealed in sequentially numbered, opaque, sealed envelopes prepared by independent study monitors'",
         "2": "'All other individuals involved in the study (patients, surgeons, anesthesiologists, data collectors, data analysts) were blinded to the randomization and the stimulation'",
@@ -427,6 +521,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Luo 2026",
       "matched_outcome": "Cumulative postoperative oxycodone consumption",
       "matched_timepoint": "0-24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'Eligible participants were randomized in a 1:1 ratio using a computer-generated randomization sequence'",
         "2": "'patients, postoperative [outcome assessors] ... blinded outcome assessment: while the attending anesthesiologists performing the intervention could not be blinded' -- an intraoperative-only exception that does not affect these postoperative results; the sham used 'identical electrode placement and procedures ... however, the stimulator was turned off, and no electrical current was delivered'",
@@ -439,10 +534,28 @@ window.ROB2_SOURCE_LINKS = {
       "adopted_by": "John Ryan N. Mendoza (review lead)",
       "adopted_date": "2026-09-08"
     },
+    "1879895932::vomiting_48h": {
+      "study": "Luo 2026",
+      "matched_outcome": "Cumulative postoperative vomiting",
+      "matched_timepoint": "0-48 h",
+      "match_method": "keyword_timepoint_unique",
+      "domains": {
+        "1": "'Eligible participants were randomized in a 1:1 ratio using a computer-generated randomization sequence'",
+        "2": "'patients, postoperative [outcome assessors] ... blinded outcome assessment: while the attending anesthesiologists performing the intervention could not be blinded' -- an intraoperative-only exception that does not affect these postoperative results; the sham used 'identical electrode placement and procedures ... however, the stimulator was turned off, and no electrical current was delivered'",
+        "3": "277 enrolled against a planned minimum of 264 (132/group), with the analysed 138/139 essentially matching plan",
+        "5": "explicitly named among the secondary endpoints -- 'the rate of complete response (CR), the severity of PONV, the requirement for rescue antiemetics, postoperative pain scores, and the incidence of other adverse events'",
+        "4": "assessed by blinded postoperative outcome assessors, for a participant who was also blinded via a genuine current-off sham"
+      },
+      "flags": "",
+      "source_pdf": "covidence_35_verified.pdf",
+      "adopted_by": "John Ryan N. Mendoza (review lead)",
+      "adopted_date": "2026-09-08"
+    },
     "1879895855::nausea_24h": {
       "study": "Ma 2026",
       "matched_outcome": "Nausea",
       "matched_timepoint": "24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'This was a partially randomized controlled trial' -- patients with PSQI < 6 were assigned to a non-randomised reference control group, though the TEAS-vs-sham contrast extracted here is the genuinely randomised comparison",
         "2": "the authors state plainly that 'Allocation concealment was not feasible due to the physical nature of the TEAS intervention' and 'participant blinding was not feasible given the physical nature of the intervention', though 'An outcome assessor blinded to group allocation performed all data collection'",
@@ -459,6 +572,7 @@ window.ROB2_SOURCE_LINKS = {
       "study": "Ma 2026",
       "matched_outcome": "Vomiting",
       "matched_timepoint": "24 h",
+      "match_method": "keyword_timepoint_unique",
       "domains": {
         "1": "'This was a partially randomized controlled trial' -- patients with PSQI < 6 were assigned to a non-randomised reference control group, though the TEAS-vs-sham contrast extracted here is the genuinely randomised comparison",
         "2": "the authors state plainly that 'Allocation concealment was not feasible due to the physical nature of the TEAS intervention' and 'participant blinding was not feasible given the physical nature of the intervention', though 'An outcome assessor blinded to group allocation performed all data collection'",

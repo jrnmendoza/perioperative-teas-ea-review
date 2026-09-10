@@ -1130,10 +1130,14 @@ function renderRoB2Matrix() {
 
     // Domain-specific, source-quoted rationale + source PDF, where
     // build_rob2_source_links.py could link this exact cell to one specific
-    // row in the review's RoB 2 registers without guessing (see that script's
-    // module docstring for why this is roughly 39% of assessed results, not
-    // all of them, and why the other 61% fall back to the general rationale
-    // below rather than a fabricated per-domain quote).
+    // row in the review's RoB 2 registers without guessing. Coverage is
+    // partial (window.ROB2_SOURCE_LINKS.coverage carries the current figure)
+    // and deliberately so -- see that script's module docstring, which also
+    // records two lexical-heuristic bugs found and reverted while trying to
+    // extend it further, both of the same shape: a word that is generic
+    // filler in most candidates but the one distinguishing word in another.
+    // The other cells fall back to the general rationale below rather than a
+    // fabricated per-domain quote.
     const linkKey = `${s.id}::${activeOutcome}`;
     const link = (window.ROB2_SOURCE_LINKS && window.ROB2_SOURCE_LINKS.links[linkKey]) || null;
     const domainQuote = link && domainIdx !== 'overall' ? link.domains[String(domainIdx + 1)] : null;
