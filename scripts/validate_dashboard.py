@@ -2425,6 +2425,76 @@ def t_interpretation_questions_are_data_triggered():
           "never free-standing assertions", not probs, "\n".join(probs))
 
 
+def t_prisma_checklist_is_complete_and_honest():
+    """
+    The PRISMA 2020 checklist must cover every item, and must not claim an item
+    is satisfied when what exists is only the underlying material.
+
+    PRISMA asks what the REPORT states. This review holds a great deal of
+    material that the manuscript does not yet report, so "evidence-ready" is
+    deliberately not "done", and items that are purely authorial -- funding,
+    competing interests, rationale -- must never be marked ready off the back
+    of repository content.
+
+    The assessor-process items are held to the same line as the limitations
+    section: while independent dual RoB 2 assessment is in progress, items 11
+    and 23c must stay flagged for attention rather than being closed early.
+    """
+    path = DASH / "prisma_checklist.js"
+    if not path.exists():
+        check("PRISMA 2020 checklist is complete and honest", False,
+              "dashboard/prisma_checklist.js missing -- run build_prisma_checklist.py")
+        return
+    src = path.read_text(encoding="utf-8")
+    P = json.loads(src[src.index("window.PRISMA_CHECKLIST = ") +
+                       len("window.PRISMA_CHECKLIST = "):src.rindex(";")])
+
+    valid = {"evidence-ready", "manuscript-only", "attention"}
+    probs = []
+    items = P.get("items", [])
+    if len(items) != 42:
+        probs.append(f"{len(items)} items present; PRISMA 2020 has 42 including sub-items")
+    seen = [i.get("item") for i in items]
+    if len(set(seen)) != len(seen):
+        probs.append("duplicate item numbers in the checklist")
+    for i in items:
+        for field in ("item", "section", "requirement", "status", "evidence", "where"):
+            if not (i.get(field) or "").strip():
+                probs.append(f"item {i.get('item', '?')}: missing {field}")
+        if i.get("status") not in valid:
+            probs.append(f"item {i.get('item')}: unknown status {i.get('status')!r}")
+    counts = {s: sum(1 for i in items if i["status"] == s) for s in valid}
+    for s, n in counts.items():
+        if P.get("counts", {}).get(s) != n:
+            probs.append(f"counts say {P.get('counts', {}).get(s)} {s}, items give {n}")
+
+    by_id = {i["item"]: i for i in items}
+    # Purely authorial items must never be claimed as ready from repo content.
+    for aid in ("1", "25", "26"):
+        if by_id.get(aid, {}).get("status") == "evidence-ready":
+            probs.append(f"item {aid} is authorial but is marked evidence-ready")
+    # The assessor process is still in progress; these cannot be closed yet.
+    for aid in ("11", "23c"):
+        if by_id.get(aid, {}).get("status") != "attention":
+            probs.append(f"item {aid} concerns the in-progress assessor process but is marked "
+                         f"{by_id.get(aid, {}).get('status')!r}")
+
+    # Re-derive the figures the items quote, so they cannot go stale.
+    grade_n = len(read_csv(ROOT / "09_V34_ANALYSIS" / "04_GRADE" / "v34_new_model_grade.csv"))
+    rob_n = len(read_csv(ROOT / "09_V34_ANALYSIS" / "03_ROB2" / "v34_rob2_draft_assessments.csv"))
+    graded_n = sum(1 for r in _interpretation_layer().get("records", [])
+                   if r["status"] != "exploratory")
+    for aid, want, what in (("15", grade_n, "GRADE model ratings"),
+                            ("18", rob_n, "RoB 2 assessments"),
+                            ("22", graded_n, "reported analyses")):
+        ev = by_id.get(aid, {}).get("evidence", "")
+        if str(want) not in ev:
+            probs.append(f"item {aid} does not quote the re-derived count of {want} {what}; "
+                         f"it says {ev[:70]!r}")
+    check("PRISMA 2020 checklist covers every item and does not claim more than the review "
+          "reports", not probs, "\n".join(probs))
+
+
 def t_limitations_are_evidenced_and_current():
     """
     Every limitation must carry evidence and a place to check it, and its
@@ -2940,7 +3010,8 @@ def main() -> int:
           t_interpretation_questions_are_data_triggered,
           t_every_analysis_has_discussion_prompts,
           t_exploratory_analyses_carry_their_guardrails,
-          t_limitations_are_evidenced_and_current]),
+          t_limitations_are_evidenced_and_current,
+          t_prisma_checklist_is_complete_and_honest]),
     ]
 
     for title, tests in sections:

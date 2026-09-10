@@ -385,7 +385,7 @@ function renderActiveTab() {
     scope.textContent='Filters update study counts and distributions in Overview, Study Explorer and the RoB matrix. Search remains active until cleared or All Studies is selected. Saved effect estimates and GRADE are not recalculated. Other tabs use their own analysis sets.';
   }
   if (activeTab === 'intro') renderOverview();
-  else if (activeTab === 'prisma') renderPrismaView();
+  else if (activeTab === 'prisma') { renderPrismaView(); renderPrismaChecklist(); }
   else if (activeTab === 'search') renderSearchStrategiesView();
   else if (activeTab === 'explorer') renderStudyExplorer();
   else if (activeTab === 'rob2') renderRoB2Matrix();
@@ -3995,6 +3995,112 @@ function limitationsCopy(btn) { ilCopy(limitationsMarkdown() + '\n', btn, '✅ C
 
 window.renderLimitations = renderLimitations;
 window.limitationsCopy = limitationsCopy;
+
+// ---------------------------------------------------------------------------
+// PRISMA 2020 checklist, mapped to this review by
+// scripts/build_prisma_checklist.py.
+//
+// The status vocabulary is the whole point: "evidence-ready" says the material
+// exists and is pinned to a location, NOT that the manuscript reports it --
+// which is what PRISMA actually asks. Conflating the two is how a checklist
+// becomes a liability at submission.
+// ---------------------------------------------------------------------------
+const PRISMA_STATUS_STYLE = {
+  'evidence-ready':  { bg: 'rgba(16,185,129,0.15)',  fg: '#6ee7b7', label: 'Evidence ready' },
+  'manuscript-only': { bg: 'rgba(148,163,184,0.16)', fg: '#cbd5e1', label: 'Manuscript only' },
+  'attention':       { bg: 'rgba(245,158,11,0.16)',  fg: '#fbbf24', label: 'Needs attention' },
+};
+
+function prismaChecklistMarkdown() {
+  const P = window.PRISMA_CHECKLIST;
+  if (!P) return '';
+  const out = ['# PRISMA 2020 checklist', '', `> ${P.disclaimer}`, '',
+               `Standard: ${P.standard}`, '',
+               '| Item | Section | Requirement | Status | Where this review holds it |',
+               '|---|---|---|---|---|'];
+  P.items.forEach(i => {
+    const s = PRISMA_STATUS_STYLE[i.status] || {};
+    out.push(`| ${i.item} | ${i.section} | ${i.requirement} | ${s.label} | ${i.evidence} (${i.where}) |`);
+  });
+  out.push('');
+  out.push(Object.entries(P.counts)
+    .map(([k, v]) => `${v} ${(PRISMA_STATUS_STYLE[k] || {}).label || k}`).join(' · ')
+    + ` of ${P.total} items.`);
+  return out.join('\n');
+}
+
+function renderPrismaChecklist() {
+  const host = document.getElementById('prisma-checklist');
+  if (!host) return;
+  const P = window.PRISMA_CHECKLIST;
+  if (!P) { host.innerHTML = ''; return; }
+
+  const sub = document.getElementById('prisma-checklist-subtitle');
+  if (sub) sub.textContent = P.disclaimer;
+
+  const cell = s => `<td style="padding:0.4rem 0.5rem;vertical-align:top;
+                       border-bottom:1px solid rgba(255,255,255,0.05);">${s}</td>`;
+  let section = null;
+
+  host.innerHTML = `
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.7rem;">
+      ${Object.entries(P.counts).map(([k, v]) => {
+        const s = PRISMA_STATUS_STYLE[k] || {};
+        return `<span class="v34-badge" style="background:${s.bg};color:${s.fg};">
+                  ${v} ${pwEsc(s.label || k)}</span>`;
+      }).join('')}
+      <span style="font-size:0.74rem;color:var(--text-muted);align-self:center;">
+        of ${P.total} items · ${pwEsc(P.standard)}</span>
+    </div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;min-width:940px;border-collapse:collapse;font-size:0.73rem;">
+        <thead><tr style="color:var(--text-muted);text-align:left;">
+          <th style="padding:0.35rem 0.5rem;">Item</th>
+          <th style="padding:0.35rem 0.5rem;">What it asks</th>
+          <th style="padding:0.35rem 0.5rem;">Status</th>
+          <th style="padding:0.35rem 0.5rem;">What this review holds</th>
+        </tr></thead>
+        <tbody>
+        ${P.items.map(i => {
+          const s = PRISMA_STATUS_STYLE[i.status] || PRISMA_STATUS_STYLE['attention'];
+          const head = i.section !== section
+            ? `<tr><td colspan="4" style="padding:0.5rem 0.5rem 0.2rem;font-weight:700;
+                 color:#a5b4fc;text-transform:uppercase;letter-spacing:0.04em;
+                 font-size:0.7rem;">${pwEsc(i.section)}</td></tr>` : '';
+          section = i.section;
+          return head + `<tr>
+            ${cell(`<strong style="color:#f8fafc;">${pwEsc(i.item)}</strong>`)}
+            ${cell(pwEsc(i.requirement))}
+            ${cell(`<span class="v34-badge" style="background:${s.bg};color:${s.fg};">${pwEsc(s.label)}</span>`)}
+            ${cell(`${pwEsc(i.evidence)}<div style="color:var(--text-muted);margin-top:0.2rem;">
+                     ${pwEsc(i.where)}</div>`)}
+          </tr>`;
+        }).join('')}
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;gap:0.8rem;align-items:flex-start;flex-wrap:wrap;margin-top:0.7rem;">
+      <p style="flex:1;min-width:20rem;font-size:0.73rem;color:var(--text-muted);margin:0;line-height:1.6;">
+        <strong style="color:#cbd5e1;">“Evidence ready” is not “done”.</strong> It means the
+        material exists here and is pinned to a location; PRISMA asks what the report states, so
+        each item still has to be written. Counts inside the items are re-derived on every build,
+        so this cannot go on claiming figures that have stopped being true. Requirement wording
+        is a paraphrase, not the checklist's own text.
+      </p>
+      <button type="button" class="btn-copy-strategy" style="flex:none;"
+              onclick="prismaChecklistCopy(this)"
+              title="Copy the mapped checklist as Markdown">
+        📋 Copy checklist
+      </button>
+    </div>`;
+}
+
+function prismaChecklistCopy(btn) {
+  ilCopy(prismaChecklistMarkdown() + '\n', btn, '✅ Copied');
+}
+
+window.renderPrismaChecklist = renderPrismaChecklist;
+window.prismaChecklistCopy = prismaChecklistCopy;
 
 // Delegated toggle for the per-row "Discuss this result" disclosure.
 function ilToggleRow(analysisId) {
