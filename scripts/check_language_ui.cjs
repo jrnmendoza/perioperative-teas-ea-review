@@ -26,7 +26,17 @@ const assert=require('node:assert/strict');
  assert.match(await page.locator('#kpi-grade-card .kpi-value').innerText(),/⊕⊕◯◯ Låg/);
  await page.selectOption('#filter-modality','TEAS');
  await page.waitForTimeout(100);
- assert.match(await page.locator('#kpi-effect-title').innerText(),/TEAS.*opioidbesparing/i);
+ // Title text changed from "TEAS Primary 24-h Opioid Sparing" to "Primary
+ // Efficacy Analysis: TEAS vs Sham" so the EA-vs-usual-care companion result
+ // is no longer implicitly co-labelled "primary" (PROSPERO's primary EA
+ // comparison is EA vs sham, for which no eligible trial exists). The
+ // Swedish translation still has to name TEAS and identify this as the
+ // primary/effect analysis.
+ {
+   const svTitle = await page.locator('#kpi-effect-title').innerText();
+   assert.match(svTitle, /TEAS/i, 'TEAS title should still name TEAS after translation');
+   assert.match(svTitle, /effektanalys|primär/i, 'TEAS title should still identify this as the primary/effect analysis after translation');
+ }
  assert.match(await page.locator('#kpi-study-count').innerText(),/studier/);
  await page.evaluate(()=>switchTab('explorer'));
  await page.selectOption('#filter-surgery','Thoracic & Cardiac');

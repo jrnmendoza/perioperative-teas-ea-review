@@ -60,9 +60,19 @@ MODEL_META = {
     "v34_primary_24h_mme_TEAS_Sham": dict(
         label="Primary 0–24 h opioid — TEAS vs sham", unit="mg IV MME",
         role="primary", rob="opioid_24h"),
+    # PROSPERO's synthesis strategy: "Primary comparisons will be TEAS versus
+    # credible sham TEAS and EA versus sham EA. Supportive comparisons will
+    # evaluate TEAS and EA against usual care, no stimulation, or attention
+    # controls." No sham-controlled EA trial reports this outcome in absolute
+    # IV MME (the only EA-vs-sham/placebo opioid contrast in the dataset,
+    # Sim 2002, is weight-normalised mg/kg and feeds the Tier E scale-free SMD
+    # synthesis instead, not this model). This is therefore the review's
+    # SUPPORTIVE EA evidence, not its EA-arm primary comparison -- there is no
+    # primary EA analysis to report, and that absence must be visible rather
+    # than papered over by treating the usual-care contrast as if it were one.
     "v34_primary_24h_mme_EA_Usual_care": dict(
-        label="Primary 0–24 h opioid — EA vs usual care", unit="mg IV MME",
-        role="primary", rob="opioid_24h"),
+        label="Supportive evidence — EA vs usual care (no-stimulation comparator), 0–24 h opioid",
+        unit="mg IV MME", role="supporting", rob="opioid_24h"),
     "v34_primary_24h_mme_ALL_AUDIT": dict(
         label="Primary 0–24 h opioid — combined audit synthesis", unit="mg IV MME",
         role="supporting", rob="opioid_24h"),

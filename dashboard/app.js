@@ -756,21 +756,21 @@ function renderKPIs() {
   // Locked Protocol v32: Modality-specific estimates and strict direct primary (k=7, N=676)
   if (filterModality === 'all') {
     if (effectTitleEl) {
-      effectTitleEl.innerHTML = '<span data-i18n="kpi.primaryTitle">Primary 24-h Opioid Sparing (Modality-Specific)</span><button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>';
+      effectTitleEl.innerHTML = '<span data-i18n="kpi.primaryTitle">Primary Efficacy Analysis &bull; Supportive EA Evidence</span><button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>';
     }
     if (effectValEl) {
-      effectValEl.innerHTML = 'TEAS: −14.00 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−34.18, +6.19]</span><br>EA: −3.94 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−19.77, +11.90]</span>';
+      effectValEl.innerHTML = 'TEAS vs sham (primary): −14.00 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−34.18, +6.19]</span><br>EA vs usual care (supportive): −3.94 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">[−19.77, +11.90]</span>';
     }
     if (effectSubEl) {
-      effectSubEl.innerText = 'Supporting Combined Synthesis (k=7, N=676): MD = −9.91 mg [−20.08, +0.27], p = 0.055';
+      effectSubEl.innerText = 'Cross-modality combined synthesis (contextual only, k=7, N=676): MD = −9.91 mg [−20.08, +0.27], p = 0.055';
     }
     if (effectBadgeEl) {
       effectBadgeEl.className = 'kpi-badge badge-emerald';
-      effectBadgeEl.innerHTML = '<span data-i18n="kpi.primaryBadge">PRIMARY: TEAS &amp; EA Modality-Specific &bull; Combined = Supporting</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
+      effectBadgeEl.innerHTML = '<span data-i18n="kpi.primaryBadge">PRIMARY: TEAS vs sham &bull; EA vs usual care is supportive, not a sham-controlled primary &bull; Combined = contextual only</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
     }
   } else if (filterModality === 'TEAS') {
     if (effectTitleEl) {
-      effectTitleEl.innerHTML = '<span>TEAS Primary 24-h Opioid Sparing</span><button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>';
+      effectTitleEl.innerHTML = '<span>Primary Efficacy Analysis: TEAS vs Sham</span><button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>';
     }
     if (effectValEl) {
       effectValEl.innerHTML = '−14.00 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">95% CI [−34.18, +6.19]</span>';
@@ -780,21 +780,21 @@ function renderKPIs() {
     }
     if (effectBadgeEl) {
       effectBadgeEl.className = 'kpi-badge badge-indigo';
-      effectBadgeEl.innerHTML = '<span>PRIMARY MODALITY 1 (TEAS vs Sham)</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
+      effectBadgeEl.innerHTML = '<span>PRIMARY EFFICACY ANALYSIS (TEAS vs Sham)</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
     }
   } else if (filterModality === 'EA') {
     if (effectTitleEl) {
-      effectTitleEl.innerHTML = '<span>EA Primary 24-h Opioid Sparing</span><button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>';
+      effectTitleEl.innerHTML = '<span>Supportive EA Evidence (Usual-Care Comparator)</span><button class="stat-info-btn" data-stat-term="meanDifference" aria-label="Statistical explanation for Mean Difference">ⓘ</button>';
     }
     if (effectValEl) {
       effectValEl.innerHTML = '−3.94 mg <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">95% CI [−19.77, +11.90]</span>';
     }
     if (effectSubEl) {
-      effectSubEl.innerText = 'k = 3, N = 339 • REML + Knapp–Hartung • p = 0.397, τ² = 28.47, I² = 77.2%';
+      effectSubEl.innerText = 'k = 3, N = 339 • REML + Knapp–Hartung • p = 0.397, τ² = 28.47, I² = 77.2% • Insufficient sham-controlled EA evidence was available for a pooled sham-controlled efficacy estimate (the review’s primary EA comparison per protocol); this usual-care/no-stimulation comparison is supportive, not a substitute.';
     }
     if (effectBadgeEl) {
       effectBadgeEl.className = 'kpi-badge badge-amber';
-      effectBadgeEl.innerHTML = '<span>PRIMARY MODALITY 2 (EA vs Usual Care)</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
+      effectBadgeEl.innerHTML = '<span>SUPPORTIVE EA EVIDENCE (Usual-Care/No-Stimulation Comparator)</span><button class="stat-info-btn" data-stat-term="knappHartung" style="margin-left: 3px;" aria-label="Statistical explanation for Knapp-Hartung">ⓘ</button>';
     }
   }
 
@@ -1994,7 +1994,7 @@ function selectStudyInSimulator(id) {
 const STATA_MASTER_RESULTS = {
   "AN-01-TEAS": {
     id: "AN-01-TEAS",
-    name: "PRIMARY MODALITY 1: TEAS vs Sham (0–24h Opioid Consumption)",
+    name: "PRIMARY EFFICACY ANALYSIS: TEAS vs Sham (0–24h Opioid Consumption)",
     role: "PRIMARY",
     outcome: "Cumulative 0–24h Opioid Consumption",
     modality: "TEAS",
@@ -2011,8 +2011,15 @@ const STATA_MASTER_RESULTS = {
   },
   "AN-01-EA": {
     id: "AN-01-EA",
-    name: "PRIMARY MODALITY 2: EA vs Usual Care (0–24h Opioid Consumption)",
-    role: "PRIMARY",
+    // PROSPERO's primary EA comparison is EA vs sham EA. No sham-controlled EA
+    // trial reports this outcome in absolute IV MME (Sim 2002, the only EA vs
+    // sham/placebo opioid contrast, is weight-normalised and feeds the Tier E
+    // SMD synthesis instead) -- so there is no primary EA analysis to show
+    // here. This is the review's supportive evidence for EA against a
+    // usual-care/no-stimulation comparator, not a stand-in for the missing
+    // sham-controlled primary.
+    name: "SUPPORTIVE EA EVIDENCE: EA vs Usual Care (0–24h Opioid Consumption)",
+    role: "SUPPORTIVE",
     outcome: "Cumulative 0–24h Opioid Consumption",
     modality: "EA",
     comparator: "Usual Care / Control",

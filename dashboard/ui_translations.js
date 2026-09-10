@@ -235,7 +235,16 @@ window.UI_TRANSLATIONS_SV = {
   "EA Primary 24-h Opioid Sparing": "EA: primär opioidbesparing efter 24 timmar",
   "PRIMARY MODALITY 1 (TEAS vs Sham)": "PRIMÄR MODALITET 1 (TEAS jämfört med sham)",
   "PRIMARY MODALITY 2 (EA vs Usual Care)": "PRIMÄR MODALITET 2 (EA jämfört med sedvanlig vård)",
-  "Supporting Combined Synthesis (k=7, N=676): MD = −9.91 mg [−20.08, +0.27], p = 0.055": "Kompletterande kombinerad syntes (k=7, N=676): MD = −9,91 mg [−20,08; +0,27], p = 0,055"
+  "Supporting Combined Synthesis (k=7, N=676): MD = −9.91 mg [−20.08, +0.27], p = 0.055": "Kompletterande kombinerad syntes (k=7, N=676): MD = −9,91 mg [−20,08; +0,27], p = 0,055",
+  "Primary Efficacy Analysis • Supportive EA Evidence": "Primär effektanalys • Kompletterande EA-underlag",
+  "Cross-modality combined synthesis (contextual only, k=7, N=676): MD = −9.91 mg [−20.08, +0.27], p = 0.055": "Kombinerad syntes över modaliteter (endast kontextuell, k=7, N=676): MD = −9,91 mg [−20,08; +0,27], p = 0,055",
+  "Primary Efficacy Analysis: TEAS vs Sham": "Primär effektanalys: TEAS jämfört med sham",
+  "Supportive EA Evidence (Usual-Care Comparator)": "Kompletterande EA-underlag (jämförelse mot sedvanlig vård)",
+  "PRIMARY EFFICACY ANALYSIS (TEAS vs Sham)": "PRIMÄR EFFEKTANALYS (TEAS jämfört med sham)",
+  "SUPPORTIVE EA EVIDENCE (Usual-Care/No-Stimulation Comparator)": "KOMPLETTERANDE EA-UNDERLAG (jämförelse mot sedvanlig vård/ingen stimulering)",
+  "PRIMARY MODALITY 1: TEAS vs Sham (0–24h Opioid Consumption)": "PRIMÄR EFFEKTANALYS: TEAS jämfört med sham (opioidkonsumtion 0–24 tim)",
+  "PRIMARY EFFICACY ANALYSIS: TEAS vs Sham (0–24h Opioid Consumption)": "PRIMÄR EFFEKTANALYS: TEAS jämfört med sham (opioidkonsumtion 0–24 tim)",
+  "SUPPORTIVE EA EVIDENCE: EA vs Usual Care (0–24h Opioid Consumption)": "KOMPLETTERANDE EA-UNDERLAG: EA jämfört med sedvanlig vård (opioidkonsumtion 0–24 tim)"
 };
 
 Object.assign(window.UI_TRANSLATIONS_SV, {

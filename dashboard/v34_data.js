@@ -231,8 +231,8 @@ window.V34_DATA = {
     },
     {
       "model_id": "v34_primary_24h_mme_EA_Usual_care",
-      "label": "Primary 0–24 h opioid — EA vs usual care",
-      "role": "primary",
+      "label": "Supportive evidence — EA vs usual care (no-stimulation comparator), 0–24 h opioid",
+      "role": "supporting",
       "rob_key": "opioid_24h",
       "unit": "mg IV MME",
       "measure": "MD",

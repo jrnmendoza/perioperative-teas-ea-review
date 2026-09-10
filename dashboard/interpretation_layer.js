@@ -1182,15 +1182,15 @@ window.INTERPRETATION_LAYER = {
     },
     {
       "analysis_id": "v34_primary_24h_mme_EA_Usual_care",
-      "label": "Primary 0–24 h opioid — EA vs usual care",
+      "label": "Supportive evidence — EA vs usual care (no-stimulation comparator), 0–24 h opioid",
       "unit": "mg IV MME",
       "comparator": "Usual care",
       "context": "The pooled estimate corresponds to approximately 3.94 mg IV MME lower in the intervention arm than the comparator, across 3 contributing trials (N = 339). The 95% confidence interval runs from −19.77 to 11.90 and includes no difference, so the data are compatible with a worthwhile effect, with none at all, and with a small effect in the opposite direction. Between-study heterogeneity is considerable (I² = 77.2%). With only 3 contributing trials, both the interval and the heterogeneity estimate are themselves imprecise. This should therefore be read as a possible signal rather than firm evidence of benefit.",
-      "results_safe": "3 trials contributed to the 0–24 h opioid consumption (EA vs usual care) synthesis (N = 339). The pooled mean difference was −3.94 mg IV MME (95% CI −19.77 to 11.90; p = 0.397; I² = 77.2%; REML + Hartung-Knapp).",
+      "results_safe": "3 trials contributed to the Supportive evidence (EA vs usual care) synthesis (N = 339). The pooled mean difference was −3.94 mg IV MME (95% CI −19.77 to 11.90; p = 0.397; I² = 77.2%; REML + Hartung-Knapp).",
       "discussion_safe": "The point estimate favours the intervention, but the confidence interval includes no difference; between-study heterogeneity was considerable (I² = 77.2%); only 3 trials contributed; certainty of evidence was very low, so this is best described as a possible effect that this evidence cannot confirm.",
       "do_not_say": [
         {
-          "text": "“EA significantly reduces 0–24 h opioid consumption.”",
+          "text": "“EA significantly reduces supportive evidence.”",
           "why": "The 95% confidence interval includes no difference; there is no statistically significant effect to report."
         },
         {
@@ -1220,7 +1220,7 @@ window.INTERPRETATION_LAYER = {
         },
         {
           "level": "unsupported",
-          "claim": "EA definitively changes 0–24 h opioid consumption.",
+          "claim": "EA definitively changes supportive evidence.",
           "basis": "The interval includes no difference. A definitive claim is not available from this analysis."
         }
       ],
