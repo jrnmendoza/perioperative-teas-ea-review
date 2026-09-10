@@ -229,6 +229,26 @@ function initGlobalFilters() {
   if (modSelect) modSelect.addEventListener('change', (e) => { filterModality = e.target.value; renderAllViews(); });
   if (compSelect) compSelect.addEventListener('change', (e) => { filterComparator = e.target.value; renderAllViews(); });
   if (surgSelect) surgSelect.addEventListener('change', (e) => { filterSurgery = e.target.value; renderAllViews(); });
+
+  // Publication-year range. The filter state (filterYearMin/filterYearMax) already
+  // existed and was already applied in getFilteredStudies, but had no control in
+  // the UI, so it was unreachable. This exposes it rather than adding a new filter.
+  const yearMinEl = document.getElementById('filter-year-min');
+  const yearMaxEl = document.getElementById('filter-year-max');
+  if (yearMinEl && yearMaxEl) {
+    const years = window.STUDIES_DATA.map(s => s.year).filter(Number.isFinite);
+    const lo = Math.min(...years), hi = Math.max(...years);
+    filterYearMin = lo; filterYearMax = hi;
+    [[yearMinEl, lo], [yearMaxEl, hi]].forEach(([el, v]) => { el.min = lo; el.max = hi; el.value = v; });
+    const apply = () => {
+      const a = parseInt(yearMinEl.value, 10), b = parseInt(yearMaxEl.value, 10);
+      filterYearMin = Number.isFinite(a) ? a : lo;
+      filterYearMax = Number.isFinite(b) ? b : hi;
+      renderAllViews();
+    };
+    yearMinEl.addEventListener('change', apply);
+    yearMaxEl.addEventListener('change', apply);
+  }
   if (robSelect) robSelect.addEventListener('change', (e) => { filterRob = e.target.value; renderAllViews(); });
 
   // Preset Buttons
@@ -262,6 +282,12 @@ function applyPreset(preset) {
     filterMinN = 60;
   }
   
+  // Keep the year inputs in step with preset changes, so the visible control
+  // never disagrees with the filter actually being applied.
+  const ymin = document.getElementById('filter-year-min');
+  const ymax = document.getElementById('filter-year-max');
+  if (ymin && ymax) { ymin.value = filterYearMin; ymax.value = filterYearMax; }
+
   if (document.getElementById('filter-modality')) document.getElementById('filter-modality').value = filterModality;
   if (document.getElementById('filter-comparator')) document.getElementById('filter-comparator').value = filterComparator;
   if (document.getElementById('filter-rob')) document.getElementById('filter-rob').value = filterRob;
@@ -974,6 +1000,169 @@ function inquiryDisposition(s) {
   return { label: 'Dispositioned', cls: 'emerald', title: raw || 'Dispositioned in the v26 lock' };
 }
 
+
+// ─── Baseline / participant characteristics ─────────────────────────────────
+// Added 2026-09-10 to answer "who was studied?" alongside "what was studied?".
+// Descriptive only: nothing here feeds an analysis, a RoB 2 judgment or GRADE.
+//
+// The register stores unreported baseline values as the literal string
+// "not reported". Distinguishing that from a real zero is the whole point of
+// this block -- a missing BMI must never render as 0, and a study that did not
+// report sex must never contribute a 0 to a female-participant count.
+const BASELINE_NR = /^\s*(not reported|nr|n\/?a|none|unreported|not stated|not specified|unclear|not available|—|-)\s*\.?\s*$/i;
+
+function isNotReported(v) {
+  return v === null || v === undefined || v === '' || (typeof v === 'string' && BASELINE_NR.test(v.trim()));
+}
+
+/** Render a baseline value, or an explicit "NR" that reads as not-reported. */
+function baselineValue(v) {
+  return isNotReported(v)
+    ? '<span class="nr-tag" title="Not reported in the source publication">NR</span>'
+    : pwEsc(String(v));
+}
+
+/** Arm-level pair, kept arm-level -- never collapsed into a study-wide mean. */
+function baselineArms(a, b) {
+  if (isNotReported(a) && isNotReported(b)) {
+    return '<span class="nr-tag" title="Not reported in the source publication">NR</span>';
+  }
+  return `<span class="arm-pair"><span>${baselineValue(a)}</span><span>${baselineValue(b)}</span></span>`;
+}
+
+/** "24/40 (60%)" -> {events:24, total:40}; null when not parseable. */
+function parseFemaleCount(v) {
+  if (isNotReported(v)) return null;
+  const m = String(v).match(/(\d+)\s*\/\s*(\d+)/);
+  return m ? { events: +m[1], total: +m[2] } : null;
+}
+
+/** Leading numeric of "70.09 ± 3.95" -> 70.09; null when not parseable. */
+function parseLeadingNumber(v) {
+  if (isNotReported(v)) return null;
+  const m = String(v).match(/-?\d+(?:\.\d+)?/);
+  return m ? parseFloat(m[0]) : null;
+}
+
+/**
+ * Descriptive baseline summary across the CURRENTLY FILTERED trials.
+ *
+ * Operates on one record per trial -- window.STUDIES_DATA holds exactly one row
+ * per included RCT, so no participant is counted twice. It deliberately does NOT
+ * compute an unweighted mean of study means; where an overall figure is
+ * defensible (sex) it is a participant-weighted count of actual numerators and
+ * denominators, and it is labelled as such. Everything else is reported as a
+ * range across study means plus a reporting denominator.
+ */
+function summarisePopulation(studies) {
+  const n = studies.length;
+  const out = { n, reported: {}, ranges: {}, female: null, countries: {}, anaesthesia: {} };
+
+  const spans = {
+    age:  ['arm1_age', 'arm2_age'],
+    bmi:  ['arm1_bmi', 'arm2_bmi'],
+    sex:  ['arm1_female', 'arm2_female']
+  };
+  for (const [label, keys] of Object.entries(spans)) {
+    out.reported[label] = studies.filter(s => keys.some(k => !isNotReported(s.population[k]))).length;
+  }
+  out.reported.asa = studies.filter(s => !isNotReported(s.population.asa_status)).length;
+
+  for (const [label, keys] of Object.entries({ age: spans.age, bmi: spans.bmi })) {
+    const means = [];
+    studies.forEach(s => keys.forEach(k => {
+      const v = parseLeadingNumber(s.population[k]);
+      if (v !== null) means.push(v);
+    }));
+    out.ranges[label] = means.length ? { lo: Math.min(...means), hi: Math.max(...means) } : null;
+  }
+
+  // Participant-weighted, from real numerators/denominators only. A trial that
+  // did not report sex contributes nothing to either side of this fraction.
+  let fem = 0, tot = 0, contributing = 0;
+  studies.forEach(s => {
+    let any = false;
+    ['arm1_female', 'arm2_female'].forEach(k => {
+      const p = parseFemaleCount(s.population[k]);
+      if (p) { fem += p.events; tot += p.total; any = true; }
+    });
+    if (any) contributing++;
+  });
+  out.female = tot > 0 ? { events: fem, total: tot, studies: contributing } : null;
+
+  studies.forEach(s => {
+    const c = s.country || 'Not reported';
+    out.countries[c] = (out.countries[c] || 0) + 1;
+    const ch = (window.STUDY_CHARACTERISTICS || {})[s.key] || {};
+    const a = ch.anesthesia || 'Not recorded';
+    out.anaesthesia[a] = (out.anaesthesia[a] || 0) + 1;
+  });
+  return out;
+}
+
+function renderPopulationSummary(studies) {
+  const host = document.getElementById('explorer-population-summary');
+  if (!host) return;
+  const p = summarisePopulation(studies);
+  if (!p.n) { host.innerHTML = '<h3>Population Characteristics</h3><p>No studies match the current filters.</p>'; return; }
+
+  const pct = x => `${(100 * x / p.n).toFixed(0)}%`;
+  const range = r => r ? `${r.lo.toFixed(1)}\u2013${r.hi.toFixed(1)}` : 'not estimable';
+  const countryBits = Object.entries(p.countries).sort((a, b) => b[1] - a[1])
+    .map(([c, k]) => `${pwEsc(c)}: ${k}`).join(' &bull; ');
+
+  host.innerHTML = `
+    <h3>Population Characteristics
+      <span style="font-weight:500;color:var(--text-muted);font-size:0.8rem;">— who was studied across ${p.n} trial${p.n === 1 ? '' : 's'}</span>
+    </h3>
+    <p style="font-size:0.78rem;color:var(--text-muted);margin:0.35rem 0 0.9rem;">
+      Descriptive only. These are <strong>not</strong> meta-analytic estimates: ranges span individual
+      study-arm means, and no unweighted mean of study means is computed.
+    </p>
+    <div class="pop-grid">
+      <div>
+        <span class="pop-label">Age reported</span>
+        <span class="pop-value">${p.reported.age}/${p.n}</span>
+        <span class="pop-sub">Study-arm mean age range: ${range(p.ranges.age)} years</span>
+      </div>
+      <div>
+        <span class="pop-label">Sex reported</span>
+        <span class="pop-value">${p.reported.sex}/${p.n}</span>
+        <span class="pop-sub">${p.female
+          ? `Female ${p.female.events.toLocaleString()} / ${p.female.total.toLocaleString()} participants (${(100 * p.female.events / p.female.total).toFixed(1)}%), participant-weighted across the ${p.female.studies} trials reporting sex`
+          : 'No parseable sex counts among the filtered trials'}</span>
+      </div>
+      <div>
+        <span class="pop-label">BMI reported</span>
+        <span class="pop-value">${p.reported.bmi}/${p.n}</span>
+        <span class="pop-sub">Study-arm mean BMI range: ${range(p.ranges.bmi)} kg/m&sup2;</span>
+      </div>
+      <div>
+        <span class="pop-label">ASA reported</span>
+        <span class="pop-value">${p.reported.asa}/${p.n}</span>
+        <span class="pop-sub">Recorded as the trial's stated eligibility class</span>
+      </div>
+    </div>
+    <div class="pop-complete">
+      <strong>Baseline data completeness</strong>
+      <span class="stat-info-btn" title="Reporting denominator varies because not all included trials reported each baseline characteristic. NR means not reported in the source publication; it is never treated as zero.">ⓘ</span>
+      <div class="pop-bars">
+        ${[['Age', p.reported.age], ['Sex', p.reported.sex], ['BMI', p.reported.bmi], ['ASA', p.reported.asa]].map(([l, v]) => `
+          <div class="pop-bar-row">
+            <span class="pop-bar-label">${l}</span>
+            <span class="pop-bar-track"><i style="width:${(100 * v / p.n).toFixed(1)}%"></i></span>
+            <span class="pop-bar-num">${v}/${p.n} <span style="color:var(--text-muted);">(${pct(v)})</span></span>
+          </div>`).join('')}
+      </div>
+      <div class="pop-foot">
+        Geographic distribution — ${countryBits}.
+        Anaesthesia technique recorded for ${p.n - (p.anaesthesia['Not recorded'] || 0)}/${p.n};
+        where absent the extraction record carried no explicitly labelled anaesthesia row.
+      </div>
+    </div>
+  `;
+}
+
 // 3. Study Explorer Table
 function renderStudyExplorer() {
   const filtered = getFilteredStudies(false);
@@ -985,6 +1174,8 @@ function renderStudyExplorer() {
       Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([name,n])=>`<span class="badge badge-indigo">${pwEsc(name)}: ${n}</span>`).join('')+
       (filtered.length?'':'<p>No studies match the current filters.</p>')+'</div>';
   }
+  renderPopulationSummary(filtered);
+
   const tbody = document.getElementById('explorer-table-body');
   if (!tbody) return;
 
@@ -1007,17 +1198,21 @@ function renderStudyExplorer() {
         <td style="font-weight: 700; color: var(--text-accent);">
           ${idx + 1}. ${s.key} ${inquiryBadge}
         </td>
+        <td>${s.year}</td>
+        <td>${s.country ? pwEsc(s.country) : '<span class="nr-tag" title="Country not recorded in the structured register">NR</span>'}</td>
+        <td>${s.surgery_category}<br><small style="color:var(--text-muted)">${pwEsc(s.surgery_procedure || 'Procedure not recorded')}</small></td>
         <td><span style="background: rgba(99,102,241,0.15); color: #818cf8; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 600; font-size: 0.75rem;">${s.modality}</span></td>
         <td>${s.comparator_short}</td>
-        <td>${s.surgery_category}<br><small style="color:var(--text-muted)">${pwEsc(s.surgery_procedure || 'Procedure not recorded')}</small></td>
-        <td>${s.stricta.acupoints}</td>
-        <td>${s.stricta.frequency_category}</td>
-        <td><strong>${s.population.total_n}</strong> (${s.population.arm1_n} / ${s.population.arm2_n})</td>
+        <td><strong>${s.population.total_n}</strong> (${s.population.arm1_n} / ${s.population.arm2_n})${
+          s.population.randomized_total_n && s.population.randomized_total_n !== s.population.total_n
+            ? `<br><small style="color:var(--text-muted)">randomised ${s.population.randomized_total_n}</small>` : ''}</td>
+        <td style="font-size:0.78rem;">${baselineArms(s.population.arm1_age, s.population.arm2_age)}</td>
+        <td style="font-size:0.78rem;">${baselineArms(s.population.arm1_female, s.population.arm2_female)}</td>
         <td>${robBadge}</td>
         <td><button class="btn-preset" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;" onclick="event.stopPropagation(); openStudyDrawer('${s.id}')">Details</button></td>
       </tr>
     `;
-  }).join('') || '<tr><td colspan="9">No studies match the current filters.</td></tr>';
+  }).join('') || '<tr><td colspan="11">No studies match the current filters.</td></tr>';
 
   const ctxEl = document.getElementById('explorer-rob-context');
   if (ctxEl) {
@@ -2586,33 +2781,83 @@ function openStudyDrawer(id) {
 
     ${inqHtml}
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-      <div style="background: var(--bg-panel); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-        <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: var(--text-muted); margin-bottom: 0.75rem;">Acupoint Intervention (STRICTA)</h4>
-        <div style="font-size: 0.82rem; line-height: 1.6;">
-          <p><strong>Acupoints:</strong> ${s.stricta.acupoints}</p>
-          <p><strong>Frequency:</strong> ${s.stricta.frequency_raw}</p>
-          <p><strong>Intensity:</strong> ${s.stricta.intensity}</p>
-          <p><strong>Timing:</strong> ${s.stricta.timing_raw}</p>
-          <p><strong>Duration:</strong> ${s.stricta.duration_raw || "Not recorded"}</p>
-          <p><strong>Stimulator/Electrode:</strong> ${s.stricta.needle_depth}</p>
-        </div>
-      </div>
+    ${(() => {
+      const ch = (window.STUDY_CHARACTERISTICS || {})[s.key] || {};
+      const pop = s.population;
+      const row = (label, value) => `<tr><th>${label}</th><td>${value}</td></tr>`;
+      // Arm-level values stay arm-level. Collapsing intervention and comparator
+      // into one study-wide figure would destroy exactly the descriptive
+      // transparency this panel exists to provide.
+      const armRow = (label, a, b) =>
+        `<tr><th>${label}</th><td>${baselineValue(a)}</td><td>${baselineValue(b)}</td></tr>`;
+      const contributed = Object.entries(s.outcomes || {})
+        .filter(([, v]) => v && (Number.isFinite(v.mean_diff) || Number.isFinite(v.rr)))
+        .map(([k]) => ROB_OUTCOME_LABELS[k] || k);
+      return `
+      <div class="sd-grid">
+        <section class="sd-card">
+          <h4>A · Trial</h4>
+          <table class="sd-table">
+            ${row('Country', s.country ? pwEsc(s.country) : baselineValue(null))}
+            ${row('Year', s.year)}
+            ${row('Surgery', `${pwEsc(s.surgery_category)}<br><span class="sd-sub">${pwEsc(s.surgery_procedure || '')}</span>`)}
+            ${row('Anaesthesia', ch.anesthesia ? pwEsc(ch.anesthesia) : baselineValue(null))}
+            ${row('Randomised N', pop.randomized_total_n
+                ? `${pop.randomized_total_n} (${pop.randomized_arm1_n} / ${pop.randomized_arm2_n})`
+                : baselineValue(null))}
+            ${row('Analysed N', `<strong>${pop.total_n}</strong> (${pop.arm1_n} / ${pop.arm2_n})<br><span class="sd-sub">denominators used in synthesis</span>`)}
+            ${row('Arms compared', `${pwEsc(pop.arm1_name)} vs ${pwEsc(pop.arm2_name)}<br><span class="sd-sub">Arm count is not separately recorded; multi-arm trials contribute the pairwise contrast named here.</span>`)}
+          </table>
+        </section>
 
-      <div style="background: var(--bg-panel); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-        <h4 style="font-size: 0.82rem; text-transform: uppercase; font-weight: 800; color: var(--text-muted); margin-bottom: 0.75rem;">Surgical &amp; Population Baseline</h4>
-        <div style="font-size: 0.82rem; line-height: 1.6;">
-          <p><strong>Surgical Category:</strong> ${s.surgery_category}</p>
-          <p><strong>Procedure:</strong> ${s.surgery_procedure}</p>
-          <p><strong>Analysed sample:</strong> ${s.population.total_n} (${s.population.arm1_n} ${s.modality} vs ${s.population.arm2_n} ${s.comparator_short})</p>
-          ${s.population.randomized_total_n && s.population.randomized_total_n !== s.population.total_n
-            ? `<p><strong>Randomised:</strong> ${s.population.randomized_total_n} (${s.population.randomized_arm1_n} vs ${s.population.randomized_arm2_n}) &mdash; <span style="color: var(--text-muted);">post-randomisation losses are reflected in the analysed denominators used for synthesis</span></p>` : ''}
-          <p><strong>Mean Age:</strong> ${s.population.arm1_age} vs ${s.population.arm2_age}</p>
-          <p><strong>Female %:</strong> ${s.population.arm1_female} vs ${s.population.arm2_female}</p>
-          <p><strong>ASA Status:</strong> ${s.population.asa_status}</p>
-        </div>
-      </div>
-    </div>
+        <section class="sd-card">
+          <h4>B · Participants</h4>
+          <table class="sd-table sd-arms">
+            <thead><tr><th></th><th>${pwEsc(pop.arm1_name)}</th><th>${pwEsc(pop.arm2_name)}</th></tr></thead>
+            <tbody>
+              <tr><th>N analysed</th><td>${pop.arm1_n}</td><td>${pop.arm2_n}</td></tr>
+              ${armRow('Age, mean ± SD', pop.arm1_age, pop.arm2_age)}
+              ${armRow('Female, n (%)', pop.arm1_female, pop.arm2_female)}
+              ${armRow('BMI, mean ± SD', pop.arm1_bmi, pop.arm2_bmi)}
+            </tbody>
+          </table>
+          <table class="sd-table" style="margin-top:0.5rem;">
+            ${row('ASA status', baselineValue(pop.asa_status))}
+            ${row('Baseline pain', `${baselineValue(null)} <span class="sd-sub">not captured as a structured baseline field in this register</span>`)}
+            ${row('Baseline opioid exposure', `${baselineValue(null)} <span class="sd-sub">not captured as a structured baseline field in this register</span>`)}
+          </table>
+          <p class="sd-note">Descriptive only. Baseline balance is <strong>not</strong> tested and is not evidence about randomisation quality — RoB 2 Domain 1 below is the formal assessment.</p>
+        </section>
+
+        <section class="sd-card">
+          <h4>C · Intervention / STRICTA</h4>
+          <table class="sd-table">
+            ${row('Modality', pwEsc(s.modality))}
+            ${row('Comparator', `${pwEsc(s.comparator_type)}<br><span class="sd-sub">${pwEsc(s.comparator_short)}</span>`)}
+            ${row('Acupoints', pwEsc(s.stricta.acupoints))}
+            ${row('Frequency', pwEsc(s.stricta.frequency_raw))}
+            ${row('Intensity', pwEsc(s.stricta.intensity))}
+            ${row('Pulse width', `${baselineValue(null)} <span class="sd-sub">not a structured STRICTA field in this register</span>`)}
+            ${row('Session duration', pwEsc(s.stricta.duration_raw || '') || baselineValue(null))}
+            ${row('Number of sessions', pwEsc(s.stricta.sessions_category))}
+            ${row('Timing vs surgery', pwEsc(s.stricta.timing_raw))}
+            ${row('Device / electrode', pwEsc(s.stricta.needle_depth))}
+            ${row('Sham procedure', `${pwEsc(s.comparator_type)}<br><span class="sd-sub">see the comparator definitions on the Methods tab</span>`)}
+          </table>
+        </section>
+
+        <section class="sd-card">
+          <h4>D · Evidence</h4>
+          <table class="sd-table">
+            ${row('Outcomes contributed', contributed.length
+                ? contributed.map(c => `<span class="sd-chip">${pwEsc(c)}</span>`).join(' ')
+                : '<span class="sd-sub">No arm-level outcome record in the interactive dataset</span>')}
+            ${row('Synthesis stratum', pwEsc(s.stratum || '') || baselineValue(null))}
+          </table>
+          <p class="sd-note">Result-specific RoB 2 judgments and the full endpoint audit are shown below; they are reused, not recomputed here.</p>
+        </section>
+      </div>`;
+    })()}
 
     <div style="background: var(--bg-panel); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">

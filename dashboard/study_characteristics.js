@@ -5,7 +5,10 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Elective total abdominal hysterectomy or myomectomy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/chen_1998_covidence_969_full_data_extraction.md",
     "source_line": 88,
-    "source_excerpt": "| Surgical procedures | **Elective total abdominal hysterectomy or myomectomy** |"
+    "source_excerpt": "| Surgical procedures | **Elective total abdominal hysterectomy or myomectomy** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/chen_1998_covidence_969_full_data_extraction.md",
+    "anesthesia_source_line": 125
   },
   "Lin 2002": {
     "surgery_category": "Gynecologic & Breast",
@@ -33,7 +36,10 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Elective abdominal hysterectomy or laparoscopic cholecystectomy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/el_rakshy_2009_covidence_868_full_data_extraction.md",
     "source_line": 121,
-    "source_excerpt": "| Surgeries | **Elective abdominal hysterectomy or laparoscopic cholecystectomy** |"
+    "source_excerpt": "| Surgeries | **Elective abdominal hysterectomy or laparoscopic cholecystectomy** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/el_rakshy_2009_covidence_868_full_data_extraction.md",
+    "anesthesia_source_line": 165
   },
   "Yeh 2010": {
     "surgery_category": "Orthopedic & Spine",
@@ -47,14 +53,20 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Adults undergoing elective conventional cardiac surgery",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/coura_2011_covidence_819_full_data_extraction.md",
     "source_line": 98,
-    "source_excerpt": "| Population | Adults undergoing **elective conventional cardiac surgery** |"
+    "source_excerpt": "| Population | Adults undergoing **elective conventional cardiac surgery** |",
+    "anesthesia": "General anesthesia implied by conventional cardiac surgery, but the anesthetic procedure was not standardized",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/coura_2011_covidence_819_full_data_extraction.md",
+    "anesthesia_source_line": 147
   },
   "Lee 2011": {
     "surgery_category": "Gynecologic & Breast",
     "surgery_procedure": "Women undergoing hysterectomy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/lee_2011_covidence_49_full_data_extraction.md",
     "source_line": 94,
-    "source_excerpt": "| Population | Women undergoing **hysterectomy** |"
+    "source_excerpt": "| Population | Women undergoing **hysterectomy** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/lee_2011_covidence_49_full_data_extraction.md",
+    "anesthesia_source_line": 96
   },
   "Yeh 2011": {
     "surgery_category": "Orthopedic & Spine",
@@ -68,21 +80,30 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Adults undergoing elective laparoscopic resection of colonic or upper rectal cancer",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/ng_2013_covidence_1970_full_data_extraction.md",
     "source_line": 99,
-    "source_excerpt": "| Population | Adults undergoing **elective laparoscopic resection of colonic or upper rectal cancer** |"
+    "source_excerpt": "| Population | Adults undergoing **elective laparoscopic resection of colonic or upper rectal cancer** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/ng_2013_covidence_1970_full_data_extraction.md",
+    "anesthesia_source_line": 146
   },
   "An 2014": {
     "surgery_category": "Neurosurgery",
     "surgery_procedure": "Adults undergoing supratentorial tumor resection / supratentorial craniotomy under general anesthesia",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/covidence_study_698_full_data_extraction.md",
     "source_line": 67,
-    "source_excerpt": "| Population | Adults undergoing **supratentorial tumor resection / supratentorial craniotomy** under general anesthesia |"
+    "source_excerpt": "| Population | Adults undergoing **supratentorial tumor resection / supratentorial craniotomy** under general anesthesia |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/covidence_study_698_full_data_extraction.md",
+    "anesthesia_source_line": 115
   },
   "Ntritsou 2014": {
     "surgery_category": "Urologic",
     "surgery_procedure": "Men undergoing radical retropubic prostatectomy for prostate malignancy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/ntritsou_2014_covidence_729_full_data_extraction.md",
     "source_line": 104,
-    "source_excerpt": "| Population | Men undergoing **radical retropubic prostatectomy for prostate malignancy** |"
+    "source_excerpt": "| Population | Men undergoing **radical retropubic prostatectomy for prostate malignancy** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/ntritsou_2014_covidence_729_full_data_extraction.md",
+    "anesthesia_source_line": 154
   },
   "Xie 2014": {
     "surgery_category": "Thoracic & Cardiac",
@@ -124,21 +145,30 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Thyroid or parathyroid surgery",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/grech_2016_full_data_extraction.md",
     "source_line": 51,
-    "source_excerpt": "| Surgery | Thyroid or parathyroid surgery |"
+    "source_excerpt": "| Surgery | Thyroid or parathyroid surgery |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/grech_2016_full_data_extraction.md",
+    "anesthesia_source_line": 375
   },
   "Seevaunnamtum 2016": {
     "surgery_category": "Gynecologic & Breast",
     "surgery_procedure": "Total abdominal hysterectomy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/seevaunnamtum_2016_covidence_596_full_data_extraction.md",
     "source_line": 135,
-    "source_excerpt": "| Surgery | **Total abdominal hysterectomy** |"
+    "source_excerpt": "| Surgery | **Total abdominal hysterectomy** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/seevaunnamtum_2016_covidence_596_full_data_extraction.md",
+    "anesthesia_source_line": 136
   },
   "Huang 2017": {
     "surgery_category": "Thoracic & Cardiac",
     "surgery_procedure": "VATS lobectomy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/huang_2017_covidence_666_full_data_extraction.md",
     "source_line": 126,
-    "source_excerpt": "| Surgery | **VATS lobectomy** |"
+    "source_excerpt": "| Surgery | **VATS lobectomy** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/huang_2017_covidence_666_full_data_extraction.md",
+    "anesthesia_source_line": 128
   },
   "Sun 2017": {
     "surgery_category": "Mixed specialties",
@@ -152,14 +182,20 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Laparoscopic radical gastrectomy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/gu_2019_covidence_1471_full_data_extraction.md",
     "source_line": 101,
-    "source_excerpt": "| Surgery | **Laparoscopic radical gastrectomy** |"
+    "source_excerpt": "| Surgery | **Laparoscopic radical gastrectomy** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/gu_2019_covidence_1471_full_data_extraction.md",
+    "anesthesia_source_line": 490
   },
   "Chen 2020": {
     "surgery_category": "Thoracic & Cardiac",
     "surgery_procedure": "Video-assisted thoracoscopic surgery (VATS) pulmonary resection",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/chen_2020_full_data_extraction.md",
     "source_line": 103,
-    "source_excerpt": "| Surgery | **Video-assisted thoracoscopic surgery (VATS) pulmonary resection** |"
+    "source_excerpt": "| Surgery | **Video-assisted thoracoscopic surgery (VATS) pulmonary resection** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/chen_2020_full_data_extraction.md",
+    "anesthesia_source_line": 145
   },
   "Yang 2020": {
     "surgery_category": "Thoracic & Cardiac",
@@ -187,28 +223,40 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Elective radical mastectomy for breast cancer",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/ao_2021_full_data_extraction.md",
     "source_line": 148,
-    "source_excerpt": "| Surgery | **Elective radical mastectomy for breast cancer** |"
+    "source_excerpt": "| Surgery | **Elective radical mastectomy for breast cancer** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/ao_2021_full_data_extraction.md",
+    "anesthesia_source_line": 149
   },
   "Gao 2021": {
     "surgery_category": "Abdominal & Gastrointestinal",
     "surgery_procedure": "Patients undergoing colorectal cancer surgery",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/gao_2021_covidence_400_full_data_extraction.md",
     "source_line": 107,
-    "source_excerpt": "| Population | Patients undergoing **colorectal cancer surgery** |"
+    "source_excerpt": "| Population | Patients undergoing **colorectal cancer surgery** |",
+    "anesthesia": "General anesthesia required",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/gao_2021_covidence_400_full_data_extraction.md",
+    "anesthesia_source_line": 108
   },
   "Li 2021": {
     "surgery_category": "Abdominal & Gastrointestinal",
     "surgery_procedure": "Adults undergoing laparoscopic gastric, colon, or rectal tumor resection",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/li_2021_covidence_437_full_data_extraction.md",
     "source_line": 123,
-    "source_excerpt": "| Population | Adults undergoing **laparoscopic gastric, colon, or rectal tumor resection** |"
+    "source_excerpt": "| Population | Adults undergoing **laparoscopic gastric, colon, or rectal tumor resection** |",
+    "anesthesia": "Same between groups, determined by chief anesthesiologist",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/li_2021_covidence_437_full_data_extraction.md",
+    "anesthesia_source_line": 240
   },
   "Liang 2021": {
     "surgery_category": "Urologic",
     "surgery_procedure": "Transurethral resection of the prostate (TURP)",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/liang_2021_covidence_14_full_data_extraction.md",
     "source_line": 130,
-    "source_excerpt": "| Procedure | **Transurethral resection of the prostate (TURP)** |"
+    "source_excerpt": "| Procedure | **Transurethral resection of the prostate (TURP)** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/liang_2021_covidence_14_full_data_extraction.md",
+    "anesthesia_source_line": 131
   },
   "Liu 2021": {
     "surgery_category": "Abdominal & Gastrointestinal",
@@ -222,7 +270,10 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Elective radical mastectomy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/lu_2021_covidence_414_full_data_extraction.md",
     "source_line": 126,
-    "source_excerpt": "| Surgery | **Elective radical mastectomy** |"
+    "source_excerpt": "| Surgery | **Elective radical mastectomy** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/lu_2021_covidence_414_full_data_extraction.md",
+    "anesthesia_source_line": 128
   },
   "Xiong 2021": {
     "surgery_category": "Abdominal & Gastrointestinal",
@@ -236,7 +287,10 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Patients undergoing radical gastrectomy for gastric cancer",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/zhou_2021_gastric_cancer_teas_full_data_extraction.md",
     "source_line": 112,
-    "source_excerpt": "| Population | Patients undergoing radical gastrectomy for gastric cancer |"
+    "source_excerpt": "| Population | Patients undergoing radical gastrectomy for gastric cancer |",
+    "anesthesia": "Epidural-assisted general anesthesia required by eligibility criteria",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/zhou_2021_gastric_cancer_teas_full_data_extraction.md",
+    "anesthesia_source_line": 187
   },
   "Li 2022": {
     "surgery_category": "Head, Neck & ENT",
@@ -278,14 +332,20 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Older adults undergoing thoracoscopic pulmonary resection for suspected lung cancer",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/guo_2023_full_data_extraction.md",
     "source_line": 126,
-    "source_excerpt": "| Population | Older adults undergoing **thoracoscopic pulmonary resection for suspected lung cancer** |"
+    "source_excerpt": "| Population | Older adults undergoing **thoracoscopic pulmonary resection for suspected lung cancer** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/guo_2023_full_data_extraction.md",
+    "anesthesia_source_line": 193
   },
   "Hou 2023": {
     "surgery_category": "Urologic",
     "surgery_procedure": "Living kidney donors (LKDs) undergoing nephrectomy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/hou_2023_covidence_7_full_data_extraction.md",
     "source_line": 106,
-    "source_excerpt": "| Population | **Living kidney donors (LKDs)** undergoing nephrectomy |"
+    "source_excerpt": "| Population | **Living kidney donors (LKDs)** undergoing nephrectomy |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/hou_2023_covidence_7_full_data_extraction.md",
+    "anesthesia_source_line": 158
   },
   "Jin 2023": {
     "surgery_category": "Gynecologic & Breast",
@@ -320,7 +380,10 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Unilateral TKA",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/huang_2024_covidence_245_full_data_extraction.md",
     "source_line": 104,
-    "source_excerpt": "| Surgery | **Unilateral TKA** |"
+    "source_excerpt": "| Surgery | **Unilateral TKA** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/huang_2024_covidence_245_full_data_extraction.md",
+    "anesthesia_source_line": 108
   },
   "Tu 2024": {
     "surgery_category": "Neurosurgery",
@@ -348,7 +411,10 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Laparoscopic hysterectomy with or without salpingo-oophorectomy or salpingectomy",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/huang_2025_covidence_131_full_data_extraction.md",
     "source_line": 127,
-    "source_excerpt": "| Surgery | **Laparoscopic hysterectomy with or without salpingo-oophorectomy or salpingectomy** |"
+    "source_excerpt": "| Surgery | **Laparoscopic hysterectomy with or without salpingo-oophorectomy or salpingectomy** |",
+    "anesthesia": "General anesthesia required",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/huang_2025_covidence_131_full_data_extraction.md",
+    "anesthesia_source_line": 128
   },
   "Liu 2025": {
     "surgery_category": "Thoracic & Cardiac",
@@ -362,7 +428,10 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Surgical repair of hip fracture",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/long_2025_hip_fracture_teas_full_data_extraction.md",
     "source_line": 150,
-    "source_excerpt": "| Surgery | Surgical repair of hip fracture |"
+    "source_excerpt": "| Surgery | Surgical repair of hip fracture |",
+    "anesthesia": "General endotracheal anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/long_2025_hip_fracture_teas_full_data_extraction.md",
+    "anesthesia_source_line": 151
   },
   "Wu 2025": {
     "surgery_category": "Thoracic & Cardiac",
@@ -397,21 +466,30 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Adults undergoing elective breast cancer surgery",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/he_2026_covidence_41_full_data_extraction.md",
     "source_line": 83,
-    "source_excerpt": "| Population | Adults undergoing **elective breast cancer surgery** |"
+    "source_excerpt": "| Population | Adults undergoing **elective breast cancer surgery** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/he_2026_covidence_41_full_data_extraction.md",
+    "anesthesia_source_line": 393
   },
   "He 2026 (hepatectomy/JIS)": {
     "surgery_category": "Abdominal & Gastrointestinal",
     "surgery_procedure": "Adults scheduled for elective hepatectomy under general anesthesia",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/he_2026_covidence_25_full_data_extraction_REVISED_with_supplements.md",
     "source_line": 114,
-    "source_excerpt": "| Population | Adults scheduled for **elective hepatectomy under general anesthesia** |"
+    "source_excerpt": "| Population | Adults scheduled for **elective hepatectomy under general anesthesia** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/he_2026_covidence_25_full_data_extraction_REVISED_with_supplements.md",
+    "anesthesia_source_line": 181
   },
   "Jiang 2026": {
     "surgery_category": "Mixed or unspecified surgery",
     "surgery_procedure": "Elective laparoscopic non-gastrointestinal surgery",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/jiang_2026_covidence_4_full_data_extraction.md",
     "source_line": 127,
-    "source_excerpt": "| Surgery | Elective **laparoscopic non-gastrointestinal surgery** |"
+    "source_excerpt": "| Surgery | Elective **laparoscopic non-gastrointestinal surgery** |",
+    "anesthesia": "General anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/jiang_2026_covidence_4_full_data_extraction.md",
+    "anesthesia_source_line": 128
   },
   "Liu 2026 (burn)": {
     "surgery_category": "Burn & Reconstructive",
@@ -439,7 +517,10 @@ window.STUDY_CHARACTERISTICS = {
     "surgery_procedure": "Patients with histologically confirmed breast cancer undergoing elective surgery",
     "source_file": "TEAS EA Verification/ChatGPT Sol Extraction/ma_2026_breast_cancer_sleep_teas_full_data_extraction.md",
     "source_line": 144,
-    "source_excerpt": "| Population | Patients with histologically confirmed **breast cancer** undergoing elective surgery |"
+    "source_excerpt": "| Population | Patients with histologically confirmed **breast cancer** undergoing elective surgery |",
+    "anesthesia": "Standardized general anesthesia",
+    "anesthesia_source_file": "TEAS EA Verification/ChatGPT Sol Extraction/ma_2026_breast_cancer_sleep_teas_full_data_extraction.md",
+    "anesthesia_source_line": 231
   },
   "Szmit 2021": {
     "surgery_category": "Abdominal & Gastrointestinal",

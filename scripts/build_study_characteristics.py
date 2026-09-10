@@ -64,7 +64,29 @@ def build():
             # "Abdominal hysterectomy" is gynecologic, not a mixed cohort.
             if 'Gynecologic & Breast' in categories and 'Abdominal & Gastrointestinal' in categories and not re.search(r'cholecystectomy|gastrectomy|colorectal',text):categories.remove('Abdominal & Gastrointestinal')
             category=categories[0] if len(categories)==1 else 'Mixed specialties' if len(categories)>1 else 'Other General Surgery'
-        records[name]=dict(surgery_category=category,surgery_procedure=procedure,source_file=source,source_line=line,source_excerpt=excerpt)
+        record=dict(surgery_category=category,surgery_procedure=procedure,source_file=source,source_line=line,source_excerpt=excerpt)
+
+        # Anaesthesia technique, read from the same preserved extraction table the
+        # surgical population comes from. Descriptive only -- it is not a Stata
+        # covariate and is not used by any analysis. Taken ONLY from an explicitly
+        # labelled row; a study whose extraction record has no such row is reported
+        # as not recorded rather than inferred from the procedure or the citation.
+        if files:
+            for i,line_text in enumerate(path.read_text().splitlines(),1):
+                cells=[c.strip() for c in line_text.split('|')]
+                # Only unambiguous TYPE labels. Deliberately excludes
+                # "anesthesia duration/time" (a duration), "* blinding" (RoB 2),
+                # and bare "general anesthesia"/"regional anesthesia" rows, whose
+                # cell holds an eligibility yes/no rather than the technique used.
+                if len(cells)>3 and cells[1].lower() in (
+                        'anesthesia','anaesthesia','anesthesia type','anaesthesia type',
+                        'type of anesthesia','type of anaesthesia',
+                        'anesthesia protocol','anaesthesia protocol'):
+                    value=cells[2].replace('**','').replace('*','').strip()
+                    if value and value.upper() not in ('NR','N/A','NA','-'):
+                        record.update(anesthesia=value,anesthesia_source_file=source,anesthesia_source_line=i)
+                    break
+        records[name]=record
     return records
 
 if __name__=='__main__':

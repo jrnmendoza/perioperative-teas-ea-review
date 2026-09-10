@@ -2495,3 +2495,106 @@ pre code { overflow-wrap: normal; word-break: normal; }
   color: var(--text-muted) !important;
   font-size: 0.78rem !important;
 }
+
+/* ── Baseline / participant characteristics (Study Explorer) ─────────────────
+   Added 2026-09-10. Descriptive presentation only. */
+
+/* "Not reported" must never be mistaken for a zero or an empty cell. */
+.nr-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+  border-radius: 3px;
+  padding: 0.05rem 0.32rem;
+  cursor: help;
+}
+
+/* Arm-level pairs stay visibly two values, never one merged figure. */
+.arm-pair { display: flex; flex-direction: column; gap: 0.1rem; line-height: 1.35; }
+.arm-pair > span:last-child { color: var(--text-secondary); }
+
+/* Population summary */
+.pop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.75rem;
+}
+.pop-grid > div {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+.pop-label {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.pop-value { font-size: 1.3rem; font-weight: 800; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+.pop-sub { font-size: 0.72rem; color: var(--text-secondary); line-height: 1.45; }
+
+.pop-complete {
+  margin-top: 0.9rem; padding-top: 0.8rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.78rem;
+}
+.pop-bars { display: flex; flex-direction: column; gap: 0.3rem; margin-top: 0.5rem; }
+.pop-bar-row { display: grid; grid-template-columns: 2.6rem 1fr auto; gap: 0.6rem; align-items: center; }
+.pop-bar-label { font-size: 0.74rem; color: var(--text-secondary); }
+.pop-bar-track { height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.07); overflow: hidden; }
+.pop-bar-track i { display: block; height: 100%; background: #818cf8; border-radius: 3px; }
+.pop-bar-num { font-size: 0.72rem; font-variant-numeric: tabular-nums; color: var(--text-primary); white-space: nowrap; }
+.pop-foot { margin-top: 0.6rem; font-size: 0.72rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Study details panel — four sections */
+.sd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.sd-card {
+  background: var(--bg-panel);
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  min-width: 0;
+}
+.sd-card h4 {
+  font-size: 0.78rem; text-transform: uppercase; font-weight: 800;
+  color: var(--text-muted); margin: 0 0 0.6rem; letter-spacing: 0.05em;
+}
+.sd-table { width: 100%; border-collapse: collapse; font-size: 0.79rem; line-height: 1.5; }
+.sd-table th, .sd-table td {
+  text-align: left; vertical-align: top;
+  padding: 0.28rem 0.4rem 0.28rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.sd-table tr:last-child th, .sd-table tr:last-child td { border-bottom: none; }
+.sd-table th { color: var(--text-muted); font-weight: 600; white-space: nowrap; width: 8.5rem; }
+.sd-table td { color: var(--text-primary); }
+.sd-arms thead th { color: var(--text-secondary); font-weight: 700; width: auto; white-space: normal; }
+.sd-arms th:first-child { width: 8rem; }
+.sd-sub { font-size: 0.72rem; color: var(--text-muted); }
+.sd-note { font-size: 0.72rem; color: var(--text-muted); line-height: 1.5; margin: 0.6rem 0 0; }
+.sd-chip {
+  display: inline-block; font-size: 0.68rem; padding: 0.1rem 0.4rem;
+  border-radius: 3px; background: rgba(99, 102, 241, 0.15); color: #a5b4fc; margin: 0.1rem 0.15rem 0.1rem 0;
+}
+
+@media (max-width: 640px) {
+  .sd-grid { grid-template-columns: 1fr; }
+  .sd-table th { width: 7rem; }
+}
+
+/* The Study Explorer carries 11 columns. Without a floor it collapses to the
+   viewport width on a phone and every cell becomes unreadable; with one, the
+   existing overflow-x wrapper scrolls it instead. */
+.explorer-table { min-width: 1040px; }
