@@ -2890,6 +2890,102 @@ def t_post_lock_errata_still_applied():
           not probs, "\n".join(probs))
 
 
+def t_target_af_sof_rows_match_v26_source():
+    """
+    The Target A-F rows of STATA_MASTER_RESULTS (app.js) -- the object that
+    actually feeds the GRADE Summary of Findings table -- must still match
+    the v26 results CSV they were transcribed from.
+
+    This is the specific gap the brief's Phase 13 ("single source of truth
+    for dashboard statistics") names: STATA_MASTER_RESULTS is a single JS
+    object (not scattered across the file), but its k/estimate/CI/p values
+    are hand-authored text (mdText, pVal) rather than generated from the CSV
+    at build time, same as MODEL_META's labels. A full migration to
+    generated templating was assessed and not attempted this pass -- the
+    downgrade/controlRisk fields are substantially reviewer-authored analysis
+    prose, not values a script can derive, so "fully templated" would still
+    need a human-maintained reasoning layer alongside it (exactly what
+    build_interpretation_layer.py's LEGACY_ANALYSES already is for these same
+    nine analyses, for the interpretation layer specifically) -- and this
+    session found two real bugs THIS SAME EDITING SESSION from exactly the
+    duplicate-source-of-truth pattern a rewrite here would still carry
+    (translations.js vs app.js; index.html's static fallback vs
+    renderKPIs()). A cross-check guard is the bounded, lower-risk
+    alternative: it cannot let the two drift apart unnoticed, without
+    introducing a new generation pathway this late that could itself
+    introduce a third instance of that same bug class.
+
+    Reuses LEGACY_ANALYSES from build_interpretation_layer.py for the
+    AN-id -> csv_id mapping rather than restating it a second time.
+    """
+    sys.path.insert(0, str(ROOT / "09_V34_ANALYSIS" / "05_INTERPRETATION"))
+    from build_interpretation_layer import LEGACY_ANALYSES  # noqa: E402
+
+    v26 = {r["analysis_id"]: r for r in read_csv(
+        ROOT / "06_FINAL_ANALYSIS_V26" / "03_RESULTS" / "master_reconciled_results_v26.csv")}
+    app = (DASH / "app.js").read_text(encoding="utf-8")
+
+    probs = []
+    for aid, meta in LEGACY_ANALYSES.items():
+        if aid == "AN-01-SMD":
+            continue  # not a Target A-F row in the SoF table; different section.
+        row = v26.get(meta["csv_id"])
+        if not row:
+            probs.append(f"{aid}: {meta['csv_id']} not found in master_reconciled_results_v26.csv")
+            continue
+        # The last entry in the object has no following "AN-..." key to anchor
+        # on, so the closing brace is matched against either boundary.
+        m = re.search(rf'"{re.escape(aid)}":\s*\{{(.*?)\n  \}},?\n(?:  "|\}})', app, re.S)
+        if not m:
+            probs.append(f"{aid}: entry not found in STATA_MASTER_RESULTS")
+            continue
+        block = m.group(1)
+
+        def field(name):
+            # Two bugs found by mutation-testing this check, not by reading
+            # it. (1) mdText's value contains an internal comma ("[lo, hi]"),
+            # so matching must run to the closing quote, not the first comma,
+            # or it silently truncates to 2 numbers and the len(nums) >= 3
+            # guard below skips the comparison with no error. (2) "k:" as a
+            # bare pattern also matches inside "controlRisk:" -- re.search
+            # isn't anchored to a standalone property name -- so it must
+            # require the property name to start right after the line's
+            # leading whitespace, not merely appear as a substring anywhere.
+            fm = re.search(rf'\n\s+{name}:\s*"([^"]*)"', block)
+            if fm:
+                return fm.group(1).strip()
+            fm = re.search(rf'\n\s+{name}:\s*([^",\n]+),', block)  # unquoted (k, n)
+            return fm.group(1).strip() if fm else None
+
+        k_disp = field("k")
+        if k_disp is not None and int(float(k_disp)) != int(float(row["k"])):
+            probs.append(f"{aid}: displayed k={k_disp}, source k={row['k']}")
+
+        md_text = field("mdText")
+        nums = re.findall(r"[−-]?\d[\d.]*", md_text or "")
+        if len(nums) >= 3:
+            def to_f(s):
+                return -float(s[1:]) if s.startswith("−") else float(s)
+            disp_est, disp_lo, disp_hi = (to_f(n) for n in nums[:3])
+            for disp, src, label in ((disp_est, float(row["estimate"]), "estimate"),
+                                     (disp_lo, float(row["ci_low"]), "ci_low"),
+                                     (disp_hi, float(row["ci_high"]), "ci_high")):
+                if abs(disp - src) > 0.02:
+                    probs.append(f"{aid}.{label}: displayed {disp}, source {src:.4f}")
+
+        p_disp = field("pVal")
+        pm = re.search(r"([\d.]+)", p_disp or "")
+        if pm and row.get("p_value"):
+            try:
+                if abs(float(pm.group(1)) - float(row["p_value"])) > 0.005:
+                    probs.append(f"{aid}.p_value: displayed {pm.group(1)}, source {row['p_value']}")
+            except ValueError:
+                pass
+
+    check("Target A-F Summary of Findings rows match the v26 results CSV",
+          not probs, "\n".join(probs))
+
+
 def t_forest_context_matches_stata_log():
     """
     The per-study forest-plot context table must still match the Stata log it
@@ -3093,7 +3189,8 @@ def main() -> int:
                                 t_prior_evidence_dispositions_match_the_analysis]),
         ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
         ("static/dynamic content sync", [t_static_kpi_fallback_matches_rendered_content,
-                                        t_forest_context_matches_stata_log]),
+                                        t_forest_context_matches_stata_log,
+                                        t_target_af_sof_rows_match_v26_source]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
           t_interpretation_bound_to_current_evidence,
