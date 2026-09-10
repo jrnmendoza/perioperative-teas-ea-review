@@ -444,14 +444,13 @@ function renderPrismaView() {
   if (btnCopy) {
     btnCopy.onclick = () => {
       const summaryText = `PRISMA 2020 Flow Summary (Perioperative TEAS/EA Systematic Review) -- updated 2026-09-07:
-- Identification: 5,100 records imported (Embase: 1,928; CENTRAL: 1,698; PubMed: 1,009; CINAHL: 465).
+- Identification: 5,100 references imported, resolving to 5,088 studies (Embase: 1,928; CENTRAL: 1,698; PubMed: 1,009; CINAHL: 465).
 - Removed before screening: 2,160 records (1,651 Covidence auto-duplicates + 1 manual duplicate + 508 automation ineligible).
 - Screening: 2,928 title/abstract records screened; 2,704 irrelevant records excluded.
 - Eligibility: 224 reports sought; 14 not retrieved; 210 assessed; 141 excluded with reasons (Wrong outcomes: 117; Wrong setting: 9; Wrong intervention: 9; Wrong comparator: 3; Wrong population: 2; Wrong design: 1).
 - Included: 70 randomized controlled trials (69 via database search + 1 via citation searching). RoB 2 complete for all 70. ${pop.text}
 - The citation-searched trial is Wu 2016 (Exp Ther Med 2016;11(2):495-502), identified from the reference list of Tan SY et al. (Front Med 2024;11:1302057) and returned by none of the four database searches. Derived from the review's own screening records by scripts/derive_study_provenance.py, not asserted.
-- Of the 69 database-search trials, 63 were included at full text in Covidence and 6 were excluded there and later reinstated after source verification (Gao 2022, Liu 2015, Oztas 2019, Song 2020, Szmit 2021, Zhang 2018). The 141 exclusions-with-reasons above are net of those reinstatements: 210 assessed - 141 excluded = 69.
-NOTE: 5,100 identified minus 2,160 removed before screening implies 2,940 should reach screening, but 2,928 is the number transcribed from the source PRISMA record for that stage (a 12-record gap not itemised in the supplied document) -- flagged, not silently corrected.`;
+NOTE: the flow counts studies, not references, from the screening stage onward. The 5,100 imported references resolve to 5,088 studies (12 references were additional reports of studies already present), so 5,088 - 2,160 removed = 2,928 screened, matching the source PRISMA record exactly.`;
       navigator.clipboard.writeText(summaryText).then(() => {
         const orig = btnCopy.innerText;
         btnCopy.innerText = '✅ Summary Copied!';

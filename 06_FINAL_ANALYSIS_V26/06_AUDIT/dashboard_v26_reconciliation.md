@@ -996,6 +996,40 @@ updated to match. The `## 25.6` callout explaining why the Study Explorer
 (70) and PRISMA (63) diverged is now **resolved and replaced**: the note now
 documents the update and its source rather than explaining a gap.
 
+### 26.2b The 12-record screening gap — resolved 2026-09-10
+
+The flow was carrying a flagged, unreconciled discrepancy: 5,100 identified
+minus 2,160 removed before screening implies 2,940 reaching screening, against
+a transcribed 2,928. It was recorded as "a 12-record gap not itemised in the
+supplied document".
+
+It **is** itemised, in the first line of the identification box:
+
+> References from databases/registers (n = 5100) **(as n = 5088 studies)**
+
+Covidence counts **references** at import and **studies** from screening
+onward. Twelve of the 5,100 references were additional reports of studies
+already present, so the import resolves to 5,088 studies. The screening
+arithmetic runs on studies:
+
+```
+5,088 studies − 2,160 removed = 2,928 screened     ← exact
+5,100 references − 2,160 removed = 2,940           ← mixes units
+```
+
+There was never a missing set of records; subtracting a study-level removal
+count from a reference-level identification count produced a spurious
+shortfall of exactly the reference-to-study collapse.
+
+`dashboard/index.html` had in fact already transcribed "representing 5,088
+unique studies" onto the identification card — directly above the amber
+warning about the unexplained gap. The figure that resolved it was on screen
+the whole time; nothing connected it to the arithmetic below.
+
+Both surfaces now state the study count alongside the reference count and
+explain the unit change. `t_prisma_screening_arithmetic_reconciles` pins the
+identity and rejects the return of the "2,940" / "unreconciled gap" language.
+
 ### 26.3 What the new PRISMA record does NOT resolve
 
 The docx gives study counts only — no patient totals, no modality or

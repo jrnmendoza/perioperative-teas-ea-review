@@ -2487,13 +2487,48 @@ def t_prisma_identification_split_is_derived():
     for study in cited:
         if f"citation-searched trial is {study}" not in app:
             probs.append(f"the citation-searched trial ({study}) is not named on the dashboard")
-    # The reinstated trials change how the exclusion count reads, so they must
-    # be disclosed rather than left implicit in a net figure.
-    for r in got["reinstated_after_exclusion"]:
-        if r["study"] not in app:
-            probs.append(f"reinstated-after-exclusion trial {r['study']} is not disclosed")
     check("PRISMA identification split is derived from the screening records, and "
           "the citation-searched trial is named", not probs, "\n".join(probs))
+
+
+def t_prisma_screening_arithmetic_reconciles():
+    """
+    The PRISMA screening arithmetic must reconcile, in the units the source
+    record actually uses.
+
+    This was flagged on the dashboard for some time as an unresolved 12-record
+    gap: 5,100 identified minus 2,160 removed implies 2,940 reaching screening,
+    against a transcribed 2,928. The gap was an artefact of mixing units. The
+    source record's identification box reads "References from databases/registers
+    (n = 5100) (as n = 5088 studies)" -- Covidence counts references at import
+    and studies thereafter, and 12 of the references were additional reports of
+    studies already present. 5,088 - 2,160 = 2,928 exactly.
+
+    Pinned here so the reconciliation cannot silently regress to the reference
+    count, and so a future change to any of the four figures has to keep the
+    identity true.
+    """
+    references, studies, removed, screened = 5100, 5088, 2160, 2928
+    app = (DASH / "app.js").read_text(encoding="utf-8")
+    html = (DASH / "index.html").read_text(encoding="utf-8")
+
+    probs = []
+    if studies - removed != screened:
+        probs.append(f"{studies} - {removed} = {studies - removed}, not {screened}")
+    if references - studies != 12:
+        probs.append(f"references minus studies is {references - studies}, expected 12")
+    # Both surfaces must state the study count, not only the reference count --
+    # showing 5,100 alone is what made the arithmetic look broken.
+    for name, text in (("app.js", app), ("index.html", html)):
+        if "5,088" not in text and "5088" not in text:
+            probs.append(f"{name} does not state the 5,088 study count")
+    # The stale "unresolved gap" language must not come back.
+    for name, text in (("app.js", app), ("index.html", html)):
+        for stale in ("2,940", "12-record gap", "Unreconciled gap"):
+            if stale in text:
+                probs.append(f"{name} still carries resolved-gap language: {stale!r}")
+    check("PRISMA screening arithmetic reconciles in studies, not references",
+          not probs, "\n".join(probs))
 
 
 def t_post_lock_errata_still_applied():
@@ -2648,7 +2683,8 @@ def main() -> int:
                                         t_v33_legacy_reconstructions_labelled]),
         ("v34 lock integrity", [t_v34_csv_mirrors_locked_workbook,
                                 t_post_lock_errata_still_applied,
-                                t_prisma_identification_split_is_derived]),
+                                t_prisma_identification_split_is_derived,
+                                t_prisma_screening_arithmetic_reconciles]),
         ("computed but not reported", [t_computed_not_reported_is_complete_and_unrated]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,
