@@ -3433,6 +3433,77 @@ def t_archival_workbooks_feed_no_live_code():
           not probs, "\n".join(probs))
 
 
+def t_pdf_extractions_are_provable_from_their_quotes():
+    """
+    STRUCTURAL. dashboard/pdf_extracted.js holds values read straight out of the
+    source PDFs. After the placeholder incident, a number in this register is only
+    worth having if a reader can check it, so every accepted value must carry the
+    PDF, the page and the verbatim sentence -- and the value must actually appear
+    in that sentence.
+
+    This is what stops the extractor from drifting into the failure mode it exists
+    to avoid: a plausible figure with no traceable origin. It also holds the
+    "conflict" path honest, since an unresolved extraction must carry no value.
+    """
+    path = DASH / "pdf_extracted.js"
+    if not path.exists():
+        check("PDF-extracted values are provable from their own quotes", False,
+              "dashboard/pdf_extracted.js is missing; run scripts/extract_baseline_from_pdfs.py")
+        return
+    data = json.loads(path.read_text(encoding="utf-8")
+                      .split("window.PDF_EXTRACTED = ", 1)[1].rsplit(";", 1)[0])
+    pdf_dir = ROOT / "TEAS EA Verification" / "Source PDFs"
+    study_keys = {s["key"] for s in STUDIES}
+    probs = []
+    accepted = 0
+
+    for key, rec in data.items():
+        if key not in study_keys:
+            probs.append(f"{key}: not a study in STUDIES_DATA")
+        src = rec.get("source_pdf")
+        if not src or not (pdf_dir / src).exists():
+            probs.append(f"{key}: source_pdf {src!r} does not exist")
+        for field, f in rec.items():
+            if field == "source_pdf" or not isinstance(f, dict):
+                continue
+            if "conflict" in f:
+                if "value" in f:
+                    probs.append(f"{key}/{field}: carries both a conflict and a value")
+                continue
+            if "value" not in f:
+                continue
+            accepted += 1
+            for required in ("page", "quote"):
+                if not f.get(required):
+                    probs.append(f"{key}/{field}: accepted value has no {required}")
+            quote = str(f.get("quote", "")).lower()
+            # Every token of the value must be visible in its own quote. Pulse
+            # width legitimately carries several ("0.6 ms / 0.2 ms"), so check
+            # each number rather than the joined string. Arm counts are often
+            # written as words ("randomly divided into four groups"), so a digit
+            # is satisfied by its own spelling too.
+            words = {"2": "two", "3": "three", "4": "four", "5": "five"}
+            for token in re.findall(r"\d+(?:\.\d+)?", str(f["value"])):
+                spelled = words.get(token)
+                if token in quote.replace(",", ""):
+                    continue
+                if spelled and spelled in quote:
+                    continue
+                probs.append(f"{key}/{field}: value {f['value']!r} is not present in its "
+                             f"own quote — {quote[:90]!r}")
+                break
+            # A non-numeric value (anaesthesia technique) must still be grounded.
+            if not re.search(r"\d", str(f["value"])):
+                head = str(f["value"]).split()[0].lower()
+                if head and head not in quote:
+                    probs.append(f"{key}/{field}: value {f['value']!r} does not appear in its "
+                                 f"own quote — {quote[:90]!r}")
+
+    check(f"PDF-extracted values are provable from their own quotes "
+          f"({accepted} accepted across {len(data)} papers)",
+          not probs, "\n".join(probs))
+
+
 def t_quarantine_registry_is_honest():
     """
     STRUCTURAL. dashboard/outcome_quarantine.js withholds an outcome from being
@@ -3738,6 +3809,7 @@ def main() -> int:
           t_outcome_units_are_not_mixed,
           t_legacy_compilers_carry_no_placeholders,
           t_archival_workbooks_feed_no_live_code,
+          t_pdf_extractions_are_provable_from_their_quotes,
           t_quarantine_registry_is_honest]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,

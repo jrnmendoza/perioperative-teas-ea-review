@@ -129,6 +129,13 @@
       </div>
 
       <div class="filter-group">
+        <span class="filter-label">Years:</span>
+        <input type="number" id="filter-year-min" class="filter-select" style="width:5.5rem;" min="1990" max="2030" step="1" aria-label="Earliest publication year">
+        <span style="color:var(--text-muted);">&ndash;</span>
+        <input type="number" id="filter-year-max" class="filter-select" style="width:5.5rem;" min="1990" max="2030" step="1" aria-label="Latest publication year">
+      </div>
+
+      <div class="filter-group">
         <span class="filter-label" data-i18n="controls.rob">RoB 2:</span>
         <select id="filter-rob" class="filter-select">
           <option value="all" data-i18n="controls.allRob">All Risk of Bias Judgments</option>
@@ -836,6 +843,7 @@
     <!-- TAB 2: STUDY EXPLORER -->
     <div id="tab-explorer" class="tab-content">
       <div class="dashboard-card" id="explorer-surgery-summary" style="padding:1.25rem;margin-bottom:1rem;"></div>
+      <div class="dashboard-card" id="explorer-population-summary" style="padding:1.25rem;margin-bottom:1rem;"></div>
       <div class="dashboard-card">
         <div class="card-header">
           <h2>Study Characteristics & STRICTA Parameters Explorer</h2>
@@ -863,16 +871,18 @@
           </div>
         </div>
         <div style="overflow-x: auto;">
-          <table class="forest-table">
+          <table class="forest-table explorer-table">
             <thead>
               <tr>
                 <th>Study Key</th>
+                <th>Year</th>
+                <th>Country</th>
+                <th>Surgical Category <button class="stat-info-btn" data-stat-term="surgicalCategory" aria-label="Explanation for Surgical Specialty">ⓘ</button></th>
                 <th>Modality <button class="stat-info-btn" data-stat-term="modality" aria-label="Explanation for Modality">ⓘ</button></th>
                 <th>Comparator <button class="stat-info-btn" data-stat-term="comparator" aria-label="Explanation for Comparator">ⓘ</button></th>
-                <th>Surgical Category <button class="stat-info-btn" data-stat-term="surgicalCategory" aria-label="Explanation for Surgical Specialty">ⓘ</button></th>
-                <th>Acupoint Formula <button class="stat-info-btn" data-stat-term="acupoints" aria-label="Explanation for Acupoint Selection">ⓘ</button></th>
-                <th>Frequency <button class="stat-info-btn" data-stat-term="frequency" aria-label="Explanation for Stimulation Frequency">ⓘ</button></th>
                 <th>Analysed N <button class="stat-info-btn" data-stat-term="nParticipants" aria-label="Explanation for Sample Size">ⓘ</button><div style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;">denominators used in synthesis</div></th>
+                <th>Age, mean &plusmn; SD<div style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;">intervention / comparator</div></th>
+                <th>Female<div style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;">intervention / comparator</div></th>
                 <th>Result-Specific RoB 2 <button class="stat-info-btn" data-stat-term="rob2" aria-label="Explanation for RoB 2">ⓘ</button><div id="explorer-rob-context" style="font-weight: 400; font-size: 0.68rem; color: var(--text-muted); text-transform: none; letter-spacing: 0;"></div></th>
                 <th>Actions</th>
               </tr>
@@ -3806,6 +3816,7 @@
   <script src="primary_browser.js"></script>
   <script src="browser_targets.js"></script>
   <script src="study_characteristics.js"></script>
+  <script src="pdf_extracted.js"></script>
   <script src="data.js?v=0c009811ebef"></script>
   <script src="translations.js?v=0c009811ebef"></script>
   <script src="ui_translations.js"></script>
