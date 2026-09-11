@@ -474,7 +474,7 @@ function renderPrismaView() {
 - Removed before screening: 2,160 records (1,651 Covidence auto-duplicates + 1 manual duplicate + 508 automation ineligible).
 - Screening: 2,928 title/abstract records screened; 2,704 irrelevant records excluded.
 - Eligibility: 224 reports sought; 14 not retrieved; 210 assessed; 141 excluded with reasons (Wrong outcomes: 117; Wrong setting: 9; Wrong intervention: 9; Wrong comparator: 3; Wrong population: 2; Wrong design: 1).
-- Included: 70 randomized controlled trials (69 via database search + 1 via citation searching). RoB 2 complete for all 70. ${pop.text}
+- Included: 70 reports describing 69 randomized controlled trials (70 reports = 69 via database search + 1 via citation searching; Yeh 2010 and Yeh 2011 are two reports of one trial). RoB 2 complete for all 70 reports. ${pop.text}
 - The citation-searched trial is Wu 2016 (Exp Ther Med 2016;11(2):495-502), identified from the reference list of Tan SY et al. (Front Med 2024;11:1302057) and returned by none of the four database searches. Derived from the review's own screening records by scripts/derive_study_provenance.py, not asserted.
 NOTE: the flow counts studies, not references, from the screening stage onward. The 5,100 imported references resolve to 5,088 studies (12 references were additional reports of studies already present), so 5,088 - 2,160 removed = 2,928 screened, matching the source PRISMA record exactly.`;
       navigator.clipboard.writeText(summaryText).then(() => {
@@ -1106,10 +1106,6 @@ function summarisePopulation(studies) {
     const pdf = (window.PDF_EXTRACTED || {})[s.key] || {};
     const c = s.country || 'Not reported';
     out.countries[c] = (out.countries[c] || 0) + 1;
-    // The register and the source PDF do not always agree about where a trial
-    // was run. Count that rather than quietly presenting the register's figure
-    // as settled -- it is the difference between "all 63 were in China" and a
-    // genuinely multi-country evidence base.
 
     // Anaesthesia resolves the same way the study details panel does: the
     // extraction record first, then the source PDF. Counting only the former

@@ -663,7 +663,7 @@ const STAT_GLOSSARY = {
       term: "k (Antal ingående studier)",
       category: "Metaanalytiska parametrar",
       shortDef: "Antalet oberoende randomiserade kontrollerade studier som bidrar med data till en specifik metaanalytisk syntes.",
-      context: "I denna översikt ingår k = 70 RCT:er totalt enligt granskningsteamets uppdaterade PRISMA-underlag från 2026-09-07 (69 via databassökningen, plus 1 via citeringssökning), men k för specifika synteser är lägre (t.ex. k = 7 för strikt primär 24h opioidbesparing) eftersom endast studier med verifierade, icke-imputerade data inkluderas.",
+      context: "I denna översikt hämtade sökningen 70 rapporter enligt granskningsteamets uppdaterade PRISMA-underlag från 2026-09-07 (69 via databassökningen, plus 1 via citeringssökning). Dessa 70 rapporter beskriver k = 69 RCT:er, eftersom Yeh 2010 och Yeh 2011 är två rapporter av samma studie (tillägg om analysenhet, 2026-09-11). k för specifika synteser är lägre (t.ex. k = 7 för strikt primär 24h opioidbesparing) eftersom endast studier med verifierade, icke-imputerade data inkluderas.",
       jumpTab: "primary"
     },
     nParticipants: {

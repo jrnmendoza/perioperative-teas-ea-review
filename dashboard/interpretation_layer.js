@@ -73,8 +73,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 7 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 7 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "author-contact-useful",
@@ -144,7 +144,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 2",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -207,8 +207,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 2 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 2 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -255,7 +255,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 2",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -278,8 +278,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 2 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 2 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -349,7 +349,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 3 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 3 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 3",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -397,8 +397,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 3 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 3 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -464,7 +464,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 3 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 3 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 3",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -487,8 +487,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 3 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 3 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -601,8 +601,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 6 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 6 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -672,7 +672,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 2",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -720,8 +720,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 2 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 2 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -791,7 +791,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 2",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -844,8 +844,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 2 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 2 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -907,7 +907,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 3 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 3 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 3",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -930,8 +930,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 3 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 3 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -993,7 +993,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 3 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 3 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 3",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -1031,8 +1031,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 3 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 3 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -1102,7 +1102,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 4 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 4 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 4",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -1155,8 +1155,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 4 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 4 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "sensitivity-dependent",
@@ -1226,7 +1226,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 3 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 3 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 3",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -1304,8 +1304,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 3 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 3 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "author-contact-useful",
@@ -1433,8 +1433,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 7 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 7 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "author-contact-useful",
@@ -1547,8 +1547,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 7 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 7 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -1618,7 +1618,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 3 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 3 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 3",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -1661,8 +1661,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 3 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 3 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -1728,7 +1728,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 1 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 1 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 1",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -1766,8 +1766,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 1 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 1 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -1833,7 +1833,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 2",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -1866,8 +1866,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 2 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 2 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -1933,7 +1933,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 2",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -1966,8 +1966,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 2 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 2 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -2033,7 +2033,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 2",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -2076,8 +2076,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 2 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 2 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -2152,8 +2152,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 6 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 6 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -2238,8 +2238,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 7 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 7 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -2286,7 +2286,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 4 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 4 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 4",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -2319,8 +2319,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 4 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 4 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "stable",
@@ -2408,7 +2408,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 2",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -2446,8 +2446,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 2 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 2 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "exploratory",
@@ -2517,7 +2517,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 1 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 1 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 1",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         }
@@ -2530,8 +2530,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 1 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 1 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "exploratory",
@@ -2619,7 +2619,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 2 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 2 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 2",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -2657,8 +2657,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 2 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 2 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "exploratory",
@@ -2728,7 +2728,7 @@ window.INTERPRETATION_LAYER = {
       ],
       "reviewer_questions": [
         {
-          "question": "Why did only 1 trials contribute, when the review includes 70 RCTs?",
+          "question": "Why did only 1 trials contribute, when the review includes 69 RCTs?",
           "trigger": "k = 1",
           "pathway": "Derivability audit and evidence flow (v33 tiered panel)"
         },
@@ -2751,8 +2751,8 @@ window.INTERPRETATION_LAYER = {
         }
       ],
       "why_k": {
-        "headline": "70 RCTs included → k = 1 in this analysis",
-        "explanation": "The review's 70 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
+        "headline": "69 RCTs included → k = 1 in this analysis",
+        "explanation": "The review's 69 included RCTs span multiple outcomes, time windows, stimulation modalities and comparator types, so most of them were never candidates for this particular estimand. For the 0–24 h opioid endpoint specifically, a 93-row derivability audit covering the 63 trials that report any 0–24 h opioid result found 10 contrasts, across 7 trials, that report the exact endpoint as a mean and SD in a dose unit with a sourced conversion factor. This analysis then takes the subset matching its own modality and comparator stratum, because the protocol does not combine TEAS with EA, or sham with usual care.",
         "pathway": "Derivability audit / evidence flow"
       },
       "status": "exploratory",

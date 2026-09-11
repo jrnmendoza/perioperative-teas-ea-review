@@ -1045,6 +1045,24 @@
         <!-- Data-integrity quarantine notice (incident 2026-09-10) -->
         <div id="meta-quarantine-notice" hidden></div>
 
+        <!-- Estimator convention. The browser plot and the saved Stata analyses
+             above are different analyses (different k), and since 2026-09-11 they
+             also use different risk-ratio estimators. Saying so is the honest
+             alternative to letting a reader assume they should agree. -->
+        <div class="estimator-note" role="note">
+          <span class="estimator-note-label">Estimator</span>
+          <div>
+            <p>Binary outcomes in this interactive plot apply the <strong>Haldane&ndash;Anscombe
+            continuity correction</strong> (+0.5 to every cell) to all contrasts, not only
+            zero-cell tables &mdash; review team decision, 2026-09-11.</p>
+            <p class="estimator-note-sub">The source-verified Stata analyses above still use the
+            uncorrected estimator: their inputs carry precomputed log risk ratios and re-running
+            them requires Stata. Those are different analyses from this plot in any case (different
+            contributing trials), so their numbers are not expected to match. Continuous outcomes
+            are unaffected.</p>
+          </div>
+        </div>
+
         <!-- Forest Plot Reader Support (Section 19) -->
         <div class="forest-helper-bar" style="margin: 0.5rem 1.25rem 0.75rem 1.25rem;">
           <details class="forest-how-to-read">

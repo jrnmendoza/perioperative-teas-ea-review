@@ -2615,3 +2615,27 @@ pre code { overflow-wrap: normal; word-break: normal; }
   cursor: help;
   vertical-align: 1px;
 }
+
+/* Estimator-convention note on the exploratory forest plot (2026-09-11). */
+.estimator-note {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin: 0.5rem 1.25rem 0.25rem 1.25rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(129, 140, 248, 0.32);
+  border-left: 3px solid #818cf8;
+  border-radius: 6px;
+  background: rgba(129, 140, 248, 0.07);
+}
+.estimator-note-label {
+  flex: 0 0 auto;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  padding-top: 0.12rem;
+}
+.estimator-note p { margin: 0; font-size: 0.83rem; line-height: 1.55; color: var(--text-secondary); }
+.estimator-note-sub { margin-top: 0.3rem !important; color: var(--text-muted) !important; font-size: 0.78rem !important; }
