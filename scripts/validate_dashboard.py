@@ -3291,7 +3291,10 @@ def t_outcome_units_are_not_mixed():
             # set may legitimately carry the raw published unit -- that is the
             # honest label. What must never happen is a raw statistic wearing
             # the pooled unit, which is the case this catches.
-            if "not in the locked" not in str(rec.get("note", "")).lower():
+            declared_out = ("not in the locked" in str(rec.get("note", "")).lower()
+                            or "not a 0" in str(rec.get("status", "")).lower()
+                            or "not pooled" in str(rec.get("status", "")).lower())
+            if not declared_out:
                 probs.append(f"{key}/{bucket}: unit '{rec['unit']}' is not the pooled unit "
                              f"'{want}' and the record does not declare itself out of pool")
         if "converted_from" in rec and want not in ("participants",):

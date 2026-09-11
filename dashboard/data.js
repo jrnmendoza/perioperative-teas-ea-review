@@ -14575,7 +14575,8 @@ window.STUDIES_DATA = [
         "mean_diff": -3.3333,
         "se": 0.881126,
         "ci_low": -5.0603,
-        "ci_upp": -1.6063
+        "ci_upp": -1.6063,
+        "interpretation_caveat": "Derived from median [IQR] by the Wan et al. transformation. In both arms the median equals Q3 (110.0 [80–110] and 110.0 [90–110] mg MME), i.e. the distribution is at a ceiling, so the transformation's symmetry assumption is strained and the derived SD is likely understated. Verified 2026-09-11; values unchanged."
       },
       "opioid_72h": {
         "status": "Unreported in Source Paper",
@@ -20193,7 +20194,8 @@ window.STUDIES_DATA = [
         "ci_upp": 1.86,
         "se": 0.605,
         "favors": "Control",
-        "note": "Not in the locked 0-24 h primary pool; value is the raw published statistic in the unit shown and has not been converted to morphine equivalents. Unit label corrected 2026-09-10."
+        "note": "Source-verified 2026-09-11 (covidence_35_verified.pdf): 15.86 (5.11) vs 15.18 (4.95) 'Sufentanil equivalents (mg)' is reported in the BASELINE CHARACTERISTICS table, alongside sex, smoking status, Apfel score and duration of anaesthesia, with P = 0.27 — it is a baseline balance variable, not cumulative 0–24 h postoperative opioid consumption. Retained here labelled for what it is; it is outside the primary pool and enters no synthesis. Re-classification is a register decision.",
+        "status": "Not a 0–24 h postoperative outcome"
       },
       "opioid_48h": {
         "status": "Unreported in Source Paper",

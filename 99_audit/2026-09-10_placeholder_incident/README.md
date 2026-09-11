@@ -95,17 +95,46 @@ only the hand-maintained copy drifted.
 
 ## Residual items
 
-- Five `opioid_24h` records (Sim 2002, Coura 2011, Jin 2023, Zhang 2025,
-  Luo 2026) are backed by the v34 master but sit outside the strict primary pool
-  (`include_strict=0`) and are not MME-converted. They are labelled with the
-  master's raw unit and are nulled at runtime. They were **not** re-verified
-  against source PDFs in this pass.
-- `Sim 2002` and `Jin 2023` each have two master rows with different intervention
-  means (0.52/0.58 and 39.31/45.72). Neither is pooled; the choice is unresolved.
-- Four `note` fields state that values are figure-only and "not digitized in this
-  pass" (Wu 2016, Liu 2015, Zhang 2018 ×2) and one states a median/IQR that was
-  deliberately not converted (Gao 2022). These are honest non-extraction
-  statements, not numerical claims, and were not re-verified against source.
+- **Resolved 2026-09-11.** All five out-of-pool `opioid_24h` records were checked
+  against their source PDFs. Four are correct as recorded: Sim 2002
+  (0.52 ± 0.19 mg/kg morphine at 24 h), Coura 2011 (13.1 ± 2.2 vs 16.3 ± 1.6
+  µg/kg fentanyl, n = 13/9), Jin 2023 (39.31 mL PCIA solution) and Zhang 2025
+  (50.53 ± 4.46 vs 53.79 ± 5.14 µg sufentanil, Table 4, P = 0.002).
+  **Luo 2026 is mis-bucketed**: its 15.86 vs 15.18 "sufentanil equivalents (mg)"
+  appears in the paper's BASELINE characteristics table beside sex, smoking and
+  Apfel score with P = 0.27 — a baseline balance variable, not a 0–24 h
+  postoperative outcome. It is now labelled as such; re-classifying it in the
+  register is a review-team decision.
+
+- **Resolved 2026-09-11.** Sim 2002 and Jin 2023 were recorded above as having
+  "two master rows with different intervention means… the choice is unresolved".
+  That framing was wrong. Both are three-arm trials with a shared control, and
+  **both rows are correct**: Sim 2002 compares preoperative EA (0.52 ± 0.19) and
+  postoperative EA (0.58 ± 0.27) against the same placebo-EA arm (0.68 ± 0.38);
+  Jin 2023 compares 2-Hz EA (39.31) and 20/100-Hz EA (45.72) against the same
+  sham (56.54). Pooling both against the shared control would need a
+  shared-control adjustment; neither is currently pooled.
+
+- **CORRECTION, 2026-09-11.** This report previously flagged Xiong 2021 as a
+  data-quality concern — "BMI 39.1/39.9 with mean age 27.5/27.3 … but its
+  surgery_procedure is the generic 'Elective surgical procedure under general
+  anesthesia'". **That was my error.** The generic string sits in an unused
+  `data.js` field that `dashboard/app.js` overwrites at boot from
+  STUDY_CHARACTERISTICS; the procedure actually displayed is **"Laparoscopic
+  sleeve gastrectomy"**, which explains a BMI of 39 at age 27 completely. Xiong
+  2021 is not anomalous. The related claim that "seven studies share that generic
+  procedure string" was measured against the same dead field; on screen only
+  Wu 2016 was generic, and it now reads "Thoracotomy for lung cancer", recovered
+  from its source PDF.
+
+- Five `note` fields still state that values are figure-only, or a deliberately
+  unconverted median/IQR (Wu 2016, Liu 2015, Zhang 2018 ×2, Gao 2022). These are
+  honest non-extraction statements rather than numerical claims. Digitising them
+  remains open.
+
+- Zhang 2023's 48 h record now carries an interpretation caveat: its median
+  equals Q3 in both arms, so the Wan et al. transformation's symmetry assumption
+  is strained and the derived SD is likely understated. Values unchanged.
 
 ## Files
 

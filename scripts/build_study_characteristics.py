@@ -58,7 +58,13 @@ def build():
             'Burn & Reconstructive':r'burn injury|wound debridement',
         }
         if 'non-gastrointestinal' in text: category='Mixed or unspecified surgery'
-        elif name=='Wu 2016': category='Not documented';procedure='Surgical procedure not documented in the available characteristics record.'
+        elif name=='Wu 2016':
+            # Recovered from the source PDF 2026-09-11 (wu2015.pdf, Exp Ther Med
+            # 2016;11:495-502): "Thoracic surgical patients with lung cancer
+            # (n=27) underwent TAES ... following thoracotomy". The previous
+            # "not documented" placeholder predates that check.
+            category='Thoracic & Cardiac'
+            procedure='Thoracotomy for lung cancer'
         else:
             categories=[c for c,p in patterns.items() if re.search(p,text)]
             # "Abdominal hysterectomy" is gynecologic, not a mixed cohort.

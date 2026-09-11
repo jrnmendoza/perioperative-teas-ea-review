@@ -544,8 +544,8 @@ window.STUDY_CHARACTERISTICS = {
     "source_excerpt": "Elective video-assisted thoracoscopic surgery (VATS)"
   },
   "Wu 2016": {
-    "surgery_category": "Not documented",
-    "surgery_procedure": "Surgical procedure not documented in the available characteristics record.",
+    "surgery_category": "Thoracic & Cardiac",
+    "surgery_procedure": "Thoracotomy for lung cancer",
     "source_file": "dashboard/data.js",
     "source_line": null,
     "source_excerpt": "Elective surgical procedure under general anesthesia (three-arm: no-TAES control, active nonacupoint electrical stimulation, true-acupoint TAES)"
