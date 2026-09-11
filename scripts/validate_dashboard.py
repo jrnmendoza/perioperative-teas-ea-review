@@ -3504,6 +3504,80 @@ def t_pdf_extractions_are_provable_from_their_quotes():
           not probs, "\n".join(probs))
 
 
+def t_unlinked_rob2_cells_explain_themselves():
+    """
+    STRUCTURAL. The RoB 2 matrix's default view is the study-level overview, and
+    every one of its 420 cells used to tell the reader that "a specific source
+    quote for this result is not yet linked". That reads as an unfinished
+    dashboard, but a study-level judgement is not a result-specific assessment --
+    there is no per-result quote that could ever be attached to it.
+
+    The remaining result-specific gaps are not unfinished either: each was checked
+    individually and left unlinked because linking it would mean guessing between
+    genuine register ties, legitimising a unit-of-analysis decision the review has
+    paused on (Yeh 2010/2011 are the same trial twice), or inventing a quote for
+    an outcome the source paper never reports (Yang 2024).
+
+    So: every assessed result that has no source-quote link must have a recorded
+    reason. A new gap appearing without one is what this catches.
+    """
+    links_path = DASH / "rob2_source_links.js"
+    if not links_path.exists():
+        check("Unlinked RoB 2 cells explain themselves", False, "rob2_source_links.js missing")
+        return
+    payload = json.loads(links_path.read_text(encoding="utf-8")
+                         .split("window.ROB2_SOURCE_LINKS = ", 1)[1].rsplit(";", 1)[0])
+    links = payload.get("links", {})
+    reasons = payload.get("unlinked_reasons", {})
+    by_id = {s["id"]: s["key"] for s in STUDIES}
+
+    # Assessed results come from two places: data.js's own rob2_outcomes, and the
+    # primary-outcome RoB 2 that build_reference_data.py injects into
+    # primary_browser.js (Szmit 2021 reaches the matrix only that way).
+    assessed = set()
+    for s in STUDIES:
+        for bucket, a in (s.get("rob2_outcomes") or {}).items():
+            if bucket != "assessed_list" and isinstance(a, dict) and a.get("status") == "Assessed":
+                assessed.add((s["id"], s["key"], bucket))
+    pb_path = DASH / "primary_browser.js"
+    if pb_path.exists():
+        pb = json.loads(pb_path.read_text(encoding="utf-8")
+                        .split("window.PRIMARY_BROWSER = ", 1)[1].rsplit(";", 1)[0])
+        key_to_id = {v: k for k, v in by_id.items()}
+        for key, rec in pb.items():
+            if isinstance(rec.get("rob2"), dict) and rec["rob2"].get("status") == "Assessed":
+                sid = key_to_id.get(key)
+                if sid:
+                    assessed.add((sid, key, "opioid_24h"))
+
+    probs = []
+    explained = 0
+    for sid, key, bucket in sorted(assessed):
+        if f"{sid}::{bucket}" in links:
+            continue
+        if f"{key}::{bucket}" in reasons:
+            explained += 1
+            continue
+        probs.append(f"{key}/{bucket}: assessed but neither linked to a source quote nor given a "
+                     f"recorded reason in UNLINKED_REASONS "
+                     f"(scripts/build_rob2_source_links.py)")
+
+    # The study-level view must keep its own branch. Without it, all 420 cells of
+    # the matrix's DEFAULT view fall through to the coverage-gap wording again.
+    app = (DASH / "app.js").read_text(encoding="utf-8")
+    if "study-level consensus overview, not a judgement about one specific result" not in app:
+        probs.append("app.js has lost the study-level explanation; the matrix's default view "
+                     "would again tell readers a source quote is 'not yet linked' for a "
+                     "judgement that is not result-specific")
+    if "unlinked_reasons" not in app:
+        probs.append("app.js no longer reads unlinked_reasons, so recorded explanations "
+                     "would not reach the reader")
+
+    check(f"Unlinked RoB 2 cells explain themselves "
+          f"({len(links)} linked, {explained} explained)",
+          not probs, "\n".join(probs))
+
+
 def t_quarantine_registry_is_honest():
     """
     STRUCTURAL. dashboard/outcome_quarantine.js withholds an outcome from being
@@ -3810,6 +3884,7 @@ def main() -> int:
           t_legacy_compilers_carry_no_placeholders,
           t_archival_workbooks_feed_no_live_code,
           t_pdf_extractions_are_provable_from_their_quotes,
+          t_unlinked_rob2_cells_explain_themselves,
           t_quarantine_registry_is_honest]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,

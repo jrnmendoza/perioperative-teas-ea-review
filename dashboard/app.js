@@ -1377,10 +1377,32 @@ function renderRoB2Matrix() {
       // nothing.
       contextText = `${rr.rationale || 'No rationale recorded.'} Overall RoB 2 for this result: ${rr.overall || 'Not reported'}. `
         + 'Hover an individual domain (D1-D5) on this row for its specific source-quoted rationale.';
+    } else if (rr.isStudyLevel) {
+      // The study-level overview is the DEFAULT selection in this tab, so this
+      // branch renders 420 of the matrix's cells. It is not a coverage gap and
+      // must not be described as one: a study-level judgement is not a
+      // result-specific assessment, so there is no "quote for this result" that
+      // could ever be linked here. Saying otherwise reads as a defect in the
+      // dashboard and, worse, implies the source-quoted rationales are missing
+      // when they exist one dropdown away.
+      contextText = `${rr.rationale || 'No rationale recorded.'} Overall RoB 2 (study-level): ${rr.overall || 'Not reported'}. `
+        + 'This is the study-level consensus overview, not a judgement about one specific result, '
+        + 'so it carries no per-result source quote. Choose a specific result from the '
+        + '"Target Outcome & Timepoint View" selector above to see the result-specific judgement '
+        + 'and, where the review\'s RoB 2 registers pin it to one row, the quoted source text behind it.';
     } else {
+      // A result-specific cell with no link. Where the link builder recorded WHY
+      // -- a genuine tie between register rows, a paused unit-of-analysis
+      // decision, or an outcome the source paper never reports -- say that
+      // instead of implying an unfinished cross-reference.
+      const reason = (window.ROB2_SOURCE_LINKS
+        && window.ROB2_SOURCE_LINKS.unlinked_reasons
+        && window.ROB2_SOURCE_LINKS.unlinked_reasons[`${s.key}::${activeOutcome}`]) || null;
       contextText = `${rr.rationale || 'No rationale recorded.'} Overall RoB 2 for this result: ${rr.overall || 'Not reported'}. `
-        + 'A specific source quote for this result is not yet linked in the dashboard’s RoB 2 cross-reference '
-        + '(see the review’s RoB 2 registers directly for the full assessment).';
+        + (reason
+           ? `No single source quote is attached to this cell. ${reason}`
+           : 'A specific source quote for this result is not yet linked in the dashboard’s RoB 2 '
+             + 'cross-reference (see the review’s RoB 2 registers directly for the full assessment).');
     }
 
     // STAT_GLOSSARY entries are rendered via .textContent in showStatPopover
