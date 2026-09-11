@@ -1056,7 +1056,8 @@ function parseLeadingNumber(v) {
  */
 function summarisePopulation(studies) {
   const n = studies.length;
-  const out = { n, reported: {}, ranges: {}, female: null, countries: {}, anaesthesia: {} };
+  const out = { n, reported: {}, ranges: {}, female: null, countries: {},
+                anaesthesiaStated: 0, adjunctCount: 0 };
 
   const spans = {
     age:  ['arm1_age', 'arm2_age'],
@@ -1106,10 +1107,9 @@ function summarisePopulation(studies) {
     // extraction record first, then the source PDF. Counting only the former
     // understated coverage as 27/70 when it is actually 52/70.
     const ch = (window.STUDY_CHARACTERISTICS || {})[s.key] || {};
-    const a = ch.anesthesia
-      || (pdf.anaesthesia && pdf.anaesthesia.value)
-      || 'Not recorded';
-    out.anaesthesia[a] = (out.anaesthesia[a] || 0) + 1;
+    const a = ch.anesthesia || (pdf.anaesthesia && pdf.anaesthesia.value) || null;
+    if (a) out.anaesthesiaStated++;
+    if (pdf.anaesthesia && pdf.anaesthesia.adjuncts) out.adjunctCount++;
   });
   return out;
 }
@@ -1197,9 +1197,12 @@ function renderPopulationSummary(studies) {
             `${pwEsc(d.study)} &rarr; ${pwEsc(d.pdf)}`).join(', ')}${p.countryDisagreements.length > 4
             ? `, +${p.countryDisagreements.length - 4} more` : ''}). Open a study to see the quoted
           affiliation. The register value is shown here unchanged pending review.` : ''}
-        Anaesthesia technique recorded for ${p.n - (p.anaesthesia['Not recorded'] || 0)}/${p.n},
-        combining the extraction records with techniques read from the source PDFs; where absent,
-        the paper states no explicit technique.
+        <br>Anaesthesia is not a varying characteristic here: general anaesthesia is an
+        <strong>eligibility criterion</strong> for this review, verified at study selection, so all
+        ${p.n} trials were conducted under it. ${p.anaesthesiaStated}/${p.n} papers state the
+        technique explicitly in their own words${p.adjunctCount
+          ? `, and ${p.adjunctCount} also report a regional or neuraxial adjunct, which the protocol permits`
+          : ''}.
       </div>
     </div>
   `;
@@ -2885,12 +2888,26 @@ function openStudyDrawer(id) {
               })())}
             ${row('Year', s.year)}
             ${row('Surgery', `${pwEsc(s.surgery_category)}<br><span class="sd-sub">${pwEsc(s.surgery_procedure || '')}</span>`)}
-            ${row('Anaesthesia', ch.anesthesia
-                ? pwEsc(ch.anesthesia)
-                : (pdfValue(s.key, 'anaesthesia')
-                   || (pdfConflict(s.key, 'anaesthesia')
-                       ? `${baselineValue(null)} <span class="sd-sub">source describes more than one technique (${pwEsc(pdfConflict(s.key, 'anaesthesia'))})</span>`
-                       : baselineValue(null))))}
+            ${row('Anaesthesia', (() => {
+                // Not a variable: the protocol makes general anaesthesia an
+                // eligibility criterion, verified at study selection, and allows
+                // it alone or with a regional/neuraxial adjunct. Reporting this
+                // as "recorded / not recorded" invited the reader to think it
+                // varied between trials, which it does not.
+                const pa = ((window.PDF_EXTRACTED || {})[s.key] || {}).anaesthesia;
+                const stated = ch.anesthesia || (pa && pa.value) || null;
+                const adj = pa && pa.adjuncts ? pa.adjuncts.join(', ') : null;
+                return '<strong>General anaesthesia</strong>'
+                  + '<br><span class="sd-sub">Eligibility criterion for this review &mdash; every '
+                  + 'included trial was conducted under general anaesthesia, verified at study '
+                  + 'selection.</span>'
+                  + (stated ? `<br><span class="sd-sub">As worded in the record: ${pwEsc(stated)}</span>` : '')
+                  + (adj
+                     ? `<br>Combined with ${pwEsc(adj.toLowerCase())}`
+                       + '<span class="sd-sub"> &mdash; permitted by the protocol, which allows general '
+                       + 'anaesthesia alone or with regional or neuraxial anaesthesia.</span>'
+                     : '');
+              })())}
             ${row('Randomised N<br><span class="sd-sub">this contrast</span>', pop.randomized_total_n
                 ? `${pop.randomized_total_n} (${pop.randomized_arm1_n} / ${pop.randomized_arm2_n})`
                 : baselineValue(null))}

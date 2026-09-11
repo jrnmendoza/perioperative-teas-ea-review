@@ -152,11 +152,49 @@ RE_KOREA = re.compile(r"\b(?:Republic of Korea|South Korea)\b", re.I)
 WORD_NUM = {"two": 2, "three": 3, "four": 4, "2": 2, "3": 3, "4": 4}
 
 
+RE_REFS_HEADING = re.compile(r"^\s*(references|reference list|bibliography)\s*$", re.I | re.M)
+
+
+def strip_references(text: str) -> str:
+    """Drop everything from a References heading onward.
+
+    A reference list is full of sentences that look exactly like protocol
+    statements -- "...after cesarean section under spinal anesthesia" (Gu 2019)
+    and "...somato-visceral pain under epidural anesthesia" (Jin 2023) are
+    citation TITLES, and both were being read as those trials' own technique.
+    They carry no "et al" or doi on the matched line, so the citation filter
+    could not see them.
+    """
+    m = RE_REFS_HEADING.search(text)
+    return text[:m.start()] if m else text
+
+
+def body_pages(pages):
+    """Pages before the reference list, with the partial page truncated.
+
+    The cutoff has to be DOCUMENT-level, not per page: a reference list starting
+    on page 12 runs onto page 13, and a per-page rule leaves page 13 fully
+    readable. That is how Liu 2015 -- a craniotomy trial -- acquired "spinal
+    anaesthesia" from a cesarean-delivery citation, and Zhang 2025 acquired
+    "combined spinal-epidural" the same way.
+    """
+    out, hit_refs = [], False
+    for pno, raw in pages:
+        if hit_refs:
+            break
+        text = norm(raw)
+        m = RE_REFS_HEADING.search(text)
+        if m:
+            hit_refs = True
+            text = text[:m.start()]
+        out.append((pno, text))
+    return out
+
+
 def collect(pages, pattern, accept):
     """Run `pattern` over every page; return {value: [(page, quote), ...]}."""
     found: dict = {}
-    for pno, raw in pages:
-        text = norm(raw)
+    for pno, text in body_pages(pages):
         for m in pattern.finditer(text):
             quote = sentence_around(text, m.start(), m.end())
             if CITATION_NOISE.search(quote):
@@ -217,8 +255,7 @@ def extract_one(pages):
     # state a width per frequency. Once an anchor is found, harvest every
     # duration in that same sentence rather than only the nearest one.
     widths, evidence = [], None
-    for pno, raw in pages:
-        text = norm(raw)
+    for pno, text in body_pages(pages):
         for m in RE_PULSE.finditer(text):
             sent = sentence_around(text, m.start(), m.end())
             if CITATION_NOISE.search(sent):
@@ -242,8 +279,53 @@ def extract_one(pages):
         if not tech:
             return None
         return (tech.strip().lower() + " anaesthesia").capitalize()
-    an = decide(collect(pages, RE_ANAES, anaes), "anaesthesia")
-    if an: rec["anaesthesia"] = an
+    # Anaesthesia is not a free variable in this review: the protocol makes
+    # general anaesthesia an ELIGIBILITY CRITERION, verified at study selection
+    # ("Adults ... undergoing an operative surgical procedure under general
+    # anaesthesia"), and explicitly allows it "alone or with balanced regional or
+    # neuraxial anaesthesia or analgesia". So a paper naming both general and
+    # spinal anaesthesia is not contradicting itself and is not a conflict -- it
+    # is describing the permitted combination. TIVA is likewise a general
+    # technique, not an alternative to one.
+    #
+    # What is therefore worth extracting is not "which anaesthetic?" but the
+    # reported DETAIL: the general technique as the paper words it, plus any
+    # regional/neuraxial adjunct it names.
+    GENERAL = {"General anaesthesia", "Total intravenous anaesthesia"}
+    techniques = collect(pages, RE_ANAES, anaes)
+    if techniques:
+        general = sorted(v for v in techniques if v in GENERAL)
+        adjuncts = sorted(v for v in techniques if v not in GENERAL)
+        if general:
+            # Keep the paper's OWN wording as the value -- TIVA is a general
+            # technique, but a value of "General anaesthesia" would not be
+            # literally provable from a quote that says "total intravenous
+            # anesthesia [TIVA]", and every stored value here must be checkable
+            # against its own quote. The general-vs-adjunct classification is
+            # carried separately.
+            ev = techniques[general[0]][0]
+            rec["anaesthesia"] = {
+                "value": general[0], "page": ev[0], "quote": ev[1],
+                "is_general": True,
+                "hits": sum(len(v) for v in techniques.values()),
+                **({"adjuncts": adjuncts,
+                    "note": "the paper also reports " + ", ".join(a.lower() for a in adjuncts)
+                            + " -- the protocol permits general anaesthesia alone or combined with "
+                              "regional or neuraxial anaesthesia"} if adjuncts else {}),
+            }
+        else:
+            # Only regional/neuraxial named and no general technique stated. That
+            # would contradict the eligibility criterion, so surface it rather
+            # than quietly recording a technique.
+            ev = techniques[adjuncts[0]][0]
+            rec["anaesthesia"] = {
+                "conflict": adjuncts,
+                "note": "no general-anaesthesia statement found, only "
+                        + ", ".join(a.lower() for a in adjuncts)
+                        + "; the review's eligibility criterion requires general anaesthesia, so "
+                          "this needs checking against the paper",
+                "page": ev[0], "quote": ev[1],
+            }
 
     # Country: affiliations live on the first page or two. Take the country named
     # in the FIRST affiliation phrase that is not inside editorial front matter;

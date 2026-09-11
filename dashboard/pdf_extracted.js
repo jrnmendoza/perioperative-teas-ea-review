@@ -6,6 +6,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "Eligibility screening was conducted for patients scheduled to undergo elective gynecological laparoscopic surgery under general anesthesia.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -36,7 +37,8 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 3,
       "quote": "General anesthesia was induced using intravenous sufentanil (0.3‑0.5 µg/kg; cat.",
-      "hits": 2
+      "is_general": true,
+      "hits": 1
     },
     "country": {
       "value": "China",
@@ -54,6 +56,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "General anesthesia was induced with intravenous sufentanil 0.5 μg/kg and propofol 2.0 mg/kg.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -69,6 +72,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "scheduled for elective thyroidectomy under general anesthesia from August 2014 to December 2014 at Fujian Provincial Hospital.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -114,7 +118,8 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 4,
       "quote": "In conclusion, acupuncture given under general anaesthesia is unlikely to have a clinically useful effect, but research into preoperative acupuncture is likely to lead to improved patient care. Acknowledgements: This study was submitted in partial fulfilment of the Masters degree in pain management ",
-      "hits": 2
+      "is_general": true,
+      "hits": 1
     },
     "source_pdf": "covidence_868_full_article.pdf"
   },
@@ -129,6 +134,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "(1) surgery under general anesthesia; (2) age /C21 18 years and American Society of Anesthesiologists I eIII; (3) patients ’ ability to understand and sign the written informed consent form; and (4) not involved in other clinical studies.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -150,6 +156,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 1,
       "quote": "non-gastrointestinal surgery under general anesthesia. Interventions: Patients were randomly allocated into the TEAS and Sham grou p with a 1:1 ratio.",
+      "is_general": true,
       "hits": 3
     },
     "country": {
@@ -165,17 +172,12 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 1,
       "quote": "Electroacupuncture under General Anesthesia Improves Postoperative Recovery in a Randomized Trial Dennis Grech 1, Zhifeng Li 2, Patrick Morcillo 2, Evelyne Kalyoussef 3, David D.",
+      "is_general": true,
       "hits": 5
     },
     "source_pdf": "030_grech_2016_lund.pdf"
   },
   "Gu 2019": {
-    "anaesthesia": {
-      "value": "Spinal anaesthesia",
-      "page": 6,
-      "quote": "and vomiting after cesarean section under spinal anesthesia, Acta Med.",
-      "hits": 1
-    },
     "country": {
       "value": "China",
       "page": 1,
@@ -213,6 +215,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 3,
       "quote": "Eligible patients were those who were scheduled for elective hepatectomy under general anesthesia.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -228,6 +231,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 3,
       "quote": "index monitor (BIS) were placed, general anesthesia was induced with IV sufentanil 0.3–0.5 μg kg\u0000 1 and propofol 0.2–0.3 mg kg\u0000 1.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -258,7 +262,8 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "under general anesthesia during hospitalization without surgical and anesthetic contraindications. We excluded patients who: could not participate due to skin lesions at the planned sites of acupuncture needling; had lower extremity sensory disturbance or abnormality; had severe arrhythmias, heart f",
-      "hits": 3
+      "is_general": true,
+      "hits": 2
     },
     "country": {
       "value": "China",
@@ -273,6 +278,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "oophorectomy or salpingectomy under general anesthesia; and willing to provide informed consent and participate in the study. Participants were excluded if they met any of the following criteria: severe cardiac, hepatic, or renal insufficiency; skin infection or nerve da- mage near the experimental ",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -288,6 +294,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "gastrointestinal surgeries were conducted under general anesthesia.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -303,12 +310,6 @@ window.PDF_EXTRACTED = {
       "value": 174,
       "page": 3,
       "quote": "The 174 patients were randomized to receive PCIA + 2-Hz EA (n=58), PCIA + 20/ 100−Hz EA (n=58), or PCIA + sham EA (n=58) treatment ( Figure 1 ).",
-      "hits": 1
-    },
-    "anaesthesia": {
-      "value": "Epidural anaesthesia",
-      "page": 8,
-      "quote": "somato-visceral pain under epidural anesthesia in parturients with scarred uterus.",
       "hits": 1
     },
     "country": {
@@ -346,6 +347,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "tumor resection under general anesthesia (stomach, colon or rec- tum); using postoperative analgesia pump; volunteering to partic- ipate in this study and sign the informed consent. Patients meeting the following criteria were excluded from the study: surgical incision or scar near the acupoints of ",
+      "is_general": true,
       "hits": 2
     },
     "country": {
@@ -361,6 +363,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "receiving elective thyroidectomy under general anesthesia. Exclusion criteria: (1) history of operative treatment; (2) history of severe pain, including current pain treatment; (3) pregnant or breastfeeding; (4) mental or neurological disorder or intellectual disabilities; (5) implanted cardiac defi",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -376,6 +379,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 1,
       "quote": "undergoing TURP under general anesthesia requiring intraoperative urinary catheterization were enrolled for the trial.",
+      "is_general": true,
       "hits": 2
     },
     "country": {
@@ -404,11 +408,11 @@ window.PDF_EXTRACTED = {
   },
   "Liu 2015": {
     "anaesthesia": {
-      "conflict": [
-        "General anaesthesia",
-        "Spinal anaesthesia"
-      ],
-      "note": "anaesthesia: the paper yielded more than one candidate; not resolved automatically"
+      "value": "General anaesthesia",
+      "page": 1,
+      "quote": "scheduled for supratentorial craniotomy under general anaesthesia were randomly allocated into either a multipoint TEAS (n=46) or a sham TEAS group (n=46).",
+      "is_general": true,
+      "hits": 1
     },
     "country": {
       "value": "China",
@@ -429,6 +433,7 @@ window.PDF_EXTRACTED = {
       "value": "Total intravenous anaesthesia",
       "page": 3,
       "quote": "μg/kg/min) plus propofol (total intravenous anesthesia [TIVA], 4–12 mg/kg/h) at the discretion of the anesthesiol- ogist.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -459,6 +464,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 6,
       "quote": "undergoing gastroesophageal ESD under general anesthesia, pretreating with TEAS could effectively improve the early postoperative pain of patients, reduce the incidence of moderate-to-severe pain, and decrease the application of morphine after surgery.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -474,6 +480,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 1,
       "quote": "Methods In this trial, 86 burn patients with wound debridement under general anesthesia were randomized to receive thirty minutes of TEAS (TEAS group, n = 43) at acupoints LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), and SP6 (Sanyinjiao) before induction of anesthesia or false stimulation (control gro",
+      "is_general": true,
       "hits": 1
     },
     "source_pdf": "covidence_48_verified.pdf"
@@ -495,11 +502,11 @@ window.PDF_EXTRACTED = {
       "hits": 1
     },
     "anaesthesia": {
-      "conflict": [
-        "General anaesthesia",
-        "Total intravenous anaesthesia"
-      ],
-      "note": "anaesthesia: the paper yielded more than one candidate; not resolved automatically"
+      "value": "General anaesthesia",
+      "page": 1,
+      "quote": "Participants: Eligible patients were women scheduled for radical mastectomy under general anesthesia.",
+      "is_general": true,
+      "hits": 5
     },
     "country": {
       "value": "China",
@@ -511,11 +518,11 @@ window.PDF_EXTRACTED = {
   },
   "Lu 2022": {
     "anaesthesia": {
-      "conflict": [
-        "General anaesthesia",
-        "Spinal anaesthesia"
-      ],
-      "note": "anaesthesia: the paper yielded more than one candidate; not resolved automatically"
+      "value": "General anaesthesia",
+      "page": 2,
+      "quote": "Patients scheduled for laparoscopic colon surgery under general anaesthesia were screened.",
+      "is_general": true,
+      "hits": 1
     },
     "country": {
       "value": "China",
@@ -530,6 +537,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 5,
       "quote": "panoplasty under general anesthesia, compared with sham stimulation.",
+      "is_general": true,
       "hits": 1
     },
     "source_pdf": "covidence_35_verified.pdf"
@@ -554,6 +562,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "All laparoscopic surgeries were performed under general anesthesia.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -581,7 +590,8 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 6,
       "quote": "ketamine, which contrasts with patients under general anaesthesia who receive benzodiazepines.",
-      "hits": 2
+      "is_general": true,
+      "hits": 1
     },
     "source_pdf": "covidence_729_full_article.pdf"
   },
@@ -601,12 +611,6 @@ window.PDF_EXTRACTED = {
     "source_pdf": "covidence_505_full_article.pdf"
   },
   "Pan 2023": {
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 10,
-      "quote": "Intraoperative low-frequency electroacupuncture under general anesthesia improves postoperative recovery in a randomized trial.",
-      "hits": 1
-    },
     "country": {
       "value": "China",
       "page": 1,
@@ -620,6 +624,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 1,
       "quote": "the end of the surgery (mean duration of surgery was 149.06 ± 42.64 minutes) under general anaesthesia.",
+      "is_general": true,
       "hits": 3
     },
     "country": {
@@ -635,6 +640,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "was under general anaesthesia, a reliable monitor is required to indicate whether the patient is receiving adequate anaesthesia and/or analgesia. The Bispectral index (BIS) (ASPECT medical system, A-1050, Natick, USA) is a processed parameter derived from multiple features generated by bispectral an",
+      "is_general": true,
       "hits": 2
     },
     "country": {
@@ -650,6 +656,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "surgery under general anesthesia.",
+      "is_general": true,
       "hits": 2
     },
     "country": {
@@ -671,6 +678,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 1,
       "quote": "for laparoscopic surgery under general anesthesia were randomly assigned to receive sham TEAS (group SSS), preoperative TEAS (group TSS), preoperative TEAS combined with intraoperative TEAS (group TTS) or preoperative TEAS combined with post- operative TEAS (group TST) (n = 95 each group).",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -713,6 +721,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 3,
       "quote": "Standard general anesthesia was induced with propofol 1–2 mg kg−1, sufentanil 0.3–0.6 μg kg−1, and cis-atracurium 0.2–0.4 mg kg−1.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -747,6 +756,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "under general anesthesia were assigned into two groups: patients to receive total intravenous anesthesia (Control group, n = 45), and others to receive pTEAS in addition to total intravenous anesthesia (pTEAS group, n = 45). Inclusion criteria are as follows: (1) ASA I – II; (2) between 40 and 70 ye",
+      "is_general": true,
       "hits": 1
     },
     "source_pdf": "s12871-022-01875-3.pdf"
@@ -768,6 +778,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "Eligible patients were scheduled for ambulatory video-assisted thoracoscopic pulmonary wedge resection under general anesthesia, aged 18–70 years, and with ASA of Anesthesiologists grade I or II.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -789,6 +800,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "The general anesthesia was induced by intravenous anesthesia with remifentanil and propofol by a target controlled infusion (TCI) system (CP600TCI, Slgo Technology Co.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -813,6 +825,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "who underwent elective LSG under general anesthesia be- tween May 2018 and February 2020.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -840,12 +853,6 @@ window.PDF_EXTRACTED = {
     "source_pdf": "covidence_464_verified.pdf"
   },
   "Yang 2024": {
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 5,
-      "quote": "laparotomy under general anesthesia: a randomized controlled trial.",
-      "hits": 1
-    },
     "country": {
       "conflict": [
         "Australia",
@@ -866,6 +873,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "General anesthesia was induced (Hegu) LI4 (Neiguan) PC6 (Zusanli) ST36 (Sanyinjiao) SP6 Figure 1: Location of Hegu (LI4), Neiguan (PC6), Zusanli (ST36), and Sanyinjiao (SP6) acupoints. withIVsufentanil0.5𝜇g/kgandpropofol2.0mg/kg.Tracheal intubation was facilitated with cisatracurium 0.15mg/kg. After",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -881,6 +889,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 4,
       "quote": "was general anesthesia with intravenous thiopental (2.1 mg/kg) and fentanyl (4.3 mg/kg), and connected to a PCA device programmed to deliver a patient-triggered 1 mg bolus of morphine with a 10 min lockout interval between doses.",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -902,6 +911,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "spine injuries under general anesthesia and had heen evaluated as American Society of Anesthesiologists grades I to II (I: a nor- mal healthy patient; II: a patient with mild systemic disease that does not limit activity).",
+      "is_general": true,
       "hits": 1
     },
     "country": {
@@ -953,11 +963,11 @@ window.PDF_EXTRACTED = {
   },
   "Zhang 2025": {
     "anaesthesia": {
-      "conflict": [
-        "Combined spinal-epidural anaesthesia",
-        "General anaesthesia"
-      ],
-      "note": "anaesthesia: the paper yielded more than one candidate; not resolved automatically"
+      "value": "General anaesthesia",
+      "page": 4,
+      "quote": "General anesthesia was induced intravenously with sufentanil (0.4 μg/kg), propofol (2 mg/kg), and rocuronium (0.6 mg/kg).",
+      "is_general": true,
+      "hits": 1
     },
     "country": {
       "value": "China",
@@ -978,6 +988,7 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 1,
       "quote": "scopic surgery under general anesthesia at a tertiary hospital in China between April and December 2022 were enrolled.",
+      "is_general": true,
       "hits": 2
     },
     "country": {
@@ -1008,12 +1019,6 @@ window.PDF_EXTRACTED = {
       "value": 4,
       "page": 1,
       "quote": "Methods: A total of 413 patients undergoing elective laparoscopic gynecological surgery were randomly allocated into 4 groups receiving EA the day before surgery (Group Pre, n = 103), 30 min before (Group 30, n = 104) or both (Group Comb, n = 103), or usual care alone (Group Usual, n = 103).",
-      "hits": 1
-    },
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 9,
-      "quote": "surgery under general anesthesia: an evidence-based review concern- ing risk assessment, prevention, and treatment.",
       "hits": 1
     },
     "country": {
