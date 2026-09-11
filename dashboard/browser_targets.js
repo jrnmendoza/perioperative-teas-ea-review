@@ -229,7 +229,7 @@ window.BROWSER_TARGETS = {
     "Ng 2013": {
       "arm1_n": 55.0,
       "arm2_n": 55.0,
-      "unit": "days",
+      "unit": "hours",
       "comparison_id": "NG13_EA_vs_SHAM_FLATUS",
       "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
       "source_note": "No statistically significant EA-vs-sham difference",
@@ -241,7 +241,8 @@ window.BROWSER_TARGETS = {
       "mean_diff": -7.2000008,
       "se": 4.5994468,
       "ci_low": -16.214916528,
-      "ci_upp": 1.8149149280000003
+      "ci_upp": 1.8149149280000003,
+      "converted_from": "2 ± .9 vs 2.3 ± 1.1 days (×24)"
     }
   },
   "intraop_opioid": {

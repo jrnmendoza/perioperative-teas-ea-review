@@ -50,6 +50,13 @@ def browser_targets(studies):
                 o.update(mean_diff=md,se=se,ci_low=md-1.96*se,ci_upp=md+1.96*se)
                 if key in ('opioid_48h','opioid_72h'): o['unit']='mg IV MME'
                 if key=='intraop_opioid': o['unit']='µg remifentanil'
+                # The *_hours columns are already converted, so the row's own
+                # unit label ('days' for Ng 2013) describes the raw statistic,
+                # not the value emitted here. Label what we actually emit.
+                if key=='flatus_time':
+                    if r['unit']!='hours':
+                        o['converted_from']=f"{r['mean_i']} ± {r['sd_i']} vs {r['mean_c']} ± {r['sd_c']} {r['unit']} (×24)"
+                    o['unit']='hours'
             result[name]=o
         targets[key]=result
     assert {k:len(v) for k,v in targets.items()}==dict(opioid_48h=3,opioid_72h=1,pain_rest_24h=2,ponv_24h=2,flatus_time=6,intraop_opioid=7,rescue_analgesia=4)

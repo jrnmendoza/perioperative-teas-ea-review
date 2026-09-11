@@ -2457,3 +2457,41 @@ pre code { overflow-wrap: normal; word-break: normal; }
 }
 .v34-withdrawn { background: rgba(244,63,94,0.18); color: #fda4af; border: 1px solid rgba(244,63,94,0.4); }
 .v34-superseded { background: rgba(245,158,11,0.16); color: #fbbf24; border: 1px solid rgba(245,158,11,0.38); }
+
+/* ── Data-integrity quarantine notice (incident 2026-09-10) ──────────────────
+   An outcome in window.OUTCOME_QUARANTINE still has study records awaiting
+   source verification. Deliberately restrained: this is a scientific
+   transparency label, not an alarm banner. */
+.quarantine-notice {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin: 0.5rem 1.25rem 0.25rem 1.25rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(217, 164, 87, 0.42);
+  border-left: 3px solid #d9a457;
+  border-radius: 6px;
+  background: rgba(217, 164, 87, 0.08);
+}
+.quarantine-notice-label {
+  flex: 0 0 auto;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #d9a457;
+  padding-top: 0.12rem;
+  white-space: nowrap;
+}
+.quarantine-notice-body { min-width: 0; }
+.quarantine-notice-body p {
+  margin: 0;
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+.quarantine-notice-detail {
+  margin-top: 0.28rem !important;
+  color: var(--text-muted) !important;
+  font-size: 0.78rem !important;
+}
