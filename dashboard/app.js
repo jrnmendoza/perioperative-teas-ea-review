@@ -1100,6 +1100,27 @@ function summarisePopulation(studies) {
   return out;
 }
 
+
+/**
+ * A value read straight from the source PDF by scripts/extract_baseline_from_pdfs.py.
+ * Renders with the page and the verbatim sentence it came from, so any reader can
+ * check it against the paper. Unmatched or conflicting extractions deliberately
+ * return null and fall through to NR rather than showing a guess.
+ */
+function pdfValue(studyKey, field) {
+  const rec = (window.PDF_EXTRACTED || {})[studyKey];
+  const f = rec && rec[field];
+  if (!f || f.value === undefined) return null;
+  const title = `${rec.source_pdf}, p${f.page}: "${String(f.quote).replace(/"/g, "'")}"`;
+  return `${pwEsc(String(f.value))} <span class="pdf-src" title="${pwEsc(title)}">PDF p${f.page}</span>`;
+}
+
+/** True when the extractor found competing candidates and refused to pick one. */
+function pdfConflict(studyKey, field) {
+  const f = ((window.PDF_EXTRACTED || {})[studyKey] || {})[field];
+  return f && f.conflict ? f.conflict.join(' / ') : null;
+}
+
 function renderPopulationSummary(studies) {
   const host = document.getElementById('explorer-population-summary');
   if (!host) return;
@@ -2801,12 +2822,24 @@ function openStudyDrawer(id) {
             ${row('Country', s.country ? pwEsc(s.country) : baselineValue(null))}
             ${row('Year', s.year)}
             ${row('Surgery', `${pwEsc(s.surgery_category)}<br><span class="sd-sub">${pwEsc(s.surgery_procedure || '')}</span>`)}
-            ${row('Anaesthesia', ch.anesthesia ? pwEsc(ch.anesthesia) : baselineValue(null))}
-            ${row('Randomised N', pop.randomized_total_n
+            ${row('Anaesthesia', ch.anesthesia
+                ? pwEsc(ch.anesthesia)
+                : (pdfValue(s.key, 'anaesthesia')
+                   || (pdfConflict(s.key, 'anaesthesia')
+                       ? `${baselineValue(null)} <span class="sd-sub">source describes more than one technique (${pwEsc(pdfConflict(s.key, 'anaesthesia'))})</span>`
+                       : baselineValue(null))))}
+            ${row('Randomised N<br><span class="sd-sub">this contrast</span>', pop.randomized_total_n
                 ? `${pop.randomized_total_n} (${pop.randomized_arm1_n} / ${pop.randomized_arm2_n})`
                 : baselineValue(null))}
+            ${row('Randomised N<br><span class="sd-sub">whole trial</span>',
+                pdfValue(s.key, 'randomised_n')
+                || (pdfConflict(s.key, 'randomised_n')
+                    ? `${baselineValue(null)} <span class="sd-sub">source gave competing figures (${pwEsc(pdfConflict(s.key, 'randomised_n'))}); not resolved automatically</span>`
+                    : baselineValue(null)))}
             ${row('Analysed N', `<strong>${pop.total_n}</strong> (${pop.arm1_n} / ${pop.arm2_n})<br><span class="sd-sub">denominators used in synthesis</span>`)}
-            ${row('Arms compared', `${pwEsc(pop.arm1_name)} vs ${pwEsc(pop.arm2_name)}<br><span class="sd-sub">Arm count is not separately recorded; multi-arm trials contribute the pairwise contrast named here.</span>`)}
+            ${row('Arms compared', `${pwEsc(pop.arm1_name)} vs ${pwEsc(pop.arm2_name)}`)}
+            ${row('Arms in trial', (pdfValue(s.key, 'arms') || baselineValue(null)) +
+                `<br><span class="sd-sub">A multi-arm trial contributes only the pairwise contrast named above, so its whole-trial randomised N is larger than the analysed N shown here.</span>`)}
           </table>
         </section>
 
@@ -2823,8 +2856,8 @@ function openStudyDrawer(id) {
           </table>
           <table class="sd-table" style="margin-top:0.5rem;">
             ${row('ASA status', baselineValue(pop.asa_status))}
-            ${row('Baseline pain', `${baselineValue(null)} <span class="sd-sub">not captured as a structured baseline field in this register</span>`)}
-            ${row('Baseline opioid exposure', `${baselineValue(null)} <span class="sd-sub">not captured as a structured baseline field in this register</span>`)}
+            ${row('Baseline pain', `${baselineValue(null)} <span class="sd-sub">a scan of all 70 source PDFs found a reported preoperative pain score in only 3, too few and too inconsistent to extract reliably</span>`)}
+            ${row('Baseline opioid exposure', `${baselineValue(null)} <span class="sd-sub">not reported in these trials; the only PDF matches were reference-list titles, not baseline data</span>`)}
           </table>
           <p class="sd-note">Descriptive only. Baseline balance is <strong>not</strong> tested and is not evidence about randomisation quality — RoB 2 Domain 1 below is the formal assessment.</p>
         </section>
@@ -2837,7 +2870,8 @@ function openStudyDrawer(id) {
             ${row('Acupoints', pwEsc(s.stricta.acupoints))}
             ${row('Frequency', pwEsc(s.stricta.frequency_raw))}
             ${row('Intensity', pwEsc(s.stricta.intensity))}
-            ${row('Pulse width', `${baselineValue(null)} <span class="sd-sub">not a structured STRICTA field in this register</span>`)}
+            ${row('Pulse width', pdfValue(s.key, 'pulse_width')
+                || `${baselineValue(null)} <span class="sd-sub">no pulse width / wave width stated in the source</span>`)}
             ${row('Session duration', pwEsc(s.stricta.duration_raw || '') || baselineValue(null))}
             ${row('Number of sessions', pwEsc(s.stricta.sessions_category))}
             ${row('Timing vs surgery', pwEsc(s.stricta.timing_raw))}

@@ -2598,3 +2598,20 @@ pre code { overflow-wrap: normal; word-break: normal; }
    viewport width on a phone and every cell becomes unreadable; with one, the
    existing overflow-x wrapper scrolls it instead. */
 .explorer-table { min-width: 1040px; }
+
+/* A value read straight from a source PDF; hover shows the page and the
+   verbatim sentence it came from. */
+.pdf-src {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  border-radius: 3px;
+  padding: 0.02rem 0.28rem;
+  margin-left: 0.28rem;
+  cursor: help;
+  vertical-align: 1px;
+}
