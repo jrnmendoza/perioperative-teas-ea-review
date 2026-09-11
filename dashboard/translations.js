@@ -437,7 +437,7 @@ const STAT_GLOSSARY = {
       term: "k (Number of Contributing Studies)",
       category: "Meta-Analytic Parameters",
       shortDef: "The count of independent randomized controlled trials contributing data to a specific meta-analytic synthesis.",
-      context: "In this review, k = 70 RCTs overall per the review team\u2019s updated 2026-09-07 PRISMA record (69 via the database search route, plus 1 via citation searching), but k for specific synthesized endpoints is smaller (e.g. k = 7 for strict primary 24h opioid sparing) because only trials with verified, non-imputed extractable data are included.",
+      context: "In this review, the search retrieved 70 reports per the review team\u2019s updated 2026-09-07 PRISMA record (69 via the database search route, plus 1 via citation searching). Those 70 reports describe k = 69 RCTs, because Yeh 2010 and Yeh 2011 are two reports of one trial (2026-09-11 unit-of-analysis amendment), but k for specific synthesized endpoints is smaller (e.g. k = 7 for strict primary 24h opioid sparing) because only trials with verified, non-imputed extractable data are included.",
       jumpTab: "primary"
     },
     nParticipants: {

@@ -762,9 +762,20 @@ function renderMCIDStudio() {
 function renderKPIs() {
   const filtered = getFilteredStudies(false);
 
+  // Reports vs studies. PRISMA 2020 keeps these separate and so does this
+  // review: a companion report describes a study already counted, so it must not
+  // add to k. Yeh 2010 and Yeh 2011 are the one linked cohort (see the
+  // 2026-09-11 unit-of-analysis amendment).
+  const companionReports = filtered.filter(s => s.duplicate_report_of).length;
+  const studyCount = filtered.length - companionReports;
+
   const studyCountEl = document.getElementById('kpi-study-count');
   if (studyCountEl) {
-    studyCountEl.innerText = `${filtered.length} Studies`;
+    studyCountEl.innerText = `${studyCount} Studies`;
+    studyCountEl.title = companionReports
+      ? `${filtered.length} reports describing ${studyCount} studies `
+        + `(${companionReports} companion report${companionReports === 1 ? '' : 's'} of a trial already counted)`
+      : `${studyCount} studies`;
   }
 
   const totalN = filtered.reduce((acc, s) => acc + (s.population ? s.population.total_n : 0), 0);

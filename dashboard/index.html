@@ -40,7 +40,7 @@
       </div>
       <div class="subnav-group" id="subnav-studies" style="display: none; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
         <span style="font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; margin-right: 0.25rem;">Studies:</span>
-        <button class="subnav-pill" data-tab="explorer" onclick="switchTab('explorer')">🔍 Study Explorer (k=70)</button>
+        <button class="subnav-pill" data-tab="explorer" onclick="switchTab('explorer')">🔍 Study Explorer (69 studies / 70 reports)</button>
         <button class="subnav-pill" data-tab="prisma" onclick="switchTab('prisma')">📋 Study Selection &amp; PRISMA Flow</button>
       </div>
       <div class="subnav-group" id="subnav-results" style="display: none; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
@@ -169,7 +169,7 @@
           <span data-i18n="kpi.includedRcts">Included RCTs</span>
           <button class="stat-info-btn" data-stat-term="kStudies" aria-label="Statistical explanation for study count k">ⓘ</button>
         </div>
-        <div class="kpi-value" id="kpi-study-count">70 RCTs</div>
+        <div class="kpi-value" id="kpi-study-count">69 RCTs</div>
         <div class="kpi-sub" id="kpi-patient-sub">See Study Explorer for current patient totals</div>
         <span class="kpi-badge badge-indigo" data-i18n="kpi.includedRctsBadge">See Study Explorer for modality breakdown</span>
       </div>
@@ -559,14 +559,14 @@
               <span style="font-size: 0.72rem; color: var(--text-muted);">224 sought, 14 not retrieved; 141 excluded</span>
             </div>
             <div class="prisma-summary-card success">
-              <span class="search-meta-label">Included in Synthesis</span>
-              <span class="prisma-card-count">70</span>
-              <span style="font-size: 0.72rem; color: #34d399;">patient totals under reconciliation</span>
+              <span class="search-meta-label">Studies Included</span>
+              <span class="prisma-card-count">69</span>
+              <span style="font-size: 0.72rem; color: #34d399;">from 70 reports &mdash; Yeh 2010 and Yeh 2011 are two reports of one trial</span>
             </div>
           </div>
 
           <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; padding: 0.85rem 1rem; border-radius: var(--radius-sm); font-size: 0.78rem; color: var(--text-secondary); line-height: 1.6; margin-top: 1rem;">
-            <strong style="color: #6ee7b7;">Updated 2026-09-07:</strong> This flow diagram now reflects the review team's updated PRISMA 2020 record (source: "PRISMA - Protocol characteristics associated with clinic....docx"), which folds the 7 post-lock source-direct additions (Wu 2016, Gao 2022, Liu 2015, Oztas 2019, Song 2020, Szmit 2021, Zhang 2018) into the eligibility and inclusion counts below. Full-text eligibility screening was revisited: 224 reports were sought, 14 could not be retrieved, 210 were assessed, and 141 were excluded (revised reason breakdown below) &mdash; 210 &minus; 141 = 69 records from the database-search route, plus 1 identified via citation searching, gives the 70 studies now included. RoB 2 is complete for all 70 studies in the source workbook (verified 2026-09-07: <code>Corrected_RoB2</code> has a full 5-domain + overall judgement for every row in <code>Study_Master</code>, no gaps) and is reflected in the Study Explorer and RoB 2 tabs. Only Szmit 2021 contributes to a locked pooled result (the strict primary 24-h opioid analysis and the Target D nausea 0&ndash;24h stratum); the other 6 are not yet pooled into any target pending a dedicated eligibility reconciliation pass. The modality split, comparator split, and total randomized-patient count shown in the "Included" card below predate this update, were found to already be inconsistent with the Study Explorer's own per-study data even for the original 63 studies, and remain under reconciliation rather than being extrapolated further.
+            <strong style="color: #6ee7b7;">Updated 2026-09-07:</strong> This flow diagram now reflects the review team's updated PRISMA 2020 record (source: "PRISMA - Protocol characteristics associated with clinic....docx"), which folds the 7 post-lock source-direct additions (Wu 2016, Gao 2022, Liu 2015, Oztas 2019, Song 2020, Szmit 2021, Zhang 2018) into the eligibility and inclusion counts below. Full-text eligibility screening was revisited: 224 reports were sought, 14 could not be retrieved, 210 were assessed, and 141 were excluded (revised reason breakdown below) &mdash; 210 &minus; 141 = 69 records from the database-search route, plus 1 identified via citation searching, gives the 70 reports now included. Those 70 reports describe <strong>69 studies</strong>: Yeh 2010 and Yeh 2011 are two reports of one lumbar spinal surgery trial (see the 2026-09-11 unit-of-analysis amendment). PRISMA 2020 keeps reports and studies as separate counts and this review reports both. RoB 2 is complete for all 70 reports in the source workbook (verified 2026-09-07: <code>Corrected_RoB2</code> has a full 5-domain + overall judgement for every row in <code>Study_Master</code>, no gaps) and is reflected in the Study Explorer and RoB 2 tabs. Only Szmit 2021 contributes to a locked pooled result (the strict primary 24-h opioid analysis and the Target D nausea 0&ndash;24h stratum); the other 6 are not yet pooled into any target pending a dedicated eligibility reconciliation pass. The modality split, comparator split, and total randomized-patient count shown in the "Included" card below predate this update, were found to already be inconsistent with the Study Explorer's own per-study data even for the original 63 studies, and remain under reconciliation rather than being extrapolated further.
           </div>
 
           <!-- PRISMA Flow Diagram Structure -->
@@ -724,19 +724,19 @@
                 <div class="prisma-card included">
                   <div class="prisma-card-title">
                     <span>Studies Included in Systematic Review &amp; Meta-Analysis</span>
-                    <span class="prisma-card-count">70 RCTs</span>
+                    <span class="prisma-card-count">69 RCTs</span>
                   </div>
                   <div class="prisma-card-body">
                     <strong>70 randomized controlled trials</strong> per the review team's updated 2026-09-07 PRISMA record (69 via the database-search route above, plus 1 identified via citation searching). Full study-level detail, RoB 2, and extracted outcomes for all 70 are in the Study Explorer.
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; margin-top: 0.85rem;">
                       <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 6px;">
                         <strong style="color: #fbbf24;">Audit &amp; Consensus Status:</strong><br>
-                        • RoB 2 complete for all 70 studies (verified 2026-09-07)<br>
+                        • 70 reports describing 69 studies (1 linked cohort)<br>• RoB 2 complete for all 70 reports (verified 2026-09-07)<br>
                         • 19/19 P1 issues dispositioned (0 blockers)
                       </div>
                       <div style="background: rgba(16, 185, 129, 0.08); padding: 0.75rem; border-radius: 6px; border: 1px solid rgba(16, 185, 129, 0.25);" id="prisma-population-reconciliation">
                         <strong style="color: #6ee7b7;">Modality, comparator and patient totals (reconciled):</strong><br>
-                        <span id="prisma-population-summary">70 studies &bull; 10,678 total randomized patients &bull; 48 TEAS / 22 EA &bull; 58 sham-controlled / 12 usual-care-controlled.</span>
+                        <span id="prisma-population-summary">69 studies from 70 reports &bull; 10,678 randomized patients across reports (double-counts the one linked Yeh cohort; under reconciliation) &bull; 48 TEAS / 22 EA &bull; 58 sham-controlled / 12 usual-care-controlled.</span>
                         <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.35rem;">Computed live from the Study Explorer's own per-study modality, comparator and population fields (the same 70-study dataset everywhere else on this dashboard), not restated from the PRISMA docx, which does not itself give patient totals.</div>
                       </div>
                     </div>

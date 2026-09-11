@@ -14,7 +14,7 @@ Object.assign(window.TRANSLATIONS.sv.kpi, {
 });
 window.UI_TRANSLATIONS_SV = {
   "📄 Executive Summary & Scope": "📄 Sammanfattning och omfattning",
-  "🔍 Study Explorer (k=70)": "🔍 Studieöversikt (k=70)",
+  "🔍 Study Explorer (69 studies / 70 reports)": "🔍 Studieöversikt (69 studier / 70 rapporter)",
   "📋 Study Selection & PRISMA Flow": "📋 Studieurval och PRISMA-flöde",
   "💊 Primary 24-h Opioid (k=7)": "💊 Primärt opioidutfall efter 24 timmar (k=7)",
   "⏱️ Secondary & Other Outcomes": "⏱️ Sekundära och övriga utfall",

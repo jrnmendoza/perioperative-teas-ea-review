@@ -86,6 +86,18 @@ def read_csv_rows(path: Path) -> list[dict]:
         return list(csv.DictReader(f))
 
 
+def companion_report_count() -> int:
+    """Reports that are a second publication of a study already counted.
+
+    PRISMA 2020 separates reports from studies, and this review has one linked
+    cohort: Yeh 2010 and Yeh 2011 report the same three-arm lumbar spinal surgery
+    trial (see 05_study_linkage/cohorts/ and the 2026-09-11 amendment). Counting
+    them as two studies would overstate the evidence base.
+    """
+    text = (DASH / "data.js").read_text(encoding="utf-8")
+    return text.count('"duplicate_report_of"')
+
+
 def canonical_studies_count() -> int:
     """Parse window.STUDIES_DATA out of data.js without a JS engine."""
     text = (DASH / "data.js").read_text(encoding="utf-8")
@@ -152,7 +164,12 @@ def build_metadata(commit: str) -> dict:
     return {
         "master_version": "v34",
         "master_file": MASTER_XLSX.name,
+        # Reports retrieved, and the number of distinct studies they describe.
+        # These differ whenever a trial is published more than once.
         "canonical_studies": canonical_studies_count(),
+        "canonical_reports": canonical_studies_count(),
+        "included_studies": canonical_studies_count() - companion_report_count(),
+        "companion_reports": companion_report_count(),
         "source_normalized_outcome_rows": source_normalized_outcome_rows(),
         "strict_primary_opioid_k": strict_primary_opioid_k(),
         "git_commit": commit,

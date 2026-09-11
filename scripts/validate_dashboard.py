@@ -3701,8 +3701,30 @@ def t_companion_publications_cannot_double_count():
                 probs.append(f"{name}: contributes arm-level data to {pooled} -- a companion "
                              f"publication pair must not both enter a synthesis; resolve the "
                              f"unit of analysis before pooling either")
+    # The counts the review reports must follow from the linkage, not be typed in.
+    import json as _json
+    meta_path = ROOT / "_site" / "build-meta.json"
+    if meta_path.exists():
+        meta = _json.loads(meta_path.read_text(encoding="utf-8"))
+        reports = meta.get("canonical_reports")
+        studies = meta.get("included_studies")
+        companions = meta.get("companion_reports")
+        if (reports, studies, companions) != (len(STUDIES), len(STUDIES) - len(pairs), len(pairs)):
+            probs.append(f"build-meta reports/studies/companions = "
+                         f"{reports}/{studies}/{companions}, expected "
+                         f"{len(STUDIES)}/{len(STUDIES) - len(pairs)}/{len(pairs)}")
+    # The dashboard must state the study count, not the report count, as k.
+    html = (DASH / "index.html").read_text(encoding="utf-8")
+    if "69 studies / 70 reports" not in html:
+        probs.append("index.html no longer distinguishes studies from reports in the "
+                     "Study Explorer label")
+    app_js = (DASH / "app.js").read_text(encoding="utf-8")
+    if "duplicate_report_of" not in app_js:
+        probs.append("app.js no longer excludes companion reports from the study count")
+
     check(f"Companion publications are declared and cannot double-count "
-          f"({len(pairs)} pair)", not probs, "\n".join(probs))
+          f"({len(pairs)} pair; {len(STUDIES)} reports = {len(STUDIES) - len(pairs)} studies)",
+          not probs, "\n".join(probs))
 
 
 def t_quarantine_registry_is_honest():
