@@ -1090,11 +1090,25 @@ function summarisePopulation(studies) {
   });
   out.female = tot > 0 ? { events: fem, total: tot, studies: contributing } : null;
 
+  out.countryDisagreements = [];
   studies.forEach(s => {
+    const pdf = (window.PDF_EXTRACTED || {})[s.key] || {};
     const c = s.country || 'Not reported';
     out.countries[c] = (out.countries[c] || 0) + 1;
+    // The register and the source PDF do not always agree about where a trial
+    // was run. Count that rather than quietly presenting the register's figure
+    // as settled -- it is the difference between "all 63 were in China" and a
+    // genuinely multi-country evidence base.
+    if (s.country && pdf.country && pdf.country.value && pdf.country.value !== s.country) {
+      out.countryDisagreements.push({ study: s.key, register: s.country, pdf: pdf.country.value });
+    }
+    // Anaesthesia resolves the same way the study details panel does: the
+    // extraction record first, then the source PDF. Counting only the former
+    // understated coverage as 27/70 when it is actually 52/70.
     const ch = (window.STUDY_CHARACTERISTICS || {})[s.key] || {};
-    const a = ch.anesthesia || 'Not recorded';
+    const a = ch.anesthesia
+      || (pdf.anaesthesia && pdf.anaesthesia.value)
+      || 'Not recorded';
     out.anaesthesia[a] = (out.anaesthesia[a] || 0) + 1;
   });
   return out;
@@ -1176,9 +1190,16 @@ function renderPopulationSummary(studies) {
           </div>`).join('')}
       </div>
       <div class="pop-foot">
-        Geographic distribution — ${countryBits}.
-        Anaesthesia technique recorded for ${p.n - (p.anaesthesia['Not recorded'] || 0)}/${p.n};
-        where absent the extraction record carried no explicitly labelled anaesthesia row.
+        Geographic distribution as recorded in the register — ${countryBits}.
+        ${p.countryDisagreements.length ? `<strong style="color:#d9a457;">
+          ${p.countryDisagreements.length} of these disagree with the source publication's own lead
+          affiliation</strong> (${p.countryDisagreements.slice(0, 4).map(d =>
+            `${pwEsc(d.study)} &rarr; ${pwEsc(d.pdf)}`).join(', ')}${p.countryDisagreements.length > 4
+            ? `, +${p.countryDisagreements.length - 4} more` : ''}). Open a study to see the quoted
+          affiliation. The register value is shown here unchanged pending review.` : ''}
+        Anaesthesia technique recorded for ${p.n - (p.anaesthesia['Not recorded'] || 0)}/${p.n},
+        combining the extraction records with techniques read from the source PDFs; where absent,
+        the paper states no explicit technique.
       </div>
     </div>
   `;
@@ -2841,7 +2862,27 @@ function openStudyDrawer(id) {
         <section class="sd-card">
           <h4>A · Trial</h4>
           <table class="sd-table">
-            ${row('Country', s.country ? pwEsc(s.country) : baselineValue(null))}
+            ${row('Country', (() => {
+                const pdfC = ((window.PDF_EXTRACTED || {})[s.key] || {}).country;
+                const reg = s.country ? pwEsc(s.country) : null;
+                // Where the register and the paper disagree, show BOTH. The
+                // register is not silently overwritten -- which country a trial
+                // was run in is register data, and correcting it is the review
+                // team's call, not this panel's.
+                if (pdfC && pdfC.value && reg && pdfC.value !== s.country) {
+                  return `${reg} <span class="nr-tag" style="border-style:solid;color:#d9a457;border-color:rgba(217,164,87,.5);" `
+                    + `title="Register says ${pwEsc(s.country)}; the source publication's lead affiliation says `
+                    + `${pwEsc(pdfC.value)}. Flagged for review, not corrected here.">register</span>`
+                    + `<br>${pwEsc(pdfC.value)} ${pdfValue(s.key, 'country') ? '' : ''}`
+                    + `<span class="pdf-src" title="${pwEsc(`${(window.PDF_EXTRACTED[s.key] || {}).source_pdf}, p${pdfC.page}: "${String(pdfC.quote).replace(/"/g, "'")}"`)}">PDF p${pdfC.page}</span>`
+                    + `<br><span class="sd-sub">Register and source disagree — see the quoted affiliation.</span>`;
+                }
+                if (reg) return reg;
+                return pdfValue(s.key, 'country')
+                  || (pdfC && pdfC.conflict
+                      ? `${baselineValue(null)} <span class="sd-sub">affiliations name several countries (${pwEsc(pdfC.conflict.join(', '))}) with no marked lead centre</span>`
+                      : baselineValue(null));
+              })())}
             ${row('Year', s.year)}
             ${row('Surgery', `${pwEsc(s.surgery_category)}<br><span class="sd-sub">${pwEsc(s.surgery_procedure || '')}</span>`)}
             ${row('Anaesthesia', ch.anesthesia

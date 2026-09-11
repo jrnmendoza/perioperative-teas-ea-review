@@ -3578,6 +3578,74 @@ def t_unlinked_rob2_cells_explain_themselves():
           not probs, "\n".join(probs))
 
 
+# Trials whose register country disagrees with the lead affiliation printed in
+# their own source publication, each confirmed by reading the affiliation. These
+# are NOT corrected here: which country a trial was run in is register data, and
+# changing it is the review team's decision. Recording them stops the set drifting
+# unnoticed in either direction.
+COUNTRY_DISAGREEMENTS = {
+    "Sim 2002": "Singapore",            # National University Hospital, Singapore
+    "Wong 2006": "Hong Kong",           # The Chinese University of Hong Kong
+    "Yeh 2010": "Taiwan",               # medical centre in northern Taiwan
+    "Coura 2011": "Brazil",             # Centro Hospitalar Unimed, Joinville
+    "Lee 2011": "Australia",            # affiliation 1: Victoria University, Melbourne
+    "Yeh 2011": "Taiwan",               # National Taipei College of Nursing
+    "Ng 2013": "Hong Kong",             # Prince of Wales Hospital, CUHK
+    "Seevaunnamtum 2016": "Malaysia",   # Universiti Sains Malaysia
+}
+
+
+def t_country_disagreements_are_declared():
+    """
+    STRUCTURAL. The register records "China" for all 63 trials that carry a
+    country. Reading the source publications shows that is wrong for eight of
+    them -- Singapore, Hong Kong (x2), Taiwan (x2), Brazil, Australia and
+    Malaysia -- which matters directly for any statement about the geographic
+    spread of this evidence base and its generalisability.
+
+    The register is deliberately NOT rewritten: that is the review team's call.
+    What must not happen is the disagreement going unnoticed, or the set
+    changing without anyone looking. This pins the exact set, so a new
+    disagreement fails the build and a resolved one must be removed here.
+    """
+    pdf_path = DASH / "pdf_extracted.js"
+    if not pdf_path.exists():
+        check("Register/source country disagreements are declared", False,
+              "dashboard/pdf_extracted.js is missing")
+        return
+    extracted = json.loads(pdf_path.read_text(encoding="utf-8")
+                           .split("window.PDF_EXTRACTED = ", 1)[1].rsplit(";", 1)[0])
+    probs = []
+    seen = {}
+    for s in STUDIES:
+        rec = extracted.get(s["key"], {}).get("country")
+        if not (s.get("country") and isinstance(rec, dict) and rec.get("value")):
+            continue
+        if rec["value"] != s["country"]:
+            seen[s["key"]] = (s["country"], rec["value"])
+
+    for key, (register_says, found) in sorted(seen.items()):
+        expected = COUNTRY_DISAGREEMENTS.get(key)
+        if expected is None:
+            probs.append(f"{key}: register says {register_says!r} but the source's lead "
+                         f"affiliation says {found!r}, and this is not declared in "
+                         f"COUNTRY_DISAGREEMENTS -- verify the affiliation and record it")
+        elif expected != found:
+            probs.append(f"{key}: declared as {expected!r} but the extractor now reads {found!r}")
+    for key in COUNTRY_DISAGREEMENTS:
+        if key not in seen:
+            probs.append(f"{key}: declared as a country disagreement but the register and the "
+                         f"source now agree -- remove it from COUNTRY_DISAGREEMENTS")
+
+    # The dashboard must actually surface this, not just record it here.
+    app = (DASH / "app.js").read_text(encoding="utf-8")
+    if "countryDisagreements" not in app:
+        probs.append("app.js no longer reports register/source country disagreements to readers")
+
+    check(f"Register/source country disagreements are declared ({len(seen)} found)",
+          not probs, "\n".join(probs))
+
+
 def t_quarantine_registry_is_honest():
     """
     STRUCTURAL. dashboard/outcome_quarantine.js withholds an outcome from being
@@ -3885,6 +3953,7 @@ def main() -> int:
           t_archival_workbooks_feed_no_live_code,
           t_pdf_extractions_are_provable_from_their_quotes,
           t_unlinked_rob2_cells_explain_themselves,
+          t_country_disagreements_are_declared,
           t_quarantine_registry_is_honest]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,

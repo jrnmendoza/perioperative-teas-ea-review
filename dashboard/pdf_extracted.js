@@ -2,6 +2,18 @@
 // Every value carries the source PDF, page and verbatim quote it came from.
 window.PDF_EXTRACTED = {
   "#105119 - Zhou 2025": {
+    "anaesthesia": {
+      "value": "General anaesthesia",
+      "page": 2,
+      "quote": "Eligibility screening was conducted for patients scheduled to undergo elective gynecological laparoscopic surgery under general anesthesia.",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "Department of Anesthesiology, The Second Affiliated Hospital of Guilin Medical University, Guilin, People’s Republic of China *These authors contributed equally to this work Correspondence: Xu Zhang, Department of Anesthesiology, The Second Affiliated Hospital of Guilin Medical University, No.",
+      "hits": 1
+    },
     "source_pdf": "105119.pdf"
   },
   "An 2014": {
@@ -11,11 +23,11 @@ window.PDF_EXTRACTED = {
       "quote": "Patients were randomly allocated into 2 groups using a computer-generated randomized number table; Group C was a control group that did not receive EA during the operation ( n ¼ 43) and Group A was the experimental group that received EA ( n ¼ 45). Acupuncture We collaborated with an acupuncturist f",
       "hits": 1
     },
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 3,
-      "quote": "General anesthesia was initially maintained with sevo flurane, 2% in oxygen at 2 L/min.",
-      "hits": 2
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "*Department of Anesthesia , Beijing Tiantan Hospital Capital Medical University , Beijing 100050 , China †Department of Anesthesia , Beijing Jishuitan Hospital Beijing 100035 , China ‡Department of Acupuncture Beijing University of Traditional Chinese Medicine Beijing 100029 , China §Department of E",
+      "hits": 4
     },
     "source_pdf": "covidence_698_full_article.pdf"
   },
@@ -24,7 +36,13 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 3,
       "quote": "General anesthesia was induced using intravenous sufentanil (0.3‑0.5 µg/kg; cat.",
-      "hits": 1
+      "hits": 2
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "2Department of Anesthesiology, Tangshan People's Hospital and Tangshan Cancer Hospital, North China University of Science and Technology, Tangshan, Hebei 063000; 3Department of Anesthesiology, Second Hospital of Hebei Medical University, Shijiazhuang, Hebei 050000, China Received February 29, 2020; ",
+      "hits": 6
     },
     "source_pdf": "download.pdf"
   },
@@ -36,11 +54,29 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "General anesthesia was induced with intravenous sufentanil 0.5 μg/kg and propofol 2.0 mg/kg.",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anesthesiology, The Shengli Clinical Medicial College of Fujian Medical University, Fujian Provincial Hospital, Fuzhou 350001, China; 2Department of Anesthesiology, People’s Hospital Affiliated to Fujian University of Traditional Chinese Medicine, Fuzhou 350122, China.",
       "hits": 2
     },
     "source_pdf": "037_chen_2015_thyroidectomy_lund.pdf"
   },
   "Chen 2015 (Hyperalgesia)": {
+    "anaesthesia": {
+      "value": "General anaesthesia",
+      "page": 2,
+      "quote": "scheduled for elective thyroidectomy under general anesthesia from August 2014 to December 2014 at Fujian Provincial Hospital.",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "Department of Anesthesiology, The Shengli Clinical Medical College of Fujian Medical University & Fujian Provin- cial Hospital, Fuzhou 350001, China.",
+      "hits": 1
+    },
     "source_pdf": "040_chen_2015_hyperalgesia_lund.pdf"
   },
   "Chen 2020": {
@@ -50,11 +86,11 @@ window.PDF_EXTRACTED = {
       "quote": "Methods: A total of 80 patients were randomized into two groups: the TEAS group and the sham TEAS combined with general anesthesia group.",
       "hits": 1
     },
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 7,
-      "quote": "the stress response during extubation after general anesthesia in elderly patients undergoing elective supratentorial craniotomy: A prospective randomized controlled trial.",
-      "hits": 1
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 Key Laboratory of Carcinogenesis and Translational Research (Ministry of Education, Beijing), Department of Anesthesiology, Peking University Cancer Hospital and Institute, Beijing, China 2 Neuroscience Research Institute and Department of Neurobiology, Peking University and Key Laboratory of Neur",
+      "hits": 5
     },
     "source_pdf": "Thoracic Cancer - 2020 - Chen - Efficacy of transcutaneous electrical acupoint stimulation combined with general anesthesia.pdf"
   },
@@ -65,9 +101,21 @@ window.PDF_EXTRACTED = {
       "quote": "The day before the surgery, 32 patients undergoing cardiac surgery were randomised into two groups: patients from the treatment group received preoperative EA at bilateral points (LI4-LI11, LR3-ST36, PC6-TE5) for 30 min with altemating frequencies of 3 and 15 Hz.",
       "hits": 1
     },
+    "country": {
+      "value": "Brazil",
+      "page": 1,
+      "quote": "'Centro Hospitalar Unimed, Joinville, Brazil 'Centro de Estudos de Acupuntura do Parana, Curitiba, Brazil Correspondence to Dr Luiz Eduardo Fana Coura, Intensivist and Acupuncturist Member of Intensive Care Therapy at Centro Hospitalar Unimed Joinville, Rua Blumenau 314, Joinville-SC 89204-250, Braz",
+      "hits": 4
+    },
     "source_pdf": "covidence_819_full_article.pdf"
   },
   "El-Rakshy 2009": {
+    "anaesthesia": {
+      "value": "General anaesthesia",
+      "page": 4,
+      "quote": "In conclusion, acupuncture given under general anaesthesia is unlikely to have a clinically useful effect, but research into preoperative acupuncture is likely to lead to improved patient care. Acknowledgements: This study was submitted in partial fulfilment of the Masters degree in pain management ",
+      "hits": 2
+    },
     "source_pdf": "covidence_868_full_article.pdf"
   },
   "Gao 2021": {
@@ -82,6 +130,12 @@ window.PDF_EXTRACTED = {
       "page": 2,
       "quote": "(1) surgery under general anesthesia; (2) age /C21 18 years and American Society of Anesthesiologists I eIII; (3) patients ’ ability to understand and sign the written informed consent form; and (4) not involved in other clinical studies.",
       "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "a Department of Anesthesiology and Center for Brain Science, the First Af filiated Hospital of Xi ’an Jiaotong University, Xi ’an, China b Department of Anesthesiology, Weinan Central Hospital, Weinan, China c Department of Anesthesiology, Xi ’an Central Hospital, Xi ’an, China d Department of Anest",
+      "hits": 13
     },
     "source_pdf": "covidence_400_full_article.pdf"
   },
@@ -98,21 +152,45 @@ window.PDF_EXTRACTED = {
       "quote": "non-gastrointestinal surgery under general anesthesia. Interventions: Patients were randomly allocated into the TEAS and Sham grou p with a 1:1 ratio.",
       "hits": 3
     },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 Department of Anesthesiology, Center for Brain Science, Th e First Affiliated Hospital of Xi’an Jiaotong University, Xi’an, China, 2 Department of Anesthesiology, Second Hospital of Shanxi Me dical University, Taiyuan, China, 3 Department of Anesthesiology, The First Affiliated Hospital, College o",
+      "hits": 12
+    },
     "source_pdf": "pdf-2.pdf"
   },
   "Grech 2016": {
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 6,
-      "quote": "tients were under general anesthesia, and therefore blinded to the treatment to avoid any placebo effect. Despite the general anesthesia, EA induced an anti- nociceptive effect; (2) the lower amount of analgesics in the EA group did not cause a higher pain score.",
-      "hits": 2
+      "page": 1,
+      "quote": "Electroacupuncture under General Anesthesia Improves Postoperative Recovery in a Randomized Trial Dennis Grech 1, Zhifeng Li 2, Patrick Morcillo 2, Evelyne Kalyoussef 3, David D.",
+      "hits": 5
     },
     "source_pdf": "030_grech_2016_lund.pdf"
   },
   "Gu 2019": {
+    "anaesthesia": {
+      "value": "Spinal anaesthesia",
+      "page": 6,
+      "quote": "and vomiting after cesarean section under spinal anesthesia, Acta Med.",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "a Department of Anesthesiology, Tangshan People ’s Hospital, North China University of Science and Technology, No.",
+      "hits": 2
+    },
     "source_pdf": "covidence_1471_full_article.pdf"
   },
   "Guo 2023": {
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "Department of Anesthesiology, The Second Affiliated Hospital of Air Force Medical University, Xi’an, People’s Republic of China ARTICLE INFO Keywords: Transcutaneous electrical acupoint stimulation (TEAS) Postoperative cognitive dysfunction(POCD) Quality of life Lung cancer Older patients ABSTRACT O",
+      "hits": 3
+    },
     "source_pdf": "006_guo_2023.pdf"
   },
   "He 2026 (breast/WJCO)": {
@@ -122,10 +200,10 @@ window.PDF_EXTRACTED = {
       "quote": "A total of 130 patients with breast cancer were randomly divided into EA group (n = 65) and control group (n = 65).",
       "hits": 1
     },
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 3,
-      "quote": "Patients in both groups were given uniform general anesthesia 30 minutes afterward, induced with propofol (2 mg/kg) and sufentanil (0.5 μg/kg).",
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "Bi-Mei He, Xiao-Lin Sun, Xiao-Yu Huang, Sen-Sen Zhang, Qing-Xiong Hong, Department of Anesthesiology, The Second Affiliated Hospital of Guangzhou University of Chinese Medicine, Guangzhou 510000, Guangdong Province, China ORCID number: Qing-Xiong Hong 0009-0007-0048-1499. Corresponding author: Qing-",
       "hits": 1
     },
     "source_pdf": "covidence_41_verified.pdf"
@@ -137,6 +215,12 @@ window.PDF_EXTRACTED = {
       "quote": "Eligible patients were those who were scheduled for elective hepatectomy under general anesthesia.",
       "hits": 1
     },
+    "country": {
+      "value": "China",
+      "page": 2,
+      "quote": "laboratory of a nesthesiology of Ministry of e ducation, Xijing Hospital, f ourth Military Medical university, Xi’an, China; bDepartment of a nesthesiology, the f irst a ffiliated Hospital of Henan university of Chinese Medicine, Zhengzhou Henan, China; cDepartment of a nesthesiology, Qinghai Provin",
+      "hits": 7
+    },
     "source_pdf": "covidence_25_verified.pdf"
   },
   "Hou 2023": {
@@ -145,6 +229,12 @@ window.PDF_EXTRACTED = {
       "page": 3,
       "quote": "index monitor (BIS) were placed, general anesthesia was induced with IV sufentanil 0.3–0.5 μg kg\u0000 1 and propofol 0.2–0.3 mg kg\u0000 1.",
       "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "a Department of Anesthesiology, The First Affiliated Hospital of USTC, Division of Life Sciences and Medicine, University of Science and Technology of China, China b Department of Anesthesiology, University of Connecticut School of Medicine, Farmington, CT, USA c Department of Kidney Transplantation",
+      "hits": 3
     },
     "source_pdf": "007_hou_2023.pdf"
   },
@@ -155,10 +245,10 @@ window.PDF_EXTRACTED = {
       "quote": "experience of TEAS or acupuncture were randomly assigned to four groups: control (con), 2/100, 2, and 100 Hz.",
       "hits": 1
     },
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 2,
-      "quote": "and general anesthesia is beneficial in pneumonectomy [7, 8]. Transcutaneous electrical acupoint stimulation (TEAS), a noninvasive adjunctive intervention based on acupunc- ture, may reduce pulmonary inflammatory responses induced by one-lung ventilation, and therefore reduce the incidence of postop",
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 Department of Anesthesiology, Peking University People’s Hospital, Beijing 100044, China 2 Department of Anesthesiology, Ministry of Health Beijing Hospital, Beijing 100730, China 3 Department of Surgery, Beijing Oasis International Hospital, Beijing 100015, China 4 Department of Anesthesiology, R",
       "hits": 3
     },
     "source_pdf": "covidence_666_full_article.pdf"
@@ -166,16 +256,46 @@ window.PDF_EXTRACTED = {
   "Huang 2024": {
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 3,
-      "quote": "All patients underwent surgery under general anesthesia.",
-      "hits": 1
+      "page": 2,
+      "quote": "under general anesthesia during hospitalization without surgical and anesthetic contraindications. We excluded patients who: could not participate due to skin lesions at the planned sites of acupuncture needling; had lower extremity sensory disturbance or abnormality; had severe arrhythmias, heart f",
+      "hits": 3
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "3 Guanghua Hospital, Shanghai University of Traditional Chinese Medicine, Shanghai, China 4 Longhua Hospital, Shanghai University of Traditional Chinese Medicine, Shanghai, China †Hai Huang and Kangmin Tang contributed equally to this work and should be considered co-first authors. Corresponding aut",
+      "hits": 5
     },
     "source_pdf": "covidence_245_full_article.pdf"
   },
   "Huang 2025": {
+    "anaesthesia": {
+      "value": "General anaesthesia",
+      "page": 2,
+      "quote": "oophorectomy or salpingectomy under general anesthesia; and willing to provide informed consent and participate in the study. Participants were excluded if they met any of the following criteria: severe cardiac, hepatic, or renal insufficiency; skin infection or nerve da- mage near the experimental ",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Gynaecology, The Affiliated Traditional Chinese Medicine Hospital, Southwest Medical University, Luzhou 646000, Sichuan, China; 2Department of Anesthesiology, The Affiliated Traditional Chinese Medicine Hospital, Southwest Medical University, Luzhou 646000, Sichuan, China Received Nov",
+      "hits": 4
+    },
     "source_pdf": "covidence_131_verified.pdf"
   },
   "Jiang 2026": {
+    "anaesthesia": {
+      "value": "General anaesthesia",
+      "page": 2,
+      "quote": "gastrointestinal surgeries were conducted under general anesthesia.",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "a Department of Anesthesiology, Shanxi Bethune Hospital, Shanxi Academy of Medical Sciences, Third Hospital of Shanxi Medical University, Tongji Shanxi Hospital, Taiyuan, 030032, China b Department of Anesthesiology and Critical Care Medicine, Tianjin Nankai Hospital, Tianjin, 300100, China ARTICLE ",
+      "hits": 2
+    },
     "source_pdf": "study_4_Jiang_2026.pdf"
   },
   "Jin 2023": {
@@ -183,6 +303,18 @@ window.PDF_EXTRACTED = {
       "value": 174,
       "page": 3,
       "quote": "The 174 patients were randomized to receive PCIA + 2-Hz EA (n=58), PCIA + 20/ 100−Hz EA (n=58), or PCIA + sham EA (n=58) treatment ( Figure 1 ).",
+      "hits": 1
+    },
+    "anaesthesia": {
+      "value": "Epidural anaesthesia",
+      "page": 8,
+      "quote": "somato-visceral pain under epidural anesthesia in parturients with scarred uterus.",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "STUDY DESIGN: This single-center, randomized, single-blinded, sham acupuncture controlled clinical trial was conducted at a tertiary uni- versity hospital in China.",
       "hits": 1
     },
     "source_pdf": "009_jin_2023.pdf"
@@ -194,11 +326,12 @@ window.PDF_EXTRACTED = {
       "quote": "on a double-blind, sham and di ﬀerent intervention controlled clinical experimental design, 47 women were randomly allocated to four di ﬀerent groups.",
       "hits": 1
     },
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 2,
-      "quote": "1 received general anesthesia only.",
-      "hits": 1
+    "country": {
+      "value": "Australia",
+      "page": 1,
+      "quote": "1 School of Biomedical and Health Sciences, Vict oria University, Melbourne, VIC 8001, Australia 2 Department of Anesthesiology, China Medical University Hospital, T aichung 40447, T aiwan Correspondence should be addressed to Hong Xu, hong.xu@vu.edu.au Received 17 January 2011; Accepted 24 March 20",
+      "hits": 2,
+      "note": "marked as affiliation 1 (lead centre); the paper also lists China"
     },
     "source_pdf": "049_lee_2011.pdf"
   },
@@ -211,18 +344,30 @@ window.PDF_EXTRACTED = {
     },
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 3,
-      "quote": "Patients received general anesthesia intravenously, as determined by the chief anesthesiologist.",
+      "page": 2,
+      "quote": "tumor resection under general anesthesia (stomach, colon or rec- tum); using postoperative analgesia pump; volunteering to partic- ipate in this study and sign the informed consent. Patients meeting the following criteria were excluded from the study: surgical incision or scar near the acupoints of ",
       "hits": 2
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "a Department of Anesthesiology, Beijing Friendship Hospital, Capital Medical University, Beijing 100050, China b Department of Anesthesiology, Beijing Hui-Min Hospital, Beijing 100053, China c Department of Traditional Chinese Medicine, Beijing Friendship Hospital, Capital Medical University, Beijin",
+      "hits": 4
     },
     "source_pdf": "covidence_437_full_article.pdf"
   },
   "Li 2022": {
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 1,
-      "quote": "frequently used for general anesthesia.1 However, experimental and clinical studies have reported a paradoxical phenomenon termed remifentanil-induced post-infusion hyperalgesia (RPH), in which pain sensitivity increases after the administration of high doses of remifentanil during surgery.2–4 The p",
+      "page": 2,
+      "quote": "receiving elective thyroidectomy under general anesthesia. Exclusion criteria: (1) history of operative treatment; (2) history of severe pain, including current pain treatment; (3) pregnant or breastfeeding; (4) mental or neurological disorder or intellectual disabilities; (5) implanted cardiac defi",
       "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "Department of Anesthesiology, Affiliated Hospital of Nanjing University of Chinese Medicine, Jiangsu Province Hospital of Chinese Medicine, Nanjing, Jiangsu, People’s Republic of China Correspondence: Weiqian Tian, Department of Anesthesiology, Affiliated Hospital of Nanjing University of Chinese Me",
+      "hits": 3
     },
     "source_pdf": "getfile.php.pdf"
   },
@@ -231,6 +376,12 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 1,
       "quote": "undergoing TURP under general anesthesia requiring intraoperative urinary catheterization were enrolled for the trial.",
+      "hits": 2
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anesthesiology, Qilu Hospital, Cheeloo College of Medicine, Shandong University, Jinan, Shandong 250012, China 2Department of Anesthesiology, First Aﬃliated Hospital of Wenzhou Medical University, Wenzhou, Zhejiang 325000, China CorrespondenceshouldbeaddressedtoJinGuiYu;yujingui1109@1",
       "hits": 2
     },
     "source_pdf": "014_liang_2021.pdf"
@@ -242,13 +393,27 @@ window.PDF_EXTRACTED = {
       "quote": "hysterectomy were randomly divided into four groups of 25 each by a computer-generated randomization sequence: Group I received neither needle insertion nor electric stimu- lation (control); Group II received needle insertion but with- out electrical stimulation (sham-EA); Group III received needle ",
       "hits": 1
     },
+    "country": {
+      "conflict": [
+        "China",
+        "Taiwan"
+      ],
+      "note": "country: several affiliation countries and no affiliation marked as the lead centre; not resolved automatically"
+    },
     "source_pdf": "covidence_951_lin_2002.pdf"
   },
   "Liu 2015": {
     "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 7,
-      "quote": "electroacupuncture with general anesthesia induced by sevoflurane in patients undergoing supratentorial craniotomy and improvements in their clinical recovery profile & blood enkephalin.",
+      "conflict": [
+        "General anaesthesia",
+        "Spinal anaesthesia"
+      ],
+      "note": "anaesthesia: the paper yielded more than one candidate; not resolved automatically"
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "Department of Anesthesiology, Beijing 100093 China; baoguowang766@163.com Accepted 10 April 2015 Published Online First 29 April 2015 To cite: Liu X, Li S, Wang B, et al.",
       "hits": 1
     },
     "source_pdf": "covidence_681_full_article.pdf"
@@ -260,9 +425,27 @@ window.PDF_EXTRACTED = {
       "quote": "The remaining 100 patients were randomly divided into Group T and Group C (Figure 2). Patient Characteristics The patients included into this final cohort were all Han Chinese, the general characteristics of the entire patients included gender [female, 49 (49%)], age (70.24±5.143 years), BMI (24.78±",
       "hits": 1
     },
+    "anaesthesia": {
+      "value": "Total intravenous anaesthesia",
+      "page": 3,
+      "quote": "μg/kg/min) plus propofol (total intravenous anesthesia [TIVA], 4–12 mg/kg/h) at the discretion of the anesthesiol- ogist.",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anesthesiology, The Third Hospital of Hebei Medical University, Shijiazhuang City, Hebei, People’s Republic of China; 2Department of Anesthesiology, Cangzhou Central Hospital, Cangzhou, Hebei, People’s Republic of China Background: Postoperative cognitive decline (POCD) in the old age",
+      "hits": 2
+    },
     "source_pdf": "getfile.php-2.pdf"
   },
   "Liu 2025": {
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 First Clinical Medical College, Guangzhou University of Chinese Medicine, Guangzhou, China, 2 Department of Anesthesiology, The First Affiliated Hospital of Guangzhou University of Chinese Medicine, Guangzhou, China, 3 Guangdong Clinical Research Academy of Chinese Medicine, Guangzhou, China, 4 De",
+      "hits": 5
+    },
     "source_pdf": "pdf.pdf"
   },
   "Liu 2026 (ESD)": {
@@ -278,18 +461,30 @@ window.PDF_EXTRACTED = {
       "quote": "undergoing gastroesophageal ESD under general anesthesia, pretreating with TEAS could effectively improve the early postoperative pain of patients, reduce the incidence of moderate-to-severe pain, and decrease the application of morphine after surgery.",
       "hits": 1
     },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "Department of Anesthesiology, Beijing Friendship Hospital, Capital Medical University, Beijing (100050), China; 2.",
+      "hits": 4
+    },
     "source_pdf": "covidence_69_full_article.pdf"
   },
   "Liu 2026 (burn)": {
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 2,
-      "quote": "wound debridements, undergoing general anesthesia, thus providing comfortable analgesia for them while reducing the dosages of opioid will be a major challenge for anesthesiologists. It is supported that preemptive analgesia, which means reducing peripheral and central nerve sensitiza - tion caused ",
+      "page": 1,
+      "quote": "Methods In this trial, 86 burn patients with wound debridement under general anesthesia were randomized to receive thirty minutes of TEAS (TEAS group, n = 43) at acupoints LI4 (Hegu), PC6 (Neiguan), ST36 (Zusanli), and SP6 (Sanyinjiao) before induction of anesthesia or false stimulation (control gro",
       "hits": 1
     },
     "source_pdf": "covidence_48_verified.pdf"
   },
   "Long 2025": {
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "a Department of Anesthesiology, The First Hospital of Nanchang, The Third Affiliated Hospital of Nanchang University, Jiangxi Medical College, Nanchang University, Nanchang, China b Department of Anesthesiology, The Second Affiliated Hospital of Zhejiang Chinese Medical University, Hangzhou, China c",
+      "hits": 3
+    },
     "source_pdf": "1-s2.0-S0020138325005200.pdf"
   },
   "Lu 2021": {
@@ -306,23 +501,35 @@ window.PDF_EXTRACTED = {
       ],
       "note": "anaesthesia: the paper yielded more than one candidate; not resolved automatically"
     },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "a Department of Anesthesiology and Perioperative Medicine, Xijing Hospital, Fourth Military Medical University, Xi'an, Shaanxi 710032, China b Department of Anesthesiology, First Affiliated Hospital, Xi'an Jiaotong University, Xi'an, Shaanxi 710061, China c Department of Anesthesiology, Tangdu Hospi",
+      "hits": 12
+    },
     "source_pdf": "covidence_414_full_article.pdf"
   },
   "Lu 2022": {
     "anaesthesia": {
       "conflict": [
-        "Epidural anaesthesia",
-        "General anaesthesia"
+        "General anaesthesia",
+        "Spinal anaesthesia"
       ],
       "note": "anaesthesia: the paper yielded more than one candidate; not resolved automatically"
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anaesthesiology and Perioperative Medicine, Xijing Hospital, Fourth Military Medical University, Xi’an, People’s Republic of China; 2Department of Anaesthesiology, T ongji Hospital, Huazhong University of Science and T echnology, Wuhan, People’s Republic of China; 3Department of Anaes",
+      "hits": 8
     },
     "source_pdf": "getfile.php-3.pdf"
   },
   "Luo 2026": {
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 2,
-      "quote": "frequent and distressing complication following general anesthesia, particularly in patients undergoing middle ear surgery [1].",
+      "page": 5,
+      "quote": "panoplasty under general anesthesia, compared with sham stimulation.",
       "hits": 1
     },
     "source_pdf": "covidence_35_verified.pdf"
@@ -334,14 +541,26 @@ window.PDF_EXTRACTED = {
       "quote": "< 6 were assigned to the non-randomized control group (Group C), and 35 patients with PSQI ≥ 6 were randomly allocated (1:1) to the sleep disturbance group (Group S, n = 17) or the TEAS intervention group (Group T, n = 18).",
       "hits": 1
     },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "2Department of Anesthesiology, Second Affiliated Hospital of Harbin Medical University, Harbin, Heilongjiang, People’s Republic of China; 3The Third People’s Hospital of Chengdu, Chengdu, Sichuan, People’s Republic of China; 4Department of Anesthesiology, The Third Hospital of Hebei Medical Universi",
+      "hits": 3
+    },
     "source_pdf": "117210.pdf"
   },
   "Ng 2013": {
     "anaesthesia": {
-      "value": "Epidural anaesthesia",
+      "value": "General anaesthesia",
       "page": 2,
-      "quote": "received epidural anesthesia or analgesia, those with a cardiac pacemaker, those who were allergic to acupuncture needles, and those who previously received acupuncture. Study Design Patients potentially eligible for the study were informed by the principal investigator about the study details the d",
+      "quote": "All laparoscopic surgeries were performed under general anesthesia.",
       "hits": 1
+    },
+    "country": {
+      "value": "Hong Kong",
+      "page": 1,
+      "quote": "Division of Colorectal Surgery, Department of Surgery, The Chinese University of Hong Kong, Prince of Wales Hospital, Shatin, Hong Kong SAR See Covering the Cover synopsis on page 255. BACKGROUND & AIMS: We investigated the efficacy of electroacupuncture in reducing the duration of postoperative ile",
+      "hits": 5
     },
     "source_pdf": "covidence_1970_ng_2013.pdf"
   },
@@ -360,8 +579,8 @@ window.PDF_EXTRACTED = {
     },
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 2,
-      "quote": "General anaesthesia was conducted by one of a team of five anaesthetists not involved in patient post- operative assessments. All the patients underwent radical retropubic prosta- tectomy for prostate malignancy .",
+      "page": 6,
+      "quote": "ketamine, which contrasts with patients under general anaesthesia who receive benzodiazepines.",
       "hits": 2
     },
     "source_pdf": "covidence_729_full_article.pdf"
@@ -373,11 +592,11 @@ window.PDF_EXTRACTED = {
       "quote": "The patients were randomly divided into three groups. Contemporary Nurse 129",
       "hits": 1
     },
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 6,
-      "quote": "All patients received general anesthesia with the same protocol.",
-      "hits": 1
+    "country": {
+      "value": "Turkey",
+      "page": 1,
+      "quote": "midline incision: Randomized controlled clinical trial Bediye Oztas a* and Emine Iyigun b aSchool of Nursing, Yuksek Ihtisas University, Ankara, Turkey; bSchool of Nursing, Gulhane Health Science University, Ankara, Turkey (Received 1 December 2018; accepted 31 May 2019 ) Aims-Objectives: The purpos",
+      "hits": 2
     },
     "source_pdf": "covidence_505_full_article.pdf"
   },
@@ -385,26 +604,44 @@ window.PDF_EXTRACTED = {
     "anaesthesia": {
       "value": "General anaesthesia",
       "page": 10,
-      "quote": "electro-acupuncture on the intratracheal extubation stress response in general anesthesia of patients with breast cancer undergoing modified radical mastectomy].",
+      "quote": "Intraoperative low-frequency electroacupuncture under general anesthesia improves postoperative recovery in a randomized trial.",
       "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anesthesia, The First Affiliated Hospital of Wenzhou Medical University, Wenzhou, People’s Republic of China; 2Department of Anesthesia, Sir Run Run Shaw Hospital, Affiliated with the Zhejiang University School of Medicine, Hangzhou, People’s Republic of China; 3Department of Anesthes",
+      "hits": 5
     },
     "source_pdf": "getfile.php-4.pdf"
   },
   "Seevaunnamtum 2016": {
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 2,
-      "quote": "dard care was defined as general anaesthesia with intraop- erative analgesia of IV Morphine 0.1 mg/kg and postopera- tive patient-controlled analgesia Morphine (PCAM). Double blinding was ensured by starting EA after pa- tients were induced under general anaesthesia and the as- sessors did not know ",
+      "page": 1,
+      "quote": "the end of the surgery (mean duration of surgery was 149.06 ± 42.64 minutes) under general anaesthesia.",
       "hits": 3
+    },
+    "country": {
+      "value": "Malaysia",
+      "page": 1,
+      "quote": "1Department of Anaesthesiology and Critical Care, Universiti Sains Malaysia, Kubang Kerian, Kelantan, Malaysia 2Hospital Raja Permaisuri Bainun Ipoh, Jalan Hospital, 30990 Ipoh, Perak, Malaysia *Corresponding author: S Praveena Seevaunnamtum, Department of Anaesthesiology and Critical Care, School o",
+      "hits": 6
     },
     "source_pdf": "covidence_596_verified.pdf"
   },
   "Sim 2002": {
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 1,
-      "quote": "General anaesthesia is the state in which, as a result of drug-induced narcosis, the patient neither perceives nor recalls noxious stimuli.",
+      "page": 2,
+      "quote": "was under general anaesthesia, a reliable monitor is required to indicate whether the patient is receiving adequate anaesthesia and/or analgesia. The Bispectral index (BIS) (ASPECT medical system, A-1050, Natick, USA) is a processed parameter derived from multiple features generated by bispectral an",
       "hits": 2
+    },
+    "country": {
+      "value": "Singapore",
+      "page": 1,
+      "quote": "Department of Anaesthesia, National University Hospital Singapore Correspondence: Tat-Leang Lee analeetl@nus.edu.sg Summary Acupuncture has been shown to be effective in experimental and clinical acute pain settings.",
+      "hits": 1
     },
     "source_pdf": "covidence_952_full_article.pdf"
   },
@@ -414,6 +651,12 @@ window.PDF_EXTRACTED = {
       "page": 2,
       "quote": "surgery under general anesthesia.",
       "hits": 2
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anesthesiology, Shengjing Hospital of China Medical University, Shenyang, Liaoning, People’s Republic of China; 2Department of Anesthesiology, Friendship Hospital of Capital Medical University, Beijing, People’s Republic of China *These authors contributed equally to this work Objecti",
+      "hits": 7
     },
     "source_pdf": "getfile.php-6.pdf"
   },
@@ -430,21 +673,39 @@ window.PDF_EXTRACTED = {
       "quote": "for laparoscopic surgery under general anesthesia were randomly assigned to receive sham TEAS (group SSS), preoperative TEAS (group TSS), preoperative TEAS combined with intraoperative TEAS (group TTS) or preoperative TEAS combined with post- operative TEAS (group TST) (n = 95 each group).",
       "hits": 1
     },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "Medical College, Xuzhou; and zZunyi Medical College, Zunyi, China. This study was carried out in the second aﬃliated hospital of Zhejiang University, School of Medicine and was funded by the Scientific Research Program of Chinese Medicine (2010ZA074) and the department (Department of Anesthesiology,",
+      "hits": 4
+    },
     "source_pdf": "sun2017-2.pdf"
   },
   "Szmit 2021": {
+    "country": {
+      "value": "Poland",
+      "page": 1,
+      "quote": "1 Department and Clinic of General, Minimally Invasive and Endocrine Surgery, Wroclaw Medical University, 50-556 Wroclaw, Poland; mateusz.szmit@umed.wroc.pl (M.S.); jerzy.rudnicki@umed.wroc.pl (J.R.) 2 Department and Clinic of Internal Medicine, Occupational Diseases, Hypertension and Clinical Oncol",
+      "hits": 9
+    },
     "source_pdf": "pdf-3.pdf"
   },
   "Tu 2024": {
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 2,
-      "quote": "status classification of I or II, undergoing general anesthesia, no history of PONV or motion sickness, no use of antiemetics and analgesia 24 h before surgery, willingness to participate, no prior experience with TEAS and signed an informed consent form.",
-      "hits": 1
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "a Department of Neurosurgery, West China Hospital, Sichuan University, Chengdu, China b Department of Integrated Traditional and Western Medicine, West China Hospital, Sichuan University, Chengdu, China ARTICLE INFO Keywords: Craniotomy Postoperative nausea and vomiting Transcutaneous electrical acu",
+      "hits": 5
     },
     "source_pdf": "study_244_Tu_2023.pdf"
   },
   "Wang 2023": {
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "Nanjing University of Chinese Medicine, Nanjing, China e-mail: surgery34@163.com J.",
+      "hits": 3
+    },
     "source_pdf": "s40122-023-00493-2.pdf"
   },
   "Wang 2024": {
@@ -454,19 +715,38 @@ window.PDF_EXTRACTED = {
       "quote": "Standard general anesthesia was induced with propofol 1–2 mg kg−1, sufentanil 0.3–0.6 μg kg−1, and cis-atracurium 0.2–0.4 mg kg−1.",
       "hits": 1
     },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 Department of Anesthesiology, National Cancer Center/ National Clinical Research Center for Cancer/Cancer Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing, China 2 Department of Outcomes Research, Outcomes Research Consortium, Cleveland Clinic, Cleveland, OH,",
+      "hits": 2
+    },
     "source_pdf": "covidence_212_full_article.pdf"
   },
   "Wong 2006": {
+    "country": {
+      "value": "Hong Kong",
+      "page": 1,
+      "quote": "Division of Cardiothoracic Surgery, Department of Surgery, and Departments of Anesthesiology and Physiotherapy, Prince of Wales Hospital, Shatin, Hong Kong, SAR, China Background.",
+      "hits": 4
+    },
     "source_pdf": "covidence_912_wong_2006.pdf"
   },
   "Wu 2016": {
+    "country": {
+      "conflict": [
+        "China",
+        "Germany"
+      ],
+      "note": "country: several affiliation countries and no affiliation marked as the lead centre; not resolved automatically"
+    },
     "source_pdf": "wu2015.pdf"
   },
   "Wu 2022": {
     "anaesthesia": {
-      "value": "Total intravenous anaesthesia",
+      "value": "General anaesthesia",
       "page": 2,
-      "quote": "total intravenous anesthesia (pTEAS group, n = 45). Inclusion criteria are as follows: (1) ASA I – II; (2) between 40 and 70 years of age; (3) diagnosed with lum - bar spinal stenosis or lumbar intervertebral disc hernia - tion based on imaging results; and (4) undergoing the operative procedures of",
+      "quote": "under general anesthesia were assigned into two groups: patients to receive total intravenous anesthesia (Control group, n = 45), and others to receive pTEAS in addition to total intravenous anesthesia (pTEAS group, n = 45). Inclusion criteria are as follows: (1) ASA I – II; (2) between 40 and 70 ye",
       "hits": 1
     },
     "source_pdf": "s12871-022-01875-3.pdf"
@@ -485,11 +765,16 @@ window.PDF_EXTRACTED = {
       "hits": 1
     },
     "anaesthesia": {
-      "conflict": [
-        "General anaesthesia",
-        "Regional anaesthesia"
-      ],
-      "note": "anaesthesia: the paper yielded more than one candidate; not resolved automatically"
+      "value": "General anaesthesia",
+      "page": 2,
+      "quote": "Eligible patients were scheduled for ambulatory video-assisted thoracoscopic pulmonary wedge resection under general anesthesia, aged 18–70 years, and with ASA of Anesthesiologists grade I or II.",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anesthesiology, Shanghai Chest Hospital, Shanghai Jiao T ong University, School of Medicine, Shanghai, People’s Republic of China; 2President’s Office, Shanghai Chest Hospital, Shanghai Jiao T ong University, School of Medicine, Shanghai, People’s Republic of China; 3Department of Sci",
+      "hits": 6
     },
     "source_pdf": "103940.pdf"
   },
@@ -506,14 +791,20 @@ window.PDF_EXTRACTED = {
       "quote": "The general anesthesia was induced by intravenous anesthesia with remifentanil and propofol by a target controlled infusion (TCI) system (CP600TCI, Slgo Technology Co.",
       "hits": 1
     },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anesthesiology, Qianfushan Hospital Affiliated to Shandong University, Jinan 250014, China 2Department of Anesthesiology, Anhui Provincial Hospital Affiliated to Anhui Medical University, Hefei 230001, China © Huazhong University of Science and Technology and Springer-Verlag Berlin He",
+      "hits": 2
+    },
     "source_pdf": "covidence_701_full_article.pdf"
   },
   "Xing 2022": {
-    "anaesthesia": {
-      "value": "General anaesthesia",
+    "country": {
+      "value": "China",
       "page": 1,
-      "quote": "were randomly divided into general anesthesia group (group G), TAPB group (group NG), and TEAS combined with TAPB group (group NTG). Patients in the NTG group received TEAS at PC6, LI4, and ST36 acupoints and TAPB.",
-      "hits": 2
+      "quote": "Department of Anaesthesiology, The First Affiliated Hospital of USTC, Division of Life Sciences and Medicine, University of Science and Technology of China, Hefei 230001, Anhui, China e-mail: zmynjl@126.com Y.",
+      "hits": 1
     },
     "source_pdf": "s40122-022-00429-2.pdf"
   },
@@ -524,6 +815,12 @@ window.PDF_EXTRACTED = {
       "quote": "who underwent elective LSG under general anesthesia be- tween May 2018 and February 2020.",
       "hits": 1
     },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 Department of Anesthesiology, The First Affiliated Hospital of Chongqing Medical University, Youyi Road 1, Yuzhong District, Chongqing 400016, People’s Republic of China 2 College of Traditional Chinese Medicine, Chongqing Medical University, Chongqing 401331, People’s Republic of China 3 Departme",
+      "hits": 3
+    },
     "source_pdf": "covidence_431_full_article.pdf"
   },
   "Yang 2020": {
@@ -533,9 +830,29 @@ window.PDF_EXTRACTED = {
       "quote": "The remaining 59 participants were randomized into e920648-3 Indexed in: [Current Contents/Clinical Medicine] [SCI Expanded] [ISI Alerting System] [ISI Journals Master List] [Index Medicus/MEDLINE] [EMBASE/Excerpta Medica] [Chemical Abstracts/CAS] Yang J.",
       "hits": 1
     },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 Department of Anesthesiology, Affiliated Hospital of Nanjing University of Chinese Medicine, Nanjing, Jiangsu, China 2 Department of Acupuncture and Rehabilitation, Affiliated Hospital of Nanjing University of Chinese Medicine, Nanjing, Jiangsu, China 3 School of Health and Biomedical Sciences, Ro",
+      "hits": 3,
+      "note": "marked as affiliation 1 (lead centre); the paper also lists Australia"
+    },
     "source_pdf": "covidence_464_verified.pdf"
   },
   "Yang 2024": {
+    "anaesthesia": {
+      "value": "General anaesthesia",
+      "page": 5,
+      "quote": "laparotomy under general anesthesia: a randomized controlled trial.",
+      "hits": 1
+    },
+    "country": {
+      "conflict": [
+        "Australia",
+        "China"
+      ],
+      "note": "country: several affiliation countries and no affiliation marked as the lead centre; not resolved automatically"
+    },
     "source_pdf": "covidence_1930_full_article.pdf"
   },
   "Yao 2015": {
@@ -549,11 +866,29 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 2,
       "quote": "General anesthesia was induced (Hegu) LI4 (Neiguan) PC6 (Zusanli) ST36 (Sanyinjiao) SP6 Figure 1: Location of Hegu (LI4), Neiguan (PC6), Zusanli (ST36), and Sanyinjiao (SP6) acupoints. withIVsufentanil0.5𝜇g/kgandpropofol2.0mg/kg.Tracheal intubation was facilitated with cisatracurium 0.15mg/kg. After",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Departmentof Anesthesiology,TheShengliClinicalMedicalCollegeof FujianMedicalUniversityand Fujian Provincial Hospital, Fuzhou 350001, China 2Departmentof TraditionalChineseMedicine,Fujian ProvincialHospital,Fuzhou 350001,China CorrespondenceshouldbeaddressedtoYanqingChen;fjslyys@gmail.com Received15",
       "hits": 2
     },
     "source_pdf": "039_yao_2015.pdf"
   },
   "Yeh 2010": {
+    "anaesthesia": {
+      "value": "General anaesthesia",
+      "page": 4,
+      "quote": "was general anesthesia with intravenous thiopental (2.1 mg/kg) and fentanyl (4.3 mg/kg), and connected to a PCA device programmed to deliver a patient-triggered 1 mg bolus of morphine with a 10 min lockout interval between doses.",
+      "hits": 1
+    },
+    "country": {
+      "value": "Taiwan",
+      "page": 2,
+      "quote": "spine injuries at a 3000-bed medical center in northern Taiwan.",
+      "hits": 1
+    },
     "source_pdf": "covidence_828_full_article.pdf"
   },
   "Yeh 2011": {
@@ -563,35 +898,72 @@ window.PDF_EXTRACTED = {
       "quote": "for 30 min, bilateral, pulse duration 0.25 ms) • Acupuncture (ipsilateral to the side of surgery, needles remained for 15 min and manually stimulated for 5 s per 5 min and just before needle removal) •PCA+TENS(2Hz) •PCA+TENS(100Hz) • PCA+TENS (altemating 2/100 Hz per 3 s) • True acupressure (no repo",
       "hits": 1
     },
+    "anaesthesia": {
+      "value": "General anaesthesia",
+      "page": 2,
+      "quote": "spine injuries under general anesthesia and had heen evaluated as American Society of Anesthesiologists grades I to II (I: a nor- mal healthy patient; II: a patient with mild systemic disease that does not limit activity).",
+      "hits": 1
+    },
+    "country": {
+      "value": "Taiwan",
+      "page": 1,
+      "quote": "Mei-Ling Yeh, RN, PhD, is a professor in the School of Nursing, National Taipei College of Nursing, Taiwan.",
+      "hits": 1
+    },
     "source_pdf": "015_PainATHM-2.pdf"
   },
   "Yu 2020": {
     "source_pdf": "s13063-019-3892-4.pdf"
   },
   "Zhan 2020": {
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "a Nanjing University of Traditional Chinese Medicine, China bAffiliated Hospital of Nanjing University of Traditional Chinese Medicine, China ARTICLE INFO Keywords: Postoperative analgesic Transverse abdominis plane block Transcutaneous electric acupoint stimulation Abdominal surgery Randomized cont",
+      "hits": 2
+    },
     "source_pdf": "covidence_1389_full_article.pdf"
   },
   "Zhang 2014": {
-    "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 8,
-      "quote": "electroacupuncture with general anesthesia induced by sevo- flurane in patients undergoing supratentorial craniotomy and improvements in their clinical recovery profile & blood enkephalin.",
-      "hits": 1
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 Clinical Fellow, 3 Professor, 4 Associate Professor, Department of Anaesthesiology, Xijing Hospital, Fourth Military Medical University, Xi ’an, Shaanxi, China 2 Specialist Registrar, Department of Anaesthesiology, Shaanxi Provincial Maternal and Child Health Hospital, Xi ’an, Shaanxi, China Summa",
+      "hits": 2
     },
     "source_pdf": "043_zhang_2014.pdf"
   },
   "Zhang 2018": {
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Gastroenterology, Changzheng Hospital affiliated to second Military Medical university, shanghai, 200003, China.",
+      "hits": 5
+    },
     "source_pdf": "Needleless Transcutaneous Electrical Acustimulation_ A Pilot Study Evaluating Improvement in Post-Operative Recovery-2.pdf"
   },
   "Zhang 2023": {
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 Department of Anesthesiology and Critical Care Medicine, Tianjin Nankai Hospital, Tianjin Medical University, 6 Changjiang Road, Tianjin, People’s Republic of China 2 Department of Biomedical Engineering, College of Precision Instruments and Optoelectronics Engineering, Tianjin University, Tianjin",
+      "hits": 4
+    },
     "source_pdf": "covidence_308_full_article.pdf"
   },
   "Zhang 2025": {
     "anaesthesia": {
-      "value": "General anaesthesia",
-      "page": 4,
-      "quote": "General anesthesia was induced intravenously with sufentanil (0.4 μg/kg), propofol (2 mg/kg), and rocuronium (0.6 mg/kg).",
-      "hits": 1
+      "conflict": [
+        "Combined spinal-epidural anaesthesia",
+        "General anaesthesia"
+      ],
+      "note": "anaesthesia: the paper yielded more than one candidate; not resolved automatically"
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anesthesiology,the Zaoyang First People’s Hospital, Xiangyang, People’s Republic of China; 2Department of Anesthesiology,the First Affiliated Hospital of Wenzhou Medical University, Wenzhou, People’s Republic of China; 3Department of Laboratory Medicine, Clinical Medical College of Sh",
+      "hits": 4
     },
     "source_pdf": "109551.pdf"
   },
@@ -606,11 +978,23 @@ window.PDF_EXTRACTED = {
       "value": "General anaesthesia",
       "page": 1,
       "quote": "scopic surgery under general anesthesia at a tertiary hospital in China between April and December 2022 were enrolled.",
-      "hits": 3
+      "hits": 2
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Anesthesiology, General Hospital of Northern Theater Command, Shenyang, 110016, People’s Republic of China; 2Department of Anesthesiology, The 964TH Hospital of Chinese People’s Liberation Army Joint Logistics Support Force, Changchun, 130000, People’s Republic of China Correspondence",
+      "hits": 5
     },
     "source_pdf": "109499.pdf"
   },
   "Zhou 2021": {
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1Department of Gastrointestinal Surgery, The Affiliated Hospital of Qingdao University, Qingdao, Shandong Province, People’s Republic of China; 2Department of Rehabilitation, The Affiliated Hospital of Qingdao University, Qingdao, Shandong Province, People’s Republic of China Purpose: Transcutaneous",
+      "hits": 2
+    },
     "source_pdf": "getfile.php-5.pdf"
   },
   "Zhu 2022": {
@@ -628,9 +1012,16 @@ window.PDF_EXTRACTED = {
     },
     "anaesthesia": {
       "value": "General anaesthesia",
-      "page": 3,
-      "quote": "general anesthesia; female sex; age 18–60 years; non- smoking; body mass index 20–30 kg/m2; undergoing lapa- roscopic hysterectomy, myomectomy, oophorectomy, salpingoopherectomy or ovarian cystectomy.",
-      "hits": 2
+      "page": 9,
+      "quote": "surgery under general anesthesia: an evidence-based review concern- ing risk assessment, prevention, and treatment.",
+      "hits": 1
+    },
+    "country": {
+      "value": "China",
+      "page": 1,
+      "quote": "1 Department of Anesthesiology, The Affiliated Hospital of Nanjing University of Chinese Medicine, Nanjing, China 2 Department of Acupuncture, The Affiliated Hospital of Nanjing University of Chinese Medicine, Nanjing, China 3 Key Laboratory of Acupuncture and Medicine Research of Ministry of Educat",
+      "hits": 4,
+      "note": "marked as affiliation 1 (lead centre); the paper also lists Australia"
     },
     "source_pdf": "covidence_381_full_article.pdf"
   }

@@ -59,7 +59,14 @@ CITATION_NOISE = re.compile(
 
 
 def norm(t: str) -> str:
-    return re.sub(r"[ \t]+", " ", t.replace("­", "").replace("ﬁ", "fi").replace("ﬂ", "fl"))
+    t = t.replace("­", "").replace("ﬁ", "fi").replace("ﬂ", "fl")
+    # "P.R. China" / "R.O.C." carry periods, and the affiliation pattern below
+    # stops at a period so it cannot span sentences. Without this, every Chinese
+    # affiliation written "Nanjing, Jiangsu, P.R. China" is invisible -- which is
+    # exactly why Yang 2020 first resolved to its Australian collaborator.
+    t = re.sub(r"\bP\.\s*R\.\s*(?=China)", "", t, flags=re.I)
+    t = re.sub(r"\bPeople'?s Republic of China\b", "China", t, flags=re.I)
+    return re.sub(r"[ \t]+", " ", t)
 
 
 def sentence_around(text: str, start: int, end: int) -> str:
@@ -102,14 +109,45 @@ RE_PULSE = re.compile(
     r"(?:pulse[\s-]*(?:width|duration)|wave[\s-]*width)[^.]{0,70}?"
     r"(\d+(?:\.\d+)?)\s*(ms|msec|milliseconds?|[µuμ]s|microseconds?)", re.I)
 
-# Anaesthesia must be the trial's own protocol, not a literature mention. Require
-# a protocol verb nearby and reject anything that looks like a citation.
+# Anaesthesia must be the trial's OWN protocol. An earlier version accepted any
+# technique named in a sentence that also contained a protocol-ish verb, which
+# was both too loose and too strict: it missed "scheduled for thyroidectomy under
+# general anesthesia" (Chen 2015) because the verb fell outside the sentence
+# split, and it turned Lu 2022 into a false conflict by accepting "when the
+# patients received epidural anaesthesia" -- a sentence about somebody else's
+# trial.
+#
+# Matching on PHRASE SHAPE instead fixes both. These are the forms a paper uses
+# to state its own technique; "received"/"undergoing" are deliberately NOT among
+# them, because they are equally natural when describing prior literature.
+# Note this also excludes "local anaesthetic agents" (a drug, not a technique):
+# only "local anaesthesia" can match.
+_TECH = r"(general|spinal|epidural|combined spinal[- ]epidural|total intravenous|regional|local)"
 RE_ANAES = re.compile(
-    r"\b(general|spinal|epidural|combined spinal[- ]epidural|total intravenous|regional)\s+"
-    r"an(?:a)?esthesia\b", re.I)
-RE_ANAES_CONTEXT = re.compile(
-    r"\b(underwent|undergoing|scheduled|received|induced|maintained|performed under|"
-    r"operated under|carried out under|surgery under)\b", re.I)
+    rf"(?:under|was|were)\s+{_TECH}\s+an(?:a)?esthesia\b"
+    rf"|{_TECH}\s+an(?:a)?esthesia\s+(?:was|were)\s+"
+    rf"(?:induced|maintained|administered|used|performed|given|achieved)"
+    rf"|\(\s*{_TECH}\s+an(?:a)?esthesia", re.I)
+
+
+# Country of the conducting centre, read from the AUTHOR AFFILIATION block.
+# Anchored on an affiliation noun so it cannot pick up a journal's editorial
+# front matter: Gao 2022's first page lists "Edited by: ... University of
+# Pittsburgh, United States" and "Reviewed by: ... Capital Medical University,
+# China" above the authors, and a bare country scan reads the editor's country.
+COUNTRY_NAMES = [
+    "China", "Taiwan", "Hong Kong", "Poland", "Turkey", "Brazil", "Greece",
+    "United Kingdom", "Germany", "Iran", "India", "Egypt", "Thailand",
+    "Singapore", "Japan", "Malaysia", "Spain", "Italy", "Denmark", "Sweden",
+    "Norway", "Netherlands", "Australia", "Canada", "United States",
+]
+RE_AFFIL = re.compile(
+    r"(Department|Dept\.|School|College|Institute|Hospital|Centre|Center|Clinic|Faculty|University)"
+    r"[^.;]{0,160}?\b(" + "|".join(re.escape(c) for c in COUNTRY_NAMES) + r")\b", re.I)
+# Front-matter that names other people's countries, never the trial's.
+RE_EDITORIAL = re.compile(r"edited by|reviewed by|specialty section|received:|accepted:|published:", re.I)
+# "Republic of Korea" / "South Korea" need their own spelling.
+RE_KOREA = re.compile(r"\b(?:Republic of Korea|South Korea)\b", re.I)
 
 WORD_NUM = {"two": 2, "three": 3, "four": 4, "2": 2, "3": 3, "4": 4}
 
@@ -199,12 +237,62 @@ def extract_one(pages):
         }
 
     def anaes(m, q, text=""):
-        if not RE_ANAES_CONTEXT.search(q):
+        # The technique is whichever alternative in RE_ANAES matched.
+        tech = next((g for g in m.groups() if g), None)
+        if not tech:
             return None
-        return (m.group(1).strip().lower().replace("total intravenous", "total intravenous")
-                + " anaesthesia").capitalize()
+        return (tech.strip().lower() + " anaesthesia").capitalize()
     an = decide(collect(pages, RE_ANAES, anaes), "anaesthesia")
     if an: rec["anaesthesia"] = an
+
+    # Country: affiliations live on the first page or two. Take the country named
+    # in the FIRST affiliation phrase that is not inside editorial front matter;
+    # that is the conducting centre. Multiple distinct countries across the
+    # affiliation block are reported as a conflict rather than guessed at.
+    # Collect every affiliation country in document order, then prefer the one
+    # carrying the superscript-1 marker. Taking merely the first REGEX match is
+    # not enough: in Yang 2020 affiliations 1 and 2 do not name a country in a
+    # form this pattern sees, so the first match is affiliation 3 (RMIT,
+    # Australia) -- a collaborator, not the conducting centre.
+    found = []
+    for pno, raw in pages[:2]:
+        text = norm(raw)
+        for m in RE_AFFIL.finditer(text):
+            if RE_EDITORIAL.search(text[max(0, m.start() - 120):m.end()]):
+                continue
+            name = m.group(2)
+            name = {"uk": "United Kingdom", "usa": "United States"}.get(name.lower(), name.title())
+            lead = bool(re.search(r"(?:^|[^\d])1\s*$", text[max(0, m.start() - 4):m.start()]))
+            found.append({"country": name, "page": pno,
+                          "quote": sentence_around(text, m.start(), m.end()), "lead": lead})
+        if RE_KOREA.search(text) and not any(f["country"].endswith("Korea") for f in found):
+            found.append({"country": "Republic of Korea", "page": pno,
+                          "quote": "Republic of Korea", "lead": False})
+    if found:
+        distinct = sorted({f["country"] for f in found})
+        lead = next((f for f in found if f["lead"]), None)
+        if len(distinct) == 1:
+            pick = found[0]
+        elif lead is not None:
+            pick = lead
+        else:
+            # Several countries and no affiliation explicitly marked as the lead.
+            # Yang 2020 is exactly this: its affiliation 1 (Nanjing) names no
+            # country at all, so the only country-bearing affiliation is the
+            # Australian collaborator at number 3. Picking the first match would
+            # assert the wrong conducting centre, so refuse instead.
+            rec["country"] = {"conflict": distinct,
+                              "note": "country: several affiliation countries and no affiliation "
+                                      "marked as the lead centre; not resolved automatically"}
+            pick = None
+        if pick is not None:
+            others = [c for c in distinct if c != pick["country"]]
+            rec["country"] = {
+                "value": pick["country"], "page": pick["page"], "quote": pick["quote"],
+                "hits": sum(1 for f in found if f["country"] == pick["country"]),
+                **({"note": "marked as affiliation 1 (lead centre); the paper also lists "
+                            + ", ".join(others)} if others else {}),
+            }
 
     return rec
 
@@ -249,7 +337,7 @@ def main() -> int:
         "window.PDF_EXTRACTED = " + json.dumps(records, ensure_ascii=False, indent=2) + ";\n",
         encoding="utf-8")
 
-    fields = ("randomised_n", "arms", "pulse_width", "anaesthesia")
+    fields = ("randomised_n", "arms", "pulse_width", "anaesthesia", "country")
     total = len(records)
     print(f"PDFs read: {total}/70")
     for f in fields:
