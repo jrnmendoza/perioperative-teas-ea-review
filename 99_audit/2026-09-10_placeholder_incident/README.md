@@ -124,8 +124,14 @@ only the hand-maintained copy drifted.
   sleeve gastrectomy"**, which explains a BMI of 39 at age 27 completely. Xiong
   2021 is not anomalous. The related claim that "seven studies share that generic
   procedure string" was measured against the same dead field; on screen only
-  Wu 2016 was generic, and it now reads "Thoracotomy for lung cancer", recovered
-  from its source PDF.
+  Wu 2016 was generic. Its procedure is recoverable — the paper states "All of
+  the patients underwent thoracotomy (18) with a rib spreader and wound
+  retractor" — but it has no text-based characteristics record, and that
+  generator's provenance model requires one. It is therefore extracted through
+  `scripts/extract_baseline_from_pdfs.py`, where the value carries its page and
+  verbatim quote, and the study panel falls back to it. The surgical-
+  characteristics generator still reports "not documented", which is accurate
+  for that source.
 
 - Five `note` fields still state that values are figure-only, or a deliberately
   unconverted median/IQR (Wu 2016, Liu 2015, Zhang 2018 ×2, Gao 2022). These are

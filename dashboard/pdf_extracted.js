@@ -15,6 +15,12 @@ window.PDF_EXTRACTED = {
       "quote": "Department of Anesthesiology, The Second Affiliated Hospital of Guilin Medical University, Guilin, People’s Republic of China *These authors contributed equally to this work Correspondence: Xu Zhang, Department of Anesthesiology, The Second Affiliated Hospital of Guilin Medical University, No.",
       "hits": 1
     },
+    "surgical_population": {
+      "value": "laparoscopic gynecological surgery",
+      "page": 1,
+      "quote": "study investigated the impact of TEAS during the post-anesthesia recovery period on postoperative recovery quality in patients undergoing laparoscopic gynecological surgery. Patients and Methods: In this single-center, randomized, double-blinded, sham-controlled trial, 100 patients undergoing electi",
+      "hits": 1
+    },
     "source_pdf": "105119.pdf"
   },
   "An 2014": {
@@ -29,6 +35,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "*Department of Anesthesia , Beijing Tiantan Hospital Capital Medical University , Beijing 100050 , China †Department of Anesthesia , Beijing Jishuitan Hospital Beijing 100035 , China ‡Department of Acupuncture Beijing University of Traditional Chinese Medicine Beijing 100029 , China §Department of E",
       "hits": 4
+    },
+    "surgical_population": {
+      "value": "a Supratentorial Craniotomy\nLi-Xin A",
+      "page": 1,
+      "quote": "Pain and Improves Recovery in Patients Undergoing a Supratentorial Craniotomy Li-Xin An, * Xue Chen, † Xiu-Jun Ren ‡ and Hai-Feng Wu § *Department of Anesthesia , Beijing Tiantan Hospital Capital Medical University , Beijing 100050 , China †Department of Anesthesia , Beijing Jishuitan Hospital Beiji",
+      "hits": 1
     },
     "source_pdf": "covidence_698_full_article.pdf"
   },
@@ -46,9 +58,21 @@ window.PDF_EXTRACTED = {
       "quote": "2Department of Anesthesiology, Tangshan People's Hospital and Tangshan Cancer Hospital, North China University of Science and Technology, Tangshan, Hebei 063000; 3Department of Anesthesiology, Second Hospital of Hebei Medical University, Shijiazhuang, Hebei 050000, China Received February 29, 2020; ",
       "hits": 6
     },
+    "surgical_population": {
+      "value": "radical mastectomy",
+      "page": 1,
+      "quote": "function in patients undergoing radical mastectomy.",
+      "hits": 1
+    },
     "source_pdf": "download.pdf"
   },
   "Chen 1998": {
+    "surgical_population": {
+      "value": "total abdominal hysterectomy or myo- \nmectomy procedures with a standar",
+      "page": 1,
+      "quote": "women undergoing total abdominal hysterectomy or myo- mectomy procedures with a standardized general anesthe sia were randomly assigned to one of four postoperative an- algesic treatment regimens (n = 25 each): Group I = sham- TENS (no electrical current) at the Zusanli (ST36) acupoints, Group II = ",
+      "hits": 1
+    },
     "source_pdf": "covidence_969_chen_1998.pdf"
   },
   "Chen 2015": {
@@ -64,6 +88,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1Department of Anesthesiology, The Shengli Clinical Medicial College of Fujian Medical University, Fujian Provincial Hospital, Fuzhou 350001, China; 2Department of Anesthesiology, People’s Hospital Affiliated to Fujian University of Traditional Chinese Medicine, Fuzhou 350122, China.",
       "hits": 2
+    },
+    "surgical_population": {
+      "value": "thyroidectomy were randomly allocated to TEAS or control groups",
+      "page": 1,
+      "quote": "or II patients undergoing thyroidectomy were randomly allocated to TEAS or control groups.",
+      "hits": 1
     },
     "source_pdf": "037_chen_2015_thyroidectomy_lund.pdf"
   },
@@ -81,6 +111,12 @@ window.PDF_EXTRACTED = {
       "quote": "Department of Anesthesiology, The Shengli Clinical Medical College of Fujian Medical University & Fujian Provin- cial Hospital, Fuzhou 350001, China.",
       "hits": 1
     },
+    "surgical_population": {
+      "value": "thyroidectomy: a randomized controlled trial\nYanqing Chen*",
+      "page": 1,
+      "quote": "alleviates remifentanil-induced hyperalgesia in patients undergoing thyroidectomy: a randomized controlled trial Yanqing Chen*, Yusheng Yao*, Yihuan Wu, Dongsheng Dai, Qiuyan Zhao, Liangcheng Qiu Department of Anesthesiology, The Shengli Clinical Medical College of Fujian Medical University & Fujian",
+      "hits": 1
+    },
     "source_pdf": "040_chen_2015_hyperalgesia_lund.pdf"
   },
   "Chen 2020": {
@@ -95,6 +131,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1 Key Laboratory of Carcinogenesis and Translational Research (Ministry of Education, Beijing), Department of Anesthesiology, Peking University Cancer Hospital and Institute, Beijing, China 2 Neuroscience Research Institute and Department of Neurobiology, Peking University and Key Laboratory of Neur",
       "hits": 5
+    },
+    "surgical_population": {
+      "value": "thoracoscopic pulmonary resectio",
+      "page": 1,
+      "quote": "analgesia in lung cancer patients undergoing thoracoscopic pulmonary resection. Methods: A total of 80 patients were randomized into two groups: the TEAS group and the sham TEAS combined with general anesthesia group.",
+      "hits": 1
     },
     "source_pdf": "Thoracic Cancer - 2020 - Chen - Efficacy of transcutaneous electrical acupoint stimulation combined with general anesthesia.pdf"
   },
@@ -111,6 +153,12 @@ window.PDF_EXTRACTED = {
       "quote": "'Centro Hospitalar Unimed, Joinville, Brazil 'Centro de Estudos de Acupuntura do Parana, Curitiba, Brazil Correspondence to Dr Luiz Eduardo Fana Coura, Intensivist and Acupuncturist Member of Intensive Care Therapy at Centro Hospitalar Unimed Joinville, Rua Blumenau 314, Joinville-SC 89204-250, Braz",
       "hits": 4
     },
+    "surgical_population": {
+      "value": "cardiac surgery were randomised\ninto two groups: patients from the tre",
+      "page": 1,
+      "quote": "patients undergoing cardiac surgery were randomised into two groups: patients from the treatment group received preoperative EA at bilateral points (LI4-LI11, LR3-ST36, PC6-TE5) for 30 min with altemating frequencies of 3 and 15 Hz.",
+      "hits": 1
+    },
     "source_pdf": "covidence_819_full_article.pdf"
   },
   "El-Rakshy 2009": {
@@ -119,6 +167,12 @@ window.PDF_EXTRACTED = {
       "page": 4,
       "quote": "In conclusion, acupuncture given under general anaesthesia is unlikely to have a clinically useful effect, but research into preoperative acupuncture is likely to lead to improved patient care. Acknowledgements: This study was submitted in partial fulfilment of the Masters degree in pain management ",
       "is_general": true,
+      "hits": 1
+    },
+    "surgical_population": {
+      "value": "laparoscopic cho-\nlecystectomy or abdominal hysterectomy",
+      "page": 1,
+      "quote": "sedation in patients undergoing laparoscopic cho- lecystectomy or abdominal hysterectomy. METHOD Study design A randomised, double-blind, comparative study was conducted in Scunthorpe & Goole Hospitals. Patients all received patient-controlled analgesia (PCA), either with acupuncture (PCA + acupunc-",
       "hits": 1
     },
     "source_pdf": "covidence_868_full_article.pdf"
@@ -142,6 +196,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "a Department of Anesthesiology and Center for Brain Science, the First Af filiated Hospital of Xi ’an Jiaotong University, Xi ’an, China b Department of Anesthesiology, Weinan Central Hospital, Weinan, China c Department of Anesthesiology, Xi ’an Central Hospital, Xi ’an, China d Department of Anest",
       "hits": 13
+    },
+    "surgical_population": {
+      "value": "lapa-\nroscopic surgery showed a reduction in POI risk",
+      "page": 4,
+      "quote": "multivariate-unadjusted analysis, patients who underwent lapa- roscopic surgery showed a reduction in POI risk (OR, 0.62, 95% CI 0.44e0.89; P ¼ .009).",
+      "hits": 1
     },
     "source_pdf": "covidence_400_full_article.pdf"
   },
@@ -175,6 +235,12 @@ window.PDF_EXTRACTED = {
       "is_general": true,
       "hits": 5
     },
+    "surgical_population": {
+      "value": "thyroid and\nparathyroid surgery randomized in two groups: EA",
+      "page": 2,
+      "quote": "double-blinded study with 20 patients undergoing thyroid and parathyroid surgery randomized in two groups: EA ( n Z 11) group or sham (control, n Z 9) group.",
+      "hits": 1
+    },
     "source_pdf": "030_grech_2016_lund.pdf"
   },
   "Gu 2019": {
@@ -184,6 +250,12 @@ window.PDF_EXTRACTED = {
       "quote": "a Department of Anesthesiology, Tangshan People ’s Hospital, North China University of Science and Technology, No.",
       "hits": 2
     },
+    "surgical_population": {
+      "value": "laparoscopic radical gastrectomy were randomly\nassigned into the long",
+      "page": 1,
+      "quote": "Methods: A total of 120 gastric cancer patients undergoing laparoscopic radical gastrectomy were randomly assigned into the long duration TEAS (L-TEAS) group, or the placebo-control (C-TEAS) group.",
+      "hits": 1
+    },
     "source_pdf": "covidence_1471_full_article.pdf"
   },
   "Guo 2023": {
@@ -192,6 +264,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "Department of Anesthesiology, The Second Affiliated Hospital of Air Force Medical University, Xi’an, People’s Republic of China ARTICLE INFO Keywords: Transcutaneous electrical acupoint stimulation (TEAS) Postoperative cognitive dysfunction(POCD) Quality of life Lung cancer Older patients ABSTRACT O",
       "hits": 3
+    },
+    "surgical_population": {
+      "value": "thoracoscopic pul -\nmonary resectio",
+      "page": 1,
+      "quote": "(TEAS) on postoperative cognitive function in older patients who underwent thoracoscopic pul - monary resection.",
+      "hits": 1
     },
     "source_pdf": "006_guo_2023.pdf"
   },
@@ -206,6 +284,12 @@ window.PDF_EXTRACTED = {
       "value": "China",
       "page": 1,
       "quote": "Bi-Mei He, Xiao-Lin Sun, Xiao-Yu Huang, Sen-Sen Zhang, Qing-Xiong Hong, Department of Anesthesiology, The Second Affiliated Hospital of Guangzhou University of Chinese Medicine, Guangzhou 510000, Guangdong Province, China ORCID number: Qing-Xiong Hong 0009-0007-0048-1499. Corresponding author: Qing-",
+      "hits": 1
+    },
+    "surgical_population": {
+      "value": "peripheral intravenous",
+      "page": 3,
+      "quote": "Each patient underwent peripheral intravenous (intravenous injection) cannulation to infuse Ringer’s solution at a rate of 8 mL/kg/hour.",
       "hits": 1
     },
     "source_pdf": "covidence_41_verified.pdf"
@@ -224,6 +308,12 @@ window.PDF_EXTRACTED = {
       "quote": "laboratory of a nesthesiology of Ministry of e ducation, Xijing Hospital, f ourth Military Medical university, Xi’an, China; bDepartment of a nesthesiology, the f irst a ffiliated Hospital of Henan university of Chinese Medicine, Zhengzhou Henan, China; cDepartment of a nesthesiology, Qinghai Provin",
       "hits": 7
     },
+    "surgical_population": {
+      "value": "hepatic resectio",
+      "page": 2,
+      "quote": "In patients undergoing hepatic resection, PONV may exacerbate hemorrhagic complications and extend hospital stays [ 1].",
+      "hits": 1
+    },
     "source_pdf": "covidence_25_verified.pdf"
   },
   "Hou 2023": {
@@ -240,6 +330,12 @@ window.PDF_EXTRACTED = {
       "quote": "a Department of Anesthesiology, The First Affiliated Hospital of USTC, Division of Life Sciences and Medicine, University of Science and Technology of China, China b Department of Anesthesiology, University of Connecticut School of Medicine, Farmington, CT, USA c Department of Kidney Transplantation",
       "hits": 3
     },
+    "surgical_population": {
+      "value": "nephrectomy",
+      "page": 2,
+      "quote": "All participants underwent nephrectomy, through laparotomy, performed by the same surgical team in the period from September 2020 to December 2020.",
+      "hits": 1
+    },
     "source_pdf": "007_hou_2023.pdf"
   },
   "Huang 2017": {
@@ -254,6 +350,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1 Department of Anesthesiology, Peking University People’s Hospital, Beijing 100044, China 2 Department of Anesthesiology, Ministry of Health Beijing Hospital, Beijing 100730, China 3 Department of Surgery, Beijing Oasis International Hospital, Beijing 100015, China 4 Department of Anesthesiology, R",
       "hits": 3
+    },
+    "surgical_population": {
+      "value": "pneumonectomy [10–12]",
+      "page": 2,
+      "quote": "on levels of serum components among patients undergoing pneumonectomy [10–12]. As far as we are aware, the effects of different frequen- cies of TEAS on perioperative anesthetic dosage, recovery, complications, and prognosis among patients undergoing V ATS lobectomy have not been investigated.",
+      "hits": 1
     },
     "source_pdf": "covidence_666_full_article.pdf"
   },
@@ -271,6 +373,12 @@ window.PDF_EXTRACTED = {
       "quote": "3 Guanghua Hospital, Shanghai University of Traditional Chinese Medicine, Shanghai, China 4 Longhua Hospital, Shanghai University of Traditional Chinese Medicine, Shanghai, China †Hai Huang and Kangmin Tang contributed equally to this work and should be considered co-first authors. Corresponding aut",
       "hits": 5
     },
+    "surgical_population": {
+      "value": "unilateral TKA were assigned to \nthe contralateral EA",
+      "page": 1,
+      "quote": "Methods: In this parallel, single-blind randomized controlled trial, 114 patients undergoing unilateral TKA were assigned to the contralateral EA (EA on the contralateral side + sham EA on the ipsilateral), ipsilateral EA (EA on the ipsilateral + sham EA on the contralateral side), or sham EA (sham ",
+      "hits": 1
+    },
     "source_pdf": "covidence_245_full_article.pdf"
   },
   "Huang 2025": {
@@ -286,6 +394,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1Department of Gynaecology, The Affiliated Traditional Chinese Medicine Hospital, Southwest Medical University, Luzhou 646000, Sichuan, China; 2Department of Anesthesiology, The Affiliated Traditional Chinese Medicine Hospital, Southwest Medical University, Luzhou 646000, Sichuan, China Received Nov",
       "hits": 4
+    },
+    "surgical_population": {
+      "value": "screening",
+      "page": 4,
+      "quote": "after 129 patients underwent screening, 28 were deemed ineligible or declined to partici - pate.",
+      "hits": 1
     },
     "source_pdf": "covidence_131_verified.pdf"
   },
@@ -303,6 +417,12 @@ window.PDF_EXTRACTED = {
       "quote": "a Department of Anesthesiology, Shanxi Bethune Hospital, Shanxi Academy of Medical Sciences, Third Hospital of Shanxi Medical University, Tongji Shanxi Hospital, Taiyuan, 030032, China b Department of Anesthesiology and Critical Care Medicine, Tianjin Nankai Hospital, Tianjin, 300100, China ARTICLE ",
       "hits": 2
     },
+    "surgical_population": {
+      "value": "non-gastrointestinal laparoscopic surgery: a randomized controlled tri",
+      "page": 1,
+      "quote": "gastrointestinal function recovery in patients undergoing non-gastrointestinal laparoscopic surgery: a randomized controlled trial Xianhong Jiang a,1 , Yuan Zhang b,1, Jiaqi Tan a, Ping Zhuang a, Aili Fang a, Xiaomin Yue a, Jun Pang a, Ying Kong a, Ke Zhang b, Yanfang Zhang b, Jianbo Yu b,* a Depart",
+      "hits": 1
+    },
     "source_pdf": "study_4_Jiang_2026.pdf"
   },
   "Jin 2023": {
@@ -316,6 +436,12 @@ window.PDF_EXTRACTED = {
       "value": "China",
       "page": 1,
       "quote": "STUDY DESIGN: This single-center, randomized, single-blinded, sham acupuncture controlled clinical trial was conducted at a tertiary uni- versity hospital in China.",
+      "hits": 1
+    },
+    "surgical_population": {
+      "value": "cesarean deliv-\nery and received fentanyl as patient-controlled intrave",
+      "page": 1,
+      "quote": "Female patients who underwent cesarean deliv- ery and received fentanyl as patient-controlled intravenous analgesia for postoperative analgesia were enrolled.",
       "hits": 1
     },
     "source_pdf": "009_jin_2023.pdf"
@@ -356,6 +482,12 @@ window.PDF_EXTRACTED = {
       "quote": "a Department of Anesthesiology, Beijing Friendship Hospital, Capital Medical University, Beijing 100050, China b Department of Anesthesiology, Beijing Hui-Min Hospital, Beijing 100053, China c Department of Traditional Chinese Medicine, Beijing Friendship Hospital, Capital Medical University, Beijin",
       "hits": 4
     },
+    "surgical_population": {
+      "value": "major abdominal surgery",
+      "page": 1,
+      "quote": "in patients undergoing major abdominal surgery.",
+      "hits": 1
+    },
     "source_pdf": "covidence_437_full_article.pdf"
   },
   "Li 2022": {
@@ -371,6 +503,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "Department of Anesthesiology, Affiliated Hospital of Nanjing University of Chinese Medicine, Jiangsu Province Hospital of Chinese Medicine, Nanjing, Jiangsu, People’s Republic of China Correspondence: Weiqian Tian, Department of Anesthesiology, Affiliated Hospital of Nanjing University of Chinese Me",
       "hits": 3
+    },
+    "surgical_population": {
+      "value": "Thyroidectomy:\nA Double-Blind Randomized Controlled T rial\nSha Li",
+      "page": 1,
+      "quote": "in Patients Undergoing Thyroidectomy: A Double-Blind Randomized Controlled T rial Sha Li, Cheng Hu, Juan Zhu, Y udi Zhou, Y aomei Cui, Qian Xu, Weiqian Tian Department of Anesthesiology, Affiliated Hospital of Nanjing University of Chinese Medicine, Jiangsu Province Hospital of Chinese Medicine, Nan",
+      "hits": 1
     },
     "source_pdf": "getfile.php.pdf"
   },
@@ -388,6 +526,12 @@ window.PDF_EXTRACTED = {
       "quote": "1Department of Anesthesiology, Qilu Hospital, Cheeloo College of Medicine, Shandong University, Jinan, Shandong 250012, China 2Department of Anesthesiology, First Aﬃliated Hospital of Wenzhou Medical University, Wenzhou, Zhejiang 325000, China CorrespondenceshouldbeaddressedtoJinGuiYu;yujingui1109@1",
       "hits": 2
     },
+    "surgical_population": {
+      "value": "Transurethral Resection of the Prostate\nDongdong Liang",
+      "page": 1,
+      "quote": "Postoperative Catheter-Related Bladder Discomfort in Patients Undergoing Transurethral Resection of the Prostate Dongdong Liang ,1,2 ShenHui Jin ,2 LeDan Huang ,2 YeLong Ren ,2 ZhongHeng Du ,2 Li Wang ,2 Ying Ren ,2 KeNing Yang ,2 JunLu Wang ,2 and JinGui Yu 1 1Department of Anesthesiology, Qilu Hos",
+      "hits": 1
+    },
     "source_pdf": "014_liang_2021.pdf"
   },
   "Lin 2002": {
@@ -404,6 +548,12 @@ window.PDF_EXTRACTED = {
       ],
       "note": "country: several affiliation countries and no affiliation marked as the lead centre; not resolved automatically"
     },
+    "surgical_population": {
+      "value": "lower\nabdominal surgery were randomly assigned to four treatment regime",
+      "page": 1,
+      "quote": "One hundred healthy consenting women undergoing lower abdominal surgery were randomly assigned to four treatment regimens: Group I ðn ¼ 25Þ, control; Group II ðn ¼ 25Þ, sham-EA (needle insertion without electrical stimulation); Group III ðn ¼ 25Þ, low-EA (2 Hz of electrical stimulation); and Group I",
+      "hits": 1
+    },
     "source_pdf": "covidence_951_lin_2002.pdf"
   },
   "Liu 2015": {
@@ -418,6 +568,12 @@ window.PDF_EXTRACTED = {
       "value": "China",
       "page": 1,
       "quote": "Department of Anesthesiology, Beijing 100093 China; baoguowang766@163.com Accepted 10 April 2015 Published Online First 29 April 2015 To cite: Liu X, Li S, Wang B, et al.",
+      "hits": 1
+    },
+    "surgical_population": {
+      "value": "supratentorial craniotomy\nXing Liu",
+      "page": 1,
+      "quote": "with sufentanil anaesthesia in patients undergoing supratentorial craniotomy Xing Liu, 1 Shuqin Li,1 Baoguo Wang,2 Lixin An, 1 Xiujun Ren,3 Haifeng Wu 4 ▸ Additional material is published online only.",
       "hits": 1
     },
     "source_pdf": "covidence_681_full_article.pdf"
@@ -442,6 +598,12 @@ window.PDF_EXTRACTED = {
       "quote": "1Department of Anesthesiology, The Third Hospital of Hebei Medical University, Shijiazhuang City, Hebei, People’s Republic of China; 2Department of Anesthesiology, Cangzhou Central Hospital, Cangzhou, Hebei, People’s Republic of China Background: Postoperative cognitive decline (POCD) in the old age",
       "hits": 2
     },
+    "surgical_population": {
+      "value": "laparoscopic radical colon \ncancer surgery",
+      "page": 1,
+      "quote": "stimulation (TEAS) against POCD in elderly patients undergoing laparoscopic radical colon cancer surgery, as well as the potential mechanism. Methods: A prospective, single-center, parallel-group, randomized trial was designed.",
+      "hits": 1
+    },
     "source_pdf": "getfile.php-2.pdf"
   },
   "Liu 2025": {
@@ -450,6 +612,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1 First Clinical Medical College, Guangzhou University of Chinese Medicine, Guangzhou, China, 2 Department of Anesthesiology, The First Affiliated Hospital of Guangzhou University of Chinese Medicine, Guangzhou, China, 3 Guangdong Clinical Research Academy of Chinese Medicine, Guangzhou, China, 4 De",
       "hits": 5
+    },
+    "surgical_population": {
+      "value": "thoracoscopic \nsurgery: a randomized controlled \ntrial\nJie Liu 1",
+      "page": 1,
+      "quote": "sleep quality in patients undergoing thoracoscopic surgery: a randomized controlled trial Jie Liu 1,2,3, Longfei Ding 1,2, Wuhua Ma 2,3, Jiyong Wang 3,4, Xiuling Song 2,3, Ying Cao 5* and Caineng Wu 2,3* 1 First Clinical Medical College, Guangzhou University of Chinese Medicine, Guangzhou, China, 2 ",
+      "hits": 1
     },
     "source_pdf": "pdf.pdf"
   },
@@ -473,6 +641,12 @@ window.PDF_EXTRACTED = {
       "quote": "Department of Anesthesiology, Beijing Friendship Hospital, Capital Medical University, Beijing (100050), China; 2.",
       "hits": 4
     },
+    "surgical_population": {
+      "value": "ESD were assigned : A total of 129 patients undergoing ESD were assigne",
+      "page": 1,
+      "quote": "MethodsMethods: A total of 129 patients undergoing ESD were assigned : A total of 129 patients undergoing ESD were assigned randomly to the TEAS group (64 cases) or the sham group (65 cases) using computer-generated random randomly to the TEAS group (64 cases) or the sham group (65 cases) using comp",
+      "hits": 1
+    },
     "source_pdf": "covidence_69_full_article.pdf"
   },
   "Liu 2026 (burn)": {
@@ -491,6 +665,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "a Department of Anesthesiology, The First Hospital of Nanchang, The Third Affiliated Hospital of Nanchang University, Jiangxi Medical College, Nanchang University, Nanchang, China b Department of Anesthesiology, The Second Affiliated Hospital of Zhejiang Chinese Medical University, Hangzhou, China c",
       "hits": 3
+    },
+    "surgical_population": {
+      "value": "elective hip fracture surgery at the Second \nAffiliated Hospital of Zhe",
+      "page": 2,
+      "quote": "patients who underwent elective hip fracture surgery at the Second Affiliated Hospital of Zhejiang Chinese Medicine University between December 2021 and August 2022 were included in the study. Research grouping Patients who met the inclusion criteria were randomly assigned to either the control grou",
+      "hits": 1
     },
     "source_pdf": "1-s2.0-S0020138325005200.pdf"
   },
@@ -514,6 +694,12 @@ window.PDF_EXTRACTED = {
       "quote": "a Department of Anesthesiology and Perioperative Medicine, Xijing Hospital, Fourth Military Medical University, Xi'an, Shaanxi 710032, China b Department of Anesthesiology, First Affiliated Hospital, Xi'an Jiaotong University, Xi'an, Shaanxi 710061, China c Department of Anesthesiology, Tangdu Hospi",
       "hits": 12
     },
+    "surgical_population": {
+      "value": "mastectomy is associated with a decreased incidence of \nchronic pain at",
+      "page": 4,
+      "quote": "that TEAS at combined acupoints before anesthesia induction in patients undergoing mastectomy is associated with a decreased incidence of chronic pain at 6 months after surgery compared with the sham inter- vention.",
+      "hits": 1
+    },
     "source_pdf": "covidence_414_full_article.pdf"
   },
   "Lu 2022": {
@@ -530,6 +716,12 @@ window.PDF_EXTRACTED = {
       "quote": "1Department of Anaesthesiology and Perioperative Medicine, Xijing Hospital, Fourth Military Medical University, Xi’an, People’s Republic of China; 2Department of Anaesthesiology, T ongji Hospital, Huazhong University of Science and T echnology, Wuhan, People’s Republic of China; 3Department of Anaes",
       "hits": 8
     },
+    "surgical_population": {
+      "value": "elective colon surgery were enrolled and 94 \nfinished study",
+      "page": 1,
+      "quote": "Patients and Methods: From November 2016 to March 2018, 100 patients who underwent elective colon surgery were enrolled and 94 finished study (n = 47 for each) in three university hospitals.",
+      "hits": 1
+    },
     "source_pdf": "getfile.php-3.pdf"
   },
   "Luo 2026": {
@@ -538,6 +730,12 @@ window.PDF_EXTRACTED = {
       "page": 5,
       "quote": "panoplasty under general anesthesia, compared with sham stimulation.",
       "is_general": true,
+      "hits": 1
+    },
+    "surgical_population": {
+      "value": "tympanoplasty",
+      "page": 1,
+      "quote": "patients undergoing tympanoplasty. Methods In this prospective, single-blind, randomized, parallel-group trial, we enrolled 277 patients (aged 18–65 years; ASA physical status I–II) scheduled for tympanoplasty.",
       "hits": 1
     },
     "source_pdf": "covidence_35_verified.pdf"
@@ -571,6 +769,12 @@ window.PDF_EXTRACTED = {
       "quote": "Division of Colorectal Surgery, Department of Surgery, The Chinese University of Hong Kong, Prince of Wales Hospital, Shatin, Hong Kong SAR See Covering the Cover synopsis on page 255. BACKGROUND & AIMS: We investigated the efficacy of electroacupuncture in reducing the duration of postoperative ile",
       "hits": 5
     },
+    "surgical_population": {
+      "value": "elective laparoscopic surgery for colonic\nand upper rectal cancer",
+      "page": 1,
+      "quote": "patients undergoing elective laparoscopic surgery for colonic and upper rectal cancer, enrolled from October 2008 to Octo- ber 2010.",
+      "hits": 1
+    },
     "source_pdf": "covidence_1970_ng_2013.pdf"
   },
   "Ntritsou 2014": {
@@ -593,6 +797,12 @@ window.PDF_EXTRACTED = {
       "is_general": true,
       "hits": 1
     },
+    "surgical_population": {
+      "value": "radical prostatectomy were randomly assigned to\ntwo groups:",
+      "page": 1,
+      "quote": "observer-blinded trial, 75 patients undergoing radical prostatectomy were randomly assigned to two groups: (1) EA (n=37; tramadol+ketamine +EA) and (2) control (n=38; tramadol+ketamine). EA (100 Hz frequency) was applied at LI4 bilaterally during the closure of the abdominal walls and EA (4 Hz) was ",
+      "hits": 1
+    },
     "source_pdf": "covidence_729_full_article.pdf"
   },
   "Oztas 2019": {
@@ -608,6 +818,12 @@ window.PDF_EXTRACTED = {
       "quote": "midline incision: Randomized controlled clinical trial Bediye Oztas a* and Emine Iyigun b aSchool of Nursing, Yuksek Ihtisas University, Ankara, Turkey; bSchool of Nursing, Gulhane Health Science University, Ankara, Turkey (Received 1 December 2018; accepted 31 May 2019 ) Aims-Objectives: The purpos",
       "hits": 2
     },
+    "surgical_population": {
+      "value": "abdominal surgery",
+      "page": 1,
+      "quote": "patients undergoing abdominal surgery. Design: This research was conducted as a randomized controlled trial. Methods: This research sample consisted of 48 patients who underwent abdominal surgery with a midline incision.",
+      "hits": 1
+    },
     "source_pdf": "covidence_505_full_article.pdf"
   },
   "Pan 2023": {
@@ -616,6 +832,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1Department of Anesthesia, The First Affiliated Hospital of Wenzhou Medical University, Wenzhou, People’s Republic of China; 2Department of Anesthesia, Sir Run Run Shaw Hospital, Affiliated with the Zhejiang University School of Medicine, Hangzhou, People’s Republic of China; 3Department of Anesthes",
       "hits": 5
+    },
+    "surgical_population": {
+      "value": "Laparoscopic Myomectomy: A Randomized \nControlled Trial\nYuanyuan Pan\n 1",
+      "page": 1,
+      "quote": "Accelerates the Recovery of Patients Undergoing Laparoscopic Myomectomy: A Randomized Controlled Trial Yuanyuan Pan 1,*, Yifan Shao 2,*, Zhanghuan Chi 3,*, Shenhui Jin 1, Junlu Wang 1 1Department of Anesthesia, The First Affiliated Hospital of Wenzhou Medical University, Wenzhou, People’s Republic o",
+      "hits": 1
     },
     "source_pdf": "getfile.php-4.pdf"
   },
@@ -632,6 +854,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1Department of Anaesthesiology and Critical Care, Universiti Sains Malaysia, Kubang Kerian, Kelantan, Malaysia 2Hospital Raja Permaisuri Bainun Ipoh, Jalan Hospital, 30990 Ipoh, Perak, Malaysia *Corresponding author: S Praveena Seevaunnamtum, Department of Anaesthesiology and Critical Care, School o",
       "hits": 6
+    },
+    "surgical_population": {
+      "value": "gynaecological surgery",
+      "page": 1,
+      "quote": "gated to determine any opioid-sparing eﬀect and reduction of postoperative nausea and vomiting (PONV) in patients undergoing gynaecological surgery . Patient and Methods: This was a prospective, double blinded randomized study conducted in a tertiary hospital in Malaysia.",
+      "hits": 1
     },
     "source_pdf": "covidence_596_verified.pdf"
   },
@@ -665,6 +893,12 @@ window.PDF_EXTRACTED = {
       "quote": "1Department of Anesthesiology, Shengjing Hospital of China Medical University, Shenyang, Liaoning, People’s Republic of China; 2Department of Anesthesiology, Friendship Hospital of Capital Medical University, Beijing, People’s Republic of China *These authors contributed equally to this work Objecti",
       "hits": 7
     },
+    "surgical_population": {
+      "value": "selective video-assisted thoracoscopic surgery",
+      "page": 1,
+      "quote": "stimulation (TEAS) on sleep quality and complications after surgery in patients undergoing selective video-assisted thoracoscopic surgery. Patients and Methods: Eighty-five patients were divided into the TEAS group or the control group randomly.",
+      "hits": 1
+    },
     "source_pdf": "getfile.php-6.pdf"
   },
   "Sun 2017": {
@@ -687,6 +921,12 @@ window.PDF_EXTRACTED = {
       "quote": "Medical College, Xuzhou; and zZunyi Medical College, Zunyi, China. This study was carried out in the second aﬃliated hospital of Zhejiang University, School of Medicine and was funded by the Scientific Research Program of Chinese Medicine (2010ZA074) and the department (Department of Anesthesiology,",
       "hits": 4
     },
+    "surgical_population": {
+      "value": "laparoscopic\nsurgery",
+      "page": 1,
+      "quote": "during perioperative period in patients undergoing laparoscopic surgery. Methods: From July 2012 to October 2013, 380 patients scheduled for laparoscopic surgery under general anesthesia were randomly assigned to receive sham TEAS (group SSS), preoperative TEAS (group TSS), preoperative TEAS combine",
+      "hits": 1
+    },
     "source_pdf": "sun2017-2.pdf"
   },
   "Szmit 2021": {
@@ -695,6 +935,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1 Department and Clinic of General, Minimally Invasive and Endocrine Surgery, Wroclaw Medical University, 50-556 Wroclaw, Poland; mateusz.szmit@umed.wroc.pl (M.S.); jerzy.rudnicki@umed.wroc.pl (J.R.) 2 Department and Clinic of Internal Medicine, Occupational Diseases, Hypertension and Clinical Oncol",
       "hits": 9
+    },
+    "surgical_population": {
+      "value": "Inguinal Hernia Repair: A Randomize",
+      "page": 1,
+      "quote": "Postoperative Analgesic Requirement in Patients Undergoing Inguinal Hernia Repair: A Randomized, Placebo-Controlled Study Mateusz Szmit 1, Siddarth Agrawal 2,3, * , Waldemar Go´ zdzik4,*, Andrzej Kübler 4, Anil Agrawal 5, Piotr Pruchnicki 6 , Marta Wo´ zniak3, Matylda Nowak 7 , Bartłomiej Bartoszewi",
+      "hits": 1
     },
     "source_pdf": "pdf-3.pdf"
   },
@@ -705,6 +951,12 @@ window.PDF_EXTRACTED = {
       "quote": "a Department of Neurosurgery, West China Hospital, Sichuan University, Chengdu, China b Department of Integrated Traditional and Western Medicine, West China Hospital, Sichuan University, Chengdu, China ARTICLE INFO Keywords: Craniotomy Postoperative nausea and vomiting Transcutaneous electrical acu",
       "hits": 5
     },
+    "surgical_population": {
+      "value": "craniotomy: A randomized \ncontrolled trial \nLiang-dan Tu",
+      "page": 1,
+      "quote": "and vomiting in patients undergoing craniotomy: A randomized controlled trial Liang-dan Tu a, Peng-cheng Li a, Yu Zhao b, Rui-zhi Feng b, Jian-qin Lv b,* a Department of Neurosurgery, West China Hospital, Sichuan University, Chengdu, China b Department of Integrated Traditional and Western Medicine,",
+      "hits": 1
+    },
     "source_pdf": "study_244_Tu_2023.pdf"
   },
   "Wang 2023": {
@@ -713,6 +965,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "Nanjing University of Chinese Medicine, Nanjing, China e-mail: surgery34@163.com J.",
       "hits": 3
+    },
+    "surgical_population": {
+      "value": "Laparoscopic Gastrointestinal Tumor\nSurgery: A Prospective",
+      "page": 1,
+      "quote": "Improves Postoperative Sleep Quality in Patients Undergoing Laparoscopic Gastrointestinal Tumor Surgery: A Prospective, Randomized Controlled Trial Jun Wang .",
+      "hits": 1
     },
     "source_pdf": "s40122-023-00493-2.pdf"
   },
@@ -730,6 +988,12 @@ window.PDF_EXTRACTED = {
       "quote": "1 Department of Anesthesiology, National Cancer Center/ National Clinical Research Center for Cancer/Cancer Hospital, Chinese Academy of Medical Sciences and Peking Union Medical College, Beijing, China 2 Department of Outcomes Research, Outcomes Research Consortium, Cleveland Clinic, Cleveland, OH,",
       "hits": 2
     },
+    "surgical_population": {
+      "value": "breast cancer surgery were assigned to either the study group",
+      "page": 1,
+      "quote": "Methods A total of 140 female patients undergoing breast cancer surgery were assigned to either the study group (70 with SNVP) or the control group (70 with mild to moderate nausea and vomiting during pregnancy (MNVP)).",
+      "hits": 1
+    },
     "source_pdf": "covidence_212_full_article.pdf"
   },
   "Wong 2006": {
@@ -738,6 +1002,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "Division of Cardiothoracic Surgery, Department of Surgery, and Departments of Anesthesiology and Physiotherapy, Prince of Wales Hospital, Shatin, Hong Kong, SAR, China Background.",
       "hits": 4
+    },
+    "surgical_population": {
+      "value": "anatomic lung resection with\ncurative intent through a thoracotomy appr",
+      "page": 2,
+      "quote": "All patients underwent anatomic lung resection with curative intent through a thoracotomy approach by a single thoracic surgeon.",
+      "hits": 1
     },
     "source_pdf": "covidence_912_wong_2006.pdf"
   },
@@ -749,6 +1019,12 @@ window.PDF_EXTRACTED = {
       ],
       "note": "country: several affiliation countries and no affiliation marked as the lead centre; not resolved automatically"
     },
+    "surgical_population": {
+      "value": "thoracotomy",
+      "page": 2,
+      "quote": "All of the patients underwent thoracotomy (18) with a rib spreader and wound retractor (tumed -Surgical Instrument & Hospital Supplies GmbH, Tuttlingen, Germany), and without rib excision.",
+      "hits": 1
+    },
     "source_pdf": "wu2015.pdf"
   },
   "Wu 2022": {
@@ -757,6 +1033,12 @@ window.PDF_EXTRACTED = {
       "page": 2,
       "quote": "under general anesthesia were assigned into two groups: patients to receive total intravenous anesthesia (Control group, n = 45), and others to receive pTEAS in addition to total intravenous anesthesia (pTEAS group, n = 45). Inclusion criteria are as follows: (1) ASA I – II; (2) between 40 and 70 ye",
       "is_general": true,
+      "hits": 1
+    },
+    "surgical_population": {
+      "value": "lumbar surgery",
+      "page": 1,
+      "quote": "patients who underwent lumbar surgery, which has a significant impact on patients’ quality of life.",
       "hits": 1
     },
     "source_pdf": "s12871-022-01875-3.pdf"
@@ -787,6 +1069,12 @@ window.PDF_EXTRACTED = {
       "quote": "1Department of Anesthesiology, Shanghai Chest Hospital, Shanghai Jiao T ong University, School of Medicine, Shanghai, People’s Republic of China; 2President’s Office, Shanghai Chest Hospital, Shanghai Jiao T ong University, School of Medicine, Shanghai, People’s Republic of China; 3Department of Sci",
       "hits": 6
     },
+    "surgical_population": {
+      "value": "surgery for \nlung cancer",
+      "page": 2,
+      "quote": "efficacy of TEAS in enhancing postoperative recovery and facilitating early discharge of patients undergoing surgery for lung cancer.",
+      "hits": 1
+    },
     "source_pdf": "103940.pdf"
   },
   "Xie 2014": {
@@ -809,6 +1097,12 @@ window.PDF_EXTRACTED = {
       "quote": "1Department of Anesthesiology, Qianfushan Hospital Affiliated to Shandong University, Jinan 250014, China 2Department of Anesthesiology, Anhui Provincial Hospital Affiliated to Anhui Medical University, Hefei 230001, China © Huazhong University of Science and Technology and Springer-Verlag Berlin He",
       "hits": 2
     },
+    "surgical_population": {
+      "value": "radica l thoracic esophagectomy",
+      "page": 1,
+      "quote": "through pain induced by remifentan il in patients undergoing radica l thoracic esophagectomy, and the mechanisms were assessed.",
+      "hits": 1
+    },
     "source_pdf": "covidence_701_full_article.pdf"
   },
   "Xing 2022": {
@@ -816,6 +1110,12 @@ window.PDF_EXTRACTED = {
       "value": "China",
       "page": 1,
       "quote": "Department of Anaesthesiology, The First Affiliated Hospital of USTC, Division of Life Sciences and Medicine, University of Science and Technology of China, Hefei 230001, Anhui, China e-mail: zmynjl@126.com Y.",
+      "hits": 1
+    },
+    "surgical_population": {
+      "value": "Laparoscopic Gastric Cancer\nSurgery: A Randomized Controlled Trial\nRuyi",
+      "page": 1,
+      "quote": "Patients Undergoing Laparoscopic Gastric Cancer Surgery: A Randomized Controlled Trial Ruyi Xing .",
       "hits": 1
     },
     "source_pdf": "s40122-022-00429-2.pdf"
@@ -834,6 +1134,12 @@ window.PDF_EXTRACTED = {
       "quote": "1 Department of Anesthesiology, The First Affiliated Hospital of Chongqing Medical University, Youyi Road 1, Yuzhong District, Chongqing 400016, People’s Republic of China 2 College of Traditional Chinese Medicine, Chongqing Medical University, Chongqing 401331, People’s Republic of China 3 Departme",
       "hits": 3
     },
+    "surgical_population": {
+      "value": "Laparoscopic Sleeve\nGastrectomy: a Prospective",
+      "page": 1,
+      "quote": "and Vomiting in Female Patients Undergoing Laparoscopic Sleeve Gastrectomy: a Prospective, Randomized Controlled Trial Qiuju Xiong1 & Su Min 1 & Ke Wei 1 & Yanmei Yang2 & Jingyue Ma1 & Dan Liu 1 & Menghua Zeng3 & Lei Zou 1 Received: 14 November 2020 / Revised: 26 December 2020 / Accepted: 29 Decembe",
+      "hits": 1
+    },
     "source_pdf": "covidence_431_full_article.pdf"
   },
   "Yang 2020": {
@@ -850,6 +1156,12 @@ window.PDF_EXTRACTED = {
       "hits": 3,
       "note": "marked as affiliation 1 (lead centre); the paper also lists Australia"
     },
+    "surgical_population": {
+      "value": "Thoracoscopic Surgery: A Feasibility \nStudy\n ABE 1 Jie Yang*\n AE 1 Libi",
+      "page": 1,
+      "quote": "Gastrointestinal Recovery in Patients Undergoing Thoracoscopic Surgery: A Feasibility Study ABE 1 Jie Yang* AE 1 Libing Huang* BC 1 Siying Liu A 2 Wenzhong Wu AG 1 Weiqian Tian ADE 3 Zhen Zheng ADE 4 Zhigang Lv AG 1 Fangbing Ji AG 1 Man Zheng * Jie Yang and Libing Huang have contributed equally to t",
+      "hits": 1
+    },
     "source_pdf": "covidence_464_verified.pdf"
   },
   "Yang 2024": {
@@ -859,6 +1171,12 @@ window.PDF_EXTRACTED = {
         "China"
       ],
       "note": "country: several affiliation countries and no affiliation marked as the lead centre; not resolved automatically"
+    },
+    "surgical_population": {
+      "value": "video-assisted thoracoscopic segmentectomy or lobectomy were randomize",
+      "page": 1,
+      "quote": "180 patients who underwent video-assisted thoracoscopic segmentectomy or lobectomy were randomized to EA group (three sessions, 24 h prior to surgery, postoperative 4 h and 24 h) or usual care group (UC group).",
+      "hits": 1
     },
     "source_pdf": "covidence_1930_full_article.pdf"
   },
@@ -881,6 +1199,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1Departmentof Anesthesiology,TheShengliClinicalMedicalCollegeof FujianMedicalUniversityand Fujian Provincial Hospital, Fuzhou 350001, China 2Departmentof TraditionalChineseMedicine,Fujian ProvincialHospital,Fuzhou 350001,China CorrespondenceshouldbeaddressedtoYanqingChen;fjslyys@gmail.com Received15",
       "hits": 2
+    },
+    "surgical_population": {
+      "value": "gynecological laparoscopic surgery were randomly allocated to TEAS or c",
+      "page": 1,
+      "quote": "74 American Society of Anesthesiologists physical status (ASA) I or II patients undergoing gynecological laparoscopic surgery were randomly allocated to TEAS or control groups.",
+      "hits": 1
     },
     "source_pdf": "039_yao_2015.pdf"
   },
@@ -920,9 +1244,21 @@ window.PDF_EXTRACTED = {
       "quote": "Mei-Ling Yeh, RN, PhD, is a professor in the School of Nursing, National Taipei College of Nursing, Taiwan.",
       "hits": 1
     },
+    "surgical_population": {
+      "value": "lumbar spinal surgery were randomly assigned to one of three\ngroups",
+      "page": 1,
+      "quote": "Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups.",
+      "hits": 1
+    },
     "source_pdf": "015_PainATHM-2.pdf"
   },
   "Yu 2020": {
+    "surgical_population": {
+      "value": "gynecological laparoscopic surgery: a\nprospective",
+      "page": 1,
+      "quote": "recovery in patients undergoing gynecological laparoscopic surgery: a prospective, randomized, placebo- controlled trial Xiangdi Yu *, Fangxiang Zhang and Bingning Chen Abstract Introduction: In current study we assessed the effect of transcutaneous electrical acupoint stimulation (TEAS) on the qual",
+      "hits": 1
+    },
     "source_pdf": "s13063-019-3892-4.pdf"
   },
   "Zhan 2020": {
@@ -941,6 +1277,12 @@ window.PDF_EXTRACTED = {
       "quote": "1 Clinical Fellow, 3 Professor, 4 Associate Professor, Department of Anaesthesiology, Xijing Hospital, Fourth Military Medical University, Xi ’an, Shaanxi, China 2 Specialist Registrar, Department of Anaesthesiology, Shaanxi Provincial Maternal and Child Health Hospital, Xi ’an, Shaanxi, China Summa",
       "hits": 2
     },
+    "surgical_population": {
+      "value": "ambulatory surgery",
+      "page": 1,
+      "quote": "cantly improve the quality of recovery and decrease the incidence of anaesthesia-related side-effects for patients undergoing ambulatory surgery. ...............................................................................................................................",
+      "hits": 1
+    },
     "source_pdf": "043_zhang_2014.pdf"
   },
   "Zhang 2018": {
@@ -950,6 +1292,12 @@ window.PDF_EXTRACTED = {
       "quote": "1Department of Gastroenterology, Changzheng Hospital affiliated to second Military Medical university, shanghai, 200003, China.",
       "hits": 5
     },
+    "surgical_population": {
+      "value": "surgical procedures \nstayed in the hospital for a total of 1",
+      "page": 1,
+      "quote": "data, Medicare patients who underwent surgical procedures stayed in the hospital for a total of 1.82 million days (a mean of 11.3 days per patient), and cost healthcare industries approxi- mately US $1.75 billion during the year of 2000 [4].",
+      "hits": 1
+    },
     "source_pdf": "Needleless Transcutaneous Electrical Acustimulation_ A Pilot Study Evaluating Improvement in Post-Operative Recovery-2.pdf"
   },
   "Zhang 2023": {
@@ -958,6 +1306,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1 Department of Anesthesiology and Critical Care Medicine, Tianjin Nankai Hospital, Tianjin Medical University, 6 Changjiang Road, Tianjin, People’s Republic of China 2 Department of Biomedical Engineering, College of Precision Instruments and Optoelectronics Engineering, Tianjin University, Tianjin",
       "hits": 4
+    },
+    "surgical_population": {
+      "value": "elective laparoscopic cholecystectomy were randomly assigned to either",
+      "page": 1,
+      "quote": "Methods Participants who underwent elective laparoscopic cholecystectomy were randomly assigned to either the TEAS group or the sham group.",
+      "hits": 1
     },
     "source_pdf": "covidence_308_full_article.pdf"
   },
@@ -974,6 +1328,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1Department of Anesthesiology,the Zaoyang First People’s Hospital, Xiangyang, People’s Republic of China; 2Department of Anesthesiology,the First Affiliated Hospital of Wenzhou Medical University, Wenzhou, People’s Republic of China; 3Department of Laboratory Medicine, Clinical Medical College of Sh",
       "hits": 4
+    },
+    "surgical_population": {
+      "value": "Laparoscopic Hysterectomy: \nA Randomized Controlled Trial\nYu Zhang 1",
+      "page": 1,
+      "quote": "Patients Undergoing Laparoscopic Hysterectomy: A Randomized Controlled Trial Yu Zhang 1, Qinxue Dai 2, Jing Zhang 3, Junlu Wang 2, Xiuxiu Zhuang 2, Anqi Zhang 2, Luping Huang 2, Wenwen Du 2 1Department of Anesthesiology,the Zaoyang First People’s Hospital, Xiangyang, People’s Republic of China; 2Dep",
+      "hits": 1
     },
     "source_pdf": "109551.pdf"
   },
@@ -997,6 +1357,12 @@ window.PDF_EXTRACTED = {
       "quote": "1Department of Anesthesiology, General Hospital of Northern Theater Command, Shenyang, 110016, People’s Republic of China; 2Department of Anesthesiology, The 964TH Hospital of Chinese People’s Liberation Army Joint Logistics Support Force, Changchun, 130000, People’s Republic of China Correspondence",
       "hits": 5
     },
+    "surgical_population": {
+      "value": "gynecological laparoscopic surgery",
+      "page": 1,
+      "quote": "quality of recovery in patients undergoing gynecological laparoscopic surgery. Patients and Methods: In this prospective, randomized, single-blind, controlled trial, patients scheduled for gynecological laparo - scopic surgery under general anesthesia at a tertiary hospital in China between April an",
+      "hits": 1
+    },
     "source_pdf": "109499.pdf"
   },
   "Zhou 2021": {
@@ -1005,6 +1371,12 @@ window.PDF_EXTRACTED = {
       "page": 1,
       "quote": "1Department of Gastrointestinal Surgery, The Affiliated Hospital of Qingdao University, Qingdao, Shandong Province, People’s Republic of China; 2Department of Rehabilitation, The Affiliated Hospital of Qingdao University, Qingdao, Shandong Province, People’s Republic of China Purpose: Transcutaneous",
       "hits": 2
+    },
+    "surgical_population": {
+      "value": "gastrectomy is largely \nunknow",
+      "page": 1,
+      "quote": "Chinese medicine (TCM) therapy for patients who underwent gastrectomy is largely unknown.",
+      "hits": 1
     },
     "source_pdf": "getfile.php-5.pdf"
   },
@@ -1027,6 +1399,12 @@ window.PDF_EXTRACTED = {
       "quote": "1 Department of Anesthesiology, The Affiliated Hospital of Nanjing University of Chinese Medicine, Nanjing, China 2 Department of Acupuncture, The Affiliated Hospital of Nanjing University of Chinese Medicine, Nanjing, China 3 Key Laboratory of Acupuncture and Medicine Research of Ministry of Educat",
       "hits": 4,
       "note": "marked as affiliation 1 (lead centre); the paper also lists Australia"
+    },
+    "surgical_population": {
+      "value": "laparoscopic surgery",
+      "page": 1,
+      "quote": "dence of postoperative nausea and vomiting (PONV), and severity of postoperative pain, in gynecological patients undergoing laparoscopic surgery.",
+      "hits": 1
     },
     "source_pdf": "covidence_381_full_article.pdf"
   }

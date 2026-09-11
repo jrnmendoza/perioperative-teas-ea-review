@@ -376,6 +376,18 @@ def extract_one(pages):
                             + ", ".join(others)} if others else {}),
             }
 
+    # Surgical population, for trials whose characteristics record has none.
+    # Deliberately narrow: only an explicit "<N> patients undergoing <procedure>"
+    # style statement, and only the phrase itself.
+    for pno, text in body_pages(pages):
+        m = re.search(r"\b(?:patients?|participants?|subjects?|women|men)\s+(?:with\s+[\w ]{3,30}\s+)?"
+                      r"(?:who\s+)?(?:underwent|undergoing)\s+([a-z][^.;,()]{6,70})", text, re.I)
+        if m and not CITATION_NOISE.search(sentence_around(text, m.start(), m.end())):
+            rec["surgical_population"] = {
+                "value": m.group(1).strip().rstrip(" and"),
+                "page": pno, "quote": sentence_around(text, m.start(), m.end()), "hits": 1}
+            break
+
     return rec
 
 

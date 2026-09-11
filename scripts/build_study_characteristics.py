@@ -59,12 +59,14 @@ def build():
         }
         if 'non-gastrointestinal' in text: category='Mixed or unspecified surgery'
         elif name=='Wu 2016':
-            # Recovered from the source PDF 2026-09-11 (wu2015.pdf, Exp Ther Med
-            # 2016;11:495-502): "Thoracic surgical patients with lung cancer
-            # (n=27) underwent TAES ... following thoracotomy". The previous
-            # "not documented" placeholder predates that check.
-            category='Thoracic & Cardiac'
-            procedure='Thoracotomy for lung cancer'
+            # No text-based characteristics record exists for this trial, and this
+            # generator's provenance model requires one (every record's excerpt is
+            # checked against a readable source file by scripts/check_tab_data.py).
+            # The procedure IS recoverable from the source PDF, so it is extracted
+            # through scripts/extract_baseline_from_pdfs.py instead, where the
+            # value is held with its page and verbatim quote and is checked by
+            # t_pdf_extractions_are_provable_from_their_quotes.
+            category='Not documented';procedure='Surgical procedure not documented in the available characteristics record.'
         else:
             categories=[c for c,p in patterns.items() if re.search(p,text)]
             # "Abdominal hysterectomy" is gynecologic, not a mixed cohort.

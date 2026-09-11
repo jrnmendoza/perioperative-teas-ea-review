@@ -2870,7 +2870,21 @@ function openStudyDrawer(id) {
                   + 'author\'s affiliation.</span>';
               })())}
             ${row('Year', s.year)}
-            ${row('Surgery', `${pwEsc(s.surgery_category)}<br><span class="sd-sub">${pwEsc(s.surgery_procedure || '')}</span>`)}
+            ${row('Surgery', (() => {
+                // Where the characteristics record documents no procedure, fall
+                // back to the one read from the source PDF, which carries its own
+                // page and quote. Wu 2016 is the only such trial.
+                const pdfProc = ((window.PDF_EXTRACTED || {})[s.key] || {}).surgical_population;
+                const documented = s.surgery_procedure
+                  && !/not documented|Elective surgical procedure under general/i.test(s.surgery_procedure);
+                if (documented || !pdfProc) {
+                  return `${pwEsc(s.surgery_category)}<br><span class="sd-sub">${pwEsc(s.surgery_procedure || '')}</span>`;
+                }
+                return `${pwEsc(s.surgery_category)}<br>${pwEsc(pdfProc.value)} `
+                  + `${pdfValue(s.key, 'surgical_population') ? '' : ''}`
+                  + `<span class="pdf-src" title="${pwEsc(`${(window.PDF_EXTRACTED[s.key] || {}).source_pdf}, p${pdfProc.page}: "${String(pdfProc.quote).replace(/"/g, "'")}"`)}">PDF p${pdfProc.page}</span>`
+                  + `<br><span class="sd-sub">Read from the source publication; the characteristics record documents no procedure.</span>`;
+              })())}
             ${row('Anaesthesia', (() => {
                 // Not a variable: the protocol makes general anaesthesia an
                 // eligibility criterion, verified at study selection, and allows
