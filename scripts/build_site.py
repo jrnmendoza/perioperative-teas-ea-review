@@ -270,7 +270,12 @@ def main() -> int:
     out = Path(args.out)
 
     run([sys.executable, "scripts/build_reference_data.py"])
-    run([sys.executable, "scripts/extract_baseline_from_pdfs.py"])
+    # scripts/extract_baseline_from_pdfs.py is deliberately NOT run here. It reads
+    # all 70 source PDFs and needs pypdf, which the deploy workflow does not
+    # install; its output (dashboard/pdf_extracted.js) is committed, so the site
+    # builds from that. Re-run it by hand when a source PDF or the extraction
+    # rules change, and commit the regenerated file.
+    # scripts/validate_dashboard.py checks that file's integrity either way.
     # The dashboard's outcome register is generated from the lock, not authored.
     # Refuse to build a site whose data.js has been hand-edited away from it --
     # that drift is what the 2026-09-10 placeholder incident was.
