@@ -3223,12 +3223,17 @@ def t_outcome_effects_recompute_from_their_arms():
                     probs.append(f"{key}/{bucket}: {label} denominator is {n}")
                 elif e > n:
                     probs.append(f"{key}/{bucket}: {label} events {e} exceed denominator {n}")
-            if min(e1, e2) <= 0 or min(n1, n2) <= 0:
+            if min(n1, n2) <= 0:
                 continue
-            rr = (e1 / n1) / (e2 / n2)
-            se = math.sqrt(1 / e1 - 1 / n1 + 1 / e2 - 1 / n2)
+            # Haldane-Anscombe, applied universally (review team decision
+            # 2026-09-11) -- must match scripts/build_reference_data.py exactly,
+            # or the register and the forest plot are on different scales.
+            e1c, e2c, n1c, n2c = e1 + 0.5, e2 + 0.5, n1 + 1, n2 + 1
+            rr = (e1c / n1c) / (e2c / n2c)
+            se = math.sqrt(1 / e1c - 1 / n1c + 1 / e2c - 1 / n2c)
             if abs(float(rec.get("rr", rr)) - rr) > 0.001:
-                probs.append(f"{key}/{bucket}: rr {rec['rr']} != {rr:.4f} from events")
+                probs.append(f"{key}/{bucket}: rr {rec['rr']} != {rr:.4f} from events "
+                             f"(Haldane-Anscombe corrected)")
             if abs(float(rec.get("se", se)) - se) > 0.001:
                 probs.append(f"{key}/{bucket}: se {rec['se']} != {se:.4f} from events")
             expect = "Intervention" if rr < 1 else "Control"
@@ -3578,72 +3583,123 @@ def t_unlinked_rob2_cells_explain_themselves():
           not probs, "\n".join(probs))
 
 
-# Trials whose register country disagrees with the lead affiliation printed in
-# their own source publication, each confirmed by reading the affiliation. These
-# are NOT corrected here: which country a trial was run in is register data, and
-# changing it is the review team's decision. Recording them stops the set drifting
-# unnoticed in either direction.
-COUNTRY_DISAGREEMENTS = {
-    "Sim 2002": "Singapore",            # National University Hospital, Singapore
-    "Wong 2006": "Hong Kong",           # The Chinese University of Hong Kong
-    "Yeh 2010": "Taiwan",               # medical centre in northern Taiwan
-    "Coura 2011": "Brazil",             # Centro Hospitalar Unimed, Joinville
-    "Lee 2011": "Australia",            # affiliation 1: Victoria University, Melbourne
-    "Yeh 2011": "Taiwan",               # National Taipei College of Nursing
-    "Ng 2013": "Hong Kong",             # Prince of Wales Hospital, CUHK
-    "Seevaunnamtum 2016": "Malaysia",   # Universiti Sains Malaysia
+# Country of CONDUCT can legitimately differ from the lead author's affiliation.
+# Lee 2011 is the case: first affiliation Victoria University, Melbourne, but the
+# paper states the patients were recruited at China Medical University Hospital,
+# Taichung. The review team chose country of conduct, so the register holds
+# Taiwan while an affiliation-based reading says Australia. That is correct, not
+# a defect -- but it must be declared so it cannot be "fixed" back by mistake.
+CONDUCT_NOT_AFFILIATION = {
+    "Lee 2011": ("Taiwan", "Australia"),
 }
 
 
-def t_country_disagreements_are_declared():
+def t_country_is_verified_country_of_conduct():
     """
-    STRUCTURAL. The register records "China" for all 63 trials that carry a
-    country. Reading the source publications shows that is wrong for eight of
-    them -- Singapore, Hong Kong (x2), Taiwan (x2), Brazil, Australia and
-    Malaysia -- which matters directly for any statement about the geographic
-    spread of this evidence base and its generalisability.
+    STRUCTURAL. The register used to record "China" for all 63 trials that had a
+    country, which was wrong for eight of them and left seven blank. Country is
+    now set from scripts/apply_country_of_conduct.py, where every value carries
+    the sentence in the source publication it was read from.
 
-    The register is deliberately NOT rewritten: that is the review team's call.
-    What must not happen is the disagreement going unnoticed, or the set
-    changing without anyone looking. This pins the exact set, so a new
-    disagreement fails the build and a resolved one must be removed here.
+    This asserts data.js still matches that table exactly, that each entry keeps
+    its evidence, and that the only place the register departs from an
+    affiliation-based reading is the declared conduct-vs-affiliation case.
+    Getting this wrong changes what the review can claim about generalisability,
+    so it should fail loudly rather than drift.
     """
-    pdf_path = DASH / "pdf_extracted.js"
-    if not pdf_path.exists():
-        check("Register/source country disagreements are declared", False,
-              "dashboard/pdf_extracted.js is missing")
-        return
-    extracted = json.loads(pdf_path.read_text(encoding="utf-8")
-                           .split("window.PDF_EXTRACTED = ", 1)[1].rsplit(";", 1)[0])
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from apply_country_of_conduct import CONDUCT, META
+
+    by_key = {s["key"]: s for s in STUDIES}
     probs = []
-    seen = {}
-    for s in STUDIES:
-        rec = extracted.get(s["key"], {}).get("country")
-        if not (s.get("country") and isinstance(rec, dict) and rec.get("value")):
+    for key, (country, evidence) in CONDUCT.items():
+        s = by_key.get(key)
+        if s is None:
+            probs.append(f"{key}: declared in CONDUCT but not present in STUDIES_DATA")
             continue
-        if rec["value"] != s["country"]:
-            seen[s["key"]] = (s["country"], rec["value"])
+        if s.get("country") != country:
+            probs.append(f"{key}: register says {s.get('country')!r}, verified conduct is "
+                         f"{country!r} -- run scripts/apply_country_of_conduct.py")
+        if s.get("country_meta") != META.get(country):
+            probs.append(f"{key}: country_meta does not match {country}")
+        if not s.get("country_evidence"):
+            probs.append(f"{key}: country set without the source sentence that supports it")
+        elif s["country_evidence"] != evidence:
+            probs.append(f"{key}: country_evidence has drifted from the verified quote")
 
-    for key, (register_says, found) in sorted(seen.items()):
-        expected = COUNTRY_DISAGREEMENTS.get(key)
-        if expected is None:
-            probs.append(f"{key}: register says {register_says!r} but the source's lead "
-                         f"affiliation says {found!r}, and this is not declared in "
-                         f"COUNTRY_DISAGREEMENTS -- verify the affiliation and record it")
-        elif expected != found:
-            probs.append(f"{key}: declared as {expected!r} but the extractor now reads {found!r}")
-    for key in COUNTRY_DISAGREEMENTS:
-        if key not in seen:
-            probs.append(f"{key}: declared as a country disagreement but the register and the "
-                         f"source now agree -- remove it from COUNTRY_DISAGREEMENTS")
+    # Every study must now carry a country; "not reported" was the old state.
+    missing = [s["key"] for s in STUDIES if not s.get("country")]
+    if missing:
+        probs.append(f"{len(missing)} study/studies still have no country: {missing[:5]}")
 
-    # The dashboard must actually surface this, not just record it here.
-    app = (DASH / "app.js").read_text(encoding="utf-8")
-    if "countryDisagreements" not in app:
-        probs.append("app.js no longer reports register/source country disagreements to readers")
+    # Where the source PDF's lead affiliation differs from the recorded conduct,
+    # that difference must be a declared one.
+    pdf_path = DASH / "pdf_extracted.js"
+    if pdf_path.exists():
+        extracted = json.loads(pdf_path.read_text(encoding="utf-8")
+                               .split("window.PDF_EXTRACTED = ", 1)[1].rsplit(";", 1)[0])
+        for s in STUDIES:
+            rec = extracted.get(s["key"], {}).get("country")
+            if not (isinstance(rec, dict) and rec.get("value") and s.get("country")):
+                continue
+            if rec["value"] != s["country"]:
+                declared = CONDUCT_NOT_AFFILIATION.get(s["key"])
+                if not declared:
+                    probs.append(f"{s['key']}: conduct {s['country']!r} differs from the source's "
+                                 f"lead affiliation {rec['value']!r} and is not declared in "
+                                 f"CONDUCT_NOT_AFFILIATION")
+                elif declared != (s["country"], rec["value"]):
+                    probs.append(f"{s['key']}: declared conduct/affiliation pair {declared} no "
+                                 f"longer matches ({s['country']!r}, {rec['value']!r})")
 
-    check(f"Register/source country disagreements are declared ({len(seen)} found)",
+    countries = {s.get("country") for s in STUDIES}
+    check(f"Country is the verified country of conduct "
+          f"({len(CONDUCT)} verified from source, {len(countries)} countries represented)",
           not probs, "\n".join(probs))
+
+
+def t_companion_publications_cannot_double_count():
+    """
+    STRUCTURAL. Yeh 2010 and Yeh 2011 are two reports of ONE three-arm trial of
+    lumbar spinal surgery -- same author team, same cohort, the sham arm's
+    figures identical between the papers. The review team decided on 2026-09-11
+    that they count once.
+
+    Formally reducing k from 70 to 69 is a change to the LOCKED v34 master and
+    the PRISMA flow, not something the dashboard may do on its own -- build_site
+    derives canonical_studies from the workbook and other checks here assert it
+    is 70. So this asserts the thing that actually protects the analysis: the
+    pair is declared as one unit, and neither report contributes independently
+    to any pooled estimate. If someone later adds one of them to a synthesis,
+    this fails.
+    """
+    by_key = {s["key"]: s for s in STUDIES}
+    pairs = [("Yeh 2010", "Yeh 2011")]
+    probs = []
+    for primary, companion in pairs:
+        p_rec, c_rec = by_key.get(primary), by_key.get(companion)
+        if not p_rec or not c_rec:
+            probs.append(f"{primary}/{companion}: one of the pair is missing from STUDIES_DATA")
+            continue
+        if c_rec.get("duplicate_report_of") != primary:
+            probs.append(f"{companion}: not marked as a duplicate report of {primary}")
+        if p_rec.get("companion_report") != companion:
+            probs.append(f"{primary}: does not name {companion} as its companion report")
+        for rec in (p_rec, c_rec):
+            if not rec.get("unit_of_analysis_note"):
+                probs.append(f"{rec['key']}: carries no unit-of-analysis note")
+        # Neither may appear in a pooled set.
+        for name, rec in ((primary, p_rec), (companion, c_rec)):
+            pooled = [b for b, v in (rec.get("outcomes") or {}).items()
+                      if isinstance(v, dict)
+                      and (isinstance(v.get("mean_diff"), (int, float))
+                           or isinstance(v.get("rr"), (int, float)))]
+            if pooled:
+                probs.append(f"{name}: contributes arm-level data to {pooled} -- a companion "
+                             f"publication pair must not both enter a synthesis; resolve the "
+                             f"unit of analysis before pooling either")
+    check(f"Companion publications are declared and cannot double-count "
+          f"({len(pairs)} pair)", not probs, "\n".join(probs))
 
 
 def t_quarantine_registry_is_honest():
@@ -3953,7 +4009,8 @@ def main() -> int:
           t_archival_workbooks_feed_no_live_code,
           t_pdf_extractions_are_provable_from_their_quotes,
           t_unlinked_rob2_cells_explain_themselves,
-          t_country_disagreements_are_declared,
+          t_country_is_verified_country_of_conduct,
+          t_companion_publications_cannot_double_count,
           t_quarantine_registry_is_honest]),
         ("interpretation layer (manuscript / reviewer overlay)",
          [t_interpretation_layer_cannot_carry_evidence,

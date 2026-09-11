@@ -682,12 +682,12 @@ window.STUDIES_DATA = [
     "journal": "#952 - Sim 2002",
     "doi": "10.1136/aim.20.2-3.56",
     "pmid": "12216602",
-    "country": "China",
+    "country": "Singapore",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "SG",
+      "lat": 1.3521,
+      "lng": 103.8198,
+      "flag": "🇸🇬"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -1001,7 +1001,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Department of Anaesthesia, National University Hospital Singapore"
   },
   {
     "id": "1879897414",
@@ -1012,12 +1013,12 @@ window.STUDIES_DATA = [
     "journal": "#912 - Wong 2006",
     "doi": "10.1016/j.athoracsur.2005.12.064",
     "pmid": "17005509",
-    "country": "China",
+    "country": "Hong Kong",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "HK",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "flag": "🇭🇰"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -1316,7 +1317,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Surgical Unit of a tertiary referral university-teaching hospital in Hong Kong (Prince of Wales Hospital, Shatin)"
   },
   {
     "id": "1879897344",
@@ -1664,12 +1666,12 @@ window.STUDIES_DATA = [
     "journal": "#828 - Yeh 2010",
     "doi": "10.1016/j.ijnurstu.2010.10.009",
     "pmid": "21084087",
-    "country": "China",
+    "country": "Taiwan",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "TW",
+      "lat": 23.6978,
+      "lng": 120.9605,
+      "flag": "🇹🇼"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -1969,7 +1971,10 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Nursing Department, Veterans General Hospital, Taipei, Taiwan, ROC",
+    "companion_report": "Yeh 2011",
+    "unit_of_analysis_note": "Retained as the trial record for the study also reported as Yeh 2011 (Altern Ther Health Med 2010;16(6):10-18). Review team decision 2026-09-11: count once."
   },
   {
     "id": "1879897266",
@@ -1980,12 +1985,12 @@ window.STUDIES_DATA = [
     "journal": "#838 - Coura 2011",
     "doi": "10.1136/aim.2010.003251",
     "pmid": "",
-    "country": "China",
+    "country": "Brazil",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "BR",
+      "lat": -14.235,
+      "lng": -51.9253,
+      "flag": "🇧🇷"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2299,7 +2304,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "conducted in the Unimed Hospital Centre, Joinville-SC, Brazil, from April 2009 to June 2010"
   },
   {
     "id": "1879897255",
@@ -2310,12 +2316,12 @@ window.STUDIES_DATA = [
     "journal": "#812 - Lee 2011",
     "doi": "10.1155/2011/696754",
     "pmid": "21716712",
-    "country": "China",
+    "country": "Taiwan",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "TW",
+      "lat": 23.6978,
+      "lng": 120.9605,
+      "flag": "🇹🇼"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2618,7 +2624,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Hysterectomized patients at the China Medical University Hospital [Taichung] were invited to be subjects in the study. Lead affiliation is Victoria University, Melbourne; country of CONDUCT is Taiwan."
   },
   {
     "id": "1879897273",
@@ -2629,12 +2636,12 @@ window.STUDIES_DATA = [
     "journal": "#823 - Yeh 2010 (ATHM)",
     "doi": "",
     "pmid": "21280458",
-    "country": "China",
+    "country": "Taiwan",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "TW",
+      "lat": 23.6978,
+      "lng": 120.9605,
+      "flag": "🇹🇼"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -2937,7 +2944,10 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "carried out by the orthopedic departments of a 4000-bed medical center in northern Taiwan",
+    "duplicate_report_of": "Yeh 2010",
+    "unit_of_analysis_note": "Same trial as Yeh 2010. Both papers report one three-arm randomised study of lumbar spinal surgery by the same author team (Yeh, Chung, Chen, Chen): Altern Ther Health Med 2010;16(6):10-18 states “Ninety-nine patients undergoing lumbar spinal surgery were randomly assigned to one of three groups”, and Int J Nurs Stud 2011;48(6):703-709 reports the same cohort, with the sham arm's figures identical between the two papers. Review team decision 2026-09-11: COUNT ONCE. Yeh 2010 (the later, larger report, n=63) is retained as the trial record; this record is its companion publication and must not contribute independently to any synthesis."
   },
   {
     "id": "1879897195",
@@ -2948,12 +2958,12 @@ window.STUDIES_DATA = [
     "journal": "#775 - Ng 2012 / 2013",
     "doi": "10.1053/j.gastro.2012.10.050",
     "pmid": "23142625",
-    "country": "China",
+    "country": "Hong Kong",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "HK",
+      "lat": 22.3193,
+      "lng": 114.1694,
+      "flag": "🇭🇰"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -3272,7 +3282,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "conducted the study from October 2008 through October 2010 at the Prince of Wales Hospital, a university teaching hospital in Hong Kong"
   },
   {
     "id": "1879897069",
@@ -4257,10 +4268,11 @@ window.STUDIES_DATA = [
         "result_rob": "Some concerns",
         "arm1_events": 1.0,
         "arm2_events": 6.0,
-        "rr": 0.166667,
-        "se": 1.0328,
-        "ci_low": 0.022015,
-        "ci_upp": 1.2618
+        "rr": 0.230769,
+        "se": 0.851631,
+        "ci_low": 0.043477,
+        "ci_upp": 1.2249,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "intraop_opioid": null
     }
@@ -5844,12 +5856,12 @@ window.STUDIES_DATA = [
     "journal": "#596 - PraveenaSeevaunnamtum 2016",
     "doi": "10.5812/aapm.40106",
     "pmid": "28975075",
-    "country": "China",
+    "country": "Malaysia",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "MY",
+      "lat": 4.2105,
+      "lng": 101.9758,
+      "flag": "🇲🇾"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -6170,7 +6182,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "conducted at a 990-bed multidisciplinary tertiary government hospital in Malaysia"
   },
   {
     "id": "1882881457",
@@ -8109,10 +8122,11 @@ window.STUDIES_DATA = [
         "result_rob": "Some concerns",
         "arm1_events": 13.0,
         "arm2_events": 24.0,
-        "rr": 0.541667,
-        "se": 0.227866,
-        "ci_low": 0.346552,
-        "ci_upp": 0.846634
+        "rr": 0.55102,
+        "se": 0.224442,
+        "ci_low": 0.35491,
+        "ci_upp": 0.855493,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "intraop_opioid": null
     }
@@ -10296,10 +10310,11 @@ window.STUDIES_DATA = [
         "result_rob": "High",
         "arm1_events": 35.0,
         "arm2_events": 68.0,
-        "rr": 0.509288,
-        "se": 0.180818,
-        "ci_low": 0.357313,
-        "ci_upp": 0.725903
+        "rr": 0.512821,
+        "se": 0.179558,
+        "ci_low": 0.360681,
+        "ci_upp": 0.729136,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "flatus_time": null,
       "hospital_stay": null,
@@ -15193,10 +15208,11 @@ window.STUDIES_DATA = [
         "result_rob": "Some concerns",
         "arm1_events": 3.0,
         "arm2_events": 6.0,
-        "rr": 0.508772,
-        "se": 0.682067,
-        "ci_low": 0.13364,
-        "ci_upp": 1.9369
+        "rr": 0.547745,
+        "se": 0.636687,
+        "ci_low": 0.157261,
+        "ci_upp": 1.9078,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "intraop_opioid": null
     }
@@ -17863,10 +17879,11 @@ window.STUDIES_DATA = [
         "result_rob": "Some concerns",
         "arm1_events": 18.0,
         "arm2_events": 29.0,
-        "rr": 0.635468,
-        "se": 0.207299,
-        "ci_low": 0.423289,
-        "ci_upp": 0.954004
+        "rr": 0.641703,
+        "se": 0.204864,
+        "ci_low": 0.429487,
+        "ci_upp": 0.958777,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "flatus_time": null,
       "hospital_stay": null,
@@ -18255,10 +18272,11 @@ window.STUDIES_DATA = [
         "result_rob": "Some concerns",
         "arm1_events": 6.0,
         "arm2_events": 13.0,
-        "rr": 0.471154,
-        "se": 0.449831,
-        "ci_low": 0.195101,
-        "ci_upp": 1.1378
+        "rr": 0.491308,
+        "se": 0.433027,
+        "ci_low": 0.210259,
+        "ci_upp": 1.148,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
       },
       "intraop_opioid": null
     }
@@ -20593,7 +20611,15 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "Poland",
+    "country_meta": {
+      "code": "PL",
+      "lat": 51.9194,
+      "lng": 19.1451,
+      "flag": "🇵🇱"
+    },
+    "country_evidence": "Department and Clinic of General, Minimally Invasive and Endocrine Surgery, Wroclaw Medical University, 50-556 Wroclaw, Poland"
   },
   {
     "id": "NEW32_GAO2022",
@@ -20686,7 +20712,15 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "Department of Anesthesiology, Center for Brain Science, The First Affiliated Hospital of Xi'an Jiaotong University, Xi'an, China"
   },
   {
     "id": "NEW32_SONG2020",
@@ -20779,7 +20813,15 @@ window.STUDIES_DATA = [
         "mean_diff": null,
         "se": null
       }
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "Department of Anesthesiology, Shengjing Hospital of China Medical University, Shenyang, China"
   },
   {
     "id": "NEW32_WU2016",
@@ -20877,7 +20919,15 @@ window.STUDIES_DATA = [
       },
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "the Cancer Hospital of Harbin Medical University (Harbin, China)"
   },
   {
     "id": "NEW32_LIU2015",
@@ -20975,7 +21025,15 @@ window.STUDIES_DATA = [
         "mean_diff": -22.1,
         "se": null
       }
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "Department of Anesthesiology, Beijing 100093 China"
   },
   {
     "id": "NEW32_OZTAS2019",
@@ -21068,7 +21126,15 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "Turkey",
+    "country_meta": {
+      "code": "TR",
+      "lat": 38.9637,
+      "lng": 35.2433,
+      "flag": "🇹🇷"
+    },
+    "country_evidence": "School of Nursing, Yuksek Ihtisas University, Ankara, Turkey"
   },
   {
     "id": "NEW32_ZHANG2018",
@@ -21154,7 +21220,15 @@ window.STUDIES_DATA = [
       },
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country": "China",
+    "country_meta": {
+      "code": "CN",
+      "lat": 35.8617,
+      "lng": 104.1954,
+      "flag": "🇨🇳"
+    },
+    "country_evidence": "Department of Gastroenterology, Changzheng Hospital affiliated to Second Military Medical University, Shanghai, 200003, China"
   }
 ];
 

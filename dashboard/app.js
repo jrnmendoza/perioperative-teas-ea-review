@@ -1091,7 +1091,6 @@ function summarisePopulation(studies) {
   });
   out.female = tot > 0 ? { events: fem, total: tot, studies: contributing } : null;
 
-  out.countryDisagreements = [];
   studies.forEach(s => {
     const pdf = (window.PDF_EXTRACTED || {})[s.key] || {};
     const c = s.country || 'Not reported';
@@ -1100,9 +1099,7 @@ function summarisePopulation(studies) {
     // was run. Count that rather than quietly presenting the register's figure
     // as settled -- it is the difference between "all 63 were in China" and a
     // genuinely multi-country evidence base.
-    if (s.country && pdf.country && pdf.country.value && pdf.country.value !== s.country) {
-      out.countryDisagreements.push({ study: s.key, register: s.country, pdf: pdf.country.value });
-    }
+
     // Anaesthesia resolves the same way the study details panel does: the
     // extraction record first, then the source PDF. Counting only the former
     // understated coverage as 27/70 when it is actually 52/70.
@@ -1190,13 +1187,7 @@ function renderPopulationSummary(studies) {
           </div>`).join('')}
       </div>
       <div class="pop-foot">
-        Geographic distribution as recorded in the register — ${countryBits}.
-        ${p.countryDisagreements.length ? `<strong style="color:#d9a457;">
-          ${p.countryDisagreements.length} of these disagree with the source publication's own lead
-          affiliation</strong> (${p.countryDisagreements.slice(0, 4).map(d =>
-            `${pwEsc(d.study)} &rarr; ${pwEsc(d.pdf)}`).join(', ')}${p.countryDisagreements.length > 4
-            ? `, +${p.countryDisagreements.length - 4} more` : ''}). Open a study to see the quoted
-          affiliation. The register value is shown here unchanged pending review.` : ''}
+        Countries of conduct, each verified against the source publication — ${countryBits}.
         <br>Anaesthesia is not a varying characteristic here: general anaesthesia is an
         <strong>eligibility criterion</strong> for this review, verified at study selection, so all
         ${p.n} trials were conducted under it. ${p.anaesthesiaStated}/${p.n} papers state the
@@ -2866,25 +2857,17 @@ function openStudyDrawer(id) {
           <h4>A · Trial</h4>
           <table class="sd-table">
             ${row('Country', (() => {
-                const pdfC = ((window.PDF_EXTRACTED || {})[s.key] || {}).country;
-                const reg = s.country ? pwEsc(s.country) : null;
-                // Where the register and the paper disagree, show BOTH. The
-                // register is not silently overwritten -- which country a trial
-                // was run in is register data, and correcting it is the review
-                // team's call, not this panel's.
-                if (pdfC && pdfC.value && reg && pdfC.value !== s.country) {
-                  return `${reg} <span class="nr-tag" style="border-style:solid;color:#d9a457;border-color:rgba(217,164,87,.5);" `
-                    + `title="Register says ${pwEsc(s.country)}; the source publication's lead affiliation says `
-                    + `${pwEsc(pdfC.value)}. Flagged for review, not corrected here.">register</span>`
-                    + `<br>${pwEsc(pdfC.value)} ${pdfValue(s.key, 'country') ? '' : ''}`
-                    + `<span class="pdf-src" title="${pwEsc(`${(window.PDF_EXTRACTED[s.key] || {}).source_pdf}, p${pdfC.page}: "${String(pdfC.quote).replace(/"/g, "'")}"`)}">PDF p${pdfC.page}</span>`
-                    + `<br><span class="sd-sub">Register and source disagree — see the quoted affiliation.</span>`;
-                }
-                if (reg) return reg;
-                return pdfValue(s.key, 'country')
-                  || (pdfC && pdfC.conflict
-                      ? `${baselineValue(null)} <span class="sd-sub">affiliations name several countries (${pwEsc(pdfC.conflict.join(', '))}) with no marked lead centre</span>`
-                      : baselineValue(null));
+                // Country of CONDUCT, verified from the source publication by
+                // scripts/apply_country_of_conduct.py. The evidence sentence is
+                // carried on the record so a reader can check it.
+                if (!s.country) return baselineValue(null);
+                const flag = (s.country_meta && s.country_meta.flag) ? s.country_meta.flag + ' ' : '';
+                const ev = s.country_evidence
+                  ? `<span class="pdf-src" title="${pwEsc(s.country_evidence)}">source-verified</span>`
+                  : '';
+                return `${flag}${pwEsc(s.country)} ${ev}`
+                  + '<br><span class="sd-sub">Country where the trial was conducted, not the lead '
+                  + 'author\'s affiliation.</span>';
               })())}
             ${row('Year', s.year)}
             ${row('Surgery', `${pwEsc(s.surgery_category)}<br><span class="sd-sub">${pwEsc(s.surgery_procedure || '')}</span>`)}
