@@ -1288,7 +1288,11 @@ function summarisePopulation(reportsList) {
                                                             && !d.explained_by_randomised);
   if (mism.length) out.flags.push({ kind: 'denominator-mismatch', rows: mism });
   (co.baseline_arm_swaps || []).forEach(s => {
-    if (inScope.has(s.study)) out.flags.push({ kind: 'baseline-arm-swap', ...s });
+    if (!inScope.has(s.study)) return;
+    // A corrected swap moves to the resolved panel. It is not deleted: the record
+    // of what was wrong, and of the paper it was checked against, is the point.
+    (s.status === 'corrected' ? out.resolved : out.flags)
+      .push({ kind: 'baseline-arm-swap', ...s });
   });
   const lockRows = (co.locked_sheet_disagreements || []).filter(d => inScope.has(d.study));
   if (lockRows.length) out.flags.push({ kind: 'locked-sheets-disagree', rows: lockRows });
@@ -1360,9 +1364,23 @@ function renderPopulationSummary(reportsList) {
   // evidence that answered it both stay on the page.
   const resolvedHtml = !p.resolved.length ? '' : `
     <details class="pop-resolved">
-      <summary><strong>Duplicate-cohort questions resolved (${p.resolved.length})</strong>
-        <span class="sd-sub"> &mdash; read against the source publications and settled</span></summary>
+      <summary><strong>Resolved against the source publications (${p.resolved.length})</strong>
+        <span class="sd-sub"> &mdash; questions this review raised, read against the papers, and settled</span></summary>
       ${p.resolved.map(c => {
+        if (c.kind === 'baseline-arm-swap') return `
+        <div class="pop-flag">
+          <span class="badge badge-emerald">Baseline corrected</span>
+          <strong>${pwEsc(c.study)}</strong> &mdash; ${pwEsc(c.summary)}
+          <div class="sd-sub">Corrected ${pwEsc(c.corrected_on)} by <code>${pwEsc(c.applied_by)}</code>
+            against <code>${pwEsc(c.source)}</code>, ${pwEsc(c.source_location)}
+            &mdash; &ldquo;${pwEsc(c.quote)}&rdquo;</div>
+          <ul class="pop-evidence">${c.fields.map(x => `<li><code>${pwEsc(x.field)}</code>:
+            was ${pwEsc(x.register)}, now ${pwEsc(x.source_says)}</li>`).join('')}
+            ${c.asa_status ? `<li><code>asa_status</code>: was ${pwEsc(c.asa_status.register)}
+              (the sham arm's distribution alone), now both arms</li>` : ''}</ul>
+          <div class="sd-sub">${pwEsc(c.resolution)}</div>
+          <div class="sd-sub"><strong>Not affected:</strong> ${pwEsc(c.affects)}</div>
+        </div>`;
         if (c.kind === 'attribution') return `
         <div class="pop-flag">
           <span class="badge badge-emerald">Identity resolved</span>

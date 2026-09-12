@@ -4292,22 +4292,49 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
     # A recorded arm swap must still be true of the register, and its quoted
     # evidence must still be in the file it names -- otherwise it is either
     # already corrected (withdraw it) or describing something that moved.
+    # A recorded arm swap is either OPEN (the register still holds what it
+    # describes) or CORRECTED (the register now holds the source value). Either
+    # way the finding has to match the data, so a correction cannot leave a stale
+    # flag standing and a withdrawal cannot quietly erase an unfixed problem.
     for s in co.get("baseline_arm_swaps", []):
         pop = (by_key.get(s["study"]) or {}).get("population") or {}
         if not pop:
             probs.append(f"{s['study']}: arm swap recorded for a study not in the register")
             continue
-        for f in s["fields"]:
-            if pop.get(f["field"]) != f["register"]:
-                probs.append(f"{s['study']}.{f['field']} is now {pop.get(f['field'])!r}, not the "
-                             f"{f['register']!r} this finding describes -- withdraw or re-verify it")
-            if f["register"] == f["source_says"]:
-                probs.append(f"{s['study']}.{f['field']}: recorded as a swap but the two agree")
+        status = s.get("status", "open")
+        if status not in ("open", "corrected"):
+            probs.append(f"{s['study']}: unknown status {status!r}")
+        want = "source_says" if status == "corrected" else "register"
+        pairs = [(f["field"], f["register"], f["source_says"]) for f in s["fields"]]
+        if s.get("asa_status"):
+            pairs.append(("asa_status", s["asa_status"]["register"],
+                          s["asa_status"]["source_says"]))
+        for field, held_before, from_source in pairs:
+            expected = from_source if want == "source_says" else held_before
+            if pop.get(field) != expected:
+                probs.append(f"{s['study']}.{field} is {pop.get(field)!r}; a {status} finding "
+                             f"requires {expected!r}")
+            if held_before == from_source:
+                probs.append(f"{s['study']}.{field}: recorded as a swap but the two agree")
         if not (ROOT / s["source"]).exists():
             probs.append(f"{s['study']}: source {s['source']} does not exist")
         if not s.get("arm_assignment_confirmed_by"):
             probs.append(f"{s['study']}: no corroboration recorded for which arm is which, so the "
                          f"swap cannot be told apart from a denominator error")
+        if status == "corrected":
+            for field in ("corrected_on", "applied_by", "resolution"):
+                if not s.get(field):
+                    probs.append(f"{s['study']}: corrected without recording {field}")
+            applied = s.get("applied_by")
+            if applied and not (ROOT / applied).exists():
+                probs.append(f"{s['study']}: {applied} does not exist, so the correction cannot "
+                             f"be re-checked or reversed")
+            # The correction must not have moved a denominator.
+            expect_n = {"Gu 2019": (58, 59)}.get(s["study"])
+            if expect_n and (pop.get("arm1_n"), pop.get("arm2_n")) != expect_n:
+                probs.append(f"{s['study']}: arms are "
+                             f"{(pop.get('arm1_n'), pop.get('arm2_n'))}, expected {expect_n} -- a "
+                             f"baseline correction must never move a denominator")
     if co.get("baseline_arm_swaps") and "Baseline on the wrong arm" not in APP:
         probs.append("recorded arm swaps are never rendered")
 

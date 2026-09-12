@@ -102,6 +102,9 @@ RESOLVED_ATTRIBUTION = [{
 # Sham/no-current TEAS n = 59 on all eight of its outcome rows).
 BASELINE_ARM_SWAPS = [{
     "study": "Gu 2019",
+    "status": "corrected",
+    "corrected_on": "2026-09-12",
+    "applied_by": "scripts/apply_baseline_arm_corrections.py",
     "summary": "Age, BMI and sex are each recorded against the opposite arm.",
     "source": "TEAS EA Verification/Source PDFs/covidence_1471_full_article.pdf",
     "source_location": "Table 1, Characteristics of patients (p4)",
@@ -126,15 +129,22 @@ BASELINE_ARM_SWAPS = [{
         {"field": "arm1_female", "register": "30/59 (50.8%)", "source_says": "27/58 (46.6%)"},
         {"field": "arm2_female", "register": "27/58 (46.6%)", "source_says": "30/59 (50.8%)"},
     ],
-    "also": "asa_status reads \u201cASA I: 20 (33.9%), ASA II: 39 (66.1%)\u201d, which sums to "
+    "also": "asa_status read \u201cASA I: 20 (33.9%), ASA II: 39 (66.1%)\u201d, which sums to "
             "59 and is the SHAM arm's distribution presented as if it were study-wide. The "
-            "paper gives ASA I 23 / II 35 for the 58 patients in the TEAS arm.",
+            "paper gives ASA I 23 / II 35 for the 58 patients in the TEAS arm. Both arms are "
+            "now given.",
+    "asa_status": {
+        "register": "ASA I: 20 (33.9%), ASA II: 39 (66.1%)",
+        "source_says": "TEAS arm \u2014 ASA I: 23/58 (39.7%), ASA II: 35/58 (60.3%); "
+                       "Sham arm \u2014 ASA I: 20/59 (33.9%), ASA II: 39/59 (66.1%)",
+    },
     "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, "
                "risk-of-bias judgement or GRADE rating reads these fields.",
-    "decision_needed": "Straightforward to correct \u2014 the paper, the lock and the register's "
-                       "own arm labels all agree on which arm is which, so the six values simply "
-                       "move back to their arms. Left uncorrected pending review-team sign-off, "
-                       "because it edits the register's baseline layer.",
+    "resolution": "Corrected 2026-09-12 on review-team sign-off: the six values were moved "
+                  "back to the arms the paper reports them for, and asa_status was rewritten to "
+                  "give both arms instead of the sham arm's distribution alone. The analysed "
+                  "denominators were not touched. The 'register' column above records what the "
+                  "register held BEFORE the correction; 'source_says' is what it holds now.",
 }]
 
 
@@ -498,7 +508,9 @@ def main(check_only: bool) -> int:
         print(f"  LOCK {d['study']}: Study_Master says {d['study_master_summary_arms']}, "
               f"AF_LOCK says {d['af_lock_analysed_arms']} ({note})")
     for s in payload["baseline_arm_swaps"]:
-        print(f"  SWAP {s['study']}: {s['summary']} ({len(s['fields'])} field(s), source-verified)")
+        tag = "CORRECTED" if s.get("status") == "corrected" else "SWAP"
+        print(f"  {tag} {s['study']}: {s['summary']} "
+              f"({len(s['fields'])} field(s), source-verified)")
     dm = payload["denominator_mismatches"]
     unexplained = [d for d in dm if not d["explained_by_randomised"]]
     print(f"  {len(dm)} female-count denominator(s) differ from the arm's analysed N "

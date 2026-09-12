@@ -104,6 +104,9 @@ window.COHORT_OVERLAP = {
   "baseline_arm_swaps": [
     {
       "study": "Gu 2019",
+      "status": "corrected",
+      "corrected_on": "2026-09-12",
+      "applied_by": "scripts/apply_baseline_arm_corrections.py",
       "summary": "Age, BMI and sex are each recorded against the opposite arm.",
       "source": "TEAS EA Verification/Source PDFs/covidence_1471_full_article.pdf",
       "source_location": "Table 1, Characteristics of patients (p4)",
@@ -145,9 +148,13 @@ window.COHORT_OVERLAP = {
           "source_says": "30/59 (50.8%)"
         }
       ],
-      "also": "asa_status reads “ASA I: 20 (33.9%), ASA II: 39 (66.1%)”, which sums to 59 and is the SHAM arm's distribution presented as if it were study-wide. The paper gives ASA I 23 / II 35 for the 58 patients in the TEAS arm.",
+      "also": "asa_status read “ASA I: 20 (33.9%), ASA II: 39 (66.1%)”, which sums to 59 and is the SHAM arm's distribution presented as if it were study-wide. The paper gives ASA I 23 / II 35 for the 58 patients in the TEAS arm. Both arms are now given.",
+      "asa_status": {
+        "register": "ASA I: 20 (33.9%), ASA II: 39 (66.1%)",
+        "source_says": "TEAS arm — ASA I: 23/58 (39.7%), ASA II: 35/58 (60.3%); Sham arm — ASA I: 20/59 (33.9%), ASA II: 39/59 (66.1%)"
+      },
       "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, risk-of-bias judgement or GRADE rating reads these fields.",
-      "decision_needed": "Straightforward to correct — the paper, the lock and the register's own arm labels all agree on which arm is which, so the six values simply move back to their arms. Left uncorrected pending review-team sign-off, because it edits the register's baseline layer."
+      "resolution": "Corrected 2026-09-12 on review-team sign-off: the six values were moved back to the arms the paper reports them for, and asa_status was rewritten to give both arms instead of the sham arm's distribution alone. The analysed denominators were not touched. The 'register' column above records what the register held BEFORE the correction; 'source_says' is what it holds now."
     }
   ],
   "resolved_attribution": [
@@ -219,26 +226,6 @@ window.COHORT_OVERLAP = {
       "female_denominator": 20,
       "analysed_n": 11,
       "randomised_n": 11,
-      "explained_by_randomised": false
-    },
-    {
-      "study": "Gu 2019",
-      "arm": "arm1",
-      "arm_name": "TEAS Group",
-      "female": "30/59 (50.8%)",
-      "female_denominator": 59,
-      "analysed_n": 58,
-      "randomised_n": 60,
-      "explained_by_randomised": false
-    },
-    {
-      "study": "Gu 2019",
-      "arm": "arm2",
-      "arm_name": "Sham Group",
-      "female": "27/58 (46.6%)",
-      "female_denominator": 58,
-      "analysed_n": 59,
-      "randomised_n": 60,
       "explained_by_randomised": false
     },
     {
