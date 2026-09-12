@@ -1149,12 +1149,15 @@ function baselineArms(a, b) {
 /**
  * Randomised N for the explorer table, kept strictly separate from analysed N.
  *
- * Two different quantities can be known, and they are labelled differently
+ * Three different quantities can be known, and they are labelled differently
  * because adding them would be meaningless: the register's randomized_total_n is
  * the randomised N of the PAIRWISE CONTRAST the review uses, while the source-PDF
  * extraction's randomised_n is the WHOLE TRIAL's, which is larger whenever the
- * trial had more than two arms. Where neither is recorded this renders NR, never
- * the analysed denominator standing in for a randomised one.
+ * trial had more than two arms. The third, added 2026-09-12, is a whole-trial
+ * total DERIVED by adding up the group sizes the paper states in its own
+ * randomisation sentence ("four groups of 25 each"); it shows its arithmetic and
+ * is never merged with a directly stated figure. Where none is recorded this
+ * renders NR, never the analysed denominator standing in for a randomised one.
  */
 function randomisedCell(s) {
   const pop = s.population || {};
@@ -1170,6 +1173,17 @@ function randomisedCell(s) {
     const title = `${pdfRec.source_pdf}, p${whole.page}: "${String(whole.quote).replace(/"/g, "'")}"`;
     bits.push(`${whole.value} <span class="pdf-src" title="${pwEsc(title)}">PDF p${whole.page}</span>`
       + '<br><span class="sd-sub">whole trial</span>');
+  }
+  const derived = pdfRec.randomised_n_derived;
+  if (!(whole && whole.value !== undefined) && derived && derived.value !== undefined) {
+    const title = `${pdfRec.source_pdf}, p${derived.page}: "${String(derived.quote).replace(/"/g, "'")}"`
+      + ` \u2014 derived as ${derived.derivation}`;
+    bits.push(`${derived.value} <span class="pdf-src" title="${pwEsc(title)}">PDF p${derived.page}</span>`
+      + `<br><span class="sd-sub">whole trial, derived: ${pwEsc(derived.derivation)}</span>`);
+  }
+  if (!bits.length && pdfRec.randomised_n_quarantined) {
+    return '<span class="nr-tag" title="' + pwEsc(pdfRec.randomised_n_quarantined.reason
+      + ' Record: ' + pdfRec.randomised_n_quarantined.record) + '">NR &mdash; disputed</span>';
   }
   return bits.length
     ? bits.join('<br>')
@@ -1211,6 +1225,7 @@ function summarisePopulation(reportsList) {
                 reported: {}, ranges: {}, female: null, countries: {},
                 anaesthesiaStated: 0, adjunctCount: 0,
                 analysedTotal: 0, randomisedContrast: 0, randomisedTrial: 0,
+                randomisedDerived: 0, randomisedDisputed: 0,
                 flags: [], resolved: [] };
   out.analysedTotal = studies.reduce((a, s) => a + ((s.population && s.population.total_n) || 0), 0);
 
@@ -1251,13 +1266,23 @@ function summarisePopulation(reportsList) {
   // register's randomized_total_n is the randomised N of the pairwise contrast
   // the review uses, while the PDF extractor's randomised_n is the whole trial's,
   // which is larger for a multi-arm trial.
+  const randRec = s => (window.PDF_EXTRACTED || {})[s.key] || {};
+  const stated = r => r.randomised_n && r.randomised_n.value !== undefined;
+  const derivedOk = r => r.randomised_n_derived && r.randomised_n_derived.value !== undefined;
   studies.forEach(s => {
     if (s.population && s.population.randomized_total_n) out.randomisedContrast++;
-    if (((window.PDF_EXTRACTED || {})[s.key] || {}).randomised_n) out.randomisedTrial++;
+    const r = randRec(s);
+    if (stated(r)) out.randomisedTrial++;
+    // Counted separately. A derived total is arithmetic on the group sizes the
+    // paper states when it describes randomising; it is evidence, but it is not
+    // a figure the paper prints, and the two must stay distinguishable.
+    else if (derivedOk(r)) out.randomisedDerived++;
+    if (r.randomised_n_quarantined) out.randomisedDisputed++;
   });
-  out.reported.randomised = studies.filter(s =>
-    (s.population && s.population.randomized_total_n)
-    || ((window.PDF_EXTRACTED || {})[s.key] || {}).randomised_n).length;
+  out.reported.randomised = studies.filter(s => {
+    const r = randRec(s);
+    return (s.population && s.population.randomized_total_n) || stated(r) || derivedOk(r);
+  }).length;
 
   studies.forEach(s => {
     const pdf = (window.PDF_EXTRACTED || {})[s.key] || {};
@@ -1599,8 +1624,15 @@ function renderPopulationSummary(reportsList) {
         <span class="pop-label">Randomised N recorded</span>
         <span class="pop-value">${p.reported.randomised}/${p.n}</span>
         <span class="pop-sub">No review-wide randomised total is published: ${p.randomisedContrast}
-          trial${p.randomisedContrast === 1 ? '' : 's'} record the randomised N of the contrast used and
-          ${p.randomisedTrial} record the whole trial's, which are different quantities and not additive</span>
+          trial${p.randomisedContrast === 1 ? '' : 's'} record the randomised N of the contrast used,
+          ${p.randomisedTrial} state the whole trial's directly and ${p.randomisedDerived} more allow it to be
+          added up from the group sizes their own randomisation sentence gives. Those are different
+          quantities and are not additive${p.randomisedDisputed
+            ? `; a further ${p.randomisedDisputed} trial${p.randomisedDisputed === 1 ? ' is' : 's are'} `
+              + `held as disputed rather than extracted, because its own reports give `
+              + `contradictory totals (Yeh 2010 prints 99, its own Table 2 gives 94, and Yeh 2011 `
+              + `gives 90)`
+            : ''}</span>
       </div>
     </div>
     <div class="pop-complete">
@@ -3077,7 +3109,7 @@ const STATA_MASTER_RESULTS = {
     controlRisk: "Control-arm means 15.9 to 80.1 hours (a ~5-fold range)",
     grade: "Very Low",
     badgeClass: "grade-badge-verylow",
-    downgrade: "Downgraded for risk of bias, inconsistency and imprecision. Admitting Zhang 2018 on 2026-09-12 moved this model from −2.00 h [−3.14, −0.87], p = 0.0062, I² = 0.0% (k = 6) to −6.79 h [−14.84, +1.27], p = 0.0848, I² = 97.3% (k = 7): the interval now crosses zero and the heterogeneity is extreme. That heterogeneity is clinically interpretable — Zhang 2018 is open abdominal GI-cancer surgery with flatus at 51–80 h against a mostly laparoscopic set at 14–42 h — but at I² = 97% the pooled mean difference should not be read as a single effect. The standardised model is more stable: Hedges' g = -0.55 [-0.88, -0.22], p = 0.0065, I² = 39.2%. Trials: Zhou 2025, Yang 2020, Yang 2024, Xing 2022, Lu 2022, Ng 2013, Zhang 2018.",
+    downgrade: "Downgraded for risk of bias, inconsistency and imprecision. Admitting Zhang 2018 on 2026-09-12 moved this model from −2.00 h [−3.14, −0.87], p = 0.0062, I² = 0.0% (k = 6) to −6.79 h [−14.84, +1.27], p = 0.0848, I² = 97.3% (k = 7): the interval now crosses zero and the heterogeneity is extreme. That heterogeneity is clinically interpretable — Zhang 2018 is open abdominal GI-cancer surgery with flatus at 51–80 h against a mostly laparoscopic set at 14–42 h — but at I² = 97% the pooled mean difference should not be read as a single effect. The standardised model is more stable: Hedges' g = -0.55 [-0.88, -0.22], p = 0.0065, I² = 39.2%. Both prespecified sensitivity analyses also lost statistical significance in the same re-run and are recorded here because they bear directly on robustness: excluding Ng 2013 (reported in days) gives k = 6, MD −6.94 h [−17.03, +3.14], p = 0.1369, I² = 98.2%; excluding High RoB trials gives k = 6, MD −7.96 h [−17.79, +1.88], p = 0.0921, I² = 95.2%. Before Zhang 2018 was admitted both were k = 5 and significant (p = 0.0115 and p = 0.0199), so the hours-scale result is not robust to either exclusion. This does not change the rating, which was already Very Low and is at the floor; it records the evidence the rating rests on. Trials: Zhou 2025, Yang 2020, Yang 2024, Xing 2022, Lu 2022, Ng 2013, Zhang 2018.",
     robStatus: "Some concerns / High RoB"
   },
   "AN-08-TARGET-F-REMI": {
@@ -3505,11 +3537,28 @@ function openStudyDrawer(id) {
             ${row('Randomised N<br><span class="sd-sub">this contrast</span>', pop.randomized_total_n
                 ? `${pop.randomized_total_n} (${pop.randomized_arm1_n} / ${pop.randomized_arm2_n})`
                 : baselineValue(null))}
-            ${row('Randomised N<br><span class="sd-sub">whole trial</span>',
-                pdfValue(s.key, 'randomised_n')
-                || (pdfConflict(s.key, 'randomised_n')
-                    ? `${baselineValue(null)} <span class="sd-sub">source gave competing figures (${pwEsc(pdfConflict(s.key, 'randomised_n'))}); not resolved automatically</span>`
-                    : baselineValue(null)))}
+            ${row('Randomised N<br><span class="sd-sub">whole trial</span>', (() => {
+                const r = (window.PDF_EXTRACTED || {})[s.key] || {};
+                if (r.randomised_n_quarantined) {
+                  return `${baselineValue(null)} <span class="sd-sub">held as disputed: `
+                    + `${pwEsc(r.randomised_n_quarantined.reason)} Record: `
+                    + `<code>${pwEsc(r.randomised_n_quarantined.record)}</code></span>`;
+                }
+                const direct = pdfValue(s.key, 'randomised_n');
+                if (direct) return direct;
+                if (pdfConflict(s.key, 'randomised_n')) {
+                  return `${baselineValue(null)} <span class="sd-sub">source gave competing figures `
+                    + `(${pwEsc(pdfConflict(s.key, 'randomised_n'))}); not resolved automatically</span>`;
+                }
+                const d = pdfValue(s.key, 'randomised_n_derived');
+                if (d) {
+                  const rec = r.randomised_n_derived;
+                  return `${d} <span class="sd-sub">derived by adding the group sizes this paper `
+                    + `states when it describes randomising: ${pwEsc(rec.derivation)}. Not a figure `
+                    + `the paper prints as a total.</span>`;
+                }
+                return baselineValue(null);
+              })())}
             ${row('Analysed N', `<strong>${pop.total_n}</strong> (${pop.arm1_n} / ${pop.arm2_n})<br><span class="sd-sub">denominators used in synthesis</span>`)}
             ${row('Arms compared', `${pwEsc(pop.arm1_name)} vs ${pwEsc(pop.arm2_name)}`)}
             ${row('Arms in trial', (pdfValue(s.key, 'arms') || baselineValue(null)) +
