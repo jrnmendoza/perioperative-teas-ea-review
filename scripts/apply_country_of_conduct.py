@@ -39,11 +39,49 @@ META = {
     "Brazil":    {"code": "BR", "lat": -14.2350, "lng": -51.9253, "flag": "🇧🇷"},
     "Poland":    {"code": "PL", "lat": 51.9194,  "lng": 19.1451,  "flag": "🇵🇱"},
     "Turkey":    {"code": "TR", "lat": 38.9637,  "lng": 35.2433,  "flag": "🇹🇷"},
+    # Added 2026-09-12 with the second correction pass below.
+    "USA":       {"code": "US", "lat": 37.0902,  "lng": -95.7129, "flag": "🇺🇸"},
+    "UK":        {"code": "GB", "lat": 55.3781,  "lng": -3.4360,  "flag": "🇬🇧"},
+    "Greece":    {"code": "GR", "lat": 39.0742,  "lng": 21.8243,  "flag": "🇬🇷"},
 }
+
+# SECOND CORRECTION PASS, 2026-09-12
+# The first pass corrected the eight trials it found and filled the seven blanks,
+# which left 54 register values carrying no recorded evidence. Cross-checking the
+# register against the source-PDF affiliation scan surfaced five more that were
+# still wrong -- all of them reading "China" with nothing supporting it, and three
+# of them obvious on the author list alone. The pattern is the same default the
+# first pass was written to undo; it simply was not exhausted.
+#
+# Two near-misses in that cross-check are recorded here so they are not
+# re-litigated: Yang 2024 reads China and is right (Nanjing; the Australian
+# candidate is co-author Zhen Zheng's RMIT affiliation, not a trial site), and
+# Lin 2002's "China Medical College" is a TAIWANESE institution in Taichung --
+# the same false positive that made Lee 2011 look Australian.
 
 # study -> (country of conduct, verbatim evidence from the source PDF)
 CONDUCT = {
-    # --- corrections: register said China, the paper says otherwise -----------
+    # --- second pass, 2026-09-12: register said China, the paper says otherwise ---
+    "Chen 1998": ("USA",
+                  "The study protocol was approved by the institutional review board at "
+                  "Cedars Sinai Medical Center"),
+    "Lin 2002": ("Taiwan",
+                 "Acupuncture Research Center, China Medical College, Taichung, Taiwan, ROC; "
+                 "corresponding address Chung-Shan South Road, Taipei, Taiwan, ROC. Every "
+                 "affiliation on the paper reads Taiwan, ROC -- \"China Medical College\" is a "
+                 "Taiwanese institution, which is what made the register read China"),
+    "El-Rakshy 2009": ("UK",
+                       "A randomised, double-blind, comparative study was conducted in "
+                       "Scunthorpe & Goole Hospitals"),
+    "Ntritsou 2014": ("Greece",
+                      "Department of Anaesthesiology, General Hospital of Thessaloniki "
+                      "\"G. Gennimatas\", Meleagrou 7, Thessaloniki 54250, Greece"),
+    "Grech 2016": ("USA",
+                   "A prospective pilot study approved by the Institutional Review Board "
+                   "(Pro2012002417) of the New Jersey Medical School, Rutgers University, "
+                   "Newark, NJ, USA"),
+
+    # --- first pass: register said China, the paper says otherwise ------------
     "Sim 2002": ("Singapore",
                  "Department of Anaesthesia, National University Hospital Singapore"),
     "Wong 2006": ("Hong Kong",

@@ -1300,6 +1300,19 @@ function summarisePopulation(reportsList) {
     if (pdf.anaesthesia && pdf.anaesthesia.adjuncts) out.adjunctCount++;
   });
 
+  // Country verification is three-tiered and the difference matters: a value with
+  // the sentence it was read from is verified; a value the affiliation scan merely
+  // agrees with is corroborated; a value with neither is the register's alone. The
+  // panel said "each verified against the source publication" while only 19 of 69
+  // carried a sentence, which is the kind of claim this review cannot afford.
+  out.countryVerified = studies.filter(s => s.country_evidence).length;
+  out.countryCorroborated = studies.filter(s => {
+    if (s.country_evidence) return false;
+    const c = ((window.PDF_EXTRACTED || {})[s.key] || {}).country;
+    return c && c.value !== undefined && c.value === s.country;
+  }).length;
+  out.countryRegisterOnly = out.n - out.countryVerified - out.countryCorroborated;
+
   // Baseline values that disagree with the publication they were read from, from
   // the scan in scripts/build_cohort_overlap_scan.py. Surfaced, not corrected:
   // the register is the locked master, and these fields feed no analysis.
@@ -1386,7 +1399,10 @@ function renderPopulationSummary(reportsList) {
     : 'not estimable \u2014 no trial in this set reports it';
 
   // Geography: a compact ranked bar list, counted over unique trials. Countries
-  // here are countries of CONDUCT, each verified against the source publication.
+  // here are countries of CONDUCT, not lead-author affiliations. Verification is
+  // uneven and the panel says so: 19 carry the sentence they were read from, the
+  // rest are register values the affiliation scan mostly agrees with. Five were
+  // outright wrong until 2026-09-12, all of them the register's "China" default.
   const countryRows = Object.entries(p.countries).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   const flagFor = name => {
     const s = (reportsList || []).find(x => x.country === name && x.country_meta && x.country_meta.flag);
@@ -1655,7 +1671,16 @@ function renderPopulationSummary(reportsList) {
       <span class="stat-info-btn" title="Country of conduct — where the participants were recruited and treated — read from the source publication, not inferred from the lead author's affiliation. Counted over unique randomized trials.">ⓘ</span>
       <div class="pop-bars">${countryChart}</div>
       <div class="pop-foot">
-        ${countryRows.filter(([c]) => c !== 'Not reported').length} countr${countryRows.filter(([c]) => c !== 'Not reported').length === 1 ? 'y' : 'ies'} of conduct across ${p.n} trials, each verified against the source publication.
+        ${countryRows.filter(([c]) => c !== 'Not reported').length} countr${countryRows.filter(([c]) => c !== 'Not reported').length === 1 ? 'y' : 'ies'} of conduct across ${p.n} trials.
+        <strong>${p.countryVerified}</strong> carry the verbatim sentence they were read from;
+        for <strong>${p.countryCorroborated}</strong> more the independent source-PDF affiliation
+        scan agrees with the register without a sentence being recorded;
+        <strong>${p.countryRegisterOnly}</strong> ${p.countryRegisterOnly === 1 ? 'is' : 'are'} the
+        register's value with no independent read.
+        <span style="color:#fbbf24;">Corrected 2026-09-12:</span> a second pass over the register's
+        default of &ldquo;China&rdquo; found five more trials that were not Chinese &mdash;
+        Chen 1998 (USA), Lin 2002 (Taiwan), El-Rakshy 2009 (UK), Ntritsou 2014 (Greece) and
+        Grech 2016 (USA) &mdash; so this chart read 8 countries with China at 87% until today.
       </div>
     </div>
     <div class="pop-complete">
