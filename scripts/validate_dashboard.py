@@ -2215,6 +2215,85 @@ def t_target_e_grade_records_its_sensitivity_evidence():
     check("t_target_e_grade_records_its_sensitivity_evidence", not probs, "\n".join(probs))
 
 
+def t_country_claims_only_the_verification_it_has():
+    """
+    ADDED 2026-09-12, after the geographic panel was found claiming more than it
+    could show.
+
+    The panel said "N countries of conduct across 69 trials, each verified against
+    the source publication" while only 19 of the 69 carried the sentence they were
+    read from. The other 50 were register values -- and cross-checking them against
+    the source-PDF affiliation scan found FIVE that were simply wrong, all reading
+    the register's default "China": Chen 1998 (Cedars Sinai, USA), Lin 2002
+    (Taiwan, ROC on every affiliation), El-Rakshy 2009 (Scunthorpe, UK), Ntritsou
+    2014 (Thessaloniki, Greece) and Grech 2016 (Rutgers, USA). The chart read
+    8 countries with China at 87%; it is 11 countries with China at 80%.
+
+    This check holds three things: the five corrections stay corrected, the panel
+    states its verification tiers instead of claiming blanket verification, and no
+    trial's country silently disagrees with the independent affiliation read.
+    """
+    import json
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from apply_country_of_conduct import CONDUCT, META
+    probs = []
+    by_key = {s["key"]: s for s in STUDIES}
+
+    SECOND_PASS = {"Chen 1998": "USA", "Lin 2002": "Taiwan", "El-Rakshy 2009": "UK",
+                   "Ntritsou 2014": "Greece", "Grech 2016": "USA"}
+    for key, want in SECOND_PASS.items():
+        s_ = by_key.get(key)
+        if s_ is None:
+            probs.append(f"{key}: not in STUDIES_DATA")
+            continue
+        if s_.get("country") != want:
+            probs.append(f"{key}: country is {s_.get('country')!r}, verified conduct is {want!r} "
+                         f"-- the register's \"China\" default was wrong here")
+        if not s_.get("country_evidence"):
+            probs.append(f"{key}: corrected without the source sentence that supports it")
+        if want not in META:
+            probs.append(f"{want} has no META entry, so its flag and code are missing")
+
+    # The panel must not claim blanket verification again. Strip // comments first:
+    # the comment explaining this very defect quotes the old wording, and a blunt
+    # substring search over the whole file matched its own documentation.
+    app_code = re.sub(r"^\s*//.*$", "", APP, flags=re.M)
+    if "each verified against the source publication" in app_code:
+        probs.append("the geographic panel claims every country is verified against the source "
+                     "publication; only the trials carrying country_evidence are")
+    # Word-bounded, and both halves required: a bare substring test passes when the
+    # property is renamed to a superstring (countryCorroborated -> ...CorroboratedX),
+    # which is exactly how a mutation slipped past the first version of this check.
+    for need in ("countryVerified", "countryCorroborated", "countryRegisterOnly"):
+        assigned = re.search(rf"out\.{need}\b\s*=", APP)
+        rendered = re.search(rf"\$\{{p\.{need}\b", APP)
+        if not assigned:
+            probs.append(f"summarisePopulation no longer computes {need}")
+        if not rendered:
+            probs.append(f"the geographic panel no longer renders {need}, so a reader cannot tell "
+                         f"verified countries from register values")
+
+    # And nothing may silently disagree with the independent read.
+    PDF = json.loads((DASH / "pdf_extracted.js").read_text(encoding="utf-8")
+                     .split("window.PDF_EXTRACTED = ", 1)[1].rstrip().rstrip(";"))
+    for s_ in STUDIES:
+        if s_.get("duplicate_report_of"):
+            continue
+        c = (PDF.get(s_["key"]) or {}).get("country")
+        if not (isinstance(c, dict) and c.get("value")):
+            continue
+        if c["value"] != s_.get("country") and s_["key"] not in CONDUCT:
+            probs.append(f"{s_['key']}: register says {s_.get('country')!r} but the source PDF's "
+                         f"affiliation reads {c['value']!r}, and the difference is not declared in "
+                         f"CONDUCT as a conduct-vs-affiliation case")
+
+    # A distribution is only as good as its denominator.
+    countries = [s_.get("country") for s_ in STUDIES if not s_.get("duplicate_report_of")]
+    if len(countries) != len([c for c in countries if c]):
+        probs.append("some trials have no country, so the geographic percentages do not sum")
+    check("t_country_claims_only_the_verification_it_has", not probs, "\n".join(probs[:8]))
+
+
 def t_cdc_not_misattributed_to_perioperative_iv():
     """
     CDC 2022 is an outpatient acute/subacute/chronic-pain prescribing guideline;
@@ -5341,6 +5420,7 @@ def main() -> int:
                                        t_randomised_n_channels_stay_separate_and_evidenced,
                                        t_target_e_post_hoc_change_is_recorded_as_an_amendment,
                                        t_target_e_grade_records_its_sensitivity_evidence,
+                                       t_country_claims_only_the_verification_it_has,
                                        t_cdc_not_misattributed_to_perioperative_iv,
                                        t_mcid_labelled_exploratory, t_version_tag_present,
                                        t_i18n_textcontent_no_html_entities, t_v26_logs_git_tracked,

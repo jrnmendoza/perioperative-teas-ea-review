@@ -17,12 +17,12 @@ window.STUDIES_DATA = [
     "journal": "#969 - Chen 1998",
     "doi": "10.1097/00000539-199811000-00028",
     "pmid": "",
-    "country": "China",
+    "country": "USA",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "US",
+      "lat": 37.0902,
+      "lng": -95.7129,
+      "flag": "🇺🇸"
     },
     "modality": "TEAS",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -343,7 +343,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "The study protocol was approved by the institutional review board at Cedars Sinai Medical Center"
   },
   {
     "id": "1879897477",
@@ -354,12 +355,12 @@ window.STUDIES_DATA = [
     "journal": "#951 - Lin 2002",
     "doi": "10.1016/S0304-3959",
     "pmid": "12406527",
-    "country": "China",
+    "country": "Taiwan",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "TW",
+      "lat": 23.6978,
+      "lng": 120.9605,
+      "flag": "🇹🇼"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -671,7 +672,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Acupuncture Research Center, China Medical College, Taichung, Taiwan, ROC; corresponding address Chung-Shan South Road, Taipei, Taiwan, ROC. Every affiliation on the paper reads Taiwan, ROC -- \"China Medical College\" is a Taiwanese institution, which is what made the register read China"
   },
   {
     "id": "1879897479",
@@ -1329,12 +1331,12 @@ window.STUDIES_DATA = [
     "journal": "#837 - El-Rakshy 2009",
     "doi": "10.1136/aim.2008.000075",
     "pmid": "",
-    "country": "China",
+    "country": "UK",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "GB",
+      "lat": 55.3781,
+      "lng": -3.436,
+      "flag": "🇬🇧"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -1655,7 +1657,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "A randomised, double-blind, comparative study was conducted in Scunthorpe & Goole Hospitals"
   },
   {
     "id": "1879897280",
@@ -3614,12 +3617,12 @@ window.STUDIES_DATA = [
     "journal": "#729 - Ntritsou 2014",
     "doi": "10.1136/acupmed-2013-010498",
     "pmid": "24480836",
-    "country": "China",
+    "country": "Greece",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "GR",
+      "lat": 39.0742,
+      "lng": 21.8243,
+      "flag": "🇬🇷"
     },
     "modality": "EA",
     "comparator_type": "Sham-Controlled (Placebo Double-Blind)",
@@ -3919,7 +3922,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "Department of Anaesthesiology, General Hospital of Thessaloniki \"G. Gennimatas\", Meleagrou 7, Thessaloniki 54250, Greece"
   },
   {
     "id": "1879897074",
@@ -5562,12 +5566,12 @@ window.STUDIES_DATA = [
     "journal": "#619 - Grech 2016",
     "doi": "10.1016/j.jams.2016.03.009",
     "pmid": "",
-    "country": "China",
+    "country": "USA",
     "country_meta": {
-      "code": "CN",
-      "lat": 35.8617,
-      "lng": 104.1954,
-      "flag": "🇨🇳"
+      "code": "US",
+      "lat": 37.0902,
+      "lng": -95.7129,
+      "flag": "🇺🇸"
     },
     "modality": "EA",
     "comparator_type": "Usual Care (Open-Label Control)",
@@ -5845,7 +5849,8 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": null,
       "intraop_opioid": null
-    }
+    },
+    "country_evidence": "A prospective pilot study approved by the Institutional Review Board (Pro2012002417) of the New Jersey Medical School, Rutgers University, Newark, NJ, USA"
   },
   {
     "id": "1879896891",
