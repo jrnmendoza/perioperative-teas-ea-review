@@ -56,9 +56,15 @@ def read_csv(path: Path) -> list[dict]:
 
 
 def read_js(path: Path, var: str):
+    """Read one `window.X = <json>` assignment out of a generated bundle.
+
+    raw_decode rather than loads on the slice to the last ';': data.js carries
+    more than one assignment, so slicing to rindex(";") hands json.loads the
+    following statements too and it fails on "Extra data".
+    """
     src = path.read_text(encoding="utf-8")
     start = src.index(var + " = ") + len(var + " = ")
-    return json.loads(src[start:src.rindex(";")])
+    return json.JSONDecoder().raw_decode(src[start:])[0]
 
 
 def _rob_evidence(rob: list[dict], n_graded: int) -> str:
@@ -314,6 +320,52 @@ def build() -> dict:
                 "a review-team decision.",
                 "; ".join(titles) + ".",
                 "Post-lock errata register"))
+
+    # ── Geographic concentration of the evidence base ───────────────────────
+    # Added 2026-09-12. The country data existed and nothing collected it, which
+    # is the exact gap this script was written to close. It became visible when a
+    # second country pass found five trials misrecorded as Chinese: correcting
+    # them moved the distribution from 8 countries with China at 87% to 11 with
+    # China at 80%, and made it obvious that no limitation recorded either figure.
+    #
+    # This states the distribution and what it bears on. It does NOT assert a
+    # GRADE indirectness downgrade: indirectness is currently not downgraded for
+    # any of the ten rated models, and changing that is a review-team judgement,
+    # not something a generator may infer.
+    studies = read_js(DASH / "data.js", "window.STUDIES_DATA")
+    trials = [s_ for s_ in studies if not s_.get("duplicate_report_of")]
+    by_country = Counter(s_.get("country") or "Not reported" for s_ in trials)
+    if trials and by_country:
+        top, top_n = by_country.most_common(1)[0]
+        share = 100.0 * top_n / len(trials)
+        singletons = sorted(c for c, n in by_country.items() if n == 1)
+        verified = sum(1 for s_ in trials if s_.get("country_evidence"))
+        if share >= 60.0:
+            out.append(lim(
+                "Generalisability",
+                f"{top_n} of the {len(trials)} trials ({share:.0f}%) were conducted in "
+                f"{top}",
+                f"Acupoint-stimulation practice, perioperative opioid prescribing and "
+                f"usual-care comparators all differ between health systems, so an evidence "
+                f"base drawn {share:.0f}% from one country constrains how far these "
+                f"estimates transfer. "
+                f"{len(singletons)} of the {len(by_country)} countries contribute a single "
+                f"trial each, so no second setting is represented strongly enough to test "
+                f"whether the effect holds outside {top}. This is recorded as a property of "
+                f"the evidence base; whether it warrants a GRADE indirectness downgrade is a "
+                f"review-team judgement and indirectness is currently not downgraded for any "
+                f"rated model.",
+                f"Country of conduct over unique trials: "
+                + "; ".join(f"{c} {n}" for c, n in by_country.most_common())
+                + f". {verified} of {len(trials)} carry the verbatim source sentence the "
+                f"country was read from; the rest are register values the source-PDF "
+                f"affiliation scan agrees with. Five were corrected on 2026-09-12 "
+                f"(Chen 1998 USA, Lin 2002 Taiwan, El-Rakshy 2009 UK, Ntritsou 2014 Greece, "
+                f"Grech 2016 USA), before which this read {len(by_country) - 3} countries "
+                f"with {top} at 87%.",
+                "Population Characteristics - Geographic distribution, in the Study Explorer",
+                metric={"key": "geographic_concentration", "count": top_n,
+                        "share_pct": round(share, 1), "countries": len(by_country)}))
 
     deferred = [{
         "title": "Risk-of-bias assessor process",

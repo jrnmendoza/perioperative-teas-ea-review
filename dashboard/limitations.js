@@ -161,7 +161,7 @@ window.LIMITATIONS = {
       "domain": "Opioid dose conversion",
       "title": "Pooled doses depend on equianalgesic conversion factors",
       "detail": "Converting different opioids to a common morphine-equivalent scale is itself an assumption. One factor in this review was found wrong and corrected during the audit, and the pooled estimate is sensitive to that choice; a prespecified sensitivity analysis quantifies the dependence.",
-      "evidence": "3 contrast(s) required a corrected equianalgesic factor (Sufentanil); 3 contrast(s) could not be converted to absolute morphine equivalents at all. Every factor is recorded with its source and status in the conversion audit.",
+      "evidence": "3 contrast(s) required a corrected equianalgesic factor (Sufentanil); 4 contrast(s) could not be converted to absolute morphine equivalents at all. Every factor is recorded with its source and status in the conversion audit.",
       "where": "Opioid conversion audit and the conversion sensitivity analysis",
       "affects": [],
       "metric": null
@@ -196,6 +196,20 @@ window.LIMITATIONS = {
       "where": "Post-lock errata register",
       "affects": [],
       "metric": null
+    },
+    {
+      "domain": "Generalisability",
+      "title": "55 of the 69 trials (80%) were conducted in China",
+      "detail": "Acupoint-stimulation practice, perioperative opioid prescribing and usual-care comparators all differ between health systems, so an evidence base drawn 80% from one country constrains how far these estimates transfer. 7 of the 11 countries contribute a single trial each, so no second setting is represented strongly enough to test whether the effect holds outside China. This is recorded as a property of the evidence base; whether it warrants a GRADE indirectness downgrade is a review-team judgement and indirectness is currently not downgraded for any rated model.",
+      "evidence": "Country of conduct over unique trials: China 55; Taiwan 3; USA 2; Hong Kong 2; Singapore 1; UK 1; Brazil 1; Greece 1; Malaysia 1; Poland 1; Turkey 1. 19 of 69 carry the verbatim source sentence the country was read from; the rest are register values the source-PDF affiliation scan agrees with. Five were corrected on 2026-09-12 (Chen 1998 USA, Lin 2002 Taiwan, El-Rakshy 2009 UK, Ntritsou 2014 Greece, Grech 2016 USA), before which this read 8 countries with China at 87%.",
+      "where": "Population Characteristics - Geographic distribution, in the Study Explorer",
+      "affects": [],
+      "metric": {
+        "key": "geographic_concentration",
+        "count": 55,
+        "share_pct": 79.7,
+        "countries": 11
+      }
     }
   ],
   "deferred": [

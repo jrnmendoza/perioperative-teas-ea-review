@@ -2287,6 +2287,35 @@ def t_country_claims_only_the_verification_it_has():
                          f"affiliation reads {c['value']!r}, and the difference is not declared in "
                          f"CONDUCT as a conduct-vs-affiliation case")
 
+    # The limitations section must carry the concentration this chart reveals. It
+    # did not: 12 limitations were recorded and none mentioned that 80% of the
+    # trials come from one country, which is the single most obvious constraint on
+    # transferring these estimates. It must also NOT claim a GRADE consequence --
+    # indirectness is not downgraded for any rated model and that is the review
+    # team's call, not a generator's inference.
+    import re as _re
+    lim_src = (DASH / "limitations.js").read_text(encoding="utf-8")
+    LIMS = json.JSONDecoder().raw_decode(
+        lim_src[_re.search(r"window\.\w+\s*=\s*", lim_src).end():])[0]["limitations"]
+    geo = [l for l in LIMS if (l.get("metric") or {}).get("key") == "geographic_concentration"]
+    counts = [c for c in (s_.get("country") for s_ in STUDIES
+                          if not s_.get("duplicate_report_of")) if c]
+    from collections import Counter as _C
+    top, top_n = _C(counts).most_common(1)[0]
+    if not geo and top_n / len(counts) >= 0.60:
+        probs.append(f"{top_n}/{len(counts)} trials are from {top} and the limitations section "
+                     f"records no geographic-concentration limitation")
+    for g in geo:
+        if g["metric"]["count"] != top_n:
+            probs.append(f"the geographic limitation says {g['metric']['count']} trials in the "
+                         f"leading country; the register says {top_n}")
+        if g["metric"]["countries"] != len(set(counts)):
+            probs.append(f"the geographic limitation says {g['metric']['countries']} countries; "
+                         f"the register has {len(set(counts))}")
+        if "review-team judgement" not in g["detail"]:
+            probs.append("the geographic limitation does not say the GRADE indirectness "
+                         "consequence is a review-team judgement, so it reads as asserting one")
+
     # A distribution is only as good as its denominator.
     countries = [s_.get("country") for s_ in STUDIES if not s_.get("duplicate_report_of")]
     if len(countries) != len([c for c in countries if c]):
