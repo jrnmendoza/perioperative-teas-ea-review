@@ -69,7 +69,12 @@ def browser_targets(studies):
                     o['unit']='hours'
             result[name]=o
         targets[key]=result
-    assert {k:len(v) for k,v in targets.items()}==dict(opioid_48h=3,opioid_72h=1,pain_rest_24h=2,ponv_24h=2,flatus_time=6,intraop_opioid=7,rescue_analgesia=4)
+    # Tripwire on analysis-set membership: a change here has to be acknowledged,
+    # not absorbed. Updated 2026-09-12 for the post-lock admissions the review
+    # team authorised after the eligibility reconciliation pass -- pain_rest_24h
+    # 2 -> 4 (Song 2020, Gao 2022), ponv_24h 2 -> 4 (the same two), flatus_time
+    # 6 -> 7 (Zhang 2018, from the validated Figure 2a digitisation).
+    assert {k:len(v) for k,v in targets.items()}==dict(opioid_48h=3,opioid_72h=1,pain_rest_24h=4,ponv_24h=4,flatus_time=7,intraop_opioid=7,rescue_analgesia=4)
     return targets
 
 

@@ -178,6 +178,23 @@ def main() -> int:
                 unmatched.append(aid)
         else:
             for field in SYNCED:
+                # Stata tables name the point estimate after its measure --
+                # results_targetD_ponv.csv calls it rr_estimate, the sensitivity
+                # grid calls it md_estimate -- while the master calls every one
+                # of them "estimate". Matching on the bare name alone meant the
+                # estimate column was silently skipped for those tables: the CI,
+                # p, tau2 and I2 synced while the point estimate did not, so
+                # Target D's RR estimates had never been refreshed from Stata at
+                # all (found 2026-09-12 with the master at 0.5604 against a
+                # Stata value of 0.6477). Resolve the alias before comparing.
+                src_field = field
+                if field == "estimate" and field not in src:
+                    src_field = next((c for c in ("rr_estimate", "md_estimate",
+                                                  "smd_estimate", "or_estimate")
+                                      if c in src), field)
+                src = dict(src)
+                if src_field != field and src_field in src:
+                    src[field] = src[src_field]
                 if field in row and field in src and src[field] != "":
                     if not values_agree(row[field], src[field]):
                         changed.append(f"{aid}.{field}: {row[field]!r} -> {src[field]!r}")

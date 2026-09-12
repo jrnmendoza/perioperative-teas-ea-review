@@ -1,9 +1,9 @@
 ----------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/04_pain.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/04_pain.log
   log type:  text
- opened on:   8 Sep 2026, 08:50:26
+ opened on:  12 Sep 2026, 13:07:22
 
 . 
 . di as txt "=================================================================="
@@ -24,8 +24,8 @@ Model: Random-Effects REML + Hartung-Knapp (se(kh))
 . describe
 
 Contains data from 06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.dta
- Observations:             2                  
-    Variables:            51                  8 Sep 2026 08:50
+ Observations:             4                  
+    Variables:            51                  12 Sep 2026 13:04
 ----------------------------------------------------------------------------------------------------
 Variable      Storage   Display    Value
     name         type    format    label      Variable label
@@ -35,8 +35,8 @@ target          str18   %18s                  target
 endpoint_stra~m str35   %35s                  endpoint_stratum
 study           str25   %25s                  study
 comparison_id   str35   %35s                  comparison_id
-intervention    str128  %128s                 intervention
-comparator      str75   %75s                  comparator
+intervention    str131  %131s                 intervention
+comparator      str85   %85s                  comparator
 outcome         str69   %69s                  outcome
 time_window     str101  %101s                 time_window
 data_type       str42   %42s                  data_type
@@ -47,13 +47,13 @@ sd_i            double  %10.0g                sd_i
 median_i        double  %10.0g                median_i
 q1_i            double  %10.0g                q1_i
 q3_i            double  %10.0g                q3_i
-events_i        byte    %10.0g                events_i
+events_i        int     %10.0g                events_i
 mean_c          double  %10.0g                mean_c
 sd_c            double  %10.0g                sd_c
 median_c        double  %10.0g                median_c
 q1_c            double  %10.0g                q1_c
 q3_c            double  %10.0g                q3_c
-events_c        byte    %10.0g                events_c
+events_c        int     %10.0g                events_c
 unit            str57   %57s                  unit
 reported_p      str54   %54s                  reported_p
 derived_effec~e str2    %9s                   derived_effect_measure
@@ -68,10 +68,10 @@ analysis_action str20   %20s                  analysis_action
 overlap_family  str30   %30s                  overlap_family
 hold_reason     str33   %33s                  hold_reason
 shared_contro~e str101  %101s                 shared_control_issue
-source_qc       str179  %179s                 source_qc
+source_qc       str415  %415s                 source_qc
 record_status   str59   %59s                  record_status
 source_url      str83   %83s                  source_url
-Sourceverifie~t str108  %108s                 Source-verified result
+Sourceverifie~t str160  %160s                 Source-verified result
 rob_d1          str13   %13s                  D1
 rob_d2          str13   %13s                  D2
 rob_d3          str13   %13s                  D3
@@ -93,12 +93,16 @@ Sorted by:
 . list lock_id study comparison_id include_strict n_i mean_i sd_i n_c mean_c sd_c md se unit result_
 > rob, clean
 
-       lock_id       study                  comparison_id   includ~t   n_i   mean_i   sd_i   n_c   m
-> ean_c   sd_c     md         se       unit   result~b  
-  1.     C-001   Xing 2022     XING22_NTG_vs_NG_RESTVAS24          1    29     1.18    .42    29    
->   1.4    .52   -.22   .1241245   VAS 0-10       High  
-  2.     C-002    Liu 2021   LIU21_TEAS_vs_CTRL_VASREST24          1    50     2.52   .505    50    
->  2.66   .626   -.14   .1137454        VAS       High  
+                 lock_id       study                  comparison_id   includ~t   n_i   mean_i   sd_i
+>    n_c   mean_c   sd_c     md         se       unit      result_rob  
+  1.               C-001   Xing 2022     XING22_NTG_vs_NG_RESTVAS24          1    29     1.18    .42
+>     29      1.4    .52   -.22   .1241245   VAS 0-10            High  
+  2.               C-002    Liu 2021   LIU21_TEAS_vs_CTRL_VASREST24          1    50     2.52   .505
+>     50     2.66   .626   -.14   .1137454        VAS            High  
+  3.   SONG20-POSTLOCK-C   Song 2020     SONG20_TEAS_vs_SHAM_PAIN24          1    42     2.76    1.1
+>     43     3.23    1.1   -.47     .23864   VAS 0-10   Some concerns  
+  4.    GAO22-POSTLOCK-C    Gao 2022      GAO22_TEAS_vs_SHAM_PAIN24          1   827        2    1.7
+>    828      2.2    1.8    -.2   .0860674   VAS 0-10   Some concerns  
 
 . 
 . * Declare Meta-Analysis Setting for Pain VAS 0-10
@@ -107,7 +111,7 @@ Sorted by:
 Meta-analysis setting information
 
  Study information
-    No. of studies: 2
+    No. of studies: 4
        Study label: study
         Study size: N/A
 
@@ -149,7 +153,7 @@ Note: Both studies evaluated on 0-10 VAS; both have High result-level RoB.
           Std. err.: se
         Study label: study
 
-Meta-analysis summary                     Number of studies =      2
+Meta-analysis summary                     Number of studies =      4
 Random-effects model                      Heterogeneity:
 Method: REML                                          tau2 =  0.0000
 SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
@@ -159,13 +163,15 @@ SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Xing 2022 |         -0.220      -0.463       0.023     45.65
-         Liu 2021 |         -0.140      -0.363       0.083     54.35
+        Xing 2022 |         -0.220      -0.463       0.023     22.02
+         Liu 2021 |         -0.140      -0.363       0.083     26.22
+        Song 2020 |         -0.470      -0.938      -0.002      5.96
+         Gao 2022 |         -0.200      -0.369      -0.031     45.80
 ------------------+-------------------------------------------------
-            theta |         -0.177      -0.683       0.330
+            theta |         -0.205      -0.339      -0.070
 --------------------------------------------------------------------
-Test of theta = 0: t(1) = -4.43                  Prob > |t| = 0.1413
-Test of homogeneity: Q = chi2(1) = 0.23            Prob > Q = 0.6347
+Test of theta = 0: t(3) = -4.85                  Prob > |t| = 0.0168
+Test of homogeneity: Q = chi2(3) = 1.58            Prob > Q = 0.6645
 
 . matrix res_pain = (r(theta), r(ci_lb), r(ci_ub), r(p), r(N), r(tau2), r(I2), r(Q), r(p_Q))
 
@@ -180,7 +186,7 @@ Test of homogeneity: Q = chi2(1) = 0.23            Prob > Q = 0.6347
           Std. err.: se
         Study label: study
 
-Meta-analysis summary                     Number of studies =      2
+Meta-analysis summary                     Number of studies =      4
 Random-effects model                      Heterogeneity:
 Method: DerSimonian–Laird                             tau2 =  0.0000
 SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
@@ -190,13 +196,15 @@ SE adjustment: Knapp–Hartung                        I2 (%) =    0.00
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Xing 2022 |         -0.220      -0.463       0.023     45.64
-         Liu 2021 |         -0.140      -0.363       0.083     54.36
+        Xing 2022 |         -0.220      -0.463       0.023     22.02
+         Liu 2021 |         -0.140      -0.363       0.083     26.22
+        Song 2020 |         -0.470      -0.938      -0.002      5.96
+         Gao 2022 |         -0.200      -0.369      -0.031     45.80
 ------------------+-------------------------------------------------
-            theta |         -0.177      -0.683       0.330
+            theta |         -0.205      -0.339      -0.070
 --------------------------------------------------------------------
-Test of theta = 0: t(1) = -4.43                  Prob > |t| = 0.1413
-Test of homogeneity: Q = chi2(1) = 0.23            Prob > Q = 0.6347
+Test of theta = 0: t(3) = -4.85                  Prob > |t| = 0.0168
+Test of homogeneity: Q = chi2(3) = 1.58            Prob > Q = 0.6645
 
 . meta summarize, random(dl)
 
@@ -205,7 +213,7 @@ Test of homogeneity: Q = chi2(1) = 0.23            Prob > Q = 0.6347
           Std. err.: se
         Study label: study
 
-Meta-analysis summary                     Number of studies =      2
+Meta-analysis summary                     Number of studies =      4
 Random-effects model                      Heterogeneity:
 Method: DerSimonian–Laird                             tau2 =  0.0000
                                                     I2 (%) =    0.00
@@ -215,13 +223,15 @@ Method: DerSimonian–Laird                             tau2 =  0.0000
 --------------------------------------------------------------------
             Study |    Effect size    [95% conf. interval]  % weight
 ------------------+-------------------------------------------------
-        Xing 2022 |         -0.220      -0.463       0.023     45.64
-         Liu 2021 |         -0.140      -0.363       0.083     54.36
+        Xing 2022 |         -0.220      -0.463       0.023     22.02
+         Liu 2021 |         -0.140      -0.363       0.083     26.22
+        Song 2020 |         -0.470      -0.938      -0.002      5.96
+         Gao 2022 |         -0.200      -0.369      -0.031     45.80
 ------------------+-------------------------------------------------
-            theta |         -0.177      -0.341      -0.012
+            theta |         -0.205      -0.319      -0.091
 --------------------------------------------------------------------
-Test of theta = 0: z = -2.10                     Prob > |z| = 0.0353
-Test of homogeneity: Q = chi2(1) = 0.23            Prob > Q = 0.6347
+Test of theta = 0: z = -3.52                     Prob > |z| = 0.0004
+Test of homogeneity: Q = chi2(3) = 1.58            Prob > Q = 0.6645
 
 . 
 . * ------------------------------------------------------------------------------
@@ -239,8 +249,8 @@ Test of homogeneity: Q = chi2(1) = 0.23            Prob > Q = 0.6347
 
 . graph export "06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetC_pain24h.png", width(1800) replace
 file
-    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/04_FIGURES/fores
-    > t_targetC_pain24h.png saved as PNG format
+    /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jennings-068
+    > 9c3/06_FINAL_ANALYSIS_V26/04_FIGURES/forest_targetC_pain24h.png saved as PNG format
 
 . 
 . * ------------------------------------------------------------------------------
@@ -285,11 +295,11 @@ file 06_FINAL_ANALYSIS_V26/03_RESULTS/results_targetC_pain24h.csv saved
 . list, clean
 
           analysis_id                         outcome                                          strat
-> um   k    estimate      ci_low    ci_high    p_value       tau2        i2   q_stat                
->   model  
+> um   k    estimate      ci_low     ci_high    p_value       tau2         i2     q_stat            
+>       model  
   1.   TC_REST_PAIN24   Pain at rest ~24 h (VAS 0-10)   Strict Pain at Rest ~24h (Xing 2022, Liu 202
-> 1)   2   -.1765161   -.6828328   .3298006   .1413458   5.28e-07   .003724   .22579   REML + Hartun
-> g-Knapp  
+> 1)   4   -.2047556   -.3391794   -.0703319   .0167523   9.68e-08   .0006369   1.577638   REML + Ha
+> rtung-Knapp  
 
 . 
 . di as txt _n "SUCCESS: Target C analyses completed and exported."
@@ -298,8 +308,8 @@ SUCCESS: Target C analyses completed and exported.
 
 . log close
       name:  <unnamed>
-       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/06_FINAL_ANALYSIS_V26/02_STATA/
-> logs/04_pain.log
+       log:  /Users/ryan/Documents/Perioperative_TEAS_EA_Review_2026/.claude/worktrees/festive-jenni
+> ngs-0689c3/06_FINAL_ANALYSIS_V26/02_STATA/logs/04_pain.log
   log type:  text
- closed on:   8 Sep 2026, 08:50:27
+ closed on:  12 Sep 2026, 13:07:23
 ----------------------------------------------------------------------------------------------------

@@ -7,9 +7,9 @@ window.LIMITATIONS = {
   "limitations": [
     {
       "domain": "Heterogeneity",
-      "title": "Considerable between-study heterogeneity in 12 of 22 reported analyses",
+      "title": "Considerable between-study heterogeneity in 13 of 22 reported analyses",
       "detail": "Pooled estimates in these analyses describe a distribution of effects rather than one common effect, so a single summary number understates how much the result varies between surgical populations, stimulation protocols and anaesthetic techniques.",
-      "evidence": "I² ≥ 75% in 12 analyses; highest is I² = 98.6% in Primary 0–24 h opioid — TEAS vs sham.",
+      "evidence": "I² ≥ 75% in 13 analyses; highest is I² = 98.6% in Primary 0–24 h opioid — TEAS vs sham.",
       "where": "Each analysis's forest plot and heterogeneity statistics",
       "affects": [
         "gi_first_flatus_TEAS_Sham",
@@ -23,19 +23,20 @@ window.LIMITATIONS = {
         "v34_primary_24h_mme_ALL_AUDIT",
         "AN-01-SMD",
         "AN-02-TARGET-A",
+        "AN-07-TARGET-E",
         "AN-08-TARGET-F-REMI"
       ],
       "metric": {
         "key": "heterogeneity",
-        "count": 12,
+        "count": 13,
         "of": 22
       }
     },
     {
       "domain": "Sparse evidence",
-      "title": "14 of 22 reported analyses rest on 3 or fewer trials",
+      "title": "12 of 22 reported analyses rest on 3 or fewer trials",
       "detail": "With this few contributing trials, between-study variance is estimated imprecisely, subgroup and moderator analysis is not informative, and a single additional trial could move the estimate materially.",
-      "evidence": "k = 1 in 1 analysis; k = 2 in 7 analyses; k = 3 in 6 analyses.",
+      "evidence": "k = 1 in 1 analysis; k = 2 in 5 analyses; k = 3 in 6 analyses.",
       "where": "Per-analysis k, and the derivability audit explaining why k is small",
       "affects": [
         "gi_first_flatus_EA_Usual_care",
@@ -49,13 +50,11 @@ window.LIMITATIONS = {
         "v34_primary_24h_mme_EA_Usual_care",
         "AN-02-TARGET-A",
         "AN-03-TARGET-B",
-        "AN-04-TARGET-C",
-        "AN-05-TARGET-D-24",
         "AN-06-TARGET-D-48"
       ],
       "metric": {
         "key": "sparse",
-        "count": 14,
+        "count": 12,
         "of": 22
       }
     },
@@ -79,9 +78,9 @@ window.LIMITATIONS = {
         "AN-01-SMD",
         "AN-02-TARGET-A",
         "AN-03-TARGET-B",
-        "AN-04-TARGET-C",
         "AN-05-TARGET-D-24",
-        "AN-06-TARGET-D-48"
+        "AN-06-TARGET-D-48",
+        "AN-07-TARGET-E"
       ],
       "metric": {
         "key": "imprecision",
@@ -93,7 +92,7 @@ window.LIMITATIONS = {
       "domain": "Risk of bias",
       "title": "12 reported analyses include at least one result at high risk of bias",
       "detail": "Where a high-risk result contributes, the pooled estimate inherits that risk. Leave-one-out results are available for each affected analysis and should be read alongside the main estimate.",
-      "evidence": "12 of 22 reported analyses. Most affected: Time to first flatus — EA vs usual care (2 of 2); Target C — postoperative pain at rest, 24 h (2 of 2); Pain VAS at 24 h — TEAS vs sham (2 of 3); and 9 further analyses with at least one.",
+      "evidence": "12 of 22 reported analyses. Most affected: Time to first flatus — EA vs usual care (2 of 2); Pain VAS at 24 h — TEAS vs sham (2 of 3); Time to first defecation — EA vs usual care (2 of 3); and 9 further analyses with at least one.",
       "where": "Result-specific RoB 2 panel and the model rollup",
       "affects": [
         "gi_first_flatus_EA_Usual_care",
@@ -117,14 +116,14 @@ window.LIMITATIONS = {
     },
     {
       "domain": "Certainty of evidence",
-      "title": "16 of 22 GRADE-rated analyses are Low or Very Low certainty",
+      "title": "17 of 22 GRADE-rated analyses are Low or Very Low certainty",
       "detail": "The true effect may differ substantially from the estimate in these analyses. Conclusions drawn from them should be phrased as what the evidence is compatible with, not as what it establishes.",
-      "evidence": "Very Low: 7, Low: 9, Moderate: 6.",
+      "evidence": "Very Low: 8, Low: 9, Moderate: 5.",
       "where": "GRADE Summary of Findings, with the downgrade reasons for each rating",
       "affects": [],
       "metric": {
         "key": "low_certainty",
-        "count": 16,
+        "count": 17,
         "of": 22
       }
     },

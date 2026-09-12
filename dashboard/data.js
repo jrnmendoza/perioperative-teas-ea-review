@@ -4259,6 +4259,7 @@ window.STUDIES_DATA = [
       "rescue_analgesia": {
         "note": "Rate of breakthrough pain rescue with IV dezocine (Table 2): EAS 1/20 (5%) vs Sham 6/20 (30%) vs Control 7/20 (35%), P<0.05. Corrected 2026-09-10: this cell previously stored 4/20 vs 10/20 (RR 0.40 [0.15,1.05]), which does not match the source PDF and directly contradicted this study's own audit.corrections note, which already documented the true 1/20 vs 6/20 figures. RR/CI recomputed with the review's standard Haldane-Anscombe continuity correction (verified against Szmit 2021's zero-event case).",
         "favors": "Intervention",
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)",
         "arm1_n": 20.0,
         "arm2_n": 20.0,
         "unit": "participants",
@@ -4271,8 +4272,7 @@ window.STUDIES_DATA = [
         "rr": 0.230769,
         "se": 0.851631,
         "ci_low": 0.043477,
-        "ci_upp": 1.2249,
-        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
+        "ci_upp": 1.2249
       },
       "intraop_opioid": null
     }
@@ -8113,6 +8113,7 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": {
         "favors": "Intervention",
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)",
         "arm1_n": 30.0,
         "arm2_n": 30.0,
         "unit": "participants",
@@ -8125,8 +8126,7 @@ window.STUDIES_DATA = [
         "rr": 0.55102,
         "se": 0.224442,
         "ci_low": 0.35491,
-        "ci_upp": 0.855493,
-        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
+        "ci_upp": 0.855493
       },
       "intraop_opioid": null
     }
@@ -10301,6 +10301,7 @@ window.STUDIES_DATA = [
         "arm2_pct": 36.2,
         "favors": "Intervention",
         "stratum": "Composite PONV (0–24h)",
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)",
         "arm1_n": 190.0,
         "arm2_n": 188.0,
         "unit": "participants",
@@ -10313,8 +10314,7 @@ window.STUDIES_DATA = [
         "rr": 0.512821,
         "se": 0.179558,
         "ci_low": 0.360681,
-        "ci_upp": 0.729136,
-        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
+        "ci_upp": 0.729136
       },
       "flatus_time": null,
       "hospital_stay": null,
@@ -14561,6 +14561,7 @@ window.STUDIES_DATA = [
         "timepoint": "first 48 h",
         "note": "Derived via Wan et al. (2014) from reported 48h median (IQR): TEAS 110 (80–110) vs Sham 110 (90–110) mg MME.",
         "favors": "Intervention",
+        "interpretation_caveat": "Derived from median [IQR] by the Wan et al. transformation. In both arms the median equals Q3 (110.0 [80–110] and 110.0 [90–110] mg MME), i.e. the distribution is at a ceiling, so the transformation's symmetry assumption is strained and the derived SD is likely understated. Verified 2026-09-11; values unchanged.",
         "arm1_n": 922.0,
         "arm2_n": 916.0,
         "unit": "mg IV MME",
@@ -14575,8 +14576,7 @@ window.STUDIES_DATA = [
         "mean_diff": -3.3333,
         "se": 0.881126,
         "ci_low": -5.0603,
-        "ci_upp": -1.6063,
-        "interpretation_caveat": "Derived from median [IQR] by the Wan et al. transformation. In both arms the median equals Q3 (110.0 [80–110] and 110.0 [90–110] mg MME), i.e. the distribution is at a ceiling, so the transformation's symmetry assumption is strained and the derived SD is likely understated. Verified 2026-09-11; values unchanged."
+        "ci_upp": -1.6063
       },
       "opioid_72h": {
         "status": "Unreported in Source Paper",
@@ -15200,6 +15200,7 @@ window.STUDIES_DATA = [
       "rescue_analgesia": {
         "note": "Use of tramadol within 6-24 h (Table 4): TEAS 3/57 (5.3%) vs Sham TEAS 6/58 (10.3%), P=0.315. Corrected 2026-09-10: this cell previously stored 9/77 vs 17/76, which does not match the source PDF (Table 1's own analysed n is 57/58, not 77/76) and directly contradicted this study's own audit.corrections note, which already documented the true 3/57 vs 6/58 figures. RR/CI recomputed with the review's standard Haldane-Anscombe continuity correction.",
         "favors": "Intervention",
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)",
         "arm1_n": 57.0,
         "arm2_n": 58.0,
         "unit": "participants",
@@ -15212,8 +15213,7 @@ window.STUDIES_DATA = [
         "rr": 0.547745,
         "se": 0.636687,
         "ci_low": 0.157261,
-        "ci_upp": 1.9078,
-        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
+        "ci_upp": 1.9078
       },
       "intraop_opioid": null
     }
@@ -17871,6 +17871,7 @@ window.STUDIES_DATA = [
         "arm2_pct": 67.4,
         "favors": "Intervention",
         "stratum": "Composite PONV (0–24h)",
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)",
         "arm1_n": 42.0,
         "arm2_n": 43.0,
         "unit": "participants",
@@ -17883,8 +17884,7 @@ window.STUDIES_DATA = [
         "rr": 0.641703,
         "se": 0.204864,
         "ci_low": 0.429487,
-        "ci_upp": 0.958777,
-        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
+        "ci_upp": 0.958777
       },
       "flatus_time": null,
       "hospital_stay": null,
@@ -18264,6 +18264,7 @@ window.STUDIES_DATA = [
       "hospital_stay": null,
       "rescue_analgesia": {
         "favors": "Intervention",
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)",
         "arm1_n": 48.0,
         "arm2_n": 49.0,
         "unit": "participants",
@@ -18276,8 +18277,7 @@ window.STUDIES_DATA = [
         "rr": 0.491308,
         "se": 0.433027,
         "ci_low": 0.210259,
-        "ci_upp": 1.148,
-        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
+        "ci_upp": 1.148
       },
       "intraop_opioid": null
     }
@@ -20685,7 +20685,6 @@ window.STUDIES_DATA = [
       "opioid_48h": null,
       "opioid_72h": null,
       "pain_rest_24h": {
-        "status": "Not pooled — unresolved blinding QC",
         "note": "24-h pain VAS 2.0±1.7 (TEAS) vs 2.2±1.8 (sham), P=0.006, mean/SD directly reported. Not promoted into Target C: workbook flags include_strict=0/include_sensitivity=0 because patients could not be fully blinded to real stimulation.",
         "d1": "NR",
         "d2": "NR",
@@ -20695,11 +20694,26 @@ window.STUDIES_DATA = [
         "overall": "NR",
         "outcome_name": "",
         "timepoint": "",
-        "rationale": ""
+        "rationale": "",
+        "arm1_n": 827.0,
+        "arm2_n": 828.0,
+        "unit": "VAS 0-10",
+        "comparison_id": "GAO22_TEAS_vs_SHAM_PAIN24",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.csv",
+        "source_note": "Source table row reads '24 h pain VAS score 2.0 (1.7) 2.2 (1.8) 0.006', presented as mean (SD) and distinct from the PONV-severity VAS rows above it. The paper does not print the pain VAS range; 0-10 is taken from convention and from the magnitude of the values. The blinding limitation is carried in RoB 2 Domain 2 rather than by exclusion (review-team ruling 2026-09-12). At n=1,655 this trial dominates the pool.",
+        "result_rob": "Some concerns",
+        "arm1_mean": 2.0,
+        "arm1_sd": 1.7,
+        "arm2_mean": 2.2,
+        "arm2_sd": 1.8,
+        "mean_diff": -0.2,
+        "se": 0.086067,
+        "ci_low": -0.368692,
+        "ci_upp": -0.031308,
+        "favors": "Intervention"
       },
       "pain_movement_24h": null,
       "ponv_24h": {
-        "status": "Not pooled — unresolved blinding QC",
         "note": "24-h composite PONV 243/827 (TEAS) vs 283/828 (sham), P=0.036; vomiting 86/827 vs 147/828, P<0.001; persistent nausea 18/827 vs 42/828, P=0.003 — all directly reported events/totals. Not promoted into Target D: workbook flags include_strict=0/include_sensitivity=0 for the same blinding QC reason.",
         "d1": "NR",
         "d2": "NR",
@@ -20709,7 +20723,22 @@ window.STUDIES_DATA = [
         "overall": "NR",
         "outcome_name": "",
         "timepoint": "",
-        "rationale": ""
+        "rationale": "",
+        "arm1_n": 827.0,
+        "arm2_n": 828.0,
+        "unit": "participants",
+        "comparison_id": "GAO22_TEAS_vs_SHAM_PONV24",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.csv",
+        "source_note": "The blinding limitation is carried in RoB 2 Domain 2 rather than by exclusion (review-team ruling 2026-09-12). At n=1,655 this trial dominates the pool.",
+        "result_rob": "Some concerns",
+        "arm1_events": 243.0,
+        "arm2_events": 283.0,
+        "rr": 0.859944,
+        "se": 0.07225,
+        "ci_low": 0.746396,
+        "ci_upp": 0.990765,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)",
+        "favors": "Intervention"
       },
       "flatus_time": null,
       "hospital_stay": null,
@@ -20781,7 +20810,6 @@ window.STUDIES_DATA = [
       "opioid_48h": null,
       "opioid_72h": null,
       "pain_rest_24h": {
-        "status": "Not pooled — denominator QC",
         "note": "24-h VAS pain 2.76±1.1 (TEAS) vs 3.23±1.1 (active control), P=0.053, mean/SD directly reported. Not promoted into Target C: workbook flags include_strict=0/include_sensitivity=0 pending resolution of the ITT (85) vs per-protocol (78) denominator inconsistency.",
         "d1": "NR",
         "d2": "NR",
@@ -20791,11 +20819,26 @@ window.STUDIES_DATA = [
         "overall": "NR",
         "outcome_name": "",
         "timepoint": "",
-        "rationale": ""
+        "rationale": "",
+        "arm1_n": 42.0,
+        "arm2_n": 43.0,
+        "unit": "VAS 0-10",
+        "comparison_id": "SONG20_TEAS_vs_SHAM_PAIN24",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.csv",
+        "source_note": "ITT population (85 = 42 + 43), the paper's stated primary analysis set; the 78-patient per-protocol set is an additional analysis and reconciles exactly (3 allergic + 2 ICU + 2 delayed drain).",
+        "result_rob": "Some concerns",
+        "arm1_mean": 2.76,
+        "arm1_sd": 1.1,
+        "arm2_mean": 3.23,
+        "arm2_sd": 1.1,
+        "mean_diff": -0.47,
+        "se": 0.23864,
+        "ci_low": -0.937734,
+        "ci_upp": -0.002266,
+        "favors": "Intervention"
       },
       "pain_movement_24h": null,
       "ponv_24h": {
-        "status": "Not pooled — denominator QC",
         "note": "24-h PONV 3/42 (TEAS) vs 10/43 (active control), P=0.039, directly reported. Not promoted into Target D for the same denominator QC reason.",
         "d1": "NR",
         "d2": "NR",
@@ -20805,7 +20848,22 @@ window.STUDIES_DATA = [
         "overall": "NR",
         "outcome_name": "",
         "timepoint": "",
-        "rationale": ""
+        "rationale": "",
+        "arm1_n": 42.0,
+        "arm2_n": 43.0,
+        "unit": "participants",
+        "comparison_id": "SONG20_TEAS_vs_SHAM_PONV24",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.csv",
+        "source_note": "Same ITT population as the Target C row.",
+        "result_rob": "Some concerns",
+        "arm1_events": 3.0,
+        "arm2_events": 10.0,
+        "rr": 0.341085,
+        "se": 0.578765,
+        "ci_low": 0.1097,
+        "ci_upp": 1.0605,
+        "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)",
+        "favors": "Intervention"
       },
       "flatus_time": null,
       "hospital_stay": null,
@@ -21213,11 +21271,24 @@ window.STUDIES_DATA = [
       "pain_movement_24h": null,
       "ponv_24h": null,
       "flatus_time": {
-        "status": "Digitised and validated 2026-09-12 — awaiting review-team admission",
         "note": "Time to first flatus reported 35.9% shorter with TEA (P<0.001), exact values shown only in Figure 2a. Formally digitised from the PDF's VECTOR path coordinates (not visually inferred, which the workbook forbids): sham-TEA 80.05 ± 4.40 SE vs TEA 51.33 ± 2.78 SE hours, n=21 per arm, giving SD 20.15 vs 12.74. The extraction reproduces all seven percentage reductions the paper reports, this one to within 0.02 percentage points. NOT entered into Target E: admitting a digitised study to a locked synthesis is a review-team decision. QC: 07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md",
-        "mean_diff": null,
-        "se": null,
-        "digitization_qc": "07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md"
+        "digitization_qc": "07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md",
+        "arm1_n": 21.0,
+        "arm2_n": 21.0,
+        "unit": "hours",
+        "comparison_id": "ZHANG18_TEA_vs_SHAM_FLATUS",
+        "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
+        "source_note": "Graph-derived: formally digitised 2026-09-12 from Figure 2a VECTOR path coordinates, not visually inferred. Calibration residual 0.28% of axis; the extraction reproduces all seven percentage reductions the paper reports, this one to 0.02 pp. The source prints mean +/- SE, so SD = SE x sqrt(21). See 07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md",
+        "result_rob": "Some concerns",
+        "arm1_mean": 51.33,
+        "arm1_sd": 12.74,
+        "arm2_mean": 80.051,
+        "arm2_sd": 20.145,
+        "mean_diff": -28.721,
+        "se": 5.2013,
+        "ci_low": -38.9156,
+        "ci_upp": -18.5264,
+        "favors": "Intervention"
       },
       "hospital_stay": {
         "status": "Graph-only, not pooled per workbook rule",

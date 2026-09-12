@@ -106,6 +106,40 @@ window.BROWSER_TARGETS = {
       "se": 0.11374542,
       "ci_low": -0.3629410232,
       "ci_upp": 0.08294102319999999
+    },
+    "Song 2020": {
+      "arm1_n": 42.0,
+      "arm2_n": 43.0,
+      "unit": "VAS 0-10",
+      "comparison_id": "SONG20_TEAS_vs_SHAM_PAIN24",
+      "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.csv",
+      "source_note": "ITT population (85 = 42 + 43), the paper's stated primary analysis set; the 78-patient per-protocol set is an additional analysis and reconciles exactly (3 allergic + 2 ICU + 2 delayed drain).",
+      "result_rob": "Some concerns",
+      "arm1_mean": 2.76,
+      "arm1_sd": 1.1,
+      "arm2_mean": 3.23,
+      "arm2_sd": 1.1,
+      "mean_diff": -0.47,
+      "se": 0.23864003,
+      "ci_low": -0.9377344588,
+      "ci_upp": -0.0022655411999999986
+    },
+    "Gao 2022": {
+      "arm1_n": 827.0,
+      "arm2_n": 828.0,
+      "unit": "VAS 0-10",
+      "comparison_id": "GAO22_TEAS_vs_SHAM_PAIN24",
+      "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_C_pain24h.csv",
+      "source_note": "Source table row reads '24 h pain VAS score 2.0 (1.7) 2.2 (1.8) 0.006', presented as mean (SD) and distinct from the PONV-severity VAS rows above it. The paper does not print the pain VAS range; 0-10 is taken from convention and from the magnitude of the values. The blinding limitation is carried in RoB 2 Domain 2 rather than by exclusion (review-team ruling 2026-09-12). At n=1,655 this trial dominates the pool.",
+      "result_rob": "Some concerns",
+      "arm1_mean": 2.0,
+      "arm1_sd": 1.7,
+      "arm2_mean": 2.2,
+      "arm2_sd": 1.8,
+      "mean_diff": -0.2,
+      "se": 0.086067431,
+      "ci_low": -0.36869216476,
+      "ci_upp": -0.031307835240000026
     }
   },
   "ponv_24h": {
@@ -139,6 +173,38 @@ window.BROWSER_TARGETS = {
       "se": 0.1795576421243226,
       "ci_low": 0.360681334523144,
       "ci_upp": 0.729136382239175,
+      "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
+    },
+    "Song 2020": {
+      "arm1_n": 42.0,
+      "arm2_n": 43.0,
+      "unit": "participants",
+      "comparison_id": "SONG20_TEAS_vs_SHAM_PONV24",
+      "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.csv",
+      "source_note": "Same ITT population as the Target C row.",
+      "result_rob": "Some concerns",
+      "arm1_events": 3.0,
+      "arm2_events": 10.0,
+      "rr": 0.34108527131782945,
+      "se": 0.5787653188224221,
+      "ci_low": 0.10970034186583838,
+      "ci_upp": 1.060517773520142,
+      "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
+    },
+    "Gao 2022": {
+      "arm1_n": 827.0,
+      "arm2_n": 828.0,
+      "unit": "participants",
+      "comparison_id": "GAO22_TEAS_vs_SHAM_PONV24",
+      "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_D_ponv.csv",
+      "source_note": "The blinding limitation is carried in RoB 2 Domain 2 rather than by exclusion (review-team ruling 2026-09-12). At n=1,655 this trial dominates the pool.",
+      "result_rob": "Some concerns",
+      "arm1_events": 243.0,
+      "arm2_events": 283.0,
+      "rr": 0.859943852294899,
+      "se": 0.07225033532903312,
+      "ci_low": 0.7463961129895372,
+      "ci_upp": 0.9907653807813402,
       "continuity_correction": "Haldane-Anscombe (+0.5 to every cell)"
     }
   },
@@ -245,6 +311,23 @@ window.BROWSER_TARGETS = {
       "ci_low": -16.214916528,
       "ci_upp": 1.8149149280000003,
       "converted_from": "2 ± .9 vs 2.3 ± 1.1 days (×24)"
+    },
+    "Zhang 2018": {
+      "arm1_n": 21.0,
+      "arm2_n": 21.0,
+      "unit": "hours",
+      "comparison_id": "ZHANG18_TEA_vs_SHAM_FLATUS",
+      "source_dataset": "06_FINAL_ANALYSIS_V26/01_DATA/target_E_flatus.csv",
+      "source_note": "Graph-derived: formally digitised 2026-09-12 from Figure 2a VECTOR path coordinates, not visually inferred. Calibration residual 0.28% of axis; the extraction reproduces all seven percentage reductions the paper reports, this one to 0.02 pp. The source prints mean +/- SE, so SD = SE x sqrt(21). See 07_TIERED_V33/03_DIGITIZATION/figure_only_values_QC_2026-09-12.md",
+      "result_rob": "Some concerns",
+      "arm1_mean": 51.330002,
+      "arm1_sd": 12.74,
+      "arm2_mean": 80.051003,
+      "arm2_sd": 20.145,
+      "mean_diff": -28.721001,
+      "se": 5.2013216,
+      "ci_low": -38.915591336,
+      "ci_upp": -18.526410664000004
     }
   },
   "intraop_opioid": {
