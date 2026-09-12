@@ -37,7 +37,7 @@ FROZEN = ("arm1_n", "arm2_n", "total_n",
 def _corrections() -> list[dict]:
     raw = SCAN_JS.read_text(encoding="utf-8")
     scan = json.JSONDecoder().raw_decode(raw.split("window.COHORT_OVERLAP = ", 1)[1])[0]
-    return [s for s in scan.get("baseline_arm_swaps", []) if s.get("status") == "corrected"]
+    return [s for s in scan.get("baseline_corrections", []) if s.get("status") == "corrected"]
 
 
 def _register():

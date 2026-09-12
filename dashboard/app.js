@@ -1287,13 +1287,19 @@ function summarisePopulation(reportsList) {
   const mism = (co.denominator_mismatches || []).filter(d => inScope.has(d.study)
                                                             && !d.explained_by_randomised);
   if (mism.length) out.flags.push({ kind: 'denominator-mismatch', rows: mism });
-  (co.baseline_arm_swaps || []).forEach(s => {
+  (co.baseline_corrections || []).forEach(s => {
     if (!inScope.has(s.study)) return;
     // A corrected swap moves to the resolved panel. It is not deleted: the record
     // of what was wrong, and of the paper it was checked against, is the point.
+    // Spread FIRST: these entries carry their own `kind` ("arm_swap" /
+    // "foreign_block"), which would otherwise overwrite the flag kind the
+    // renderer dispatches on and drop them into the wrong branch.
     (s.status === 'corrected' ? out.resolved : out.flags)
-      .push({ kind: 'baseline-arm-swap', ...s });
+      .push({ ...s, kind: 'baseline-correction', subkind: s.kind });
   });
+  const dupBlocks = (co.duplicate_baseline_blocks || [])
+    .filter(d => d.studies.some(k => inScope.has(k)));
+  if (dupBlocks.length) out.flags.push({ kind: 'duplicate-baseline', rows: dupBlocks });
   const lockRows = (co.locked_sheet_disagreements || []).filter(d => inScope.has(d.study));
   if (lockRows.length) out.flags.push({ kind: 'locked-sheets-disagree', rows: lockRows });
   (co.cohort_size_disagreements || []).forEach(d => {
@@ -1367,9 +1373,9 @@ function renderPopulationSummary(reportsList) {
       <summary><strong>Resolved against the source publications (${p.resolved.length})</strong>
         <span class="sd-sub"> &mdash; questions this review raised, read against the papers, and settled</span></summary>
       ${p.resolved.map(c => {
-        if (c.kind === 'baseline-arm-swap') return `
+        if (c.kind === 'baseline-correction') return `
         <div class="pop-flag">
-          <span class="badge badge-emerald">Baseline corrected</span>
+          <span class="badge badge-emerald">${c.subkind === 'foreign_block' ? "Baseline restored from the paper" : "Baseline corrected"}</span>
           <strong>${pwEsc(c.study)}</strong> &mdash; ${pwEsc(c.summary)}
           <div class="sd-sub">Corrected ${pwEsc(c.corrected_on)} by <code>${pwEsc(c.applied_by)}</code>
             against <code>${pwEsc(c.source)}</code>, ${pwEsc(c.source_location)}
@@ -1397,6 +1403,7 @@ function renderPopulationSummary(reportsList) {
             : ''}
         </div>`;
         const a = c.adjudication || {};
+        if (!Array.isArray(c.shared)) return '';
         return `
         <div class="pop-flag">
           <span class="badge badge-emerald">Separate cohorts</span>
@@ -1433,9 +1440,9 @@ function renderPopulationSummary(reportsList) {
             ${f.superseded_finding
               ? `<div class="sd-sub"><em>Correction:</em> ${pwEsc(f.superseded_finding)}</div>` : ''}
           </div>`;
-        if (f.kind === 'baseline-arm-swap') return `
+        if (f.kind === 'baseline-correction') return `
           <div class="pop-flag">
-            <span class="badge badge-rose">Baseline on the wrong arm</span>
+            <span class="badge badge-rose">${f.subkind === 'foreign_block' ? "Baseline from another trial" : "Baseline on the wrong arm"}</span>
             <strong>${pwEsc(f.study)}</strong> &mdash; ${pwEsc(f.summary)}
             <div class="sd-sub">Source: <code>${pwEsc(f.source)}</code>, ${pwEsc(f.source_location)}
               &mdash; &ldquo;${pwEsc(f.quote)}&rdquo;</div>
@@ -1447,6 +1454,15 @@ function renderPopulationSummary(reportsList) {
             ${f.also ? `<div class="sd-sub">${pwEsc(f.also)}</div>` : ''}
             <div class="sd-sub"><strong>Affects:</strong> ${pwEsc(f.affects)}</div>
             <div class="sd-sub"><strong>Decision needed:</strong> ${pwEsc(f.decision_needed)}</div>
+          </div>`;
+        if (f.kind === 'duplicate-baseline') return `
+          <div class="pop-flag">
+            <span class="badge badge-rose">Identical baseline rows</span>
+            ${f.rows.length} pair${f.rows.length === 1 ? '' : 's'} of records share an identical
+            baseline row. Two trials do not independently produce the same ages, BMIs, sex counts
+            and ASA distribution, so one record is carrying the other's.
+            <ul class="pop-evidence">${f.rows.map(d => `<li>${d.studies.map(pwEsc).join(' and ')}
+              &mdash; ${pwEsc(Object.entries(d.block).filter(([, v]) => v).map(([k, v]) => `${k} ${v}`).join('; '))}</li>`).join('')}</ul>
           </div>`;
         if (f.kind === 'locked-sheets-disagree') return `
           <div class="pop-flag">

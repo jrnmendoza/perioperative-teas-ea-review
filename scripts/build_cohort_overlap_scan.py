@@ -89,7 +89,12 @@ RESOLVED_ATTRIBUTION = [{
 }]
 
 
-# Baseline rows whose values sit on the wrong ARM, verified against the source PDF.
+# Baseline rows found wrong against the source PDF, and what the paper says instead.
+#
+# Two kinds have turned up so far. An "arm_swap" has the right study's values on the
+# wrong arms. A "foreign_block" has another study's values entirely -- caught by
+# duplicate_baseline_blocks() below, which compares every record's baseline row
+# against every other's.
 #
 # The denominator screen below flags any sex count whose denominator is not that
 # arm's analysed N. Most of its hits are explicable. These are the ones that were
@@ -100,7 +105,8 @@ RESOLVED_ATTRIBUTION = [{
 # confirmed three ways over (the paper's Table 1, the arm labels in the register,
 # and Outcome_Data_AF_LOCK, which records Long-duration TEAS n = 58 against
 # Sham/no-current TEAS n = 59 on all eight of its outcome rows).
-BASELINE_ARM_SWAPS = [{
+BASELINE_CORRECTIONS = [{
+    "kind": "arm_swap",
     "study": "Gu 2019",
     "status": "corrected",
     "corrected_on": "2026-09-12",
@@ -146,6 +152,60 @@ BASELINE_ARM_SWAPS = [{
                   "denominators were not touched. The 'register' column above records what the "
                   "register held BEFORE the correction; 'source_says' is what it holds now.",
 }]
+
+
+BASELINE_CORRECTIONS.append({
+    "kind": "foreign_block",
+    "study": "He 2026 (hepatectomy/JIS)",
+    "status": "corrected",
+    "corrected_on": "2026-09-12",
+    "applied_by": "scripts/apply_baseline_arm_corrections.py",
+    "summary": "The whole baseline row belonged to a different trial.",
+    "source": "TEAS EA Verification/Source PDFs/covidence_25_verified.pdf",
+    "source_location": "TABLE 1, Baseline characteristics of study population",
+    "quote": "Characteristic TEAS (n = 80) Control (n = 79) | sex, no. (%) female 28 (35.0) "
+             "26 (32.9) | age, mean \u00b1 SD, yrs 52.3 \u00b1 9.1  54.3 \u00b1 10.9 | "
+             "BMI, mean \u00b1 SD, kg/m2 23.4 \u00b1 3.3  23.7 \u00b1 4.9 | ASA grade, no. (%) "
+             "I 2 (2.5) 1 (1.3)  II 74 (92.5) 72 (91.1)  III 4 (5) 6 (7.6)",
+    "arm_assignment_confirmed_by": [
+        "Every value the register held was Liu 2026 (burn)'s, byte for byte \u2014 ages "
+        "42.0 \u00b1 9.8 / 39.5 \u00b1 11.3, BMI 24.6 \u00b1 3.5 / 24.9 \u00b1 3.2, female "
+        "9/43 and 10/43, ASA I 11 (25.6%) / II 32 (74.4%). Liu 2026's own Table 1 reports "
+        "exactly those for its T and C groups of 43 each, so that record is correct and this "
+        "one was carrying a copy.",
+        "The denominator 43 appears nowhere in this paper as a group size; its only two "
+        "occurrences are inside confidence intervals (0.43).",
+        "The paper's own text corroborates its Table 1: \u201cThe mean (SD) age of "
+        "participants was 53.3 (9.2) years; 54 patients were women (34.0%)\u201d. "
+        "28 + 26 = 54, and 54/159 = 34.0%; the arm means weight to 53.3 years.",
+        "The analysed denominators in the register (80 and 79) already matched the paper and "
+        "Outcome_Data_AF_LOCK, and were not touched.",
+    ],
+    "fields": [
+        {"field": "arm1_age",    "register": "42.0 ± 9.8",    "source_says": "52.3 ± 9.1"},
+        {"field": "arm2_age",    "register": "39.5 ± 11.3",   "source_says": "54.3 ± 10.9"},
+        {"field": "arm1_bmi",    "register": "24.6 ± 3.5",    "source_says": "23.4 ± 3.3"},
+        {"field": "arm2_bmi",    "register": "24.9 ± 3.2",    "source_says": "23.7 ± 4.9"},
+        {"field": "arm1_female", "register": "9/43 (20.9%)",  "source_says": "28/80 (35.0%)"},
+        {"field": "arm2_female", "register": "10/43 (23.3%)", "source_says": "26/79 (32.9%)"},
+    ],
+    "asa_status": {
+        "register": "ASA I: 11 (25.6%), ASA II: 32 (74.4%)",
+        "source_says": "TEAS arm \u2014 ASA I: 2/80 (2.5%), ASA II: 74/80 (92.5%), "
+                       "ASA III: 4/80 (5.0%); Sham arm \u2014 ASA I: 1/79 (1.3%), "
+                       "ASA II: 72/79 (91.1%), ASA III: 6/79 (7.6%)",
+    },
+    "also": "The comparator classification was checked at the same time and is right: the paper "
+            "says \u201cFor control group participants, electrodes were similarly placed but "
+            "remained inactive\u201d, which is a sham, not usual care. The abstract's shorthand "
+            "\u201ccontrol group (no stimulation)\u201d describes the current, not the "
+            "electrodes.",
+    "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, "
+               "risk-of-bias judgement or GRADE rating reads these fields.",
+    "resolution": "Corrected 2026-09-12 on review-team sign-off, from the paper's own Table 1. "
+                  "The 'register' column above records what the register held BEFORE the "
+                  "correction; 'source_says' is what it holds now.",
+})
 
 
 # Candidate pairs the review team has adjudicated against their source PDFs. An
@@ -350,7 +410,8 @@ def build() -> dict:
             {"flagged_for_review": 0, "adjudicated_separate": 1, "confirmed": 2}[c["status"]],
             c["studies"])),
         "attribution_conflicts": ATTRIBUTION_CONFLICTS,
-        "baseline_arm_swaps": BASELINE_ARM_SWAPS,
+        "baseline_corrections": BASELINE_CORRECTIONS,
+        "duplicate_baseline_blocks": duplicate_baseline_blocks(studies),
         "resolved_attribution": RESOLVED_ATTRIBUTION,
         "denominator_mismatches": denominator_mismatches(studies),
         "locked_sheet_disagreements": locked_sheet_disagreements(),
@@ -422,6 +483,32 @@ def locked_sheet_disagreements() -> list[dict]:
             "kind": "identity_split" if swapped_with else "arm_figures_differ",
         })
     return sorted(out, key=lambda d: (d["kind"] != "identity_split", d["study"]))
+
+
+def duplicate_baseline_blocks(studies: list[dict]) -> list[dict]:
+    """
+    Records sharing an identical baseline row with another record.
+
+    Two trials do not independently produce the same ages, BMIs, sex counts and
+    ASA distribution. When they appear to, one record is carrying the other's
+    block -- which is how He 2026 (hepatectomy/JIS) came to hold Liu 2026 (burn)'s
+    baselines, denominators of 43 and all, for a trial that analysed 80 and 79.
+
+    A block has to carry at least three real values before it is compared, so a
+    row that is mostly "not reported" cannot match another by being empty.
+    """
+    fields = ("arm1_age", "arm2_age", "arm1_bmi", "arm2_bmi",
+              "arm1_female", "arm2_female", "asa_status")
+    nr = {"", "not reported", "nr", "n/a", "none"}
+    groups: dict[tuple, list[str]] = {}
+    for s in studies:
+        pop = s.get("population") or {}
+        block = tuple(str(pop.get(f) or "").strip() for f in fields)
+        if sum(1 for v in block if v.lower() not in nr) < 3:
+            continue
+        groups.setdefault(block, []).append(s["key"])
+    return [{"studies": sorted(keys), "block": dict(zip(fields, block))}
+            for block, keys in groups.items() if len(keys) > 1]
 
 
 def denominator_mismatches(studies: list[dict]) -> list[dict]:
@@ -507,10 +594,12 @@ def main(check_only: bool) -> int:
                 else "figures differ")
         print(f"  LOCK {d['study']}: Study_Master says {d['study_master_summary_arms']}, "
               f"AF_LOCK says {d['af_lock_analysed_arms']} ({note})")
-    for s in payload["baseline_arm_swaps"]:
-        tag = "CORRECTED" if s.get("status") == "corrected" else "SWAP"
+    for s in payload["baseline_corrections"]:
+        tag = "CORRECTED" if s.get("status") == "corrected" else s.get("kind", "?").upper()
         print(f"  {tag} {s['study']}: {s['summary']} "
               f"({len(s['fields'])} field(s), source-verified)")
+    for d in payload["duplicate_baseline_blocks"]:
+        print(f"  DUPLICATE BASELINE {' == '.join(d['studies'])}")
     dm = payload["denominator_mismatches"]
     unexplained = [d for d in dm if not d["explained_by_randomised"]]
     print(f"  {len(dm)} female-count denominator(s) differ from the arm's analysed N "

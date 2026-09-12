@@ -4296,7 +4296,7 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
     # describes) or CORRECTED (the register now holds the source value). Either
     # way the finding has to match the data, so a correction cannot leave a stale
     # flag standing and a withdrawal cannot quietly erase an unfixed problem.
-    for s in co.get("baseline_arm_swaps", []):
+    for s in co.get("baseline_corrections", []):
         pop = (by_key.get(s["study"]) or {}).get("population") or {}
         if not pop:
             probs.append(f"{s['study']}: arm swap recorded for a study not in the register")
@@ -4330,13 +4330,31 @@ def t_baseline_conflicts_are_surfaced_not_corrected():
                 probs.append(f"{s['study']}: {applied} does not exist, so the correction cannot "
                              f"be re-checked or reversed")
             # The correction must not have moved a denominator.
-            expect_n = {"Gu 2019": (58, 59)}.get(s["study"])
+            expect_n = {"Gu 2019": (58, 59),
+                        "He 2026 (hepatectomy/JIS)": (80, 79)}.get(s["study"])
             if expect_n and (pop.get("arm1_n"), pop.get("arm2_n")) != expect_n:
                 probs.append(f"{s['study']}: arms are "
                              f"{(pop.get('arm1_n'), pop.get('arm2_n'))}, expected {expect_n} -- a "
                              f"baseline correction must never move a denominator")
-    if co.get("baseline_arm_swaps") and "Baseline on the wrong arm" not in APP:
-        probs.append("recorded arm swaps are never rendered")
+    if co.get("baseline_corrections") and "Baseline on the wrong arm" not in APP:
+        probs.append("recorded baseline corrections are never rendered")
+    # Two trials do not produce identical baseline rows. Any surviving duplicate is
+    # one record carrying another's block, and must be visible.
+    dups = co.get("duplicate_baseline_blocks", [])
+    # Required unconditionally: the screen is standing infrastructure, so its
+    # renderer must survive even while the list is empty. Guarding it with
+    # "if dups" would let the renderer be deleted during a clean spell and only
+    # surface the loss the next time a duplicate appeared.
+    # Asserted on the badge the renderer emits, not on the flag's kind string:
+    # the kind also appears where the flag is PUSHED, so testing for it would pass
+    # with the renderer deleted.
+    if "Identical baseline rows" not in APP:
+        probs.append("the duplicate-baseline-block screen has no renderer")
+    for d in dups:
+        corrected = {c["study"] for c in co.get("baseline_corrections", [])
+                     if c.get("status") == "corrected"}
+        if set(d["studies"]) & corrected:
+            probs.append(f"{d['studies']}: still share a baseline row after being corrected")
 
     for d in co.get("denominator_mismatches", []):
         pop = (by_key.get(d["study"]) or {}).get("population") or {}

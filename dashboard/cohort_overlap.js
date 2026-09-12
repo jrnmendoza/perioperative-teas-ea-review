@@ -101,8 +101,9 @@ window.COHORT_OVERLAP = {
     }
   ],
   "attribution_conflicts": [],
-  "baseline_arm_swaps": [
+  "baseline_corrections": [
     {
+      "kind": "arm_swap",
       "study": "Gu 2019",
       "status": "corrected",
       "corrected_on": "2026-09-12",
@@ -155,8 +156,65 @@ window.COHORT_OVERLAP = {
       },
       "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, risk-of-bias judgement or GRADE rating reads these fields.",
       "resolution": "Corrected 2026-09-12 on review-team sign-off: the six values were moved back to the arms the paper reports them for, and asa_status was rewritten to give both arms instead of the sham arm's distribution alone. The analysed denominators were not touched. The 'register' column above records what the register held BEFORE the correction; 'source_says' is what it holds now."
+    },
+    {
+      "kind": "foreign_block",
+      "study": "He 2026 (hepatectomy/JIS)",
+      "status": "corrected",
+      "corrected_on": "2026-09-12",
+      "applied_by": "scripts/apply_baseline_arm_corrections.py",
+      "summary": "The whole baseline row belonged to a different trial.",
+      "source": "TEAS EA Verification/Source PDFs/covidence_25_verified.pdf",
+      "source_location": "TABLE 1, Baseline characteristics of study population",
+      "quote": "Characteristic TEAS (n = 80) Control (n = 79) | sex, no. (%) female 28 (35.0) 26 (32.9) | age, mean ± SD, yrs 52.3 ± 9.1  54.3 ± 10.9 | BMI, mean ± SD, kg/m2 23.4 ± 3.3  23.7 ± 4.9 | ASA grade, no. (%) I 2 (2.5) 1 (1.3)  II 74 (92.5) 72 (91.1)  III 4 (5) 6 (7.6)",
+      "arm_assignment_confirmed_by": [
+        "Every value the register held was Liu 2026 (burn)'s, byte for byte — ages 42.0 ± 9.8 / 39.5 ± 11.3, BMI 24.6 ± 3.5 / 24.9 ± 3.2, female 9/43 and 10/43, ASA I 11 (25.6%) / II 32 (74.4%). Liu 2026's own Table 1 reports exactly those for its T and C groups of 43 each, so that record is correct and this one was carrying a copy.",
+        "The denominator 43 appears nowhere in this paper as a group size; its only two occurrences are inside confidence intervals (0.43).",
+        "The paper's own text corroborates its Table 1: “The mean (SD) age of participants was 53.3 (9.2) years; 54 patients were women (34.0%)”. 28 + 26 = 54, and 54/159 = 34.0%; the arm means weight to 53.3 years.",
+        "The analysed denominators in the register (80 and 79) already matched the paper and Outcome_Data_AF_LOCK, and were not touched."
+      ],
+      "fields": [
+        {
+          "field": "arm1_age",
+          "register": "42.0 ± 9.8",
+          "source_says": "52.3 ± 9.1"
+        },
+        {
+          "field": "arm2_age",
+          "register": "39.5 ± 11.3",
+          "source_says": "54.3 ± 10.9"
+        },
+        {
+          "field": "arm1_bmi",
+          "register": "24.6 ± 3.5",
+          "source_says": "23.4 ± 3.3"
+        },
+        {
+          "field": "arm2_bmi",
+          "register": "24.9 ± 3.2",
+          "source_says": "23.7 ± 4.9"
+        },
+        {
+          "field": "arm1_female",
+          "register": "9/43 (20.9%)",
+          "source_says": "28/80 (35.0%)"
+        },
+        {
+          "field": "arm2_female",
+          "register": "10/43 (23.3%)",
+          "source_says": "26/79 (32.9%)"
+        }
+      ],
+      "asa_status": {
+        "register": "ASA I: 11 (25.6%), ASA II: 32 (74.4%)",
+        "source_says": "TEAS arm — ASA I: 2/80 (2.5%), ASA II: 74/80 (92.5%), ASA III: 4/80 (5.0%); Sham arm — ASA I: 1/79 (1.3%), ASA II: 72/79 (91.1%), ASA III: 6/79 (7.6%)"
+      },
+      "also": "The comparator classification was checked at the same time and is right: the paper says “For control group participants, electrodes were similarly placed but remained inactive”, which is a sham, not usual care. The abstract's shorthand “control group (no stimulation)” describes the current, not the electrodes.",
+      "affects": "Descriptive baseline display only. No analysed denominator, effect estimate, risk-of-bias judgement or GRADE rating reads these fields.",
+      "resolution": "Corrected 2026-09-12 on review-team sign-off, from the paper's own Table 1. The 'register' column above records what the register held BEFORE the correction; 'source_says' is what it holds now."
     }
   ],
+  "duplicate_baseline_blocks": [],
   "resolved_attribution": [
     {
       "studies": [
@@ -226,26 +284,6 @@ window.COHORT_OVERLAP = {
       "female_denominator": 20,
       "analysed_n": 11,
       "randomised_n": 11,
-      "explained_by_randomised": false
-    },
-    {
-      "study": "He 2026 (hepatectomy/JIS)",
-      "arm": "arm1",
-      "arm_name": "TEAS Group",
-      "female": "9/43 (20.9%)",
-      "female_denominator": 43,
-      "analysed_n": 80,
-      "randomised_n": 81,
-      "explained_by_randomised": false
-    },
-    {
-      "study": "He 2026 (hepatectomy/JIS)",
-      "arm": "arm2",
-      "arm_name": "Sham Group",
-      "female": "10/43 (23.3%)",
-      "female_denominator": 43,
-      "analysed_n": 79,
-      "randomised_n": 80,
       "explained_by_randomised": false
     }
   ],
